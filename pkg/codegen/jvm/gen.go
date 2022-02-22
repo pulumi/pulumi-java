@@ -763,14 +763,208 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 }
 
 func (pt *plainType) genOutputType(ctx *classFileContext) error {
+	if len(pt.properties) > 250 {
+		return pt.genJumboOutputType(ctx)
+	}
+	return pt.genNormalOutputType(ctx)
+}
+
+func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
+	// generates a class for Outputs where pt.properties >= 250
 	w := ctx.writer
 	indent := strings.Repeat("    ", 0)
 
-	// TODO: proper support for large constructors
 	props := pt.properties
-	if len(props) > 250 {
-		props = pt.properties[0:250]
+
+	// Open the class and annotate it appropriately.
+	_, _ = fmt.Fprintf(w, "%s@%s\n", indent, ctx.ref(names.OutputCustomType))
+	_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
+
+	// Generate each output field.
+	for _, prop := range props {
+		fieldName := names.Ident(pt.mod.propertyName(prop))
+		fieldType := pt.mod.typeString(
+			ctx,
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false, // outer optional
+			false, // inputless overload
+		)
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, indent+"    "))
+			}
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, indent+"    "))
+
+			}
+			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
+		}
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
+		_, _ = fmt.Fprintf(w, "%s    private %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
+	if len(props) > 0 {
+		_, _ = fmt.Fprintf(w, "\n")
+	}
+
+	// Generate the constructor parameter names - used as a workaround for Java reflection issues
+	var paramNamesStringBuilder strings.Builder
+	paramNamesStringBuilder.WriteString("{")
+	for i, prop := range props {
+		if i > 0 {
+			paramNamesStringBuilder.WriteString(",")
+		}
+		paramName := names.Ident(prop.Name)
+		paramNamesStringBuilder.WriteString("\"" + paramName.String() + "\"")
+	}
+	paramNamesStringBuilder.WriteString("}")
+
+	// Generate an appropriately-attributed constructor that will set this types' fields.
+	fmt.Fprintf(w,
+		"%s    @%s.Constructor(%s)\n",
+		indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+	fmt.Fprintf(w, "%s    private %s() {}\n", indent, pt.name)
+
+	// Generate getters
+	for _, prop := range props {
+		if prop.Comment != "" || prop.DeprecationMessage != "" {
+			_, _ = fmt.Fprintf(w, "%s    /**\n", indent)
+			if prop.Comment != "" {
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.Comment, indent+"    "))
+			}
+
+			if prop.DeprecationMessage != "" {
+				_, _ = fmt.Fprintf(w, "%s     * @deprecated\n", indent)
+				_, _ = fmt.Fprintln(w, formatBlockComment(prop.DeprecationMessage, indent+"    "))
+
+			}
+			_, _ = fmt.Fprintf(w, "%s     */\n", indent)
+		}
+		paramName := names.Ident(prop.Name)
+		getterName := names.Ident(prop.Name).AsProperty().Getter()
+		getterType := pt.mod.typeString(
+			ctx,
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			true,  // outer optional
+			false, // inputless overload
+		)
+		getterTypeNonOptional := pt.mod.typeString(
+			ctx,
+			codegen.UnwrapType(prop.Type),
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false, // outer optional (irrelevant)
+			false, // inputless overload
+		)
+
+		returnStatement := fmt.Sprintf("this.%s", paramName)
+
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
+			case *schema.ArrayType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? List.of() : this.%s", paramName, paramName)
+			case *schema.MapType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
+			default:
+				// Option<Input<T>> are stored as @Nullable Input<T>. We don't
+				// need to perform the nullable conversion for them.
+				if !getterType.Type.Equal(names.Input) {
+					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
+				}
+			}
+		}
+
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
+		if err := getterTemplate.Execute(w, getterTemplateContext{
+			Indent:          strings.Repeat("    ", 1),
+			GetterType:      getterType.ToCode(ctx.imports),
+			GetterName:      getterName,
+			ReturnStatement: returnStatement,
+		}); err != nil {
+			return err
+		}
+
+		_, _ = fmt.Fprintf(w, "\n")
+	}
+
+	// Generate Builder
+	var builderFields []builderFieldTemplateContext
+	var builderSetters []builderSetterTemplateContext
+	for _, prop := range props {
+		propertyName := names.Ident(pt.mod.propertyName(prop))
+		propertyType := pt.mod.typeString(
+			ctx,
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false, // is input
+			false, // is state
+			false, // requires initializers
+			false, // outer optional
+			false, // inputless overload
+		)
+
+		// add field
+		builderFields = append(builderFields, builderFieldTemplateContext{
+			FieldType: propertyType.ToCode(ctx.imports),
+			FieldName: propertyName.String(),
+		})
+
+		setterName := names.Ident(prop.Name).AsProperty().Setter()
+		assignment := func(propertyName names.Ident) string {
+			if prop.IsRequired() {
+				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
+			}
+			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
+		}
+
+		// add setter
+		builderSetters = append(builderSetters, builderSetterTemplateContext{
+			SetterName:   setterName,
+			PropertyType: propertyType.ToCode(ctx.imports),
+			PropertyName: propertyName.String(),
+			Assignment:   assignment(propertyName),
+		})
+	}
+
+	_, _ = fmt.Fprintf(w, "\n")
+	if err := builderTemplate.Execute(w, builderTemplateContext{
+		Indent:     strings.Repeat("    ", 1),
+		Name:       "Builder",
+		IsFinal:    true,
+		IsJumbo:    true,
+		Fields:     builderFields,
+		Setters:    builderSetters,
+		ResultType: pt.name,
+		Objects:    ctx.ref(names.Objects),
+	}); err != nil {
+		return err
+	}
+	_, _ = fmt.Fprintf(w, "\n")
+
+	// Close the class.
+	_, _ = fmt.Fprintf(w, "%s}\n", indent)
+	return nil
+}
+
+func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
+	w := ctx.writer
+	indent := strings.Repeat("    ", 0)
+
+	props := pt.properties
 
 	// Open the class and annotate it appropriately.
 	_, _ = fmt.Fprintf(w, "%s@%s\n", indent, ctx.ref(names.OutputCustomType))
@@ -1259,25 +1453,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if hasConstInputs {
 		argsOverride = "makeArgs(args)"
 	}
-
-	_, _ = fmt.Fprintf(w, "    /**\n")
-	_, _ = fmt.Fprintf(w, "     *\n")
-	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
-	_, _ = fmt.Fprintf(w, "     */\n")
-
-	// Name only constructor
-	fmt.Fprintf(w,
-		"    public %s(String name) {\n", className)
-	if r.IsComponent {
-		fmt.Fprintf(w,
-			"        super(\"%s\", name, %s.Empty, makeResourceOptions(null, %s.empty()), true);\n",
-			tok, ctx.ref(argsFQN), ctx.imports.Ref(names.Input))
-	} else {
-		fmt.Fprintf(w,
-			"        super(\"%s\", name, %s.Empty, makeResourceOptions(null, %s.empty()));\n",
-			tok, ctx.ref(argsFQN), ctx.imports.Ref(names.Input))
-	}
-	fmt.Fprintf(w, "    }\n")
 
 	_, _ = fmt.Fprintf(w, "    /**\n")
 	_, _ = fmt.Fprintf(w, "     *\n")
