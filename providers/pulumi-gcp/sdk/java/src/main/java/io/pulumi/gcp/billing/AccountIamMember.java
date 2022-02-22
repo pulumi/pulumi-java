@@ -50,13 +50,6 @@ public class AccountIamMember extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public AccountIamMember(String name) {
-        super("gcp:billing/accountIamMember:AccountIamMember", name, AccountIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

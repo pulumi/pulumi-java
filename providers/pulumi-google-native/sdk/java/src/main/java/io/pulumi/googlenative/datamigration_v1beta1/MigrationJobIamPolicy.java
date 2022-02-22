@@ -84,13 +84,6 @@ public class MigrationJobIamPolicy extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public MigrationJobIamPolicy(String name) {
-        super("google-native:datamigration/v1beta1:MigrationJobIamPolicy", name, MigrationJobIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

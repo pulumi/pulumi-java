@@ -84,13 +84,6 @@ public class ServiceConsumerIamPolicy extends io.pulumi.resources.CustomResource
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public ServiceConsumerIamPolicy(String name) {
-        super("google-native:servicemanagement/v1:ServiceConsumerIamPolicy", name, ServiceConsumerIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

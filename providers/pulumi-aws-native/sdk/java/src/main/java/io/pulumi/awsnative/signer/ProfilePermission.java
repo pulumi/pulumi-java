@@ -52,13 +52,6 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public ProfilePermission(String name) {
-        super("aws-native:signer:ProfilePermission", name, ProfilePermissionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

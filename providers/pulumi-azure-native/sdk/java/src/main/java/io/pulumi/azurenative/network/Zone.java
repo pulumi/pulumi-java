@@ -206,13 +206,6 @@ public class Zone extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public Zone(String name) {
-        super("azure-native:network:Zone", name, ZoneArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

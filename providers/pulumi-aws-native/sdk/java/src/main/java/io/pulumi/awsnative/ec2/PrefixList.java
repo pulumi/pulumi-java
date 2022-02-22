@@ -155,13 +155,6 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public PrefixList(String name) {
-        super("aws-native:ec2:PrefixList", name, PrefixListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

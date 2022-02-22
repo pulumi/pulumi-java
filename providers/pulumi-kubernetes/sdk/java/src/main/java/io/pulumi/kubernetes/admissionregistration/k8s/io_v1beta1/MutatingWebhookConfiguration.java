@@ -82,13 +82,6 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public MutatingWebhookConfiguration(String name) {
-        super("kubernetes:admissionregistration.k8s.io/v1beta1:MutatingWebhookConfiguration", name, MutatingWebhookConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

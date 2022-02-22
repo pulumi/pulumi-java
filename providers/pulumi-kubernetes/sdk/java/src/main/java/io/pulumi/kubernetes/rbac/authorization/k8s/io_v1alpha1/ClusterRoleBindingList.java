@@ -81,13 +81,6 @@ public class ClusterRoleBindingList extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public ClusterRoleBindingList(String name) {
-        super("kubernetes:rbac.authorization.k8s.io/v1alpha1:ClusterRoleBindingList", name, ClusterRoleBindingListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

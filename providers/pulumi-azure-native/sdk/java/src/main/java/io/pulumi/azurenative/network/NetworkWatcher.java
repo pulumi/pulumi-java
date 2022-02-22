@@ -120,13 +120,6 @@ public class NetworkWatcher extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public NetworkWatcher(String name) {
-        super("azure-native:network:NetworkWatcher", name, NetworkWatcherArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

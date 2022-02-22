@@ -84,13 +84,6 @@ public class EdgeCacheServiceIamPolicy extends io.pulumi.resources.CustomResourc
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public EdgeCacheServiceIamPolicy(String name) {
-        super("google-native:networkservices/v1:EdgeCacheServiceIamPolicy", name, EdgeCacheServiceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

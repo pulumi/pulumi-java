@@ -174,13 +174,6 @@ public class WebAppSourceControlSlot extends io.pulumi.resources.CustomResource 
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public WebAppSourceControlSlot(String name) {
-        super("azure-native:web:WebAppSourceControlSlot", name, WebAppSourceControlSlotArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

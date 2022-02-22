@@ -325,13 +325,6 @@ public class DatabaseBlobAuditingPolicy extends io.pulumi.resources.CustomResour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public DatabaseBlobAuditingPolicy(String name) {
-        super("azure-native:sql:DatabaseBlobAuditingPolicy", name, DatabaseBlobAuditingPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

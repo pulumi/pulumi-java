@@ -165,13 +165,6 @@ public class AutoScaleVCore extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public AutoScaleVCore(String name) {
-        super("azure-native:powerbidedicated:AutoScaleVCore", name, AutoScaleVCoreArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

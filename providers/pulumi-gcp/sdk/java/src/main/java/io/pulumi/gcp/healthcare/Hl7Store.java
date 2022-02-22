@@ -183,13 +183,6 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public Hl7Store(String name) {
-        super("gcp:healthcare/hl7Store:Hl7Store", name, Hl7StoreArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

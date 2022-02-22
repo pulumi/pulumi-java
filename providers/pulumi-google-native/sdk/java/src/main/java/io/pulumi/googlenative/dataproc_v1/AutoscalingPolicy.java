@@ -88,13 +88,6 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public AutoscalingPolicy(String name) {
-        super("google-native:dataproc/v1:AutoscalingPolicy", name, AutoscalingPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

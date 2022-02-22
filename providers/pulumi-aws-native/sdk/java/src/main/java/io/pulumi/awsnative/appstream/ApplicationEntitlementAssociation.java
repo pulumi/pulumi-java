@@ -40,13 +40,6 @@ public class ApplicationEntitlementAssociation extends io.pulumi.resources.Custo
     /**
      *
      * @param name The _unique_ name of the resulting resource.
-     */
-    public ApplicationEntitlementAssociation(String name) {
-        super("aws-native:appstream:ApplicationEntitlementAssociation", name, ApplicationEntitlementAssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
