@@ -77,7 +77,6 @@ public final class UrlSigningActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public UrlSigningActionResponse build() {
             return new UrlSigningActionResponse(name, parameters);
         }

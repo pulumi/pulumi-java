@@ -15,28 +15,28 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRoutineArgs Empty = new GetRoutineArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="readMask")
-    private final @Nullable String readMask;
+      private final @Nullable String readMask;
 
     public Optional<String> getReadMask() {
         return this.readMask == null ? Optional.empty() : Optional.ofNullable(this.readMask);
     }
 
     @InputImport(name="routineId", required=true)
-    private final String routineId;
+      private final String routineId;
 
     public String getRoutineId() {
         return this.routineId;
@@ -105,7 +105,6 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
-
         public GetRoutineArgs build() {
             return new GetRoutineArgs(datasetId, project, readMask, routineId);
         }

@@ -21,7 +21,7 @@ public final class VpcPeeringConnectivityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vpc", required=true)
-    private final String vpc;
+      private final String vpc;
 
     public String getVpc() {
         return this.vpc;
@@ -59,7 +59,6 @@ public final class VpcPeeringConnectivityResponse extends io.pulumi.resources.In
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public VpcPeeringConnectivityResponse build() {
             return new VpcPeeringConnectivityResponse(vpc);
         }

@@ -160,7 +160,6 @@ public final class GetActionResult {
             this.workflowId = workflowId;
             return this;
         }
-
         public GetActionResult build() {
             return new GetActionResult(etag, id, logicAppResourceId, name, type, workflowId);
         }

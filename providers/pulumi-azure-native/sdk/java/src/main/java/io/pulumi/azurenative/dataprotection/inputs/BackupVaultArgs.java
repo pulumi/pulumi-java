@@ -23,7 +23,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSettings", required=true)
-    private final Input<List<StorageSettingArgs>> storageSettings;
+        private final Input<List<StorageSettingArgs>> storageSettings;
 
     public Input<List<StorageSettingArgs>> getStorageSettings() {
         return this.storageSettings;
@@ -66,7 +66,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             this.storageSettings = Input.of(Objects.requireNonNull(storageSettings));
             return this;
         }
-
         public BackupVaultArgs build() {
             return new BackupVaultArgs(storageSettings);
         }

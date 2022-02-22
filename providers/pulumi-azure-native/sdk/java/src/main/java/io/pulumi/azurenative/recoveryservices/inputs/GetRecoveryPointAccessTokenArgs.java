@@ -21,7 +21,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -32,7 +32,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable String eTag;
+        private final @Nullable String eTag;
 
     public Optional<String> getETag() {
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
@@ -43,7 +43,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+        private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -54,7 +54,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -65,7 +65,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable AADProperties properties;
+        private final @Nullable AADProperties properties;
 
     public Optional<AADProperties> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -76,7 +76,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="protectedItemName", required=true)
-    private final String protectedItemName;
+        private final String protectedItemName;
 
     public String getProtectedItemName() {
         return this.protectedItemName;
@@ -87,7 +87,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="recoveryPointId", required=true)
-    private final String recoveryPointId;
+        private final String recoveryPointId;
 
     public String getRecoveryPointId() {
         return this.recoveryPointId;
@@ -98,7 +98,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -109,7 +109,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -120,7 +120,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -249,7 +249,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetRecoveryPointAccessTokenArgs build() {
             return new GetRecoveryPointAccessTokenArgs(containerName, eTag, fabricName, location, properties, protectedItemName, recoveryPointId, resourceGroupName, tags, vaultName);
         }

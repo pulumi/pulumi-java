@@ -76,7 +76,6 @@ public final class LinkedWorkspacePropsResponse {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
-
         public LinkedWorkspacePropsResponse build() {
             return new LinkedWorkspacePropsResponse(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
         }

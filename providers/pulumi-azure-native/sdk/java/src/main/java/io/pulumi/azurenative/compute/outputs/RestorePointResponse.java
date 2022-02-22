@@ -205,7 +205,6 @@ public final class RestorePointResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestorePointResponse build() {
             return new RestorePointResponse(consistencyMode, excludeDisks, id, name, provisioningState, sourceMetadata, timeCreated, type);
         }

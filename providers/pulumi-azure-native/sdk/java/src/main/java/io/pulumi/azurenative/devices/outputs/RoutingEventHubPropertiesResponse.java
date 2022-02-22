@@ -202,7 +202,6 @@ public final class RoutingEventHubPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingEventHubPropertiesResponse build() {
             return new RoutingEventHubPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

@@ -76,7 +76,6 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public ApplicationGatewayAutoscaleConfigurationResponse build() {
             return new ApplicationGatewayAutoscaleConfigurationResponse(maxCapacity, minCapacity);
         }

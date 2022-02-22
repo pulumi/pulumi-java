@@ -203,7 +203,6 @@ public final class SparkJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SparkJobResponse build() {
             return new SparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

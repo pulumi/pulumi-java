@@ -231,7 +231,6 @@ public final class QuickBooksObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public QuickBooksObjectDatasetResponse build() {
             return new QuickBooksObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

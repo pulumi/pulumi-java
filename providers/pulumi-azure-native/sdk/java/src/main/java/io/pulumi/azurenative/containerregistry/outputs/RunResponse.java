@@ -589,7 +589,6 @@ public final class RunResponse {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
-
         public RunResponse build() {
             return new RunResponse(agentConfiguration, agentPoolName, createTime, customRegistries, finishTime, id, imageUpdateTrigger, isArchiveEnabled, lastUpdatedTime, logArtifact, name, outputImages, platform, provisioningState, runErrorMessage, runId, runType, sourceRegistryAuth, sourceTrigger, startTime, status, systemData, task, timerTrigger, type, updateTriggerToken);
         }

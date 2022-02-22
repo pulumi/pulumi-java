@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="promotionId")
-    private final @Nullable Input<String> promotionId;
+      private final @Nullable Input<String> promotionId;
 
     public Input<String> getPromotionId() {
         return this.promotionId == null ? Input.empty() : this.promotionId;
@@ -66,7 +66,6 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
             this.promotionId = Input.ofNullable(promotionId);
             return this;
         }
-
         public GoogleCloudRetailV2alphaPromotionArgs build() {
             return new GoogleCloudRetailV2alphaPromotionArgs(promotionId);
         }

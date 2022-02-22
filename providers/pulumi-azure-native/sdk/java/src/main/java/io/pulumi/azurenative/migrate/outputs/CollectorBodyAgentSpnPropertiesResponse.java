@@ -139,7 +139,6 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public CollectorBodyAgentSpnPropertiesResponse build() {
             return new CollectorBodyAgentSpnPropertiesResponse(applicationId, audience, authority, objectId, tenantId);
         }

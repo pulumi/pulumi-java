@@ -25,7 +25,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable String eTag;
+        private final @Nullable String eTag;
 
     public Optional<String> getETag() {
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
@@ -36,7 +36,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="error")
-    private final @Nullable ErrorDetailsResponse error;
+        private final @Nullable ErrorDetailsResponse error;
 
     public Optional<ErrorDetailsResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -47,7 +47,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="executionType")
-    private final @Nullable String executionType;
+        private final @Nullable String executionType;
 
     public Optional<String> getExecutionType() {
         return this.executionType == null ? Optional.empty() : Optional.ofNullable(this.executionType);
@@ -58,7 +58,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable String fileName;
+        private final @Nullable String fileName;
 
     public Optional<String> getFileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
@@ -69,7 +69,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -80,7 +80,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -91,7 +91,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="processingEndTime")
-    private final @Nullable String processingEndTime;
+        private final @Nullable String processingEndTime;
 
     public Optional<String> getProcessingEndTime() {
         return this.processingEndTime == null ? Optional.empty() : Optional.ofNullable(this.processingEndTime);
@@ -102,7 +102,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="processingStartTime")
-    private final @Nullable String processingStartTime;
+        private final @Nullable String processingStartTime;
 
     public Optional<String> getProcessingStartTime() {
         return this.processingStartTime == null ? Optional.empty() : Optional.ofNullable(this.processingStartTime);
@@ -113,7 +113,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="runSettings")
-    private final @Nullable CommonExportPropertiesResponse runSettings;
+        private final @Nullable CommonExportPropertiesResponse runSettings;
 
     public Optional<CommonExportPropertiesResponse> getRunSettings() {
         return this.runSettings == null ? Optional.empty() : Optional.ofNullable(this.runSettings);
@@ -124,7 +124,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -135,7 +135,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="submittedBy")
-    private final @Nullable String submittedBy;
+        private final @Nullable String submittedBy;
 
     public Optional<String> getSubmittedBy() {
         return this.submittedBy == null ? Optional.empty() : Optional.ofNullable(this.submittedBy);
@@ -146,7 +146,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="submittedTime")
-    private final @Nullable String submittedTime;
+        private final @Nullable String submittedTime;
 
     public Optional<String> getSubmittedTime() {
         return this.submittedTime == null ? Optional.empty() : Optional.ofNullable(this.submittedTime);
@@ -157,7 +157,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -316,7 +316,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExportExecutionResponse build() {
             return new ExportExecutionResponse(eTag, error, executionType, fileName, id, name, processingEndTime, processingStartTime, runSettings, status, submittedBy, submittedTime, type);
         }

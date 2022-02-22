@@ -54,7 +54,6 @@ public final class CacheEncryptionSettingsResponse {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public CacheEncryptionSettingsResponse build() {
             return new CacheEncryptionSettingsResponse(keyEncryptionKey);
         }

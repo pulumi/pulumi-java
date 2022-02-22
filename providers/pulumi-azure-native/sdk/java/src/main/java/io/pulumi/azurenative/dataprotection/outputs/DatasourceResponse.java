@@ -181,7 +181,6 @@ public final class DatasourceResponse {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public DatasourceResponse build() {
             return new DatasourceResponse(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
         }

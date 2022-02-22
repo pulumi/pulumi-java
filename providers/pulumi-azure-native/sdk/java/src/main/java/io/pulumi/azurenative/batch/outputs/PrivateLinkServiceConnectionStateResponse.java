@@ -73,7 +73,6 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionRequired, description, status);
         }

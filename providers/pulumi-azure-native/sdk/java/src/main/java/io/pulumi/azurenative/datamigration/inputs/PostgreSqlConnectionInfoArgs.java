@@ -24,7 +24,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -35,7 +35,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -46,7 +46,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -57,7 +57,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -69,7 +69,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+        private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -199,7 +199,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public PostgreSqlConnectionInfoArgs build() {
             return new PostgreSqlConnectionInfoArgs(databaseName, password, port, serverName, type, userName);
         }

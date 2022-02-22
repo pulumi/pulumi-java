@@ -121,7 +121,6 @@ public final class MediaGraphRtspSourceResponse {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public MediaGraphRtspSourceResponse build() {
             return new MediaGraphRtspSourceResponse(endpoint, name, odataType, transport);
         }

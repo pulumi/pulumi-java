@@ -54,7 +54,6 @@ public final class RealtimeConfigurationResponse {
             this.maxConcurrentCalls = maxConcurrentCalls;
             return this;
         }
-
         public RealtimeConfigurationResponse build() {
             return new RealtimeConfigurationResponse(maxConcurrentCalls);
         }

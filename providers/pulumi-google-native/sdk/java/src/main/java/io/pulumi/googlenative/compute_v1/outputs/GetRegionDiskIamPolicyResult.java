@@ -142,7 +142,6 @@ public final class GetRegionDiskIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionDiskIamPolicyResult build() {
             return new GetRegionDiskIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

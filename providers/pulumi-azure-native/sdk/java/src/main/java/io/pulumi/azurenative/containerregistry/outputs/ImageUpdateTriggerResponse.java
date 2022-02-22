@@ -99,7 +99,6 @@ public final class ImageUpdateTriggerResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public ImageUpdateTriggerResponse build() {
             return new ImageUpdateTriggerResponse(id, images, timestamp);
         }

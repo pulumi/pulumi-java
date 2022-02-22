@@ -20,7 +20,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -31,14 +31,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainRedirect")
-    private final @Nullable Input<DomainRedirectArgs> domainRedirect;
+      private final @Nullable Input<DomainRedirectArgs> domainRedirect;
 
     public Input<DomainRedirectArgs> getDomainRedirect() {
         return this.domainRedirect == null ? Input.empty() : this.domainRedirect;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -49,14 +49,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="site", required=true)
-    private final Input<String> site;
+      private final Input<String> site;
 
     public Input<String> getSite() {
         return this.site;
     }
 
     @InputImport(name="siteId", required=true)
-    private final Input<String> siteId;
+      private final Input<String> siteId;
 
     public Input<String> getSiteId() {
         return this.siteId;
@@ -160,7 +160,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(domainName, domainRedirect, project, site, siteId);
         }

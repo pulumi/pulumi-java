@@ -120,7 +120,6 @@ public final class VirtualMachineIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public VirtualMachineIdentityResponse build() {
             return new VirtualMachineIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

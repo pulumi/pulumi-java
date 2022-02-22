@@ -22,7 +22,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="concurrentDispatchesCount", required=true)
-    private final String concurrentDispatchesCount;
+      private final String concurrentDispatchesCount;
 
     public String getConcurrentDispatchesCount() {
         return this.concurrentDispatchesCount;
@@ -33,7 +33,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="effectiveExecutionRate", required=true)
-    private final Double effectiveExecutionRate;
+      private final Double effectiveExecutionRate;
 
     public Double getEffectiveExecutionRate() {
         return this.effectiveExecutionRate;
@@ -44,7 +44,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="executedLastMinuteCount", required=true)
-    private final String executedLastMinuteCount;
+      private final String executedLastMinuteCount;
 
     public String getExecutedLastMinuteCount() {
         return this.executedLastMinuteCount;
@@ -55,7 +55,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oldestEstimatedArrivalTime", required=true)
-    private final String oldestEstimatedArrivalTime;
+      private final String oldestEstimatedArrivalTime;
 
     public String getOldestEstimatedArrivalTime() {
         return this.oldestEstimatedArrivalTime;
@@ -66,7 +66,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tasksCount", required=true)
-    private final String tasksCount;
+      private final String tasksCount;
 
     public String getTasksCount() {
         return this.tasksCount;
@@ -145,7 +145,6 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
             this.tasksCount = Objects.requireNonNull(tasksCount);
             return this;
         }
-
         public QueueStatsResponse build() {
             return new QueueStatsResponse(concurrentDispatchesCount, effectiveExecutionRate, executedLastMinuteCount, oldestEstimatedArrivalTime, tasksCount);
         }

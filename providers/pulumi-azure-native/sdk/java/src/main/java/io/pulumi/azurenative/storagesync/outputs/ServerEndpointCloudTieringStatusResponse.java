@@ -248,7 +248,6 @@ public final class ServerEndpointCloudTieringStatusResponse {
             this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
             return this;
         }
-
         public ServerEndpointCloudTieringStatusResponse build() {
             return new ServerEndpointCloudTieringStatusResponse(cachePerformance, datePolicyStatus, filesNotTiering, health, healthLastUpdatedTimestamp, lastCloudTieringResult, lastSuccessTimestamp, lastUpdatedTimestamp, spaceSavings, volumeFreeSpacePolicyStatus);
         }

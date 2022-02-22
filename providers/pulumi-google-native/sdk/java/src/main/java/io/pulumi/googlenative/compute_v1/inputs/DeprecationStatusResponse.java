@@ -21,7 +21,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deleted", required=true)
-    private final String deleted;
+      private final String deleted;
 
     public String getDeleted() {
         return this.deleted;
@@ -32,7 +32,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deprecated", required=true)
-    private final String deprecated;
+      private final String deprecated;
 
     public String getDeprecated() {
         return this.deprecated;
@@ -43,7 +43,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="obsolete", required=true)
-    private final String obsolete;
+      private final String obsolete;
 
     public String getObsolete() {
         return this.obsolete;
@@ -54,7 +54,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="replacement", required=true)
-    private final String replacement;
+      private final String replacement;
 
     public String getReplacement() {
         return this.replacement;
@@ -65,7 +65,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -144,7 +144,6 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public DeprecationStatusResponse build() {
             return new DeprecationStatusResponse(deleted, deprecated, obsolete, replacement, state);
         }

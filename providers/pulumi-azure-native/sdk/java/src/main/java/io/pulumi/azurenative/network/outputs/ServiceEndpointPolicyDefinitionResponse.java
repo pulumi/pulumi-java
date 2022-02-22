@@ -182,7 +182,6 @@ public final class ServiceEndpointPolicyDefinitionResponse {
             this.serviceResources = serviceResources;
             return this;
         }
-
         public ServiceEndpointPolicyDefinitionResponse build() {
             return new ServiceEndpointPolicyDefinitionResponse(description, etag, id, name, provisioningState, service, serviceResources);
         }

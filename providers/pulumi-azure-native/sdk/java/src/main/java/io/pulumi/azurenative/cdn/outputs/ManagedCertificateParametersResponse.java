@@ -54,7 +54,6 @@ public final class ManagedCertificateParametersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedCertificateParametersResponse build() {
             return new ManagedCertificateParametersResponse(type);
         }

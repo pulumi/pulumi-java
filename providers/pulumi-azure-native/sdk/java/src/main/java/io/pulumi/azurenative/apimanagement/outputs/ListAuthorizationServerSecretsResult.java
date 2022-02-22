@@ -97,7 +97,6 @@ public final class ListAuthorizationServerSecretsResult {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
-
         public ListAuthorizationServerSecretsResult build() {
             return new ListAuthorizationServerSecretsResult(clientSecret, resourceOwnerPassword, resourceOwnerUsername);
         }

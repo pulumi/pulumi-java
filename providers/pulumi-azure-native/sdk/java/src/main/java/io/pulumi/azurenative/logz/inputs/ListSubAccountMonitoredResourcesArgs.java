@@ -17,7 +17,7 @@ public final class ListSubAccountMonitoredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final String monitorName;
+        private final String monitorName;
 
     public String getMonitorName() {
         return this.monitorName;
@@ -28,7 +28,7 @@ public final class ListSubAccountMonitoredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListSubAccountMonitoredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subAccountName", required=true)
-    private final String subAccountName;
+        private final String subAccountName;
 
     public String getSubAccountName() {
         return this.subAccountName;
@@ -98,7 +98,6 @@ public final class ListSubAccountMonitoredResourcesArgs extends io.pulumi.resour
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
         }
-
         public ListSubAccountMonitoredResourcesArgs build() {
             return new ListSubAccountMonitoredResourcesArgs(monitorName, resourceGroupName, subAccountName);
         }

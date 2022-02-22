@@ -269,7 +269,6 @@ public final class GetLoadBalancerBackendAddressPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoadBalancerBackendAddressPoolResult build() {
             return new GetLoadBalancerBackendAddressPoolResult(backendIPConfigurations, etag, id, loadBalancerBackendAddresses, loadBalancingRules, location, name, outboundRule, outboundRules, provisioningState, type);
         }

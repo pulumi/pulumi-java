@@ -24,7 +24,7 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="toggleTime")
-    private final @Nullable Input<String> toggleTime;
+      private final @Nullable Input<String> toggleTime;
 
     public Input<String> getToggleTime() {
         return this.toggleTime == null ? Input.empty() : this.toggleTime;
@@ -94,7 +94,6 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
             this.toggleTime = Input.ofNullable(toggleTime);
             return this;
         }
-
         public BucketAutoclassArgs build() {
             return new BucketAutoclassArgs(enabled, toggleTime);
         }

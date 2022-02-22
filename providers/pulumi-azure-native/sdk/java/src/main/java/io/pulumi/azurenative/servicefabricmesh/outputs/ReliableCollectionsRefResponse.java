@@ -77,7 +77,6 @@ public final class ReliableCollectionsRefResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ReliableCollectionsRefResponse build() {
             return new ReliableCollectionsRefResponse(doNotPersistState, name);
         }

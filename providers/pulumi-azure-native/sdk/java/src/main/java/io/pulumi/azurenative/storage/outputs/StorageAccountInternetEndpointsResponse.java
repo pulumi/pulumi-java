@@ -116,7 +116,6 @@ public final class StorageAccountInternetEndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountInternetEndpointsResponse build() {
             return new StorageAccountInternetEndpointsResponse(blob, dfs, file, web);
         }

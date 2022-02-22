@@ -24,7 +24,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -35,7 +35,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="flushImmediately")
-    private final @Nullable Object flushImmediately;
+        private final @Nullable Object flushImmediately;
 
     public Optional<Object> getFlushImmediately() {
         return this.flushImmediately == null ? Optional.empty() : Optional.ofNullable(this.flushImmediately);
@@ -46,7 +46,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ingestionMappingAsJson")
-    private final @Nullable Object ingestionMappingAsJson;
+        private final @Nullable Object ingestionMappingAsJson;
 
     public Optional<Object> getIngestionMappingAsJson() {
         return this.ingestionMappingAsJson == null ? Optional.empty() : Optional.ofNullable(this.ingestionMappingAsJson);
@@ -57,7 +57,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ingestionMappingName")
-    private final @Nullable Object ingestionMappingName;
+        private final @Nullable Object ingestionMappingName;
 
     public Optional<Object> getIngestionMappingName() {
         return this.ingestionMappingName == null ? Optional.empty() : Optional.ofNullable(this.ingestionMappingName);
@@ -68,7 +68,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -79,7 +79,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Object sinkRetryCount;
+        private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -90,7 +90,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Object sinkRetryWait;
+        private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -102,7 +102,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -113,7 +113,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Object writeBatchSize;
+        private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -124,7 +124,7 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Object writeBatchTimeout;
+        private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -253,7 +253,6 @@ public final class AzureDataExplorerSinkResponse extends io.pulumi.resources.Inv
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureDataExplorerSinkResponse build() {
             return new AzureDataExplorerSinkResponse(disableMetricsCollection, flushImmediately, ingestionMappingAsJson, ingestionMappingName, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

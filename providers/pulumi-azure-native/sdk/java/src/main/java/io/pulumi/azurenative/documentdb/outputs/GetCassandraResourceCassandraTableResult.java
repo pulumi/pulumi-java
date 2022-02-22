@@ -168,7 +168,6 @@ public final class GetCassandraResourceCassandraTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraResourceCassandraTableResult build() {
             return new GetCassandraResourceCassandraTableResult(id, location, name, options, resource, tags, type);
         }

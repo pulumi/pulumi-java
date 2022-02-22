@@ -120,7 +120,6 @@ public final class ManagedIdentityResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(clientId, identityType, objectId, resourceId);
         }

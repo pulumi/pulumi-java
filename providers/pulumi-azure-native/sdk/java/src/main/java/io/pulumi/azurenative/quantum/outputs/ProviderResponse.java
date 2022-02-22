@@ -160,7 +160,6 @@ public final class ProviderResponse {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }

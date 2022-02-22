@@ -24,7 +24,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
      * 
      */
     @InputImport(name="publicIPPrefixes")
-    private final @Nullable Input<List<ResourceReferenceArgs>> publicIPPrefixes;
+        private final @Nullable Input<List<ResourceReferenceArgs>> publicIPPrefixes;
 
     public Input<List<ResourceReferenceArgs>> getPublicIPPrefixes() {
         return this.publicIPPrefixes == null ? Input.empty() : this.publicIPPrefixes;
@@ -67,7 +67,6 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
             this.publicIPPrefixes = Input.ofNullable(publicIPPrefixes);
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs build() {
             return new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(publicIPPrefixes);
         }

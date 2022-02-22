@@ -118,7 +118,6 @@ public final class ApiKeyAuthenticationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApiKeyAuthenticationResponse build() {
             return new ApiKeyAuthenticationResponse(in, name, type, value);
         }

@@ -22,14 +22,14 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boost")
-    private final @Nullable Input<Double> boost;
+      private final @Nullable Input<Double> boost;
 
     public Input<Double> getBoost() {
         return this.boost == null ? Input.empty() : this.boost;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -40,7 +40,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -51,7 +51,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phraseSetId", required=true)
-    private final Input<String> phraseSetId;
+      private final Input<String> phraseSetId;
 
     public Input<String> getPhraseSetId() {
         return this.phraseSetId;
@@ -62,14 +62,14 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phrases")
-    private final @Nullable Input<List<PhraseArgs>> phrases;
+      private final @Nullable Input<List<PhraseArgs>> phrases;
 
     public Input<List<PhraseArgs>> getPhrases() {
         return this.phrases == null ? Input.empty() : this.phrases;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -188,7 +188,6 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public PhraseSetArgs build() {
             return new PhraseSetArgs(boost, location, name, phraseSetId, phrases, project);
         }

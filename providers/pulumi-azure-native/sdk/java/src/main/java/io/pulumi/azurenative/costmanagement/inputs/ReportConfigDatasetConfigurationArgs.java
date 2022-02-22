@@ -24,7 +24,7 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<String>> columns;
+        private final @Nullable Input<List<String>> columns;
 
     public Input<List<String>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -67,7 +67,6 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
             this.columns = Input.ofNullable(columns);
             return this;
         }
-
         public ReportConfigDatasetConfigurationArgs build() {
             return new ReportConfigDatasetConfigurationArgs(columns);
         }

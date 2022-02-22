@@ -13,21 +13,21 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @InputImport(name="developerId", required=true)
-    private final String developerId;
+      private final String developerId;
 
     public String getDeveloperId() {
         return this.developerId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+      private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -86,7 +86,6 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public GetSubscriptionArgs build() {
             return new GetSubscriptionArgs(developerId, organizationId, subscriptionId);
         }

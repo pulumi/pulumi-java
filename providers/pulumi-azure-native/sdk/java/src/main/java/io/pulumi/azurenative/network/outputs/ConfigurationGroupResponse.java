@@ -183,7 +183,6 @@ public final class ConfigurationGroupResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ConfigurationGroupResponse build() {
             return new ConfigurationGroupResponse(conditionalMembership, description, displayName, groupMembers, id, memberType, provisioningState);
         }

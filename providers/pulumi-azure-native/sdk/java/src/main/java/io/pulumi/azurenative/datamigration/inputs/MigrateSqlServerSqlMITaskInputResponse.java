@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupBlobShare", required=true)
-    private final BlobShareResponse backupBlobShare;
+        private final BlobShareResponse backupBlobShare;
 
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable FileShareResponse backupFileShare;
+        private final @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> getBackupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupMode")
-    private final @Nullable String backupMode;
+        private final @Nullable String backupMode;
 
     public Optional<String> getBackupMode() {
         return this.backupMode == null ? Optional.empty() : Optional.ofNullable(this.backupMode);
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedAgentJobs")
-    private final @Nullable List<String> selectedAgentJobs;
+        private final @Nullable List<String> selectedAgentJobs;
 
     public List<String> getSelectedAgentJobs() {
         return this.selectedAgentJobs == null ? List.of() : this.selectedAgentJobs;
@@ -72,7 +72,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+        private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -83,7 +83,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedLogins")
-    private final @Nullable List<String> selectedLogins;
+        private final @Nullable List<String> selectedLogins;
 
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
@@ -94,7 +94,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse sourceConnectionInfo;
+        private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -105,7 +105,7 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse targetConnectionInfo;
+        private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -214,7 +214,6 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskInputResponse build() {
             return new MigrateSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedAgentJobs, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

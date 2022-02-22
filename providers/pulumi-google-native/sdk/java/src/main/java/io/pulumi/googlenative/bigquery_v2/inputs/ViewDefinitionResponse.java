@@ -20,7 +20,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -31,7 +31,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="useExplicitColumnNames", required=true)
-    private final Boolean useExplicitColumnNames;
+      private final Boolean useExplicitColumnNames;
 
     public Boolean getUseExplicitColumnNames() {
         return this.useExplicitColumnNames;
@@ -42,7 +42,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="useLegacySql", required=true)
-    private final Boolean useLegacySql;
+      private final Boolean useLegacySql;
 
     public Boolean getUseLegacySql() {
         return this.useLegacySql;
@@ -53,7 +53,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userDefinedFunctionResources", required=true)
-    private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
+      private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
@@ -122,7 +122,6 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }
-
         public ViewDefinitionResponse build() {
             return new ViewDefinitionResponse(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }

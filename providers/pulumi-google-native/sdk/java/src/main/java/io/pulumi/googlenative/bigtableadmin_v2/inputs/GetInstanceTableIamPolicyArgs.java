@@ -15,21 +15,21 @@ public final class GetInstanceTableIamPolicyArgs extends io.pulumi.resources.Inv
     public static final GetInstanceTableIamPolicyArgs Empty = new GetInstanceTableIamPolicyArgs();
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -88,7 +88,6 @@ public final class GetInstanceTableIamPolicyArgs extends io.pulumi.resources.Inv
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public GetInstanceTableIamPolicyArgs build() {
             return new GetInstanceTableIamPolicyArgs(instanceId, project, tableId);
         }

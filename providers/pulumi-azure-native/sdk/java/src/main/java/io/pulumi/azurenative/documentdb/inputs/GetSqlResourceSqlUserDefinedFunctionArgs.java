@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="userDefinedFunctionName", required=true)
-    private final String userDefinedFunctionName;
+        private final String userDefinedFunctionName;
 
     public String getUserDefinedFunctionName() {
         return this.userDefinedFunctionName;
@@ -140,7 +140,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
             this.userDefinedFunctionName = Objects.requireNonNull(userDefinedFunctionName);
             return this;
         }
-
         public GetSqlResourceSqlUserDefinedFunctionArgs build() {
             return new GetSqlResourceSqlUserDefinedFunctionArgs(accountName, containerName, databaseName, resourceGroupName, userDefinedFunctionName);
         }

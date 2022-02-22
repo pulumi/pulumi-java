@@ -52,7 +52,6 @@ public final class Gen2StorageConfigurationOutputResponse {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Gen2StorageConfigurationOutputResponse build() {
             return new Gen2StorageConfigurationOutputResponse(accountName);
         }

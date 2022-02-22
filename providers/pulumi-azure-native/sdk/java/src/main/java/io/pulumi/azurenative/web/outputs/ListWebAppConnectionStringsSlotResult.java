@@ -141,7 +141,6 @@ public final class ListWebAppConnectionStringsSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppConnectionStringsSlotResult build() {
             return new ListWebAppConnectionStringsSlotResult(id, kind, name, properties, type);
         }

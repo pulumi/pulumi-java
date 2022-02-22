@@ -159,7 +159,6 @@ public final class SSLHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public SSLHealthCheckResponse build() {
             return new SSLHealthCheckResponse(port, portName, portSpecification, proxyHeader, request, response);
         }

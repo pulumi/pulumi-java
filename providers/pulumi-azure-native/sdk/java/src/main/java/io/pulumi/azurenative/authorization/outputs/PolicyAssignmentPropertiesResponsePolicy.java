@@ -98,7 +98,6 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
             this.lastModifiedDateTime = lastModifiedDateTime;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponsePolicy build() {
             return new PolicyAssignmentPropertiesResponsePolicy(id, lastModifiedBy, lastModifiedDateTime);
         }

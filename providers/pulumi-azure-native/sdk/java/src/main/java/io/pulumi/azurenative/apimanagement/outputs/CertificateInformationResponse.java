@@ -95,7 +95,6 @@ public final class CertificateInformationResponse {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public CertificateInformationResponse build() {
             return new CertificateInformationResponse(expiry, subject, thumbprint);
         }

@@ -25,7 +25,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * 
      */
     @InputImport(name="cloudSql")
-    private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
+      private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
     public Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> getCloudSql() {
         return this.cloudSql == null ? Input.empty() : this.cloudSql;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * 
      */
     @InputImport(name="connectionType")
-    private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
+      private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
     public Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> getConnectionType() {
         return this.connectionType == null ? Input.empty() : this.connectionType;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * 
      */
     @InputImport(name="hasCredential")
-    private final @Nullable Input<Boolean> hasCredential;
+      private final @Nullable Input<Boolean> hasCredential;
 
     public Input<Boolean> getHasCredential() {
         return this.hasCredential == null ? Input.empty() : this.hasCredential;
@@ -121,7 +121,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
             this.hasCredential = Input.ofNullable(hasCredential);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(cloudSql, connectionType, hasCredential);
         }

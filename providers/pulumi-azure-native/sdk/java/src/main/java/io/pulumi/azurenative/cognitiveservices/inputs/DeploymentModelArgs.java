@@ -23,7 +23,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+        private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -34,7 +34,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -119,7 +119,6 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public DeploymentModelArgs build() {
             return new DeploymentModelArgs(format, name, version);
         }

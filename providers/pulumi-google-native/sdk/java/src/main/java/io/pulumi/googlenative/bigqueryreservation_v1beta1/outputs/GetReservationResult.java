@@ -138,7 +138,6 @@ public final class GetReservationResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetReservationResult build() {
             return new GetReservationResult(creationTime, ignoreIdleSlots, name, slotCapacity, updateTime);
         }

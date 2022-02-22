@@ -76,7 +76,6 @@ public final class TextStreamResponse {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
-
         public TextStreamResponse build() {
             return new TextStreamResponse(codec, mapping);
         }

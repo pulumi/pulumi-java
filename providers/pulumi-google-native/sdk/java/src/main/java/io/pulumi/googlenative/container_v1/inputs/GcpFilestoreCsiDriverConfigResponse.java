@@ -21,7 +21,7 @@ public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resourc
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcpFilestoreCsiDriverConfigResponse build() {
             return new GcpFilestoreCsiDriverConfigResponse(enabled);
         }

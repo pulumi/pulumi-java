@@ -21,7 +21,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServiceLocation")
-    private final @Nullable Input<String> peeringServiceLocation;
+        private final @Nullable Input<String> peeringServiceLocation;
 
     public Input<String> getPeeringServiceLocation() {
         return this.peeringServiceLocation == null ? Input.empty() : this.peeringServiceLocation;
@@ -43,7 +43,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServiceName")
-    private final @Nullable Input<String> peeringServiceName;
+        private final @Nullable Input<String> peeringServiceName;
 
     public Input<String> getPeeringServiceName() {
         return this.peeringServiceName == null ? Input.empty() : this.peeringServiceName;
@@ -54,7 +54,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServiceProvider")
-    private final @Nullable Input<String> peeringServiceProvider;
+        private final @Nullable Input<String> peeringServiceProvider;
 
     public Input<String> getPeeringServiceProvider() {
         return this.peeringServiceProvider == null ? Input.empty() : this.peeringServiceProvider;
@@ -65,7 +65,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerBackupPeeringLocation")
-    private final @Nullable Input<String> providerBackupPeeringLocation;
+        private final @Nullable Input<String> providerBackupPeeringLocation;
 
     public Input<String> getProviderBackupPeeringLocation() {
         return this.providerBackupPeeringLocation == null ? Input.empty() : this.providerBackupPeeringLocation;
@@ -76,7 +76,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerPrimaryPeeringLocation")
-    private final @Nullable Input<String> providerPrimaryPeeringLocation;
+        private final @Nullable Input<String> providerPrimaryPeeringLocation;
 
     public Input<String> getProviderPrimaryPeeringLocation() {
         return this.providerPrimaryPeeringLocation == null ? Input.empty() : this.providerPrimaryPeeringLocation;
@@ -87,7 +87,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<PeeringServiceSkuArgs> sku;
+        private final @Nullable Input<PeeringServiceSkuArgs> sku;
 
     public Input<PeeringServiceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -109,7 +109,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -273,7 +273,6 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PeeringServiceArgs build() {
             return new PeeringServiceArgs(location, peeringServiceLocation, peeringServiceName, peeringServiceProvider, providerBackupPeeringLocation, providerPrimaryPeeringLocation, resourceGroupName, sku, tags);
         }

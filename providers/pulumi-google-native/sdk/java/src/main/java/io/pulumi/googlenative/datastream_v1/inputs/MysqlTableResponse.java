@@ -23,7 +23,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlColumns", required=true)
-    private final List<MysqlColumnResponse> mysqlColumns;
+      private final List<MysqlColumnResponse> mysqlColumns;
 
     public List<MysqlColumnResponse> getMysqlColumns() {
         return this.mysqlColumns;
@@ -34,7 +34,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="table", required=true)
-    private final String table;
+      private final String table;
 
     public String getTable() {
         return this.table;
@@ -83,7 +83,6 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, table);
         }

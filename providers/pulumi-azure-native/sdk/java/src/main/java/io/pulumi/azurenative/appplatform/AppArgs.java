@@ -21,7 +21,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-    private final @Nullable Input<String> appName;
+        private final @Nullable Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName == null ? Input.empty() : this.appName;
@@ -32,7 +32,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedIdentityPropertiesArgs> identity;
+        private final @Nullable Input<ManagedIdentityPropertiesArgs> identity;
 
     public Input<ManagedIdentityPropertiesArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -43,7 +43,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<AppResourcePropertiesArgs> properties;
+        private final @Nullable Input<AppResourcePropertiesArgs> properties;
 
     public Input<AppResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -65,7 +65,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -195,7 +195,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(appName, identity, location, properties, resourceGroupName, serviceName);
         }

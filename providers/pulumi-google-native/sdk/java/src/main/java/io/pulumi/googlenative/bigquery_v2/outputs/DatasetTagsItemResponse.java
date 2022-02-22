@@ -74,7 +74,6 @@ public final class DatasetTagsItemResponse {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public DatasetTagsItemResponse build() {
             return new DatasetTagsItemResponse(tagKey, tagValue);
         }

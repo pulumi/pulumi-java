@@ -23,7 +23,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="product")
-    private final @Nullable Input<String> product;
+        private final @Nullable Input<String> product;
 
     public Input<String> getProduct() {
         return this.product == null ? Input.empty() : this.product;
@@ -45,7 +45,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -119,7 +119,6 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
-
         public ImagePurchasePlanArgs build() {
             return new ImagePurchasePlanArgs(name, product, publisher);
         }

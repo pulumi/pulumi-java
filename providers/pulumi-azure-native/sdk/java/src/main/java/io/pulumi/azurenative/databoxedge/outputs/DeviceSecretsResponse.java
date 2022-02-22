@@ -202,7 +202,6 @@ public final class DeviceSecretsResponse {
             this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;
         }
-
         public DeviceSecretsResponse build() {
             return new DeviceSecretsResponse(bmcDefaultUserPassword, hcsDataVolumeBitLockerExternalKey, hcsInternalVolumeBitLockerExternalKey, rotateKeyForDataVolumeBitlocker, rotateKeysForSedDrivesSerialized, sedEncryptionExternalKey, sedEncryptionExternalKeyId, systemVolumeBitLockerRecoveryKey);
         }

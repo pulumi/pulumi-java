@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
      * 
      */
     @InputImport(name="boundingBoxEvaluationOptions")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
     public Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions == null ? Input.empty() : this.boundingBoxEvaluationOptions;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
             this.boundingBoxEvaluationOptions = Input.ofNullable(boundingBoxEvaluationOptions);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(boundingBoxEvaluationOptions);
         }

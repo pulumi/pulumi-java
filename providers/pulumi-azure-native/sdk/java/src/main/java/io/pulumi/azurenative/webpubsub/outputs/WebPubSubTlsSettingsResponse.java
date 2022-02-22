@@ -54,7 +54,6 @@ public final class WebPubSubTlsSettingsResponse {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
-
         public WebPubSubTlsSettingsResponse build() {
             return new WebPubSubTlsSettingsResponse(clientCertEnabled);
         }

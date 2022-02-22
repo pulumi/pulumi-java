@@ -22,7 +22,7 @@ public final class KeyVaultResourceSettingsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -33,7 +33,7 @@ public final class KeyVaultResourceSettingsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+        private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -82,7 +82,6 @@ public final class KeyVaultResourceSettingsResponse extends io.pulumi.resources.
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public KeyVaultResourceSettingsResponse build() {
             return new KeyVaultResourceSettingsResponse(resourceType, targetResourceName);
         }

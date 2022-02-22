@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
      * 
      */
     @InputImport(name="auxiliaryTables")
-    private final @Nullable Input<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables;
+      private final @Nullable Input<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables;
 
     public Input<List<GooglePrivacyDlpV2StatisticalTableArgs>> getAuxiliaryTables() {
         return this.auxiliaryTables == null ? Input.empty() : this.auxiliaryTables;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final Input<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds;
+      private final Input<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds;
 
     public Input<List<GooglePrivacyDlpV2QuasiIdArgs>> getQuasiIds() {
         return this.quasiIds;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
      * 
      */
     @InputImport(name="regionCode")
-    private final @Nullable Input<String> regionCode;
+      private final @Nullable Input<String> regionCode;
 
     public Input<String> getRegionCode() {
         return this.regionCode == null ? Input.empty() : this.regionCode;
@@ -122,7 +122,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
             this.regionCode = Input.ofNullable(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs(auxiliaryTables, quasiIds, regionCode);
         }

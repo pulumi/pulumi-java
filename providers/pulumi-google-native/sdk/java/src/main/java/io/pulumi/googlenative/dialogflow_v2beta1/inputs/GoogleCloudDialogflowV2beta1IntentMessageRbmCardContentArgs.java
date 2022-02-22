@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
      * 
      */
     @InputImport(name="media")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> getMedia() {
         return this.media == null ? Input.empty() : this.media;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
      * 
      */
     @InputImport(name="suggestions")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getSuggestions() {
         return this.suggestions == null ? Input.empty() : this.suggestions;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -148,7 +148,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs(description, media, suggestions, title);
         }

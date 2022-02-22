@@ -137,7 +137,6 @@ public final class MessageCountDetailsResponse {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
         }
-
         public MessageCountDetailsResponse build() {
             return new MessageCountDetailsResponse(activeMessageCount, deadLetterMessageCount, scheduledMessageCount, transferDeadLetterMessageCount, transferMessageCount);
         }

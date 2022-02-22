@@ -142,7 +142,6 @@ public final class ImageTemplateShellCustomizerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateShellCustomizerResponse build() {
             return new ImageTemplateShellCustomizerResponse(inline, name, scriptUri, sha256Checksum, type);
         }

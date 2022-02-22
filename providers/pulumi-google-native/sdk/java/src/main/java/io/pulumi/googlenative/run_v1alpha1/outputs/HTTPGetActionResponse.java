@@ -118,7 +118,6 @@ public final class HTTPGetActionResponse {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public HTTPGetActionResponse build() {
             return new HTTPGetActionResponse(host, httpHeaders, path, scheme);
         }

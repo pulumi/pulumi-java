@@ -25,7 +25,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,Type>> type;
+        private final @Nullable Input<Either<String,Type>> type;
 
     public Input<Either<String,Type>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public IdentityArgs build() {
             return new IdentityArgs(type);
         }

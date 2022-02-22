@@ -88,7 +88,6 @@ public final class Container {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Container build() {
             return new Container(brightness, color, material, size);
         }

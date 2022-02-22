@@ -120,7 +120,6 @@ public final class ClusterDefinitionResponse {
             this.kind = kind;
             return this;
         }
-
         public ClusterDefinitionResponse build() {
             return new ClusterDefinitionResponse(blueprint, componentVersion, configurations, kind);
         }

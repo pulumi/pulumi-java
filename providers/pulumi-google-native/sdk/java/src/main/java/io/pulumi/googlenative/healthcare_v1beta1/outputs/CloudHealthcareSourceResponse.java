@@ -52,7 +52,6 @@ public final class CloudHealthcareSourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public CloudHealthcareSourceResponse build() {
             return new CloudHealthcareSourceResponse(name);
         }

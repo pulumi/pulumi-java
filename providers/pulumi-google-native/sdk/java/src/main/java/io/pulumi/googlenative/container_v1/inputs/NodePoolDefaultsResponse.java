@@ -21,7 +21,7 @@ public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nodeConfigDefaults", required=true)
-    private final NodeConfigDefaultsResponse nodeConfigDefaults;
+      private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
     public NodeConfigDefaultsResponse getNodeConfigDefaults() {
         return this.nodeConfigDefaults;
@@ -59,7 +59,6 @@ public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeAr
             this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
             return this;
         }
-
         public NodePoolDefaultsResponse build() {
             return new NodePoolDefaultsResponse(nodeConfigDefaults);
         }

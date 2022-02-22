@@ -100,7 +100,6 @@ public final class Mp4FormatResponse {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public Mp4FormatResponse build() {
             return new Mp4FormatResponse(filenamePattern, odataType, outputFiles);
         }

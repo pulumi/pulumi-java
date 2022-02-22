@@ -58,7 +58,6 @@ public final class UpcomingMaintenanceTimeWindowResponse {
             this.latest = Objects.requireNonNull(latest);
             return this;
         }
-
         public UpcomingMaintenanceTimeWindowResponse build() {
             return new UpcomingMaintenanceTimeWindowResponse(earliest, latest);
         }

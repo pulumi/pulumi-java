@@ -309,7 +309,6 @@ public final class GetAgentResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GetAgentResult build() {
             return new GetAgentResult(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, name, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }

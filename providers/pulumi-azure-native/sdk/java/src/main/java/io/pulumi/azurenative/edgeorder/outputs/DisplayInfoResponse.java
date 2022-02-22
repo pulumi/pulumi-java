@@ -74,7 +74,6 @@ public final class DisplayInfoResponse {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
         }
-
         public DisplayInfoResponse build() {
             return new DisplayInfoResponse(configurationDisplayName, productFamilyDisplayName);
         }

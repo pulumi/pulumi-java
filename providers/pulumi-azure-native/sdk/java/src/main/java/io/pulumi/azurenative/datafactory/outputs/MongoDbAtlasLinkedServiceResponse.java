@@ -188,7 +188,6 @@ public final class MongoDbAtlasLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbAtlasLinkedServiceResponse build() {
             return new MongoDbAtlasLinkedServiceResponse(annotations, connectVia, connectionString, database, description, parameters, type);
         }

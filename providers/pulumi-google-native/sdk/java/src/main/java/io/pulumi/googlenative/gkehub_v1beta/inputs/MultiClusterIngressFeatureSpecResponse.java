@@ -21,7 +21,7 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="configMembership", required=true)
-    private final String configMembership;
+      private final String configMembership;
 
     public String getConfigMembership() {
         return this.configMembership;
@@ -59,7 +59,6 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
-
         public MultiClusterIngressFeatureSpecResponse build() {
             return new MultiClusterIngressFeatureSpecResponse(configMembership);
         }

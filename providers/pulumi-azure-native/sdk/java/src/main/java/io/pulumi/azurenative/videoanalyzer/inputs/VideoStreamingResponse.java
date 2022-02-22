@@ -29,7 +29,7 @@ public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="archiveBaseUrl")
-    private final @Nullable String archiveBaseUrl;
+        private final @Nullable String archiveBaseUrl;
 
     public Optional<String> getArchiveBaseUrl() {
         return this.archiveBaseUrl == null ? Optional.empty() : Optional.ofNullable(this.archiveBaseUrl);
@@ -67,7 +67,6 @@ public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
         }
-
         public VideoStreamingResponse build() {
             return new VideoStreamingResponse(archiveBaseUrl);
         }

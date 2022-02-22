@@ -23,7 +23,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUri")
-    private final @Nullable Input<String> fileUri;
+      private final @Nullable Input<String> fileUri;
 
     public Input<String> getFileUri() {
         return this.fileUri == null ? Input.empty() : this.fileUri;
@@ -66,7 +66,6 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.fileUri = Input.ofNullable(fileUri);
             return this;
         }
-
         public FileReferenceArgs build() {
             return new FileReferenceArgs(fileUri);
         }

@@ -268,7 +268,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoPoolAttachedDatabaseConfigurationResult build() {
             return new GetKustoPoolAttachedDatabaseConfigurationResult(attachedDatabaseNames, databaseName, defaultPrincipalsModificationKind, id, kustoPoolResourceId, location, name, provisioningState, systemData, tableLevelSharingProperties, type);
         }

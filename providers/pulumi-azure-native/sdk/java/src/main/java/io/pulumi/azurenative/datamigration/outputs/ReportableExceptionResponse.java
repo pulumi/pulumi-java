@@ -161,7 +161,6 @@ public final class ReportableExceptionResponse {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ReportableExceptionResponse build() {
             return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
         }

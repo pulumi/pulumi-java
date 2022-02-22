@@ -160,7 +160,6 @@ public final class GetWorkerPoolResult {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(autoscale, channel, name, state, workerConfig, workerCount);
         }

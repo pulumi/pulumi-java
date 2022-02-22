@@ -77,7 +77,6 @@ public final class SizeAvailabilityResponse {
             this.sizeCategory = sizeCategory;
             return this;
         }
-
         public SizeAvailabilityResponse build() {
             return new SizeAvailabilityResponse(isAvailable, sizeCategory);
         }

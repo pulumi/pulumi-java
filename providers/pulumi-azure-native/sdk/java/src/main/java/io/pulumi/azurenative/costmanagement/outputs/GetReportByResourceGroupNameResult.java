@@ -206,7 +206,6 @@ public final class GetReportByResourceGroupNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReportByResourceGroupNameResult build() {
             return new GetReportByResourceGroupNameResult(definition, deliveryInfo, format, id, name, schedule, tags, type);
         }

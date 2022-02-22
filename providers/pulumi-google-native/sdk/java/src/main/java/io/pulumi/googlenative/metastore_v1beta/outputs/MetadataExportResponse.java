@@ -137,7 +137,6 @@ public final class MetadataExportResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MetadataExportResponse build() {
             return new MetadataExportResponse(databaseDumpType, destinationGcsUri, endTime, startTime, state);
         }

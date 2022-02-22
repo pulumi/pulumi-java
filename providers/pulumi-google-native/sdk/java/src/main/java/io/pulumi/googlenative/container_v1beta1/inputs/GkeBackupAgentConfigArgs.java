@@ -23,7 +23,7 @@ public final class GkeBackupAgentConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class GkeBackupAgentConfigArgs extends io.pulumi.resources.Resource
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public GkeBackupAgentConfigArgs build() {
             return new GkeBackupAgentConfigArgs(enabled);
         }

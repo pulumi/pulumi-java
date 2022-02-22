@@ -27,7 +27,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetType")
-    private final @Nullable Input<Either<String,DatasetType>> datasetType;
+        private final @Nullable Input<Either<String,DatasetType>> datasetType;
 
     public Input<Either<String,DatasetType>> getDatasetType() {
         return this.datasetType == null ? Input.empty() : this.datasetType;
@@ -38,7 +38,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable Input<String> datastoreId;
+        private final @Nullable Input<String> datastoreId;
 
     public Input<String> getDatastoreId() {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
@@ -49,7 +49,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAnonymous")
-    private final @Nullable Input<Boolean> isAnonymous;
+        private final @Nullable Input<Boolean> isAnonymous;
 
     public Input<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
@@ -71,7 +71,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -82,7 +82,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -93,7 +93,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -227,7 +227,6 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DataVersionArgs build() {
             return new DataVersionArgs(datasetType, datastoreId, description, isAnonymous, path, properties, tags);
         }

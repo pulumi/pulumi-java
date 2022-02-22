@@ -98,7 +98,6 @@ public final class EndpointPropertiesResponseSubnets {
             this.scope = scope;
             return this;
         }
-
         public EndpointPropertiesResponseSubnets build() {
             return new EndpointPropertiesResponseSubnets(first, last, scope);
         }

@@ -99,7 +99,6 @@ public final class ManagementPolicyActionResponse {
             this.version = version;
             return this;
         }
-
         public ManagementPolicyActionResponse build() {
             return new ManagementPolicyActionResponse(baseBlob, snapshot, version);
         }

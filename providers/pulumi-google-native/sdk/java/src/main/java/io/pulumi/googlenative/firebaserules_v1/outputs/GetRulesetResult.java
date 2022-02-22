@@ -118,7 +118,6 @@ public final class GetRulesetResult {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetRulesetResult build() {
             return new GetRulesetResult(createTime, metadata, name, source);
         }

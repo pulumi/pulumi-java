@@ -117,7 +117,6 @@ public final class AndroidMatrixResponse {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
-
         public AndroidMatrixResponse build() {
             return new AndroidMatrixResponse(androidModelIds, androidVersionIds, locales, orientations);
         }

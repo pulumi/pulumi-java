@@ -23,7 +23,7 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Integer> day;
+      private final @Nullable Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -34,7 +34,7 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="month")
-    private final @Nullable Input<Integer> month;
+      private final @Nullable Input<Integer> month;
 
     public Input<Integer> getMonth() {
         return this.month == null ? Input.empty() : this.month;
@@ -45,7 +45,7 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="year")
-    private final @Nullable Input<Integer> year;
+      private final @Nullable Input<Integer> year;
 
     public Input<Integer> getYear() {
         return this.year == null ? Input.empty() : this.year;
@@ -119,7 +119,6 @@ public final class GoogleTypeDateArgs extends io.pulumi.resources.ResourceArgs {
             this.year = Input.ofNullable(year);
             return this;
         }
-
         public GoogleTypeDateArgs build() {
             return new GoogleTypeDateArgs(day, month, year);
         }

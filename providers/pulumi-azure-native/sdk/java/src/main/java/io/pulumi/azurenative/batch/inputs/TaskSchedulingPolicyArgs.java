@@ -14,7 +14,7 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     public static final TaskSchedulingPolicyArgs Empty = new TaskSchedulingPolicyArgs();
 
     @InputImport(name="nodeFillType", required=true)
-    private final Input<ComputeNodeFillType> nodeFillType;
+        private final Input<ComputeNodeFillType> nodeFillType;
 
     public Input<ComputeNodeFillType> getNodeFillType() {
         return this.nodeFillType;
@@ -57,7 +57,6 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
             this.nodeFillType = Input.of(Objects.requireNonNull(nodeFillType));
             return this;
         }
-
         public TaskSchedulingPolicyArgs build() {
             return new TaskSchedulingPolicyArgs(nodeFillType);
         }

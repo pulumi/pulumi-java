@@ -58,7 +58,6 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
-
         public ServiceTypeDeltaHealthPolicyResponse build() {
             return new ServiceTypeDeltaHealthPolicyResponse(maxPercentDeltaUnhealthyServices);
         }

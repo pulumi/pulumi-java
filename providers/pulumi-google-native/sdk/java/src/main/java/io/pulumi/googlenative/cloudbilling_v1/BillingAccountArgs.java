@@ -19,7 +19,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -30,7 +30,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterBillingAccount")
-    private final @Nullable Input<String> masterBillingAccount;
+      private final @Nullable Input<String> masterBillingAccount;
 
     public Input<String> getMasterBillingAccount() {
         return this.masterBillingAccount == null ? Input.empty() : this.masterBillingAccount;
@@ -89,7 +89,6 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.masterBillingAccount = Input.ofNullable(masterBillingAccount);
             return this;
         }
-
         public BillingAccountArgs build() {
             return new BillingAccountArgs(displayName, masterBillingAccount);
         }

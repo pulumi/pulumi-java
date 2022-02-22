@@ -95,7 +95,6 @@ public final class IdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(principalId, tenantId, type);
         }

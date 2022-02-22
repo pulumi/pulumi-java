@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @InputImport(name="ssml")
-    private final @Nullable Input<String> ssml;
+      private final @Nullable Input<String> ssml;
 
     public Input<String> getSsml() {
         return this.ssml == null ? Input.empty() : this.ssml;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(ssml, text);
         }

@@ -54,7 +54,6 @@ public final class ResourceIdResponse {
             this.id = id;
             return this;
         }
-
         public ResourceIdResponse build() {
             return new ResourceIdResponse(id);
         }

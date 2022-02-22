@@ -297,7 +297,6 @@ public final class EncodedTaskRunRequestResponse {
             this.values = values;
             return this;
         }
-
         public EncodedTaskRunRequestResponse build() {
             return new EncodedTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }

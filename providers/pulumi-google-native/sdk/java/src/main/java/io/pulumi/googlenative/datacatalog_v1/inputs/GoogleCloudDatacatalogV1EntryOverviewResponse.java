@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
      * 
      */
     @InputImport(name="overview", required=true)
-    private final String overview;
+      private final String overview;
 
     public String getOverview() {
         return this.overview;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
             return new GoogleCloudDatacatalogV1EntryOverviewResponse(overview);
         }

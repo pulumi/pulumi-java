@@ -22,7 +22,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="allowedValues", required=true)
-    private final List<String> allowedValues;
+      private final List<String> allowedValues;
 
     public List<String> getAllowedValues() {
         return this.allowedValues;
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @InputImport(name="policy", required=true)
-    private final String policy;
+      private final String policy;
 
     public String getPolicy() {
         return this.policy;
@@ -82,7 +82,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(allowedValues, policy);
         }

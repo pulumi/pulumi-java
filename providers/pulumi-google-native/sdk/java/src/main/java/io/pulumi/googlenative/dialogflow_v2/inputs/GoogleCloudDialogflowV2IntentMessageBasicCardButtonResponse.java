@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
+      private final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
 
     public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse getOpenUriAction() {
         return this.openUriAction;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(openUriAction, title);
         }

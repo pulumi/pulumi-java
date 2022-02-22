@@ -116,7 +116,6 @@ public final class GatewayConfigResponse {
             this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
             return this;
         }
-
         public GatewayConfigResponse build() {
             return new GatewayConfigResponse(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }

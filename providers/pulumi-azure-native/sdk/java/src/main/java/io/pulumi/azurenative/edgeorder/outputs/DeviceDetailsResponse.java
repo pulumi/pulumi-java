@@ -95,7 +95,6 @@ public final class DeviceDetailsResponse {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public DeviceDetailsResponse build() {
             return new DeviceDetailsResponse(managementResourceId, managementResourceTenantId, serialNumber);
         }

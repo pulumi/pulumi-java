@@ -161,7 +161,6 @@ public final class SubnetworkLogConfigResponse {
             this.metadataFields = Objects.requireNonNull(metadataFields);
             return this;
         }
-
         public SubnetworkLogConfigResponse build() {
             return new SubnetworkLogConfigResponse(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
         }

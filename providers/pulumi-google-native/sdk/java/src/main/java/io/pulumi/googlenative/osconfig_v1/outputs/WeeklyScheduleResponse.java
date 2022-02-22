@@ -52,7 +52,6 @@ public final class WeeklyScheduleResponse {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public WeeklyScheduleResponse build() {
             return new WeeklyScheduleResponse(dayOfWeek);
         }

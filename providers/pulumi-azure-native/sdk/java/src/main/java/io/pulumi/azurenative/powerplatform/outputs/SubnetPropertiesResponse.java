@@ -54,7 +54,6 @@ public final class SubnetPropertiesResponse {
             this.name = name;
             return this;
         }
-
         public SubnetPropertiesResponse build() {
             return new SubnetPropertiesResponse(name);
         }

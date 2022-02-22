@@ -74,7 +74,6 @@ public final class EventFilterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventFilterResponse build() {
             return new EventFilterResponse(attribute, value);
         }

@@ -75,7 +75,6 @@ public final class TCPSocketActionResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TCPSocketActionResponse build() {
             return new TCPSocketActionResponse(host, port);
         }

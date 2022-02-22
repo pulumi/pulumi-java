@@ -23,7 +23,7 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -83,7 +83,6 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public StorageInsightStatusResponse build() {
             return new StorageInsightStatusResponse(description, state);
         }

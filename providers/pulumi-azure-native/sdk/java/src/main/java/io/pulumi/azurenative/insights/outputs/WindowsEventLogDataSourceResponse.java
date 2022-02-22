@@ -102,7 +102,6 @@ public final class WindowsEventLogDataSourceResponse {
             this.xPathQueries = xPathQueries;
             return this;
         }
-
         public WindowsEventLogDataSourceResponse build() {
             return new WindowsEventLogDataSourceResponse(name, streams, xPathQueries);
         }

@@ -52,7 +52,6 @@ public final class KeyVaultReferenceResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public KeyVaultReferenceResponse build() {
             return new KeyVaultReferenceResponse(id);
         }

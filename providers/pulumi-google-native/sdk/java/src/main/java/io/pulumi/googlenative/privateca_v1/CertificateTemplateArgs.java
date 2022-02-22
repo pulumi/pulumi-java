@@ -19,7 +19,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     public static final CertificateTemplateArgs Empty = new CertificateTemplateArgs();
 
     @InputImport(name="certificateTemplateId", required=true)
-    private final Input<String> certificateTemplateId;
+      private final Input<String> certificateTemplateId;
 
     public Input<String> getCertificateTemplateId() {
         return this.certificateTemplateId;
@@ -30,7 +30,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="identityConstraints")
-    private final @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
+      private final @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
 
     public Input<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
         return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
@@ -52,14 +52,14 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="passthroughExtensions")
-    private final @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
+      private final @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
     public Input<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
         return this.passthroughExtensions == null ? Input.empty() : this.passthroughExtensions;
@@ -81,21 +81,21 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="predefinedValues")
-    private final @Nullable Input<X509ParametersArgs> predefinedValues;
+      private final @Nullable Input<X509ParametersArgs> predefinedValues;
 
     public Input<X509ParametersArgs> getPredefinedValues() {
         return this.predefinedValues == null ? Input.empty() : this.predefinedValues;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -259,7 +259,6 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public CertificateTemplateArgs build() {
             return new CertificateTemplateArgs(certificateTemplateId, description, identityConstraints, labels, location, passthroughExtensions, predefinedValues, project, requestId);
         }

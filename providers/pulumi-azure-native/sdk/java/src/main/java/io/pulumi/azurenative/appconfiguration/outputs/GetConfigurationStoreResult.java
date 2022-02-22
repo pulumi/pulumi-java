@@ -313,7 +313,6 @@ public final class GetConfigurationStoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationStoreResult build() {
             return new GetConfigurationStoreResult(creationDate, encryption, endpoint, id, identity, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, tags, type);
         }

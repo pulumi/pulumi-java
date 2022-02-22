@@ -77,7 +77,6 @@ public final class CmkKekIdentityResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public CmkKekIdentityResponse build() {
             return new CmkKekIdentityResponse(useSystemAssignedIdentity, userAssignedIdentity);
         }

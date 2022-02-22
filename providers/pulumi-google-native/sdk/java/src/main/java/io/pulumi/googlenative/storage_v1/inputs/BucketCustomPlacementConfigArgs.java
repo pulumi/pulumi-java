@@ -24,7 +24,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataLocations")
-    private final @Nullable Input<List<String>> dataLocations;
+      private final @Nullable Input<List<String>> dataLocations;
 
     public Input<List<String>> getDataLocations() {
         return this.dataLocations == null ? Input.empty() : this.dataLocations;
@@ -67,7 +67,6 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
             this.dataLocations = Input.ofNullable(dataLocations);
             return this;
         }
-
         public BucketCustomPlacementConfigArgs build() {
             return new BucketCustomPlacementConfigArgs(dataLocations);
         }

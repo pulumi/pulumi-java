@@ -24,7 +24,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable String parameters;
+        private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -46,7 +46,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roles", required=true)
-    private final Object roles;
+        private final Object roles;
 
     public Object getRoles() {
         return this.roles;
@@ -57,7 +57,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+        private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -126,7 +126,6 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ScriptActionResponse build() {
             return new ScriptActionResponse(name, parameters, roles, uri);
         }

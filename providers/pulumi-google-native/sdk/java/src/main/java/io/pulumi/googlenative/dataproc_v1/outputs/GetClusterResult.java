@@ -205,7 +205,6 @@ public final class GetClusterResult {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterName, clusterUuid, config, labels, metrics, project, status, statusHistory);
         }

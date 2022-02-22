@@ -54,7 +54,6 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public ResourceManagementPrivateLinkEndpointConnectionsResponse build() {
             return new ResourceManagementPrivateLinkEndpointConnectionsResponse(privateEndpointConnections);
         }

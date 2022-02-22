@@ -268,7 +268,6 @@ public final class GetNetworkGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkGroupResult build() {
             return new GetNetworkGroupResult(conditionalMembership, description, displayName, etag, groupMembers, id, memberType, name, provisioningState, systemData, type);
         }

@@ -76,7 +76,6 @@ public final class MetadataCategoriesResponse {
             this.verticals = verticals;
             return this;
         }
-
         public MetadataCategoriesResponse build() {
             return new MetadataCategoriesResponse(domains, verticals);
         }

@@ -159,7 +159,6 @@ public final class CircuitBreakersResponse {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public CircuitBreakersResponse build() {
             return new CircuitBreakersResponse(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

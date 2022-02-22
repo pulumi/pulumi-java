@@ -117,7 +117,6 @@ public final class DsRecordResponse {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }
-
         public DsRecordResponse build() {
             return new DsRecordResponse(algorithm, digest, digestType, keyTag);
         }

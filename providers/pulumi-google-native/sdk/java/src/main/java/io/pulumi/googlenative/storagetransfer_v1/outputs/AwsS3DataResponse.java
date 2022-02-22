@@ -117,7 +117,6 @@ public final class AwsS3DataResponse {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AwsS3DataResponse build() {
             return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
         }

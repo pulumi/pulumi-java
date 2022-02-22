@@ -140,7 +140,6 @@ public final class RulesEngineResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RulesEngineResponse build() {
             return new RulesEngineResponse(id, name, resourceState, rules, type);
         }

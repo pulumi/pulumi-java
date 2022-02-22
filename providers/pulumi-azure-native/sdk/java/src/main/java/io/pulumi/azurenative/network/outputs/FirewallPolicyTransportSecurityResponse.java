@@ -54,7 +54,6 @@ public final class FirewallPolicyTransportSecurityResponse {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public FirewallPolicyTransportSecurityResponse build() {
             return new FirewallPolicyTransportSecurityResponse(certificateAuthority);
         }

@@ -21,7 +21,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -32,7 +32,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -102,7 +102,6 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public BigTableIODetailsResponse build() {
             return new BigTableIODetailsResponse(instanceId, project, tableId);
         }

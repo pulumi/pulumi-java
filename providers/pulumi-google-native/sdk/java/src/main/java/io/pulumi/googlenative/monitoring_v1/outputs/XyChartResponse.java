@@ -184,7 +184,6 @@ public final class XyChartResponse {
             this.yAxis = Objects.requireNonNull(yAxis);
             return this;
         }
-
         public XyChartResponse build() {
             return new XyChartResponse(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }

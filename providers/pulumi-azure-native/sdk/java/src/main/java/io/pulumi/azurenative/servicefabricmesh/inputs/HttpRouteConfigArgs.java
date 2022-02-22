@@ -24,7 +24,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<GatewayDestinationArgs> destination;
+        private final Input<GatewayDestinationArgs> destination;
 
     public Input<GatewayDestinationArgs> getDestination() {
         return this.destination;
@@ -35,7 +35,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="match", required=true)
-    private final Input<HttpRouteMatchRuleArgs> match;
+        private final Input<HttpRouteMatchRuleArgs> match;
 
     public Input<HttpRouteMatchRuleArgs> getMatch() {
         return this.match;
@@ -46,7 +46,7 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -120,7 +120,6 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public HttpRouteConfigArgs build() {
             return new HttpRouteConfigArgs(destination, match, name);
         }

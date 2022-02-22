@@ -99,7 +99,6 @@ public final class GenericContainerExtendedInfoResponse {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
         public GenericContainerExtendedInfoResponse build() {
             return new GenericContainerExtendedInfoResponse(containerIdentityInfo, rawCertData, serviceEndpoints);
         }

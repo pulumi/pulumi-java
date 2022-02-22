@@ -28,7 +28,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="health")
-    private final @Nullable String health;
+        private final @Nullable String health;
 
     public Optional<String> getHealth() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
@@ -39,7 +39,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="healthErrorDetails")
-    private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+        private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
@@ -50,7 +50,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="policyFriendlyName")
-    private final @Nullable String policyFriendlyName;
+        private final @Nullable String policyFriendlyName;
 
     public Optional<String> getPolicyFriendlyName() {
         return this.policyFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.policyFriendlyName);
@@ -61,7 +61,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable String policyId;
+        private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -72,7 +72,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="providerSpecificDetails")
-    private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
+        private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
 
     public Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> getProviderSpecificDetails() {
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
@@ -83,7 +83,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="sourceFabricFriendlyName")
-    private final @Nullable String sourceFabricFriendlyName;
+        private final @Nullable String sourceFabricFriendlyName;
 
     public Optional<String> getSourceFabricFriendlyName() {
         return this.sourceFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceFabricFriendlyName);
@@ -94,7 +94,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="sourceProtectionContainerFriendlyName")
-    private final @Nullable String sourceProtectionContainerFriendlyName;
+        private final @Nullable String sourceProtectionContainerFriendlyName;
 
     public Optional<String> getSourceProtectionContainerFriendlyName() {
         return this.sourceProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
@@ -105,7 +105,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -116,7 +116,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="targetFabricFriendlyName")
-    private final @Nullable String targetFabricFriendlyName;
+        private final @Nullable String targetFabricFriendlyName;
 
     public Optional<String> getTargetFabricFriendlyName() {
         return this.targetFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetFabricFriendlyName);
@@ -127,7 +127,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="targetProtectionContainerFriendlyName")
-    private final @Nullable String targetProtectionContainerFriendlyName;
+        private final @Nullable String targetProtectionContainerFriendlyName;
 
     public Optional<String> getTargetProtectionContainerFriendlyName() {
         return this.targetProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetProtectionContainerFriendlyName);
@@ -138,7 +138,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="targetProtectionContainerId")
-    private final @Nullable String targetProtectionContainerId;
+        private final @Nullable String targetProtectionContainerId;
 
     public Optional<String> getTargetProtectionContainerId() {
         return this.targetProtectionContainerId == null ? Optional.empty() : Optional.ofNullable(this.targetProtectionContainerId);
@@ -277,7 +277,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
-
         public ProtectionContainerMappingPropertiesResponse build() {
             return new ProtectionContainerMappingPropertiesResponse(health, healthErrorDetails, policyFriendlyName, policyId, providerSpecificDetails, sourceFabricFriendlyName, sourceProtectionContainerFriendlyName, state, targetFabricFriendlyName, targetProtectionContainerFriendlyName, targetProtectionContainerId);
         }

@@ -201,7 +201,6 @@ public final class EndpointResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }

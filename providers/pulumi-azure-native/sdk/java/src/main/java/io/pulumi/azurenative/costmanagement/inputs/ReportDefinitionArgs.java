@@ -28,7 +28,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<ReportDatasetArgs> dataset;
+        private final @Nullable Input<ReportDatasetArgs> dataset;
 
     public Input<ReportDatasetArgs> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -39,7 +39,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timePeriod")
-    private final @Nullable Input<ReportTimePeriodArgs> timePeriod;
+        private final @Nullable Input<ReportTimePeriodArgs> timePeriod;
 
     public Input<ReportTimePeriodArgs> getTimePeriod() {
         return this.timePeriod == null ? Input.empty() : this.timePeriod;
@@ -50,7 +50,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeframe", required=true)
-    private final Input<Either<String,TimeframeType>> timeframe;
+        private final Input<Either<String,TimeframeType>> timeframe;
 
     public Input<Either<String,TimeframeType>> getTimeframe() {
         return this.timeframe;
@@ -61,7 +61,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ReportType>> type;
+        private final Input<Either<String,ReportType>> type;
 
     public Input<Either<String,ReportType>> getType() {
         return this.type;
@@ -150,7 +150,6 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ReportDefinitionArgs build() {
             return new ReportDefinitionArgs(dataset, timePeriod, timeframe, type);
         }

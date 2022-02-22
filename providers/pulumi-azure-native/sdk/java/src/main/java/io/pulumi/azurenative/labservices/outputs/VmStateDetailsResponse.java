@@ -116,7 +116,6 @@ public final class VmStateDetailsResponse {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
-
         public VmStateDetailsResponse build() {
             return new VmStateDetailsResponse(lastKnownPowerState, powerState, rdpAuthority, sshAuthority);
         }

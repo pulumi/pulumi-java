@@ -21,7 +21,7 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -81,7 +81,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, username);
         }

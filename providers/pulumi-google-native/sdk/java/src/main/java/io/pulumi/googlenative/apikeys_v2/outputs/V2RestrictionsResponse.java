@@ -142,7 +142,6 @@ public final class V2RestrictionsResponse {
             this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
             return this;
         }
-
         public V2RestrictionsResponse build() {
             return new V2RestrictionsResponse(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudRetailV2alphaConditionTimeRangeResponse build() {
             return new GoogleCloudRetailV2alphaConditionTimeRangeResponse(endTime, startTime);
         }

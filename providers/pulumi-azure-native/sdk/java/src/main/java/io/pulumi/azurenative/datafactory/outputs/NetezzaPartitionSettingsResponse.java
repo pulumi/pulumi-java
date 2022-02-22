@@ -97,7 +97,6 @@ public final class NetezzaPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public NetezzaPartitionSettingsResponse build() {
             return new NetezzaPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

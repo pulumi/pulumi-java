@@ -231,7 +231,6 @@ public final class OdbcTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OdbcTableDatasetResponse build() {
             return new OdbcTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

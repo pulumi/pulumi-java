@@ -116,7 +116,6 @@ public final class ClusterStatusResponse {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }
-
         public ClusterStatusResponse build() {
             return new ClusterStatusResponse(detail, state, stateStartTime, substate);
         }

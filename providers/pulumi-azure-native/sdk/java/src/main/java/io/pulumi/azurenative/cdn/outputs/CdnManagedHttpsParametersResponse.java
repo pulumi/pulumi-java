@@ -121,7 +121,6 @@ public final class CdnManagedHttpsParametersResponse {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public CdnManagedHttpsParametersResponse build() {
             return new CdnManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

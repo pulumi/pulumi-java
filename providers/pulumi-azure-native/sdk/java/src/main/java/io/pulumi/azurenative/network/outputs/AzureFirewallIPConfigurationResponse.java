@@ -203,7 +203,6 @@ public final class AzureFirewallIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFirewallIPConfigurationResponse build() {
             return new AzureFirewallIPConfigurationResponse(etag, id, name, privateIPAddress, provisioningState, publicIPAddress, subnet, type);
         }

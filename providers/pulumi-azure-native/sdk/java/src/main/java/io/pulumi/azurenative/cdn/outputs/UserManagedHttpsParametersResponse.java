@@ -121,7 +121,6 @@ public final class UserManagedHttpsParametersResponse {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public UserManagedHttpsParametersResponse build() {
             return new UserManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

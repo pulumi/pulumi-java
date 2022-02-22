@@ -52,7 +52,6 @@ public final class GetConsoleWithLocationResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetConsoleWithLocationResult build() {
             return new GetConsoleWithLocationResult(properties);
         }

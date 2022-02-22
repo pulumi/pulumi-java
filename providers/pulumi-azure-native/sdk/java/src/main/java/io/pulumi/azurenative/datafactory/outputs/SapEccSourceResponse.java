@@ -226,7 +226,6 @@ public final class SapEccSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapEccSourceResponse build() {
             return new SapEccSourceResponse(additionalColumns, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

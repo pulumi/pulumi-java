@@ -27,7 +27,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCopyCommand")
-    private final @Nullable Input<Object> allowCopyCommand;
+        private final @Nullable Input<Object> allowCopyCommand;
 
     public Input<Object> getAllowCopyCommand() {
         return this.allowCopyCommand == null ? Input.empty() : this.allowCopyCommand;
@@ -38,7 +38,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowPolyBase")
-    private final @Nullable Input<Object> allowPolyBase;
+        private final @Nullable Input<Object> allowPolyBase;
 
     public Input<Object> getAllowPolyBase() {
         return this.allowPolyBase == null ? Input.empty() : this.allowPolyBase;
@@ -49,7 +49,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyCommandSettings")
-    private final @Nullable Input<DWCopyCommandSettingsArgs> copyCommandSettings;
+        private final @Nullable Input<DWCopyCommandSettingsArgs> copyCommandSettings;
 
     public Input<DWCopyCommandSettingsArgs> getCopyCommandSettings() {
         return this.copyCommandSettings == null ? Input.empty() : this.copyCommandSettings;
@@ -60,7 +60,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -71,7 +71,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -82,7 +82,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="polyBaseSettings")
-    private final @Nullable Input<PolybaseSettingsArgs> polyBaseSettings;
+        private final @Nullable Input<PolybaseSettingsArgs> polyBaseSettings;
 
     public Input<PolybaseSettingsArgs> getPolyBaseSettings() {
         return this.polyBaseSettings == null ? Input.empty() : this.polyBaseSettings;
@@ -93,7 +93,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preCopyScript")
-    private final @Nullable Input<Object> preCopyScript;
+        private final @Nullable Input<Object> preCopyScript;
 
     public Input<Object> getPreCopyScript() {
         return this.preCopyScript == null ? Input.empty() : this.preCopyScript;
@@ -104,7 +104,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Input<Object> sinkRetryCount;
+        private final @Nullable Input<Object> sinkRetryCount;
 
     public Input<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
@@ -115,7 +115,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Input<Object> sinkRetryWait;
+        private final @Nullable Input<Object> sinkRetryWait;
 
     public Input<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
@@ -126,7 +126,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlWriterUseTableLock")
-    private final @Nullable Input<Object> sqlWriterUseTableLock;
+        private final @Nullable Input<Object> sqlWriterUseTableLock;
 
     public Input<Object> getSqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Input.empty() : this.sqlWriterUseTableLock;
@@ -137,7 +137,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableOption")
-    private final @Nullable Input<Object> tableOption;
+        private final @Nullable Input<Object> tableOption;
 
     public Input<Object> getTableOption() {
         return this.tableOption == null ? Input.empty() : this.tableOption;
@@ -149,7 +149,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -160,7 +160,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upsertSettings")
-    private final @Nullable Input<SqlDWUpsertSettingsArgs> upsertSettings;
+        private final @Nullable Input<SqlDWUpsertSettingsArgs> upsertSettings;
 
     public Input<SqlDWUpsertSettingsArgs> getUpsertSettings() {
         return this.upsertSettings == null ? Input.empty() : this.upsertSettings;
@@ -171,7 +171,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Input<Object> writeBatchSize;
+        private final @Nullable Input<Object> writeBatchSize;
 
     public Input<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
@@ -182,7 +182,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Input<Object> writeBatchTimeout;
+        private final @Nullable Input<Object> writeBatchTimeout;
 
     public Input<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
@@ -193,7 +193,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeBehavior")
-    private final @Nullable Input<Object> writeBehavior;
+        private final @Nullable Input<Object> writeBehavior;
 
     public Input<Object> getWriteBehavior() {
         return this.writeBehavior == null ? Input.empty() : this.writeBehavior;
@@ -462,7 +462,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.writeBehavior = Input.ofNullable(writeBehavior);
             return this;
         }
-
         public SqlDWSinkArgs build() {
             return new SqlDWSinkArgs(allowCopyCommand, allowPolyBase, copyCommandSettings, disableMetricsCollection, maxConcurrentConnections, polyBaseSettings, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterUseTableLock, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

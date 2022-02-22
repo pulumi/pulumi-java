@@ -22,7 +22,7 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final List<String> eventType;
+      private final List<String> eventType;
 
     public List<String> getEventType() {
         return this.eventType;
@@ -60,7 +60,6 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public FilterResponse build() {
             return new FilterResponse(eventType);
         }

@@ -52,7 +52,6 @@ public final class SourceContextResponse {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public SourceContextResponse build() {
             return new SourceContextResponse(fileName);
         }

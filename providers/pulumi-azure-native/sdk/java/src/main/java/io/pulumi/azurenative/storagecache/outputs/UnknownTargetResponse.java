@@ -54,7 +54,6 @@ public final class UnknownTargetResponse {
             this.attributes = attributes;
             return this;
         }
-
         public UnknownTargetResponse build() {
             return new UnknownTargetResponse(attributes);
         }

@@ -116,7 +116,6 @@ public final class SslConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SslConfigResponse build() {
             return new SslConfigResponse(caCertificate, clientCertificate, clientKey, type);
         }

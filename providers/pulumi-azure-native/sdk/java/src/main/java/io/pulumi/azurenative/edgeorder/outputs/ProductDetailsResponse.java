@@ -144,7 +144,6 @@ public final class ProductDetailsResponse {
             this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
             return this;
         }
-
         public ProductDetailsResponse build() {
             return new ProductDetailsResponse(count, deviceDetails, displayInfo, hierarchyInformation, productDoubleEncryptionStatus);
         }

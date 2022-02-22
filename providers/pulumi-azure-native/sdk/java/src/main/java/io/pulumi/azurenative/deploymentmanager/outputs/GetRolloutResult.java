@@ -335,7 +335,6 @@ public final class GetRolloutResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRolloutResult build() {
             return new GetRolloutResult(artifactSourceId, buildVersion, id, identity, location, name, operationInfo, services, status, stepGroups, tags, targetServiceTopologyId, totalRetryAttempts, type);
         }

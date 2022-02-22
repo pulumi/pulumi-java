@@ -76,7 +76,6 @@ public final class ConnectivityCollectionResponse {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-
         public ConnectivityCollectionResponse build() {
             return new ConnectivityCollectionResponse(groups, peerings);
         }

@@ -95,7 +95,6 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public InstanceGroupAutoscalingPolicyConfigResponse build() {
             return new InstanceGroupAutoscalingPolicyConfigResponse(maxInstances, minInstances, weight);
         }

@@ -269,7 +269,6 @@ public final class GetCustomDomainResult {
             this.validationData = validationData;
             return this;
         }
-
         public GetCustomDomainResult build() {
             return new GetCustomDomainResult(customHttpsParameters, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, provisioningState, resourceState, systemData, type, validationData);
         }

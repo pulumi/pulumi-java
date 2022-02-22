@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoHashConfigResponse(cryptoKey);
         }

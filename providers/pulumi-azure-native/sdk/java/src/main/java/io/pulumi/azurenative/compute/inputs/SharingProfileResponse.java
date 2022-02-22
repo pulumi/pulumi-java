@@ -25,7 +25,7 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="groups", required=true)
-    private final List<SharingProfileGroupResponse> groups;
+        private final List<SharingProfileGroupResponse> groups;
 
     public List<SharingProfileGroupResponse> getGroups() {
         return this.groups;
@@ -36,7 +36,7 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable String permissions;
+        private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
@@ -85,7 +85,6 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
             this.permissions = permissions;
             return this;
         }
-
         public SharingProfileResponse build() {
             return new SharingProfileResponse(groups, permissions);
         }

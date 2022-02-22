@@ -118,7 +118,6 @@ public final class DataBoxDiskCopyLogDetailsResponse {
             this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
             return this;
         }
-
         public DataBoxDiskCopyLogDetailsResponse build() {
             return new DataBoxDiskCopyLogDetailsResponse(copyLogDetailsType, diskSerialNumber, errorLogLink, verboseLogLink);
         }

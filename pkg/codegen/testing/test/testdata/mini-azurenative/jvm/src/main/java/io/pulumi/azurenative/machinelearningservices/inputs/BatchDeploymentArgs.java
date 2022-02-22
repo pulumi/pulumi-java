@@ -27,7 +27,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+        private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -49,7 +49,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+        private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -64,7 +64,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="errorThreshold")
-    private final @Nullable Input<Integer> errorThreshold;
+        private final @Nullable Input<Integer> errorThreshold;
 
     public Input<Integer> getErrorThreshold() {
         return this.errorThreshold == null ? Input.empty() : this.errorThreshold;
@@ -77,7 +77,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="miniBatchSize")
-    private final @Nullable Input<Double> miniBatchSize;
+        private final @Nullable Input<Double> miniBatchSize;
 
     public Input<Double> getMiniBatchSize() {
         return this.miniBatchSize == null ? Input.empty() : this.miniBatchSize;
@@ -88,7 +88,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeys")
-    private final @Nullable Input<List<String>> partitionKeys;
+        private final @Nullable Input<List<String>> partitionKeys;
 
     public Input<List<String>> getPartitionKeys() {
         return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
@@ -99,7 +99,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -233,7 +233,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public BatchDeploymentArgs build() {
             return new BatchDeploymentArgs(description, environmentId, environmentVariables, errorThreshold, miniBatchSize, partitionKeys, properties);
         }

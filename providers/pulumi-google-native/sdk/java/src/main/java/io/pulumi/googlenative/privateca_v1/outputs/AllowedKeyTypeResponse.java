@@ -75,7 +75,6 @@ public final class AllowedKeyTypeResponse {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
         }
-
         public AllowedKeyTypeResponse build() {
             return new AllowedKeyTypeResponse(ellipticCurve, rsa);
         }

@@ -142,7 +142,6 @@ public final class EventHubPropertiesResponse {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public EventHubPropertiesResponse build() {
             return new EventHubPropertiesResponse(endpoint, partitionCount, partitionIds, path, retentionTimeInDays);
         }

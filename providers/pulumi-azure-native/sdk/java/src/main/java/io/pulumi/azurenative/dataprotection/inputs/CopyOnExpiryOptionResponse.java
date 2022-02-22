@@ -22,7 +22,7 @@ public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -60,7 +60,6 @@ public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.Invoke
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CopyOnExpiryOptionResponse build() {
             return new CopyOnExpiryOptionResponse(objectType);
         }

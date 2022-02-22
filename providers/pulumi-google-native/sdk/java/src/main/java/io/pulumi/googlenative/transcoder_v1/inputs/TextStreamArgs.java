@@ -25,7 +25,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-    private final @Nullable Input<String> codec;
+      private final @Nullable Input<String> codec;
 
     public Input<String> getCodec() {
         return this.codec == null ? Input.empty() : this.codec;
@@ -36,7 +36,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapping")
-    private final @Nullable Input<List<TextMappingArgs>> mapping;
+      private final @Nullable Input<List<TextMappingArgs>> mapping;
 
     public Input<List<TextMappingArgs>> getMapping() {
         return this.mapping == null ? Input.empty() : this.mapping;
@@ -95,7 +95,6 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.mapping = Input.ofNullable(mapping);
             return this;
         }
-
         public TextStreamArgs build() {
             return new TextStreamArgs(codec, mapping);
         }

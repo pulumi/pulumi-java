@@ -142,7 +142,6 @@ public final class OracleCloudStorageLocationResponse {
             this.version = version;
             return this;
         }
-
         public OracleCloudStorageLocationResponse build() {
             return new OracleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }

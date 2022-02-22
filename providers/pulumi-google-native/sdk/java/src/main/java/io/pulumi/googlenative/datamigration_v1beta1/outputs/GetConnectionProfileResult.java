@@ -246,7 +246,6 @@ public final class GetConnectionProfileResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionProfileResult build() {
             return new GetConnectionProfileResult(cloudsql, createTime, displayName, error, labels, mysql, name, provider, state, updateTime);
         }

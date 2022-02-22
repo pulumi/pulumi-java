@@ -159,7 +159,6 @@ public final class GetGameServerDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGameServerDeploymentResult build() {
             return new GetGameServerDeploymentResult(createTime, description, etag, labels, name, updateTime);
         }

@@ -23,7 +23,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificate")
-    private final @Nullable Input<String> caCertificate;
+      private final @Nullable Input<String> caCertificate;
 
     public Input<String> getCaCertificate() {
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
@@ -34,7 +34,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -45,7 +45,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+      private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
@@ -119,7 +119,6 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clientKey = Input.ofNullable(clientKey);
             return this;
         }
-
         public MysqlSslConfigArgs build() {
             return new MysqlSslConfigArgs(caCertificate, clientCertificate, clientKey);
         }

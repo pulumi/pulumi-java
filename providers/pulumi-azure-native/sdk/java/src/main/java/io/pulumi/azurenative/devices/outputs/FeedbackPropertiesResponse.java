@@ -98,7 +98,6 @@ public final class FeedbackPropertiesResponse {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
-
         public FeedbackPropertiesResponse build() {
             return new FeedbackPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }

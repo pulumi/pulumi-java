@@ -19,7 +19,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -41,7 +41,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="invitationId", required=true)
-    private final Input<String> invitationId;
+        private final Input<String> invitationId;
 
     public Input<String> getInvitationId() {
         return this.invitationId;
@@ -52,7 +52,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shareSubscriptionName")
-    private final @Nullable Input<String> shareSubscriptionName;
+        private final @Nullable Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName == null ? Input.empty() : this.shareSubscriptionName;
@@ -74,7 +74,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceShareLocation", required=true)
-    private final Input<String> sourceShareLocation;
+        private final Input<String> sourceShareLocation;
 
     public Input<String> getSourceShareLocation() {
         return this.sourceShareLocation;
@@ -193,7 +193,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.sourceShareLocation = Input.of(Objects.requireNonNull(sourceShareLocation));
             return this;
         }
-
         public ShareSubscriptionArgs build() {
             return new ShareSubscriptionArgs(accountName, expirationDate, invitationId, resourceGroupName, shareSubscriptionName, sourceShareLocation);
         }

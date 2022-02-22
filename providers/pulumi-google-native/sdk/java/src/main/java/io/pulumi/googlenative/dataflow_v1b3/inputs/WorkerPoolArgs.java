@@ -34,7 +34,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingSettings")
-    private final @Nullable Input<AutoscalingSettingsArgs> autoscalingSettings;
+      private final @Nullable Input<AutoscalingSettingsArgs> autoscalingSettings;
 
     public Input<AutoscalingSettingsArgs> getAutoscalingSettings() {
         return this.autoscalingSettings == null ? Input.empty() : this.autoscalingSettings;
@@ -45,7 +45,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<DiskArgs>> dataDisks;
+      private final @Nullable Input<List<DiskArgs>> dataDisks;
 
     public Input<List<DiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -56,7 +56,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPackageSet")
-    private final @Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet;
+      private final @Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet;
 
     public Input<WorkerPoolDefaultPackageSet> getDefaultPackageSet() {
         return this.defaultPackageSet == null ? Input.empty() : this.defaultPackageSet;
@@ -67,7 +67,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -78,7 +78,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSourceImage")
-    private final @Nullable Input<String> diskSourceImage;
+      private final @Nullable Input<String> diskSourceImage;
 
     public Input<String> getDiskSourceImage() {
         return this.diskSourceImage == null ? Input.empty() : this.diskSourceImage;
@@ -89,7 +89,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -100,7 +100,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable Input<WorkerPoolIpConfiguration> ipConfiguration;
+      private final @Nullable Input<WorkerPoolIpConfiguration> ipConfiguration;
 
     public Input<WorkerPoolIpConfiguration> getIpConfiguration() {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
@@ -111,7 +111,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -122,7 +122,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -133,7 +133,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -144,7 +144,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -155,7 +155,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numThreadsPerWorker")
-    private final @Nullable Input<Integer> numThreadsPerWorker;
+      private final @Nullable Input<Integer> numThreadsPerWorker;
 
     public Input<Integer> getNumThreadsPerWorker() {
         return this.numThreadsPerWorker == null ? Input.empty() : this.numThreadsPerWorker;
@@ -166,7 +166,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numWorkers")
-    private final @Nullable Input<Integer> numWorkers;
+      private final @Nullable Input<Integer> numWorkers;
 
     public Input<Integer> getNumWorkers() {
         return this.numWorkers == null ? Input.empty() : this.numWorkers;
@@ -177,7 +177,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onHostMaintenance")
-    private final @Nullable Input<String> onHostMaintenance;
+      private final @Nullable Input<String> onHostMaintenance;
 
     public Input<String> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
@@ -188,7 +188,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packages")
-    private final @Nullable Input<List<PackageArgs>> packages;
+      private final @Nullable Input<List<PackageArgs>> packages;
 
     public Input<List<PackageArgs>> getPackages() {
         return this.packages == null ? Input.empty() : this.packages;
@@ -199,7 +199,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolArgs")
-    private final @Nullable Input<Map<String,String>> poolArgs;
+      private final @Nullable Input<Map<String,String>> poolArgs;
 
     public Input<Map<String,String>> getPoolArgs() {
         return this.poolArgs == null ? Input.empty() : this.poolArgs;
@@ -210,7 +210,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkHarnessContainerImages")
-    private final @Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
+      private final @Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
 
     public Input<List<SdkHarnessContainerImageArgs>> getSdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages == null ? Input.empty() : this.sdkHarnessContainerImages;
@@ -221,7 +221,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -232,7 +232,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskrunnerSettings")
-    private final @Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings;
+      private final @Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings;
 
     public Input<TaskRunnerSettingsArgs> getTaskrunnerSettings() {
         return this.taskrunnerSettings == null ? Input.empty() : this.taskrunnerSettings;
@@ -243,7 +243,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="teardownPolicy")
-    private final @Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy;
+      private final @Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy;
 
     public Input<WorkerPoolTeardownPolicy> getTeardownPolicy() {
         return this.teardownPolicy == null ? Input.empty() : this.teardownPolicy;
@@ -254,7 +254,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -598,7 +598,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public WorkerPoolArgs build() {
             return new WorkerPoolArgs(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }

@@ -252,7 +252,6 @@ public final class AzureMLUpdateResourceActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureMLUpdateResourceActivityResponse build() {
             return new AzureMLUpdateResourceActivityResponse(dependsOn, description, linkedServiceName, name, policy, trainedModelFilePath, trainedModelLinkedServiceName, trainedModelName, type, userProperties);
         }

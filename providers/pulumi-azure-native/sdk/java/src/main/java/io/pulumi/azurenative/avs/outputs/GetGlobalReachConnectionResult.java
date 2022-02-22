@@ -202,7 +202,6 @@ public final class GetGlobalReachConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGlobalReachConnectionResult build() {
             return new GetGlobalReachConnectionResult(addressPrefix, authorizationKey, circuitConnectionStatus, id, name, peerExpressRouteCircuit, provisioningState, type);
         }

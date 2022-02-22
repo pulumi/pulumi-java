@@ -21,7 +21,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,AlertRuleKind>> kind;
+        private final Input<Either<String,AlertRuleKind>> kind;
 
     public Input<Either<String,AlertRuleKind>> getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId")
-    private final @Nullable Input<String> ruleId;
+        private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -54,7 +54,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -143,7 +143,6 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public AlertRuleArgs build() {
             return new AlertRuleArgs(kind, resourceGroupName, ruleId, workspaceName);
         }

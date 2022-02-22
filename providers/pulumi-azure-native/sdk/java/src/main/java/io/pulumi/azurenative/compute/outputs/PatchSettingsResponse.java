@@ -98,7 +98,6 @@ public final class PatchSettingsResponse {
             this.patchMode = patchMode;
             return this;
         }
-
         public PatchSettingsResponse build() {
             return new PatchSettingsResponse(assessmentMode, enableHotpatching, patchMode);
         }

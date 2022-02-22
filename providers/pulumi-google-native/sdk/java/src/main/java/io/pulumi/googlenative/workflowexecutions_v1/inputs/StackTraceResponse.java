@@ -22,7 +22,7 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elements", required=true)
-    private final List<StackTraceElementResponse> elements;
+      private final List<StackTraceElementResponse> elements;
 
     public List<StackTraceElementResponse> getElements() {
         return this.elements;
@@ -60,7 +60,6 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }
-
         public StackTraceResponse build() {
             return new StackTraceResponse(elements);
         }

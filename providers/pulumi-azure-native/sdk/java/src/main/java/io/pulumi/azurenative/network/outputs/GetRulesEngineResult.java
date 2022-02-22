@@ -140,7 +140,6 @@ public final class GetRulesEngineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRulesEngineResult build() {
             return new GetRulesEngineResult(id, name, resourceState, rules, type);
         }

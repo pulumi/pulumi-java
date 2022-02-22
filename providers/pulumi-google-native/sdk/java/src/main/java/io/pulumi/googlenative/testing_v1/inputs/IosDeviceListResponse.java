@@ -22,7 +22,7 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="iosDevices", required=true)
-    private final List<IosDeviceResponse> iosDevices;
+      private final List<IosDeviceResponse> iosDevices;
 
     public List<IosDeviceResponse> getIosDevices() {
         return this.iosDevices;
@@ -60,7 +60,6 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
-
         public IosDeviceListResponse build() {
             return new IosDeviceListResponse(iosDevices);
         }

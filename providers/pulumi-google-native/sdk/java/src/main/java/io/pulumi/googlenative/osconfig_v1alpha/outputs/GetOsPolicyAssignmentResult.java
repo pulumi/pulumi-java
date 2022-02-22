@@ -310,7 +310,6 @@ public final class GetOsPolicyAssignmentResult {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetOsPolicyAssignmentResult build() {
             return new GetOsPolicyAssignmentResult(baseline, deleted, description, etag, instanceFilter, name, osPolicies, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);
         }

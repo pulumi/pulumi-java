@@ -23,7 +23,7 @@ public final class PipelinePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="elapsedTimeMetric")
-    private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
+        private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
     public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {
         return this.elapsedTimeMetric == null ? Optional.empty() : Optional.ofNullable(this.elapsedTimeMetric);
@@ -61,7 +61,6 @@ public final class PipelinePolicyResponse extends io.pulumi.resources.InvokeArgs
             this.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }
-
         public PipelinePolicyResponse build() {
             return new PipelinePolicyResponse(elapsedTimeMetric);
         }

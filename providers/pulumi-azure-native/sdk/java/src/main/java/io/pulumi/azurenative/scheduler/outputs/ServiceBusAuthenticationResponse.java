@@ -97,7 +97,6 @@ public final class ServiceBusAuthenticationResponse {
             this.type = type;
             return this;
         }
-
         public ServiceBusAuthenticationResponse build() {
             return new ServiceBusAuthenticationResponse(sasKey, sasKeyName, type);
         }

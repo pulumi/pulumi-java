@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketingConfigResponse build() {
             return new GooglePrivacyDlpV2BucketingConfigResponse(buckets);
         }

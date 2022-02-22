@@ -75,7 +75,6 @@ public final class LatencyPercentileResponse {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public LatencyPercentileResponse build() {
             return new LatencyPercentileResponse(latencyMicros, percent);
         }

@@ -74,7 +74,6 @@ public final class SchematizedDataResponse {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public SchematizedDataResponse build() {
             return new SchematizedDataResponse(data, error);
         }

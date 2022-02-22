@@ -288,7 +288,6 @@ public final class SsisParameterResponse {
             this.variable = variable;
             return this;
         }
-
         public SsisParameterResponse build() {
             return new SsisParameterResponse(dataType, defaultValue, description, designDefaultValue, id, name, required, sensitive, sensitiveDefaultValue, valueSet, valueType, variable);
         }

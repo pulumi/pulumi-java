@@ -74,7 +74,6 @@ public final class AzureSkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public AzureSkuResponse build() {
             return new AzureSkuResponse(name, tier);
         }

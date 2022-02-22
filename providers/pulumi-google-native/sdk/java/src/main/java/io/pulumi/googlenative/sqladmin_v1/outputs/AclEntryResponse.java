@@ -116,7 +116,6 @@ public final class AclEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AclEntryResponse build() {
             return new AclEntryResponse(expirationTime, kind, name, value);
         }

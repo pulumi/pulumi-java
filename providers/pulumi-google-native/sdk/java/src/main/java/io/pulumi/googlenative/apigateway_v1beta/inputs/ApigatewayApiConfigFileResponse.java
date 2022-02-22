@@ -21,7 +21,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="contents", required=true)
-    private final String contents;
+      private final String contents;
 
     public String getContents() {
         return this.contents;
@@ -32,7 +32,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -81,7 +81,6 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public ApigatewayApiConfigFileResponse build() {
             return new ApigatewayApiConfigFileResponse(contents, path);
         }

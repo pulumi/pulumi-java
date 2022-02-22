@@ -22,7 +22,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dispatchTime", required=true)
-    private final String dispatchTime;
+      private final String dispatchTime;
 
     public String getDispatchTime() {
         return this.dispatchTime;
@@ -33,7 +33,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="responseStatus", required=true)
-    private final StatusResponse responseStatus;
+      private final StatusResponse responseStatus;
 
     public StatusResponse getResponseStatus() {
         return this.responseStatus;
@@ -44,7 +44,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="responseTime", required=true)
-    private final String responseTime;
+      private final String responseTime;
 
     public String getResponseTime() {
         return this.responseTime;
@@ -55,7 +55,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scheduleTime", required=true)
-    private final String scheduleTime;
+      private final String scheduleTime;
 
     public String getScheduleTime() {
         return this.scheduleTime;
@@ -124,7 +124,6 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public AttemptStatusResponse build() {
             return new AttemptStatusResponse(dispatchTime, responseStatus, responseTime, scheduleTime);
         }

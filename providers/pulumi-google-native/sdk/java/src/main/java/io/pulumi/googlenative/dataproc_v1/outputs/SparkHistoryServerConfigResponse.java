@@ -52,7 +52,6 @@ public final class SparkHistoryServerConfigResponse {
             this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
             return this;
         }
-
         public SparkHistoryServerConfigResponse build() {
             return new SparkHistoryServerConfigResponse(dataprocCluster);
         }

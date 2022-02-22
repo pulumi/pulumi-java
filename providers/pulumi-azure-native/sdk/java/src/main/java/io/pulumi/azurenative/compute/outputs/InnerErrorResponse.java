@@ -76,7 +76,6 @@ public final class InnerErrorResponse {
             this.exceptiontype = exceptiontype;
             return this;
         }
-
         public InnerErrorResponse build() {
             return new InnerErrorResponse(errordetail, exceptiontype);
         }

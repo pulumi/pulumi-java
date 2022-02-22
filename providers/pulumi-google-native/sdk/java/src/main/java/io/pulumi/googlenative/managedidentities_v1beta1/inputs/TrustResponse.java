@@ -23,7 +23,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -34,7 +34,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastTrustHeartbeatTime", required=true)
-    private final String lastTrustHeartbeatTime;
+      private final String lastTrustHeartbeatTime;
 
     public String getLastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
@@ -45,7 +45,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selectiveAuthentication", required=true)
-    private final Boolean selectiveAuthentication;
+      private final Boolean selectiveAuthentication;
 
     public Boolean getSelectiveAuthentication() {
         return this.selectiveAuthentication;
@@ -56,7 +56,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -67,7 +67,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stateDescription", required=true)
-    private final String stateDescription;
+      private final String stateDescription;
 
     public String getStateDescription() {
         return this.stateDescription;
@@ -78,7 +78,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetDnsIpAddresses", required=true)
-    private final List<String> targetDnsIpAddresses;
+      private final List<String> targetDnsIpAddresses;
 
     public List<String> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
@@ -89,7 +89,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetDomainName", required=true)
-    private final String targetDomainName;
+      private final String targetDomainName;
 
     public String getTargetDomainName() {
         return this.targetDomainName;
@@ -100,7 +100,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustDirection", required=true)
-    private final String trustDirection;
+      private final String trustDirection;
 
     public String getTrustDirection() {
         return this.trustDirection;
@@ -111,7 +111,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustHandshakeSecret", required=true)
-    private final String trustHandshakeSecret;
+      private final String trustHandshakeSecret;
 
     public String getTrustHandshakeSecret() {
         return this.trustHandshakeSecret;
@@ -122,7 +122,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustType", required=true)
-    private final String trustType;
+      private final String trustType;
 
     public String getTrustType() {
         return this.trustType;
@@ -133,7 +133,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -272,7 +272,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TrustResponse build() {
             return new TrustResponse(createTime, lastTrustHeartbeatTime, selectiveAuthentication, state, stateDescription, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType, updateTime);
         }

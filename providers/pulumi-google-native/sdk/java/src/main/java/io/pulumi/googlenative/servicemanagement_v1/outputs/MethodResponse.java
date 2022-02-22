@@ -182,7 +182,6 @@ public final class MethodResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public MethodResponse build() {
             return new MethodResponse(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }

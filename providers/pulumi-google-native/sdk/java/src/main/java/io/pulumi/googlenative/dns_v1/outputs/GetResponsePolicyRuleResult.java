@@ -130,7 +130,6 @@ public final class GetResponsePolicyRuleResult {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetResponsePolicyRuleResult build() {
             return new GetResponsePolicyRuleResult(behavior, dnsName, kind, localData, ruleName);
         }

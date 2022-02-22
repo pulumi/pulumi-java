@@ -24,7 +24,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -35,7 +35,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="amount")
-    private final @Nullable Input<String> amount;
+      private final @Nullable Input<String> amount;
 
     public Input<String> getAmount() {
         return this.amount == null ? Input.empty() : this.amount;
@@ -46,7 +46,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceCommitmentType> type;
+      private final @Nullable Input<ResourceCommitmentType> type;
 
     public Input<ResourceCommitmentType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -120,7 +120,6 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ResourceCommitmentArgs build() {
             return new ResourceCommitmentArgs(acceleratorType, amount, type);
         }

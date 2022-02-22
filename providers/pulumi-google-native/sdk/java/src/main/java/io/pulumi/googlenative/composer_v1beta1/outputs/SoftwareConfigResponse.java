@@ -160,7 +160,6 @@ public final class SoftwareConfigResponse {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }
-
         public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

@@ -222,7 +222,6 @@ public final class PackageInfoOccurrenceResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PackageInfoOccurrenceResponse build() {
             return new PackageInfoOccurrenceResponse(comment, filename, homePage, licenseConcluded, packageType, sourceInfo, summaryDescription, title, version);
         }

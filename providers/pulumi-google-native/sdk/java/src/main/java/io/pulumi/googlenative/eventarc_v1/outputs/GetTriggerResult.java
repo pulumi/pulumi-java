@@ -247,7 +247,6 @@ public final class GetTriggerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(createTime, destination, etag, eventFilters, labels, name, serviceAccount, transport, uid, updateTime);
         }

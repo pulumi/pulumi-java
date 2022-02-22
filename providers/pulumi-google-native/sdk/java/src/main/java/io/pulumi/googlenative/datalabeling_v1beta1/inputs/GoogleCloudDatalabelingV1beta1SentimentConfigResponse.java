@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse extends
      * 
      */
     @InputImport(name="enableLabelSentimentSelection", required=true)
-    private final Boolean enableLabelSentimentSelection;
+      private final Boolean enableLabelSentimentSelection;
 
     public Boolean getEnableLabelSentimentSelection() {
         return this.enableLabelSentimentSelection;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse extends
             this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1SentimentConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1SentimentConfigResponse(enableLabelSentimentSelection);
         }

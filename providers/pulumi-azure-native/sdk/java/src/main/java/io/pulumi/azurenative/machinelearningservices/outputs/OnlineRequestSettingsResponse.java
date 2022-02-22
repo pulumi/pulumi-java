@@ -98,7 +98,6 @@ public final class OnlineRequestSettingsResponse {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public OnlineRequestSettingsResponse build() {
             return new OnlineRequestSettingsResponse(maxConcurrentRequestsPerInstance, maxQueueWait, requestTimeout);
         }

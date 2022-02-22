@@ -140,7 +140,6 @@ public final class ProjectFilePropertiesResponse {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public ProjectFilePropertiesResponse build() {
             return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
         }

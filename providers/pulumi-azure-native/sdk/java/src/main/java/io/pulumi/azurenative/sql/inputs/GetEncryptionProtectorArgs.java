@@ -17,7 +17,7 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="encryptionProtectorName", required=true)
-    private final String encryptionProtectorName;
+        private final String encryptionProtectorName;
 
     public String getEncryptionProtectorName() {
         return this.encryptionProtectorName;
@@ -28,7 +28,7 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -98,7 +98,6 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetEncryptionProtectorArgs build() {
             return new GetEncryptionProtectorArgs(encryptionProtectorName, resourceGroupName, serverName);
         }

@@ -34,7 +34,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="activationPolicy", required=true)
-    private final String activationPolicy;
+      private final String activationPolicy;
 
     public String getActivationPolicy() {
         return this.activationPolicy;
@@ -45,7 +45,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="activeDirectoryConfig", required=true)
-    private final SqlActiveDirectoryConfigResponse activeDirectoryConfig;
+      private final SqlActiveDirectoryConfigResponse activeDirectoryConfig;
 
     public SqlActiveDirectoryConfigResponse getActiveDirectoryConfig() {
         return this.activeDirectoryConfig;
@@ -56,7 +56,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityType", required=true)
-    private final String availabilityType;
+      private final String availabilityType;
 
     public String getAvailabilityType() {
         return this.availabilityType;
@@ -67,7 +67,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupConfiguration", required=true)
-    private final BackupConfigurationResponse backupConfiguration;
+      private final BackupConfigurationResponse backupConfiguration;
 
     public BackupConfigurationResponse getBackupConfiguration() {
         return this.backupConfiguration;
@@ -78,7 +78,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="collation", required=true)
-    private final String collation;
+      private final String collation;
 
     public String getCollation() {
         return this.collation;
@@ -89,7 +89,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="crashSafeReplicationEnabled", required=true)
-    private final Boolean crashSafeReplicationEnabled;
+      private final Boolean crashSafeReplicationEnabled;
 
     public Boolean getCrashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled;
@@ -100,7 +100,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGb", required=true)
-    private final String dataDiskSizeGb;
+      private final String dataDiskSizeGb;
 
     public String getDataDiskSizeGb() {
         return this.dataDiskSizeGb;
@@ -111,7 +111,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataDiskType", required=true)
-    private final String dataDiskType;
+      private final String dataDiskType;
 
     public String getDataDiskType() {
         return this.dataDiskType;
@@ -122,7 +122,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseFlags", required=true)
-    private final List<DatabaseFlagsResponse> databaseFlags;
+      private final List<DatabaseFlagsResponse> databaseFlags;
 
     public List<DatabaseFlagsResponse> getDatabaseFlags() {
         return this.databaseFlags;
@@ -133,7 +133,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseReplicationEnabled", required=true)
-    private final Boolean databaseReplicationEnabled;
+      private final Boolean databaseReplicationEnabled;
 
     public Boolean getDatabaseReplicationEnabled() {
         return this.databaseReplicationEnabled;
@@ -144,7 +144,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="denyMaintenancePeriods", required=true)
-    private final List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
+      private final List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
 
     public List<DenyMaintenancePeriodResponse> getDenyMaintenancePeriods() {
         return this.denyMaintenancePeriods;
@@ -155,7 +155,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="insightsConfig", required=true)
-    private final InsightsConfigResponse insightsConfig;
+      private final InsightsConfigResponse insightsConfig;
 
     public InsightsConfigResponse getInsightsConfig() {
         return this.insightsConfig;
@@ -166,7 +166,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipConfiguration", required=true)
-    private final IpConfigurationResponse ipConfiguration;
+      private final IpConfigurationResponse ipConfiguration;
 
     public IpConfigurationResponse getIpConfiguration() {
         return this.ipConfiguration;
@@ -177,7 +177,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -188,7 +188,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationPreference", required=true)
-    private final LocationPreferenceResponse locationPreference;
+      private final LocationPreferenceResponse locationPreference;
 
     public LocationPreferenceResponse getLocationPreference() {
         return this.locationPreference;
@@ -199,7 +199,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maintenanceWindow", required=true)
-    private final MaintenanceWindowResponse maintenanceWindow;
+      private final MaintenanceWindowResponse maintenanceWindow;
 
     public MaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
@@ -210,7 +210,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="passwordValidationPolicy", required=true)
-    private final PasswordValidationPolicyResponse passwordValidationPolicy;
+      private final PasswordValidationPolicyResponse passwordValidationPolicy;
 
     public PasswordValidationPolicyResponse getPasswordValidationPolicy() {
         return this.passwordValidationPolicy;
@@ -221,7 +221,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pricingPlan", required=true)
-    private final String pricingPlan;
+      private final String pricingPlan;
 
     public String getPricingPlan() {
         return this.pricingPlan;
@@ -232,7 +232,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="settingsVersion", required=true)
-    private final String settingsVersion;
+      private final String settingsVersion;
 
     public String getSettingsVersion() {
         return this.settingsVersion;
@@ -243,7 +243,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlServerAuditConfig", required=true)
-    private final SqlServerAuditConfigResponse sqlServerAuditConfig;
+      private final SqlServerAuditConfigResponse sqlServerAuditConfig;
 
     public SqlServerAuditConfigResponse getSqlServerAuditConfig() {
         return this.sqlServerAuditConfig;
@@ -254,7 +254,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAutoResize", required=true)
-    private final Boolean storageAutoResize;
+      private final Boolean storageAutoResize;
 
     public Boolean getStorageAutoResize() {
         return this.storageAutoResize;
@@ -265,7 +265,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAutoResizeLimit", required=true)
-    private final String storageAutoResizeLimit;
+      private final String storageAutoResizeLimit;
 
     public String getStorageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
@@ -276,7 +276,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final String tier;
+      private final String tier;
 
     public String getTier() {
         return this.tier;
@@ -287,7 +287,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userLabels", required=true)
-    private final Map<String,String> userLabels;
+      private final Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {
         return this.userLabels;
@@ -556,7 +556,6 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }

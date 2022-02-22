@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardRowResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(cells, dividerAfter);
         }

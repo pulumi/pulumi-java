@@ -27,7 +27,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<Either<String,Roles>>> roles;
+        private final @Nullable Input<List<Either<String,Roles>>> roles;
 
     public Input<List<Either<String,Roles>>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -38,7 +38,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+        private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -97,7 +97,6 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SecurityContactPropertiesNotificationsByRoleArgs build() {
             return new SecurityContactPropertiesNotificationsByRoleArgs(roles, state);
         }

@@ -97,7 +97,6 @@ public final class BindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public BindingResponse build() {
             return new BindingResponse(condition, members, role);
         }

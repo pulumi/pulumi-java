@@ -219,7 +219,6 @@ public final class XmlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public XmlSourceResponse build() {
             return new XmlSourceResponse(additionalColumns, disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

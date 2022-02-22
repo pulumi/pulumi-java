@@ -52,7 +52,6 @@ public final class NodeInfoResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeInfoResponse build() {
             return new NodeInfoResponse(zone);
         }

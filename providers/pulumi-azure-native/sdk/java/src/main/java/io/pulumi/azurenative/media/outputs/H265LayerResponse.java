@@ -332,7 +332,6 @@ public final class H265LayerResponse {
             this.width = width;
             return this;
         }
-
         public H265LayerResponse build() {
             return new H265LayerResponse(adaptiveBFrame, bFrames, bitrate, bufferWindow, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }

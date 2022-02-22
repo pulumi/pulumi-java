@@ -268,7 +268,6 @@ public final class Office365SourceResponse {
             this.userScopeFilterUri = userScopeFilterUri;
             return this;
         }
-
         public Office365SourceResponse build() {
             return new Office365SourceResponse(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
         }

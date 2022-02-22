@@ -287,7 +287,6 @@ public final class GetSqlDWTableDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlDWTableDataSetMappingResult build() {
             return new GetSqlDWTableDataSetMappingResult(dataSetId, dataSetMappingStatus, dataWarehouseName, id, kind, name, provisioningState, schemaName, sqlServerResourceId, systemData, tableName, type);
         }

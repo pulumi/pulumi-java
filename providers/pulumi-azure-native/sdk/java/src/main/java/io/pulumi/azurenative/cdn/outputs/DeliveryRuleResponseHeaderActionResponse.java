@@ -77,7 +77,6 @@ public final class DeliveryRuleResponseHeaderActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleResponseHeaderActionResponse build() {
             return new DeliveryRuleResponseHeaderActionResponse(name, parameters);
         }

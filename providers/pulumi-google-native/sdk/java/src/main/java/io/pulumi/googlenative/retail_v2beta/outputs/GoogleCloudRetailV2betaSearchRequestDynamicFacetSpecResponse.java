@@ -52,7 +52,6 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse build() {
             return new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(mode);
         }

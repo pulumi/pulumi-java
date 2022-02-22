@@ -353,7 +353,6 @@ public final class GetOuContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOuContainerResult build() {
             return new GetOuContainerResult(accounts, containerId, deploymentId, distinguishedName, domainName, etag, id, location, name, provisioningState, serviceStatus, systemData, tags, tenantId, type);
         }

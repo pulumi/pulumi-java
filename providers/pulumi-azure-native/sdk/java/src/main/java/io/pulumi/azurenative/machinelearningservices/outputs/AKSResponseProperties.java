@@ -186,7 +186,6 @@ public final class AKSResponseProperties {
             this.systemServices = Objects.requireNonNull(systemServices);
             return this;
         }
-
         public AKSResponseProperties build() {
             return new AKSResponseProperties(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration, systemServices);
         }

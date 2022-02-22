@@ -196,7 +196,6 @@ public final class GetCompositeTypeResult {
             this.templateContents = Objects.requireNonNull(templateContents);
             return this;
         }
-
         public GetCompositeTypeResult build() {
             return new GetCompositeTypeResult(description, insertTime, labels, name, operation, selfLink, status, templateContents);
         }

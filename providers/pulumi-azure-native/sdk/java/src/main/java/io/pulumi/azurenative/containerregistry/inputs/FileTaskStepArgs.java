@@ -25,7 +25,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contextAccessToken")
-    private final @Nullable Input<String> contextAccessToken;
+        private final @Nullable Input<String> contextAccessToken;
 
     public Input<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
@@ -36,7 +36,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable Input<String> contextPath;
+        private final @Nullable Input<String> contextPath;
 
     public Input<String> getContextPath() {
         return this.contextPath == null ? Input.empty() : this.contextPath;
@@ -47,7 +47,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-    private final Input<String> taskFilePath;
+        private final Input<String> taskFilePath;
 
     public Input<String> getTaskFilePath() {
         return this.taskFilePath;
@@ -59,7 +59,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -70,7 +70,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<SetValueArgs>> values;
+        private final @Nullable Input<List<SetValueArgs>> values;
 
     public Input<List<SetValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -81,7 +81,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valuesFilePath")
-    private final @Nullable Input<String> valuesFilePath;
+        private final @Nullable Input<String> valuesFilePath;
 
     public Input<String> getValuesFilePath() {
         return this.valuesFilePath == null ? Input.empty() : this.valuesFilePath;
@@ -200,7 +200,6 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
             this.valuesFilePath = Input.ofNullable(valuesFilePath);
             return this;
         }
-
         public FileTaskStepArgs build() {
             return new FileTaskStepArgs(contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
         }

@@ -15,28 +15,28 @@ public final class GetEntryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEntryArgs Empty = new GetEntryArgs();
 
     @InputImport(name="entryGroupId", required=true)
-    private final String entryGroupId;
+      private final String entryGroupId;
 
     public String getEntryGroupId() {
         return this.entryGroupId;
     }
 
     @InputImport(name="entryId", required=true)
-    private final String entryId;
+      private final String entryId;
 
     public String getEntryId() {
         return this.entryId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetEntryArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetEntryArgs build() {
             return new GetEntryArgs(entryGroupId, entryId, location, project);
         }

@@ -96,7 +96,6 @@ public final class HttpHeaderOptionResponse {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public HttpHeaderOptionResponse build() {
             return new HttpHeaderOptionResponse(headerName, headerValue, replace);
         }

@@ -332,7 +332,6 @@ public final class GetPrivateStoreOfferResult {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }
-
         public GetPrivateStoreOfferResult build() {
             return new GetPrivateStoreOfferResult(createdAt, eTag, iconFileUris, id, modifiedAt, name, offerDisplayName, plans, privateStoreId, publisherDisplayName, specificPlanIdsLimitation, type, uniqueOfferId, updateSuppressedDueIdempotence);
         }

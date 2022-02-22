@@ -24,7 +24,7 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -35,7 +35,7 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -94,7 +94,6 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public InstancePropertiesPatchArgs build() {
             return new InstancePropertiesPatchArgs(labels, metadata);
         }

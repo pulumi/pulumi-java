@@ -21,7 +21,7 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="primaryKey", required=true)
-    private final String primaryKey;
+        private final String primaryKey;
 
     public String getPrimaryKey() {
         return this.primaryKey;
@@ -32,7 +32,7 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="secondaryKey", required=true)
-    private final String secondaryKey;
+        private final String secondaryKey;
 
     public String getSecondaryKey() {
         return this.secondaryKey;
@@ -81,7 +81,6 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public RedisAccessKeysResponse build() {
             return new RedisAccessKeysResponse(primaryKey, secondaryKey);
         }

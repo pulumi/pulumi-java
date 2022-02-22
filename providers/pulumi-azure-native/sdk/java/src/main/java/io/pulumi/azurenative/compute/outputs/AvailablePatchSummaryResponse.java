@@ -203,7 +203,6 @@ public final class AvailablePatchSummaryResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public AvailablePatchSummaryResponse build() {
             return new AvailablePatchSummaryResponse(assessmentActivityId, criticalAndSecurityPatchCount, error, lastModifiedTime, otherPatchCount, rebootPending, startTime, status);
         }

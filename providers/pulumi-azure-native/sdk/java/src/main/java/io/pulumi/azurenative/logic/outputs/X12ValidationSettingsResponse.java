@@ -244,7 +244,6 @@ public final class X12ValidationSettingsResponse {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public X12ValidationSettingsResponse build() {
             return new X12ValidationSettingsResponse(allowLeadingAndTrailingSpacesAndZeroes, checkDuplicateGroupControlNumber, checkDuplicateInterchangeControlNumber, checkDuplicateTransactionSetControlNumber, interchangeControlNumberValidityDays, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
         }

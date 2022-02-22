@@ -95,7 +95,6 @@ public final class TimeSeriesRatioResponse {
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
         }
-
         public TimeSeriesRatioResponse build() {
             return new TimeSeriesRatioResponse(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

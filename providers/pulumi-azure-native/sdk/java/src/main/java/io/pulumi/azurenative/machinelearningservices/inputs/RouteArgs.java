@@ -19,7 +19,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -30,7 +30,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -89,7 +89,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public RouteArgs build() {
             return new RouteArgs(path, port);
         }

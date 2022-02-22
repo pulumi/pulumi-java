@@ -143,7 +143,6 @@ public final class ManagedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, description, ssisProperties, state, type);
         }

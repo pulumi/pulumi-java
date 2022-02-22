@@ -54,7 +54,6 @@ public final class GetVirtualMachineRdpFileContentsResult {
             this.contents = contents;
             return this;
         }
-
         public GetVirtualMachineRdpFileContentsResult build() {
             return new GetVirtualMachineRdpFileContentsResult(contents);
         }

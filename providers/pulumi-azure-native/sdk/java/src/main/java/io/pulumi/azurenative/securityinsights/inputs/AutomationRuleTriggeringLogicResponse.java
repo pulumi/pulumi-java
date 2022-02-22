@@ -26,7 +26,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
+        private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
 
     public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
@@ -37,7 +37,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="expirationTimeUtc")
-    private final @Nullable String expirationTimeUtc;
+        private final @Nullable String expirationTimeUtc;
 
     public Optional<String> getExpirationTimeUtc() {
         return this.expirationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.expirationTimeUtc);
@@ -48,7 +48,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -59,7 +59,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="triggersOn", required=true)
-    private final String triggersOn;
+        private final String triggersOn;
 
     public String getTriggersOn() {
         return this.triggersOn;
@@ -70,7 +70,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="triggersWhen", required=true)
-    private final String triggersWhen;
+        private final String triggersWhen;
 
     public String getTriggersWhen() {
         return this.triggersWhen;
@@ -149,7 +149,6 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
         }
-
         public AutomationRuleTriggeringLogicResponse build() {
             return new AutomationRuleTriggeringLogicResponse(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
         }

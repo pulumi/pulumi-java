@@ -401,7 +401,6 @@ public final class GetIoMAMPolicyByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIoMAMPolicyByNameResult build() {
             return new GetIoMAMPolicyByNameResult(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryptionLevel, fileSharingSaveAs, friendlyName, groupStatus, id, lastModifiedTime, location, managedBrowser, name, numOfApps, offlineWipeTimeout, pin, pinNumRetry, tags, touchId, type);
         }

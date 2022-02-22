@@ -25,7 +25,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="addresses")
-    private final @Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses;
+        private final @Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
     public Input<List<AzureFirewallPublicIPAddressArgs>> getAddresses() {
         return this.addresses == null ? Input.empty() : this.addresses;
@@ -36,7 +36,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -95,7 +95,6 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
             this.count = Input.ofNullable(count);
             return this;
         }
-
         public HubPublicIPAddressesArgs build() {
             return new HubPublicIPAddressesArgs(addresses, count);
         }

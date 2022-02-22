@@ -140,7 +140,6 @@ public final class GetJobResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(apiVersion, kind, metadata, spec, status);
         }

@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForSCCPowershellResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForSCCPowershellResult build() {
             return new GetprivateLinkServicesForSCCPowershellResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

@@ -132,7 +132,6 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
             return this;
         }
-
         public ClusterUpgradeDeltaHealthPolicyResponse build() {
             return new ClusterUpgradeDeltaHealthPolicyResponse(applicationDeltaHealthPolicies, maxPercentDeltaUnhealthyApplications, maxPercentDeltaUnhealthyNodes, maxPercentUpgradeDomainDeltaUnhealthyNodes);
         }

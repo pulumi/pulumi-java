@@ -29,7 +29,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedIssuanceModes")
-    private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
+      private final @Nullable Input<IssuanceModesArgs> allowedIssuanceModes;
 
     public Input<IssuanceModesArgs> getAllowedIssuanceModes() {
         return this.allowedIssuanceModes == null ? Input.empty() : this.allowedIssuanceModes;
@@ -40,7 +40,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedKeyTypes")
-    private final @Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes;
+      private final @Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes;
 
     public Input<List<AllowedKeyTypeArgs>> getAllowedKeyTypes() {
         return this.allowedKeyTypes == null ? Input.empty() : this.allowedKeyTypes;
@@ -51,7 +51,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baselineValues")
-    private final @Nullable Input<X509ParametersArgs> baselineValues;
+      private final @Nullable Input<X509ParametersArgs> baselineValues;
 
     public Input<X509ParametersArgs> getBaselineValues() {
         return this.baselineValues == null ? Input.empty() : this.baselineValues;
@@ -62,7 +62,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityConstraints")
-    private final @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
+      private final @Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints;
 
     public Input<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
         return this.identityConstraints == null ? Input.empty() : this.identityConstraints;
@@ -73,7 +73,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumLifetime")
-    private final @Nullable Input<String> maximumLifetime;
+      private final @Nullable Input<String> maximumLifetime;
 
     public Input<String> getMaximumLifetime() {
         return this.maximumLifetime == null ? Input.empty() : this.maximumLifetime;
@@ -84,7 +84,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passthroughExtensions")
-    private final @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
+      private final @Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
     public Input<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
         return this.passthroughExtensions == null ? Input.empty() : this.passthroughExtensions;
@@ -203,7 +203,6 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.passthroughExtensions = Input.ofNullable(passthroughExtensions);
             return this;
         }
-
         public IssuancePolicyArgs build() {
             return new IssuancePolicyArgs(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }

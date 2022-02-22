@@ -120,7 +120,6 @@ public final class AutoPatchingSettingsResponse {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
-
         public AutoPatchingSettingsResponse build() {
             return new AutoPatchingSettingsResponse(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }

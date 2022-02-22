@@ -25,7 +25,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fileHashes", required=true)
-    private final Map<String,String> fileHashes;
+      private final Map<String,String> fileHashes;
 
     public Map<String,String> getFileHashes() {
         return this.fileHashes;
@@ -36,7 +36,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resolvedRepoSource", required=true)
-    private final RepoSourceResponse resolvedRepoSource;
+      private final RepoSourceResponse resolvedRepoSource;
 
     public RepoSourceResponse getResolvedRepoSource() {
         return this.resolvedRepoSource;
@@ -47,7 +47,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resolvedStorageSource", required=true)
-    private final StorageSourceResponse resolvedStorageSource;
+      private final StorageSourceResponse resolvedStorageSource;
 
     public StorageSourceResponse getResolvedStorageSource() {
         return this.resolvedStorageSource;
@@ -58,7 +58,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resolvedStorageSourceManifest", required=true)
-    private final StorageSourceManifestResponse resolvedStorageSourceManifest;
+      private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
     public StorageSourceManifestResponse getResolvedStorageSourceManifest() {
         return this.resolvedStorageSourceManifest;
@@ -127,7 +127,6 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
             this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
             return this;
         }
-
         public SourceProvenanceResponse build() {
             return new SourceProvenanceResponse(fileHashes, resolvedRepoSource, resolvedStorageSource, resolvedStorageSourceManifest);
         }

@@ -120,7 +120,6 @@ public final class GetTagKeyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTagKeyIamPolicyResult build() {
             return new GetTagKeyIamPolicyResult(auditConfigs, bindings, etag, version);
         }

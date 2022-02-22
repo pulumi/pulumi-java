@@ -97,7 +97,6 @@ public final class UploadWatermarkResponse {
             this.usages = usages;
             return this;
         }
-
         public UploadWatermarkResponse build() {
             return new UploadWatermarkResponse(logs, metrics, usages);
         }

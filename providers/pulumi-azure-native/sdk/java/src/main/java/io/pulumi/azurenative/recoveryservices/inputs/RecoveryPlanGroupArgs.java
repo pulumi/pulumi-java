@@ -28,7 +28,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endGroupActions")
-    private final @Nullable Input<List<RecoveryPlanActionArgs>> endGroupActions;
+        private final @Nullable Input<List<RecoveryPlanActionArgs>> endGroupActions;
 
     public Input<List<RecoveryPlanActionArgs>> getEndGroupActions() {
         return this.endGroupActions == null ? Input.empty() : this.endGroupActions;
@@ -39,7 +39,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groupType", required=true)
-    private final Input<Either<String,RecoveryPlanGroupType>> groupType;
+        private final Input<Either<String,RecoveryPlanGroupType>> groupType;
 
     public Input<Either<String,RecoveryPlanGroupType>> getGroupType() {
         return this.groupType;
@@ -50,7 +50,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationProtectedItems")
-    private final @Nullable Input<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
+        private final @Nullable Input<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
     public Input<List<RecoveryPlanProtectedItemArgs>> getReplicationProtectedItems() {
         return this.replicationProtectedItems == null ? Input.empty() : this.replicationProtectedItems;
@@ -61,7 +61,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="startGroupActions")
-    private final @Nullable Input<List<RecoveryPlanActionArgs>> startGroupActions;
+        private final @Nullable Input<List<RecoveryPlanActionArgs>> startGroupActions;
 
     public Input<List<RecoveryPlanActionArgs>> getStartGroupActions() {
         return this.startGroupActions == null ? Input.empty() : this.startGroupActions;
@@ -150,7 +150,6 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
             this.startGroupActions = Input.ofNullable(startGroupActions);
             return this;
         }
-
         public RecoveryPlanGroupArgs build() {
             return new RecoveryPlanGroupArgs(endGroupActions, groupType, replicationProtectedItems, startGroupActions);
         }

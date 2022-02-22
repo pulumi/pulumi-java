@@ -46,7 +46,6 @@ public final class TagsResponse {
             this.tags = tags;
             return this;
         }
-
         public TagsResponse build() {
             return new TagsResponse(tags);
         }

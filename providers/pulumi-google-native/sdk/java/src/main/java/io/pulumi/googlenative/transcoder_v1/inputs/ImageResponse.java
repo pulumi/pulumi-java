@@ -23,7 +23,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alpha", required=true)
-    private final Double alpha;
+      private final Double alpha;
 
     public Double getAlpha() {
         return this.alpha;
@@ -34,7 +34,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolution", required=true)
-    private final NormalizedCoordinateResponse resolution;
+      private final NormalizedCoordinateResponse resolution;
 
     public NormalizedCoordinateResponse getResolution() {
         return this.resolution;
@@ -45,7 +45,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -104,7 +104,6 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(alpha, resolution, uri);
         }

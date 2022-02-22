@@ -23,7 +23,7 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsub")
-    private final @Nullable Input<PubsubArgs> pubsub;
+      private final @Nullable Input<PubsubArgs> pubsub;
 
     public Input<PubsubArgs> getPubsub() {
         return this.pubsub == null ? Input.empty() : this.pubsub;
@@ -66,7 +66,6 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
             this.pubsub = Input.ofNullable(pubsub);
             return this;
         }
-
         public TransportArgs build() {
             return new TransportArgs(pubsub);
         }

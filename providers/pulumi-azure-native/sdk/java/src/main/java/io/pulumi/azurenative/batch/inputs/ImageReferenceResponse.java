@@ -19,7 +19,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -30,7 +30,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="offer")
-    private final @Nullable String offer;
+        private final @Nullable String offer;
 
     public Optional<String> getOffer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
@@ -41,7 +41,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable String publisher;
+        private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
@@ -52,7 +52,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable String sku;
+        private final @Nullable String sku;
 
     public Optional<String> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -63,7 +63,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -142,7 +142,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
             this.version = version;
             return this;
         }
-
         public ImageReferenceResponse build() {
             return new ImageReferenceResponse(id, offer, publisher, sku, version);
         }

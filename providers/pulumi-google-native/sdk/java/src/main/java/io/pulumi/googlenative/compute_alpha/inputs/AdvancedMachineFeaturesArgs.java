@@ -24,7 +24,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableNestedVirtualization")
-    private final @Nullable Input<Boolean> enableNestedVirtualization;
+      private final @Nullable Input<Boolean> enableNestedVirtualization;
 
     public Input<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
@@ -35,7 +35,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableUefiNetworking")
-    private final @Nullable Input<Boolean> enableUefiNetworking;
+      private final @Nullable Input<Boolean> enableUefiNetworking;
 
     public Input<Boolean> getEnableUefiNetworking() {
         return this.enableUefiNetworking == null ? Input.empty() : this.enableUefiNetworking;
@@ -46,7 +46,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="numaNodeCount")
-    private final @Nullable Input<Integer> numaNodeCount;
+      private final @Nullable Input<Integer> numaNodeCount;
 
     public Input<Integer> getNumaNodeCount() {
         return this.numaNodeCount == null ? Input.empty() : this.numaNodeCount;
@@ -57,7 +57,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -68,7 +68,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="visibleCoreCount")
-    private final @Nullable Input<Integer> visibleCoreCount;
+      private final @Nullable Input<Integer> visibleCoreCount;
 
     public Input<Integer> getVisibleCoreCount() {
         return this.visibleCoreCount == null ? Input.empty() : this.visibleCoreCount;
@@ -172,7 +172,6 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.visibleCoreCount = Input.ofNullable(visibleCoreCount);
             return this;
         }
-
         public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(enableNestedVirtualization, enableUefiNetworking, numaNodeCount, threadsPerCore, visibleCoreCount);
         }

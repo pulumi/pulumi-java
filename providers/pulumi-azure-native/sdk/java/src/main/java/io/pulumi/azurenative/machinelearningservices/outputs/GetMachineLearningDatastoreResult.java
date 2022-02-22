@@ -206,7 +206,6 @@ public final class GetMachineLearningDatastoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineLearningDatastoreResult build() {
             return new GetMachineLearningDatastoreResult(id, identity, location, name, properties, sku, tags, type);
         }

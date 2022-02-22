@@ -266,7 +266,6 @@ public final class GetADLSGen2FolderDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetADLSGen2FolderDataSetResult build() {
             return new GetADLSGen2FolderDataSetResult(dataSetId, fileSystem, folderPath, id, kind, name, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

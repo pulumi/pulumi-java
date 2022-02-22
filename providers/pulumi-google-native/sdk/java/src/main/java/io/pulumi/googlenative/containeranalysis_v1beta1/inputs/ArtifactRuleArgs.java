@@ -20,7 +20,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArtifactRuleArgs Empty = new ArtifactRuleArgs();
 
     @InputImport(name="artifactRule")
-    private final @Nullable Input<List<String>> artifactRule;
+      private final @Nullable Input<List<String>> artifactRule;
 
     public Input<List<String>> getArtifactRule() {
         return this.artifactRule == null ? Input.empty() : this.artifactRule;
@@ -63,7 +63,6 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactRule = Input.ofNullable(artifactRule);
             return this;
         }
-
         public ArtifactRuleArgs build() {
             return new ArtifactRuleArgs(artifactRule);
         }

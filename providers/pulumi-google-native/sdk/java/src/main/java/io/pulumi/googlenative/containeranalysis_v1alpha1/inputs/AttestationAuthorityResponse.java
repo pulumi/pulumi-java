@@ -17,7 +17,7 @@ public final class AttestationAuthorityResponse extends io.pulumi.resources.Invo
     public static final AttestationAuthorityResponse Empty = new AttestationAuthorityResponse();
 
     @InputImport(name="hint", required=true)
-    private final AttestationAuthorityHintResponse hint;
+      private final AttestationAuthorityHintResponse hint;
 
     public AttestationAuthorityHintResponse getHint() {
         return this.hint;
@@ -55,7 +55,6 @@ public final class AttestationAuthorityResponse extends io.pulumi.resources.Invo
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AttestationAuthorityResponse build() {
             return new AttestationAuthorityResponse(hint);
         }

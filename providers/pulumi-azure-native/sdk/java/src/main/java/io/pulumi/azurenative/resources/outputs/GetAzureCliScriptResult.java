@@ -528,7 +528,6 @@ public final class GetAzureCliScriptResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAzureCliScriptResult build() {
             return new GetAzureCliScriptResult(arguments, azCliVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, id, identity, kind, location, name, outputs, primaryScriptUri, provisioningState, retentionInterval, scriptContent, status, storageAccountSettings, supportingScriptUris, systemData, tags, timeout, type);
         }

@@ -77,7 +77,6 @@ public final class ManagedRuleGroupOverrideResponse {
             this.rules = rules;
             return this;
         }
-
         public ManagedRuleGroupOverrideResponse build() {
             return new ManagedRuleGroupOverrideResponse(ruleGroupName, rules);
         }

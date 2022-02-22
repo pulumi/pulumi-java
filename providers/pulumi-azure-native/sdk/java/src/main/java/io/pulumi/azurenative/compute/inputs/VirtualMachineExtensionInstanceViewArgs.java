@@ -25,7 +25,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable Input<List<InstanceViewStatusArgs>> statuses;
+        private final @Nullable Input<List<InstanceViewStatusArgs>> statuses;
 
     public Input<List<InstanceViewStatusArgs>> getStatuses() {
         return this.statuses == null ? Input.empty() : this.statuses;
@@ -47,7 +47,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="substatuses")
-    private final @Nullable Input<List<InstanceViewStatusArgs>> substatuses;
+        private final @Nullable Input<List<InstanceViewStatusArgs>> substatuses;
 
     public Input<List<InstanceViewStatusArgs>> getSubstatuses() {
         return this.substatuses == null ? Input.empty() : this.substatuses;
@@ -58,7 +58,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -69,7 +69,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable Input<String> typeHandlerVersion;
+        private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
@@ -173,7 +173,6 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }
-
         public VirtualMachineExtensionInstanceViewArgs build() {
             return new VirtualMachineExtensionInstanceViewArgs(name, statuses, substatuses, type, typeHandlerVersion);
         }

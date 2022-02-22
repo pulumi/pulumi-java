@@ -76,7 +76,6 @@ public final class ScriptStatisticsResponse {
             this.stackFrames = Objects.requireNonNull(stackFrames);
             return this;
         }
-
         public ScriptStatisticsResponse build() {
             return new ScriptStatisticsResponse(evaluationKind, stackFrames);
         }

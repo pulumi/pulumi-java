@@ -75,7 +75,6 @@ public final class UserPropertyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UserPropertyResponse build() {
             return new UserPropertyResponse(name, value);
         }

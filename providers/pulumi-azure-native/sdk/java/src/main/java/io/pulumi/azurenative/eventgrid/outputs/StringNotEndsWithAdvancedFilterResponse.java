@@ -100,7 +100,6 @@ public final class StringNotEndsWithAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringNotEndsWithAdvancedFilterResponse build() {
             return new StringNotEndsWithAdvancedFilterResponse(key, operatorType, values);
         }

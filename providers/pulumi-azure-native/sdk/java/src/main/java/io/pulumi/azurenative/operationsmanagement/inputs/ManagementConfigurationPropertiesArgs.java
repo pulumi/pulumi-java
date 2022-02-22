@@ -26,7 +26,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+        private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -37,7 +37,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<List<ArmTemplateParameterArgs>> parameters;
+        private final Input<List<ArmTemplateParameterArgs>> parameters;
 
     public Input<List<ArmTemplateParameterArgs>> getParameters() {
         return this.parameters;
@@ -48,7 +48,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final Input<String> parentResourceType;
+        private final Input<String> parentResourceType;
 
     public Input<String> getParentResourceType() {
         return this.parentResourceType;
@@ -59,7 +59,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<Object> template;
+        private final Input<Object> template;
 
     public Input<Object> getTemplate() {
         return this.template;
@@ -148,7 +148,6 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
-
         public ManagementConfigurationPropertiesArgs build() {
             return new ManagementConfigurationPropertiesArgs(applicationId, parameters, parentResourceType, template);
         }

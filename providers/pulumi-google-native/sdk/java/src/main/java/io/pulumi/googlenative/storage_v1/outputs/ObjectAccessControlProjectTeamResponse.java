@@ -74,7 +74,6 @@ public final class ObjectAccessControlProjectTeamResponse {
             this.team = Objects.requireNonNull(team);
             return this;
         }
-
         public ObjectAccessControlProjectTeamResponse build() {
             return new ObjectAccessControlProjectTeamResponse(projectNumber, team);
         }

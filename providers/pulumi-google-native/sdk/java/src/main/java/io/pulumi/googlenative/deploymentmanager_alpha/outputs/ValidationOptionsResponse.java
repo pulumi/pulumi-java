@@ -74,7 +74,6 @@ public final class ValidationOptionsResponse {
             this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
             return this;
         }
-
         public ValidationOptionsResponse build() {
             return new ValidationOptionsResponse(schemaValidation, undeclaredProperties);
         }

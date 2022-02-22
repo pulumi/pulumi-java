@@ -21,7 +21,7 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="originalTransformOrCollection", required=true)
-    private final String originalTransformOrCollection;
+      private final String originalTransformOrCollection;
 
     public String getOriginalTransformOrCollection() {
         return this.originalTransformOrCollection;
@@ -43,7 +43,7 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeBytes", required=true)
-    private final String sizeBytes;
+      private final String sizeBytes;
 
     public String getSizeBytes() {
         return this.sizeBytes;
@@ -54,7 +54,7 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -123,7 +123,6 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public StageSourceResponse build() {
             return new StageSourceResponse(name, originalTransformOrCollection, sizeBytes, userName);
         }

@@ -95,7 +95,6 @@ public final class NetworkEndpointGroupCloudRunResponse {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
-
         public NetworkEndpointGroupCloudRunResponse build() {
             return new NetworkEndpointGroupCloudRunResponse(service, tag, urlMask);
         }

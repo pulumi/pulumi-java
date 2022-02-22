@@ -162,7 +162,6 @@ public final class IoTHubStreamInputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IoTHubStreamInputDataSourceResponse build() {
             return new IoTHubStreamInputDataSourceResponse(consumerGroupName, endpoint, iotHubNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

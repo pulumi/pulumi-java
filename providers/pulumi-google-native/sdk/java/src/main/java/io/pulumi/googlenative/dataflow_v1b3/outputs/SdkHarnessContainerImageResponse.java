@@ -96,7 +96,6 @@ public final class SdkHarnessContainerImageResponse {
             this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
             return this;
         }
-
         public SdkHarnessContainerImageResponse build() {
             return new SdkHarnessContainerImageResponse(containerImage, environmentId, useSingleCorePerContainer);
         }

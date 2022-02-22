@@ -264,7 +264,6 @@ public final class SpriteSheetResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public SpriteSheetResponse build() {
             return new SpriteSheetResponse(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
         }

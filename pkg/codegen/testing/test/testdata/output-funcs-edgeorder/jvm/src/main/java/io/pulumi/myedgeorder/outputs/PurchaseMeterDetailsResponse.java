@@ -161,7 +161,6 @@ public final class PurchaseMeterDetailsResponse {
             this.termId = Objects.requireNonNull(termId);
             return this;
         }
-
         public PurchaseMeterDetailsResponse build() {
             return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
         }

@@ -21,7 +21,7 @@ public final class ConnectToTargetSqlDbTaskInputResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse targetConnectionInfo;
+        private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -59,7 +59,6 @@ public final class ConnectToTargetSqlDbTaskInputResponse extends io.pulumi.resou
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlDbTaskInputResponse build() {
             return new ConnectToTargetSqlDbTaskInputResponse(targetConnectionInfo);
         }

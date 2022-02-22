@@ -52,7 +52,6 @@ public final class MetastoreConfigResponse {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
-
         public MetastoreConfigResponse build() {
             return new MetastoreConfigResponse(dataprocMetastoreService);
         }

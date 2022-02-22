@@ -140,7 +140,6 @@ public final class GetBucketIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetBucketIamPolicyResult build() {
             return new GetBucketIamPolicyResult(bindings, etag, kind, resourceId, version);
         }

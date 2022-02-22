@@ -99,7 +99,6 @@ public final class FirewallPolicyInsightsResponse {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public FirewallPolicyInsightsResponse build() {
             return new FirewallPolicyInsightsResponse(isEnabled, logAnalyticsResources, retentionDays);
         }

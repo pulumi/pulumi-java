@@ -21,7 +21,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+        private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -32,7 +32,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable Input<String> privateLinkResourceId;
+        private final @Nullable Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
@@ -54,7 +54,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requestMessage")
-    private final @Nullable Input<String> requestMessage;
+        private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
@@ -65,7 +65,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+        private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
     public Input<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -169,7 +169,6 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public SharedPrivateLinkResourceArgs build() {
             return new SharedPrivateLinkResourceArgs(groupId, name, privateLinkResourceId, requestMessage, status);
         }

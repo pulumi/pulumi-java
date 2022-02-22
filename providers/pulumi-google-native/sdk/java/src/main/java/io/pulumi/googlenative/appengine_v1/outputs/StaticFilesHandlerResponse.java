@@ -181,7 +181,6 @@ public final class StaticFilesHandlerResponse {
             this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
             return this;
         }
-
         public StaticFilesHandlerResponse build() {
             return new StaticFilesHandlerResponse(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }

@@ -391,7 +391,6 @@ public final class GetRegionTargetHttpsProxyResult {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetRegionTargetHttpsProxyResult build() {
             return new GetRegionTargetHttpsProxyResult(authorizationPolicy, certificateMap, creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, quicOverride, region, selfLink, selfLinkWithId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
         }

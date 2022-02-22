@@ -22,7 +22,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyInMinutes", required=true)
-    private final Input<Integer> frequencyInMinutes;
+        private final Input<Integer> frequencyInMinutes;
 
     public Input<Integer> getFrequencyInMinutes() {
         return this.frequencyInMinutes;
@@ -33,7 +33,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeWindowInMinutes", required=true)
-    private final Input<Integer> timeWindowInMinutes;
+        private final Input<Integer> timeWindowInMinutes;
 
     public Input<Integer> getTimeWindowInMinutes() {
         return this.timeWindowInMinutes;
@@ -92,7 +92,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.timeWindowInMinutes = Input.of(Objects.requireNonNull(timeWindowInMinutes));
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(frequencyInMinutes, timeWindowInMinutes);
         }

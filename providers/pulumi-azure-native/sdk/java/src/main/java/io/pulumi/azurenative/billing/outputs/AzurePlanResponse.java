@@ -76,7 +76,6 @@ public final class AzurePlanResponse {
             this.skuId = skuId;
             return this;
         }
-
         public AzurePlanResponse build() {
             return new AzurePlanResponse(skuDescription, skuId);
         }

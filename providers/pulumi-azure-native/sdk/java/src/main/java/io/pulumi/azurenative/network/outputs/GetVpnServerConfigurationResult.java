@@ -443,7 +443,6 @@ public final class GetVpnServerConfigurationResult {
             this.vpnProtocols = vpnProtocols;
             return this;
         }
-
         public GetVpnServerConfigurationResult build() {
             return new GetVpnServerConfigurationResult(aadAuthenticationParameters, etag, id, location, name, p2SVpnGateways, provisioningState, radiusClientRootCertificates, radiusServerAddress, radiusServerRootCertificates, radiusServerSecret, radiusServers, tags, type, vpnAuthenticationTypes, vpnClientIpsecPolicies, vpnClientRevokedCertificates, vpnClientRootCertificates, vpnProtocols);
         }

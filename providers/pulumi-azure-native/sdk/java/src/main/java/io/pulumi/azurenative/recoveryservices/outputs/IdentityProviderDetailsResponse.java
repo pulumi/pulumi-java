@@ -139,7 +139,6 @@ public final class IdentityProviderDetailsResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public IdentityProviderDetailsResponse build() {
             return new IdentityProviderDetailsResponse(aadAuthority, applicationId, audience, objectId, tenantId);
         }

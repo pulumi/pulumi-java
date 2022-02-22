@@ -95,7 +95,6 @@ public final class PermissionScopeResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public PermissionScopeResponse build() {
             return new PermissionScopeResponse(permissions, resourceName, service);
         }

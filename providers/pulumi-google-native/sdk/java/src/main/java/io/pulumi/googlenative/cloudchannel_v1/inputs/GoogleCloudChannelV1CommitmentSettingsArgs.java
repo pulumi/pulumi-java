@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="renewalSettings")
-    private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
+      private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
     public Input<GoogleCloudChannelV1RenewalSettingsArgs> getRenewalSettings() {
         return this.renewalSettings == null ? Input.empty() : this.renewalSettings;
@@ -66,7 +66,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
             this.renewalSettings = Input.ofNullable(renewalSettings);
             return this;
         }
-
         public GoogleCloudChannelV1CommitmentSettingsArgs build() {
             return new GoogleCloudChannelV1CommitmentSettingsArgs(renewalSettings);
         }

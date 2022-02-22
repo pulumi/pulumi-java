@@ -25,7 +25,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-    private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Input<Boolean> boolValue;
 
     public Input<Boolean> getBoolValue() {
         return this.boolValue == null ? Input.empty() : this.boolValue;
@@ -36,7 +36,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="durationValue")
-    private final @Nullable Input<String> durationValue;
+      private final @Nullable Input<String> durationValue;
 
     public Input<String> getDurationValue() {
         return this.durationValue == null ? Input.empty() : this.durationValue;
@@ -47,7 +47,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="floatValue")
-    private final @Nullable Input<Double> floatValue;
+      private final @Nullable Input<Double> floatValue;
 
     public Input<Double> getFloatValue() {
         return this.floatValue == null ? Input.empty() : this.floatValue;
@@ -58,7 +58,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="int64Value")
-    private final @Nullable Input<String> int64Value;
+      private final @Nullable Input<String> int64Value;
 
     public Input<String> getInt64Value() {
         return this.int64Value == null ? Input.empty() : this.int64Value;
@@ -69,7 +69,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="javaClassValue")
-    private final @Nullable Input<String> javaClassValue;
+      private final @Nullable Input<String> javaClassValue;
 
     public Input<String> getJavaClassValue() {
         return this.javaClassValue == null ? Input.empty() : this.javaClassValue;
@@ -80,7 +80,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -91,7 +91,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -102,7 +102,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -113,7 +113,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortStrValue")
-    private final @Nullable Input<String> shortStrValue;
+      private final @Nullable Input<String> shortStrValue;
 
     public Input<String> getShortStrValue() {
         return this.shortStrValue == null ? Input.empty() : this.shortStrValue;
@@ -124,7 +124,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strValue")
-    private final @Nullable Input<String> strValue;
+      private final @Nullable Input<String> strValue;
 
     public Input<String> getStrValue() {
         return this.strValue == null ? Input.empty() : this.strValue;
@@ -135,7 +135,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampValue")
-    private final @Nullable Input<String> timestampValue;
+      private final @Nullable Input<String> timestampValue;
 
     public Input<String> getTimestampValue() {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;
@@ -146,7 +146,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -355,7 +355,6 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public DisplayDataArgs build() {
             return new DisplayDataArgs(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
         }

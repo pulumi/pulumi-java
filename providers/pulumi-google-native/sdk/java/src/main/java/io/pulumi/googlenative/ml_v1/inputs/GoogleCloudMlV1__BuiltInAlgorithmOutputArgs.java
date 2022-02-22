@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable Input<String> framework;
+      private final @Nullable Input<String> framework;
 
     public Input<String> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="modelPath")
-    private final @Nullable Input<String> modelPath;
+      private final @Nullable Input<String> modelPath;
 
     public Input<String> getModelPath() {
         return this.modelPath == null ? Input.empty() : this.modelPath;
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="pythonVersion")
-    private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -145,7 +145,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
-
         public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {
             return new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(framework, modelPath, pythonVersion, runtimeVersion);
         }

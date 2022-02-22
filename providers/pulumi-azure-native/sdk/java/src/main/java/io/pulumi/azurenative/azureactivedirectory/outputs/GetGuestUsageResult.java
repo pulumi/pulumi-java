@@ -161,7 +161,6 @@ public final class GetGuestUsageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGuestUsageResult build() {
             return new GetGuestUsageResult(id, location, name, tags, tenantId, type);
         }

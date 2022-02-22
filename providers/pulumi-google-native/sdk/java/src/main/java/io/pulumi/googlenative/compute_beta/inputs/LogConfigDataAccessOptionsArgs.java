@@ -23,7 +23,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logMode")
-    private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
+      private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
 
     public Input<LogConfigDataAccessOptionsLogMode> getLogMode() {
         return this.logMode == null ? Input.empty() : this.logMode;
@@ -66,7 +66,6 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
             this.logMode = Input.ofNullable(logMode);
             return this;
         }
-
         public LogConfigDataAccessOptionsArgs build() {
             return new LogConfigDataAccessOptionsArgs(logMode);
         }

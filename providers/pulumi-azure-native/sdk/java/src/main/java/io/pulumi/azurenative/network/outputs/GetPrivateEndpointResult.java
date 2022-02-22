@@ -314,7 +314,6 @@ public final class GetPrivateEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointResult build() {
             return new GetPrivateEndpointResult(customDnsConfigs, etag, extendedLocation, id, location, manualPrivateLinkServiceConnections, name, networkInterfaces, privateLinkServiceConnections, provisioningState, subnet, tags, type);
         }

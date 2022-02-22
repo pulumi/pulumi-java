@@ -98,7 +98,6 @@ public final class RestRequestResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RestRequestResponse build() {
             return new RestRequestResponse(authentication, method, uri);
         }

@@ -143,7 +143,6 @@ public final class EncryptionResponse {
             this.services = services;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }

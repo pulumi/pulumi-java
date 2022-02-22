@@ -23,7 +23,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable String jobId;
+        private final @Nullable String jobId;
 
     public Optional<String> getJobId() {
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
@@ -34,7 +34,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="scenarioName")
-    private final @Nullable String scenarioName;
+        private final @Nullable String scenarioName;
 
     public Optional<String> getScenarioName() {
         return this.scenarioName == null ? Optional.empty() : Optional.ofNullable(this.scenarioName);
@@ -45,7 +45,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -104,7 +104,6 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
             this.startTime = startTime;
             return this;
         }
-
         public CurrentScenarioDetailsResponse build() {
             return new CurrentScenarioDetailsResponse(jobId, scenarioName, startTime);
         }

@@ -95,7 +95,6 @@ public final class GetKnowledgeBaseResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKnowledgeBaseResult build() {
             return new GetKnowledgeBaseResult(displayName, languageCode, name);
         }

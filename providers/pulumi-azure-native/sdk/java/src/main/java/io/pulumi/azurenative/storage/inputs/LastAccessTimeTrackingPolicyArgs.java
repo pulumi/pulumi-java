@@ -28,7 +28,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="blobType")
-    private final @Nullable Input<List<String>> blobType;
+        private final @Nullable Input<List<String>> blobType;
 
     public Input<List<String>> getBlobType() {
         return this.blobType == null ? Input.empty() : this.blobType;
@@ -39,7 +39,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Input<Boolean> enable;
+        private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
@@ -50,7 +50,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,Name>> name;
+        private final @Nullable Input<Either<String,Name>> name;
 
     public Input<Either<String,Name>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,7 +61,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="trackingGranularityInDays")
-    private final @Nullable Input<Integer> trackingGranularityInDays;
+        private final @Nullable Input<Integer> trackingGranularityInDays;
 
     public Input<Integer> getTrackingGranularityInDays() {
         return this.trackingGranularityInDays == null ? Input.empty() : this.trackingGranularityInDays;
@@ -150,7 +150,6 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
             this.trackingGranularityInDays = Input.ofNullable(trackingGranularityInDays);
             return this;
         }
-
         public LastAccessTimeTrackingPolicyArgs build() {
             return new LastAccessTimeTrackingPolicyArgs(blobType, enable, name, trackingGranularityInDays);
         }

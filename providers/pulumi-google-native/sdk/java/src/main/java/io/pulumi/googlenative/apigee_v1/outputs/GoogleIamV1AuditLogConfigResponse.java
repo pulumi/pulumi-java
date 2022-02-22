@@ -75,7 +75,6 @@ public final class GoogleIamV1AuditLogConfigResponse {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GoogleIamV1AuditLogConfigResponse build() {
             return new GoogleIamV1AuditLogConfigResponse(exemptedMembers, logType);
         }

@@ -15,21 +15,21 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
     public static final GetFutureReservationArgs Empty = new GetFutureReservationArgs();
 
     @InputImport(name="futureReservation", required=true)
-    private final String futureReservation;
+      private final String futureReservation;
 
     public String getFutureReservation() {
         return this.futureReservation;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -88,7 +88,6 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetFutureReservationArgs build() {
             return new GetFutureReservationArgs(futureReservation, project, zone);
         }

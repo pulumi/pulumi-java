@@ -22,7 +22,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="apiVersion", required=true)
-    private final String apiVersion;
+      private final String apiVersion;
 
     public String getApiVersion() {
         return this.apiVersion;
@@ -33,7 +33,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="blockOwnerDeletion", required=true)
-    private final Boolean blockOwnerDeletion;
+      private final Boolean blockOwnerDeletion;
 
     public Boolean getBlockOwnerDeletion() {
         return this.blockOwnerDeletion;
@@ -44,7 +44,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="controller", required=true)
-    private final Boolean controller;
+      private final Boolean controller;
 
     public Boolean getController() {
         return this.controller;
@@ -55,7 +55,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -66,7 +66,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -166,7 +166,6 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReferenceResponse build() {
             return new OwnerReferenceResponse(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

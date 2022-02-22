@@ -74,7 +74,6 @@ public final class ImageResponse {
             this.rawBytes = Objects.requireNonNull(rawBytes);
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(gcsUri, rawBytes);
         }

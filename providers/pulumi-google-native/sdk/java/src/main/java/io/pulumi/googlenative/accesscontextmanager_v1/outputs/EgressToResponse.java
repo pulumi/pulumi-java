@@ -76,7 +76,6 @@ public final class EgressToResponse {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public EgressToResponse build() {
             return new EgressToResponse(operations, resources);
         }

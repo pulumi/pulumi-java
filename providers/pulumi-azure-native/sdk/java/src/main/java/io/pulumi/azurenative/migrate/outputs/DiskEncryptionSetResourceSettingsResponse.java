@@ -76,7 +76,6 @@ public final class DiskEncryptionSetResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public DiskEncryptionSetResourceSettingsResponse build() {
             return new DiskEncryptionSetResourceSettingsResponse(resourceType, targetResourceName);
         }

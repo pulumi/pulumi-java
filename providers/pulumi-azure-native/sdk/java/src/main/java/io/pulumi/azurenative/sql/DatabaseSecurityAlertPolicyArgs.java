@@ -23,7 +23,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -34,7 +34,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disabledAlerts")
-    private final @Nullable Input<List<String>> disabledAlerts;
+        private final @Nullable Input<List<String>> disabledAlerts;
 
     public Input<List<String>> getDisabledAlerts() {
         return this.disabledAlerts == null ? Input.empty() : this.disabledAlerts;
@@ -45,7 +45,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="emailAccountAdmins")
-    private final @Nullable Input<Boolean> emailAccountAdmins;
+        private final @Nullable Input<Boolean> emailAccountAdmins;
 
     public Input<Boolean> getEmailAccountAdmins() {
         return this.emailAccountAdmins == null ? Input.empty() : this.emailAccountAdmins;
@@ -56,7 +56,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="emailAddresses")
-    private final @Nullable Input<List<String>> emailAddresses;
+        private final @Nullable Input<List<String>> emailAddresses;
 
     public Input<List<String>> getEmailAddresses() {
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
@@ -67,7 +67,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -89,7 +89,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityAlertPolicyName")
-    private final @Nullable Input<String> securityAlertPolicyName;
+        private final @Nullable Input<String> securityAlertPolicyName;
 
     public Input<String> getSecurityAlertPolicyName() {
         return this.securityAlertPolicyName == null ? Input.empty() : this.securityAlertPolicyName;
@@ -100,7 +100,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -111,7 +111,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<SecurityAlertsPolicyState> state;
+        private final Input<SecurityAlertsPolicyState> state;
 
     public Input<SecurityAlertsPolicyState> getState() {
         return this.state;
@@ -122,7 +122,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-    private final @Nullable Input<String> storageAccountAccessKey;
+        private final @Nullable Input<String> storageAccountAccessKey;
 
     public Input<String> getStorageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
@@ -133,7 +133,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageEndpoint")
-    private final @Nullable Input<String> storageEndpoint;
+        private final @Nullable Input<String> storageEndpoint;
 
     public Input<String> getStorageEndpoint() {
         return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;
@@ -327,7 +327,6 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             this.storageEndpoint = Input.ofNullable(storageEndpoint);
             return this;
         }
-
         public DatabaseSecurityAlertPolicyArgs build() {
             return new DatabaseSecurityAlertPolicyArgs(databaseName, disabledAlerts, emailAccountAdmins, emailAddresses, resourceGroupName, retentionDays, securityAlertPolicyName, serverName, state, storageAccountAccessKey, storageEndpoint);
         }

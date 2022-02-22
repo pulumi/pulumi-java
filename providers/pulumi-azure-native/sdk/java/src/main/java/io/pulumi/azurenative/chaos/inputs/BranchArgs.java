@@ -27,7 +27,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<Object>> actions;
+        private final Input<List<Object>> actions;
 
     public Input<List<Object>> getActions() {
         return this.actions;
@@ -38,7 +38,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -97,7 +97,6 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public BranchArgs build() {
             return new BranchArgs(actions, name);
         }

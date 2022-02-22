@@ -307,7 +307,6 @@ public final class GetHostQueryResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetHostQueryResult build() {
             return new GetHostQueryResult(created, envgroupHostname, error, executionTime, name, queryParams, reportDefinitionId, result, resultFileSize, resultRows, self, state, updated);
         }

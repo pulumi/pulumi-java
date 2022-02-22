@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      * 
      */
     @InputImport(name="enableInteractionLogging", required=true)
-    private final Boolean enableInteractionLogging;
+      private final Boolean enableInteractionLogging;
 
     public Boolean getEnableInteractionLogging() {
         return this.enableInteractionLogging;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      * 
      */
     @InputImport(name="enableStackdriverLogging", required=true)
-    private final Boolean enableStackdriverLogging;
+      private final Boolean enableStackdriverLogging;
 
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(enableInteractionLogging, enableStackdriverLogging);
         }

@@ -205,7 +205,6 @@ public final class PaypalSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PaypalSourceResponse build() {
             return new PaypalSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

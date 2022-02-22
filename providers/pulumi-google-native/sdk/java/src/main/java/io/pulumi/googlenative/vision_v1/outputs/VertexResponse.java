@@ -74,7 +74,6 @@ public final class VertexResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public VertexResponse build() {
             return new VertexResponse(x, y);
         }

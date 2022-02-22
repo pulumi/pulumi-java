@@ -97,7 +97,6 @@ public final class DaprMetadataResponse {
             this.value = value;
             return this;
         }
-
         public DaprMetadataResponse build() {
             return new DaprMetadataResponse(name, secretRef, value);
         }

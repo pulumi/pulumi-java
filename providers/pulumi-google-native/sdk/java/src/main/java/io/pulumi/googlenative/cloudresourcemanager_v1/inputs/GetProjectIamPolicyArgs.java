@@ -13,7 +13,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -51,7 +51,6 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetProjectIamPolicyArgs build() {
             return new GetProjectIamPolicyArgs(resource);
         }

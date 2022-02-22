@@ -354,7 +354,6 @@ public final class GetKubeEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKubeEnvironmentResult build() {
             return new GetKubeEnvironmentResult(aksResourceID, appLogsConfiguration, arcConfiguration, defaultDomain, deploymentErrors, extendedLocation, id, internalLoadBalancerEnabled, kind, location, name, provisioningState, staticIp, tags, type);
         }

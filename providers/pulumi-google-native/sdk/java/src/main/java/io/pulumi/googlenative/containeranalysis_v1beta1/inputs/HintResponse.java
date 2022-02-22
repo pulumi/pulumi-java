@@ -21,7 +21,7 @@ public final class HintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final String humanReadableName;
+      private final String humanReadableName;
 
     public String getHumanReadableName() {
         return this.humanReadableName;
@@ -59,7 +59,6 @@ public final class HintResponse extends io.pulumi.resources.InvokeArgs {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public HintResponse build() {
             return new HintResponse(humanReadableName);
         }

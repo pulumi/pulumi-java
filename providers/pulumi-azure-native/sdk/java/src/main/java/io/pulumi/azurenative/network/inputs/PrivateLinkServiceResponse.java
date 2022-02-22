@@ -33,7 +33,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="alias", required=true)
-    private final String alias;
+        private final String alias;
 
     public String getAlias() {
         return this.alias;
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoApproval")
-    private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
+        private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
 
     public Optional<PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
         return this.autoApproval == null ? Optional.empty() : Optional.ofNullable(this.autoApproval);
@@ -55,7 +55,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableProxyProtocol")
-    private final @Nullable Boolean enableProxyProtocol;
+        private final @Nullable Boolean enableProxyProtocol;
 
     public Optional<Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol == null ? Optional.empty() : Optional.ofNullable(this.enableProxyProtocol);
@@ -66,7 +66,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -77,7 +77,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable ExtendedLocationResponse extendedLocation;
+        private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
@@ -88,7 +88,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fqdns")
-    private final @Nullable List<String> fqdns;
+        private final @Nullable List<String> fqdns;
 
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
@@ -99,7 +99,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -110,7 +110,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
+        private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
 
     public List<PrivateLinkServiceIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -121,7 +121,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="loadBalancerFrontendIpConfigurations")
-    private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
+        private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
 
     public List<FrontendIPConfigurationResponse> getLoadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
@@ -132,7 +132,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -143,7 +143,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -154,7 +154,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+        private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -165,7 +165,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateEndpointConnections", required=true)
-    private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+        private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -176,7 +176,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -187,7 +187,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -198,7 +198,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -209,7 +209,7 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
+        private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
     public Optional<PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
@@ -408,7 +408,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
             this.visibility = visibility;
             return this;
         }
-
         public PrivateLinkServiceResponse build() {
             return new PrivateLinkServiceResponse(alias, autoApproval, enableProxyProtocol, etag, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, name, networkInterfaces, privateEndpointConnections, provisioningState, tags, type, visibility);
         }

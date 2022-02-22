@@ -140,7 +140,6 @@ public final class DataBoxHeavySecretResponse {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }
-
         public DataBoxHeavySecretResponse build() {
             return new DataBoxHeavySecretResponse(accountCredentialDetails, devicePassword, deviceSerialNumber, encodedValidationCertPubKey, networkConfigurations);
         }

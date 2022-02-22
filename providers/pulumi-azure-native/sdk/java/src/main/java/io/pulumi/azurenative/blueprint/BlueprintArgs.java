@@ -25,7 +25,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintName")
-    private final @Nullable Input<String> blueprintName;
+        private final @Nullable Input<String> blueprintName;
 
     public Input<String> getBlueprintName() {
         return this.blueprintName == null ? Input.empty() : this.blueprintName;
@@ -36,7 +36,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -58,7 +58,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterDefinitionArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterDefinitionArgs>> parameters;
 
     public Input<Map<String,ParameterDefinitionArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -69,7 +69,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroups")
-    private final @Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
+        private final @Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
     public Input<Map<String,ResourceGroupDefinitionArgs>> getResourceGroups() {
         return this.resourceGroups == null ? Input.empty() : this.resourceGroups;
@@ -80,7 +80,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final Input<String> resourceScope;
+        private final Input<String> resourceScope;
 
     public Input<String> getResourceScope() {
         return this.resourceScope;
@@ -91,7 +91,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetScope", required=true)
-    private final Input<Either<String,BlueprintTargetScope>> targetScope;
+        private final Input<Either<String,BlueprintTargetScope>> targetScope;
 
     public Input<Either<String,BlueprintTargetScope>> getTargetScope() {
         return this.targetScope;
@@ -102,7 +102,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<Object> versions;
+        private final @Nullable Input<Object> versions;
 
     public Input<Object> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -251,7 +251,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public BlueprintArgs build() {
             return new BlueprintArgs(blueprintName, description, displayName, parameters, resourceGroups, resourceScope, targetScope, versions);
         }

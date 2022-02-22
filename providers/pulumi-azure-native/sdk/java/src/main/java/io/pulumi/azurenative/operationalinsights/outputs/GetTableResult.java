@@ -334,7 +334,6 @@ public final class GetTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(archiveRetentionInDays, id, lastPlanModifiedDate, name, plan, provisioningState, restoredLogs, resultStatistics, retentionInDays, schema, searchResults, systemData, totalRetentionInDays, type);
         }

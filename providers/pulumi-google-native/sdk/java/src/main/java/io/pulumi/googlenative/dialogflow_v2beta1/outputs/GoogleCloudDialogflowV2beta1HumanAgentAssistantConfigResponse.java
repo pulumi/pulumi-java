@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
         }

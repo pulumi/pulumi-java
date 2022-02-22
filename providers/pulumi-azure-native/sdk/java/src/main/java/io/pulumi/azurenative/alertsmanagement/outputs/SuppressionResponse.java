@@ -249,7 +249,6 @@ public final class SuppressionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SuppressionResponse build() {
             return new SuppressionResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, suppressionConfig, type);
         }

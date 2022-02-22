@@ -268,7 +268,6 @@ public final class NatRuleResponse {
             this.translatedPort = translatedPort;
             return this;
         }
-
         public NatRuleResponse build() {
             return new NatRuleResponse(description, destinationAddresses, destinationPorts, ipProtocols, name, ruleType, sourceAddresses, sourceIpGroups, translatedAddress, translatedFqdn, translatedPort);
         }

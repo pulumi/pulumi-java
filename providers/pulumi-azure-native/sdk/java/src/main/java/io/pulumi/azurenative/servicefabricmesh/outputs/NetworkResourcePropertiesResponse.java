@@ -141,7 +141,6 @@ public final class NetworkResourcePropertiesResponse {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public NetworkResourcePropertiesResponse build() {
             return new NetworkResourcePropertiesResponse(description, kind, provisioningState, status, statusDetails);
         }

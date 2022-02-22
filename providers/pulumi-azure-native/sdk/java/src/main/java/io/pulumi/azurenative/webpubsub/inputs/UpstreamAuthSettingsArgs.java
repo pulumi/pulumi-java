@@ -26,7 +26,7 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="managedIdentity")
-    private final @Nullable Input<ManagedIdentitySettingsArgs> managedIdentity;
+        private final @Nullable Input<ManagedIdentitySettingsArgs> managedIdentity;
 
     public Input<ManagedIdentitySettingsArgs> getManagedIdentity() {
         return this.managedIdentity == null ? Input.empty() : this.managedIdentity;
@@ -37,7 +37,7 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,UpstreamAuthType>> type;
+        private final @Nullable Input<Either<String,UpstreamAuthType>> type;
 
     public Input<Either<String,UpstreamAuthType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -96,7 +96,6 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public UpstreamAuthSettingsArgs build() {
             return new UpstreamAuthSettingsArgs(managedIdentity, type);
         }

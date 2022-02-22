@@ -20,21 +20,21 @@ public final class ReplayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+      private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
     public Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,6 @@ public final class ReplayArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ReplayArgs build() {
             return new ReplayArgs(config, location, project);
         }

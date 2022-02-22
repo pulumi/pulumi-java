@@ -139,7 +139,6 @@ public final class SiteAgentPropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SiteAgentPropertiesResponse build() {
             return new SiteAgentPropertiesResponse(id, keyVaultId, keyVaultUri, lastHeartBeatUtc, version);
         }

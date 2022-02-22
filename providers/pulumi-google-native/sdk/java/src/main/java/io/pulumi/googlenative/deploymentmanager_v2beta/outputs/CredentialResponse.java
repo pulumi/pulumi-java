@@ -97,7 +97,6 @@ public final class CredentialResponse {
             this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
             return this;
         }
-
         public CredentialResponse build() {
             return new CredentialResponse(basicAuth, serviceAccount, useProjectDefault);
         }

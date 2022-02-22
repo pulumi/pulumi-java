@@ -17,7 +17,7 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -98,7 +98,6 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetServerKeyArgs build() {
             return new GetServerKeyArgs(keyName, resourceGroupName, serverName);
         }

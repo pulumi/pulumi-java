@@ -54,7 +54,6 @@ public final class ContainerRegistryPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ContainerRegistryPropertiesResponse build() {
             return new ContainerRegistryPropertiesResponse(resourceId);
         }

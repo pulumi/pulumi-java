@@ -24,7 +24,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Input<Object> fileNamePrefix;
+        private final @Nullable Input<Object> fileNamePrefix;
 
     public Input<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
@@ -35,7 +35,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Input<Object> maxRowsPerFile;
+        private final @Nullable Input<Object> maxRowsPerFile;
 
     public Input<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
@@ -46,7 +46,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recordName")
-    private final @Nullable Input<String> recordName;
+        private final @Nullable Input<String> recordName;
 
     public Input<String> getRecordName() {
         return this.recordName == null ? Input.empty() : this.recordName;
@@ -57,7 +57,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recordNamespace")
-    private final @Nullable Input<String> recordNamespace;
+        private final @Nullable Input<String> recordNamespace;
 
     public Input<String> getRecordNamespace() {
         return this.recordNamespace == null ? Input.empty() : this.recordNamespace;
@@ -69,7 +69,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AvroWriteSettingsArgs build() {
             return new AvroWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
         }

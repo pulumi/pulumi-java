@@ -101,7 +101,6 @@ public final class RuleEmailActionResponse {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
-
         public RuleEmailActionResponse build() {
             return new RuleEmailActionResponse(customEmails, odataType, sendToServiceOwners);
         }

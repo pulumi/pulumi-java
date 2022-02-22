@@ -287,7 +287,6 @@ public final class DiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(autoDelete, boot, deviceName, diskSizeGb, guestOsFeatures, index, $interface, kind, licenses, mode, source, type);
         }

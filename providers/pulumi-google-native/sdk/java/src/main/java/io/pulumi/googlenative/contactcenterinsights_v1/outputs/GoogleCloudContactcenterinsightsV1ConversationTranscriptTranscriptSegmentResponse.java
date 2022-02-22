@@ -228,7 +228,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(channelTag, confidence, dialogflowSegmentMetadata, languageCode, messageTime, segmentParticipant, sentiment, text, words);
         }

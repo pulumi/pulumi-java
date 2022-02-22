@@ -138,7 +138,6 @@ public final class GetApicategoryResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetApicategoryResult build() {
             return new GetApicategoryResult(data, errorCode, message, requestId, status);
         }

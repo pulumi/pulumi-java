@@ -24,7 +24,7 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="loginServers")
-    private final @Nullable Input<List<String>> loginServers;
+        private final @Nullable Input<List<String>> loginServers;
 
     public Input<List<String>> getLoginServers() {
         return this.loginServers == null ? Input.empty() : this.loginServers;
@@ -67,7 +67,6 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
             this.loginServers = Input.ofNullable(loginServers);
             return this;
         }
-
         public FhirServiceAcrConfigurationArgs build() {
             return new FhirServiceAcrConfigurationArgs(loginServers);
         }

@@ -265,7 +265,6 @@ public final class TrustResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TrustResponse build() {
             return new TrustResponse(createTime, lastKnownTrustConnectedHeartbeatTime, selectiveAuthentication, state, stateDescription, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType, updateTime);
         }

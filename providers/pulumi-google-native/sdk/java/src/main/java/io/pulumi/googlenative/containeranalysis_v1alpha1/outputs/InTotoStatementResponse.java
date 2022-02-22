@@ -141,7 +141,6 @@ public final class InTotoStatementResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InTotoStatementResponse build() {
             return new InTotoStatementResponse(predicateType, provenance, slsaProvenance, subject, type);
         }

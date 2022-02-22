@@ -23,7 +23,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<VICredentialArgs> credentials;
+        private final @Nullable Input<VICredentialArgs> credentials;
 
     public Input<VICredentialArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -34,7 +34,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -45,7 +45,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn", required=true)
-    private final Input<String> fqdn;
+        private final Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn;
@@ -56,7 +56,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -67,7 +67,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -89,7 +89,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcenterName")
-    private final @Nullable Input<String> vcenterName;
+        private final @Nullable Input<String> vcenterName;
 
     public Input<String> getVcenterName() {
         return this.vcenterName == null ? Input.empty() : this.vcenterName;
@@ -275,7 +275,6 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             this.vcenterName = Input.ofNullable(vcenterName);
             return this;
         }
-
         public VCenterArgs build() {
             return new VCenterArgs(credentials, extendedLocation, fqdn, kind, location, port, resourceGroupName, tags, vcenterName);
         }

@@ -23,7 +23,7 @@ public final class DeliveryRuleIsDeviceConditionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleIsDeviceConditionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final IsDeviceMatchConditionParametersResponse parameters;
+        private final IsDeviceMatchConditionParametersResponse parameters;
 
     public IsDeviceMatchConditionParametersResponse getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class DeliveryRuleIsDeviceConditionResponse extends io.pulumi.resou
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleIsDeviceConditionResponse build() {
             return new DeliveryRuleIsDeviceConditionResponse(name, parameters);
         }

@@ -175,7 +175,6 @@ public final class GetSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSiteResult build() {
             return new GetSiteResult(eTag, id, location, name, properties, tags, type);
         }

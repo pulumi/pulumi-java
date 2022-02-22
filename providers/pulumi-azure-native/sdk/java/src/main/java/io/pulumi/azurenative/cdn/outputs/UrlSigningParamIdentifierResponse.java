@@ -74,7 +74,6 @@ public final class UrlSigningParamIdentifierResponse {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }
-
         public UrlSigningParamIdentifierResponse build() {
             return new UrlSigningParamIdentifierResponse(paramIndicator, paramName);
         }

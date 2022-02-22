@@ -74,7 +74,6 @@ public final class GooRepositoryResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GooRepositoryResponse build() {
             return new GooRepositoryResponse(name, url);
         }

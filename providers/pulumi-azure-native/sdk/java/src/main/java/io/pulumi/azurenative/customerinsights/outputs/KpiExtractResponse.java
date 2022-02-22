@@ -74,7 +74,6 @@ public final class KpiExtractResponse {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
         }
-
         public KpiExtractResponse build() {
             return new KpiExtractResponse(expression, extractName);
         }

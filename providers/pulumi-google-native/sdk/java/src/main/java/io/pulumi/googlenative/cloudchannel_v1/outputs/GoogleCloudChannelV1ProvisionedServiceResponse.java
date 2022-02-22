@@ -95,7 +95,6 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
-
         public GoogleCloudChannelV1ProvisionedServiceResponse build() {
             return new GoogleCloudChannelV1ProvisionedServiceResponse(productId, provisioningId, skuId);
         }

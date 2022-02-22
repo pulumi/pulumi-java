@@ -195,7 +195,6 @@ public final class GetProtectionContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionContainerResult build() {
             return new GetProtectionContainerResult(eTag, id, location, name, properties, tags, type);
         }

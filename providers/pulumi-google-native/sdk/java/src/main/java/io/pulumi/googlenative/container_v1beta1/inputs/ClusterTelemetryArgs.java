@@ -23,7 +23,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ClusterTelemetryType> type;
+      private final @Nullable Input<ClusterTelemetryType> type;
 
     public Input<ClusterTelemetryType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ClusterTelemetryArgs build() {
             return new ClusterTelemetryArgs(type);
         }

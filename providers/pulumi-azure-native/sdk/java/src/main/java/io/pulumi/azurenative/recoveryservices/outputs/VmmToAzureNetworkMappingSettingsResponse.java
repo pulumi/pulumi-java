@@ -54,7 +54,6 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public VmmToAzureNetworkMappingSettingsResponse build() {
             return new VmmToAzureNetworkMappingSettingsResponse(instanceType);
         }

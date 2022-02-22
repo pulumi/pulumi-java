@@ -23,7 +23,7 @@ public final class WebTestPropertiesResponseConfiguration extends io.pulumi.reso
      * 
      */
     @InputImport(name="webTest")
-    private final @Nullable String webTest;
+        private final @Nullable String webTest;
 
     public Optional<String> getWebTest() {
         return this.webTest == null ? Optional.empty() : Optional.ofNullable(this.webTest);
@@ -61,7 +61,6 @@ public final class WebTestPropertiesResponseConfiguration extends io.pulumi.reso
             this.webTest = webTest;
             return this;
         }
-
         public WebTestPropertiesResponseConfiguration build() {
             return new WebTestPropertiesResponseConfiguration(webTest);
         }

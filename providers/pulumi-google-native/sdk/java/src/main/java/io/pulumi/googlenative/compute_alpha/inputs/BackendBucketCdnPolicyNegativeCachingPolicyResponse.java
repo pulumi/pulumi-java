@@ -21,7 +21,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends i
      * 
      */
     @InputImport(name="code", required=true)
-    private final Integer code;
+      private final Integer code;
 
     public Integer getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends i
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final Integer ttl;
+      private final Integer ttl;
 
     public Integer getTtl() {
         return this.ttl;
@@ -81,7 +81,6 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse extends i
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public BackendBucketCdnPolicyNegativeCachingPolicyResponse build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicyResponse(code, ttl);
         }

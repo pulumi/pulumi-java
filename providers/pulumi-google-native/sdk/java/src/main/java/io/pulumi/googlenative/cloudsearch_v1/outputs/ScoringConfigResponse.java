@@ -74,7 +74,6 @@ public final class ScoringConfigResponse {
             this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
             return this;
         }
-
         public ScoringConfigResponse build() {
             return new ScoringConfigResponse(disableFreshness, disablePersonalization);
         }

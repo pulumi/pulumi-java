@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
      * 
      */
     @InputImport(name="operation", required=true)
-    private final String operation;
+      private final String operation;
 
     public String getOperation() {
         return this.operation;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
      * 
      */
     @InputImport(name="operationTypes", required=true)
-    private final List<String> operationTypes;
+      private final List<String> operationTypes;
 
     public List<String> getOperationTypes() {
         return this.operationTypes;
@@ -82,7 +82,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
             this.operationTypes = Objects.requireNonNull(operationTypes);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationResponse(operation, operationTypes);
         }

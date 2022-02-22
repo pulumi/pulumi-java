@@ -75,7 +75,6 @@ public final class ImageNoteResponse {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
-
         public ImageNoteResponse build() {
             return new ImageNoteResponse(fingerprint, resourceUrl);
         }

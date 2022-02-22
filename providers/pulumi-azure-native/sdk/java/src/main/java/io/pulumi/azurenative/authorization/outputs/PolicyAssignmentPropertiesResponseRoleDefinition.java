@@ -97,7 +97,6 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition {
             this.type = type;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponseRoleDefinition build() {
             return new PolicyAssignmentPropertiesResponseRoleDefinition(displayName, id, type);
         }

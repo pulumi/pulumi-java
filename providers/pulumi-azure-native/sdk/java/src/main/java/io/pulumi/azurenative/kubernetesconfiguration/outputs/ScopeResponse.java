@@ -77,7 +77,6 @@ public final class ScopeResponse {
             this.namespace = namespace;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(cluster, namespace);
         }

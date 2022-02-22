@@ -21,7 +21,7 @@ public final class AKSReplicaStatusResponseError extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="error", required=true)
-    private final ErrorResponseResponse error;
+        private final ErrorResponseResponse error;
 
     public ErrorResponseResponse getError() {
         return this.error;
@@ -59,7 +59,6 @@ public final class AKSReplicaStatusResponseError extends io.pulumi.resources.Inv
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public AKSReplicaStatusResponseError build() {
             return new AKSReplicaStatusResponseError(error);
         }

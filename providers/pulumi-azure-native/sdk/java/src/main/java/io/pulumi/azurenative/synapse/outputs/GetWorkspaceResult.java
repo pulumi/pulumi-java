@@ -528,7 +528,6 @@ public final class GetWorkspaceResult {
             this.workspaceUID = Objects.requireNonNull(workspaceUID);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(adlaResourceId, connectivityEndpoints, defaultDataLakeStorage, encryption, extraProperties, id, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, name, privateEndpointConnections, provisioningState, publicNetworkAccess, purviewConfiguration, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, type, virtualNetworkProfile, workspaceRepositoryConfiguration, workspaceUID);
         }

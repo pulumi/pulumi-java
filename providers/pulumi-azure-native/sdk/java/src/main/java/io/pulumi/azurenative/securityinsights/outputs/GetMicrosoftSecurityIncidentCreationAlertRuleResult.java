@@ -332,7 +332,6 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMicrosoftSecurityIncidentCreationAlertRuleResult build() {
             return new GetMicrosoftSecurityIncidentCreationAlertRuleResult(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, etag, id, kind, lastModifiedUtc, name, productFilter, severitiesFilter, type);
         }

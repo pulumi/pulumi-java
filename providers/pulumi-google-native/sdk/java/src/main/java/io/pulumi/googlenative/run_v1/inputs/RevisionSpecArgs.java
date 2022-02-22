@@ -29,7 +29,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerConcurrency")
-    private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Input<Integer> containerConcurrency;
 
     public Input<Integer> getContainerConcurrency() {
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
@@ -40,7 +40,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ContainerArgs>> containers;
+      private final @Nullable Input<List<ContainerArgs>> containers;
 
     public Input<List<ContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -51,7 +51,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableServiceLinks")
-    private final @Nullable Input<Boolean> enableServiceLinks;
+      private final @Nullable Input<Boolean> enableServiceLinks;
 
     public Input<Boolean> getEnableServiceLinks() {
         return this.enableServiceLinks == null ? Input.empty() : this.enableServiceLinks;
@@ -62,7 +62,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullSecrets")
-    private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
+      private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
     public Input<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
         return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
@@ -73,7 +73,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountName")
-    private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
@@ -84,14 +84,14 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
     }
 
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -225,7 +225,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
-
         public RevisionSpecArgs build() {
             return new RevisionSpecArgs(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
         }

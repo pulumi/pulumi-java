@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @InputImport(name="allowMultiLabel", required=true)
-    private final Boolean allowMultiLabel;
+      private final Boolean allowMultiLabel;
 
     public Boolean getAllowMultiLabel() {
         return this.allowMultiLabel;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final String annotationSpecSet;
+      private final String annotationSpecSet;
 
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @InputImport(name="sentimentConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
+      private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
     public GoogleCloudDatalabelingV1beta1SentimentConfigResponse getSentimentConfig() {
         return this.sentimentConfig;
@@ -104,7 +104,6 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
             this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(allowMultiLabel, annotationSpecSet, sentimentConfig);
         }

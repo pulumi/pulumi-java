@@ -335,7 +335,6 @@ public final class GetFactoryResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFactoryResult build() {
             return new GetFactoryResult(createTime, eTag, encryption, globalParameters, id, identity, location, name, provisioningState, publicNetworkAccess, repoConfiguration, tags, type, version);
         }

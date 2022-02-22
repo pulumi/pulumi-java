@@ -361,7 +361,6 @@ public final class GetManagedZoneResult {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }
-
         public GetManagedZoneResult build() {
             return new GetManagedZoneResult(cloudLoggingConfig, creationTime, description, dnsName, dnssecConfig, forwardingConfig, kind, labels, name, nameServerSet, nameServers, peeringConfig, privateVisibilityConfig, reverseLookupConfig, serviceDirectoryConfig, visibility);
         }

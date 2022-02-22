@@ -125,7 +125,6 @@ public final class ApiManagementServiceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ApiManagementServiceIdentityResponse build() {
             return new ApiManagementServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

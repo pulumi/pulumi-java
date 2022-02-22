@@ -96,7 +96,6 @@ public final class CertificateChainsResponse {
             this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
             return this;
         }
-
         public CertificateChainsResponse build() {
             return new CertificateChainsResponse(caviumCerts, googleCardCerts, googlePartitionCerts);
         }

@@ -52,7 +52,6 @@ public final class AttestationNoteResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AttestationNoteResponse build() {
             return new AttestationNoteResponse(hint);
         }

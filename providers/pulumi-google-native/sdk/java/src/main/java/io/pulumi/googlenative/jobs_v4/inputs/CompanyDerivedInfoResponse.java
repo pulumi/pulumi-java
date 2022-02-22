@@ -21,7 +21,7 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headquartersLocation", required=true)
-    private final LocationResponse headquartersLocation;
+      private final LocationResponse headquartersLocation;
 
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;
@@ -59,7 +59,6 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }
-
         public CompanyDerivedInfoResponse build() {
             return new CompanyDerivedInfoResponse(headquartersLocation);
         }

@@ -52,7 +52,6 @@ public final class AvroOptionsResponse {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }
-
         public AvroOptionsResponse build() {
             return new AvroOptionsResponse(useAvroLogicalTypes);
         }

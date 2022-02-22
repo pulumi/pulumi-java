@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2ConditionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionResponse build() {
             return new GooglePrivacyDlpV2ConditionResponse(field, operator, value);
         }

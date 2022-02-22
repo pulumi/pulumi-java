@@ -52,7 +52,6 @@ public final class AppBundleResponse {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }
-
         public AppBundleResponse build() {
             return new AppBundleResponse(bundleLocation);
         }

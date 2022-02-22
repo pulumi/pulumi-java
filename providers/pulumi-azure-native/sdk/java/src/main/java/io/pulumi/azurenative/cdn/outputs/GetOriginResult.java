@@ -415,7 +415,6 @@ public final class GetOriginResult {
             this.weight = weight;
             return this;
         }
-
         public GetOriginResult build() {
             return new GetOriginResult(enabled, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, provisioningState, resourceState, systemData, type, weight);
         }

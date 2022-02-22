@@ -97,7 +97,6 @@ public final class SourceResponse {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(repoSource, storageSource, storageSourceManifest);
         }

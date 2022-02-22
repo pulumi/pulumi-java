@@ -23,7 +23,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Input<Integer> instanceCount;
+        private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceSize")
-    private final @Nullable Input<Either<String,ServiceSize>> instanceSize;
+        private final @Nullable Input<Either<String,ServiceSize>> instanceSize;
 
     public Input<Either<String,ServiceSize>> getInstanceSize() {
         return this.instanceSize == null ? Input.empty() : this.instanceSize;
@@ -56,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+        private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -78,7 +78,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceType")
-    private final @Nullable Input<Either<String,ServiceType>> serviceType;
+        private final @Nullable Input<Either<String,ServiceType>> serviceType;
 
     public Input<Either<String,ServiceType>> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
@@ -197,7 +197,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceType = Input.ofNullable(serviceType);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(accountName, instanceCount, instanceSize, resourceGroupName, serviceName, serviceType);
         }

@@ -22,7 +22,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="absoluteValue", required=true)
-    private final Double absoluteValue;
+        private final Double absoluteValue;
 
     public Double getAbsoluteValue() {
         return this.absoluteValue;
@@ -33,7 +33,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="changeValueAbsolute", required=true)
-    private final Double changeValueAbsolute;
+        private final Double changeValueAbsolute;
 
     public Double getChangeValueAbsolute() {
         return this.changeValueAbsolute;
@@ -44,7 +44,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="changeValueRelative", required=true)
-    private final Double changeValueRelative;
+        private final Double changeValueRelative;
 
     public Double getChangeValueRelative() {
         return this.changeValueRelative;
@@ -55,7 +55,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dimensionName", required=true)
-    private final String dimensionName;
+        private final String dimensionName;
 
     public String getDimensionName() {
         return this.dimensionName;
@@ -66,7 +66,7 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+        private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -145,7 +145,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public RecommendedActionImpactRecordResponse build() {
             return new RecommendedActionImpactRecordResponse(absoluteValue, changeValueAbsolute, changeValueRelative, dimensionName, unit);
         }

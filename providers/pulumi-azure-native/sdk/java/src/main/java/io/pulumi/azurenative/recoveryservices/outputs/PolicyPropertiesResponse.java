@@ -88,7 +88,6 @@ public final class PolicyPropertiesResponse {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public PolicyPropertiesResponse build() {
             return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
         }

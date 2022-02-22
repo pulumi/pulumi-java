@@ -25,7 +25,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="filesNotSyncingErrors", required=true)
-    private final List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
+        private final List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
 
     public List<ServerEndpointFilesNotSyncingErrorResponse> getFilesNotSyncingErrors() {
         return this.filesNotSyncingErrors;
@@ -36,7 +36,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastSyncMode", required=true)
-    private final String lastSyncMode;
+        private final String lastSyncMode;
 
     public String getLastSyncMode() {
         return this.lastSyncMode;
@@ -47,7 +47,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastSyncPerItemErrorCount", required=true)
-    private final Double lastSyncPerItemErrorCount;
+        private final Double lastSyncPerItemErrorCount;
 
     public Double getLastSyncPerItemErrorCount() {
         return this.lastSyncPerItemErrorCount;
@@ -58,7 +58,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastSyncResult", required=true)
-    private final Integer lastSyncResult;
+        private final Integer lastSyncResult;
 
     public Integer getLastSyncResult() {
         return this.lastSyncResult;
@@ -69,7 +69,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastSyncSuccessTimestamp", required=true)
-    private final String lastSyncSuccessTimestamp;
+        private final String lastSyncSuccessTimestamp;
 
     public String getLastSyncSuccessTimestamp() {
         return this.lastSyncSuccessTimestamp;
@@ -80,7 +80,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastSyncTimestamp", required=true)
-    private final String lastSyncTimestamp;
+        private final String lastSyncTimestamp;
 
     public String getLastSyncTimestamp() {
         return this.lastSyncTimestamp;
@@ -91,7 +91,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="persistentFilesNotSyncingCount", required=true)
-    private final Double persistentFilesNotSyncingCount;
+        private final Double persistentFilesNotSyncingCount;
 
     public Double getPersistentFilesNotSyncingCount() {
         return this.persistentFilesNotSyncingCount;
@@ -102,7 +102,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="transientFilesNotSyncingCount", required=true)
-    private final Double transientFilesNotSyncingCount;
+        private final Double transientFilesNotSyncingCount;
 
     public Double getTransientFilesNotSyncingCount() {
         return this.transientFilesNotSyncingCount;
@@ -211,7 +211,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
             this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
             return this;
         }
-
         public ServerEndpointSyncSessionStatusResponse build() {
             return new ServerEndpointSyncSessionStatusResponse(filesNotSyncingErrors, lastSyncMode, lastSyncPerItemErrorCount, lastSyncResult, lastSyncSuccessTimestamp, lastSyncTimestamp, persistentFilesNotSyncingCount, transientFilesNotSyncingCount);
         }

@@ -138,7 +138,6 @@ public final class WorkerResourceResponse {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public WorkerResourceResponse build() {
             return new WorkerResourceResponse(cpu, maxCount, memoryGb, minCount, storageGb);
         }

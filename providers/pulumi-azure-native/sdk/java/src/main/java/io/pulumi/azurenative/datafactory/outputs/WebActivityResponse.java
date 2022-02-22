@@ -360,7 +360,6 @@ public final class WebActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public WebActivityResponse build() {
             return new WebActivityResponse(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
         }

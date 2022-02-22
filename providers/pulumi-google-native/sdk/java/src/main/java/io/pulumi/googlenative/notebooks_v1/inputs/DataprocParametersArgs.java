@@ -23,7 +23,7 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -66,7 +66,6 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
-
         public DataprocParametersArgs build() {
             return new DataprocParametersArgs(cluster);
         }

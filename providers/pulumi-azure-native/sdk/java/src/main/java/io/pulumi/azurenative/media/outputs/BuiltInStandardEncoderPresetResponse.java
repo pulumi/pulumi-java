@@ -76,7 +76,6 @@ public final class BuiltInStandardEncoderPresetResponse {
             this.presetName = Objects.requireNonNull(presetName);
             return this;
         }
-
         public BuiltInStandardEncoderPresetResponse build() {
             return new BuiltInStandardEncoderPresetResponse(odataType, presetName);
         }

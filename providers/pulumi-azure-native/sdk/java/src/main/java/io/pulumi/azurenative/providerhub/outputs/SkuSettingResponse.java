@@ -195,7 +195,6 @@ public final class SkuSettingResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuSettingResponse build() {
             return new SkuSettingResponse(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);
         }

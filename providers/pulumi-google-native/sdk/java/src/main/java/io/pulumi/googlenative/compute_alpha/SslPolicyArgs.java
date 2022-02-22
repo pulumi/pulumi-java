@@ -23,7 +23,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customFeatures")
-    private final @Nullable Input<List<String>> customFeatures;
+      private final @Nullable Input<List<String>> customFeatures;
 
     public Input<List<String>> getCustomFeatures() {
         return this.customFeatures == null ? Input.empty() : this.customFeatures;
@@ -34,7 +34,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTlsVersion")
-    private final @Nullable Input<SslPolicyMinTlsVersion> minTlsVersion;
+      private final @Nullable Input<SslPolicyMinTlsVersion> minTlsVersion;
 
     public Input<SslPolicyMinTlsVersion> getMinTlsVersion() {
         return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
@@ -56,7 +56,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,21 +67,21 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<SslPolicyProfile> profile;
+      private final @Nullable Input<SslPolicyProfile> profile;
 
     public Input<SslPolicyProfile> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -92,7 +92,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsSettings")
-    private final @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
+      private final @Nullable Input<ServerTlsSettingsArgs> tlsSettings;
 
     public Input<ServerTlsSettingsArgs> getTlsSettings() {
         return this.tlsSettings == null ? Input.empty() : this.tlsSettings;
@@ -241,7 +241,6 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.tlsSettings = Input.ofNullable(tlsSettings);
             return this;
         }
-
         public SslPolicyArgs build() {
             return new SslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, requestId, tlsSettings);
         }

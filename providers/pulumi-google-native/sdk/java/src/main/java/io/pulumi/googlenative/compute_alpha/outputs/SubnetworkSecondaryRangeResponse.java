@@ -95,7 +95,6 @@ public final class SubnetworkSecondaryRangeResponse {
             this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
             return this;
         }
-
         public SubnetworkSecondaryRangeResponse build() {
             return new SubnetworkSecondaryRangeResponse(ipCidrRange, rangeName, reservedInternalRange);
         }

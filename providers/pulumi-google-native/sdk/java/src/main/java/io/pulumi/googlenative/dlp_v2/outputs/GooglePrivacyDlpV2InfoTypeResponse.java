@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeResponse build() {
             return new GooglePrivacyDlpV2InfoTypeResponse(name, version);
         }

@@ -120,7 +120,6 @@ public final class VirtualMachineScaleSetIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public VirtualMachineScaleSetIdentityResponse build() {
             return new VirtualMachineScaleSetIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

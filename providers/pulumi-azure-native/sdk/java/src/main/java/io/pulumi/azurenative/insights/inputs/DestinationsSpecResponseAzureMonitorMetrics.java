@@ -24,7 +24,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -62,7 +62,6 @@ public final class DestinationsSpecResponseAzureMonitorMetrics extends io.pulumi
             this.name = name;
             return this;
         }
-
         public DestinationsSpecResponseAzureMonitorMetrics build() {
             return new DestinationsSpecResponseAzureMonitorMetrics(name);
         }

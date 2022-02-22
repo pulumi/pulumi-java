@@ -144,7 +144,6 @@ public final class GetConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(authenticationDetails, hybridComputeSettings, id, name, type);
         }

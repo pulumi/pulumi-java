@@ -160,7 +160,6 @@ public final class GetSourceResult {
             this.vmware = Objects.requireNonNull(vmware);
             return this;
         }
-
         public GetSourceResult build() {
             return new GetSourceResult(createTime, description, labels, name, updateTime, vmware);
         }

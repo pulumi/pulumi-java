@@ -22,7 +22,7 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numFacetBuckets", required=true)
-    private final Integer numFacetBuckets;
+      private final Integer numFacetBuckets;
 
     public Integer getNumFacetBuckets() {
         return this.numFacetBuckets;
@@ -33,7 +33,7 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -44,7 +44,7 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operatorName", required=true)
-    private final String operatorName;
+      private final String operatorName;
 
     public String getOperatorName() {
         return this.operatorName;
@@ -55,7 +55,7 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceName", required=true)
-    private final String sourceName;
+      private final String sourceName;
 
     public String getSourceName() {
         return this.sourceName;
@@ -124,7 +124,6 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public FacetOptionsResponse build() {
             return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
         }

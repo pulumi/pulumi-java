@@ -21,7 +21,7 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fullResourceName", required=true)
-    private final String fullResourceName;
+      private final String fullResourceName;
 
     public String getFullResourceName() {
         return this.fullResourceName;
@@ -59,7 +59,6 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public ResourceSelectorResponse build() {
             return new ResourceSelectorResponse(fullResourceName);
         }

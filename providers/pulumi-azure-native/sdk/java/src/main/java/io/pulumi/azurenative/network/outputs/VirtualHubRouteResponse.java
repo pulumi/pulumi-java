@@ -77,7 +77,6 @@ public final class VirtualHubRouteResponse {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public VirtualHubRouteResponse build() {
             return new VirtualHubRouteResponse(addressPrefixes, nextHopIpAddress);
         }

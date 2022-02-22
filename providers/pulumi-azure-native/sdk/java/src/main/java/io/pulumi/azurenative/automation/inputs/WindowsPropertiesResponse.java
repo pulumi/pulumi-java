@@ -24,7 +24,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="excludedKbNumbers")
-    private final @Nullable List<String> excludedKbNumbers;
+        private final @Nullable List<String> excludedKbNumbers;
 
     public List<String> getExcludedKbNumbers() {
         return this.excludedKbNumbers == null ? List.of() : this.excludedKbNumbers;
@@ -35,7 +35,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="includedKbNumbers")
-    private final @Nullable List<String> includedKbNumbers;
+        private final @Nullable List<String> includedKbNumbers;
 
     public List<String> getIncludedKbNumbers() {
         return this.includedKbNumbers == null ? List.of() : this.includedKbNumbers;
@@ -46,7 +46,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="includedUpdateClassifications")
-    private final @Nullable String includedUpdateClassifications;
+        private final @Nullable String includedUpdateClassifications;
 
     public Optional<String> getIncludedUpdateClassifications() {
         return this.includedUpdateClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedUpdateClassifications);
@@ -57,7 +57,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rebootSetting")
-    private final @Nullable String rebootSetting;
+        private final @Nullable String rebootSetting;
 
     public Optional<String> getRebootSetting() {
         return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
@@ -126,7 +126,6 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public WindowsPropertiesResponse build() {
             return new WindowsPropertiesResponse(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
         }

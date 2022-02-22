@@ -23,7 +23,7 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -34,7 +34,7 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable String userAssignedIdentity;
+        private final @Nullable String userAssignedIdentity;
 
     public Optional<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
@@ -83,7 +83,6 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public MediaServicesForPutRequestResponse build() {
             return new MediaServicesForPutRequestResponse(resourceId, userAssignedIdentity);
         }

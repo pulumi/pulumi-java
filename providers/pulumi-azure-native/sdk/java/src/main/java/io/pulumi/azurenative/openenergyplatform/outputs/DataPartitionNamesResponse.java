@@ -46,7 +46,6 @@ public final class DataPartitionNamesResponse {
             this.name = name;
             return this;
         }
-
         public DataPartitionNamesResponse build() {
             return new DataPartitionNamesResponse(name);
         }

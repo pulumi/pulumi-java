@@ -19,7 +19,7 @@ public final class GetStreamingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetStreamingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+        private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -41,7 +41,7 @@ public final class GetStreamingJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetStreamingJobArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetStreamingJobArgs build() {
             return new GetStreamingJobArgs(expand, jobName, resourceGroupName);
         }

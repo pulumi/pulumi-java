@@ -24,7 +24,7 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="computeId")
-    private final @Nullable String computeId;
+        private final @Nullable String computeId;
 
     public Optional<String> getComputeId() {
         return this.computeId == null ? Optional.empty() : Optional.ofNullable(this.computeId);
@@ -35,7 +35,7 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="nodeCount")
-    private final @Nullable Integer nodeCount;
+        private final @Nullable Integer nodeCount;
 
     public Optional<Integer> getNodeCount() {
         return this.nodeCount == null ? Optional.empty() : Optional.ofNullable(this.nodeCount);
@@ -84,7 +84,6 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
             this.nodeCount = nodeCount;
             return this;
         }
-
         public ComputeBindingResponse build() {
             return new ComputeBindingResponse(computeId, nodeCount);
         }

@@ -99,7 +99,6 @@ public final class CacheHealthResponse {
             this.statusDescription = statusDescription;
             return this;
         }
-
         public CacheHealthResponse build() {
             return new CacheHealthResponse(conditions, state, statusDescription);
         }

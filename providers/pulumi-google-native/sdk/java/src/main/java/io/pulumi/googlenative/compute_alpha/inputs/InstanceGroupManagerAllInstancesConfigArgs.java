@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<InstancePropertiesPatchArgs> properties;
+      private final @Nullable Input<InstancePropertiesPatchArgs> properties;
 
     public Input<InstancePropertiesPatchArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public InstanceGroupManagerAllInstancesConfigArgs build() {
             return new InstanceGroupManagerAllInstancesConfigArgs(properties);
         }

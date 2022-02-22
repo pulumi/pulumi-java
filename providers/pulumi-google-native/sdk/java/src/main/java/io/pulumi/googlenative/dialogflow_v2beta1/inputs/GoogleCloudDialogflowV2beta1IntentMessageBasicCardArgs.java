@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
      * 
      */
     @InputImport(name="formattedText")
-    private final @Nullable Input<String> formattedText;
+      private final @Nullable Input<String> formattedText;
 
     public Input<String> getFormattedText() {
         return this.formattedText == null ? Input.empty() : this.formattedText;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -174,7 +174,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs(buttons, formattedText, image, subtitle, title);
         }

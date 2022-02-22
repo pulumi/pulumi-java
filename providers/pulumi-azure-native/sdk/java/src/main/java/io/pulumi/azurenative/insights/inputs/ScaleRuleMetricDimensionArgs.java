@@ -25,7 +25,7 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dimensionName", required=true)
-    private final Input<String> dimensionName;
+        private final Input<String> dimensionName;
 
     public Input<String> getDimensionName() {
         return this.dimensionName;
@@ -36,7 +36,7 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
+        private final Input<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
 
     public Input<Either<String,ScaleRuleMetricDimensionOperationType>> getOperator() {
         return this.operator;
@@ -47,7 +47,7 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -121,7 +121,6 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public ScaleRuleMetricDimensionArgs build() {
             return new ScaleRuleMetricDimensionArgs(dimensionName, operator, values);
         }

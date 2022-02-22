@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
      * 
      */
     @InputImport(name="suggestions", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> getSuggestions() {
         return this.suggestions;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
             this.suggestions = Input.of(Objects.requireNonNull(suggestions));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionsArgs(suggestions);
         }

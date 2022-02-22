@@ -27,7 +27,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<Either<String,DataType>> dataType;
+        private final @Nullable Input<Either<String,DataType>> dataType;
 
     public Input<Either<String,DataType>> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -38,7 +38,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,IndexKind>> kind;
+        private final @Nullable Input<Either<String,IndexKind>> kind;
 
     public Input<Either<String,IndexKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -49,7 +49,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="precision")
-    private final @Nullable Input<Integer> precision;
+        private final @Nullable Input<Integer> precision;
 
     public Input<Integer> getPrecision() {
         return this.precision == null ? Input.empty() : this.precision;
@@ -123,7 +123,6 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
             this.precision = Input.ofNullable(precision);
             return this;
         }
-
         public IndexesArgs build() {
             return new IndexesArgs(dataType, kind, precision);
         }

@@ -231,7 +231,6 @@ public final class MariaDBTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MariaDBTableDatasetResponse build() {
             return new MariaDBTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

@@ -23,7 +23,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -34,7 +34,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -45,7 +45,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -119,7 +119,6 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public UrlDispatchRuleArgs build() {
             return new UrlDispatchRuleArgs(domain, path, service);
         }

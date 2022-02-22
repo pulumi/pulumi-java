@@ -97,7 +97,6 @@ public final class BlobFilterDetailsResponse {
             this.containerList = containerList;
             return this;
         }
-
         public BlobFilterDetailsResponse build() {
             return new BlobFilterDetailsResponse(blobPathList, blobPrefixList, containerList);
         }

@@ -76,7 +76,6 @@ public final class StackPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public StackPropertiesResponse build() {
             return new StackPropertiesResponse(id, version);
         }

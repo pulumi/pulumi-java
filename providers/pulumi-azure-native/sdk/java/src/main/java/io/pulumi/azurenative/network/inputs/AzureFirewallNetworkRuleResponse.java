@@ -24,7 +24,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable List<String> destinationAddresses;
+        private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
@@ -46,7 +46,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destinationFqdns")
-    private final @Nullable List<String> destinationFqdns;
+        private final @Nullable List<String> destinationFqdns;
 
     public List<String> getDestinationFqdns() {
         return this.destinationFqdns == null ? List.of() : this.destinationFqdns;
@@ -57,7 +57,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destinationIpGroups")
-    private final @Nullable List<String> destinationIpGroups;
+        private final @Nullable List<String> destinationIpGroups;
 
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
@@ -68,7 +68,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destinationPorts")
-    private final @Nullable List<String> destinationPorts;
+        private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
@@ -79,7 +79,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -90,7 +90,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable List<String> protocols;
+        private final @Nullable List<String> protocols;
 
     public List<String> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
@@ -101,7 +101,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable List<String> sourceAddresses;
+        private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -112,7 +112,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable List<String> sourceIpGroups;
+        private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -231,7 +231,6 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public AzureFirewallNetworkRuleResponse build() {
             return new AzureFirewallNetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups);
         }

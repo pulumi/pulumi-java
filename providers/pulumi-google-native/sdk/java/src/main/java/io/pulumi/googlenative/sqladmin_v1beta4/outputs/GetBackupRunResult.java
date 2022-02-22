@@ -350,7 +350,6 @@ public final class GetBackupRunResult {
             this.windowStartTime = Objects.requireNonNull(windowStartTime);
             return this;
         }
-
         public GetBackupRunResult build() {
             return new GetBackupRunResult(backupKind, description, diskEncryptionConfiguration, diskEncryptionStatus, endTime, enqueuedTime, error, instance, kind, location, selfLink, startTime, status, type, windowStartTime);
         }

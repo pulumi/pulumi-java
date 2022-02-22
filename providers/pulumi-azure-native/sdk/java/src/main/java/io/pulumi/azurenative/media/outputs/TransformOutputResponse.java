@@ -103,7 +103,6 @@ public final class TransformOutputResponse {
             this.relativePriority = relativePriority;
             return this;
         }
-
         public TransformOutputResponse build() {
             return new TransformOutputResponse(onError, preset, relativePriority);
         }

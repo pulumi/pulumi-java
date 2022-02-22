@@ -226,7 +226,6 @@ public final class AppResourcePropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AppResourcePropertiesResponse build() {
             return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, $public, temporaryDisk, url);
         }

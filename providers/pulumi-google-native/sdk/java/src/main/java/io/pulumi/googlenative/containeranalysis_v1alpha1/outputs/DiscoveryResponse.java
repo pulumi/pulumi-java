@@ -52,7 +52,6 @@ public final class DiscoveryResponse {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
-
         public DiscoveryResponse build() {
             return new DiscoveryResponse(analysisKind);
         }

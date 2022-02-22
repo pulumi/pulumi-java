@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="newValue", required=true)
-    private final GooglePrivacyDlpV2ValueResponse newValue;
+      private final GooglePrivacyDlpV2ValueResponse newValue;
 
     public GooglePrivacyDlpV2ValueResponse getNewValue() {
         return this.newValue;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceValueConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceValueConfigResponse(newValue);
         }

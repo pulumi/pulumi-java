@@ -74,7 +74,6 @@ public final class ManagedVirtualNetworkReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedVirtualNetworkReferenceResponse build() {
             return new ManagedVirtualNetworkReferenceResponse(referenceName, type);
         }

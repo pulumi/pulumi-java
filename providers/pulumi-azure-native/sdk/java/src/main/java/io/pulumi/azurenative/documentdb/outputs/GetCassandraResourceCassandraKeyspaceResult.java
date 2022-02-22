@@ -168,7 +168,6 @@ public final class GetCassandraResourceCassandraKeyspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraResourceCassandraKeyspaceResult build() {
             return new GetCassandraResourceCassandraKeyspaceResult(id, location, name, options, resource, tags, type);
         }

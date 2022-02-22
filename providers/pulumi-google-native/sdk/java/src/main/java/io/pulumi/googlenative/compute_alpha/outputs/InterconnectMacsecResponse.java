@@ -76,7 +76,6 @@ public final class InterconnectMacsecResponse {
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }
-
         public InterconnectMacsecResponse build() {
             return new InterconnectMacsecResponse(failOpen, preSharedKeys);
         }

@@ -224,7 +224,6 @@ public final class AS2MdnSettingsResponse {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }
-
         public AS2MdnSettingsResponse build() {
             return new AS2MdnSettingsResponse(dispositionNotificationTo, mdnText, micHashingAlgorithm, needMDN, receiptDeliveryUrl, sendInboundMDNToMessageBox, sendMDNAsynchronously, signMDN, signOutboundMDNIfOptional);
         }

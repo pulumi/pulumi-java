@@ -15,28 +15,28 @@ public final class GetInternalRangeIamPolicyArgs extends io.pulumi.resources.Inv
     public static final GetInternalRangeIamPolicyArgs Empty = new GetInternalRangeIamPolicyArgs();
 
     @InputImport(name="internalRangeId", required=true)
-    private final String internalRangeId;
+      private final String internalRangeId;
 
     public String getInternalRangeId() {
         return this.internalRangeId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetInternalRangeIamPolicyArgs extends io.pulumi.resources.Inv
             this.project = project;
             return this;
         }
-
         public GetInternalRangeIamPolicyArgs build() {
             return new GetInternalRangeIamPolicyArgs(internalRangeId, location, optionsRequestedPolicyVersion, project);
         }

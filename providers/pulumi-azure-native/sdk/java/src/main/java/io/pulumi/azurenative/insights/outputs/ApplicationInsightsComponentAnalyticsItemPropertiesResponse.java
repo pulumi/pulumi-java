@@ -54,7 +54,6 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
             this.functionAlias = functionAlias;
             return this;
         }
-
         public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
             return new ApplicationInsightsComponentAnalyticsItemPropertiesResponse(functionAlias);
         }

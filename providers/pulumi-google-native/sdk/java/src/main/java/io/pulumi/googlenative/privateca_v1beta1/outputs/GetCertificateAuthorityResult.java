@@ -419,7 +419,6 @@ public final class GetCertificateAuthorityResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(accessUrls, caCertificateDescriptions, certificatePolicy, config, createTime, deleteTime, gcsBucket, issuingOptions, keySpec, labels, lifetime, name, pemCaCertificates, state, subordinateConfig, tier, type, updateTime);
         }

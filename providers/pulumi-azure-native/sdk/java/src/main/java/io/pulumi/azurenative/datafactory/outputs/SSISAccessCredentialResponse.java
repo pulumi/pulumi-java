@@ -98,7 +98,6 @@ public final class SSISAccessCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public SSISAccessCredentialResponse build() {
             return new SSISAccessCredentialResponse(domain, password, userName);
         }

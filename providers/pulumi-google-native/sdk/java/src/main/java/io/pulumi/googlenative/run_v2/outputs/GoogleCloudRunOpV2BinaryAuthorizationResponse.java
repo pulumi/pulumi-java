@@ -75,7 +75,6 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
             this.useDefault = Objects.requireNonNull(useDefault);
             return this;
         }
-
         public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
             return new GoogleCloudRunOpV2BinaryAuthorizationResponse(breakglassJustification, useDefault);
         }

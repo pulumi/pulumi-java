@@ -401,7 +401,6 @@ public final class DynamicsCrmLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public DynamicsCrmLinkedServiceResponse build() {
             return new DynamicsCrmLinkedServiceResponse(annotations, authenticationType, connectVia, deploymentType, description, encryptedCredential, hostName, organizationName, parameters, password, port, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, serviceUri, type, username);
         }

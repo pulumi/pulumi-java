@@ -76,7 +76,6 @@ public final class QosPortRangeResponse {
             this.start = start;
             return this;
         }
-
         public QosPortRangeResponse build() {
             return new QosPortRangeResponse(end, start);
         }

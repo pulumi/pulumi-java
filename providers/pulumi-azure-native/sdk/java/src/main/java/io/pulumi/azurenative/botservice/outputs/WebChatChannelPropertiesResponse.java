@@ -77,7 +77,6 @@ public final class WebChatChannelPropertiesResponse {
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
         }
-
         public WebChatChannelPropertiesResponse build() {
             return new WebChatChannelPropertiesResponse(sites, webChatEmbedCode);
         }

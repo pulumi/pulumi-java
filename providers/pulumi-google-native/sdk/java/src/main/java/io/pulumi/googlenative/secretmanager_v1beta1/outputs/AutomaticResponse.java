@@ -30,7 +30,6 @@ public final class AutomaticResponse {
         public Builder(AutomaticResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse();
         }

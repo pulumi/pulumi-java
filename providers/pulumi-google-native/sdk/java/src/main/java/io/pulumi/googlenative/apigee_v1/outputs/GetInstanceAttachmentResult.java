@@ -95,7 +95,6 @@ public final class GetInstanceAttachmentResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetInstanceAttachmentResult build() {
             return new GetInstanceAttachmentResult(createdAt, environment, name);
         }

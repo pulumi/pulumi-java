@@ -97,7 +97,6 @@ public final class UserAccountCredentialsResponse {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
-
         public UserAccountCredentialsResponse build() {
             return new UserAccountCredentialsResponse(adminUserName, adminUserPassword, adminUserSshPublicKey);
         }

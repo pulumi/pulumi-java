@@ -402,7 +402,6 @@ public final class CosmosDbLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbLinkedServiceResponse build() {
             return new CosmosDbLinkedServiceResponse(accountEndpoint, accountKey, annotations, azureCloudType, connectVia, connectionMode, connectionString, credential, database, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, tenant, type);
         }

@@ -66,7 +66,6 @@ public final class CdnCertificateSourceParametersResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public CdnCertificateSourceParametersResponse build() {
             return new CdnCertificateSourceParametersResponse(certificateType, odataType);
         }

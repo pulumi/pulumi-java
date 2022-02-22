@@ -162,7 +162,6 @@ public final class AllowlistCustomAlertRuleResponse {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public AllowlistCustomAlertRuleResponse build() {
             return new AllowlistCustomAlertRuleResponse(allowlistValues, description, displayName, isEnabled, ruleType, valueType);
         }

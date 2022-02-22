@@ -204,7 +204,6 @@ public final class ActionGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, status, type);
         }

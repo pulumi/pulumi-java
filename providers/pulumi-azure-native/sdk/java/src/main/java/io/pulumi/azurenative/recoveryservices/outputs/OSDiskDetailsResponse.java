@@ -97,7 +97,6 @@ public final class OSDiskDetailsResponse {
             this.vhdName = vhdName;
             return this;
         }
-
         public OSDiskDetailsResponse build() {
             return new OSDiskDetailsResponse(osType, osVhdId, vhdName);
         }

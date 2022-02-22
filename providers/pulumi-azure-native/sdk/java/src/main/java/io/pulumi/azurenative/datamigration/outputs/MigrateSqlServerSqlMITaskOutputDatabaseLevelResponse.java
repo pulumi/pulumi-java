@@ -247,7 +247,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(databaseName, endedOn, exceptionsAndWarnings, id, message, resultType, sizeMB, stage, startedOn, state);
         }

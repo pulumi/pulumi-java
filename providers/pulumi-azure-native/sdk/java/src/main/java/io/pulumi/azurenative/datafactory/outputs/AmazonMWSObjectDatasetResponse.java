@@ -231,7 +231,6 @@ public final class AmazonMWSObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonMWSObjectDatasetResponse build() {
             return new AmazonMWSObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

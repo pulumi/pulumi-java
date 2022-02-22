@@ -161,7 +161,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
             this.targetId = targetId;
             return this;
         }
-
         public ConfigurationProfileAssignmentPropertiesResponse build() {
             return new ConfigurationProfileAssignmentPropertiesResponse(accountId, compliance, configurationProfile, configurationProfilePreferenceId, provisioningState, targetId);
         }

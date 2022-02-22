@@ -309,7 +309,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
             this.urlPathMap = urlPathMap;
             return this;
         }
-
         public ApplicationGatewayRequestRoutingRuleResponse build() {
             return new ApplicationGatewayRequestRoutingRuleResponse(backendAddressPool, backendHttpSettings, etag, httpListener, id, name, priority, provisioningState, redirectConfiguration, rewriteRuleSet, ruleType, type, urlPathMap);
         }

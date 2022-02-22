@@ -74,7 +74,6 @@ public final class RouterApplianceInstanceResponse {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, virtualMachine);
         }

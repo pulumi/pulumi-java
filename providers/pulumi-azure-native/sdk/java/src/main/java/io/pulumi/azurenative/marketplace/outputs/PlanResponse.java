@@ -160,7 +160,6 @@ public final class PlanResponse {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public PlanResponse build() {
             return new PlanResponse(accessibility, altStackReference, planDisplayName, planId, skuId, stackType);
         }

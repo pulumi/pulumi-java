@@ -19,14 +19,14 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
      * 
      */
     @InputImport(name="gkeClusterName")
-    private final @Nullable Input<String> gkeClusterName;
+      private final @Nullable Input<String> gkeClusterName;
 
     public Input<String> getGkeClusterName() {
         return this.gkeClusterName == null ? Input.empty() : this.gkeClusterName;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -85,7 +85,6 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigGKEClusterArgs build() {
             return new ManagedZonePrivateVisibilityConfigGKEClusterArgs(gkeClusterName, kind);
         }

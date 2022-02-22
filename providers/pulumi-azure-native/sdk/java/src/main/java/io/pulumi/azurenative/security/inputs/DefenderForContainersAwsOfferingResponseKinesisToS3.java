@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends i
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable String cloudRoleArn;
+        private final @Nullable String cloudRoleArn;
 
     public Optional<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
@@ -61,7 +61,6 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends i
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
             return new DefenderForContainersAwsOfferingResponseKinesisToS3(cloudRoleArn);
         }

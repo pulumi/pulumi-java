@@ -37,7 +37,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="codeId")
-    private final @Nullable String codeId;
+        private final @Nullable String codeId;
 
     public Optional<String> getCodeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
@@ -48,7 +48,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command", required=true)
-    private final String command;
+        private final String command;
 
     public String getCommand() {
         return this.command;
@@ -59,7 +59,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compute", required=true)
-    private final ComputeConfigurationResponse compute;
+        private final ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse getCompute() {
         return this.compute;
@@ -70,7 +70,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -81,7 +81,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Object distribution;
+        private final @Nullable Object distribution;
 
     public Object getDistribution() {
         return this.distribution == null ? null : this.distribution;
@@ -92,7 +92,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable String environmentId;
+        private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
@@ -103,7 +103,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Map<String,String> environmentVariables;
+        private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
@@ -114,7 +114,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="experimentName")
-    private final @Nullable String experimentName;
+        private final @Nullable String experimentName;
 
     public Optional<String> getExperimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
@@ -126,7 +126,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
+        private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
     public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
         return this.identity == null ? null : this.identity;
@@ -137,7 +137,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputDataBindings")
-    private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
+        private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
     public Map<String,InputDataBindingResponse> getInputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
@@ -149,7 +149,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="interactionEndpoints", required=true)
-    private final Map<String,JobEndpointResponse> interactionEndpoints;
+        private final Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> getInteractionEndpoints() {
         return this.interactionEndpoints;
@@ -161,7 +161,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobType", required=true)
-    private final String jobType;
+        private final String jobType;
 
     public String getJobType() {
         return this.jobType;
@@ -172,7 +172,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="output", required=true)
-    private final JobOutputResponse output;
+        private final JobOutputResponse output;
 
     public JobOutputResponse getOutput() {
         return this.output;
@@ -183,7 +183,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputDataBindings")
-    private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
+        private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
     public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
@@ -194,7 +194,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Object parameters;
+        private final Object parameters;
 
     public Object getParameters() {
         return this.parameters;
@@ -206,7 +206,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -217,7 +217,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -228,7 +228,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -239,7 +239,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -250,7 +250,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -261,7 +261,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+        private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -500,7 +500,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
             this.timeout = timeout;
             return this;
         }
-
         public CommandJobResponse build() {
             return new CommandJobResponse(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, interactionEndpoints, jobType, output, outputDataBindings, parameters, priority, properties, provisioningState, status, tags, timeout);
         }

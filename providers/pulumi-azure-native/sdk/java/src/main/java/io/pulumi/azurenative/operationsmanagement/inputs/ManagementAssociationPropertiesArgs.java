@@ -22,7 +22,7 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+        private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -65,7 +65,6 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public ManagementAssociationPropertiesArgs build() {
             return new ManagementAssociationPropertiesArgs(applicationId);
         }

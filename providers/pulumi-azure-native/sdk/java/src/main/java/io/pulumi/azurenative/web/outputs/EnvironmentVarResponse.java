@@ -97,7 +97,6 @@ public final class EnvironmentVarResponse {
             this.value = value;
             return this;
         }
-
         public EnvironmentVarResponse build() {
             return new EnvironmentVarResponse(name, secretRef, value);
         }

@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueFrequencyResponse build() {
             return new GooglePrivacyDlpV2ValueFrequencyResponse(count, value);
         }

@@ -165,7 +165,6 @@ public final class ManagedClusterLoadBalancerProfileResponse {
             this.outboundIPs = outboundIPs;
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileResponse build() {
             return new ManagedClusterLoadBalancerProfileResponse(allocatedOutboundPorts, effectiveOutboundIPs, idleTimeoutInMinutes, managedOutboundIPs, outboundIPPrefixes, outboundIPs);
         }

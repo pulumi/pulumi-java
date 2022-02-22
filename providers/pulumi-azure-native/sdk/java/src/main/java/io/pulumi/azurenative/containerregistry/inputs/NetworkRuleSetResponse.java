@@ -26,7 +26,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultAction", required=true)
-    private final String defaultAction;
+        private final String defaultAction;
 
     public String getDefaultAction() {
         return this.defaultAction;
@@ -37,7 +37,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable List<IPRuleResponse> ipRules;
+        private final @Nullable List<IPRuleResponse> ipRules;
 
     public List<IPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
@@ -48,7 +48,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
+        private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
@@ -107,7 +107,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(defaultAction, ipRules, virtualNetworkRules);
         }

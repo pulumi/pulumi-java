@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
     public static final DefaultRolloutSpecificationMediumTrafficArgs Empty = new DefaultRolloutSpecificationMediumTrafficArgs();
 
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+        private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
     }
 
     @InputImport(name="waitDuration")
-    private final @Nullable Input<String> waitDuration;
+        private final @Nullable Input<String> waitDuration;
 
     public Input<String> getWaitDuration() {
         return this.waitDuration == null ? Input.empty() : this.waitDuration;
@@ -82,7 +82,6 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
             this.waitDuration = Input.ofNullable(waitDuration);
             return this;
         }
-
         public DefaultRolloutSpecificationMediumTrafficArgs build() {
             return new DefaultRolloutSpecificationMediumTrafficArgs(regions, waitDuration);
         }

@@ -54,7 +54,6 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
             this.id = id;
             return this;
         }
-
         public FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }

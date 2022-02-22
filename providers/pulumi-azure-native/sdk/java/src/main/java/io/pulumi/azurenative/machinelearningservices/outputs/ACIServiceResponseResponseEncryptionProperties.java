@@ -95,7 +95,6 @@ public final class ACIServiceResponseResponseEncryptionProperties {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public ACIServiceResponseResponseEncryptionProperties build() {
             return new ACIServiceResponseResponseEncryptionProperties(keyName, keyVersion, vaultBaseUrl);
         }

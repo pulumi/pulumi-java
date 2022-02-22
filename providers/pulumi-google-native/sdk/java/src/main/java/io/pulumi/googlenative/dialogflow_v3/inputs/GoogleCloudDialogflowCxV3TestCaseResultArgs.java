@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * 
      */
     @InputImport(name="conversationTurns")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
     public Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getConversationTurns() {
         return this.conversationTurns == null ? Input.empty() : this.conversationTurns;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<String> environment;
+      private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * 
      */
     @InputImport(name="testResult")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
     public Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> getTestResult() {
         return this.testResult == null ? Input.empty() : this.testResult;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * 
      */
     @InputImport(name="testTime")
-    private final @Nullable Input<String> testTime;
+      private final @Nullable Input<String> testTime;
 
     public Input<String> getTestTime() {
         return this.testTime == null ? Input.empty() : this.testTime;
@@ -174,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             this.testTime = Input.ofNullable(testTime);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestCaseResultArgs build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultArgs(conversationTurns, environment, name, testResult, testTime);
         }

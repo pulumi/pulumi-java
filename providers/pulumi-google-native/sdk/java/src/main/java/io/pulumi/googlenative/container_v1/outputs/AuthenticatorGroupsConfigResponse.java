@@ -75,7 +75,6 @@ public final class AuthenticatorGroupsConfigResponse {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public AuthenticatorGroupsConfigResponse build() {
             return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
         }

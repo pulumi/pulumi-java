@@ -23,7 +23,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<String> subnet;
+        private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -93,7 +93,6 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public VirtualNetworkProfileArgs build() {
             return new VirtualNetworkProfileArgs(id, subnet);
         }

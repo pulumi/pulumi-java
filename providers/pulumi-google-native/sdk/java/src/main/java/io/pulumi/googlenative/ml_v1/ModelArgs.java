@@ -22,7 +22,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,7 +44,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -55,7 +55,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionConsoleLogging")
-    private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
+      private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
 
     public Input<Boolean> getOnlinePredictionConsoleLogging() {
         return this.onlinePredictionConsoleLogging == null ? Input.empty() : this.onlinePredictionConsoleLogging;
@@ -77,14 +77,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionLogging")
-    private final @Nullable Input<Boolean> onlinePredictionLogging;
+      private final @Nullable Input<Boolean> onlinePredictionLogging;
 
     public Input<Boolean> getOnlinePredictionLogging() {
         return this.onlinePredictionLogging == null ? Input.empty() : this.onlinePredictionLogging;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -95,7 +95,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
@@ -244,7 +244,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.regions = Input.ofNullable(regions);
             return this;
         }
-
         public ModelArgs build() {
             return new ModelArgs(description, etag, labels, name, onlinePredictionConsoleLogging, onlinePredictionLogging, project, regions);
         }

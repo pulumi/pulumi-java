@@ -162,7 +162,6 @@ public final class GetIntegrationAccountBatchConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountBatchConfigurationResult build() {
             return new GetIntegrationAccountBatchConfigurationResult(id, location, name, properties, tags, type);
         }

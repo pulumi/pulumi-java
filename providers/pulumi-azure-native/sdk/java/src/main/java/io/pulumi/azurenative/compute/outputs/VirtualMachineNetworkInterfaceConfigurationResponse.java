@@ -241,7 +241,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
             this.primary = primary;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceConfigurationResponse(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
         }

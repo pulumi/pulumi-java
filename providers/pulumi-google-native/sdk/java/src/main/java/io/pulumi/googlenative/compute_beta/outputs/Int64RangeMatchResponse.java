@@ -74,7 +74,6 @@ public final class Int64RangeMatchResponse {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public Int64RangeMatchResponse build() {
             return new Int64RangeMatchResponse(rangeEnd, rangeStart);
         }

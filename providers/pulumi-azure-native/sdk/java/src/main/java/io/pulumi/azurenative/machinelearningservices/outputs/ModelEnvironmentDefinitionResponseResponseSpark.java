@@ -100,7 +100,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
             this.repositories = repositories;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseSpark build() {
             return new ModelEnvironmentDefinitionResponseResponseSpark(packages, precachePackages, repositories);
         }

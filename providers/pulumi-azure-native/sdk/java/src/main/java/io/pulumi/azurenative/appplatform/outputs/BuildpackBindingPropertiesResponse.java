@@ -98,7 +98,6 @@ public final class BuildpackBindingPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public BuildpackBindingPropertiesResponse build() {
             return new BuildpackBindingPropertiesResponse(bindingType, launchProperties, provisioningState);
         }

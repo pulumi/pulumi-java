@@ -76,7 +76,6 @@ public final class TraceResponse {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public TraceResponse build() {
             return new TraceResponse(endpointInfo, steps);
         }

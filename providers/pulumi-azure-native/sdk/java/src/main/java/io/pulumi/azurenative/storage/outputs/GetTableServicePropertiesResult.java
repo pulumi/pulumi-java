@@ -119,7 +119,6 @@ public final class GetTableServicePropertiesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTableServicePropertiesResult build() {
             return new GetTableServicePropertiesResult(cors, id, name, type);
         }

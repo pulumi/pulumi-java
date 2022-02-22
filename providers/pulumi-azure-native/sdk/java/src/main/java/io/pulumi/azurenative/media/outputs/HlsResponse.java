@@ -54,7 +54,6 @@ public final class HlsResponse {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
-
         public HlsResponse build() {
             return new HlsResponse(fragmentsPerTsSegment);
         }

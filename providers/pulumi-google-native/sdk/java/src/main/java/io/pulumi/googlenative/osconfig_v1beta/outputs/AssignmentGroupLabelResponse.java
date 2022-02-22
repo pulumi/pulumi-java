@@ -53,7 +53,6 @@ public final class AssignmentGroupLabelResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public AssignmentGroupLabelResponse build() {
             return new AssignmentGroupLabelResponse(labels);
         }

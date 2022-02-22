@@ -15,21 +15,21 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRouterArgs Empty = new GetRouterArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="router", required=true)
-    private final String router;
+      private final String router;
 
     public String getRouter() {
         return this.router;
@@ -88,7 +88,6 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
             this.router = Objects.requireNonNull(router);
             return this;
         }
-
         public GetRouterArgs build() {
             return new GetRouterArgs(project, region, router);
         }

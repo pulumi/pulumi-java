@@ -100,7 +100,6 @@ public final class SnowflakeExportCopyCommandResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeExportCopyCommandResponse build() {
             return new SnowflakeExportCopyCommandResponse(additionalCopyOptions, additionalFormatOptions, type);
         }

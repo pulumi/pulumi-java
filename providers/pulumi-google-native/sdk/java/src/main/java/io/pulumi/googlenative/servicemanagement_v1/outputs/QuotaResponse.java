@@ -76,7 +76,6 @@ public final class QuotaResponse {
             this.metricRules = Objects.requireNonNull(metricRules);
             return this;
         }
-
         public QuotaResponse build() {
             return new QuotaResponse(limits, metricRules);
         }

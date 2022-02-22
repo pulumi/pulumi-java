@@ -23,7 +23,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<VaultPropertiesEncryptionArgs> encryption;
+        private final @Nullable Input<VaultPropertiesEncryptionArgs> encryption;
 
     public Input<VaultPropertiesEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -66,7 +66,6 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
-
         public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(encryption);
         }

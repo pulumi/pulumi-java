@@ -118,7 +118,6 @@ public final class DatadogApiKeyResponse {
             this.name = name;
             return this;
         }
-
         public DatadogApiKeyResponse build() {
             return new DatadogApiKeyResponse(created, createdBy, key, name);
         }

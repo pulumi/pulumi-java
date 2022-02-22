@@ -19,28 +19,28 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContainerArgs Empty = new ContainerArgs();
 
     @InputImport(name="brightness")
-    private final @Nullable Input<ContainerBrightness> brightness;
+        private final @Nullable Input<ContainerBrightness> brightness;
 
     public Input<ContainerBrightness> getBrightness() {
         return this.brightness == null ? Input.empty() : this.brightness;
     }
 
     @InputImport(name="color")
-    private final @Nullable Input<Either<ContainerColor,String>> color;
+        private final @Nullable Input<Either<ContainerColor,String>> color;
 
     public Input<Either<ContainerColor,String>> getColor() {
         return this.color == null ? Input.empty() : this.color;
     }
 
     @InputImport(name="material")
-    private final @Nullable Input<String> material;
+        private final @Nullable Input<String> material;
 
     public Input<String> getMaterial() {
         return this.material == null ? Input.empty() : this.material;
     }
 
     @InputImport(name="size", required=true)
-    private final Input<ContainerSize> size;
+        private final Input<ContainerSize> size;
 
     public Input<ContainerSize> getSize() {
         return this.size;
@@ -129,7 +129,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
-
         public ContainerArgs build() {
             return new ContainerArgs(brightness, color, material, size);
         }

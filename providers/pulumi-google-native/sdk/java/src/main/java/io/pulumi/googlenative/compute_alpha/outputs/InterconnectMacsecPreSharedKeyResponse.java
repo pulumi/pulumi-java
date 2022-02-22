@@ -74,7 +74,6 @@ public final class InterconnectMacsecPreSharedKeyResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public InterconnectMacsecPreSharedKeyResponse build() {
             return new InterconnectMacsecPreSharedKeyResponse(name, startTime);
         }

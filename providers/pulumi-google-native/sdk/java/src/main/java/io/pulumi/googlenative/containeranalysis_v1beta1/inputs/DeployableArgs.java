@@ -23,7 +23,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<List<String>> resourceUri;
+      private final Input<List<String>> resourceUri;
 
     public Input<List<String>> getResourceUri() {
         return this.resourceUri;
@@ -66,7 +66,6 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public DeployableArgs build() {
             return new DeployableArgs(resourceUri);
         }

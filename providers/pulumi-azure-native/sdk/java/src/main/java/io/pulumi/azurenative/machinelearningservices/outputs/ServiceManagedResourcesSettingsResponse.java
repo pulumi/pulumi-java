@@ -54,7 +54,6 @@ public final class ServiceManagedResourcesSettingsResponse {
             this.cosmosDb = cosmosDb;
             return this;
         }
-
         public ServiceManagedResourcesSettingsResponse build() {
             return new ServiceManagedResourcesSettingsResponse(cosmosDb);
         }

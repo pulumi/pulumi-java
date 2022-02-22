@@ -74,7 +74,6 @@ public final class AcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(coreCount, type);
         }

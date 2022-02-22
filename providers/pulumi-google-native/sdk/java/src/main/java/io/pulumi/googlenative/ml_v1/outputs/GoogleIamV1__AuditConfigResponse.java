@@ -76,7 +76,6 @@ public final class GoogleIamV1__AuditConfigResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleIamV1__AuditConfigResponse build() {
             return new GoogleIamV1__AuditConfigResponse(auditLogConfigs, service);
         }

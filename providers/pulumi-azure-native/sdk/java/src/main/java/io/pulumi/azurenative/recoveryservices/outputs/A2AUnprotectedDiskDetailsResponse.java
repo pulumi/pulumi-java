@@ -54,7 +54,6 @@ public final class A2AUnprotectedDiskDetailsResponse {
             this.diskLunId = diskLunId;
             return this;
         }
-
         public A2AUnprotectedDiskDetailsResponse build() {
             return new A2AUnprotectedDiskDetailsResponse(diskLunId);
         }

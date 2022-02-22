@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
      * 
      */
     @InputImport(name="jobConfig", required=true)
-    private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
+      private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse getJobConfig() {
         return this.jobConfig;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
             return new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(jobConfig);
         }

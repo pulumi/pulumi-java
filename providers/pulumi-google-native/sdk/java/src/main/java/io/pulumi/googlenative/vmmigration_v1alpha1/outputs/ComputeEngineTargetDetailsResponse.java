@@ -395,7 +395,6 @@ public final class ComputeEngineTargetDetailsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ComputeEngineTargetDetailsResponse build() {
             return new ComputeEngineTargetDetailsResponse(additionalLicenses, appliedLicense, bootOption, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, project, secureBoot, serviceAccount, vmName, zone);
         }

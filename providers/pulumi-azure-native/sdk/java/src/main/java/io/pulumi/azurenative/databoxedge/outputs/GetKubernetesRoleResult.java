@@ -268,7 +268,6 @@ public final class GetKubernetesRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKubernetesRoleResult build() {
             return new GetKubernetesRoleResult(hostPlatform, hostPlatformType, id, kind, kubernetesClusterInfo, kubernetesRoleResources, name, provisioningState, roleStatus, systemData, type);
         }

@@ -23,7 +23,7 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="orderBy")
-    private final @Nullable String orderBy;
+        private final @Nullable String orderBy;
 
     public Optional<String> getOrderBy() {
         return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
@@ -83,7 +83,6 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.orderBy = orderBy;
             return this;
         }
-
         public ClusterKeyResponse build() {
             return new ClusterKeyResponse(name, orderBy);
         }

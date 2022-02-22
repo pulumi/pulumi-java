@@ -25,7 +25,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
+      private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
 
     public Input<List<CustomErrorRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -36,7 +36,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable Input<List<String>> types;
+      private final @Nullable Input<List<String>> types;
 
     public Input<List<String>> getTypes() {
         return this.types == null ? Input.empty() : this.types;
@@ -95,7 +95,6 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.types = Input.ofNullable(types);
             return this;
         }
-
         public CustomErrorArgs build() {
             return new CustomErrorArgs(rules, types);
         }

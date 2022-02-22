@@ -54,7 +54,6 @@ public final class ListOpenIdConnectProviderSecretsResult {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public ListOpenIdConnectProviderSecretsResult build() {
             return new ListOpenIdConnectProviderSecretsResult(clientSecret);
         }

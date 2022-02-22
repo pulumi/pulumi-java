@@ -162,7 +162,6 @@ public final class RuleMetricDataSourceResponse {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public RuleMetricDataSourceResponse build() {
             return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }

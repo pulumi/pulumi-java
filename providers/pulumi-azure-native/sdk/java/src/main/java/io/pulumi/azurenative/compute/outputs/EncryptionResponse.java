@@ -76,7 +76,6 @@ public final class EncryptionResponse {
             this.type = type;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(diskEncryptionSetId, type);
         }

@@ -98,7 +98,6 @@ public final class ModelContainerResponse {
             this.tags = tags;
             return this;
         }
-
         public ModelContainerResponse build() {
             return new ModelContainerResponse(description, properties, tags);
         }

@@ -188,7 +188,6 @@ public final class MongoDbV2LinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbV2LinkedServiceResponse build() {
             return new MongoDbV2LinkedServiceResponse(annotations, connectVia, connectionString, database, description, parameters, type);
         }

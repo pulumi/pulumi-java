@@ -74,7 +74,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(kind, name);
         }

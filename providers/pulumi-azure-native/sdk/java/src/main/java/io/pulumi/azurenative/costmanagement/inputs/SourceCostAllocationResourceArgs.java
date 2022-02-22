@@ -25,7 +25,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<Either<String,CostAllocationResourceType>> resourceType;
+        private final Input<Either<String,CostAllocationResourceType>> resourceType;
 
     public Input<Either<String,CostAllocationResourceType>> getPropResourceType() {
         return this.resourceType;
@@ -47,7 +47,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -121,7 +121,6 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public SourceCostAllocationResourceArgs build() {
             return new SourceCostAllocationResourceArgs(name, resourceType, values);
         }

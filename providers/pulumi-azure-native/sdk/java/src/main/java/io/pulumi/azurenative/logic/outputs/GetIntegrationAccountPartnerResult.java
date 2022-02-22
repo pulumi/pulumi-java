@@ -247,7 +247,6 @@ public final class GetIntegrationAccountPartnerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountPartnerResult build() {
             return new GetIntegrationAccountPartnerResult(changedTime, content, createdTime, id, location, metadata, name, partnerType, tags, type);
         }

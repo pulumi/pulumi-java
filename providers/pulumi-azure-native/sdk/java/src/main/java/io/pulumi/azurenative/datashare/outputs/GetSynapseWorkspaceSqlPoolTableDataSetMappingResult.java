@@ -224,7 +224,6 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynapseWorkspaceSqlPoolTableDataSetMappingResult build() {
             return new GetSynapseWorkspaceSqlPoolTableDataSetMappingResult(dataSetId, dataSetMappingStatus, id, kind, name, provisioningState, synapseWorkspaceSqlPoolTableResourceId, systemData, type);
         }

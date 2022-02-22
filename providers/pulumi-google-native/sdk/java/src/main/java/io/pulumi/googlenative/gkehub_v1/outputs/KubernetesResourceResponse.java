@@ -119,7 +119,6 @@ public final class KubernetesResourceResponse {
             this.resourceOptions = Objects.requireNonNull(resourceOptions);
             return this;
         }
-
         public KubernetesResourceResponse build() {
             return new KubernetesResourceResponse(connectResources, membershipCrManifest, membershipResources, resourceOptions);
         }

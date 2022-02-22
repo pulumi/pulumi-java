@@ -54,7 +54,6 @@ public final class SeedNodeResponse {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public SeedNodeResponse build() {
             return new SeedNodeResponse(ipAddress);
         }

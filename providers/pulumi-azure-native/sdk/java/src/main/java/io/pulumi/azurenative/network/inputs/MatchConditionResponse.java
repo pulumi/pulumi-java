@@ -26,7 +26,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="matchValues", required=true)
-    private final List<String> matchValues;
+        private final List<String> matchValues;
 
     public List<String> getMatchValues() {
         return this.matchValues;
@@ -37,7 +37,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="matchVariables", required=true)
-    private final List<MatchVariableResponse> matchVariables;
+        private final List<MatchVariableResponse> matchVariables;
 
     public List<MatchVariableResponse> getMatchVariables() {
         return this.matchVariables;
@@ -48,7 +48,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="negationConditon")
-    private final @Nullable Boolean negationConditon;
+        private final @Nullable Boolean negationConditon;
 
     public Optional<Boolean> getNegationConditon() {
         return this.negationConditon == null ? Optional.empty() : Optional.ofNullable(this.negationConditon);
@@ -59,7 +59,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -70,7 +70,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable List<String> transforms;
+        private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
@@ -149,7 +149,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
             this.transforms = transforms;
             return this;
         }
-
         public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValues, matchVariables, negationConditon, operator, transforms);
         }

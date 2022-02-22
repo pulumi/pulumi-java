@@ -75,7 +75,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceRPMResponse build() {
             return new OSPolicyResourcePackageResourceRPMResponse(pullDeps, source);
         }

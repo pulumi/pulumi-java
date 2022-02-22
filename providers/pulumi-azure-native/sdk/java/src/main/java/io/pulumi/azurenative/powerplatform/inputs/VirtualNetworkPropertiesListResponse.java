@@ -25,7 +25,7 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="nextLink")
-    private final @Nullable String nextLink;
+        private final @Nullable String nextLink;
 
     public Optional<String> getNextLink() {
         return this.nextLink == null ? Optional.empty() : Optional.ofNullable(this.nextLink);
@@ -36,7 +36,7 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable List<VirtualNetworkPropertiesResponse> value;
+        private final @Nullable List<VirtualNetworkPropertiesResponse> value;
 
     public List<VirtualNetworkPropertiesResponse> getValue() {
         return this.value == null ? List.of() : this.value;
@@ -85,7 +85,6 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
             this.value = value;
             return this;
         }
-
         public VirtualNetworkPropertiesListResponse build() {
             return new VirtualNetworkPropertiesListResponse(nextLink, value);
         }

@@ -54,7 +54,6 @@ public final class EndpointRefResponse {
             this.name = name;
             return this;
         }
-
         public EndpointRefResponse build() {
             return new EndpointRefResponse(name);
         }

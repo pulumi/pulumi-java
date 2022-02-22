@@ -691,7 +691,6 @@ public final class GetHostPoolResult {
             this.vmTemplate = vmTemplate;
             return this;
         }
-
         public GetHostPoolResult build() {
             return new GetHostPoolResult(applicationGroupReferences, cloudPcResource, customRdpProperty, description, etag, friendlyName, hostPoolType, id, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, name, objectId, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, type, validationEnvironment, vmTemplate);
         }

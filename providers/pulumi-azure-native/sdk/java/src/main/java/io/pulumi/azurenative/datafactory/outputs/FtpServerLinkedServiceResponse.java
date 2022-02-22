@@ -317,7 +317,6 @@ public final class FtpServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public FtpServerLinkedServiceResponse build() {
             return new FtpServerLinkedServiceResponse(annotations, authenticationType, connectVia, description, enableServerCertificateValidation, enableSsl, encryptedCredential, host, parameters, password, port, type, userName);
         }

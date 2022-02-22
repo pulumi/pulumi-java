@@ -439,7 +439,6 @@ public final class GetConversationResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConversationResult build() {
             return new GetConversationResult(agentId, callMetadata, createTime, dataSource, dialogflowIntents, duration, expireTime, labels, languageCode, latestAnalysis, medium, name, obfuscatedUserId, runtimeAnnotations, startTime, transcript, ttl, turnCount, updateTime);
         }

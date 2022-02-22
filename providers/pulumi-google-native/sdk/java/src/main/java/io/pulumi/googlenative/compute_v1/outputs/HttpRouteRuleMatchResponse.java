@@ -184,7 +184,6 @@ public final class HttpRouteRuleMatchResponse {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public HttpRouteRuleMatchResponse build() {
             return new HttpRouteRuleMatchResponse(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

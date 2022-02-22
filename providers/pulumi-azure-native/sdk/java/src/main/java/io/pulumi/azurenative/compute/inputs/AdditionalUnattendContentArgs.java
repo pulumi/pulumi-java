@@ -26,7 +26,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="componentName")
-    private final @Nullable Input<ComponentNames> componentName;
+        private final @Nullable Input<ComponentNames> componentName;
 
     public Input<ComponentNames> getComponentName() {
         return this.componentName == null ? Input.empty() : this.componentName;
@@ -37,7 +37,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -48,7 +48,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="passName")
-    private final @Nullable Input<PassNames> passName;
+        private final @Nullable Input<PassNames> passName;
 
     public Input<PassNames> getPassName() {
         return this.passName == null ? Input.empty() : this.passName;
@@ -59,7 +59,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="settingName")
-    private final @Nullable Input<SettingNames> settingName;
+        private final @Nullable Input<SettingNames> settingName;
 
     public Input<SettingNames> getSettingName() {
         return this.settingName == null ? Input.empty() : this.settingName;
@@ -148,7 +148,6 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             this.settingName = Input.ofNullable(settingName);
             return this;
         }
-
         public AdditionalUnattendContentArgs build() {
             return new AdditionalUnattendContentArgs(componentName, content, passName, settingName);
         }

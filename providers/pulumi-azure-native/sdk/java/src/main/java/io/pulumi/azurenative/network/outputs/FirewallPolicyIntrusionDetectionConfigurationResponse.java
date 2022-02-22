@@ -77,7 +77,6 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
             this.signatureOverrides = signatureOverrides;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
             return new FirewallPolicyIntrusionDetectionConfigurationResponse(bypassTrafficSettings, signatureOverrides);
         }

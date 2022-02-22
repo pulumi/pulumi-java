@@ -27,7 +27,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalIpv6")
-    private final @Nullable Input<String> externalIpv6;
+      private final @Nullable Input<String> externalIpv6;
 
     public Input<String> getExternalIpv6() {
         return this.externalIpv6 == null ? Input.empty() : this.externalIpv6;
@@ -38,7 +38,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalIpv6PrefixLength")
-    private final @Nullable Input<Integer> externalIpv6PrefixLength;
+      private final @Nullable Input<Integer> externalIpv6PrefixLength;
 
     public Input<Integer> getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
@@ -49,7 +49,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natIP")
-    private final @Nullable Input<String> natIP;
+      private final @Nullable Input<String> natIP;
 
     public Input<String> getNatIP() {
         return this.natIP == null ? Input.empty() : this.natIP;
@@ -71,7 +71,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkTier")
-    private final @Nullable Input<AccessConfigNetworkTier> networkTier;
+      private final @Nullable Input<AccessConfigNetworkTier> networkTier;
 
     public Input<AccessConfigNetworkTier> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
@@ -82,7 +82,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicPtrDomainName")
-    private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
@@ -93,7 +93,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setPublicPtr")
-    private final @Nullable Input<Boolean> setPublicPtr;
+      private final @Nullable Input<Boolean> setPublicPtr;
 
     public Input<Boolean> getSetPublicPtr() {
         return this.setPublicPtr == null ? Input.empty() : this.setPublicPtr;
@@ -104,7 +104,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<AccessConfigType> type;
+      private final @Nullable Input<AccessConfigType> type;
 
     public Input<AccessConfigType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -253,7 +253,6 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AccessConfigArgs build() {
             return new AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, name, natIP, networkTier, publicPtrDomainName, setPublicPtr, type);
         }

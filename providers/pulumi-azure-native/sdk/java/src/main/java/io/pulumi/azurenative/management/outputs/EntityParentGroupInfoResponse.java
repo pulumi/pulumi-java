@@ -54,7 +54,6 @@ public final class EntityParentGroupInfoResponse {
             this.id = id;
             return this;
         }
-
         public EntityParentGroupInfoResponse build() {
             return new EntityParentGroupInfoResponse(id);
         }

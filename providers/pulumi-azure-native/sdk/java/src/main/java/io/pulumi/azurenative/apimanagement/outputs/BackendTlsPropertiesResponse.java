@@ -76,7 +76,6 @@ public final class BackendTlsPropertiesResponse {
             this.validateCertificateName = validateCertificateName;
             return this;
         }
-
         public BackendTlsPropertiesResponse build() {
             return new BackendTlsPropertiesResponse(validateCertificateChain, validateCertificateName);
         }

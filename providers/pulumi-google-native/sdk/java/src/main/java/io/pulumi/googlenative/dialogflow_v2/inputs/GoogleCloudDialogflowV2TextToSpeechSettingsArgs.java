@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="enableTextToSpeech")
-    private final @Nullable Input<Boolean> enableTextToSpeech;
+      private final @Nullable Input<Boolean> enableTextToSpeech;
 
     public Input<Boolean> getEnableTextToSpeech() {
         return this.enableTextToSpeech == null ? Input.empty() : this.enableTextToSpeech;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="outputAudioEncoding", required=true)
-    private final Input<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
+      private final Input<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
 
     public Input<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> getOutputAudioEncoding() {
         return this.outputAudioEncoding;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="sampleRateHertz")
-    private final @Nullable Input<Integer> sampleRateHertz;
+      private final @Nullable Input<Integer> sampleRateHertz;
 
     public Input<Integer> getSampleRateHertz() {
         return this.sampleRateHertz == null ? Input.empty() : this.sampleRateHertz;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="synthesizeSpeechConfigs")
-    private final @Nullable Input<Map<String,String>> synthesizeSpeechConfigs;
+      private final @Nullable Input<Map<String,String>> synthesizeSpeechConfigs;
 
     public Input<Map<String,String>> getSynthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs == null ? Input.empty() : this.synthesizeSpeechConfigs;
@@ -149,7 +149,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
             this.synthesizeSpeechConfigs = Input.ofNullable(synthesizeSpeechConfigs);
             return this;
         }
-
         public GoogleCloudDialogflowV2TextToSpeechSettingsArgs build() {
             return new GoogleCloudDialogflowV2TextToSpeechSettingsArgs(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }

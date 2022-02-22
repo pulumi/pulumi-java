@@ -139,7 +139,6 @@ public final class GetSqlPoolTransparentDataEncryptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolTransparentDataEncryptionResult build() {
             return new GetSqlPoolTransparentDataEncryptionResult(id, location, name, status, type);
         }

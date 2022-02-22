@@ -140,7 +140,6 @@ public final class LoadBalancingRuleResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }

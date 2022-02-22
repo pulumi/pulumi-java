@@ -76,7 +76,6 @@ public final class ConfigurationParameterResponse {
             this.value = value;
             return this;
         }
-
         public ConfigurationParameterResponse build() {
             return new ConfigurationParameterResponse(name, value);
         }

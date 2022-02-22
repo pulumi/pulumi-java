@@ -184,7 +184,6 @@ public final class GetConfigurationProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationProfileResult build() {
             return new GetConfigurationProfileResult(id, identity, location, name, properties, systemData, type);
         }

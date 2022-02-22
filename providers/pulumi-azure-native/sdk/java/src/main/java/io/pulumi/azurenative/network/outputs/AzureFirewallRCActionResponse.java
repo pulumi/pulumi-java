@@ -54,7 +54,6 @@ public final class AzureFirewallRCActionResponse {
             this.type = type;
             return this;
         }
-
         public AzureFirewallRCActionResponse build() {
             return new AzureFirewallRCActionResponse(type);
         }

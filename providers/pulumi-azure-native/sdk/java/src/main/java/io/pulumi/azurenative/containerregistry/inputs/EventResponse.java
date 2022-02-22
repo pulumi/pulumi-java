@@ -25,7 +25,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventRequestMessage")
-    private final @Nullable EventRequestMessageResponse eventRequestMessage;
+        private final @Nullable EventRequestMessageResponse eventRequestMessage;
 
     public Optional<EventRequestMessageResponse> getEventRequestMessage() {
         return this.eventRequestMessage == null ? Optional.empty() : Optional.ofNullable(this.eventRequestMessage);
@@ -36,7 +36,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventResponseMessage")
-    private final @Nullable EventResponseMessageResponse eventResponseMessage;
+        private final @Nullable EventResponseMessageResponse eventResponseMessage;
 
     public Optional<EventResponseMessageResponse> getEventResponseMessage() {
         return this.eventResponseMessage == null ? Optional.empty() : Optional.ofNullable(this.eventResponseMessage);
@@ -47,7 +47,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -106,7 +106,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(eventRequestMessage, eventResponseMessage, id);
         }

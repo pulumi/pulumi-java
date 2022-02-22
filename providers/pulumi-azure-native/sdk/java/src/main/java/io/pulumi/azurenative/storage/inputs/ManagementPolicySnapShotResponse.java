@@ -23,7 +23,7 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="delete")
-    private final @Nullable DateAfterCreationResponse delete;
+        private final @Nullable DateAfterCreationResponse delete;
 
     public Optional<DateAfterCreationResponse> getDelete() {
         return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
@@ -34,7 +34,7 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tierToArchive")
-    private final @Nullable DateAfterCreationResponse tierToArchive;
+        private final @Nullable DateAfterCreationResponse tierToArchive;
 
     public Optional<DateAfterCreationResponse> getTierToArchive() {
         return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
@@ -45,7 +45,7 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tierToCool")
-    private final @Nullable DateAfterCreationResponse tierToCool;
+        private final @Nullable DateAfterCreationResponse tierToCool;
 
     public Optional<DateAfterCreationResponse> getTierToCool() {
         return this.tierToCool == null ? Optional.empty() : Optional.ofNullable(this.tierToCool);
@@ -104,7 +104,6 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
             this.tierToCool = tierToCool;
             return this;
         }
-
         public ManagementPolicySnapShotResponse build() {
             return new ManagementPolicySnapShotResponse(delete, tierToArchive, tierToCool);
         }

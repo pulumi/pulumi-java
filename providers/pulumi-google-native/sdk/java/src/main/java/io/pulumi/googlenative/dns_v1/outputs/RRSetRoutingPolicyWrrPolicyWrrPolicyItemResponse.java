@@ -102,7 +102,6 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(kind, rrdatas, signatureRrdatas, weight);
         }

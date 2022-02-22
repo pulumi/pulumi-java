@@ -74,7 +74,6 @@ public final class PkixPublicKeyResponse {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public PkixPublicKeyResponse build() {
             return new PkixPublicKeyResponse(publicKeyPem, signatureAlgorithm);
         }

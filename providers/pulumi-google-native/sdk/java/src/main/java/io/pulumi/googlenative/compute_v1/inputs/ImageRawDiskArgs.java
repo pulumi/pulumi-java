@@ -24,7 +24,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType")
-    private final @Nullable Input<ImageRawDiskContainerType> containerType;
+      private final @Nullable Input<ImageRawDiskContainerType> containerType;
 
     public Input<ImageRawDiskContainerType> getContainerType() {
         return this.containerType == null ? Input.empty() : this.containerType;
@@ -35,7 +35,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -94,7 +94,6 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public ImageRawDiskArgs build() {
             return new ImageRawDiskArgs(containerType, source);
         }

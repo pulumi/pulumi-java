@@ -77,7 +77,6 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }
-
         public InstanceFailoverGroupReadWriteEndpointResponse build() {
             return new InstanceFailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }

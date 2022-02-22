@@ -23,7 +23,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="error")
-    private final @Nullable CloudErrorBodyResponse error;
+        private final @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -61,7 +61,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.error = error;
             return this;
         }
-
         public CloudErrorResponse build() {
             return new CloudErrorResponse(error);
         }

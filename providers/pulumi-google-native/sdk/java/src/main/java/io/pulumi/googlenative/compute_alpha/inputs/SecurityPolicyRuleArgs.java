@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -42,7 +42,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<SecurityPolicyRuleDirection> direction;
+      private final @Nullable Input<SecurityPolicyRuleDirection> direction;
 
     public Input<SecurityPolicyRuleDirection> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -64,7 +64,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -75,7 +75,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
+      private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
     public Input<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -86,7 +86,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
+      private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
 
     public Input<SecurityPolicyRuleMatcherArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -97,7 +97,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -108,7 +108,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -119,7 +119,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rateLimitOptions")
-    private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
     public Input<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
         return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
@@ -130,7 +130,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectOptions")
-    private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
     public Input<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
         return this.redirectOptions == null ? Input.empty() : this.redirectOptions;
@@ -141,7 +141,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectTarget")
-    private final @Nullable Input<String> redirectTarget;
+      private final @Nullable Input<String> redirectTarget;
 
     public Input<String> getRedirectTarget() {
         return this.redirectTarget == null ? Input.empty() : this.redirectTarget;
@@ -152,7 +152,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleNumber")
-    private final @Nullable Input<String> ruleNumber;
+      private final @Nullable Input<String> ruleNumber;
 
     public Input<String> getRuleNumber() {
         return this.ruleNumber == null ? Input.empty() : this.ruleNumber;
@@ -163,7 +163,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable Input<List<String>> targetResources;
+      private final @Nullable Input<List<String>> targetResources;
 
     public Input<List<String>> getTargetResources() {
         return this.targetResources == null ? Input.empty() : this.targetResources;
@@ -174,7 +174,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetServiceAccounts")
-    private final @Nullable Input<List<String>> targetServiceAccounts;
+      private final @Nullable Input<List<String>> targetServiceAccounts;
 
     public Input<List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
@@ -413,7 +413,6 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }
-
         public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, direction, enableLogging, headerAction, match, preview, priority, rateLimitOptions, redirectOptions, redirectTarget, ruleNumber, targetResources, targetServiceAccounts);
         }

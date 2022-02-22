@@ -24,7 +24,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<CapacityArgs> capacity;
+      private final @Nullable Input<CapacityArgs> capacity;
 
     public Input<CapacityArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -35,7 +35,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+      private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -94,7 +94,6 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.count = Input.ofNullable(count);
             return this;
         }
-
         public PartitionConfigArgs build() {
             return new PartitionConfigArgs(capacity, count);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
      * 
      */
     @InputImport(name="versionVariants")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
     public Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
         return this.versionVariants == null ? Input.empty() : this.versionVariants;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
             this.versionVariants = Input.ofNullable(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VariantsHistoryArgs build() {
             return new GoogleCloudDialogflowCxV3VariantsHistoryArgs(updateTime, versionVariants);
         }

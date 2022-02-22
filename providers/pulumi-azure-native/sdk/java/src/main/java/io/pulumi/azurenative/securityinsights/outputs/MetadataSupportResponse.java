@@ -118,7 +118,6 @@ public final class MetadataSupportResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public MetadataSupportResponse build() {
             return new MetadataSupportResponse(email, link, name, tier);
         }

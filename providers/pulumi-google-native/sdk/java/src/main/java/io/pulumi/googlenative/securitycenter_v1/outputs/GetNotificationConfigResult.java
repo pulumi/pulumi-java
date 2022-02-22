@@ -138,7 +138,6 @@ public final class GetNotificationConfigResult {
             this.streamingConfig = Objects.requireNonNull(streamingConfig);
             return this;
         }
-
         public GetNotificationConfigResult build() {
             return new GetNotificationConfigResult(description, name, pubsubTopic, serviceAccount, streamingConfig);
         }

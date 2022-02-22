@@ -67,7 +67,6 @@ public final class OriginGroupOverrideActionParametersResponse {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
-
         public OriginGroupOverrideActionParametersResponse build() {
             return new OriginGroupOverrideActionParametersResponse(odataType, originGroup);
         }

@@ -265,7 +265,6 @@ public final class BucketAccessControlResponse {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public BucketAccessControlResponse build() {
             return new BucketAccessControlResponse(bucket, domain, email, entity, entityId, etag, kind, projectTeam, role, selfLink);
         }

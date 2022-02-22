@@ -19,21 +19,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleResponse Empty = new ResourcePolicySnapshotSchedulePolicyScheduleResponse();
 
     @InputImport(name="dailySchedule", required=true)
-    private final ResourcePolicyDailyCycleResponse dailySchedule;
+      private final ResourcePolicyDailyCycleResponse dailySchedule;
 
     public ResourcePolicyDailyCycleResponse getDailySchedule() {
         return this.dailySchedule;
     }
 
     @InputImport(name="hourlySchedule", required=true)
-    private final ResourcePolicyHourlyCycleResponse hourlySchedule;
+      private final ResourcePolicyHourlyCycleResponse hourlySchedule;
 
     public ResourcePolicyHourlyCycleResponse getHourlySchedule() {
         return this.hourlySchedule;
     }
 
     @InputImport(name="weeklySchedule", required=true)
-    private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
+      private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
     public ResourcePolicyWeeklyCycleResponse getWeeklySchedule() {
         return this.weeklySchedule;
@@ -92,7 +92,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
             this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleResponse(dailySchedule, hourlySchedule, weeklySchedule);
         }

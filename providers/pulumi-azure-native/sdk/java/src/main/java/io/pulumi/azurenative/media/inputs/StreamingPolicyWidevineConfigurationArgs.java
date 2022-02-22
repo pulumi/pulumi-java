@@ -23,7 +23,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-    private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+        private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
 
     public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;
@@ -66,7 +66,6 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
             this.customLicenseAcquisitionUrlTemplate = Input.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
-
         public StreamingPolicyWidevineConfigurationArgs build() {
             return new StreamingPolicyWidevineConfigurationArgs(customLicenseAcquisitionUrlTemplate);
         }

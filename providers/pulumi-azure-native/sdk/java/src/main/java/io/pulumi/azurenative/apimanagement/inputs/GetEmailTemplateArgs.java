@@ -17,7 +17,7 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="templateName", required=true)
-    private final String templateName;
+        private final String templateName;
 
     public String getTemplateName() {
         return this.templateName;
@@ -98,7 +98,6 @@ public final class GetEmailTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public GetEmailTemplateArgs build() {
             return new GetEmailTemplateArgs(resourceGroupName, serviceName, templateName);
         }

@@ -23,7 +23,7 @@ public final class VICredentialResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable String username;
+        private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -61,7 +61,6 @@ public final class VICredentialResponse extends io.pulumi.resources.InvokeArgs {
             this.username = username;
             return this;
         }
-
         public VICredentialResponse build() {
             return new VICredentialResponse(username);
         }

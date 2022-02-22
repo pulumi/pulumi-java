@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1QuotaResponse {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
-
         public GoogleCloudApigeeV1QuotaResponse build() {
             return new GoogleCloudApigeeV1QuotaResponse(interval, limit, timeUnit);
         }

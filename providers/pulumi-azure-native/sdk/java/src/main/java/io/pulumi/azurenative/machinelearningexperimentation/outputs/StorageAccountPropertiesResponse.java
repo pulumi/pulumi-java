@@ -74,7 +74,6 @@ public final class StorageAccountPropertiesResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(accessKey, storageAccountId);
         }

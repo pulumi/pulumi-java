@@ -54,7 +54,6 @@ public final class SecurityPolicyLinkResponse {
             this.id = id;
             return this;
         }
-
         public SecurityPolicyLinkResponse build() {
             return new SecurityPolicyLinkResponse(id);
         }

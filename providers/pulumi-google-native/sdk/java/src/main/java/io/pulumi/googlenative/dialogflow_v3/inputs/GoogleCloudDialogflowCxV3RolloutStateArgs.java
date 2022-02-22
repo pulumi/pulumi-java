@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="step")
-    private final @Nullable Input<String> step;
+      private final @Nullable Input<String> step;
 
     public Input<String> getStep() {
         return this.step == null ? Input.empty() : this.step;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="stepIndex")
-    private final @Nullable Input<Integer> stepIndex;
+      private final @Nullable Input<Integer> stepIndex;
 
     public Input<Integer> getStepIndex() {
         return this.stepIndex == null ? Input.empty() : this.stepIndex;
@@ -120,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
             this.stepIndex = Input.ofNullable(stepIndex);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3RolloutStateArgs build() {
             return new GoogleCloudDialogflowCxV3RolloutStateArgs(startTime, step, stepIndex);
         }

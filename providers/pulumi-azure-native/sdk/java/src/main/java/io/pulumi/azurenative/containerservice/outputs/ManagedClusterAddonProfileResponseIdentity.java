@@ -97,7 +97,6 @@ public final class ManagedClusterAddonProfileResponseIdentity {
             this.resourceId = resourceId;
             return this;
         }
-
         public ManagedClusterAddonProfileResponseIdentity build() {
             return new ManagedClusterAddonProfileResponseIdentity(clientId, objectId, resourceId);
         }

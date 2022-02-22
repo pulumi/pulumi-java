@@ -97,7 +97,6 @@ public final class SubscriptionReceiverValueResponse {
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public SubscriptionReceiverValueResponse build() {
             return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
         }

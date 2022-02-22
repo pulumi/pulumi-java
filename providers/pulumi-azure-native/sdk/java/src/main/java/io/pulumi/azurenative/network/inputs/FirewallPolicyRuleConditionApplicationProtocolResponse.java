@@ -24,7 +24,7 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse extend
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -35,7 +35,7 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse extend
      * 
      */
     @InputImport(name="protocolType")
-    private final @Nullable String protocolType;
+        private final @Nullable String protocolType;
 
     public Optional<String> getProtocolType() {
         return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
@@ -84,7 +84,6 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse extend
             this.protocolType = protocolType;
             return this;
         }
-
         public FirewallPolicyRuleConditionApplicationProtocolResponse build() {
             return new FirewallPolicyRuleConditionApplicationProtocolResponse(port, protocolType);
         }

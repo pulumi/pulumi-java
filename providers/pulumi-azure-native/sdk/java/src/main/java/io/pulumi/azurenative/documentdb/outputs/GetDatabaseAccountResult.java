@@ -785,7 +785,6 @@ public final class GetDatabaseAccountResult {
             this.writeLocations = Objects.requireNonNull(writeLocations);
             return this;
         }
-
         public GetDatabaseAccountResult build() {
             return new GetDatabaseAccountResult(apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, documentEndpoint, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, failoverPolicies, id, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, name, networkAclBypass, networkAclBypassResourceIds, privateEndpointConnections, provisioningState, publicNetworkAccess, readLocations, tags, type, virtualNetworkRules, writeLocations);
         }

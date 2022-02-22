@@ -26,7 +26,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="availablePatchSummary")
-    private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
+        private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
     public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
         return this.availablePatchSummary == null ? Optional.empty() : Optional.ofNullable(this.availablePatchSummary);
@@ -37,7 +37,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="configurationStatuses", required=true)
-    private final List<InstanceViewStatusResponse> configurationStatuses;
+        private final List<InstanceViewStatusResponse> configurationStatuses;
 
     public List<InstanceViewStatusResponse> getConfigurationStatuses() {
         return this.configurationStatuses;
@@ -48,7 +48,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastPatchInstallationSummary")
-    private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
+        private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
     public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {
         return this.lastPatchInstallationSummary == null ? Optional.empty() : Optional.ofNullable(this.lastPatchInstallationSummary);
@@ -107,7 +107,6 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
         }
-
         public VirtualMachinePatchStatusResponse build() {
             return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
         }

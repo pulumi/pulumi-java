@@ -226,7 +226,6 @@ public final class GetManagedNetworkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedNetworkResult build() {
             return new GetManagedNetworkResult(connectivity, etag, id, location, name, provisioningState, scope, tags, type);
         }

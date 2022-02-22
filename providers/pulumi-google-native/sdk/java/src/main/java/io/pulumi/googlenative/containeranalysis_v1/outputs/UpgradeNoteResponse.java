@@ -120,7 +120,6 @@ public final class UpgradeNoteResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
-
         public UpgradeNoteResponse build() {
             return new UpgradeNoteResponse(distributions, $package, version, windowsUpdate);
         }

@@ -22,7 +22,7 @@ public final class WorkflowTemplateIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,21 +33,21 @@ public final class WorkflowTemplateIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,14 +58,14 @@ public final class WorkflowTemplateIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
     }
 
     @InputImport(name="workflowTemplateId", required=true)
-    private final Input<String> workflowTemplateId;
+      private final Input<String> workflowTemplateId;
 
     public Input<String> getWorkflowTemplateId() {
         return this.workflowTemplateId;
@@ -184,7 +184,6 @@ public final class WorkflowTemplateIamPolicyArgs extends io.pulumi.resources.Res
             this.workflowTemplateId = Input.of(Objects.requireNonNull(workflowTemplateId));
             return this;
         }
-
         public WorkflowTemplateIamPolicyArgs build() {
             return new WorkflowTemplateIamPolicyArgs(bindings, etag, location, project, version, workflowTemplateId);
         }

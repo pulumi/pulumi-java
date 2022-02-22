@@ -77,7 +77,6 @@ public final class DeliveryRuleRequestBodyConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleRequestBodyConditionResponse build() {
             return new DeliveryRuleRequestBodyConditionResponse(name, parameters);
         }

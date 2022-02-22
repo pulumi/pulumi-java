@@ -184,7 +184,6 @@ public final class AzureIaaSVMProtectionPolicyResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public AzureIaaSVMProtectionPolicyResponse build() {
             return new AzureIaaSVMProtectionPolicyResponse(backupManagementType, instantRPDetails, instantRpRetentionRangeInDays, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone);
         }

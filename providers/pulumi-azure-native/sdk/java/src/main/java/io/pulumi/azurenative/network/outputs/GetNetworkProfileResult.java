@@ -248,7 +248,6 @@ public final class GetNetworkProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkProfileResult build() {
             return new GetNetworkProfileResult(containerNetworkInterfaceConfigurations, containerNetworkInterfaces, etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }

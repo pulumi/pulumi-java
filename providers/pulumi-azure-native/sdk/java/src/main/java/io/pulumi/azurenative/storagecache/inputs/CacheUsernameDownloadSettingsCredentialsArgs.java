@@ -23,7 +23,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="bindDn")
-    private final @Nullable Input<String> bindDn;
+        private final @Nullable Input<String> bindDn;
 
     public Input<String> getBindDn() {
         return this.bindDn == null ? Input.empty() : this.bindDn;
@@ -34,7 +34,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="bindPassword")
-    private final @Nullable Input<String> bindPassword;
+        private final @Nullable Input<String> bindPassword;
 
     public Input<String> getBindPassword() {
         return this.bindPassword == null ? Input.empty() : this.bindPassword;
@@ -93,7 +93,6 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
             this.bindPassword = Input.ofNullable(bindPassword);
             return this;
         }
-
         public CacheUsernameDownloadSettingsCredentialsArgs build() {
             return new CacheUsernameDownloadSettingsCredentialsArgs(bindDn, bindPassword);
         }

@@ -100,7 +100,6 @@ public final class StringEndsWithAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringEndsWithAdvancedFilterResponse build() {
             return new StringEndsWithAdvancedFilterResponse(key, operatorType, values);
         }

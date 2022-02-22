@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
      * 
      */
     @InputImport(name="info", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
+      private final GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
 
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse getInfo() {
         return this.info;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse(description, image, info, title);
         }

@@ -229,7 +229,6 @@ public final class GetOnlineDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOnlineDeploymentResult build() {
             return new GetOnlineDeploymentResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

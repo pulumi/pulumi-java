@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
      * 
      */
     @InputImport(name="lastUpdateTime")
-    private final @Nullable Input<String> lastUpdateTime;
+      private final @Nullable Input<String> lastUpdateTime;
 
     public Input<String> getLastUpdateTime() {
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
      * 
      */
     @InputImport(name="versionMetrics")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
 
     public Input<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> getVersionMetrics() {
         return this.versionMetrics == null ? Input.empty() : this.versionMetrics;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
             this.versionMetrics = Input.ofNullable(versionMetrics);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultArgs build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultArgs(lastUpdateTime, versionMetrics);
         }

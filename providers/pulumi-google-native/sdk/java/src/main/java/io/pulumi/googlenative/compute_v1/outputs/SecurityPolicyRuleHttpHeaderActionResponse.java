@@ -53,7 +53,6 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
             this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionResponse(requestHeadersToAdds);
         }

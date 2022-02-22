@@ -224,7 +224,6 @@ public final class SecurityProfileResponse {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
-
         public SecurityProfileResponse build() {
             return new SecurityProfileResponse(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
         }

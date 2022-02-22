@@ -97,7 +97,6 @@ public final class VersionDetailsResponse {
             this.version = version;
             return this;
         }
-
         public VersionDetailsResponse build() {
             return new VersionDetailsResponse(expiryDate, status, version);
         }

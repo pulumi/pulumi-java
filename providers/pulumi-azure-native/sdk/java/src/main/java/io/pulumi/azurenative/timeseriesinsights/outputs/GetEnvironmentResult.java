@@ -182,7 +182,6 @@ public final class GetEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(id, kind, location, name, sku, tags, type);
         }

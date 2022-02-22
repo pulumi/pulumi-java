@@ -24,7 +24,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable Input<String> deploymentName;
+        private final @Nullable Input<String> deploymentName;
 
     public Input<String> getDeploymentName() {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
@@ -35,7 +35,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<OnErrorDeploymentType> type;
+        private final @Nullable Input<OnErrorDeploymentType> type;
 
     public Input<OnErrorDeploymentType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OnErrorDeploymentArgs build() {
             return new OnErrorDeploymentArgs(deploymentName, type);
         }

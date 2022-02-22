@@ -78,7 +78,6 @@ public final class PowerQuerySinkMappingResponse {
             this.queryName = queryName;
             return this;
         }
-
         public PowerQuerySinkMappingResponse build() {
             return new PowerQuerySinkMappingResponse(dataflowSinks, queryName);
         }

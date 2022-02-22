@@ -142,7 +142,6 @@ public final class GetRegionNetworkIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionNetworkIamPolicyResult build() {
             return new GetRegionNetworkIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

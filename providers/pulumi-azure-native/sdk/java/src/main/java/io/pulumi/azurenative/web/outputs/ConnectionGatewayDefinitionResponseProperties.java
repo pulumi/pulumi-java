@@ -184,7 +184,6 @@ public final class ConnectionGatewayDefinitionResponseProperties {
             this.status = status;
             return this;
         }
-
         public ConnectionGatewayDefinitionResponseProperties build() {
             return new ConnectionGatewayDefinitionResponseProperties(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
         }

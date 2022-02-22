@@ -137,7 +137,6 @@ public final class MountPointMapResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public MountPointMapResponse build() {
             return new MountPointMapResponse(mountPoint, mountType, roleId, roleType, shareId);
         }

@@ -18,7 +18,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     public static final EnvironmentResponse Empty = new EnvironmentResponse();
 
     @InputImport(name="customValues", required=true)
-    private final Map<String,String> customValues;
+      private final Map<String,String> customValues;
 
     public Map<String,String> getCustomValues() {
         return this.customValues;
@@ -56,7 +56,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(customValues);
         }

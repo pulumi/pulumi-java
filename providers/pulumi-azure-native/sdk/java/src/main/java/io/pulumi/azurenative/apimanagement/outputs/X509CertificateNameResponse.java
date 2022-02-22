@@ -76,7 +76,6 @@ public final class X509CertificateNameResponse {
             this.name = name;
             return this;
         }
-
         public X509CertificateNameResponse build() {
             return new X509CertificateNameResponse(issuerCertificateThumbprint, name);
         }

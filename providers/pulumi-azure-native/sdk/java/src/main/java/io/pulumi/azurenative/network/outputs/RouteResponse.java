@@ -224,7 +224,6 @@ public final class RouteResponse {
             this.type = type;
             return this;
         }
-
         public RouteResponse build() {
             return new RouteResponse(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
         }

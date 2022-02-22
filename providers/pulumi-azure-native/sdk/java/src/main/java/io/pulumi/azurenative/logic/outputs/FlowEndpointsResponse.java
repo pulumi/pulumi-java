@@ -76,7 +76,6 @@ public final class FlowEndpointsResponse {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
-
         public FlowEndpointsResponse build() {
             return new FlowEndpointsResponse(accessEndpointIpAddresses, outgoingIpAddresses);
         }

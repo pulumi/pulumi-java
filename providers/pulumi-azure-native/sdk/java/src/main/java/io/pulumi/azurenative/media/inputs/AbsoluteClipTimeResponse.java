@@ -22,7 +22,7 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+        private final String time;
 
     public String getTime() {
         return this.time;
@@ -82,7 +82,6 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public AbsoluteClipTimeResponse build() {
             return new AbsoluteClipTimeResponse(odataType, time);
         }

@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigResponse {
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
-
         public GoogleCloudDialogflowV2AutomatedAgentConfigResponse build() {
             return new GoogleCloudDialogflowV2AutomatedAgentConfigResponse(agent);
         }

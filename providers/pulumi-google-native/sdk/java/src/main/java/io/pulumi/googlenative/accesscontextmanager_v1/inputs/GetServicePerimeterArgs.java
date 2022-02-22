@@ -13,14 +13,14 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
     public static final GetServicePerimeterArgs Empty = new GetServicePerimeterArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-    private final String accessPolicyId;
+      private final String accessPolicyId;
 
     public String getAccessPolicyId() {
         return this.accessPolicyId;
     }
 
     @InputImport(name="servicePerimeterId", required=true)
-    private final String servicePerimeterId;
+      private final String servicePerimeterId;
 
     public String getServicePerimeterId() {
         return this.servicePerimeterId;
@@ -69,7 +69,6 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
             this.servicePerimeterId = Objects.requireNonNull(servicePerimeterId);
             return this;
         }
-
         public GetServicePerimeterArgs build() {
             return new GetServicePerimeterArgs(accessPolicyId, servicePerimeterId);
         }

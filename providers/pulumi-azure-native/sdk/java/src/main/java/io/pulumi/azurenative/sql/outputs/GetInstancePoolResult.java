@@ -226,7 +226,6 @@ public final class GetInstancePoolResult {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
-
         public GetInstancePoolResult build() {
             return new GetInstancePoolResult(id, licenseType, location, name, sku, subnetId, tags, type, vCores);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GoogleCloudDialogflowV2NotificationConfigResponse build() {
             return new GoogleCloudDialogflowV2NotificationConfigResponse(messageFormat, topic);
         }

@@ -46,7 +46,6 @@ public final class AutomationRuleSetResponse {
             this.rules = rules;
             return this;
         }
-
         public AutomationRuleSetResponse build() {
             return new AutomationRuleSetResponse(rules);
         }

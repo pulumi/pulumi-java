@@ -183,7 +183,6 @@ public final class SsisVariableResponse {
             this.value = value;
             return this;
         }
-
         public SsisVariableResponse build() {
             return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
         }

@@ -20,7 +20,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -31,7 +31,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requirePartitionFilter")
-    private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -42,7 +42,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceUriPrefix")
-    private final @Nullable Input<String> sourceUriPrefix;
+      private final @Nullable Input<String> sourceUriPrefix;
 
     public Input<String> getSourceUriPrefix() {
         return this.sourceUriPrefix == null ? Input.empty() : this.sourceUriPrefix;
@@ -116,7 +116,6 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
             this.sourceUriPrefix = Input.ofNullable(sourceUriPrefix);
             return this;
         }
-
         public HivePartitioningOptionsArgs build() {
             return new HivePartitioningOptionsArgs(mode, requirePartitionFilter, sourceUriPrefix);
         }

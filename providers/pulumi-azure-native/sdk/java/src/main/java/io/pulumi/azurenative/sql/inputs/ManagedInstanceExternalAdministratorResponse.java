@@ -24,7 +24,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="administratorType")
-    private final @Nullable String administratorType;
+        private final @Nullable String administratorType;
 
     public Optional<String> getAdministratorType() {
         return this.administratorType == null ? Optional.empty() : Optional.ofNullable(this.administratorType);
@@ -35,7 +35,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="azureADOnlyAuthentication")
-    private final @Nullable Boolean azureADOnlyAuthentication;
+        private final @Nullable Boolean azureADOnlyAuthentication;
 
     public Optional<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication == null ? Optional.empty() : Optional.ofNullable(this.azureADOnlyAuthentication);
@@ -46,7 +46,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="login")
-    private final @Nullable String login;
+        private final @Nullable String login;
 
     public Optional<String> getLogin() {
         return this.login == null ? Optional.empty() : Optional.ofNullable(this.login);
@@ -57,7 +57,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="principalType")
-    private final @Nullable String principalType;
+        private final @Nullable String principalType;
 
     public Optional<String> getPrincipalType() {
         return this.principalType == null ? Optional.empty() : Optional.ofNullable(this.principalType);
@@ -68,7 +68,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable String sid;
+        private final @Nullable String sid;
 
     public Optional<String> getSid() {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
@@ -79,7 +79,7 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -168,7 +168,6 @@ public final class ManagedInstanceExternalAdministratorResponse extends io.pulum
             this.tenantId = tenantId;
             return this;
         }
-
         public ManagedInstanceExternalAdministratorResponse build() {
             return new ManagedInstanceExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

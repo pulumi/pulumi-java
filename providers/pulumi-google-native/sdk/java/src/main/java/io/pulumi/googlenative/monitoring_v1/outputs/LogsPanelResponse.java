@@ -75,7 +75,6 @@ public final class LogsPanelResponse {
             this.resourceNames = Objects.requireNonNull(resourceNames);
             return this;
         }
-
         public LogsPanelResponse build() {
             return new LogsPanelResponse(filter, resourceNames);
         }

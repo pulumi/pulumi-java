@@ -118,7 +118,6 @@ public final class GetEkmConnectionResult {
             this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
             return this;
         }
-
         public GetEkmConnectionResult build() {
             return new GetEkmConnectionResult(createTime, etag, name, serviceResolvers);
         }

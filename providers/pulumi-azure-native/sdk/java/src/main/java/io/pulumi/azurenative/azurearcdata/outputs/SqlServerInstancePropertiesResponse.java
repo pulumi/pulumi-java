@@ -341,7 +341,6 @@ public final class SqlServerInstancePropertiesResponse {
             this.version = version;
             return this;
         }
-
         public SqlServerInstancePropertiesResponse build() {
             return new SqlServerInstancePropertiesResponse(collation, containerResourceId, createTime, currentVersion, edition, instanceName, licenseType, patchLevel, productId, provisioningState, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
         }

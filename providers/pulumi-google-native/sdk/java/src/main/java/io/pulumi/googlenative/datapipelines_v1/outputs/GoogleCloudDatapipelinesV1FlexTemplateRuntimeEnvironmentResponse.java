@@ -372,7 +372,6 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse build() {
             return new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, enableStreamingEngine, flexrsGoal, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }

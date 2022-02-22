@@ -97,7 +97,6 @@ public final class SparkSqlBatchResponse {
             this.queryVariables = Objects.requireNonNull(queryVariables);
             return this;
         }
-
         public SparkSqlBatchResponse build() {
             return new SparkSqlBatchResponse(jarFileUris, queryFileUri, queryVariables);
         }

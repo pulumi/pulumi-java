@@ -443,7 +443,6 @@ public final class ODataLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public ODataLinkedServiceResponse build() {
             return new ODataLinkedServiceResponse(aadResourceId, aadServicePrincipalCredentialType, annotations, authHeaders, authenticationType, azureCloudType, connectVia, description, encryptedCredential, parameters, password, servicePrincipalEmbeddedCert, servicePrincipalEmbeddedCertPassword, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }

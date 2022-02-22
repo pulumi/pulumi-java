@@ -23,7 +23,7 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -66,7 +66,6 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public CloudFunctionEndpointArgs build() {
             return new CloudFunctionEndpointArgs(uri);
         }

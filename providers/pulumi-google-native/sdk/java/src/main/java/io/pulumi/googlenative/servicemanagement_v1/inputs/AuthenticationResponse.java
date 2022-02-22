@@ -23,7 +23,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="providers", required=true)
-    private final List<AuthProviderResponse> providers;
+      private final List<AuthProviderResponse> providers;
 
     public List<AuthProviderResponse> getProviders() {
         return this.providers;
@@ -34,7 +34,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<AuthenticationRuleResponse> rules;
+      private final List<AuthenticationRuleResponse> rules;
 
     public List<AuthenticationRuleResponse> getRules() {
         return this.rules;
@@ -83,7 +83,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(providers, rules);
         }

@@ -147,7 +147,6 @@ public final class AzureSqlContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public AzureSqlContainerResponse build() {
             return new AzureSqlContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
         }

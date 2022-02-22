@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioAr
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final Input<String> audioUri;
+      private final Input<String> audioUri;
 
     public Input<String> getAudioUri() {
         return this.audioUri;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioAr
             this.audioUri = Input.of(Objects.requireNonNull(audioUri));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(audioUri);
         }

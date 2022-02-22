@@ -17,7 +17,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final String environmentName;
+        private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @InputImport(name="functionAppName", required=true)
-    private final String functionAppName;
+        private final String functionAppName;
 
     public String getFunctionAppName() {
         return this.functionAppName;
@@ -39,7 +39,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
             return new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(environmentName, functionAppName, name, resourceGroupName);
         }

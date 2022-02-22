@@ -24,7 +24,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<FileReferenceArgs> location;
+      private final @Nullable Input<FileReferenceArgs> location;
 
     public Input<FileReferenceArgs> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -35,7 +35,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -94,7 +94,6 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
-
         public ApkArgs build() {
             return new ApkArgs(location, packageName);
         }

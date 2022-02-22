@@ -54,7 +54,6 @@ public final class StorageClassificationMappingPropertiesResponse {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }
-
         public StorageClassificationMappingPropertiesResponse build() {
             return new StorageClassificationMappingPropertiesResponse(targetStorageClassificationId);
         }

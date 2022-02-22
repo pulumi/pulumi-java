@@ -141,7 +141,6 @@ public final class VideoResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public VideoResponse build() {
             return new VideoResponse(keyFrameInterval, label, odataType, stretchMode, syncMode);
         }

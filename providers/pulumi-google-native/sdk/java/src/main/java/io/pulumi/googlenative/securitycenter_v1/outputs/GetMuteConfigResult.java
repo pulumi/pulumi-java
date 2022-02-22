@@ -179,7 +179,6 @@ public final class GetMuteConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMuteConfigResult build() {
             return new GetMuteConfigResult(createTime, description, displayName, filter, mostRecentEditor, name, updateTime);
         }

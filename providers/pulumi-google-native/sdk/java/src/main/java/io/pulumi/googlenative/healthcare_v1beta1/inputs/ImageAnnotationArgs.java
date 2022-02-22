@@ -25,7 +25,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="boundingPolys")
-    private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
+      private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
 
     public Input<List<BoundingPolyArgs>> getBoundingPolys() {
         return this.boundingPolys == null ? Input.empty() : this.boundingPolys;
@@ -36,7 +36,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="frameIndex")
-    private final @Nullable Input<Integer> frameIndex;
+      private final @Nullable Input<Integer> frameIndex;
 
     public Input<Integer> getFrameIndex() {
         return this.frameIndex == null ? Input.empty() : this.frameIndex;
@@ -95,7 +95,6 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
             this.frameIndex = Input.ofNullable(frameIndex);
             return this;
         }
-
         public ImageAnnotationArgs build() {
             return new ImageAnnotationArgs(boundingPolys, frameIndex);
         }

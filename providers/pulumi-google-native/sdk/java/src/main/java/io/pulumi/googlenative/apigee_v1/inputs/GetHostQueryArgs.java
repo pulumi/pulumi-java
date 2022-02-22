@@ -13,14 +13,14 @@ public final class GetHostQueryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHostQueryArgs Empty = new GetHostQueryArgs();
 
     @InputImport(name="hostQueryId", required=true)
-    private final String hostQueryId;
+      private final String hostQueryId;
 
     public String getHostQueryId() {
         return this.hostQueryId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetHostQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetHostQueryArgs build() {
             return new GetHostQueryArgs(hostQueryId, organizationId);
         }

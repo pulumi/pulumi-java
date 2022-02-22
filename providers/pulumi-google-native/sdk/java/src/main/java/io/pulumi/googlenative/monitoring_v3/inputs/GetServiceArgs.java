@@ -13,21 +13,21 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
     }
 
     @InputImport(name="v3Id", required=true)
-    private final String v3Id;
+      private final String v3Id;
 
     public String getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-    private final String v3Id1;
+      private final String v3Id1;
 
     public String getV3Id1() {
         return this.v3Id1;
@@ -86,7 +86,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
-
         public GetServiceArgs build() {
             return new GetServiceArgs(serviceId, v3Id, v3Id1);
         }

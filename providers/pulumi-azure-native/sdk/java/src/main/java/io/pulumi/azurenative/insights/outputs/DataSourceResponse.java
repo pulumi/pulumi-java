@@ -82,7 +82,6 @@ public final class DataSourceResponse {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
-
         public DataSourceResponse build() {
             return new DataSourceResponse(configuration, kind, sinks);
         }

@@ -23,7 +23,7 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -83,7 +83,6 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
             this.version = version;
             return this;
         }
-
         public EnvironmentImageResponseResponseEnvironmentReference build() {
             return new EnvironmentImageResponseResponseEnvironmentReference(name, version);
         }

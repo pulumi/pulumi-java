@@ -19,7 +19,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
      * 
      */
     @InputImport(name="maxValue")
-    private final @Nullable Input<String> maxValue;
+      private final @Nullable Input<String> maxValue;
 
     public Input<String> getMaxValue() {
         return this.maxValue == null ? Input.empty() : this.maxValue;
@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
      * 
      */
     @InputImport(name="minValue")
-    private final @Nullable Input<String> minValue;
+      private final @Nullable Input<String> minValue;
 
     public Input<String> getMinValue() {
         return this.minValue == null ? Input.empty() : this.minValue;
@@ -89,7 +89,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
             this.minValue = Input.ofNullable(minValue);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs(maxValue, minValue);
         }

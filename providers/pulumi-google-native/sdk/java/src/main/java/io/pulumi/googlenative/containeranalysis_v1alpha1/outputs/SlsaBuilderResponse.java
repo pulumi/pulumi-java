@@ -30,7 +30,6 @@ public final class SlsaBuilderResponse {
         public Builder(SlsaBuilderResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SlsaBuilderResponse build() {
             return new SlsaBuilderResponse();
         }

@@ -24,7 +24,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="delete")
-    private final @Nullable Input<DateAfterModificationArgs> delete;
+        private final @Nullable Input<DateAfterModificationArgs> delete;
 
     public Input<DateAfterModificationArgs> getDelete() {
         return this.delete == null ? Input.empty() : this.delete;
@@ -35,7 +35,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableAutoTierToHotFromCool")
-    private final @Nullable Input<Boolean> enableAutoTierToHotFromCool;
+        private final @Nullable Input<Boolean> enableAutoTierToHotFromCool;
 
     public Input<Boolean> getEnableAutoTierToHotFromCool() {
         return this.enableAutoTierToHotFromCool == null ? Input.empty() : this.enableAutoTierToHotFromCool;
@@ -46,7 +46,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tierToArchive")
-    private final @Nullable Input<DateAfterModificationArgs> tierToArchive;
+        private final @Nullable Input<DateAfterModificationArgs> tierToArchive;
 
     public Input<DateAfterModificationArgs> getTierToArchive() {
         return this.tierToArchive == null ? Input.empty() : this.tierToArchive;
@@ -57,7 +57,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tierToCool")
-    private final @Nullable Input<DateAfterModificationArgs> tierToCool;
+        private final @Nullable Input<DateAfterModificationArgs> tierToCool;
 
     public Input<DateAfterModificationArgs> getTierToCool() {
         return this.tierToCool == null ? Input.empty() : this.tierToCool;
@@ -146,7 +146,6 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             this.tierToCool = Input.ofNullable(tierToCool);
             return this;
         }
-
         public ManagementPolicyBaseBlobArgs build() {
             return new ManagementPolicyBaseBlobArgs(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
         }

@@ -182,7 +182,6 @@ public final class GetAuthorizationPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetAuthorizationPolicyResult build() {
             return new GetAuthorizationPolicyResult(action, createTime, description, labels, name, rules, updateTime);
         }

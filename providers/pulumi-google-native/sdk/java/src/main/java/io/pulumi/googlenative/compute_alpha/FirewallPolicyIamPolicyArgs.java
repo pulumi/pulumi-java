@@ -24,7 +24,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -35,7 +35,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -46,14 +46,14 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -64,7 +64,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleArgs>> rules;
+      private final @Nullable Input<List<RuleArgs>> rules;
 
     public Input<List<RuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -75,7 +75,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -194,7 +194,6 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FirewallPolicyIamPolicyArgs build() {
             return new FirewallPolicyIamPolicyArgs(auditConfigs, bindings, etag, resource, rules, version);
         }

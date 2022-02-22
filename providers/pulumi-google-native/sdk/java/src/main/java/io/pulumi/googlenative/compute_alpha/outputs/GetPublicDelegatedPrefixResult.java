@@ -308,7 +308,6 @@ public final class GetPublicDelegatedPrefixResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetPublicDelegatedPrefixResult build() {
             return new GetPublicDelegatedPrefixResult(creationTimestamp, description, fingerprint, ipCidrRange, isLiveMigration, kind, name, parentPrefix, publicDelegatedSubPrefixs, region, selfLink, selfLinkWithId, status);
         }

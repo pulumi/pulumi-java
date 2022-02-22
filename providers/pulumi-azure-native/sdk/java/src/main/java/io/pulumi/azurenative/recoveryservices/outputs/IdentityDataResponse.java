@@ -119,7 +119,6 @@ public final class IdentityDataResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public IdentityDataResponse build() {
             return new IdentityDataResponse(principalId, tenantId, type, userAssignedIdentities);
         }

@@ -46,7 +46,6 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
             this.resourceCreationBegin = resourceCreationBegin;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseExtensionOptions build() {
             return new ResourceTypeRegistrationPropertiesResponseExtensionOptions(resourceCreationBegin);
         }

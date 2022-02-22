@@ -95,7 +95,6 @@ public final class ResourceIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(principalId, tenantId, type);
         }

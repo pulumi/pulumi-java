@@ -17,7 +17,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
     public static final RecommendationConfigurationPropertiesResponse Empty = new RecommendationConfigurationPropertiesResponse();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="recommendationType", required=true)
-    private final String recommendationType;
+        private final String recommendationType;
 
     public String getRecommendationType() {
         return this.recommendationType;
@@ -39,7 +39,7 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -98,7 +98,6 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RecommendationConfigurationPropertiesResponse build() {
             return new RecommendationConfigurationPropertiesResponse(name, recommendationType, status);
         }

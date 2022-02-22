@@ -97,7 +97,6 @@ public final class PrivateEndpointACLResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PrivateEndpointACLResponse build() {
             return new PrivateEndpointACLResponse(allow, deny, name);
         }

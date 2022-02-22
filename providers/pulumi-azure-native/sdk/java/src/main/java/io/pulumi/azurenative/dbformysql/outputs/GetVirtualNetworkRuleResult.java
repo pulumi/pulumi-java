@@ -161,7 +161,6 @@ public final class GetVirtualNetworkRuleResult {
             this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
             return this;
         }
-
         public GetVirtualNetworkRuleResult build() {
             return new GetVirtualNetworkRuleResult(id, ignoreMissingVnetServiceEndpoint, name, state, type, virtualNetworkSubnetId);
         }

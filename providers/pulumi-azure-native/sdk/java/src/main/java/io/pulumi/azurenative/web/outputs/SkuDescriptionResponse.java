@@ -206,7 +206,6 @@ public final class SkuDescriptionResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuDescriptionResponse build() {
             return new SkuDescriptionResponse(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }

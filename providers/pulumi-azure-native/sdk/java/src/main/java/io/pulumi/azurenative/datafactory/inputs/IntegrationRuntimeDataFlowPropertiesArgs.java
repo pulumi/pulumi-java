@@ -27,7 +27,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="cleanup")
-    private final @Nullable Input<Boolean> cleanup;
+        private final @Nullable Input<Boolean> cleanup;
 
     public Input<Boolean> getCleanup() {
         return this.cleanup == null ? Input.empty() : this.cleanup;
@@ -38,7 +38,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="computeType")
-    private final @Nullable Input<Either<String,DataFlowComputeType>> computeType;
+        private final @Nullable Input<Either<String,DataFlowComputeType>> computeType;
 
     public Input<Either<String,DataFlowComputeType>> getComputeType() {
         return this.computeType == null ? Input.empty() : this.computeType;
@@ -49,7 +49,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<Integer> coreCount;
+        private final @Nullable Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -60,7 +60,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeToLive")
-    private final @Nullable Input<Integer> timeToLive;
+        private final @Nullable Input<Integer> timeToLive;
 
     public Input<Integer> getTimeToLive() {
         return this.timeToLive == null ? Input.empty() : this.timeToLive;
@@ -149,7 +149,6 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             this.timeToLive = Input.ofNullable(timeToLive);
             return this;
         }
-
         public IntegrationRuntimeDataFlowPropertiesArgs build() {
             return new IntegrationRuntimeDataFlowPropertiesArgs(cleanup, computeType, coreCount, timeToLive);
         }

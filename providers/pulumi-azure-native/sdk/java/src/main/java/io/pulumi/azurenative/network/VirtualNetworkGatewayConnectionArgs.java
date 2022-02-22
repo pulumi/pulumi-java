@@ -32,7 +32,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable Input<String> authorizationKey;
+        private final @Nullable Input<String> authorizationKey;
 
     public Input<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
@@ -43,7 +43,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionMode")
-    private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
+        private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
 
     public Input<Either<String,VirtualNetworkGatewayConnectionMode>> getConnectionMode() {
         return this.connectionMode == null ? Input.empty() : this.connectionMode;
@@ -54,7 +54,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionProtocol")
-    private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
+        private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
 
     public Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> getConnectionProtocol() {
         return this.connectionProtocol == null ? Input.empty() : this.connectionProtocol;
@@ -65,7 +65,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionType", required=true)
-    private final Input<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
+        private final Input<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
 
     public Input<Either<String,VirtualNetworkGatewayConnectionType>> getConnectionType() {
         return this.connectionType;
@@ -76,7 +76,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dpdTimeoutSeconds")
-    private final @Nullable Input<Integer> dpdTimeoutSeconds;
+        private final @Nullable Input<Integer> dpdTimeoutSeconds;
 
     public Input<Integer> getDpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds == null ? Input.empty() : this.dpdTimeoutSeconds;
@@ -87,7 +87,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enableBgp")
-    private final @Nullable Input<Boolean> enableBgp;
+        private final @Nullable Input<Boolean> enableBgp;
 
     public Input<Boolean> getEnableBgp() {
         return this.enableBgp == null ? Input.empty() : this.enableBgp;
@@ -98,7 +98,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expressRouteGatewayBypass")
-    private final @Nullable Input<Boolean> expressRouteGatewayBypass;
+        private final @Nullable Input<Boolean> expressRouteGatewayBypass;
 
     public Input<Boolean> getExpressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Input.empty() : this.expressRouteGatewayBypass;
@@ -109,7 +109,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -120,7 +120,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipsecPolicies")
-    private final @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
+        private final @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
 
     public Input<List<IpsecPolicyArgs>> getIpsecPolicies() {
         return this.ipsecPolicies == null ? Input.empty() : this.ipsecPolicies;
@@ -131,7 +131,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="localNetworkGateway2")
-    private final @Nullable Input<LocalNetworkGatewayArgs> localNetworkGateway2;
+        private final @Nullable Input<LocalNetworkGatewayArgs> localNetworkGateway2;
 
     public Input<LocalNetworkGatewayArgs> getLocalNetworkGateway2() {
         return this.localNetworkGateway2 == null ? Input.empty() : this.localNetworkGateway2;
@@ -142,7 +142,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -153,7 +153,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="peer")
-    private final @Nullable Input<SubResourceArgs> peer;
+        private final @Nullable Input<SubResourceArgs> peer;
 
     public Input<SubResourceArgs> getPeer() {
         return this.peer == null ? Input.empty() : this.peer;
@@ -164,7 +164,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -175,7 +175,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="routingWeight")
-    private final @Nullable Input<Integer> routingWeight;
+        private final @Nullable Input<Integer> routingWeight;
 
     public Input<Integer> getRoutingWeight() {
         return this.routingWeight == null ? Input.empty() : this.routingWeight;
@@ -186,7 +186,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sharedKey")
-    private final @Nullable Input<String> sharedKey;
+        private final @Nullable Input<String> sharedKey;
 
     public Input<String> getSharedKey() {
         return this.sharedKey == null ? Input.empty() : this.sharedKey;
@@ -197,7 +197,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -208,7 +208,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="trafficSelectorPolicies")
-    private final @Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
+        private final @Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
     public Input<List<TrafficSelectorPolicyArgs>> getTrafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? Input.empty() : this.trafficSelectorPolicies;
@@ -219,7 +219,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="useLocalAzureIpAddress")
-    private final @Nullable Input<Boolean> useLocalAzureIpAddress;
+        private final @Nullable Input<Boolean> useLocalAzureIpAddress;
 
     public Input<Boolean> getUseLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress == null ? Input.empty() : this.useLocalAzureIpAddress;
@@ -230,7 +230,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="usePolicyBasedTrafficSelectors")
-    private final @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
+        private final @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
 
     public Input<Boolean> getUsePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors == null ? Input.empty() : this.usePolicyBasedTrafficSelectors;
@@ -241,7 +241,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualNetworkGateway1", required=true)
-    private final Input<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
+        private final Input<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
 
     public Input<VirtualNetworkGatewayArgs> getVirtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
@@ -252,7 +252,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualNetworkGateway2")
-    private final @Nullable Input<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
+        private final @Nullable Input<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
 
     public Input<VirtualNetworkGatewayArgs> getVirtualNetworkGateway2() {
         return this.virtualNetworkGateway2 == null ? Input.empty() : this.virtualNetworkGateway2;
@@ -263,7 +263,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualNetworkGatewayConnectionName")
-    private final @Nullable Input<String> virtualNetworkGatewayConnectionName;
+        private final @Nullable Input<String> virtualNetworkGatewayConnectionName;
 
     public Input<String> getVirtualNetworkGatewayConnectionName() {
         return this.virtualNetworkGatewayConnectionName == null ? Input.empty() : this.virtualNetworkGatewayConnectionName;
@@ -622,7 +622,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
             this.virtualNetworkGatewayConnectionName = Input.ofNullable(virtualNetworkGatewayConnectionName);
             return this;
         }
-
         public VirtualNetworkGatewayConnectionArgs build() {
             return new VirtualNetworkGatewayConnectionArgs(authorizationKey, connectionMode, connectionProtocol, connectionType, dpdTimeoutSeconds, enableBgp, expressRouteGatewayBypass, id, ipsecPolicies, localNetworkGateway2, location, peer, resourceGroupName, routingWeight, sharedKey, tags, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, virtualNetworkGateway1, virtualNetworkGateway2, virtualNetworkGatewayConnectionName);
         }

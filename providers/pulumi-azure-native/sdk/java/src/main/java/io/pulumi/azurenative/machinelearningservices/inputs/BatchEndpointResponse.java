@@ -25,7 +25,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="authMode")
-    private final @Nullable String authMode;
+        private final @Nullable String authMode;
 
     public Optional<String> getAuthMode() {
         return this.authMode == null ? Optional.empty() : Optional.ofNullable(this.authMode);
@@ -36,7 +36,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -58,7 +58,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scoringUri", required=true)
-    private final String scoringUri;
+        private final String scoringUri;
 
     public String getScoringUri() {
         return this.scoringUri;
@@ -69,7 +69,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="swaggerUri", required=true)
-    private final String swaggerUri;
+        private final String swaggerUri;
 
     public String getSwaggerUri() {
         return this.swaggerUri;
@@ -80,7 +80,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Map<String,Integer> traffic;
+        private final @Nullable Map<String,Integer> traffic;
 
     public Map<String,Integer> getTraffic() {
         return this.traffic == null ? Map.of() : this.traffic;
@@ -169,7 +169,6 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
             this.traffic = traffic;
             return this;
         }
-
         public BatchEndpointResponse build() {
             return new BatchEndpointResponse(authMode, description, properties, scoringUri, swaggerUri, traffic);
         }

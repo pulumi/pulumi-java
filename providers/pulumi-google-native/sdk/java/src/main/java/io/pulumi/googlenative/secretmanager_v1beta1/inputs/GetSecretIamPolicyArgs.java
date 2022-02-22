@@ -15,21 +15,21 @@ public final class GetSecretIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetSecretIamPolicyArgs Empty = new GetSecretIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="secretId", required=true)
-    private final String secretId;
+      private final String secretId;
 
     public String getSecretId() {
         return this.secretId;
@@ -88,7 +88,6 @@ public final class GetSecretIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public GetSecretIamPolicyArgs build() {
             return new GetSecretIamPolicyArgs(optionsRequestedPolicyVersion, project, secretId);
         }

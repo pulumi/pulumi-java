@@ -44,7 +44,6 @@ public final class ServerBindingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServerBindingResponse build() {
             return new ServerBindingResponse(type);
         }

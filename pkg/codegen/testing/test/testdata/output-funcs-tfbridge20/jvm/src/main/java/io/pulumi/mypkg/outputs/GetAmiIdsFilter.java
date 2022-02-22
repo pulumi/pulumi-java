@@ -59,7 +59,6 @@ public final class GetAmiIdsFilter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetAmiIdsFilter build() {
             return new GetAmiIdsFilter(name, values);
         }

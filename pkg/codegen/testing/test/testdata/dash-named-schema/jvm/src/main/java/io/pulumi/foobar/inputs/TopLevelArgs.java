@@ -15,7 +15,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopLevelArgs Empty = new TopLevelArgs();
 
     @InputImport(name="buzz")
-    private final @Nullable Input<String> buzz;
+        private final @Nullable Input<String> buzz;
 
     public Input<String> getBuzz() {
         return this.buzz == null ? Input.empty() : this.buzz;
@@ -58,7 +58,6 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.buzz = Input.ofNullable(buzz);
             return this;
         }
-
         public TopLevelArgs build() {
             return new TopLevelArgs(buzz);
         }

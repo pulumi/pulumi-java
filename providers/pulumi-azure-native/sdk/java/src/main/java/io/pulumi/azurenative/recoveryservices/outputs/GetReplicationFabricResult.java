@@ -140,7 +140,6 @@ public final class GetReplicationFabricResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationFabricResult build() {
             return new GetReplicationFabricResult(id, location, name, properties, type);
         }

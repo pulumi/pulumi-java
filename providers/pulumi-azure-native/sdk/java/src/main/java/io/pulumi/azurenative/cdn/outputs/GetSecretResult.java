@@ -178,7 +178,6 @@ public final class GetSecretResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(deploymentStatus, id, name, parameters, provisioningState, systemData, type);
         }

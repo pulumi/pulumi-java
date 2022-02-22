@@ -119,7 +119,6 @@ public final class Pav2MeterDetailsResponse {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
-
         public Pav2MeterDetailsResponse build() {
             return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
         }

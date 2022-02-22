@@ -179,7 +179,6 @@ public final class ListTopicKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListTopicKeysResult build() {
             return new ListTopicKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

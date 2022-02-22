@@ -23,7 +23,7 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<NotificationSettingsArgs> notifications;
+        private final @Nullable Input<NotificationSettingsArgs> notifications;
 
     public Input<NotificationSettingsArgs> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -66,7 +66,6 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
-
         public ConfigurationProfileResourcePropertiesArgs build() {
             return new ConfigurationProfileResourcePropertiesArgs(notifications);
         }

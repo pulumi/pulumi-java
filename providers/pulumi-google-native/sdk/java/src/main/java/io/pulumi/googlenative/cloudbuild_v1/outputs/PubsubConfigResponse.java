@@ -116,7 +116,6 @@ public final class PubsubConfigResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubConfigResponse build() {
             return new PubsubConfigResponse(serviceAccountEmail, state, subscription, topic);
         }

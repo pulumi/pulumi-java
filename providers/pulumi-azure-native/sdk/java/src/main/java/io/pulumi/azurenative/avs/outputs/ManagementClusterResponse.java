@@ -118,7 +118,6 @@ public final class ManagementClusterResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagementClusterResponse build() {
             return new ManagementClusterResponse(clusterId, clusterSize, hosts, provisioningState);
         }

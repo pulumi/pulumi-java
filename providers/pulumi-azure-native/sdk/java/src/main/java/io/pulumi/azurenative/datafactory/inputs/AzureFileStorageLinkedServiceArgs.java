@@ -31,7 +31,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey;
+        private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey;
 
     public Input<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -42,7 +42,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -53,7 +53,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<Object> connectionString;
+        private final @Nullable Input<Object> connectionString;
 
     public Input<Object> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -75,7 +75,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -86,7 +86,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -97,7 +97,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fileShare")
-    private final @Nullable Input<Object> fileShare;
+        private final @Nullable Input<Object> fileShare;
 
     public Input<Object> getFileShare() {
         return this.fileShare == null ? Input.empty() : this.fileShare;
@@ -108,7 +108,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<Object> host;
+        private final @Nullable Input<Object> host;
 
     public Input<Object> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -119,7 +119,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -130,7 +130,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -141,7 +141,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken;
+        private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken;
 
     public Input<AzureKeyVaultSecretReferenceArgs> getSasToken() {
         return this.sasToken == null ? Input.empty() : this.sasToken;
@@ -152,7 +152,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sasUri")
-    private final @Nullable Input<Object> sasUri;
+        private final @Nullable Input<Object> sasUri;
 
     public Input<Object> getSasUri() {
         return this.sasUri == null ? Input.empty() : this.sasUri;
@@ -163,7 +163,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="snapshot")
-    private final @Nullable Input<Object> snapshot;
+        private final @Nullable Input<Object> snapshot;
 
     public Input<Object> getSnapshot() {
         return this.snapshot == null ? Input.empty() : this.snapshot;
@@ -175,7 +175,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -186,7 +186,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable Input<Object> userId;
+        private final @Nullable Input<Object> userId;
 
     public Input<Object> getUserId() {
         return this.userId == null ? Input.empty() : this.userId;
@@ -440,7 +440,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
             this.userId = Input.ofNullable(userId);
             return this;
         }
-
         public AzureFileStorageLinkedServiceArgs build() {
             return new AzureFileStorageLinkedServiceArgs(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, fileShare, host, parameters, password, sasToken, sasUri, snapshot, type, userId);
         }

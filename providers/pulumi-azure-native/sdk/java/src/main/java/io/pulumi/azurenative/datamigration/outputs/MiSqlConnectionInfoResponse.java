@@ -120,7 +120,6 @@ public final class MiSqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MiSqlConnectionInfoResponse build() {
             return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
         }

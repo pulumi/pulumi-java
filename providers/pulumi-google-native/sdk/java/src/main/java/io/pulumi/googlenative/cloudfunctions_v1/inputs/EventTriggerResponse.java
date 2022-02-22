@@ -22,7 +22,7 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final String eventType;
+      private final String eventType;
 
     public String getEventType() {
         return this.eventType;
@@ -33,7 +33,7 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="failurePolicy", required=true)
-    private final FailurePolicyResponse failurePolicy;
+      private final FailurePolicyResponse failurePolicy;
 
     public FailurePolicyResponse getFailurePolicy() {
         return this.failurePolicy;
@@ -44,7 +44,7 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -55,7 +55,7 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -124,7 +124,6 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public EventTriggerResponse build() {
             return new EventTriggerResponse(eventType, failurePolicy, resource, service);
         }

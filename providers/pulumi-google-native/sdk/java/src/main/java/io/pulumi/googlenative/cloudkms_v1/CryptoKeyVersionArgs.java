@@ -17,7 +17,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 
     @InputImport(name="cryptoKeyId", required=true)
-    private final Input<String> cryptoKeyId;
+      private final Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId;
@@ -28,28 +28,28 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="externalProtectionLevelOptions")
-    private final @Nullable Input<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
+      private final @Nullable Input<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
     public Input<ExternalProtectionLevelOptionsArgs> getExternalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions == null ? Input.empty() : this.externalProtectionLevelOptions;
     }
 
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<CryptoKeyVersionState> state;
+      private final @Nullable Input<CryptoKeyVersionState> state;
 
     public Input<CryptoKeyVersionState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -179,7 +179,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public CryptoKeyVersionArgs build() {
             return new CryptoKeyVersionArgs(cryptoKeyId, externalProtectionLevelOptions, keyRingId, location, project, state);
         }

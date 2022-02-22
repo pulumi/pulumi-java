@@ -54,7 +54,6 @@ public final class ProductPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public ProductPropertiesResponse build() {
             return new ProductPropertiesResponse(version);
         }

@@ -21,7 +21,7 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyReference", required=true)
-    private final String keyReference;
+      private final String keyReference;
 
     public String getKeyReference() {
         return this.keyReference;
@@ -59,7 +59,6 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
         }
-
         public CryptoKeyConfigResponse build() {
             return new CryptoKeyConfigResponse(keyReference);
         }

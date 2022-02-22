@@ -15,35 +15,35 @@ public final class GetServiceDatabaseIamPolicyArgs extends io.pulumi.resources.I
     public static final GetServiceDatabaseIamPolicyArgs Empty = new GetServiceDatabaseIamPolicyArgs();
 
     @InputImport(name="databaseId", required=true)
-    private final String databaseId;
+      private final String databaseId;
 
     public String getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -122,7 +122,6 @@ public final class GetServiceDatabaseIamPolicyArgs extends io.pulumi.resources.I
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetServiceDatabaseIamPolicyArgs build() {
             return new GetServiceDatabaseIamPolicyArgs(databaseId, location, optionsRequestedPolicyVersion, project, serviceId);
         }

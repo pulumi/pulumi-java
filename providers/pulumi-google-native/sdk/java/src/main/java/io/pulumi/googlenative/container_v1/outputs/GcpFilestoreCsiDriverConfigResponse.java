@@ -52,7 +52,6 @@ public final class GcpFilestoreCsiDriverConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcpFilestoreCsiDriverConfigResponse build() {
             return new GcpFilestoreCsiDriverConfigResponse(enabled);
         }

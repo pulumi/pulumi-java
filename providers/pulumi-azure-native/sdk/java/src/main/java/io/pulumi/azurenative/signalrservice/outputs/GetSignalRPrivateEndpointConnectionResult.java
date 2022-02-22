@@ -162,7 +162,6 @@ public final class GetSignalRPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSignalRPrivateEndpointConnectionResult build() {
             return new GetSignalRPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

@@ -97,7 +97,6 @@ public final class PrivateLinkConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public PrivateLinkConnectionStateResponse build() {
             return new PrivateLinkConnectionStateResponse(actionsRequired, description, status);
         }

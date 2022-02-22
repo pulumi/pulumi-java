@@ -95,7 +95,6 @@ public final class VideoFlagsResponse {
             this.isRecording = Objects.requireNonNull(isRecording);
             return this;
         }
-
         public VideoFlagsResponse build() {
             return new VideoFlagsResponse(canStream, hasData, isRecording);
         }

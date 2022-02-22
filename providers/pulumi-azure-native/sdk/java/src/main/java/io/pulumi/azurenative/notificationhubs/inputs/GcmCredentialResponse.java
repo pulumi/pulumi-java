@@ -23,7 +23,7 @@ public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="gcmEndpoint")
-    private final @Nullable String gcmEndpoint;
+        private final @Nullable String gcmEndpoint;
 
     public Optional<String> getGcmEndpoint() {
         return this.gcmEndpoint == null ? Optional.empty() : Optional.ofNullable(this.gcmEndpoint);
@@ -34,7 +34,7 @@ public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="googleApiKey")
-    private final @Nullable String googleApiKey;
+        private final @Nullable String googleApiKey;
 
     public Optional<String> getGoogleApiKey() {
         return this.googleApiKey == null ? Optional.empty() : Optional.ofNullable(this.googleApiKey);
@@ -83,7 +83,6 @@ public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs 
             this.googleApiKey = googleApiKey;
             return this;
         }
-
         public GcmCredentialResponse build() {
             return new GcmCredentialResponse(gcmEndpoint, googleApiKey);
         }

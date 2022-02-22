@@ -205,7 +205,6 @@ public final class CustomRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold, ruleType);
         }

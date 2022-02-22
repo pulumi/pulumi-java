@@ -53,7 +53,6 @@ public final class CapacityReservationGroupInstanceViewResponse {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }
-
         public CapacityReservationGroupInstanceViewResponse build() {
             return new CapacityReservationGroupInstanceViewResponse(capacityReservations);
         }

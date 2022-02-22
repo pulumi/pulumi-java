@@ -21,7 +21,7 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="publicKeyCertificate", required=true)
-    private final PublicKeyCertificateResponse publicKeyCertificate;
+      private final PublicKeyCertificateResponse publicKeyCertificate;
 
     public PublicKeyCertificateResponse getPublicKeyCertificate() {
         return this.publicKeyCertificate;
@@ -59,7 +59,6 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
-
         public RegistryCredentialResponse build() {
             return new RegistryCredentialResponse(publicKeyCertificate);
         }

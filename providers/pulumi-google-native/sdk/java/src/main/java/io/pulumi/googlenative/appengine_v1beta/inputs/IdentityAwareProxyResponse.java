@@ -22,7 +22,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="oauth2ClientId", required=true)
-    private final String oauth2ClientId;
+      private final String oauth2ClientId;
 
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
@@ -44,7 +44,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="oauth2ClientSecret", required=true)
-    private final String oauth2ClientSecret;
+      private final String oauth2ClientSecret;
 
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
@@ -55,7 +55,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="oauth2ClientSecretSha256", required=true)
-    private final String oauth2ClientSecretSha256;
+      private final String oauth2ClientSecretSha256;
 
     public String getOauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
@@ -124,7 +124,6 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public IdentityAwareProxyResponse build() {
             return new IdentityAwareProxyResponse(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

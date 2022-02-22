@@ -107,7 +107,6 @@ public final class InputFileResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public InputFileResponse build() {
             return new InputFileResponse(filename, includedTracks, odataType);
         }

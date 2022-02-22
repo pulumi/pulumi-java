@@ -19,7 +19,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="billingCycle")
-    private final @Nullable String billingCycle;
+        private final @Nullable String billingCycle;
 
     public Optional<String> getBillingCycle() {
         return this.billingCycle == null ? Optional.empty() : Optional.ofNullable(this.billingCycle);
@@ -30,7 +30,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="effectiveDate")
-    private final @Nullable String effectiveDate;
+        private final @Nullable String effectiveDate;
 
     public Optional<String> getEffectiveDate() {
         return this.effectiveDate == null ? Optional.empty() : Optional.ofNullable(this.effectiveDate);
@@ -41,7 +41,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="planDetails")
-    private final @Nullable String planDetails;
+        private final @Nullable String planDetails;
 
     public Optional<String> getPlanDetails() {
         return this.planDetails == null ? Optional.empty() : Optional.ofNullable(this.planDetails);
@@ -52,7 +52,7 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="usageType")
-    private final @Nullable String usageType;
+        private final @Nullable String usageType;
 
     public Optional<String> getUsageType() {
         return this.usageType == null ? Optional.empty() : Optional.ofNullable(this.usageType);
@@ -121,7 +121,6 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
             this.usageType = usageType;
             return this;
         }
-
         public PlanDataResponse build() {
             return new PlanDataResponse(billingCycle, effectiveDate, planDetails, usageType);
         }

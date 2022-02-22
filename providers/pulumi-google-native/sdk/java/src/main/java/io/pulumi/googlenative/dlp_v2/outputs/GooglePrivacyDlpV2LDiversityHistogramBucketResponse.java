@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
             this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, sensitiveValueFrequencyLowerBound, sensitiveValueFrequencyUpperBound);
         }

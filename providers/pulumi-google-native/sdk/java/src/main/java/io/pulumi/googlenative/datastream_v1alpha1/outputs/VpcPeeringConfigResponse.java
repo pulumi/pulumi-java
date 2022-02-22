@@ -74,7 +74,6 @@ public final class VpcPeeringConfigResponse {
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
         }
-
         public VpcPeeringConfigResponse build() {
             return new VpcPeeringConfigResponse(subnet, vpcName);
         }

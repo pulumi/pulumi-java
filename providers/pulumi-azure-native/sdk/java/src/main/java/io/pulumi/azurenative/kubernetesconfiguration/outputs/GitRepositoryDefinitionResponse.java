@@ -204,7 +204,6 @@ public final class GitRepositoryDefinitionResponse {
             this.url = url;
             return this;
         }
-
         public GitRepositoryDefinitionResponse build() {
             return new GitRepositoryDefinitionResponse(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
         }

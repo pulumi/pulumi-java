@@ -74,7 +74,6 @@ public final class ConnStringValueTypePairResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnStringValueTypePairResponse build() {
             return new ConnStringValueTypePairResponse(type, value);
         }

@@ -96,7 +96,6 @@ public final class StatefulPolicyPreservedStateResponse {
             this.internalIPs = Objects.requireNonNull(internalIPs);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks, externalIPs, internalIPs);
         }

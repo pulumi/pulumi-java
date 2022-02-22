@@ -117,7 +117,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(aliasContext, gerritProject, hostUri, revisionId);
         }

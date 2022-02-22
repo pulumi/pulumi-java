@@ -160,7 +160,6 @@ public final class GetIpFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIpFirewallRuleResult build() {
             return new GetIpFirewallRuleResult(endIpAddress, id, name, provisioningState, startIpAddress, type);
         }

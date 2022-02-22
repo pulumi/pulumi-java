@@ -74,7 +74,6 @@ public final class DiagnosticResponse {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticResponse build() {
             return new DiagnosticResponse(field, level);
         }

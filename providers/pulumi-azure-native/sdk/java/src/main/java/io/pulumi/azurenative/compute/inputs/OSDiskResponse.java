@@ -29,7 +29,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable String caching;
+        private final @Nullable String caching;
 
     public Optional<String> getCaching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
@@ -40,7 +40,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final String createOption;
+        private final String createOption;
 
     public String getCreateOption() {
         return this.createOption;
@@ -51,7 +51,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable String deleteOption;
+        private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
@@ -62,7 +62,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diffDiskSettings")
-    private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
+        private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
     public Optional<DiffDiskSettingsResponse> getDiffDiskSettings() {
         return this.diffDiskSettings == null ? Optional.empty() : Optional.ofNullable(this.diffDiskSettings);
@@ -73,7 +73,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Integer diskSizeGB;
+        private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
@@ -84,7 +84,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptionSettings")
-    private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
+        private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
     public Optional<DiskEncryptionSettingsResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
@@ -95,7 +95,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable VirtualHardDiskResponse image;
+        private final @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> getImage() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
@@ -106,7 +106,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable ManagedDiskParametersResponse managedDisk;
+        private final @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
@@ -117,7 +117,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -128,7 +128,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+        private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -139,7 +139,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vhd")
-    private final @Nullable VirtualHardDiskResponse vhd;
+        private final @Nullable VirtualHardDiskResponse vhd;
 
     public Optional<VirtualHardDiskResponse> getVhd() {
         return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
@@ -150,7 +150,7 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Boolean writeAcceleratorEnabled;
+        private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
@@ -299,7 +299,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public OSDiskResponse build() {
             return new OSDiskResponse(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
         }

@@ -76,7 +76,6 @@ public final class AuthorizationResponse {
             this.parameters = parameters;
             return this;
         }
-
         public AuthorizationResponse build() {
             return new AuthorizationResponse(authorizationType, parameters);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
      * 
      */
     @InputImport(name="postbackData", required=true)
-    private final String postbackData;
+      private final String postbackData;
 
     public String getPostbackData() {
         return this.postbackData;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(postbackData, text);
         }

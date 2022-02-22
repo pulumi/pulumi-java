@@ -76,7 +76,6 @@ public final class HelmOperatorPropertiesResponse {
             this.chartVersion = chartVersion;
             return this;
         }
-
         public HelmOperatorPropertiesResponse build() {
             return new HelmOperatorPropertiesResponse(chartValues, chartVersion);
         }

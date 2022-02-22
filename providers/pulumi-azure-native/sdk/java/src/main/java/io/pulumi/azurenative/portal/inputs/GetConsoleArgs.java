@@ -17,7 +17,7 @@ public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="consoleName", required=true)
-    private final String consoleName;
+        private final String consoleName;
 
     public String getConsoleName() {
         return this.consoleName;
@@ -55,7 +55,6 @@ public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
             this.consoleName = Objects.requireNonNull(consoleName);
             return this;
         }
-
         public GetConsoleArgs build() {
             return new GetConsoleArgs(consoleName);
         }

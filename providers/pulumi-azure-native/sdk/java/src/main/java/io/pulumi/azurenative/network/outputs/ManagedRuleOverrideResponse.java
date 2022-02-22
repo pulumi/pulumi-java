@@ -76,7 +76,6 @@ public final class ManagedRuleOverrideResponse {
             this.state = state;
             return this;
         }
-
         public ManagedRuleOverrideResponse build() {
             return new ManagedRuleOverrideResponse(ruleId, state);
         }

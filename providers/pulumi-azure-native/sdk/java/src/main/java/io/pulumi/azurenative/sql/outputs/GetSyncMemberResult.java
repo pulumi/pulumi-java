@@ -329,7 +329,6 @@ public final class GetSyncMemberResult {
             this.userName = userName;
             return this;
         }
-
         public GetSyncMemberResult build() {
             return new GetSyncMemberResult(databaseName, databaseType, id, name, privateEndpointName, serverName, sqlServerDatabaseId, syncAgentId, syncDirection, syncMemberAzureDatabaseResourceId, syncState, type, usePrivateLinkConnection, userName);
         }

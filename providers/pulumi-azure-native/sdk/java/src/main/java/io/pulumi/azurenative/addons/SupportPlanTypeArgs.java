@@ -19,7 +19,7 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="planTypeName")
-    private final @Nullable Input<String> planTypeName;
+        private final @Nullable Input<String> planTypeName;
 
     public Input<String> getPlanTypeName() {
         return this.planTypeName == null ? Input.empty() : this.planTypeName;
@@ -30,7 +30,7 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="providerName", required=true)
-    private final Input<String> providerName;
+        private final Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName;
@@ -89,7 +89,6 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
             this.providerName = Input.of(Objects.requireNonNull(providerName));
             return this;
         }
-
         public SupportPlanTypeArgs build() {
             return new SupportPlanTypeArgs(planTypeName, providerName);
         }

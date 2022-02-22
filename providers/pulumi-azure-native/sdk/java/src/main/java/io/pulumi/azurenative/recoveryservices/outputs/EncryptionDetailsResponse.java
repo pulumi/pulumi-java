@@ -97,7 +97,6 @@ public final class EncryptionDetailsResponse {
             this.kekState = kekState;
             return this;
         }
-
         public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(kekCertExpiryDate, kekCertThumbprint, kekState);
         }

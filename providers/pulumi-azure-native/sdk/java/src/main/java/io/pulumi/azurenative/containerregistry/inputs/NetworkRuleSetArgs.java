@@ -28,7 +28,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction", required=true)
-    private final Input<Either<String,DefaultAction>> defaultAction;
+        private final Input<Either<String,DefaultAction>> defaultAction;
 
     public Input<Either<String,DefaultAction>> getDefaultAction() {
         return this.defaultAction;
@@ -39,7 +39,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable Input<List<IPRuleArgs>> ipRules;
+        private final @Nullable Input<List<IPRuleArgs>> ipRules;
 
     public Input<List<IPRuleArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;
@@ -50,7 +50,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Input<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
@@ -124,7 +124,6 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }
-
         public NetworkRuleSetArgs build() {
             return new NetworkRuleSetArgs(defaultAction, ipRules, virtualNetworkRules);
         }

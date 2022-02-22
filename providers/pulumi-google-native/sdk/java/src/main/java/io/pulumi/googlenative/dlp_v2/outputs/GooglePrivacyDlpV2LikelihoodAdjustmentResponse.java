@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
             this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
             return this;
         }
-
         public GooglePrivacyDlpV2LikelihoodAdjustmentResponse build() {
             return new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(fixedLikelihood, relativeLikelihood);
         }

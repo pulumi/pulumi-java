@@ -74,7 +74,6 @@ public final class SourceResponse {
             this.predefinedSource = Objects.requireNonNull(predefinedSource);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(name, predefinedSource);
         }

@@ -421,7 +421,6 @@ public final class GetOccurrenceResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, envelope, image, kind, name, noteName, $package, remediation, resourceUri, updateTime, upgrade, vulnerability);
         }

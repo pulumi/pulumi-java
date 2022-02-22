@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+        private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable Input<String> keyVersion;
+        private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
@@ -45,7 +45,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyvaultUri")
-    private final @Nullable Input<String> keyvaultUri;
+        private final @Nullable Input<String> keyvaultUri;
 
     public Input<String> getKeyvaultUri() {
         return this.keyvaultUri == null ? Input.empty() : this.keyvaultUri;
@@ -119,7 +119,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.keyvaultUri = Input.ofNullable(keyvaultUri);
             return this;
         }
-
         public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyName, keyVersion, keyvaultUri);
         }

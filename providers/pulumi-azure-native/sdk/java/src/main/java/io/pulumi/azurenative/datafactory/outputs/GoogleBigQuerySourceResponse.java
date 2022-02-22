@@ -205,7 +205,6 @@ public final class GoogleBigQuerySourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleBigQuerySourceResponse build() {
             return new GoogleBigQuerySourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

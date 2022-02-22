@@ -23,7 +23,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="retentionPolicy", required=true)
-    private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
+      private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
 
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse getRetentionPolicy() {
         return this.retentionPolicy;
@@ -34,7 +34,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
+      private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
 
     public ResourcePolicySnapshotSchedulePolicyScheduleResponse getSchedule() {
         return this.schedule;
@@ -45,7 +45,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="snapshotProperties", required=true)
-    private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
+      private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse getSnapshotProperties() {
         return this.snapshotProperties;
@@ -104,7 +104,6 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyResponse(retentionPolicy, schedule, snapshotProperties);
         }

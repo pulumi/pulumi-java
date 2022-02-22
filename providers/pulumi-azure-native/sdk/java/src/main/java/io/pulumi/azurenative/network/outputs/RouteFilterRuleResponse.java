@@ -203,7 +203,6 @@ public final class RouteFilterRuleResponse {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }
-
         public RouteFilterRuleResponse build() {
             return new RouteFilterRuleResponse(access, communities, etag, id, location, name, provisioningState, routeFilterRuleType);
         }

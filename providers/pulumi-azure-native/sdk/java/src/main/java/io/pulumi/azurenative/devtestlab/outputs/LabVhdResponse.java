@@ -54,7 +54,6 @@ public final class LabVhdResponse {
             this.id = id;
             return this;
         }
-
         public LabVhdResponse build() {
             return new LabVhdResponse(id);
         }

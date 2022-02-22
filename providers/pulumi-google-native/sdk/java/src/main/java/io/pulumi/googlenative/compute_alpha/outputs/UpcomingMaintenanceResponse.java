@@ -97,7 +97,6 @@ public final class UpcomingMaintenanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UpcomingMaintenanceResponse build() {
             return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
         }

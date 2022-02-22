@@ -26,7 +26,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methods", required=true)
-    private final List<MethodResponse> methods;
+      private final List<MethodResponse> methods;
 
     public List<MethodResponse> getMethods() {
         return this.methods;
@@ -37,7 +37,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mixins", required=true)
-    private final List<MixinResponse> mixins;
+      private final List<MixinResponse> mixins;
 
     public List<MixinResponse> getMixins() {
         return this.mixins;
@@ -48,7 +48,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="options", required=true)
-    private final List<OptionResponse> options;
+      private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
         return this.options;
@@ -70,7 +70,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceContext", required=true)
-    private final SourceContextResponse sourceContext;
+      private final SourceContextResponse sourceContext;
 
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
@@ -81,7 +81,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syntax", required=true)
-    private final String syntax;
+      private final String syntax;
 
     public String getSyntax() {
         return this.syntax;
@@ -92,7 +92,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -191,7 +191,6 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ApiResponse build() {
             return new ApiResponse(methods, mixins, name, options, sourceContext, syntax, version);
         }

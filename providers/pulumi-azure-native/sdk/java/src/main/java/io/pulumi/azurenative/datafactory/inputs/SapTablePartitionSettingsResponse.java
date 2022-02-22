@@ -23,7 +23,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxPartitionsNumber")
-    private final @Nullable Object maxPartitionsNumber;
+        private final @Nullable Object maxPartitionsNumber;
 
     public Optional<Object> getMaxPartitionsNumber() {
         return this.maxPartitionsNumber == null ? Optional.empty() : Optional.ofNullable(this.maxPartitionsNumber);
@@ -34,7 +34,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="partitionColumnName")
-    private final @Nullable Object partitionColumnName;
+        private final @Nullable Object partitionColumnName;
 
     public Optional<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
@@ -45,7 +45,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="partitionLowerBound")
-    private final @Nullable Object partitionLowerBound;
+        private final @Nullable Object partitionLowerBound;
 
     public Optional<Object> getPartitionLowerBound() {
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
@@ -56,7 +56,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="partitionUpperBound")
-    private final @Nullable Object partitionUpperBound;
+        private final @Nullable Object partitionUpperBound;
 
     public Optional<Object> getPartitionUpperBound() {
         return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
@@ -125,7 +125,6 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SapTablePartitionSettingsResponse build() {
             return new SapTablePartitionSettingsResponse(maxPartitionsNumber, partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

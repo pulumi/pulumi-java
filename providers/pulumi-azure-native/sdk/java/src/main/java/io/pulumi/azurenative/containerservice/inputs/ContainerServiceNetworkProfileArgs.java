@@ -30,7 +30,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dnsServiceIP")
-    private final @Nullable Input<String> dnsServiceIP;
+        private final @Nullable Input<String> dnsServiceIP;
 
     public Input<String> getDnsServiceIP() {
         return this.dnsServiceIP == null ? Input.empty() : this.dnsServiceIP;
@@ -41,7 +41,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dockerBridgeCidr")
-    private final @Nullable Input<String> dockerBridgeCidr;
+        private final @Nullable Input<String> dockerBridgeCidr;
 
     public Input<String> getDockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Input.empty() : this.dockerBridgeCidr;
@@ -52,7 +52,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerProfile")
-    private final @Nullable Input<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
+        private final @Nullable Input<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
     public Input<ManagedClusterLoadBalancerProfileArgs> getLoadBalancerProfile() {
         return this.loadBalancerProfile == null ? Input.empty() : this.loadBalancerProfile;
@@ -63,7 +63,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerSku")
-    private final @Nullable Input<Either<String,LoadBalancerSku>> loadBalancerSku;
+        private final @Nullable Input<Either<String,LoadBalancerSku>> loadBalancerSku;
 
     public Input<Either<String,LoadBalancerSku>> getLoadBalancerSku() {
         return this.loadBalancerSku == null ? Input.empty() : this.loadBalancerSku;
@@ -74,7 +74,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkMode")
-    private final @Nullable Input<Either<String,NetworkMode>> networkMode;
+        private final @Nullable Input<Either<String,NetworkMode>> networkMode;
 
     public Input<Either<String,NetworkMode>> getNetworkMode() {
         return this.networkMode == null ? Input.empty() : this.networkMode;
@@ -85,7 +85,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkPlugin")
-    private final @Nullable Input<Either<String,NetworkPlugin>> networkPlugin;
+        private final @Nullable Input<Either<String,NetworkPlugin>> networkPlugin;
 
     public Input<Either<String,NetworkPlugin>> getNetworkPlugin() {
         return this.networkPlugin == null ? Input.empty() : this.networkPlugin;
@@ -96,7 +96,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkPolicy")
-    private final @Nullable Input<Either<String,NetworkPolicy>> networkPolicy;
+        private final @Nullable Input<Either<String,NetworkPolicy>> networkPolicy;
 
     public Input<Either<String,NetworkPolicy>> getNetworkPolicy() {
         return this.networkPolicy == null ? Input.empty() : this.networkPolicy;
@@ -107,7 +107,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outboundType")
-    private final @Nullable Input<Either<String,OutboundType>> outboundType;
+        private final @Nullable Input<Either<String,OutboundType>> outboundType;
 
     public Input<Either<String,OutboundType>> getOutboundType() {
         return this.outboundType == null ? Input.empty() : this.outboundType;
@@ -118,7 +118,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="podCidr")
-    private final @Nullable Input<String> podCidr;
+        private final @Nullable Input<String> podCidr;
 
     public Input<String> getPodCidr() {
         return this.podCidr == null ? Input.empty() : this.podCidr;
@@ -129,7 +129,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceCidr")
-    private final @Nullable Input<String> serviceCidr;
+        private final @Nullable Input<String> serviceCidr;
 
     public Input<String> getServiceCidr() {
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
@@ -308,7 +308,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }
-
         public ContainerServiceNetworkProfileArgs build() {
             return new ContainerServiceNetworkProfileArgs(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }

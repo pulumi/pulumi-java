@@ -123,7 +123,6 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public SqlAlwaysEncryptedPropertiesResponse build() {
             return new SqlAlwaysEncryptedPropertiesResponse(alwaysEncryptedAkvAuthType, credential, servicePrincipalId, servicePrincipalKey);
         }

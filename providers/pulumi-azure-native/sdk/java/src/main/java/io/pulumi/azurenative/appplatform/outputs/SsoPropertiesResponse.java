@@ -119,7 +119,6 @@ public final class SsoPropertiesResponse {
             this.scope = scope;
             return this;
         }
-
         public SsoPropertiesResponse build() {
             return new SsoPropertiesResponse(clientId, clientSecret, issuerUri, scope);
         }

@@ -224,7 +224,6 @@ public final class GetExternalVpnGatewayResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetExternalVpnGatewayResult build() {
             return new GetExternalVpnGatewayResult(creationTimestamp, description, interfaces, kind, labelFingerprint, labels, name, redundancyType, selfLink);
         }

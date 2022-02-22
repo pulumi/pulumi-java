@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
      * 
      */
     @InputImport(name="isControlGroup")
-    private final @Nullable Input<Boolean> isControlGroup;
+      private final @Nullable Input<Boolean> isControlGroup;
 
     public Input<Boolean> getIsControlGroup() {
         return this.isControlGroup == null ? Input.empty() : this.isControlGroup;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
      * 
      */
     @InputImport(name="trafficAllocation")
-    private final @Nullable Input<Double> trafficAllocation;
+      private final @Nullable Input<Double> trafficAllocation;
 
     public Input<Double> getTrafficAllocation() {
         return this.trafficAllocation == null ? Input.empty() : this.trafficAllocation;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsVariantArgs build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsVariantArgs(isControlGroup, trafficAllocation, version);
         }

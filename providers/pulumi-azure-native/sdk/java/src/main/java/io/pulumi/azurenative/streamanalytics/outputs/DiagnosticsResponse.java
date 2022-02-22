@@ -53,7 +53,6 @@ public final class DiagnosticsResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse(conditions);
         }

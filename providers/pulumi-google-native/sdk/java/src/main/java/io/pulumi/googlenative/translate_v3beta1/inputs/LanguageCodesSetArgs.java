@@ -24,7 +24,7 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="languageCodes")
-    private final @Nullable Input<List<String>> languageCodes;
+      private final @Nullable Input<List<String>> languageCodes;
 
     public Input<List<String>> getLanguageCodes() {
         return this.languageCodes == null ? Input.empty() : this.languageCodes;
@@ -67,7 +67,6 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
             this.languageCodes = Input.ofNullable(languageCodes);
             return this;
         }
-
         public LanguageCodesSetArgs build() {
             return new LanguageCodesSetArgs(languageCodes);
         }

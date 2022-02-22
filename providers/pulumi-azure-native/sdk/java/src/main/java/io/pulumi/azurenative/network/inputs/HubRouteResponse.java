@@ -22,7 +22,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationType", required=true)
-    private final String destinationType;
+        private final String destinationType;
 
     public String getDestinationType() {
         return this.destinationType;
@@ -33,7 +33,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final List<String> destinations;
+        private final List<String> destinations;
 
     public List<String> getDestinations() {
         return this.destinations;
@@ -44,7 +44,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-    private final String nextHop;
+        private final String nextHop;
 
     public String getNextHop() {
         return this.nextHop;
@@ -66,7 +66,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-    private final String nextHopType;
+        private final String nextHopType;
 
     public String getNextHopType() {
         return this.nextHopType;
@@ -145,7 +145,6 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
-
         public HubRouteResponse build() {
             return new HubRouteResponse(destinationType, destinations, name, nextHop, nextHopType);
         }

@@ -74,7 +74,6 @@ public final class DocumentationResponse {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public DocumentationResponse build() {
             return new DocumentationResponse(content, mimeType);
         }

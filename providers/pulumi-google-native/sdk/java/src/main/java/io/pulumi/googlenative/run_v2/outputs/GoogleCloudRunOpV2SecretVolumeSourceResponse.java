@@ -98,7 +98,6 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceResponse(defaultMode, items, secret);
         }

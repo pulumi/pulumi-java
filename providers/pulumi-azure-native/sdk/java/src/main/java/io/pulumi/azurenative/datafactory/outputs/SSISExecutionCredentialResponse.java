@@ -96,7 +96,6 @@ public final class SSISExecutionCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public SSISExecutionCredentialResponse build() {
             return new SSISExecutionCredentialResponse(domain, password, userName);
         }

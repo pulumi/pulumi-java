@@ -227,7 +227,6 @@ public final class GetWorkflowTemplateResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWorkflowTemplateResult build() {
             return new GetWorkflowTemplateResult(createTime, dagTimeout, jobs, labels, name, parameters, placement, updateTime, version);
         }

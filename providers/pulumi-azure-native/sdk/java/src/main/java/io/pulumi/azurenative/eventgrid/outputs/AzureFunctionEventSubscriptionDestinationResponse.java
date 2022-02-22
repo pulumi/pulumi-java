@@ -121,7 +121,6 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public AzureFunctionEventSubscriptionDestinationResponse build() {
             return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }

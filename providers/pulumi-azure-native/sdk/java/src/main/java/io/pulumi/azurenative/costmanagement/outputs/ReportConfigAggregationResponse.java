@@ -74,7 +74,6 @@ public final class ReportConfigAggregationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ReportConfigAggregationResponse build() {
             return new ReportConfigAggregationResponse(function, name);
         }

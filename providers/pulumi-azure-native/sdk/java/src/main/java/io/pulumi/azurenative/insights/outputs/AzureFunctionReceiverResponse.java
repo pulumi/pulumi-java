@@ -140,7 +140,6 @@ public final class AzureFunctionReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public AzureFunctionReceiverResponse build() {
             return new AzureFunctionReceiverResponse(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);
         }

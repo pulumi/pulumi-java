@@ -23,7 +23,7 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -34,7 +34,7 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageSettings", required=true)
-    private final List<StorageSettingResponse> storageSettings;
+        private final List<StorageSettingResponse> storageSettings;
 
     public List<StorageSettingResponse> getStorageSettings() {
         return this.storageSettings;
@@ -83,7 +83,6 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
             this.storageSettings = Objects.requireNonNull(storageSettings);
             return this;
         }
-
         public BackupVaultResponse build() {
             return new BackupVaultResponse(provisioningState, storageSettings);
         }

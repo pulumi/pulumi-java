@@ -154,7 +154,6 @@ public final class PostArgsMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public PostArgsMatchConditionParametersResponse build() {
             return new PostArgsMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, selector, transforms);
         }

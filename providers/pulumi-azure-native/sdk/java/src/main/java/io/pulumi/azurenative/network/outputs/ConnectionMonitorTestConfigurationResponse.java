@@ -207,7 +207,6 @@ public final class ConnectionMonitorTestConfigurationResponse {
             this.testFrequencySec = testFrequencySec;
             return this;
         }
-
         public ConnectionMonitorTestConfigurationResponse build() {
             return new ConnectionMonitorTestConfigurationResponse(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }

@@ -77,7 +77,6 @@ public final class ListIotHubResourceKeysResult {
             this.value = value;
             return this;
         }
-
         public ListIotHubResourceKeysResult build() {
             return new ListIotHubResourceKeysResult(nextLink, value);
         }

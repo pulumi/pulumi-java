@@ -267,7 +267,6 @@ public final class GetCryptoKeyResult {
             this.versionTemplate = Objects.requireNonNull(versionTemplate);
             return this;
         }
-
         public GetCryptoKeyResult build() {
             return new GetCryptoKeyResult(createTime, cryptoKeyBackend, destroyScheduledDuration, importOnly, labels, name, nextRotationTime, primary, purpose, rotationPeriod, versionTemplate);
         }

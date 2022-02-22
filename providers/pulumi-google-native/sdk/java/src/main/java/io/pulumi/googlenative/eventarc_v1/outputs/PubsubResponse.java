@@ -74,7 +74,6 @@ public final class PubsubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubResponse build() {
             return new PubsubResponse(subscription, topic);
         }

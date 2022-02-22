@@ -60,7 +60,6 @@ public final class ServiceTreeInfoResponse {
             this.serviceId = serviceId;
             return this;
         }
-
         public ServiceTreeInfoResponse build() {
             return new ServiceTreeInfoResponse(componentId, serviceId);
         }

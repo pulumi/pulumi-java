@@ -97,7 +97,6 @@ public final class VirtualNetworkConfigurationResponse {
             this.vnetid = Objects.requireNonNull(vnetid);
             return this;
         }
-
         public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(subnetResourceId, subnetname, vnetid);
         }

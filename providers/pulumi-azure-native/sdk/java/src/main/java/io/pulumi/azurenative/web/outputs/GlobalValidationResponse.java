@@ -124,7 +124,6 @@ public final class GlobalValidationResponse {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
-
         public GlobalValidationResponse build() {
             return new GlobalValidationResponse(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
         }

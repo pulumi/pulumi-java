@@ -233,7 +233,6 @@ public final class AvroSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AvroSinkResponse build() {
             return new AvroSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

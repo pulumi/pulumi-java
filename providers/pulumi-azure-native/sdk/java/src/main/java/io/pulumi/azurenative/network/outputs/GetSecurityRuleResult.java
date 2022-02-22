@@ -457,7 +457,6 @@ public final class GetSecurityRuleResult {
             this.type = type;
             return this;
         }
-
         public GetSecurityRuleResult build() {
             return new GetSecurityRuleResult(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, etag, id, name, priority, protocol, provisioningState, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }

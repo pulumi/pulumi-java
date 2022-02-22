@@ -201,7 +201,6 @@ public final class BgpPeerStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public BgpPeerStatusResponse build() {
             return new BgpPeerStatusResponse(asn, connectedDuration, localAddress, messagesReceived, messagesSent, neighbor, routesReceived, state);
         }

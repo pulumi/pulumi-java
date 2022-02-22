@@ -165,7 +165,6 @@ public final class CustomerCertificateParametersResponse {
             this.useLatestVersion = useLatestVersion;
             return this;
         }
-
         public CustomerCertificateParametersResponse build() {
             return new CustomerCertificateParametersResponse(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
         }

@@ -76,7 +76,6 @@ public final class ScaleRuleAuthResponse {
             this.triggerParameter = triggerParameter;
             return this;
         }
-
         public ScaleRuleAuthResponse build() {
             return new ScaleRuleAuthResponse(secretRef, triggerParameter);
         }

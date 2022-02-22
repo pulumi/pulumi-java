@@ -24,7 +24,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<GeoFilterActions> action;
+        private final Input<GeoFilterActions> action;
 
     public Input<GeoFilterActions> getAction() {
         return this.action;
@@ -35,7 +35,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryCodes", required=true)
-    private final Input<List<String>> countryCodes;
+        private final Input<List<String>> countryCodes;
 
     public Input<List<String>> getCountryCodes() {
         return this.countryCodes;
@@ -46,7 +46,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath", required=true)
-    private final Input<String> relativePath;
+        private final Input<String> relativePath;
 
     public Input<String> getRelativePath() {
         return this.relativePath;
@@ -120,7 +120,6 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.relativePath = Input.of(Objects.requireNonNull(relativePath));
             return this;
         }
-
         public GeoFilterArgs build() {
             return new GeoFilterArgs(action, countryCodes, relativePath);
         }

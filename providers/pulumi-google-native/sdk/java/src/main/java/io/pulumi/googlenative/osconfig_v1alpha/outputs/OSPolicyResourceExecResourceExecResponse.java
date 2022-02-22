@@ -139,7 +139,6 @@ public final class OSPolicyResourceExecResourceExecResponse {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public OSPolicyResourceExecResourceExecResponse build() {
             return new OSPolicyResourceExecResourceExecResponse(args, file, interpreter, outputFilePath, script);
         }

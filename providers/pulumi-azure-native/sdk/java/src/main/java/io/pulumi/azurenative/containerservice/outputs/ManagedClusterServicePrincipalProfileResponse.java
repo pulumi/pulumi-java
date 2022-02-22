@@ -76,7 +76,6 @@ public final class ManagedClusterServicePrincipalProfileResponse {
             this.secret = secret;
             return this;
         }
-
         public ManagedClusterServicePrincipalProfileResponse build() {
             return new ManagedClusterServicePrincipalProfileResponse(clientId, secret);
         }

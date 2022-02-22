@@ -97,7 +97,6 @@ public final class UploadServicePrincipalResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public UploadServicePrincipalResponse build() {
             return new UploadServicePrincipalResponse(authority, clientId, tenantId);
         }

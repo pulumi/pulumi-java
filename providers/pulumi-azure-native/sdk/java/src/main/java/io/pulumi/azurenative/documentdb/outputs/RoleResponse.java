@@ -76,7 +76,6 @@ public final class RoleResponse {
             this.role = role;
             return this;
         }
-
         public RoleResponse build() {
             return new RoleResponse(db, role);
         }

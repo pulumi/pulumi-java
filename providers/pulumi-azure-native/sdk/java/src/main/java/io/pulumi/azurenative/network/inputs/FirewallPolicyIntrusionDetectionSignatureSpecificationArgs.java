@@ -25,7 +25,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -36,7 +36,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+        private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
     public Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -95,7 +95,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionSignatureSpecificationArgs build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(id, mode);
         }

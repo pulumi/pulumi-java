@@ -608,7 +608,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureVmWorkloadSAPAseDatabaseProtectedItemResponse build() {
             return new AzureVmWorkloadSAPAseDatabaseProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupErrorDetail, lastBackupStatus, lastBackupTime, lastRecoveryPoint, parentName, parentType, policyId, protectedItemDataSourceId, protectedItemHealthStatus, protectedItemType, protectionState, protectionStatus, serverName, sourceResourceId, workloadType);
         }

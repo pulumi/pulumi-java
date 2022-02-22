@@ -76,7 +76,6 @@ public final class CertificateExtensionConstraintsResponse {
             this.knownExtensions = Objects.requireNonNull(knownExtensions);
             return this;
         }
-
         public CertificateExtensionConstraintsResponse build() {
             return new CertificateExtensionConstraintsResponse(additionalExtensions, knownExtensions);
         }

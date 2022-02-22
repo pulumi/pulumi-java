@@ -290,7 +290,6 @@ public final class GetVirtualRouterResult {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-
         public GetVirtualRouterResult build() {
             return new GetVirtualRouterResult(etag, hostedGateway, hostedSubnet, id, location, name, peerings, provisioningState, tags, type, virtualRouterAsn, virtualRouterIps);
         }

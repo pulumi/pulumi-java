@@ -52,7 +52,6 @@ public final class IosTestLoopResponse {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(bundleId);
         }

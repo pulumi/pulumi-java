@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
      * 
      */
     @InputImport(name="repoName")
-    private final @Nullable Input<String> repoName;
+      private final @Nullable Input<String> repoName;
 
     public Input<String> getRepoName() {
         return this.repoName == null ? Input.empty() : this.repoName;
@@ -93,7 +93,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
             this.repoName = Input.ofNullable(repoName);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs(project, repoName);
         }

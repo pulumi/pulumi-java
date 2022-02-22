@@ -77,7 +77,6 @@ public final class SelectVideoTrackByIdResponse {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public SelectVideoTrackByIdResponse build() {
             return new SelectVideoTrackByIdResponse(odataType, trackId);
         }

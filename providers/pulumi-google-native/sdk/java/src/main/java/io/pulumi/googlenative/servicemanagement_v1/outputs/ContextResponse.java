@@ -53,7 +53,6 @@ public final class ContextResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ContextResponse build() {
             return new ContextResponse(rules);
         }

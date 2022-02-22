@@ -24,7 +24,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxOccurs")
-    private final @Nullable Input<Integer> maxOccurs;
+      private final @Nullable Input<Integer> maxOccurs;
 
     public Input<Integer> getMaxOccurs() {
         return this.maxOccurs == null ? Input.empty() : this.maxOccurs;
@@ -35,7 +35,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minOccurs")
-    private final @Nullable Input<Integer> minOccurs;
+      private final @Nullable Input<Integer> minOccurs;
 
     public Input<Integer> getMinOccurs() {
         return this.minOccurs == null ? Input.empty() : this.minOccurs;
@@ -46,7 +46,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+      private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -68,7 +68,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public FieldArgs build() {
             return new FieldArgs(maxOccurs, minOccurs, name, table, type);
         }

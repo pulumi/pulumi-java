@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * 
      */
     @InputImport(name="enableInsightsExport")
-    private final @Nullable Input<Boolean> enableInsightsExport;
+      private final @Nullable Input<Boolean> enableInsightsExport;
 
     public Input<Boolean> getEnableInsightsExport() {
         return this.enableInsightsExport == null ? Input.empty() : this.enableInsightsExport;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
             this.enableInsightsExport = Input.ofNullable(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs(enableInsightsExport);
         }

@@ -252,7 +252,6 @@ public final class HiveObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HiveObjectDatasetResponse build() {
             return new HiveObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

@@ -76,7 +76,6 @@ public final class JobDerivedInfoResponse {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public JobDerivedInfoResponse build() {
             return new JobDerivedInfoResponse(jobCategories, locations);
         }

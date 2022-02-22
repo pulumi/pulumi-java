@@ -54,7 +54,6 @@ public final class AppInsightsPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public AppInsightsPropertiesResponse build() {
             return new AppInsightsPropertiesResponse(resourceId);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bootDiskSizeGb", required=true)
-    private final Integer bootDiskSizeGb;
+      private final Integer bootDiskSizeGb;
 
     public Integer getBootDiskSizeGb() {
         return this.bootDiskSizeGb;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bootDiskType", required=true)
-    private final String bootDiskType;
+      private final String bootDiskType;
 
     public String getBootDiskType() {
         return this.bootDiskType;
@@ -82,7 +82,6 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
-
         public GoogleCloudMlV1__DiskConfigResponse build() {
             return new GoogleCloudMlV1__DiskConfigResponse(bootDiskSizeGb, bootDiskType);
         }

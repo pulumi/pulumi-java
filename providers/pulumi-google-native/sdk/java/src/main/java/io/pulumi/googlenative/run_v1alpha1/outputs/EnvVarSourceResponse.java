@@ -75,7 +75,6 @@ public final class EnvVarSourceResponse {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public EnvVarSourceResponse build() {
             return new EnvVarSourceResponse(configMapKeyRef, secretKeyRef);
         }

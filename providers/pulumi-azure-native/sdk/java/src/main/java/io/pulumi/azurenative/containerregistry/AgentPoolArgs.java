@@ -23,7 +23,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable Input<String> agentPoolName;
+        private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -34,7 +34,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -45,7 +45,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="os")
-    private final @Nullable Input<Either<String,OS>> os;
+        private final @Nullable Input<Either<String,OS>> os;
 
     public Input<Either<String,OS>> getOs() {
         return this.os == null ? Input.empty() : this.os;
@@ -67,7 +67,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final Input<String> registryName;
+        private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -78,7 +78,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+        private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -111,7 +111,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkSubnetResourceId")
-    private final @Nullable Input<String> virtualNetworkSubnetResourceId;
+        private final @Nullable Input<String> virtualNetworkSubnetResourceId;
 
     public Input<String> getVirtualNetworkSubnetResourceId() {
         return this.virtualNetworkSubnetResourceId == null ? Input.empty() : this.virtualNetworkSubnetResourceId;
@@ -275,7 +275,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualNetworkSubnetResourceId = Input.ofNullable(virtualNetworkSubnetResourceId);
             return this;
         }
-
         public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolName, count, location, os, registryName, resourceGroupName, tags, tier, virtualNetworkSubnetResourceId);
         }

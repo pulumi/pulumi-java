@@ -52,7 +52,6 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GoogleCloudApigeeV1MonetizationConfigResponse build() {
             return new GoogleCloudApigeeV1MonetizationConfigResponse(enabled);
         }

@@ -24,7 +24,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -46,7 +46,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
@@ -57,7 +57,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageGb")
-    private final @Nullable Input<Double> storageGb;
+      private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;
@@ -146,7 +146,6 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }
-
         public SchedulerResourceArgs build() {
             return new SchedulerResourceArgs(count, cpu, memoryGb, storageGb);
         }

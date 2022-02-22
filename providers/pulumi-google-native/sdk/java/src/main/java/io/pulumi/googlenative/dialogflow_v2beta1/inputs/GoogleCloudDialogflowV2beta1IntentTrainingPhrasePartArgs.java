@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="entityType")
-    private final @Nullable Input<String> entityType;
+      private final @Nullable Input<String> entityType;
 
     public Input<String> getEntityType() {
         return this.entityType == null ? Input.empty() : this.entityType;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="text", required=true)
-    private final Input<String> text;
+      private final Input<String> text;
 
     public Input<String> getText() {
         return this.text;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="userDefined")
-    private final @Nullable Input<Boolean> userDefined;
+      private final @Nullable Input<Boolean> userDefined;
 
     public Input<Boolean> getUserDefined() {
         return this.userDefined == null ? Input.empty() : this.userDefined;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
             this.userDefined = Input.ofNullable(userDefined);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs(alias, entityType, text, userDefined);
         }

@@ -139,7 +139,6 @@ public final class GetAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertRuleResult build() {
             return new GetAlertRuleResult(etag, id, kind, name, type);
         }

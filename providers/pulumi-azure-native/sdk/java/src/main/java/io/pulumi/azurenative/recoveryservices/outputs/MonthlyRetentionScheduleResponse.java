@@ -143,7 +143,6 @@ public final class MonthlyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public MonthlyRetentionScheduleResponse build() {
             return new MonthlyRetentionScheduleResponse(retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
         }

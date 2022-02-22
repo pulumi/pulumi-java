@@ -185,7 +185,6 @@ public final class UpdateConfigurationResponse {
             this.windows = windows;
             return this;
         }
-
         public UpdateConfigurationResponse build() {
             return new UpdateConfigurationResponse(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
         }

@@ -17,7 +17,7 @@ public final class ListWebAppSiteBackupsArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListWebAppSiteBackupsArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListWebAppSiteBackupsArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListWebAppSiteBackupsArgs build() {
             return new ListWebAppSiteBackupsArgs(name, resourceGroupName);
         }

@@ -202,7 +202,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
             this.primaryDomain = Objects.requireNonNull(primaryDomain);
             return this;
         }
-
         public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
             return new GoogleCloudChannelV1CloudIdentityInfoResponse(adminConsoleUri, alternateEmail, customerType, eduData, isDomainVerified, languageCode, phoneNumber, primaryDomain);
         }

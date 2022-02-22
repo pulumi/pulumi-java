@@ -74,7 +74,6 @@ public final class RequestUtilizationResponse {
             this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
             return this;
         }
-
         public RequestUtilizationResponse build() {
             return new RequestUtilizationResponse(targetConcurrentRequests, targetRequestCountPerSecond);
         }

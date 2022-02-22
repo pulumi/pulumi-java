@@ -34,7 +34,6 @@ public final class GooSettingsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(GooSettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooSettingsResponse build() {
             return new GooSettingsResponse();
         }

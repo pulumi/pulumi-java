@@ -142,7 +142,6 @@ public final class CommonExportPropertiesResponse {
             this.runHistory = runHistory;
             return this;
         }
-
         public CommonExportPropertiesResponse build() {
             return new CommonExportPropertiesResponse(definition, deliveryInfo, format, nextRunTimeEstimate, runHistory);
         }

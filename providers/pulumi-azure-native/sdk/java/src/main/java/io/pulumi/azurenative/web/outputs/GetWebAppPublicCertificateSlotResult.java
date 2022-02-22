@@ -181,7 +181,6 @@ public final class GetWebAppPublicCertificateSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppPublicCertificateSlotResult build() {
             return new GetWebAppPublicCertificateSlotResult(blob, id, kind, name, publicCertificateLocation, thumbprint, type);
         }

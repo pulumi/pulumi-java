@@ -98,7 +98,6 @@ public final class StaticRouteResponse {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public StaticRouteResponse build() {
             return new StaticRouteResponse(addressPrefixes, name, nextHopIpAddress);
         }

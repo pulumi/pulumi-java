@@ -54,7 +54,6 @@ public final class DynamicExecutorAllocationResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DynamicExecutorAllocationResponse build() {
             return new DynamicExecutorAllocationResponse(enabled);
         }

@@ -54,7 +54,6 @@ public final class LogAnalyticsWorkspaceConfigResponse {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public LogAnalyticsWorkspaceConfigResponse build() {
             return new LogAnalyticsWorkspaceConfigResponse(workspaceId);
         }

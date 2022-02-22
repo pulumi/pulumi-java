@@ -22,7 +22,7 @@ public final class SingletonPartitionSchemeDescriptionResponse extends io.pulumi
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-    private final String partitionScheme;
+        private final String partitionScheme;
 
     public String getPartitionScheme() {
         return this.partitionScheme;
@@ -60,7 +60,6 @@ public final class SingletonPartitionSchemeDescriptionResponse extends io.pulumi
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public SingletonPartitionSchemeDescriptionResponse build() {
             return new SingletonPartitionSchemeDescriptionResponse(partitionScheme);
         }

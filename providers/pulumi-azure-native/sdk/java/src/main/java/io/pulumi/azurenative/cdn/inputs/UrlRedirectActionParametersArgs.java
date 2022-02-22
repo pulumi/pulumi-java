@@ -26,7 +26,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customFragment")
-    private final @Nullable Input<String> customFragment;
+        private final @Nullable Input<String> customFragment;
 
     public Input<String> getCustomFragment() {
         return this.customFragment == null ? Input.empty() : this.customFragment;
@@ -37,7 +37,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customHostname")
-    private final @Nullable Input<String> customHostname;
+        private final @Nullable Input<String> customHostname;
 
     public Input<String> getCustomHostname() {
         return this.customHostname == null ? Input.empty() : this.customHostname;
@@ -48,7 +48,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customPath")
-    private final @Nullable Input<String> customPath;
+        private final @Nullable Input<String> customPath;
 
     public Input<String> getCustomPath() {
         return this.customPath == null ? Input.empty() : this.customPath;
@@ -59,7 +59,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customQueryString")
-    private final @Nullable Input<String> customQueryString;
+        private final @Nullable Input<String> customQueryString;
 
     public Input<String> getCustomQueryString() {
         return this.customQueryString == null ? Input.empty() : this.customQueryString;
@@ -70,14 +70,14 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationProtocol")
-    private final @Nullable Input<Either<String,DestinationProtocol>> destinationProtocol;
+        private final @Nullable Input<Either<String,DestinationProtocol>> destinationProtocol;
 
     public Input<Either<String,DestinationProtocol>> getDestinationProtocol() {
         return this.destinationProtocol == null ? Input.empty() : this.destinationProtocol;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -88,7 +88,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="redirectType", required=true)
-    private final Input<Either<String,RedirectType>> redirectType;
+        private final Input<Either<String,RedirectType>> redirectType;
 
     public Input<Either<String,RedirectType>> getRedirectType() {
         return this.redirectType;
@@ -222,7 +222,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             this.redirectType = Input.of(Objects.requireNonNull(redirectType));
             return this;
         }
-
         public UrlRedirectActionParametersArgs build() {
             return new UrlRedirectActionParametersArgs(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }

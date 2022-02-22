@@ -162,7 +162,6 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlRoleDefinitionResult build() {
             return new GetSqlResourceSqlRoleDefinitionResult(assignableScopes, id, name, permissions, roleName, type);
         }

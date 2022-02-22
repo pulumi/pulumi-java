@@ -207,7 +207,6 @@ public final class MigrateSqlServerSqlMITaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskInputResponse build() {
             return new MigrateSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedAgentJobs, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

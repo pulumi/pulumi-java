@@ -23,7 +23,7 @@ public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.R
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public GcpFilestoreCsiDriverConfigArgs build() {
             return new GcpFilestoreCsiDriverConfigArgs(enabled);
         }

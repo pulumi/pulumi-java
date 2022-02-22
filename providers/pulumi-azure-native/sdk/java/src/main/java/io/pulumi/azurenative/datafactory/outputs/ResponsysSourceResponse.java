@@ -205,7 +205,6 @@ public final class ResponsysSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResponsysSourceResponse build() {
             return new ResponsysSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

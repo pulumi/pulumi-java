@@ -162,7 +162,6 @@ public final class ConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

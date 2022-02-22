@@ -27,7 +27,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clearTracks")
-    private final @Nullable List<TrackSelectionResponse> clearTracks;
+        private final @Nullable List<TrackSelectionResponse> clearTracks;
 
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
+        private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
@@ -49,7 +49,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="drm")
-    private final @Nullable CbcsDrmConfigurationResponse drm;
+        private final @Nullable CbcsDrmConfigurationResponse drm;
 
     public Optional<CbcsDrmConfigurationResponse> getDrm() {
         return this.drm == null ? Optional.empty() : Optional.ofNullable(this.drm);
@@ -60,7 +60,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable EnabledProtocolsResponse enabledProtocols;
+        private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
@@ -129,7 +129,6 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public CommonEncryptionCbcsResponse build() {
             return new CommonEncryptionCbcsResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }

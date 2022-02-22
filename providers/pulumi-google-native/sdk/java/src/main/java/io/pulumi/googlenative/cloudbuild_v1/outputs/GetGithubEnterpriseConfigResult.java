@@ -222,7 +222,6 @@ public final class GetGithubEnterpriseConfigResult {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }
-
         public GetGithubEnterpriseConfigResult build() {
             return new GetGithubEnterpriseConfigResult(appId, createTime, displayName, hostUrl, name, peeredNetwork, secrets, sslCa, webhookKey);
         }

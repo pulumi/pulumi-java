@@ -19,7 +19,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="companyName")
-    private final @Nullable Input<String> companyName;
+        private final @Nullable Input<String> companyName;
 
     public Input<String> getCompanyName() {
         return this.companyName == null ? Input.empty() : this.companyName;
@@ -30,7 +30,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enterpriseAppId")
-    private final @Nullable Input<String> enterpriseAppId;
+        private final @Nullable Input<String> enterpriseAppId;
 
     public Input<String> getEnterpriseAppId() {
         return this.enterpriseAppId == null ? Input.empty() : this.enterpriseAppId;
@@ -41,7 +41,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="singleSignOnUrl")
-    private final @Nullable Input<String> singleSignOnUrl;
+        private final @Nullable Input<String> singleSignOnUrl;
 
     public Input<String> getSingleSignOnUrl() {
         return this.singleSignOnUrl == null ? Input.empty() : this.singleSignOnUrl;
@@ -115,7 +115,6 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
             this.singleSignOnUrl = Input.ofNullable(singleSignOnUrl);
             return this;
         }
-
         public LogzOrganizationPropertiesArgs build() {
             return new LogzOrganizationPropertiesArgs(companyName, enterpriseAppId, singleSignOnUrl);
         }

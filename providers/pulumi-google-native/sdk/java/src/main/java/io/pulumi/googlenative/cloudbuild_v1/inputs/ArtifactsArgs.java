@@ -25,7 +25,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<String>> images;
+      private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -36,7 +36,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objects")
-    private final @Nullable Input<ArtifactObjectsArgs> objects;
+      private final @Nullable Input<ArtifactObjectsArgs> objects;
 
     public Input<ArtifactObjectsArgs> getObjects() {
         return this.objects == null ? Input.empty() : this.objects;
@@ -95,7 +95,6 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
             this.objects = Input.ofNullable(objects);
             return this;
         }
-
         public ArtifactsArgs build() {
             return new ArtifactsArgs(images, objects);
         }

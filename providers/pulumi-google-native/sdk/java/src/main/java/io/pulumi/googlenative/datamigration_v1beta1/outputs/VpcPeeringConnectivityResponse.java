@@ -52,7 +52,6 @@ public final class VpcPeeringConnectivityResponse {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public VpcPeeringConnectivityResponse build() {
             return new VpcPeeringConnectivityResponse(vpc);
         }

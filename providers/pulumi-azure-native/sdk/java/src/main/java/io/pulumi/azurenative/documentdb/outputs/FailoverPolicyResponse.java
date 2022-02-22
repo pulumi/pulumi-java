@@ -98,7 +98,6 @@ public final class FailoverPolicyResponse {
             this.locationName = locationName;
             return this;
         }
-
         public FailoverPolicyResponse build() {
             return new FailoverPolicyResponse(failoverPriority, id, locationName);
         }

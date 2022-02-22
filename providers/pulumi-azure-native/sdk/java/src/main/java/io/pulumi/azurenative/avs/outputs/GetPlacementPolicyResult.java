@@ -119,7 +119,6 @@ public final class GetPlacementPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPlacementPolicyResult build() {
             return new GetPlacementPolicyResult(id, name, properties, type);
         }

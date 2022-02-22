@@ -14,7 +14,7 @@ public final class StandardSqlStructTypeResponse extends io.pulumi.resources.Inv
     public static final StandardSqlStructTypeResponse Empty = new StandardSqlStructTypeResponse();
 
     @InputImport(name="fields", required=true)
-    private final List<StandardSqlFieldResponse> fields;
+      private final List<StandardSqlFieldResponse> fields;
 
     public List<StandardSqlFieldResponse> getFields() {
         return this.fields;
@@ -52,7 +52,6 @@ public final class StandardSqlStructTypeResponse extends io.pulumi.resources.Inv
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public StandardSqlStructTypeResponse build() {
             return new StandardSqlStructTypeResponse(fields);
         }

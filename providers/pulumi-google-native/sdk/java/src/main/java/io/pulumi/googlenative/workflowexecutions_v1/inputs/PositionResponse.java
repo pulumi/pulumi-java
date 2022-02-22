@@ -21,7 +21,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="column", required=true)
-    private final String column;
+      private final String column;
 
     public String getColumn() {
         return this.column;
@@ -32,7 +32,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="length", required=true)
-    private final String length;
+      private final String length;
 
     public String getLength() {
         return this.length;
@@ -43,7 +43,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="line", required=true)
-    private final String line;
+      private final String line;
 
     public String getLine() {
         return this.line;
@@ -102,7 +102,6 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
             this.line = Objects.requireNonNull(line);
             return this;
         }
-
         public PositionResponse build() {
             return new PositionResponse(column, length, line);
         }

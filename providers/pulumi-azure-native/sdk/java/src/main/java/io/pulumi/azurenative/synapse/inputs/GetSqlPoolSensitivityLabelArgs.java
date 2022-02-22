@@ -17,7 +17,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="columnName", required=true)
-    private final String columnName;
+        private final String columnName;
 
     public String getColumnName() {
         return this.columnName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="schemaName", required=true)
-    private final String schemaName;
+        private final String schemaName;
 
     public String getSchemaName() {
         return this.schemaName;
@@ -50,7 +50,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sensitivityLabelSource", required=true)
-    private final String sensitivityLabelSource;
+        private final String sensitivityLabelSource;
 
     public String getSensitivityLabelSource() {
         return this.sensitivityLabelSource;
@@ -61,7 +61,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-    private final String sqlPoolName;
+        private final String sqlPoolName;
 
     public String getSqlPoolName() {
         return this.sqlPoolName;
@@ -72,7 +72,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -83,7 +83,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -182,7 +182,6 @@ public final class GetSqlPoolSensitivityLabelArgs extends io.pulumi.resources.In
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetSqlPoolSensitivityLabelArgs build() {
             return new GetSqlPoolSensitivityLabelArgs(columnName, resourceGroupName, schemaName, sensitivityLabelSource, sqlPoolName, tableName, workspaceName);
         }

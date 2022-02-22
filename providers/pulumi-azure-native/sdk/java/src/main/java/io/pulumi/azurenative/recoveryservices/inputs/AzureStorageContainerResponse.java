@@ -24,7 +24,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable String backupManagementType;
+        private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -39,7 +39,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final String containerType;
+        private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -50,7 +50,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+        private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -61,7 +61,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable String healthStatus;
+        private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
@@ -72,7 +72,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="protectedItemCount")
-    private final @Nullable Double protectedItemCount;
+        private final @Nullable Double protectedItemCount;
 
     public Optional<Double> getProtectedItemCount() {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
@@ -83,7 +83,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable String registrationStatus;
+        private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
@@ -94,7 +94,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+        private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -105,7 +105,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable String sourceResourceId;
+        private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -116,7 +116,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="storageAccountVersion")
-    private final @Nullable String storageAccountVersion;
+        private final @Nullable String storageAccountVersion;
 
     public Optional<String> getStorageAccountVersion() {
         return this.storageAccountVersion == null ? Optional.empty() : Optional.ofNullable(this.storageAccountVersion);
@@ -235,7 +235,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
             this.storageAccountVersion = storageAccountVersion;
             return this;
         }
-
         public AzureStorageContainerResponse build() {
             return new AzureStorageContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
         }

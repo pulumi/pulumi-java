@@ -77,7 +77,6 @@ public final class ScopeResponse {
             this.values = values;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(scopeType, values);
         }

@@ -22,7 +22,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metricCosts", required=true)
-    private final Map<String,String> metricCosts;
+      private final Map<String,String> metricCosts;
 
     public Map<String,String> getMetricCosts() {
         return this.metricCosts;
@@ -33,7 +33,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -82,7 +82,6 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public MetricRuleResponse build() {
             return new MetricRuleResponse(metricCosts, selector);
         }

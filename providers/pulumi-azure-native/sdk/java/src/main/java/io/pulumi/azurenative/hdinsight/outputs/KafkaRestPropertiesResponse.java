@@ -78,7 +78,6 @@ public final class KafkaRestPropertiesResponse {
             this.configurationOverride = configurationOverride;
             return this;
         }
-
         public KafkaRestPropertiesResponse build() {
             return new KafkaRestPropertiesResponse(clientGroupInfo, configurationOverride);
         }

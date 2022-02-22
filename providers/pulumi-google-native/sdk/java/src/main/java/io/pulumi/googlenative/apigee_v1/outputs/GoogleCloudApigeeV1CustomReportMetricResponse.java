@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudApigeeV1CustomReportMetricResponse build() {
             return new GoogleCloudApigeeV1CustomReportMetricResponse(function, name);
         }

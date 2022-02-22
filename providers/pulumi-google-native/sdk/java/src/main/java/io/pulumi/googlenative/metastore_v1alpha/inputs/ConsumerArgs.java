@@ -23,7 +23,7 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -66,7 +66,6 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public ConsumerArgs build() {
             return new ConsumerArgs(subnetwork);
         }

@@ -52,7 +52,6 @@ public final class FeatureResourceStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FeatureResourceStateResponse build() {
             return new FeatureResourceStateResponse(state);
         }

@@ -245,7 +245,6 @@ public final class DeliveryPipelineResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public DeliveryPipelineResponse build() {
             return new DeliveryPipelineResponse(annotations, condition, createTime, description, etag, labels, name, serialPipeline, uid, updateTime);
         }

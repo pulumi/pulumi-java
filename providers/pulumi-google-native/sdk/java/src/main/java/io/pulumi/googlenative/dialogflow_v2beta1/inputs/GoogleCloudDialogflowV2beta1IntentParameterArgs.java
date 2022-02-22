@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="entityTypeDisplayName")
-    private final @Nullable Input<String> entityTypeDisplayName;
+      private final @Nullable Input<String> entityTypeDisplayName;
 
     public Input<String> getEntityTypeDisplayName() {
         return this.entityTypeDisplayName == null ? Input.empty() : this.entityTypeDisplayName;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="isList")
-    private final @Nullable Input<Boolean> isList;
+      private final @Nullable Input<Boolean> isList;
 
     public Input<Boolean> getIsList() {
         return this.isList == null ? Input.empty() : this.isList;
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="mandatory")
-    private final @Nullable Input<Boolean> mandatory;
+      private final @Nullable Input<Boolean> mandatory;
 
     public Input<Boolean> getMandatory() {
         return this.mandatory == null ? Input.empty() : this.mandatory;
@@ -80,7 +80,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="prompts")
-    private final @Nullable Input<List<String>> prompts;
+      private final @Nullable Input<List<String>> prompts;
 
     public Input<List<String>> getPrompts() {
         return this.prompts == null ? Input.empty() : this.prompts;
@@ -102,7 +102,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -251,7 +251,6 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends io.pu
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentParameterArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentParameterArgs(defaultValue, displayName, entityTypeDisplayName, isList, mandatory, name, prompts, value);
         }

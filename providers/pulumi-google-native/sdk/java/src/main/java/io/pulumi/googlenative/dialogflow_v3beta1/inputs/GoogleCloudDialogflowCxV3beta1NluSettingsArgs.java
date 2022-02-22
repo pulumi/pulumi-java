@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="classificationThreshold")
-    private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Input<Double> classificationThreshold;
 
     public Input<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="modelTrainingMode")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode;
 
     public Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> getModelTrainingMode() {
         return this.modelTrainingMode == null ? Input.empty() : this.modelTrainingMode;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="modelType")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType;
 
     public Input<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> getModelType() {
         return this.modelType == null ? Input.empty() : this.modelType;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends io.pulu
             this.modelType = Input.ofNullable(modelType);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1NluSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1NluSettingsArgs(classificationThreshold, modelTrainingMode, modelType);
         }

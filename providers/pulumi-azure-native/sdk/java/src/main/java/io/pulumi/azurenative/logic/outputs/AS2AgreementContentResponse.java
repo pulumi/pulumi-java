@@ -74,7 +74,6 @@ public final class AS2AgreementContentResponse {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public AS2AgreementContentResponse build() {
             return new AS2AgreementContentResponse(receiveAgreement, sendAgreement);
         }

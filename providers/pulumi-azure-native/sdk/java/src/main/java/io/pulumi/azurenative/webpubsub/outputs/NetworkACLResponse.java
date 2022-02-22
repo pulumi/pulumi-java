@@ -76,7 +76,6 @@ public final class NetworkACLResponse {
             this.deny = deny;
             return this;
         }
-
         public NetworkACLResponse build() {
             return new NetworkACLResponse(allow, deny);
         }

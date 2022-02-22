@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigArgs extends io.pu
      * 
      */
     @InputImport(name="agent", required=true)
-    private final Input<String> agent;
+      private final Input<String> agent;
 
     public Input<String> getAgent() {
         return this.agent;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigArgs extends io.pu
             this.agent = Input.of(Objects.requireNonNull(agent));
             return this;
         }
-
         public GoogleCloudDialogflowV2AutomatedAgentConfigArgs build() {
             return new GoogleCloudDialogflowV2AutomatedAgentConfigArgs(agent);
         }

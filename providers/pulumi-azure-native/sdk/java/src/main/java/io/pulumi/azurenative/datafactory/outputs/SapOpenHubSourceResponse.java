@@ -268,7 +268,6 @@ public final class SapOpenHubSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapOpenHubSourceResponse build() {
             return new SapOpenHubSourceResponse(additionalColumns, baseRequestId, customRfcReadTableFunctionModule, disableMetricsCollection, excludeLastRequest, maxConcurrentConnections, queryTimeout, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }

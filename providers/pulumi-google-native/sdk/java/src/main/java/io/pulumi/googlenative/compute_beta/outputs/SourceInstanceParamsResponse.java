@@ -53,7 +53,6 @@ public final class SourceInstanceParamsResponse {
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }
-
         public SourceInstanceParamsResponse build() {
             return new SourceInstanceParamsResponse(diskConfigs);
         }

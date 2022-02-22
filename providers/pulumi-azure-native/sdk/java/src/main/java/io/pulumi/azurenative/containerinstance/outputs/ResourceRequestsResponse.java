@@ -98,7 +98,6 @@ public final class ResourceRequestsResponse {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, gpu, memoryInGB);
         }

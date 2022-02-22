@@ -45,7 +45,6 @@ public final class Rec {
             this.rec1 = rec1;
             return this;
         }
-
         public Rec build() {
             return new Rec(rec1);
         }

@@ -185,7 +185,6 @@ public final class GetMECRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMECRoleResult build() {
             return new GetMECRoleResult(connectionString, id, kind, name, roleStatus, systemData, type);
         }

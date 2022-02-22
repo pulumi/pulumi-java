@@ -204,7 +204,6 @@ public final class GetCloudEdgeManagementRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudEdgeManagementRoleResult build() {
             return new GetCloudEdgeManagementRoleResult(edgeProfile, id, kind, localManagementStatus, name, roleStatus, systemData, type);
         }

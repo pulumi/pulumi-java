@@ -97,7 +97,6 @@ public final class WsfcDomainCredentialsResponse {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
-
         public WsfcDomainCredentialsResponse build() {
             return new WsfcDomainCredentialsResponse(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
         }

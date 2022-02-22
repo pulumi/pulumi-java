@@ -22,7 +22,7 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sasToken", required=true)
-    private final Input<String> sasToken;
+      private final Input<String> sasToken;
 
     public Input<String> getSasToken() {
         return this.sasToken;
@@ -65,7 +65,6 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
             this.sasToken = Input.of(Objects.requireNonNull(sasToken));
             return this;
         }
-
         public AzureCredentialsArgs build() {
             return new AzureCredentialsArgs(sasToken);
         }

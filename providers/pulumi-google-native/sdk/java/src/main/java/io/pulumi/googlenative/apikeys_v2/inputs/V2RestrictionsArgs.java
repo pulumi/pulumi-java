@@ -28,7 +28,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidKeyRestrictions")
-    private final @Nullable Input<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
+      private final @Nullable Input<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
 
     public Input<V2AndroidKeyRestrictionsArgs> getAndroidKeyRestrictions() {
         return this.androidKeyRestrictions == null ? Input.empty() : this.androidKeyRestrictions;
@@ -39,7 +39,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiTargets")
-    private final @Nullable Input<List<V2ApiTargetArgs>> apiTargets;
+      private final @Nullable Input<List<V2ApiTargetArgs>> apiTargets;
 
     public Input<List<V2ApiTargetArgs>> getApiTargets() {
         return this.apiTargets == null ? Input.empty() : this.apiTargets;
@@ -50,7 +50,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="browserKeyRestrictions")
-    private final @Nullable Input<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
+      private final @Nullable Input<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
 
     public Input<V2BrowserKeyRestrictionsArgs> getBrowserKeyRestrictions() {
         return this.browserKeyRestrictions == null ? Input.empty() : this.browserKeyRestrictions;
@@ -61,7 +61,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosKeyRestrictions")
-    private final @Nullable Input<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
+      private final @Nullable Input<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
 
     public Input<V2IosKeyRestrictionsArgs> getIosKeyRestrictions() {
         return this.iosKeyRestrictions == null ? Input.empty() : this.iosKeyRestrictions;
@@ -72,7 +72,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverKeyRestrictions")
-    private final @Nullable Input<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
+      private final @Nullable Input<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
 
     public Input<V2ServerKeyRestrictionsArgs> getServerKeyRestrictions() {
         return this.serverKeyRestrictions == null ? Input.empty() : this.serverKeyRestrictions;
@@ -176,7 +176,6 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             this.serverKeyRestrictions = Input.ofNullable(serverKeyRestrictions);
             return this;
         }
-
         public V2RestrictionsArgs build() {
             return new V2RestrictionsArgs(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);
         }

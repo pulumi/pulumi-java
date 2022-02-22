@@ -23,7 +23,7 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -45,21 +45,21 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;
@@ -70,7 +70,7 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -81,7 +81,7 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -215,7 +215,6 @@ public final class OrganizationSourceIamPolicyArgs extends io.pulumi.resources.R
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public OrganizationSourceIamPolicyArgs build() {
             return new OrganizationSourceIamPolicyArgs(auditConfigs, bindings, etag, organizationId, sourceId, updateMask, version);
         }

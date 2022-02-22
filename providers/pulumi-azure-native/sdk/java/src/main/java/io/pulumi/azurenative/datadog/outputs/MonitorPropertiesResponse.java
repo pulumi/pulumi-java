@@ -168,7 +168,6 @@ public final class MonitorPropertiesResponse {
             this.userInfo = userInfo;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(datadogOrganizationProperties, liftrResourceCategory, liftrResourcePreference, marketplaceSubscriptionStatus, monitoringStatus, provisioningState, userInfo);
         }

@@ -17,7 +17,7 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -28,7 +28,7 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userSettingsName", required=true)
-    private final String userSettingsName;
+        private final String userSettingsName;
 
     public String getUserSettingsName() {
         return this.userSettingsName;
@@ -77,7 +77,6 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
             this.userSettingsName = Objects.requireNonNull(userSettingsName);
             return this;
         }
-
         public GetUserSettingsWithLocationArgs build() {
             return new GetUserSettingsWithLocationArgs(location, userSettingsName);
         }

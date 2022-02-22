@@ -77,7 +77,6 @@ public final class CustomerManagedKeyDetailsResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public CustomerManagedKeyDetailsResponse build() {
             return new CustomerManagedKeyDetailsResponse(key, status);
         }

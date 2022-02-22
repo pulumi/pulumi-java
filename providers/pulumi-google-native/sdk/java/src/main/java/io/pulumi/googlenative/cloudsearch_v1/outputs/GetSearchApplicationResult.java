@@ -271,7 +271,6 @@ public final class GetSearchApplicationResult {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
-
         public GetSearchApplicationResult build() {
             return new GetSearchApplicationResult(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, operationIds, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
         }

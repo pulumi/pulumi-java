@@ -288,7 +288,6 @@ public final class GetFirewallPolicyResult {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(associations, creationTimestamp, description, fingerprint, kind, name, parent, ruleTupleCount, rules, selfLink, selfLinkWithId, shortName);
         }

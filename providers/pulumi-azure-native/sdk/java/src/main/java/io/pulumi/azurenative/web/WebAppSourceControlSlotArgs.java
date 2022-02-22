@@ -21,7 +21,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+        private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -32,7 +32,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deploymentRollbackEnabled")
-    private final @Nullable Input<Boolean> deploymentRollbackEnabled;
+        private final @Nullable Input<Boolean> deploymentRollbackEnabled;
 
     public Input<Boolean> getDeploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled == null ? Input.empty() : this.deploymentRollbackEnabled;
@@ -43,7 +43,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="gitHubActionConfiguration")
-    private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
+        private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
     public Input<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
         return this.gitHubActionConfiguration == null ? Input.empty() : this.gitHubActionConfiguration;
@@ -54,7 +54,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isGitHubAction")
-    private final @Nullable Input<Boolean> isGitHubAction;
+        private final @Nullable Input<Boolean> isGitHubAction;
 
     public Input<Boolean> getIsGitHubAction() {
         return this.isGitHubAction == null ? Input.empty() : this.isGitHubAction;
@@ -65,7 +65,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isManualIntegration")
-    private final @Nullable Input<Boolean> isManualIntegration;
+        private final @Nullable Input<Boolean> isManualIntegration;
 
     public Input<Boolean> getIsManualIntegration() {
         return this.isManualIntegration == null ? Input.empty() : this.isManualIntegration;
@@ -76,7 +76,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isMercurial")
-    private final @Nullable Input<Boolean> isMercurial;
+        private final @Nullable Input<Boolean> isMercurial;
 
     public Input<Boolean> getIsMercurial() {
         return this.isMercurial == null ? Input.empty() : this.isMercurial;
@@ -87,7 +87,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -98,7 +98,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -109,7 +109,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="repoUrl")
-    private final @Nullable Input<String> repoUrl;
+        private final @Nullable Input<String> repoUrl;
 
     public Input<String> getRepoUrl() {
         return this.repoUrl == null ? Input.empty() : this.repoUrl;
@@ -120,7 +120,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -131,7 +131,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -325,7 +325,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppSourceControlSlotArgs build() {
             return new WebAppSourceControlSlotArgs(branch, deploymentRollbackEnabled, gitHubActionConfiguration, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, resourceGroupName, slot);
         }

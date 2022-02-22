@@ -567,7 +567,6 @@ public final class GetLabResult {
             this.vmCreationResourceGroup = Objects.requireNonNull(vmCreationResourceGroup);
             return this;
         }
-
         public GetLabResult build() {
             return new GetLabResult(announcement, artifactsStorageAccount, createdDate, defaultPremiumStorageAccount, defaultStorageAccount, environmentPermission, extendedProperties, id, labStorageType, loadBalancerId, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, networkSecurityGroupId, premiumDataDiskStorageAccount, premiumDataDisks, provisioningState, publicIpId, support, tags, type, uniqueIdentifier, vaultName, vmCreationResourceGroup);
         }

@@ -53,7 +53,6 @@ public final class TimeSeriesTableResponse {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
         public TimeSeriesTableResponse build() {
             return new TimeSeriesTableResponse(dataSets);
         }

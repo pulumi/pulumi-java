@@ -118,7 +118,6 @@ public final class ScriptReferenceResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ScriptReferenceResponse build() {
             return new ScriptReferenceResponse(scriptArguments, scriptData, scriptSource, timeout);
         }

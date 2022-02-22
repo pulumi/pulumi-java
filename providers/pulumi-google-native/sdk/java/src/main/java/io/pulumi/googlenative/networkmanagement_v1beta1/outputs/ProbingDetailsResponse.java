@@ -204,7 +204,6 @@ public final class ProbingDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ProbingDetailsResponse build() {
             return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }

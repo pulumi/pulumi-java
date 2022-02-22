@@ -160,7 +160,6 @@ public final class GetRolloutResult {
             this.trafficPercentStrategy = Objects.requireNonNull(trafficPercentStrategy);
             return this;
         }
-
         public GetRolloutResult build() {
             return new GetRolloutResult(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
         }

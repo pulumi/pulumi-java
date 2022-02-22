@@ -76,7 +76,6 @@ public final class DynamicGroupMetadataResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DynamicGroupMetadataResponse build() {
             return new DynamicGroupMetadataResponse(queries, status);
         }

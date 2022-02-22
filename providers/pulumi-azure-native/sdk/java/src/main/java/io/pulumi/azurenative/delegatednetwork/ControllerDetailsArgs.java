@@ -20,7 +20,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -53,7 +53,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -142,7 +142,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ControllerDetailsArgs build() {
             return new ControllerDetailsArgs(location, resourceGroupName, resourceName, tags);
         }

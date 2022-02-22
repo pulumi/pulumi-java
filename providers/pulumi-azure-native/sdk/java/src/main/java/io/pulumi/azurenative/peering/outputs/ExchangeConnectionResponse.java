@@ -141,7 +141,6 @@ public final class ExchangeConnectionResponse {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-
         public ExchangeConnectionResponse build() {
             return new ExchangeConnectionResponse(bgpSession, connectionIdentifier, connectionState, errorMessage, peeringDBFacilityId);
         }

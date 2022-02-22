@@ -98,7 +98,6 @@ public final class IPConfigResponse {
             this.staticIPAddress = staticIPAddress;
             return this;
         }
-
         public IPConfigResponse build() {
             return new IPConfigResponse(lBBackendAddressPoolIds, publicIpAddressId, staticIPAddress);
         }

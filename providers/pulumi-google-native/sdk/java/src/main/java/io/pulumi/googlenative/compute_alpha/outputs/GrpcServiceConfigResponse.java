@@ -97,7 +97,6 @@ public final class GrpcServiceConfigResponse {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GrpcServiceConfigResponse build() {
             return new GrpcServiceConfigResponse(callCredentials, channelCredentials, targetUri);
         }

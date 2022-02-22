@@ -76,7 +76,6 @@ public final class RuntimeMetadataResponse {
             this.sdkInfo = Objects.requireNonNull(sdkInfo);
             return this;
         }
-
         public RuntimeMetadataResponse build() {
             return new RuntimeMetadataResponse(parameters, sdkInfo);
         }

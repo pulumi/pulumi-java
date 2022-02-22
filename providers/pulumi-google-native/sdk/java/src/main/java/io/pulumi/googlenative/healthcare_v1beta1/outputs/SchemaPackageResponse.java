@@ -141,7 +141,6 @@ public final class SchemaPackageResponse {
             this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
             return this;
         }
-
         public SchemaPackageResponse build() {
             return new SchemaPackageResponse(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);
         }

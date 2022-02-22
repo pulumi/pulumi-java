@@ -138,7 +138,6 @@ public final class FieldResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldResponse build() {
             return new FieldResponse(maxOccurs, minOccurs, name, table, type);
         }

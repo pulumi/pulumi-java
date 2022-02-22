@@ -243,7 +243,6 @@ public final class GetKeyResult {
             this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(disabled, keyAlgorithm, keyOrigin, keyType, name, privateKeyData, privateKeyType, publicKeyData, validAfterTime, validBeforeTime);
         }

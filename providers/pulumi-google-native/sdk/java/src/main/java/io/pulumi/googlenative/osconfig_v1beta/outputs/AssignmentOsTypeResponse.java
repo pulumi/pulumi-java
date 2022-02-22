@@ -95,7 +95,6 @@ public final class AssignmentOsTypeResponse {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public AssignmentOsTypeResponse build() {
             return new AssignmentOsTypeResponse(osArchitecture, osShortName, osVersion);
         }

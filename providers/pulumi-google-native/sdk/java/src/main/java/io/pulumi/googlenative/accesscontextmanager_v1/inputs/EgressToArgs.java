@@ -25,7 +25,7 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<ApiOperationArgs>> operations;
+      private final @Nullable Input<List<ApiOperationArgs>> operations;
 
     public Input<List<ApiOperationArgs>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -36,7 +36,7 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -95,7 +95,6 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
             this.resources = Input.ofNullable(resources);
             return this;
         }
-
         public EgressToArgs build() {
             return new EgressToArgs(operations, resources);
         }

@@ -54,7 +54,6 @@ public final class PipelineSourceTriggerDescriptorResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public PipelineSourceTriggerDescriptorResponse build() {
             return new PipelineSourceTriggerDescriptorResponse(timestamp);
         }

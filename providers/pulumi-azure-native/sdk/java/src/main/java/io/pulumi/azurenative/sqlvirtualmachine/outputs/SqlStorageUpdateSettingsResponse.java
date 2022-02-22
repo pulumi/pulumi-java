@@ -98,7 +98,6 @@ public final class SqlStorageUpdateSettingsResponse {
             this.startingDeviceId = startingDeviceId;
             return this;
         }
-
         public SqlStorageUpdateSettingsResponse build() {
             return new SqlStorageUpdateSettingsResponse(diskConfigurationType, diskCount, startingDeviceId);
         }

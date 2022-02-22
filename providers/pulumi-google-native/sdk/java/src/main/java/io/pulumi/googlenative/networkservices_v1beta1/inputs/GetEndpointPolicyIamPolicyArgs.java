@@ -15,28 +15,28 @@ public final class GetEndpointPolicyIamPolicyArgs extends io.pulumi.resources.In
     public static final GetEndpointPolicyIamPolicyArgs Empty = new GetEndpointPolicyIamPolicyArgs();
 
     @InputImport(name="endpointPolicyId", required=true)
-    private final String endpointPolicyId;
+      private final String endpointPolicyId;
 
     public String getEndpointPolicyId() {
         return this.endpointPolicyId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetEndpointPolicyIamPolicyArgs extends io.pulumi.resources.In
             this.project = project;
             return this;
         }
-
         public GetEndpointPolicyIamPolicyArgs build() {
             return new GetEndpointPolicyIamPolicyArgs(endpointPolicyId, location, optionsRequestedPolicyVersion, project);
         }

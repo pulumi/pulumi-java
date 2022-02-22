@@ -23,7 +23,7 @@ public final class BillingProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maxPrice")
-    private final @Nullable Double maxPrice;
+        private final @Nullable Double maxPrice;
 
     public Optional<Double> getMaxPrice() {
         return this.maxPrice == null ? Optional.empty() : Optional.ofNullable(this.maxPrice);
@@ -61,7 +61,6 @@ public final class BillingProfileResponse extends io.pulumi.resources.InvokeArgs
             this.maxPrice = maxPrice;
             return this;
         }
-
         public BillingProfileResponse build() {
             return new BillingProfileResponse(maxPrice);
         }

@@ -77,7 +77,6 @@ public final class RequestsBasedTriggerResponse {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public RequestsBasedTriggerResponse build() {
             return new RequestsBasedTriggerResponse(count, timeInterval);
         }

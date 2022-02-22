@@ -165,7 +165,6 @@ public final class DataBoxDiskJobSecretsResponse {
             this.passKey = Objects.requireNonNull(passKey);
             return this;
         }
-
         public DataBoxDiskJobSecretsResponse build() {
             return new DataBoxDiskJobSecretsResponse(dcAccessSecurityCode, diskSecrets, error, isPasskeyUserDefined, jobSecretsType, passKey);
         }

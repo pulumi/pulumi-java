@@ -76,7 +76,6 @@ public final class DefaultKeyResponse {
             this.policyName = policyName;
             return this;
         }
-
         public DefaultKeyResponse build() {
             return new DefaultKeyResponse(label, policyName);
         }

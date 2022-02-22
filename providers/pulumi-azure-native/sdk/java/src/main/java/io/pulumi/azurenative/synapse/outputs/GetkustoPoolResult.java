@@ -352,7 +352,6 @@ public final class GetkustoPoolResult {
             this.workspaceUid = workspaceUid;
             return this;
         }
-
         public GetkustoPoolResult build() {
             return new GetkustoPoolResult(dataIngestionUri, engineType, etag, id, location, name, provisioningState, sku, state, stateReason, systemData, tags, type, uri, workspaceUid);
         }

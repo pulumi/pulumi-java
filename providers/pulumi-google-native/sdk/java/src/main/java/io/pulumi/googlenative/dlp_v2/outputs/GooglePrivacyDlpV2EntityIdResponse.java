@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2EntityIdResponse build() {
             return new GooglePrivacyDlpV2EntityIdResponse(field);
         }

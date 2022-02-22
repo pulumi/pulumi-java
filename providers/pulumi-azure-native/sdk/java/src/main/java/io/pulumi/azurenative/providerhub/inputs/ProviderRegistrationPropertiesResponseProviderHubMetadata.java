@@ -18,21 +18,21 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
     public static final ProviderRegistrationPropertiesResponseProviderHubMetadata Empty = new ProviderRegistrationPropertiesResponseProviderHubMetadata();
 
     @InputImport(name="providerAuthentication")
-    private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
+        private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
 
     public Optional<ProviderHubMetadataResponseProviderAuthentication> getProviderAuthentication() {
         return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
     }
 
     @InputImport(name="providerAuthorizations")
-    private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
+        private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
     public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
 
     @InputImport(name="thirdPartyProviderAuthorization")
-    private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
+        private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
     public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> getThirdPartyProviderAuthorization() {
         return this.thirdPartyProviderAuthorization == null ? Optional.empty() : Optional.ofNullable(this.thirdPartyProviderAuthorization);
@@ -91,7 +91,6 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
-
         public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
             return new ProviderRegistrationPropertiesResponseProviderHubMetadata(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
         }

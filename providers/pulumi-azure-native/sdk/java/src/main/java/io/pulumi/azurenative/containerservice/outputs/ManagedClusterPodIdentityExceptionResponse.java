@@ -96,7 +96,6 @@ public final class ManagedClusterPodIdentityExceptionResponse {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }
-
         public ManagedClusterPodIdentityExceptionResponse build() {
             return new ManagedClusterPodIdentityExceptionResponse(name, namespace, podLabels);
         }

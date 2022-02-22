@@ -158,7 +158,6 @@ public final class ResourcePoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourcePoolResponse build() {
             return new ResourcePoolResponse(fullName, id, location, name, privateCloudId, type);
         }

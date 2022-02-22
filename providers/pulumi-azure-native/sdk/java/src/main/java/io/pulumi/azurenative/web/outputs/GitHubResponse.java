@@ -99,7 +99,6 @@ public final class GitHubResponse {
             this.registration = registration;
             return this;
         }
-
         public GitHubResponse build() {
             return new GitHubResponse(enabled, login, registration);
         }

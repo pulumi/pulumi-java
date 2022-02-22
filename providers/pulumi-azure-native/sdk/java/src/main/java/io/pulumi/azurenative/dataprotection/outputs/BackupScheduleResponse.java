@@ -53,7 +53,6 @@ public final class BackupScheduleResponse {
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }
-
         public BackupScheduleResponse build() {
             return new BackupScheduleResponse(repeatingTimeIntervals);
         }

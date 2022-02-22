@@ -24,7 +24,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
+        private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
     public Optional<RuleManagementEventClaimsDataSourceResponse> getClaims() {
         return this.claims == null ? Optional.empty() : Optional.ofNullable(this.claims);
@@ -35,7 +35,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="eventName")
-    private final @Nullable String eventName;
+        private final @Nullable String eventName;
 
     public Optional<String> getEventName() {
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
@@ -46,7 +46,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="eventSource")
-    private final @Nullable String eventSource;
+        private final @Nullable String eventSource;
 
     public Optional<String> getEventSource() {
         return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
@@ -57,7 +57,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="legacyResourceId")
-    private final @Nullable String legacyResourceId;
+        private final @Nullable String legacyResourceId;
 
     public Optional<String> getLegacyResourceId() {
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
@@ -68,7 +68,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+        private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -79,7 +79,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable String metricNamespace;
+        private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
@@ -91,7 +91,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -102,7 +102,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable String operationName;
+        private final @Nullable String operationName;
 
     public Optional<String> getOperationName() {
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
@@ -113,7 +113,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable String resourceGroupName;
+        private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
@@ -124,7 +124,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable String resourceLocation;
+        private final @Nullable String resourceLocation;
 
     public Optional<String> getResourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
@@ -135,7 +135,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceProviderName")
-    private final @Nullable String resourceProviderName;
+        private final @Nullable String resourceProviderName;
 
     public Optional<String> getResourceProviderName() {
         return this.resourceProviderName == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderName);
@@ -146,7 +146,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable String resourceUri;
+        private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
@@ -157,7 +157,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -168,7 +168,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="subStatus")
-    private final @Nullable String subStatus;
+        private final @Nullable String subStatus;
 
     public Optional<String> getSubStatus() {
         return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
@@ -337,7 +337,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
             this.subStatus = subStatus;
             return this;
         }
-
         public RuleManagementEventDataSourceResponse build() {
             return new RuleManagementEventDataSourceResponse(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
         }

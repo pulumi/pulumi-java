@@ -23,7 +23,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<String> payload;
+      private final @Nullable Input<String> payload;
 
     public Input<String> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -34,7 +34,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -93,7 +93,6 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public PullMessageArgs build() {
             return new PullMessageArgs(payload, tag);
         }

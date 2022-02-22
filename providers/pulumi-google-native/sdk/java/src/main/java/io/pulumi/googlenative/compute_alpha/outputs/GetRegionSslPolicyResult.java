@@ -329,7 +329,6 @@ public final class GetRegionSslPolicyResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetRegionSslPolicyResult build() {
             return new GetRegionSslPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, kind, minTlsVersion, name, profile, region, selfLink, selfLinkWithId, tlsSettings, warnings);
         }

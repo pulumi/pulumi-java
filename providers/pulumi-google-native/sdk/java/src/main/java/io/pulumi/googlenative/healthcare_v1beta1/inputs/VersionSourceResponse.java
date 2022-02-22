@@ -21,7 +21,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mshField", required=true)
-    private final String mshField;
+      private final String mshField;
 
     public String getMshField() {
         return this.mshField;
@@ -32,7 +32,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VersionSourceResponse build() {
             return new VersionSourceResponse(mshField, value);
         }

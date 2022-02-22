@@ -73,7 +73,6 @@ public final class ResourceProviderCapabilitiesResponse {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public ResourceProviderCapabilitiesResponse build() {
             return new ResourceProviderCapabilitiesResponse(effect, quotaId, requiredFeatures);
         }

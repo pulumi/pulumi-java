@@ -203,7 +203,6 @@ public final class DomainProvisioningResponse {
             this.expectedIps = Objects.requireNonNull(expectedIps);
             return this;
         }
-
         public DomainProvisioningResponse build() {
             return new DomainProvisioningResponse(certChallengeDiscoveredTxt, certChallengeDns, certChallengeHttp, certStatus, discoveredIps, dnsFetchTime, dnsStatus, expectedIps);
         }

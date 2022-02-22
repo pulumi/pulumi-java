@@ -329,7 +329,6 @@ public final class GetCryptoKeyVersionResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetCryptoKeyVersionResult build() {
             return new GetCryptoKeyVersionResult(algorithm, attestation, createTime, destroyEventTime, destroyTime, externalProtectionLevelOptions, generateTime, importFailureReason, importJob, importTime, name, protectionLevel, reimportEligible, state);
         }

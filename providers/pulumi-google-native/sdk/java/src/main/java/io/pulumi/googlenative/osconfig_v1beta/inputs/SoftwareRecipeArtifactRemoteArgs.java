@@ -23,7 +23,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<String> checksum;
+      private final @Nullable Input<String> checksum;
 
     public Input<String> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -93,7 +93,6 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public SoftwareRecipeArtifactRemoteArgs build() {
             return new SoftwareRecipeArtifactRemoteArgs(checksum, uri);
         }

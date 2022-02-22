@@ -23,7 +23,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="header")
-    private final @Nullable Input<String> header;
+      private final @Nullable Input<String> header;
 
     public Input<String> getHeader() {
         return this.header == null ? Input.empty() : this.header;
@@ -34,7 +34,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -45,7 +45,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valuePrefix")
-    private final @Nullable Input<String> valuePrefix;
+      private final @Nullable Input<String> valuePrefix;
 
     public Input<String> getValuePrefix() {
         return this.valuePrefix == null ? Input.empty() : this.valuePrefix;
@@ -119,7 +119,6 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.valuePrefix = Input.ofNullable(valuePrefix);
             return this;
         }
-
         public JwtLocationArgs build() {
             return new JwtLocationArgs(header, query, valuePrefix);
         }

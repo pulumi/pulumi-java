@@ -76,7 +76,6 @@ public final class LoadBalancerNatRuleReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public LoadBalancerNatRuleReferenceResponse build() {
             return new LoadBalancerNatRuleReferenceResponse(name, sourceArmResourceId);
         }

@@ -139,7 +139,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public AKSServiceResponseResponseLivenessProbeRequirements build() {
             return new AKSServiceResponseResponseLivenessProbeRequirements(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

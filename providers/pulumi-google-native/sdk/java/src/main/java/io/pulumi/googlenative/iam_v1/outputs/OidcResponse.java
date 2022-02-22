@@ -75,7 +75,6 @@ public final class OidcResponse {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public OidcResponse build() {
             return new OidcResponse(allowedAudiences, issuerUri);
         }

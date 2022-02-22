@@ -75,7 +75,6 @@ public final class ModelStateResponse {
             this.validationError = Objects.requireNonNull(validationError);
             return this;
         }
-
         public ModelStateResponse build() {
             return new ModelStateResponse(published, validationError);
         }

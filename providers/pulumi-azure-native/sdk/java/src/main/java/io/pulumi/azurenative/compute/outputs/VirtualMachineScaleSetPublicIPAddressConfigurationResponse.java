@@ -208,7 +208,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
             this.sku = sku;
             return this;
         }
-
         public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);
         }

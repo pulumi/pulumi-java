@@ -23,14 +23,14 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
+      private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
 
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> getItems() {
         return this.items;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -79,7 +79,6 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resourc
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public RRSetRoutingPolicyGeoPolicyResponse build() {
             return new RRSetRoutingPolicyGeoPolicyResponse(items, kind);
         }

@@ -20,7 +20,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     public static final AttestationArgs Empty = new AttestationArgs();
 
     @InputImport(name="genericSignedAttestation")
-    private final @Nullable Input<GenericSignedAttestationArgs> genericSignedAttestation;
+      private final @Nullable Input<GenericSignedAttestationArgs> genericSignedAttestation;
 
     public Input<GenericSignedAttestationArgs> getGenericSignedAttestation() {
         return this.genericSignedAttestation == null ? Input.empty() : this.genericSignedAttestation;
@@ -31,7 +31,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpSignedAttestation")
-    private final @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
+      private final @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
 
     public Input<PgpSignedAttestationArgs> getPgpSignedAttestation() {
         return this.pgpSignedAttestation == null ? Input.empty() : this.pgpSignedAttestation;
@@ -90,7 +90,6 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             this.pgpSignedAttestation = Input.ofNullable(pgpSignedAttestation);
             return this;
         }
-
         public AttestationArgs build() {
             return new AttestationArgs(genericSignedAttestation, pgpSignedAttestation);
         }

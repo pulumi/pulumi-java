@@ -81,7 +81,6 @@ public final class GetEntitiesGetTimelineResult {
             this.value = value;
             return this;
         }
-
         public GetEntitiesGetTimelineResult build() {
             return new GetEntitiesGetTimelineResult(metaData, value);
         }

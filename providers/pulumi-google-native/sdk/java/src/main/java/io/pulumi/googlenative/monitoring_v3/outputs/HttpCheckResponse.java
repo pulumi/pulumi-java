@@ -246,7 +246,6 @@ public final class HttpCheckResponse {
             this.validateSsl = Objects.requireNonNull(validateSsl);
             return this;
         }
-
         public HttpCheckResponse build() {
             return new HttpCheckResponse(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }

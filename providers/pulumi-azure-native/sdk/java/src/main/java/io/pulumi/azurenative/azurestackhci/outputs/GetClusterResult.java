@@ -499,7 +499,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(aadClientId, aadTenantId, billingModel, cloudId, createdAt, createdBy, createdByType, id, lastBillingTimestamp, lastModifiedAt, lastModifiedBy, lastModifiedByType, lastSyncTimestamp, location, name, provisioningState, registrationTimestamp, reportedProperties, status, tags, trialDaysRemaining, type);
         }

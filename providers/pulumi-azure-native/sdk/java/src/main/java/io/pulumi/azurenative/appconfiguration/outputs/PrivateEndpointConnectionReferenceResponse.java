@@ -162,7 +162,6 @@ public final class PrivateEndpointConnectionReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionReferenceResponse build() {
             return new PrivateEndpointConnectionReferenceResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

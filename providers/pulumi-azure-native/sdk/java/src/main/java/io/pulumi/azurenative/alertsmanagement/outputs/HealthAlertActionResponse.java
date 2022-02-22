@@ -77,7 +77,6 @@ public final class HealthAlertActionResponse {
             this.webHookProperties = webHookProperties;
             return this;
         }
-
         public HealthAlertActionResponse build() {
             return new HealthAlertActionResponse(actionGroupId, webHookProperties);
         }

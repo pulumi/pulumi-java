@@ -75,7 +75,6 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1UsageSignalResponse build() {
             return new GoogleCloudDatacatalogV1beta1UsageSignalResponse(updateTime, usageWithinTimeRange);
         }

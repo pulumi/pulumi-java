@@ -95,7 +95,6 @@ public final class LabelDescriptorResponse {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public LabelDescriptorResponse build() {
             return new LabelDescriptorResponse(description, key, valueType);
         }

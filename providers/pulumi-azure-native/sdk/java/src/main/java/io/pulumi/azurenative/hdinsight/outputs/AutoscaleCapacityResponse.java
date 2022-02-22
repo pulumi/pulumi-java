@@ -76,7 +76,6 @@ public final class AutoscaleCapacityResponse {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public AutoscaleCapacityResponse build() {
             return new AutoscaleCapacityResponse(maxInstanceCount, minInstanceCount);
         }

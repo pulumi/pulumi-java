@@ -226,7 +226,6 @@ public final class GetManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagerResult build() {
             return new GetManagerResult(cisIntrinsicSettings, etag, id, location, name, provisioningState, sku, tags, type);
         }

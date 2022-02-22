@@ -443,7 +443,6 @@ public final class GetRegionSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegionSecurityPolicyResult build() {
             return new GetRegionSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, cloudArmorConfig, creationTimestamp, ddosProtectionConfig, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, region, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
         }

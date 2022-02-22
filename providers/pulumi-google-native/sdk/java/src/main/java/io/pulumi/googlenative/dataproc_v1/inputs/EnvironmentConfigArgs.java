@@ -24,7 +24,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="executionConfig")
-    private final @Nullable Input<ExecutionConfigArgs> executionConfig;
+      private final @Nullable Input<ExecutionConfigArgs> executionConfig;
 
     public Input<ExecutionConfigArgs> getExecutionConfig() {
         return this.executionConfig == null ? Input.empty() : this.executionConfig;
@@ -35,7 +35,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peripheralsConfig")
-    private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
+      private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
 
     public Input<PeripheralsConfigArgs> getPeripheralsConfig() {
         return this.peripheralsConfig == null ? Input.empty() : this.peripheralsConfig;
@@ -94,7 +94,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             this.peripheralsConfig = Input.ofNullable(peripheralsConfig);
             return this;
         }
-
         public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(executionConfig, peripheralsConfig);
         }

@@ -52,7 +52,6 @@ public final class ContainerServiceSshPublicKeyResponse {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }
-
         public ContainerServiceSshPublicKeyResponse build() {
             return new ContainerServiceSshPublicKeyResponse(keyData);
         }

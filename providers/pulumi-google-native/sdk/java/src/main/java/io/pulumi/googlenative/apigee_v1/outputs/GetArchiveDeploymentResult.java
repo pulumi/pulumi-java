@@ -159,7 +159,6 @@ public final class GetArchiveDeploymentResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetArchiveDeploymentResult build() {
             return new GetArchiveDeploymentResult(createdAt, gcsUri, labels, name, operation, updatedAt);
         }

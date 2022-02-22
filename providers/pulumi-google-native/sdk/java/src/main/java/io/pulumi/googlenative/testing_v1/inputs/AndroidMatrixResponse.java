@@ -22,7 +22,7 @@ public final class AndroidMatrixResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="androidModelIds", required=true)
-    private final List<String> androidModelIds;
+      private final List<String> androidModelIds;
 
     public List<String> getAndroidModelIds() {
         return this.androidModelIds;
@@ -33,7 +33,7 @@ public final class AndroidMatrixResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="androidVersionIds", required=true)
-    private final List<String> androidVersionIds;
+      private final List<String> androidVersionIds;
 
     public List<String> getAndroidVersionIds() {
         return this.androidVersionIds;
@@ -44,7 +44,7 @@ public final class AndroidMatrixResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="locales", required=true)
-    private final List<String> locales;
+      private final List<String> locales;
 
     public List<String> getLocales() {
         return this.locales;
@@ -55,7 +55,7 @@ public final class AndroidMatrixResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="orientations", required=true)
-    private final List<String> orientations;
+      private final List<String> orientations;
 
     public List<String> getOrientations() {
         return this.orientations;
@@ -124,7 +124,6 @@ public final class AndroidMatrixResponse extends io.pulumi.resources.InvokeArgs 
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
-
         public AndroidMatrixResponse build() {
             return new AndroidMatrixResponse(androidModelIds, androidVersionIds, locales, orientations);
         }

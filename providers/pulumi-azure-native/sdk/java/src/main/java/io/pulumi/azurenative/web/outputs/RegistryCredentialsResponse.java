@@ -97,7 +97,6 @@ public final class RegistryCredentialsResponse {
             this.username = username;
             return this;
         }
-
         public RegistryCredentialsResponse build() {
             return new RegistryCredentialsResponse(passwordSecretRef, server, username);
         }

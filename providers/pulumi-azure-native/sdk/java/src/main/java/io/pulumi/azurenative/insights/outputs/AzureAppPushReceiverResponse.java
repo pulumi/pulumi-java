@@ -74,7 +74,6 @@ public final class AzureAppPushReceiverResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AzureAppPushReceiverResponse build() {
             return new AzureAppPushReceiverResponse(emailAddress, name);
         }

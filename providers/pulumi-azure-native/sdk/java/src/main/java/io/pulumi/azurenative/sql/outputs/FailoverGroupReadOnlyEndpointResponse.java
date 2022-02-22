@@ -54,7 +54,6 @@ public final class FailoverGroupReadOnlyEndpointResponse {
             this.failoverPolicy = failoverPolicy;
             return this;
         }
-
         public FailoverGroupReadOnlyEndpointResponse build() {
             return new FailoverGroupReadOnlyEndpointResponse(failoverPolicy);
         }

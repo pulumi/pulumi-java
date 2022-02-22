@@ -54,7 +54,6 @@ public final class DedicatedHostAvailableCapacityResponse {
             this.allocatableVMs = allocatableVMs;
             return this;
         }
-
         public DedicatedHostAvailableCapacityResponse build() {
             return new DedicatedHostAvailableCapacityResponse(allocatableVMs);
         }

@@ -116,7 +116,6 @@ public final class VirtualNetworkRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, name, subnetId, type);
         }

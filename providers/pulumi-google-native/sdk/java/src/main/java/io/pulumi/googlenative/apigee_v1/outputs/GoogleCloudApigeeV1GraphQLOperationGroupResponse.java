@@ -76,7 +76,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
         }

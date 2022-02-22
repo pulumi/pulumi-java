@@ -75,7 +75,6 @@ public final class ActivityDependencyResponse {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }
-
         public ActivityDependencyResponse build() {
             return new ActivityDependencyResponse(activity, dependencyConditions);
         }

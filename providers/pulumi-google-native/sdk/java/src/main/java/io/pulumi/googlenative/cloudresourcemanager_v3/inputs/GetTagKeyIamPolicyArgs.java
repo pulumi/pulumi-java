@@ -13,7 +13,7 @@ public final class GetTagKeyIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetTagKeyIamPolicyArgs Empty = new GetTagKeyIamPolicyArgs();
 
     @InputImport(name="tagKeyId", required=true)
-    private final String tagKeyId;
+      private final String tagKeyId;
 
     public String getTagKeyId() {
         return this.tagKeyId;
@@ -51,7 +51,6 @@ public final class GetTagKeyIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.tagKeyId = Objects.requireNonNull(tagKeyId);
             return this;
         }
-
         public GetTagKeyIamPolicyArgs build() {
             return new GetTagKeyIamPolicyArgs(tagKeyId);
         }

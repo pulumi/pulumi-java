@@ -26,7 +26,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostType")
-    private final @Nullable Input<HostType> hostType;
+        private final @Nullable Input<HostType> hostType;
 
     public Input<HostType> getHostType() {
         return this.hostType == null ? Input.empty() : this.hostType;
@@ -37,7 +37,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sslState")
-    private final @Nullable Input<SslState> sslState;
+        private final @Nullable Input<SslState> sslState;
 
     public Input<SslState> getSslState() {
         return this.sslState == null ? Input.empty() : this.sslState;
@@ -59,7 +59,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+        private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -70,7 +70,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="toUpdate")
-    private final @Nullable Input<Boolean> toUpdate;
+        private final @Nullable Input<Boolean> toUpdate;
 
     public Input<Boolean> getToUpdate() {
         return this.toUpdate == null ? Input.empty() : this.toUpdate;
@@ -81,7 +81,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="virtualIP")
-    private final @Nullable Input<String> virtualIP;
+        private final @Nullable Input<String> virtualIP;
 
     public Input<String> getVirtualIP() {
         return this.virtualIP == null ? Input.empty() : this.virtualIP;
@@ -200,7 +200,6 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             this.virtualIP = Input.ofNullable(virtualIP);
             return this;
         }
-
         public HostNameSslStateArgs build() {
             return new HostNameSslStateArgs(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }

@@ -140,7 +140,6 @@ public final class GetQueueResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(approximateMessageCount, id, metadata, name, type);
         }

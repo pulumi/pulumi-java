@@ -76,7 +76,6 @@ public final class EntityInsightItemResponseQueryTimeInterval {
             this.startTime = startTime;
             return this;
         }
-
         public EntityInsightItemResponseQueryTimeInterval build() {
             return new EntityInsightItemResponseQueryTimeInterval(endTime, startTime);
         }

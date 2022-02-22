@@ -22,7 +22,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyspaceName")
-    private final @Nullable Input<String> keyspaceName;
+        private final @Nullable Input<String> keyspaceName;
 
     public Input<String> getKeyspaceName() {
         return this.keyspaceName == null ? Input.empty() : this.keyspaceName;
@@ -44,7 +44,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CreateUpdateOptionsArgs> options;
+        private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -66,7 +66,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<CassandraKeyspaceResourceArgs> resource;
+        private final Input<CassandraKeyspaceResourceArgs> resource;
 
     public Input<CassandraKeyspaceResourceArgs> getResource() {
         return this.resource;
@@ -77,7 +77,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class CassandraResourceCassandraKeyspaceArgs extends io.pulumi.reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CassandraResourceCassandraKeyspaceArgs build() {
             return new CassandraResourceCassandraKeyspaceArgs(accountName, keyspaceName, location, options, resource, resourceGroupName, tags);
         }

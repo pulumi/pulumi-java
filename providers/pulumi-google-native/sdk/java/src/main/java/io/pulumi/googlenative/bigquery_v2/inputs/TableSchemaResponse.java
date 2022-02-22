@@ -18,7 +18,7 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<TableFieldSchemaResponse> fields;
+      private final List<TableFieldSchemaResponse> fields;
 
     public List<TableFieldSchemaResponse> getFields() {
         return this.fields;
@@ -56,7 +56,6 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public TableSchemaResponse build() {
             return new TableSchemaResponse(fields);
         }

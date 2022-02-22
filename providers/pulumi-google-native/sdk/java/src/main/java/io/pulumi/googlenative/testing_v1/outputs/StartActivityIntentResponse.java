@@ -96,7 +96,6 @@ public final class StartActivityIntentResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public StartActivityIntentResponse build() {
             return new StartActivityIntentResponse(action, categories, uri);
         }

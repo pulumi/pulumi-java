@@ -97,7 +97,6 @@ public final class AzureFileFilterDetailsResponse {
             this.fileShareList = fileShareList;
             return this;
         }
-
         public AzureFileFilterDetailsResponse build() {
             return new AzureFileFilterDetailsResponse(filePathList, filePrefixList, fileShareList);
         }

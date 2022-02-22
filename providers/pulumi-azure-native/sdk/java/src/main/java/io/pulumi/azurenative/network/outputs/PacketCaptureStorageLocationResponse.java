@@ -97,7 +97,6 @@ public final class PacketCaptureStorageLocationResponse {
             this.storagePath = storagePath;
             return this;
         }
-
         public PacketCaptureStorageLocationResponse build() {
             return new PacketCaptureStorageLocationResponse(filePath, storageId, storagePath);
         }

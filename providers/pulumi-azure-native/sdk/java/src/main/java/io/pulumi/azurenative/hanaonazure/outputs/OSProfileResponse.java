@@ -118,7 +118,6 @@ public final class OSProfileResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public OSProfileResponse build() {
             return new OSProfileResponse(computerName, osType, sshPublicKey, version);
         }

@@ -74,7 +74,6 @@ public final class DeploymentUpdateLabelEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeploymentUpdateLabelEntryResponse build() {
             return new DeploymentUpdateLabelEntryResponse(key, value);
         }

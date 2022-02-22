@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="annotatedDatasetDescription")
-    private final @Nullable Input<String> annotatedDatasetDescription;
+      private final @Nullable Input<String> annotatedDatasetDescription;
 
     public Input<String> getAnnotatedDatasetDescription() {
         return this.annotatedDatasetDescription == null ? Input.empty() : this.annotatedDatasetDescription;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="annotatedDatasetDisplayName", required=true)
-    private final Input<String> annotatedDatasetDisplayName;
+      private final Input<String> annotatedDatasetDisplayName;
 
     public Input<String> getAnnotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="contributorEmails")
-    private final @Nullable Input<List<String>> contributorEmails;
+      private final @Nullable Input<List<String>> contributorEmails;
 
     public Input<List<String>> getContributorEmails() {
         return this.contributorEmails == null ? Input.empty() : this.contributorEmails;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="instruction", required=true)
-    private final Input<String> instruction;
+      private final Input<String> instruction;
 
     public Input<String> getInstruction() {
         return this.instruction;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="labelGroup")
-    private final @Nullable Input<String> labelGroup;
+      private final @Nullable Input<String> labelGroup;
 
     public Input<String> getLabelGroup() {
         return this.labelGroup == null ? Input.empty() : this.labelGroup;
@@ -80,7 +80,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -91,7 +91,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="questionDuration")
-    private final @Nullable Input<String> questionDuration;
+      private final @Nullable Input<String> questionDuration;
 
     public Input<String> getQuestionDuration() {
         return this.questionDuration == null ? Input.empty() : this.questionDuration;
@@ -102,7 +102,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="replicaCount")
-    private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -113,7 +113,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * 
      */
     @InputImport(name="userEmailAddress")
-    private final @Nullable Input<String> userEmailAddress;
+      private final @Nullable Input<String> userEmailAddress;
 
     public Input<String> getUserEmailAddress() {
         return this.userEmailAddress == null ? Input.empty() : this.userEmailAddress;
@@ -277,7 +277,6 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
             this.userEmailAddress = Input.ofNullable(userEmailAddress);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
         }

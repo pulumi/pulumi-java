@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
             this.partToExtract = Objects.requireNonNull(partToExtract);
             return this;
         }
-
         public GooglePrivacyDlpV2TimePartConfigResponse build() {
             return new GooglePrivacyDlpV2TimePartConfigResponse(partToExtract);
         }

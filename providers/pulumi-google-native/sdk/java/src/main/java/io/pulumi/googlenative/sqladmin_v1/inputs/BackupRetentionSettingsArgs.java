@@ -24,7 +24,7 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retainedBackups")
-    private final @Nullable Input<Integer> retainedBackups;
+      private final @Nullable Input<Integer> retainedBackups;
 
     public Input<Integer> getRetainedBackups() {
         return this.retainedBackups == null ? Input.empty() : this.retainedBackups;
@@ -35,7 +35,7 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retentionUnit")
-    private final @Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit;
+      private final @Nullable Input<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
     public Input<BackupRetentionSettingsRetentionUnit> getRetentionUnit() {
         return this.retentionUnit == null ? Input.empty() : this.retentionUnit;
@@ -94,7 +94,6 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
             this.retentionUnit = Input.ofNullable(retentionUnit);
             return this;
         }
-
         public BackupRetentionSettingsArgs build() {
             return new BackupRetentionSettingsArgs(retainedBackups, retentionUnit);
         }

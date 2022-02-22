@@ -117,7 +117,6 @@ public final class GetCustomDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomDomainResult build() {
             return new GetCustomDomainResult(id, name, properties, type);
         }

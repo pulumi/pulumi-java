@@ -25,7 +25,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<Integer> columns;
+      private final @Nullable Input<Integer> columns;
 
     public Input<Integer> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -36,7 +36,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tiles")
-    private final @Nullable Input<List<TileArgs>> tiles;
+      private final @Nullable Input<List<TileArgs>> tiles;
 
     public Input<List<TileArgs>> getTiles() {
         return this.tiles == null ? Input.empty() : this.tiles;
@@ -95,7 +95,6 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.tiles = Input.ofNullable(tiles);
             return this;
         }
-
         public MosaicLayoutArgs build() {
             return new MosaicLayoutArgs(columns, tiles);
         }

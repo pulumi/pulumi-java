@@ -117,7 +117,6 @@ public final class MongoDBDatabaseGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public MongoDBDatabaseGetPropertiesResponseResource build() {
             return new MongoDBDatabaseGetPropertiesResponseResource(etag, id, rid, ts);
         }

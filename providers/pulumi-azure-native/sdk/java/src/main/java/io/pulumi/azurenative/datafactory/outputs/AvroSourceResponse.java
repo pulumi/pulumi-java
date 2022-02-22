@@ -197,7 +197,6 @@ public final class AvroSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AvroSourceResponse build() {
             return new AvroSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

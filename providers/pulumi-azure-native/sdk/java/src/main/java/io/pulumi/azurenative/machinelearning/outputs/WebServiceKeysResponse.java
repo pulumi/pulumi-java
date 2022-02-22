@@ -76,7 +76,6 @@ public final class WebServiceKeysResponse {
             this.secondary = secondary;
             return this;
         }
-
         public WebServiceKeysResponse build() {
             return new WebServiceKeysResponse(primary, secondary);
         }

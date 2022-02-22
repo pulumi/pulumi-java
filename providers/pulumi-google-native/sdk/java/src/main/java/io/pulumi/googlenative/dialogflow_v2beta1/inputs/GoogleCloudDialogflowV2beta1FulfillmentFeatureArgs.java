@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends io
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> type;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> type;
 
     public Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends io
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs(type);
         }

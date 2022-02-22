@@ -22,7 +22,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @InputImport(name="force", required=true)
-    private final Boolean force;
+      private final Boolean force;
 
     public Boolean getForce() {
         return this.force;
@@ -33,7 +33,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @InputImport(name="tableUri", required=true)
-    private final String tableUri;
+      private final String tableUri;
 
     public String getTableUri() {
         return this.tableUri;
@@ -44,7 +44,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @InputImport(name="writeDisposition", required=true)
-    private final String writeDisposition;
+      private final String writeDisposition;
 
     public String getWriteDisposition() {
         return this.writeDisposition;
@@ -103,7 +103,6 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(force, tableUri, writeDisposition);
         }

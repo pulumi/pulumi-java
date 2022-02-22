@@ -97,7 +97,6 @@ public final class HttpRouteMatchPathResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HttpRouteMatchPathResponse build() {
             return new HttpRouteMatchPathResponse(rewrite, type, value);
         }

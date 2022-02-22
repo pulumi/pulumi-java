@@ -332,7 +332,6 @@ public final class GetConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectorId, connectorName, connectorProperties, connectorType, created, description, displayName, id, isInternal, lastModified, name, state, tenantId, type);
         }

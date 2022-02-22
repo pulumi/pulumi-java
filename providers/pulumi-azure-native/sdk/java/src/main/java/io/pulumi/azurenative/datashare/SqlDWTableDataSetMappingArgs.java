@@ -19,7 +19,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetId", required=true)
-    private final Input<String> dataSetId;
+        private final Input<String> dataSetId;
 
     public Input<String> getDataSetId() {
         return this.dataSetId;
@@ -41,7 +41,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetMappingName")
-    private final @Nullable Input<String> dataSetMappingName;
+        private final @Nullable Input<String> dataSetMappingName;
 
     public Input<String> getDataSetMappingName() {
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
@@ -52,7 +52,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataWarehouseName", required=true)
-    private final Input<String> dataWarehouseName;
+        private final Input<String> dataWarehouseName;
 
     public Input<String> getDataWarehouseName() {
         return this.dataWarehouseName;
@@ -64,7 +64,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -75,7 +75,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaName", required=true)
-    private final Input<String> schemaName;
+        private final Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName;
@@ -97,7 +97,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+        private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -108,7 +108,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sqlServerResourceId", required=true)
-    private final Input<String> sqlServerResourceId;
+        private final Input<String> sqlServerResourceId;
 
     public Input<String> getSqlServerResourceId() {
         return this.sqlServerResourceId;
@@ -119,7 +119,7 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+        private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -298,7 +298,6 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public SqlDWTableDataSetMappingArgs build() {
             return new SqlDWTableDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, dataWarehouseName, kind, resourceGroupName, schemaName, shareSubscriptionName, sqlServerResourceId, tableName);
         }

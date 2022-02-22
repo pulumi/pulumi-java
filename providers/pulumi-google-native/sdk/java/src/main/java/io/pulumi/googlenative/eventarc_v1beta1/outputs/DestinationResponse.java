@@ -52,7 +52,6 @@ public final class DestinationResponse {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudRunService);
         }

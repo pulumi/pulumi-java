@@ -99,7 +99,6 @@ public final class EncryptionPropertyResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public EncryptionPropertyResponse build() {
             return new EncryptionPropertyResponse(identity, keyVaultProperties, status);
         }

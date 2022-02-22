@@ -270,7 +270,6 @@ public final class ProtectionContainerMappingPropertiesResponse {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
-
         public ProtectionContainerMappingPropertiesResponse build() {
             return new ProtectionContainerMappingPropertiesResponse(health, healthErrorDetails, policyFriendlyName, policyId, providerSpecificDetails, sourceFabricFriendlyName, sourceProtectionContainerFriendlyName, state, targetFabricFriendlyName, targetProtectionContainerFriendlyName, targetProtectionContainerId);
         }

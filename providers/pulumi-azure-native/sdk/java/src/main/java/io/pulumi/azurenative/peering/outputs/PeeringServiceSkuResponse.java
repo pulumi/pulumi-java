@@ -54,7 +54,6 @@ public final class PeeringServiceSkuResponse {
             this.name = name;
             return this;
         }
-
         public PeeringServiceSkuResponse build() {
             return new PeeringServiceSkuResponse(name);
         }

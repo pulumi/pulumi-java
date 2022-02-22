@@ -18,7 +18,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicArgs Empty = new TopicArgs();
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -29,7 +29,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -40,14 +40,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionConfig")
-    private final @Nullable Input<PartitionConfigArgs> partitionConfig;
+      private final @Nullable Input<PartitionConfigArgs> partitionConfig;
 
     public Input<PartitionConfigArgs> getPartitionConfig() {
         return this.partitionConfig == null ? Input.empty() : this.partitionConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationConfig")
-    private final @Nullable Input<ReservationConfigArgs> reservationConfig;
+      private final @Nullable Input<ReservationConfigArgs> reservationConfig;
 
     public Input<ReservationConfigArgs> getReservationConfig() {
         return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
@@ -69,14 +69,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionConfig")
-    private final @Nullable Input<RetentionConfigArgs> retentionConfig;
+      private final @Nullable Input<RetentionConfigArgs> retentionConfig;
 
     public Input<RetentionConfigArgs> getRetentionConfig() {
         return this.retentionConfig == null ? Input.empty() : this.retentionConfig;
     }
 
     @InputImport(name="topicId", required=true)
-    private final Input<String> topicId;
+      private final Input<String> topicId;
 
     public Input<String> getTopicId() {
         return this.topicId;
@@ -210,7 +210,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.topicId = Input.of(Objects.requireNonNull(topicId));
             return this;
         }
-
         public TopicArgs build() {
             return new TopicArgs(location, name, partitionConfig, project, reservationConfig, retentionConfig, topicId);
         }

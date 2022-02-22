@@ -76,7 +76,6 @@ public final class LoadBalancerSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public LoadBalancerSkuResponse build() {
             return new LoadBalancerSkuResponse(name, tier);
         }

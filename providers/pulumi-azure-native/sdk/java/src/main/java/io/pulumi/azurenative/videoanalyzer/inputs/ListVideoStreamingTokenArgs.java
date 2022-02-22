@@ -17,7 +17,7 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="videoName", required=true)
-    private final String videoName;
+        private final String videoName;
 
     public String getVideoName() {
         return this.videoName;
@@ -98,7 +98,6 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
-
         public ListVideoStreamingTokenArgs build() {
             return new ListVideoStreamingTokenArgs(accountName, resourceGroupName, videoName);
         }

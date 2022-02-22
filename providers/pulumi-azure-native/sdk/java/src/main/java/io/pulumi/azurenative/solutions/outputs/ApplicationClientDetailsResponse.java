@@ -97,7 +97,6 @@ public final class ApplicationClientDetailsResponse {
             this.puid = puid;
             return this;
         }
-
         public ApplicationClientDetailsResponse build() {
             return new ApplicationClientDetailsResponse(applicationId, oid, puid);
         }

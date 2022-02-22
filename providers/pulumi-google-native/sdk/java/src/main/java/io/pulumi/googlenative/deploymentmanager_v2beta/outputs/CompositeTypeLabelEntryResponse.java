@@ -74,7 +74,6 @@ public final class CompositeTypeLabelEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CompositeTypeLabelEntryResponse build() {
             return new CompositeTypeLabelEntryResponse(key, value);
         }

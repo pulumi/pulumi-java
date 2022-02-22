@@ -95,7 +95,6 @@ public final class DmlStatisticsResponse {
             this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
             return this;
         }
-
         public DmlStatisticsResponse build() {
             return new DmlStatisticsResponse(deletedRowCount, insertedRowCount, updatedRowCount);
         }

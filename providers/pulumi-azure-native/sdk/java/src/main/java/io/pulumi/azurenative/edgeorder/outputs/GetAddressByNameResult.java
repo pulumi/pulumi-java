@@ -227,7 +227,6 @@ public final class GetAddressByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddressByNameResult build() {
             return new GetAddressByNameResult(addressValidationStatus, contactDetails, id, location, name, shippingAddress, systemData, tags, type);
         }

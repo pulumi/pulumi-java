@@ -286,7 +286,6 @@ public final class NetworkPeeringResponse {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }
-
         public NetworkPeeringResponse build() {
             return new NetworkPeeringResponse(advertisePeerSubnetsViaRouters, autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, state, stateDetails);
         }

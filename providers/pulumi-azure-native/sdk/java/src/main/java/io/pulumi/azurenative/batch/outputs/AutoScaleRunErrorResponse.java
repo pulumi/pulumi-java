@@ -89,7 +89,6 @@ public final class AutoScaleRunErrorResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public AutoScaleRunErrorResponse build() {
             return new AutoScaleRunErrorResponse(code, details, message);
         }

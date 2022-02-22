@@ -204,7 +204,6 @@ public final class ImageResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);
         }

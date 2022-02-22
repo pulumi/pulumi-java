@@ -25,7 +25,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direct")
-    private final @Nullable Input<PeeringPropertiesDirectArgs> direct;
+        private final @Nullable Input<PeeringPropertiesDirectArgs> direct;
 
     public Input<PeeringPropertiesDirectArgs> getDirect() {
         return this.direct == null ? Input.empty() : this.direct;
@@ -36,7 +36,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exchange")
-    private final @Nullable Input<PeeringPropertiesExchangeArgs> exchange;
+        private final @Nullable Input<PeeringPropertiesExchangeArgs> exchange;
 
     public Input<PeeringPropertiesExchangeArgs> getExchange() {
         return this.exchange == null ? Input.empty() : this.exchange;
@@ -47,7 +47,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,Kind>> kind;
+        private final Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind;
@@ -58,7 +58,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringLocation")
-    private final @Nullable Input<String> peeringLocation;
+        private final @Nullable Input<String> peeringLocation;
 
     public Input<String> getPeeringLocation() {
         return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
@@ -80,7 +80,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringName")
-    private final @Nullable Input<String> peeringName;
+        private final @Nullable Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName == null ? Input.empty() : this.peeringName;
@@ -91,7 +91,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<PeeringSkuArgs> sku;
+        private final Input<PeeringSkuArgs> sku;
 
     public Input<PeeringSkuArgs> getSku() {
         return this.sku;
@@ -113,7 +113,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -277,7 +277,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PeeringArgs build() {
             return new PeeringArgs(direct, exchange, kind, location, peeringLocation, peeringName, resourceGroupName, sku, tags);
         }

@@ -158,7 +158,6 @@ public final class GoogleCloudRunV1ConditionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunV1ConditionResponse build() {
             return new GoogleCloudRunV1ConditionResponse(lastTransitionTime, message, reason, severity, status, type);
         }

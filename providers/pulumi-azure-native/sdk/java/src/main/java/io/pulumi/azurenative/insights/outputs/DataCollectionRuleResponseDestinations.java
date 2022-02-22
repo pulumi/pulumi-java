@@ -78,7 +78,6 @@ public final class DataCollectionRuleResponseDestinations {
             this.logAnalytics = logAnalytics;
             return this;
         }
-
         public DataCollectionRuleResponseDestinations build() {
             return new DataCollectionRuleResponseDestinations(azureMonitorMetrics, logAnalytics);
         }

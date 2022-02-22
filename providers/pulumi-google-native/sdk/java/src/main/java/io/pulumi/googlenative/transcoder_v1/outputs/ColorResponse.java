@@ -95,7 +95,6 @@ public final class ColorResponse {
             this.saturation = Objects.requireNonNull(saturation);
             return this;
         }
-
         public ColorResponse build() {
             return new ColorResponse(brightness, contrast, saturation);
         }

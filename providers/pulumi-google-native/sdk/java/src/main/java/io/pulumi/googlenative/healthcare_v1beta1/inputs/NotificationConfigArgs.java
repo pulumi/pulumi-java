@@ -24,7 +24,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic")
-    private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
@@ -35,7 +35,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sendForBulkImport")
-    private final @Nullable Input<Boolean> sendForBulkImport;
+      private final @Nullable Input<Boolean> sendForBulkImport;
 
     public Input<Boolean> getSendForBulkImport() {
         return this.sendForBulkImport == null ? Input.empty() : this.sendForBulkImport;
@@ -94,7 +94,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.sendForBulkImport = Input.ofNullable(sendForBulkImport);
             return this;
         }
-
         public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsubTopic, sendForBulkImport);
         }

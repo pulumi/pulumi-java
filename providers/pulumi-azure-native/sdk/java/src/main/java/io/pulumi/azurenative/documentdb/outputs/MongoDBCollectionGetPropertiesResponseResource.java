@@ -186,7 +186,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public MongoDBCollectionGetPropertiesResponseResource build() {
             return new MongoDBCollectionGetPropertiesResponseResource(analyticalStorageTtl, etag, id, indexes, rid, shardKey, ts);
         }

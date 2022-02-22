@@ -53,7 +53,6 @@ public final class MysqlRdbmsResponse {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }
-
         public MysqlRdbmsResponse build() {
             return new MysqlRdbmsResponse(mysqlDatabases);
         }

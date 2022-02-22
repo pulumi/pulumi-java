@@ -74,7 +74,6 @@ public final class PublishingOptionsResponse {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
-
         public PublishingOptionsResponse build() {
             return new PublishingOptionsResponse(publishCaCert, publishCrl);
         }

@@ -97,7 +97,6 @@ public final class DestinationResponse {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudFunction, cloudRun, gke);
         }

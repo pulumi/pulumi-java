@@ -308,7 +308,6 @@ public final class XmlDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public XmlDatasetResponse build() {
             return new XmlDatasetResponse(annotations, compression, description, encodingName, folder, linkedServiceName, location, nullValue, parameters, schema, structure, type);
         }

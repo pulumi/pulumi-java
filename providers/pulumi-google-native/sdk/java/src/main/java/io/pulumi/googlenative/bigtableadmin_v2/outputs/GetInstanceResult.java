@@ -159,7 +159,6 @@ public final class GetInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(createTime, displayName, labels, name, state, type);
         }

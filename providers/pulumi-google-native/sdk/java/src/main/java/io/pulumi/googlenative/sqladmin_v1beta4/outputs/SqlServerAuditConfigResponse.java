@@ -74,7 +74,6 @@ public final class SqlServerAuditConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SqlServerAuditConfigResponse build() {
             return new SqlServerAuditConfigResponse(bucket, kind);
         }

@@ -74,7 +74,6 @@ public final class MetadataFilterLabelMatchResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MetadataFilterLabelMatchResponse build() {
             return new MetadataFilterLabelMatchResponse(name, value);
         }

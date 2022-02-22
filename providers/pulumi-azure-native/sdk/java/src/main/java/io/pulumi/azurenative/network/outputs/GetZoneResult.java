@@ -311,7 +311,6 @@ public final class GetZoneResult {
             this.zoneType = zoneType;
             return this;
         }
-
         public GetZoneResult build() {
             return new GetZoneResult(etag, id, location, maxNumberOfRecordSets, maxNumberOfRecordsPerRecordSet, name, nameServers, numberOfRecordSets, registrationVirtualNetworks, resolutionVirtualNetworks, tags, type, zoneType);
         }

@@ -74,7 +74,6 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public BackendAuthorizationHeaderCredentialsResponse build() {
             return new BackendAuthorizationHeaderCredentialsResponse(parameter, scheme);
         }

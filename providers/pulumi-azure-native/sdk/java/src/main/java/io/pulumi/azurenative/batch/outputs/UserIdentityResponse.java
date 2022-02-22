@@ -77,7 +77,6 @@ public final class UserIdentityResponse {
             this.userName = userName;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(autoUser, userName);
         }

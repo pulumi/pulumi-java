@@ -23,7 +23,7 @@ public final class ResourceRangeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Integer max;
+        private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
@@ -34,7 +34,7 @@ public final class ResourceRangeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Integer min;
+        private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
@@ -83,7 +83,6 @@ public final class ResourceRangeResponse extends io.pulumi.resources.InvokeArgs 
             this.min = min;
             return this;
         }
-
         public ResourceRangeResponse build() {
             return new ResourceRangeResponse(max, min);
         }

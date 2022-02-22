@@ -353,7 +353,6 @@ public final class GetPipelineResult {
             this.variables = variables;
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(activities, annotations, concurrency, description, etag, folder, id, name, parameters, policy, runDimensions, type, variables);
         }

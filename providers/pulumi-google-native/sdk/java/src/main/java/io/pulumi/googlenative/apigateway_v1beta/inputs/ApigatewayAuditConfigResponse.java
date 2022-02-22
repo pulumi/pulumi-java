@@ -23,7 +23,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
+      private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
 
     public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,7 +34,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -83,7 +83,6 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public ApigatewayAuditConfigResponse build() {
             return new ApigatewayAuditConfigResponse(auditLogConfigs, service);
         }

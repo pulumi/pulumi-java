@@ -690,7 +690,6 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }
-
         public GetAccessReviewScheduleDefinitionByIdResult build() {
             return new GetAccessReviewScheduleDefinitionByIdResult(assignmentState, autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, id, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, name, numberOfOccurrences, principalId, principalName, principalType, recommendationsEnabled, reminderNotificationsEnabled, resourceId, reviewers, reviewersType, roleDefinitionId, startDate, status, type, userPrincipalName);
         }

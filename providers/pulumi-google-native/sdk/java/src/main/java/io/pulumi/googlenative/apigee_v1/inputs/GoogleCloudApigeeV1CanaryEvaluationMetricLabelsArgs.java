@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<String> env;
+      private final @Nullable Input<String> env;
 
     public Input<String> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -119,7 +119,6 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
-
         public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {
             return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(env, instanceId, location);
         }

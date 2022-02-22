@@ -204,7 +204,6 @@ public final class GetServiceUnitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceUnitResult build() {
             return new GetServiceUnitResult(artifacts, deploymentMode, id, location, name, tags, targetResourceGroup, type);
         }

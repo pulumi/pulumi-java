@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(caseContent, condition);
         }

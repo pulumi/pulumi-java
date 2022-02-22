@@ -99,7 +99,6 @@ public final class SqlFilterResponse {
             this.sqlExpression = sqlExpression;
             return this;
         }
-
         public SqlFilterResponse build() {
             return new SqlFilterResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }

@@ -116,7 +116,6 @@ public final class SwitchCaseResponse {
             this.value = value;
             return this;
         }
-
         public SwitchCaseResponse build() {
             return new SwitchCaseResponse(activities, value);
         }

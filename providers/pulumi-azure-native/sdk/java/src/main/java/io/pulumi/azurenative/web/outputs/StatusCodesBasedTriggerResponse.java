@@ -161,7 +161,6 @@ public final class StatusCodesBasedTriggerResponse {
             this.win32Status = win32Status;
             return this;
         }
-
         public StatusCodesBasedTriggerResponse build() {
             return new StatusCodesBasedTriggerResponse(count, path, status, subStatus, timeInterval, win32Status);
         }

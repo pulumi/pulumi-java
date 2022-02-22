@@ -222,7 +222,6 @@ public final class GetKeyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(createTime, deleteTime, displayName, etag, keyString, name, restrictions, uid, updateTime);
         }

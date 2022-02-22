@@ -23,7 +23,7 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<String> threshold;
+      private final @Nullable Input<String> threshold;
 
     public Input<String> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -66,7 +66,6 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public LatencyCriteriaArgs build() {
             return new LatencyCriteriaArgs(threshold);
         }

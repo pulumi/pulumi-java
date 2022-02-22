@@ -21,7 +21,7 @@ public final class BinaryAuthorizationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class BinaryAuthorizationResponse extends io.pulumi.resources.Invok
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BinaryAuthorizationResponse build() {
             return new BinaryAuthorizationResponse(enabled);
         }

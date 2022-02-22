@@ -231,7 +231,6 @@ public final class MappingDataFlowResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MappingDataFlowResponse build() {
             return new MappingDataFlowResponse(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }

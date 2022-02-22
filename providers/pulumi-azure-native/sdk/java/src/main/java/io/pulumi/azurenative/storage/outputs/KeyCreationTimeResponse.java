@@ -60,7 +60,6 @@ public final class KeyCreationTimeResponse {
             this.key2 = key2;
             return this;
         }
-
         public KeyCreationTimeResponse build() {
             return new KeyCreationTimeResponse(key1, key2);
         }

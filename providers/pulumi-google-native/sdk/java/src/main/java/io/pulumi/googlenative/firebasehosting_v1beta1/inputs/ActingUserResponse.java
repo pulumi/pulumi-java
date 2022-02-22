@@ -21,7 +21,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -32,7 +32,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageUrl", required=true)
-    private final String imageUrl;
+      private final String imageUrl;
 
     public String getImageUrl() {
         return this.imageUrl;
@@ -81,7 +81,6 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ActingUserResponse build() {
             return new ActingUserResponse(email, imageUrl);
         }

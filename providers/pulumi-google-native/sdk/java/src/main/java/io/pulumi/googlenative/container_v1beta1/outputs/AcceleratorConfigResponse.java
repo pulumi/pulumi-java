@@ -95,7 +95,6 @@ public final class AcceleratorConfigResponse {
             this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorType, gpuPartitionSize);
         }

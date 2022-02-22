@@ -77,7 +77,6 @@ public final class NonceResponse {
             this.validateNonce = validateNonce;
             return this;
         }
-
         public NonceResponse build() {
             return new NonceResponse(nonceExpirationInterval, validateNonce);
         }

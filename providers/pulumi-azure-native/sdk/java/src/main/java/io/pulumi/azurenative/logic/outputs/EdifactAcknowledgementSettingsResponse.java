@@ -267,7 +267,6 @@ public final class EdifactAcknowledgementSettingsResponse {
             this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
             return this;
         }
-
         public EdifactAcknowledgementSettingsResponse build() {
             return new EdifactAcknowledgementSettingsResponse(acknowledgementControlNumberLowerBound, acknowledgementControlNumberPrefix, acknowledgementControlNumberSuffix, acknowledgementControlNumberUpperBound, batchFunctionalAcknowledgements, batchTechnicalAcknowledgements, needFunctionalAcknowledgement, needLoopForValidMessages, needTechnicalAcknowledgement, rolloverAcknowledgementControlNumber, sendSynchronousAcknowledgement);
         }

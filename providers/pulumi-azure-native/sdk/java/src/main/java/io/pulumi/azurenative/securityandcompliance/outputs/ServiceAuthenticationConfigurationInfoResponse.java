@@ -98,7 +98,6 @@ public final class ServiceAuthenticationConfigurationInfoResponse {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public ServiceAuthenticationConfigurationInfoResponse build() {
             return new ServiceAuthenticationConfigurationInfoResponse(audience, authority, smartProxyEnabled);
         }

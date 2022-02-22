@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @InputImport(name="bigQueryField", required=true)
-    private final GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
+      private final GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
 
     public GooglePrivacyDlpV2BigQueryFieldResponse getBigQueryField() {
         return this.bigQueryField;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @InputImport(name="cloudStorageFileSet", required=true)
-    private final GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
+      private final GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
 
     public GooglePrivacyDlpV2CloudStorageFileSetResponse getCloudStorageFileSet() {
         return this.cloudStorageFileSet;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @InputImport(name="outputPath", required=true)
-    private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
+      private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
     public GooglePrivacyDlpV2CloudStoragePathResponse getOutputPath() {
         return this.outputPath;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
         }

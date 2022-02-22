@@ -270,7 +270,6 @@ public final class GetWebAppVnetConnectionSlotResult {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
-
         public GetWebAppVnetConnectionSlotResult build() {
             return new GetWebAppVnetConnectionSlotResult(certBlob, certThumbprint, dnsServers, id, isSwift, kind, name, resyncRequired, routes, type, vnetResourceId);
         }

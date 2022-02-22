@@ -408,7 +408,6 @@ public final class GetRouteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(compressionSettings, customDomains, deploymentStatus, enabledState, forwardingProtocol, httpsRedirect, id, linkToDefaultDomain, name, originGroup, originPath, patternsToMatch, provisioningState, queryStringCachingBehavior, ruleSets, supportedProtocols, systemData, type);
         }

@@ -252,7 +252,6 @@ public final class OracleTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleTableDatasetResponse build() {
             return new OracleTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

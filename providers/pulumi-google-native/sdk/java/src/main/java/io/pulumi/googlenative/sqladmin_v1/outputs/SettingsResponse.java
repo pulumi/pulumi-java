@@ -549,7 +549,6 @@ public final class SettingsResponse {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }

@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
             return new GoogleCloudApigeeV1ApiCategoryDataResponse(name, siteId, updateTime);
         }

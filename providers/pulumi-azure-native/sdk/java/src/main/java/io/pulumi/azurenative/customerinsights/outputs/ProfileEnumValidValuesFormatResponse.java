@@ -78,7 +78,6 @@ public final class ProfileEnumValidValuesFormatResponse {
             this.value = value;
             return this;
         }
-
         public ProfileEnumValidValuesFormatResponse build() {
             return new ProfileEnumValidValuesFormatResponse(localizedValueNames, value);
         }

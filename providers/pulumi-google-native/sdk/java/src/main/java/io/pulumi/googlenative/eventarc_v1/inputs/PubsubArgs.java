@@ -23,7 +23,7 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -66,7 +66,6 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public PubsubArgs build() {
             return new PubsubArgs(topic);
         }

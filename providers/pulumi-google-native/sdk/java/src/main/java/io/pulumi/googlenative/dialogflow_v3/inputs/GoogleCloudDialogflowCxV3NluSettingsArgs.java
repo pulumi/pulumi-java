@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="classificationThreshold")
-    private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Input<Double> classificationThreshold;
 
     public Input<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="modelTrainingMode")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode;
 
     public Input<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> getModelTrainingMode() {
         return this.modelTrainingMode == null ? Input.empty() : this.modelTrainingMode;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="modelType")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType;
 
     public Input<GoogleCloudDialogflowCxV3NluSettingsModelType> getModelType() {
         return this.modelType == null ? Input.empty() : this.modelType;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
             this.modelType = Input.ofNullable(modelType);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3NluSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3NluSettingsArgs(classificationThreshold, modelTrainingMode, modelType);
         }

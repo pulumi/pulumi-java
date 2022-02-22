@@ -25,7 +25,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizationRule", required=true)
-    private final Input<ExprArgs> authorizationRule;
+      private final Input<ExprArgs> authorizationRule;
 
     public Input<ExprArgs> getAuthorizationRule() {
         return this.authorizationRule;
@@ -36,7 +36,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceAttributes")
-    private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
+      private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
 
     public Input<List<AttributeArgs>> getResourceAttributes() {
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
@@ -95,7 +95,6 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
             this.resourceAttributes = Input.ofNullable(resourceAttributes);
             return this;
         }
-
         public GoogleCloudHealthcareV1ConsentPolicyArgs build() {
             return new GoogleCloudHealthcareV1ConsentPolicyArgs(authorizationRule, resourceAttributes);
         }

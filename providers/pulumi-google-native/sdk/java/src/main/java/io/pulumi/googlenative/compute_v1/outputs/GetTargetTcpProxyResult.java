@@ -201,7 +201,6 @@ public final class GetTargetTcpProxyResult {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetTargetTcpProxyResult build() {
             return new GetTargetTcpProxyResult(creationTimestamp, description, kind, name, proxyBind, proxyHeader, selfLink, service);
         }

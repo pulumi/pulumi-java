@@ -74,7 +74,6 @@ public final class SelectedCertificateInputResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public SelectedCertificateInputResponse build() {
             return new SelectedCertificateInputResponse(certificateName, password);
         }

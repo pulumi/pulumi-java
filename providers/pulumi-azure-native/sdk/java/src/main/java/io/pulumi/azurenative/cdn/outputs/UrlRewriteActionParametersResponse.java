@@ -111,7 +111,6 @@ public final class UrlRewriteActionParametersResponse {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }
-
         public UrlRewriteActionParametersResponse build() {
             return new UrlRewriteActionParametersResponse(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }

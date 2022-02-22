@@ -22,7 +22,7 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final Input<String> labelName;
+        private final Input<String> labelName;
 
     public Input<String> getLabelName() {
         return this.labelName;
@@ -65,7 +65,6 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
             this.labelName = Input.of(Objects.requireNonNull(labelName));
             return this;
         }
-
         public IncidentLabelArgs build() {
             return new IncidentLabelArgs(labelName);
         }

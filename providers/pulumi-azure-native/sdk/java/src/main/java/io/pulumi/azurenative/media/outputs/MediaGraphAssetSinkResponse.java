@@ -119,7 +119,6 @@ public final class MediaGraphAssetSinkResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphAssetSinkResponse build() {
             return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
         }

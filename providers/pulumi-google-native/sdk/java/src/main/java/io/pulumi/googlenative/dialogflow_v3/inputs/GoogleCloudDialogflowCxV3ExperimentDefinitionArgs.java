@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends io.
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends io.
      * 
      */
     @InputImport(name="versionVariants")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
     public Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
         return this.versionVariants == null ? Input.empty() : this.versionVariants;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends io.
             this.versionVariants = Input.ofNullable(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentDefinitionArgs build() {
             return new GoogleCloudDialogflowCxV3ExperimentDefinitionArgs(condition, versionVariants);
         }

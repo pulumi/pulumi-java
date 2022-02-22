@@ -376,7 +376,6 @@ public final class GetServerDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerDetailsResult build() {
             return new GetServerDetailsResult(asAdministrators, backupBlobContainerUri, gatewayDetails, id, ipV4FirewallSettings, location, managedMode, name, provisioningState, querypoolConnectionMode, serverFullName, serverMonitorMode, sku, state, tags, type);
         }

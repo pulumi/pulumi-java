@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
             return new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(updateTime, versionVariants);
         }

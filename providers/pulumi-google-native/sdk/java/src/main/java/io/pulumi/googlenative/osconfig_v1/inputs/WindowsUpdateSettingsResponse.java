@@ -22,7 +22,7 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="classifications", required=true)
-    private final List<String> classifications;
+      private final List<String> classifications;
 
     public List<String> getClassifications() {
         return this.classifications;
@@ -33,7 +33,7 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="excludes", required=true)
-    private final List<String> excludes;
+      private final List<String> excludes;
 
     public List<String> getExcludes() {
         return this.excludes;
@@ -44,7 +44,7 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="exclusivePatches", required=true)
-    private final List<String> exclusivePatches;
+      private final List<String> exclusivePatches;
 
     public List<String> getExclusivePatches() {
         return this.exclusivePatches;
@@ -103,7 +103,6 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
-
         public WindowsUpdateSettingsResponse build() {
             return new WindowsUpdateSettingsResponse(classifications, excludes, exclusivePatches);
         }

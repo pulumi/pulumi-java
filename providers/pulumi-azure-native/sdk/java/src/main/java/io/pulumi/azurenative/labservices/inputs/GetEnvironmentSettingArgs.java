@@ -19,7 +19,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="environmentSettingName", required=true)
-    private final String environmentSettingName;
+        private final String environmentSettingName;
 
     public String getEnvironmentSettingName() {
         return this.environmentSettingName;
@@ -30,7 +30,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -41,7 +41,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final String labAccountName;
+        private final String labAccountName;
 
     public String getLabAccountName() {
         return this.labAccountName;
@@ -52,7 +52,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -63,7 +63,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEnvironmentSettingArgs build() {
             return new GetEnvironmentSettingArgs(environmentSettingName, expand, labAccountName, labName, resourceGroupName);
         }

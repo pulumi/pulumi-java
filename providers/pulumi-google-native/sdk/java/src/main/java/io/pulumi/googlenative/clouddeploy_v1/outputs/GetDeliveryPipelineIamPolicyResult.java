@@ -120,7 +120,6 @@ public final class GetDeliveryPipelineIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDeliveryPipelineIamPolicyResult build() {
             return new GetDeliveryPipelineIamPolicyResult(auditConfigs, bindings, etag, version);
         }

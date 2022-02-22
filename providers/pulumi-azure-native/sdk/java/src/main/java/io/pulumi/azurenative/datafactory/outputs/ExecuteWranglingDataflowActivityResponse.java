@@ -363,7 +363,6 @@ public final class ExecuteWranglingDataflowActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteWranglingDataflowActivityResponse build() {
             return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
         }

@@ -141,7 +141,6 @@ public final class RepositoryResponse {
             this.url = url;
             return this;
         }
-
         public RepositoryResponse build() {
             return new RepositoryResponse(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }

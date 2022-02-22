@@ -194,7 +194,6 @@ public final class KeyVaultCertificateSourceParametersResponse {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultCertificateSourceParametersResponse build() {
             return new KeyVaultCertificateSourceParametersResponse(deleteRule, odataType, resourceGroupName, secretName, secretVersion, subscriptionId, updateRule, vaultName);
         }

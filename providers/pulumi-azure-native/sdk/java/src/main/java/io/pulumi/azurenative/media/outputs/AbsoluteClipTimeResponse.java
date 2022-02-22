@@ -76,7 +76,6 @@ public final class AbsoluteClipTimeResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public AbsoluteClipTimeResponse build() {
             return new AbsoluteClipTimeResponse(odataType, time);
         }

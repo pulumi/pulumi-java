@@ -118,7 +118,6 @@ public final class HybridRunbookWorkerLegacyResponse {
             this.registrationTime = registrationTime;
             return this;
         }
-
         public HybridRunbookWorkerLegacyResponse build() {
             return new HybridRunbookWorkerLegacyResponse(ip, lastSeenDateTime, name, registrationTime);
         }

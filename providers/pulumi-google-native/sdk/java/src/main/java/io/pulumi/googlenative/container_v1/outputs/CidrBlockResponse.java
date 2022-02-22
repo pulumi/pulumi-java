@@ -74,7 +74,6 @@ public final class CidrBlockResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public CidrBlockResponse build() {
             return new CidrBlockResponse(cidrBlock, displayName);
         }

@@ -15,21 +15,21 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDomainArgs Empty = new GetDomainArgs();
 
     @InputImport(name="domainId", required=true)
-    private final String domainId;
+      private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+      private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -88,7 +88,6 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public GetDomainArgs build() {
             return new GetDomainArgs(domainId, project, siteId);
         }

@@ -23,7 +23,7 @@ public final class MCASDataConnectorDataTypesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="alerts")
-    private final @Nullable DataConnectorDataTypeCommonResponse alerts;
+        private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
     public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
         return this.alerts == null ? Optional.empty() : Optional.ofNullable(this.alerts);
@@ -34,7 +34,7 @@ public final class MCASDataConnectorDataTypesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="discoveryLogs")
-    private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
+        private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
     public Optional<DataConnectorDataTypeCommonResponse> getDiscoveryLogs() {
         return this.discoveryLogs == null ? Optional.empty() : Optional.ofNullable(this.discoveryLogs);
@@ -83,7 +83,6 @@ public final class MCASDataConnectorDataTypesResponse extends io.pulumi.resource
             this.discoveryLogs = discoveryLogs;
             return this;
         }
-
         public MCASDataConnectorDataTypesResponse build() {
             return new MCASDataConnectorDataTypesResponse(alerts, discoveryLogs);
         }

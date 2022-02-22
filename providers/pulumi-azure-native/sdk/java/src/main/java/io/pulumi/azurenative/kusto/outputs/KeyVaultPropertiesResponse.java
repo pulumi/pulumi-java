@@ -118,7 +118,6 @@ public final class KeyVaultPropertiesResponse {
             this.userIdentity = userIdentity;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion, userIdentity);
         }

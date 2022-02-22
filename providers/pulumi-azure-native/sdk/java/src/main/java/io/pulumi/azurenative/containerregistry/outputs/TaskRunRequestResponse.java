@@ -164,7 +164,6 @@ public final class TaskRunRequestResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TaskRunRequestResponse build() {
             return new TaskRunRequestResponse(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }

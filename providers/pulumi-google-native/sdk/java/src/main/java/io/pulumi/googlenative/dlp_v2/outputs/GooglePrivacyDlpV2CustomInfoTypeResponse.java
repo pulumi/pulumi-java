@@ -207,7 +207,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
             this.surrogateType = Objects.requireNonNull(surrogateType);
             return this;
         }
-
         public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
             return new GooglePrivacyDlpV2CustomInfoTypeResponse(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);
         }

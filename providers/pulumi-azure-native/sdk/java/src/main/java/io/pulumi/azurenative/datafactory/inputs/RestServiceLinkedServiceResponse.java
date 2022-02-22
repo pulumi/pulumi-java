@@ -32,7 +32,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="aadResourceId")
-    private final @Nullable Object aadResourceId;
+        private final @Nullable Object aadResourceId;
 
     public Optional<Object> getAadResourceId() {
         return this.aadResourceId == null ? Optional.empty() : Optional.ofNullable(this.aadResourceId);
@@ -43,7 +43,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -54,7 +54,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authHeaders")
-    private final @Nullable Object authHeaders;
+        private final @Nullable Object authHeaders;
 
     public Optional<Object> getAuthHeaders() {
         return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
@@ -65,7 +65,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+        private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -76,7 +76,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="azureCloudType")
-    private final @Nullable Object azureCloudType;
+        private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
@@ -87,7 +87,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -98,7 +98,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+        private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -109,7 +109,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -120,7 +120,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableServerCertificateValidation")
-    private final @Nullable Object enableServerCertificateValidation;
+        private final @Nullable Object enableServerCertificateValidation;
 
     public Optional<Object> getEnableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
@@ -131,7 +131,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -142,7 +142,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -153,7 +153,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -164,7 +164,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Object servicePrincipalId;
+        private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -175,7 +175,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
@@ -186,7 +186,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Object tenant;
+        private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -198,7 +198,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -209,7 +209,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="url", required=true)
-    private final Object url;
+        private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -220,7 +220,7 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Object userName;
+        private final @Nullable Object userName;
 
     public Optional<Object> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -429,7 +429,6 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
             this.userName = userName;
             return this;
         }
-
         public RestServiceLinkedServiceResponse build() {
             return new RestServiceLinkedServiceResponse(aadResourceId, annotations, authHeaders, authenticationType, azureCloudType, connectVia, credential, description, enableServerCertificateValidation, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }

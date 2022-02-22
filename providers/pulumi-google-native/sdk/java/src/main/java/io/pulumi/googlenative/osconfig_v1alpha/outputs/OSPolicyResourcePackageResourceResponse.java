@@ -207,7 +207,6 @@ public final class OSPolicyResourcePackageResourceResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourcePackageResourceResponse build() {
             return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

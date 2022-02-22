@@ -76,7 +76,6 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
             this.headerValue = headerValue;
             return this;
         }
-
         public ApplicationGatewayHeaderConfigurationResponse build() {
             return new ApplicationGatewayHeaderConfigurationResponse(headerName, headerValue);
         }

@@ -74,7 +74,6 @@ public final class IscsiLunResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IscsiLunResponse build() {
             return new IscsiLunResponse(managedDiskAzureResourceId, name);
         }

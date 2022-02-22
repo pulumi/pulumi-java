@@ -22,7 +22,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisStatus", required=true)
-    private final String analysisStatus;
+      private final String analysisStatus;
 
     public String getAnalysisStatus() {
         return this.analysisStatus;
@@ -33,7 +33,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisStatusError", required=true)
-    private final StatusResponse analysisStatusError;
+      private final StatusResponse analysisStatusError;
 
     public StatusResponse getAnalysisStatusError() {
         return this.analysisStatusError;
@@ -44,7 +44,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="continuousAnalysis", required=true)
-    private final String continuousAnalysis;
+      private final String continuousAnalysis;
 
     public String getContinuousAnalysis() {
         return this.continuousAnalysis;
@@ -103,7 +103,6 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
-
         public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis);
         }

@@ -26,7 +26,7 @@ public final class WindowsEventLogDataSourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -38,7 +38,7 @@ public final class WindowsEventLogDataSourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable List<String> streams;
+        private final @Nullable List<String> streams;
 
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
@@ -49,7 +49,7 @@ public final class WindowsEventLogDataSourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="xPathQueries")
-    private final @Nullable List<String> xPathQueries;
+        private final @Nullable List<String> xPathQueries;
 
     public List<String> getXPathQueries() {
         return this.xPathQueries == null ? List.of() : this.xPathQueries;
@@ -108,7 +108,6 @@ public final class WindowsEventLogDataSourceResponse extends io.pulumi.resources
             this.xPathQueries = xPathQueries;
             return this;
         }
-
         public WindowsEventLogDataSourceResponse build() {
             return new WindowsEventLogDataSourceResponse(name, streams, xPathQueries);
         }

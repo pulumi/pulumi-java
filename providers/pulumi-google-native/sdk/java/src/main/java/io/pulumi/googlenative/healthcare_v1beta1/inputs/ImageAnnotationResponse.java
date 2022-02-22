@@ -23,7 +23,7 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="boundingPolys", required=true)
-    private final List<BoundingPolyResponse> boundingPolys;
+      private final List<BoundingPolyResponse> boundingPolys;
 
     public List<BoundingPolyResponse> getBoundingPolys() {
         return this.boundingPolys;
@@ -34,7 +34,7 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="frameIndex", required=true)
-    private final Integer frameIndex;
+      private final Integer frameIndex;
 
     public Integer getFrameIndex() {
         return this.frameIndex;
@@ -83,7 +83,6 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
             this.frameIndex = Objects.requireNonNull(frameIndex);
             return this;
         }
-
         public ImageAnnotationResponse build() {
             return new ImageAnnotationResponse(boundingPolys, frameIndex);
         }

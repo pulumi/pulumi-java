@@ -1046,7 +1046,6 @@ public final class GetWebAppResult {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public GetWebAppResult build() {
             return new GetWebAppResult(availabilityState, clientAffinityEnabled, clientCertEnabled, clientCertExclusionPaths, clientCertMode, containerSize, customDomainVerificationId, dailyMemoryTimeQuota, defaultHostName, enabled, enabledHostNames, hostNameSslStates, hostNames, hostNamesDisabled, hostingEnvironmentProfile, httpsOnly, hyperV, id, identity, inProgressOperationId, isDefaultContainer, isXenon, keyVaultReferenceIdentity, kind, lastModifiedTimeUtc, location, maxNumberOfWorkers, name, outboundIpAddresses, possibleOutboundIpAddresses, redundancyMode, repositorySiteName, reserved, resourceGroup, scmSiteAlsoStopped, serverFarmId, siteConfig, slotSwapStatus, state, storageAccountRequired, suspendedTill, tags, targetSwapSlot, trafficManagerHostNames, type, usageState, virtualNetworkSubnetId);
         }

@@ -22,7 +22,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="services", required=true)
-    private final List<String> services;
+      private final List<String> services;
 
     public List<String> getServices() {
         return this.services;
@@ -60,7 +60,6 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(services);
         }

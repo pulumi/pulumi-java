@@ -24,7 +24,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * 
      */
     @InputImport(name="artifactTags")
-    private final @Nullable Map<String,String> artifactTags;
+        private final @Nullable Map<String,String> artifactTags;
 
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
@@ -35,7 +35,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * 
      */
     @InputImport(name="imageId", required=true)
-    private final String imageId;
+        private final String imageId;
 
     public String getImageId() {
         return this.imageId;
@@ -46,7 +46,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -57,7 +57,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * 
      */
     @InputImport(name="runOutputName", required=true)
-    private final String runOutputName;
+        private final String runOutputName;
 
     public String getRunOutputName() {
         return this.runOutputName;
@@ -69,7 +69,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateManagedImageDistributorResponse build() {
             return new ImageTemplateManagedImageDistributorResponse(artifactTags, imageId, location, runOutputName, type);
         }

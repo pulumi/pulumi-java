@@ -23,7 +23,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hub")
-    private final @Nullable Input<String> hub;
+      private final @Nullable Input<String> hub;
 
     public Input<String> getHub() {
         return this.hub == null ? Input.empty() : this.hub;
@@ -45,7 +45,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -56,7 +56,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedInterconnectAttachments")
-    private final @Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
+      private final @Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
     public Input<LinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
@@ -67,7 +67,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRouterApplianceInstances")
-    private final @Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
+      private final @Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
     public Input<LinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
@@ -78,14 +78,14 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedVpnTunnels")
-    private final @Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels;
+      private final @Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels;
 
     public Input<LinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -96,28 +96,28 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="spokeId", required=true)
-    private final Input<String> spokeId;
+      private final Input<String> spokeId;
 
     public Input<String> getSpokeId() {
         return this.spokeId;
@@ -311,7 +311,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             this.spokeId = Input.of(Objects.requireNonNull(spokeId));
             return this;
         }
-
         public SpokeArgs build() {
             return new SpokeArgs(description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project, requestId, spokeId);
         }

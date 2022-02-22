@@ -185,7 +185,6 @@ public final class EventContentResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public EventContentResponse build() {
             return new EventContentResponse(action, actor, id, request, source, target, timestamp);
         }

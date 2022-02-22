@@ -248,7 +248,6 @@ public final class GetProximityPlacementGroupResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetProximityPlacementGroupResult build() {
             return new GetProximityPlacementGroupResult(availabilitySets, colocationStatus, id, location, name, proximityPlacementGroupType, tags, type, virtualMachineScaleSets, virtualMachines);
         }

@@ -15,35 +15,35 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
     @InputImport(name="deliveryPipelineId", required=true)
-    private final String deliveryPipelineId;
+      private final String deliveryPipelineId;
 
     public String getDeliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="releaseId", required=true)
-    private final String releaseId;
+      private final String releaseId;
 
     public String getReleaseId() {
         return this.releaseId;
     }
 
     @InputImport(name="rolloutId", required=true)
-    private final String rolloutId;
+      private final String rolloutId;
 
     public String getRolloutId() {
         return this.rolloutId;
@@ -122,7 +122,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.rolloutId = Objects.requireNonNull(rolloutId);
             return this;
         }
-
         public GetRolloutArgs build() {
             return new GetRolloutArgs(deliveryPipelineId, location, project, releaseId, rolloutId);
         }

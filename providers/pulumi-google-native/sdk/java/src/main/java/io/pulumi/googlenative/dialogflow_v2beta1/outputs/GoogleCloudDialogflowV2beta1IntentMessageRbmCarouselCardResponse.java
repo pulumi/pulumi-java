@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(cardContents, cardWidth);
         }

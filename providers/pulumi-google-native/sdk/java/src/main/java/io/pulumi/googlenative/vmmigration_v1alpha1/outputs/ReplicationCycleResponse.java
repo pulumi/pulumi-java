@@ -161,7 +161,6 @@ public final class ReplicationCycleResponse {
             this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
             return this;
         }
-
         public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(endTime, progress, progressPercent, startTime, steps, totalPauseDuration);
         }

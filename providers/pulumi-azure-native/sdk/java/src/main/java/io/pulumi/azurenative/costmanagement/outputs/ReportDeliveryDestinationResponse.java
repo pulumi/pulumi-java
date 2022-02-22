@@ -97,7 +97,6 @@ public final class ReportDeliveryDestinationResponse {
             this.rootFolderPath = rootFolderPath;
             return this;
         }
-
         public ReportDeliveryDestinationResponse build() {
             return new ReportDeliveryDestinationResponse(container, resourceId, rootFolderPath);
         }

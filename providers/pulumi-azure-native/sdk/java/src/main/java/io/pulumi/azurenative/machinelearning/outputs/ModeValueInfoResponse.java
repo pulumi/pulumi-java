@@ -78,7 +78,6 @@ public final class ModeValueInfoResponse {
             this.parameters = parameters;
             return this;
         }
-
         public ModeValueInfoResponse build() {
             return new ModeValueInfoResponse(interfaceString, parameters);
         }

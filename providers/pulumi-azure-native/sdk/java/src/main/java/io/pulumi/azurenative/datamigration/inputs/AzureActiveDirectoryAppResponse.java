@@ -21,7 +21,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="appKey", required=true)
-    private final String appKey;
+        private final String appKey;
 
     public String getAppKey() {
         return this.appKey;
@@ -32,7 +32,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final String applicationId;
+        private final String applicationId;
 
     public String getApplicationId() {
         return this.applicationId;
@@ -43,7 +43,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -102,7 +102,6 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AzureActiveDirectoryAppResponse build() {
             return new AzureActiveDirectoryAppResponse(appKey, applicationId, tenantId);
         }

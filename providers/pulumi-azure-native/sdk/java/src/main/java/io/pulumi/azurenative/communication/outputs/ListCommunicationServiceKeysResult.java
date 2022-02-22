@@ -118,7 +118,6 @@ public final class ListCommunicationServiceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListCommunicationServiceKeysResult build() {
             return new ListCommunicationServiceKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

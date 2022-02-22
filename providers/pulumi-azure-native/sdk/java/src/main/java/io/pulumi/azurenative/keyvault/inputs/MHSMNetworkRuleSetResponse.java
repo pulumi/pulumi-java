@@ -26,7 +26,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="bypass")
-    private final @Nullable String bypass;
+        private final @Nullable String bypass;
 
     public Optional<String> getBypass() {
         return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
@@ -37,7 +37,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable String defaultAction;
+        private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
@@ -48,7 +48,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable List<MHSMIPRuleResponse> ipRules;
+        private final @Nullable List<MHSMIPRuleResponse> ipRules;
 
     public List<MHSMIPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
@@ -59,7 +59,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
+        private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<MHSMVirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
@@ -128,7 +128,6 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public MHSMNetworkRuleSetResponse build() {
             return new MHSMNetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
         }

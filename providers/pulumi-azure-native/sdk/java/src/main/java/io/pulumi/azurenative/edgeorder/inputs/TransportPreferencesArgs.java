@@ -24,7 +24,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredShipmentType", required=true)
-    private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
+        private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
     public Input<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
         return this.preferredShipmentType;
@@ -67,7 +67,6 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
             this.preferredShipmentType = Input.of(Objects.requireNonNull(preferredShipmentType));
             return this;
         }
-
         public TransportPreferencesArgs build() {
             return new TransportPreferencesArgs(preferredShipmentType);
         }

@@ -95,7 +95,6 @@ public final class GalleryImageIdentifierResponse {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GalleryImageIdentifierResponse build() {
             return new GalleryImageIdentifierResponse(offer, publisher, sku);
         }

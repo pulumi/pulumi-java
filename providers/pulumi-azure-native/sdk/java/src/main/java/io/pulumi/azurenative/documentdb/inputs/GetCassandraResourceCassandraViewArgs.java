@@ -17,7 +17,7 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-    private final String keyspaceName;
+        private final String keyspaceName;
 
     public String getKeyspaceName() {
         return this.keyspaceName;
@@ -39,7 +39,7 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="viewName", required=true)
-    private final String viewName;
+        private final String viewName;
 
     public String getViewName() {
         return this.viewName;
@@ -119,7 +119,6 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }
-
         public GetCassandraResourceCassandraViewArgs build() {
             return new GetCassandraResourceCassandraViewArgs(accountName, keyspaceName, resourceGroupName, viewName);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * 
      */
     @InputImport(name="userInput", required=true)
-    private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
+      private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse getUserInput() {
         return this.userInput;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * 
      */
     @InputImport(name="virtualAgentOutput", required=true)
-    private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
+      private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
         return this.virtualAgentOutput;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(userInput, virtualAgentOutput);
         }

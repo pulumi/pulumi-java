@@ -20,7 +20,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<JobScheduleDay> day;
+        private final @Nullable Input<JobScheduleDay> day;
 
     public Input<JobScheduleDay> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -31,7 +31,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="occurrence")
-    private final @Nullable Input<Integer> occurrence;
+        private final @Nullable Input<Integer> occurrence;
 
     public Input<Integer> getOccurrence() {
         return this.occurrence == null ? Input.empty() : this.occurrence;
@@ -90,7 +90,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
             this.occurrence = Input.ofNullable(occurrence);
             return this;
         }
-
         public JobRecurrenceScheduleMonthlyOccurrenceArgs build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceArgs(day, occurrence);
         }

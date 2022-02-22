@@ -288,7 +288,6 @@ public final class GetStorageAccountCredentialResult {
             this.userName = userName;
             return this;
         }
-
         public GetStorageAccountCredentialResult build() {
             return new GetStorageAccountCredentialResult(accountKey, accountType, alias, blobDomainName, connectionString, id, name, sslStatus, storageAccountId, systemData, type, userName);
         }

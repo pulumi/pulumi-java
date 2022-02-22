@@ -13,14 +13,14 @@ public final class GetApiProductArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetApiProductArgs Empty = new GetApiProductArgs();
 
     @InputImport(name="apiproductId", required=true)
-    private final String apiproductId;
+      private final String apiproductId;
 
     public String getApiproductId() {
         return this.apiproductId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetApiProductArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetApiProductArgs build() {
             return new GetApiProductArgs(apiproductId, organizationId);
         }

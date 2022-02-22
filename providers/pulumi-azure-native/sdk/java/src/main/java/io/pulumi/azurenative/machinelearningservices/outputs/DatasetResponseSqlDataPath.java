@@ -117,7 +117,6 @@ public final class DatasetResponseSqlDataPath {
             this.sqlTableName = Objects.requireNonNull(sqlTableName);
             return this;
         }
-
         public DatasetResponseSqlDataPath build() {
             return new DatasetResponseSqlDataPath(queryTimeout, sqlQuery, sqlStoredProcedureName, sqlTableName);
         }

@@ -117,7 +117,6 @@ public final class PackageIssueResponse {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType);
         }

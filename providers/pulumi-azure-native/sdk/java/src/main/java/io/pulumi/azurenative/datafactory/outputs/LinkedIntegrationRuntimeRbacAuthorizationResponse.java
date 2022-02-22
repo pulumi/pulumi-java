@@ -100,7 +100,6 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, credential, resourceId);
         }

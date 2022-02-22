@@ -76,7 +76,6 @@ public final class SkipErrorFileResponse {
             this.fileMissing = fileMissing;
             return this;
         }
-
         public SkipErrorFileResponse build() {
             return new SkipErrorFileResponse(dataInconsistency, fileMissing);
         }

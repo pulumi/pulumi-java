@@ -54,7 +54,6 @@ public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirew
             this.id = id;
             return this;
         }
-
         public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }

@@ -23,7 +23,7 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="disableTraceRoute")
-    private final @Nullable Boolean disableTraceRoute;
+        private final @Nullable Boolean disableTraceRoute;
 
     public Optional<Boolean> getDisableTraceRoute() {
         return this.disableTraceRoute == null ? Optional.empty() : Optional.ofNullable(this.disableTraceRoute);
@@ -61,7 +61,6 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends io.pulumi.
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
-
         public ConnectionMonitorIcmpConfigurationResponse build() {
             return new ConnectionMonitorIcmpConfigurationResponse(disableTraceRoute);
         }

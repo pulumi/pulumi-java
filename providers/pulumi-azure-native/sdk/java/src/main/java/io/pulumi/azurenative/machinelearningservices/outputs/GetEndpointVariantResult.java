@@ -231,7 +231,6 @@ public final class GetEndpointVariantResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEndpointVariantResult build() {
             return new GetEndpointVariantResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

@@ -137,7 +137,6 @@ public final class TlsCertificateResponse {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public TlsCertificateResponse build() {
             return new TlsCertificateResponse(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

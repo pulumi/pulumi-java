@@ -162,7 +162,6 @@ public final class SecretResourcePropertiesResponse {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public SecretResourcePropertiesResponse build() {
             return new SecretResourcePropertiesResponse(contentType, description, kind, provisioningState, status, statusDetails);
         }

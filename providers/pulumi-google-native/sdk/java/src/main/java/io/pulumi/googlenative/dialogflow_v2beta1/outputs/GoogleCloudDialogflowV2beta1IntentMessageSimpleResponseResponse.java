@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
         }

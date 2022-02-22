@@ -17,7 +17,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scriptName", required=true)
-    private final String scriptName;
+        private final String scriptName;
 
     public String getScriptName() {
         return this.scriptName;
@@ -119,7 +119,6 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
             this.scriptName = Objects.requireNonNull(scriptName);
             return this;
         }
-
         public GetScriptArgs build() {
             return new GetScriptArgs(clusterName, databaseName, resourceGroupName, scriptName);
         }

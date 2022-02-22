@@ -19,14 +19,14 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     public static final GrafeasV1beta1IntotoSignatureArgs Empty = new GrafeasV1beta1IntotoSignatureArgs();
 
     @InputImport(name="keyid")
-    private final @Nullable Input<String> keyid;
+      private final @Nullable Input<String> keyid;
 
     public Input<String> getKeyid() {
         return this.keyid == null ? Input.empty() : this.keyid;
     }
 
     @InputImport(name="sig")
-    private final @Nullable Input<String> sig;
+      private final @Nullable Input<String> sig;
 
     public Input<String> getSig() {
         return this.sig == null ? Input.empty() : this.sig;
@@ -85,7 +85,6 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
             this.sig = Input.ofNullable(sig);
             return this;
         }
-
         public GrafeasV1beta1IntotoSignatureArgs build() {
             return new GrafeasV1beta1IntotoSignatureArgs(keyid, sig);
         }

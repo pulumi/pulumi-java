@@ -25,7 +25,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alpha")
-    private final @Nullable Input<Double> alpha;
+      private final @Nullable Input<Double> alpha;
 
     public Input<Double> getAlpha() {
         return this.alpha == null ? Input.empty() : this.alpha;
@@ -36,7 +36,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable Input<NormalizedCoordinateArgs> resolution;
+      private final @Nullable Input<NormalizedCoordinateArgs> resolution;
 
     public Input<NormalizedCoordinateArgs> getResolution() {
         return this.resolution == null ? Input.empty() : this.resolution;
@@ -47,7 +47,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -121,7 +121,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public ImageArgs build() {
             return new ImageArgs(alpha, resolution, uri);
         }

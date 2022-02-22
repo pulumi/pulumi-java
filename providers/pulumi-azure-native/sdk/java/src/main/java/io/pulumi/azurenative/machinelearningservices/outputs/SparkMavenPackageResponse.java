@@ -73,7 +73,6 @@ public final class SparkMavenPackageResponse {
             this.version = version;
             return this;
         }
-
         public SparkMavenPackageResponse build() {
             return new SparkMavenPackageResponse(artifact, group, version);
         }

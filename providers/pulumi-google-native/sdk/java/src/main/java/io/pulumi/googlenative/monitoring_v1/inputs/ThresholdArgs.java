@@ -27,7 +27,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="color")
-    private final @Nullable Input<ThresholdColor> color;
+      private final @Nullable Input<ThresholdColor> color;
 
     public Input<ThresholdColor> getColor() {
         return this.color == null ? Input.empty() : this.color;
@@ -38,7 +38,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<ThresholdDirection> direction;
+      private final @Nullable Input<ThresholdDirection> direction;
 
     public Input<ThresholdDirection> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -49,7 +49,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -60,7 +60,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAxis")
-    private final @Nullable Input<ThresholdTargetAxis> targetAxis;
+      private final @Nullable Input<ThresholdTargetAxis> targetAxis;
 
     public Input<ThresholdTargetAxis> getTargetAxis() {
         return this.targetAxis == null ? Input.empty() : this.targetAxis;
@@ -71,7 +71,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Double> value;
+      private final @Nullable Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -175,7 +175,6 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ThresholdArgs build() {
             return new ThresholdArgs(color, direction, label, targetAxis, value);
         }

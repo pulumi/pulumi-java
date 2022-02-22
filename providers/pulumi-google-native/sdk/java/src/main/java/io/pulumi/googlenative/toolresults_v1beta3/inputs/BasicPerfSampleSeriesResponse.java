@@ -17,21 +17,21 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
     public static final BasicPerfSampleSeriesResponse Empty = new BasicPerfSampleSeriesResponse();
 
     @InputImport(name="perfMetricType", required=true)
-    private final String perfMetricType;
+      private final String perfMetricType;
 
     public String getPerfMetricType() {
         return this.perfMetricType;
     }
 
     @InputImport(name="perfUnit", required=true)
-    private final String perfUnit;
+      private final String perfUnit;
 
     public String getPerfUnit() {
         return this.perfUnit;
     }
 
     @InputImport(name="sampleSeriesLabel", required=true)
-    private final String sampleSeriesLabel;
+      private final String sampleSeriesLabel;
 
     public String getSampleSeriesLabel() {
         return this.sampleSeriesLabel;
@@ -90,7 +90,6 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
             this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
             return this;
         }
-
         public BasicPerfSampleSeriesResponse build() {
             return new BasicPerfSampleSeriesResponse(perfMetricType, perfUnit, sampleSeriesLabel);
         }

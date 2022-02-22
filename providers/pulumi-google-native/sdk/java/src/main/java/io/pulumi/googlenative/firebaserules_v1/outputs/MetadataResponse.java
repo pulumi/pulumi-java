@@ -53,7 +53,6 @@ public final class MetadataResponse {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(services);
         }

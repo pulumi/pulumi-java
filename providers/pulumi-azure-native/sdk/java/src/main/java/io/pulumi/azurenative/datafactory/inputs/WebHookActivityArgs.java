@@ -30,7 +30,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
+        private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
 
     public Input<WebActivityAuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -41,7 +41,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<Object> body;
+        private final @Nullable Input<Object> body;
 
     public Input<Object> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -52,7 +52,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -63,7 +63,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -74,7 +74,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Object> headers;
+        private final @Nullable Input<Object> headers;
 
     public Input<Object> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -85,7 +85,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="method", required=true)
-    private final Input<Either<String,WebHookActivityMethod>> method;
+        private final Input<Either<String,WebHookActivityMethod>> method;
 
     public Input<Either<String,WebHookActivityMethod>> getMethod() {
         return this.method;
@@ -96,7 +96,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -107,7 +107,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="reportStatusOnCallBack")
-    private final @Nullable Input<Object> reportStatusOnCallBack;
+        private final @Nullable Input<Object> reportStatusOnCallBack;
 
     public Input<Object> getReportStatusOnCallBack() {
         return this.reportStatusOnCallBack == null ? Input.empty() : this.reportStatusOnCallBack;
@@ -118,7 +118,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+        private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -130,7 +130,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -141,7 +141,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<Object> url;
+        private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;
@@ -152,7 +152,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -361,7 +361,6 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public WebHookActivityArgs build() {
             return new WebHookActivityArgs(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
         }

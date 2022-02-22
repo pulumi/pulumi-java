@@ -189,7 +189,6 @@ public final class GetDataManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataManagerResult build() {
             return new GetDataManagerResult(etag, id, location, name, sku, tags, type);
         }

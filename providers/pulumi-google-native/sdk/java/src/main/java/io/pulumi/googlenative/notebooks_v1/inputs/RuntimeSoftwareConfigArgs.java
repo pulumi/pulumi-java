@@ -27,7 +27,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customGpuDriverPath")
-    private final @Nullable Input<String> customGpuDriverPath;
+      private final @Nullable Input<String> customGpuDriverPath;
 
     public Input<String> getCustomGpuDriverPath() {
         return this.customGpuDriverPath == null ? Input.empty() : this.customGpuDriverPath;
@@ -38,7 +38,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableHealthMonitoring")
-    private final @Nullable Input<Boolean> enableHealthMonitoring;
+      private final @Nullable Input<Boolean> enableHealthMonitoring;
 
     public Input<Boolean> getEnableHealthMonitoring() {
         return this.enableHealthMonitoring == null ? Input.empty() : this.enableHealthMonitoring;
@@ -49,7 +49,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="idleShutdown")
-    private final @Nullable Input<Boolean> idleShutdown;
+      private final @Nullable Input<Boolean> idleShutdown;
 
     public Input<Boolean> getIdleShutdown() {
         return this.idleShutdown == null ? Input.empty() : this.idleShutdown;
@@ -60,7 +60,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="idleShutdownTimeout")
-    private final @Nullable Input<Integer> idleShutdownTimeout;
+      private final @Nullable Input<Integer> idleShutdownTimeout;
 
     public Input<Integer> getIdleShutdownTimeout() {
         return this.idleShutdownTimeout == null ? Input.empty() : this.idleShutdownTimeout;
@@ -71,7 +71,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="installGpuDriver")
-    private final @Nullable Input<Boolean> installGpuDriver;
+      private final @Nullable Input<Boolean> installGpuDriver;
 
     public Input<Boolean> getInstallGpuDriver() {
         return this.installGpuDriver == null ? Input.empty() : this.installGpuDriver;
@@ -82,7 +82,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kernels")
-    private final @Nullable Input<List<ContainerImageArgs>> kernels;
+      private final @Nullable Input<List<ContainerImageArgs>> kernels;
 
     public Input<List<ContainerImageArgs>> getKernels() {
         return this.kernels == null ? Input.empty() : this.kernels;
@@ -93,7 +93,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notebookUpgradeSchedule")
-    private final @Nullable Input<String> notebookUpgradeSchedule;
+      private final @Nullable Input<String> notebookUpgradeSchedule;
 
     public Input<String> getNotebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule == null ? Input.empty() : this.notebookUpgradeSchedule;
@@ -104,7 +104,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="postStartupScript")
-    private final @Nullable Input<String> postStartupScript;
+      private final @Nullable Input<String> postStartupScript;
 
     public Input<String> getPostStartupScript() {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
@@ -253,7 +253,6 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             this.postStartupScript = Input.ofNullable(postStartupScript);
             return this;
         }
-
         public RuntimeSoftwareConfigArgs build() {
             return new RuntimeSoftwareConfigArgs(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }

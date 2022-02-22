@@ -224,7 +224,6 @@ public final class GetWebPubSubSharedPrivateLinkResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebPubSubSharedPrivateLinkResourceResult build() {
             return new GetWebPubSubSharedPrivateLinkResourceResult(groupId, id, name, privateLinkResourceId, provisioningState, requestMessage, status, systemData, type);
         }

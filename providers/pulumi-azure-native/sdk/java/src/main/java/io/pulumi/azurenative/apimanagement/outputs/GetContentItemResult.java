@@ -117,7 +117,6 @@ public final class GetContentItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContentItemResult build() {
             return new GetContentItemResult(id, name, properties, type);
         }

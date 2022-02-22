@@ -78,7 +78,6 @@ public final class ListJobCredentialsResult {
             this.value = value;
             return this;
         }
-
         public ListJobCredentialsResult build() {
             return new ListJobCredentialsResult(nextLink, value);
         }

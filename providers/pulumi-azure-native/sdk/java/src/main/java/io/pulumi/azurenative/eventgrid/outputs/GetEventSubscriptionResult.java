@@ -320,7 +320,6 @@ public final class GetEventSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventSubscriptionResult build() {
             return new GetEventSubscriptionResult(deadLetterDestination, destination, eventDeliverySchema, expirationTimeUtc, filter, id, labels, name, provisioningState, retryPolicy, systemData, topic, type);
         }

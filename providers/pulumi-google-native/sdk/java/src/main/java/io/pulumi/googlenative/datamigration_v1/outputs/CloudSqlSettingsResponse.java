@@ -371,7 +371,6 @@ public final class CloudSqlSettingsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public CloudSqlSettingsResponse build() {
             return new CloudSqlSettingsResponse(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, rootPasswordSet, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }

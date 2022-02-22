@@ -22,7 +22,7 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final List<ReplicaResponse> replicas;
+      private final List<ReplicaResponse> replicas;
 
     public List<ReplicaResponse> getReplicas() {
         return this.replicas;
@@ -60,7 +60,6 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public UserManagedResponse build() {
             return new UserManagedResponse(replicas);
         }

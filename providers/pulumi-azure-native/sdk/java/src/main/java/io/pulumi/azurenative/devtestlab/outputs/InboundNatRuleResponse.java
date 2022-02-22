@@ -98,7 +98,6 @@ public final class InboundNatRuleResponse {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public InboundNatRuleResponse build() {
             return new InboundNatRuleResponse(backendPort, frontendPort, transportProtocol);
         }

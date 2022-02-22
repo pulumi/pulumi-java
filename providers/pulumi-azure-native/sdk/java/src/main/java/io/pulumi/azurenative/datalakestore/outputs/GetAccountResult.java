@@ -543,7 +543,6 @@ public final class GetAccountResult {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, creationTime, currentTier, defaultGroup, encryptionConfig, encryptionProvisioningState, encryptionState, endpoint, firewallAllowAzureIps, firewallRules, firewallState, id, identity, lastModifiedTime, location, name, newTier, provisioningState, state, tags, trustedIdProviderState, trustedIdProviders, type, virtualNetworkRules);
         }

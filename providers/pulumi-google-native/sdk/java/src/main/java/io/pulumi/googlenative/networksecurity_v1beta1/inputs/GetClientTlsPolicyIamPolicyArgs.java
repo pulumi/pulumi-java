@@ -15,28 +15,28 @@ public final class GetClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.I
     public static final GetClientTlsPolicyIamPolicyArgs Empty = new GetClientTlsPolicyIamPolicyArgs();
 
     @InputImport(name="clientTlsPolicyId", required=true)
-    private final String clientTlsPolicyId;
+      private final String clientTlsPolicyId;
 
     public String getClientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.I
             this.project = project;
             return this;
         }
-
         public GetClientTlsPolicyIamPolicyArgs build() {
             return new GetClientTlsPolicyIamPolicyArgs(clientTlsPolicyId, location, optionsRequestedPolicyVersion, project);
         }

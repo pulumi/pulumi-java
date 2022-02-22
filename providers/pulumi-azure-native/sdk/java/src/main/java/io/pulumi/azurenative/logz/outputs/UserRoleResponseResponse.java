@@ -54,7 +54,6 @@ public final class UserRoleResponseResponse {
             this.role = role;
             return this;
         }
-
         public UserRoleResponseResponse build() {
             return new UserRoleResponseResponse(role);
         }

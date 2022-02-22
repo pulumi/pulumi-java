@@ -75,7 +75,6 @@ public final class ZipInfoResponse {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public ZipInfoResponse build() {
             return new ZipInfoResponse(filesCount, sourceUrl);
         }

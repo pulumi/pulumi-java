@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * 
      */
     @InputImport(name="event", required=true)
-    private final String event;
+      private final String event;
 
     public String getEvent() {
         return this.event;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * 
      */
     @InputImport(name="targetFlow", required=true)
-    private final String targetFlow;
+      private final String targetFlow;
 
     public String getTargetFlow() {
         return this.targetFlow;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * 
      */
     @InputImport(name="targetPage", required=true)
-    private final String targetPage;
+      private final String targetPage;
 
     public String getTargetPage() {
         return this.targetPage;
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * 
      */
     @InputImport(name="triggerFulfillment", required=true)
-    private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
+      private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
@@ -145,7 +145,6 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EventHandlerResponse build() {
             return new GoogleCloudDialogflowCxV3EventHandlerResponse(event, name, targetFlow, targetPage, triggerFulfillment);
         }

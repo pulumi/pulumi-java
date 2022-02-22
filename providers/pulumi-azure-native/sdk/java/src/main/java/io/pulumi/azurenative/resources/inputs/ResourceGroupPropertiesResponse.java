@@ -21,7 +21,7 @@ public final class ResourceGroupPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -59,7 +59,6 @@ public final class ResourceGroupPropertiesResponse extends io.pulumi.resources.I
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ResourceGroupPropertiesResponse build() {
             return new ResourceGroupPropertiesResponse(provisioningState);
         }

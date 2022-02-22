@@ -96,7 +96,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, vmCount);
         }

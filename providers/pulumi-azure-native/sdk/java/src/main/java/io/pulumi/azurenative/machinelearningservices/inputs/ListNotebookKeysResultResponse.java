@@ -13,14 +13,14 @@ public final class ListNotebookKeysResultResponse extends io.pulumi.resources.In
     public static final ListNotebookKeysResultResponse Empty = new ListNotebookKeysResultResponse();
 
     @InputImport(name="primaryAccessKey", required=true)
-    private final String primaryAccessKey;
+        private final String primaryAccessKey;
 
     public String getPrimaryAccessKey() {
         return this.primaryAccessKey;
     }
 
     @InputImport(name="secondaryAccessKey", required=true)
-    private final String secondaryAccessKey;
+        private final String secondaryAccessKey;
 
     public String getSecondaryAccessKey() {
         return this.secondaryAccessKey;
@@ -69,7 +69,6 @@ public final class ListNotebookKeysResultResponse extends io.pulumi.resources.In
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
         }
-
         public ListNotebookKeysResultResponse build() {
             return new ListNotebookKeysResultResponse(primaryAccessKey, secondaryAccessKey);
         }

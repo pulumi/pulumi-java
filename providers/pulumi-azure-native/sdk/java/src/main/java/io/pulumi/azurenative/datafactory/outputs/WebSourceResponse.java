@@ -163,7 +163,6 @@ public final class WebSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public WebSourceResponse build() {
             return new WebSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, type);
         }

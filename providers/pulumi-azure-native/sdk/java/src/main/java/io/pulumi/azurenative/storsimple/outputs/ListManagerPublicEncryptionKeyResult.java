@@ -97,7 +97,6 @@ public final class ListManagerPublicEncryptionKeyResult {
             this.valueCertificateThumbprint = valueCertificateThumbprint;
             return this;
         }
-
         public ListManagerPublicEncryptionKeyResult build() {
             return new ListManagerPublicEncryptionKeyResult(encryptionAlgorithm, value, valueCertificateThumbprint);
         }

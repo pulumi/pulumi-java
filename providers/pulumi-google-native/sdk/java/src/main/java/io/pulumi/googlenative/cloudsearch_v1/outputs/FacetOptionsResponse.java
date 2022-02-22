@@ -117,7 +117,6 @@ public final class FacetOptionsResponse {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public FacetOptionsResponse build() {
             return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
         }

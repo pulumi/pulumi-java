@@ -122,7 +122,6 @@ public final class ResponseContractResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ResponseContractResponse build() {
             return new ResponseContractResponse(description, headers, representations, statusCode);
         }

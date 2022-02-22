@@ -266,7 +266,6 @@ public final class GetMetricDescriptorResult {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public GetMetricDescriptorResult build() {
             return new GetMetricDescriptorResult(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
         }

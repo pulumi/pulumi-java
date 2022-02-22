@@ -22,7 +22,7 @@ public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedReferrers", required=true)
-    private final List<String> allowedReferrers;
+      private final List<String> allowedReferrers;
 
     public List<String> getAllowedReferrers() {
         return this.allowedReferrers;
@@ -60,7 +60,6 @@ public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.
             this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
             return this;
         }
-
         public V2BrowserKeyRestrictionsResponse build() {
             return new V2BrowserKeyRestrictionsResponse(allowedReferrers);
         }

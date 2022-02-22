@@ -98,7 +98,6 @@ public final class VirtualNetworkRuleResponse {
             this.state = state;
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVnetServiceEndpoint, state);
         }

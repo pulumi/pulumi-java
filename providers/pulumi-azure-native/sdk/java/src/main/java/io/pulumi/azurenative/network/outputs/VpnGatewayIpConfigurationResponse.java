@@ -97,7 +97,6 @@ public final class VpnGatewayIpConfigurationResponse {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public VpnGatewayIpConfigurationResponse build() {
             return new VpnGatewayIpConfigurationResponse(id, privateIpAddress, publicIpAddress);
         }

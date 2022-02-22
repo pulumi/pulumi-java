@@ -23,7 +23,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="excludeObjects")
-    private final @Nullable Input<OracleRdbmsArgs> excludeObjects;
+      private final @Nullable Input<OracleRdbmsArgs> excludeObjects;
 
     public Input<OracleRdbmsArgs> getExcludeObjects() {
         return this.excludeObjects == null ? Input.empty() : this.excludeObjects;
@@ -34,7 +34,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeObjects")
-    private final @Nullable Input<OracleRdbmsArgs> includeObjects;
+      private final @Nullable Input<OracleRdbmsArgs> includeObjects;
 
     public Input<OracleRdbmsArgs> getIncludeObjects() {
         return this.includeObjects == null ? Input.empty() : this.includeObjects;
@@ -93,7 +93,6 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             this.includeObjects = Input.ofNullable(includeObjects);
             return this;
         }
-
         public OracleSourceConfigArgs build() {
             return new OracleSourceConfigArgs(excludeObjects, includeObjects);
         }

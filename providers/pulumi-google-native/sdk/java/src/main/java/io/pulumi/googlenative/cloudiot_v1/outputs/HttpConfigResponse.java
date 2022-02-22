@@ -52,7 +52,6 @@ public final class HttpConfigResponse {
             this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(httpEnabledState);
         }

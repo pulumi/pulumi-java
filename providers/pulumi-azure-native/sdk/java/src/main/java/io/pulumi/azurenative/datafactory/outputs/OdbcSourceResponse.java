@@ -205,7 +205,6 @@ public final class OdbcSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OdbcSourceResponse build() {
             return new OdbcSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

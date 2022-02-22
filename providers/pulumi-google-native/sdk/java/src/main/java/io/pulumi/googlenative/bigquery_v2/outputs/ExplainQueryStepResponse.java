@@ -75,7 +75,6 @@ public final class ExplainQueryStepResponse {
             this.substeps = Objects.requireNonNull(substeps);
             return this;
         }
-
         public ExplainQueryStepResponse build() {
             return new ExplainQueryStepResponse(kind, substeps);
         }

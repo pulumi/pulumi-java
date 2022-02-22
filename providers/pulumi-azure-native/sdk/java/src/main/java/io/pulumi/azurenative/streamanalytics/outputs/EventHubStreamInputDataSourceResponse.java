@@ -162,7 +162,6 @@ public final class EventHubStreamInputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventHubStreamInputDataSourceResponse build() {
             return new EventHubStreamInputDataSourceResponse(consumerGroupName, eventHubName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

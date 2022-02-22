@@ -311,7 +311,6 @@ public final class GetRemoteRenderingAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRemoteRenderingAccountResult build() {
             return new GetRemoteRenderingAccountResult(accountDomain, accountId, id, identity, kind, location, name, plan, sku, storageAccountName, systemData, tags, type);
         }

@@ -97,7 +97,6 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyResponse(retentionPolicy, schedule, snapshotProperties);
         }

@@ -22,7 +22,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
+        private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -65,7 +65,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends io.pulumi.
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskInputArgs build() {
             return new ConnectToSourcePostgreSqlSyncTaskInputArgs(sourceConnectionInfo);
         }

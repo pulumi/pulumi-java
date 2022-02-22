@@ -161,7 +161,6 @@ public final class DataSourcePrecedenceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataSourcePrecedenceResponse build() {
             return new DataSourcePrecedenceResponse(dataSourceReferenceId, dataSourceType, id, name, precedence, status);
         }

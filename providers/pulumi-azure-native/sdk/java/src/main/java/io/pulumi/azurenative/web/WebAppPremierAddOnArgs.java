@@ -20,7 +20,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,7 +31,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="marketplaceOffer")
-    private final @Nullable Input<String> marketplaceOffer;
+        private final @Nullable Input<String> marketplaceOffer;
 
     public Input<String> getMarketplaceOffer() {
         return this.marketplaceOffer == null ? Input.empty() : this.marketplaceOffer;
@@ -53,7 +53,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="marketplacePublisher")
-    private final @Nullable Input<String> marketplacePublisher;
+        private final @Nullable Input<String> marketplacePublisher;
 
     public Input<String> getMarketplacePublisher() {
         return this.marketplacePublisher == null ? Input.empty() : this.marketplacePublisher;
@@ -64,7 +64,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="premierAddOnName")
-    private final @Nullable Input<String> premierAddOnName;
+        private final @Nullable Input<String> premierAddOnName;
 
     public Input<String> getPremierAddOnName() {
         return this.premierAddOnName == null ? Input.empty() : this.premierAddOnName;
@@ -86,7 +86,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="product")
-    private final @Nullable Input<String> product;
+        private final @Nullable Input<String> product;
 
     public Input<String> getProduct() {
         return this.product == null ? Input.empty() : this.product;
@@ -97,7 +97,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -108,7 +108,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+        private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -119,7 +119,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -130,7 +130,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vendor")
-    private final @Nullable Input<String> vendor;
+        private final @Nullable Input<String> vendor;
 
     public Input<String> getVendor() {
         return this.vendor == null ? Input.empty() : this.vendor;
@@ -324,7 +324,6 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
             this.vendor = Input.ofNullable(vendor);
             return this;
         }
-
         public WebAppPremierAddOnArgs build() {
             return new WebAppPremierAddOnArgs(kind, location, marketplaceOffer, marketplacePublisher, name, premierAddOnName, product, resourceGroupName, sku, tags, vendor);
         }

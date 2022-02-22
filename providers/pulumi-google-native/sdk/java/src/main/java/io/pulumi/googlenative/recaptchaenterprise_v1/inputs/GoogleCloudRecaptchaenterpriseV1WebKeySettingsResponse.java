@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @InputImport(name="allowAllDomains", required=true)
-    private final Boolean allowAllDomains;
+      private final Boolean allowAllDomains;
 
     public Boolean getAllowAllDomains() {
         return this.allowAllDomains;
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @InputImport(name="allowAmpTraffic", required=true)
-    private final Boolean allowAmpTraffic;
+      private final Boolean allowAmpTraffic;
 
     public Boolean getAllowAmpTraffic() {
         return this.allowAmpTraffic;
@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @InputImport(name="allowedDomains", required=true)
-    private final List<String> allowedDomains;
+      private final List<String> allowedDomains;
 
     public List<String> getAllowedDomains() {
         return this.allowedDomains;
@@ -56,7 +56,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @InputImport(name="challengeSecurityPreference", required=true)
-    private final String challengeSecurityPreference;
+      private final String challengeSecurityPreference;
 
     public String getChallengeSecurityPreference() {
         return this.challengeSecurityPreference;
@@ -67,7 +67,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @InputImport(name="integrationType", required=true)
-    private final String integrationType;
+      private final String integrationType;
 
     public String getIntegrationType() {
         return this.integrationType;
@@ -146,7 +146,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }

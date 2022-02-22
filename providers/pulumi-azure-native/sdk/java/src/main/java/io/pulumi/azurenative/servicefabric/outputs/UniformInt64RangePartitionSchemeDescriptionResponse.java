@@ -123,7 +123,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public UniformInt64RangePartitionSchemeDescriptionResponse build() {
             return new UniformInt64RangePartitionSchemeDescriptionResponse(count, highKey, lowKey, partitionScheme);
         }

@@ -204,7 +204,6 @@ public final class GooglePrivacyDlpV2ValueResponse {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueResponse build() {
             return new GooglePrivacyDlpV2ValueResponse(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }

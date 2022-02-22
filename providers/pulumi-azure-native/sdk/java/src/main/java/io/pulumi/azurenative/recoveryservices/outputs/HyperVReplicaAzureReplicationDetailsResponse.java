@@ -610,7 +610,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaAzureReplicationDetailsResponse build() {
             return new HyperVReplicaAzureReplicationDetailsResponse(azureVmDiskDetails, enableRdpOnTargetOption, encryption, initialReplicationDetails, instanceType, lastReplicatedTime, lastRpoCalculatedTime, licenseType, oSDetails, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMSize, recoveryAzureVmName, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, useManagedDisks, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

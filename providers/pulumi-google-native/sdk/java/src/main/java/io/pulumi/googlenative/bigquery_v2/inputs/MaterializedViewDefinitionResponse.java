@@ -18,7 +18,7 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableRefresh", required=true)
-    private final Boolean enableRefresh;
+      private final Boolean enableRefresh;
 
     public Boolean getEnableRefresh() {
         return this.enableRefresh;
@@ -29,7 +29,7 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="lastRefreshTime", required=true)
-    private final String lastRefreshTime;
+      private final String lastRefreshTime;
 
     public String getLastRefreshTime() {
         return this.lastRefreshTime;
@@ -40,7 +40,7 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -51,7 +51,7 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="refreshIntervalMs", required=true)
-    private final String refreshIntervalMs;
+      private final String refreshIntervalMs;
 
     public String getRefreshIntervalMs() {
         return this.refreshIntervalMs;
@@ -120,7 +120,6 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
         }
-
         public MaterializedViewDefinitionResponse build() {
             return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
         }

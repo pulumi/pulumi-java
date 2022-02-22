@@ -25,7 +25,7 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,DiskEncryptionSetIdentityType>> type;
+        private final @Nullable Input<Either<String,DiskEncryptionSetIdentityType>> type;
 
     public Input<Either<String,DiskEncryptionSetIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EncryptionSetIdentityArgs build() {
             return new EncryptionSetIdentityArgs(type);
         }

@@ -460,7 +460,6 @@ public final class ServiceResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public ServiceResponse build() {
             return new ServiceResponse(artifactGcsUri, createTime, databaseType, encryptionConfig, endpointUri, hiveMetastoreConfig, labels, maintenanceWindow, metadataIntegration, metadataManagementActivity, name, network, networkConfig, port, releaseChannel, state, stateMessage, tier, uid, updateTime);
         }

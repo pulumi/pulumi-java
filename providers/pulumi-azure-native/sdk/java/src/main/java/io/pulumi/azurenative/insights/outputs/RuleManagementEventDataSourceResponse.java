@@ -331,7 +331,6 @@ public final class RuleManagementEventDataSourceResponse {
             this.subStatus = subStatus;
             return this;
         }
-
         public RuleManagementEventDataSourceResponse build() {
             return new RuleManagementEventDataSourceResponse(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
         }

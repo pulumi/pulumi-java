@@ -182,7 +182,6 @@ public final class GetGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(builtIn, description, displayName, externalId, id, name, type);
         }

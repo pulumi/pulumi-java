@@ -76,7 +76,6 @@ public final class MigrateSyncCompleteCommandInputResponse {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public MigrateSyncCompleteCommandInputResponse build() {
             return new MigrateSyncCompleteCommandInputResponse(commitTimeStamp, databaseName);
         }

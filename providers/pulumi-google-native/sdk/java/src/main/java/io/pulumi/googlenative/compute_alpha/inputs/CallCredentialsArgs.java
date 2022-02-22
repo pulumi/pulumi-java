@@ -24,7 +24,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="callCredentialType")
-    private final @Nullable Input<CallCredentialsCallCredentialType> callCredentialType;
+      private final @Nullable Input<CallCredentialsCallCredentialType> callCredentialType;
 
     public Input<CallCredentialsCallCredentialType> getCallCredentialType() {
         return this.callCredentialType == null ? Input.empty() : this.callCredentialType;
@@ -35,7 +35,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fromPlugin")
-    private final @Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin;
+      private final @Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin;
 
     public Input<MetadataCredentialsFromPluginArgs> getFromPlugin() {
         return this.fromPlugin == null ? Input.empty() : this.fromPlugin;
@@ -94,7 +94,6 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
             this.fromPlugin = Input.ofNullable(fromPlugin);
             return this;
         }
-
         public CallCredentialsArgs build() {
             return new CallCredentialsArgs(callCredentialType, fromPlugin);
         }

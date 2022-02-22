@@ -160,7 +160,6 @@ public final class JobSpecResponse {
             this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
             return this;
         }
-
         public JobSpecResponse build() {
             return new JobSpecResponse(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
         }

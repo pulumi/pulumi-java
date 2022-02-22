@@ -77,7 +77,6 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
             this.protocolType = protocolType;
             return this;
         }
-
         public AzureFirewallApplicationRuleProtocolResponse build() {
             return new AzureFirewallApplicationRuleProtocolResponse(port, protocolType);
         }

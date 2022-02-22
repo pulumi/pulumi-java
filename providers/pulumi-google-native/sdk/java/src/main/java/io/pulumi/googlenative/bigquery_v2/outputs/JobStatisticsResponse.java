@@ -399,7 +399,6 @@ public final class JobStatisticsResponse {
             this.transactionInfo = Objects.requireNonNull(transactionInfo);
             return this;
         }
-
         public JobStatisticsResponse build() {
             return new JobStatisticsResponse(completionRatio, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalSlotMs, transactionInfo);
         }

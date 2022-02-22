@@ -119,7 +119,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
-
         public IntegrationRuntimeSsisCatalogInfoResponse build() {
             return new IntegrationRuntimeSsisCatalogInfoResponse(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint);
         }

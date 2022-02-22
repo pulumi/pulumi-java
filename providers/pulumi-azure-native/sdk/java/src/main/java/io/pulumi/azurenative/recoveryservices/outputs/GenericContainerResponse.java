@@ -190,7 +190,6 @@ public final class GenericContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public GenericContainerResponse build() {
             return new GenericContainerResponse(backupManagementType, containerType, extendedInformation, fabricName, friendlyName, healthStatus, registrationStatus);
         }

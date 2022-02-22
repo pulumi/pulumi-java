@@ -74,7 +74,6 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ImageTemplateIdentityResponseUserAssignedIdentities build() {
             return new ImageTemplateIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

@@ -225,7 +225,6 @@ public final class HostnameConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HostnameConfigurationResponse build() {
             return new HostnameConfigurationResponse(certificate, certificatePassword, defaultSslBinding, encodedCertificate, hostName, identityClientId, keyVaultId, negotiateClientCertificate, type);
         }

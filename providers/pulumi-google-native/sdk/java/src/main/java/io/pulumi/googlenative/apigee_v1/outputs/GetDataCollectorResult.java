@@ -137,7 +137,6 @@ public final class GetDataCollectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataCollectorResult build() {
             return new GetDataCollectorResult(createdAt, description, lastModifiedAt, name, type);
         }

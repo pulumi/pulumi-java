@@ -78,7 +78,6 @@ public final class CanonicalProfileDefinitionResponse {
             this.properties = properties;
             return this;
         }
-
         public CanonicalProfileDefinitionResponse build() {
             return new CanonicalProfileDefinitionResponse(canonicalProfileId, properties);
         }

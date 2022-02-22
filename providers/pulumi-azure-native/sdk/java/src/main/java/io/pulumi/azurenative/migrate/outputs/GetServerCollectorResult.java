@@ -100,7 +100,6 @@ public final class GetServerCollectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerCollectorResult build() {
             return new GetServerCollectorResult(eTag, id, name, properties, type);
         }

@@ -26,7 +26,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalIpas")
-    private final @Nullable Input<List<FileReferenceArgs>> additionalIpas;
+      private final @Nullable Input<List<FileReferenceArgs>> additionalIpas;
 
     public Input<List<FileReferenceArgs>> getAdditionalIpas() {
         return this.additionalIpas == null ? Input.empty() : this.additionalIpas;
@@ -37,7 +37,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<String> networkProfile;
+      private final @Nullable Input<String> networkProfile;
 
     public Input<String> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -48,7 +48,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullDirectories")
-    private final @Nullable Input<List<IosDeviceFileArgs>> pullDirectories;
+      private final @Nullable Input<List<IosDeviceFileArgs>> pullDirectories;
 
     public Input<List<IosDeviceFileArgs>> getPullDirectories() {
         return this.pullDirectories == null ? Input.empty() : this.pullDirectories;
@@ -59,7 +59,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushFiles")
-    private final @Nullable Input<List<IosDeviceFileArgs>> pushFiles;
+      private final @Nullable Input<List<IosDeviceFileArgs>> pushFiles;
 
     public Input<List<IosDeviceFileArgs>> getPushFiles() {
         return this.pushFiles == null ? Input.empty() : this.pushFiles;
@@ -148,7 +148,6 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.pushFiles = Input.ofNullable(pushFiles);
             return this;
         }
-
         public IosTestSetupArgs build() {
             return new IosTestSetupArgs(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }

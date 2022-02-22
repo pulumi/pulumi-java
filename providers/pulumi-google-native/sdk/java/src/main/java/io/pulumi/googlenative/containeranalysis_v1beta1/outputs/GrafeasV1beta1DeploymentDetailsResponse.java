@@ -52,7 +52,6 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public GrafeasV1beta1DeploymentDetailsResponse build() {
             return new GrafeasV1beta1DeploymentDetailsResponse(deployment);
         }

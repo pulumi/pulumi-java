@@ -96,7 +96,6 @@ public final class AudioResponse {
             this.lufs = Objects.requireNonNull(lufs);
             return this;
         }
-
         public AudioResponse build() {
             return new AudioResponse(highBoost, lowBoost, lufs);
         }

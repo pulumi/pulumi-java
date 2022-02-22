@@ -141,7 +141,6 @@ public final class OAuthAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OAuthAuthenticationResponse build() {
             return new OAuthAuthenticationResponse(audience, clientId, secret, tenant, type);
         }

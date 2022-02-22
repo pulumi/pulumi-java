@@ -139,7 +139,6 @@ public final class GetDataVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataVersionResult build() {
             return new GetDataVersionResult(id, name, properties, systemData, type);
         }

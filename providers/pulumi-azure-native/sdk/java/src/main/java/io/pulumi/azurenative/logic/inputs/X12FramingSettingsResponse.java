@@ -23,7 +23,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="characterSet", required=true)
-    private final String characterSet;
+        private final String characterSet;
 
     public String getCharacterSet() {
         return this.characterSet;
@@ -34,7 +34,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-    private final Integer componentSeparator;
+        private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
         return this.componentSeparator;
@@ -45,7 +45,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-    private final Integer dataElementSeparator;
+        private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
@@ -56,7 +56,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-    private final Integer replaceCharacter;
+        private final Integer replaceCharacter;
 
     public Integer getReplaceCharacter() {
         return this.replaceCharacter;
@@ -67,7 +67,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-    private final Boolean replaceSeparatorsInPayload;
+        private final Boolean replaceSeparatorsInPayload;
 
     public Boolean getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -78,7 +78,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-    private final Integer segmentTerminator;
+        private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
@@ -89,7 +89,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-    private final String segmentTerminatorSuffix;
+        private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -188,7 +188,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public X12FramingSettingsResponse build() {
             return new X12FramingSettingsResponse(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
         }

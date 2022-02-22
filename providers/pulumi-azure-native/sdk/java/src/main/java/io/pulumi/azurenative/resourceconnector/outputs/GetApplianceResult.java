@@ -311,7 +311,6 @@ public final class GetApplianceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetApplianceResult build() {
             return new GetApplianceResult(distro, id, identity, infrastructureConfig, location, name, provisioningState, publicKey, status, systemData, tags, type, version);
         }

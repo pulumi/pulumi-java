@@ -96,7 +96,6 @@ public final class TlsValidationContextResponse {
             this.validationSource = Objects.requireNonNull(validationSource);
             return this;
         }
-
         public TlsValidationContextResponse build() {
             return new TlsValidationContextResponse(certificatePath, sdsConfig, validationSource);
         }

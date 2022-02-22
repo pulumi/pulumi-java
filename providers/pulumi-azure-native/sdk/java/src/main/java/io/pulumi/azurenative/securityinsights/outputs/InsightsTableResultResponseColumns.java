@@ -76,7 +76,6 @@ public final class InsightsTableResultResponseColumns {
             this.type = type;
             return this;
         }
-
         public InsightsTableResultResponseColumns build() {
             return new InsightsTableResultResponseColumns(name, type);
         }

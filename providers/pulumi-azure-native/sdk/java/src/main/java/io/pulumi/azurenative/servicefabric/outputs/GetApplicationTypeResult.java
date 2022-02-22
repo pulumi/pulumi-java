@@ -182,7 +182,6 @@ public final class GetApplicationTypeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationTypeResult build() {
             return new GetApplicationTypeResult(etag, id, location, name, provisioningState, tags, type);
         }

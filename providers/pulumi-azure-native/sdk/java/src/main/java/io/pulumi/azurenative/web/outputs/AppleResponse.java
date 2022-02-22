@@ -99,7 +99,6 @@ public final class AppleResponse {
             this.registration = registration;
             return this;
         }
-
         public AppleResponse build() {
             return new AppleResponse(enabled, login, registration);
         }

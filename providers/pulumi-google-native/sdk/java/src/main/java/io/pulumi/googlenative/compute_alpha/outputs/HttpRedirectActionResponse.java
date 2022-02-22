@@ -159,7 +159,6 @@ public final class HttpRedirectActionResponse {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public HttpRedirectActionResponse build() {
             return new HttpRedirectActionResponse(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

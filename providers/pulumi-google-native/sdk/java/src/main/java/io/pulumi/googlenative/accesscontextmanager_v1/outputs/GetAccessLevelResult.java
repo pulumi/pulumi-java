@@ -139,7 +139,6 @@ public final class GetAccessLevelResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetAccessLevelResult build() {
             return new GetAccessLevelResult(basic, custom, description, name, title);
         }

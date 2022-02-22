@@ -17,7 +17,7 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="originGroupName", required=true)
-    private final String originGroupName;
+        private final String originGroupName;
 
     public String getOriginGroupName() {
         return this.originGroupName;
@@ -28,7 +28,7 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="originName", required=true)
-    private final String originName;
+        private final String originName;
 
     public String getOriginName() {
         return this.originName;
@@ -39,7 +39,7 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -50,7 +50,7 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAFDOriginArgs build() {
             return new GetAFDOriginArgs(originGroupName, originName, profileName, resourceGroupName);
         }

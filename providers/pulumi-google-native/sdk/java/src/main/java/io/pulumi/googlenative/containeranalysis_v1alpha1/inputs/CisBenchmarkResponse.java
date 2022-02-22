@@ -22,7 +22,7 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileLevel", required=true)
-    private final Integer profileLevel;
+      private final Integer profileLevel;
 
     public Integer getProfileLevel() {
         return this.profileLevel;
@@ -33,7 +33,7 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -82,7 +82,6 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public CisBenchmarkResponse build() {
             return new CisBenchmarkResponse(profileLevel, severity);
         }

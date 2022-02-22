@@ -140,7 +140,6 @@ public final class SecretAttributesResponse {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public SecretAttributesResponse build() {
             return new SecretAttributesResponse(created, enabled, expires, notBefore, updated);
         }

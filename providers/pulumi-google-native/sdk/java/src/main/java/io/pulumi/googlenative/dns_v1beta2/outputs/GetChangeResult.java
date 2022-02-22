@@ -153,7 +153,6 @@ public final class GetChangeResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetChangeResult build() {
             return new GetChangeResult(additions, deletions, isServing, kind, startTime, status);
         }

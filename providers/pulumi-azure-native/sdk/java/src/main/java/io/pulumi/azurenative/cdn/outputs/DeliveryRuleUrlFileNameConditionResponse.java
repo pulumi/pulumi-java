@@ -77,7 +77,6 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleUrlFileNameConditionResponse build() {
             return new DeliveryRuleUrlFileNameConditionResponse(name, parameters);
         }

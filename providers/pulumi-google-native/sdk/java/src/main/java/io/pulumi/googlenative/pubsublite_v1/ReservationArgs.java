@@ -15,7 +15,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ReservationArgs Empty = new ReservationArgs();
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -26,21 +26,21 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="reservationId", required=true)
-    private final Input<String> reservationId;
+      private final Input<String> reservationId;
 
     public Input<String> getReservationId() {
         return this.reservationId;
@@ -51,7 +51,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throughputCapacity")
-    private final @Nullable Input<String> throughputCapacity;
+      private final @Nullable Input<String> throughputCapacity;
 
     public Input<String> getThroughputCapacity() {
         return this.throughputCapacity == null ? Input.empty() : this.throughputCapacity;
@@ -155,7 +155,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.throughputCapacity = Input.ofNullable(throughputCapacity);
             return this;
         }
-
         public ReservationArgs build() {
             return new ReservationArgs(location, name, project, reservationId, throughputCapacity);
         }

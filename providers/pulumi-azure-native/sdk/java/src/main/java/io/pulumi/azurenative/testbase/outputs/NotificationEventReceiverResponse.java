@@ -77,7 +77,6 @@ public final class NotificationEventReceiverResponse {
             this.receiverValue = receiverValue;
             return this;
         }
-
         public NotificationEventReceiverResponse build() {
             return new NotificationEventReceiverResponse(receiverType, receiverValue);
         }

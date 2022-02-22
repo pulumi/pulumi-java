@@ -203,7 +203,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse build() {
             return new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse(description, destinationAddresses, destinationIpGroups, destinationPorts, name, protocol, sourceAddresses, sourceIpGroups);
         }

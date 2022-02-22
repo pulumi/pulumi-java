@@ -122,7 +122,6 @@ public final class TransferFilterDetailsResponse {
             this.filterFileDetails = filterFileDetails;
             return this;
         }
-
         public TransferFilterDetailsResponse build() {
             return new TransferFilterDetailsResponse(azureFileFilterDetails, blobFilterDetails, dataAccountType, filterFileDetails);
         }

@@ -24,7 +24,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="and")
-    private final @Nullable Input<List<ReportFilterArgs>> and;
+        private final @Nullable Input<List<ReportFilterArgs>> and;
 
     public Input<List<ReportFilterArgs>> getAnd() {
         return this.and == null ? Input.empty() : this.and;
@@ -35,7 +35,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimension")
-    private final @Nullable Input<ReportComparisonExpressionArgs> dimension;
+        private final @Nullable Input<ReportComparisonExpressionArgs> dimension;
 
     public Input<ReportComparisonExpressionArgs> getDimension() {
         return this.dimension == null ? Input.empty() : this.dimension;
@@ -46,7 +46,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="not")
-    private final @Nullable Input<ReportFilterArgs> not;
+        private final @Nullable Input<ReportFilterArgs> not;
 
     public Input<ReportFilterArgs> getNot() {
         return this.not == null ? Input.empty() : this.not;
@@ -57,7 +57,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="or")
-    private final @Nullable Input<List<ReportFilterArgs>> or;
+        private final @Nullable Input<List<ReportFilterArgs>> or;
 
     public Input<List<ReportFilterArgs>> getOr() {
         return this.or == null ? Input.empty() : this.or;
@@ -68,7 +68,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<ReportComparisonExpressionArgs> tag;
+        private final @Nullable Input<ReportComparisonExpressionArgs> tag;
 
     public Input<ReportComparisonExpressionArgs> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -172,7 +172,6 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public ReportFilterArgs build() {
             return new ReportFilterArgs(and, dimension, not, or, tag);
         }

@@ -225,7 +225,6 @@ public final class GetIncidentCommentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIncidentCommentResult build() {
             return new GetIncidentCommentResult(author, createdTimeUtc, etag, id, lastModifiedTimeUtc, message, name, systemData, type);
         }

@@ -98,7 +98,6 @@ public final class ReportScheduleResponse {
             this.status = status;
             return this;
         }
-
         public ReportScheduleResponse build() {
             return new ReportScheduleResponse(recurrence, recurrencePeriod, status);
         }

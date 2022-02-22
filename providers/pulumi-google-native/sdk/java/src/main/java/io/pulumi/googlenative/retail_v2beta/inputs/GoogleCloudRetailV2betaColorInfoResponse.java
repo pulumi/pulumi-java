@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="colorFamilies", required=true)
-    private final List<String> colorFamilies;
+      private final List<String> colorFamilies;
 
     public List<String> getColorFamilies() {
         return this.colorFamilies;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="colors", required=true)
-    private final List<String> colors;
+      private final List<String> colors;
 
     public List<String> getColors() {
         return this.colors;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends io.pulumi.re
             this.colors = Objects.requireNonNull(colors);
             return this;
         }
-
         public GoogleCloudRetailV2betaColorInfoResponse build() {
             return new GoogleCloudRetailV2betaColorInfoResponse(colorFamilies, colors);
         }

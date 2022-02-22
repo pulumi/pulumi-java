@@ -424,7 +424,6 @@ public final class GetCacheResult {
             this.upgradeStatus = upgradeStatus;
             return this;
         }
-
         public GetCacheResult build() {
             return new GetCacheResult(cacheSizeGB, directoryServicesSettings, encryptionSettings, health, id, identity, location, mountAddresses, name, networkSettings, provisioningState, securitySettings, sku, subnet, systemData, tags, type, upgradeStatus);
         }

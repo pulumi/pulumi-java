@@ -266,7 +266,6 @@ public final class DetailResponse {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }
-
         public DetailResponse build() {
             return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, vendor);
         }

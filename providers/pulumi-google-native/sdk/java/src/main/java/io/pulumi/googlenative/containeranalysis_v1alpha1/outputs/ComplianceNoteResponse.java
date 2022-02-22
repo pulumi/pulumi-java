@@ -182,7 +182,6 @@ public final class ComplianceNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceNoteResponse build() {
             return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }

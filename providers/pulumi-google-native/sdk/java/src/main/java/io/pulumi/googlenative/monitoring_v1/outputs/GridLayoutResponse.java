@@ -76,7 +76,6 @@ public final class GridLayoutResponse {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public GridLayoutResponse build() {
             return new GridLayoutResponse(columns, widgets);
         }

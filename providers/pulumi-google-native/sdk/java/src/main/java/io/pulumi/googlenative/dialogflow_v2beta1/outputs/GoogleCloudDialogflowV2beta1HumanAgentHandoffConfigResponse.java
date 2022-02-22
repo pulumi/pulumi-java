@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
         }

@@ -24,7 +24,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final Input<String> eventType;
+      private final Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType;
@@ -35,7 +35,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failurePolicy")
-    private final @Nullable Input<FailurePolicyArgs> failurePolicy;
+      private final @Nullable Input<FailurePolicyArgs> failurePolicy;
 
     public Input<FailurePolicyArgs> getFailurePolicy() {
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
@@ -46,7 +46,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -57,7 +57,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -146,7 +146,6 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public EventTriggerArgs build() {
             return new EventTriggerArgs(eventType, failurePolicy, resource, service);
         }

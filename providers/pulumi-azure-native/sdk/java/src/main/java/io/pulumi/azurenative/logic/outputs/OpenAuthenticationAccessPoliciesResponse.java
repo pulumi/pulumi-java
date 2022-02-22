@@ -55,7 +55,6 @@ public final class OpenAuthenticationAccessPoliciesResponse {
             this.policies = policies;
             return this;
         }
-
         public OpenAuthenticationAccessPoliciesResponse build() {
             return new OpenAuthenticationAccessPoliciesResponse(policies);
         }

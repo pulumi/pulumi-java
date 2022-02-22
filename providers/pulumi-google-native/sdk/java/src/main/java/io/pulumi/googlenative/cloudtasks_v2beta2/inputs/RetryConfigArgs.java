@@ -25,7 +25,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAttempts")
-    private final @Nullable Input<Integer> maxAttempts;
+      private final @Nullable Input<Integer> maxAttempts;
 
     public Input<Integer> getMaxAttempts() {
         return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
@@ -36,7 +36,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBackoff")
-    private final @Nullable Input<String> maxBackoff;
+      private final @Nullable Input<String> maxBackoff;
 
     public Input<String> getMaxBackoff() {
         return this.maxBackoff == null ? Input.empty() : this.maxBackoff;
@@ -47,7 +47,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDoublings")
-    private final @Nullable Input<Integer> maxDoublings;
+      private final @Nullable Input<Integer> maxDoublings;
 
     public Input<Integer> getMaxDoublings() {
         return this.maxDoublings == null ? Input.empty() : this.maxDoublings;
@@ -58,7 +58,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetryDuration")
-    private final @Nullable Input<String> maxRetryDuration;
+      private final @Nullable Input<String> maxRetryDuration;
 
     public Input<String> getMaxRetryDuration() {
         return this.maxRetryDuration == null ? Input.empty() : this.maxRetryDuration;
@@ -69,7 +69,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minBackoff")
-    private final @Nullable Input<String> minBackoff;
+      private final @Nullable Input<String> minBackoff;
 
     public Input<String> getMinBackoff() {
         return this.minBackoff == null ? Input.empty() : this.minBackoff;
@@ -80,7 +80,7 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unlimitedAttempts")
-    private final @Nullable Input<Boolean> unlimitedAttempts;
+      private final @Nullable Input<Boolean> unlimitedAttempts;
 
     public Input<Boolean> getUnlimitedAttempts() {
         return this.unlimitedAttempts == null ? Input.empty() : this.unlimitedAttempts;
@@ -199,7 +199,6 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.unlimitedAttempts = Input.ofNullable(unlimitedAttempts);
             return this;
         }
-
         public RetryConfigArgs build() {
             return new RetryConfigArgs(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff, unlimitedAttempts);
         }

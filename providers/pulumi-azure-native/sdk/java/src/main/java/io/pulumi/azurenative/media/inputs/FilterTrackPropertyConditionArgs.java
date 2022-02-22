@@ -25,7 +25,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operation", required=true)
-    private final Input<Either<String,FilterTrackPropertyCompareOperation>> operation;
+        private final Input<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
     public Input<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
         return this.operation;
@@ -36,7 +36,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="property", required=true)
-    private final Input<Either<String,FilterTrackPropertyType>> property;
+        private final Input<Either<String,FilterTrackPropertyType>> property;
 
     public Input<Either<String,FilterTrackPropertyType>> getProperty() {
         return this.property;
@@ -47,7 +47,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -121,7 +121,6 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public FilterTrackPropertyConditionArgs build() {
             return new FilterTrackPropertyConditionArgs(operation, property, value);
         }

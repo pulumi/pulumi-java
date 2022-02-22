@@ -265,7 +265,6 @@ public final class GetManagerExtendedInfoResult {
             this.version = version;
             return this;
         }
-
         public GetManagerExtendedInfoResult build() {
             return new GetManagerExtendedInfoResult(algorithm, encryptionKey, encryptionKeyThumbprint, etag, id, integrityKey, kind, name, portalCertificateThumbprint, type, version);
         }

@@ -76,7 +76,6 @@ public final class RegistryPasswordResponse {
             this.value = value;
             return this;
         }
-
         public RegistryPasswordResponse build() {
             return new RegistryPasswordResponse(name, value);
         }

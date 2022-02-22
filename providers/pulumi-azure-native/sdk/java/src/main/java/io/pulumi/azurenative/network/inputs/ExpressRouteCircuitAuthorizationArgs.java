@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable Input<String> authorizationKey;
+        private final @Nullable Input<String> authorizationKey;
 
     public Input<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationUseStatus")
-    private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+        private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
     public Input<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
         return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -147,7 +147,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ExpressRouteCircuitAuthorizationArgs build() {
             return new ExpressRouteCircuitAuthorizationArgs(authorizationKey, authorizationUseStatus, id, name);
         }

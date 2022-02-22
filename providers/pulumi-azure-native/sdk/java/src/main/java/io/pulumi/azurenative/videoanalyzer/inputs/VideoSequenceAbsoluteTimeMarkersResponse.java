@@ -21,7 +21,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="ranges", required=true)
-    private final String ranges;
+        private final String ranges;
 
     public String getRanges() {
         return this.ranges;
@@ -33,7 +33,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VideoSequenceAbsoluteTimeMarkersResponse build() {
             return new VideoSequenceAbsoluteTimeMarkersResponse(ranges, type);
         }

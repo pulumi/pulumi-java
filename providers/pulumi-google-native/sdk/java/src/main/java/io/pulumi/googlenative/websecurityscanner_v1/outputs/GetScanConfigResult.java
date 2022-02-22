@@ -310,7 +310,6 @@ public final class GetScanConfigResult {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }
-
         public GetScanConfigResult build() {
             return new GetScanConfigResult(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, managedScan, maxQps, name, riskLevel, schedule, startingUrls, staticIpScan, userAgent);
         }

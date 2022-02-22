@@ -74,7 +74,6 @@ public final class ParquetOptionsResponse {
             this.enumAsString = Objects.requireNonNull(enumAsString);
             return this;
         }
-
         public ParquetOptionsResponse build() {
             return new ParquetOptionsResponse(enableListInference, enumAsString);
         }

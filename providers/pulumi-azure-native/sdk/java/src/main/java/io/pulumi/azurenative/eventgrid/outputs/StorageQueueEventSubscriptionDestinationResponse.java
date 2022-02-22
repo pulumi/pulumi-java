@@ -99,7 +99,6 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageQueueEventSubscriptionDestinationResponse build() {
             return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
         }

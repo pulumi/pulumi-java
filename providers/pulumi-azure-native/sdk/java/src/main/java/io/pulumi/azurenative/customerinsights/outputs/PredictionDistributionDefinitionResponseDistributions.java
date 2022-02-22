@@ -140,7 +140,6 @@ public final class PredictionDistributionDefinitionResponseDistributions {
             this.scoreThreshold = scoreThreshold;
             return this;
         }
-
         public PredictionDistributionDefinitionResponseDistributions build() {
             return new PredictionDistributionDefinitionResponseDistributions(negatives, negativesAboveThreshold, positives, positivesAboveThreshold, scoreThreshold);
         }

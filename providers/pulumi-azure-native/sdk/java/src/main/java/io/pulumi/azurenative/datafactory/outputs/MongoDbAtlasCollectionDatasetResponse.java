@@ -231,7 +231,6 @@ public final class MongoDbAtlasCollectionDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbAtlasCollectionDatasetResponse build() {
             return new MongoDbAtlasCollectionDatasetResponse(annotations, collection, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

@@ -20,7 +20,7 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
     public static final ByProductsArgs Empty = new ByProductsArgs();
 
     @InputImport(name="customValues")
-    private final @Nullable Input<Map<String,String>> customValues;
+      private final @Nullable Input<Map<String,String>> customValues;
 
     public Input<Map<String,String>> getCustomValues() {
         return this.customValues == null ? Input.empty() : this.customValues;
@@ -63,7 +63,6 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
             this.customValues = Input.ofNullable(customValues);
             return this;
         }
-
         public ByProductsArgs build() {
             return new ByProductsArgs(customValues);
         }

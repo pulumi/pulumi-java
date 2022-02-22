@@ -98,7 +98,6 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
             this.timeToLive = timeToLive;
             return this;
         }
-
         public IntegrationRuntimeDataFlowPropertiesResponse build() {
             return new IntegrationRuntimeDataFlowPropertiesResponse(computeType, coreCount, timeToLive);
         }

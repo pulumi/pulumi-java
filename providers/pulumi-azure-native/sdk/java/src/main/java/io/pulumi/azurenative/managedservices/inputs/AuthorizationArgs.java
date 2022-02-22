@@ -24,7 +24,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegatedRoleDefinitionIds")
-    private final @Nullable Input<List<String>> delegatedRoleDefinitionIds;
+        private final @Nullable Input<List<String>> delegatedRoleDefinitionIds;
 
     public Input<List<String>> getDelegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? Input.empty() : this.delegatedRoleDefinitionIds;
@@ -35,7 +35,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -46,7 +46,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalIdDisplayName")
-    private final @Nullable Input<String> principalIdDisplayName;
+        private final @Nullable Input<String> principalIdDisplayName;
 
     public Input<String> getPrincipalIdDisplayName() {
         return this.principalIdDisplayName == null ? Input.empty() : this.principalIdDisplayName;
@@ -57,7 +57,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final Input<String> roleDefinitionId;
+        private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -146,7 +146,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
-
         public AuthorizationArgs build() {
             return new AuthorizationArgs(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
         }

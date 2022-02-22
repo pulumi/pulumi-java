@@ -121,7 +121,6 @@ public final class InputResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(id, name, properties, type);
         }

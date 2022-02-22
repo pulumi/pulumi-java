@@ -158,7 +158,6 @@ public final class RestoreResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestoreResponse build() {
             return new RestoreResponse(backup, details, endTime, startTime, state, type);
         }

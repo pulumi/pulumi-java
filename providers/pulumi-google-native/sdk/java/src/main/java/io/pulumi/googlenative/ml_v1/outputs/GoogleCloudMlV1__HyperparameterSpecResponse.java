@@ -225,7 +225,6 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterSpecResponse build() {
             return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }

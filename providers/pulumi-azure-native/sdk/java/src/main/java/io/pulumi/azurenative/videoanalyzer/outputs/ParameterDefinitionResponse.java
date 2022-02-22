@@ -76,7 +76,6 @@ public final class ParameterDefinitionResponse {
             this.value = value;
             return this;
         }
-
         public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(name, value);
         }

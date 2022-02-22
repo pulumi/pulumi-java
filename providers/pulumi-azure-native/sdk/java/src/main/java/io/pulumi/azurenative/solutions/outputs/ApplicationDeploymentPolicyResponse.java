@@ -52,7 +52,6 @@ public final class ApplicationDeploymentPolicyResponse {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public ApplicationDeploymentPolicyResponse build() {
             return new ApplicationDeploymentPolicyResponse(deploymentMode);
         }

@@ -78,7 +78,6 @@ public final class CopyAudioResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public CopyAudioResponse build() {
             return new CopyAudioResponse(label, odataType);
         }

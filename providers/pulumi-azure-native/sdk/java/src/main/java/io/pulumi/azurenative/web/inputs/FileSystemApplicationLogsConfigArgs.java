@@ -23,7 +23,7 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<LogLevel> level;
+        private final @Nullable Input<LogLevel> level;
 
     public Input<LogLevel> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -66,7 +66,6 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
             this.level = Input.ofNullable(level);
             return this;
         }
-
         public FileSystemApplicationLogsConfigArgs build() {
             return new FileSystemApplicationLogsConfigArgs(level);
         }

@@ -118,7 +118,6 @@ public final class ServicePrincipalSecretAuthInfoResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalSecretAuthInfoResponse build() {
             return new ServicePrincipalSecretAuthInfoResponse(authType, clientId, principalId, secret);
         }

@@ -161,7 +161,6 @@ public final class AccessReviewScopeResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public AccessReviewScopeResponse build() {
             return new AccessReviewScopeResponse(assignmentState, expandNestedMemberships, inactiveDuration, principalType, resourceId, roleDefinitionId);
         }

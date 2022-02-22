@@ -22,7 +22,7 @@ public final class JobPlacementResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-    private final Map<String,String> clusterLabels;
+      private final Map<String,String> clusterLabels;
 
     public Map<String,String> getClusterLabels() {
         return this.clusterLabels;
@@ -33,7 +33,7 @@ public final class JobPlacementResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -44,7 +44,7 @@ public final class JobPlacementResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterUuid", required=true)
-    private final String clusterUuid;
+      private final String clusterUuid;
 
     public String getClusterUuid() {
         return this.clusterUuid;
@@ -103,7 +103,6 @@ public final class JobPlacementResponse extends io.pulumi.resources.InvokeArgs {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }
-
         public JobPlacementResponse build() {
             return new JobPlacementResponse(clusterLabels, clusterName, clusterUuid);
         }

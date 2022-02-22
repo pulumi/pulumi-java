@@ -23,7 +23,7 @@ public final class WaitStepPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final Input<WaitStepAttributesArgs> attributes;
+        private final Input<WaitStepAttributesArgs> attributes;
 
     public Input<WaitStepAttributesArgs> getAttributes() {
         return this.attributes;
@@ -35,7 +35,7 @@ public final class WaitStepPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stepType", required=true)
-    private final Input<String> stepType;
+        private final Input<String> stepType;
 
     public Input<String> getStepType() {
         return this.stepType;
@@ -94,7 +94,6 @@ public final class WaitStepPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.stepType = Input.of(Objects.requireNonNull(stepType));
             return this;
         }
-
         public WaitStepPropertiesArgs build() {
             return new WaitStepPropertiesArgs(attributes, stepType);
         }

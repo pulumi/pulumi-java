@@ -20,7 +20,7 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final Input<String> monitorName;
+        private final Input<String> monitorName;
 
     public Input<String> getMonitorName() {
         return this.monitorName;
@@ -31,7 +31,7 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
+        private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
 
     public Input<MonitoringTagRulesPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,14 +42,14 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+        private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
@@ -60,7 +60,7 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subAccountName", required=true)
-    private final Input<String> subAccountName;
+        private final Input<String> subAccountName;
 
     public Input<String> getSubAccountName() {
         return this.subAccountName;
@@ -164,7 +164,6 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
             this.subAccountName = Input.of(Objects.requireNonNull(subAccountName));
             return this;
         }
-
         public SubAccountTagRuleArgs build() {
             return new SubAccountTagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName, subAccountName);
         }

@@ -161,7 +161,6 @@ public final class ApplicationGatewayIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayIPConfigurationResponse build() {
             return new ApplicationGatewayIPConfigurationResponse(etag, id, name, provisioningState, subnet, type);
         }

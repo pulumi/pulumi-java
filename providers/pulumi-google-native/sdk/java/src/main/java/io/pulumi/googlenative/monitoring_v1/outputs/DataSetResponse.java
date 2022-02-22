@@ -138,7 +138,6 @@ public final class DataSetResponse {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public DataSetResponse build() {
             return new DataSetResponse(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
         }

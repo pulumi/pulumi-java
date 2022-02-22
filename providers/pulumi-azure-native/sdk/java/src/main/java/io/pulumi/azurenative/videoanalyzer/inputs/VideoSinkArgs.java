@@ -27,7 +27,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs", required=true)
-    private final Input<List<NodeInputArgs>> inputs;
+        private final Input<List<NodeInputArgs>> inputs;
 
     public Input<List<NodeInputArgs>> getInputs() {
         return this.inputs;
@@ -38,7 +38,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -61,7 +61,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoCreationProperties")
-    private final @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties;
+        private final @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties;
 
     public Input<VideoCreationPropertiesArgs> getVideoCreationProperties() {
         return this.videoCreationProperties == null ? Input.empty() : this.videoCreationProperties;
@@ -72,7 +72,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName", required=true)
-    private final Input<String> videoName;
+        private final Input<String> videoName;
 
     public Input<String> getVideoName() {
         return this.videoName;
@@ -83,7 +83,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoPublishingOptions")
-    private final @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions;
+        private final @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions;
 
     public Input<VideoPublishingOptionsArgs> getVideoPublishingOptions() {
         return this.videoPublishingOptions == null ? Input.empty() : this.videoPublishingOptions;
@@ -202,7 +202,6 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.videoPublishingOptions = Input.ofNullable(videoPublishingOptions);
             return this;
         }
-
         public VideoSinkArgs build() {
             return new VideoSinkArgs(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }

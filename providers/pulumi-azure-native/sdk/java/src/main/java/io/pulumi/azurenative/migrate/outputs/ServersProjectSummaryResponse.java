@@ -227,7 +227,6 @@ public final class ServersProjectSummaryResponse {
             this.testMigratedCount = testMigratedCount;
             return this;
         }
-
         public ServersProjectSummaryResponse build() {
             return new ServersProjectSummaryResponse(assessedCount, discoveredCount, extendedSummary, instanceType, lastSummaryRefreshedTime, migratedCount, refreshSummaryState, replicatingCount, testMigratedCount);
         }

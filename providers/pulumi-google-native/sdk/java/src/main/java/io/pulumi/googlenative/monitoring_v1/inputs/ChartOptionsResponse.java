@@ -21,7 +21,7 @@ public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -59,7 +59,6 @@ public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public ChartOptionsResponse build() {
             return new ChartOptionsResponse(mode);
         }

@@ -52,7 +52,6 @@ public final class AcceleratorResponse {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public AcceleratorResponse build() {
             return new AcceleratorResponse(acceleratorType);
         }

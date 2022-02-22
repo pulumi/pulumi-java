@@ -22,7 +22,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosModelId", required=true)
-    private final Input<String> iosModelId;
+      private final Input<String> iosModelId;
 
     public Input<String> getIosModelId() {
         return this.iosModelId;
@@ -33,7 +33,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosVersionId", required=true)
-    private final Input<String> iosVersionId;
+      private final Input<String> iosVersionId;
 
     public Input<String> getIosVersionId() {
         return this.iosVersionId;
@@ -44,7 +44,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale", required=true)
-    private final Input<String> locale;
+      private final Input<String> locale;
 
     public Input<String> getLocale() {
         return this.locale;
@@ -55,7 +55,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientation", required=true)
-    private final Input<String> orientation;
+      private final Input<String> orientation;
 
     public Input<String> getOrientation() {
         return this.orientation;
@@ -144,7 +144,6 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.orientation = Input.of(Objects.requireNonNull(orientation));
             return this;
         }
-
         public IosDeviceArgs build() {
             return new IosDeviceArgs(iosModelId, iosVersionId, locale, orientation);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="valueSource")
-    private final @Nullable Input<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
+      private final @Nullable Input<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
 
     public Input<GoogleCloudRunOpV2EnvVarSourceArgs> getValueSource() {
         return this.valueSource == null ? Input.empty() : this.valueSource;
@@ -120,7 +120,6 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
             this.valueSource = Input.ofNullable(valueSource);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarArgs build() {
             return new GoogleCloudRunOpV2EnvVarArgs(name, value, valueSource);
         }

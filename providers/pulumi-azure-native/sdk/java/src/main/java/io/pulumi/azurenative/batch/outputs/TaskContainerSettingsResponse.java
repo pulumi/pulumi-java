@@ -111,7 +111,6 @@ public final class TaskContainerSettingsResponse {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public TaskContainerSettingsResponse build() {
             return new TaskContainerSettingsResponse(containerRunOptions, imageName, registry, workingDirectory);
         }

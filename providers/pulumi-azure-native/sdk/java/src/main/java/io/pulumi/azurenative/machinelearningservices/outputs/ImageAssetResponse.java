@@ -119,7 +119,6 @@ public final class ImageAssetResponse {
             this.url = url;
             return this;
         }
-
         public ImageAssetResponse build() {
             return new ImageAssetResponse(id, mimeType, unpack, url);
         }

@@ -22,7 +22,7 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -65,7 +65,6 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public AwsArgs build() {
             return new AwsArgs(accountId);
         }

@@ -97,7 +97,6 @@ public final class QueryParameterResponse {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public QueryParameterResponse build() {
             return new QueryParameterResponse(name, parameterType, parameterValue);
         }

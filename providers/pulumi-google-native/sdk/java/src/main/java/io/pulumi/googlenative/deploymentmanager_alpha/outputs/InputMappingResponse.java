@@ -116,7 +116,6 @@ public final class InputMappingResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InputMappingResponse build() {
             return new InputMappingResponse(fieldName, location, methodMatch, value);
         }

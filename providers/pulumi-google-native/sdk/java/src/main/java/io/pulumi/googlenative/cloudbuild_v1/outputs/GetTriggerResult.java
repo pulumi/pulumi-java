@@ -527,7 +527,6 @@ public final class GetTriggerResult {
             this.webhookConfig = Objects.requireNonNull(webhookConfig);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, createTime, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, name, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
         }

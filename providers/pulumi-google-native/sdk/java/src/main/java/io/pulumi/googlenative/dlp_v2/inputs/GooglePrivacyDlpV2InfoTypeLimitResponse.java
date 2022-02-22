@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFindings", required=true)
-    private final Integer maxFindings;
+      private final Integer maxFindings;
 
     public Integer getMaxFindings() {
         return this.maxFindings;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
             return new GooglePrivacyDlpV2InfoTypeLimitResponse(infoType, maxFindings);
         }

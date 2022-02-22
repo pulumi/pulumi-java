@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1OperationResponse {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationResponse build() {
             return new GoogleCloudApigeeV1OperationResponse(methods, resource);
         }

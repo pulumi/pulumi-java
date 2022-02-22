@@ -23,7 +23,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="perPartitionBytes")
-    private final @Nullable Input<String> perPartitionBytes;
+      private final @Nullable Input<String> perPartitionBytes;
 
     public Input<String> getPerPartitionBytes() {
         return this.perPartitionBytes == null ? Input.empty() : this.perPartitionBytes;
@@ -34,7 +34,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -93,7 +93,6 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.period = Input.ofNullable(period);
             return this;
         }
-
         public RetentionConfigArgs build() {
             return new RetentionConfigArgs(perPartitionBytes, period);
         }

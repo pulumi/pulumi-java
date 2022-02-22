@@ -21,7 +21,7 @@ public final class ConfigConnectorConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class ConfigConnectorConfigResponse extends io.pulumi.resources.Inv
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConfigConnectorConfigResponse build() {
             return new ConfigConnectorConfigResponse(enabled);
         }

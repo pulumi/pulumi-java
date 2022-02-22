@@ -75,7 +75,6 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPortResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigDestinationPortResponse build() {
             return new SecurityPolicyRuleMatcherConfigDestinationPortResponse(ipProtocol, ports);
         }

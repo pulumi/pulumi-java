@@ -97,7 +97,6 @@ public final class UserAssignedIdentityAuthInfoResponse {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public UserAssignedIdentityAuthInfoResponse build() {
             return new UserAssignedIdentityAuthInfoResponse(authType, clientId, subscriptionId);
         }

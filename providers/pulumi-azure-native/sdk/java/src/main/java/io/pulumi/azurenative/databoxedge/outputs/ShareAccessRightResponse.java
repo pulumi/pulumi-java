@@ -74,7 +74,6 @@ public final class ShareAccessRightResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public ShareAccessRightResponse build() {
             return new ShareAccessRightResponse(accessType, shareId);
         }

@@ -52,7 +52,6 @@ public final class CertificateProviderInstanceResponse {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }
-
         public CertificateProviderInstanceResponse build() {
             return new CertificateProviderInstanceResponse(pluginInstance);
         }

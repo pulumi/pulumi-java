@@ -98,7 +98,6 @@ public final class FieldDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldDefinitionResponse build() {
             return new FieldDefinitionResponse(isEncrypted, isOptional, type);
         }

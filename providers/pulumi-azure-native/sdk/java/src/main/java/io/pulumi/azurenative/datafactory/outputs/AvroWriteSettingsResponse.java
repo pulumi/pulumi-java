@@ -142,7 +142,6 @@ public final class AvroWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AvroWriteSettingsResponse build() {
             return new AvroWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
         }

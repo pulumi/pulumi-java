@@ -22,7 +22,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configMapKeyRef", required=true)
-    private final ConfigMapKeySelectorResponse configMapKeyRef;
+      private final ConfigMapKeySelectorResponse configMapKeyRef;
 
     public ConfigMapKeySelectorResponse getConfigMapKeyRef() {
         return this.configMapKeyRef;
@@ -33,7 +33,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretKeyRef", required=true)
-    private final SecretKeySelectorResponse secretKeyRef;
+      private final SecretKeySelectorResponse secretKeyRef;
 
     public SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;
@@ -82,7 +82,6 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public EnvVarSourceResponse build() {
             return new EnvVarSourceResponse(configMapKeyRef, secretKeyRef);
         }

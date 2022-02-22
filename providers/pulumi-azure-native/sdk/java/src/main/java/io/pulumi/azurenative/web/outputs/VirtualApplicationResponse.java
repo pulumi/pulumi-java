@@ -121,7 +121,6 @@ public final class VirtualApplicationResponse {
             this.virtualPath = virtualPath;
             return this;
         }
-
         public VirtualApplicationResponse build() {
             return new VirtualApplicationResponse(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }

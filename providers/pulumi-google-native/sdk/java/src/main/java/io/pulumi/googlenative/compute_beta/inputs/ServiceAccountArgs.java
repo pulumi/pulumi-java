@@ -24,7 +24,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -35,7 +35,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -94,7 +94,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public ServiceAccountArgs build() {
             return new ServiceAccountArgs(email, scopes);
         }

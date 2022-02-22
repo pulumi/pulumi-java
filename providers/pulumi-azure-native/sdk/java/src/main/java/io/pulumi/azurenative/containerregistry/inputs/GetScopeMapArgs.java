@@ -17,7 +17,7 @@ public final class GetScopeMapArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+        private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetScopeMapArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScopeMapArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scopeMapName", required=true)
-    private final String scopeMapName;
+        private final String scopeMapName;
 
     public String getScopeMapName() {
         return this.scopeMapName;
@@ -98,7 +98,6 @@ public final class GetScopeMapArgs extends io.pulumi.resources.InvokeArgs {
             this.scopeMapName = Objects.requireNonNull(scopeMapName);
             return this;
         }
-
         public GetScopeMapArgs build() {
             return new GetScopeMapArgs(registryName, resourceGroupName, scopeMapName);
         }

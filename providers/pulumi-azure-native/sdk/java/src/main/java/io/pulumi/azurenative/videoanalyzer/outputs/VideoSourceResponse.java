@@ -119,7 +119,6 @@ public final class VideoSourceResponse {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
-
         public VideoSourceResponse build() {
             return new VideoSourceResponse(name, timeSequences, type, videoName);
         }

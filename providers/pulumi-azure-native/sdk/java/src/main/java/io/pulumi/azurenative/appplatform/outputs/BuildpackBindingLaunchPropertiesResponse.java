@@ -76,7 +76,6 @@ public final class BuildpackBindingLaunchPropertiesResponse {
             this.secrets = secrets;
             return this;
         }
-
         public BuildpackBindingLaunchPropertiesResponse build() {
             return new BuildpackBindingLaunchPropertiesResponse(properties, secrets);
         }

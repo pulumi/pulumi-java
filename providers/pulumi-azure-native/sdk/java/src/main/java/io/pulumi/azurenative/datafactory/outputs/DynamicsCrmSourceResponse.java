@@ -184,7 +184,6 @@ public final class DynamicsCrmSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicsCrmSourceResponse build() {
             return new DynamicsCrmSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

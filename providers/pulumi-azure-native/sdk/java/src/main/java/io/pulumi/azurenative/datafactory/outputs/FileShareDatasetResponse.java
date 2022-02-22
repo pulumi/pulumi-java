@@ -363,7 +363,6 @@ public final class FileShareDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileShareDatasetResponse build() {
             return new FileShareDatasetResponse(annotations, compression, description, fileFilter, fileName, folder, folderPath, format, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, schema, structure, type);
         }

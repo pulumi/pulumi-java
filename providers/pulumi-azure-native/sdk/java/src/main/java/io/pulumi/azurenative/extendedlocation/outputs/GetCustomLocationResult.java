@@ -311,7 +311,6 @@ public final class GetCustomLocationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomLocationResult build() {
             return new GetCustomLocationResult(authentication, clusterExtensionIds, displayName, hostResourceId, hostType, id, location, name, namespace, provisioningState, systemData, tags, type);
         }

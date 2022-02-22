@@ -13,14 +13,14 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReportArgs Empty = new GetReportArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="reportId", required=true)
-    private final String reportId;
+      private final String reportId;
 
     public String getReportId() {
         return this.reportId;
@@ -69,7 +69,6 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
             this.reportId = Objects.requireNonNull(reportId);
             return this;
         }
-
         public GetReportArgs build() {
             return new GetReportArgs(organizationId, reportId);
         }

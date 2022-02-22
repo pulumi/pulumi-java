@@ -13,7 +13,7 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
     public static final TaskSchedulingPolicyResponse Empty = new TaskSchedulingPolicyResponse();
 
     @InputImport(name="nodeFillType", required=true)
-    private final String nodeFillType;
+        private final String nodeFillType;
 
     public String getNodeFillType() {
         return this.nodeFillType;
@@ -51,7 +51,6 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }
-
         public TaskSchedulingPolicyResponse build() {
             return new TaskSchedulingPolicyResponse(nodeFillType);
         }

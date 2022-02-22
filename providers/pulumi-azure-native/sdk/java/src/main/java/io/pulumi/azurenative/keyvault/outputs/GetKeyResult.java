@@ -282,7 +282,6 @@ public final class GetKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(attributes, curveName, id, keyOps, keySize, keyUri, keyUriWithVersion, kty, location, name, tags, type);
         }

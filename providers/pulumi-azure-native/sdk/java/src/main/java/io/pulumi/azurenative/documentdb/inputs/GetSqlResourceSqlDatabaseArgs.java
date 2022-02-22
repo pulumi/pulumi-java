@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlDatabaseArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlDatabaseArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlDatabaseArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetSqlResourceSqlDatabaseArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetSqlResourceSqlDatabaseArgs build() {
             return new GetSqlResourceSqlDatabaseArgs(accountName, databaseName, resourceGroupName);
         }

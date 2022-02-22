@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__RouteMapResponse {
             this.predict = Objects.requireNonNull(predict);
             return this;
         }
-
         public GoogleCloudMlV1__RouteMapResponse build() {
             return new GoogleCloudMlV1__RouteMapResponse(health, predict);
         }

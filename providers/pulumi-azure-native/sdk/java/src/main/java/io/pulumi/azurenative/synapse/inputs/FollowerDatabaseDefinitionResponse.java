@@ -21,7 +21,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
-    private final String attachedDatabaseConfigurationName;
+        private final String attachedDatabaseConfigurationName;
 
     public String getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -32,7 +32,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -43,7 +43,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="kustoPoolResourceId", required=true)
-    private final String kustoPoolResourceId;
+        private final String kustoPoolResourceId;
 
     public String getKustoPoolResourceId() {
         return this.kustoPoolResourceId;
@@ -102,7 +102,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }
-
         public FollowerDatabaseDefinitionResponse build() {
             return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, databaseName, kustoPoolResourceId);
         }

@@ -25,7 +25,7 @@ public final class MpiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-    private final String distributionType;
+        private final String distributionType;
 
     public String getDistributionType() {
         return this.distributionType;
@@ -36,7 +36,7 @@ public final class MpiResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="processCountPerInstance")
-    private final @Nullable Integer processCountPerInstance;
+        private final @Nullable Integer processCountPerInstance;
 
     public Optional<Integer> getProcessCountPerInstance() {
         return this.processCountPerInstance == null ? Optional.empty() : Optional.ofNullable(this.processCountPerInstance);
@@ -85,7 +85,6 @@ public final class MpiResponse extends io.pulumi.resources.InvokeArgs {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
-
         public MpiResponse build() {
             return new MpiResponse(distributionType, processCountPerInstance);
         }

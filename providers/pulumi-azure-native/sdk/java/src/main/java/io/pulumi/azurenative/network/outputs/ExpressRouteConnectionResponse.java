@@ -227,7 +227,6 @@ public final class ExpressRouteConnectionResponse {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public ExpressRouteConnectionResponse build() {
             return new ExpressRouteConnectionResponse(authorizationKey, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, id, name, provisioningState, routingConfiguration, routingWeight);
         }

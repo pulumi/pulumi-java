@@ -24,7 +24,7 @@ public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Double count;
+        private final @Nullable Double count;
 
     public Optional<Double> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable String vmSize;
+        private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -84,7 +84,6 @@ public final class DedicatedHostAllocatableVMResponse extends io.pulumi.resource
             this.vmSize = vmSize;
             return this;
         }
-
         public DedicatedHostAllocatableVMResponse build() {
             return new DedicatedHostAllocatableVMResponse(count, vmSize);
         }

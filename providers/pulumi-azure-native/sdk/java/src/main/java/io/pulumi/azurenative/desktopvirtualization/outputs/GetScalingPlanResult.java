@@ -438,7 +438,6 @@ public final class GetScalingPlanResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScalingPlanResult build() {
             return new GetScalingPlanResult(description, etag, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, id, identity, kind, location, managedBy, name, objectId, plan, ring, schedules, sku, tags, timeZone, type);
         }

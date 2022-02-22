@@ -433,7 +433,6 @@ public final class GetExportConfigurationResult {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public GetExportConfigurationResult build() {
             return new GetExportConfigurationResult(applicationName, containerName, destinationAccountId, destinationStorageLocationId, destinationStorageSubscriptionId, destinationType, exportId, exportStatus, instrumentationKey, isUserEnabled, lastGapTime, lastSuccessTime, lastUserUpdate, notificationQueueEnabled, permanentErrorReason, recordTypes, resourceGroup, storageName, subscriptionId);
         }

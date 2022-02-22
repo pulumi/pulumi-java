@@ -15,21 +15,21 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetScheduleArgs Empty = new GetScheduleArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="scheduleId", required=true)
-    private final String scheduleId;
+      private final String scheduleId;
 
     public String getScheduleId() {
         return this.scheduleId;
@@ -88,7 +88,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.scheduleId = Objects.requireNonNull(scheduleId);
             return this;
         }
-
         public GetScheduleArgs build() {
             return new GetScheduleArgs(location, project, scheduleId);
         }

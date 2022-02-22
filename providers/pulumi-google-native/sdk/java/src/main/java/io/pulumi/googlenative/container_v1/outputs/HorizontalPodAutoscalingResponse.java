@@ -52,7 +52,6 @@ public final class HorizontalPodAutoscalingResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HorizontalPodAutoscalingResponse build() {
             return new HorizontalPodAutoscalingResponse(disabled);
         }

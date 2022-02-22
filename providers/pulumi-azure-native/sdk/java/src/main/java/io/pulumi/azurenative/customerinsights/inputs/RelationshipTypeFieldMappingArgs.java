@@ -22,7 +22,7 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="profileFieldName", required=true)
-    private final Input<String> profileFieldName;
+        private final Input<String> profileFieldName;
 
     public Input<String> getProfileFieldName() {
         return this.profileFieldName;
@@ -33,7 +33,7 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relatedProfileKeyProperty", required=true)
-    private final Input<String> relatedProfileKeyProperty;
+        private final Input<String> relatedProfileKeyProperty;
 
     public Input<String> getRelatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
@@ -92,7 +92,6 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
             this.relatedProfileKeyProperty = Input.of(Objects.requireNonNull(relatedProfileKeyProperty));
             return this;
         }
-
         public RelationshipTypeFieldMappingArgs build() {
             return new RelationshipTypeFieldMappingArgs(profileFieldName, relatedProfileKeyProperty);
         }

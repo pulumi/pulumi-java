@@ -205,7 +205,6 @@ public final class GetCommitmentPlanResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCommitmentPlanResult build() {
             return new GetCommitmentPlanResult(etag, id, location, name, properties, sku, tags, type);
         }

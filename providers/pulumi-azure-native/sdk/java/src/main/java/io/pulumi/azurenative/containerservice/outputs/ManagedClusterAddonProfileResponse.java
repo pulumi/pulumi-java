@@ -99,7 +99,6 @@ public final class ManagedClusterAddonProfileResponse {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public ManagedClusterAddonProfileResponse build() {
             return new ManagedClusterAddonProfileResponse(config, enabled, identity);
         }

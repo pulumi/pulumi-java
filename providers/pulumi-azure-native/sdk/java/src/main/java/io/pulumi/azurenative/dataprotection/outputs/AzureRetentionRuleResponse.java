@@ -97,7 +97,6 @@ public final class AzureRetentionRuleResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AzureRetentionRuleResponse build() {
             return new AzureRetentionRuleResponse(isDefault, lifecycles, name, objectType);
         }

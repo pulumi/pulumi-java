@@ -25,7 +25,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-    private final Input<String> distributionType;
+        private final Input<String> distributionType;
 
     public Input<String> getDistributionType() {
         return this.distributionType;
@@ -36,7 +36,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterServerCount")
-    private final @Nullable Input<Integer> parameterServerCount;
+        private final @Nullable Input<Integer> parameterServerCount;
 
     public Input<Integer> getParameterServerCount() {
         return this.parameterServerCount == null ? Input.empty() : this.parameterServerCount;
@@ -47,7 +47,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerCount")
-    private final @Nullable Input<Integer> workerCount;
+        private final @Nullable Input<Integer> workerCount;
 
     public Input<Integer> getWorkerCount() {
         return this.workerCount == null ? Input.empty() : this.workerCount;
@@ -121,7 +121,6 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }
-
         public TensorFlowArgs build() {
             return new TensorFlowArgs(distributionType, parameterServerCount, workerCount);
         }

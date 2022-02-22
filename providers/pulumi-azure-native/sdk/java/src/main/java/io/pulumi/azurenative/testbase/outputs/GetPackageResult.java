@@ -439,7 +439,6 @@ public final class GetPackageResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetPackageResult build() {
             return new GetPackageResult(applicationName, blobPath, etag, flightingRing, id, isEnabled, lastModifiedTime, location, name, packageStatus, provisioningState, systemData, tags, targetOSList, testTypes, tests, type, validationResults, version);
         }

@@ -97,7 +97,6 @@ public final class GetCustomClassResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetCustomClassResult build() {
             return new GetCustomClassResult(customClassId, items, name);
         }

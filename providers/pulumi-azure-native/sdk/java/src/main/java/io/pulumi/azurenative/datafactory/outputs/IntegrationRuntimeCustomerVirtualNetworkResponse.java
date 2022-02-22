@@ -54,7 +54,6 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public IntegrationRuntimeCustomerVirtualNetworkResponse build() {
             return new IntegrationRuntimeCustomerVirtualNetworkResponse(subnetId);
         }

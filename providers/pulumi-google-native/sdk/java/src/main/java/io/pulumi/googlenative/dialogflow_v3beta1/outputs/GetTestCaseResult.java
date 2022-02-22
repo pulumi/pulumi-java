@@ -204,7 +204,6 @@ public final class GetTestCaseResult {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
         }
-
         public GetTestCaseResult build() {
             return new GetTestCaseResult(creationTime, displayName, lastTestResult, name, notes, tags, testCaseConversationTurns, testConfig);
         }

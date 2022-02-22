@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final String bucketSize;
+      private final String bucketSize;
 
     public String getBucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @InputImport(name="bucketValueCount", required=true)
-    private final String bucketValueCount;
+      private final String bucketValueCount;
 
     public String getBucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @InputImport(name="bucketValues", required=true)
-    private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
+      private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @InputImport(name="maxAnonymity", required=true)
-    private final String maxAnonymity;
+      private final String maxAnonymity;
 
     public String getMaxAnonymity() {
         return this.maxAnonymity;
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @InputImport(name="minAnonymity", required=true)
-    private final String minAnonymity;
+      private final String minAnonymity;
 
     public String getMinAnonymity() {
         return this.minAnonymity;
@@ -146,7 +146,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
             this.minAnonymity = Objects.requireNonNull(minAnonymity);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxAnonymity, minAnonymity);
         }

@@ -76,7 +76,6 @@ public final class AutoScalingResourceMetricResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AutoScalingResourceMetricResponse build() {
             return new AutoScalingResourceMetricResponse(kind, name);
         }

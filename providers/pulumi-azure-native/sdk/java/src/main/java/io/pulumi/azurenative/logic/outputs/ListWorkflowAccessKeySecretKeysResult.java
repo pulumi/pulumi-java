@@ -74,7 +74,6 @@ public final class ListWorkflowAccessKeySecretKeysResult {
             this.secondarySecretKey = Objects.requireNonNull(secondarySecretKey);
             return this;
         }
-
         public ListWorkflowAccessKeySecretKeysResult build() {
             return new ListWorkflowAccessKeySecretKeysResult(primarySecretKey, secondarySecretKey);
         }

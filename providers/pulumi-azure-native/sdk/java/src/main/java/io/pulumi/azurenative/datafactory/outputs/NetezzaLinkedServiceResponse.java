@@ -210,7 +210,6 @@ public final class NetezzaLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NetezzaLinkedServiceResponse build() {
             return new NetezzaLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
         }

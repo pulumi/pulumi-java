@@ -23,7 +23,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -34,7 +34,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="link")
-    private final @Nullable String link;
+        private final @Nullable String link;
 
     public Optional<String> getLink() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
@@ -56,7 +56,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="linkedResourceType")
-    private final @Nullable String linkedResourceType;
+        private final @Nullable String linkedResourceType;
 
     public Optional<String> getLinkedResourceType() {
         return this.linkedResourceType == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceType);
@@ -67,7 +67,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -78,7 +78,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -89,7 +89,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -188,7 +188,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceNavigationLinkResponse build() {
             return new ResourceNavigationLinkResponse(etag, id, link, linkedResourceType, name, provisioningState, type);
         }

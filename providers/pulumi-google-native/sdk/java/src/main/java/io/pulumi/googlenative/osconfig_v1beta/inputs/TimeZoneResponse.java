@@ -21,7 +21,7 @@ public final class TimeZoneResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -59,7 +59,6 @@ public final class TimeZoneResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public TimeZoneResponse build() {
             return new TimeZoneResponse(version);
         }

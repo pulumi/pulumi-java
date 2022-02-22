@@ -202,7 +202,6 @@ public final class GetContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContainerResult build() {
             return new GetContainerResult(containerStatus, createdDateTime, dataFormat, id, name, refreshDetails, systemData, type);
         }

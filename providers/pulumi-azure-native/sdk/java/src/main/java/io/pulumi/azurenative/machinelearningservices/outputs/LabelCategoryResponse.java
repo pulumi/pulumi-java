@@ -100,7 +100,6 @@ public final class LabelCategoryResponse {
             this.displayName = displayName;
             return this;
         }
-
         public LabelCategoryResponse build() {
             return new LabelCategoryResponse(allowMultiSelect, classes, displayName);
         }

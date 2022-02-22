@@ -197,7 +197,6 @@ public final class GetJitNetworkAccessPolicyResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetJitNetworkAccessPolicyResult build() {
             return new GetJitNetworkAccessPolicyResult(id, kind, location, name, provisioningState, requests, type, virtualMachines);
         }

@@ -76,7 +76,6 @@ public final class RetryPolicyResponse {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(eventTimeToLiveInMinutes, maxDeliveryAttempts);
         }

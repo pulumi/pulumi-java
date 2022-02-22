@@ -118,7 +118,6 @@ public final class IncidentOwnerInfoResponse {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
-
         public IncidentOwnerInfoResponse build() {
             return new IncidentOwnerInfoResponse(assignedTo, email, objectId, userPrincipalName);
         }

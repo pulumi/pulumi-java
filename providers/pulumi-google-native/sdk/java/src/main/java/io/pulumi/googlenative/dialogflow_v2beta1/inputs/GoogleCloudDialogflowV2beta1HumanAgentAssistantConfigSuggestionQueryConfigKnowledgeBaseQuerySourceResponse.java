@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="knowledgeBases", required=true)
-    private final List<String> knowledgeBases;
+      private final List<String> knowledgeBases;
 
     public List<String> getKnowledgeBases() {
         return this.knowledgeBases;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(knowledgeBases);
         }

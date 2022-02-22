@@ -142,7 +142,6 @@ public final class VideoAnalyzerPresetResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public VideoAnalyzerPresetResponse build() {
             return new VideoAnalyzerPresetResponse(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
         }

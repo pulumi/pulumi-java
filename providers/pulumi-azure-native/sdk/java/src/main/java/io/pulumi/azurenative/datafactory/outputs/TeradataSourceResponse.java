@@ -248,7 +248,6 @@ public final class TeradataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TeradataSourceResponse build() {
             return new TeradataSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

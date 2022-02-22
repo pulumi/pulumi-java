@@ -116,7 +116,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
             return new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(framework, modelPath, pythonVersion, runtimeVersion);
         }

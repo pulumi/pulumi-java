@@ -266,7 +266,6 @@ public final class GetEncryptionProtectorResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetEncryptionProtectorResult build() {
             return new GetEncryptionProtectorResult(autoRotationEnabled, id, kind, location, name, serverKeyName, serverKeyType, subregion, thumbprint, type, uri);
         }

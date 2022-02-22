@@ -67,7 +67,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigResponse build() {
             return new ManagedZoneServiceDirectoryConfigResponse(kind, namespace);
         }

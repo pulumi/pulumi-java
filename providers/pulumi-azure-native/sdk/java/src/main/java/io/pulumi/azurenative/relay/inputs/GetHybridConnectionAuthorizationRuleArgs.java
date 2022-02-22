@@ -17,7 +17,7 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="hybridConnectionName", required=true)
-    private final String hybridConnectionName;
+        private final String hybridConnectionName;
 
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
@@ -39,7 +39,7 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -50,7 +50,7 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetHybridConnectionAuthorizationRuleArgs build() {
             return new GetHybridConnectionAuthorizationRuleArgs(authorizationRuleName, hybridConnectionName, namespaceName, resourceGroupName);
         }

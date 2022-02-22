@@ -22,7 +22,7 @@ public final class ResourceOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="connectVersion", required=true)
-    private final String connectVersion;
+      private final String connectVersion;
 
     public String getConnectVersion() {
         return this.connectVersion;
@@ -33,7 +33,7 @@ public final class ResourceOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="k8sVersion", required=true)
-    private final String k8sVersion;
+      private final String k8sVersion;
 
     public String getK8sVersion() {
         return this.k8sVersion;
@@ -44,7 +44,7 @@ public final class ResourceOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="v1beta1Crd", required=true)
-    private final Boolean v1beta1Crd;
+      private final Boolean v1beta1Crd;
 
     public Boolean getV1beta1Crd() {
         return this.v1beta1Crd;
@@ -103,7 +103,6 @@ public final class ResourceOptionsResponse extends io.pulumi.resources.InvokeArg
             this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
             return this;
         }
-
         public ResourceOptionsResponse build() {
             return new ResourceOptionsResponse(connectVersion, k8sVersion, v1beta1Crd);
         }

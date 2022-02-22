@@ -162,7 +162,6 @@ public final class GetDatastoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(diskPoolVolume, id, name, netAppVolume, provisioningState, type);
         }

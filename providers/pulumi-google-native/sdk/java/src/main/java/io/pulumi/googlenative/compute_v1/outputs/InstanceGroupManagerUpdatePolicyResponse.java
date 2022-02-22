@@ -180,7 +180,6 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicyResponse build() {
             return new InstanceGroupManagerUpdatePolicyResponse(instanceRedistributionType, maxSurge, maxUnavailable, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }

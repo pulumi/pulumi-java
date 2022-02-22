@@ -122,7 +122,6 @@ public final class CmdkeySetupResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public CmdkeySetupResponse build() {
             return new CmdkeySetupResponse(password, targetName, type, userName);
         }

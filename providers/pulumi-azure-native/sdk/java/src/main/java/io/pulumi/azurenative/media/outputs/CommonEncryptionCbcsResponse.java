@@ -122,7 +122,6 @@ public final class CommonEncryptionCbcsResponse {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public CommonEncryptionCbcsResponse build() {
             return new CommonEncryptionCbcsResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }

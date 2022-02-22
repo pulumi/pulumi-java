@@ -308,7 +308,6 @@ public final class GetBlobFolderDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobFolderDataSetMappingResult build() {
             return new GetBlobFolderDataSetMappingResult(containerName, dataSetId, dataSetMappingStatus, id, kind, name, prefix, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

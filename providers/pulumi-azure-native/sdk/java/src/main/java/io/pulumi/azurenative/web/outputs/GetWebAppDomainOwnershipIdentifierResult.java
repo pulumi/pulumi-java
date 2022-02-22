@@ -139,7 +139,6 @@ public final class GetWebAppDomainOwnershipIdentifierResult {
             this.value = value;
             return this;
         }
-
         public GetWebAppDomainOwnershipIdentifierResult build() {
             return new GetWebAppDomainOwnershipIdentifierResult(id, kind, name, type, value);
         }

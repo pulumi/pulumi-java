@@ -140,7 +140,6 @@ public final class ResourceGuardResponse {
             this.vaultCriticalOperationExclusionList = Objects.requireNonNull(vaultCriticalOperationExclusionList);
             return this;
         }
-
         public ResourceGuardResponse build() {
             return new ResourceGuardResponse(allowAutoApprovals, description, provisioningState, resourceGuardOperations, vaultCriticalOperationExclusionList);
         }

@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
+      private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
     public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
         return this.outputConfig;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2SaveFindingsResponse build() {
             return new GooglePrivacyDlpV2SaveFindingsResponse(outputConfig);
         }

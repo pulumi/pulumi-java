@@ -52,7 +52,6 @@ public final class AutomaticResponse {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse(customerManagedEncryption);
         }

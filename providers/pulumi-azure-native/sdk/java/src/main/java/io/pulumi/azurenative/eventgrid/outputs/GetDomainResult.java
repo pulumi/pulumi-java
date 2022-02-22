@@ -336,7 +336,6 @@ public final class GetDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(endpoint, id, inboundIpRules, inputSchema, inputSchemaMapping, location, metricResourceId, name, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }

@@ -78,7 +78,6 @@ public final class TargetCopySettingResponse {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
-
         public TargetCopySettingResponse build() {
             return new TargetCopySettingResponse(copyAfter, dataStore);
         }

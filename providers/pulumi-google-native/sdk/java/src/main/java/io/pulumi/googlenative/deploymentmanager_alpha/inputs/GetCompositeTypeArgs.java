@@ -15,14 +15,14 @@ public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCompositeTypeArgs Empty = new GetCompositeTypeArgs();
 
     @InputImport(name="compositeType", required=true)
-    private final String compositeType;
+      private final String compositeType;
 
     public String getCompositeType() {
         return this.compositeType;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCompositeTypeArgs build() {
             return new GetCompositeTypeArgs(compositeType, project);
         }

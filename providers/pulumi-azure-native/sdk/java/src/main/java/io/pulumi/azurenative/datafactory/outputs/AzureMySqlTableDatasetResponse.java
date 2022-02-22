@@ -252,7 +252,6 @@ public final class AzureMySqlTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMySqlTableDatasetResponse build() {
             return new AzureMySqlTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

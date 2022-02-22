@@ -141,7 +141,6 @@ public final class RoutePropertiesResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public RoutePropertiesResponse build() {
             return new RoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }

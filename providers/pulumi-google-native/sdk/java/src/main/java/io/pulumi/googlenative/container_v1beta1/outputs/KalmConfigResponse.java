@@ -52,7 +52,6 @@ public final class KalmConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public KalmConfigResponse build() {
             return new KalmConfigResponse(enabled);
         }

@@ -22,7 +22,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="acceleratorCount", required=true)
-    private final Integer acceleratorCount;
+      private final Integer acceleratorCount;
 
     public Integer getAcceleratorCount() {
         return this.acceleratorCount;
@@ -33,7 +33,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final String acceleratorType;
+      private final String acceleratorType;
 
     public String getAcceleratorType() {
         return this.acceleratorType;
@@ -82,7 +82,6 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorType);
         }

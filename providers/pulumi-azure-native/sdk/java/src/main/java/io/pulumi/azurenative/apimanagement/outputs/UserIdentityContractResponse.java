@@ -76,7 +76,6 @@ public final class UserIdentityContractResponse {
             this.provider = provider;
             return this;
         }
-
         public UserIdentityContractResponse build() {
             return new UserIdentityContractResponse(id, provider);
         }

@@ -54,7 +54,6 @@ public final class CloudErrorResponse {
             this.error = error;
             return this;
         }
-
         public CloudErrorResponse build() {
             return new CloudErrorResponse(error);
         }

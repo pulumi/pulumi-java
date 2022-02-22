@@ -181,7 +181,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public VMwareCbtProtectionContainerMappingDetailsResponse build() {
             return new VMwareCbtProtectionContainerMappingDetailsResponse(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }

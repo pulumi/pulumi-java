@@ -20,7 +20,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="billingAccountId", required=true)
-    private final Input<String> billingAccountId;
+        private final Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId;
@@ -31,7 +31,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CostAllocationRulePropertiesArgs> properties;
+        private final @Nullable Input<CostAllocationRulePropertiesArgs> properties;
 
     public Input<CostAllocationRulePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -116,7 +116,6 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
-
         public CostAllocationRuleArgs build() {
             return new CostAllocationRuleArgs(billingAccountId, properties, ruleName);
         }

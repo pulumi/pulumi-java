@@ -21,7 +21,7 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="installation", required=true)
-    private final InstallationResponse installation;
+      private final InstallationResponse installation;
 
     public InstallationResponse getInstallation() {
         return this.installation;
@@ -59,7 +59,6 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
-
         public GrafeasV1beta1PackageDetailsResponse build() {
             return new GrafeasV1beta1PackageDetailsResponse(installation);
         }

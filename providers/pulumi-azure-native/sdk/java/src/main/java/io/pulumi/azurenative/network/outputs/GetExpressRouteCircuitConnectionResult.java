@@ -267,7 +267,6 @@ public final class GetExpressRouteCircuitConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitConnectionResult build() {
             return new GetExpressRouteCircuitConnectionResult(addressPrefix, authorizationKey, circuitConnectionStatus, etag, expressRouteCircuitPeering, id, ipv6CircuitConnectionConfig, name, peerExpressRouteCircuitPeering, provisioningState, type);
         }

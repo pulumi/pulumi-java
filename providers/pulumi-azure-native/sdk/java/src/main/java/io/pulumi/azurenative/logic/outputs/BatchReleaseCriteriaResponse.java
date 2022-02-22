@@ -98,7 +98,6 @@ public final class BatchReleaseCriteriaResponse {
             this.recurrence = recurrence;
             return this;
         }
-
         public BatchReleaseCriteriaResponse build() {
             return new BatchReleaseCriteriaResponse(batchSize, messageCount, recurrence);
         }

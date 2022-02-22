@@ -21,35 +21,35 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
     @InputImport(name="geo")
-    private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
+      private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
     public Input<RRSetRoutingPolicyGeoPolicyArgs> getGeo() {
         return this.geo == null ? Input.empty() : this.geo;
     }
 
     @InputImport(name="geoPolicy")
-    private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
+      private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
 
     public Input<RRSetRoutingPolicyGeoPolicyArgs> getGeoPolicy() {
         return this.geoPolicy == null ? Input.empty() : this.geoPolicy;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="wrr")
-    private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
+      private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
     public Input<RRSetRoutingPolicyWrrPolicyArgs> getWrr() {
         return this.wrr == null ? Input.empty() : this.wrr;
     }
 
     @InputImport(name="wrrPolicy")
-    private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
+      private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
 
     public Input<RRSetRoutingPolicyWrrPolicyArgs> getWrrPolicy() {
         return this.wrrPolicy == null ? Input.empty() : this.wrrPolicy;
@@ -153,7 +153,6 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
             this.wrrPolicy = Input.ofNullable(wrrPolicy);
             return this;
         }
-
         public RRSetRoutingPolicyArgs build() {
             return new RRSetRoutingPolicyArgs(geo, geoPolicy, kind, wrr, wrrPolicy);
         }

@@ -203,7 +203,6 @@ public final class DatabaseBackupInfoResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public DatabaseBackupInfoResponse build() {
             return new DatabaseBackupInfoResponse(backupFiles, backupFinishDate, backupType, databaseName, familyCount, isCompressed, isDamaged, position);
         }

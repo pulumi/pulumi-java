@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
-
         public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(cryptoKeyName, wrappedKey);
         }

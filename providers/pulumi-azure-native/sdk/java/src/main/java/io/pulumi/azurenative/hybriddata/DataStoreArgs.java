@@ -23,7 +23,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerSecrets")
-    private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
+        private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
 
     public Input<List<CustomerSecretArgs>> getCustomerSecrets() {
         return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
@@ -34,7 +34,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataManagerName", required=true)
-    private final Input<String> dataManagerName;
+        private final Input<String> dataManagerName;
 
     public Input<String> getDataManagerName() {
         return this.dataManagerName;
@@ -45,7 +45,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataStoreName")
-    private final @Nullable Input<String> dataStoreName;
+        private final @Nullable Input<String> dataStoreName;
 
     public Input<String> getDataStoreName() {
         return this.dataStoreName == null ? Input.empty() : this.dataStoreName;
@@ -56,7 +56,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataStoreTypeId", required=true)
-    private final Input<String> dataStoreTypeId;
+        private final Input<String> dataStoreTypeId;
 
     public Input<String> getDataStoreTypeId() {
         return this.dataStoreTypeId;
@@ -67,7 +67,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedProperties")
-    private final @Nullable Input<Object> extendedProperties;
+        private final @Nullable Input<Object> extendedProperties;
 
     public Input<Object> getExtendedProperties() {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
@@ -78,7 +78,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryId")
-    private final @Nullable Input<String> repositoryId;
+        private final @Nullable Input<String> repositoryId;
 
     public Input<String> getRepositoryId() {
         return this.repositoryId == null ? Input.empty() : this.repositoryId;
@@ -89,7 +89,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<State> state;
+        private final Input<State> state;
 
     public Input<State> getState() {
         return this.state;
@@ -249,7 +249,6 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public DataStoreArgs build() {
             return new DataStoreArgs(customerSecrets, dataManagerName, dataStoreName, dataStoreTypeId, extendedProperties, repositoryId, resourceGroupName, state);
         }

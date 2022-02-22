@@ -690,7 +690,6 @@ public final class GetBucketObjectResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetBucketObjectResult build() {
             return new GetBucketObjectResult(acl, bucket, cacheControl, componentCount, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customTime, customerEncryption, etag, eventBasedHold, generation, kind, kmsKeyName, md5Hash, mediaLink, metadata, metageneration, name, owner, retentionExpirationTime, selfLink, size, storageClass, temporaryHold, timeCreated, timeDeleted, timeStorageClassUpdated, updated);
         }

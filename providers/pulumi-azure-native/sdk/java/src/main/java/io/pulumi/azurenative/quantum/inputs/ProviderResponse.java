@@ -23,7 +23,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable String applicationName;
+        private final @Nullable String applicationName;
 
     public Optional<String> getApplicationName() {
         return this.applicationName == null ? Optional.empty() : Optional.ofNullable(this.applicationName);
@@ -34,7 +34,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceUri")
-    private final @Nullable String instanceUri;
+        private final @Nullable String instanceUri;
 
     public Optional<String> getInstanceUri() {
         return this.instanceUri == null ? Optional.empty() : Optional.ofNullable(this.instanceUri);
@@ -45,7 +45,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="providerId")
-    private final @Nullable String providerId;
+        private final @Nullable String providerId;
 
     public Optional<String> getProviderId() {
         return this.providerId == null ? Optional.empty() : Optional.ofNullable(this.providerId);
@@ -56,7 +56,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="providerSku")
-    private final @Nullable String providerSku;
+        private final @Nullable String providerSku;
 
     public Optional<String> getProviderSku() {
         return this.providerSku == null ? Optional.empty() : Optional.ofNullable(this.providerSku);
@@ -67,7 +67,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -78,7 +78,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUsageId")
-    private final @Nullable String resourceUsageId;
+        private final @Nullable String resourceUsageId;
 
     public Optional<String> getResourceUsageId() {
         return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);
@@ -167,7 +167,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }

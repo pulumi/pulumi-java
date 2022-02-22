@@ -54,7 +54,6 @@ public final class ManagementLockOwnerResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public ManagementLockOwnerResponse build() {
             return new ManagementLockOwnerResponse(applicationId);
         }

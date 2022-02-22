@@ -76,7 +76,6 @@ public final class UserAssignedIdentityResponse {
             this.principalId = principalId;
             return this;
         }
-
         public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId);
         }

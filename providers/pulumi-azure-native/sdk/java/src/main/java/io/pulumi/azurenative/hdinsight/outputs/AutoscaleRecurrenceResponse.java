@@ -78,7 +78,6 @@ public final class AutoscaleRecurrenceResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public AutoscaleRecurrenceResponse build() {
             return new AutoscaleRecurrenceResponse(schedule, timeZone);
         }

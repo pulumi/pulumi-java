@@ -20,7 +20,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="authorityUrl")
-    private final @Nullable String authorityUrl;
+        private final @Nullable String authorityUrl;
 
     public Optional<String> getAuthorityUrl() {
         return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
@@ -31,7 +31,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable String certificate;
+        private final @Nullable String certificate;
 
     public Optional<String> getCertificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
@@ -42,7 +42,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -53,7 +53,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable String clientSecret;
+        private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -64,7 +64,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="isCertAuth")
-    private final @Nullable Boolean isCertAuth;
+        private final @Nullable Boolean isCertAuth;
 
     public Optional<Boolean> getIsCertAuth() {
         return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
@@ -75,7 +75,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+        private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -86,7 +86,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable String resourceUri;
+        private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
@@ -97,7 +97,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceDataAccessAuthIdentity")
-    private final @Nullable String serviceDataAccessAuthIdentity;
+        private final @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
@@ -108,7 +108,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -119,7 +119,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -130,7 +130,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+        private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -269,7 +269,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
             this.thumbprint = thumbprint;
             return this;
         }
-
         public ClientCredentialsResponse build() {
             return new ClientCredentialsResponse(authorityUrl, certificate, clientId, clientSecret, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint);
         }

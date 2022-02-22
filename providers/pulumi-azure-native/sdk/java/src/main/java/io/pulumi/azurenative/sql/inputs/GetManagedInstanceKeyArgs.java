@@ -17,7 +17,7 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final String managedInstanceName;
+        private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -39,7 +39,7 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedInstanceKeyArgs build() {
             return new GetManagedInstanceKeyArgs(keyName, managedInstanceName, resourceGroupName);
         }

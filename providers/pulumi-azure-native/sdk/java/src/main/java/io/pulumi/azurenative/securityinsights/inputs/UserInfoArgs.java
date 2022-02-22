@@ -22,7 +22,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+        private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -65,7 +65,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public UserInfoArgs build() {
             return new UserInfoArgs(objectId);
         }

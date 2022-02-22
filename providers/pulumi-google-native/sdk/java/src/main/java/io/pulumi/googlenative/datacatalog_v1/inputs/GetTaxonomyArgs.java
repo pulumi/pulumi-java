@@ -15,21 +15,21 @@ public final class GetTaxonomyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTaxonomyArgs Empty = new GetTaxonomyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="taxonomyId", required=true)
-    private final String taxonomyId;
+      private final String taxonomyId;
 
     public String getTaxonomyId() {
         return this.taxonomyId;
@@ -88,7 +88,6 @@ public final class GetTaxonomyArgs extends io.pulumi.resources.InvokeArgs {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
         }
-
         public GetTaxonomyArgs build() {
             return new GetTaxonomyArgs(location, project, taxonomyId);
         }

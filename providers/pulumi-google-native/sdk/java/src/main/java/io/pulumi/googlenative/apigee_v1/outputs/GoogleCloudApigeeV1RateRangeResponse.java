@@ -96,7 +96,6 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RateRangeResponse build() {
             return new GoogleCloudApigeeV1RateRangeResponse(end, fee, start);
         }

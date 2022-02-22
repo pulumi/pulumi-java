@@ -98,7 +98,6 @@ public final class AssignmentLockSettingsResponse {
             this.mode = mode;
             return this;
         }
-
         public AssignmentLockSettingsResponse build() {
             return new AssignmentLockSettingsResponse(excludedActions, excludedPrincipals, mode);
         }

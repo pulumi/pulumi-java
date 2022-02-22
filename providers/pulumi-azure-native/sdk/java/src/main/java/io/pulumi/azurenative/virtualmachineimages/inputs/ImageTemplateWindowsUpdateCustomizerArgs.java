@@ -25,7 +25,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<List<String>> filters;
+        private final @Nullable Input<List<String>> filters;
 
     public Input<List<String>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -36,7 +36,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="searchCriteria")
-    private final @Nullable Input<String> searchCriteria;
+        private final @Nullable Input<String> searchCriteria;
 
     public Input<String> getSearchCriteria() {
         return this.searchCriteria == null ? Input.empty() : this.searchCriteria;
@@ -59,7 +59,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -70,7 +70,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="updateLimit")
-    private final @Nullable Input<Integer> updateLimit;
+        private final @Nullable Input<Integer> updateLimit;
 
     public Input<Integer> getUpdateLimit() {
         return this.updateLimit == null ? Input.empty() : this.updateLimit;
@@ -174,7 +174,6 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             this.updateLimit = Input.ofNullable(updateLimit);
             return this;
         }
-
         public ImageTemplateWindowsUpdateCustomizerArgs build() {
             return new ImageTemplateWindowsUpdateCustomizerArgs(filters, name, searchCriteria, type, updateLimit);
         }

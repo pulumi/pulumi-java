@@ -247,7 +247,6 @@ public final class ApiResourceMetadataResponse {
             this.wsdlService = wsdlService;
             return this;
         }
-
         public ApiResourceMetadataResponse build() {
             return new ApiResourceMetadataResponse(apiType, brandColor, connectionType, deploymentParameters, hideKey, provisioningState, source, tags, wsdlImportMethod, wsdlService);
         }

@@ -76,7 +76,6 @@ public final class BiEngineStatisticsResponse {
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }
-
         public BiEngineStatisticsResponse build() {
             return new BiEngineStatisticsResponse(biEngineMode, biEngineReasons);
         }

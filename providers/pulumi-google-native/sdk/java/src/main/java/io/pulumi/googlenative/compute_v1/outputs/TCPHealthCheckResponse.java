@@ -159,7 +159,6 @@ public final class TCPHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public TCPHealthCheckResponse build() {
             return new TCPHealthCheckResponse(port, portName, portSpecification, proxyHeader, request, response);
         }

@@ -23,7 +23,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsername", required=true)
-    private final Input<String> adminUsername;
+        private final Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername;
@@ -34,7 +34,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ssh", required=true)
-    private final Input<ContainerServiceSshConfigurationArgs> ssh;
+        private final Input<ContainerServiceSshConfigurationArgs> ssh;
 
     public Input<ContainerServiceSshConfigurationArgs> getSsh() {
         return this.ssh;
@@ -93,7 +93,6 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
             this.ssh = Input.of(Objects.requireNonNull(ssh));
             return this;
         }
-
         public ContainerServiceLinuxProfileArgs build() {
             return new ContainerServiceLinuxProfileArgs(adminUsername, ssh);
         }

@@ -112,7 +112,6 @@ public final class SystemDataResponse {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public SystemDataResponse build() {
             return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

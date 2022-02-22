@@ -246,7 +246,6 @@ public final class GetServiceFabricResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetServiceFabricResult build() {
             return new GetServiceFabricResult(applicableSchedule, environmentId, externalServiceFabricId, id, location, name, provisioningState, tags, type, uniqueIdentifier);
         }

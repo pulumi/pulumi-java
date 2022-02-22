@@ -139,7 +139,6 @@ public final class GetBuildpackBindingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBuildpackBindingResult build() {
             return new GetBuildpackBindingResult(id, name, properties, systemData, type);
         }

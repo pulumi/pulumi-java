@@ -62,7 +62,6 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
             return new ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(softDeleteTTL, subscriptionStateOverrideActions);
         }

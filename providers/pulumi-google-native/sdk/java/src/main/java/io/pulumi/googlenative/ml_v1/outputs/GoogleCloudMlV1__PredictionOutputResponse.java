@@ -117,7 +117,6 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
             this.predictionCount = Objects.requireNonNull(predictionCount);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionOutputResponse build() {
             return new GoogleCloudMlV1__PredictionOutputResponse(errorCount, nodeHours, outputPath, predictionCount);
         }

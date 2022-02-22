@@ -137,7 +137,6 @@ public final class ApiConfigHandlerResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApiConfigHandlerResponse build() {
             return new ApiConfigHandlerResponse(authFailAction, login, script, securityLevel, url);
         }

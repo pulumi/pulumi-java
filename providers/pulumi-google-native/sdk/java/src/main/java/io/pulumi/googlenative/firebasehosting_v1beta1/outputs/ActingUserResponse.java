@@ -74,7 +74,6 @@ public final class ActingUserResponse {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ActingUserResponse build() {
             return new ActingUserResponse(email, imageUrl);
         }

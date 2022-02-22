@@ -21,7 +21,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+        private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -32,7 +32,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobProgress", required=true)
-    private final String jobProgress;
+        private final String jobProgress;
 
     public String getJobProgress() {
         return this.jobProgress;
@@ -81,7 +81,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
             this.jobProgress = Objects.requireNonNull(jobProgress);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(jobName, jobProgress);
         }

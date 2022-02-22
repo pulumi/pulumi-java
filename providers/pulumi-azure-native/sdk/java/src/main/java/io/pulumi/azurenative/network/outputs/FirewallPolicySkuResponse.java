@@ -54,7 +54,6 @@ public final class FirewallPolicySkuResponse {
             this.tier = tier;
             return this;
         }
-
         public FirewallPolicySkuResponse build() {
             return new FirewallPolicySkuResponse(tier);
         }

@@ -225,7 +225,6 @@ public final class GetDocumentResult {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
         }
-
         public GetDocumentResult build() {
             return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
         }

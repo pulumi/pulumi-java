@@ -22,7 +22,7 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="mysqlExcludedObjects", required=true)
-    private final MysqlRdbmsResponse mysqlExcludedObjects;
+      private final MysqlRdbmsResponse mysqlExcludedObjects;
 
     public MysqlRdbmsResponse getMysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
@@ -33,7 +33,7 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="oracleExcludedObjects", required=true)
-    private final OracleRdbmsResponse oracleExcludedObjects;
+      private final OracleRdbmsResponse oracleExcludedObjects;
 
     public OracleRdbmsResponse getOracleExcludedObjects() {
         return this.oracleExcludedObjects;
@@ -82,7 +82,6 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
             this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
             return this;
         }
-
         public BackfillAllStrategyResponse build() {
             return new BackfillAllStrategyResponse(mysqlExcludedObjects, oracleExcludedObjects);
         }

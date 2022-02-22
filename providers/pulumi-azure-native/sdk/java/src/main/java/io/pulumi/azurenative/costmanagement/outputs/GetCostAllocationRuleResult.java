@@ -117,7 +117,6 @@ public final class GetCostAllocationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCostAllocationRuleResult build() {
             return new GetCostAllocationRuleResult(id, name, properties, type);
         }

@@ -97,7 +97,6 @@ public final class ErrorResponseResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, details, message);
         }

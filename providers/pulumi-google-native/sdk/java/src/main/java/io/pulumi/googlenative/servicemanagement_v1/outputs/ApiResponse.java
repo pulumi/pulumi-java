@@ -184,7 +184,6 @@ public final class ApiResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ApiResponse build() {
             return new ApiResponse(methods, mixins, name, options, sourceContext, syntax, version);
         }

@@ -231,7 +231,6 @@ public final class SapTableResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapTableResourceDatasetResponse build() {
             return new SapTableResourceDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

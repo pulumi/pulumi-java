@@ -25,7 +25,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<LogLevel> level;
+        private final @Nullable Input<LogLevel> level;
 
     public Input<LogLevel> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -38,7 +38,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -49,7 +49,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="sasUrl")
-    private final @Nullable Input<String> sasUrl;
+        private final @Nullable Input<String> sasUrl;
 
     public Input<String> getSasUrl() {
         return this.sasUrl == null ? Input.empty() : this.sasUrl;
@@ -123,7 +123,6 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
             this.sasUrl = Input.ofNullable(sasUrl);
             return this;
         }
-
         public AzureBlobStorageApplicationLogsConfigArgs build() {
             return new AzureBlobStorageApplicationLogsConfigArgs(level, retentionInDays, sasUrl);
         }

@@ -19,7 +19,7 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+        private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -30,7 +30,7 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+        private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
@@ -41,7 +41,7 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -141,7 +141,6 @@ public final class ProductApiArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public ProductApiArgs build() {
             return new ProductApiArgs(apiId, productId, resourceGroupName, serviceName);
         }

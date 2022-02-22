@@ -120,7 +120,6 @@ public final class GetDatasetHl7V2StoreIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatasetHl7V2StoreIamPolicyResult build() {
             return new GetDatasetHl7V2StoreIamPolicyResult(auditConfigs, bindings, etag, version);
         }

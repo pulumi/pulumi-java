@@ -26,7 +26,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayData")
-    private final @Nullable Input<List<DisplayDataArgs>> displayData;
+      private final @Nullable Input<List<DisplayDataArgs>> displayData;
 
     public Input<List<DisplayDataArgs>> getDisplayData() {
         return this.displayData == null ? Input.empty() : this.displayData;
@@ -37,7 +37,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionPipelineStage")
-    private final @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage;
+      private final @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
     public Input<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
         return this.executionPipelineStage == null ? Input.empty() : this.executionPipelineStage;
@@ -48,7 +48,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="originalPipelineTransform")
-    private final @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform;
+      private final @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform;
 
     public Input<List<TransformSummaryArgs>> getOriginalPipelineTransform() {
         return this.originalPipelineTransform == null ? Input.empty() : this.originalPipelineTransform;
@@ -122,7 +122,6 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
             this.originalPipelineTransform = Input.ofNullable(originalPipelineTransform);
             return this;
         }
-
         public PipelineDescriptionArgs build() {
             return new PipelineDescriptionArgs(displayData, executionPipelineStage, originalPipelineTransform);
         }

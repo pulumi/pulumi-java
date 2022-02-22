@@ -78,7 +78,6 @@ public final class ListConfigurationsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListConfigurationsResult build() {
             return new ListConfigurationsResult(nextLink, value);
         }

@@ -53,7 +53,6 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1SchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1SchemaResponse(columns);
         }

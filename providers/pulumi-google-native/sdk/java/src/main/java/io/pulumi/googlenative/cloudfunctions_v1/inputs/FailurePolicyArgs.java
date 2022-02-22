@@ -23,7 +23,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retry")
-    private final @Nullable Input<RetryArgs> retry;
+      private final @Nullable Input<RetryArgs> retry;
 
     public Input<RetryArgs> getRetry() {
         return this.retry == null ? Input.empty() : this.retry;
@@ -66,7 +66,6 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.retry = Input.ofNullable(retry);
             return this;
         }
-
         public FailurePolicyArgs build() {
             return new FailurePolicyArgs(retry);
         }

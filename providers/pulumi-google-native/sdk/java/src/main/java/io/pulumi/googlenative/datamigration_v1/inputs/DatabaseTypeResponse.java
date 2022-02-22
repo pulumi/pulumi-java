@@ -21,7 +21,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final String engine;
+      private final String engine;
 
     public String getEngine() {
         return this.engine;
@@ -32,7 +32,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provider", required=true)
-    private final String provider;
+      private final String provider;
 
     public String getProvider() {
         return this.provider;
@@ -81,7 +81,6 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public DatabaseTypeResponse build() {
             return new DatabaseTypeResponse(engine, provider);
         }

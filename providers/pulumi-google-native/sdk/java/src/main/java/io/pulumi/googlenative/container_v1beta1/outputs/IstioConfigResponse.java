@@ -75,7 +75,6 @@ public final class IstioConfigResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }

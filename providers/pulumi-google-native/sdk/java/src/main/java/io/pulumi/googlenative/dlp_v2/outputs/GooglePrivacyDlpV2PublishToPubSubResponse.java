@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GooglePrivacyDlpV2PublishToPubSubResponse build() {
             return new GooglePrivacyDlpV2PublishToPubSubResponse(topic);
         }

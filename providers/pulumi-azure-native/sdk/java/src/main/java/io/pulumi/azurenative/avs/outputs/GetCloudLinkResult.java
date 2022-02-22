@@ -139,7 +139,6 @@ public final class GetCloudLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudLinkResult build() {
             return new GetCloudLinkResult(id, linkedCloud, name, status, type);
         }

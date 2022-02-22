@@ -24,7 +24,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Integer capacity;
+        private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -35,7 +35,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="family")
-    private final @Nullable String family;
+        private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
@@ -46,7 +46,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="model")
-    private final @Nullable String model;
+        private final @Nullable String model;
 
     public Optional<String> getModel() {
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
@@ -57,7 +57,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -68,7 +68,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable String size;
+        private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -79,7 +79,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -168,7 +168,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, family, model, name, size, tier);
         }

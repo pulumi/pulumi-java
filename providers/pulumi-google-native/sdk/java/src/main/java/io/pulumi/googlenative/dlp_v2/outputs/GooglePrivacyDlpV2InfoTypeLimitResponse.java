@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
             return new GooglePrivacyDlpV2InfoTypeLimitResponse(infoType, maxFindings);
         }

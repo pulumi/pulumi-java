@@ -56,7 +56,6 @@ public final class EventHandlerSettingsResponse {
             this.items = items;
             return this;
         }
-
         public EventHandlerSettingsResponse build() {
             return new EventHandlerSettingsResponse(items);
         }

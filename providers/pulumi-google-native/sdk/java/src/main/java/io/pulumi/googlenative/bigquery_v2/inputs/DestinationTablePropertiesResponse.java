@@ -18,7 +18,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -29,7 +29,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -40,7 +40,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="friendlyName", required=true)
-    private final String friendlyName;
+      private final String friendlyName;
 
     public String getFriendlyName() {
         return this.friendlyName;
@@ -51,7 +51,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -120,7 +120,6 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public DestinationTablePropertiesResponse build() {
             return new DestinationTablePropertiesResponse(description, expirationTime, friendlyName, labels);
         }

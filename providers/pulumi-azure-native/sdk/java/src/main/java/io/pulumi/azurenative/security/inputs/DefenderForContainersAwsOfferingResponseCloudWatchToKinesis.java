@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis e
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable String cloudRoleArn;
+        private final @Nullable String cloudRoleArn;
 
     public Optional<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
@@ -61,7 +61,6 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis e
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponseCloudWatchToKinesis build() {
             return new DefenderForContainersAwsOfferingResponseCloudWatchToKinesis(cloudRoleArn);
         }

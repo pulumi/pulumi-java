@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageImageResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageImageResponse(accessibilityText, imageUri);
         }

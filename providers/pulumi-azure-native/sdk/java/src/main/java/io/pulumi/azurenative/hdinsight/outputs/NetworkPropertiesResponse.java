@@ -76,7 +76,6 @@ public final class NetworkPropertiesResponse {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
-
         public NetworkPropertiesResponse build() {
             return new NetworkPropertiesResponse(privateLink, resourceProviderConnection);
         }

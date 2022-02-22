@@ -139,7 +139,6 @@ public final class UserAccessPolicyResponse {
             this.startTime = startTime;
             return this;
         }
-
         public UserAccessPolicyResponse build() {
             return new UserAccessPolicyResponse(accessResourcePath, expireTime, permissions, profileName, startTime);
         }

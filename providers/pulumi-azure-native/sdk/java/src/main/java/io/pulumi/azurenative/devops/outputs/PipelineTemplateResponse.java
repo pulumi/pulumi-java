@@ -76,7 +76,6 @@ public final class PipelineTemplateResponse {
             this.parameters = parameters;
             return this;
         }
-
         public PipelineTemplateResponse build() {
             return new PipelineTemplateResponse(id, parameters);
         }

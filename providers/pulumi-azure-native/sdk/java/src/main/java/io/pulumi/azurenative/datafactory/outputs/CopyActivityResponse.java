@@ -686,7 +686,6 @@ public final class CopyActivityResponse {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
-
         public CopyActivityResponse build() {
             return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }

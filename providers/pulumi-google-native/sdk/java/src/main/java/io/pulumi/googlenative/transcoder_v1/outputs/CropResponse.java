@@ -116,7 +116,6 @@ public final class CropResponse {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
         }
-
         public CropResponse build() {
             return new CropResponse(bottomPixels, leftPixels, rightPixels, topPixels);
         }

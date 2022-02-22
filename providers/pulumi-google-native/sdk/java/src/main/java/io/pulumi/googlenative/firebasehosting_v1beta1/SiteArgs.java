@@ -20,7 +20,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -31,21 +31,21 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="siteId", required=true)
-    private final Input<String> siteId;
+      private final Input<String> siteId;
 
     public Input<String> getSiteId() {
         return this.siteId;
@@ -134,7 +134,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }
-
         public SiteArgs build() {
             return new SiteArgs(appId, labels, project, siteId);
         }

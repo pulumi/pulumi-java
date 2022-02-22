@@ -15,7 +15,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="bar")
-    private final @Nullable Input<String> bar;
+        private final @Nullable Input<String> bar;
 
     public Input<String> getBar() {
         return this.bar == null ? Input.empty() : this.bar;
@@ -58,7 +58,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.bar = Input.ofNullable(bar).asSecret();
             return this;
         }
-
         public ResourceArgs build() {
             return new ResourceArgs(bar);
         }

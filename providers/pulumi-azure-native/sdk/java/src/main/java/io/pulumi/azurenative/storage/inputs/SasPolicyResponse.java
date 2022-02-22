@@ -21,7 +21,7 @@ public final class SasPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expirationAction", required=true)
-    private final String expirationAction;
+        private final String expirationAction;
 
     public String getExpirationAction() {
         return this.expirationAction;
@@ -32,7 +32,7 @@ public final class SasPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sasExpirationPeriod", required=true)
-    private final String sasExpirationPeriod;
+        private final String sasExpirationPeriod;
 
     public String getSasExpirationPeriod() {
         return this.sasExpirationPeriod;
@@ -81,7 +81,6 @@ public final class SasPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
             return this;
         }
-
         public SasPolicyResponse build() {
             return new SasPolicyResponse(expirationAction, sasExpirationPeriod);
         }

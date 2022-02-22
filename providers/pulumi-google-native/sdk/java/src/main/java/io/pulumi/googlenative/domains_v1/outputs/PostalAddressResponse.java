@@ -265,7 +265,6 @@ public final class PostalAddressResponse {
             this.sublocality = Objects.requireNonNull(sublocality);
             return this;
         }
-
         public PostalAddressResponse build() {
             return new PostalAddressResponse(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
         }

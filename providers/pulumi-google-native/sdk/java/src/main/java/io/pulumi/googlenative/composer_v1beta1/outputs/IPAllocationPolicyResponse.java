@@ -138,7 +138,6 @@ public final class IPAllocationPolicyResponse {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
-
         public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

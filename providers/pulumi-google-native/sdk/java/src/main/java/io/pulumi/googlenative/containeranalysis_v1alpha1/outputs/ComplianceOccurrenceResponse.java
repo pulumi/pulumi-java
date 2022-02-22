@@ -76,7 +76,6 @@ public final class ComplianceOccurrenceResponse {
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }
-
         public ComplianceOccurrenceResponse build() {
             return new ComplianceOccurrenceResponse(nonComplianceReason, nonCompliantFiles);
         }

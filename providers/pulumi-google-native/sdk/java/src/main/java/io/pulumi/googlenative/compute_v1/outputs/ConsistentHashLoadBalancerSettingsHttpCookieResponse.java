@@ -96,7 +96,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieResponse(name, path, ttl);
         }

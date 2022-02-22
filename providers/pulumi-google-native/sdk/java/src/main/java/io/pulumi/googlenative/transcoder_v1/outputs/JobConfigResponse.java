@@ -252,7 +252,6 @@ public final class JobConfigResponse {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }
-
         public JobConfigResponse build() {
             return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }

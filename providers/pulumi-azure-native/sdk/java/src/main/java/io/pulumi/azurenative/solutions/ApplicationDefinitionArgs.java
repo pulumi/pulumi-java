@@ -32,7 +32,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationDefinitionName")
-    private final @Nullable Input<String> applicationDefinitionName;
+        private final @Nullable Input<String> applicationDefinitionName;
 
     public Input<String> getApplicationDefinitionName() {
         return this.applicationDefinitionName == null ? Input.empty() : this.applicationDefinitionName;
@@ -43,7 +43,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts;
+        private final @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts;
 
     public Input<List<ApplicationDefinitionArtifactArgs>> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -54,7 +54,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authorizations")
-    private final @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations;
+        private final @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations;
 
     public Input<List<ApplicationAuthorizationArgs>> getAuthorizations() {
         return this.authorizations == null ? Input.empty() : this.authorizations;
@@ -65,7 +65,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createUiDefinition")
-    private final @Nullable Input<Object> createUiDefinition;
+        private final @Nullable Input<Object> createUiDefinition;
 
     public Input<Object> getCreateUiDefinition() {
         return this.createUiDefinition == null ? Input.empty() : this.createUiDefinition;
@@ -76,7 +76,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deploymentPolicy")
-    private final @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy;
+        private final @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy;
 
     public Input<ApplicationDeploymentPolicyArgs> getDeploymentPolicy() {
         return this.deploymentPolicy == null ? Input.empty() : this.deploymentPolicy;
@@ -87,7 +87,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -109,7 +109,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+        private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -120,7 +120,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -131,7 +131,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lockLevel", required=true)
-    private final Input<ApplicationLockLevel> lockLevel;
+        private final Input<ApplicationLockLevel> lockLevel;
 
     public Input<ApplicationLockLevel> getLockLevel() {
         return this.lockLevel;
@@ -142,7 +142,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lockingPolicy")
-    private final @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
+        private final @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
 
     public Input<ApplicationPackageLockingPolicyDefinitionArgs> getLockingPolicy() {
         return this.lockingPolicy == null ? Input.empty() : this.lockingPolicy;
@@ -153,7 +153,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mainTemplate")
-    private final @Nullable Input<Object> mainTemplate;
+        private final @Nullable Input<Object> mainTemplate;
 
     public Input<Object> getMainTemplate() {
         return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
@@ -164,7 +164,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+        private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
@@ -175,7 +175,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managementPolicy")
-    private final @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy;
+        private final @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy;
 
     public Input<ApplicationManagementPolicyArgs> getManagementPolicy() {
         return this.managementPolicy == null ? Input.empty() : this.managementPolicy;
@@ -186,7 +186,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notificationPolicy")
-    private final @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy;
+        private final @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy;
 
     public Input<ApplicationNotificationPolicyArgs> getNotificationPolicy() {
         return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
@@ -197,7 +197,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="packageFileUri")
-    private final @Nullable Input<String> packageFileUri;
+        private final @Nullable Input<String> packageFileUri;
 
     public Input<String> getPackageFileUri() {
         return this.packageFileUri == null ? Input.empty() : this.packageFileUri;
@@ -208,7 +208,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<List<ApplicationPolicyArgs>> policies;
+        private final @Nullable Input<List<ApplicationPolicyArgs>> policies;
 
     public Input<List<ApplicationPolicyArgs>> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
@@ -219,7 +219,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -230,7 +230,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -241,7 +241,7 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -570,7 +570,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ApplicationDefinitionArgs build() {
             return new ApplicationDefinitionArgs(applicationDefinitionName, artifacts, authorizations, createUiDefinition, deploymentPolicy, description, displayName, isEnabled, location, lockLevel, lockingPolicy, mainTemplate, managedBy, managementPolicy, notificationPolicy, packageFileUri, policies, resourceGroupName, sku, tags);
         }

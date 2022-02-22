@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(parameterId, text);
         }

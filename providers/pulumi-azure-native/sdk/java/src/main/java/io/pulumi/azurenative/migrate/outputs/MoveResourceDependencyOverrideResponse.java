@@ -78,7 +78,6 @@ public final class MoveResourceDependencyOverrideResponse {
             this.targetId = targetId;
             return this;
         }
-
         public MoveResourceDependencyOverrideResponse build() {
             return new MoveResourceDependencyOverrideResponse(id, targetId);
         }

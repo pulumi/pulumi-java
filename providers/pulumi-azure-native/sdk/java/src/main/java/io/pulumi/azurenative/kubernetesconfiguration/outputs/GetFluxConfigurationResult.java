@@ -419,7 +419,6 @@ public final class GetFluxConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFluxConfigurationResult build() {
             return new GetFluxConfigurationResult(complianceState, configurationProtectedSettings, errorMessage, gitRepository, id, kustomizations, lastSourceSyncedAt, lastSourceSyncedCommitId, name, namespace, provisioningState, repositoryPublicKey, scope, sourceKind, statuses, suspend, systemData, type);
         }

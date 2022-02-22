@@ -76,7 +76,6 @@ public final class ListDomainSharedAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListDomainSharedAccessKeysResult build() {
             return new ListDomainSharedAccessKeysResult(key1, key2);
         }

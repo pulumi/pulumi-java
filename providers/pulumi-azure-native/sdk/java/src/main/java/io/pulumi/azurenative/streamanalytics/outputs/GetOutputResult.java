@@ -195,7 +195,6 @@ public final class GetOutputResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOutputResult build() {
             return new GetOutputResult(datasource, diagnostics, etag, id, name, serialization, type);
         }

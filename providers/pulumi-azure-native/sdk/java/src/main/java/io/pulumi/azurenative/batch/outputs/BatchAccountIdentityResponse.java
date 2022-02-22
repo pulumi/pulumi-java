@@ -119,7 +119,6 @@ public final class BatchAccountIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public BatchAccountIdentityResponse build() {
             return new BatchAccountIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

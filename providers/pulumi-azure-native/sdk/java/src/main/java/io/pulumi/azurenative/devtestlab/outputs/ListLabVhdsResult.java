@@ -78,7 +78,6 @@ public final class ListLabVhdsResult {
             this.value = value;
             return this;
         }
-
         public ListLabVhdsResult build() {
             return new ListLabVhdsResult(nextLink, value);
         }

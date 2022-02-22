@@ -182,7 +182,6 @@ public final class GetSubscriptionNetworkManagerConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubscriptionNetworkManagerConnectionResult build() {
             return new GetSubscriptionNetworkManagerConnectionResult(description, etag, id, name, networkManagerId, systemData, type);
         }

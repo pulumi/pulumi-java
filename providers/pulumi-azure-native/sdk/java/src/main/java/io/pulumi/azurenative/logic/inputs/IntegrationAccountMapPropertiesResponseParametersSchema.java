@@ -23,7 +23,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
      * 
      */
     @InputImport(name="ref")
-    private final @Nullable String ref;
+        private final @Nullable String ref;
 
     public Optional<String> getRef() {
         return this.ref == null ? Optional.empty() : Optional.ofNullable(this.ref);
@@ -61,7 +61,6 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
             this.ref = ref;
             return this;
         }
-
         public IntegrationAccountMapPropertiesResponseParametersSchema build() {
             return new IntegrationAccountMapPropertiesResponseParametersSchema(ref);
         }

@@ -27,7 +27,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -38,7 +38,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentRefs")
-    private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
+        private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
 
     public List<SsisEnvironmentReferenceResponse> getEnvironmentRefs() {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
@@ -49,7 +49,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folderId")
-    private final @Nullable Double folderId;
+        private final @Nullable Double folderId;
 
     public Optional<Double> getFolderId() {
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
@@ -60,7 +60,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Double id;
+        private final @Nullable Double id;
 
     public Optional<Double> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -71,7 +71,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -82,7 +82,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<SsisParameterResponse> parameters;
+        private final @Nullable List<SsisParameterResponse> parameters;
 
     public List<SsisParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -94,7 +94,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Double version;
+        private final @Nullable Double version;
 
     public Optional<Double> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -214,7 +214,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
             this.version = version;
             return this;
         }
-
         public SsisProjectResponse build() {
             return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
         }

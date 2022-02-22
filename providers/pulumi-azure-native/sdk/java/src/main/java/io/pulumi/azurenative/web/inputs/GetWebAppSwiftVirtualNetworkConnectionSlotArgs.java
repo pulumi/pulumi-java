@@ -17,7 +17,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+        private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -98,7 +98,6 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public GetWebAppSwiftVirtualNetworkConnectionSlotArgs build() {
             return new GetWebAppSwiftVirtualNetworkConnectionSlotArgs(name, resourceGroupName, slot);
         }

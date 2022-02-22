@@ -59,7 +59,6 @@ public final class CisBenchmarkResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public CisBenchmarkResponse build() {
             return new CisBenchmarkResponse(profileLevel, severity);
         }

@@ -23,7 +23,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -66,7 +66,6 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(kmsKeyName);
         }

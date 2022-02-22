@@ -78,7 +78,6 @@ public final class NetworkRefResponse {
             this.name = name;
             return this;
         }
-
         public NetworkRefResponse build() {
             return new NetworkRefResponse(endpointRefs, name);
         }

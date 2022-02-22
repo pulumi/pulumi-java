@@ -163,7 +163,6 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
             this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2PrivacyMetricResponse build() {
             return new GooglePrivacyDlpV2PrivacyMetricResponse(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);
         }

@@ -75,7 +75,6 @@ public final class NotificationConfigResponse {
             this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsubTopic, sendForBulkImport);
         }

@@ -97,7 +97,6 @@ public final class NetworkRuleSetIpRuleResponse {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public NetworkRuleSetIpRuleResponse build() {
             return new NetworkRuleSetIpRuleResponse(action, filterName, ipMask);
         }

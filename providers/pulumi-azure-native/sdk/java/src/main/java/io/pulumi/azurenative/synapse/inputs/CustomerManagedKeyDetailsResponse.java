@@ -24,7 +24,7 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="key")
-    private final @Nullable WorkspaceKeyDetailsResponse key;
+        private final @Nullable WorkspaceKeyDetailsResponse key;
 
     public Optional<WorkspaceKeyDetailsResponse> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -35,7 +35,7 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -84,7 +84,6 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public CustomerManagedKeyDetailsResponse build() {
             return new CustomerManagedKeyDetailsResponse(key, status);
         }

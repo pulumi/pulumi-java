@@ -98,7 +98,6 @@ public final class KeyVaultKeyResponseAttributes {
             this.updated = updated;
             return this;
         }
-
         public KeyVaultKeyResponseAttributes build() {
             return new KeyVaultKeyResponseAttributes(created, enabled, updated);
         }

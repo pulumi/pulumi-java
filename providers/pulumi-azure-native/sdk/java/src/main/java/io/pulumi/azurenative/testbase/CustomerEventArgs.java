@@ -21,7 +21,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerEventName")
-    private final @Nullable Input<String> customerEventName;
+        private final @Nullable Input<String> customerEventName;
 
     public Input<String> getCustomerEventName() {
         return this.customerEventName == null ? Input.empty() : this.customerEventName;
@@ -32,7 +32,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventName", required=true)
-    private final Input<String> eventName;
+        private final Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName;
@@ -43,7 +43,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="receivers", required=true)
-    private final Input<List<NotificationEventReceiverArgs>> receivers;
+        private final Input<List<NotificationEventReceiverArgs>> receivers;
 
     public Input<List<NotificationEventReceiverArgs>> getReceivers() {
         return this.receivers;
@@ -54,7 +54,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final Input<String> testBaseAccountName;
+        private final Input<String> testBaseAccountName;
 
     public Input<String> getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -169,7 +169,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
             this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
-
         public CustomerEventArgs build() {
             return new CustomerEventArgs(customerEventName, eventName, receivers, resourceGroupName, testBaseAccountName);
         }

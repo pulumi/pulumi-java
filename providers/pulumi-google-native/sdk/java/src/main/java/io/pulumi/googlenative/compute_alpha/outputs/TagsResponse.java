@@ -75,7 +75,6 @@ public final class TagsResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public TagsResponse build() {
             return new TagsResponse(fingerprint, items);
         }

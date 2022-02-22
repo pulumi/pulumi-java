@@ -23,7 +23,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<ChartOptionsMode> mode;
+      private final @Nullable Input<ChartOptionsMode> mode;
 
     public Input<ChartOptionsMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -66,7 +66,6 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public ChartOptionsArgs build() {
             return new ChartOptionsArgs(mode);
         }

@@ -17,7 +17,7 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretResourceName", required=true)
-    private final String secretResourceName;
+        private final String secretResourceName;
 
     public String getSecretResourceName() {
         return this.secretResourceName;
@@ -39,7 +39,7 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretValueResourceName", required=true)
-    private final String secretValueResourceName;
+        private final String secretValueResourceName;
 
     public String getSecretValueResourceName() {
         return this.secretValueResourceName;
@@ -98,7 +98,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
             this.secretValueResourceName = Objects.requireNonNull(secretValueResourceName);
             return this;
         }
-
         public ListSecretValueArgs build() {
             return new ListSecretValueArgs(resourceGroupName, secretResourceName, secretValueResourceName);
         }

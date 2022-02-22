@@ -99,7 +99,6 @@ public final class JobCollectionPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public JobCollectionPropertiesResponse build() {
             return new JobCollectionPropertiesResponse(quota, sku, state);
         }

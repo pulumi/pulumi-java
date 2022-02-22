@@ -26,7 +26,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Either<String,LocalTimestampFormat>> format;
+        private final @Nullable Input<Either<String,LocalTimestampFormat>> format;
 
     public Input<Either<String,LocalTimestampFormat>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -37,7 +37,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZoneOffset")
-    private final @Nullable Input<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
+        private final @Nullable Input<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
     public Input<LocalTimestampTimeZoneOffsetArgs> getTimeZoneOffset() {
         return this.timeZoneOffset == null ? Input.empty() : this.timeZoneOffset;
@@ -96,7 +96,6 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZoneOffset = Input.ofNullable(timeZoneOffset);
             return this;
         }
-
         public LocalTimestampArgs build() {
             return new LocalTimestampArgs(format, timeZoneOffset);
         }

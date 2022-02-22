@@ -23,7 +23,7 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceUri")
-    private final @Nullable String sourceUri;
+        private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {
         return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
@@ -83,7 +83,6 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
             this.sourceUri = sourceUri;
             return this;
         }
-
         public AttestationEvidenceResponse build() {
             return new AttestationEvidenceResponse(description, sourceUri);
         }

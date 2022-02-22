@@ -74,7 +74,6 @@ public final class LicenseResourceRequirementsResponse {
             this.minMemoryMb = Objects.requireNonNull(minMemoryMb);
             return this;
         }
-
         public LicenseResourceRequirementsResponse build() {
             return new LicenseResourceRequirementsResponse(minGuestCpuCount, minMemoryMb);
         }

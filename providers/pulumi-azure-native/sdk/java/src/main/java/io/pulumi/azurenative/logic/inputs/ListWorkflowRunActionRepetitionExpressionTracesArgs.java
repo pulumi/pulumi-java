@@ -17,7 +17,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * 
      */
     @InputImport(name="actionName", required=true)
-    private final String actionName;
+        private final String actionName;
 
     public String getActionName() {
         return this.actionName;
@@ -28,7 +28,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * 
      */
     @InputImport(name="repetitionName", required=true)
-    private final String repetitionName;
+        private final String repetitionName;
 
     public String getRepetitionName() {
         return this.repetitionName;
@@ -39,7 +39,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * 
      */
     @InputImport(name="runName", required=true)
-    private final String runName;
+        private final String runName;
 
     public String getRunName() {
         return this.runName;
@@ -61,7 +61,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * 
      */
     @InputImport(name="workflowName", required=true)
-    private final String workflowName;
+        private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;
@@ -140,7 +140,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
-
         public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {
             return new ListWorkflowRunActionRepetitionExpressionTracesArgs(actionName, repetitionName, resourceGroupName, runName, workflowName);
         }

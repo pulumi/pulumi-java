@@ -159,7 +159,6 @@ public final class GetWebAppResult {
             this.webId = Objects.requireNonNull(webId);
             return this;
         }
-
         public GetWebAppResult build() {
             return new GetWebAppResult(appId, appUrls, displayName, name, project, webId);
         }

@@ -139,7 +139,6 @@ public final class PasswordValidationPolicyResponse {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }
-
         public PasswordValidationPolicyResponse build() {
             return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }

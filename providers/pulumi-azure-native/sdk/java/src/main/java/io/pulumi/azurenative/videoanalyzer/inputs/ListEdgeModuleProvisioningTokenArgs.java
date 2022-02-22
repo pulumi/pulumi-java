@@ -17,7 +17,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="edgeModuleName", required=true)
-    private final String edgeModuleName;
+        private final String edgeModuleName;
 
     public String getEdgeModuleName() {
         return this.edgeModuleName;
@@ -39,7 +39,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expirationDate", required=true)
-    private final String expirationDate;
+        private final String expirationDate;
 
     public String getExpirationDate() {
         return this.expirationDate;
@@ -50,7 +50,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListEdgeModuleProvisioningTokenArgs build() {
             return new ListEdgeModuleProvisioningTokenArgs(accountName, edgeModuleName, expirationDate, resourceGroupName);
         }

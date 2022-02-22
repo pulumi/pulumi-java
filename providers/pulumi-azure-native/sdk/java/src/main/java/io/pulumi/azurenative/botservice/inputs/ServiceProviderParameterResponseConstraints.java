@@ -23,7 +23,7 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Boolean required;
+        private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
@@ -61,7 +61,6 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
             this.required = required;
             return this;
         }
-
         public ServiceProviderParameterResponseConstraints build() {
             return new ServiceProviderParameterResponseConstraints(required);
         }

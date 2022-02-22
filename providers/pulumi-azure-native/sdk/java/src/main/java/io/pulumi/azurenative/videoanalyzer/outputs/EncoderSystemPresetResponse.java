@@ -76,7 +76,6 @@ public final class EncoderSystemPresetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderSystemPresetResponse build() {
             return new EncoderSystemPresetResponse(name, type);
         }

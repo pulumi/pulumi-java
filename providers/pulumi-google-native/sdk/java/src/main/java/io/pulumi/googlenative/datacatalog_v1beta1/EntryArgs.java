@@ -24,7 +24,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDateShardedSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
 
     public Input<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> getBigqueryDateShardedSpec() {
         return this.bigqueryDateShardedSpec == null ? Input.empty() : this.bigqueryDateShardedSpec;
@@ -35,7 +35,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryTableSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
 
     public Input<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> getBigqueryTableSpec() {
         return this.bigqueryTableSpec == null ? Input.empty() : this.bigqueryTableSpec;
@@ -46,7 +46,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,21 +57,21 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="entryGroupId", required=true)
-    private final Input<String> entryGroupId;
+      private final Input<String> entryGroupId;
 
     public Input<String> getEntryGroupId() {
         return this.entryGroupId;
     }
 
     @InputImport(name="entryId", required=true)
-    private final Input<String> entryId;
+      private final Input<String> entryId;
 
     public Input<String> getEntryId() {
         return this.entryId;
@@ -82,7 +82,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsFilesetSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
 
     public Input<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> getGcsFilesetSpec() {
         return this.gcsFilesetSpec == null ? Input.empty() : this.gcsFilesetSpec;
@@ -93,21 +93,21 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedResource")
-    private final @Nullable Input<String> linkedResource;
+      private final @Nullable Input<String> linkedResource;
 
     public Input<String> getLinkedResource() {
         return this.linkedResource == null ? Input.empty() : this.linkedResource;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -118,7 +118,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
+      private final @Nullable Input<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
 
     public Input<GoogleCloudDatacatalogV1beta1SchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -129,7 +129,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<EntryType> type;
+      private final @Nullable Input<EntryType> type;
 
     public Input<EntryType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -140,7 +140,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedSystem")
-    private final @Nullable Input<String> userSpecifiedSystem;
+      private final @Nullable Input<String> userSpecifiedSystem;
 
     public Input<String> getUserSpecifiedSystem() {
         return this.userSpecifiedSystem == null ? Input.empty() : this.userSpecifiedSystem;
@@ -151,7 +151,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedType")
-    private final @Nullable Input<String> userSpecifiedType;
+      private final @Nullable Input<String> userSpecifiedType;
 
     public Input<String> getUserSpecifiedType() {
         return this.userSpecifiedType == null ? Input.empty() : this.userSpecifiedType;
@@ -390,7 +390,6 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             this.userSpecifiedType = Input.ofNullable(userSpecifiedType);
             return this;
         }
-
         public EntryArgs build() {
             return new EntryArgs(bigqueryDateShardedSpec, bigqueryTableSpec, description, displayName, entryGroupId, entryId, gcsFilesetSpec, linkedResource, location, project, schema, type, userSpecifiedSystem, userSpecifiedType);
         }

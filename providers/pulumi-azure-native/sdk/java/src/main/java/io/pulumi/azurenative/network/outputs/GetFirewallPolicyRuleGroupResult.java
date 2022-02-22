@@ -186,7 +186,6 @@ public final class GetFirewallPolicyRuleGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallPolicyRuleGroupResult build() {
             return new GetFirewallPolicyRuleGroupResult(etag, id, name, priority, provisioningState, rules, type);
         }

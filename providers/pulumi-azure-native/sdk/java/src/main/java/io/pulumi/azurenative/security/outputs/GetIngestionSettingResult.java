@@ -95,7 +95,6 @@ public final class GetIngestionSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIngestionSettingResult build() {
             return new GetIngestionSettingResult(id, name, type);
         }

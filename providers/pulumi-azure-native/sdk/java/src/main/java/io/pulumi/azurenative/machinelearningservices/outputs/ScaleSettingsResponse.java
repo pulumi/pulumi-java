@@ -98,7 +98,6 @@ public final class ScaleSettingsResponse {
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
-
         public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
         }

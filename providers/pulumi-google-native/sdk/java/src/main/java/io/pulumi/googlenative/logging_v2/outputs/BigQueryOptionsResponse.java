@@ -74,7 +74,6 @@ public final class BigQueryOptionsResponse {
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
         }
-
         public BigQueryOptionsResponse build() {
             return new BigQueryOptionsResponse(usePartitionedTables, usesTimestampColumnPartitioning);
         }

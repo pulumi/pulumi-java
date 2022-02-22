@@ -23,7 +23,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLicence")
-    private final @Nullable Input<String> dataLicence;
+      private final @Nullable Input<String> dataLicence;
 
     public Input<String> getDataLicence() {
         return this.dataLicence == null ? Input.empty() : this.dataLicence;
@@ -34,7 +34,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxVersion")
-    private final @Nullable Input<String> spdxVersion;
+      private final @Nullable Input<String> spdxVersion;
 
     public Input<String> getSpdxVersion() {
         return this.spdxVersion == null ? Input.empty() : this.spdxVersion;
@@ -93,7 +93,6 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.spdxVersion = Input.ofNullable(spdxVersion);
             return this;
         }
-
         public DocumentNoteArgs build() {
             return new DocumentNoteArgs(dataLicence, spdxVersion);
         }

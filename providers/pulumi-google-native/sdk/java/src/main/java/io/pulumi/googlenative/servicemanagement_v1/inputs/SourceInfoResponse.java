@@ -23,7 +23,7 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceFiles", required=true)
-    private final List<Map<String,String>> sourceFiles;
+      private final List<Map<String,String>> sourceFiles;
 
     public List<Map<String,String>> getSourceFiles() {
         return this.sourceFiles;
@@ -61,7 +61,6 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }
-
         public SourceInfoResponse build() {
             return new SourceInfoResponse(sourceFiles);
         }

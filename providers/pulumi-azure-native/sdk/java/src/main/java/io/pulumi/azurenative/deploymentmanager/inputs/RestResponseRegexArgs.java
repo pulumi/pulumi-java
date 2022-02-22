@@ -25,7 +25,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="matchQuantifier")
-    private final @Nullable Input<RestMatchQuantifier> matchQuantifier;
+        private final @Nullable Input<RestMatchQuantifier> matchQuantifier;
 
     public Input<RestMatchQuantifier> getMatchQuantifier() {
         return this.matchQuantifier == null ? Input.empty() : this.matchQuantifier;
@@ -36,7 +36,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="matches")
-    private final @Nullable Input<List<String>> matches;
+        private final @Nullable Input<List<String>> matches;
 
     public Input<List<String>> getMatches() {
         return this.matches == null ? Input.empty() : this.matches;
@@ -95,7 +95,6 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
             this.matches = Input.ofNullable(matches);
             return this;
         }
-
         public RestResponseRegexArgs build() {
             return new RestResponseRegexArgs(matchQuantifier, matches);
         }

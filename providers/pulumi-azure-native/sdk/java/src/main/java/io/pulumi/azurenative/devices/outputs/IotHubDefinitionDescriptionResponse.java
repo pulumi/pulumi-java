@@ -141,7 +141,6 @@ public final class IotHubDefinitionDescriptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IotHubDefinitionDescriptionResponse build() {
             return new IotHubDefinitionDescriptionResponse(allocationWeight, applyAllocationPolicy, connectionString, location, name);
         }

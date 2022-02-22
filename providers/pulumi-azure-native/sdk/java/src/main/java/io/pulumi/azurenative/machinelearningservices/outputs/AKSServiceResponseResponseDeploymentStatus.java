@@ -119,7 +119,6 @@ public final class AKSServiceResponseResponseDeploymentStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public AKSServiceResponseResponseDeploymentStatus build() {
             return new AKSServiceResponseResponseDeploymentStatus(availableReplicas, desiredReplicas, error, updatedReplicas);
         }

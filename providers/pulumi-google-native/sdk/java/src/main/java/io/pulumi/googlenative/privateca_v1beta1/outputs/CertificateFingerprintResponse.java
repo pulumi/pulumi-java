@@ -52,7 +52,6 @@ public final class CertificateFingerprintResponse {
             this.sha256Hash = Objects.requireNonNull(sha256Hash);
             return this;
         }
-
         public CertificateFingerprintResponse build() {
             return new CertificateFingerprintResponse(sha256Hash);
         }

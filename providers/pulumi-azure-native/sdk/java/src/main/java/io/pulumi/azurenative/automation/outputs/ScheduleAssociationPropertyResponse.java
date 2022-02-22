@@ -54,7 +54,6 @@ public final class ScheduleAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public ScheduleAssociationPropertyResponse build() {
             return new ScheduleAssociationPropertyResponse(name);
         }

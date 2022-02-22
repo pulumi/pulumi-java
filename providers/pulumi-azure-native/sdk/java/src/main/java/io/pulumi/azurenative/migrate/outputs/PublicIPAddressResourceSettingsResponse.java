@@ -183,7 +183,6 @@ public final class PublicIPAddressResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public PublicIPAddressResourceSettingsResponse build() {
             return new PublicIPAddressResourceSettingsResponse(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
         }

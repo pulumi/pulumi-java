@@ -205,7 +205,6 @@ public final class EloquaSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EloquaSourceResponse build() {
             return new EloquaSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

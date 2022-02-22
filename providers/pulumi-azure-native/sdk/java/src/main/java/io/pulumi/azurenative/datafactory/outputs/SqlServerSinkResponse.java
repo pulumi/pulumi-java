@@ -376,7 +376,6 @@ public final class SqlServerSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SqlServerSinkResponse build() {
             return new SqlServerSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

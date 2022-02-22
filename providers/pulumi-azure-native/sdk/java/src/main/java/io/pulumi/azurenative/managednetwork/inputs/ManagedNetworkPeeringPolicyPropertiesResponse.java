@@ -25,7 +25,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="hub")
-    private final @Nullable ResourceIdResponse hub;
+        private final @Nullable ResourceIdResponse hub;
 
     public Optional<ResourceIdResponse> getHub() {
         return this.hub == null ? Optional.empty() : Optional.ofNullable(this.hub);
@@ -47,7 +47,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="mesh")
-    private final @Nullable List<ResourceIdResponse> mesh;
+        private final @Nullable List<ResourceIdResponse> mesh;
 
     public List<ResourceIdResponse> getMesh() {
         return this.mesh == null ? List.of() : this.mesh;
@@ -58,7 +58,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -69,7 +69,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="spokes")
-    private final @Nullable List<ResourceIdResponse> spokes;
+        private final @Nullable List<ResourceIdResponse> spokes;
 
     public List<ResourceIdResponse> getSpokes() {
         return this.spokes == null ? List.of() : this.spokes;
@@ -80,7 +80,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -169,7 +169,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedNetworkPeeringPolicyPropertiesResponse build() {
             return new ManagedNetworkPeeringPolicyPropertiesResponse(etag, hub, mesh, provisioningState, spokes, type);
         }

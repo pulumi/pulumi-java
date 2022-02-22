@@ -23,7 +23,7 @@ public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="method")
-    private final @Nullable String method;
+        private final @Nullable String method;
 
     public Optional<String> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -34,7 +34,7 @@ public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="requestUri")
-    private final @Nullable String requestUri;
+        private final @Nullable String requestUri;
 
     public Optional<String> getRequestUri() {
         return this.requestUri == null ? Optional.empty() : Optional.ofNullable(this.requestUri);
@@ -83,7 +83,6 @@ public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.Inv
             this.requestUri = requestUri;
             return this;
         }
-
         public ApiConnectionTestLinkResponse build() {
             return new ApiConnectionTestLinkResponse(method, requestUri);
         }

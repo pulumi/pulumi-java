@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }
-
         public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
             return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }

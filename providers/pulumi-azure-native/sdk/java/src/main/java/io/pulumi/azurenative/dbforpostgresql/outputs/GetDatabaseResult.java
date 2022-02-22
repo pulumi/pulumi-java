@@ -139,7 +139,6 @@ public final class GetDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(charset, collation, id, name, type);
         }

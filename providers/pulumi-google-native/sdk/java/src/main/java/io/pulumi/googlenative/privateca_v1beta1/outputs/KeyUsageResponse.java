@@ -98,7 +98,6 @@ public final class KeyUsageResponse {
             this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
             return this;
         }
-
         public KeyUsageResponse build() {
             return new KeyUsageResponse(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

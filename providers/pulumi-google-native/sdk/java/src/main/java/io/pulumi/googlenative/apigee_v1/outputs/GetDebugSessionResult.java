@@ -159,7 +159,6 @@ public final class GetDebugSessionResult {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public GetDebugSessionResult build() {
             return new GetDebugSessionResult(count, filter, name, timeout, tracesize, validity);
         }

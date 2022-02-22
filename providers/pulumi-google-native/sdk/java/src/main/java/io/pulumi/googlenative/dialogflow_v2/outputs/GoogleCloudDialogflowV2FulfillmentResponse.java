@@ -141,7 +141,6 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentResponse(displayName, enabled, features, genericWebService, name);
         }

@@ -460,7 +460,6 @@ public final class ActiveDefaultSecurityUserRuleResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public ActiveDefaultSecurityUserRuleResponse build() {
             return new ActiveDefaultSecurityUserRuleResponse(commitTime, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, flag, id, kind, protocol, provisioningState, region, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

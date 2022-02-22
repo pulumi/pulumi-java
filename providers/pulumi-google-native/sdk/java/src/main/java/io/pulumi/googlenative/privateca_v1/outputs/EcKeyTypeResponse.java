@@ -52,7 +52,6 @@ public final class EcKeyTypeResponse {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public EcKeyTypeResponse build() {
             return new EcKeyTypeResponse(signatureAlgorithm);
         }

@@ -54,7 +54,6 @@ public final class PurviewConfigurationResponse {
             this.purviewResourceId = purviewResourceId;
             return this;
         }
-
         public PurviewConfigurationResponse build() {
             return new PurviewConfigurationResponse(purviewResourceId);
         }

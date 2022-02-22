@@ -74,7 +74,6 @@ public final class LayerResponse {
             this.directive = Objects.requireNonNull(directive);
             return this;
         }
-
         public LayerResponse build() {
             return new LayerResponse(arguments, directive);
         }

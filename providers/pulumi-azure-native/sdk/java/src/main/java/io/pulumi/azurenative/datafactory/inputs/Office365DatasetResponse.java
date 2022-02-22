@@ -29,7 +29,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -51,7 +51,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable DatasetResponseFolder folder;
+        private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -62,7 +62,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -73,7 +73,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -84,7 +84,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="predicate")
-    private final @Nullable Object predicate;
+        private final @Nullable Object predicate;
 
     public Optional<Object> getPredicate() {
         return this.predicate == null ? Optional.empty() : Optional.ofNullable(this.predicate);
@@ -95,7 +95,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Object schema;
+        private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -106,7 +106,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Object structure;
+        private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -117,7 +117,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Object tableName;
+        private final Object tableName;
 
     public Object getTableName() {
         return this.tableName;
@@ -129,7 +129,7 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -258,7 +258,6 @@ public final class Office365DatasetResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Office365DatasetResponse build() {
             return new Office365DatasetResponse(annotations, description, folder, linkedServiceName, parameters, predicate, schema, structure, tableName, type);
         }

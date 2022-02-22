@@ -117,7 +117,6 @@ public final class GetWCFRelayAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWCFRelayAuthorizationRuleResult build() {
             return new GetWCFRelayAuthorizationRuleResult(id, name, rights, type);
         }

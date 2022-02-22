@@ -142,7 +142,6 @@ public final class LiveEventPreviewResponse {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
-
         public LiveEventPreviewResponse build() {
             return new LiveEventPreviewResponse(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
         }

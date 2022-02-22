@@ -20,7 +20,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataConnectorId")
-    private final @Nullable Input<String> dataConnectorId;
+        private final @Nullable Input<String> dataConnectorId;
 
     public Input<String> getDataConnectorId() {
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
@@ -31,7 +31,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataTypes")
-    private final @Nullable Input<AlertsDataTypeOfDataConnectorArgs> dataTypes;
+        private final @Nullable Input<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
     public Input<AlertsDataTypeOfDataConnectorArgs> getDataTypes() {
         return this.dataTypes == null ? Input.empty() : this.dataTypes;
@@ -43,7 +43,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -76,7 +76,7 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -195,7 +195,6 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public ASCDataConnectorArgs build() {
             return new ASCDataConnectorArgs(dataConnectorId, dataTypes, kind, resourceGroupName, subscriptionId, workspaceName);
         }

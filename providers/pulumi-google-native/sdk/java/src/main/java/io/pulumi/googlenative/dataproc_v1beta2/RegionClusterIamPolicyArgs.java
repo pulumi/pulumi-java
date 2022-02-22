@@ -22,14 +22,14 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -40,21 +40,21 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="regionId", required=true)
-    private final Input<String> regionId;
+      private final Input<String> regionId;
 
     public Input<String> getRegionId() {
         return this.regionId;
@@ -65,7 +65,7 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -184,7 +184,6 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public RegionClusterIamPolicyArgs build() {
             return new RegionClusterIamPolicyArgs(bindings, clusterId, etag, project, regionId, version);
         }

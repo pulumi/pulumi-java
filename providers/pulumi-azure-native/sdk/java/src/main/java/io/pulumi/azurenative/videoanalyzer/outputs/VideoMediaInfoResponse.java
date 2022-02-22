@@ -52,7 +52,6 @@ public final class VideoMediaInfoResponse {
             this.segmentLength = Objects.requireNonNull(segmentLength);
             return this;
         }
-
         public VideoMediaInfoResponse build() {
             return new VideoMediaInfoResponse(segmentLength);
         }

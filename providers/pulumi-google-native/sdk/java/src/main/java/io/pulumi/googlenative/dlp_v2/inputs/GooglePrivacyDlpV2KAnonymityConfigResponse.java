@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="entityId", required=true)
-    private final GooglePrivacyDlpV2EntityIdResponse entityId;
+      private final GooglePrivacyDlpV2EntityIdResponse entityId;
 
     public GooglePrivacyDlpV2EntityIdResponse getEntityId() {
         return this.entityId;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
         return this.quasiIds;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
             return new GooglePrivacyDlpV2KAnonymityConfigResponse(entityId, quasiIds);
         }

@@ -26,7 +26,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkApiVersion")
-    private final @Nullable String networkApiVersion;
+        private final @Nullable String networkApiVersion;
 
     public Optional<String> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Optional.empty() : Optional.ofNullable(this.networkApiVersion);
@@ -37,7 +37,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
+        private final @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineNetworkInterfaceConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
@@ -48,7 +48,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
+        private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
     public List<NetworkInterfaceReferenceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
@@ -107,7 +107,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
         }

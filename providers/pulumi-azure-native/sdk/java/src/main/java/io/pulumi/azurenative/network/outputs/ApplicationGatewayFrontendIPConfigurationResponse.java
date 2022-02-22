@@ -245,7 +245,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayFrontendIPConfigurationResponse build() {
             return new ApplicationGatewayFrontendIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, privateLinkConfiguration, provisioningState, publicIPAddress, subnet, type);
         }

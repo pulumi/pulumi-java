@@ -139,7 +139,6 @@ public final class AuthProviderResponse {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }
-
         public AuthProviderResponse build() {
             return new AuthProviderResponse(audiences, authorizationUrl, issuer, jwksUri, jwtLocations);
         }

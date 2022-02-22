@@ -163,7 +163,6 @@ public final class GetStepResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStepResult build() {
             return new GetStepResult(id, location, name, properties, tags, type);
         }

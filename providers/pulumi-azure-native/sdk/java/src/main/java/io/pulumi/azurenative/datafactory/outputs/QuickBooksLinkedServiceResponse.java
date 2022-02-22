@@ -338,7 +338,6 @@ public final class QuickBooksLinkedServiceResponse {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public QuickBooksLinkedServiceResponse build() {
             return new QuickBooksLinkedServiceResponse(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
         }

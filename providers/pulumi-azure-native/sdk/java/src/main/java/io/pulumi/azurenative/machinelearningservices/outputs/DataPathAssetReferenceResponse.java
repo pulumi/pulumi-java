@@ -99,7 +99,6 @@ public final class DataPathAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public DataPathAssetReferenceResponse build() {
             return new DataPathAssetReferenceResponse(datastoreId, path, referenceType);
         }

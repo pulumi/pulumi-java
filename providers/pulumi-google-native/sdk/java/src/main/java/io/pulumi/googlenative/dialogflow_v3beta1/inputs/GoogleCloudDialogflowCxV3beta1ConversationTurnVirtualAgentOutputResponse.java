@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="currentPage", required=true)
-    private final GoogleCloudDialogflowCxV3beta1PageResponse currentPage;
+      private final GoogleCloudDialogflowCxV3beta1PageResponse currentPage;
 
     public GoogleCloudDialogflowCxV3beta1PageResponse getCurrentPage() {
         return this.currentPage;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="diagnosticInfo", required=true)
-    private final Map<String,String> diagnosticInfo;
+      private final Map<String,String> diagnosticInfo;
 
     public Map<String,String> getDiagnosticInfo() {
         return this.diagnosticInfo;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="differences", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences;
+      private final List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences;
 
     public List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> getDifferences() {
         return this.differences;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="sessionParameters", required=true)
-    private final Map<String,String> sessionParameters;
+      private final Map<String,String> sessionParameters;
 
     public Map<String,String> getSessionParameters() {
         return this.sessionParameters;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="status", required=true)
-    private final GoogleRpcStatusResponse status;
+      private final GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="textResponses", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses;
+      private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses;
 
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> getTextResponses() {
         return this.textResponses;
@@ -94,7 +94,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * 
      */
     @InputImport(name="triggeredIntent", required=true)
-    private final GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
+      private final GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
 
     public GoogleCloudDialogflowCxV3beta1IntentResponse getTriggeredIntent() {
         return this.triggeredIntent;
@@ -193,7 +193,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
             this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(currentPage, diagnosticInfo, differences, sessionParameters, status, textResponses, triggeredIntent);
         }

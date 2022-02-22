@@ -23,7 +23,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowlist")
-    private final @Nullable Input<OracleRdbmsArgs> allowlist;
+      private final @Nullable Input<OracleRdbmsArgs> allowlist;
 
     public Input<OracleRdbmsArgs> getAllowlist() {
         return this.allowlist == null ? Input.empty() : this.allowlist;
@@ -34,7 +34,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rejectlist")
-    private final @Nullable Input<OracleRdbmsArgs> rejectlist;
+      private final @Nullable Input<OracleRdbmsArgs> rejectlist;
 
     public Input<OracleRdbmsArgs> getRejectlist() {
         return this.rejectlist == null ? Input.empty() : this.rejectlist;
@@ -93,7 +93,6 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             this.rejectlist = Input.ofNullable(rejectlist);
             return this;
         }
-
         public OracleSourceConfigArgs build() {
             return new OracleSourceConfigArgs(allowlist, rejectlist);
         }

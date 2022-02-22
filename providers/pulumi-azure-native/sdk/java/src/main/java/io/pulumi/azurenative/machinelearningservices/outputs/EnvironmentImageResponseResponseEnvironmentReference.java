@@ -76,7 +76,6 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
             this.version = version;
             return this;
         }
-
         public EnvironmentImageResponseResponseEnvironmentReference build() {
             return new EnvironmentImageResponseResponseEnvironmentReference(name, version);
         }

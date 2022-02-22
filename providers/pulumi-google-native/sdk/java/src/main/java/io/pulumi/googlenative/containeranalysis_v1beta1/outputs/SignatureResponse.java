@@ -74,7 +74,6 @@ public final class SignatureResponse {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public SignatureResponse build() {
             return new SignatureResponse(publicKeyId, signature);
         }

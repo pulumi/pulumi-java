@@ -74,7 +74,6 @@ public final class AbortInfoResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public AbortInfoResponse build() {
             return new AbortInfoResponse(cause, resourceUri);
         }

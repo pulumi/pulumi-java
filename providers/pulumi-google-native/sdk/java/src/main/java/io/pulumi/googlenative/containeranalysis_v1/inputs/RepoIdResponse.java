@@ -22,7 +22,7 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectRepoId", required=true)
-    private final ProjectRepoIdResponse projectRepoId;
+      private final ProjectRepoIdResponse projectRepoId;
 
     public ProjectRepoIdResponse getProjectRepoId() {
         return this.projectRepoId;
@@ -33,7 +33,7 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -82,7 +82,6 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public RepoIdResponse build() {
             return new RepoIdResponse(projectRepoId, uid);
         }

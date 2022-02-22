@@ -97,7 +97,6 @@ public final class SecretEnvSourceResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public SecretEnvSourceResponse build() {
             return new SecretEnvSourceResponse(localObjectReference, name, optional);
         }

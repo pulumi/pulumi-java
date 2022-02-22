@@ -23,7 +23,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificates", required=true)
-    private final Input<List<String>> certificates;
+        private final Input<List<String>> certificates;
 
     public Input<List<String>> getCertificates() {
         return this.certificates;
@@ -35,7 +35,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PemCertificateListArgs build() {
             return new PemCertificateListArgs(certificates, type);
         }

@@ -118,7 +118,6 @@ public final class SolutionPropertiesResponse {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }
-
         public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(containedResources, provisioningState, referencedResources, workspaceResourceId);
         }

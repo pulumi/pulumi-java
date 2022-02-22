@@ -399,7 +399,6 @@ public final class GetApplicationResult {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(etag, id, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, name, parameters, provisioningState, removeApplicationCapacity, tags, type, typeName, typeVersion, upgradePolicy);
         }

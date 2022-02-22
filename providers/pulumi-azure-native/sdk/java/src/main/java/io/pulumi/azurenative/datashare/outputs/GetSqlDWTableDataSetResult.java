@@ -245,7 +245,6 @@ public final class GetSqlDWTableDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlDWTableDataSetResult build() {
             return new GetSqlDWTableDataSetResult(dataSetId, dataWarehouseName, id, kind, name, schemaName, sqlServerResourceId, systemData, tableName, type);
         }

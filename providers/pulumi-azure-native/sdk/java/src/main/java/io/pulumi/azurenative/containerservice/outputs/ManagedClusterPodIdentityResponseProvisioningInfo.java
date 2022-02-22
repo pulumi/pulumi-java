@@ -54,7 +54,6 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
             this.error = error;
             return this;
         }
-
         public ManagedClusterPodIdentityResponseProvisioningInfo build() {
             return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
         }

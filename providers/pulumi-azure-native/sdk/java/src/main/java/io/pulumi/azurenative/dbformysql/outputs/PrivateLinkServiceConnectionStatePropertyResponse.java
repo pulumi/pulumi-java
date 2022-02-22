@@ -95,7 +95,6 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStatePropertyResponse build() {
             return new PrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
         }

@@ -609,7 +609,6 @@ public final class GetAppServicePlanResult {
             this.workerTierName = workerTierName;
             return this;
         }
-
         public GetAppServicePlanResult build() {
             return new GetAppServicePlanResult(freeOfferExpirationTime, geoRegion, hostingEnvironmentProfile, hyperV, id, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, maximumNumberOfWorkers, name, numberOfSites, perSiteScaling, provisioningState, reserved, resourceGroup, sku, spotExpirationTime, status, subscription, tags, targetWorkerCount, targetWorkerSizeId, type, workerTierName);
         }

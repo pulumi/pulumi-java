@@ -54,7 +54,6 @@ public final class ApiDefinitionInfoResponse {
             this.url = url;
             return this;
         }
-
         public ApiDefinitionInfoResponse build() {
             return new ApiDefinitionInfoResponse(url);
         }

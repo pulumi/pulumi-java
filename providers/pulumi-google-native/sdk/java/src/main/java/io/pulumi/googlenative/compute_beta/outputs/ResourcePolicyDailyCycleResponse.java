@@ -96,7 +96,6 @@ public final class ResourcePolicyDailyCycleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyDailyCycleResponse build() {
             return new ResourcePolicyDailyCycleResponse(daysInCycle, duration, startTime);
         }

@@ -117,7 +117,6 @@ public final class GetLinkedWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedWorkspaceResult build() {
             return new GetLinkedWorkspaceResult(id, name, properties, type);
         }

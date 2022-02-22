@@ -19,7 +19,7 @@ public final class BigtableOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="columnFamilies", required=true)
-    private final List<BigtableColumnFamilyResponse> columnFamilies;
+      private final List<BigtableColumnFamilyResponse> columnFamilies;
 
     public List<BigtableColumnFamilyResponse> getColumnFamilies() {
         return this.columnFamilies;
@@ -30,7 +30,7 @@ public final class BigtableOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ignoreUnspecifiedColumnFamilies", required=true)
-    private final Boolean ignoreUnspecifiedColumnFamilies;
+      private final Boolean ignoreUnspecifiedColumnFamilies;
 
     public Boolean getIgnoreUnspecifiedColumnFamilies() {
         return this.ignoreUnspecifiedColumnFamilies;
@@ -41,7 +41,7 @@ public final class BigtableOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="readRowkeyAsString", required=true)
-    private final Boolean readRowkeyAsString;
+      private final Boolean readRowkeyAsString;
 
     public Boolean getReadRowkeyAsString() {
         return this.readRowkeyAsString;
@@ -100,7 +100,6 @@ public final class BigtableOptionsResponse extends io.pulumi.resources.InvokeArg
             this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
             return this;
         }
-
         public BigtableOptionsResponse build() {
             return new BigtableOptionsResponse(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
         }

@@ -308,7 +308,6 @@ public final class GetRegionSslCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegionSslCertificateResult build() {
             return new GetRegionSslCertificateResult(certificate, creationTimestamp, description, expireTime, kind, managed, name, privateKey, region, selfLink, selfManaged, subjectAlternativeNames, type);
         }

@@ -78,7 +78,6 @@ public final class ResourceForestSettingsResponse {
             this.settings = settings;
             return this;
         }
-
         public ResourceForestSettingsResponse build() {
             return new ResourceForestSettingsResponse(resourceForest, settings);
         }

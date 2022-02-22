@@ -118,7 +118,6 @@ public final class ConnectionProfileResponse {
             this.webSshAccess = webSshAccess;
             return this;
         }
-
         public ConnectionProfileResponse build() {
             return new ConnectionProfileResponse(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }

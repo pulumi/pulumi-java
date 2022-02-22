@@ -30,7 +30,6 @@ public final class IosRoboTestResponse {
         public Builder(IosRoboTestResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public IosRoboTestResponse build() {
             return new IosRoboTestResponse();
         }

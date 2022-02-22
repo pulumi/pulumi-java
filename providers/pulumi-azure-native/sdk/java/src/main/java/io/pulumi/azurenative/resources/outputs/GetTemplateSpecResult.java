@@ -248,7 +248,6 @@ public final class GetTemplateSpecResult {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public GetTemplateSpecResult build() {
             return new GetTemplateSpecResult(description, displayName, id, location, metadata, name, systemData, tags, type, versions);
         }

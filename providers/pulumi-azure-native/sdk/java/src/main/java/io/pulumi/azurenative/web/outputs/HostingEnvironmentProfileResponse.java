@@ -97,7 +97,6 @@ public final class HostingEnvironmentProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HostingEnvironmentProfileResponse build() {
             return new HostingEnvironmentProfileResponse(id, name, type);
         }

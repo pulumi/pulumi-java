@@ -144,7 +144,6 @@ public final class AutoscaleProfileResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AutoscaleProfileResponse build() {
             return new AutoscaleProfileResponse(capacity, fixedDate, name, recurrence, rules);
         }

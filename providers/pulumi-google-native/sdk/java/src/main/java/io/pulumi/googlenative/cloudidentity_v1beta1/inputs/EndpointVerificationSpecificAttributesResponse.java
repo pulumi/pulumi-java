@@ -22,7 +22,7 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
      * 
      */
     @InputImport(name="certificateAttributes", required=true)
-    private final List<CertificateAttributesResponse> certificateAttributes;
+      private final List<CertificateAttributesResponse> certificateAttributes;
 
     public List<CertificateAttributesResponse> getCertificateAttributes() {
         return this.certificateAttributes;
@@ -60,7 +60,6 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }
-
         public EndpointVerificationSpecificAttributesResponse build() {
             return new EndpointVerificationSpecificAttributesResponse(certificateAttributes);
         }

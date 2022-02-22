@@ -262,7 +262,6 @@ public final class GetRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRuleResult build() {
             return new GetRuleResult(actions, conditions, deploymentStatus, id, matchProcessingBehavior, name, order, provisioningState, systemData, type);
         }

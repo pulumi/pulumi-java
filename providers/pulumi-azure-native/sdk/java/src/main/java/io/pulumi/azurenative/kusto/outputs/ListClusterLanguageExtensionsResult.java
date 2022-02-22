@@ -54,7 +54,6 @@ public final class ListClusterLanguageExtensionsResult {
             this.value = value;
             return this;
         }
-
         public ListClusterLanguageExtensionsResult build() {
             return new ListClusterLanguageExtensionsResult(value);
         }

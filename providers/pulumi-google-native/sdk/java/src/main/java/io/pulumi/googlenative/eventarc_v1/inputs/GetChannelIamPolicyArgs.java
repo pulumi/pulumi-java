@@ -15,28 +15,28 @@ public final class GetChannelIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetChannelIamPolicyArgs Empty = new GetChannelIamPolicyArgs();
 
     @InputImport(name="channelId", required=true)
-    private final String channelId;
+      private final String channelId;
 
     public String getChannelId() {
         return this.channelId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetChannelIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetChannelIamPolicyArgs build() {
             return new GetChannelIamPolicyArgs(channelId, location, optionsRequestedPolicyVersion, project);
         }

@@ -74,7 +74,6 @@ public final class LibraryResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LibraryResponse build() {
             return new LibraryResponse(name, version);
         }

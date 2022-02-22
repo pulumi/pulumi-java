@@ -118,7 +118,6 @@ public final class ClientInfoResponse {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
-
         public ClientInfoResponse build() {
             return new ClientInfoResponse(email, name, objectId, userPrincipalName);
         }

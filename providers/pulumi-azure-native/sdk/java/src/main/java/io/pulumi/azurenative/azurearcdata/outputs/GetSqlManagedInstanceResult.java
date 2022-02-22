@@ -228,7 +228,6 @@ public final class GetSqlManagedInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlManagedInstanceResult build() {
             return new GetSqlManagedInstanceResult(extendedLocation, id, location, name, properties, sku, systemData, tags, type);
         }

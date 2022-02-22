@@ -267,7 +267,6 @@ public final class ConfigurationServiceGitRepositoryResponse {
             this.username = username;
             return this;
         }
-
         public ConfigurationServiceGitRepositoryResponse build() {
             return new ConfigurationServiceGitRepositoryResponse(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);
         }

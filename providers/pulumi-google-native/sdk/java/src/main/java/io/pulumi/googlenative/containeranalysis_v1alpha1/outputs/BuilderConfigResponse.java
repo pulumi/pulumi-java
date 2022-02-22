@@ -30,7 +30,6 @@ public final class BuilderConfigResponse {
         public Builder(BuilderConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BuilderConfigResponse build() {
             return new BuilderConfigResponse();
         }

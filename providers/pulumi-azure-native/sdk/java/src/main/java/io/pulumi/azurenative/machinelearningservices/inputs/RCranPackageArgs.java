@@ -19,7 +19,7 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+        private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -89,7 +89,6 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.repository = Input.ofNullable(repository);
             return this;
         }
-
         public RCranPackageArgs build() {
             return new RCranPackageArgs(name, repository);
         }

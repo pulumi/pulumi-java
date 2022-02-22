@@ -54,7 +54,6 @@ public final class HardwareProfileResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(vmSize);
         }

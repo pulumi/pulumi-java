@@ -248,7 +248,6 @@ public final class GetPipelineJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineJobResult build() {
             return new GetPipelineJobResult(description, error, expiration, id, name, parameters, state, systemData, topologyName, type);
         }

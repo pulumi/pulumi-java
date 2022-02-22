@@ -141,7 +141,6 @@ public final class ClusterAutoscalingResponse {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-
         public ClusterAutoscalingResponse build() {
             return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }

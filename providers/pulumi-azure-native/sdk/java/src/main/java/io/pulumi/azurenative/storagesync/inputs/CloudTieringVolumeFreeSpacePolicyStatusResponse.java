@@ -22,7 +22,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * 
      */
     @InputImport(name="currentVolumeFreeSpacePercent", required=true)
-    private final Integer currentVolumeFreeSpacePercent;
+        private final Integer currentVolumeFreeSpacePercent;
 
     public Integer getCurrentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
@@ -33,7 +33,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * 
      */
     @InputImport(name="effectiveVolumeFreeSpacePolicy", required=true)
-    private final Integer effectiveVolumeFreeSpacePolicy;
+        private final Integer effectiveVolumeFreeSpacePolicy;
 
     public Integer getEffectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
@@ -44,7 +44,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
      * 
      */
     @InputImport(name="lastUpdatedTimestamp", required=true)
-    private final String lastUpdatedTimestamp;
+        private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -103,7 +103,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
             return new CloudTieringVolumeFreeSpacePolicyStatusResponse(currentVolumeFreeSpacePercent, effectiveVolumeFreeSpacePolicy, lastUpdatedTimestamp);
         }

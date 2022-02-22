@@ -22,7 +22,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupInfo", required=true)
-    private final BackupInfoResponse backupInfo;
+      private final BackupInfoResponse backupInfo;
 
     public BackupInfoResponse getBackupInfo() {
         return this.backupInfo;
@@ -33,7 +33,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceType", required=true)
-    private final String sourceType;
+      private final String sourceType;
 
     public String getSourceType() {
         return this.sourceType;
@@ -82,7 +82,6 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public RestoreInfoResponse build() {
             return new RestoreInfoResponse(backupInfo, sourceType);
         }

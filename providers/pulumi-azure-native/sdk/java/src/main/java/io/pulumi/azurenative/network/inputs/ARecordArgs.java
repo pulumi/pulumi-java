@@ -23,7 +23,7 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable Input<String> ipv4Address;
+        private final @Nullable Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
@@ -66,7 +66,6 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ipv4Address = Input.ofNullable(ipv4Address);
             return this;
         }
-
         public ARecordArgs build() {
             return new ARecordArgs(ipv4Address);
         }

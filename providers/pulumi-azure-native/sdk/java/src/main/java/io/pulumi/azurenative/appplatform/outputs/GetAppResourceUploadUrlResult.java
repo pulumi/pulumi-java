@@ -76,7 +76,6 @@ public final class GetAppResourceUploadUrlResult {
             this.uploadUrl = uploadUrl;
             return this;
         }
-
         public GetAppResourceUploadUrlResult build() {
             return new GetAppResourceUploadUrlResult(relativePath, uploadUrl);
         }

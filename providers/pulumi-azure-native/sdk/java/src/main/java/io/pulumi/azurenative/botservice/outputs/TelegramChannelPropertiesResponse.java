@@ -98,7 +98,6 @@ public final class TelegramChannelPropertiesResponse {
             this.isValidated = isValidated;
             return this;
         }
-
         public TelegramChannelPropertiesResponse build() {
             return new TelegramChannelPropertiesResponse(accessToken, isEnabled, isValidated);
         }

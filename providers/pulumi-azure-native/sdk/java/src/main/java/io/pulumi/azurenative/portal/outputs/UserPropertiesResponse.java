@@ -139,7 +139,6 @@ public final class UserPropertiesResponse {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }
-
         public UserPropertiesResponse build() {
             return new UserPropertiesResponse(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
         }

@@ -19,7 +19,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableAutomaticUpdates")
-    private final @Nullable Input<Boolean> enableAutomaticUpdates;
+        private final @Nullable Input<Boolean> enableAutomaticUpdates;
 
     public Input<Boolean> getEnableAutomaticUpdates() {
         return this.enableAutomaticUpdates == null ? Input.empty() : this.enableAutomaticUpdates;
@@ -62,7 +62,6 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             this.enableAutomaticUpdates = Input.ofNullable(enableAutomaticUpdates);
             return this;
         }
-
         public WindowsConfigurationArgs build() {
             return new WindowsConfigurationArgs(enableAutomaticUpdates);
         }

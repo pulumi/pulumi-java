@@ -97,7 +97,6 @@ public final class OpenShiftRouterProfileResponse {
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }
-
         public OpenShiftRouterProfileResponse build() {
             return new OpenShiftRouterProfileResponse(fqdn, name, publicSubdomain);
         }

@@ -180,7 +180,6 @@ public final class HTTPHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public HTTPHealthCheckResponse build() {
             return new HTTPHealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

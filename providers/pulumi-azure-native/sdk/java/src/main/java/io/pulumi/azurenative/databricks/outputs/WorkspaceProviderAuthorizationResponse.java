@@ -74,7 +74,6 @@ public final class WorkspaceProviderAuthorizationResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public WorkspaceProviderAuthorizationResponse build() {
             return new WorkspaceProviderAuthorizationResponse(principalId, roleDefinitionId);
         }

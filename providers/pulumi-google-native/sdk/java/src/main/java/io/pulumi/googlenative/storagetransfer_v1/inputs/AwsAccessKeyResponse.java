@@ -21,7 +21,7 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final String accessKeyId;
+      private final String accessKeyId;
 
     public String getAccessKeyId() {
         return this.accessKeyId;
@@ -32,7 +32,7 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-    private final String secretAccessKey;
+      private final String secretAccessKey;
 
     public String getSecretAccessKey() {
         return this.secretAccessKey;
@@ -81,7 +81,6 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public AwsAccessKeyResponse build() {
             return new AwsAccessKeyResponse(accessKeyId, secretAccessKey);
         }

@@ -20,7 +20,7 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateZoneName")
-    private final @Nullable Input<String> privateZoneName;
+        private final @Nullable Input<String> privateZoneName;
 
     public Input<String> getPrivateZoneName() {
         return this.privateZoneName == null ? Input.empty() : this.privateZoneName;
@@ -42,7 +42,7 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -142,7 +142,6 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PrivateZoneArgs build() {
             return new PrivateZoneArgs(location, privateZoneName, resourceGroupName, tags);
         }

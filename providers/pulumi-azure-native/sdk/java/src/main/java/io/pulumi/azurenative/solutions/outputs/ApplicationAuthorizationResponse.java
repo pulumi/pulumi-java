@@ -74,7 +74,6 @@ public final class ApplicationAuthorizationResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public ApplicationAuthorizationResponse build() {
             return new ApplicationAuthorizationResponse(principalId, roleDefinitionId);
         }

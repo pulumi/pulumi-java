@@ -21,7 +21,7 @@ public final class ContainerInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="image", required=true)
-    private final String image;
+      private final String image;
 
     public String getImage() {
         return this.image;
@@ -59,7 +59,6 @@ public final class ContainerInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public ContainerInfoResponse build() {
             return new ContainerInfoResponse(image);
         }

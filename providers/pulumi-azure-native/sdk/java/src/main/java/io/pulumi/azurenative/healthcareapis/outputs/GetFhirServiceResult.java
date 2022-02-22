@@ -358,7 +358,6 @@ public final class GetFhirServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFhirServiceResult build() {
             return new GetFhirServiceResult(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, etag, exportConfiguration, id, identity, kind, location, name, provisioningState, systemData, tags, type);
         }

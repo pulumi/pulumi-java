@@ -75,7 +75,6 @@ public final class AcceleratorConfigResponse {
             this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorTypeUri);
         }

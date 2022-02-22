@@ -140,7 +140,6 @@ public final class GuestOSCustomizationResponse {
             this.username = username;
             return this;
         }
-
         public GuestOSCustomizationResponse build() {
             return new GuestOSCustomizationResponse(dnsServers, hostName, password, policyId, username);
         }

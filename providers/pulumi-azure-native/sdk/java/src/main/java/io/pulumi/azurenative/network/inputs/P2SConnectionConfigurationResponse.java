@@ -26,7 +26,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableInternetSecurity")
-    private final @Nullable Boolean enableInternetSecurity;
+        private final @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
@@ -37,7 +37,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -59,7 +59,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -70,7 +70,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -81,7 +81,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="routingConfiguration")
-    private final @Nullable RoutingConfigurationResponse routingConfiguration;
+        private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
@@ -92,7 +92,7 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpnClientAddressPool")
-    private final @Nullable AddressSpaceResponse vpnClientAddressPool;
+        private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
     public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
         return this.vpnClientAddressPool == null ? Optional.empty() : Optional.ofNullable(this.vpnClientAddressPool);
@@ -191,7 +191,6 @@ public final class P2SConnectionConfigurationResponse extends io.pulumi.resource
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
-
         public P2SConnectionConfigurationResponse build() {
             return new P2SConnectionConfigurationResponse(enableInternetSecurity, etag, id, name, provisioningState, routingConfiguration, vpnClientAddressPool);
         }

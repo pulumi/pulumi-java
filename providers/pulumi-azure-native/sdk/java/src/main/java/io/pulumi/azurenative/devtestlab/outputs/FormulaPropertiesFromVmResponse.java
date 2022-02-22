@@ -54,7 +54,6 @@ public final class FormulaPropertiesFromVmResponse {
             this.labVmId = labVmId;
             return this;
         }
-
         public FormulaPropertiesFromVmResponse build() {
             return new FormulaPropertiesFromVmResponse(labVmId);
         }

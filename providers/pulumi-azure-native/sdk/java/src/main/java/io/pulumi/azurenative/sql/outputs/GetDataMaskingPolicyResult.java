@@ -223,7 +223,6 @@ public final class GetDataMaskingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataMaskingPolicyResult build() {
             return new GetDataMaskingPolicyResult(applicationPrincipals, dataMaskingState, exemptPrincipals, id, kind, location, maskingLevel, name, type);
         }

@@ -23,7 +23,7 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+        private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -34,7 +34,7 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
      * 
      */
     @InputImport(name="definitionVersion")
-    private final @Nullable String definitionVersion;
+        private final @Nullable String definitionVersion;
 
     public Optional<String> getDefinitionVersion() {
         return this.definitionVersion == null ? Optional.empty() : Optional.ofNullable(this.definitionVersion);
@@ -83,7 +83,6 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
             this.definitionVersion = definitionVersion;
             return this;
         }
-
         public DatasetStateResponseDeprecatedBy build() {
             return new DatasetStateResponseDeprecatedBy(datasetId, definitionVersion);
         }

@@ -23,7 +23,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable String accountKey;
+        private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
@@ -34,7 +34,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable String accountName;
+        private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
@@ -83,7 +83,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.accountName = accountName;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountKey, accountName);
         }

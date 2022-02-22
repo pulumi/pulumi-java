@@ -21,7 +21,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final String labelName;
+        private final String labelName;
 
     public String getLabelName() {
         return this.labelName;
@@ -32,7 +32,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="labelType", required=true)
-    private final String labelType;
+        private final String labelType;
 
     public String getLabelType() {
         return this.labelType;
@@ -81,7 +81,6 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
             this.labelType = Objects.requireNonNull(labelType);
             return this;
         }
-
         public IncidentLabelResponse build() {
             return new IncidentLabelResponse(labelName, labelType);
         }

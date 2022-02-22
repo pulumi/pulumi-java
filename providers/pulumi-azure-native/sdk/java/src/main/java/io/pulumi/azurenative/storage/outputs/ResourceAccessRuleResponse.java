@@ -76,7 +76,6 @@ public final class ResourceAccessRuleResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ResourceAccessRuleResponse build() {
             return new ResourceAccessRuleResponse(resourceId, tenantId);
         }

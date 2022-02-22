@@ -180,7 +180,6 @@ public final class GatewayRouteResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public GatewayRouteResponse build() {
             return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
         }

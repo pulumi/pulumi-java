@@ -118,7 +118,6 @@ public final class AutomationTriggeringRuleResponse {
             this.propertyType = propertyType;
             return this;
         }
-
         public AutomationTriggeringRuleResponse build() {
             return new AutomationTriggeringRuleResponse(expectedValue, operator, propertyJPath, propertyType);
         }

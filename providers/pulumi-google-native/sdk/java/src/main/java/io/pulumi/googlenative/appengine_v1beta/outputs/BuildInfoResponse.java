@@ -52,7 +52,6 @@ public final class BuildInfoResponse {
             this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
             return this;
         }
-
         public BuildInfoResponse build() {
             return new BuildInfoResponse(cloudBuildId);
         }

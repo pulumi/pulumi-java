@@ -162,7 +162,6 @@ public final class GetPrivateEndpointConnectionByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionByNameResult build() {
             return new GetPrivateEndpointConnectionByNameResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

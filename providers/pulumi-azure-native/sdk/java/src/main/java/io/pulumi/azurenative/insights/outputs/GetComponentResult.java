@@ -544,7 +544,6 @@ public final class GetComponentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetComponentResult build() {
             return new GetComponentResult(appId, applicationId, applicationType, connectionString, creationDate, disableIpMasking, flowType, hockeyAppId, hockeyAppToken, id, immediatePurgeDataOn30Days, ingestionMode, instrumentationKey, kind, location, name, privateLinkScopedResources, provisioningState, requestSource, retentionInDays, samplingPercentage, tags, tenantId, type);
         }

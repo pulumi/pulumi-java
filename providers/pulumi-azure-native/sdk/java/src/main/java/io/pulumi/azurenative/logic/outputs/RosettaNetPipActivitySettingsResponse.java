@@ -97,7 +97,6 @@ public final class RosettaNetPipActivitySettingsResponse {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }
-
         public RosettaNetPipActivitySettingsResponse build() {
             return new RosettaNetPipActivitySettingsResponse(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }

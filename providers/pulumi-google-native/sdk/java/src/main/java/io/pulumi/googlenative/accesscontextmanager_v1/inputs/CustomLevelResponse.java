@@ -21,7 +21,7 @@ public final class CustomLevelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expr", required=true)
-    private final ExprResponse expr;
+      private final ExprResponse expr;
 
     public ExprResponse getExpr() {
         return this.expr;
@@ -59,7 +59,6 @@ public final class CustomLevelResponse extends io.pulumi.resources.InvokeArgs {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public CustomLevelResponse build() {
             return new CustomLevelResponse(expr);
         }

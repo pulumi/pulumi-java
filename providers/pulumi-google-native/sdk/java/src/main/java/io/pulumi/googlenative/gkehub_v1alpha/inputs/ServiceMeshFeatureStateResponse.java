@@ -22,7 +22,7 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="analysisMessages", required=true)
-    private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
+      private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
     public List<ServiceMeshAnalysisMessageResponse> getAnalysisMessages() {
         return this.analysisMessages;
@@ -60,7 +60,6 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
             this.analysisMessages = Objects.requireNonNull(analysisMessages);
             return this;
         }
-
         public ServiceMeshFeatureStateResponse build() {
             return new ServiceMeshFeatureStateResponse(analysisMessages);
         }

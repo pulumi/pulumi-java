@@ -168,7 +168,6 @@ public final class GetTableResourceTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTableResourceTableResult build() {
             return new GetTableResourceTableResult(id, location, name, options, resource, tags, type);
         }

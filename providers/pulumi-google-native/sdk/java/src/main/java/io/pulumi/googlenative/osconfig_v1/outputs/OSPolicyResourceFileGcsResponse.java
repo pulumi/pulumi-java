@@ -95,7 +95,6 @@ public final class OSPolicyResourceFileGcsResponse {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OSPolicyResourceFileGcsResponse build() {
             return new OSPolicyResourceFileGcsResponse(bucket, generation, object);
         }

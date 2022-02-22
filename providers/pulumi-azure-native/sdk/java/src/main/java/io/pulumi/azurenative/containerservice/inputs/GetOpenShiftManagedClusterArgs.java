@@ -17,7 +17,7 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -77,7 +77,6 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetOpenShiftManagedClusterArgs build() {
             return new GetOpenShiftManagedClusterArgs(resourceGroupName, resourceName);
         }

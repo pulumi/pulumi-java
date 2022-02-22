@@ -54,7 +54,6 @@ public final class CreatorPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public CreatorPropertiesResponse build() {
             return new CreatorPropertiesResponse(provisioningState);
         }

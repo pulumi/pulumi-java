@@ -223,7 +223,6 @@ public final class ApplicationGatewaySslCertificateResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewaySslCertificateResponse build() {
             return new ApplicationGatewaySslCertificateResponse(data, etag, id, keyVaultSecretId, name, password, provisioningState, publicCertData, type);
         }

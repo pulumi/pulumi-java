@@ -21,7 +21,7 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="builderConfig", required=true)
-    private final BuilderConfigResponse builderConfig;
+      private final BuilderConfigResponse builderConfig;
 
     public BuilderConfigResponse getBuilderConfig() {
         return this.builderConfig;
@@ -32,14 +32,14 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="materials", required=true)
-    private final List<String> materials;
+      private final List<String> materials;
 
     public List<String> getMaterials() {
         return this.materials;
     }
 
     @InputImport(name="metadata", required=true)
-    private final MetadataResponse metadata;
+      private final MetadataResponse metadata;
 
     public MetadataResponse getMetadata() {
         return this.metadata;
@@ -50,7 +50,7 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recipe", required=true)
-    private final RecipeResponse recipe;
+      private final RecipeResponse recipe;
 
     public RecipeResponse getRecipe() {
         return this.recipe;
@@ -119,7 +119,6 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public InTotoProvenanceResponse build() {
             return new InTotoProvenanceResponse(builderConfig, materials, metadata, recipe);
         }

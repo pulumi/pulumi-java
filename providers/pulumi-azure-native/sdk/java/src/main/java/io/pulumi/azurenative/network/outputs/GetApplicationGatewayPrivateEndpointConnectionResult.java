@@ -204,7 +204,6 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationGatewayPrivateEndpointConnectionResult build() {
             return new GetApplicationGatewayPrivateEndpointConnectionResult(etag, id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

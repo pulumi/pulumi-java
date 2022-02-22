@@ -78,7 +78,6 @@ public final class ListSubAccountVMHostsResult {
             this.value = value;
             return this;
         }
-
         public ListSubAccountVMHostsResult build() {
             return new ListSubAccountVMHostsResult(nextLink, value);
         }

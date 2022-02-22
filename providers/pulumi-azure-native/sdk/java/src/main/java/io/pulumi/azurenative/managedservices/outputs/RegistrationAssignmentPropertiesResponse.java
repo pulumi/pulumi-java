@@ -96,7 +96,6 @@ public final class RegistrationAssignmentPropertiesResponse {
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponse build() {
             return new RegistrationAssignmentPropertiesResponse(provisioningState, registrationDefinition, registrationDefinitionId);
         }

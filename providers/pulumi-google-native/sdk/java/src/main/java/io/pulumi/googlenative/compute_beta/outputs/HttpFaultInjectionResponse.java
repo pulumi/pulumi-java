@@ -75,7 +75,6 @@ public final class HttpFaultInjectionResponse {
             this.delay = Objects.requireNonNull(delay);
             return this;
         }
-
         public HttpFaultInjectionResponse build() {
             return new HttpFaultInjectionResponse(abort, delay);
         }

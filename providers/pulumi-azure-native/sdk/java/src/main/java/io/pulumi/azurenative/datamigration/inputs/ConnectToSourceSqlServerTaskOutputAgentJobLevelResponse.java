@@ -23,7 +23,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -45,7 +45,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="jobCategory", required=true)
-    private final String jobCategory;
+        private final String jobCategory;
 
     public String getJobCategory() {
         return this.jobCategory;
@@ -56,7 +56,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="jobOwner", required=true)
-    private final String jobOwner;
+        private final String jobOwner;
 
     public String getJobOwner() {
         return this.jobOwner;
@@ -67,7 +67,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="lastExecutedOn", required=true)
-    private final String lastExecutedOn;
+        private final String lastExecutedOn;
 
     public String getLastExecutedOn() {
         return this.lastExecutedOn;
@@ -78,7 +78,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="migrationEligibility", required=true)
-    private final MigrationEligibilityInfoResponse migrationEligibility;
+        private final MigrationEligibilityInfoResponse migrationEligibility;
 
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
         return this.migrationEligibility;
@@ -89,7 +89,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -101,7 +101,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -210,7 +210,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(id, isEnabled, jobCategory, jobOwner, lastExecutedOn, migrationEligibility, name, resultType);
         }

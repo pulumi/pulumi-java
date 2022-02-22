@@ -121,7 +121,6 @@ public final class SourcePropertiesResponse {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public SourcePropertiesResponse build() {
             return new SourcePropertiesResponse(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse(destinationName, uri);
         }

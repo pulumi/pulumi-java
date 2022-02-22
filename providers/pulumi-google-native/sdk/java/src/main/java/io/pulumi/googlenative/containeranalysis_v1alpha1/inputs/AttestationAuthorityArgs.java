@@ -19,7 +19,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     public static final AttestationAuthorityArgs Empty = new AttestationAuthorityArgs();
 
     @InputImport(name="hint")
-    private final @Nullable Input<AttestationAuthorityHintArgs> hint;
+      private final @Nullable Input<AttestationAuthorityHintArgs> hint;
 
     public Input<AttestationAuthorityHintArgs> getHint() {
         return this.hint == null ? Input.empty() : this.hint;
@@ -62,7 +62,6 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
             this.hint = Input.ofNullable(hint);
             return this;
         }
-
         public AttestationAuthorityArgs build() {
             return new AttestationAuthorityArgs(hint);
         }

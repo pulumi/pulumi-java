@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
             this.egress = Objects.requireNonNull(egress);
             return this;
         }
-
         public GoogleCloudRunOpV2VpcAccessResponse build() {
             return new GoogleCloudRunOpV2VpcAccessResponse(connector, egress);
         }

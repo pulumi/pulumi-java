@@ -102,7 +102,6 @@ public final class ComponentSetupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ComponentSetupResponse build() {
             return new ComponentSetupResponse(componentName, licenseKey, type);
         }

@@ -389,7 +389,6 @@ public final class ContainerResponse {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(args, command, env, envFrom, image, imagePullPolicy, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, terminationMessagePath, terminationMessagePolicy, volumeMounts, workingDir);
         }

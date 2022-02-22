@@ -26,7 +26,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableOnpremGcsTransferLogs")
-    private final @Nullable Input<Boolean> enableOnpremGcsTransferLogs;
+      private final @Nullable Input<Boolean> enableOnpremGcsTransferLogs;
 
     public Input<Boolean> getEnableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs == null ? Input.empty() : this.enableOnpremGcsTransferLogs;
@@ -37,7 +37,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActionStates")
-    private final @Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates;
+      private final @Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
     public Input<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
         return this.logActionStates == null ? Input.empty() : this.logActionStates;
@@ -48,7 +48,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActions")
-    private final @Nullable Input<List<LoggingConfigLogActionsItem>> logActions;
+      private final @Nullable Input<List<LoggingConfigLogActionsItem>> logActions;
 
     public Input<List<LoggingConfigLogActionsItem>> getLogActions() {
         return this.logActions == null ? Input.empty() : this.logActions;
@@ -122,7 +122,6 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.logActions = Input.ofNullable(logActions);
             return this;
         }
-
         public LoggingConfigArgs build() {
             return new LoggingConfigArgs(enableOnpremGcsTransferLogs, logActionStates, logActions);
         }

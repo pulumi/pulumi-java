@@ -501,7 +501,6 @@ public final class GetWebPubSubResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWebPubSubResult build() {
             return new GetWebPubSubResult(eventHandler, externalIP, features, hostName, id, identity, location, name, networkACLs, privateEndpointConnections, provisioningState, publicNetworkAccess, publicPort, serverPort, sharedPrivateLinkResources, sku, systemData, tags, tls, type, version);
         }

@@ -17,7 +17,7 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bookmarkId", required=true)
-    private final String bookmarkId;
+        private final String bookmarkId;
 
     public String getBookmarkId() {
         return this.bookmarkId;
@@ -28,7 +28,7 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetBookmarkArgs build() {
             return new GetBookmarkArgs(bookmarkId, resourceGroupName, workspaceName);
         }

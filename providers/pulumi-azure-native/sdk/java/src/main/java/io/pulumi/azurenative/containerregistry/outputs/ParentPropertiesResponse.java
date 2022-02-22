@@ -77,7 +77,6 @@ public final class ParentPropertiesResponse {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }
-
         public ParentPropertiesResponse build() {
             return new ParentPropertiesResponse(id, syncProperties);
         }

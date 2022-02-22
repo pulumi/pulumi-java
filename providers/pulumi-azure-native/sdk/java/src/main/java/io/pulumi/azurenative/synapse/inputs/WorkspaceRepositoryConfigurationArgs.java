@@ -23,7 +23,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -34,7 +34,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="collaborationBranch")
-    private final @Nullable Input<String> collaborationBranch;
+        private final @Nullable Input<String> collaborationBranch;
 
     public Input<String> getCollaborationBranch() {
         return this.collaborationBranch == null ? Input.empty() : this.collaborationBranch;
@@ -45,7 +45,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -56,7 +56,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastCommitId")
-    private final @Nullable Input<String> lastCommitId;
+        private final @Nullable Input<String> lastCommitId;
 
     public Input<String> getLastCommitId() {
         return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
@@ -67,7 +67,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+        private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -78,7 +78,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+        private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -89,7 +89,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rootFolder")
-    private final @Nullable Input<String> rootFolder;
+        private final @Nullable Input<String> rootFolder;
 
     public Input<String> getRootFolder() {
         return this.rootFolder == null ? Input.empty() : this.rootFolder;
@@ -100,7 +100,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -111,7 +111,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -275,7 +275,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public WorkspaceRepositoryConfigurationArgs build() {
             return new WorkspaceRepositoryConfigurationArgs(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

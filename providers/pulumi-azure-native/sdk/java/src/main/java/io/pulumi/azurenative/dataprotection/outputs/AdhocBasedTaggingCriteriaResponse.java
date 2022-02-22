@@ -54,7 +54,6 @@ public final class AdhocBasedTaggingCriteriaResponse {
             this.tagInfo = tagInfo;
             return this;
         }
-
         public AdhocBasedTaggingCriteriaResponse build() {
             return new AdhocBasedTaggingCriteriaResponse(tagInfo);
         }

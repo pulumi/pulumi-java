@@ -495,7 +495,6 @@ public final class GetDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(authCode, autoRenew, createdTime, dnsType, dnsZoneId, domainNotRenewableReasons, expirationTime, id, kind, lastRenewedTime, location, managedHostNames, name, nameServers, privacy, provisioningState, readyForDnsRecordManagement, registrationStatus, systemData, tags, targetDnsType, type);
         }

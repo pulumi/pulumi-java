@@ -22,7 +22,7 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="discovered", required=true)
-    private final Input<DiscoveredArgs> discovered;
+      private final Input<DiscoveredArgs> discovered;
 
     public Input<DiscoveredArgs> getDiscovered() {
         return this.discovered;
@@ -65,7 +65,6 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
             this.discovered = Input.of(Objects.requireNonNull(discovered));
             return this;
         }
-
         public GrafeasV1beta1DiscoveryDetailsArgs build() {
             return new GrafeasV1beta1DiscoveryDetailsArgs(discovered);
         }

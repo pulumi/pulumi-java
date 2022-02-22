@@ -22,7 +22,7 @@ public final class VertexAIParametersResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="env", required=true)
-    private final Map<String,String> env;
+      private final Map<String,String> env;
 
     public Map<String,String> getEnv() {
         return this.env;
@@ -33,7 +33,7 @@ public final class VertexAIParametersResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -82,7 +82,6 @@ public final class VertexAIParametersResponse extends io.pulumi.resources.Invoke
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public VertexAIParametersResponse build() {
             return new VertexAIParametersResponse(env, network);
         }

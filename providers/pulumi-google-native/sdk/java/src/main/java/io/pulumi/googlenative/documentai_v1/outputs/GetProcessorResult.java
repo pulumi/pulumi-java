@@ -200,7 +200,6 @@ public final class GetProcessorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProcessorResult build() {
             return new GetProcessorResult(createTime, defaultProcessorVersion, displayName, kmsKeyName, name, processEndpoint, state, type);
         }

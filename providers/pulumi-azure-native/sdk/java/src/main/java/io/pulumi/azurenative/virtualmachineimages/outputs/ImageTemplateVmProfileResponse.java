@@ -99,7 +99,6 @@ public final class ImageTemplateVmProfileResponse {
             this.vnetConfig = vnetConfig;
             return this;
         }
-
         public ImageTemplateVmProfileResponse build() {
             return new ImageTemplateVmProfileResponse(osDiskSizeGB, vmSize, vnetConfig);
         }

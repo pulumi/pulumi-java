@@ -120,7 +120,6 @@ public final class SelectVideoTrackByAttributeResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public SelectVideoTrackByAttributeResponse build() {
             return new SelectVideoTrackByAttributeResponse(attribute, filter, filterValue, odataType);
         }

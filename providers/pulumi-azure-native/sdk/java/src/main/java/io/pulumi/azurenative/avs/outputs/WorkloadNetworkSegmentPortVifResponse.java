@@ -54,7 +54,6 @@ public final class WorkloadNetworkSegmentPortVifResponse {
             this.portName = portName;
             return this;
         }
-
         public WorkloadNetworkSegmentPortVifResponse build() {
             return new WorkloadNetworkSegmentPortVifResponse(portName);
         }

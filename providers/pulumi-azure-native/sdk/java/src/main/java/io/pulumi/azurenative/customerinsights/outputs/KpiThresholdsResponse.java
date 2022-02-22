@@ -96,7 +96,6 @@ public final class KpiThresholdsResponse {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
         }
-
         public KpiThresholdsResponse build() {
             return new KpiThresholdsResponse(increasingKpi, lowerLimit, upperLimit);
         }

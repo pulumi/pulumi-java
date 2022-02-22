@@ -203,7 +203,6 @@ public final class GetScopeConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScopeConnectionResult build() {
             return new GetScopeConnectionResult(description, etag, id, name, resourceId, systemData, tenantId, type);
         }

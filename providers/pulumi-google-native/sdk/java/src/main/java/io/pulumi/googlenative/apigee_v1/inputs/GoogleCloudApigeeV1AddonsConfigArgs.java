@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="advancedApiOpsConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
 
     public Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> getAdvancedApiOpsConfig() {
         return this.advancedApiOpsConfig == null ? Input.empty() : this.advancedApiOpsConfig;
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectorsPlatformConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
 
     public Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> getConnectorsPlatformConfig() {
         return this.connectorsPlatformConfig == null ? Input.empty() : this.connectorsPlatformConfig;
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="integrationConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
 
     public Input<GoogleCloudApigeeV1IntegrationConfigArgs> getIntegrationConfig() {
         return this.integrationConfig == null ? Input.empty() : this.integrationConfig;
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monetizationConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 
     public Input<GoogleCloudApigeeV1MonetizationConfigArgs> getMonetizationConfig() {
         return this.monetizationConfig == null ? Input.empty() : this.monetizationConfig;
@@ -148,7 +148,6 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
             this.monetizationConfig = Input.ofNullable(monetizationConfig);
             return this;
         }
-
         public GoogleCloudApigeeV1AddonsConfigArgs build() {
             return new GoogleCloudApigeeV1AddonsConfigArgs(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }

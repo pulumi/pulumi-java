@@ -74,7 +74,6 @@ public final class HealthBotPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public HealthBotPropertiesResponse build() {
             return new HealthBotPropertiesResponse(botManagementPortalLink, provisioningState);
         }

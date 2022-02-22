@@ -112,7 +112,6 @@ public final class JitNetworkAccessRequestResponse {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public JitNetworkAccessRequestResponse build() {
             return new JitNetworkAccessRequestResponse(justification, requestor, startTimeUtc, virtualMachines);
         }

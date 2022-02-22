@@ -52,7 +52,6 @@ public final class IntegrationAccountSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IntegrationAccountSkuResponse build() {
             return new IntegrationAccountSkuResponse(name);
         }

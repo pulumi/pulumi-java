@@ -25,7 +25,7 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,FirewallPolicySkuTier>> tier;
+        private final @Nullable Input<Either<String,FirewallPolicySkuTier>> tier;
 
     public Input<Either<String,FirewallPolicySkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -68,7 +68,6 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public FirewallPolicySkuArgs build() {
             return new FirewallPolicySkuArgs(tier);
         }

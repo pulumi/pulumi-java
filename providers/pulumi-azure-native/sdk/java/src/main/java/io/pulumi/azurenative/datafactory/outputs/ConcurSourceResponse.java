@@ -205,7 +205,6 @@ public final class ConcurSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConcurSourceResponse build() {
             return new ConcurSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

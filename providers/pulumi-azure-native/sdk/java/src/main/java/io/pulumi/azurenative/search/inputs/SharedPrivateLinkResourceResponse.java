@@ -24,7 +24,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -35,7 +35,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable SharedPrivateLinkResourcePropertiesResponse properties;
+        private final @Nullable SharedPrivateLinkResourcePropertiesResponse properties;
 
     public Optional<SharedPrivateLinkResourcePropertiesResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -57,7 +57,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -126,7 +126,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharedPrivateLinkResourceResponse build() {
             return new SharedPrivateLinkResourceResponse(id, name, properties, type);
         }

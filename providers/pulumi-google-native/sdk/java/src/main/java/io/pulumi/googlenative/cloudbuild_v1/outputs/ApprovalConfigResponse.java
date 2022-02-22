@@ -52,7 +52,6 @@ public final class ApprovalConfigResponse {
             this.approvalRequired = Objects.requireNonNull(approvalRequired);
             return this;
         }
-
         public ApprovalConfigResponse build() {
             return new ApprovalConfigResponse(approvalRequired);
         }

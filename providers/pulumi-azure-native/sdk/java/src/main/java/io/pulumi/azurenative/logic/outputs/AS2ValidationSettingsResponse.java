@@ -246,7 +246,6 @@ public final class AS2ValidationSettingsResponse {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
-
         public AS2ValidationSettingsResponse build() {
             return new AS2ValidationSettingsResponse(checkCertificateRevocationListOnReceive, checkCertificateRevocationListOnSend, checkDuplicateMessage, compressMessage, encryptMessage, encryptionAlgorithm, interchangeDuplicatesValidityDays, overrideMessageProperties, signMessage, signingAlgorithm);
         }

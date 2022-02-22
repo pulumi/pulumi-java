@@ -75,7 +75,6 @@ public final class AlertStrategyResponse {
             this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
             return this;
         }
-
         public AlertStrategyResponse build() {
             return new AlertStrategyResponse(autoClose, notificationRateLimit);
         }

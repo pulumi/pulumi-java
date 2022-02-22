@@ -76,7 +76,6 @@ public final class StorageAccountDetailsResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public StorageAccountDetailsResponse build() {
             return new StorageAccountDetailsResponse(dataAccountType, storageAccountId);
         }

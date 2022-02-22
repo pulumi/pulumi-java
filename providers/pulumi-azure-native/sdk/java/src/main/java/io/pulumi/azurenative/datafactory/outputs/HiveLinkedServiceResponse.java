@@ -506,7 +506,6 @@ public final class HiveLinkedServiceResponse {
             this.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
         }
-
         public HiveLinkedServiceResponse build() {
             return new HiveLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, serviceDiscoveryMode, thriftTransportProtocol, trustedCertPath, type, useNativeQuery, useSystemTrustStore, username, zooKeeperNameSpace);
         }

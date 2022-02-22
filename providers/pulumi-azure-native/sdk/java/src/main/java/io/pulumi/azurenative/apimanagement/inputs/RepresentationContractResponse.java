@@ -25,7 +25,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+        private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -36,7 +36,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="formParameters")
-    private final @Nullable List<ParameterContractResponse> formParameters;
+        private final @Nullable List<ParameterContractResponse> formParameters;
 
     public List<ParameterContractResponse> getFormParameters() {
         return this.formParameters == null ? List.of() : this.formParameters;
@@ -47,7 +47,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sample")
-    private final @Nullable String sample;
+        private final @Nullable String sample;
 
     public Optional<String> getSample() {
         return this.sample == null ? Optional.empty() : Optional.ofNullable(this.sample);
@@ -58,7 +58,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="schemaId")
-    private final @Nullable String schemaId;
+        private final @Nullable String schemaId;
 
     public Optional<String> getSchemaId() {
         return this.schemaId == null ? Optional.empty() : Optional.ofNullable(this.schemaId);
@@ -69,7 +69,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable String typeName;
+        private final @Nullable String typeName;
 
     public Optional<String> getTypeName() {
         return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
@@ -148,7 +148,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
             this.typeName = typeName;
             return this;
         }
-
         public RepresentationContractResponse build() {
             return new RepresentationContractResponse(contentType, formParameters, sample, schemaId, typeName);
         }

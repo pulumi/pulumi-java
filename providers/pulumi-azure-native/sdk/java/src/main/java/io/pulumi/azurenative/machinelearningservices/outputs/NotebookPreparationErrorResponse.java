@@ -61,7 +61,6 @@ public final class NotebookPreparationErrorResponse {
             this.statusCode = statusCode;
             return this;
         }
-
         public NotebookPreparationErrorResponse build() {
             return new NotebookPreparationErrorResponse(errorMessage, statusCode);
         }

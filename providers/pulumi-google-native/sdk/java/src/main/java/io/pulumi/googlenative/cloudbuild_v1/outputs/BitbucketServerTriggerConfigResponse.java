@@ -161,7 +161,6 @@ public final class BitbucketServerTriggerConfigResponse {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
-
         public BitbucketServerTriggerConfigResponse build() {
             return new BitbucketServerTriggerConfigResponse(bitbucketServerConfig, bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }

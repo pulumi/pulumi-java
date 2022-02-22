@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="acceleratorConfig", required=true)
-    private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
+      private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
 
     public GoogleCloudMlV1__AcceleratorConfigResponse getAcceleratorConfig() {
         return this.acceleratorConfig;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerArgs", required=true)
-    private final List<String> containerArgs;
+      private final List<String> containerArgs;
 
     public List<String> getContainerArgs() {
         return this.containerArgs;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerCommand", required=true)
-    private final List<String> containerCommand;
+      private final List<String> containerCommand;
 
     public List<String> getContainerCommand() {
         return this.containerCommand;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskConfig", required=true)
-    private final GoogleCloudMlV1__DiskConfigResponse diskConfig;
+      private final GoogleCloudMlV1__DiskConfigResponse diskConfig;
 
     public GoogleCloudMlV1__DiskConfigResponse getDiskConfig() {
         return this.diskConfig;
@@ -68,7 +68,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -79,7 +79,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="tpuTfVersion", required=true)
-    private final String tpuTfVersion;
+      private final String tpuTfVersion;
 
     public String getTpuTfVersion() {
         return this.tpuTfVersion;
@@ -168,7 +168,6 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
             this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
             return this;
         }
-
         public GoogleCloudMlV1__ReplicaConfigResponse build() {
             return new GoogleCloudMlV1__ReplicaConfigResponse(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
         }

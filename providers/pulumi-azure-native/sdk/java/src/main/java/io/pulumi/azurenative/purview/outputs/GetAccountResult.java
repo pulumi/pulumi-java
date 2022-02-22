@@ -444,7 +444,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(cloudConnectors, createdAt, createdBy, createdByObjectId, endpoints, friendlyName, id, identity, location, managedResourceGroupName, managedResources, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, systemData, tags, type);
         }

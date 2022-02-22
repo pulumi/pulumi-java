@@ -337,7 +337,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DataLakeAnalyticsUSQLActivityResponse build() {
             return new DataLakeAnalyticsUSQLActivityResponse(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
         }

@@ -75,7 +75,6 @@ public final class FilesNotTieringErrorResponse {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
-
         public FilesNotTieringErrorResponse build() {
             return new FilesNotTieringErrorResponse(errorCode, fileCount);
         }

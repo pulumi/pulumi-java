@@ -74,7 +74,6 @@ public final class ApplicationUserAssignedIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ApplicationUserAssignedIdentityResponse build() {
             return new ApplicationUserAssignedIdentityResponse(name, principalId);
         }

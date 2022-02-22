@@ -27,7 +27,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authInfo")
-    private final @Nullable Input<Object> authInfo;
+        private final @Nullable Input<Object> authInfo;
 
     public Input<Object> getAuthInfo() {
         return this.authInfo == null ? Input.empty() : this.authInfo;
@@ -38,7 +38,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientType")
-    private final @Nullable Input<Either<String,ClientType>> clientType;
+        private final @Nullable Input<Either<String,ClientType>> clientType;
 
     public Input<Either<String,ClientType>> getClientType() {
         return this.clientType == null ? Input.empty() : this.clientType;
@@ -49,7 +49,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkerName")
-    private final @Nullable Input<String> linkerName;
+        private final @Nullable Input<String> linkerName;
 
     public Input<String> getLinkerName() {
         return this.linkerName == null ? Input.empty() : this.linkerName;
@@ -60,7 +60,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<String> resourceUri;
+        private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -71,7 +71,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+        private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;
@@ -175,7 +175,6 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }
-
         public LinkerArgs build() {
             return new LinkerArgs(authInfo, clientType, linkerName, resourceUri, targetId);
         }

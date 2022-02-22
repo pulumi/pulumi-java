@@ -54,7 +54,6 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public ListOpenShiftClusterAdminCredentialsResult build() {
             return new ListOpenShiftClusterAdminCredentialsResult(kubeconfig);
         }

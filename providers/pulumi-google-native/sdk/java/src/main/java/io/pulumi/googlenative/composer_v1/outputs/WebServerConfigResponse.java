@@ -52,7 +52,6 @@ public final class WebServerConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WebServerConfigResponse build() {
             return new WebServerConfigResponse(machineType);
         }

@@ -308,7 +308,6 @@ public final class AzureDataLakeSectionResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public AzureDataLakeSectionResponse build() {
             return new AzureDataLakeSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, storeName, subscriptionId, tenantId, thumbprint);
         }

@@ -265,7 +265,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
             this.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
         }
-
         public RedisCommonPropertiesResponseRedisConfiguration build() {
             return new RedisCommonPropertiesResponseRedisConfiguration(aofStorageConnectionString0, aofStorageConnectionString1, maxclients, maxfragmentationmemoryReserved, maxmemoryDelta, maxmemoryPolicy, maxmemoryReserved, rdbBackupEnabled, rdbBackupFrequency, rdbBackupMaxSnapshotCount, rdbStorageConnectionString);
         }

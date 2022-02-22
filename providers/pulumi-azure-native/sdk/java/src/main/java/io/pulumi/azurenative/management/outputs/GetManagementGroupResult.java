@@ -184,7 +184,6 @@ public final class GetManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupResult build() {
             return new GetManagementGroupResult(children, details, displayName, id, name, tenantId, type);
         }

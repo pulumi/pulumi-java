@@ -24,7 +24,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -35,7 +35,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -94,7 +94,6 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public AzureFabricCreationInputArgs build() {
             return new AzureFabricCreationInputArgs(instanceType, location);
         }

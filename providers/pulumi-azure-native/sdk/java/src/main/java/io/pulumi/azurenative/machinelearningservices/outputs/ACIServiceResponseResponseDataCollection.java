@@ -76,7 +76,6 @@ public final class ACIServiceResponseResponseDataCollection {
             this.storageEnabled = storageEnabled;
             return this;
         }
-
         public ACIServiceResponseResponseDataCollection build() {
             return new ACIServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }

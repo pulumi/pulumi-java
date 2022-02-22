@@ -22,7 +22,7 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -33,7 +33,7 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="value", required=true)
-    private final Object value;
+        private final Object value;
 
     public Object getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomObjectParameterResponse build() {
             return new WorkspaceCustomObjectParameterResponse(type, value);
         }

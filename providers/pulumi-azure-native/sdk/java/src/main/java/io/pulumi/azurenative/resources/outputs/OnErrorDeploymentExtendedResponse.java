@@ -97,7 +97,6 @@ public final class OnErrorDeploymentExtendedResponse {
             this.type = type;
             return this;
         }
-
         public OnErrorDeploymentExtendedResponse build() {
             return new OnErrorDeploymentExtendedResponse(deploymentName, provisioningState, type);
         }

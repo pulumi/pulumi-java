@@ -76,7 +76,6 @@ public final class ACIServiceResponseResponseVnetConfiguration {
             this.vnetName = vnetName;
             return this;
         }
-
         public ACIServiceResponseResponseVnetConfiguration build() {
             return new ACIServiceResponseResponseVnetConfiguration(subnetName, vnetName);
         }

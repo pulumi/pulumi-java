@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="connections", required=true)
-    private final List<String> connections;
+      private final List<String> connections;
 
     public List<String> getConnections() {
         return this.connections;
@@ -60,7 +60,6 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends io.pulumi.
             this.connections = Objects.requireNonNull(connections);
             return this;
         }
-
         public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceResponse(connections);
         }

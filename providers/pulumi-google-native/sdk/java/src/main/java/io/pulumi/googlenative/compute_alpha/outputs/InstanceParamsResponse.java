@@ -53,7 +53,6 @@ public final class InstanceParamsResponse {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
-
         public InstanceParamsResponse build() {
             return new InstanceParamsResponse(resourceManagerTags);
         }

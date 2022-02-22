@@ -117,7 +117,6 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstanceAzureADOnlyAuthenticationResult build() {
             return new GetManagedInstanceAzureADOnlyAuthenticationResult(azureADOnlyAuthentication, id, name, type);
         }

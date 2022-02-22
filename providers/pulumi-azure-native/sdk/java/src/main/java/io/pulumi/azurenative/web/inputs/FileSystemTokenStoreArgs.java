@@ -23,7 +23,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="directory")
-    private final @Nullable Input<String> directory;
+        private final @Nullable Input<String> directory;
 
     public Input<String> getDirectory() {
         return this.directory == null ? Input.empty() : this.directory;
@@ -66,7 +66,6 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
             this.directory = Input.ofNullable(directory);
             return this;
         }
-
         public FileSystemTokenStoreArgs build() {
             return new FileSystemTokenStoreArgs(directory);
         }

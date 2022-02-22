@@ -21,7 +21,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -43,7 +43,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIdentityConfigurationResponse build() {
             return new ManagedIdentityConfigurationResponse(principalId, tenantId, type);
         }

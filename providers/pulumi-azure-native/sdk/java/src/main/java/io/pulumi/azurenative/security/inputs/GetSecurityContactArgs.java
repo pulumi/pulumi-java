@@ -17,7 +17,7 @@ public final class GetSecurityContactArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="securityContactName", required=true)
-    private final String securityContactName;
+        private final String securityContactName;
 
     public String getSecurityContactName() {
         return this.securityContactName;
@@ -55,7 +55,6 @@ public final class GetSecurityContactArgs extends io.pulumi.resources.InvokeArgs
             this.securityContactName = Objects.requireNonNull(securityContactName);
             return this;
         }
-
         public GetSecurityContactArgs build() {
             return new GetSecurityContactArgs(securityContactName);
         }

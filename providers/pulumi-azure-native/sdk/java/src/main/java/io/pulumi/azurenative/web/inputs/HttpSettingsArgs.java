@@ -25,7 +25,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardProxy")
-    private final @Nullable Input<ForwardProxyArgs> forwardProxy;
+        private final @Nullable Input<ForwardProxyArgs> forwardProxy;
 
     public Input<ForwardProxyArgs> getForwardProxy() {
         return this.forwardProxy == null ? Input.empty() : this.forwardProxy;
@@ -36,7 +36,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireHttps")
-    private final @Nullable Input<Boolean> requireHttps;
+        private final @Nullable Input<Boolean> requireHttps;
 
     public Input<Boolean> getRequireHttps() {
         return this.requireHttps == null ? Input.empty() : this.requireHttps;
@@ -47,7 +47,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<HttpSettingsRoutesArgs> routes;
+        private final @Nullable Input<HttpSettingsRoutesArgs> routes;
 
     public Input<HttpSettingsRoutesArgs> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -121,7 +121,6 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.routes = Input.ofNullable(routes);
             return this;
         }
-
         public HttpSettingsArgs build() {
             return new HttpSettingsArgs(forwardProxy, requireHttps, routes);
         }

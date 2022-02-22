@@ -454,7 +454,6 @@ public final class GetSignalRResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSignalRResult build() {
             return new GetSignalRResult(cors, externalIP, features, hostName, hostNamePrefix, id, kind, location, name, networkACLs, privateEndpointConnections, provisioningState, publicPort, serverPort, sku, tags, type, upstream, version);
         }

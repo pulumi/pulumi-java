@@ -248,7 +248,6 @@ public final class MongoDbV2SourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbV2SourceResponse build() {
             return new MongoDbV2SourceResponse(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

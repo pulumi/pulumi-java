@@ -161,7 +161,6 @@ public final class SearchResultsResponse {
             this.startSearchTime = startSearchTime;
             return this;
         }
-
         public SearchResultsResponse build() {
             return new SearchResultsResponse(description, endSearchTime, limit, query, sourceTable, startSearchTime);
         }

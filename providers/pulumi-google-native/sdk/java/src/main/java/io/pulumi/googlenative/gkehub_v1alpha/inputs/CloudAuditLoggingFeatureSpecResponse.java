@@ -22,7 +22,7 @@ public final class CloudAuditLoggingFeatureSpecResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowlistedServiceAccounts", required=true)
-    private final List<String> allowlistedServiceAccounts;
+      private final List<String> allowlistedServiceAccounts;
 
     public List<String> getAllowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts;
@@ -60,7 +60,6 @@ public final class CloudAuditLoggingFeatureSpecResponse extends io.pulumi.resour
             this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
             return this;
         }
-
         public CloudAuditLoggingFeatureSpecResponse build() {
             return new CloudAuditLoggingFeatureSpecResponse(allowlistedServiceAccounts);
         }

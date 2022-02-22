@@ -23,7 +23,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+        private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -34,7 +34,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+        private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -93,7 +93,6 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public ServicePrincipalPropertiesArgs build() {
             return new ServicePrincipalPropertiesArgs(applicationId, secret);
         }

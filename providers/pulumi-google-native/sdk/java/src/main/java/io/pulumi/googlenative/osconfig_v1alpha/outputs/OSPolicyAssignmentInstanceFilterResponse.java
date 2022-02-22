@@ -119,7 +119,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
             this.inventories = Objects.requireNonNull(inventories);
             return this;
         }
-
         public OSPolicyAssignmentInstanceFilterResponse build() {
             return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
         }

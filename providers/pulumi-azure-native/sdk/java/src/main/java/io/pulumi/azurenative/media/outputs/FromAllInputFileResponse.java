@@ -85,7 +85,6 @@ public final class FromAllInputFileResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public FromAllInputFileResponse build() {
             return new FromAllInputFileResponse(includedTracks, odataType);
         }

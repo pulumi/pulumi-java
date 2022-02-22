@@ -97,7 +97,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVaultUri, keyVersion);
         }

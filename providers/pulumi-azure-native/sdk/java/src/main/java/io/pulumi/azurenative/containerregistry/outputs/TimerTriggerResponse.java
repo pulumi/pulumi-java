@@ -97,7 +97,6 @@ public final class TimerTriggerResponse {
             this.status = status;
             return this;
         }
-
         public TimerTriggerResponse build() {
             return new TimerTriggerResponse(name, schedule, status);
         }

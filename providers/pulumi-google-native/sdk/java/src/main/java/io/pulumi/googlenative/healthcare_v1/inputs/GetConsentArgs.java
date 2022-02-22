@@ -15,35 +15,35 @@ public final class GetConsentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetConsentArgs Empty = new GetConsentArgs();
 
     @InputImport(name="consentId", required=true)
-    private final String consentId;
+      private final String consentId;
 
     public String getConsentId() {
         return this.consentId;
     }
 
     @InputImport(name="consentStoreId", required=true)
-    private final String consentStoreId;
+      private final String consentStoreId;
 
     public String getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetConsentArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetConsentArgs build() {
             return new GetConsentArgs(consentId, consentStoreId, datasetId, location, project);
         }

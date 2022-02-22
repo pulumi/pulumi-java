@@ -75,7 +75,6 @@ public final class GetFolderPolicyResult {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public GetFolderPolicyResult build() {
             return new GetFolderPolicyResult(name, spec);
         }

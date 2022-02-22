@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse e
         public Builder(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse build() {
             return new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse();
         }

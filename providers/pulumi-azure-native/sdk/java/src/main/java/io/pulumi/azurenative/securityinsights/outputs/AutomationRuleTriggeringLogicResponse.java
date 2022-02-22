@@ -142,7 +142,6 @@ public final class AutomationRuleTriggeringLogicResponse {
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
         }
-
         public AutomationRuleTriggeringLogicResponse build() {
             return new AutomationRuleTriggeringLogicResponse(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
         }

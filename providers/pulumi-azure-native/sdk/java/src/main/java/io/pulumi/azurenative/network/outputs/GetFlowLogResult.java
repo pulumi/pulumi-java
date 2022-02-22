@@ -333,7 +333,6 @@ public final class GetFlowLogResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFlowLogResult build() {
             return new GetFlowLogResult(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
         }

@@ -26,7 +26,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Boolean autoUpgradeMinorVersion;
+        private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
@@ -41,7 +41,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable String forceUpdateTag;
+        private final @Nullable String forceUpdateTag;
 
     public Optional<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
@@ -52,14 +52,14 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable String protectedSettings;
+        private final @Nullable String protectedSettings;
 
     public Optional<String> getProtectedSettings() {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
     }
 
     @InputImport(name="protectedSettingsFromKeyVault")
-    private final @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
+        private final @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
 
     public Optional<CloudServiceVaultAndSecretReferenceResponse> getProtectedSettingsFromKeyVault() {
         return this.protectedSettingsFromKeyVault == null ? Optional.empty() : Optional.ofNullable(this.protectedSettingsFromKeyVault);
@@ -70,7 +70,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -81,7 +81,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable String publisher;
+        private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
@@ -92,7 +92,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="rolesAppliedTo")
-    private final @Nullable List<String> rolesAppliedTo;
+        private final @Nullable List<String> rolesAppliedTo;
 
     public List<String> getRolesAppliedTo() {
         return this.rolesAppliedTo == null ? List.of() : this.rolesAppliedTo;
@@ -103,7 +103,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable String settings;
+        private final @Nullable String settings;
 
     public Optional<String> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -114,7 +114,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -125,7 +125,7 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable String typeHandlerVersion;
+        private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
@@ -254,7 +254,6 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public CloudServiceExtensionPropertiesResponse build() {
             return new CloudServiceExtensionPropertiesResponse(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, provisioningState, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
         }

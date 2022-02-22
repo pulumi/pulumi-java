@@ -163,7 +163,6 @@ public final class SftpWriteSettingsResponse {
             this.useTempFileRename = useTempFileRename;
             return this;
         }
-
         public SftpWriteSettingsResponse build() {
             return new SftpWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, operationTimeout, type, useTempFileRename);
         }

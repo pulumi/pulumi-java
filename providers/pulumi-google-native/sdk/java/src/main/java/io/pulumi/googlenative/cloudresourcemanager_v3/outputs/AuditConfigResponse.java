@@ -76,7 +76,6 @@ public final class AuditConfigResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public AuditConfigResponse build() {
             return new AuditConfigResponse(auditLogConfigs, service);
         }

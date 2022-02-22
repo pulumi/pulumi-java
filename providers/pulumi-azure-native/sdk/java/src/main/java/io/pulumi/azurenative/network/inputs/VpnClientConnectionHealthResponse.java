@@ -26,7 +26,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="allocatedIpAddresses")
-    private final @Nullable List<String> allocatedIpAddresses;
+        private final @Nullable List<String> allocatedIpAddresses;
 
     public List<String> getAllocatedIpAddresses() {
         return this.allocatedIpAddresses == null ? List.of() : this.allocatedIpAddresses;
@@ -37,7 +37,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="totalEgressBytesTransferred", required=true)
-    private final Double totalEgressBytesTransferred;
+        private final Double totalEgressBytesTransferred;
 
     public Double getTotalEgressBytesTransferred() {
         return this.totalEgressBytesTransferred;
@@ -48,7 +48,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="totalIngressBytesTransferred", required=true)
-    private final Double totalIngressBytesTransferred;
+        private final Double totalIngressBytesTransferred;
 
     public Double getTotalIngressBytesTransferred() {
         return this.totalIngressBytesTransferred;
@@ -59,7 +59,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="vpnClientConnectionsCount")
-    private final @Nullable Integer vpnClientConnectionsCount;
+        private final @Nullable Integer vpnClientConnectionsCount;
 
     public Optional<Integer> getVpnClientConnectionsCount() {
         return this.vpnClientConnectionsCount == null ? Optional.empty() : Optional.ofNullable(this.vpnClientConnectionsCount);
@@ -128,7 +128,6 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
             this.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
         }
-
         public VpnClientConnectionHealthResponse build() {
             return new VpnClientConnectionHealthResponse(allocatedIpAddresses, totalEgressBytesTransferred, totalIngressBytesTransferred, vpnClientConnectionsCount);
         }

@@ -15,21 +15,21 @@ public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.Invo
     public static final GetPublicDelegatedPrefixArgs Empty = new GetPublicDelegatedPrefixArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="publicDelegatedPrefix", required=true)
-    private final String publicDelegatedPrefix;
+      private final String publicDelegatedPrefix;
 
     public String getPublicDelegatedPrefix() {
         return this.publicDelegatedPrefix;
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.Invo
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetPublicDelegatedPrefixArgs build() {
             return new GetPublicDelegatedPrefixArgs(project, publicDelegatedPrefix, region);
         }

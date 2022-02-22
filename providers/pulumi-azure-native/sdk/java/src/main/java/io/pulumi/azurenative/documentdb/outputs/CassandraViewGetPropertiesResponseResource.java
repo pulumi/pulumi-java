@@ -138,7 +138,6 @@ public final class CassandraViewGetPropertiesResponseResource {
             this.viewDefinition = Objects.requireNonNull(viewDefinition);
             return this;
         }
-
         public CassandraViewGetPropertiesResponseResource build() {
             return new CassandraViewGetPropertiesResponseResource(etag, id, rid, ts, viewDefinition);
         }

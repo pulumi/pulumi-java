@@ -23,7 +23,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="firewallRuleName")
-    private final @Nullable Input<String> firewallRuleName;
+        private final @Nullable Input<String> firewallRuleName;
 
     public Input<String> getFirewallRuleName() {
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
@@ -34,7 +34,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rangeEnd")
-    private final @Nullable Input<String> rangeEnd;
+        private final @Nullable Input<String> rangeEnd;
 
     public Input<String> getRangeEnd() {
         return this.rangeEnd == null ? Input.empty() : this.rangeEnd;
@@ -45,7 +45,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rangeStart")
-    private final @Nullable Input<String> rangeStart;
+        private final @Nullable Input<String> rangeStart;
 
     public Input<String> getRangeStart() {
         return this.rangeStart == null ? Input.empty() : this.rangeStart;
@@ -119,7 +119,6 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             this.rangeStart = Input.ofNullable(rangeStart);
             return this;
         }
-
         public IPv4FirewallRuleArgs build() {
             return new IPv4FirewallRuleArgs(firewallRuleName, rangeEnd, rangeStart);
         }

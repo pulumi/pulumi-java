@@ -29,7 +29,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -40,7 +40,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePolicies")
-    private final @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
+        private final @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
     public Input<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
         return this.computePolicies == null ? Input.empty() : this.computePolicies;
@@ -51,7 +51,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLakeStoreAccounts", required=true)
-    private final Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
+        private final Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
     public Input<List<AddDataLakeStoreWithAccountParametersArgs>> getDataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
@@ -62,7 +62,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataLakeStoreAccount", required=true)
-    private final Input<String> defaultDataLakeStoreAccount;
+        private final Input<String> defaultDataLakeStoreAccount;
 
     public Input<String> getDefaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
@@ -73,7 +73,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallAllowAzureIps")
-    private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+        private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
     public Input<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
         return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
@@ -84,7 +84,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRules")
-    private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+        private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
     public Input<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
@@ -95,7 +95,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallState")
-    private final @Nullable Input<FirewallState> firewallState;
+        private final @Nullable Input<FirewallState> firewallState;
 
     public Input<FirewallState> getFirewallState() {
         return this.firewallState == null ? Input.empty() : this.firewallState;
@@ -106,7 +106,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -117,7 +117,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelism")
-    private final @Nullable Input<Integer> maxDegreeOfParallelism;
+        private final @Nullable Input<Integer> maxDegreeOfParallelism;
 
     public Input<Integer> getMaxDegreeOfParallelism() {
         return this.maxDegreeOfParallelism == null ? Input.empty() : this.maxDegreeOfParallelism;
@@ -128,7 +128,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-    private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+        private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
     public Input<Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
@@ -139,7 +139,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxJobCount")
-    private final @Nullable Input<Integer> maxJobCount;
+        private final @Nullable Input<Integer> maxJobCount;
 
     public Input<Integer> getMaxJobCount() {
         return this.maxJobCount == null ? Input.empty() : this.maxJobCount;
@@ -150,7 +150,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPriorityPerJob")
-    private final @Nullable Input<Integer> minPriorityPerJob;
+        private final @Nullable Input<Integer> minPriorityPerJob;
 
     public Input<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
@@ -161,7 +161,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newTier")
-    private final @Nullable Input<TierType> newTier;
+        private final @Nullable Input<TierType> newTier;
 
     public Input<TierType> getNewTier() {
         return this.newTier == null ? Input.empty() : this.newTier;
@@ -172,7 +172,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStoreRetention")
-    private final @Nullable Input<Integer> queryStoreRetention;
+        private final @Nullable Input<Integer> queryStoreRetention;
 
     public Input<Integer> getQueryStoreRetention() {
         return this.queryStoreRetention == null ? Input.empty() : this.queryStoreRetention;
@@ -183,7 +183,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccounts")
-    private final @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
+        private final @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
     public Input<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
@@ -205,7 +205,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -489,7 +489,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(accountName, computePolicies, dataLakeStoreAccounts, defaultDataLakeStoreAccount, firewallAllowAzureIps, firewallRules, firewallState, location, maxDegreeOfParallelism, maxDegreeOfParallelismPerJob, maxJobCount, minPriorityPerJob, newTier, queryStoreRetention, resourceGroupName, storageAccounts, tags);
         }

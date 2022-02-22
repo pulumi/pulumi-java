@@ -19,7 +19,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -30,7 +30,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="webServiceName", required=true)
-    private final String webServiceName;
+        private final String webServiceName;
 
     public String getWebServiceName() {
         return this.webServiceName;
@@ -100,7 +100,6 @@ public final class GetWebServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.webServiceName = Objects.requireNonNull(webServiceName);
             return this;
         }
-
         public GetWebServiceArgs build() {
             return new GetWebServiceArgs(region, resourceGroupName, webServiceName);
         }

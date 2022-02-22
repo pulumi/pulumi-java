@@ -23,7 +23,7 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+        private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -34,7 +34,7 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable String vmSize;
+        private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -83,7 +83,6 @@ public final class MasterProfileResponse extends io.pulumi.resources.InvokeArgs 
             this.vmSize = vmSize;
             return this;
         }
-
         public MasterProfileResponse build() {
             return new MasterProfileResponse(subnetId, vmSize);
         }

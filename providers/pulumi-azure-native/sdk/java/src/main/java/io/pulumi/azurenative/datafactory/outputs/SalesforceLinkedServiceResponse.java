@@ -275,7 +275,6 @@ public final class SalesforceLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SalesforceLinkedServiceResponse build() {
             return new SalesforceLinkedServiceResponse(annotations, apiVersion, connectVia, description, encryptedCredential, environmentUrl, parameters, password, securityToken, type, username);
         }

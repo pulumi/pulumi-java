@@ -163,7 +163,6 @@ public final class GetApiPortalResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiPortalResult build() {
             return new GetApiPortalResult(id, name, properties, sku, systemData, type);
         }

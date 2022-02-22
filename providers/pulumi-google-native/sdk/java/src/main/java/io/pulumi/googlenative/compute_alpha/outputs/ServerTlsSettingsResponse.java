@@ -97,7 +97,6 @@ public final class ServerTlsSettingsResponse {
             this.tlsMode = Objects.requireNonNull(tlsMode);
             return this;
         }
-
         public ServerTlsSettingsResponse build() {
             return new ServerTlsSettingsResponse(proxyTlsContext, subjectAltNames, tlsMode);
         }

@@ -54,7 +54,6 @@ public final class CertificateResponse {
             this.pem = pem;
             return this;
         }
-
         public CertificateResponse build() {
             return new CertificateResponse(pem);
         }

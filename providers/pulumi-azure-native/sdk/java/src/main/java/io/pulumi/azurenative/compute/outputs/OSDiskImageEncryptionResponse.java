@@ -54,7 +54,6 @@ public final class OSDiskImageEncryptionResponse {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public OSDiskImageEncryptionResponse build() {
             return new OSDiskImageEncryptionResponse(diskEncryptionSetId);
         }

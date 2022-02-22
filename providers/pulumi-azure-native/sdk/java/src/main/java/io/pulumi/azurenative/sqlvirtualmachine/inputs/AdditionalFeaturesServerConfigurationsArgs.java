@@ -23,7 +23,7 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="isRServicesEnabled")
-    private final @Nullable Input<Boolean> isRServicesEnabled;
+        private final @Nullable Input<Boolean> isRServicesEnabled;
 
     public Input<Boolean> getIsRServicesEnabled() {
         return this.isRServicesEnabled == null ? Input.empty() : this.isRServicesEnabled;
@@ -66,7 +66,6 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
             this.isRServicesEnabled = Input.ofNullable(isRServicesEnabled);
             return this;
         }
-
         public AdditionalFeaturesServerConfigurationsArgs build() {
             return new AdditionalFeaturesServerConfigurationsArgs(isRServicesEnabled);
         }

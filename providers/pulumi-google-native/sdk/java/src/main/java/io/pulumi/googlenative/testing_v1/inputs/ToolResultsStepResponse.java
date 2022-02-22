@@ -21,7 +21,7 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="executionId", required=true)
-    private final String executionId;
+      private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
@@ -32,7 +32,7 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="historyId", required=true)
-    private final String historyId;
+      private final String historyId;
 
     public String getHistoryId() {
         return this.historyId;
@@ -43,7 +43,7 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -54,7 +54,7 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="stepId", required=true)
-    private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;
@@ -123,7 +123,6 @@ public final class ToolResultsStepResponse extends io.pulumi.resources.InvokeArg
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public ToolResultsStepResponse build() {
             return new ToolResultsStepResponse(executionId, historyId, project, stepId);
         }

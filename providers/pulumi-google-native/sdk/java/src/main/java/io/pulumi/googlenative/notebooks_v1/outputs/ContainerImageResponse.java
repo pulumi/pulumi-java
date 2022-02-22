@@ -74,7 +74,6 @@ public final class ContainerImageResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public ContainerImageResponse build() {
             return new ContainerImageResponse(repository, tag);
         }

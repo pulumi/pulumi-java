@@ -331,7 +331,6 @@ public final class GetRelationshipLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRelationshipLinkResult build() {
             return new GetRelationshipLinkResult(description, displayName, id, interactionType, linkName, mappings, name, profilePropertyReferences, provisioningState, relatedProfilePropertyReferences, relationshipGuidId, relationshipName, tenantId, type);
         }

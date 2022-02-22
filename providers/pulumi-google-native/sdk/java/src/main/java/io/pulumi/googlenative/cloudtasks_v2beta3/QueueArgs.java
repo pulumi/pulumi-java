@@ -24,14 +24,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpQueue")
-    private final @Nullable Input<AppEngineHttpQueueArgs> appEngineHttpQueue;
+      private final @Nullable Input<AppEngineHttpQueueArgs> appEngineHttpQueue;
 
     public Input<AppEngineHttpQueueArgs> getAppEngineHttpQueue() {
         return this.appEngineHttpQueue == null ? Input.empty() : this.appEngineHttpQueue;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,14 +42,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimits")
-    private final @Nullable Input<RateLimitsArgs> rateLimits;
+      private final @Nullable Input<RateLimitsArgs> rateLimits;
 
     public Input<RateLimitsArgs> getRateLimits() {
         return this.rateLimits == null ? Input.empty() : this.rateLimits;
@@ -71,7 +71,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-    private final @Nullable Input<RetryConfigArgs> retryConfig;
+      private final @Nullable Input<RetryConfigArgs> retryConfig;
 
     public Input<RetryConfigArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -82,7 +82,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackdriverLoggingConfig")
-    private final @Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
+      private final @Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
     public Input<StackdriverLoggingConfigArgs> getStackdriverLoggingConfig() {
         return this.stackdriverLoggingConfig == null ? Input.empty() : this.stackdriverLoggingConfig;
@@ -93,7 +93,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskTtl")
-    private final @Nullable Input<String> taskTtl;
+      private final @Nullable Input<String> taskTtl;
 
     public Input<String> getTaskTtl() {
         return this.taskTtl == null ? Input.empty() : this.taskTtl;
@@ -104,7 +104,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tombstoneTtl")
-    private final @Nullable Input<String> tombstoneTtl;
+      private final @Nullable Input<String> tombstoneTtl;
 
     public Input<String> getTombstoneTtl() {
         return this.tombstoneTtl == null ? Input.empty() : this.tombstoneTtl;
@@ -115,7 +115,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<QueueType> type;
+      private final @Nullable Input<QueueType> type;
 
     public Input<QueueType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -294,7 +294,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public QueueArgs build() {
             return new QueueArgs(appEngineHttpQueue, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig, taskTtl, tombstoneTtl, type);
         }

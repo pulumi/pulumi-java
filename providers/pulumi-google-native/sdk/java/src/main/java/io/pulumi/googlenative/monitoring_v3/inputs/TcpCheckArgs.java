@@ -23,7 +23,7 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -66,7 +66,6 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.port = Input.ofNullable(port);
             return this;
         }
-
         public TcpCheckArgs build() {
             return new TcpCheckArgs(port);
         }

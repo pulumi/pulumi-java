@@ -23,7 +23,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
+      private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
 
     public Input<List<FirewallPolicyAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
@@ -34,28 +34,28 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -66,7 +66,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
 
     public Input<List<FirewallPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -77,7 +77,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -88,7 +88,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcNetworkScope")
-    private final @Nullable Input<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
+      private final @Nullable Input<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
     public Input<RegionNetworkFirewallPolicyVpcNetworkScope> getVpcNetworkScope() {
         return this.vpcNetworkScope == null ? Input.empty() : this.vpcNetworkScope;
@@ -237,7 +237,6 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             this.vpcNetworkScope = Input.ofNullable(vpcNetworkScope);
             return this;
         }
-
         public RegionNetworkFirewallPolicyArgs build() {
             return new RegionNetworkFirewallPolicyArgs(associations, description, project, region, requestId, rules, shortName, vpcNetworkScope);
         }

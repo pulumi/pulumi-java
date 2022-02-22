@@ -316,7 +316,6 @@ public final class HDInsightPigActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightPigActivityResponse build() {
             return new HDInsightPigActivityResponse(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties);
         }

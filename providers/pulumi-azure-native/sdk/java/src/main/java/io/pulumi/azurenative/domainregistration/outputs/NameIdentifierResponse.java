@@ -54,7 +54,6 @@ public final class NameIdentifierResponse {
             this.name = name;
             return this;
         }
-
         public NameIdentifierResponse build() {
             return new NameIdentifierResponse(name);
         }

@@ -74,7 +74,6 @@ public final class VolumeResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(name, path);
         }

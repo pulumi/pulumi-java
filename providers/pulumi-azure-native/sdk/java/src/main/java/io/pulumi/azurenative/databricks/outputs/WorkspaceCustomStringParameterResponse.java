@@ -74,7 +74,6 @@ public final class WorkspaceCustomStringParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomStringParameterResponse build() {
             return new WorkspaceCustomStringParameterResponse(type, value);
         }

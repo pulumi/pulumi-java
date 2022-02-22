@@ -331,7 +331,6 @@ public final class GetStreamingLocatorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingLocatorResult build() {
             return new GetStreamingLocatorResult(alternativeMediaId, assetName, contentKeys, created, defaultContentKeyPolicyName, endTime, filters, id, name, startTime, streamingLocatorId, streamingPolicyName, systemData, type);
         }

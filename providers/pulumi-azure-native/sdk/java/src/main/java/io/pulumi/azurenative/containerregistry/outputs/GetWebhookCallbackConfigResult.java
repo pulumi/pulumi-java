@@ -76,7 +76,6 @@ public final class GetWebhookCallbackConfigResult {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
-
         public GetWebhookCallbackConfigResult build() {
             return new GetWebhookCallbackConfigResult(customHeaders, serviceUri);
         }

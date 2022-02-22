@@ -95,7 +95,6 @@ public final class ConsolePropertiesResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ConsolePropertiesResponse build() {
             return new ConsolePropertiesResponse(osType, provisioningState, uri);
         }

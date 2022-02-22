@@ -53,7 +53,6 @@ public final class StackTraceResponse {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }
-
         public StackTraceResponse build() {
             return new StackTraceResponse(elements);
         }

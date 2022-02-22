@@ -98,7 +98,6 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
             return new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(keyName, keyVault, keyVersion);
         }

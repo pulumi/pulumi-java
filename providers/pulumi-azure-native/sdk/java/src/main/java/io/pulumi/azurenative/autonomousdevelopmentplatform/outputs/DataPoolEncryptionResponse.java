@@ -118,7 +118,6 @@ public final class DataPoolEncryptionResponse {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public DataPoolEncryptionResponse build() {
             return new DataPoolEncryptionResponse(keyName, keyVaultUri, keyVersion, userAssignedIdentity);
         }

@@ -139,7 +139,6 @@ public final class GetDataContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataContainerResult build() {
             return new GetDataContainerResult(id, name, properties, systemData, type);
         }

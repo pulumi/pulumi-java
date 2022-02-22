@@ -353,7 +353,6 @@ public final class GetIoTHubEventSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIoTHubEventSourceResult build() {
             return new GetIoTHubEventSourceResult(consumerGroupName, creationTime, eventSourceResourceId, id, iotHubName, keyName, kind, localTimestamp, location, name, provisioningState, tags, time, timestampPropertyName, type);
         }

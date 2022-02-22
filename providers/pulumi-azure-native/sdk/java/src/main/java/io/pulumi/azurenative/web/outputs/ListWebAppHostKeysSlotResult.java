@@ -98,7 +98,6 @@ public final class ListWebAppHostKeysSlotResult {
             this.systemKeys = systemKeys;
             return this;
         }
-
         public ListWebAppHostKeysSlotResult build() {
             return new ListWebAppHostKeysSlotResult(functionKeys, masterKey, systemKeys);
         }

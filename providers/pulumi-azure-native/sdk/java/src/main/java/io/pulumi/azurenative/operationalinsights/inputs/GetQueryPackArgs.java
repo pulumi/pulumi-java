@@ -17,7 +17,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryPackName", required=true)
-    private final String queryPackName;
+        private final String queryPackName;
 
     public String getQueryPackName() {
         return this.queryPackName;
@@ -28,7 +28,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetQueryPackArgs build() {
             return new GetQueryPackArgs(queryPackName, resourceGroupName);
         }

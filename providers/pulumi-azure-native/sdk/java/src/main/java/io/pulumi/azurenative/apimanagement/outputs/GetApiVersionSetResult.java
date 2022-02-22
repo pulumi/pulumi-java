@@ -202,7 +202,6 @@ public final class GetApiVersionSetResult {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }
-
         public GetApiVersionSetResult build() {
             return new GetApiVersionSetResult(description, displayName, id, name, type, versionHeaderName, versionQueryName, versioningScheme);
         }

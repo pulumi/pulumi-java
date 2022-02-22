@@ -76,7 +76,6 @@ public final class SqlDWUpsertSettingsResponse {
             this.keys = keys;
             return this;
         }
-
         public SqlDWUpsertSettingsResponse build() {
             return new SqlDWUpsertSettingsResponse(interimSchemaName, keys);
         }

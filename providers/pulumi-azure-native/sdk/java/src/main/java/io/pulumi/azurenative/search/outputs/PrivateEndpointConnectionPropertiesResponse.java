@@ -77,7 +77,6 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState);
         }

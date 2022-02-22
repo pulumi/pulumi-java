@@ -76,7 +76,6 @@ public final class PublicIPPrefixSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public PublicIPPrefixSkuResponse build() {
             return new PublicIPPrefixSkuResponse(name, tier);
         }

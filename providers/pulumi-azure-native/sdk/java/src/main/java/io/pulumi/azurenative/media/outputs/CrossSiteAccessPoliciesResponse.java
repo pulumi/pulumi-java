@@ -76,7 +76,6 @@ public final class CrossSiteAccessPoliciesResponse {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
-
         public CrossSiteAccessPoliciesResponse build() {
             return new CrossSiteAccessPoliciesResponse(clientAccessPolicy, crossDomainPolicy);
         }

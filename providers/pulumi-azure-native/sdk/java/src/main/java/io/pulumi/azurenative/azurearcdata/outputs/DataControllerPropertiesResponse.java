@@ -200,7 +200,6 @@ public final class DataControllerPropertiesResponse {
             this.uploadWatermark = uploadWatermark;
             return this;
         }
-
         public DataControllerPropertiesResponse build() {
             return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
         }

@@ -268,7 +268,6 @@ public final class FailoverTargetResponse {
             this.volumesCount = volumesCount;
             return this;
         }
-
         public FailoverTargetResponse build() {
             return new FailoverTargetResponse(availableLocalStorageInBytes, availableTieredStorageInBytes, dataContainersCount, deviceId, deviceLocation, deviceSoftwareVersion, deviceStatus, eligibilityResult, friendlyDeviceSoftwareVersion, modelDescription, volumesCount);
         }

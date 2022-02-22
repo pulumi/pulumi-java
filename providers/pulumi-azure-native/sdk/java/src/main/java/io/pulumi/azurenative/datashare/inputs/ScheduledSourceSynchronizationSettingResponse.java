@@ -24,7 +24,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+        private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -35,7 +35,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * 
      */
     @InputImport(name="recurrenceInterval")
-    private final @Nullable String recurrenceInterval;
+        private final @Nullable String recurrenceInterval;
 
     public Optional<String> getRecurrenceInterval() {
         return this.recurrenceInterval == null ? Optional.empty() : Optional.ofNullable(this.recurrenceInterval);
@@ -46,7 +46,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * 
      */
     @InputImport(name="synchronizationTime")
-    private final @Nullable String synchronizationTime;
+        private final @Nullable String synchronizationTime;
 
     public Optional<String> getSynchronizationTime() {
         return this.synchronizationTime == null ? Optional.empty() : Optional.ofNullable(this.synchronizationTime);
@@ -105,7 +105,6 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
             this.synchronizationTime = synchronizationTime;
             return this;
         }
-
         public ScheduledSourceSynchronizationSettingResponse build() {
             return new ScheduledSourceSynchronizationSettingResponse(kind, recurrenceInterval, synchronizationTime);
         }

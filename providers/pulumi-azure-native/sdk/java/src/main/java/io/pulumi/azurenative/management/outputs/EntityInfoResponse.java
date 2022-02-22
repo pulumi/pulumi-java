@@ -302,7 +302,6 @@ public final class EntityInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EntityInfoResponse build() {
             return new EntityInfoResponse(displayName, id, inheritedPermissions, name, numberOfChildGroups, numberOfChildren, numberOfDescendants, parent, parentDisplayNameChain, parentNameChain, permissions, tenantId, type);
         }

@@ -160,7 +160,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(confidenceScore, metadata, queryRecord, source, title, uri);
         }

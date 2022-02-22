@@ -414,7 +414,6 @@ public final class GetCloudConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudConnectorResult build() {
             return new GetCloudConnectorResult(billingModel, collectionInfo, createdOn, credentialsKey, daysTrialRemaining, defaultManagementGroupId, displayName, externalBillingAccountId, id, kind, modifiedOn, name, providerBillingAccountDisplayName, providerBillingAccountId, reportId, status, subscriptionId, type);
         }

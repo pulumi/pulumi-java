@@ -22,7 +22,7 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requiredForNewSiteToSiteDataTransferSpokes", required=true)
-    private final Boolean requiredForNewSiteToSiteDataTransferSpokes;
+      private final Boolean requiredForNewSiteToSiteDataTransferSpokes;
 
     public Boolean getRequiredForNewSiteToSiteDataTransferSpokes() {
         return this.requiredForNewSiteToSiteDataTransferSpokes;
@@ -33,7 +33,7 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -82,7 +82,6 @@ public final class RoutingVPCResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RoutingVPCResponse build() {
             return new RoutingVPCResponse(requiredForNewSiteToSiteDataTransferSpokes, uri);
         }

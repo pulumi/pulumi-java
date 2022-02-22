@@ -15,14 +15,14 @@ public final class GetReleaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReleaseArgs Empty = new GetReleaseArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="releaseId", required=true)
-    private final String releaseId;
+      private final String releaseId;
 
     public String getReleaseId() {
         return this.releaseId;
@@ -71,7 +71,6 @@ public final class GetReleaseArgs extends io.pulumi.resources.InvokeArgs {
             this.releaseId = Objects.requireNonNull(releaseId);
             return this;
         }
-
         public GetReleaseArgs build() {
             return new GetReleaseArgs(project, releaseId);
         }

@@ -53,7 +53,6 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
             this.connections = Objects.requireNonNull(connections);
             return this;
         }
-
         public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceResponse(connections);
         }

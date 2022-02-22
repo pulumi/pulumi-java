@@ -23,7 +23,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subscription")
-    private final @Nullable Input<String> subscription;
+      private final @Nullable Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription == null ? Input.empty() : this.subscription;
@@ -34,7 +34,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -93,7 +93,6 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public PubSubIODetailsArgs build() {
             return new PubSubIODetailsArgs(subscription, topic);
         }

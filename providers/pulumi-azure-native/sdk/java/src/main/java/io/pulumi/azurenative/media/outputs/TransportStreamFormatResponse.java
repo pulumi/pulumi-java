@@ -100,7 +100,6 @@ public final class TransportStreamFormatResponse {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public TransportStreamFormatResponse build() {
             return new TransportStreamFormatResponse(filenamePattern, odataType, outputFiles);
         }

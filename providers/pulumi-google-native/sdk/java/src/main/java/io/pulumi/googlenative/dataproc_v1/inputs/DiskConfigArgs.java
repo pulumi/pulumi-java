@@ -24,7 +24,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-    private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Input<Integer> bootDiskSizeGb;
 
     public Input<Integer> getBootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
@@ -35,7 +35,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskType")
-    private final @Nullable Input<String> bootDiskType;
+      private final @Nullable Input<String> bootDiskType;
 
     public Input<String> getBootDiskType() {
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
@@ -46,7 +46,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localSsdInterface")
-    private final @Nullable Input<String> localSsdInterface;
+      private final @Nullable Input<String> localSsdInterface;
 
     public Input<String> getLocalSsdInterface() {
         return this.localSsdInterface == null ? Input.empty() : this.localSsdInterface;
@@ -57,7 +57,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numLocalSsds")
-    private final @Nullable Input<Integer> numLocalSsds;
+      private final @Nullable Input<Integer> numLocalSsds;
 
     public Input<Integer> getNumLocalSsds() {
         return this.numLocalSsds == null ? Input.empty() : this.numLocalSsds;
@@ -146,7 +146,6 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.numLocalSsds = Input.ofNullable(numLocalSsds);
             return this;
         }
-
         public DiskConfigArgs build() {
             return new DiskConfigArgs(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);
         }

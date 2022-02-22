@@ -54,7 +54,6 @@ public final class DatasetResponseFolder {
             this.name = name;
             return this;
         }
-
         public DatasetResponseFolder build() {
             return new DatasetResponseFolder(name);
         }

@@ -275,7 +275,6 @@ public final class MicrosoftAccessLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public MicrosoftAccessLinkedServiceResponse build() {
             return new MicrosoftAccessLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, type, userName);
         }

@@ -375,7 +375,6 @@ public final class GetDscConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscConfigurationResult build() {
             return new GetDscConfigurationResult(creationTime, description, etag, id, jobCount, lastModifiedTime, location, logVerbose, name, nodeConfigurationCount, parameters, provisioningState, source, state, tags, type);
         }

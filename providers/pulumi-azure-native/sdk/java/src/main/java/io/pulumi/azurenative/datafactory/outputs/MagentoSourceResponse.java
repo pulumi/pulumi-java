@@ -205,7 +205,6 @@ public final class MagentoSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MagentoSourceResponse build() {
             return new MagentoSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

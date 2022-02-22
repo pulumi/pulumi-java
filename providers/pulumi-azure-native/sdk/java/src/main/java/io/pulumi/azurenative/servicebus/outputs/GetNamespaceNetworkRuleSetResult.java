@@ -163,7 +163,6 @@ public final class GetNamespaceNetworkRuleSetResult {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public GetNamespaceNetworkRuleSetResult build() {
             return new GetNamespaceNetworkRuleSetResult(defaultAction, id, ipRules, name, type, virtualNetworkRules);
         }

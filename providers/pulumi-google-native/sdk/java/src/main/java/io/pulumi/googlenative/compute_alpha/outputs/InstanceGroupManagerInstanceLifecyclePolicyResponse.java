@@ -52,7 +52,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
             this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyResponse build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyResponse(metadataBasedReadinessSignal);
         }

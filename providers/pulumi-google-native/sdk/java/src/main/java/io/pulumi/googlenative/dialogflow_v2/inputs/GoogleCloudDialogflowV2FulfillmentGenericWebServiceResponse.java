@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
      * 
      */
     @InputImport(name="isCloudFunction", required=true)
-    private final Boolean isCloudFunction;
+      private final Boolean isCloudFunction;
 
     public Boolean getIsCloudFunction() {
         return this.isCloudFunction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
      * 
      */
     @InputImport(name="requestHeaders", required=true)
-    private final Map<String,String> requestHeaders;
+      private final Map<String,String> requestHeaders;
 
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse(isCloudFunction, password, requestHeaders, uri, username);
         }

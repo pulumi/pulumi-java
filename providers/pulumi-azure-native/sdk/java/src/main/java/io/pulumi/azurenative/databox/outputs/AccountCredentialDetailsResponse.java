@@ -118,7 +118,6 @@ public final class AccountCredentialDetailsResponse {
             this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
             return this;
         }
-
         public AccountCredentialDetailsResponse build() {
             return new AccountCredentialDetailsResponse(accountConnectionString, accountName, dataAccountType, shareCredentialDetails);
         }

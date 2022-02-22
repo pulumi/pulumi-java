@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxNodes", required=true)
-    private final Integer maxNodes;
+      private final Integer maxNodes;
 
     public Integer getMaxNodes() {
         return this.maxNodes;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="metrics", required=true)
-    private final List<GoogleCloudMlV1__MetricSpecResponse> metrics;
+      private final List<GoogleCloudMlV1__MetricSpecResponse> metrics;
 
     public List<GoogleCloudMlV1__MetricSpecResponse> getMetrics() {
         return this.metrics;
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="minNodes", required=true)
-    private final Integer minNodes;
+      private final Integer minNodes;
 
     public Integer getMinNodes() {
         return this.minNodes;
@@ -104,7 +104,6 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends io.pulumi.resour
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }
-
         public GoogleCloudMlV1__AutoScalingResponse build() {
             return new GoogleCloudMlV1__AutoScalingResponse(maxNodes, metrics, minNodes);
         }

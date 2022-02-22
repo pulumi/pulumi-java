@@ -54,7 +54,6 @@ public final class CloudConnectorsResponse {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
-
         public CloudConnectorsResponse build() {
             return new CloudConnectorsResponse(awsExternalId);
         }

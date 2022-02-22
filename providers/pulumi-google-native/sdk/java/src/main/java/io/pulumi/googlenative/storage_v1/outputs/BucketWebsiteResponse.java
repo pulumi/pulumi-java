@@ -74,7 +74,6 @@ public final class BucketWebsiteResponse {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
         }
-
         public BucketWebsiteResponse build() {
             return new BucketWebsiteResponse(mainPageSuffix, notFoundPage);
         }

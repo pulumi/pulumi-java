@@ -52,7 +52,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
             this.boundingBoxEvaluationOptions = Objects.requireNonNull(boundingBoxEvaluationOptions);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(boundingBoxEvaluationOptions);
         }

@@ -208,7 +208,6 @@ public final class GetScopeMapResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScopeMapResult build() {
             return new GetScopeMapResult(actions, creationDate, description, id, name, provisioningState, systemData, type);
         }

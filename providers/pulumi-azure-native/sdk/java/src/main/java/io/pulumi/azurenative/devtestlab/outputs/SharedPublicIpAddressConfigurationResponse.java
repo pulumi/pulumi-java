@@ -54,7 +54,6 @@ public final class SharedPublicIpAddressConfigurationResponse {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-
         public SharedPublicIpAddressConfigurationResponse build() {
             return new SharedPublicIpAddressConfigurationResponse(inboundNatRules);
         }

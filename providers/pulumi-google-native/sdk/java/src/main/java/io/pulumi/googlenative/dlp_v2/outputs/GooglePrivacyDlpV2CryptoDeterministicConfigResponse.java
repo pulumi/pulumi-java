@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoDeterministicConfigResponse(context, cryptoKey, surrogateInfoType);
         }

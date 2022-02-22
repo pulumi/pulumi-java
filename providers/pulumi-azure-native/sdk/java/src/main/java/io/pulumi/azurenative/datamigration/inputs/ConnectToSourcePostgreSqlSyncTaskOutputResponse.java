@@ -23,7 +23,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
      * 
      */
     @InputImport(name="databases", required=true)
-    private final List<String> databases;
+        private final List<String> databases;
 
     public List<String> getDatabases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
      * 
      */
     @InputImport(name="sourceServerBrandVersion", required=true)
-    private final String sourceServerBrandVersion;
+        private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -56,7 +56,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-    private final String sourceServerVersion;
+        private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -67,7 +67,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+        private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -146,7 +146,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToSourcePostgreSqlSyncTaskOutputResponse(databases, id, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

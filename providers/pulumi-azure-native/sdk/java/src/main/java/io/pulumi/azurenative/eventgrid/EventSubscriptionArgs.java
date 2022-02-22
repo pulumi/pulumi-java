@@ -33,7 +33,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deadLetterDestination")
-    private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+        private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
@@ -44,7 +44,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<Object> destination;
+        private final @Nullable Input<Object> destination;
 
     public Input<Object> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -55,7 +55,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventDeliverySchema")
-    private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
+        private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
     public Input<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
         return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
@@ -66,7 +66,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSubscriptionName")
-    private final @Nullable Input<String> eventSubscriptionName;
+        private final @Nullable Input<String> eventSubscriptionName;
 
     public Input<String> getEventSubscriptionName() {
         return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
@@ -77,7 +77,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expirationTimeUtc")
-    private final @Nullable Input<String> expirationTimeUtc;
+        private final @Nullable Input<String> expirationTimeUtc;
 
     public Input<String> getExpirationTimeUtc() {
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
@@ -88,7 +88,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<EventSubscriptionFilterArgs> filter;
+        private final @Nullable Input<EventSubscriptionFilterArgs> filter;
 
     public Input<EventSubscriptionFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -99,7 +99,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+        private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -110,7 +110,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -121,7 +121,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -285,7 +285,6 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public EventSubscriptionArgs build() {
             return new EventSubscriptionArgs(deadLetterDestination, destination, eventDeliverySchema, eventSubscriptionName, expirationTimeUtc, filter, labels, retryPolicy, scope);
         }

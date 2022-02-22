@@ -23,7 +23,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="externalIp")
-    private final @Nullable Input<String> externalIp;
+      private final @Nullable Input<String> externalIp;
 
     public Input<String> getExternalIp() {
         return this.externalIp == null ? Input.empty() : this.externalIp;
@@ -34,7 +34,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="internalIp")
-    private final @Nullable Input<String> internalIp;
+      private final @Nullable Input<String> internalIp;
 
     public Input<String> getInternalIp() {
         return this.internalIp == null ? Input.empty() : this.internalIp;
@@ -45,7 +45,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -56,7 +56,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -145,7 +145,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(externalIp, internalIp, network, subnetwork);
         }

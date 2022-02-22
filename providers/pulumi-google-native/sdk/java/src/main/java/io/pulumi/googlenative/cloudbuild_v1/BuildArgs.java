@@ -27,7 +27,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<ArtifactsArgs> artifacts;
+      private final @Nullable Input<ArtifactsArgs> artifacts;
 
     public Input<ArtifactsArgs> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -38,7 +38,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableSecrets")
-    private final @Nullable Input<SecretsArgs> availableSecrets;
+      private final @Nullable Input<SecretsArgs> availableSecrets;
 
     public Input<SecretsArgs> getAvailableSecrets() {
         return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
@@ -49,14 +49,14 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<String>> images;
+      private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsBucket")
-    private final @Nullable Input<String> logsBucket;
+      private final @Nullable Input<String> logsBucket;
 
     public Input<String> getLogsBucket() {
         return this.logsBucket == null ? Input.empty() : this.logsBucket;
@@ -78,21 +78,21 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<BuildOptionsArgs> options;
+      private final @Nullable Input<BuildOptionsArgs> options;
 
     public Input<BuildOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+      private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -103,7 +103,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueTtl")
-    private final @Nullable Input<String> queueTtl;
+      private final @Nullable Input<String> queueTtl;
 
     public Input<String> getQueueTtl() {
         return this.queueTtl == null ? Input.empty() : this.queueTtl;
@@ -114,7 +114,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<SecretArgs>> secrets;
+      private final @Nullable Input<List<SecretArgs>> secrets;
 
     public Input<List<SecretArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -125,7 +125,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -136,7 +136,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<SourceArgs> source;
+      private final @Nullable Input<SourceArgs> source;
 
     public Input<SourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -147,7 +147,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps", required=true)
-    private final Input<List<BuildStepArgs>> steps;
+      private final Input<List<BuildStepArgs>> steps;
 
     public Input<List<BuildStepArgs>> getSteps() {
         return this.steps;
@@ -158,7 +158,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutions")
-    private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Input<Map<String,String>> substitutions;
 
     public Input<Map<String,String>> getSubstitutions() {
         return this.substitutions == null ? Input.empty() : this.substitutions;
@@ -169,7 +169,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -180,7 +180,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -449,7 +449,6 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public BuildArgs build() {
             return new BuildArgs(artifacts, availableSecrets, images, location, logsBucket, options, project, projectId, queueTtl, secrets, serviceAccount, source, steps, substitutions, tags, timeout);
         }

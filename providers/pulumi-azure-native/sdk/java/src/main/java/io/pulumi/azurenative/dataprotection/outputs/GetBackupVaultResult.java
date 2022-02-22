@@ -227,7 +227,6 @@ public final class GetBackupVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupVaultResult build() {
             return new GetBackupVaultResult(eTag, id, identity, location, name, properties, systemData, tags, type);
         }

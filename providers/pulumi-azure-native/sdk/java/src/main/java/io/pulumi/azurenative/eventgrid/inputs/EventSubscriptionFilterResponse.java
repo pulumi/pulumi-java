@@ -38,7 +38,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="advancedFilters")
-    private final @Nullable List<Object> advancedFilters;
+        private final @Nullable List<Object> advancedFilters;
 
     public List<Object> getAdvancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
@@ -49,7 +49,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="includedEventTypes")
-    private final @Nullable List<String> includedEventTypes;
+        private final @Nullable List<String> includedEventTypes;
 
     public List<String> getIncludedEventTypes() {
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
@@ -61,7 +61,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="isSubjectCaseSensitive")
-    private final @Nullable Boolean isSubjectCaseSensitive;
+        private final @Nullable Boolean isSubjectCaseSensitive;
 
     public Optional<Boolean> getIsSubjectCaseSensitive() {
         return this.isSubjectCaseSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSubjectCaseSensitive);
@@ -74,7 +74,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subjectBeginsWith")
-    private final @Nullable String subjectBeginsWith;
+        private final @Nullable String subjectBeginsWith;
 
     public Optional<String> getSubjectBeginsWith() {
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
@@ -86,7 +86,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subjectEndsWith")
-    private final @Nullable String subjectEndsWith;
+        private final @Nullable String subjectEndsWith;
 
     public Optional<String> getSubjectEndsWith() {
         return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
@@ -165,7 +165,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public EventSubscriptionFilterResponse build() {
             return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }

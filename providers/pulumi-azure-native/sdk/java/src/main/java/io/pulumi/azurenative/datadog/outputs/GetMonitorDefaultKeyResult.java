@@ -118,7 +118,6 @@ public final class GetMonitorDefaultKeyResult {
             this.name = name;
             return this;
         }
-
         public GetMonitorDefaultKeyResult build() {
             return new GetMonitorDefaultKeyResult(created, createdBy, key, name);
         }

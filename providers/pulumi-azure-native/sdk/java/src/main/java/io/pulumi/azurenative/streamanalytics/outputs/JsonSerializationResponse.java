@@ -99,7 +99,6 @@ public final class JsonSerializationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonSerializationResponse build() {
             return new JsonSerializationResponse(encoding, format, type);
         }

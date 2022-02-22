@@ -74,7 +74,6 @@ public final class MixinResponse {
             this.root = Objects.requireNonNull(root);
             return this;
         }
-
         public MixinResponse build() {
             return new MixinResponse(name, root);
         }

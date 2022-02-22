@@ -287,7 +287,6 @@ public final class GetIdentityProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIdentityProviderResult build() {
             return new GetIdentityProviderResult(allowedTenants, authority, clientId, clientSecret, id, name, passwordResetPolicyName, profileEditingPolicyName, signinPolicyName, signinTenant, signupPolicyName, type);
         }

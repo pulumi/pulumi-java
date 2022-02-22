@@ -22,7 +22,7 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="qualifier", required=true)
-    private final Input<String> qualifier;
+        private final Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier;
@@ -33,7 +33,7 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public BusinessIdentityArgs build() {
             return new BusinessIdentityArgs(qualifier, value);
         }

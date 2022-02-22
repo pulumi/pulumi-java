@@ -76,7 +76,6 @@ public final class DataMaskingEntityResponse {
             this.value = value;
             return this;
         }
-
         public DataMaskingEntityResponse build() {
             return new DataMaskingEntityResponse(mode, value);
         }

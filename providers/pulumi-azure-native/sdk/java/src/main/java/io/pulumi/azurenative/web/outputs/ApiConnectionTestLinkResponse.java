@@ -76,7 +76,6 @@ public final class ApiConnectionTestLinkResponse {
             this.requestUri = requestUri;
             return this;
         }
-
         public ApiConnectionTestLinkResponse build() {
             return new ApiConnectionTestLinkResponse(method, requestUri);
         }

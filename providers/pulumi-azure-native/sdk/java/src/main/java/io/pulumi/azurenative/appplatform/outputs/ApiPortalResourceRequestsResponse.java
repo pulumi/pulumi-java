@@ -74,7 +74,6 @@ public final class ApiPortalResourceRequestsResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public ApiPortalResourceRequestsResponse build() {
             return new ApiPortalResourceRequestsResponse(cpu, memory);
         }

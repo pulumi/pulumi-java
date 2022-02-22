@@ -243,7 +243,6 @@ public final class GetWorkflowResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(createTime, description, labels, name, revisionCreateTime, revisionId, serviceAccount, sourceContents, state, updateTime);
         }

@@ -141,7 +141,6 @@ public final class AutoScaleConfigurationResponse {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AutoScaleConfigurationResponse build() {
             return new AutoScaleConfigurationResponse(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
         }

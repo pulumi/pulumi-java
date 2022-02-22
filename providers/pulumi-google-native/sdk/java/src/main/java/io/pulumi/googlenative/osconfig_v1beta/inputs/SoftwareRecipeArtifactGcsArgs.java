@@ -23,7 +23,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<String> generation;
+      private final @Nullable Input<String> generation;
 
     public Input<String> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+      private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -119,7 +119,6 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
             this.object = Input.ofNullable(object);
             return this;
         }
-
         public SoftwareRecipeArtifactGcsArgs build() {
             return new SoftwareRecipeArtifactGcsArgs(bucket, generation, object);
         }

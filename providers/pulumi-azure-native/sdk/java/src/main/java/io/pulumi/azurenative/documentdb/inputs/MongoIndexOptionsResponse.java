@@ -24,7 +24,7 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expireAfterSeconds")
-    private final @Nullable Integer expireAfterSeconds;
+        private final @Nullable Integer expireAfterSeconds;
 
     public Optional<Integer> getExpireAfterSeconds() {
         return this.expireAfterSeconds == null ? Optional.empty() : Optional.ofNullable(this.expireAfterSeconds);
@@ -35,7 +35,7 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="unique")
-    private final @Nullable Boolean unique;
+        private final @Nullable Boolean unique;
 
     public Optional<Boolean> getUnique() {
         return this.unique == null ? Optional.empty() : Optional.ofNullable(this.unique);
@@ -84,7 +84,6 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
             this.unique = unique;
             return this;
         }
-
         public MongoIndexOptionsResponse build() {
             return new MongoIndexOptionsResponse(expireAfterSeconds, unique);
         }

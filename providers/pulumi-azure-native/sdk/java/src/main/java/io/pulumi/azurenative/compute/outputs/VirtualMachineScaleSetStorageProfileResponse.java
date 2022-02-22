@@ -100,7 +100,6 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public VirtualMachineScaleSetStorageProfileResponse build() {
             return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
         }

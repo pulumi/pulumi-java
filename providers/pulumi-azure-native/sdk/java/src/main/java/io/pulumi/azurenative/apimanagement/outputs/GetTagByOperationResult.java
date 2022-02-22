@@ -116,7 +116,6 @@ public final class GetTagByOperationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagByOperationResult build() {
             return new GetTagByOperationResult(displayName, id, name, type);
         }

@@ -359,7 +359,6 @@ public final class HDInsightHiveActivityResponse {
             this.variables = variables;
             return this;
         }
-
         public HDInsightHiveActivityResponse build() {
             return new HDInsightHiveActivityResponse(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, queryTimeout, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties, variables);
         }

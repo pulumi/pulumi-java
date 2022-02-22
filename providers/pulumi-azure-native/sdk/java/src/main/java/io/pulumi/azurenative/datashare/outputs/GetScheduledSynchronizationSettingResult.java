@@ -245,7 +245,6 @@ public final class GetScheduledSynchronizationSettingResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetScheduledSynchronizationSettingResult build() {
             return new GetScheduledSynchronizationSettingResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationTime, systemData, type, userName);
         }

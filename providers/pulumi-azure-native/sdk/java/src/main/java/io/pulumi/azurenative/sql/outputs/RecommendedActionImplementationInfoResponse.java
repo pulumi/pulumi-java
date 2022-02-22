@@ -74,7 +74,6 @@ public final class RecommendedActionImplementationInfoResponse {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public RecommendedActionImplementationInfoResponse build() {
             return new RecommendedActionImplementationInfoResponse(method, script);
         }

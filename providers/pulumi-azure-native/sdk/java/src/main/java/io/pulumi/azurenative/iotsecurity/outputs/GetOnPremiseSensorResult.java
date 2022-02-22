@@ -117,7 +117,6 @@ public final class GetOnPremiseSensorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOnPremiseSensorResult build() {
             return new GetOnPremiseSensorResult(id, name, systemData, type);
         }

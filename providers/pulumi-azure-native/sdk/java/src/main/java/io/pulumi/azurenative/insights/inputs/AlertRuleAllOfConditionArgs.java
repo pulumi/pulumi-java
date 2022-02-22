@@ -23,7 +23,7 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allOf", required=true)
-    private final Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
+        private final Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
     public Input<List<AlertRuleAnyOfOrLeafConditionArgs>> getAllOf() {
         return this.allOf;
@@ -66,7 +66,6 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
             this.allOf = Input.of(Objects.requireNonNull(allOf));
             return this;
         }
-
         public AlertRuleAllOfConditionArgs build() {
             return new AlertRuleAllOfConditionArgs(allOf);
         }

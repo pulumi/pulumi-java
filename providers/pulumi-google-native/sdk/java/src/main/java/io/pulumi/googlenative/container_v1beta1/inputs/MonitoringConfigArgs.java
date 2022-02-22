@@ -24,7 +24,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="componentConfig")
-    private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+      private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
 
     public Input<MonitoringComponentConfigArgs> getComponentConfig() {
         return this.componentConfig == null ? Input.empty() : this.componentConfig;
@@ -35,7 +35,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managedPrometheusConfig")
-    private final @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig;
+      private final @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
     public Input<ManagedPrometheusConfigArgs> getManagedPrometheusConfig() {
         return this.managedPrometheusConfig == null ? Input.empty() : this.managedPrometheusConfig;
@@ -94,7 +94,6 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.managedPrometheusConfig = Input.ofNullable(managedPrometheusConfig);
             return this;
         }
-
         public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(componentConfig, managedPrometheusConfig);
         }

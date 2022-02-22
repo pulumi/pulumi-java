@@ -19,7 +19,7 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArtifactHashesArgs Empty = new ArtifactHashesArgs();
 
     @InputImport(name="sha256")
-    private final @Nullable Input<String> sha256;
+      private final @Nullable Input<String> sha256;
 
     public Input<String> getSha256() {
         return this.sha256 == null ? Input.empty() : this.sha256;
@@ -62,7 +62,6 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }
-
         public ArtifactHashesArgs build() {
             return new ArtifactHashesArgs(sha256);
         }

@@ -54,7 +54,6 @@ public final class AgentPropertiesResponse {
             this.cpu = cpu;
             return this;
         }
-
         public AgentPropertiesResponse build() {
             return new AgentPropertiesResponse(cpu);
         }

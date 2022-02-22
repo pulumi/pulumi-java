@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends i
      * 
      */
     @InputImport(name="filePatterns", required=true)
-    private final List<String> filePatterns;
+      private final List<String> filePatterns;
 
     public List<String> getFilePatterns() {
         return this.filePatterns;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends i
      * 
      */
     @InputImport(name="sampleGcsFileSpecs", required=true)
-    private final List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
+      private final List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
 
     public List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> getSampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs;
@@ -83,7 +83,6 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends i
             this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(filePatterns, sampleGcsFileSpecs);
         }

@@ -24,7 +24,7 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="asn")
-    private final @Nullable Input<Double> asn;
+        private final @Nullable Input<Double> asn;
 
     public Input<Double> getAsn() {
         return this.asn == null ? Input.empty() : this.asn;
@@ -35,7 +35,7 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-    private final @Nullable Input<String> bgpPeeringAddress;
+        private final @Nullable Input<String> bgpPeeringAddress;
 
     public Input<String> getBgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Input.empty() : this.bgpPeeringAddress;
@@ -94,7 +94,6 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
             this.bgpPeeringAddress = Input.ofNullable(bgpPeeringAddress);
             return this;
         }
-
         public VpnLinkBgpSettingsArgs build() {
             return new VpnLinkBgpSettingsArgs(asn, bgpPeeringAddress);
         }

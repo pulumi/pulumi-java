@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="customTag", required=true)
-    private final String customTag;
+      private final String customTag;
 
     public String getCustomTag() {
         return this.customTag;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="field", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse field;
+      private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="inferred", required=true)
-    private final GoogleProtobufEmptyResponse inferred;
+      private final GoogleProtobufEmptyResponse inferred;
 
     public GoogleProtobufEmptyResponse getInferred() {
         return this.inferred;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2TaggedFieldResponse build() {
             return new GooglePrivacyDlpV2TaggedFieldResponse(customTag, field, inferred, infoType);
         }

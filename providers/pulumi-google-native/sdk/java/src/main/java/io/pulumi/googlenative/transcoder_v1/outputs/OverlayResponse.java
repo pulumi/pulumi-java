@@ -76,7 +76,6 @@ public final class OverlayResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public OverlayResponse build() {
             return new OverlayResponse(animations, image);
         }

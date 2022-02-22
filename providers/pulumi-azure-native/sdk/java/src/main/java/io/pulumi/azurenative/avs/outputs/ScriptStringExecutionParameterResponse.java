@@ -99,7 +99,6 @@ public final class ScriptStringExecutionParameterResponse {
             this.value = value;
             return this;
         }
-
         public ScriptStringExecutionParameterResponse build() {
             return new ScriptStringExecutionParameterResponse(name, type, value);
         }

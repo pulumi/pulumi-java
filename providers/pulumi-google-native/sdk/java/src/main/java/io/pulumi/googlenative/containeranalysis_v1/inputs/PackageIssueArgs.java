@@ -24,7 +24,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-    private final Input<String> affectedCpeUri;
+      private final Input<String> affectedCpeUri;
 
     public Input<String> getAffectedCpeUri() {
         return this.affectedCpeUri;
@@ -35,7 +35,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-    private final Input<String> affectedPackage;
+      private final Input<String> affectedPackage;
 
     public Input<String> getAffectedPackage() {
         return this.affectedPackage;
@@ -46,7 +46,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersion", required=true)
-    private final Input<VersionArgs> affectedVersion;
+      private final Input<VersionArgs> affectedVersion;
 
     public Input<VersionArgs> getAffectedVersion() {
         return this.affectedVersion;
@@ -57,7 +57,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedCpeUri")
-    private final @Nullable Input<String> fixedCpeUri;
+      private final @Nullable Input<String> fixedCpeUri;
 
     public Input<String> getFixedCpeUri() {
         return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
@@ -68,7 +68,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedPackage")
-    private final @Nullable Input<String> fixedPackage;
+      private final @Nullable Input<String> fixedPackage;
 
     public Input<String> getFixedPackage() {
         return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
@@ -79,7 +79,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedVersion", required=true)
-    private final Input<VersionArgs> fixedVersion;
+      private final Input<VersionArgs> fixedVersion;
 
     public Input<VersionArgs> getFixedVersion() {
         return this.fixedVersion;
@@ -90,7 +90,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<String> packageType;
+      private final @Nullable Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
@@ -224,7 +224,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
-
         public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedCpeUri, affectedPackage, affectedVersion, fixedCpeUri, fixedPackage, fixedVersion, packageType);
         }

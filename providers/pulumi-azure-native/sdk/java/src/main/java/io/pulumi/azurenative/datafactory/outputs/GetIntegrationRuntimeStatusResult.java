@@ -77,7 +77,6 @@ public final class GetIntegrationRuntimeStatusResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetIntegrationRuntimeStatusResult build() {
             return new GetIntegrationRuntimeStatusResult(name, properties);
         }

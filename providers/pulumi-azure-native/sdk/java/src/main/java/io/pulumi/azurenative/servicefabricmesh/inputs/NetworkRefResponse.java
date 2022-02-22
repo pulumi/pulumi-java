@@ -25,7 +25,7 @@ public final class NetworkRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointRefs")
-    private final @Nullable List<EndpointRefResponse> endpointRefs;
+        private final @Nullable List<EndpointRefResponse> endpointRefs;
 
     public List<EndpointRefResponse> getEndpointRefs() {
         return this.endpointRefs == null ? List.of() : this.endpointRefs;
@@ -36,7 +36,7 @@ public final class NetworkRefResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -85,7 +85,6 @@ public final class NetworkRefResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public NetworkRefResponse build() {
             return new NetworkRefResponse(endpointRefs, name);
         }

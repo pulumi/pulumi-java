@@ -27,7 +27,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disableGateway")
-    private final @Nullable Input<Boolean> disableGateway;
+        private final @Nullable Input<Boolean> disableGateway;
 
     public Input<Boolean> getDisableGateway() {
         return this.disableGateway == null ? Input.empty() : this.disableGateway;
@@ -38,7 +38,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -49,7 +49,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
+        private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
 
     public Input<ApiManagementServiceSkuPropertiesArgs> getSku() {
         return this.sku;
@@ -60,7 +60,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkConfiguration")
-    private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+        private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Input<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
@@ -71,7 +71,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -175,7 +175,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public AdditionalLocationArgs build() {
             return new AdditionalLocationArgs(disableGateway, location, sku, virtualNetworkConfiguration, zones);
         }

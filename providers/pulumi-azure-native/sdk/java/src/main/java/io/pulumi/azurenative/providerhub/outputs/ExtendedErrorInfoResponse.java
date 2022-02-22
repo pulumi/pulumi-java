@@ -101,7 +101,6 @@ public final class ExtendedErrorInfoResponse {
             this.target = target;
             return this;
         }
-
         public ExtendedErrorInfoResponse build() {
             return new ExtendedErrorInfoResponse(additionalInfo, code, details, message, target);
         }

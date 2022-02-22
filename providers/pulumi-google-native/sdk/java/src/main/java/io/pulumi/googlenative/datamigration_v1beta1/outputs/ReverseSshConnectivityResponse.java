@@ -117,7 +117,6 @@ public final class ReverseSshConnectivityResponse {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public ReverseSshConnectivityResponse build() {
             return new ReverseSshConnectivityResponse(vm, vmIp, vmPort, vpc);
         }

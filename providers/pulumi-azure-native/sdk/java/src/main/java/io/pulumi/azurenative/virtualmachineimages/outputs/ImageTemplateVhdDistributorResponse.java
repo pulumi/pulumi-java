@@ -99,7 +99,6 @@ public final class ImageTemplateVhdDistributorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateVhdDistributorResponse build() {
             return new ImageTemplateVhdDistributorResponse(artifactTags, runOutputName, type);
         }

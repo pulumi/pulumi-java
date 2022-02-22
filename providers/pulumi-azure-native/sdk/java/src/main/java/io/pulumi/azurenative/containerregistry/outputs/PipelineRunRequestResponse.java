@@ -148,7 +148,6 @@ public final class PipelineRunRequestResponse {
             this.target = target;
             return this;
         }
-
         public PipelineRunRequestResponse build() {
             return new PipelineRunRequestResponse(artifacts, catalogDigest, pipelineResourceId, source, target);
         }

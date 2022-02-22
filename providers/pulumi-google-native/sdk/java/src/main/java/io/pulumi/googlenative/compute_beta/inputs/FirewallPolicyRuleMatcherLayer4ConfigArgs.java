@@ -20,7 +20,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ipProtocol")
-    private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Input<String> ipProtocol;
 
     public Input<String> getIpProtocol() {
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
@@ -31,7 +31,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -90,7 +90,6 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public FirewallPolicyRuleMatcherLayer4ConfigArgs build() {
             return new FirewallPolicyRuleMatcherLayer4ConfigArgs(ipProtocol, ports);
         }

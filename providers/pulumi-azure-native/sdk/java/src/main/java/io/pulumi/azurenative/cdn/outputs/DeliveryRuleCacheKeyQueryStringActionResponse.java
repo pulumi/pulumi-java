@@ -77,7 +77,6 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCacheKeyQueryStringActionResponse build() {
             return new DeliveryRuleCacheKeyQueryStringActionResponse(name, parameters);
         }

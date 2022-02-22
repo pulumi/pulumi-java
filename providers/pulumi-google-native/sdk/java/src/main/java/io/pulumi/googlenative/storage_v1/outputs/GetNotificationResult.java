@@ -202,7 +202,6 @@ public final class GetNotificationResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetNotificationResult build() {
             return new GetNotificationResult(customAttributes, etag, eventTypes, kind, objectNamePrefix, payloadFormat, selfLink, topic);
         }

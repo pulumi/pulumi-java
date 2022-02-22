@@ -61,7 +61,6 @@ public final class ObjectWithNodeOptionalInputs {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }
-
         public ObjectWithNodeOptionalInputs build() {
             return new ObjectWithNodeOptionalInputs(bar, foo);
         }

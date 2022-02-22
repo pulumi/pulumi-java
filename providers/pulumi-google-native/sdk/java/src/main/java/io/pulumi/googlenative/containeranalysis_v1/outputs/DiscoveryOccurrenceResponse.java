@@ -138,7 +138,6 @@ public final class DiscoveryOccurrenceResponse {
             this.lastScanTime = Objects.requireNonNull(lastScanTime);
             return this;
         }
-
         public DiscoveryOccurrenceResponse build() {
             return new DiscoveryOccurrenceResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
         }

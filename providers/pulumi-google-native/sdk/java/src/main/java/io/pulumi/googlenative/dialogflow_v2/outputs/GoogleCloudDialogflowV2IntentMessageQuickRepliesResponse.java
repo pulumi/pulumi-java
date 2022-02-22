@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse(quickReplies, title);
         }

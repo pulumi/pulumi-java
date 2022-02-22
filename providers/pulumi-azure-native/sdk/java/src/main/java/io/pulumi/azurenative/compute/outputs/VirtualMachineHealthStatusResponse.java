@@ -52,7 +52,6 @@ public final class VirtualMachineHealthStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public VirtualMachineHealthStatusResponse build() {
             return new VirtualMachineHealthStatusResponse(status);
         }

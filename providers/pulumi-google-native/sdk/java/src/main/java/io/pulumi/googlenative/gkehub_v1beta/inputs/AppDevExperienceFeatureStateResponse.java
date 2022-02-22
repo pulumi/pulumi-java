@@ -21,7 +21,7 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkingInstallSucceeded", required=true)
-    private final StatusResponse networkingInstallSucceeded;
+      private final StatusResponse networkingInstallSucceeded;
 
     public StatusResponse getNetworkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
@@ -59,7 +59,6 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }
-
         public AppDevExperienceFeatureStateResponse build() {
             return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
         }

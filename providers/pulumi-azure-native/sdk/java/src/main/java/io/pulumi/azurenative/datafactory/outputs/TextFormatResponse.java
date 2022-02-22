@@ -289,7 +289,6 @@ public final class TextFormatResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TextFormatResponse build() {
             return new TextFormatResponse(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
         }

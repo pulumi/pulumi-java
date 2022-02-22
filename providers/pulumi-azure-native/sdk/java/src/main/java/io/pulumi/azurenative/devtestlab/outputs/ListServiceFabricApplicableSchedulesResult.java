@@ -183,7 +183,6 @@ public final class ListServiceFabricApplicableSchedulesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListServiceFabricApplicableSchedulesResult build() {
             return new ListServiceFabricApplicableSchedulesResult(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }

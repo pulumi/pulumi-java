@@ -22,7 +22,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final String baseUrl;
+      private final String baseUrl;
 
     public String getBaseUrl() {
         return this.baseUrl;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @InputImport(name="gpgKeys", required=true)
-    private final List<String> gpgKeys;
+      private final List<String> gpgKeys;
 
     public List<String> getGpgKeys() {
         return this.gpgKeys;
@@ -103,7 +103,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

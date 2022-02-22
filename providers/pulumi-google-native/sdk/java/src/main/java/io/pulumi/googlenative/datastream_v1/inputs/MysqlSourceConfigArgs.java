@@ -23,7 +23,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="excludeObjects")
-    private final @Nullable Input<MysqlRdbmsArgs> excludeObjects;
+      private final @Nullable Input<MysqlRdbmsArgs> excludeObjects;
 
     public Input<MysqlRdbmsArgs> getExcludeObjects() {
         return this.excludeObjects == null ? Input.empty() : this.excludeObjects;
@@ -34,7 +34,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="includeObjects")
-    private final @Nullable Input<MysqlRdbmsArgs> includeObjects;
+      private final @Nullable Input<MysqlRdbmsArgs> includeObjects;
 
     public Input<MysqlRdbmsArgs> getIncludeObjects() {
         return this.includeObjects == null ? Input.empty() : this.includeObjects;
@@ -93,7 +93,6 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             this.includeObjects = Input.ofNullable(includeObjects);
             return this;
         }
-
         public MysqlSourceConfigArgs build() {
             return new MysqlSourceConfigArgs(excludeObjects, includeObjects);
         }

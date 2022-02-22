@@ -19,7 +19,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+        private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final Input<String> operationId;
+        private final Input<String> operationId;
 
     public Input<String> getOperationId() {
         return this.operationId;
@@ -41,7 +41,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -63,7 +63,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagId")
-    private final @Nullable Input<String> tagId;
+        private final @Nullable Input<String> tagId;
 
     public Input<String> getTagId() {
         return this.tagId == null ? Input.empty() : this.tagId;
@@ -167,7 +167,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
             this.tagId = Input.ofNullable(tagId);
             return this;
         }
-
         public TagByOperationArgs build() {
             return new TagByOperationArgs(apiId, operationId, resourceGroupName, serviceName, tagId);
         }

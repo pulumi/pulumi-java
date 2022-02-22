@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(channelTag, sentimentData);
         }

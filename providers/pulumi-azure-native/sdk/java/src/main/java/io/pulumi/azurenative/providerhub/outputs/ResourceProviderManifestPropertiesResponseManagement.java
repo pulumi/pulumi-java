@@ -141,7 +141,6 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseManagement build() {
             return new ResourceProviderManifestPropertiesResponseManagement(incidentContactEmail, incidentRoutingService, incidentRoutingTeam, manifestOwners, resourceAccessPolicy, resourceAccessRoles, schemaOwners, serviceTreeInfos);
         }

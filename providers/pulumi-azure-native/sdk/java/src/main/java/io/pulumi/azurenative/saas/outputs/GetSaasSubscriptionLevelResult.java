@@ -140,7 +140,6 @@ public final class GetSaasSubscriptionLevelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSaasSubscriptionLevelResult build() {
             return new GetSaasSubscriptionLevelResult(id, name, properties, tags, type);
         }

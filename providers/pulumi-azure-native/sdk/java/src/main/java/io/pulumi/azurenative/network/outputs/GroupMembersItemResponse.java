@@ -54,7 +54,6 @@ public final class GroupMembersItemResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public GroupMembersItemResponse build() {
             return new GroupMembersItemResponse(resourceId);
         }

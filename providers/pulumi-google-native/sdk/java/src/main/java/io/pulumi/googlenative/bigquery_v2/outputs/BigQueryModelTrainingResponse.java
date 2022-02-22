@@ -75,7 +75,6 @@ public final class BigQueryModelTrainingResponse {
             this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
             return this;
         }
-
         public BigQueryModelTrainingResponse build() {
             return new BigQueryModelTrainingResponse(currentIteration, expectedTotalIterations);
         }

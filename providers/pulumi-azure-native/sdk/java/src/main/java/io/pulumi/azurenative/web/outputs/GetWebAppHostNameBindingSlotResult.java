@@ -307,7 +307,6 @@ public final class GetWebAppHostNameBindingSlotResult {
             this.virtualIP = Objects.requireNonNull(virtualIP);
             return this;
         }
-
         public GetWebAppHostNameBindingSlotResult build() {
             return new GetWebAppHostNameBindingSlotResult(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostNameType, id, kind, name, siteName, sslState, thumbprint, type, virtualIP);
         }

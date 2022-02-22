@@ -17,7 +17,7 @@ public final class GetServiceTopologyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceTopologyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceTopologyName", required=true)
-    private final String serviceTopologyName;
+        private final String serviceTopologyName;
 
     public String getServiceTopologyName() {
         return this.serviceTopologyName;
@@ -77,7 +77,6 @@ public final class GetServiceTopologyArgs extends io.pulumi.resources.InvokeArgs
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
-
         public GetServiceTopologyArgs build() {
             return new GetServiceTopologyArgs(resourceGroupName, serviceTopologyName);
         }

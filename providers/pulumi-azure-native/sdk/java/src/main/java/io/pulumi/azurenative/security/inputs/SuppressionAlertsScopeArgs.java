@@ -19,7 +19,7 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allOf", required=true)
-    private final Input<List<ScopeElementArgs>> allOf;
+        private final Input<List<ScopeElementArgs>> allOf;
 
     public Input<List<ScopeElementArgs>> getAllOf() {
         return this.allOf;
@@ -62,7 +62,6 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
             this.allOf = Input.of(Objects.requireNonNull(allOf));
             return this;
         }
-
         public SuppressionAlertsScopeArgs build() {
             return new SuppressionAlertsScopeArgs(allOf);
         }

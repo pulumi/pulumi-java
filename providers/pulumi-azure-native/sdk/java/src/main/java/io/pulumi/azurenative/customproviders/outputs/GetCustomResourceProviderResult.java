@@ -227,7 +227,6 @@ public final class GetCustomResourceProviderResult {
             this.validations = validations;
             return this;
         }
-
         public GetCustomResourceProviderResult build() {
             return new GetCustomResourceProviderResult(actions, id, location, name, provisioningState, resourceTypes, tags, type, validations);
         }

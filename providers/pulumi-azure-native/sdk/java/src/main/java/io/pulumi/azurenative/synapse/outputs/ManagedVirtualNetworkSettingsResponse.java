@@ -99,7 +99,6 @@ public final class ManagedVirtualNetworkSettingsResponse {
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
         }
-
         public ManagedVirtualNetworkSettingsResponse build() {
             return new ManagedVirtualNetworkSettingsResponse(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
         }

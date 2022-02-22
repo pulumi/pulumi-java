@@ -99,7 +99,6 @@ public final class RRSetRoutingPolicyResponse {
             this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
             return this;
         }
-
         public RRSetRoutingPolicyResponse build() {
             return new RRSetRoutingPolicyResponse(geo, geoPolicy, kind, wrr, wrrPolicy);
         }

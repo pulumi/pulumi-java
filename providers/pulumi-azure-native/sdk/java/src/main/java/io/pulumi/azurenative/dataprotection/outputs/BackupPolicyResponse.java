@@ -99,7 +99,6 @@ public final class BackupPolicyResponse {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }
-
         public BackupPolicyResponse build() {
             return new BackupPolicyResponse(datasourceTypes, objectType, policyRules);
         }

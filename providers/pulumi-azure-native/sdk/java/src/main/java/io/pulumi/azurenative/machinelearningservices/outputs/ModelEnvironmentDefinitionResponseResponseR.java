@@ -208,7 +208,6 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
             this.userManaged = userManaged;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseR build() {
             return new ModelEnvironmentDefinitionResponseResponseR(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
         }

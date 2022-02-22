@@ -58,7 +58,6 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public SecurityPolicyAdvancedOptionsConfigResponse build() {
             return new SecurityPolicyAdvancedOptionsConfigResponse(jsonParsing, logLevel);
         }

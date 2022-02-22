@@ -22,7 +22,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="compressedQuery")
-    private final @Nullable Input<String> compressedQuery;
+        private final @Nullable Input<String> compressedQuery;
 
     public Input<String> getCompressedQuery() {
         return this.compressedQuery == null ? Input.empty() : this.compressedQuery;
@@ -33,7 +33,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="customAssessmentAutomationName")
-    private final @Nullable Input<String> customAssessmentAutomationName;
+        private final @Nullable Input<String> customAssessmentAutomationName;
 
     public Input<String> getCustomAssessmentAutomationName() {
         return this.customAssessmentAutomationName == null ? Input.empty() : this.customAssessmentAutomationName;
@@ -44,7 +44,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,7 +66,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="remediationDescription")
-    private final @Nullable Input<String> remediationDescription;
+        private final @Nullable Input<String> remediationDescription;
 
     public Input<String> getRemediationDescription() {
         return this.remediationDescription == null ? Input.empty() : this.remediationDescription;
@@ -77,7 +77,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Input<Either<String,SeverityEnum>> severity;
+        private final @Nullable Input<Either<String,SeverityEnum>> severity;
 
     public Input<Either<String,SeverityEnum>> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -99,7 +99,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="supportedCloud")
-    private final @Nullable Input<Either<String,SupportedCloudEnum>> supportedCloud;
+        private final @Nullable Input<Either<String,SupportedCloudEnum>> supportedCloud;
 
     public Input<Either<String,SupportedCloudEnum>> getSupportedCloud() {
         return this.supportedCloud == null ? Input.empty() : this.supportedCloud;
@@ -248,7 +248,6 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             this.supportedCloud = Input.ofNullable(supportedCloud);
             return this;
         }
-
         public CustomAssessmentAutomationArgs build() {
             return new CustomAssessmentAutomationArgs(compressedQuery, customAssessmentAutomationName, description, displayName, remediationDescription, resourceGroupName, severity, supportedCloud);
         }

@@ -161,7 +161,6 @@ public final class GetTaskResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(etag, id, name, properties, type);
         }

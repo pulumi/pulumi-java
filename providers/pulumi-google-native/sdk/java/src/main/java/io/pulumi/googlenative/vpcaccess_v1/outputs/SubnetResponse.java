@@ -74,7 +74,6 @@ public final class SubnetResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public SubnetResponse build() {
             return new SubnetResponse(name, project);
         }

@@ -34,7 +34,6 @@ public final class StaticIpConnectivityResponse extends io.pulumi.resources.Invo
         public Builder(StaticIpConnectivityResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StaticIpConnectivityResponse build() {
             return new StaticIpConnectivityResponse();
         }

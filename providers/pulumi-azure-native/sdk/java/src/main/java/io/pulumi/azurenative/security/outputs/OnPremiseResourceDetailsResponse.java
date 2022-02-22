@@ -139,7 +139,6 @@ public final class OnPremiseResourceDetailsResponse {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public OnPremiseResourceDetailsResponse build() {
             return new OnPremiseResourceDetailsResponse(machineName, source, sourceComputerId, vmuuid, workspaceId);
         }

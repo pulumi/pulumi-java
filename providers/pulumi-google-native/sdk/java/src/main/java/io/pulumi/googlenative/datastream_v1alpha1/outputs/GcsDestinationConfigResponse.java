@@ -140,7 +140,6 @@ public final class GcsDestinationConfigResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GcsDestinationConfigResponse build() {
             return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }

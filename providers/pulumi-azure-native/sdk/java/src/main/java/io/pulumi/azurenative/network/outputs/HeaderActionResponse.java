@@ -97,7 +97,6 @@ public final class HeaderActionResponse {
             this.value = value;
             return this;
         }
-
         public HeaderActionResponse build() {
             return new HeaderActionResponse(headerActionType, headerName, value);
         }

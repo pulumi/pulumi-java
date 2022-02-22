@@ -133,7 +133,6 @@ public final class RemoteAddressMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RemoteAddressMatchConditionParametersResponse build() {
             return new RemoteAddressMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

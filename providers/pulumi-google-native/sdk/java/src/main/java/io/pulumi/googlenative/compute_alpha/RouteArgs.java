@@ -23,7 +23,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConflictingSubnetworks")
-    private final @Nullable Input<Boolean> allowConflictingSubnetworks;
+      private final @Nullable Input<Boolean> allowConflictingSubnetworks;
 
     public Input<Boolean> getAllowConflictingSubnetworks() {
         return this.allowConflictingSubnetworks == null ? Input.empty() : this.allowConflictingSubnetworks;
@@ -34,7 +34,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destRange")
-    private final @Nullable Input<String> destRange;
+      private final @Nullable Input<String> destRange;
 
     public Input<String> getDestRange() {
         return this.destRange == null ? Input.empty() : this.destRange;
@@ -56,7 +56,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ilbRouteBehaviorOnUnhealthy")
-    private final @Nullable Input<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy;
+      private final @Nullable Input<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy;
 
     public Input<RouteIlbRouteBehaviorOnUnhealthy> getIlbRouteBehaviorOnUnhealthy() {
         return this.ilbRouteBehaviorOnUnhealthy == null ? Input.empty() : this.ilbRouteBehaviorOnUnhealthy;
@@ -67,7 +67,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -89,7 +89,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopGateway")
-    private final @Nullable Input<String> nextHopGateway;
+      private final @Nullable Input<String> nextHopGateway;
 
     public Input<String> getNextHopGateway() {
         return this.nextHopGateway == null ? Input.empty() : this.nextHopGateway;
@@ -100,7 +100,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIlb")
-    private final @Nullable Input<String> nextHopIlb;
+      private final @Nullable Input<String> nextHopIlb;
 
     public Input<String> getNextHopIlb() {
         return this.nextHopIlb == null ? Input.empty() : this.nextHopIlb;
@@ -111,7 +111,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopInstance")
-    private final @Nullable Input<String> nextHopInstance;
+      private final @Nullable Input<String> nextHopInstance;
 
     public Input<String> getNextHopInstance() {
         return this.nextHopInstance == null ? Input.empty() : this.nextHopInstance;
@@ -122,7 +122,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIp")
-    private final @Nullable Input<String> nextHopIp;
+      private final @Nullable Input<String> nextHopIp;
 
     public Input<String> getNextHopIp() {
         return this.nextHopIp == null ? Input.empty() : this.nextHopIp;
@@ -133,7 +133,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopNetwork")
-    private final @Nullable Input<String> nextHopNetwork;
+      private final @Nullable Input<String> nextHopNetwork;
 
     public Input<String> getNextHopNetwork() {
         return this.nextHopNetwork == null ? Input.empty() : this.nextHopNetwork;
@@ -144,7 +144,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopVpnTunnel")
-    private final @Nullable Input<String> nextHopVpnTunnel;
+      private final @Nullable Input<String> nextHopVpnTunnel;
 
     public Input<String> getNextHopVpnTunnel() {
         return this.nextHopVpnTunnel == null ? Input.empty() : this.nextHopVpnTunnel;
@@ -155,21 +155,21 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -180,7 +180,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -449,7 +449,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RouteArgs build() {
             return new RouteArgs(allowConflictingSubnetworks, description, destRange, ilbRouteBehaviorOnUnhealthy, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, requestId, tags);
         }

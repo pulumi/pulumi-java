@@ -17,7 +17,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -119,7 +119,6 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ListServiceFabricApplicableSchedulesArgs build() {
             return new ListServiceFabricApplicableSchedulesArgs(labName, name, resourceGroupName, userName);
         }

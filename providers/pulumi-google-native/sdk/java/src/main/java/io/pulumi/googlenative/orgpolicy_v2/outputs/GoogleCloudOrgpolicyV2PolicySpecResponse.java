@@ -140,7 +140,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecResponse(etag, inheritFromParent, reset, rules, updateTime);
         }

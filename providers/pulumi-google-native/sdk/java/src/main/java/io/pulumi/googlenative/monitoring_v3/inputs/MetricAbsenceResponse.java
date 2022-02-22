@@ -24,7 +24,7 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="aggregations", required=true)
-    private final List<AggregationResponse> aggregations;
+      private final List<AggregationResponse> aggregations;
 
     public List<AggregationResponse> getAggregations() {
         return this.aggregations;
@@ -35,7 +35,7 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -46,7 +46,7 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -57,7 +57,7 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final TriggerResponse trigger;
+      private final TriggerResponse trigger;
 
     public TriggerResponse getTrigger() {
         return this.trigger;
@@ -126,7 +126,6 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricAbsenceResponse build() {
             return new MetricAbsenceResponse(aggregations, duration, filter, trigger);
         }

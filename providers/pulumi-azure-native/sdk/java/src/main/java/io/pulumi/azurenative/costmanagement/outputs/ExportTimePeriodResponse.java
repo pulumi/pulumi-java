@@ -74,7 +74,6 @@ public final class ExportTimePeriodResponse {
             this.to = Objects.requireNonNull(to);
             return this;
         }
-
         public ExportTimePeriodResponse build() {
             return new ExportTimePeriodResponse(from, to);
         }

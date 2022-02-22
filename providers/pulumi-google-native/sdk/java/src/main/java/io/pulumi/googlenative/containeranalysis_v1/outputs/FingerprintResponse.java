@@ -96,7 +96,6 @@ public final class FingerprintResponse {
             this.v2Name = Objects.requireNonNull(v2Name);
             return this;
         }
-
         public FingerprintResponse build() {
             return new FingerprintResponse(v1Name, v2Blob, v2Name);
         }

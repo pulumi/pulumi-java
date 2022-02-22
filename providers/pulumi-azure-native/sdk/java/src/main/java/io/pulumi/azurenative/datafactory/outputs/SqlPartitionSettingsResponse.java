@@ -97,7 +97,6 @@ public final class SqlPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SqlPartitionSettingsResponse build() {
             return new SqlPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

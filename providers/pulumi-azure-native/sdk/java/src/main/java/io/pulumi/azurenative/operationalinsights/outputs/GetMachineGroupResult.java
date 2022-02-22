@@ -228,7 +228,6 @@ public final class GetMachineGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineGroupResult build() {
             return new GetMachineGroupResult(count, displayName, etag, groupType, id, kind, machines, name, type);
         }

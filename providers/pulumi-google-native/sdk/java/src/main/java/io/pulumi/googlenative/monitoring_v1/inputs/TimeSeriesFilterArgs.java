@@ -25,7 +25,7 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<AggregationArgs> aggregation;
+      private final @Nullable Input<AggregationArgs> aggregation;
 
     public Input<AggregationArgs> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -36,7 +36,7 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -47,7 +47,7 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pickTimeSeriesFilter")
-    private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+      private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
     public Input<PickTimeSeriesFilterArgs> getPickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter == null ? Input.empty() : this.pickTimeSeriesFilter;
@@ -58,7 +58,7 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secondaryAggregation")
-    private final @Nullable Input<AggregationArgs> secondaryAggregation;
+      private final @Nullable Input<AggregationArgs> secondaryAggregation;
 
     public Input<AggregationArgs> getSecondaryAggregation() {
         return this.secondaryAggregation == null ? Input.empty() : this.secondaryAggregation;
@@ -147,7 +147,6 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
             this.secondaryAggregation = Input.ofNullable(secondaryAggregation);
             return this;
         }
-
         public TimeSeriesFilterArgs build() {
             return new TimeSeriesFilterArgs(aggregation, filter, pickTimeSeriesFilter, secondaryAggregation);
         }

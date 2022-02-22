@@ -20,7 +20,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionMonitorTestName")
-    private final @Nullable Input<String> connectionMonitorTestName;
+        private final @Nullable Input<String> connectionMonitorTestName;
 
     public Input<String> getConnectionMonitorTestName() {
         return this.connectionMonitorTestName == null ? Input.empty() : this.connectionMonitorTestName;
@@ -31,7 +31,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -42,7 +42,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Input<Integer> destinationPort;
+        private final @Nullable Input<Integer> destinationPort;
 
     public Input<Integer> getDestinationPort() {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
@@ -53,7 +53,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-    private final Input<String> peeringServiceName;
+        private final Input<String> peeringServiceName;
 
     public Input<String> getPeeringServiceName() {
         return this.peeringServiceName;
@@ -64,7 +64,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceAgent")
-    private final @Nullable Input<String> sourceAgent;
+        private final @Nullable Input<String> sourceAgent;
 
     public Input<String> getSourceAgent() {
         return this.sourceAgent == null ? Input.empty() : this.sourceAgent;
@@ -86,7 +86,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="testFrequencyInSec")
-    private final @Nullable Input<Integer> testFrequencyInSec;
+        private final @Nullable Input<Integer> testFrequencyInSec;
 
     public Input<Integer> getTestFrequencyInSec() {
         return this.testFrequencyInSec == null ? Input.empty() : this.testFrequencyInSec;
@@ -220,7 +220,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             this.testFrequencyInSec = Input.ofNullable(testFrequencyInSec);
             return this;
         }
-
         public ConnectionMonitorTestArgs build() {
             return new ConnectionMonitorTestArgs(connectionMonitorTestName, destination, destinationPort, peeringServiceName, resourceGroupName, sourceAgent, testFrequencyInSec);
         }

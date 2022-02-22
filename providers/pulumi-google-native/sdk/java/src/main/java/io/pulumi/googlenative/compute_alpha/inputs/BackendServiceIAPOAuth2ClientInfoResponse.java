@@ -17,7 +17,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final String applicationName;
+      private final String applicationName;
 
     public String getApplicationName() {
         return this.applicationName;
@@ -28,7 +28,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="clientName", required=true)
-    private final String clientName;
+      private final String clientName;
 
     public String getClientName() {
         return this.clientName;
@@ -39,7 +39,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="developerEmailAddress", required=true)
-    private final String developerEmailAddress;
+      private final String developerEmailAddress;
 
     public String getDeveloperEmailAddress() {
         return this.developerEmailAddress;
@@ -98,7 +98,6 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends io.pulumi.r
             this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
             return this;
         }
-
         public BackendServiceIAPOAuth2ClientInfoResponse build() {
             return new BackendServiceIAPOAuth2ClientInfoResponse(applicationName, clientName, developerEmailAddress);
         }

@@ -23,7 +23,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateSubnetworks")
-    private final @Nullable Input<Boolean> autoCreateSubnetworks;
+      private final @Nullable Input<Boolean> autoCreateSubnetworks;
 
     public Input<Boolean> getAutoCreateSubnetworks() {
         return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
@@ -34,7 +34,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableUlaInternalIpv6")
-    private final @Nullable Input<Boolean> enableUlaInternalIpv6;
+      private final @Nullable Input<Boolean> enableUlaInternalIpv6;
 
     public Input<Boolean> getEnableUlaInternalIpv6() {
         return this.enableUlaInternalIpv6 == null ? Input.empty() : this.enableUlaInternalIpv6;
@@ -56,7 +56,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalIpv6Range")
-    private final @Nullable Input<String> internalIpv6Range;
+      private final @Nullable Input<String> internalIpv6Range;
 
     public Input<String> getInternalIpv6Range() {
         return this.internalIpv6Range == null ? Input.empty() : this.internalIpv6Range;
@@ -67,7 +67,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -78,28 +78,28 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="networkFirewallPolicyEnforcementOrder")
-    private final @Nullable Input<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
+      private final @Nullable Input<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
     public Input<NetworkNetworkFirewallPolicyEnforcementOrder> getNetworkFirewallPolicyEnforcementOrder() {
         return this.networkFirewallPolicyEnforcementOrder == null ? Input.empty() : this.networkFirewallPolicyEnforcementOrder;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -110,7 +110,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingConfig")
-    private final @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
+      private final @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
 
     public Input<NetworkRoutingConfigArgs> getRoutingConfig() {
         return this.routingConfig == null ? Input.empty() : this.routingConfig;
@@ -289,7 +289,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.routingConfig = Input.ofNullable(routingConfig);
             return this;
         }
-
         public NetworkArgs build() {
             return new NetworkArgs(autoCreateSubnetworks, description, enableUlaInternalIpv6, internalIpv6Range, mtu, name, networkFirewallPolicyEnforcementOrder, project, requestId, routingConfig);
         }

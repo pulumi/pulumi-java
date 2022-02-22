@@ -21,7 +21,7 @@ public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -59,7 +59,6 @@ public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudEndpointsResponse build() {
             return new CloudEndpointsResponse(service);
         }

@@ -360,7 +360,6 @@ public final class DockerBuildRequestResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DockerBuildRequestResponse build() {
             return new DockerBuildRequestResponse(agentConfiguration, agentPoolName, arguments, credentials, dockerFilePath, imageNames, isArchiveEnabled, isPushEnabled, logTemplate, noCache, platform, sourceLocation, target, timeout, type);
         }

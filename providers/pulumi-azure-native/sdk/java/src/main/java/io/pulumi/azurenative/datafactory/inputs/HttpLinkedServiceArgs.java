@@ -32,7 +32,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authHeaders")
-    private final @Nullable Input<Object> authHeaders;
+        private final @Nullable Input<Object> authHeaders;
 
     public Input<Object> getAuthHeaders() {
         return this.authHeaders == null ? Input.empty() : this.authHeaders;
@@ -54,7 +54,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,HttpAuthenticationType>> authenticationType;
+        private final @Nullable Input<Either<String,HttpAuthenticationType>> authenticationType;
 
     public Input<Either<String,HttpAuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -65,7 +65,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certThumbprint")
-    private final @Nullable Input<Object> certThumbprint;
+        private final @Nullable Input<Object> certThumbprint;
 
     public Input<Object> getCertThumbprint() {
         return this.certThumbprint == null ? Input.empty() : this.certThumbprint;
@@ -76,7 +76,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -87,7 +87,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="embeddedCertData")
-    private final @Nullable Input<Object> embeddedCertData;
+        private final @Nullable Input<Object> embeddedCertData;
 
     public Input<Object> getEmbeddedCertData() {
         return this.embeddedCertData == null ? Input.empty() : this.embeddedCertData;
@@ -109,7 +109,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableServerCertificateValidation")
-    private final @Nullable Input<Object> enableServerCertificateValidation;
+        private final @Nullable Input<Object> enableServerCertificateValidation;
 
     public Input<Object> getEnableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Input.empty() : this.enableServerCertificateValidation;
@@ -120,7 +120,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -131,7 +131,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -154,7 +154,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -165,7 +165,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<Object> url;
+        private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;
@@ -176,7 +176,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<Object> userName;
+        private final @Nullable Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -415,7 +415,6 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public HttpLinkedServiceArgs build() {
             return new HttpLinkedServiceArgs(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);
         }

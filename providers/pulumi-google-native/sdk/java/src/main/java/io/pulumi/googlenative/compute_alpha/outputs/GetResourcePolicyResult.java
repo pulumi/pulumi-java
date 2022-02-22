@@ -294,7 +294,6 @@ public final class GetResourcePolicyResult {
             this.vmMaintenancePolicy = Objects.requireNonNull(vmMaintenancePolicy);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(creationTimestamp, description, groupPlacementPolicy, instanceSchedulePolicy, kind, name, region, resourceStatus, selfLink, selfLinkWithId, snapshotSchedulePolicy, status, vmMaintenancePolicy);
         }

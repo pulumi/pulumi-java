@@ -52,7 +52,6 @@ public final class ToolExecutionStepResponse {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }
-
         public ToolExecutionStepResponse build() {
             return new ToolExecutionStepResponse(toolExecution);
         }

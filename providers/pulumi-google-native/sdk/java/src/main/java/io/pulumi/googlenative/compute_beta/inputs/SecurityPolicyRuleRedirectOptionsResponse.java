@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -77,7 +77,6 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecurityPolicyRuleRedirectOptionsResponse build() {
             return new SecurityPolicyRuleRedirectOptionsResponse(target, type);
         }

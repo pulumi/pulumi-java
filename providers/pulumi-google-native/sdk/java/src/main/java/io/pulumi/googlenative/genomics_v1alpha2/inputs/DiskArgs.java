@@ -26,7 +26,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPoint")
-    private final @Nullable Input<String> mountPoint;
+      private final @Nullable Input<String> mountPoint;
 
     public Input<String> getMountPoint() {
         return this.mountPoint == null ? Input.empty() : this.mountPoint;
@@ -37,7 +37,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -59,7 +59,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-    private final @Nullable Input<Integer> sizeGb;
+      private final @Nullable Input<Integer> sizeGb;
 
     public Input<Integer> getSizeGb() {
         return this.sizeGb == null ? Input.empty() : this.sizeGb;
@@ -70,7 +70,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -81,7 +81,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<DiskType> type;
+      private final Input<DiskType> type;
 
     public Input<DiskType> getType() {
         return this.type;
@@ -200,7 +200,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DiskArgs build() {
             return new DiskArgs(mountPoint, name, readOnly, sizeGb, source, type);
         }

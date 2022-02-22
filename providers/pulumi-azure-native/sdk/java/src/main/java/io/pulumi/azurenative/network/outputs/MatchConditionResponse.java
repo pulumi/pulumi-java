@@ -142,7 +142,6 @@ public final class MatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValues, matchVariables, negationConditon, operator, transforms);
         }

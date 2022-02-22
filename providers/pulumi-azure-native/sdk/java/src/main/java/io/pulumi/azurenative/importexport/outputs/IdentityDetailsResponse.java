@@ -97,7 +97,6 @@ public final class IdentityDetailsResponse {
             this.type = type;
             return this;
         }
-
         public IdentityDetailsResponse build() {
             return new IdentityDetailsResponse(principalId, tenantId, type);
         }

@@ -206,7 +206,6 @@ public final class GetReportByBillingAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReportByBillingAccountResult build() {
             return new GetReportByBillingAccountResult(definition, deliveryInfo, format, id, name, schedule, tags, type);
         }

@@ -99,7 +99,6 @@ public final class ScriptSecureStringExecutionParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScriptSecureStringExecutionParameterResponse build() {
             return new ScriptSecureStringExecutionParameterResponse(name, secureValue, type);
         }

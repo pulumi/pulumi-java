@@ -76,7 +76,6 @@ public final class AbsoluteDeleteOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AbsoluteDeleteOptionResponse build() {
             return new AbsoluteDeleteOptionResponse(duration, objectType);
         }

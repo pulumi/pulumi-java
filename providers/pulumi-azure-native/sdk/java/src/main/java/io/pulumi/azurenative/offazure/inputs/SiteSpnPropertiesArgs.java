@@ -23,7 +23,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="aadAuthority")
-    private final @Nullable Input<String> aadAuthority;
+        private final @Nullable Input<String> aadAuthority;
 
     public Input<String> getAadAuthority() {
         return this.aadAuthority == null ? Input.empty() : this.aadAuthority;
@@ -34,7 +34,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+        private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -45,7 +45,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable Input<String> audience;
+        private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -56,7 +56,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+        private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -67,7 +67,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rawCertData")
-    private final @Nullable Input<String> rawCertData;
+        private final @Nullable Input<String> rawCertData;
 
     public Input<String> getRawCertData() {
         return this.rawCertData == null ? Input.empty() : this.rawCertData;
@@ -78,7 +78,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -197,7 +197,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public SiteSpnPropertiesArgs build() {
             return new SiteSpnPropertiesArgs(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
         }

@@ -54,7 +54,6 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public ListIntegrationAccountKeyVaultKeysResult build() {
             return new ListIntegrationAccountKeyVaultKeysResult(skipToken);
         }

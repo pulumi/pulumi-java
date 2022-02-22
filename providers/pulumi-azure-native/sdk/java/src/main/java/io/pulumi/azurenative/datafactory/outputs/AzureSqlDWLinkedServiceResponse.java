@@ -318,7 +318,6 @@ public final class AzureSqlDWLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSqlDWLinkedServiceResponse build() {
             return new AzureSqlDWLinkedServiceResponse(annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

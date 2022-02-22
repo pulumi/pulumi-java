@@ -140,7 +140,6 @@ public final class PolicySettingsResponse {
             this.mode = mode;
             return this;
         }
-
         public PolicySettingsResponse build() {
             return new PolicySettingsResponse(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);
         }

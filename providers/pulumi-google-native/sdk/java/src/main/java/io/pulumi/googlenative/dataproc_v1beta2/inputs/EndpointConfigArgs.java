@@ -23,7 +23,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttpPortAccess")
-    private final @Nullable Input<Boolean> enableHttpPortAccess;
+      private final @Nullable Input<Boolean> enableHttpPortAccess;
 
     public Input<Boolean> getEnableHttpPortAccess() {
         return this.enableHttpPortAccess == null ? Input.empty() : this.enableHttpPortAccess;
@@ -66,7 +66,6 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.enableHttpPortAccess = Input.ofNullable(enableHttpPortAccess);
             return this;
         }
-
         public EndpointConfigArgs build() {
             return new EndpointConfigArgs(enableHttpPortAccess);
         }

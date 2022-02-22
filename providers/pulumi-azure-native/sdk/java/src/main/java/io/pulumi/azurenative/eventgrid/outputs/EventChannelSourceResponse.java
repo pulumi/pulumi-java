@@ -56,7 +56,6 @@ public final class EventChannelSourceResponse {
             this.source = source;
             return this;
         }
-
         public EventChannelSourceResponse build() {
             return new EventChannelSourceResponse(source);
         }

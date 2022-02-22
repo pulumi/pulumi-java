@@ -202,7 +202,6 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingServiceBusQueueEndpointPropertiesResponse build() {
             return new RoutingServiceBusQueueEndpointPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

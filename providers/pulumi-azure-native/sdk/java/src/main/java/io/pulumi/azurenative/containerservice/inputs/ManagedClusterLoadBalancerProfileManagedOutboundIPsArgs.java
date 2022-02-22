@@ -23,7 +23,7 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -66,7 +66,6 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
             this.count = Input.ofNullable(count);
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs build() {
             return new ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(count);
         }

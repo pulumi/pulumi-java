@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public GoogleCloudMlV1__ManualScalingResponse build() {
             return new GoogleCloudMlV1__ManualScalingResponse(nodes);
         }

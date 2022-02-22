@@ -19,7 +19,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-    private final Input<String> cacheName;
+        private final Input<String> cacheName;
 
     public Input<String> getCacheName() {
         return this.cacheName;
@@ -30,7 +30,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIP", required=true)
-    private final Input<String> endIP;
+        private final Input<String> endIP;
 
     public Input<String> getEndIP() {
         return this.endIP;
@@ -41,7 +41,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -63,7 +63,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIP", required=true)
-    private final Input<String> startIP;
+        private final Input<String> startIP;
 
     public Input<String> getStartIP() {
         return this.startIP;
@@ -167,7 +167,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.startIP = Input.of(Objects.requireNonNull(startIP));
             return this;
         }
-
         public FirewallRuleArgs build() {
             return new FirewallRuleArgs(cacheName, endIP, resourceGroupName, ruleName, startIP);
         }

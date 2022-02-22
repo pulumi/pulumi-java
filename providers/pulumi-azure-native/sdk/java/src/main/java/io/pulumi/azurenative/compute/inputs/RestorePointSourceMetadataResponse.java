@@ -28,7 +28,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diagnosticsProfile")
-    private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
+        private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
     public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
         return this.diagnosticsProfile == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsProfile);
@@ -39,7 +39,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="hardwareProfile")
-    private final @Nullable HardwareProfileResponse hardwareProfile;
+        private final @Nullable HardwareProfileResponse hardwareProfile;
 
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
@@ -50,7 +50,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable String licenseType;
+        private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -61,7 +61,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -72,7 +72,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable OSProfileResponse osProfile;
+        private final @Nullable OSProfileResponse osProfile;
 
     public Optional<OSProfileResponse> getOsProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
@@ -83,7 +83,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="securityProfile")
-    private final @Nullable SecurityProfileResponse securityProfile;
+        private final @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> getSecurityProfile() {
         return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
@@ -94,7 +94,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageProfile")
-    private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
+        private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
 
     public Optional<RestorePointSourceVMStorageProfileResponse> getStorageProfile() {
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
@@ -105,7 +105,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable String vmId;
+        private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
@@ -214,7 +214,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
             this.vmId = vmId;
             return this;
         }
-
         public RestorePointSourceMetadataResponse build() {
             return new RestorePointSourceMetadataResponse(diagnosticsProfile, hardwareProfile, licenseType, location, osProfile, securityProfile, storageProfile, vmId);
         }

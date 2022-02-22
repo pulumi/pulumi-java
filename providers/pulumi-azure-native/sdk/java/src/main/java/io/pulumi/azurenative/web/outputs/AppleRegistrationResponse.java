@@ -76,7 +76,6 @@ public final class AppleRegistrationResponse {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public AppleRegistrationResponse build() {
             return new AppleRegistrationResponse(clientId, clientSecretSettingName);
         }

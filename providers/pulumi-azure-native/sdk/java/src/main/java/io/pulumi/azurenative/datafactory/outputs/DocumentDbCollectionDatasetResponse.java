@@ -231,7 +231,6 @@ public final class DocumentDbCollectionDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbCollectionDatasetResponse build() {
             return new DocumentDbCollectionDatasetResponse(annotations, collectionName, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

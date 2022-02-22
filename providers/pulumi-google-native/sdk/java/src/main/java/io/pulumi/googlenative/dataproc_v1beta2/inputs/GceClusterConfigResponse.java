@@ -27,7 +27,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="internalIpOnly", required=true)
-    private final Boolean internalIpOnly;
+      private final Boolean internalIpOnly;
 
     public Boolean getInternalIpOnly() {
         return this.internalIpOnly;
@@ -38,7 +38,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -49,7 +49,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -60,7 +60,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nodeGroupAffinity", required=true)
-    private final NodeGroupAffinityResponse nodeGroupAffinity;
+      private final NodeGroupAffinityResponse nodeGroupAffinity;
 
     public NodeGroupAffinityResponse getNodeGroupAffinity() {
         return this.nodeGroupAffinity;
@@ -71,7 +71,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess", required=true)
-    private final String privateIpv6GoogleAccess;
+      private final String privateIpv6GoogleAccess;
 
     public String getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
@@ -82,7 +82,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="reservationAffinity", required=true)
-    private final ReservationAffinityResponse reservationAffinity;
+      private final ReservationAffinityResponse reservationAffinity;
 
     public ReservationAffinityResponse getReservationAffinity() {
         return this.reservationAffinity;
@@ -93,7 +93,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -104,7 +104,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="serviceAccountScopes", required=true)
-    private final List<String> serviceAccountScopes;
+      private final List<String> serviceAccountScopes;
 
     public List<String> getServiceAccountScopes() {
         return this.serviceAccountScopes;
@@ -115,7 +115,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="shieldedInstanceConfig", required=true)
-    private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
+      private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -126,7 +126,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subnetworkUri", required=true)
-    private final String subnetworkUri;
+      private final String subnetworkUri;
 
     public String getSubnetworkUri() {
         return this.subnetworkUri;
@@ -137,7 +137,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+      private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
@@ -148,7 +148,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="zoneUri", required=true)
-    private final String zoneUri;
+      private final String zoneUri;
 
     public String getZoneUri() {
         return this.zoneUri;
@@ -297,7 +297,6 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
             this.zoneUri = Objects.requireNonNull(zoneUri);
             return this;
         }
-
         public GceClusterConfigResponse build() {
             return new GceClusterConfigResponse(internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
         }

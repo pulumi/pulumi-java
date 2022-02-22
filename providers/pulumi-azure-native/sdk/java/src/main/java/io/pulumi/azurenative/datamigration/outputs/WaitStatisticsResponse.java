@@ -96,7 +96,6 @@ public final class WaitStatisticsResponse {
             this.waitType = Objects.requireNonNull(waitType);
             return this;
         }
-
         public WaitStatisticsResponse build() {
             return new WaitStatisticsResponse(waitCount, waitTimeMs, waitType);
         }

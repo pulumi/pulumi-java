@@ -77,7 +77,6 @@ public final class PortResponse {
             this.protocol = protocol;
             return this;
         }
-
         public PortResponse build() {
             return new PortResponse(port, protocol);
         }

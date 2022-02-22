@@ -25,7 +25,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceVault")
-    private final @Nullable Input<SubResourceArgs> sourceVault;
+        private final @Nullable Input<SubResourceArgs> sourceVault;
 
     public Input<SubResourceArgs> getSourceVault() {
         return this.sourceVault == null ? Input.empty() : this.sourceVault;
@@ -36,7 +36,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vaultCertificates")
-    private final @Nullable Input<List<VaultCertificateArgs>> vaultCertificates;
+        private final @Nullable Input<List<VaultCertificateArgs>> vaultCertificates;
 
     public Input<List<VaultCertificateArgs>> getVaultCertificates() {
         return this.vaultCertificates == null ? Input.empty() : this.vaultCertificates;
@@ -95,7 +95,6 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
             this.vaultCertificates = Input.ofNullable(vaultCertificates);
             return this;
         }
-
         public VaultSecretGroupArgs build() {
             return new VaultSecretGroupArgs(sourceVault, vaultCertificates);
         }

@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<Double>> values;
+      private final @Nullable Input<List<Double>> values;
 
     public Input<List<Double>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -63,7 +63,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs(values);
         }

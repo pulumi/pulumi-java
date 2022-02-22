@@ -335,7 +335,6 @@ public final class GetRegistryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(adminUserEnabled, creationDate, id, location, loginServer, name, networkRuleSet, policies, provisioningState, sku, status, storageAccount, tags, type);
         }

@@ -54,7 +54,6 @@ public final class VirtualHardDiskResponse {
             this.uri = uri;
             return this;
         }
-
         public VirtualHardDiskResponse build() {
             return new VirtualHardDiskResponse(uri);
         }

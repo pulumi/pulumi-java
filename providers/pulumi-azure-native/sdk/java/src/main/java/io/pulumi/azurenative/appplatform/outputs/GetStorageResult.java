@@ -139,7 +139,6 @@ public final class GetStorageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageResult build() {
             return new GetStorageResult(id, name, properties, systemData, type);
         }

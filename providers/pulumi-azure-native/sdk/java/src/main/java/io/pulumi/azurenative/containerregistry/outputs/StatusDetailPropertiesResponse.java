@@ -137,7 +137,6 @@ public final class StatusDetailPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StatusDetailPropertiesResponse build() {
             return new StatusDetailPropertiesResponse(code, correlationId, description, timestamp, type);
         }

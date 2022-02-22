@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__MeasurementResponse {
             this.stepCount = Objects.requireNonNull(stepCount);
             return this;
         }
-
         public GoogleCloudMlV1__MeasurementResponse build() {
             return new GoogleCloudMlV1__MeasurementResponse(elapsedTime, metrics, stepCount);
         }

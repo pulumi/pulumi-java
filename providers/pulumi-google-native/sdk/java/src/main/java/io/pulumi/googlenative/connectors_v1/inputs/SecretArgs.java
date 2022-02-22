@@ -23,7 +23,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable Input<String> secretVersion;
+      private final @Nullable Input<String> secretVersion;
 
     public Input<String> getSecretVersion() {
         return this.secretVersion == null ? Input.empty() : this.secretVersion;
@@ -66,7 +66,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.secretVersion = Input.ofNullable(secretVersion);
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(secretVersion);
         }

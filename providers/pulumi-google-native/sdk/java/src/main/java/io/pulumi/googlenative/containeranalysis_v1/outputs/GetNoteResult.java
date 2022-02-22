@@ -443,7 +443,6 @@ public final class GetNoteResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetNoteResult build() {
             return new GetNoteResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, expirationTime, image, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, shortDescription, updateTime, upgrade, vulnerability);
         }

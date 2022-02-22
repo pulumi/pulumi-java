@@ -254,7 +254,6 @@ public final class AmazonS3CompatibleLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonS3CompatibleLinkedServiceResponse build() {
             return new AmazonS3CompatibleLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, forcePathStyle, parameters, secretAccessKey, serviceUrl, type);
         }

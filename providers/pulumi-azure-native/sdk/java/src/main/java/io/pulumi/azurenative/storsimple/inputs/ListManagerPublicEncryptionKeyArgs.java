@@ -17,7 +17,7 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final String managerName;
+        private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -28,7 +28,7 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListManagerPublicEncryptionKeyArgs build() {
             return new ListManagerPublicEncryptionKeyArgs(managerName, resourceGroupName);
         }

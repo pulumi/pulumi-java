@@ -76,7 +76,6 @@ public final class RecommendedMachineConfigurationResponse {
             this.vCPUs = vCPUs;
             return this;
         }
-
         public RecommendedMachineConfigurationResponse build() {
             return new RecommendedMachineConfigurationResponse(memory, vCPUs);
         }

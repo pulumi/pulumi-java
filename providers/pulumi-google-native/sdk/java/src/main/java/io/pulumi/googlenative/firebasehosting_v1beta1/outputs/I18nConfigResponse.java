@@ -52,7 +52,6 @@ public final class I18nConfigResponse {
             this.root = Objects.requireNonNull(root);
             return this;
         }
-
         public I18nConfigResponse build() {
             return new I18nConfigResponse(root);
         }

@@ -139,7 +139,6 @@ public final class LoadBalancerInfoResponse {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public LoadBalancerInfoResponse build() {
             return new LoadBalancerInfoResponse(backendType, backendUri, backends, healthCheckUri, loadBalancerType);
         }

@@ -161,7 +161,6 @@ public final class ExecutionConfigResponse {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
         }

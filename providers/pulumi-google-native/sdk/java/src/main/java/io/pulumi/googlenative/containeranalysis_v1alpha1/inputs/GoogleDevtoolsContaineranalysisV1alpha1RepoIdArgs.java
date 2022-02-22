@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
      * 
      */
     @InputImport(name="projectRepoId")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> getProjectRepoId() {
         return this.projectRepoId == null ? Input.empty() : this.projectRepoId;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -94,7 +94,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(projectRepoId, uid);
         }

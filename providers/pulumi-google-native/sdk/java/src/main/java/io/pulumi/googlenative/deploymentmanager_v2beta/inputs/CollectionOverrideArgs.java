@@ -24,7 +24,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="collection")
-    private final @Nullable Input<String> collection;
+      private final @Nullable Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection == null ? Input.empty() : this.collection;
@@ -35,7 +35,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Input<OptionsArgs> options;
 
     public Input<OptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -94,7 +94,6 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
             this.options = Input.ofNullable(options);
             return this;
         }
-
         public CollectionOverrideArgs build() {
             return new CollectionOverrideArgs(collection, options);
         }

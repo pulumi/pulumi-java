@@ -144,7 +144,6 @@ public final class MigrateProjectPropertiesResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public MigrateProjectPropertiesResponse build() {
             return new MigrateProjectPropertiesResponse(lastSummaryRefreshedTime, provisioningState, refreshSummaryState, registeredTools, summary);
         }

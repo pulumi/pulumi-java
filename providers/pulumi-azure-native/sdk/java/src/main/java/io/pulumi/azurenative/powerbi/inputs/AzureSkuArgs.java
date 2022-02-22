@@ -21,7 +21,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,AzureSkuName>> name;
+        private final Input<Either<String,AzureSkuName>> name;
 
     public Input<Either<String,AzureSkuName>> getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<Either<String,AzureSkuTier>> tier;
+        private final Input<Either<String,AzureSkuTier>> tier;
 
     public Input<Either<String,AzureSkuTier>> getTier() {
         return this.tier;
@@ -91,7 +91,6 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public AzureSkuArgs build() {
             return new AzureSkuArgs(name, tier);
         }

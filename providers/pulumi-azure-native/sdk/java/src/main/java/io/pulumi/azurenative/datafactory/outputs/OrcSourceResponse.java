@@ -197,7 +197,6 @@ public final class OrcSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcSourceResponse build() {
             return new OrcSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

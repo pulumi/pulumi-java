@@ -146,7 +146,6 @@ public final class CustomDataSourceLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomDataSourceLinkedServiceResponse build() {
             return new CustomDataSourceLinkedServiceResponse(annotations, connectVia, description, parameters, type);
         }

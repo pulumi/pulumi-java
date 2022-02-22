@@ -181,7 +181,6 @@ public final class GetProjectResult {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);
         }

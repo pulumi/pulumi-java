@@ -19,7 +19,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentItemId")
-    private final @Nullable Input<String> contentItemId;
+        private final @Nullable Input<String> contentItemId;
 
     public Input<String> getContentItemId() {
         return this.contentItemId == null ? Input.empty() : this.contentItemId;
@@ -30,7 +30,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypeId", required=true)
-    private final Input<String> contentTypeId;
+        private final Input<String> contentTypeId;
 
     public Input<String> getContentTypeId() {
         return this.contentTypeId;
@@ -41,7 +41,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -141,7 +141,6 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public ContentItemArgs build() {
             return new ContentItemArgs(contentItemId, contentTypeId, resourceGroupName, serviceName);
         }

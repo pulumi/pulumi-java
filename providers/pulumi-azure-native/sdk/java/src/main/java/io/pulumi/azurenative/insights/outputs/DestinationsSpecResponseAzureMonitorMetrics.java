@@ -56,7 +56,6 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
             this.name = name;
             return this;
         }
-
         public DestinationsSpecResponseAzureMonitorMetrics build() {
             return new DestinationsSpecResponseAzureMonitorMetrics(name);
         }

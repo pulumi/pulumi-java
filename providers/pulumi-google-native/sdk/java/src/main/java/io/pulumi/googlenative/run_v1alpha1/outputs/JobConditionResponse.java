@@ -158,7 +158,6 @@ public final class JobConditionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobConditionResponse build() {
             return new JobConditionResponse(lastTransitionTime, message, reason, severity, status, type);
         }

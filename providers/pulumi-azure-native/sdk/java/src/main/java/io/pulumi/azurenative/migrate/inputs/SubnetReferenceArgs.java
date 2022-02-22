@@ -23,7 +23,7 @@ public final class SubnetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class SubnetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final Input<String> sourceArmResourceId;
+        private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -93,7 +93,6 @@ public final class SubnetReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
-
         public SubnetReferenceArgs build() {
             return new SubnetReferenceArgs(name, sourceArmResourceId);
         }

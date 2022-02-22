@@ -21,7 +21,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="packageName", required=true)
-    private final String packageName;
+      private final String packageName;
 
     public String getPackageName() {
         return this.packageName;
@@ -32,7 +32,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sha1Fingerprint", required=true)
-    private final String sha1Fingerprint;
+      private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
@@ -81,7 +81,6 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public V2AndroidApplicationResponse build() {
             return new V2AndroidApplicationResponse(packageName, sha1Fingerprint);
         }

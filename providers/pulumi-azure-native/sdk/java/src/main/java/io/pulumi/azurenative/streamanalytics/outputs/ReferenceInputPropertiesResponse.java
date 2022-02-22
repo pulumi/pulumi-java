@@ -147,7 +147,6 @@ public final class ReferenceInputPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReferenceInputPropertiesResponse build() {
             return new ReferenceInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }

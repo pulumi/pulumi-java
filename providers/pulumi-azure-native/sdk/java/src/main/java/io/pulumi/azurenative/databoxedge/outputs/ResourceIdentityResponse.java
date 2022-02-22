@@ -97,7 +97,6 @@ public final class ResourceIdentityResponse {
             this.type = type;
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(principalId, tenantId, type);
         }

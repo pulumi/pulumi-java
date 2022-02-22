@@ -540,7 +540,6 @@ public final class X12EnvelopeSettingsResponse {
             this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
             return this;
         }
-
         public X12EnvelopeSettingsResponse build() {
             return new X12EnvelopeSettingsResponse(controlStandardsId, controlVersionNumber, enableDefaultGroupHeaders, functionalGroupId, groupControlNumberLowerBound, groupControlNumberUpperBound, groupHeaderAgencyCode, groupHeaderDateFormat, groupHeaderTimeFormat, groupHeaderVersion, interchangeControlNumberLowerBound, interchangeControlNumberUpperBound, overwriteExistingTransactionSetControlNumber, receiverApplicationId, rolloverGroupControlNumber, rolloverInterchangeControlNumber, rolloverTransactionSetControlNumber, senderApplicationId, transactionSetControlNumberLowerBound, transactionSetControlNumberPrefix, transactionSetControlNumberSuffix, transactionSetControlNumberUpperBound, usageIndicator, useControlStandardsIdAsRepetitionCharacter);
         }

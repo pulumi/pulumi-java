@@ -74,7 +74,6 @@ public final class ApplianceCredentialKubeconfigResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApplianceCredentialKubeconfigResponse build() {
             return new ApplianceCredentialKubeconfigResponse(name, value);
         }

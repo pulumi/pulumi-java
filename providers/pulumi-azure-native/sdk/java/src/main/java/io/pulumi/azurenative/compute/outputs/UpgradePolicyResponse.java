@@ -99,7 +99,6 @@ public final class UpgradePolicyResponse {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
-
         public UpgradePolicyResponse build() {
             return new UpgradePolicyResponse(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }

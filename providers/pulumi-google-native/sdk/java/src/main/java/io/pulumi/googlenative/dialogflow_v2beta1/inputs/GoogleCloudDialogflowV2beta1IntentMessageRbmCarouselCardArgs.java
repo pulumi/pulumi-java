@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * 
      */
     @InputImport(name="cardContents", required=true)
-    private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
+      private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> getCardContents() {
         return this.cardContents;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * 
      */
     @InputImport(name="cardWidth", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
+      private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> getCardWidth() {
         return this.cardWidth;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
             this.cardWidth = Input.of(Objects.requireNonNull(cardWidth));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs(cardContents, cardWidth);
         }

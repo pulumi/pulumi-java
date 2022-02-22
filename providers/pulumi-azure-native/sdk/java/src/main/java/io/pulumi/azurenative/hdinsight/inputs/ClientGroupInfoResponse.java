@@ -23,7 +23,7 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable String groupId;
+        private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -34,7 +34,7 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable String groupName;
+        private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
@@ -83,7 +83,6 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
             this.groupName = groupName;
             return this;
         }
-
         public ClientGroupInfoResponse build() {
             return new ClientGroupInfoResponse(groupId, groupName);
         }

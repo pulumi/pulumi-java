@@ -225,7 +225,6 @@ public final class GetIotConnectorFhirDestinationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotConnectorFhirDestinationResult build() {
             return new GetIotConnectorFhirDestinationResult(etag, fhirMapping, fhirServiceResourceId, id, location, name, resourceIdentityResolutionType, systemData, type);
         }

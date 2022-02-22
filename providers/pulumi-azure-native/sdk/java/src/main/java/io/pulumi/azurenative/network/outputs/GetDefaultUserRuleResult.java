@@ -375,7 +375,6 @@ public final class GetDefaultUserRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDefaultUserRuleResult build() {
             return new GetDefaultUserRuleResult(description, destinationPortRanges, destinations, direction, displayName, etag, flag, id, kind, name, protocol, provisioningState, sourcePortRanges, sources, systemData, type);
         }

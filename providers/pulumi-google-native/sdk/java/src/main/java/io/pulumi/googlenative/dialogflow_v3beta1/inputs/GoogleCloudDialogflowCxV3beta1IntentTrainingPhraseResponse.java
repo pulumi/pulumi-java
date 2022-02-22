@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
      * 
      */
     @InputImport(name="parts", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
+      private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> getParts() {
         return this.parts;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
      * 
      */
     @InputImport(name="repeatCount", required=true)
-    private final Integer repeatCount;
+      private final Integer repeatCount;
 
     public Integer getRepeatCount() {
         return this.repeatCount;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
             this.repeatCount = Objects.requireNonNull(repeatCount);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(parts, repeatCount);
         }

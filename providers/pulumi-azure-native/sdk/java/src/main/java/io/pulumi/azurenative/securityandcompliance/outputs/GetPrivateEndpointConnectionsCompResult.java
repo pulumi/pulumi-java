@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsCompResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsCompResult build() {
             return new GetPrivateEndpointConnectionsCompResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

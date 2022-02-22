@@ -140,7 +140,6 @@ public final class ListWebAppMetadataSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppMetadataSlotResult build() {
             return new ListWebAppMetadataSlotResult(id, kind, name, properties, type);
         }

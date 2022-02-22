@@ -75,7 +75,6 @@ public final class RouteResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public RouteResponse build() {
             return new RouteResponse(path, port);
         }

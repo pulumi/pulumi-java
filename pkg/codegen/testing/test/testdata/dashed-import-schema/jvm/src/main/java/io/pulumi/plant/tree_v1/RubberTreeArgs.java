@@ -21,35 +21,35 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     public static final RubberTreeArgs Empty = new RubberTreeArgs();
 
     @InputImport(name="container")
-    private final @Nullable Input<ContainerArgs> container;
+        private final @Nullable Input<ContainerArgs> container;
 
     public Input<ContainerArgs> getContainer() {
         return this.container == null ? Input.empty() : this.container;
     }
 
     @InputImport(name="diameter", required=true)
-    private final Input<Diameter> diameter;
+        private final Input<Diameter> diameter;
 
     public Input<Diameter> getDiameter() {
         return this.diameter;
     }
 
     @InputImport(name="farm")
-    private final @Nullable Input<Either<Farm,String>> farm;
+        private final @Nullable Input<Either<Farm,String>> farm;
 
     public Input<Either<Farm,String>> getFarm() {
         return this.farm == null ? Input.empty() : this.farm;
     }
 
     @InputImport(name="size")
-    private final @Nullable Input<TreeSize> size;
+        private final @Nullable Input<TreeSize> size;
 
     public Input<TreeSize> getSize() {
         return this.size == null ? Input.empty() : this.size;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<RubberTreeVariety> type;
+        private final Input<RubberTreeVariety> type;
 
     public Input<RubberTreeVariety> getType() {
         return this.type;
@@ -153,7 +153,6 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RubberTreeArgs build() {
             return new RubberTreeArgs(container, diameter, farm, size, type);
         }

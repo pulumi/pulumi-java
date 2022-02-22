@@ -310,7 +310,6 @@ public final class GetDiskPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskPoolResult build() {
             return new GetDiskPoolResult(additionalCapabilities, availabilityZones, disks, id, location, name, provisioningState, status, subnetId, systemData, tags, tier, type);
         }

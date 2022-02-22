@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+      private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fee")
-    private final @Nullable Input<GoogleTypeMoneyArgs> fee;
+      private final @Nullable Input<GoogleTypeMoneyArgs> fee;
 
     public Input<GoogleTypeMoneyArgs> getFee() {
         return this.fee == null ? Input.empty() : this.fee;
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+      private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -120,7 +120,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RateRangeArgs build() {
             return new GoogleCloudApigeeV1RateRangeArgs(end, fee, start);
         }

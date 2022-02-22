@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="condition", required=true)
-    private final String condition;
+      private final String condition;
 
     public String getCondition() {
         return this.condition;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="intent", required=true)
-    private final String intent;
+      private final String intent;
 
     public String getIntent() {
         return this.intent;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="targetFlow", required=true)
-    private final String targetFlow;
+      private final String targetFlow;
 
     public String getTargetFlow() {
         return this.targetFlow;
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="targetPage", required=true)
-    private final String targetPage;
+      private final String targetPage;
 
     public String getTargetPage() {
         return this.targetPage;
@@ -77,7 +77,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * 
      */
     @InputImport(name="triggerFulfillment", required=true)
-    private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
+      private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
@@ -166,7 +166,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TransitionRouteResponse build() {
             return new GoogleCloudDialogflowCxV3TransitionRouteResponse(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

@@ -119,7 +119,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(chainName, guestFlush, labels, storageLocations);
         }

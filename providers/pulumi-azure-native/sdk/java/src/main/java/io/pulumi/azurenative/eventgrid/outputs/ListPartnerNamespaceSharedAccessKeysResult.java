@@ -76,7 +76,6 @@ public final class ListPartnerNamespaceSharedAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListPartnerNamespaceSharedAccessKeysResult build() {
             return new ListPartnerNamespaceSharedAccessKeysResult(key1, key2);
         }

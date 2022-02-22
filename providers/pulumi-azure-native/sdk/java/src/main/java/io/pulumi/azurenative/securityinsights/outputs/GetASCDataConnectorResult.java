@@ -184,7 +184,6 @@ public final class GetASCDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetASCDataConnectorResult build() {
             return new GetASCDataConnectorResult(dataTypes, etag, id, kind, name, subscriptionId, type);
         }

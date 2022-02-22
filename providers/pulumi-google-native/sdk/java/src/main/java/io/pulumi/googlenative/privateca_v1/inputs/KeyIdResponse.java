@@ -21,7 +21,7 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -59,7 +59,6 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public KeyIdResponse build() {
             return new KeyIdResponse(keyId);
         }

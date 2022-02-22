@@ -74,7 +74,6 @@ public final class GetPackageDownloadURLResult {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public GetPackageDownloadURLResult build() {
             return new GetPackageDownloadURLResult(downloadUrl, expirationTime);
         }

@@ -75,7 +75,6 @@ public final class ChannelCredentialsResponse {
             this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
             return this;
         }
-
         public ChannelCredentialsResponse build() {
             return new ChannelCredentialsResponse(certificates, channelCredentialType);
         }

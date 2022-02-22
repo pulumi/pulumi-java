@@ -25,7 +25,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="authorizations")
-    private final @Nullable List<AuthorizationResponse> authorizations;
+        private final @Nullable List<AuthorizationResponse> authorizations;
 
     public List<AuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
@@ -36,7 +36,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="managedByTenantId")
-    private final @Nullable String managedByTenantId;
+        private final @Nullable String managedByTenantId;
 
     public Optional<String> getManagedByTenantId() {
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
@@ -58,7 +58,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="managedByTenantName")
-    private final @Nullable String managedByTenantName;
+        private final @Nullable String managedByTenantName;
 
     public Optional<String> getManagedByTenantName() {
         return this.managedByTenantName == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantName);
@@ -69,7 +69,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="manageeTenantId")
-    private final @Nullable String manageeTenantId;
+        private final @Nullable String manageeTenantId;
 
     public Optional<String> getManageeTenantId() {
         return this.manageeTenantId == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantId);
@@ -80,7 +80,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="manageeTenantName")
-    private final @Nullable String manageeTenantName;
+        private final @Nullable String manageeTenantName;
 
     public Optional<String> getManageeTenantName() {
         return this.manageeTenantName == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantName);
@@ -91,7 +91,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -102,7 +102,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
      * 
      */
     @InputImport(name="registrationDefinitionName")
-    private final @Nullable String registrationDefinitionName;
+        private final @Nullable String registrationDefinitionName;
 
     public Optional<String> getRegistrationDefinitionName() {
         return this.registrationDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.registrationDefinitionName);
@@ -211,7 +211,6 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponseProperties build() {
             return new RegistrationAssignmentPropertiesResponseProperties(authorizations, description, managedByTenantId, managedByTenantName, manageeTenantId, manageeTenantName, provisioningState, registrationDefinitionName);
         }

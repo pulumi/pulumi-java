@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<String> operator;
+      private final @Nullable Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -171,7 +171,6 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudApigeeV1QueryMetricArgs build() {
             return new GoogleCloudApigeeV1QueryMetricArgs(alias, function, name, operator, value);
         }

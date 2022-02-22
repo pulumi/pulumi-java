@@ -17,7 +17,7 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataCollectionRuleName", required=true)
-    private final String dataCollectionRuleName;
+        private final String dataCollectionRuleName;
 
     public String getDataCollectionRuleName() {
         return this.dataCollectionRuleName;
@@ -28,7 +28,7 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDataCollectionRuleArgs build() {
             return new GetDataCollectionRuleArgs(dataCollectionRuleName, resourceGroupName);
         }

@@ -23,7 +23,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deprecationDescription")
-    private final @Nullable Input<String> deprecationDescription;
+      private final @Nullable Input<String> deprecationDescription;
 
     public Input<String> getDeprecationDescription() {
         return this.deprecationDescription == null ? Input.empty() : this.deprecationDescription;
@@ -34,7 +34,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -119,7 +119,6 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public DocumentationRuleArgs build() {
             return new DocumentationRuleArgs(deprecationDescription, description, selector);
         }

@@ -99,7 +99,6 @@ public final class ListMachineLearningComputeNodesResult {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ListMachineLearningComputeNodesResult build() {
             return new ListMachineLearningComputeNodesResult(computeType, nextLink, nodes);
         }

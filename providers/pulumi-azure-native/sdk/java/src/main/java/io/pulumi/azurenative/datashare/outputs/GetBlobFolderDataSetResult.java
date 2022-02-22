@@ -266,7 +266,6 @@ public final class GetBlobFolderDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobFolderDataSetResult build() {
             return new GetBlobFolderDataSetResult(containerName, dataSetId, id, kind, name, prefix, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

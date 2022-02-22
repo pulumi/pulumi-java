@@ -97,7 +97,6 @@ public final class EncryptionSetIdentityResponse {
             this.type = type;
             return this;
         }
-
         public EncryptionSetIdentityResponse build() {
             return new EncryptionSetIdentityResponse(principalId, tenantId, type);
         }

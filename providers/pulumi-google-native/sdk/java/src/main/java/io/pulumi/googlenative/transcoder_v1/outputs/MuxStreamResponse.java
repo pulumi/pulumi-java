@@ -139,7 +139,6 @@ public final class MuxStreamResponse {
             this.segmentSettings = Objects.requireNonNull(segmentSettings);
             return this;
         }
-
         public MuxStreamResponse build() {
             return new MuxStreamResponse(container, elementaryStreams, fileName, key, segmentSettings);
         }

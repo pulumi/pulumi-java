@@ -123,7 +123,6 @@ public final class RtspSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RtspSourceResponse build() {
             return new RtspSourceResponse(endpoint, name, transport, type);
         }

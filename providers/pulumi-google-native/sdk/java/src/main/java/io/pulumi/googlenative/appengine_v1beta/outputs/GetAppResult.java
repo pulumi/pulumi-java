@@ -322,7 +322,6 @@ public final class GetAppResult {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(authDomain, codeBucket, databaseType, defaultBucket, defaultCookieExpiration, defaultHostname, dispatchRules, featureSettings, gcrDomain, iap, location, name, serviceAccount, servingStatus);
         }

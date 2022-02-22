@@ -98,7 +98,6 @@ public final class AFDDomainHttpsParametersResponse {
             this.secret = secret;
             return this;
         }
-
         public AFDDomainHttpsParametersResponse build() {
             return new AFDDomainHttpsParametersResponse(certificateType, minimumTlsVersion, secret);
         }

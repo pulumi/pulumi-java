@@ -17,7 +17,7 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sqlMigrationServiceName", required=true)
-    private final String sqlMigrationServiceName;
+        private final String sqlMigrationServiceName;
 
     public String getSqlMigrationServiceName() {
         return this.sqlMigrationServiceName;
@@ -77,7 +77,6 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
             this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
             return this;
         }
-
         public ListSqlMigrationServiceAuthKeysArgs build() {
             return new ListSqlMigrationServiceAuthKeysArgs(resourceGroupName, sqlMigrationServiceName);
         }

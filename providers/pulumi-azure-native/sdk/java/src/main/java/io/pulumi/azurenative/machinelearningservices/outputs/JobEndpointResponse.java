@@ -120,7 +120,6 @@ public final class JobEndpointResponse {
             this.properties = properties;
             return this;
         }
-
         public JobEndpointResponse build() {
             return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
         }

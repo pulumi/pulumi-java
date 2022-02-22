@@ -24,7 +24,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="amount", required=true)
-    private final MoneyResponse amount;
+      private final MoneyResponse amount;
 
     public MoneyResponse getAmount() {
         return this.amount;
@@ -35,7 +35,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expectedUnitsPerYear", required=true)
-    private final Double expectedUnitsPerYear;
+      private final Double expectedUnitsPerYear;
 
     public Double getExpectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
@@ -57,7 +57,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="range", required=true)
-    private final CompensationRangeResponse range;
+      private final CompensationRangeResponse range;
 
     public CompensationRangeResponse getRange() {
         return this.range;
@@ -68,7 +68,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -79,7 +79,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -168,7 +168,6 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CompensationEntryResponse build() {
             return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
         }

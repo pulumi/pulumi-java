@@ -26,7 +26,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appliesToGroups")
-    private final @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups;
+        private final @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
     public Input<List<ConnectivityGroupItemArgs>> getAppliesToGroups() {
         return this.appliesToGroups == null ? Input.empty() : this.appliesToGroups;
@@ -37,7 +37,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable Input<String> configurationName;
+        private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -48,7 +48,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectivityTopology", required=true)
-    private final Input<Either<String,ConnectivityTopology>> connectivityTopology;
+        private final Input<Either<String,ConnectivityTopology>> connectivityTopology;
 
     public Input<Either<String,ConnectivityTopology>> getConnectivityTopology() {
         return this.connectivityTopology;
@@ -59,7 +59,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteExistingPeering")
-    private final @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering;
+        private final @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
     public Input<Either<String,DeleteExistingPeering>> getDeleteExistingPeering() {
         return this.deleteExistingPeering == null ? Input.empty() : this.deleteExistingPeering;
@@ -70,7 +70,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -92,7 +92,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hubs")
-    private final @Nullable Input<List<HubArgs>> hubs;
+        private final @Nullable Input<List<HubArgs>> hubs;
 
     public Input<List<HubArgs>> getHubs() {
         return this.hubs == null ? Input.empty() : this.hubs;
@@ -103,7 +103,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isGlobal")
-    private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
+        private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
 
     public Input<Either<String,IsGlobal>> getIsGlobal() {
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
@@ -114,7 +114,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final Input<String> networkManagerName;
+        private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -125,7 +125,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -304,7 +304,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ConnectivityConfigurationArgs build() {
             return new ConnectivityConfigurationArgs(appliesToGroups, configurationName, connectivityTopology, deleteExistingPeering, description, displayName, hubs, isGlobal, networkManagerName, resourceGroupName);
         }

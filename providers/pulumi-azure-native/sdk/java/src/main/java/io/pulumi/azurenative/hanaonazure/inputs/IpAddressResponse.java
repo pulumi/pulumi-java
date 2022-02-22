@@ -23,7 +23,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -61,7 +61,6 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public IpAddressResponse build() {
             return new IpAddressResponse(ipAddress);
         }

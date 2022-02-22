@@ -182,7 +182,6 @@ public final class DelegationResponse {
             this.type = type;
             return this;
         }
-
         public DelegationResponse build() {
             return new DelegationResponse(actions, etag, id, name, provisioningState, serviceName, type);
         }

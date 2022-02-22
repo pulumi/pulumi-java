@@ -23,7 +23,7 @@ public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -83,7 +83,6 @@ public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resourc
             this.type = type;
             return this;
         }
-
         public ReferenceDataSetKeyPropertyResponse build() {
             return new ReferenceDataSetKeyPropertyResponse(name, type);
         }

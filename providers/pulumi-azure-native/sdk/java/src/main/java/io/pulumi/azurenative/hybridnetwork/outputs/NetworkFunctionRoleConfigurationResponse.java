@@ -229,7 +229,6 @@ public final class NetworkFunctionRoleConfigurationResponse {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
-
         public NetworkFunctionRoleConfigurationResponse build() {
             return new NetworkFunctionRoleConfigurationResponse(customProfile, networkInterfaces, osProfile, roleName, roleType, storageProfile, userDataParameters, userDataTemplate, virtualMachineSize);
         }

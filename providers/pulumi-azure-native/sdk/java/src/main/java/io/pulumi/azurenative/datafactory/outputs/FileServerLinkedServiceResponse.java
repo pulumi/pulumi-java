@@ -233,7 +233,6 @@ public final class FileServerLinkedServiceResponse {
             this.userId = userId;
             return this;
         }
-
         public FileServerLinkedServiceResponse build() {
             return new FileServerLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, type, userId);
         }

@@ -22,14 +22,14 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * 
      */
     @InputImport(name="maxRetentionDays", required=true)
-    private final Integer maxRetentionDays;
+      private final Integer maxRetentionDays;
 
     public Integer getMaxRetentionDays() {
         return this.maxRetentionDays;
     }
 
     @InputImport(name="onPolicySwitch", required=true)
-    private final String onPolicySwitch;
+      private final String onPolicySwitch;
 
     public String getOnPolicySwitch() {
         return this.onPolicySwitch;
@@ -40,7 +40,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * 
      */
     @InputImport(name="onSourceDiskDelete", required=true)
-    private final String onSourceDiskDelete;
+      private final String onSourceDiskDelete;
 
     public String getOnSourceDiskDelete() {
         return this.onSourceDiskDelete;
@@ -99,7 +99,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
             this.onSourceDiskDelete = Objects.requireNonNull(onSourceDiskDelete);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(maxRetentionDays, onPolicySwitch, onSourceDiskDelete);
         }

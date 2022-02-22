@@ -76,7 +76,6 @@ public final class CodeConfigurationResponse {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }
-
         public CodeConfigurationResponse build() {
             return new CodeConfigurationResponse(codeId, scoringScript);
         }

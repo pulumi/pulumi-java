@@ -65,7 +65,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities", required=true)
-    private final Input<List<Object>> activities;
+        private final Input<List<Object>> activities;
 
     public Input<List<Object>> getActivities() {
         return this.activities;
@@ -76,7 +76,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -87,7 +87,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<ExpressionArgs> expression;
+        private final Input<ExpressionArgs> expression;
 
     public Input<ExpressionArgs> getExpression() {
         return this.expression;
@@ -109,7 +109,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -120,7 +120,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Object> timeout;
+        private final @Nullable Input<Object> timeout;
 
     public Input<Object> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -132,7 +132,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -292,7 +292,6 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public UntilActivityArgs build() {
             return new UntilActivityArgs(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }

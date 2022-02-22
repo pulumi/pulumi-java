@@ -248,7 +248,6 @@ public final class GetBotResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

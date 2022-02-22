@@ -22,7 +22,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-    private final @Nullable Integer analyticalStorageTtl;
+        private final @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> getAnalyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
@@ -33,7 +33,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Integer defaultTtl;
+        private final @Nullable Integer defaultTtl;
 
     public Optional<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
@@ -44,7 +44,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -55,7 +55,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -66,7 +66,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+        private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -77,7 +77,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable CassandraSchemaResponse schema;
+        private final @Nullable CassandraSchemaResponse schema;
 
     public Optional<CassandraSchemaResponse> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -88,7 +88,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+        private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -187,7 +187,6 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public CassandraTableGetPropertiesResponseResource build() {
             return new CassandraTableGetPropertiesResponseResource(analyticalStorageTtl, defaultTtl, etag, id, rid, schema, ts);
         }

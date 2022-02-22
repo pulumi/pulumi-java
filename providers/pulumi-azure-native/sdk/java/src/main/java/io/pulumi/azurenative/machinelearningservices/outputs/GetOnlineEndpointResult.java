@@ -227,7 +227,6 @@ public final class GetOnlineEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOnlineEndpointResult build() {
             return new GetOnlineEndpointResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

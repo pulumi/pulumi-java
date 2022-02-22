@@ -54,7 +54,6 @@ public final class VirtualHubRouteTableResponse {
             this.routes = routes;
             return this;
         }
-
         public VirtualHubRouteTableResponse build() {
             return new VirtualHubRouteTableResponse(routes);
         }

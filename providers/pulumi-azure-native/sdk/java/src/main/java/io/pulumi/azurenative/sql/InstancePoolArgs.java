@@ -24,7 +24,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancePoolName")
-    private final @Nullable Input<String> instancePoolName;
+        private final @Nullable Input<String> instancePoolName;
 
     public Input<String> getInstancePoolName() {
         return this.instancePoolName == null ? Input.empty() : this.instancePoolName;
@@ -35,7 +35,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType", required=true)
-    private final Input<Either<String,InstancePoolLicenseType>> licenseType;
+        private final Input<Either<String,InstancePoolLicenseType>> licenseType;
 
     public Input<Either<String,InstancePoolLicenseType>> getLicenseType() {
         return this.licenseType;
@@ -46,7 +46,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -79,7 +79,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -90,7 +90,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vCores", required=true)
-    private final Input<Integer> vCores;
+        private final Input<Integer> vCores;
 
     public Input<Integer> getVCores() {
         return this.vCores;
@@ -250,7 +250,6 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.vCores = Input.of(Objects.requireNonNull(vCores));
             return this;
         }
-
         public InstancePoolArgs build() {
             return new InstancePoolArgs(instancePoolName, licenseType, location, resourceGroupName, sku, subnetId, tags, vCores);
         }

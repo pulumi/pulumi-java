@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
      * 
      */
     @InputImport(name="metadataBasedReadinessSignal")
-    private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+      private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
     public Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal == null ? Input.empty() : this.metadataBasedReadinessSignal;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
             this.metadataBasedReadinessSignal = Input.ofNullable(metadataBasedReadinessSignal);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyArgs(metadataBasedReadinessSignal);
         }

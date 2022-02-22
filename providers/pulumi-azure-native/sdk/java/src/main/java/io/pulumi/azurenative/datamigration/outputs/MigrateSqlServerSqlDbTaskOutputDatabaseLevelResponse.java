@@ -375,7 +375,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(databaseName, endedOn, errorCount, errorPrefix, exceptionsAndWarnings, id, message, numberOfObjects, numberOfObjectsCompleted, objectSummary, resultPrefix, resultType, stage, startedOn, state, statusMessage);
         }

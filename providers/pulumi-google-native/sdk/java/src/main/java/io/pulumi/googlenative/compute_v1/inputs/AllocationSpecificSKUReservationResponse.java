@@ -22,7 +22,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="count", required=true)
-    private final String count;
+      private final String count;
 
     public String getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="inUseCount", required=true)
-    private final String inUseCount;
+      private final String inUseCount;
 
     public String getInUseCount() {
         return this.inUseCount;
@@ -44,7 +44,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="instanceProperties", required=true)
-    private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
+      private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;
@@ -103,7 +103,6 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationResponse build() {
             return new AllocationSpecificSKUReservationResponse(count, inUseCount, instanceProperties);
         }

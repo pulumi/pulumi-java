@@ -76,7 +76,6 @@ public final class OAuth2AuthenticationSettingsContractResponse {
             this.scope = scope;
             return this;
         }
-
         public OAuth2AuthenticationSettingsContractResponse build() {
             return new OAuth2AuthenticationSettingsContractResponse(authorizationServerId, scope);
         }

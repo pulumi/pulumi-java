@@ -416,7 +416,6 @@ public final class DPMProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public DPMProtectedItemResponse build() {
             return new DPMProtectedItemResponse(backupEngineName, backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastRecoveryPoint, policyId, protectedItemType, protectionState, sourceResourceId, workloadType);
         }

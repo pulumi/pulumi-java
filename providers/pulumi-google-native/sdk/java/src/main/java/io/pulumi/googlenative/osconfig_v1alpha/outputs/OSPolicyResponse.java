@@ -119,7 +119,6 @@ public final class OSPolicyResponse {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public OSPolicyResponse build() {
             return new OSPolicyResponse(allowNoResourceGroupMatch, description, mode, resourceGroups);
         }

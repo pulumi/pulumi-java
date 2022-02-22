@@ -77,7 +77,6 @@ public final class SkuResponse {
             this.plan = plan;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, plan);
         }

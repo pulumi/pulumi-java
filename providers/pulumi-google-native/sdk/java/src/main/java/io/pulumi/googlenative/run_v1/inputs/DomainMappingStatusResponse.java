@@ -25,7 +25,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<GoogleCloudRunV1ConditionResponse> conditions;
+      private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
     public List<GoogleCloudRunV1ConditionResponse> getConditions() {
         return this.conditions;
@@ -36,7 +36,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="mappedRouteName", required=true)
-    private final String mappedRouteName;
+      private final String mappedRouteName;
 
     public String getMappedRouteName() {
         return this.mappedRouteName;
@@ -47,7 +47,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="observedGeneration", required=true)
-    private final Integer observedGeneration;
+      private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
         return this.observedGeneration;
@@ -58,7 +58,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceRecords", required=true)
-    private final List<ResourceRecordResponse> resourceRecords;
+      private final List<ResourceRecordResponse> resourceRecords;
 
     public List<ResourceRecordResponse> getResourceRecords() {
         return this.resourceRecords;
@@ -69,7 +69,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -148,7 +148,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DomainMappingStatusResponse build() {
             return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }

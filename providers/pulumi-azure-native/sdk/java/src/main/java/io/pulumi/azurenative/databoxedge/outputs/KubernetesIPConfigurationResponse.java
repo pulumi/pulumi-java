@@ -76,7 +76,6 @@ public final class KubernetesIPConfigurationResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public KubernetesIPConfigurationResponse build() {
             return new KubernetesIPConfigurationResponse(ipAddress, port);
         }

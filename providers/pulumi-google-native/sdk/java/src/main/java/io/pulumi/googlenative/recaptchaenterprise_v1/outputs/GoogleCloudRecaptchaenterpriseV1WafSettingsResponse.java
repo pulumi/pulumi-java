@@ -74,7 +74,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
             this.wafService = Objects.requireNonNull(wafService);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(wafFeature, wafService);
         }

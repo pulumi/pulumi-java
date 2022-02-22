@@ -180,7 +180,6 @@ public final class GetServiceBindingResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServiceBindingResult build() {
             return new GetServiceBindingResult(createTime, description, endpointFilter, labels, name, service, updateTime);
         }

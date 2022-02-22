@@ -116,7 +116,6 @@ public final class AndroidDeviceResponse {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public AndroidDeviceResponse build() {
             return new AndroidDeviceResponse(androidModelId, androidVersionId, locale, orientation);
         }

@@ -15,21 +15,21 @@ public final class GetSubscriptionIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetSubscriptionIamPolicyArgs Empty = new GetSubscriptionIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+      private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -88,7 +88,6 @@ public final class GetSubscriptionIamPolicyArgs extends io.pulumi.resources.Invo
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public GetSubscriptionIamPolicyArgs build() {
             return new GetSubscriptionIamPolicyArgs(optionsRequestedPolicyVersion, project, subscriptionId);
         }

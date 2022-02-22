@@ -118,7 +118,6 @@ public final class RecurrentScheduleResponse {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public RecurrentScheduleResponse build() {
             return new RecurrentScheduleResponse(days, hours, minutes, timeZone);
         }

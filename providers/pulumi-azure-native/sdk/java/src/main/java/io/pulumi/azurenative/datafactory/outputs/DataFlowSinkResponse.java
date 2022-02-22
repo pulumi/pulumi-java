@@ -163,7 +163,6 @@ public final class DataFlowSinkResponse {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
-
         public DataFlowSinkResponse build() {
             return new DataFlowSinkResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService);
         }

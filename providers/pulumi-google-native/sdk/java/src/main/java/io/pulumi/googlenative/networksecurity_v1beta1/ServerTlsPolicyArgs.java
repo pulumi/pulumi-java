@@ -23,7 +23,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allowOpen")
-    private final @Nullable Input<Boolean> allowOpen;
+      private final @Nullable Input<Boolean> allowOpen;
 
     public Input<Boolean> getAllowOpen() {
         return this.allowOpen == null ? Input.empty() : this.allowOpen;
@@ -34,7 +34,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,14 +45,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -63,7 +63,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mtlsPolicy")
-    private final @Nullable Input<MTLSPolicyArgs> mtlsPolicy;
+      private final @Nullable Input<MTLSPolicyArgs> mtlsPolicy;
 
     public Input<MTLSPolicyArgs> getMtlsPolicy() {
         return this.mtlsPolicy == null ? Input.empty() : this.mtlsPolicy;
@@ -74,14 +74,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -92,14 +92,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverCertificate")
-    private final @Nullable Input<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate;
+      private final @Nullable Input<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate;
 
     public Input<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> getServerCertificate() {
         return this.serverCertificate == null ? Input.empty() : this.serverCertificate;
     }
 
     @InputImport(name="serverTlsPolicyId", required=true)
-    private final Input<String> serverTlsPolicyId;
+      private final Input<String> serverTlsPolicyId;
 
     public Input<String> getServerTlsPolicyId() {
         return this.serverTlsPolicyId;
@@ -263,7 +263,6 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.serverTlsPolicyId = Input.of(Objects.requireNonNull(serverTlsPolicyId));
             return this;
         }
-
         public ServerTlsPolicyArgs build() {
             return new ServerTlsPolicyArgs(allowOpen, description, labels, location, mtlsPolicy, name, project, serverCertificate, serverTlsPolicyId);
         }

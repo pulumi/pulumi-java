@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jobNotificationEmails", required=true)
-    private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
+      private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
 
     public GooglePrivacyDlpV2JobNotificationEmailsResponse getJobNotificationEmails() {
         return this.jobNotificationEmails;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pubSub", required=true)
-    private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
+      private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
 
     public GooglePrivacyDlpV2PublishToPubSubResponse getPubSub() {
         return this.pubSub;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="publishFindingsToCloudDataCatalog", required=true)
-    private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
+      private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
 
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse getPublishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="publishSummaryToCscc", required=true)
-    private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
+      private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
 
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse getPublishSummaryToCscc() {
         return this.publishSummaryToCscc;
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="publishToStackdriver", required=true)
-    private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
+      private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
 
     public GooglePrivacyDlpV2PublishToStackdriverResponse getPublishToStackdriver() {
         return this.publishToStackdriver;
@@ -81,7 +81,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="saveFindings", required=true)
-    private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
+      private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
     public GooglePrivacyDlpV2SaveFindingsResponse getSaveFindings() {
         return this.saveFindings;
@@ -170,7 +170,6 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2ActionResponse build() {
             return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }

@@ -223,7 +223,6 @@ public final class GetEventHubConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubConnectionResult build() {
             return new GetEventHubConnectionResult(consumerGroup, dataFormat, eventHubResourceId, id, location, mappingRuleName, name, tableName, type);
         }

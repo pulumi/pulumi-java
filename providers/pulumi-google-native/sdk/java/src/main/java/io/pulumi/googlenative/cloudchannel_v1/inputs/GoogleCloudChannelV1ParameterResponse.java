@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="editable", required=true)
-    private final Boolean editable;
+      private final Boolean editable;
 
     public Boolean getEditable() {
         return this.editable;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="value", required=true)
-    private final GoogleCloudChannelV1ValueResponse value;
+      private final GoogleCloudChannelV1ValueResponse value;
 
     public GoogleCloudChannelV1ValueResponse getValue() {
         return this.value;
@@ -104,7 +104,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudChannelV1ParameterResponse build() {
             return new GoogleCloudChannelV1ParameterResponse(editable, name, value);
         }

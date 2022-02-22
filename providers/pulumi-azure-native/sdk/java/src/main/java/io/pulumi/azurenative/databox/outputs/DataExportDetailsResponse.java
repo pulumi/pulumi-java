@@ -101,7 +101,6 @@ public final class DataExportDetailsResponse {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
-
         public DataExportDetailsResponse build() {
             return new DataExportDetailsResponse(accountDetails, logCollectionLevel, transferConfiguration);
         }

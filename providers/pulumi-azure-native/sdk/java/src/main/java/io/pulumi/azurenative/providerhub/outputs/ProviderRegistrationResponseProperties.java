@@ -240,7 +240,6 @@ public final class ProviderRegistrationResponseProperties {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
-
         public ProviderRegistrationResponseProperties build() {
             return new ProviderRegistrationResponseProperties(capabilities, featuresRule, management, metadata, namespace, providerAuthentication, providerAuthorizations, providerHubMetadata, providerType, providerVersion, provisioningState, requestHeaderOptions, requiredFeatures, subscriptionLifecycleNotificationSpecifications, templateDeploymentOptions);
         }

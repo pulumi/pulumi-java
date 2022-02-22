@@ -24,7 +24,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="apiKey", required=true)
-    private final String apiKey;
+      private final String apiKey;
 
     public String getApiKey() {
         return this.apiKey;
@@ -35,7 +35,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectedRepositories", required=true)
-    private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
+      private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
 
     public List<BitbucketServerRepositoryIdResponse> getConnectedRepositories() {
         return this.connectedRepositories;
@@ -46,7 +46,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -57,7 +57,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="hostUri", required=true)
-    private final String hostUri;
+      private final String hostUri;
 
     public String getHostUri() {
         return this.hostUri;
@@ -68,7 +68,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final String peeredNetwork;
+      private final String peeredNetwork;
 
     public String getPeeredNetwork() {
         return this.peeredNetwork;
@@ -90,7 +90,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="secrets", required=true)
-    private final BitbucketServerSecretsResponse secrets;
+      private final BitbucketServerSecretsResponse secrets;
 
     public BitbucketServerSecretsResponse getSecrets() {
         return this.secrets;
@@ -101,7 +101,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sslCa", required=true)
-    private final String sslCa;
+      private final String sslCa;
 
     public String getSslCa() {
         return this.sslCa;
@@ -112,7 +112,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -123,7 +123,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="webhookKey", required=true)
-    private final String webhookKey;
+      private final String webhookKey;
 
     public String getWebhookKey() {
         return this.webhookKey;
@@ -252,7 +252,6 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }
-
         public BitbucketServerConfigResponse build() {
             return new BitbucketServerConfigResponse(apiKey, connectedRepositories, createTime, hostUri, name, peeredNetwork, secrets, sslCa, username, webhookKey);
         }

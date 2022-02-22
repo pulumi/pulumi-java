@@ -24,7 +24,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * 
      */
     @InputImport(name="allowedActions")
-    private final @Nullable List<String> allowedActions;
+        private final @Nullable List<String> allowedActions;
 
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
@@ -35,7 +35,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * 
      */
     @InputImport(name="allowedDataActions")
-    private final @Nullable List<String> allowedDataActions;
+        private final @Nullable List<String> allowedDataActions;
 
     public List<String> getAllowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
@@ -84,7 +84,6 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-
         public ApplicationPackageLockingPolicyDefinitionResponse build() {
             return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
         }

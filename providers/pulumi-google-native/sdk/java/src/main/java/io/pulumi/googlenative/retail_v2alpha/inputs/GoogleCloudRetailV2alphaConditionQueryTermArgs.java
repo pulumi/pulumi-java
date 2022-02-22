@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
      * 
      */
     @InputImport(name="fullMatch")
-    private final @Nullable Input<Boolean> fullMatch;
+      private final @Nullable Input<Boolean> fullMatch;
 
     public Input<Boolean> getFullMatch() {
         return this.fullMatch == null ? Input.empty() : this.fullMatch;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudRetailV2alphaConditionQueryTermArgs build() {
             return new GoogleCloudRetailV2alphaConditionQueryTermArgs(fullMatch, value);
         }

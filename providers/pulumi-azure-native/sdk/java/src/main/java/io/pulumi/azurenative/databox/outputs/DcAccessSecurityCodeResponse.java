@@ -76,7 +76,6 @@ public final class DcAccessSecurityCodeResponse {
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
         }
-
         public DcAccessSecurityCodeResponse build() {
             return new DcAccessSecurityCodeResponse(forwardDCAccessCode, reverseDCAccessCode);
         }

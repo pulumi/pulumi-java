@@ -23,7 +23,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable Input<String> endDate;
+      private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -34,7 +34,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startDate")
-    private final @Nullable Input<String> startDate;
+      private final @Nullable Input<String> startDate;
 
     public Input<String> getStartDate() {
         return this.startDate == null ? Input.empty() : this.startDate;
@@ -45,7 +45,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+      private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -119,7 +119,6 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
             this.time = Input.ofNullable(time);
             return this;
         }
-
         public DenyMaintenancePeriodArgs build() {
             return new DenyMaintenancePeriodArgs(endDate, startDate, time);
         }

@@ -96,7 +96,6 @@ public final class ContainerPortResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(containerPort, name, protocol);
         }

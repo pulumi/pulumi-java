@@ -100,7 +100,6 @@ public final class AzureFileStorageLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFileStorageLocationResponse build() {
             return new AzureFileStorageLocationResponse(fileName, folderPath, type);
         }

@@ -76,7 +76,6 @@ public final class AutomationScopeResponse {
             this.scopePath = scopePath;
             return this;
         }
-
         public AutomationScopeResponse build() {
             return new AutomationScopeResponse(description, scopePath);
         }

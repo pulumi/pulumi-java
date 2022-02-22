@@ -103,7 +103,6 @@ public final class DelimitedTextReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextReadSettingsResponse build() {
             return new DelimitedTextReadSettingsResponse(compressionProperties, skipLineCount, type);
         }

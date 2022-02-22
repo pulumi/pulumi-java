@@ -373,7 +373,6 @@ public final class GetLabResult {
             this.userQuota = Objects.requireNonNull(userQuota);
             return this;
         }
-
         public GetLabResult build() {
             return new GetLabResult(createdByObjectId, createdByUserPrincipalName, createdDate, id, invitationCode, latestOperationResult, location, maxUsersInLab, name, provisioningState, tags, type, uniqueIdentifier, usageQuota, userAccessMode, userQuota);
         }

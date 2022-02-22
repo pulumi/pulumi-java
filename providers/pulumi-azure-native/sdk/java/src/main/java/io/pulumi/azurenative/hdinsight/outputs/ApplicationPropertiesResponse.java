@@ -271,7 +271,6 @@ public final class ApplicationPropertiesResponse {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-
         public ApplicationPropertiesResponse build() {
             return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
         }

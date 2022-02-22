@@ -22,7 +22,7 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="derivedImage", required=true)
-    private final Input<DerivedArgs> derivedImage;
+      private final Input<DerivedArgs> derivedImage;
 
     public Input<DerivedArgs> getDerivedImage() {
         return this.derivedImage;
@@ -65,7 +65,6 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
             this.derivedImage = Input.of(Objects.requireNonNull(derivedImage));
             return this;
         }
-
         public GrafeasV1beta1ImageDetailsArgs build() {
             return new GrafeasV1beta1ImageDetailsArgs(derivedImage);
         }

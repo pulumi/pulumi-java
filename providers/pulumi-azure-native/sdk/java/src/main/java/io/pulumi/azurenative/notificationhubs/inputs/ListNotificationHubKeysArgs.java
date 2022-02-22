@@ -17,7 +17,7 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="notificationHubName", required=true)
-    private final String notificationHubName;
+        private final String notificationHubName;
 
     public String getNotificationHubName() {
         return this.notificationHubName;
@@ -50,7 +50,7 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListNotificationHubKeysArgs build() {
             return new ListNotificationHubKeysArgs(authorizationRuleName, namespaceName, notificationHubName, resourceGroupName);
         }

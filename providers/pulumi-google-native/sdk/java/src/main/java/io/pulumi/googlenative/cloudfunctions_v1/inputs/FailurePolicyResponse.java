@@ -21,7 +21,7 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="retry", required=true)
-    private final RetryResponse retry;
+      private final RetryResponse retry;
 
     public RetryResponse getRetry() {
         return this.retry;
@@ -59,7 +59,6 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public FailurePolicyResponse build() {
             return new FailurePolicyResponse(retry);
         }

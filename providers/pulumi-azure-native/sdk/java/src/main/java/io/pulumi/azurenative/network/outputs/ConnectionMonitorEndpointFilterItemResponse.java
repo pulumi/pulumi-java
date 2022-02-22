@@ -76,7 +76,6 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointFilterItemResponse build() {
             return new ConnectionMonitorEndpointFilterItemResponse(address, type);
         }

@@ -24,7 +24,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -35,7 +35,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<Double> expireTime;
+        private final @Nullable Input<Double> expireTime;
 
     public Input<Double> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -46,7 +46,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -57,7 +57,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumTtl")
-    private final @Nullable Input<Double> minimumTtl;
+        private final @Nullable Input<Double> minimumTtl;
 
     public Input<Double> getMinimumTtl() {
         return this.minimumTtl == null ? Input.empty() : this.minimumTtl;
@@ -68,7 +68,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshTime")
-    private final @Nullable Input<Double> refreshTime;
+        private final @Nullable Input<Double> refreshTime;
 
     public Input<Double> getRefreshTime() {
         return this.refreshTime == null ? Input.empty() : this.refreshTime;
@@ -79,7 +79,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryTime")
-    private final @Nullable Input<Double> retryTime;
+        private final @Nullable Input<Double> retryTime;
 
     public Input<Double> getRetryTime() {
         return this.retryTime == null ? Input.empty() : this.retryTime;
@@ -90,7 +90,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-    private final @Nullable Input<Double> serialNumber;
+        private final @Nullable Input<Double> serialNumber;
 
     public Input<Double> getSerialNumber() {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
@@ -224,7 +224,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.serialNumber = Input.ofNullable(serialNumber);
             return this;
         }
-
         public SoaRecordArgs build() {
             return new SoaRecordArgs(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
         }

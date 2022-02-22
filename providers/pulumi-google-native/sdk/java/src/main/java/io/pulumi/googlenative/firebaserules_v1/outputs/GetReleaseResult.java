@@ -116,7 +116,6 @@ public final class GetReleaseResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetReleaseResult build() {
             return new GetReleaseResult(createTime, name, rulesetName, updateTime);
         }

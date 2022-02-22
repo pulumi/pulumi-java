@@ -74,7 +74,6 @@ public final class SourceCrowdingConfigResponse {
             this.numSuggestions = Objects.requireNonNull(numSuggestions);
             return this;
         }
-
         public SourceCrowdingConfigResponse build() {
             return new SourceCrowdingConfigResponse(numResults, numSuggestions);
         }

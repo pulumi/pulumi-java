@@ -76,7 +76,6 @@ public final class PrivateIPAddressResponse {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
-
         public PrivateIPAddressResponse build() {
             return new PrivateIPAddressResponse(ipAddress, subnetResourceId);
         }

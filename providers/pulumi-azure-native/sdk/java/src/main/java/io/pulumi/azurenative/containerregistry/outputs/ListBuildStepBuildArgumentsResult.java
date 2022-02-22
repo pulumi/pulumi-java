@@ -78,7 +78,6 @@ public final class ListBuildStepBuildArgumentsResult {
             this.value = value;
             return this;
         }
-
         public ListBuildStepBuildArgumentsResult build() {
             return new ListBuildStepBuildArgumentsResult(nextLink, value);
         }

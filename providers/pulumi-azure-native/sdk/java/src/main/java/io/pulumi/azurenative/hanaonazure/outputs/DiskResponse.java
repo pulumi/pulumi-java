@@ -98,7 +98,6 @@ public final class DiskResponse {
             this.name = name;
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(diskSizeGB, lun, name);
         }

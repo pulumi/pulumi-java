@@ -25,7 +25,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable Input<DistributionArchitecture> architecture;
+      private final @Nullable Input<DistributionArchitecture> architecture;
 
     public Input<DistributionArchitecture> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -36,7 +36,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final Input<String> cpeUri;
+      private final Input<String> cpeUri;
 
     public Input<String> getCpeUri() {
         return this.cpeUri;
@@ -47,7 +47,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestVersion")
-    private final @Nullable Input<VersionArgs> latestVersion;
+      private final @Nullable Input<VersionArgs> latestVersion;
 
     public Input<VersionArgs> getLatestVersion() {
         return this.latestVersion == null ? Input.empty() : this.latestVersion;
@@ -69,7 +69,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintainer")
-    private final @Nullable Input<String> maintainer;
+      private final @Nullable Input<String> maintainer;
 
     public Input<String> getMaintainer() {
         return this.maintainer == null ? Input.empty() : this.maintainer;
@@ -80,7 +80,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -199,7 +199,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public DistributionArgs build() {
             return new DistributionArgs(architecture, cpeUri, description, latestVersion, maintainer, url);
         }

@@ -17,7 +17,7 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="relayName", required=true)
-    private final String relayName;
+        private final String relayName;
 
     public String getRelayName() {
         return this.relayName;
@@ -50,7 +50,7 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+        private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -140,7 +140,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public GetWebAppHybridConnectionSlotArgs build() {
             return new GetWebAppHybridConnectionSlotArgs(name, namespaceName, relayName, resourceGroupName, slot);
         }

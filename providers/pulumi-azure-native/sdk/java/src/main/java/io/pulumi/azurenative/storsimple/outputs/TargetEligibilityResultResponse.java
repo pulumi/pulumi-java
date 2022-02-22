@@ -78,7 +78,6 @@ public final class TargetEligibilityResultResponse {
             this.messages = messages;
             return this;
         }
-
         public TargetEligibilityResultResponse build() {
             return new TargetEligibilityResultResponse(eligibilityStatus, messages);
         }

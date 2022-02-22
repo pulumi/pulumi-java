@@ -224,7 +224,6 @@ public final class BackupConfigurationResponse {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
         }
-
         public BackupConfigurationResponse build() {
             return new BackupConfigurationResponse(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
         }

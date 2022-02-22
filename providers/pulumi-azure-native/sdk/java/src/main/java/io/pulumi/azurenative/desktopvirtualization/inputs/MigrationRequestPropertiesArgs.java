@@ -25,7 +25,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="migrationPath")
-    private final @Nullable Input<String> migrationPath;
+        private final @Nullable Input<String> migrationPath;
 
     public Input<String> getMigrationPath() {
         return this.migrationPath == null ? Input.empty() : this.migrationPath;
@@ -36,7 +36,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="operation")
-    private final @Nullable Input<Either<String,Operation>> operation;
+        private final @Nullable Input<Either<String,Operation>> operation;
 
     public Input<Either<String,Operation>> getOperation() {
         return this.operation == null ? Input.empty() : this.operation;
@@ -95,7 +95,6 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
             this.operation = Input.ofNullable(operation);
             return this;
         }
-
         public MigrationRequestPropertiesArgs build() {
             return new MigrationRequestPropertiesArgs(migrationPath, operation);
         }

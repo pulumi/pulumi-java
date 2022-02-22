@@ -23,7 +23,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushEndpoint")
-    private final @Nullable Input<String> pushEndpoint;
+      private final @Nullable Input<String> pushEndpoint;
 
     public Input<String> getPushEndpoint() {
         return this.pushEndpoint == null ? Input.empty() : this.pushEndpoint;
@@ -66,7 +66,6 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.pushEndpoint = Input.ofNullable(pushEndpoint);
             return this;
         }
-
         public PushConfigArgs build() {
             return new PushConfigArgs(pushEndpoint);
         }

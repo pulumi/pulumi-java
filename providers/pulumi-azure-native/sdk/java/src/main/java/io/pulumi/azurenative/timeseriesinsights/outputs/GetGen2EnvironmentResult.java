@@ -358,7 +358,6 @@ public final class GetGen2EnvironmentResult {
             this.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
-
         public GetGen2EnvironmentResult build() {
             return new GetGen2EnvironmentResult(creationTime, dataAccessFqdn, dataAccessId, id, kind, location, name, provisioningState, sku, status, storageConfiguration, tags, timeSeriesIdProperties, type, warmStoreConfiguration);
         }

@@ -77,7 +77,6 @@ public final class ContainerResourcesResponse {
             this.memory = memory;
             return this;
         }
-
         public ContainerResourcesResponse build() {
             return new ContainerResourcesResponse(cpu, memory);
         }

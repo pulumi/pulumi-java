@@ -78,7 +78,6 @@ public final class DirectLineChannelPropertiesResponse {
             this.sites = sites;
             return this;
         }
-
         public DirectLineChannelPropertiesResponse build() {
             return new DirectLineChannelPropertiesResponse(directLineEmbedCode, sites);
         }

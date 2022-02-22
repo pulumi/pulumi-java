@@ -23,7 +23,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="azureResourceName")
-    private final @Nullable Input<String> azureResourceName;
+        private final @Nullable Input<String> azureResourceName;
 
     public Input<String> getAzureResourceName() {
         return this.azureResourceName == null ? Input.empty() : this.azureResourceName;
@@ -34,7 +34,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="azureResourceType")
-    private final @Nullable Input<AzureResourceType> azureResourceType;
+        private final @Nullable Input<AzureResourceType> azureResourceType;
 
     public Input<AzureResourceType> getAzureResourceType() {
         return this.azureResourceType == null ? Input.empty() : this.azureResourceType;
@@ -45,7 +45,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customHostNameDnsRecordType")
-    private final @Nullable Input<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
+        private final @Nullable Input<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
     public Input<CustomHostNameDnsRecordType> getCustomHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType == null ? Input.empty() : this.customHostNameDnsRecordType;
@@ -56,7 +56,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainId")
-    private final @Nullable Input<String> domainId;
+        private final @Nullable Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId == null ? Input.empty() : this.domainId;
@@ -67,7 +67,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -78,7 +78,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hostNameType")
-    private final @Nullable Input<HostNameType> hostNameType;
+        private final @Nullable Input<HostNameType> hostNameType;
 
     public Input<HostNameType> getHostNameType() {
         return this.hostNameType == null ? Input.empty() : this.hostNameType;
@@ -89,7 +89,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -100,7 +100,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -111,7 +111,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -122,7 +122,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="siteName")
-    private final @Nullable Input<String> siteName;
+        private final @Nullable Input<String> siteName;
 
     public Input<String> getSiteName() {
         return this.siteName == null ? Input.empty() : this.siteName;
@@ -133,7 +133,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -144,7 +144,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sslState")
-    private final @Nullable Input<SslState> sslState;
+        private final @Nullable Input<SslState> sslState;
 
     public Input<SslState> getSslState() {
         return this.sslState == null ? Input.empty() : this.sslState;
@@ -155,7 +155,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+        private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -379,7 +379,6 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public WebAppHostNameBindingSlotArgs build() {
             return new WebAppHostNameBindingSlotArgs(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostName, hostNameType, kind, name, resourceGroupName, siteName, slot, sslState, thumbprint);
         }

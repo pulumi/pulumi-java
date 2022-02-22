@@ -54,7 +54,6 @@ public final class TransferConfigurationResponseTransferAllDetails {
             this.include = include;
             return this;
         }
-
         public TransferConfigurationResponseTransferAllDetails build() {
             return new TransferConfigurationResponseTransferAllDetails(include);
         }

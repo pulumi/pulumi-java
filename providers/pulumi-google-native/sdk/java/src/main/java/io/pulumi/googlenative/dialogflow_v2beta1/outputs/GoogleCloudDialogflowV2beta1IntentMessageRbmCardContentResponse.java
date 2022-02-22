@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(description, media, suggestions, title);
         }

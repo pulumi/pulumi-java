@@ -246,7 +246,6 @@ public final class IfConditionActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public IfConditionActivityResponse build() {
             return new IfConditionActivityResponse(dependsOn, description, expression, ifFalseActivities, ifTrueActivities, name, type, userProperties);
         }

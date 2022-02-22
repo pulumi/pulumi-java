@@ -248,7 +248,6 @@ public final class ActionGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, type);
         }

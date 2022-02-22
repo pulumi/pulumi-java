@@ -161,7 +161,6 @@ public final class LoadBalancerBackendAddressResponse {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
-
         public LoadBalancerBackendAddressResponse build() {
             return new LoadBalancerBackendAddressResponse(ipAddress, loadBalancerFrontendIPConfiguration, name, networkInterfaceIPConfiguration, subnet, virtualNetwork);
         }

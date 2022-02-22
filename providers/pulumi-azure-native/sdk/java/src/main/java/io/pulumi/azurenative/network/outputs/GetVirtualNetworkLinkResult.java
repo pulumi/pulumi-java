@@ -247,7 +247,6 @@ public final class GetVirtualNetworkLinkResult {
             this.virtualNetworkLinkState = Objects.requireNonNull(virtualNetworkLinkState);
             return this;
         }
-
         public GetVirtualNetworkLinkResult build() {
             return new GetVirtualNetworkLinkResult(etag, id, location, name, provisioningState, registrationEnabled, tags, type, virtualNetwork, virtualNetworkLinkState);
         }

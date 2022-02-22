@@ -296,7 +296,6 @@ public final class ResponsysLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public ResponsysLinkedServiceResponse build() {
             return new ResponsysLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

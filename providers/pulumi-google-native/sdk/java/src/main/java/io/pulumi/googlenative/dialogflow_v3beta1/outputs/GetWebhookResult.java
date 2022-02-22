@@ -161,7 +161,6 @@ public final class GetWebhookResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetWebhookResult build() {
             return new GetWebhookResult(disabled, displayName, genericWebService, name, serviceDirectory, timeout);
         }

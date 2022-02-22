@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(fileUri, height, thumbnailUri);
         }

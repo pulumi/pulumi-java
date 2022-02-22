@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxRunningTime", required=true)
-    private final String maxRunningTime;
+      private final String maxRunningTime;
 
     public String getMaxRunningTime() {
         return this.maxRunningTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxWaitTime", required=true)
-    private final String maxWaitTime;
+      private final String maxWaitTime;
 
     public String getMaxWaitTime() {
         return this.maxWaitTime;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -103,7 +103,6 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public GoogleCloudMlV1__SchedulingResponse build() {
             return new GoogleCloudMlV1__SchedulingResponse(maxRunningTime, maxWaitTime, priority);
         }

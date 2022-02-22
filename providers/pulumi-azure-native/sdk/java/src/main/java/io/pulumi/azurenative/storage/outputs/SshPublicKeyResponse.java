@@ -76,7 +76,6 @@ public final class SshPublicKeyResponse {
             this.key = key;
             return this;
         }
-
         public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(description, key);
         }

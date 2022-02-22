@@ -25,7 +25,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets", required=true)
-    private final Input<List<TargetReferenceArgs>> targets;
+        private final Input<List<TargetReferenceArgs>> targets;
 
     public Input<List<TargetReferenceArgs>> getTargets() {
         return this.targets;
@@ -47,7 +47,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<SelectorType> type;
+        private final Input<SelectorType> type;
 
     public Input<SelectorType> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SelectorArgs build() {
             return new SelectorArgs(id, targets, type);
         }

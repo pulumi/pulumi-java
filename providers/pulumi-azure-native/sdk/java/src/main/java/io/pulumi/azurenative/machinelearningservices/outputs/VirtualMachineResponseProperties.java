@@ -120,7 +120,6 @@ public final class VirtualMachineResponseProperties {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
-
         public VirtualMachineResponseProperties build() {
             return new VirtualMachineResponseProperties(address, administratorAccount, sshPort, virtualMachineSize);
         }

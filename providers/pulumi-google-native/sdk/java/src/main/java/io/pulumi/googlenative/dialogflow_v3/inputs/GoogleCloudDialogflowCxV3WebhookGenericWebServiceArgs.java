@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
      * 
      */
     @InputImport(name="allowedCaCerts")
-    private final @Nullable Input<List<String>> allowedCaCerts;
+      private final @Nullable Input<List<String>> allowedCaCerts;
 
     public Input<List<String>> getAllowedCaCerts() {
         return this.allowedCaCerts == null ? Input.empty() : this.allowedCaCerts;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
      * 
      */
     @InputImport(name="requestHeaders")
-    private final @Nullable Input<Map<String,String>> requestHeaders;
+      private final @Nullable Input<Map<String,String>> requestHeaders;
 
     public Input<Map<String,String>> getRequestHeaders() {
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -173,7 +173,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs(allowedCaCerts, password, requestHeaders, uri, username);
         }

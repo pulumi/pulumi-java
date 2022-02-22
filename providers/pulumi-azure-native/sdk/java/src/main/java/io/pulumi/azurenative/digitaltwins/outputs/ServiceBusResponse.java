@@ -246,7 +246,6 @@ public final class ServiceBusResponse {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-
         public ServiceBusResponse build() {
             return new ServiceBusResponse(authenticationType, createdTime, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, provisioningState, secondaryConnectionString);
         }

@@ -25,7 +25,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiEntitySetName")
-    private final @Nullable Input<String> apiEntitySetName;
+        private final @Nullable Input<String> apiEntitySetName;
 
     public Input<String> getApiEntitySetName() {
         return this.apiEntitySetName == null ? Input.empty() : this.apiEntitySetName;
@@ -36,7 +36,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,List<String>>> attributes;
+        private final @Nullable Input<Map<String,List<String>>> attributes;
 
     public Input<Map<String,List<String>>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -47,7 +47,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<Map<String,String>> description;
+        private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<Map<String,String>> displayName;
+        private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -69,7 +69,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityType")
-    private final @Nullable Input<EntityTypes> entityType;
+        private final @Nullable Input<EntityTypes> entityType;
 
     public Input<EntityTypes> getEntityType() {
         return this.entityType == null ? Input.empty() : this.entityType;
@@ -80,7 +80,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
+        private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
 
     public Input<List<PropertyDefinitionArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -91,7 +91,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -102,7 +102,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancesCount")
-    private final @Nullable Input<Integer> instancesCount;
+        private final @Nullable Input<Integer> instancesCount;
 
     public Input<Integer> getInstancesCount() {
         return this.instancesCount == null ? Input.empty() : this.instancesCount;
@@ -113,7 +113,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="largeImage")
-    private final @Nullable Input<String> largeImage;
+        private final @Nullable Input<String> largeImage;
 
     public Input<String> getLargeImage() {
         return this.largeImage == null ? Input.empty() : this.largeImage;
@@ -124,7 +124,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localizedAttributes")
-    private final @Nullable Input<Map<String,Map<String,String>>> localizedAttributes;
+        private final @Nullable Input<Map<String,Map<String,String>>> localizedAttributes;
 
     public Input<Map<String,Map<String,String>>> getLocalizedAttributes() {
         return this.localizedAttributes == null ? Input.empty() : this.localizedAttributes;
@@ -135,7 +135,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediumImage")
-    private final @Nullable Input<String> mediumImage;
+        private final @Nullable Input<String> mediumImage;
 
     public Input<String> getMediumImage() {
         return this.mediumImage == null ? Input.empty() : this.mediumImage;
@@ -146,7 +146,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable Input<String> profileName;
+        private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -157,7 +157,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaItemTypeLink")
-    private final @Nullable Input<String> schemaItemTypeLink;
+        private final @Nullable Input<String> schemaItemTypeLink;
 
     public Input<String> getSchemaItemTypeLink() {
         return this.schemaItemTypeLink == null ? Input.empty() : this.schemaItemTypeLink;
@@ -179,7 +179,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smallImage")
-    private final @Nullable Input<String> smallImage;
+        private final @Nullable Input<String> smallImage;
 
     public Input<String> getSmallImage() {
         return this.smallImage == null ? Input.empty() : this.smallImage;
@@ -190,7 +190,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strongIds")
-    private final @Nullable Input<List<StrongIdArgs>> strongIds;
+        private final @Nullable Input<List<StrongIdArgs>> strongIds;
 
     public Input<List<StrongIdArgs>> getStrongIds() {
         return this.strongIds == null ? Input.empty() : this.strongIds;
@@ -201,7 +201,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampFieldName")
-    private final @Nullable Input<String> timestampFieldName;
+        private final @Nullable Input<String> timestampFieldName;
 
     public Input<String> getTimestampFieldName() {
         return this.timestampFieldName == null ? Input.empty() : this.timestampFieldName;
@@ -212,7 +212,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -511,7 +511,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
-
         public ProfileArgs build() {
             return new ProfileArgs(apiEntitySetName, attributes, description, displayName, entityType, fields, hubName, instancesCount, largeImage, localizedAttributes, mediumImage, profileName, resourceGroupName, schemaItemTypeLink, smallImage, strongIds, timestampFieldName, typeName);
         }

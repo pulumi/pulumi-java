@@ -95,7 +95,6 @@ public final class NicIPAddressSettingsResponse {
             this.subnetMask = Objects.requireNonNull(subnetMask);
             return this;
         }
-
         public NicIPAddressSettingsResponse build() {
             return new NicIPAddressSettingsResponse(allocationMethod, ipAddress, subnetMask);
         }

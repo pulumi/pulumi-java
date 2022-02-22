@@ -22,7 +22,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final Integer errorCode;
+        private final Integer errorCode;
 
     public Integer getErrorCode() {
         return this.errorCode;
@@ -33,7 +33,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fileCount", required=true)
-    private final Double fileCount;
+        private final Double fileCount;
 
     public Double getFileCount() {
         return this.fileCount;
@@ -82,7 +82,6 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
-
         public FilesNotTieringErrorResponse build() {
             return new FilesNotTieringErrorResponse(errorCode, fileCount);
         }

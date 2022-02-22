@@ -97,7 +97,6 @@ public final class OperationWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationWarningsItemResponse build() {
             return new OperationWarningsItemResponse(code, data, message);
         }

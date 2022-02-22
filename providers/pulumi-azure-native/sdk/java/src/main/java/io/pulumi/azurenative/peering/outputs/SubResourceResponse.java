@@ -54,7 +54,6 @@ public final class SubResourceResponse {
             this.id = id;
             return this;
         }
-
         public SubResourceResponse build() {
             return new SubResourceResponse(id);
         }

@@ -99,7 +99,6 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
             this.rules = rules;
             return this;
         }
-
         public FrontDoorManagedRuleGroupOverrideResponse build() {
             return new FrontDoorManagedRuleGroupOverrideResponse(exclusions, ruleGroupName, rules);
         }

@@ -311,7 +311,6 @@ public final class AmazonS3ReadSettingsResponse {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public AmazonS3ReadSettingsResponse build() {
             return new AmazonS3ReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, prefix, recursive, type, wildcardFileName, wildcardFolderPath);
         }

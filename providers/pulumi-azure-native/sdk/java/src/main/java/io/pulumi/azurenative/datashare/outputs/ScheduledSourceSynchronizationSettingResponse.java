@@ -99,7 +99,6 @@ public final class ScheduledSourceSynchronizationSettingResponse {
             this.synchronizationTime = synchronizationTime;
             return this;
         }
-
         public ScheduledSourceSynchronizationSettingResponse build() {
             return new ScheduledSourceSynchronizationSettingResponse(kind, recurrenceInterval, synchronizationTime);
         }

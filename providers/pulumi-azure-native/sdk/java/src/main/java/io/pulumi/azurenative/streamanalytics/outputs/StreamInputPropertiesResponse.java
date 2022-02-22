@@ -149,7 +149,6 @@ public final class StreamInputPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StreamInputPropertiesResponse build() {
             return new StreamInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }

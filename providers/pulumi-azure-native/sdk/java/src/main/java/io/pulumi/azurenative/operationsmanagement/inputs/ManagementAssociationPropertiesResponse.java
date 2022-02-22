@@ -21,7 +21,7 @@ public final class ManagementAssociationPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final String applicationId;
+        private final String applicationId;
 
     public String getApplicationId() {
         return this.applicationId;
@@ -59,7 +59,6 @@ public final class ManagementAssociationPropertiesResponse extends io.pulumi.res
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public ManagementAssociationPropertiesResponse build() {
             return new ManagementAssociationPropertiesResponse(applicationId);
         }

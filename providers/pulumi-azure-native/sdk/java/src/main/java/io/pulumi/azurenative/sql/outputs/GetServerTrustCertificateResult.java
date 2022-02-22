@@ -160,7 +160,6 @@ public final class GetServerTrustCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerTrustCertificateResult build() {
             return new GetServerTrustCertificateResult(certificateName, id, name, publicBlob, thumbprint, type);
         }

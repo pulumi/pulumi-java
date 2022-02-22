@@ -74,7 +74,6 @@ public final class EnvelopeSignatureResponse {
             this.sig = Objects.requireNonNull(sig);
             return this;
         }
-
         public EnvelopeSignatureResponse build() {
             return new EnvelopeSignatureResponse(keyid, sig);
         }

@@ -76,7 +76,6 @@ public final class CustomRPValidationsResponse {
             this.validationType = validationType;
             return this;
         }
-
         public CustomRPValidationsResponse build() {
             return new CustomRPValidationsResponse(specification, validationType);
         }

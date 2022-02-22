@@ -117,7 +117,6 @@ public final class SchedulerResourceResponse {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public SchedulerResourceResponse build() {
             return new SchedulerResourceResponse(count, cpu, memoryGb, storageGb);
         }

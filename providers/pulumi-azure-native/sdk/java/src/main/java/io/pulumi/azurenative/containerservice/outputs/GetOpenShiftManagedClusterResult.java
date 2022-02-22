@@ -378,7 +378,6 @@ public final class GetOpenShiftManagedClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOpenShiftManagedClusterResult build() {
             return new GetOpenShiftManagedClusterResult(agentPoolProfiles, authProfile, clusterVersion, fqdn, id, location, masterPoolProfile, name, networkProfile, openShiftVersion, plan, provisioningState, publicHostname, routerProfiles, tags, type);
         }

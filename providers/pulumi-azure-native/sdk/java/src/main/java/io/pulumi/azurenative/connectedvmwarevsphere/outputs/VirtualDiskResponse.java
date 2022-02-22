@@ -245,7 +245,6 @@ public final class VirtualDiskResponse {
             this.unitNumber = unitNumber;
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerKey, deviceKey, deviceName, diskMode, diskObjectId, diskSizeGB, diskType, label, name, unitNumber);
         }

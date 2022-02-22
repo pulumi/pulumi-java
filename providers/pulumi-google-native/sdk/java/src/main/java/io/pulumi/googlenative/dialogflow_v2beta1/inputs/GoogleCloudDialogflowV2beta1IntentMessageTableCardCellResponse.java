@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(text);
         }

@@ -140,7 +140,6 @@ public final class AKSServiceResponseResponseAutoScaler {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AKSServiceResponseResponseAutoScaler build() {
             return new AKSServiceResponseResponseAutoScaler(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
         }

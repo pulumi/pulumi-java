@@ -118,7 +118,6 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(datasetUri, force, schemaConfig, writeDisposition);
         }

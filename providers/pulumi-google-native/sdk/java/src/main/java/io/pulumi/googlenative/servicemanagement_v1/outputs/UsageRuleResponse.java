@@ -96,7 +96,6 @@ public final class UsageRuleResponse {
             this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
             return this;
         }
-
         public UsageRuleResponse build() {
             return new UsageRuleResponse(allowUnregisteredCalls, selector, skipServiceControl);
         }

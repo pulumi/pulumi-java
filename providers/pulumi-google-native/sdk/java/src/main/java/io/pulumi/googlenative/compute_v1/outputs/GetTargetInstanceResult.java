@@ -221,7 +221,6 @@ public final class GetTargetInstanceResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetTargetInstanceResult build() {
             return new GetTargetInstanceResult(creationTimestamp, description, instance, kind, name, natPolicy, network, selfLink, zone);
         }

@@ -23,7 +23,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="upgradeChannel")
-    private final @Nullable String upgradeChannel;
+        private final @Nullable String upgradeChannel;
 
     public Optional<String> getUpgradeChannel() {
         return this.upgradeChannel == null ? Optional.empty() : Optional.ofNullable(this.upgradeChannel);
@@ -61,7 +61,6 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.re
             this.upgradeChannel = upgradeChannel;
             return this;
         }
-
         public ManagedClusterAutoUpgradeProfileResponse build() {
             return new ManagedClusterAutoUpgradeProfileResponse(upgradeChannel);
         }

@@ -142,7 +142,6 @@ public final class AuthConfigResponse {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
         }
-
         public AuthConfigResponse build() {
             return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }

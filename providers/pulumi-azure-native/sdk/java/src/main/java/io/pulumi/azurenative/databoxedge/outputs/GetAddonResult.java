@@ -138,7 +138,6 @@ public final class GetAddonResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddonResult build() {
             return new GetAddonResult(id, kind, name, systemData, type);
         }

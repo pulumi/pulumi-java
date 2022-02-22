@@ -23,7 +23,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repeatingTimeIntervals", required=true)
-    private final Input<List<String>> repeatingTimeIntervals;
+        private final Input<List<String>> repeatingTimeIntervals;
 
     public Input<List<String>> getRepeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
@@ -66,7 +66,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.repeatingTimeIntervals = Input.of(Objects.requireNonNull(repeatingTimeIntervals));
             return this;
         }
-
         public BackupScheduleArgs build() {
             return new BackupScheduleArgs(repeatingTimeIntervals);
         }

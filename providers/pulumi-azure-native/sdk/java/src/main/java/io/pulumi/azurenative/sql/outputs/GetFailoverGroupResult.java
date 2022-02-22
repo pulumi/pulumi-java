@@ -270,7 +270,6 @@ public final class GetFailoverGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFailoverGroupResult build() {
             return new GetFailoverGroupResult(databases, id, location, name, partnerServers, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, tags, type);
         }

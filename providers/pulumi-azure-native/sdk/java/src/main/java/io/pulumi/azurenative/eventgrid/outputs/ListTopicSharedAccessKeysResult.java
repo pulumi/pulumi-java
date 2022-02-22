@@ -76,7 +76,6 @@ public final class ListTopicSharedAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListTopicSharedAccessKeysResult build() {
             return new ListTopicSharedAccessKeysResult(key1, key2);
         }

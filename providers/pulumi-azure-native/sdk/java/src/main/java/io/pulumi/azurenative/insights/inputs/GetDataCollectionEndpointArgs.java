@@ -17,7 +17,7 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataCollectionEndpointName", required=true)
-    private final String dataCollectionEndpointName;
+        private final String dataCollectionEndpointName;
 
     public String getDataCollectionEndpointName() {
         return this.dataCollectionEndpointName;
@@ -28,7 +28,7 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDataCollectionEndpointArgs build() {
             return new GetDataCollectionEndpointArgs(dataCollectionEndpointName, resourceGroupName);
         }

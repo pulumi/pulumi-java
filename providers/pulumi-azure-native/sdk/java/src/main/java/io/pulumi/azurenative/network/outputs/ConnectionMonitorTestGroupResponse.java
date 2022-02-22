@@ -141,7 +141,6 @@ public final class ConnectionMonitorTestGroupResponse {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-
         public ConnectionMonitorTestGroupResponse build() {
             return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
         }

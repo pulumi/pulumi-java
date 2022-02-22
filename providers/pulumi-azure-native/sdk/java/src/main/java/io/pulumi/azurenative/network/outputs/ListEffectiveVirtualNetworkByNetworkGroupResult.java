@@ -78,7 +78,6 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupResult {
             this.value = value;
             return this;
         }
-
         public ListEffectiveVirtualNetworkByNetworkGroupResult build() {
             return new ListEffectiveVirtualNetworkByNetworkGroupResult(skipToken, value);
         }

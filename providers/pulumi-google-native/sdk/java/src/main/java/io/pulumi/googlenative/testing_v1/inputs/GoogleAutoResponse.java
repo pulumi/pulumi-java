@@ -34,7 +34,6 @@ public final class GoogleAutoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(GoogleAutoResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleAutoResponse build() {
             return new GoogleAutoResponse();
         }

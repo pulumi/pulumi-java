@@ -98,7 +98,6 @@ public final class StatusResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(code, details, message);
         }

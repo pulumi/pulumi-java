@@ -76,7 +76,6 @@ public final class ListWebAppSiteBackupsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListWebAppSiteBackupsResult build() {
             return new ListWebAppSiteBackupsResult(nextLink, value);
         }

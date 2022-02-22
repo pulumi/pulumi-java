@@ -22,7 +22,7 @@ public final class DeployableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final List<String> resourceUri;
+      private final List<String> resourceUri;
 
     public List<String> getResourceUri() {
         return this.resourceUri;
@@ -60,7 +60,6 @@ public final class DeployableResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public DeployableResponse build() {
             return new DeployableResponse(resourceUri);
         }

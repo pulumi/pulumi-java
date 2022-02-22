@@ -17,7 +17,7 @@ public final class GetBlobFolderDataSetMappingArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobFolderDataSetMappingArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dataSetMappingName", required=true)
-    private final String dataSetMappingName;
+        private final String dataSetMappingName;
 
     public String getDataSetMappingName() {
         return this.dataSetMappingName;
@@ -39,7 +39,7 @@ public final class GetBlobFolderDataSetMappingArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetBlobFolderDataSetMappingArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final String shareSubscriptionName;
+        private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -119,7 +119,6 @@ public final class GetBlobFolderDataSetMappingArgs extends io.pulumi.resources.I
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public GetBlobFolderDataSetMappingArgs build() {
             return new GetBlobFolderDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
         }

@@ -287,7 +287,6 @@ public final class GetManagedDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedDatabaseResult build() {
             return new GetManagedDatabaseResult(catalogCollation, collation, creationDate, defaultSecondaryLocation, earliestRestorePoint, failoverGroupId, id, location, name, status, tags, type);
         }

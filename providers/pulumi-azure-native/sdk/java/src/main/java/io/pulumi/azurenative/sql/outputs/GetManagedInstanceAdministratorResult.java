@@ -181,7 +181,6 @@ public final class GetManagedInstanceAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstanceAdministratorResult build() {
             return new GetManagedInstanceAdministratorResult(administratorType, id, login, name, sid, tenantId, type);
         }

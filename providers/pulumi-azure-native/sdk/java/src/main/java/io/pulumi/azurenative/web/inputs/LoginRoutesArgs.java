@@ -23,7 +23,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logoutEndpoint")
-    private final @Nullable Input<String> logoutEndpoint;
+        private final @Nullable Input<String> logoutEndpoint;
 
     public Input<String> getLogoutEndpoint() {
         return this.logoutEndpoint == null ? Input.empty() : this.logoutEndpoint;
@@ -66,7 +66,6 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
             this.logoutEndpoint = Input.ofNullable(logoutEndpoint);
             return this;
         }
-
         public LoginRoutesArgs build() {
             return new LoginRoutesArgs(logoutEndpoint);
         }

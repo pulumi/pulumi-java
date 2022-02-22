@@ -227,7 +227,6 @@ public final class GetBatchEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchEndpointResult build() {
             return new GetBatchEndpointResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

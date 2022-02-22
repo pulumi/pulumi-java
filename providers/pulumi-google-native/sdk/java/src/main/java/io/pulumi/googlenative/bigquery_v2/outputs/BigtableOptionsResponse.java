@@ -97,7 +97,6 @@ public final class BigtableOptionsResponse {
             this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
             return this;
         }
-
         public BigtableOptionsResponse build() {
             return new BigtableOptionsResponse(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
         }

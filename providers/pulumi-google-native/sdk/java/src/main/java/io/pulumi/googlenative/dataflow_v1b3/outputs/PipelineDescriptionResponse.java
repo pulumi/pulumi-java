@@ -98,7 +98,6 @@ public final class PipelineDescriptionResponse {
             this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
             return this;
         }
-
         public PipelineDescriptionResponse build() {
             return new PipelineDescriptionResponse(displayData, executionPipelineStage, originalPipelineTransform);
         }

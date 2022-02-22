@@ -77,7 +77,6 @@ public final class ManagementPolicyDefinitionResponse {
             this.filters = filters;
             return this;
         }
-
         public ManagementPolicyDefinitionResponse build() {
             return new ManagementPolicyDefinitionResponse(actions, filters);
         }

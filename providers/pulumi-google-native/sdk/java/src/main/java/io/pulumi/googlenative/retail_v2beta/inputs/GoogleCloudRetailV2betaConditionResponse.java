@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="activeTimeRange", required=true)
-    private final List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
+      private final List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange;
 
     public List<GoogleCloudRetailV2betaConditionTimeRangeResponse> getActiveTimeRange() {
         return this.activeTimeRange;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaConditionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="queryTerms", required=true)
-    private final List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
+      private final List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
 
     public List<GoogleCloudRetailV2betaConditionQueryTermResponse> getQueryTerms() {
         return this.queryTerms;
@@ -83,7 +83,6 @@ public final class GoogleCloudRetailV2betaConditionResponse extends io.pulumi.re
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionResponse build() {
             return new GoogleCloudRetailV2betaConditionResponse(activeTimeRange, queryTerms);
         }

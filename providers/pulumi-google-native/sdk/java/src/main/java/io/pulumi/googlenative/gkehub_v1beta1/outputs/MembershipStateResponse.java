@@ -95,7 +95,6 @@ public final class MembershipStateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public MembershipStateResponse build() {
             return new MembershipStateResponse(code, description, updateTime);
         }

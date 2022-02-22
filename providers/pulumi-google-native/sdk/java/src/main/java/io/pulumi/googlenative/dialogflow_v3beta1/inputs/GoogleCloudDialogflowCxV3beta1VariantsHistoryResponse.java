@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
      * 
      */
     @InputImport(name="versionVariants", required=true)
-    private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+      private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse getVersionVariants() {
         return this.versionVariants;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
             return new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(updateTime, versionVariants);
         }

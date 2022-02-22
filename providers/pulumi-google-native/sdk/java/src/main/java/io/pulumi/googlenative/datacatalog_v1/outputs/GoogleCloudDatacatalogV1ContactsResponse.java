@@ -53,7 +53,6 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
             this.people = Objects.requireNonNull(people);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ContactsResponse build() {
             return new GoogleCloudDatacatalogV1ContactsResponse(people);
         }

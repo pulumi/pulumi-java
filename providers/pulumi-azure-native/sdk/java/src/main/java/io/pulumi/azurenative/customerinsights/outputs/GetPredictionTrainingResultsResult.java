@@ -141,7 +141,6 @@ public final class GetPredictionTrainingResultsResult {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public GetPredictionTrainingResultsResult build() {
             return new GetPredictionTrainingResultsResult(canonicalProfiles, predictionDistribution, primaryProfileInstanceCount, scoreName, tenantId);
         }

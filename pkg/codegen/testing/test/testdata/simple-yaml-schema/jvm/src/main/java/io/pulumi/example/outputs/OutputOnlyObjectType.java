@@ -46,7 +46,6 @@ public final class OutputOnlyObjectType {
             this.foo = foo;
             return this;
         }
-
         public OutputOnlyObjectType build() {
             return new OutputOnlyObjectType(foo);
         }

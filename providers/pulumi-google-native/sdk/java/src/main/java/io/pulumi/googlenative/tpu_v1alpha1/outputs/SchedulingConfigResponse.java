@@ -74,7 +74,6 @@ public final class SchedulingConfigResponse {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }
-
         public SchedulingConfigResponse build() {
             return new SchedulingConfigResponse(preemptible, reserved);
         }

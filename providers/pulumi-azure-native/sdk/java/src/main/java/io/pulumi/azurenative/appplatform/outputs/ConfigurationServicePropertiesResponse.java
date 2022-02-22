@@ -122,7 +122,6 @@ public final class ConfigurationServicePropertiesResponse {
             this.settings = settings;
             return this;
         }
-
         public ConfigurationServicePropertiesResponse build() {
             return new ConfigurationServicePropertiesResponse(instances, provisioningState, resourceRequests, settings);
         }

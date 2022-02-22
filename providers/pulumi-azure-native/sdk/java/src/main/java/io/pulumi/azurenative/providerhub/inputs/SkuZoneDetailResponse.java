@@ -17,14 +17,14 @@ public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs 
     public static final SkuZoneDetailResponse Empty = new SkuZoneDetailResponse();
 
     @InputImport(name="capabilities")
-    private final @Nullable List<SkuCapabilityResponse> capabilities;
+        private final @Nullable List<SkuCapabilityResponse> capabilities;
 
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
     @InputImport(name="name")
-    private final @Nullable List<String> name;
+        private final @Nullable List<String> name;
 
     public List<String> getName() {
         return this.name == null ? List.of() : this.name;
@@ -73,7 +73,6 @@ public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.name = name;
             return this;
         }
-
         public SkuZoneDetailResponse build() {
             return new SkuZoneDetailResponse(capabilities, name);
         }

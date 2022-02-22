@@ -140,7 +140,6 @@ public final class GetReplicationvCenterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationvCenterResult build() {
             return new GetReplicationvCenterResult(id, location, name, properties, type);
         }

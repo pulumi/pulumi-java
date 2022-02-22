@@ -201,7 +201,6 @@ public final class InstanceInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InstanceInfoResponse build() {
             return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
         }

@@ -401,7 +401,6 @@ public final class GoogleBigQueryLinkedServiceResponse {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
-
         public GoogleBigQueryLinkedServiceResponse build() {
             return new GoogleBigQueryLinkedServiceResponse(additionalProjects, annotations, authenticationType, clientId, clientSecret, connectVia, description, email, encryptedCredential, keyFilePath, parameters, project, refreshToken, requestGoogleDriveScope, trustedCertPath, type, useSystemTrustStore);
         }

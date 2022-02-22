@@ -15,14 +15,14 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetModelArgs Empty = new GetModelArgs();
 
     @InputImport(name="modelId", required=true)
-    private final String modelId;
+      private final String modelId;
 
     public String getModelId() {
         return this.modelId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetModelArgs build() {
             return new GetModelArgs(modelId, project);
         }

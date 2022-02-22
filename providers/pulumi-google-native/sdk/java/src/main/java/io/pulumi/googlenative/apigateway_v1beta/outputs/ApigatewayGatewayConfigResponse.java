@@ -52,7 +52,6 @@ public final class ApigatewayGatewayConfigResponse {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public ApigatewayGatewayConfigResponse build() {
             return new ApigatewayGatewayConfigResponse(backendConfig);
         }

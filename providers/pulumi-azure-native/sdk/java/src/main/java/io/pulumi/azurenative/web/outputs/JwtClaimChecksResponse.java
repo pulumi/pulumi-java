@@ -76,7 +76,6 @@ public final class JwtClaimChecksResponse {
             this.allowedGroups = allowedGroups;
             return this;
         }
-
         public JwtClaimChecksResponse build() {
             return new JwtClaimChecksResponse(allowedClientApplications, allowedGroups);
         }

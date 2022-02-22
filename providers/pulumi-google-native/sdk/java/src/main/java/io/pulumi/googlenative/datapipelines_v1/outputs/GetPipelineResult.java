@@ -267,7 +267,6 @@ public final class GetPipelineResult {
             this.workload = Objects.requireNonNull(workload);
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(createTime, displayName, jobCount, lastUpdateTime, name, pipelineSources, scheduleInfo, schedulerServiceAccountEmail, state, type, workload);
         }

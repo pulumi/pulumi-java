@@ -26,7 +26,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="auditLogStatus")
-    private final @Nullable Input<Either<String,AuditLogStatus>> auditLogStatus;
+        private final @Nullable Input<Either<String,AuditLogStatus>> auditLogStatus;
 
     public Input<Either<String,AuditLogStatus>> getAuditLogStatus() {
         return this.auditLogStatus == null ? Input.empty() : this.auditLogStatus;
@@ -37,7 +37,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<Either<String,LogLevel>> logLevel;
+        private final @Nullable Input<Either<String,LogLevel>> logLevel;
 
     public Input<Either<String,LogLevel>> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -96,7 +96,6 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
-
         public LoggingPropertiesArgs build() {
             return new LoggingPropertiesArgs(auditLogStatus, logLevel);
         }

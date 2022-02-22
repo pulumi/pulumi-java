@@ -74,7 +74,6 @@ public final class PubSubIODetailsResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubIODetailsResponse build() {
             return new PubSubIODetailsResponse(subscription, topic);
         }

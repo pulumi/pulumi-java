@@ -23,7 +23,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopicName")
-    private final @Nullable Input<String> pubsubTopicName;
+      private final @Nullable Input<String> pubsubTopicName;
 
     public Input<String> getPubsubTopicName() {
         return this.pubsubTopicName == null ? Input.empty() : this.pubsubTopicName;
@@ -66,7 +66,6 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
             this.pubsubTopicName = Input.ofNullable(pubsubTopicName);
             return this;
         }
-
         public StateNotificationConfigArgs build() {
             return new StateNotificationConfigArgs(pubsubTopicName);
         }

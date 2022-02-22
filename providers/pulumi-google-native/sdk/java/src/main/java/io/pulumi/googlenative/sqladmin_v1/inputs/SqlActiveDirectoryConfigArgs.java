@@ -23,7 +23,7 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -34,7 +34,7 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -93,7 +93,6 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public SqlActiveDirectoryConfigArgs build() {
             return new SqlActiveDirectoryConfigArgs(domain, kind);
         }

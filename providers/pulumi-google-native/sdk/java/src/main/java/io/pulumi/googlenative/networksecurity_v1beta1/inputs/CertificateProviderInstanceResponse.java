@@ -21,7 +21,7 @@ public final class CertificateProviderInstanceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="pluginInstance", required=true)
-    private final String pluginInstance;
+      private final String pluginInstance;
 
     public String getPluginInstance() {
         return this.pluginInstance;
@@ -59,7 +59,6 @@ public final class CertificateProviderInstanceResponse extends io.pulumi.resourc
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }
-
         public CertificateProviderInstanceResponse build() {
             return new CertificateProviderInstanceResponse(pluginInstance);
         }

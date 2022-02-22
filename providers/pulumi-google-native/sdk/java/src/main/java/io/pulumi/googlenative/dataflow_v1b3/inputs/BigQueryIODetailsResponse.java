@@ -21,7 +21,7 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final String dataset;
+      private final String dataset;
 
     public String getDataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -54,7 +54,7 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="table", required=true)
-    private final String table;
+      private final String table;
 
     public String getTable() {
         return this.table;
@@ -123,7 +123,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public BigQueryIODetailsResponse build() {
             return new BigQueryIODetailsResponse(dataset, project, query, table);
         }

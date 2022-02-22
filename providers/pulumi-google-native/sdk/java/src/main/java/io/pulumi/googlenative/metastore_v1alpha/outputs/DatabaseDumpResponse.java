@@ -116,7 +116,6 @@ public final class DatabaseDumpResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatabaseDumpResponse build() {
             return new DatabaseDumpResponse(databaseType, gcsUri, sourceDatabase, type);
         }

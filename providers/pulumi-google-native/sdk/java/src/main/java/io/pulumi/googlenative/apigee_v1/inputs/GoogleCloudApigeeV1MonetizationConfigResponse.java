@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulu
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GoogleCloudApigeeV1MonetizationConfigResponse build() {
             return new GoogleCloudApigeeV1MonetizationConfigResponse(enabled);
         }

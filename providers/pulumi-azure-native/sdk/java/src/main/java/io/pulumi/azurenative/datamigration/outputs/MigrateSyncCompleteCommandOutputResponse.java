@@ -76,7 +76,6 @@ public final class MigrateSyncCompleteCommandOutputResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public MigrateSyncCompleteCommandOutputResponse build() {
             return new MigrateSyncCompleteCommandOutputResponse(errors, id);
         }

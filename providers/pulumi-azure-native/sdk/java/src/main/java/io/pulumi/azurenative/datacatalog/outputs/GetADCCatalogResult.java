@@ -291,7 +291,6 @@ public final class GetADCCatalogResult {
             this.users = users;
             return this;
         }
-
         public GetADCCatalogResult build() {
             return new GetADCCatalogResult(admins, enableAutomaticUnitAdjustment, etag, id, location, name, sku, successfullyProvisioned, tags, type, units, users);
         }

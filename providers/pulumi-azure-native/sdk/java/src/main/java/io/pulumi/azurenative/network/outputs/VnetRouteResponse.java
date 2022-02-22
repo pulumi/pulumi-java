@@ -54,7 +54,6 @@ public final class VnetRouteResponse {
             this.staticRoutes = staticRoutes;
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(staticRoutes);
         }

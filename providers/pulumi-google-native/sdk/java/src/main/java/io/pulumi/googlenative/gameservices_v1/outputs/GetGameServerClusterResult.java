@@ -203,7 +203,6 @@ public final class GetGameServerClusterResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGameServerClusterResult build() {
             return new GetGameServerClusterResult(clusterState, connectionInfo, createTime, description, etag, labels, name, updateTime);
         }

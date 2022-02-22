@@ -77,7 +77,6 @@ public final class EndpointPropertiesResponse {
             this.port = port;
             return this;
         }
-
         public EndpointPropertiesResponse build() {
             return new EndpointPropertiesResponse(name, port);
         }

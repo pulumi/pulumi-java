@@ -97,7 +97,6 @@ public final class BuildDetailsResponse {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public BuildDetailsResponse build() {
             return new BuildDetailsResponse(intotoStatement, provenance, provenanceBytes);
         }

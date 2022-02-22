@@ -76,7 +76,6 @@ public final class FlowEndpointsConfigurationResponse {
             this.workflow = workflow;
             return this;
         }
-
         public FlowEndpointsConfigurationResponse build() {
             return new FlowEndpointsConfigurationResponse(connector, workflow);
         }

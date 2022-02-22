@@ -17,7 +17,7 @@ public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListWebAppPublishingCredentialsArgs build() {
             return new ListWebAppPublishingCredentialsArgs(name, resourceGroupName);
         }

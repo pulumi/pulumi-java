@@ -54,7 +54,6 @@ public final class BlockchainMemberNodesSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public BlockchainMemberNodesSkuResponse build() {
             return new BlockchainMemberNodesSkuResponse(capacity);
         }

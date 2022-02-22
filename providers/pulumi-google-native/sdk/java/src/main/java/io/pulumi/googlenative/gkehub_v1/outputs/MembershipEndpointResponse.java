@@ -163,7 +163,6 @@ public final class MembershipEndpointResponse {
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
         }
-
         public MembershipEndpointResponse build() {
             return new MembershipEndpointResponse(edgeCluster, gkeCluster, kubernetesMetadata, kubernetesResource, multiCloudCluster, onPremCluster);
         }

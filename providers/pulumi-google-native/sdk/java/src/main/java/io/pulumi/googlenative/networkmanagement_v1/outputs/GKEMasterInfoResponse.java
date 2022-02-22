@@ -116,7 +116,6 @@ public final class GKEMasterInfoResponse {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
-
         public GKEMasterInfoResponse build() {
             return new GKEMasterInfoResponse(clusterNetworkUri, clusterUri, externalIp, internalIp);
         }

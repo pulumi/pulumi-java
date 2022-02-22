@@ -119,7 +119,6 @@ public final class PathRuleResponse {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }
-
         public PathRuleResponse build() {
             return new PathRuleResponse(paths, routeAction, service, urlRedirect);
         }

@@ -76,7 +76,6 @@ public final class ServicePrincipalProfileResponse {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public ServicePrincipalProfileResponse build() {
             return new ServicePrincipalProfileResponse(clientId, clientSecret);
         }

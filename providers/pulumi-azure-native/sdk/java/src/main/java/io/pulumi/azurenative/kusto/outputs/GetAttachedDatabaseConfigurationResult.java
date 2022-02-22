@@ -246,7 +246,6 @@ public final class GetAttachedDatabaseConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttachedDatabaseConfigurationResult build() {
             return new GetAttachedDatabaseConfigurationResult(attachedDatabaseNames, clusterResourceId, databaseName, defaultPrincipalsModificationKind, id, location, name, provisioningState, tableLevelSharingProperties, type);
         }

@@ -79,7 +79,6 @@ public final class BranchResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BranchResponse build() {
             return new BranchResponse(actions, name);
         }

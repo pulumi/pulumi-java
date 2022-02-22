@@ -27,7 +27,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<TestIssueCategory> category;
+      private final @Nullable Input<TestIssueCategory> category;
 
     public Input<TestIssueCategory> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -38,7 +38,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorMessage")
-    private final @Nullable Input<String> errorMessage;
+      private final @Nullable Input<String> errorMessage;
 
     public Input<String> getErrorMessage() {
         return this.errorMessage == null ? Input.empty() : this.errorMessage;
@@ -49,7 +49,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Input<TestIssueSeverity> severity;
+      private final @Nullable Input<TestIssueSeverity> severity;
 
     public Input<TestIssueSeverity> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -60,7 +60,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<TestIssueType> type;
+      private final @Nullable Input<TestIssueType> type;
 
     public Input<TestIssueType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -71,7 +71,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="warning")
-    private final @Nullable Input<AnyArgs> warning;
+      private final @Nullable Input<AnyArgs> warning;
 
     public Input<AnyArgs> getWarning() {
         return this.warning == null ? Input.empty() : this.warning;
@@ -175,7 +175,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.warning = Input.ofNullable(warning);
             return this;
         }
-
         public TestIssueArgs build() {
             return new TestIssueArgs(category, errorMessage, severity, type, warning);
         }

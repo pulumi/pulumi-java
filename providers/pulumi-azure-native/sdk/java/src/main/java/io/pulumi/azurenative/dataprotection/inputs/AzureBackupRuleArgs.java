@@ -28,7 +28,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backupParameters")
-    private final @Nullable Input<AzureBackupParamsArgs> backupParameters;
+        private final @Nullable Input<AzureBackupParamsArgs> backupParameters;
 
     public Input<AzureBackupParamsArgs> getBackupParameters() {
         return this.backupParameters == null ? Input.empty() : this.backupParameters;
@@ -39,14 +39,14 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataStore", required=true)
-    private final Input<DataStoreInfoBaseArgs> dataStore;
+        private final Input<DataStoreInfoBaseArgs> dataStore;
 
     public Input<DataStoreInfoBaseArgs> getDataStore() {
         return this.dataStore;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -57,7 +57,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -68,7 +68,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
+        private final Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
     public Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> getTrigger() {
         return this.trigger;
@@ -172,7 +172,6 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.trigger = Input.of(Objects.requireNonNull(trigger));
             return this;
         }
-
         public AzureBackupRuleArgs build() {
             return new AzureBackupRuleArgs(backupParameters, dataStore, name, objectType, trigger);
         }

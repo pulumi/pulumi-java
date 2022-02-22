@@ -173,7 +173,6 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToSourceSqlServerSyncTaskPropertiesResponse build() {
             return new ConnectToSourceSqlServerSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

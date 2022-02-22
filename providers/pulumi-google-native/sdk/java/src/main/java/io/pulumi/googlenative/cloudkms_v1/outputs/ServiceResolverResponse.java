@@ -118,7 +118,6 @@ public final class ServiceResolverResponse {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
-
         public ServiceResolverResponse build() {
             return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }

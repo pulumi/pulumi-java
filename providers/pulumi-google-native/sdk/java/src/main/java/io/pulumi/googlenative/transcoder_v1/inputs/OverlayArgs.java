@@ -25,7 +25,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="animations")
-    private final @Nullable Input<List<AnimationArgs>> animations;
+      private final @Nullable Input<List<AnimationArgs>> animations;
 
     public Input<List<AnimationArgs>> getAnimations() {
         return this.animations == null ? Input.empty() : this.animations;
@@ -36,7 +36,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<ImageArgs> image;
+      private final @Nullable Input<ImageArgs> image;
 
     public Input<ImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -95,7 +95,6 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
             this.image = Input.ofNullable(image);
             return this;
         }
-
         public OverlayArgs build() {
             return new OverlayArgs(animations, image);
         }

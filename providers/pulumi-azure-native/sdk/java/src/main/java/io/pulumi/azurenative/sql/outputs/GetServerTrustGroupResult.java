@@ -139,7 +139,6 @@ public final class GetServerTrustGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerTrustGroupResult build() {
             return new GetServerTrustGroupResult(groupMembers, id, name, trustScopes, type);
         }

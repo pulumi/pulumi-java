@@ -227,7 +227,6 @@ public final class GetGalleryImageVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryImageVersionResult build() {
             return new GetGalleryImageVersionResult(id, location, name, provisioningState, publishingProfile, replicationStatus, storageProfile, tags, type);
         }

@@ -160,7 +160,6 @@ public final class ConnectorMappingFormatResponse {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
-
         public ConnectorMappingFormatResponse build() {
             return new ConnectorMappingFormatResponse(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
         }

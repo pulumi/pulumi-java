@@ -119,7 +119,6 @@ public final class LogMetricTriggerResponse {
             this.thresholdOperator = thresholdOperator;
             return this;
         }
-
         public LogMetricTriggerResponse build() {
             return new LogMetricTriggerResponse(metricColumn, metricTriggerType, threshold, thresholdOperator);
         }

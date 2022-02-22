@@ -95,7 +95,6 @@ public final class KeyVaultMetaInfoResponse {
             this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
             return this;
         }
-
         public KeyVaultMetaInfoResponse build() {
             return new KeyVaultMetaInfoResponse(encryptionKeyName, encryptionKeyVersion, keyVaultResourceId);
         }

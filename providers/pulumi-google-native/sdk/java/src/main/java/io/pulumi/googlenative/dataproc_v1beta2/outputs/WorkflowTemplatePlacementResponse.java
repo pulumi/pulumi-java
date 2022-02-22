@@ -75,7 +75,6 @@ public final class WorkflowTemplatePlacementResponse {
             this.managedCluster = Objects.requireNonNull(managedCluster);
             return this;
         }
-
         public WorkflowTemplatePlacementResponse build() {
             return new WorkflowTemplatePlacementResponse(clusterSelector, managedCluster);
         }

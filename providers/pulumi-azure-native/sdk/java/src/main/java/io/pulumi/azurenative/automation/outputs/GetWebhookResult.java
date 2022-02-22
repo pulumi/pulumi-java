@@ -331,7 +331,6 @@ public final class GetWebhookResult {
             this.uri = uri;
             return this;
         }
-
         public GetWebhookResult build() {
             return new GetWebhookResult(creationTime, description, expiryTime, id, isEnabled, lastInvokedTime, lastModifiedBy, lastModifiedTime, name, parameters, runOn, runbook, type, uri);
         }

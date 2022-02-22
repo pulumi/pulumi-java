@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableEntityExtraction")
-    private final @Nullable Input<Boolean> enableEntityExtraction;
+      private final @Nullable Input<Boolean> enableEntityExtraction;
 
     public Input<Boolean> getEnableEntityExtraction() {
         return this.enableEntityExtraction == null ? Input.empty() : this.enableEntityExtraction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableSentimentAnalysis")
-    private final @Nullable Input<Boolean> enableSentimentAnalysis;
+      private final @Nullable Input<Boolean> enableSentimentAnalysis;
 
     public Input<Boolean> getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis == null ? Input.empty() : this.enableSentimentAnalysis;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
             this.enableSentimentAnalysis = Input.ofNullable(enableSentimentAnalysis);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs(enableEntityExtraction, enableSentimentAnalysis);
         }

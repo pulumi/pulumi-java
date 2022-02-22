@@ -120,7 +120,6 @@ public final class AssignmentReportResourceResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public AssignmentReportResourceResponse build() {
             return new AssignmentReportResourceResponse(complianceStatus, properties, reasons, resourceId);
         }

@@ -175,7 +175,6 @@ public final class GetSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityPolicyResult build() {
             return new GetSecurityPolicyResult(deploymentStatus, id, name, parameters, provisioningState, systemData, type);
         }

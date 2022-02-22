@@ -24,7 +24,7 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
+        private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
     public List<CloudServiceVaultSecretGroupResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
@@ -62,7 +62,6 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
             this.secrets = secrets;
             return this;
         }
-
         public CloudServiceOsProfileResponse build() {
             return new CloudServiceOsProfileResponse(secrets);
         }

@@ -89,7 +89,6 @@ public final class CacheKeyQueryStringActionParametersResponse {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public CacheKeyQueryStringActionParametersResponse build() {
             return new CacheKeyQueryStringActionParametersResponse(odataType, queryParameters, queryStringBehavior);
         }

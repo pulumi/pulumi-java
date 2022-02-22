@@ -116,7 +116,6 @@ public final class ListDeploymentInfoResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ListDeploymentInfoResult build() {
             return new ListDeploymentInfoResult(diskCapacity, memoryCapacity, status, version);
         }

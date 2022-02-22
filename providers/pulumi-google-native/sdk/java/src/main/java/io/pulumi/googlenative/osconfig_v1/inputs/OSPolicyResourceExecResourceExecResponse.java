@@ -23,7 +23,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="file", required=true)
-    private final OSPolicyResourceFileResponse file;
+      private final OSPolicyResourceFileResponse file;
 
     public OSPolicyResourceFileResponse getFile() {
         return this.file;
@@ -45,7 +45,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final String interpreter;
+      private final String interpreter;
 
     public String getInterpreter() {
         return this.interpreter;
@@ -56,7 +56,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="outputFilePath", required=true)
-    private final String outputFilePath;
+      private final String outputFilePath;
 
     public String getOutputFilePath() {
         return this.outputFilePath;
@@ -67,7 +67,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="script", required=true)
-    private final String script;
+      private final String script;
 
     public String getScript() {
         return this.script;
@@ -146,7 +146,6 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public OSPolicyResourceExecResourceExecResponse build() {
             return new OSPolicyResourceExecResourceExecResponse(args, file, interpreter, outputFilePath, script);
         }

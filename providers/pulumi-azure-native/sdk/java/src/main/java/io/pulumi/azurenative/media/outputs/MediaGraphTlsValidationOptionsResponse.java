@@ -74,7 +74,6 @@ public final class MediaGraphTlsValidationOptionsResponse {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
-
         public MediaGraphTlsValidationOptionsResponse build() {
             return new MediaGraphTlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

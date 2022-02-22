@@ -185,7 +185,6 @@ public final class HdfsSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HdfsSourceResponse build() {
             return new HdfsSourceResponse(disableMetricsCollection, distcpSettings, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }

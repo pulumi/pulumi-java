@@ -19,7 +19,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final String hostName;
+        private final String hostName;
 
     public String getHostName() {
         return this.hostName;
@@ -30,7 +30,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final String policyName;
+        private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -41,7 +41,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="select")
-    private final @Nullable String select;
+        private final @Nullable String select;
 
     public Optional<String> getSelect() {
         return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
@@ -100,7 +100,6 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
             this.select = select;
             return this;
         }
-
         public GetIoMAMPolicyByNameArgs build() {
             return new GetIoMAMPolicyByNameArgs(hostName, policyName, select);
         }

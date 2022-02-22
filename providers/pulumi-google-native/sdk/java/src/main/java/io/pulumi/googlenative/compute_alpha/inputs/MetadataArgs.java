@@ -24,7 +24,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<MetadataItemsItemArgs>> items;
+      private final @Nullable Input<List<MetadataItemsItemArgs>> items;
 
     public Input<List<MetadataItemsItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -67,7 +67,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.items = Input.ofNullable(items);
             return this;
         }
-
         public MetadataArgs build() {
             return new MetadataArgs(items);
         }

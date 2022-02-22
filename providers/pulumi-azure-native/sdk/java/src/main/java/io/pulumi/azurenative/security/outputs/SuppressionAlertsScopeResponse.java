@@ -53,7 +53,6 @@ public final class SuppressionAlertsScopeResponse {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public SuppressionAlertsScopeResponse build() {
             return new SuppressionAlertsScopeResponse(allOf);
         }

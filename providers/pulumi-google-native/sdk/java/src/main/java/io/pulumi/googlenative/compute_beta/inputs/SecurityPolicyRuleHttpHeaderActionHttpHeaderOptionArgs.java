@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+      private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @InputImport(name="headerValue")
-    private final @Nullable Input<String> headerValue;
+      private final @Nullable Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue == null ? Input.empty() : this.headerValue;
@@ -89,7 +89,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             this.headerValue = Input.ofNullable(headerValue);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(headerName, headerValue);
         }

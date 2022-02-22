@@ -23,7 +23,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Input<String> vpc;
+      private final @Nullable Input<String> vpc;
 
     public Input<String> getVpc() {
         return this.vpc == null ? Input.empty() : this.vpc;
@@ -66,7 +66,6 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
             this.vpc = Input.ofNullable(vpc);
             return this;
         }
-
         public VpcPeeringConnectivityArgs build() {
             return new VpcPeeringConnectivityArgs(vpc);
         }

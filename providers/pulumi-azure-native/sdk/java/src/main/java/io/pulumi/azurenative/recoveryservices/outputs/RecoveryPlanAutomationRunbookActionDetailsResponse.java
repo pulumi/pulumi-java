@@ -120,7 +120,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
             return new RecoveryPlanAutomationRunbookActionDetailsResponse(fabricLocation, instanceType, runbookId, timeout);
         }

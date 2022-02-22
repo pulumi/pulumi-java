@@ -99,7 +99,6 @@ public final class CustomOpenIdConnectProviderResponse {
             this.registration = registration;
             return this;
         }
-
         public CustomOpenIdConnectProviderResponse build() {
             return new CustomOpenIdConnectProviderResponse(enabled, login, registration);
         }

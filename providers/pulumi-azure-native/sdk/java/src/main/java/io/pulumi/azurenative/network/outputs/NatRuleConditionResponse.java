@@ -205,7 +205,6 @@ public final class NatRuleConditionResponse {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public NatRuleConditionResponse build() {
             return new NatRuleConditionResponse(description, destinationAddresses, destinationPorts, ipProtocols, name, ruleConditionType, sourceAddresses, sourceIpGroups);
         }

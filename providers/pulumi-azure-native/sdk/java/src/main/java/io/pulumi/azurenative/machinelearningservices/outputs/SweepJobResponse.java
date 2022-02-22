@@ -476,7 +476,6 @@ public final class SweepJobResponse {
             this.trial = trial;
             return this;
         }
-
         public SweepJobResponse build() {
             return new SweepJobResponse(algorithm, compute, description, earlyTermination, experimentName, identity, interactionEndpoints, jobType, maxConcurrentTrials, maxTotalTrials, objective, output, priority, properties, provisioningState, searchSpace, status, tags, timeout, trial);
         }

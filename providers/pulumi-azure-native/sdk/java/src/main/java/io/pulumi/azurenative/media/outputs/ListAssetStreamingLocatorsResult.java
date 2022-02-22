@@ -53,7 +53,6 @@ public final class ListAssetStreamingLocatorsResult {
             this.streamingLocators = Objects.requireNonNull(streamingLocators);
             return this;
         }
-
         public ListAssetStreamingLocatorsResult build() {
             return new ListAssetStreamingLocatorsResult(streamingLocators);
         }

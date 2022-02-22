@@ -25,7 +25,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="containerIdentityInfo")
-    private final @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo;
+        private final @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo;
 
     public Input<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
         return this.containerIdentityInfo == null ? Input.empty() : this.containerIdentityInfo;
@@ -36,7 +36,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rawCertData")
-    private final @Nullable Input<String> rawCertData;
+        private final @Nullable Input<String> rawCertData;
 
     public Input<String> getRawCertData() {
         return this.rawCertData == null ? Input.empty() : this.rawCertData;
@@ -47,7 +47,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceEndpoints")
-    private final @Nullable Input<Map<String,String>> serviceEndpoints;
+        private final @Nullable Input<Map<String,String>> serviceEndpoints;
 
     public Input<Map<String,String>> getServiceEndpoints() {
         return this.serviceEndpoints == null ? Input.empty() : this.serviceEndpoints;
@@ -121,7 +121,6 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
             this.serviceEndpoints = Input.ofNullable(serviceEndpoints);
             return this;
         }
-
         public GenericContainerExtendedInfoArgs build() {
             return new GenericContainerExtendedInfoArgs(containerIdentityInfo, rawCertData, serviceEndpoints);
         }

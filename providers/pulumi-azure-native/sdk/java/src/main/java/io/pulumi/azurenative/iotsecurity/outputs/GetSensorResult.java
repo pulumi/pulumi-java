@@ -330,7 +330,6 @@ public final class GetSensorResult {
             this.zone = zone;
             return this;
         }
-
         public GetSensorResult build() {
             return new GetSensorResult(connectivityTime, dynamicLearning, id, learningMode, name, sensorStatus, sensorType, sensorVersion, systemData, tiAutomaticUpdates, tiStatus, tiVersion, type, zone);
         }

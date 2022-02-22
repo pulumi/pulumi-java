@@ -182,7 +182,6 @@ public final class GetReplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationResult build() {
             return new GetReplicationResult(id, location, name, provisioningState, status, tags, type);
         }

@@ -658,7 +658,6 @@ public final class GetBucketResult {
             this.website = Objects.requireNonNull(website);
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(acl, autoclass, billing, cors, customPlacementConfig, defaultEventBasedHold, defaultObjectAcl, encryption, etag, iamConfiguration, kind, labels, lifecycle, location, locationType, logging, metageneration, name, owner, projectNumber, retentionPolicy, rpo, satisfiesPZS, selfLink, storageClass, timeCreated, updated, versioning, website);
         }

@@ -54,7 +54,6 @@ public final class ManualResolutionPropertiesResponse {
             this.targetId = targetId;
             return this;
         }
-
         public ManualResolutionPropertiesResponse build() {
             return new ManualResolutionPropertiesResponse(targetId);
         }

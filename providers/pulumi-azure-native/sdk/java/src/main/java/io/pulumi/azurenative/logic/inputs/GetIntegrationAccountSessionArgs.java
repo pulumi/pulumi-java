@@ -17,7 +17,7 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final String integrationAccountName;
+        private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sessionName", required=true)
-    private final String sessionName;
+        private final String sessionName;
 
     public String getSessionName() {
         return this.sessionName;
@@ -98,7 +98,6 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
             this.sessionName = Objects.requireNonNull(sessionName);
             return this;
         }
-
         public GetIntegrationAccountSessionArgs build() {
             return new GetIntegrationAccountSessionArgs(integrationAccountName, resourceGroupName, sessionName);
         }

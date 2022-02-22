@@ -25,7 +25,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="bitbucketServerConfigResource", required=true)
-    private final Input<String> bitbucketServerConfigResource;
+      private final Input<String> bitbucketServerConfigResource;
 
     public Input<String> getBitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
@@ -36,7 +36,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="projectKey", required=true)
-    private final Input<String> projectKey;
+      private final Input<String> projectKey;
 
     public Input<String> getProjectKey() {
         return this.projectKey;
@@ -47,7 +47,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pullRequest")
-    private final @Nullable Input<PullRequestFilterArgs> pullRequest;
+      private final @Nullable Input<PullRequestFilterArgs> pullRequest;
 
     public Input<PullRequestFilterArgs> getPullRequest() {
         return this.pullRequest == null ? Input.empty() : this.pullRequest;
@@ -58,7 +58,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="push")
-    private final @Nullable Input<PushFilterArgs> push;
+      private final @Nullable Input<PushFilterArgs> push;
 
     public Input<PushFilterArgs> getPush() {
         return this.push == null ? Input.empty() : this.push;
@@ -69,7 +69,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repoSlug", required=true)
-    private final Input<String> repoSlug;
+      private final Input<String> repoSlug;
 
     public Input<String> getRepoSlug() {
         return this.repoSlug;
@@ -173,7 +173,6 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
             this.repoSlug = Input.of(Objects.requireNonNull(repoSlug));
             return this;
         }
-
         public BitbucketServerTriggerConfigArgs build() {
             return new BitbucketServerTriggerConfigArgs(bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }

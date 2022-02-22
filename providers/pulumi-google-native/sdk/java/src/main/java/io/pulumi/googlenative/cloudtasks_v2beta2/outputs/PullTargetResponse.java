@@ -30,7 +30,6 @@ public final class PullTargetResponse {
         public Builder(PullTargetResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PullTargetResponse build() {
             return new PullTargetResponse();
         }

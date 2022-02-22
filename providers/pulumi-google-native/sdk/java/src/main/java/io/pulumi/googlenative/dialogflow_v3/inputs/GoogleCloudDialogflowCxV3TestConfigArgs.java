@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="flow")
-    private final @Nullable Input<String> flow;
+      private final @Nullable Input<String> flow;
 
     public Input<String> getFlow() {
         return this.flow == null ? Input.empty() : this.flow;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="trackingParameters")
-    private final @Nullable Input<List<String>> trackingParameters;
+      private final @Nullable Input<List<String>> trackingParameters;
 
     public Input<List<String>> getTrackingParameters() {
         return this.trackingParameters == null ? Input.empty() : this.trackingParameters;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
             this.trackingParameters = Input.ofNullable(trackingParameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestConfigArgs build() {
             return new GoogleCloudDialogflowCxV3TestConfigArgs(flow, trackingParameters);
         }

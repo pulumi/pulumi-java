@@ -15,21 +15,21 @@ public final class GetInstanceDatabaseIamPolicyArgs extends io.pulumi.resources.
     public static final GetInstanceDatabaseIamPolicyArgs Empty = new GetInstanceDatabaseIamPolicyArgs();
 
     @InputImport(name="databaseId", required=true)
-    private final String databaseId;
+      private final String databaseId;
 
     public String getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetInstanceDatabaseIamPolicyArgs extends io.pulumi.resources.
             this.project = project;
             return this;
         }
-
         public GetInstanceDatabaseIamPolicyArgs build() {
             return new GetInstanceDatabaseIamPolicyArgs(databaseId, instanceId, project);
         }

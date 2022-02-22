@@ -223,7 +223,6 @@ public final class EnvironmentDetailsResponse {
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
         }
-
         public EnvironmentDetailsResponse build() {
             return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
         }

@@ -26,7 +26,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="elapsedTime")
-    private final @Nullable Input<DurationArgs> elapsedTime;
+      private final @Nullable Input<DurationArgs> elapsedTime;
 
     public Input<DurationArgs> getElapsedTime() {
         return this.elapsedTime == null ? Input.empty() : this.elapsedTime;
@@ -37,7 +37,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="errorCount")
-    private final @Nullable Input<Integer> errorCount;
+      private final @Nullable Input<Integer> errorCount;
 
     public Input<Integer> getErrorCount() {
         return this.errorCount == null ? Input.empty() : this.errorCount;
@@ -48,7 +48,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="failureCount")
-    private final @Nullable Input<Integer> failureCount;
+      private final @Nullable Input<Integer> failureCount;
 
     public Input<Integer> getFailureCount() {
         return this.failureCount == null ? Input.empty() : this.failureCount;
@@ -59,7 +59,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="flakyCount")
-    private final @Nullable Input<Integer> flakyCount;
+      private final @Nullable Input<Integer> flakyCount;
 
     public Input<Integer> getFlakyCount() {
         return this.flakyCount == null ? Input.empty() : this.flakyCount;
@@ -70,7 +70,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="skippedCount")
-    private final @Nullable Input<Integer> skippedCount;
+      private final @Nullable Input<Integer> skippedCount;
 
     public Input<Integer> getSkippedCount() {
         return this.skippedCount == null ? Input.empty() : this.skippedCount;
@@ -92,7 +92,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="totalCount")
-    private final @Nullable Input<Integer> totalCount;
+      private final @Nullable Input<Integer> totalCount;
 
     public Input<Integer> getTotalCount() {
         return this.totalCount == null ? Input.empty() : this.totalCount;
@@ -103,7 +103,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="xmlSource")
-    private final @Nullable Input<FileReferenceArgs> xmlSource;
+      private final @Nullable Input<FileReferenceArgs> xmlSource;
 
     public Input<FileReferenceArgs> getXmlSource() {
         return this.xmlSource == null ? Input.empty() : this.xmlSource;
@@ -252,7 +252,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             this.xmlSource = Input.ofNullable(xmlSource);
             return this;
         }
-
         public TestSuiteOverviewArgs build() {
             return new TestSuiteOverviewArgs(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }

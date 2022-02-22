@@ -76,7 +76,6 @@ public final class BlobLocationResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public BlobLocationResponse build() {
             return new BlobLocationResponse(credentials, uri);
         }

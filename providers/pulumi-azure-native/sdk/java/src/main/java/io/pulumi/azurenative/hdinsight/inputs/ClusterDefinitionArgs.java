@@ -25,7 +25,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blueprint")
-    private final @Nullable Input<String> blueprint;
+        private final @Nullable Input<String> blueprint;
 
     public Input<String> getBlueprint() {
         return this.blueprint == null ? Input.empty() : this.blueprint;
@@ -36,7 +36,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="componentVersion")
-    private final @Nullable Input<Map<String,String>> componentVersion;
+        private final @Nullable Input<Map<String,String>> componentVersion;
 
     public Input<Map<String,String>> getComponentVersion() {
         return this.componentVersion == null ? Input.empty() : this.componentVersion;
@@ -47,7 +47,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurations")
-    private final @Nullable Input<Object> configurations;
+        private final @Nullable Input<Object> configurations;
 
     public Input<Object> getConfigurations() {
         return this.configurations == null ? Input.empty() : this.configurations;
@@ -58,7 +58,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -147,7 +147,6 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ClusterDefinitionArgs build() {
             return new ClusterDefinitionArgs(blueprint, componentVersion, configurations, kind);
         }

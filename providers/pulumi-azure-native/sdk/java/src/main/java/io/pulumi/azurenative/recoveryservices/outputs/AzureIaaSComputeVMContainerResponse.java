@@ -210,7 +210,6 @@ public final class AzureIaaSComputeVMContainerResponse {
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
         }
-
         public AzureIaaSComputeVMContainerResponse build() {
             return new AzureIaaSComputeVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }

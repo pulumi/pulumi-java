@@ -119,7 +119,6 @@ public final class GetBackupShortTermRetentionPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupShortTermRetentionPolicyResult build() {
             return new GetBackupShortTermRetentionPolicyResult(id, name, retentionDays, type);
         }

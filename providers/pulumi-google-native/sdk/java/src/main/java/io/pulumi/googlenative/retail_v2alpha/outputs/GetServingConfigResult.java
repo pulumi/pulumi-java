@@ -391,7 +391,6 @@ public final class GetServingConfigResult {
             this.twowaySynonymsControlIds = Objects.requireNonNull(twowaySynonymsControlIds);
             return this;
         }
-
         public GetServingConfigResult build() {
             return new GetServingConfigResult(boostControlIds, displayName, diversityLevel, doNotAssociateControlIds, dynamicFacetSpec, enableCategoryFilterLevel, facetControlIds, filterControlIds, ignoreControlIds, modelId, name, onewaySynonymsControlIds, priceRerankingLevel, redirectControlIds, replacementControlIds, solutionTypes, twowaySynonymsControlIds);
         }

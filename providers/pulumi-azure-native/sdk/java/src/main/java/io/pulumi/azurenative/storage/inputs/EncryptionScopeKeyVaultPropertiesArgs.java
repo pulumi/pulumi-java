@@ -23,7 +23,7 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyUri")
-    private final @Nullable Input<String> keyUri;
+        private final @Nullable Input<String> keyUri;
 
     public Input<String> getKeyUri() {
         return this.keyUri == null ? Input.empty() : this.keyUri;
@@ -66,7 +66,6 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
             this.keyUri = Input.ofNullable(keyUri);
             return this;
         }
-
         public EncryptionScopeKeyVaultPropertiesArgs build() {
             return new EncryptionScopeKeyVaultPropertiesArgs(keyUri);
         }

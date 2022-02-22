@@ -76,7 +76,6 @@ public final class ClientRegistrationResponse {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public ClientRegistrationResponse build() {
             return new ClientRegistrationResponse(clientId, clientSecretSettingName);
         }

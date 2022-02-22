@@ -226,7 +226,6 @@ public final class SapCloudForCustomerSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapCloudForCustomerSourceResponse build() {
             return new SapCloudForCustomerSourceResponse(additionalColumns, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

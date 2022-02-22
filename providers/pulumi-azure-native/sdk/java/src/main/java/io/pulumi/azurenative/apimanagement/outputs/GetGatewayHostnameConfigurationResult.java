@@ -224,7 +224,6 @@ public final class GetGatewayHostnameConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayHostnameConfigurationResult build() {
             return new GetGatewayHostnameConfigurationResult(certificateId, hostname, http2Enabled, id, name, negotiateClientCertificate, tls10Enabled, tls11Enabled, type);
         }

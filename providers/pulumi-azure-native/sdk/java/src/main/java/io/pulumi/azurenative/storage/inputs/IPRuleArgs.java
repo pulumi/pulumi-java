@@ -24,7 +24,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Action> action;
+        private final @Nullable Input<Action> action;
 
     public Input<Action> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -35,7 +35,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iPAddressOrRange", required=true)
-    private final Input<String> iPAddressOrRange;
+        private final Input<String> iPAddressOrRange;
 
     public Input<String> getIPAddressOrRange() {
         return this.iPAddressOrRange;
@@ -94,7 +94,6 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.iPAddressOrRange = Input.of(Objects.requireNonNull(iPAddressOrRange));
             return this;
         }
-
         public IPRuleArgs build() {
             return new IPRuleArgs(action, iPAddressOrRange);
         }

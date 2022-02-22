@@ -52,7 +52,6 @@ public final class DatabaseInfoResponse {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public DatabaseInfoResponse build() {
             return new DatabaseInfoResponse(sourceDatabaseName);
         }

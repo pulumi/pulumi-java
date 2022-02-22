@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
      * 
      */
     @InputImport(name="lastPeriodAmount", required=true)
-    private final GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount;
+      private final GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount;
 
     public GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse getLastPeriodAmount() {
         return this.lastPeriodAmount;
@@ -33,7 +33,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
      * 
      */
     @InputImport(name="specifiedAmount", required=true)
-    private final GoogleTypeMoneyResponse specifiedAmount;
+      private final GoogleTypeMoneyResponse specifiedAmount;
 
     public GoogleTypeMoneyResponse getSpecifiedAmount() {
         return this.specifiedAmount;
@@ -82,7 +82,6 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
             this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse(lastPeriodAmount, specifiedAmount);
         }

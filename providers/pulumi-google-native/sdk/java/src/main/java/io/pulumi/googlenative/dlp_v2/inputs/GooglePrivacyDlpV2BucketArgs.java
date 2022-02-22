@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> max;
+      private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> max;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getMax() {
         return this.max == null ? Input.empty() : this.max;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> min;
+      private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> min;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replacementValue", required=true)
-    private final Input<GooglePrivacyDlpV2ValueArgs> replacementValue;
+      private final Input<GooglePrivacyDlpV2ValueArgs> replacementValue;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getReplacementValue() {
         return this.replacementValue;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
             this.replacementValue = Input.of(Objects.requireNonNull(replacementValue));
             return this;
         }
-
         public GooglePrivacyDlpV2BucketArgs build() {
             return new GooglePrivacyDlpV2BucketArgs(max, min, replacementValue);
         }

@@ -24,7 +24,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -35,7 +35,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creatorComment")
-    private final @Nullable Input<String> creatorComment;
+      private final @Nullable Input<String> creatorComment;
 
     public Input<String> getCreatorComment() {
         return this.creatorComment == null ? Input.empty() : this.creatorComment;
@@ -46,7 +46,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creators")
-    private final @Nullable Input<List<String>> creators;
+      private final @Nullable Input<List<String>> creators;
 
     public Input<List<String>> getCreators() {
         return this.creators == null ? Input.empty() : this.creators;
@@ -57,7 +57,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="documentComment")
-    private final @Nullable Input<String> documentComment;
+      private final @Nullable Input<String> documentComment;
 
     public Input<String> getDocumentComment() {
         return this.documentComment == null ? Input.empty() : this.documentComment;
@@ -68,7 +68,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="externalDocumentRefs")
-    private final @Nullable Input<List<String>> externalDocumentRefs;
+      private final @Nullable Input<List<String>> externalDocumentRefs;
 
     public Input<List<String>> getExternalDocumentRefs() {
         return this.externalDocumentRefs == null ? Input.empty() : this.externalDocumentRefs;
@@ -79,7 +79,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -90,7 +90,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="licenseListVersion")
-    private final @Nullable Input<String> licenseListVersion;
+      private final @Nullable Input<String> licenseListVersion;
 
     public Input<String> getLicenseListVersion() {
         return this.licenseListVersion == null ? Input.empty() : this.licenseListVersion;
@@ -101,7 +101,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -112,7 +112,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -276,7 +276,6 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public DocumentOccurrenceArgs build() {
             return new DocumentOccurrenceArgs(createTime, creatorComment, creators, documentComment, externalDocumentRefs, id, licenseListVersion, namespace, title);
         }

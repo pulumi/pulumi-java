@@ -54,7 +54,6 @@ public final class DiskSecurityProfileResponse {
             this.securityType = securityType;
             return this;
         }
-
         public DiskSecurityProfileResponse build() {
             return new DiskSecurityProfileResponse(securityType);
         }

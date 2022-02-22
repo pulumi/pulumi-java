@@ -118,7 +118,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse build() {
             return new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(keyName, primaryKey, rights, secondaryKey);
         }

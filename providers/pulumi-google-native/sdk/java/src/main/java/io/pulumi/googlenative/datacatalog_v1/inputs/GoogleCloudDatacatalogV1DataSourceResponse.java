@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -81,7 +81,6 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleCloudDatacatalogV1DataSourceResponse build() {
             return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service);
         }

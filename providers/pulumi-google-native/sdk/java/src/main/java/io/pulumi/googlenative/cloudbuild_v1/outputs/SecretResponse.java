@@ -75,7 +75,6 @@ public final class SecretResponse {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(kmsKeyName, secretEnv);
         }

@@ -22,7 +22,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="reusableConfig", required=true)
-    private final String reusableConfig;
+      private final String reusableConfig;
 
     public String getReusableConfig() {
         return this.reusableConfig;
@@ -33,7 +33,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="reusableConfigValues", required=true)
-    private final ReusableConfigValuesResponse reusableConfigValues;
+      private final ReusableConfigValuesResponse reusableConfigValues;
 
     public ReusableConfigValuesResponse getReusableConfigValues() {
         return this.reusableConfigValues;
@@ -82,7 +82,6 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
         }
-
         public ReusableConfigWrapperResponse build() {
             return new ReusableConfigWrapperResponse(reusableConfig, reusableConfigValues);
         }

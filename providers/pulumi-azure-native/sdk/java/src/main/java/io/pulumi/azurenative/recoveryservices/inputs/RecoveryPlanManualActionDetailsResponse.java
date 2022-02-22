@@ -23,7 +23,7 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -84,7 +84,6 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public RecoveryPlanManualActionDetailsResponse build() {
             return new RecoveryPlanManualActionDetailsResponse(description, instanceType);
         }

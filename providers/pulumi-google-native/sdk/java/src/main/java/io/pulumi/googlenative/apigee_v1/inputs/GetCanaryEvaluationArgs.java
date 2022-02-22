@@ -13,21 +13,21 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
     public static final GetCanaryEvaluationArgs Empty = new GetCanaryEvaluationArgs();
 
     @InputImport(name="canaryevaluationId", required=true)
-    private final String canaryevaluationId;
+      private final String canaryevaluationId;
 
     public String getCanaryevaluationId() {
         return this.canaryevaluationId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -86,7 +86,6 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetCanaryEvaluationArgs build() {
             return new GetCanaryEvaluationArgs(canaryevaluationId, instanceId, organizationId);
         }

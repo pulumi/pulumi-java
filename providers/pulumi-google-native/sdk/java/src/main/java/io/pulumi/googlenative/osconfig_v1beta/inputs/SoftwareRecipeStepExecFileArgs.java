@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+      private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="artifactId")
-    private final @Nullable Input<String> artifactId;
+      private final @Nullable Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId == null ? Input.empty() : this.artifactId;
@@ -58,7 +58,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -147,7 +147,6 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
-
         public SoftwareRecipeStepExecFileArgs build() {
             return new SoftwareRecipeStepExecFileArgs(allowedExitCodes, args, artifactId, localPath);
         }

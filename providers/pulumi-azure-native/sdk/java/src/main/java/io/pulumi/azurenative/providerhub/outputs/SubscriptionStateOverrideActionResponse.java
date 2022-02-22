@@ -58,7 +58,6 @@ public final class SubscriptionStateOverrideActionResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public SubscriptionStateOverrideActionResponse build() {
             return new SubscriptionStateOverrideActionResponse(action, state);
         }

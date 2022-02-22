@@ -441,7 +441,6 @@ public final class GetWorkflowResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(accessControl, accessEndpoint, changedTime, createdTime, definition, endpointsConfiguration, id, identity, integrationAccount, integrationServiceEnvironment, location, name, parameters, provisioningState, sku, state, tags, type, version);
         }

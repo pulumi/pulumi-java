@@ -25,7 +25,7 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bigqueryDestination")
-    private final @Nullable Input<BigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Input<BigQueryDestinationArgs> bigqueryDestination;
 
     public Input<BigQueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
@@ -36,7 +36,7 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="consumptionMeteringConfig")
-    private final @Nullable Input<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
+      private final @Nullable Input<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
 
     public Input<ConsumptionMeteringConfigArgs> getConsumptionMeteringConfig() {
         return this.consumptionMeteringConfig == null ? Input.empty() : this.consumptionMeteringConfig;
@@ -47,7 +47,7 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enableNetworkEgressMetering")
-    private final @Nullable Input<Boolean> enableNetworkEgressMetering;
+      private final @Nullable Input<Boolean> enableNetworkEgressMetering;
 
     public Input<Boolean> getEnableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering == null ? Input.empty() : this.enableNetworkEgressMetering;
@@ -121,7 +121,6 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
             this.enableNetworkEgressMetering = Input.ofNullable(enableNetworkEgressMetering);
             return this;
         }
-
         public ResourceUsageExportConfigArgs build() {
             return new ResourceUsageExportConfigArgs(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }

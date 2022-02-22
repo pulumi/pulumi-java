@@ -97,7 +97,6 @@ public final class SelectorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelectorResponse build() {
             return new SelectorResponse(id, targets, type);
         }

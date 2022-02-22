@@ -99,7 +99,6 @@ public final class AzureQueryPropertiesResponse {
             this.tagSettings = tagSettings;
             return this;
         }
-
         public AzureQueryPropertiesResponse build() {
             return new AzureQueryPropertiesResponse(locations, scope, tagSettings);
         }

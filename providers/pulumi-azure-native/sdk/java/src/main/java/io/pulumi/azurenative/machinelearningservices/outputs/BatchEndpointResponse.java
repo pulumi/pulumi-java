@@ -162,7 +162,6 @@ public final class BatchEndpointResponse {
             this.traffic = traffic;
             return this;
         }
-
         public BatchEndpointResponse build() {
             return new BatchEndpointResponse(authMode, description, properties, scoringUri, swaggerUri, traffic);
         }

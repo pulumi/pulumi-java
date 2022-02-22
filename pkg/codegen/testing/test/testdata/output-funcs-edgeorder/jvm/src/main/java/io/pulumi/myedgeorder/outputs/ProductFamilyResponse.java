@@ -208,7 +208,6 @@ public final class ProductFamilyResponse {
             this.productLines = Objects.requireNonNull(productLines);
             return this;
         }
-
         public ProductFamilyResponse build() {
             return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines);
         }

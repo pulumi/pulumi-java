@@ -27,7 +27,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableBgpRoutePropagation")
-    private final @Nullable Input<Boolean> disableBgpRoutePropagation;
+        private final @Nullable Input<Boolean> disableBgpRoutePropagation;
 
     public Input<Boolean> getDisableBgpRoutePropagation() {
         return this.disableBgpRoutePropagation == null ? Input.empty() : this.disableBgpRoutePropagation;
@@ -38,7 +38,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -49,7 +49,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -60,7 +60,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<RouteArgs>> routes;
+        private final @Nullable Input<List<RouteArgs>> routes;
 
     public Input<List<RouteArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -71,7 +71,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -175,7 +175,6 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RouteTableArgs build() {
             return new RouteTableArgs(disableBgpRoutePropagation, id, location, routes, tags);
         }

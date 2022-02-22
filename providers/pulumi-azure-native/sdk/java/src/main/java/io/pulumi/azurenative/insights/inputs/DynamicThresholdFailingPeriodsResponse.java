@@ -21,7 +21,7 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="minFailingPeriodsToAlert", required=true)
-    private final Double minFailingPeriodsToAlert;
+        private final Double minFailingPeriodsToAlert;
 
     public Double getMinFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
@@ -32,7 +32,7 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="numberOfEvaluationPeriods", required=true)
-    private final Double numberOfEvaluationPeriods;
+        private final Double numberOfEvaluationPeriods;
 
     public Double getNumberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
@@ -81,7 +81,6 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }
-
         public DynamicThresholdFailingPeriodsResponse build() {
             return new DynamicThresholdFailingPeriodsResponse(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
         }

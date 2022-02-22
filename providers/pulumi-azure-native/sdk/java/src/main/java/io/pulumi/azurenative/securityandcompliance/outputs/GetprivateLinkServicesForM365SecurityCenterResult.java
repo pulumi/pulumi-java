@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForM365SecurityCenterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForM365SecurityCenterResult build() {
             return new GetprivateLinkServicesForM365SecurityCenterResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

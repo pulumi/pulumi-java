@@ -119,7 +119,6 @@ public final class ApplicationGetEndpointResponse {
             this.publicPort = publicPort;
             return this;
         }
-
         public ApplicationGetEndpointResponse build() {
             return new ApplicationGetEndpointResponse(destinationPort, location, privateIPAddress, publicPort);
         }

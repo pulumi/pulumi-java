@@ -117,7 +117,6 @@ public final class GetTopicAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTopicAuthorizationRuleResult build() {
             return new GetTopicAuthorizationRuleResult(id, name, rights, type);
         }

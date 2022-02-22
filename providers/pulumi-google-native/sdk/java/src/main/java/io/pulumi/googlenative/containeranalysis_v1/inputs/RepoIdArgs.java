@@ -24,7 +24,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectRepoId")
-    private final @Nullable Input<ProjectRepoIdArgs> projectRepoId;
+      private final @Nullable Input<ProjectRepoIdArgs> projectRepoId;
 
     public Input<ProjectRepoIdArgs> getProjectRepoId() {
         return this.projectRepoId == null ? Input.empty() : this.projectRepoId;
@@ -35,7 +35,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -94,7 +94,6 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public RepoIdArgs build() {
             return new RepoIdArgs(projectRepoId, uid);
         }

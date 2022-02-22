@@ -30,7 +30,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="backupBlobShare", required=true)
-    private final Input<BlobShareArgs> backupBlobShare;
+        private final Input<BlobShareArgs> backupBlobShare;
 
     public Input<BlobShareArgs> getBackupBlobShare() {
         return this.backupBlobShare;
@@ -41,7 +41,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable Input<FileShareArgs> backupFileShare;
+        private final @Nullable Input<FileShareArgs> backupFileShare;
 
     public Input<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare == null ? Input.empty() : this.backupFileShare;
@@ -52,7 +52,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="backupMode")
-    private final @Nullable Input<Either<String,BackupMode>> backupMode;
+        private final @Nullable Input<Either<String,BackupMode>> backupMode;
 
     public Input<Either<String,BackupMode>> getBackupMode() {
         return this.backupMode == null ? Input.empty() : this.backupMode;
@@ -63,7 +63,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
+        private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -74,7 +74,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="selectedLogins")
-    private final @Nullable Input<List<String>> selectedLogins;
+        private final @Nullable Input<List<String>> selectedLogins;
 
     public Input<List<String>> getSelectedLogins() {
         return this.selectedLogins == null ? Input.empty() : this.selectedLogins;
@@ -85,7 +85,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -96,7 +96,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+        private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -230,7 +230,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskInputArgs build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputArgs(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

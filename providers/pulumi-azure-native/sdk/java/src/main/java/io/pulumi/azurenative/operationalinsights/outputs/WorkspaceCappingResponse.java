@@ -98,7 +98,6 @@ public final class WorkspaceCappingResponse {
             this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
             return this;
         }
-
         public WorkspaceCappingResponse build() {
             return new WorkspaceCappingResponse(dailyQuotaGb, dataIngestionStatus, quotaNextResetTime);
         }

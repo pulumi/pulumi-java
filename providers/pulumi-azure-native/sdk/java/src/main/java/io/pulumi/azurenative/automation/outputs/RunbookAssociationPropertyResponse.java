@@ -54,7 +54,6 @@ public final class RunbookAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public RunbookAssociationPropertyResponse build() {
             return new RunbookAssociationPropertyResponse(name);
         }

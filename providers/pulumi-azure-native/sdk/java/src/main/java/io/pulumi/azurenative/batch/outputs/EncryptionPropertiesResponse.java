@@ -77,7 +77,6 @@ public final class EncryptionPropertiesResponse {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keySource, keyVaultProperties);
         }

@@ -74,7 +74,6 @@ public final class BlobRestoreRangeResponse {
             this.startRange = Objects.requireNonNull(startRange);
             return this;
         }
-
         public BlobRestoreRangeResponse build() {
             return new BlobRestoreRangeResponse(endRange, startRange);
         }

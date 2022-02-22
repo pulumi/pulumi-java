@@ -100,7 +100,6 @@ public final class StringInAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringInAdvancedFilterResponse build() {
             return new StringInAdvancedFilterResponse(key, operatorType, values);
         }

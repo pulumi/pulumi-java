@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordSuppressionResponse build() {
             return new GooglePrivacyDlpV2RecordSuppressionResponse(condition);
         }

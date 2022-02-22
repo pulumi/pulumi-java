@@ -77,7 +77,6 @@ public final class DeliveryRuleHttpVersionConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleHttpVersionConditionResponse build() {
             return new DeliveryRuleHttpVersionConditionResponse(name, parameters);
         }

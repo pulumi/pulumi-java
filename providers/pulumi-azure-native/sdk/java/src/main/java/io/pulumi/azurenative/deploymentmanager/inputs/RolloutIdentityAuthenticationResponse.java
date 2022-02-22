@@ -22,7 +22,7 @@ public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -60,7 +60,6 @@ public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RolloutIdentityAuthenticationResponse build() {
             return new RolloutIdentityAuthenticationResponse(type);
         }

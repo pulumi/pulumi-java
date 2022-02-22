@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(key);
         }

@@ -23,7 +23,7 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceField")
-    private final @Nullable Input<String> sourceField;
+        private final @Nullable Input<String> sourceField;
 
     public Input<String> getSourceField() {
         return this.sourceField == null ? Input.empty() : this.sourceField;
@@ -66,7 +66,6 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceField = Input.ofNullable(sourceField);
             return this;
         }
-
         public JsonFieldArgs build() {
             return new JsonFieldArgs(sourceField);
         }

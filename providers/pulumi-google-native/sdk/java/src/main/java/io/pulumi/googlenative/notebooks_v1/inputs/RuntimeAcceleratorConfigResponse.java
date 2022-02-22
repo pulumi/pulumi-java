@@ -21,7 +21,7 @@ public final class RuntimeAcceleratorConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="coreCount", required=true)
-    private final String coreCount;
+      private final String coreCount;
 
     public String getCoreCount() {
         return this.coreCount;
@@ -32,7 +32,7 @@ public final class RuntimeAcceleratorConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class RuntimeAcceleratorConfigResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuntimeAcceleratorConfigResponse build() {
             return new RuntimeAcceleratorConfigResponse(coreCount, type);
         }

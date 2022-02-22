@@ -54,7 +54,6 @@ public final class ProtocolSettingsResponse {
             this.smb = smb;
             return this;
         }
-
         public ProtocolSettingsResponse build() {
             return new ProtocolSettingsResponse(smb);
         }

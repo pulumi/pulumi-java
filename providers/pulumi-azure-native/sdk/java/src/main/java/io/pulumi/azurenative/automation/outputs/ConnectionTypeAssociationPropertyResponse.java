@@ -54,7 +54,6 @@ public final class ConnectionTypeAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public ConnectionTypeAssociationPropertyResponse build() {
             return new ConnectionTypeAssociationPropertyResponse(name);
         }

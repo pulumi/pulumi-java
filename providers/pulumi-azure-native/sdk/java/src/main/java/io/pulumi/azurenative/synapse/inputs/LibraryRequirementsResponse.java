@@ -23,7 +23,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="content")
-    private final @Nullable String content;
+        private final @Nullable String content;
 
     public Optional<String> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -34,7 +34,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable String filename;
+        private final @Nullable String filename;
 
     public Optional<String> getFilename() {
         return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
@@ -45,7 +45,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+        private final String time;
 
     public String getTime() {
         return this.time;
@@ -104,7 +104,6 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public LibraryRequirementsResponse build() {
             return new LibraryRequirementsResponse(content, filename, time);
         }

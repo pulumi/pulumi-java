@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -40,7 +40,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
+      private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
     public Input<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -62,7 +62,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
+      private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
 
     public Input<SecurityPolicyRuleMatcherArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -73,7 +73,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+      private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -84,7 +84,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -95,7 +95,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rateLimitOptions")
-    private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
     public Input<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
         return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
@@ -106,7 +106,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectOptions")
-    private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
     public Input<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
         return this.redirectOptions == null ? Input.empty() : this.redirectOptions;
@@ -255,7 +255,6 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.redirectOptions = Input.ofNullable(redirectOptions);
             return this;
         }
-
         public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, headerAction, match, preview, priority, rateLimitOptions, redirectOptions);
         }

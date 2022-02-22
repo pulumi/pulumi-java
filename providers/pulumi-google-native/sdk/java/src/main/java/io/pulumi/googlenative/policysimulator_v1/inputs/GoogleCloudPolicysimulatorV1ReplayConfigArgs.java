@@ -25,7 +25,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="logSource")
-    private final @Nullable Input<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
+      private final @Nullable Input<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
 
     public Input<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> getLogSource() {
         return this.logSource == null ? Input.empty() : this.logSource;
@@ -36,7 +36,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="policyOverlay")
-    private final @Nullable Input<Map<String,String>> policyOverlay;
+      private final @Nullable Input<Map<String,String>> policyOverlay;
 
     public Input<Map<String,String>> getPolicyOverlay() {
         return this.policyOverlay == null ? Input.empty() : this.policyOverlay;
@@ -95,7 +95,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
             this.policyOverlay = Input.ofNullable(policyOverlay);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1ReplayConfigArgs build() {
             return new GoogleCloudPolicysimulatorV1ReplayConfigArgs(logSource, policyOverlay);
         }

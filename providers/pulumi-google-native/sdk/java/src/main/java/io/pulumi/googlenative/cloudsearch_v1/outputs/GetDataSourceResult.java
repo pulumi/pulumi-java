@@ -224,7 +224,6 @@ public final class GetDataSourceResult {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
         }

@@ -76,7 +76,6 @@ public final class VpcAccessibleServicesResponse {
             this.enableRestriction = Objects.requireNonNull(enableRestriction);
             return this;
         }
-
         public VpcAccessibleServicesResponse build() {
             return new VpcAccessibleServicesResponse(allowedServices, enableRestriction);
         }

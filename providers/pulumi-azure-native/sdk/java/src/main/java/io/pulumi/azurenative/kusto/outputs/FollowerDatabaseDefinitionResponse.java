@@ -95,7 +95,6 @@ public final class FollowerDatabaseDefinitionResponse {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public FollowerDatabaseDefinitionResponse build() {
             return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, clusterResourceId, databaseName);
         }

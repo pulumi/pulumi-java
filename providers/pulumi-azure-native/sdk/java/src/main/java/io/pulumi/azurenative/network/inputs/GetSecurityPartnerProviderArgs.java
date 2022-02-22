@@ -17,7 +17,7 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="securityPartnerProviderName", required=true)
-    private final String securityPartnerProviderName;
+        private final String securityPartnerProviderName;
 
     public String getSecurityPartnerProviderName() {
         return this.securityPartnerProviderName;
@@ -77,7 +77,6 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
             this.securityPartnerProviderName = Objects.requireNonNull(securityPartnerProviderName);
             return this;
         }
-
         public GetSecurityPartnerProviderArgs build() {
             return new GetSecurityPartnerProviderArgs(resourceGroupName, securityPartnerProviderName);
         }

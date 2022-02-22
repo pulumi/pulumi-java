@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
             this.equivalenceClassHistogramBuckets = Objects.requireNonNull(equivalenceClassHistogramBuckets);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityResultResponse build() {
             return new GooglePrivacyDlpV2KAnonymityResultResponse(equivalenceClassHistogramBuckets);
         }

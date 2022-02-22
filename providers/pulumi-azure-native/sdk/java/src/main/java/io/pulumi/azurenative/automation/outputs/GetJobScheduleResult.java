@@ -205,7 +205,6 @@ public final class GetJobScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobScheduleResult build() {
             return new GetJobScheduleResult(id, jobScheduleId, name, parameters, runOn, runbook, schedule, type);
         }

@@ -290,7 +290,6 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
         }
-
         public GetSoftwareUpdateConfigurationByNameResult build() {
             return new GetSoftwareUpdateConfigurationByNameResult(createdBy, creationTime, error, id, lastModifiedBy, lastModifiedTime, name, provisioningState, scheduleInfo, tasks, type, updateConfiguration);
         }

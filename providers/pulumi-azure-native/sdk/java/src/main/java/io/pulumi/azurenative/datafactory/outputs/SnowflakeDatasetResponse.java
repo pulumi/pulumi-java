@@ -231,7 +231,6 @@ public final class SnowflakeDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeDatasetResponse build() {
             return new SnowflakeDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

@@ -269,7 +269,6 @@ public final class OutboundRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OutboundRuleResponse build() {
             return new OutboundRuleResponse(allocatedOutboundPorts, backendAddressPool, enableTcpReset, etag, frontendIPConfigurations, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }

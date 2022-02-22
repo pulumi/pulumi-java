@@ -77,7 +77,6 @@ public final class DeliveryRuleIsDeviceConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleIsDeviceConditionResponse build() {
             return new DeliveryRuleIsDeviceConditionResponse(name, parameters);
         }

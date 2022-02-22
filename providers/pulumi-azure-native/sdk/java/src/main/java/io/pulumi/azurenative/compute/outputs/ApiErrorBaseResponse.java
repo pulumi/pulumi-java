@@ -97,7 +97,6 @@ public final class ApiErrorBaseResponse {
             this.target = target;
             return this;
         }
-
         public ApiErrorBaseResponse build() {
             return new ApiErrorBaseResponse(code, message, target);
         }

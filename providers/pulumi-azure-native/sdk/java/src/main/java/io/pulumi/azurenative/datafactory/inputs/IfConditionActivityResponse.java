@@ -65,7 +65,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -76,7 +76,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -87,7 +87,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="expression", required=true)
-    private final ExpressionResponse expression;
+        private final ExpressionResponse expression;
 
     public ExpressionResponse getExpression() {
         return this.expression;
@@ -98,7 +98,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ifFalseActivities")
-    private final @Nullable List<Object> ifFalseActivities;
+        private final @Nullable List<Object> ifFalseActivities;
 
     public List<Object> getIfFalseActivities() {
         return this.ifFalseActivities == null ? List.of() : this.ifFalseActivities;
@@ -109,7 +109,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ifTrueActivities")
-    private final @Nullable List<Object> ifTrueActivities;
+        private final @Nullable List<Object> ifTrueActivities;
 
     public List<Object> getIfTrueActivities() {
         return this.ifTrueActivities == null ? List.of() : this.ifTrueActivities;
@@ -120,7 +120,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -132,7 +132,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -252,7 +252,6 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
             this.userProperties = userProperties;
             return this;
         }
-
         public IfConditionActivityResponse build() {
             return new IfConditionActivityResponse(dependsOn, description, expression, ifFalseActivities, ifTrueActivities, name, type, userProperties);
         }

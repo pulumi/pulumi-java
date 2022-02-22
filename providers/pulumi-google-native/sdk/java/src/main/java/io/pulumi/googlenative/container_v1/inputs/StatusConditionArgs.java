@@ -24,7 +24,7 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="canonicalCode")
-    private final @Nullable Input<StatusConditionCanonicalCode> canonicalCode;
+      private final @Nullable Input<StatusConditionCanonicalCode> canonicalCode;
 
     public Input<StatusConditionCanonicalCode> getCanonicalCode() {
         return this.canonicalCode == null ? Input.empty() : this.canonicalCode;
@@ -35,7 +35,7 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -94,7 +94,6 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public StatusConditionArgs build() {
             return new StatusConditionArgs(canonicalCode, message);
         }

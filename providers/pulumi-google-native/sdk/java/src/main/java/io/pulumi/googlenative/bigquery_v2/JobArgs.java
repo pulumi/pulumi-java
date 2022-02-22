@@ -22,7 +22,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<JobConfigurationArgs> configuration;
+      private final @Nullable Input<JobConfigurationArgs> configuration;
 
     public Input<JobConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -33,21 +33,21 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobReference")
-    private final @Nullable Input<JobReferenceArgs> jobReference;
+      private final @Nullable Input<JobReferenceArgs> jobReference;
 
     public Input<JobReferenceArgs> getJobReference() {
         return this.jobReference == null ? Input.empty() : this.jobReference;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="source")
-    private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Input<AssetOrArchive> source;
 
     public Input<AssetOrArchive> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -136,7 +136,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(configuration, jobReference, project, source);
         }

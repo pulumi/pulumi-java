@@ -52,7 +52,6 @@ public final class AppDevExperienceFeatureStateResponse {
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }
-
         public AppDevExperienceFeatureStateResponse build() {
             return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
         }

@@ -75,7 +75,6 @@ public final class ReplicaResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public ReplicaResponse build() {
             return new ReplicaResponse(customerManagedEncryption, location);
         }

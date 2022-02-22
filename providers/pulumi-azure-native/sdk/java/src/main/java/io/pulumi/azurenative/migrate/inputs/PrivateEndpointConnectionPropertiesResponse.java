@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateEndpoint", required=true)
-    private final ResourceIdResponse privateEndpoint;
+        private final ResourceIdResponse privateEndpoint;
 
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -106,7 +106,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

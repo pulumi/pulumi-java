@@ -203,7 +203,6 @@ public final class TestSuiteOverviewResponse {
             this.xmlSource = Objects.requireNonNull(xmlSource);
             return this;
         }
-
         public TestSuiteOverviewResponse build() {
             return new TestSuiteOverviewResponse(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }

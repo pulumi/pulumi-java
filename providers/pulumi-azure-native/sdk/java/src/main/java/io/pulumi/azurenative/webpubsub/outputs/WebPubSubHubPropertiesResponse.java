@@ -78,7 +78,6 @@ public final class WebPubSubHubPropertiesResponse {
             this.eventHandlers = eventHandlers;
             return this;
         }
-
         public WebPubSubHubPropertiesResponse build() {
             return new WebPubSubHubPropertiesResponse(anonymousConnectPolicy, eventHandlers);
         }

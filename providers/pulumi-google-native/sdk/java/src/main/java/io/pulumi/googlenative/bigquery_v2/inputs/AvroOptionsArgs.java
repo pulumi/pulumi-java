@@ -19,7 +19,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-    private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Input<Boolean> useAvroLogicalTypes;
 
     public Input<Boolean> getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
@@ -62,7 +62,6 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
             return this;
         }
-
         public AvroOptionsArgs build() {
             return new AvroOptionsArgs(useAvroLogicalTypes);
         }

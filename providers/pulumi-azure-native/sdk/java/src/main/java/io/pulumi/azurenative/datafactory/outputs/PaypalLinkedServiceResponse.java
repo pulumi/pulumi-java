@@ -296,7 +296,6 @@ public final class PaypalLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public PaypalLinkedServiceResponse build() {
             return new PaypalLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

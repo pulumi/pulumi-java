@@ -53,7 +53,6 @@ public final class ListContainerAppSecretsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListContainerAppSecretsResult build() {
             return new ListContainerAppSecretsResult(value);
         }

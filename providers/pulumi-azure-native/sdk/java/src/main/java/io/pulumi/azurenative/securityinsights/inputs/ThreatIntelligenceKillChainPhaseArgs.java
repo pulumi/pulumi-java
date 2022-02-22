@@ -23,7 +23,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="killChainName")
-    private final @Nullable Input<String> killChainName;
+        private final @Nullable Input<String> killChainName;
 
     public Input<String> getKillChainName() {
         return this.killChainName == null ? Input.empty() : this.killChainName;
@@ -34,7 +34,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="phaseName")
-    private final @Nullable Input<String> phaseName;
+        private final @Nullable Input<String> phaseName;
 
     public Input<String> getPhaseName() {
         return this.phaseName == null ? Input.empty() : this.phaseName;
@@ -93,7 +93,6 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
             this.phaseName = Input.ofNullable(phaseName);
             return this;
         }
-
         public ThreatIntelligenceKillChainPhaseArgs build() {
             return new ThreatIntelligenceKillChainPhaseArgs(killChainName, phaseName);
         }

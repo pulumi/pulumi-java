@@ -22,7 +22,7 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clientValidationCa", required=true)
-    private final List<ValidationCAResponse> clientValidationCa;
+      private final List<ValidationCAResponse> clientValidationCa;
 
     public List<ValidationCAResponse> getClientValidationCa() {
         return this.clientValidationCa;
@@ -60,7 +60,6 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
             return this;
         }
-
         public MTLSPolicyResponse build() {
             return new MTLSPolicyResponse(clientValidationCa);
         }

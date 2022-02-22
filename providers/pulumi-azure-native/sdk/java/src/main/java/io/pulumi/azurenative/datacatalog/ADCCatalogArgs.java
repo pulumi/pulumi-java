@@ -26,7 +26,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admins")
-    private final @Nullable Input<List<PrincipalsArgs>> admins;
+        private final @Nullable Input<List<PrincipalsArgs>> admins;
 
     public Input<List<PrincipalsArgs>> getAdmins() {
         return this.admins == null ? Input.empty() : this.admins;
@@ -37,7 +37,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogName")
-    private final @Nullable Input<String> catalogName;
+        private final @Nullable Input<String> catalogName;
 
     public Input<String> getCatalogName() {
         return this.catalogName == null ? Input.empty() : this.catalogName;
@@ -48,7 +48,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutomaticUnitAdjustment")
-    private final @Nullable Input<Boolean> enableAutomaticUnitAdjustment;
+        private final @Nullable Input<Boolean> enableAutomaticUnitAdjustment;
 
     public Input<Boolean> getEnableAutomaticUnitAdjustment() {
         return this.enableAutomaticUnitAdjustment == null ? Input.empty() : this.enableAutomaticUnitAdjustment;
@@ -59,7 +59,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -81,7 +81,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<Either<String,SkuType>> sku;
+        private final @Nullable Input<Either<String,SkuType>> sku;
 
     public Input<Either<String,SkuType>> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -92,7 +92,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successfullyProvisioned")
-    private final @Nullable Input<Boolean> successfullyProvisioned;
+        private final @Nullable Input<Boolean> successfullyProvisioned;
 
     public Input<Boolean> getSuccessfullyProvisioned() {
         return this.successfullyProvisioned == null ? Input.empty() : this.successfullyProvisioned;
@@ -103,7 +103,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -114,7 +114,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="units")
-    private final @Nullable Input<Integer> units;
+        private final @Nullable Input<Integer> units;
 
     public Input<Integer> getUnits() {
         return this.units == null ? Input.empty() : this.units;
@@ -125,7 +125,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users")
-    private final @Nullable Input<List<PrincipalsArgs>> users;
+        private final @Nullable Input<List<PrincipalsArgs>> users;
 
     public Input<List<PrincipalsArgs>> getUsers() {
         return this.users == null ? Input.empty() : this.users;
@@ -304,7 +304,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             this.users = Input.ofNullable(users);
             return this;
         }
-
         public ADCCatalogArgs build() {
             return new ADCCatalogArgs(admins, catalogName, enableAutomaticUnitAdjustment, location, resourceGroupName, sku, successfullyProvisioned, tags, units, users);
         }

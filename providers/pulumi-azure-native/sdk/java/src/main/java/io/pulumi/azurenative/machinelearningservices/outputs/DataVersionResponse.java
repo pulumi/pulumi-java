@@ -183,7 +183,6 @@ public final class DataVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public DataVersionResponse build() {
             return new DataVersionResponse(datasetType, datastoreId, description, isAnonymous, path, properties, tags);
         }

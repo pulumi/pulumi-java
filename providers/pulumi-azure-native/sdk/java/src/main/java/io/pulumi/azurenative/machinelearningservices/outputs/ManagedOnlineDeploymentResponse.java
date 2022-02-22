@@ -342,7 +342,6 @@ public final class ManagedOnlineDeploymentResponse {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public ManagedOnlineDeploymentResponse build() {
             return new ManagedOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, description, endpointComputeType, environmentId, environmentVariables, instanceType, livenessProbe, model, properties, provisioningState, readinessProbe, requestSettings, scaleSettings);
         }

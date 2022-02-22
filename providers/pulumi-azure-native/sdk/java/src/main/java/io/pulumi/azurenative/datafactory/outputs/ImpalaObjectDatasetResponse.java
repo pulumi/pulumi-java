@@ -252,7 +252,6 @@ public final class ImpalaObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImpalaObjectDatasetResponse build() {
             return new ImpalaObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

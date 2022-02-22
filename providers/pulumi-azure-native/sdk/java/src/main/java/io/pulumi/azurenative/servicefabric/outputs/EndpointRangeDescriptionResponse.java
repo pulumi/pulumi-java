@@ -74,7 +74,6 @@ public final class EndpointRangeDescriptionResponse {
             this.startPort = Objects.requireNonNull(startPort);
             return this;
         }
-
         public EndpointRangeDescriptionResponse build() {
             return new EndpointRangeDescriptionResponse(endPort, startPort);
         }

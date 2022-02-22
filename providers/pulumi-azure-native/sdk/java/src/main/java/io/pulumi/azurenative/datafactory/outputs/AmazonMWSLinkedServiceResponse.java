@@ -359,7 +359,6 @@ public final class AmazonMWSLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public AmazonMWSLinkedServiceResponse build() {
             return new AmazonMWSLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

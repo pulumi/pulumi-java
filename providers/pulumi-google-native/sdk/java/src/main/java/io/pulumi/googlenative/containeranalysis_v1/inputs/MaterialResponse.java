@@ -14,14 +14,14 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
     public static final MaterialResponse Empty = new MaterialResponse();
 
     @InputImport(name="digest", required=true)
-    private final Map<String,String> digest;
+      private final Map<String,String> digest;
 
     public Map<String,String> getDigest() {
         return this.digest;
     }
 
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -70,7 +70,6 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public MaterialResponse build() {
             return new MaterialResponse(digest, uri);
         }

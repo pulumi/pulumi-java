@@ -21,7 +21,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+        private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -82,7 +82,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse build() {
             return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse(keyId, odataType);
         }

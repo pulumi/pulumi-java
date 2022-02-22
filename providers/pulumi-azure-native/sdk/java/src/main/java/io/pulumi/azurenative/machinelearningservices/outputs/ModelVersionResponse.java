@@ -184,7 +184,6 @@ public final class ModelVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public ModelVersionResponse build() {
             return new ModelVersionResponse(datastoreId, description, flavors, isAnonymous, path, properties, tags);
         }

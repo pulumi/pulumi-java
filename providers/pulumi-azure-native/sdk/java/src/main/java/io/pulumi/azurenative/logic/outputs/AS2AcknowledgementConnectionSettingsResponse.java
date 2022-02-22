@@ -116,7 +116,6 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
-
         public AS2AcknowledgementConnectionSettingsResponse build() {
             return new AS2AcknowledgementConnectionSettingsResponse(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
         }

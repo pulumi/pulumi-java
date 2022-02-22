@@ -120,7 +120,6 @@ public final class MetricConfigurationResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public MetricConfigurationResponse build() {
             return new MetricConfigurationResponse(counterSets, mdmAccount, metricNameSpace, resourceId);
         }

@@ -119,7 +119,6 @@ public final class CloudErrorBodyResponse {
             this.target = target;
             return this;
         }
-
         public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }

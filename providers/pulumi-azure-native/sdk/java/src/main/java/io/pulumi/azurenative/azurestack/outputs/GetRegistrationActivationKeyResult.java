@@ -54,7 +54,6 @@ public final class GetRegistrationActivationKeyResult {
             this.activationKey = activationKey;
             return this;
         }
-
         public GetRegistrationActivationKeyResult build() {
             return new GetRegistrationActivationKeyResult(activationKey);
         }

@@ -54,7 +54,6 @@ public final class ListDeviceFailoverTarsResult {
             this.value = value;
             return this;
         }
-
         public ListDeviceFailoverTarsResult build() {
             return new ListDeviceFailoverTarsResult(value);
         }

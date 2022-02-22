@@ -332,7 +332,6 @@ public final class GetConversationProfileResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConversationProfileResult build() {
             return new GetConversationProfileResult(automatedAgentConfig, createTime, displayName, humanAgentAssistantConfig, humanAgentHandoffConfig, languageCode, loggingConfig, name, newMessageEventNotificationConfig, notificationConfig, securitySettings, sttConfig, timeZone, updateTime);
         }

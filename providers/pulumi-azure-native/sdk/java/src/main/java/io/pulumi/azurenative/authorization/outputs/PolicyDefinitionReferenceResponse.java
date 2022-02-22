@@ -121,7 +121,6 @@ public final class PolicyDefinitionReferenceResponse {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public PolicyDefinitionReferenceResponse build() {
             return new PolicyDefinitionReferenceResponse(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
         }

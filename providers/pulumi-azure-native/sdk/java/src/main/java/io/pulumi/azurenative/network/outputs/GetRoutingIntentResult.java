@@ -162,7 +162,6 @@ public final class GetRoutingIntentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoutingIntentResult build() {
             return new GetRoutingIntentResult(etag, id, name, provisioningState, routingPolicies, type);
         }

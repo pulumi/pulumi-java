@@ -74,7 +74,6 @@ public final class MetricDescriptorMetadataResponse {
             this.samplePeriod = Objects.requireNonNull(samplePeriod);
             return this;
         }
-
         public MetricDescriptorMetadataResponse build() {
             return new MetricDescriptorMetadataResponse(ingestDelay, samplePeriod);
         }

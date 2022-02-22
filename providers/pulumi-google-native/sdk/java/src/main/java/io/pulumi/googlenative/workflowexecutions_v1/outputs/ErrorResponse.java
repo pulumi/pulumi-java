@@ -96,7 +96,6 @@ public final class ErrorResponse {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ErrorResponse build() {
             return new ErrorResponse(context, payload, stackTrace);
         }

@@ -118,7 +118,6 @@ public final class SecretKeySelectorResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public SecretKeySelectorResponse build() {
             return new SecretKeySelectorResponse(key, localObjectReference, name, optional);
         }

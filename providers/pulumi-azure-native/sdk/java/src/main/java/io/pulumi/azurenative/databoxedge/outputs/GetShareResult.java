@@ -335,7 +335,6 @@ public final class GetShareResult {
             this.userAccessRights = userAccessRights;
             return this;
         }
-
         public GetShareResult build() {
             return new GetShareResult(accessProtocol, azureContainerInfo, clientAccessRights, dataPolicy, description, id, monitoringStatus, name, refreshDetails, shareMappings, shareStatus, systemData, type, userAccessRights);
         }

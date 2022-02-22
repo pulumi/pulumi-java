@@ -116,7 +116,6 @@ public final class CircuitResponse {
             this.secondarySubnet = Objects.requireNonNull(secondarySubnet);
             return this;
         }
-
         public CircuitResponse build() {
             return new CircuitResponse(expressRouteID, expressRoutePrivatePeeringID, primarySubnet, secondarySubnet);
         }

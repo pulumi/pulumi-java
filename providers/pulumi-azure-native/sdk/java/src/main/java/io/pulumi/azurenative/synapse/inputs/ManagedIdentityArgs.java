@@ -23,7 +23,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+        private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ManagedIdentityArgs build() {
             return new ManagedIdentityArgs(type);
         }

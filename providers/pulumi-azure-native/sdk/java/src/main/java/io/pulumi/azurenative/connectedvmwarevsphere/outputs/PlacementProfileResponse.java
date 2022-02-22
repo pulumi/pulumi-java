@@ -118,7 +118,6 @@ public final class PlacementProfileResponse {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
-
         public PlacementProfileResponse build() {
             return new PlacementProfileResponse(clusterId, datastoreId, hostId, resourcePoolId);
         }

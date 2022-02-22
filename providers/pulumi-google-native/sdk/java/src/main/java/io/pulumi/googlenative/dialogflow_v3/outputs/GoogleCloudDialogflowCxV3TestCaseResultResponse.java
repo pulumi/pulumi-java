@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
             this.testTime = Objects.requireNonNull(testTime);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestCaseResultResponse build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
         }

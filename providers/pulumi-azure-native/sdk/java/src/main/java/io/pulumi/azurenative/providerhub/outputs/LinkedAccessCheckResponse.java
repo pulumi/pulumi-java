@@ -99,7 +99,6 @@ public final class LinkedAccessCheckResponse {
             this.linkedType = linkedType;
             return this;
         }
-
         public LinkedAccessCheckResponse build() {
             return new LinkedAccessCheckResponse(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }

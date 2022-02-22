@@ -75,7 +75,6 @@ public final class SecuritySettingsResponse {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-
         public SecuritySettingsResponse build() {
             return new SecuritySettingsResponse(clientTlsPolicy, subjectAltNames);
         }

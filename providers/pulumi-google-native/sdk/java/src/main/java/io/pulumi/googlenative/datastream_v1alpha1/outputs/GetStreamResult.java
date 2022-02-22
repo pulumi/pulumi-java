@@ -291,7 +291,6 @@ public final class GetStreamResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetStreamResult build() {
             return new GetStreamResult(backfillAll, backfillNone, createTime, customerManagedEncryptionKey, destinationConfig, displayName, errors, labels, name, sourceConfig, state, updateTime);
         }

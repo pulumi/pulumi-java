@@ -634,7 +634,6 @@ public final class GetWorkspaceResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, id, identity, imageBuildCompute, keyVault, location, name, notebookInfo, primaryUserAssignedIdentity, privateEndpointConnections, privateLinkCount, provisioningState, serviceManagedResourcesSettings, serviceProvisionedResourceGroup, sharedPrivateLinkResources, sku, storageAccount, systemData, tags, type, workspaceId);
         }

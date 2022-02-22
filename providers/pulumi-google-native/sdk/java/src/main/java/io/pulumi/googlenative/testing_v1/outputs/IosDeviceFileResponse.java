@@ -96,7 +96,6 @@ public final class IosDeviceFileResponse {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public IosDeviceFileResponse build() {
             return new IosDeviceFileResponse(bundleId, content, devicePath);
         }

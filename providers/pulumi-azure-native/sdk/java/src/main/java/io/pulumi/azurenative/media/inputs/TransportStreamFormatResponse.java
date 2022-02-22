@@ -25,7 +25,7 @@ public final class TransportStreamFormatResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-    private final String filenamePattern;
+        private final String filenamePattern;
 
     public String getFilenamePattern() {
         return this.filenamePattern;
@@ -37,7 +37,7 @@ public final class TransportStreamFormatResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class TransportStreamFormatResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="outputFiles")
-    private final @Nullable List<OutputFileResponse> outputFiles;
+        private final @Nullable List<OutputFileResponse> outputFiles;
 
     public List<OutputFileResponse> getOutputFiles() {
         return this.outputFiles == null ? List.of() : this.outputFiles;
@@ -107,7 +107,6 @@ public final class TransportStreamFormatResponse extends io.pulumi.resources.Inv
             this.outputFiles = outputFiles;
             return this;
         }
-
         public TransportStreamFormatResponse build() {
             return new TransportStreamFormatResponse(filenamePattern, odataType, outputFiles);
         }

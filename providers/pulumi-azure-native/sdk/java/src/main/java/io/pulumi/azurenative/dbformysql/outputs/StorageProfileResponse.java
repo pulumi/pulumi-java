@@ -119,7 +119,6 @@ public final class StorageProfileResponse {
             this.storageMB = storageMB;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
         }

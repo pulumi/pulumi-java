@@ -22,7 +22,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<TokenCredentialsPropertiesArgs> credentials;
+        private final @Nullable Input<TokenCredentialsPropertiesArgs> credentials;
 
     public Input<TokenCredentialsPropertiesArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -33,7 +33,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final Input<String> registryName;
+        private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -44,7 +44,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeMapId")
-    private final @Nullable Input<String> scopeMapId;
+        private final @Nullable Input<String> scopeMapId;
 
     public Input<String> getScopeMapId() {
         return this.scopeMapId == null ? Input.empty() : this.scopeMapId;
@@ -66,7 +66,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,TokenStatus>> status;
+        private final @Nullable Input<Either<String,TokenStatus>> status;
 
     public Input<Either<String,TokenStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -77,7 +77,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenName")
-    private final @Nullable Input<String> tokenName;
+        private final @Nullable Input<String> tokenName;
 
     public Input<String> getTokenName() {
         return this.tokenName == null ? Input.empty() : this.tokenName;
@@ -196,7 +196,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
             this.tokenName = Input.ofNullable(tokenName);
             return this;
         }
-
         public TokenArgs build() {
             return new TokenArgs(credentials, registryName, resourceGroupName, scopeMapId, status, tokenName);
         }

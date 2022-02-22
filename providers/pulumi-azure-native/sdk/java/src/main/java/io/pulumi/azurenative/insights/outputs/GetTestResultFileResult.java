@@ -76,7 +76,6 @@ public final class GetTestResultFileResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public GetTestResultFileResult build() {
             return new GetTestResultFileResult(data, nextLink);
         }

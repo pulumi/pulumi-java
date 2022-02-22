@@ -186,7 +186,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
             this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse(currentPage, diagnosticInfo, differences, sessionParameters, status, textResponses, triggeredIntent);
         }

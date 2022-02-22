@@ -52,7 +52,6 @@ public final class ConsumptionMeteringConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConsumptionMeteringConfigResponse build() {
             return new ConsumptionMeteringConfigResponse(enabled);
         }

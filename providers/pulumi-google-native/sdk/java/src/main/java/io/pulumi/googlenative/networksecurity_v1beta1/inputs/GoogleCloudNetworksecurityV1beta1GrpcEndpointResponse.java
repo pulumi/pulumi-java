@@ -21,7 +21,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
      * 
      */
     @InputImport(name="targetUri", required=true)
-    private final String targetUri;
+      private final String targetUri;
 
     public String getTargetUri() {
         return this.targetUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse build() {
             return new GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(targetUri);
         }

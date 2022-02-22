@@ -30,7 +30,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<Either<String,ActionType>> action;
+        private final Input<Either<String,ActionType>> action;
 
     public Input<Either<String,ActionType>> getAction() {
         return this.action;
@@ -41,7 +41,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
+        private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
 
     public Input<Either<String,CustomRuleEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -52,7 +52,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchConditions", required=true)
-    private final Input<List<FrontDoorMatchConditionArgs>> matchConditions;
+        private final Input<List<FrontDoorMatchConditionArgs>> matchConditions;
 
     public Input<List<FrontDoorMatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
@@ -63,7 +63,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -85,7 +85,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitDurationInMinutes")
-    private final @Nullable Input<Integer> rateLimitDurationInMinutes;
+        private final @Nullable Input<Integer> rateLimitDurationInMinutes;
 
     public Input<Integer> getRateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes == null ? Input.empty() : this.rateLimitDurationInMinutes;
@@ -96,7 +96,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitThreshold")
-    private final @Nullable Input<Integer> rateLimitThreshold;
+        private final @Nullable Input<Integer> rateLimitThreshold;
 
     public Input<Integer> getRateLimitThreshold() {
         return this.rateLimitThreshold == null ? Input.empty() : this.rateLimitThreshold;
@@ -107,7 +107,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<Either<String,RuleType>> ruleType;
+        private final Input<Either<String,RuleType>> ruleType;
 
     public Input<Either<String,RuleType>> getRuleType() {
         return this.ruleType;
@@ -256,7 +256,6 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public CustomRuleArgs build() {
             return new CustomRuleArgs(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold, ruleType);
         }

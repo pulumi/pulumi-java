@@ -23,7 +23,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="purviewResourceId")
-    private final @Nullable Input<String> purviewResourceId;
+        private final @Nullable Input<String> purviewResourceId;
 
     public Input<String> getPurviewResourceId() {
         return this.purviewResourceId == null ? Input.empty() : this.purviewResourceId;
@@ -66,7 +66,6 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
             this.purviewResourceId = Input.ofNullable(purviewResourceId);
             return this;
         }
-
         public PurviewConfigurationArgs build() {
             return new PurviewConfigurationArgs(purviewResourceId);
         }

@@ -75,7 +75,6 @@ public final class ScheduleResponse {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(intervalDurationDays, scheduleTime);
         }

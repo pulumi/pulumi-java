@@ -23,7 +23,7 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -34,7 +34,7 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -120,7 +120,6 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public SecretResourcePropertiesArgs build() {
             return new SecretResourcePropertiesArgs(contentType, description, kind);
         }

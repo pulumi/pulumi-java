@@ -15,14 +15,14 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetKeyArgs build() {
             return new GetKeyArgs(keyId, project);
         }

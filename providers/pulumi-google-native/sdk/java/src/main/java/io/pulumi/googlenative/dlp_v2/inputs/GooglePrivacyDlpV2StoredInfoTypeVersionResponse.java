@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * 
      */
     @InputImport(name="config", required=true)
-    private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
+      private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
 
     public GooglePrivacyDlpV2StoredInfoTypeConfigResponse getConfig() {
         return this.config;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<GooglePrivacyDlpV2ErrorResponse> errors;
+      private final List<GooglePrivacyDlpV2ErrorResponse> errors;
 
     public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
         return this.errors;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * 
      */
     @InputImport(name="stats", required=true)
-    private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
+      private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
     public GooglePrivacyDlpV2StoredInfoTypeStatsResponse getStats() {
         return this.stats;
@@ -148,7 +148,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
             this.stats = Objects.requireNonNull(stats);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(config, createTime, errors, state, stats);
         }

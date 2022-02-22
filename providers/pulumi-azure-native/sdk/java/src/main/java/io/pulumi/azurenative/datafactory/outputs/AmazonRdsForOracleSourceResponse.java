@@ -248,7 +248,6 @@ public final class AmazonRdsForOracleSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForOracleSourceResponse build() {
             return new AmazonRdsForOracleSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, oracleReaderQuery, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

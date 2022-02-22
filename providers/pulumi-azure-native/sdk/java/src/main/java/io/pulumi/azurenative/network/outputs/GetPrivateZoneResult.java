@@ -330,7 +330,6 @@ public final class GetPrivateZoneResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateZoneResult build() {
             return new GetPrivateZoneResult(etag, id, internalId, location, maxNumberOfRecordSets, maxNumberOfVirtualNetworkLinks, maxNumberOfVirtualNetworkLinksWithRegistration, name, numberOfRecordSets, numberOfVirtualNetworkLinks, numberOfVirtualNetworkLinksWithRegistration, provisioningState, tags, type);
         }

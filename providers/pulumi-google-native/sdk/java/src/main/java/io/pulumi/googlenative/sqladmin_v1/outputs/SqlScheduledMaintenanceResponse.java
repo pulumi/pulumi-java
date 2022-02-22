@@ -109,7 +109,6 @@ public final class SqlScheduledMaintenanceResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public SqlScheduledMaintenanceResponse build() {
             return new SqlScheduledMaintenanceResponse(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }

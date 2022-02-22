@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2NumericalStatsConfigResponse build() {
             return new GooglePrivacyDlpV2NumericalStatsConfigResponse(field);
         }

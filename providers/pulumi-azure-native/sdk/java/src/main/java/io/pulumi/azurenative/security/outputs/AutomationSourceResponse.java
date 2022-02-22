@@ -78,7 +78,6 @@ public final class AutomationSourceResponse {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public AutomationSourceResponse build() {
             return new AutomationSourceResponse(eventSource, ruleSets);
         }

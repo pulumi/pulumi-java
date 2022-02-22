@@ -180,7 +180,6 @@ public final class CertificatePropertiesResponse {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(certificate, created, expiry, isVerified, subject, thumbprint, updated);
         }

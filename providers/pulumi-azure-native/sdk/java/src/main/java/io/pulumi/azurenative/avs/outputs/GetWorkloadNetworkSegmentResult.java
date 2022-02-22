@@ -248,7 +248,6 @@ public final class GetWorkloadNetworkSegmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkSegmentResult build() {
             return new GetWorkloadNetworkSegmentResult(connectedGateway, displayName, id, name, portVif, provisioningState, revision, status, subnet, type);
         }

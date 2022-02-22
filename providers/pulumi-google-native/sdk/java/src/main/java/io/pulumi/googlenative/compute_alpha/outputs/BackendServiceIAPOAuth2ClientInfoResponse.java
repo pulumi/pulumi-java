@@ -95,7 +95,6 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
             this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
             return this;
         }
-
         public BackendServiceIAPOAuth2ClientInfoResponse build() {
             return new BackendServiceIAPOAuth2ClientInfoResponse(applicationName, clientName, developerEmailAddress);
         }

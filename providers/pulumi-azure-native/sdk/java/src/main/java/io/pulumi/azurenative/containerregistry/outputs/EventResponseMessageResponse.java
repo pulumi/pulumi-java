@@ -140,7 +140,6 @@ public final class EventResponseMessageResponse {
             this.version = version;
             return this;
         }
-
         public EventResponseMessageResponse build() {
             return new EventResponseMessageResponse(content, headers, reasonPhrase, statusCode, version);
         }

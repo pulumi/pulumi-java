@@ -26,7 +26,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="baseImageTrigger")
-    private final @Nullable Input<BaseImageTriggerArgs> baseImageTrigger;
+        private final @Nullable Input<BaseImageTriggerArgs> baseImageTrigger;
 
     public Input<BaseImageTriggerArgs> getBaseImageTrigger() {
         return this.baseImageTrigger == null ? Input.empty() : this.baseImageTrigger;
@@ -37,7 +37,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceTriggers")
-    private final @Nullable Input<List<SourceTriggerArgs>> sourceTriggers;
+        private final @Nullable Input<List<SourceTriggerArgs>> sourceTriggers;
 
     public Input<List<SourceTriggerArgs>> getSourceTriggers() {
         return this.sourceTriggers == null ? Input.empty() : this.sourceTriggers;
@@ -48,7 +48,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timerTriggers")
-    private final @Nullable Input<List<TimerTriggerArgs>> timerTriggers;
+        private final @Nullable Input<List<TimerTriggerArgs>> timerTriggers;
 
     public Input<List<TimerTriggerArgs>> getTimerTriggers() {
         return this.timerTriggers == null ? Input.empty() : this.timerTriggers;
@@ -122,7 +122,6 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.timerTriggers = Input.ofNullable(timerTriggers);
             return this;
         }
-
         public TriggerPropertiesArgs build() {
             return new TriggerPropertiesArgs(baseImageTrigger, sourceTriggers, timerTriggers);
         }

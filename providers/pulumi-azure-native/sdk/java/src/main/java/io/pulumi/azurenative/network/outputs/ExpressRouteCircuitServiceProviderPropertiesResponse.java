@@ -98,7 +98,6 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
             this.serviceProviderName = serviceProviderName;
             return this;
         }
-
         public ExpressRouteCircuitServiceProviderPropertiesResponse build() {
             return new ExpressRouteCircuitServiceProviderPropertiesResponse(bandwidthInMbps, peeringLocation, serviceProviderName);
         }

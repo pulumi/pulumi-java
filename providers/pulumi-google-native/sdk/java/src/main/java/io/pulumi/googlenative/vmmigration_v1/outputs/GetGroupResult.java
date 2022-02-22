@@ -137,7 +137,6 @@ public final class GetGroupResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(createTime, description, displayName, name, updateTime);
         }

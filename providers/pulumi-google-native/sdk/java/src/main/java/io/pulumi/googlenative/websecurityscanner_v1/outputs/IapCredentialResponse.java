@@ -52,7 +52,6 @@ public final class IapCredentialResponse {
             this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
             return this;
         }
-
         public IapCredentialResponse build() {
             return new IapCredentialResponse(iapTestServiceAccountInfo);
         }

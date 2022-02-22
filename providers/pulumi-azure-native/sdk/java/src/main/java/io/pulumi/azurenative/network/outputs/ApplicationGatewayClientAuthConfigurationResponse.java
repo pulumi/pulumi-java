@@ -54,7 +54,6 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
-
         public ApplicationGatewayClientAuthConfigurationResponse build() {
             return new ApplicationGatewayClientAuthConfigurationResponse(verifyClientCertIssuerDN);
         }

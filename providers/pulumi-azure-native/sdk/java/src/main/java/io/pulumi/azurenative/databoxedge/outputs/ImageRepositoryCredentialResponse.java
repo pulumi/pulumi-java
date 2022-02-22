@@ -98,7 +98,6 @@ public final class ImageRepositoryCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ImageRepositoryCredentialResponse build() {
             return new ImageRepositoryCredentialResponse(imageRepositoryUrl, password, userName);
         }

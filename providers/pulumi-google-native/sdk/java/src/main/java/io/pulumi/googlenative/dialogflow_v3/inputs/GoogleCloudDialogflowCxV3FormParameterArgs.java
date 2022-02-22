@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final Input<String> entityType;
+      private final Input<String> entityType;
 
     public Input<String> getEntityType() {
         return this.entityType;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fillBehavior", required=true)
-    private final Input<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> fillBehavior;
+      private final Input<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> fillBehavior;
 
     public Input<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> getFillBehavior() {
         return this.fillBehavior;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="isList")
-    private final @Nullable Input<Boolean> isList;
+      private final @Nullable Input<Boolean> isList;
 
     public Input<Boolean> getIsList() {
         return this.isList == null ? Input.empty() : this.isList;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="redact")
-    private final @Nullable Input<Boolean> redact;
+      private final @Nullable Input<Boolean> redact;
 
     public Input<Boolean> getRedact() {
         return this.redact == null ? Input.empty() : this.redact;
@@ -92,7 +92,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Input<Boolean> required;
+      private final @Nullable Input<Boolean> required;
 
     public Input<Boolean> getRequired() {
         return this.required == null ? Input.empty() : this.required;
@@ -226,7 +226,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
             this.required = Input.ofNullable(required);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormParameterArgs build() {
             return new GoogleCloudDialogflowCxV3FormParameterArgs(defaultValue, displayName, entityType, fillBehavior, isList, redact, required);
         }

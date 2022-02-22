@@ -224,7 +224,6 @@ public final class GetRouteResult {
             this.type = type;
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
         }

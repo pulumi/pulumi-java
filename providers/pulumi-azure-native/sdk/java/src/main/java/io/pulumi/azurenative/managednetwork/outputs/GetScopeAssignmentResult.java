@@ -181,7 +181,6 @@ public final class GetScopeAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScopeAssignmentResult build() {
             return new GetScopeAssignmentResult(assignedManagedNetwork, etag, id, location, name, provisioningState, type);
         }

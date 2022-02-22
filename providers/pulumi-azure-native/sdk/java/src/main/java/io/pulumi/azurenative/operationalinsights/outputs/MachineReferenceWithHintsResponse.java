@@ -160,7 +160,6 @@ public final class MachineReferenceWithHintsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MachineReferenceWithHintsResponse build() {
             return new MachineReferenceWithHintsResponse(displayNameHint, id, kind, name, osFamilyHint, type);
         }

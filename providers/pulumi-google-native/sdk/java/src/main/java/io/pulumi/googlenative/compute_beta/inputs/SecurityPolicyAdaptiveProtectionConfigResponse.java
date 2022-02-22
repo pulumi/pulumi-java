@@ -21,7 +21,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pul
      * 
      */
     @InputImport(name="layer7DdosDefenseConfig", required=true)
-    private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
+      private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse getLayer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
@@ -59,7 +59,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pul
             this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigResponse build() {
             return new SecurityPolicyAdaptiveProtectionConfigResponse(layer7DdosDefenseConfig);
         }

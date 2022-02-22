@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -65,7 +65,6 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.re
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public GooglePrivacyDlpV2UnwrappedCryptoKeyArgs build() {
             return new GooglePrivacyDlpV2UnwrappedCryptoKeyArgs(key);
         }

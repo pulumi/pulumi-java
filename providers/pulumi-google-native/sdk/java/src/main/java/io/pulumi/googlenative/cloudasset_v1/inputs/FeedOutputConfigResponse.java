@@ -21,7 +21,7 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-    private final PubsubDestinationResponse pubsubDestination;
+      private final PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
@@ -59,7 +59,6 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public FeedOutputConfigResponse build() {
             return new FeedOutputConfigResponse(pubsubDestination);
         }

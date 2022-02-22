@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
      * 
      */
     @InputImport(name="filePatterns", required=true)
-    private final Input<List<String>> filePatterns;
+      private final Input<List<String>> filePatterns;
 
     public Input<List<String>> getFilePatterns() {
         return this.filePatterns;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
             this.filePatterns = Input.of(Objects.requireNonNull(filePatterns));
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs build() {
             return new GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs(filePatterns);
         }

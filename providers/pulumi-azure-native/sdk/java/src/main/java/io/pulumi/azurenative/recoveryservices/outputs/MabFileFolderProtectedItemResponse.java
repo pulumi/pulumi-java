@@ -480,7 +480,6 @@ public final class MabFileFolderProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public MabFileFolderProtectedItemResponse build() {
             return new MabFileFolderProtectedItemResponse(backupManagementType, backupSetName, computerName, containerName, createMode, deferredDeleteSyncTimeInUTC, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemType, protectionState, sourceResourceId, workloadType);
         }

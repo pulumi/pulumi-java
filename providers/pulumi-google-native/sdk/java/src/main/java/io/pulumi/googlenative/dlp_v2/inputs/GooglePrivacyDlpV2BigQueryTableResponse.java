@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -102,7 +102,6 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryTableResponse build() {
             return new GooglePrivacyDlpV2BigQueryTableResponse(datasetId, project, tableId);
         }

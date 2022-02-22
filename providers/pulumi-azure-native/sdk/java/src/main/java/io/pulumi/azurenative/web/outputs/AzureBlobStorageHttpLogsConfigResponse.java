@@ -103,7 +103,6 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public AzureBlobStorageHttpLogsConfigResponse build() {
             return new AzureBlobStorageHttpLogsConfigResponse(enabled, retentionInDays, sasUrl);
         }

@@ -22,7 +22,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diagnosticOutputUri", required=true)
-    private final String diagnosticOutputUri;
+      private final String diagnosticOutputUri;
 
     public String getDiagnosticOutputUri() {
         return this.diagnosticOutputUri;
@@ -33,7 +33,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final Map<String,String> endpoints;
+      private final Map<String,String> endpoints;
 
     public Map<String,String> getEndpoints() {
         return this.endpoints;
@@ -44,7 +44,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputUri", required=true)
-    private final String outputUri;
+      private final String outputUri;
 
     public String getOutputUri() {
         return this.outputUri;
@@ -103,7 +103,6 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }
-
         public RuntimeInfoResponse build() {
             return new RuntimeInfoResponse(diagnosticOutputUri, endpoints, outputUri);
         }

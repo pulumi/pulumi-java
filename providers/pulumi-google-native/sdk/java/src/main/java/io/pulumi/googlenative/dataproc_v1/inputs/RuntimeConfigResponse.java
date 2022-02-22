@@ -22,7 +22,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="containerImage", required=true)
-    private final String containerImage;
+      private final String containerImage;
 
     public String getContainerImage() {
         return this.containerImage;
@@ -33,7 +33,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -44,7 +44,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -103,7 +103,6 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RuntimeConfigResponse build() {
             return new RuntimeConfigResponse(containerImage, properties, version);
         }

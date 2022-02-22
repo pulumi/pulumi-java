@@ -17,7 +17,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     public static final ImportJobArgs Empty = new ImportJobArgs();
 
     @InputImport(name="importJobId", required=true)
-    private final Input<String> importJobId;
+      private final Input<String> importJobId;
 
     public Input<String> getImportJobId() {
         return this.importJobId;
@@ -28,28 +28,28 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importMethod", required=true)
-    private final Input<ImportJobImportMethod> importMethod;
+      private final Input<ImportJobImportMethod> importMethod;
 
     public Input<ImportJobImportMethod> getImportMethod() {
         return this.importMethod;
     }
 
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectionLevel", required=true)
-    private final Input<ImportJobProtectionLevel> protectionLevel;
+      private final Input<ImportJobProtectionLevel> protectionLevel;
 
     public Input<ImportJobProtectionLevel> getProtectionLevel() {
         return this.protectionLevel;
@@ -179,7 +179,6 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
             this.protectionLevel = Input.of(Objects.requireNonNull(protectionLevel));
             return this;
         }
-
         public ImportJobArgs build() {
             return new ImportJobArgs(importJobId, importMethod, keyRingId, location, project, protectionLevel);
         }

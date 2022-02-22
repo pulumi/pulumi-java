@@ -163,7 +163,6 @@ public final class ApplicationUpgradePolicyResponse {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
-
         public ApplicationUpgradePolicyResponse build() {
             return new ApplicationUpgradePolicyResponse(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);
         }

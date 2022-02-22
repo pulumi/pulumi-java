@@ -24,7 +24,7 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -67,7 +67,6 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
             this.locations = Input.ofNullable(locations);
             return this;
         }
-
         public RemediationFiltersArgs build() {
             return new RemediationFiltersArgs(locations);
         }

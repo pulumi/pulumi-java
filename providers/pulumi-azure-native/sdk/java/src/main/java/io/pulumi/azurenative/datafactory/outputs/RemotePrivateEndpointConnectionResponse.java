@@ -91,7 +91,6 @@ public final class RemotePrivateEndpointConnectionResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public RemotePrivateEndpointConnectionResponse build() {
             return new RemotePrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

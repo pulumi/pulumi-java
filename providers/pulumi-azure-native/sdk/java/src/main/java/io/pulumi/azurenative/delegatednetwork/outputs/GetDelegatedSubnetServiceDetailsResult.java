@@ -226,7 +226,6 @@ public final class GetDelegatedSubnetServiceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDelegatedSubnetServiceDetailsResult build() {
             return new GetDelegatedSubnetServiceDetailsResult(controllerDetails, id, location, name, provisioningState, resourceGuid, subnetDetails, tags, type);
         }

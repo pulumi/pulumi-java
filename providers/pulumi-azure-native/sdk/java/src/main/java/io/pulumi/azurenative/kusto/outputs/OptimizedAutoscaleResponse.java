@@ -117,7 +117,6 @@ public final class OptimizedAutoscaleResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public OptimizedAutoscaleResponse build() {
             return new OptimizedAutoscaleResponse(isEnabled, maximum, minimum, version);
         }

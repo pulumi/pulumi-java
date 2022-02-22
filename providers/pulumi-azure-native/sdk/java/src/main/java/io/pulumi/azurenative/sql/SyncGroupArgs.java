@@ -25,7 +25,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conflictLoggingRetentionInDays")
-    private final @Nullable Input<Integer> conflictLoggingRetentionInDays;
+        private final @Nullable Input<Integer> conflictLoggingRetentionInDays;
 
     public Input<Integer> getConflictLoggingRetentionInDays() {
         return this.conflictLoggingRetentionInDays == null ? Input.empty() : this.conflictLoggingRetentionInDays;
@@ -36,7 +36,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conflictResolutionPolicy")
-    private final @Nullable Input<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
+        private final @Nullable Input<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
 
     public Input<Either<String,SyncConflictResolutionPolicy>> getConflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Input.empty() : this.conflictResolutionPolicy;
@@ -47,7 +47,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -58,7 +58,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableConflictLogging")
-    private final @Nullable Input<Boolean> enableConflictLogging;
+        private final @Nullable Input<Boolean> enableConflictLogging;
 
     public Input<Boolean> getEnableConflictLogging() {
         return this.enableConflictLogging == null ? Input.empty() : this.enableConflictLogging;
@@ -69,7 +69,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubDatabasePassword")
-    private final @Nullable Input<String> hubDatabasePassword;
+        private final @Nullable Input<String> hubDatabasePassword;
 
     public Input<String> getHubDatabasePassword() {
         return this.hubDatabasePassword == null ? Input.empty() : this.hubDatabasePassword;
@@ -80,7 +80,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubDatabaseUserName")
-    private final @Nullable Input<String> hubDatabaseUserName;
+        private final @Nullable Input<String> hubDatabaseUserName;
 
     public Input<String> getHubDatabaseUserName() {
         return this.hubDatabaseUserName == null ? Input.empty() : this.hubDatabaseUserName;
@@ -91,7 +91,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+        private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -102,7 +102,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<SyncGroupSchemaArgs> schema;
+        private final @Nullable Input<SyncGroupSchemaArgs> schema;
 
     public Input<SyncGroupSchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -124,7 +124,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -135,7 +135,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -146,7 +146,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncDatabaseId")
-    private final @Nullable Input<String> syncDatabaseId;
+        private final @Nullable Input<String> syncDatabaseId;
 
     public Input<String> getSyncDatabaseId() {
         return this.syncDatabaseId == null ? Input.empty() : this.syncDatabaseId;
@@ -157,7 +157,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName")
-    private final @Nullable Input<String> syncGroupName;
+        private final @Nullable Input<String> syncGroupName;
 
     public Input<String> getSyncGroupName() {
         return this.syncGroupName == null ? Input.empty() : this.syncGroupName;
@@ -168,7 +168,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usePrivateLinkConnection")
-    private final @Nullable Input<Boolean> usePrivateLinkConnection;
+        private final @Nullable Input<Boolean> usePrivateLinkConnection;
 
     public Input<Boolean> getUsePrivateLinkConnection() {
         return this.usePrivateLinkConnection == null ? Input.empty() : this.usePrivateLinkConnection;
@@ -407,7 +407,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.usePrivateLinkConnection = Input.ofNullable(usePrivateLinkConnection);
             return this;
         }
-
         public SyncGroupArgs build() {
             return new SyncGroupArgs(conflictLoggingRetentionInDays, conflictResolutionPolicy, databaseName, enableConflictLogging, hubDatabasePassword, hubDatabaseUserName, interval, resourceGroupName, schema, serverName, sku, syncDatabaseId, syncGroupName, usePrivateLinkConnection);
         }

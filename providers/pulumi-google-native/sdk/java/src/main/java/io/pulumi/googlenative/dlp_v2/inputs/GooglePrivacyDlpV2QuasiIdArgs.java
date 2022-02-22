@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customTag")
-    private final @Nullable Input<String> customTag;
+      private final @Nullable Input<String> customTag;
 
     public Input<String> getCustomTag() {
         return this.customTag == null ? Input.empty() : this.customTag;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inferred")
-    private final @Nullable Input<GoogleProtobufEmptyArgs> inferred;
+      private final @Nullable Input<GoogleProtobufEmptyArgs> inferred;
 
     public Input<GoogleProtobufEmptyArgs> getInferred() {
         return this.inferred == null ? Input.empty() : this.inferred;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="infoType")
-    private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
     public Input<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
         return this.infoType == null ? Input.empty() : this.infoType;
@@ -148,7 +148,6 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
             this.infoType = Input.ofNullable(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdArgs build() {
             return new GooglePrivacyDlpV2QuasiIdArgs(customTag, field, inferred, infoType);
         }

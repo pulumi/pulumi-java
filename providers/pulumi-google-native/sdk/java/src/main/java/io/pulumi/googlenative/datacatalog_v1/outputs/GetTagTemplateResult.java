@@ -118,7 +118,6 @@ public final class GetTagTemplateResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetTagTemplateResult build() {
             return new GetTagTemplateResult(displayName, fields, isPubliclyReadable, name);
         }

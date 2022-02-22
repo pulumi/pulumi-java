@@ -118,7 +118,6 @@ public final class LinkedServicePropsResponse {
             this.modifiedTime = modifiedTime;
             return this;
         }
-
         public LinkedServicePropsResponse build() {
             return new LinkedServicePropsResponse(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }

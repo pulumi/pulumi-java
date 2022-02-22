@@ -77,7 +77,6 @@ public final class WaitStepPropertiesResponse {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
-
         public WaitStepPropertiesResponse build() {
             return new WaitStepPropertiesResponse(attributes, stepType);
         }

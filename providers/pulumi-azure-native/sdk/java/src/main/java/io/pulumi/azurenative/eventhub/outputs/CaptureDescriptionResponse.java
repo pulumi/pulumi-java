@@ -163,7 +163,6 @@ public final class CaptureDescriptionResponse {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
-
         public CaptureDescriptionResponse build() {
             return new CaptureDescriptionResponse(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }

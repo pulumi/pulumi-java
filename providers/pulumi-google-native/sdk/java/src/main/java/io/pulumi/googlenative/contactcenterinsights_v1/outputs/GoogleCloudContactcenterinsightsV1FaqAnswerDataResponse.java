@@ -160,7 +160,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(answer, confidenceScore, metadata, queryRecord, question, source);
         }

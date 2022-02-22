@@ -17,14 +17,14 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -94,7 +94,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrivateEndpointConnectionArgs build() {
             return new GetPrivateEndpointConnectionArgs(accountName, name, resourceGroupName);
         }

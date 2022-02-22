@@ -248,7 +248,6 @@ public final class GetAttestationProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttestationProviderResult build() {
             return new GetAttestationProviderResult(attestUri, id, location, name, privateEndpointConnections, status, systemData, tags, trustModel, type);
         }

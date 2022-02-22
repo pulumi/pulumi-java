@@ -100,7 +100,6 @@ public final class AutoHealActionsResponse {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
-
         public AutoHealActionsResponse build() {
             return new AutoHealActionsResponse(actionType, customAction, minProcessExecutionTime);
         }

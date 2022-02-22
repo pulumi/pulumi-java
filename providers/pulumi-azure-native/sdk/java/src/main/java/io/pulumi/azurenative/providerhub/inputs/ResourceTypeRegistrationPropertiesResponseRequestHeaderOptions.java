@@ -15,7 +15,7 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
     public static final ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions Empty = new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions();
 
     @InputImport(name="optInHeaders")
-    private final @Nullable String optInHeaders;
+        private final @Nullable String optInHeaders;
 
     public Optional<String> getOptInHeaders() {
         return this.optInHeaders == null ? Optional.empty() : Optional.ofNullable(this.optInHeaders);
@@ -53,7 +53,6 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
             this.optInHeaders = optInHeaders;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions build() {
             return new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(optInHeaders);
         }

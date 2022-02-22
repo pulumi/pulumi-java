@@ -24,7 +24,7 @@ public final class ManagementPolicyDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="actions", required=true)
-    private final ManagementPolicyActionResponse actions;
+        private final ManagementPolicyActionResponse actions;
 
     public ManagementPolicyActionResponse getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class ManagementPolicyDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable ManagementPolicyFilterResponse filters;
+        private final @Nullable ManagementPolicyFilterResponse filters;
 
     public Optional<ManagementPolicyFilterResponse> getFilters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
@@ -84,7 +84,6 @@ public final class ManagementPolicyDefinitionResponse extends io.pulumi.resource
             this.filters = filters;
             return this;
         }
-
         public ManagementPolicyDefinitionResponse build() {
             return new ManagementPolicyDefinitionResponse(actions, filters);
         }

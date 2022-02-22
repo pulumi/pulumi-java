@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="mongoRoleDefinitionId", required=true)
-    private final String mongoRoleDefinitionId;
+        private final String mongoRoleDefinitionId;
 
     public String getMongoRoleDefinitionId() {
         return this.mongoRoleDefinitionId;
@@ -39,7 +39,7 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetMongoDBResourceMongoRoleDefinitionArgs build() {
             return new GetMongoDBResourceMongoRoleDefinitionArgs(accountName, mongoRoleDefinitionId, resourceGroupName);
         }

@@ -52,7 +52,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(timeoutSec);
         }

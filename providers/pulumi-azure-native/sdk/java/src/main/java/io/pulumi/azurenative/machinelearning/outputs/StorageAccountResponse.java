@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.name = name;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(key, name);
         }

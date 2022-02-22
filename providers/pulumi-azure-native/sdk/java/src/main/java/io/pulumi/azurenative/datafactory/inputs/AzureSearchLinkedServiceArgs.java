@@ -31,7 +31,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -75,7 +75,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -86,7 +86,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -98,7 +98,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -109,7 +109,7 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<Object> url;
+        private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;
@@ -258,7 +258,6 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public AzureSearchLinkedServiceArgs build() {
             return new AzureSearchLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, key, parameters, type, url);
         }

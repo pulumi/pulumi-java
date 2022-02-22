@@ -182,7 +182,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(expirationDate, id, keyVault, name, subject, thumbprint, type);
         }

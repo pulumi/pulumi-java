@@ -205,7 +205,6 @@ public final class HiveSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HiveSourceResponse build() {
             return new HiveSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

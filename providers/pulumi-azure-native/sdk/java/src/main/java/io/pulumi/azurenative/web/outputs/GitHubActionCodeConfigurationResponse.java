@@ -76,7 +76,6 @@ public final class GitHubActionCodeConfigurationResponse {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public GitHubActionCodeConfigurationResponse build() {
             return new GitHubActionCodeConfigurationResponse(runtimeStack, runtimeVersion);
         }

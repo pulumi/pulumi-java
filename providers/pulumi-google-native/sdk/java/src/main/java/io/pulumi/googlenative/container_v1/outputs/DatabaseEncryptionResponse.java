@@ -74,7 +74,6 @@ public final class DatabaseEncryptionResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public DatabaseEncryptionResponse build() {
             return new DatabaseEncryptionResponse(keyName, state);
         }

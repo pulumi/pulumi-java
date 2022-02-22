@@ -181,7 +181,6 @@ public final class GetEnvironmentResult {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(containerImage, createTime, description, displayName, name, postStartupScript, vmImage);
         }

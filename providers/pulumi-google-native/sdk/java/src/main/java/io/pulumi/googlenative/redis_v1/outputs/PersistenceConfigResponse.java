@@ -116,7 +116,6 @@ public final class PersistenceConfigResponse {
             this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
             return this;
         }
-
         public PersistenceConfigResponse build() {
             return new PersistenceConfigResponse(persistenceMode, rdbNextSnapshotTime, rdbSnapshotPeriod, rdbSnapshotStartTime);
         }

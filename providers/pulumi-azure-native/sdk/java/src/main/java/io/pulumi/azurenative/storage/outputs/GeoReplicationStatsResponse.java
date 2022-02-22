@@ -96,7 +96,6 @@ public final class GeoReplicationStatsResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GeoReplicationStatsResponse build() {
             return new GeoReplicationStatsResponse(canFailover, lastSyncTime, status);
         }

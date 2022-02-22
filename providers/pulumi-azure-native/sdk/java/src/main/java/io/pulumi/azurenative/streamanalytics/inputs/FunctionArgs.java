@@ -24,7 +24,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ScalarFunctionPropertiesArgs> properties;
+        private final @Nullable Input<ScalarFunctionPropertiesArgs> properties;
 
     public Input<ScalarFunctionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -94,7 +94,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public FunctionArgs build() {
             return new FunctionArgs(name, properties);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends io.p
      * 
      */
     @InputImport(name="inputUri", required=true)
-    private final Input<String> inputUri;
+      private final Input<String> inputUri;
 
     public Input<String> getInputUri() {
         return this.inputUri;
@@ -65,7 +65,6 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends io.p
             this.inputUri = Input.of(Objects.requireNonNull(inputUri));
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BigQuerySourceArgs build() {
             return new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(inputUri);
         }

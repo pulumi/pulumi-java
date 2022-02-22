@@ -613,7 +613,6 @@ public final class GetVirtualMachineTemplateResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetVirtualMachineTemplateResult build() {
             return new GetVirtualMachineTemplateResult(customResourceName, disks, extendedLocation, firmwareType, folderPath, id, inventoryItemId, kind, location, memorySizeMB, moName, moRefId, name, networkInterfaces, numCPUs, numCoresPerSocket, osName, osType, provisioningState, statuses, systemData, tags, toolsVersion, toolsVersionStatus, type, uuid, vCenterId);
         }

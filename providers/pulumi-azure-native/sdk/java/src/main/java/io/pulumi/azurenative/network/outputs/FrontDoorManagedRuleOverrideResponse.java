@@ -120,7 +120,6 @@ public final class FrontDoorManagedRuleOverrideResponse {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public FrontDoorManagedRuleOverrideResponse build() {
             return new FrontDoorManagedRuleOverrideResponse(action, enabledState, exclusions, ruleId);
         }

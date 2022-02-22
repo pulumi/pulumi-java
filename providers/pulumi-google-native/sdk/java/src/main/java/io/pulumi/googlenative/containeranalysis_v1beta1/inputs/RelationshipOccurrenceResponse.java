@@ -21,7 +21,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="comment", required=true)
-    private final String comment;
+      private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -32,7 +32,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -43,7 +43,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -54,7 +54,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RelationshipOccurrenceResponse build() {
             return new RelationshipOccurrenceResponse(comment, source, target, type);
         }

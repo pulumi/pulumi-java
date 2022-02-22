@@ -231,7 +231,6 @@ public final class MySqlTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MySqlTableDatasetResponse build() {
             return new MySqlTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

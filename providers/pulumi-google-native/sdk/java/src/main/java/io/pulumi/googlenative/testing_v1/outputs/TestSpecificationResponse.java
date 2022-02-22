@@ -250,7 +250,6 @@ public final class TestSpecificationResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public TestSpecificationResponse build() {
             return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }

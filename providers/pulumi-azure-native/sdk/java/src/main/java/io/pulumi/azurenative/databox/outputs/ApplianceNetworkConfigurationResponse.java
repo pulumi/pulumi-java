@@ -74,7 +74,6 @@ public final class ApplianceNetworkConfigurationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ApplianceNetworkConfigurationResponse build() {
             return new ApplianceNetworkConfigurationResponse(macAddress, name);
         }

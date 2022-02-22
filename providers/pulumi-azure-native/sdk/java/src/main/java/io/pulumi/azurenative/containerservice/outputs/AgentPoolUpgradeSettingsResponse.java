@@ -54,7 +54,6 @@ public final class AgentPoolUpgradeSettingsResponse {
             this.maxSurge = maxSurge;
             return this;
         }
-
         public AgentPoolUpgradeSettingsResponse build() {
             return new AgentPoolUpgradeSettingsResponse(maxSurge);
         }

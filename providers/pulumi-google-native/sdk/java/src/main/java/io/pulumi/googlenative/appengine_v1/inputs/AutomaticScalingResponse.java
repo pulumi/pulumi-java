@@ -27,7 +27,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="coolDownPeriod", required=true)
-    private final String coolDownPeriod;
+      private final String coolDownPeriod;
 
     public String getCoolDownPeriod() {
         return this.coolDownPeriod;
@@ -38,7 +38,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cpuUtilization", required=true)
-    private final CpuUtilizationResponse cpuUtilization;
+      private final CpuUtilizationResponse cpuUtilization;
 
     public CpuUtilizationResponse getCpuUtilization() {
         return this.cpuUtilization;
@@ -49,7 +49,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="diskUtilization", required=true)
-    private final DiskUtilizationResponse diskUtilization;
+      private final DiskUtilizationResponse diskUtilization;
 
     public DiskUtilizationResponse getDiskUtilization() {
         return this.diskUtilization;
@@ -60,7 +60,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxConcurrentRequests", required=true)
-    private final Integer maxConcurrentRequests;
+      private final Integer maxConcurrentRequests;
 
     public Integer getMaxConcurrentRequests() {
         return this.maxConcurrentRequests;
@@ -71,7 +71,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxIdleInstances", required=true)
-    private final Integer maxIdleInstances;
+      private final Integer maxIdleInstances;
 
     public Integer getMaxIdleInstances() {
         return this.maxIdleInstances;
@@ -82,7 +82,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxPendingLatency", required=true)
-    private final String maxPendingLatency;
+      private final String maxPendingLatency;
 
     public String getMaxPendingLatency() {
         return this.maxPendingLatency;
@@ -93,7 +93,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxTotalInstances", required=true)
-    private final Integer maxTotalInstances;
+      private final Integer maxTotalInstances;
 
     public Integer getMaxTotalInstances() {
         return this.maxTotalInstances;
@@ -104,7 +104,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minIdleInstances", required=true)
-    private final Integer minIdleInstances;
+      private final Integer minIdleInstances;
 
     public Integer getMinIdleInstances() {
         return this.minIdleInstances;
@@ -115,7 +115,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minPendingLatency", required=true)
-    private final String minPendingLatency;
+      private final String minPendingLatency;
 
     public String getMinPendingLatency() {
         return this.minPendingLatency;
@@ -126,7 +126,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minTotalInstances", required=true)
-    private final Integer minTotalInstances;
+      private final Integer minTotalInstances;
 
     public Integer getMinTotalInstances() {
         return this.minTotalInstances;
@@ -137,7 +137,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkUtilization", required=true)
-    private final NetworkUtilizationResponse networkUtilization;
+      private final NetworkUtilizationResponse networkUtilization;
 
     public NetworkUtilizationResponse getNetworkUtilization() {
         return this.networkUtilization;
@@ -148,7 +148,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="requestUtilization", required=true)
-    private final RequestUtilizationResponse requestUtilization;
+      private final RequestUtilizationResponse requestUtilization;
 
     public RequestUtilizationResponse getRequestUtilization() {
         return this.requestUtilization;
@@ -159,7 +159,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="standardSchedulerSettings", required=true)
-    private final StandardSchedulerSettingsResponse standardSchedulerSettings;
+      private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 
     public StandardSchedulerSettingsResponse getStandardSchedulerSettings() {
         return this.standardSchedulerSettings;
@@ -318,7 +318,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
         }
-
         public AutomaticScalingResponse build() {
             return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }

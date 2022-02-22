@@ -74,7 +74,6 @@ public final class ExtendedLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExtendedLocationResponse build() {
             return new ExtendedLocationResponse(name, type);
         }

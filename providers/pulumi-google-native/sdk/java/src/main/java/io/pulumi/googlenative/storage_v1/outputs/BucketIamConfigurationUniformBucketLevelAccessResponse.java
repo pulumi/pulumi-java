@@ -75,7 +75,6 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
             return new BucketIamConfigurationUniformBucketLevelAccessResponse(enabled, lockedTime);
         }

@@ -162,7 +162,6 @@ public final class SqlManagedInstanceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SqlManagedInstanceSkuResponse build() {
             return new SqlManagedInstanceSkuResponse(capacity, dev, family, name, size, tier);
         }

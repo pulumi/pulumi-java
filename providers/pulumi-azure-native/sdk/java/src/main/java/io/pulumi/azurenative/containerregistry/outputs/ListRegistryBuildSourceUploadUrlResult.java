@@ -76,7 +76,6 @@ public final class ListRegistryBuildSourceUploadUrlResult {
             this.uploadUrl = uploadUrl;
             return this;
         }
-
         public ListRegistryBuildSourceUploadUrlResult build() {
             return new ListRegistryBuildSourceUploadUrlResult(relativePath, uploadUrl);
         }

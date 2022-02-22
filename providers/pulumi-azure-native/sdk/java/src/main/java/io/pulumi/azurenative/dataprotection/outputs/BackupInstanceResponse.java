@@ -220,7 +220,6 @@ public final class BackupInstanceResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public BackupInstanceResponse build() {
             return new BackupInstanceResponse(currentProtectionState, dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo, protectionErrorDetails, protectionStatus, provisioningState);
         }

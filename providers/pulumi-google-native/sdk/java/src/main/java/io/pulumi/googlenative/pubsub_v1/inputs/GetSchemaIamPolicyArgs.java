@@ -15,21 +15,21 @@ public final class GetSchemaIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetSchemaIamPolicyArgs Empty = new GetSchemaIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="schemaId", required=true)
-    private final String schemaId;
+      private final String schemaId;
 
     public String getSchemaId() {
         return this.schemaId;
@@ -88,7 +88,6 @@ public final class GetSchemaIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.schemaId = Objects.requireNonNull(schemaId);
             return this;
         }
-
         public GetSchemaIamPolicyArgs build() {
             return new GetSchemaIamPolicyArgs(optionsRequestedPolicyVersion, project, schemaId);
         }

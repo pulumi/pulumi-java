@@ -108,7 +108,6 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZoneForwardingConfigNameServerTargetResponse build() {
             return new ManagedZoneForwardingConfigNameServerTargetResponse(forwardingPath, ipv4Address, ipv6Address, kind);
         }

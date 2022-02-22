@@ -74,7 +74,6 @@ public final class ImageRawDiskResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ImageRawDiskResponse build() {
             return new ImageRawDiskResponse(containerType, source);
         }

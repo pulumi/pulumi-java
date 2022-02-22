@@ -74,7 +74,6 @@ public final class X12AgreementContentResponse {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public X12AgreementContentResponse build() {
             return new X12AgreementContentResponse(receiveAgreement, sendAgreement);
         }

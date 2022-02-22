@@ -21,7 +21,7 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="backupType", required=true)
-    private final String backupType;
+        private final String backupType;
 
     public String getBackupType() {
         return this.backupType;
@@ -33,7 +33,7 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -82,7 +82,6 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AzureBackupParamsResponse build() {
             return new AzureBackupParamsResponse(backupType, objectType);
         }

@@ -246,7 +246,6 @@ public final class GetManagementGroupDiagnosticSettingResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetManagementGroupDiagnosticSettingResult build() {
             return new GetManagementGroupDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, location, logs, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }

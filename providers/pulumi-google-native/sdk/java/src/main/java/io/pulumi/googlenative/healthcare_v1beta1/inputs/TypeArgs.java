@@ -26,7 +26,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<FieldArgs>> fields;
+      private final @Nullable Input<List<FieldArgs>> fields;
 
     public Input<List<FieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -37,7 +37,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primitive")
-    private final @Nullable Input<TypePrimitive> primitive;
+      private final @Nullable Input<TypePrimitive> primitive;
 
     public Input<TypePrimitive> getPrimitive() {
         return this.primitive == null ? Input.empty() : this.primitive;
@@ -122,7 +122,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             this.primitive = Input.ofNullable(primitive);
             return this;
         }
-
         public TypeArgs build() {
             return new TypeArgs(fields, name, primitive);
         }

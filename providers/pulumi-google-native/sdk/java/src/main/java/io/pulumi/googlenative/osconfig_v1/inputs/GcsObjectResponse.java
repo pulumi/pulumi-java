@@ -21,7 +21,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="generationNumber", required=true)
-    private final String generationNumber;
+      private final String generationNumber;
 
     public String getGenerationNumber() {
         return this.generationNumber;
@@ -43,7 +43,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
@@ -102,7 +102,6 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public GcsObjectResponse build() {
             return new GcsObjectResponse(bucket, generationNumber, object);
         }

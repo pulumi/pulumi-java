@@ -74,7 +74,6 @@ public final class UserAccessRightResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public UserAccessRightResponse build() {
             return new UserAccessRightResponse(accessType, userId);
         }

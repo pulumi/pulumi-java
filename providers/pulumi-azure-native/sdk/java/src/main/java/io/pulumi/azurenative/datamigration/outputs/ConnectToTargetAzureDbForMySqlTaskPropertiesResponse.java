@@ -169,7 +169,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetAzureDbForMySqlTaskPropertiesResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

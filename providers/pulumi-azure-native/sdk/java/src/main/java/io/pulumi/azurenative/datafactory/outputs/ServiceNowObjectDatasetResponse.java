@@ -231,7 +231,6 @@ public final class ServiceNowObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceNowObjectDatasetResponse build() {
             return new ServiceNowObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

@@ -195,7 +195,6 @@ public final class GetProtectedItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectedItemResult build() {
             return new GetProtectedItemResult(eTag, id, location, name, properties, tags, type);
         }

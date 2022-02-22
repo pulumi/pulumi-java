@@ -118,7 +118,6 @@ public final class IncidentInfoResponse {
             this.title = title;
             return this;
         }
-
         public IncidentInfoResponse build() {
             return new IncidentInfoResponse(incidentId, relationName, severity, title);
         }

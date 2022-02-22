@@ -205,7 +205,6 @@ public final class AzurePostgreSqlSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzurePostgreSqlSinkResponse build() {
             return new AzurePostgreSqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

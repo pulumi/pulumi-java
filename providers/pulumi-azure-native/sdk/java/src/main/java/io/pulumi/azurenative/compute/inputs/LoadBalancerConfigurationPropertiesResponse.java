@@ -18,7 +18,7 @@ public final class LoadBalancerConfigurationPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-    private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
+        private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
     public List<LoadBalancerFrontendIPConfigurationResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
@@ -56,7 +56,6 @@ public final class LoadBalancerConfigurationPropertiesResponse extends io.pulumi
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
-
         public LoadBalancerConfigurationPropertiesResponse build() {
             return new LoadBalancerConfigurationPropertiesResponse(frontendIPConfigurations);
         }

@@ -54,7 +54,6 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyClearKeyConfigurationResponse build() {
             return new ContentKeyPolicyClearKeyConfigurationResponse(odataType);
         }

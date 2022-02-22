@@ -184,7 +184,6 @@ public final class GetEnterpriseKnowledgeGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnterpriseKnowledgeGraphResult build() {
             return new GetEnterpriseKnowledgeGraphResult(id, location, name, properties, sku, tags, type);
         }

@@ -205,7 +205,6 @@ public final class GetB2CTenantResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetB2CTenantResult build() {
             return new GetB2CTenantResult(billingConfig, id, location, name, sku, tags, tenantId, type);
         }

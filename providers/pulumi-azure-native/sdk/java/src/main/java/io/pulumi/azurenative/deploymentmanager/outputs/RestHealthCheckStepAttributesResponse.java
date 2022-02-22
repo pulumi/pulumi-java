@@ -143,7 +143,6 @@ public final class RestHealthCheckStepAttributesResponse {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public RestHealthCheckStepAttributesResponse build() {
             return new RestHealthCheckStepAttributesResponse(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
         }

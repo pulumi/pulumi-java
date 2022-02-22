@@ -181,7 +181,6 @@ public final class GetServicePerimeterResult {
             this.useExplicitDryRunSpec = Objects.requireNonNull(useExplicitDryRunSpec);
             return this;
         }
-
         public GetServicePerimeterResult build() {
             return new GetServicePerimeterResult(description, name, perimeterType, spec, status, title, useExplicitDryRunSpec);
         }

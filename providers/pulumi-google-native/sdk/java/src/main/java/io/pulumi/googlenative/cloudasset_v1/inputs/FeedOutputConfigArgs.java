@@ -23,7 +23,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pubsubDestination")
-    private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
+      private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
 
     public Input<PubsubDestinationArgs> getPubsubDestination() {
         return this.pubsubDestination == null ? Input.empty() : this.pubsubDestination;
@@ -66,7 +66,6 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
             this.pubsubDestination = Input.ofNullable(pubsubDestination);
             return this;
         }
-
         public FeedOutputConfigArgs build() {
             return new FeedOutputConfigArgs(pubsubDestination);
         }

@@ -77,7 +77,6 @@ public final class OpenIdConnectLoginResponse {
             this.scopes = scopes;
             return this;
         }
-
         public OpenIdConnectLoginResponse build() {
             return new OpenIdConnectLoginResponse(nameClaimType, scopes);
         }

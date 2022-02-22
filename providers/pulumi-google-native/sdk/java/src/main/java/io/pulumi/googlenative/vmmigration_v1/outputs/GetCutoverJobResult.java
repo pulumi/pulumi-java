@@ -203,7 +203,6 @@ public final class GetCutoverJobResult {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public GetCutoverJobResult build() {
             return new GetCutoverJobResult(computeEngineTargetDetails, createTime, error, name, progressPercent, state, stateMessage, stateTime);
         }

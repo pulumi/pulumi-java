@@ -78,7 +78,6 @@ public final class MetricRulesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public MetricRulesResponse build() {
             return new MetricRulesResponse(filteringTags, subscriptionId);
         }

@@ -161,7 +161,6 @@ public final class HardwareProfileResponse {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(cpuHotAddEnabled, cpuHotRemoveEnabled, memoryHotAddEnabled, memorySizeMB, numCPUs, numCoresPerSocket);
         }

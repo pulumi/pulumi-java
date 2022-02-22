@@ -572,7 +572,6 @@ public final class ACIServiceResponseResponse {
             this.vnetConfiguration = vnetConfiguration;
             return this;
         }
-
         public ACIServiceResponseResponse build() {
             return new ACIServiceResponseResponse(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, deploymentType, description, encryptionProperties, environmentImageRequest, error, kvTags, location, modelConfigMap, models, properties, publicFqdn, publicIp, scoringUri, sslCertificate, sslEnabled, sslKey, state, swaggerUri, vnetConfiguration);
         }

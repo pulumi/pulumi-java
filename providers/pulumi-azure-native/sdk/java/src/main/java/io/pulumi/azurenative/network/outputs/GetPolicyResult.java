@@ -350,7 +350,6 @@ public final class GetPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(customRules, etag, frontendEndpointLinks, id, location, managedRules, name, policySettings, provisioningState, resourceState, routingRuleLinks, securityPolicyLinks, sku, tags, type);
         }

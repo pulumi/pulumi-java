@@ -140,7 +140,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
             this.status = status;
             return this;
         }
-
         public SharedPrivateLinkResourcePropertiesResponse build() {
             return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLink, privateLinkLocation, requestMessage, status);
         }

@@ -17,7 +17,7 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -28,7 +28,7 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -77,7 +77,6 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnectionPropertyResponse build() {
             return new ConnectionPropertyResponse(key, value);
         }

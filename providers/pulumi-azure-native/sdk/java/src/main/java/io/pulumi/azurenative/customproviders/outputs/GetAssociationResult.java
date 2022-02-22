@@ -139,7 +139,6 @@ public final class GetAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssociationResult build() {
             return new GetAssociationResult(id, name, provisioningState, targetResourceId, type);
         }

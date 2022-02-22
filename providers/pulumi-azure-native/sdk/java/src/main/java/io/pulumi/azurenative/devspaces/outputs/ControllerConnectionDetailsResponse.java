@@ -54,7 +54,6 @@ public final class ControllerConnectionDetailsResponse {
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }
-
         public ControllerConnectionDetailsResponse build() {
             return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
         }

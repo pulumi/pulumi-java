@@ -75,7 +75,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
             this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(categoricalFeatures, numericalFeatures);
         }

@@ -21,7 +21,7 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final String expireTime;
+      private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
@@ -32,7 +32,7 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -43,7 +43,7 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final String ttl;
+      private final String ttl;
 
     public String getTtl() {
         return this.ttl;
@@ -54,7 +54,7 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -123,7 +123,6 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SqlAclEntryResponse build() {
             return new SqlAclEntryResponse(expireTime, label, ttl, value);
         }

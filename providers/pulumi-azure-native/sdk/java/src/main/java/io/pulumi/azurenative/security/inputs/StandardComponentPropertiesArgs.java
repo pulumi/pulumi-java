@@ -23,7 +23,7 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -66,7 +66,6 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public StandardComponentPropertiesArgs build() {
             return new StandardComponentPropertiesArgs(key);
         }

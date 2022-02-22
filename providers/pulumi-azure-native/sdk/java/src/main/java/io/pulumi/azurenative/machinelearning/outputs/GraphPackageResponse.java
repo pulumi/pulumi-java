@@ -101,7 +101,6 @@ public final class GraphPackageResponse {
             this.nodes = nodes;
             return this;
         }
-
         public GraphPackageResponse build() {
             return new GraphPackageResponse(edges, graphParameters, nodes);
         }

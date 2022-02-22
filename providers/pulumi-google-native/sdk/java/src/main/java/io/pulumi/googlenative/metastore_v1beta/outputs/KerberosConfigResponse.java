@@ -96,7 +96,6 @@ public final class KerberosConfigResponse {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(keytab, krb5ConfigGcsUri, principal);
         }

@@ -120,7 +120,6 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult build() {
             return new GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult(auditConfigs, bindings, etag, version);
         }

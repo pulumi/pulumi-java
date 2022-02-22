@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }

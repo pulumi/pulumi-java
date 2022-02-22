@@ -21,7 +21,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="capacityReservationGroupName")
-    private final @Nullable Input<String> capacityReservationGroupName;
+        private final @Nullable Input<String> capacityReservationGroupName;
 
     public Input<String> getCapacityReservationGroupName() {
         return this.capacityReservationGroupName == null ? Input.empty() : this.capacityReservationGroupName;
@@ -32,7 +32,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -169,7 +169,6 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public CapacityReservationGroupArgs build() {
             return new CapacityReservationGroupArgs(capacityReservationGroupName, location, resourceGroupName, tags, zones);
         }

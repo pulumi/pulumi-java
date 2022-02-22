@@ -159,7 +159,6 @@ public final class GetAdminRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAdminRuleResult build() {
             return new GetAdminRuleResult(etag, id, kind, name, systemData, type);
         }

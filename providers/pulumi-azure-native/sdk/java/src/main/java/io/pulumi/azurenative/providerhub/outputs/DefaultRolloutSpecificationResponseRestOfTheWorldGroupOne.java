@@ -61,7 +61,6 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne build() {
             return new DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne(regions, waitDuration);
         }

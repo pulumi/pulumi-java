@@ -97,7 +97,6 @@ public final class UserInfoResponse {
             this.objectId = objectId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(email, name, objectId);
         }

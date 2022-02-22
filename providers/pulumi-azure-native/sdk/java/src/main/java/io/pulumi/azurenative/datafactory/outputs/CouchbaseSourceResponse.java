@@ -205,7 +205,6 @@ public final class CouchbaseSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CouchbaseSourceResponse build() {
             return new CouchbaseSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

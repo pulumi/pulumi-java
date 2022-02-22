@@ -23,7 +23,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="launcherActivity", required=true)
-    private final LauncherActivityIntentResponse launcherActivity;
+      private final LauncherActivityIntentResponse launcherActivity;
 
     public LauncherActivityIntentResponse getLauncherActivity() {
         return this.launcherActivity;
@@ -34,7 +34,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="startActivity", required=true)
-    private final StartActivityIntentResponse startActivity;
+      private final StartActivityIntentResponse startActivity;
 
     public StartActivityIntentResponse getStartActivity() {
         return this.startActivity;
@@ -45,7 +45,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final String timeout;
+      private final String timeout;
 
     public String getTimeout() {
         return this.timeout;
@@ -104,7 +104,6 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public RoboStartingIntentResponse build() {
             return new RoboStartingIntentResponse(launcherActivity, startActivity, timeout);
         }

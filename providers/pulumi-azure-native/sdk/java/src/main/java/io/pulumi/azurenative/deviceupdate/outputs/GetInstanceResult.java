@@ -271,7 +271,6 @@ public final class GetInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(accountName, diagnosticStorageProperties, enableDiagnostics, id, iotHubs, location, name, provisioningState, systemData, tags, type);
         }

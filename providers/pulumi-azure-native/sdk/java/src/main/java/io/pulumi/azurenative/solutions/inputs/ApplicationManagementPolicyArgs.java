@@ -25,7 +25,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
+        private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
 
     public Input<Either<String,ApplicationManagementMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -68,7 +68,6 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public ApplicationManagementPolicyArgs build() {
             return new ApplicationManagementPolicyArgs(mode);
         }

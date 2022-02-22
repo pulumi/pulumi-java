@@ -248,7 +248,6 @@ public final class GetExportResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExportResult build() {
             return new GetExportResult(definition, deliveryInfo, eTag, format, id, name, nextRunTimeEstimate, runHistory, schedule, type);
         }

@@ -393,7 +393,6 @@ public final class PackageInfoNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PackageInfoNoteResponse build() {
             return new PackageInfoNoteResponse(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
         }

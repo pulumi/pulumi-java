@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentDefinitionResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentDefinitionResponse(condition, versionVariants);
         }

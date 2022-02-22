@@ -120,7 +120,6 @@ public final class ClusterIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ClusterIdentityResponse build() {
             return new ClusterIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

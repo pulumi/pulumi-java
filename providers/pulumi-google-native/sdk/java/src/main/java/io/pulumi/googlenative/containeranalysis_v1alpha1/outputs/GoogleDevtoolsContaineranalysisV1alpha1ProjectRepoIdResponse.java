@@ -74,7 +74,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse(project, repoName);
         }

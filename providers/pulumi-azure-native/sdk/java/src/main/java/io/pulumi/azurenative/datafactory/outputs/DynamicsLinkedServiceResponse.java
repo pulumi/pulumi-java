@@ -423,7 +423,6 @@ public final class DynamicsLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public DynamicsLinkedServiceResponse build() {
             return new DynamicsLinkedServiceResponse(annotations, authenticationType, connectVia, credential, deploymentType, description, encryptedCredential, hostName, organizationName, parameters, password, port, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, serviceUri, type, username);
         }

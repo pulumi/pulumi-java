@@ -96,7 +96,6 @@ public final class EncryptionInfoResponse {
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
         }
-
         public EncryptionInfoResponse build() {
             return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
         }

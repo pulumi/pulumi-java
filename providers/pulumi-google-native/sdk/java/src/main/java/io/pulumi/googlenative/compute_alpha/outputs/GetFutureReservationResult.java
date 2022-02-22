@@ -280,7 +280,6 @@ public final class GetFutureReservationResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetFutureReservationResult build() {
             return new GetFutureReservationResult(creationTimestamp, description, kind, name, namePrefix, selfLink, selfLinkWithId, shareSettings, specificSkuProperties, status, timeWindow, zone);
         }

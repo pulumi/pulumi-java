@@ -353,7 +353,6 @@ public final class GetJobResult {
             this.userUpdateTime = Objects.requireNonNull(userUpdateTime);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(appEngineHttpTarget, attemptDeadline, description, httpTarget, lastAttemptTime, legacyAppEngineCron, name, pubsubTarget, retryConfig, schedule, scheduleTime, state, status, timeZone, userUpdateTime);
         }

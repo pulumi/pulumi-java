@@ -23,7 +23,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectionAttributes", required=true)
-    private final Map<String,String> connectionAttributes;
+      private final Map<String,String> connectionAttributes;
 
     public Map<String,String> getConnectionAttributes() {
         return this.connectionAttributes;
@@ -34,7 +34,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseService", required=true)
-    private final String databaseService;
+      private final String databaseService;
 
     public String getDatabaseService() {
         return this.databaseService;
@@ -45,7 +45,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final String hostname;
+      private final String hostname;
 
     public String getHostname() {
         return this.hostname;
@@ -56,7 +56,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -67,7 +67,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -78,7 +78,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -167,7 +167,6 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OracleProfileResponse build() {
             return new OracleProfileResponse(connectionAttributes, databaseService, hostname, password, port, username);
         }

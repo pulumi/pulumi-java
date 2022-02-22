@@ -54,7 +54,6 @@ public final class WindowsOsInfoResponse {
             this.windowsOsState = windowsOsState;
             return this;
         }
-
         public WindowsOsInfoResponse build() {
             return new WindowsOsInfoResponse(windowsOsState);
         }

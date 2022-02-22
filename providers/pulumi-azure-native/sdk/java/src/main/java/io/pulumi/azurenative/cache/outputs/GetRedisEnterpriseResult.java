@@ -311,7 +311,6 @@ public final class GetRedisEnterpriseResult {
             this.zones = zones;
             return this;
         }
-
         public GetRedisEnterpriseResult build() {
             return new GetRedisEnterpriseResult(hostName, id, location, minimumTlsVersion, name, privateEndpointConnections, provisioningState, redisVersion, resourceState, sku, tags, type, zones);
         }

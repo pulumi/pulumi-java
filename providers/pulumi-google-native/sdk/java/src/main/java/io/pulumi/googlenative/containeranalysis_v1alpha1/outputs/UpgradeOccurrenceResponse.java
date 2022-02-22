@@ -97,7 +97,6 @@ public final class UpgradeOccurrenceResponse {
             this.parsedVersion = Objects.requireNonNull(parsedVersion);
             return this;
         }
-
         public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion);
         }

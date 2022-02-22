@@ -77,7 +77,6 @@ public final class Hl7SchemaConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7SchemaConfigResponse build() {
             return new Hl7SchemaConfigResponse(messageSchemaConfigs, version);
         }

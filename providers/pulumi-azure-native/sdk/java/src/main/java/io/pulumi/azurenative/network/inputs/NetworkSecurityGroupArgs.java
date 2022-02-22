@@ -26,7 +26,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -48,7 +48,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityRules")
-    private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
+        private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
 
     public Input<List<SecurityRuleArgs>> getSecurityRules() {
         return this.securityRules == null ? Input.empty() : this.securityRules;
@@ -59,7 +59,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -148,7 +148,6 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NetworkSecurityGroupArgs build() {
             return new NetworkSecurityGroupArgs(id, location, securityRules, tags);
         }

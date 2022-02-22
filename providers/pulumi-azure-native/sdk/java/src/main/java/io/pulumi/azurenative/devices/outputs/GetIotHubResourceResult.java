@@ -205,7 +205,6 @@ public final class GetIotHubResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotHubResourceResult build() {
             return new GetIotHubResourceResult(etag, id, location, name, properties, sku, tags, type);
         }

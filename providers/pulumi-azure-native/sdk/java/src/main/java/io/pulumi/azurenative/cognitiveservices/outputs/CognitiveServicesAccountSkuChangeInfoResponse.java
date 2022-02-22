@@ -96,7 +96,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
         }
-
         public CognitiveServicesAccountSkuChangeInfoResponse build() {
             return new CognitiveServicesAccountSkuChangeInfoResponse(countOfDowngrades, countOfUpgradesAfterDowngrades, lastChangeDate);
         }

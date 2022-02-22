@@ -117,7 +117,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.word = Objects.requireNonNull(word);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(confidence, endOffset, startOffset, word);
         }

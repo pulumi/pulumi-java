@@ -15,21 +15,21 @@ public final class GetRegionOperationIamPolicyArgs extends io.pulumi.resources.I
     public static final GetRegionOperationIamPolicyArgs Empty = new GetRegionOperationIamPolicyArgs();
 
     @InputImport(name="operationId", required=true)
-    private final String operationId;
+      private final String operationId;
 
     public String getOperationId() {
         return this.operationId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="regionId", required=true)
-    private final String regionId;
+      private final String regionId;
 
     public String getRegionId() {
         return this.regionId;
@@ -88,7 +88,6 @@ public final class GetRegionOperationIamPolicyArgs extends io.pulumi.resources.I
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public GetRegionOperationIamPolicyArgs build() {
             return new GetRegionOperationIamPolicyArgs(operationId, project, regionId);
         }

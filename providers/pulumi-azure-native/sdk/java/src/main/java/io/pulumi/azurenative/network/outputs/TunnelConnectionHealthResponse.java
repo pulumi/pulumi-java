@@ -138,7 +138,6 @@ public final class TunnelConnectionHealthResponse {
             this.tunnel = Objects.requireNonNull(tunnel);
             return this;
         }
-
         public TunnelConnectionHealthResponse build() {
             return new TunnelConnectionHealthResponse(connectionStatus, egressBytesTransferred, ingressBytesTransferred, lastConnectionEstablishedUtcTime, tunnel);
         }

@@ -95,7 +95,6 @@ public final class TemplateSpecVersionInfoResponse {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
-
         public TemplateSpecVersionInfoResponse build() {
             return new TemplateSpecVersionInfoResponse(description, timeCreated, timeModified);
         }

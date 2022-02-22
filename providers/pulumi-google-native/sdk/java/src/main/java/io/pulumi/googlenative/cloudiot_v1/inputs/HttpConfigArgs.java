@@ -23,7 +23,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpEnabledState")
-    private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
+      private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
 
     public Input<HttpConfigHttpEnabledState> getHttpEnabledState() {
         return this.httpEnabledState == null ? Input.empty() : this.httpEnabledState;
@@ -66,7 +66,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.httpEnabledState = Input.ofNullable(httpEnabledState);
             return this;
         }
-
         public HttpConfigArgs build() {
             return new HttpConfigArgs(httpEnabledState);
         }

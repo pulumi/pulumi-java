@@ -159,7 +159,6 @@ public final class OwnerReferenceResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReferenceResponse build() {
             return new OwnerReferenceResponse(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

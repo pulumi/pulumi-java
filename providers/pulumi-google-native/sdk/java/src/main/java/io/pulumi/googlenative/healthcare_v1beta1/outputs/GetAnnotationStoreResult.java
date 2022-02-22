@@ -75,7 +75,6 @@ public final class GetAnnotationStoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetAnnotationStoreResult build() {
             return new GetAnnotationStoreResult(labels, name);
         }

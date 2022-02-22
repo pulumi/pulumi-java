@@ -52,7 +52,6 @@ public final class GlossaryInputConfigResponse {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
-
         public GlossaryInputConfigResponse build() {
             return new GlossaryInputConfigResponse(gcsSource);
         }

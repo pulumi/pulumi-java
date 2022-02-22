@@ -77,7 +77,6 @@ public final class PropagatedRouteTableResponse {
             this.labels = labels;
             return this;
         }
-
         public PropagatedRouteTableResponse build() {
             return new PropagatedRouteTableResponse(ids, labels);
         }

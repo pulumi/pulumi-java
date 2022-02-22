@@ -18,7 +18,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="diskEncryptionKey", required=true)
-    private final CustomerEncryptionKeyResponse diskEncryptionKey;
+      private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
         return this.diskEncryptionKey;
@@ -29,7 +29,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-    private final String sourceDisk;
+      private final String sourceDisk;
 
     public String getSourceDisk() {
         return this.sourceDisk;
@@ -78,7 +78,6 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public SourceDiskEncryptionKeyResponse build() {
             return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
         }

@@ -182,7 +182,6 @@ public final class EdgeProfileSubscriptionResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public EdgeProfileSubscriptionResponse build() {
             return new EdgeProfileSubscriptionResponse(id, locationPlacementId, quotaId, registeredFeatures, registrationDate, registrationId, serializedDetails, state, subscriptionId, tenantId);
         }

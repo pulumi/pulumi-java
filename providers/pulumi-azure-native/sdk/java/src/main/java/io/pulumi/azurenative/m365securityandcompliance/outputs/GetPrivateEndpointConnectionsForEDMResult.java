@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsForEDMResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsForEDMResult build() {
             return new GetPrivateEndpointConnectionsForEDMResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

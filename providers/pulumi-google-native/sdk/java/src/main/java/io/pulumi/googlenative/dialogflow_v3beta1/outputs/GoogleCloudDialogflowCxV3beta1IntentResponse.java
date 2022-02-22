@@ -206,7 +206,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentResponse(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }

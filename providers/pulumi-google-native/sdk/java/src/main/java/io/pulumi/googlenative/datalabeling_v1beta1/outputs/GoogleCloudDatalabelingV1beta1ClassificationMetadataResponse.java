@@ -52,7 +52,6 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
             this.isMultiLabel = Objects.requireNonNull(isMultiLabel);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse build() {
             return new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(isMultiLabel);
         }

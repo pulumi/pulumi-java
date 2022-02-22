@@ -76,7 +76,6 @@ public final class ProvisioningErrorResponse {
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
         }
-
         public ProvisioningErrorResponse build() {
             return new ProvisioningErrorResponse(message, provisioningErrorCode);
         }

@@ -97,7 +97,6 @@ public final class InputDataBindingResponse {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
-
         public InputDataBindingResponse build() {
             return new InputDataBindingResponse(dataId, mode, pathOnCompute);
         }

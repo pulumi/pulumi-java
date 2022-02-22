@@ -26,7 +26,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthInGbps")
-    private final @Nullable Input<Integer> bandwidthInGbps;
+        private final @Nullable Input<Integer> bandwidthInGbps;
 
     public Input<Integer> getBandwidthInGbps() {
         return this.bandwidthInGbps == null ? Input.empty() : this.bandwidthInGbps;
@@ -37,7 +37,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encapsulation")
-    private final @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
+        private final @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
     public Input<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
         return this.encapsulation == null ? Input.empty() : this.encapsulation;
@@ -48,7 +48,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expressRoutePortName")
-    private final @Nullable Input<String> expressRoutePortName;
+        private final @Nullable Input<String> expressRoutePortName;
 
     public Input<String> getExpressRoutePortName() {
         return this.expressRoutePortName == null ? Input.empty() : this.expressRoutePortName;
@@ -59,7 +59,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -70,7 +70,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -81,7 +81,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="links")
-    private final @Nullable Input<List<ExpressRouteLinkArgs>> links;
+        private final @Nullable Input<List<ExpressRouteLinkArgs>> links;
 
     public Input<List<ExpressRouteLinkArgs>> getLinks() {
         return this.links == null ? Input.empty() : this.links;
@@ -92,7 +92,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringLocation")
-    private final @Nullable Input<String> peeringLocation;
+        private final @Nullable Input<String> peeringLocation;
 
     public Input<String> getPeeringLocation() {
         return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
@@ -114,7 +114,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -125,7 +125,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -304,7 +304,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ExpressRoutePortArgs build() {
             return new ExpressRoutePortArgs(bandwidthInGbps, encapsulation, expressRoutePortName, id, identity, links, location, peeringLocation, resourceGroupName, tags);
         }

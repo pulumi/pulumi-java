@@ -120,7 +120,6 @@ public final class BlobInventoryPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public BlobInventoryPolicyFilterResponse build() {
             return new BlobInventoryPolicyFilterResponse(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
         }

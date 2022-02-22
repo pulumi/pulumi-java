@@ -121,7 +121,6 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskInputResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }

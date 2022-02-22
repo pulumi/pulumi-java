@@ -271,7 +271,6 @@ public final class GetAvailabilitySetResult {
             this.virtualMachines = virtualMachines;
             return this;
         }
-
         public GetAvailabilitySetResult build() {
             return new GetAvailabilitySetResult(id, location, name, platformFaultDomainCount, platformUpdateDomainCount, proximityPlacementGroup, sku, statuses, tags, type, virtualMachines);
         }

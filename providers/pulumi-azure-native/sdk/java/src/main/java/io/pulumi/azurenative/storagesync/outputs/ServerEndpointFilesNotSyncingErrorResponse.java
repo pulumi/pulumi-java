@@ -96,7 +96,6 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
             this.transientCount = Objects.requireNonNull(transientCount);
             return this;
         }
-
         public ServerEndpointFilesNotSyncingErrorResponse build() {
             return new ServerEndpointFilesNotSyncingErrorResponse(errorCode, persistentCount, transientCount);
         }

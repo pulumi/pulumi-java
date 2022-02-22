@@ -96,7 +96,6 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsResponse build() {
             return new ConsistentHashLoadBalancerSettingsResponse(httpCookie, httpHeaderName, minimumRingSize);
         }

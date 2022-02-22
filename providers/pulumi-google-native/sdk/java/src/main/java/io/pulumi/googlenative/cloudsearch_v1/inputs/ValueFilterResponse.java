@@ -18,7 +18,7 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operatorName", required=true)
-    private final String operatorName;
+      private final String operatorName;
 
     public String getOperatorName() {
         return this.operatorName;
@@ -29,7 +29,7 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final ValueResponse value;
+      private final ValueResponse value;
 
     public ValueResponse getValue() {
         return this.value;
@@ -78,7 +78,6 @@ public final class ValueFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ValueFilterResponse build() {
             return new ValueFilterResponse(operatorName, value);
         }

@@ -19,7 +19,7 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compactJwt")
-    private final @Nullable Input<String> compactJwt;
+      private final @Nullable Input<String> compactJwt;
 
     public Input<String> getCompactJwt() {
         return this.compactJwt == null ? Input.empty() : this.compactJwt;
@@ -62,7 +62,6 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
             this.compactJwt = Input.ofNullable(compactJwt);
             return this;
         }
-
         public JwtArgs build() {
             return new JwtArgs(compactJwt);
         }

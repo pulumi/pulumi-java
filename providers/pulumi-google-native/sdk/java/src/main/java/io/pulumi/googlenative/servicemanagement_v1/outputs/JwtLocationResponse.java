@@ -95,7 +95,6 @@ public final class JwtLocationResponse {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
         }
-
         public JwtLocationResponse build() {
             return new JwtLocationResponse(header, query, valuePrefix);
         }

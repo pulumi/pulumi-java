@@ -210,7 +210,6 @@ public final class SapBwCubeDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapBwCubeDatasetResponse build() {
             return new SapBwCubeDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

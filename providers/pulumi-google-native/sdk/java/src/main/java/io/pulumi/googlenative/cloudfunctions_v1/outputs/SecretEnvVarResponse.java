@@ -116,7 +116,6 @@ public final class SecretEnvVarResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretEnvVarResponse build() {
             return new SecretEnvVarResponse(key, project, secret, version);
         }

@@ -23,7 +23,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originalTransformOrCollection")
-    private final @Nullable Input<String> originalTransformOrCollection;
+      private final @Nullable Input<String> originalTransformOrCollection;
 
     public Input<String> getOriginalTransformOrCollection() {
         return this.originalTransformOrCollection == null ? Input.empty() : this.originalTransformOrCollection;
@@ -45,7 +45,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-    private final @Nullable Input<String> sizeBytes;
+      private final @Nullable Input<String> sizeBytes;
 
     public Input<String> getSizeBytes() {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
@@ -56,7 +56,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -145,7 +145,6 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public StageSourceArgs build() {
             return new StageSourceArgs(name, originalTransformOrCollection, sizeBytes, userName);
         }

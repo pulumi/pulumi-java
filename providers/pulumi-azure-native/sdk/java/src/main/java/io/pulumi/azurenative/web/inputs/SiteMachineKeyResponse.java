@@ -23,7 +23,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="decryption")
-    private final @Nullable String decryption;
+        private final @Nullable String decryption;
 
     public Optional<String> getDecryption() {
         return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
@@ -34,7 +34,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="decryptionKey")
-    private final @Nullable String decryptionKey;
+        private final @Nullable String decryptionKey;
 
     public Optional<String> getDecryptionKey() {
         return this.decryptionKey == null ? Optional.empty() : Optional.ofNullable(this.decryptionKey);
@@ -45,7 +45,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable String validation;
+        private final @Nullable String validation;
 
     public Optional<String> getValidation() {
         return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
@@ -56,7 +56,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="validationKey")
-    private final @Nullable String validationKey;
+        private final @Nullable String validationKey;
 
     public Optional<String> getValidationKey() {
         return this.validationKey == null ? Optional.empty() : Optional.ofNullable(this.validationKey);
@@ -125,7 +125,6 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
             this.validationKey = validationKey;
             return this;
         }
-
         public SiteMachineKeyResponse build() {
             return new SiteMachineKeyResponse(decryption, decryptionKey, validation, validationKey);
         }

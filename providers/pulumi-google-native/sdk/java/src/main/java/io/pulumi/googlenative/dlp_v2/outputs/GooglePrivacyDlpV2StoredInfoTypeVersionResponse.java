@@ -141,7 +141,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
             this.stats = Objects.requireNonNull(stats);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(config, createTime, errors, state, stats);
         }

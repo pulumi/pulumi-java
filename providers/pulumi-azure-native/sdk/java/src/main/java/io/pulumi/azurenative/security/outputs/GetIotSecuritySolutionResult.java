@@ -397,7 +397,6 @@ public final class GetIotSecuritySolutionResult {
             this.workspace = workspace;
             return this;
         }
-
         public GetIotSecuritySolutionResult build() {
             return new GetIotSecuritySolutionResult(additionalWorkspaces, autoDiscoveredResources, disabledDataSources, displayName, export, id, iotHubs, location, name, recommendationsConfiguration, status, systemData, tags, type, unmaskedIpLoggingStatus, userDefinedResources, workspace);
         }

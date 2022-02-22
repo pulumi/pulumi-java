@@ -77,7 +77,6 @@ public final class CriteriaResponse {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public CriteriaResponse build() {
             return new CriteriaResponse(dimensions, metricName);
         }

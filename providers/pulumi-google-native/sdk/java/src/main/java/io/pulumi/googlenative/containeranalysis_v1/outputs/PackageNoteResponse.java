@@ -76,7 +76,6 @@ public final class PackageNoteResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageNoteResponse build() {
             return new PackageNoteResponse(distribution, name);
         }

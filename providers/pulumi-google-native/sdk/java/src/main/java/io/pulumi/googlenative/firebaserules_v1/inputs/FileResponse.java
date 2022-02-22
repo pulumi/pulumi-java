@@ -21,7 +21,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -32,7 +32,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final String fingerprint;
+      private final String fingerprint;
 
     public String getFingerprint() {
         return this.fingerprint;
@@ -43,7 +43,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -102,7 +102,6 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public FileResponse build() {
             return new FileResponse(content, fingerprint, name);
         }

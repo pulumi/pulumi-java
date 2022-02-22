@@ -24,7 +24,7 @@ public final class ExportDatasetConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable List<String> columns;
+        private final @Nullable List<String> columns;
 
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -62,7 +62,6 @@ public final class ExportDatasetConfigurationResponse extends io.pulumi.resource
             this.columns = columns;
             return this;
         }
-
         public ExportDatasetConfigurationResponse build() {
             return new ExportDatasetConfigurationResponse(columns);
         }

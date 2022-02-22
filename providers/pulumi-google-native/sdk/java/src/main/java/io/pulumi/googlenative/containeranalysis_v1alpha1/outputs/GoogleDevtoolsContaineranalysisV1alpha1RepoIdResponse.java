@@ -75,7 +75,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(projectRepoId, uid);
         }

@@ -200,7 +200,6 @@ public final class RouterInterfaceResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public RouterInterfaceResponse build() {
             return new RouterInterfaceResponse(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, managementType, name, privateIpAddress, redundantInterface, subnetwork);
         }

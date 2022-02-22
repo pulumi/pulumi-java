@@ -117,7 +117,6 @@ public final class RegionalReplicationStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public RegionalReplicationStatusResponse build() {
             return new RegionalReplicationStatusResponse(details, progress, region, state);
         }

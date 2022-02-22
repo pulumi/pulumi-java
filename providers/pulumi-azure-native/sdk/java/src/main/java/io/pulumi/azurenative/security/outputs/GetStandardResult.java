@@ -311,7 +311,6 @@ public final class GetStandardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStandardResult build() {
             return new GetStandardResult(category, components, description, displayName, etag, id, kind, location, name, standardType, systemData, tags, type);
         }

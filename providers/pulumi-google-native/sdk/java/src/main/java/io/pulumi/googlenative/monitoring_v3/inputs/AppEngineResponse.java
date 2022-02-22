@@ -21,7 +21,7 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="moduleId", required=true)
-    private final String moduleId;
+      private final String moduleId;
 
     public String getModuleId() {
         return this.moduleId;
@@ -59,7 +59,6 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
-
         public AppEngineResponse build() {
             return new AppEngineResponse(moduleId);
         }

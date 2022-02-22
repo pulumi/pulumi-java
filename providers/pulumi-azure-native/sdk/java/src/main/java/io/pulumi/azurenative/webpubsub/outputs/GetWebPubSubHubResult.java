@@ -139,7 +139,6 @@ public final class GetWebPubSubHubResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebPubSubHubResult build() {
             return new GetWebPubSubHubResult(id, name, properties, systemData, type);
         }

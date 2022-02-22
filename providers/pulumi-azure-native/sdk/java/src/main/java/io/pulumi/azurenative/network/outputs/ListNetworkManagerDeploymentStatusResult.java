@@ -78,7 +78,6 @@ public final class ListNetworkManagerDeploymentStatusResult {
             this.value = value;
             return this;
         }
-
         public ListNetworkManagerDeploymentStatusResult build() {
             return new ListNetworkManagerDeploymentStatusResult(skipToken, value);
         }

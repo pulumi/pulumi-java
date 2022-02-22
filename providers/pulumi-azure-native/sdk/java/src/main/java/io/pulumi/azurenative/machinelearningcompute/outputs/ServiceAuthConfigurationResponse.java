@@ -74,7 +74,6 @@ public final class ServiceAuthConfigurationResponse {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
         }
-
         public ServiceAuthConfigurationResponse build() {
             return new ServiceAuthConfigurationResponse(primaryAuthKeyHash, secondaryAuthKeyHash);
         }

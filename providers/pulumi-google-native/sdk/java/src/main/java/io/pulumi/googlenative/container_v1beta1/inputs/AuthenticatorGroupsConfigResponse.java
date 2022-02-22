@@ -22,7 +22,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="securityGroup", required=true)
-    private final String securityGroup;
+      private final String securityGroup;
 
     public String getSecurityGroup() {
         return this.securityGroup;
@@ -82,7 +82,6 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public AuthenticatorGroupsConfigResponse build() {
             return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
         }

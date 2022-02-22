@@ -142,7 +142,6 @@ public final class AmazonS3LocationResponse {
             this.version = version;
             return this;
         }
-
         public AmazonS3LocationResponse build() {
             return new AmazonS3LocationResponse(bucketName, fileName, folderPath, type, version);
         }

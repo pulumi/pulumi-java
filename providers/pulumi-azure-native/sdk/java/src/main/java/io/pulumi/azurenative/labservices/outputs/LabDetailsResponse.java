@@ -118,7 +118,6 @@ public final class LabDetailsResponse {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
         }
-
         public LabDetailsResponse build() {
             return new LabDetailsResponse(id, name, provisioningState, usageQuota);
         }

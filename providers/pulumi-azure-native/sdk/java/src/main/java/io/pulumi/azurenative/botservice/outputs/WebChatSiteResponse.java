@@ -159,7 +159,6 @@ public final class WebChatSiteResponse {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public WebChatSiteResponse build() {
             return new WebChatSiteResponse(isEnabled, isWebchatPreviewEnabled, key, key2, siteId, siteName);
         }

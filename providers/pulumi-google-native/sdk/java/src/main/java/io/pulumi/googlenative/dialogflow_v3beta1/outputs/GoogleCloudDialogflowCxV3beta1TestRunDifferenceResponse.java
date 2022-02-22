@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(description, type);
         }

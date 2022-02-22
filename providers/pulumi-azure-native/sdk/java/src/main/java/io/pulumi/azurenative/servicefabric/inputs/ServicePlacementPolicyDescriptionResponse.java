@@ -21,7 +21,7 @@ public final class ServicePlacementPolicyDescriptionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,6 @@ public final class ServicePlacementPolicyDescriptionResponse extends io.pulumi.r
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServicePlacementPolicyDescriptionResponse build() {
             return new ServicePlacementPolicyDescriptionResponse(type);
         }

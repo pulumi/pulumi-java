@@ -99,7 +99,6 @@ public final class MonitoringTagRulesPropertiesResponse {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MonitoringTagRulesPropertiesResponse build() {
             return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState, systemData);
         }

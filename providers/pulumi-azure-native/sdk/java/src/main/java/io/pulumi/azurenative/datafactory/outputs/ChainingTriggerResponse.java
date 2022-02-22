@@ -187,7 +187,6 @@ public final class ChainingTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ChainingTriggerResponse build() {
             return new ChainingTriggerResponse(annotations, dependsOn, description, pipeline, runDimension, runtimeState, type);
         }

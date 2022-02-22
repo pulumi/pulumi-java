@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
+      private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
 
     public List<GoogleCloudDialogflowCxV3FormParameterResponse> getParameters() {
         return this.parameters;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormResponse build() {
             return new GoogleCloudDialogflowCxV3FormResponse(parameters);
         }

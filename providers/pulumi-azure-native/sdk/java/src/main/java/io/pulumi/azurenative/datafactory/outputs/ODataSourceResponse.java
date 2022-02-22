@@ -205,7 +205,6 @@ public final class ODataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ODataSourceResponse build() {
             return new ODataSourceResponse(additionalColumns, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

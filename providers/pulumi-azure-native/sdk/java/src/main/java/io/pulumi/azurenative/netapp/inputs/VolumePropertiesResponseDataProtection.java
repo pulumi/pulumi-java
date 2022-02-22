@@ -25,7 +25,7 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
      * 
      */
     @InputImport(name="backup")
-    private final @Nullable VolumeBackupPropertiesResponse backup;
+        private final @Nullable VolumeBackupPropertiesResponse backup;
 
     public Optional<VolumeBackupPropertiesResponse> getBackup() {
         return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
@@ -36,7 +36,7 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
      * 
      */
     @InputImport(name="replication")
-    private final @Nullable ReplicationObjectResponse replication;
+        private final @Nullable ReplicationObjectResponse replication;
 
     public Optional<ReplicationObjectResponse> getReplication() {
         return this.replication == null ? Optional.empty() : Optional.ofNullable(this.replication);
@@ -47,7 +47,7 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
      * 
      */
     @InputImport(name="snapshot")
-    private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
+        private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
     public Optional<VolumeSnapshotPropertiesResponse> getSnapshot() {
         return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
@@ -106,7 +106,6 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
             this.snapshot = snapshot;
             return this;
         }
-
         public VolumePropertiesResponseDataProtection build() {
             return new VolumePropertiesResponseDataProtection(backup, replication, snapshot);
         }

@@ -30,7 +30,6 @@ public final class NoConnectivitySettingsResponse {
         public Builder(NoConnectivitySettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public NoConnectivitySettingsResponse build() {
             return new NoConnectivitySettingsResponse();
         }

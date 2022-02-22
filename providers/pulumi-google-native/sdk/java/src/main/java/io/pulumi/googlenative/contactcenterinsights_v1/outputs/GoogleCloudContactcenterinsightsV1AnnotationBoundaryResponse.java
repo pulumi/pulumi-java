@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(transcriptIndex, wordIndex);
         }

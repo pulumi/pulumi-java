@@ -75,7 +75,6 @@ public final class GlobalParameterSpecificationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GlobalParameterSpecificationResponse build() {
             return new GlobalParameterSpecificationResponse(type, value);
         }

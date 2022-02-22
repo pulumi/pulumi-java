@@ -22,7 +22,7 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final StandardSqlDataTypeResponse type;
+      private final StandardSqlDataTypeResponse type;
 
     public StandardSqlDataTypeResponse getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StandardSqlFieldResponse build() {
             return new StandardSqlFieldResponse(name, type);
         }

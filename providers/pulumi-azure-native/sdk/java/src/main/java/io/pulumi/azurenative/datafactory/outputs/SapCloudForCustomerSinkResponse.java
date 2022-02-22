@@ -226,7 +226,6 @@ public final class SapCloudForCustomerSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SapCloudForCustomerSinkResponse build() {
             return new SapCloudForCustomerSinkResponse(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

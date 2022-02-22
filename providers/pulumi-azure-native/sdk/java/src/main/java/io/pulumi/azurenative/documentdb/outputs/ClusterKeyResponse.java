@@ -76,7 +76,6 @@ public final class ClusterKeyResponse {
             this.orderBy = orderBy;
             return this;
         }
-
         public ClusterKeyResponse build() {
             return new ClusterKeyResponse(name, orderBy);
         }

@@ -142,7 +142,6 @@ public final class GetNodeGroupIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNodeGroupIamPolicyResult build() {
             return new GetNodeGroupIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

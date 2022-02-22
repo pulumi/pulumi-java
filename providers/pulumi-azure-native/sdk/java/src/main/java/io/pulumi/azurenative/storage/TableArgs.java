@@ -19,7 +19,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+        private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -115,7 +115,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
-
         public TableArgs build() {
             return new TableArgs(accountName, resourceGroupName, tableName);
         }

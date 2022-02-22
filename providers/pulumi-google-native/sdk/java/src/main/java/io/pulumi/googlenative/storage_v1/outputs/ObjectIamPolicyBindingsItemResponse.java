@@ -135,7 +135,6 @@ public final class ObjectIamPolicyBindingsItemResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public ObjectIamPolicyBindingsItemResponse build() {
             return new ObjectIamPolicyBindingsItemResponse(condition, members, role);
         }

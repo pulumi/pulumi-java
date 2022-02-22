@@ -74,7 +74,6 @@ public final class NormalizedVertexResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public NormalizedVertexResponse build() {
             return new NormalizedVertexResponse(x, y);
         }

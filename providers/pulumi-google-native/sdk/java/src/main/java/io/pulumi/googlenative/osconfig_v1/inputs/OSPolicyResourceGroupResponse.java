@@ -23,7 +23,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="inventoryFilters", required=true)
-    private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
+      private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
 
     public List<OSPolicyInventoryFilterResponse> getInventoryFilters() {
         return this.inventoryFilters;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resources", required=true)
-    private final List<OSPolicyResourceResponse> resources;
+      private final List<OSPolicyResourceResponse> resources;
 
     public List<OSPolicyResourceResponse> getResources() {
         return this.resources;
@@ -83,7 +83,6 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OSPolicyResourceGroupResponse build() {
             return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
         }

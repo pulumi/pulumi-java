@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="text", required=true)
-    private final Input<String> text;
+      private final Input<String> text;
 
     public Input<String> getText() {
         return this.text;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TextInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1TextInputArgs(text);
         }

@@ -22,7 +22,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataManagementPublicIpId", required=true)
-    private final Input<String> dataManagementPublicIpId;
+        private final Input<String> dataManagementPublicIpId;
 
     public Input<String> getDataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
@@ -33,7 +33,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enginePublicIpId", required=true)
-    private final Input<String> enginePublicIpId;
+        private final Input<String> enginePublicIpId;
 
     public Input<String> getEnginePublicIpId() {
         return this.enginePublicIpId;
@@ -44,7 +44,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -118,7 +118,6 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public VirtualNetworkConfigurationArgs build() {
             return new VirtualNetworkConfigurationArgs(dataManagementPublicIpId, enginePublicIpId, subnetId);
         }

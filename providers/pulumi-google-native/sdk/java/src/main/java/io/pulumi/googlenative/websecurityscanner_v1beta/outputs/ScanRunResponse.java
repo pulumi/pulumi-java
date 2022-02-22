@@ -268,7 +268,6 @@ public final class ScanRunResponse {
             this.warningTraces = Objects.requireNonNull(warningTraces);
             return this;
         }
-
         public ScanRunResponse build() {
             return new ScanRunResponse(endTime, errorTrace, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount, warningTraces);
         }

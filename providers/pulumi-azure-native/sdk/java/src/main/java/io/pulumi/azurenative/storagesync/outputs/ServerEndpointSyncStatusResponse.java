@@ -266,7 +266,6 @@ public final class ServerEndpointSyncStatusResponse {
             this.uploadStatus = Objects.requireNonNull(uploadStatus);
             return this;
         }
-
         public ServerEndpointSyncStatusResponse build() {
             return new ServerEndpointSyncStatusResponse(combinedHealth, downloadActivity, downloadHealth, downloadStatus, lastUpdatedTimestamp, offlineDataTransferStatus, syncActivity, totalPersistentFilesNotSyncingCount, uploadActivity, uploadHealth, uploadStatus);
         }

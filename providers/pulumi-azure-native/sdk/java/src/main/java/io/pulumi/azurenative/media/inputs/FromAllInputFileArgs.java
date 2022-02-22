@@ -31,7 +31,7 @@ public final class FromAllInputFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="includedTracks")
-    private final @Nullable Input<List<Object>> includedTracks;
+        private final @Nullable Input<List<Object>> includedTracks;
 
     public Input<List<Object>> getIncludedTracks() {
         return this.includedTracks == null ? Input.empty() : this.includedTracks;
@@ -43,7 +43,7 @@ public final class FromAllInputFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -102,7 +102,6 @@ public final class FromAllInputFileArgs extends io.pulumi.resources.ResourceArgs
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public FromAllInputFileArgs build() {
             return new FromAllInputFileArgs(includedTracks, odataType);
         }

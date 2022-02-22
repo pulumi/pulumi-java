@@ -97,7 +97,6 @@ public final class ConnStringInfoResponse {
             this.type = type;
             return this;
         }
-
         public ConnStringInfoResponse build() {
             return new ConnStringInfoResponse(connectionString, name, type);
         }

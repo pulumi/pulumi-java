@@ -44,7 +44,7 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="advancedFilters")
-    private final @Nullable Input<List<Object>> advancedFilters;
+        private final @Nullable Input<List<Object>> advancedFilters;
 
     public Input<List<Object>> getAdvancedFilters() {
         return this.advancedFilters == null ? Input.empty() : this.advancedFilters;
@@ -55,7 +55,7 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableAdvancedFilteringOnArrays")
-    private final @Nullable Input<Boolean> enableAdvancedFilteringOnArrays;
+        private final @Nullable Input<Boolean> enableAdvancedFilteringOnArrays;
 
     public Input<Boolean> getEnableAdvancedFilteringOnArrays() {
         return this.enableAdvancedFilteringOnArrays == null ? Input.empty() : this.enableAdvancedFilteringOnArrays;
@@ -114,7 +114,6 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
             this.enableAdvancedFilteringOnArrays = Input.ofNullable(enableAdvancedFilteringOnArrays);
             return this;
         }
-
         public EventChannelFilterArgs build() {
             return new EventChannelFilterArgs(advancedFilters, enableAdvancedFilteringOnArrays);
         }

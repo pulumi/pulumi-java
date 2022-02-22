@@ -74,7 +74,6 @@ public final class AnyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AnyResponse build() {
             return new AnyResponse(typeUrl, value);
         }

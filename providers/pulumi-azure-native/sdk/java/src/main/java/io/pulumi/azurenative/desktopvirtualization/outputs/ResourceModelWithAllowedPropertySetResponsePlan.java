@@ -139,7 +139,6 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
             this.version = version;
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetResponsePlan build() {
             return new ResourceModelWithAllowedPropertySetResponsePlan(name, product, promotionCode, publisher, version);
         }

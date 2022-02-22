@@ -270,7 +270,6 @@ public final class ScheduleCreationParameterResponse {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public ScheduleCreationParameterResponse build() {
             return new ScheduleCreationParameterResponse(dailyRecurrence, hourlyRecurrence, location, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
         }

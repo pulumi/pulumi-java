@@ -24,7 +24,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -35,7 +35,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dir", required=true)
-    private final String dir;
+      private final String dir;
 
     public String getDir() {
         return this.dir;
@@ -46,7 +46,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="entrypoint", required=true)
-    private final String entrypoint;
+      private final String entrypoint;
 
     public String getEntrypoint() {
         return this.entrypoint;
@@ -57,7 +57,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="env", required=true)
-    private final List<String> env;
+      private final List<String> env;
 
     public List<String> getEnv() {
         return this.env;
@@ -68,7 +68,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pullTiming", required=true)
-    private final TimeSpanResponse pullTiming;
+      private final TimeSpanResponse pullTiming;
 
     public TimeSpanResponse getPullTiming() {
         return this.pullTiming;
@@ -90,7 +90,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="script", required=true)
-    private final String script;
+      private final String script;
 
     public String getScript() {
         return this.script;
@@ -101,7 +101,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretEnv", required=true)
-    private final List<String> secretEnv;
+      private final List<String> secretEnv;
 
     public List<String> getSecretEnv() {
         return this.secretEnv;
@@ -112,7 +112,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -123,7 +123,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final String timeout;
+      private final String timeout;
 
     public String getTimeout() {
         return this.timeout;
@@ -134,7 +134,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timing", required=true)
-    private final TimeSpanResponse timing;
+      private final TimeSpanResponse timing;
 
     public TimeSpanResponse getTiming() {
         return this.timing;
@@ -145,7 +145,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumes", required=true)
-    private final List<VolumeResponse> volumes;
+      private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
         return this.volumes;
@@ -156,7 +156,7 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="waitFor", required=true)
-    private final List<String> waitFor;
+      private final List<String> waitFor;
 
     public List<String> getWaitFor() {
         return this.waitFor;
@@ -315,7 +315,6 @@ public final class BuildStepResponse extends io.pulumi.resources.InvokeArgs {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-
         public BuildStepResponse build() {
             return new BuildStepResponse(args, dir, entrypoint, env, name, pullTiming, script, secretEnv, status, timeout, timing, volumes, waitFor);
         }

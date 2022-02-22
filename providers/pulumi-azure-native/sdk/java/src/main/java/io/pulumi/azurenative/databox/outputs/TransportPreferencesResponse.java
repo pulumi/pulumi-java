@@ -52,7 +52,6 @@ public final class TransportPreferencesResponse {
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
         }
-
         public TransportPreferencesResponse build() {
             return new TransportPreferencesResponse(preferredShipmentType);
         }

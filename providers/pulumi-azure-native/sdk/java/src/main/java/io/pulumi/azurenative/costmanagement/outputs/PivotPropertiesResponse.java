@@ -76,7 +76,6 @@ public final class PivotPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public PivotPropertiesResponse build() {
             return new PivotPropertiesResponse(name, type);
         }

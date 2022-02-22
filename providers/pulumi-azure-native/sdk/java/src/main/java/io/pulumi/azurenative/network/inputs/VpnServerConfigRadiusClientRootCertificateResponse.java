@@ -23,7 +23,7 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends io
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends io
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+        private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -83,7 +83,6 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends io
             this.thumbprint = thumbprint;
             return this;
         }
-
         public VpnServerConfigRadiusClientRootCertificateResponse build() {
             return new VpnServerConfigRadiusClientRootCertificateResponse(name, thumbprint);
         }

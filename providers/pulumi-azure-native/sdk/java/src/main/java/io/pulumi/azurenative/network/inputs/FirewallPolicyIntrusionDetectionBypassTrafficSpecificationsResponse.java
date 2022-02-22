@@ -24,7 +24,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable List<String> destinationAddresses;
+        private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
@@ -46,7 +46,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="destinationIpGroups")
-    private final @Nullable List<String> destinationIpGroups;
+        private final @Nullable List<String> destinationIpGroups;
 
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
@@ -57,7 +57,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="destinationPorts")
-    private final @Nullable List<String> destinationPorts;
+        private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
@@ -68,7 +68,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -90,7 +90,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable List<String> sourceAddresses;
+        private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -101,7 +101,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable List<String> sourceIpGroups;
+        private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -210,7 +210,6 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse build() {
             return new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse(description, destinationAddresses, destinationIpGroups, destinationPorts, name, protocol, sourceAddresses, sourceIpGroups);
         }

@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="features")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> features;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> features;
 
     public Input<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> getFeatures() {
         return this.features == null ? Input.empty() : this.features;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="genericWebService")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> genericWebService;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> genericWebService;
 
     public Input<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> getGenericWebService() {
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -175,7 +175,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1FulfillmentArgs build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentArgs(displayName, enabled, features, genericWebService, name);
         }

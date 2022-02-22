@@ -310,7 +310,6 @@ public final class GetIpAllocationResult {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public GetIpAllocationResult build() {
             return new GetIpAllocationResult(allocationTags, etag, id, ipamAllocationId, location, name, prefix, prefixLength, prefixType, subnet, tags, type, virtualNetwork);
         }

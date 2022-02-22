@@ -139,7 +139,6 @@ public final class EnterpriseChannelNodeResponse {
             this.state = state;
             return this;
         }
-
         public EnterpriseChannelNodeResponse build() {
             return new EnterpriseChannelNodeResponse(azureLocation, azureSku, id, name, state);
         }

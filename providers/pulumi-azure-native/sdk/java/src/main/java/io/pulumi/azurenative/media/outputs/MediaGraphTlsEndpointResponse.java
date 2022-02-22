@@ -144,7 +144,6 @@ public final class MediaGraphTlsEndpointResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MediaGraphTlsEndpointResponse build() {
             return new MediaGraphTlsEndpointResponse(credentials, odataType, trustedCertificates, url, validationOptions);
         }

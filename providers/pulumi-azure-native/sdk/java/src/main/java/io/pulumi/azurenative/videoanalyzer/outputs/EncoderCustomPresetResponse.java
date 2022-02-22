@@ -101,7 +101,6 @@ public final class EncoderCustomPresetResponse {
             this.videoEncoder = videoEncoder;
             return this;
         }
-
         public EncoderCustomPresetResponse build() {
             return new EncoderCustomPresetResponse(audioEncoder, type, videoEncoder);
         }

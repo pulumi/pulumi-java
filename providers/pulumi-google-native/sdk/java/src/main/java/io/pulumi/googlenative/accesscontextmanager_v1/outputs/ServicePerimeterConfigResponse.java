@@ -162,7 +162,6 @@ public final class ServicePerimeterConfigResponse {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }
-
         public ServicePerimeterConfigResponse build() {
             return new ServicePerimeterConfigResponse(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

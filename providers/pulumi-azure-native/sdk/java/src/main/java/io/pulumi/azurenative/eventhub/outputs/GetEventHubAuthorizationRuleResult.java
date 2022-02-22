@@ -117,7 +117,6 @@ public final class GetEventHubAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubAuthorizationRuleResult build() {
             return new GetEventHubAuthorizationRuleResult(id, name, rights, type);
         }

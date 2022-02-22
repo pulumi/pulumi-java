@@ -52,7 +52,6 @@ public final class ApplicationNotificationEndpointResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationNotificationEndpointResponse build() {
             return new ApplicationNotificationEndpointResponse(uri);
         }

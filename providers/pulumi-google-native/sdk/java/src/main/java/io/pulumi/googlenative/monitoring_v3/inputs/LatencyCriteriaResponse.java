@@ -21,7 +21,7 @@ public final class LatencyCriteriaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final String threshold;
+      private final String threshold;
 
     public String getThreshold() {
         return this.threshold;
@@ -59,7 +59,6 @@ public final class LatencyCriteriaResponse extends io.pulumi.resources.InvokeArg
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public LatencyCriteriaResponse build() {
             return new LatencyCriteriaResponse(threshold);
         }

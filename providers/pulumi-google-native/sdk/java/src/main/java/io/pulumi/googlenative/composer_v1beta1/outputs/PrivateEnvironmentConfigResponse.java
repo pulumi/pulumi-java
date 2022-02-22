@@ -223,7 +223,6 @@ public final class PrivateEnvironmentConfigResponse {
             this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange);
             return this;
         }
-
         public PrivateEnvironmentConfigResponse build() {
             return new PrivateEnvironmentConfigResponse(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudComposerNetworkIpv4ReservedRange, cloudSqlIpv4CidrBlock, enablePrivateEnvironment, enablePrivatelyUsedPublicIps, privateClusterConfig, webServerIpv4CidrBlock, webServerIpv4ReservedRange);
         }

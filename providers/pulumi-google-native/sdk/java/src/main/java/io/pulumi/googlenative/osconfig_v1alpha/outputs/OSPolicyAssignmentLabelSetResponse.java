@@ -53,7 +53,6 @@ public final class OSPolicyAssignmentLabelSetResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public OSPolicyAssignmentLabelSetResponse build() {
             return new OSPolicyAssignmentLabelSetResponse(labels);
         }

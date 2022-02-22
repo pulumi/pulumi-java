@@ -181,7 +181,6 @@ public final class DomainSecuritySettingsResponse {
             this.tlsV1 = tlsV1;
             return this;
         }
-
         public DomainSecuritySettingsResponse build() {
             return new DomainSecuritySettingsResponse(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
         }

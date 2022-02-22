@@ -22,7 +22,7 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="searchParameters", required=true)
-    private final List<SearchParameterResponse> searchParameters;
+      private final List<SearchParameterResponse> searchParameters;
 
     public List<SearchParameterResponse> getSearchParameters() {
         return this.searchParameters;
@@ -60,7 +60,6 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }
-
         public SearchConfigResponse build() {
             return new SearchConfigResponse(searchParameters);
         }

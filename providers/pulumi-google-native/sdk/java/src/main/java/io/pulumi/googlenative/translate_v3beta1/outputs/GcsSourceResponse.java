@@ -52,7 +52,6 @@ public final class GcsSourceResponse {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public GcsSourceResponse build() {
             return new GcsSourceResponse(inputUri);
         }

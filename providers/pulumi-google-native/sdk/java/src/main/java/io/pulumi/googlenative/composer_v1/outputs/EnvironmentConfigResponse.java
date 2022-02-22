@@ -336,7 +336,6 @@ public final class EnvironmentConfigResponse {
             this.workloadsConfig = Objects.requireNonNull(workloadsConfig);
             return this;
         }
-
         public EnvironmentConfigResponse build() {
             return new EnvironmentConfigResponse(airflowUri, dagGcsPrefix, databaseConfig, encryptionConfig, environmentSize, gkeCluster, maintenanceWindow, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }

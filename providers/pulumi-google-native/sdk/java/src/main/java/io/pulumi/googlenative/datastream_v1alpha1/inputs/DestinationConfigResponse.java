@@ -22,7 +22,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="destinationConnectionProfileName", required=true)
-    private final String destinationConnectionProfileName;
+      private final String destinationConnectionProfileName;
 
     public String getDestinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
@@ -33,7 +33,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="gcsDestinationConfig", required=true)
-    private final GcsDestinationConfigResponse gcsDestinationConfig;
+      private final GcsDestinationConfigResponse gcsDestinationConfig;
 
     public GcsDestinationConfigResponse getGcsDestinationConfig() {
         return this.gcsDestinationConfig;
@@ -82,7 +82,6 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
         }
-
         public DestinationConfigResponse build() {
             return new DestinationConfigResponse(destinationConnectionProfileName, gcsDestinationConfig);
         }

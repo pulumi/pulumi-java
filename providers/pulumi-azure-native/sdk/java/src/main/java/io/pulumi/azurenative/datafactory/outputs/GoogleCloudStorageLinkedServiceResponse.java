@@ -233,7 +233,6 @@ public final class GoogleCloudStorageLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudStorageLinkedServiceResponse build() {
             return new GoogleCloudStorageLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, type);
         }

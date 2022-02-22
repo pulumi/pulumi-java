@@ -120,7 +120,6 @@ public final class TestExecutionStepResponse {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }
-
         public TestExecutionStepResponse build() {
             return new TestExecutionStepResponse(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }

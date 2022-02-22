@@ -75,7 +75,6 @@ public final class DurationResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public DurationResponse build() {
             return new DurationResponse(nanos, seconds);
         }

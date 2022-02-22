@@ -97,7 +97,6 @@ public final class LogConfigCounterOptionsResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public LogConfigCounterOptionsResponse build() {
             return new LogConfigCounterOptionsResponse(customFields, field, metric);
         }

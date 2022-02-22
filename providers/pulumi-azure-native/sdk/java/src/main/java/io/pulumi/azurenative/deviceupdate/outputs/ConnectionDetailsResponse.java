@@ -137,7 +137,6 @@ public final class ConnectionDetailsResponse {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public ConnectionDetailsResponse build() {
             return new ConnectionDetailsResponse(groupId, id, linkIdentifier, memberName, privateIpAddress);
         }

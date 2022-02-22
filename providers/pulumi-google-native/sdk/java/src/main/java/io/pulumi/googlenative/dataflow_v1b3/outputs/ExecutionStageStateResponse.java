@@ -95,7 +95,6 @@ public final class ExecutionStageStateResponse {
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
         }
-
         public ExecutionStageStateResponse build() {
             return new ExecutionStageStateResponse(currentStateTime, executionStageName, executionStageState);
         }

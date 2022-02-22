@@ -164,7 +164,6 @@ public final class BlobReferenceInputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobReferenceInputDataSourceResponse build() {
             return new BlobReferenceInputDataSourceResponse(container, dateFormat, pathPattern, storageAccounts, timeFormat, type);
         }

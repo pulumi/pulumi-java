@@ -257,7 +257,6 @@ public final class GetEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(createdAt, createdBy, createdByType, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, provisioningState, resourceId, type);
         }

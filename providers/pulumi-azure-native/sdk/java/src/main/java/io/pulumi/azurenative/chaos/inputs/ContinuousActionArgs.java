@@ -24,7 +24,7 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+        private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -35,7 +35,7 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<List<KeyValuePairArgs>> parameters;
+        private final Input<List<KeyValuePairArgs>> parameters;
 
     public Input<List<KeyValuePairArgs>> getParameters() {
         return this.parameters;
@@ -57,7 +57,7 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selectorId", required=true)
-    private final Input<String> selectorId;
+        private final Input<String> selectorId;
 
     public Input<String> getSelectorId() {
         return this.selectorId;
@@ -69,7 +69,7 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ContinuousActionArgs build() {
             return new ContinuousActionArgs(duration, name, parameters, selectorId, type);
         }

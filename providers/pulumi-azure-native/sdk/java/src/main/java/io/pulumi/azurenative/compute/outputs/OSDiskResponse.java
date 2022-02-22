@@ -292,7 +292,6 @@ public final class OSDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public OSDiskResponse build() {
             return new OSDiskResponse(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
         }

@@ -52,7 +52,6 @@ public final class ResourceProviderDetailsResponse {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public ResourceProviderDetailsResponse build() {
             return new ResourceProviderDetailsResponse(resourceProviderNamespace);
         }

@@ -231,7 +231,6 @@ public final class SapHanaTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapHanaTableDatasetResponse build() {
             return new SapHanaTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

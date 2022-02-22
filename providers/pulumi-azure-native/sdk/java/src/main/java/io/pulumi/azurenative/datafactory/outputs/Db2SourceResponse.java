@@ -205,7 +205,6 @@ public final class Db2SourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Db2SourceResponse build() {
             return new Db2SourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

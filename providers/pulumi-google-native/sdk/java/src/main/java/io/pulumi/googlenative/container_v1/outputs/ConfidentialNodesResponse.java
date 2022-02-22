@@ -52,7 +52,6 @@ public final class ConfidentialNodesResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConfidentialNodesResponse build() {
             return new ConfidentialNodesResponse(enabled);
         }

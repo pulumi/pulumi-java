@@ -17,7 +17,7 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iotConnectorName", required=true)
-    private final String iotConnectorName;
+        private final String iotConnectorName;
 
     public String getIotConnectorName() {
         return this.iotConnectorName;
@@ -28,7 +28,7 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetIotConnectorArgs build() {
             return new GetIotConnectorArgs(iotConnectorName, resourceGroupName, workspaceName);
         }

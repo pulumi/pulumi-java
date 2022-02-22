@@ -26,7 +26,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupNames")
-    private final @Nullable Input<List<String>> groupNames;
+        private final @Nullable Input<List<String>> groupNames;
 
     public Input<List<String>> getGroupNames() {
         return this.groupNames == null ? Input.empty() : this.groupNames;
@@ -37,7 +37,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
 
     public Input<Map<String,ParameterValuesValueArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -48,7 +48,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionId", required=true)
-    private final Input<String> policyDefinitionId;
+        private final Input<String> policyDefinitionId;
 
     public Input<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
@@ -59,7 +59,7 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-    private final @Nullable Input<String> policyDefinitionReferenceId;
+        private final @Nullable Input<String> policyDefinitionReferenceId;
 
     public Input<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
@@ -148,7 +148,6 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
             this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
             return this;
         }
-
         public PolicyDefinitionReferenceArgs build() {
             return new PolicyDefinitionReferenceArgs(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
         }

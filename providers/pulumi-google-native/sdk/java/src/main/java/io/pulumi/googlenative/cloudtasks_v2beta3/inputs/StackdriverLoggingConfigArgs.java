@@ -23,7 +23,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="samplingRatio")
-    private final @Nullable Input<Double> samplingRatio;
+      private final @Nullable Input<Double> samplingRatio;
 
     public Input<Double> getSamplingRatio() {
         return this.samplingRatio == null ? Input.empty() : this.samplingRatio;
@@ -66,7 +66,6 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
             this.samplingRatio = Input.ofNullable(samplingRatio);
             return this;
         }
-
         public StackdriverLoggingConfigArgs build() {
             return new StackdriverLoggingConfigArgs(samplingRatio);
         }

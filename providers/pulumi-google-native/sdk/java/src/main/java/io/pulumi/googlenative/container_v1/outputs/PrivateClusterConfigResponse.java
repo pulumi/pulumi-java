@@ -181,7 +181,6 @@ public final class PrivateClusterConfigResponse {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

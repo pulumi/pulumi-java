@@ -140,7 +140,6 @@ public final class LogAnalyticsResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsResponse build() {
             return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }

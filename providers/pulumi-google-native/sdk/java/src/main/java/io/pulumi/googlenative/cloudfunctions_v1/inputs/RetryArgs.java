@@ -34,7 +34,6 @@ public final class RetryArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(RetryArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RetryArgs build() {
             return new RetryArgs();
         }

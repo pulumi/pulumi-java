@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="allMetrics")
-    private final @Nullable Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics;
+      private final @Nullable Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics;
 
     public Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> getAllMetrics() {
         return this.allMetrics == null ? Input.empty() : this.allMetrics;
@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="builtInAlgorithmOutput")
-    private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
+      private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
     public Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput == null ? Input.empty() : this.builtInAlgorithmOutput;
@@ -50,7 +50,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="finalMetric")
-    private final @Nullable Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric;
+      private final @Nullable Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric;
 
     public Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> getFinalMetric() {
         return this.finalMetric == null ? Input.empty() : this.finalMetric;
@@ -61,7 +61,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="hyperparameters")
-    private final @Nullable Input<Map<String,String>> hyperparameters;
+      private final @Nullable Input<Map<String,String>> hyperparameters;
 
     public Input<Map<String,String>> getHyperparameters() {
         return this.hyperparameters == null ? Input.empty() : this.hyperparameters;
@@ -72,7 +72,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="isTrialStoppedEarly")
-    private final @Nullable Input<Boolean> isTrialStoppedEarly;
+      private final @Nullable Input<Boolean> isTrialStoppedEarly;
 
     public Input<Boolean> getIsTrialStoppedEarly() {
         return this.isTrialStoppedEarly == null ? Input.empty() : this.isTrialStoppedEarly;
@@ -83,7 +83,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="trialId")
-    private final @Nullable Input<String> trialId;
+      private final @Nullable Input<String> trialId;
 
     public Input<String> getTrialId() {
         return this.trialId == null ? Input.empty() : this.trialId;
@@ -94,7 +94,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="webAccessUris")
-    private final @Nullable Input<Map<String,String>> webAccessUris;
+      private final @Nullable Input<Map<String,String>> webAccessUris;
 
     public Input<Map<String,String>> getWebAccessUris() {
         return this.webAccessUris == null ? Input.empty() : this.webAccessUris;
@@ -228,7 +228,6 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             this.webAccessUris = Input.ofNullable(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterOutputArgs build() {
             return new GoogleCloudMlV1__HyperparameterOutputArgs(allMetrics, builtInAlgorithmOutput, finalMetric, hyperparameters, isTrialStoppedEarly, trialId, webAccessUris);
         }

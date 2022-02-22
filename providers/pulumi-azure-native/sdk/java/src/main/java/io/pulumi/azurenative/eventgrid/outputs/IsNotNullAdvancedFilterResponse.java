@@ -78,7 +78,6 @@ public final class IsNotNullAdvancedFilterResponse {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public IsNotNullAdvancedFilterResponse build() {
             return new IsNotNullAdvancedFilterResponse(key, operatorType);
         }

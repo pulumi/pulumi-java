@@ -314,7 +314,6 @@ public final class GetDataCollectionRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataCollectionRuleResult build() {
             return new GetDataCollectionRuleResult(dataFlows, dataSources, description, destinations, etag, id, immutableId, kind, location, name, provisioningState, tags, type);
         }

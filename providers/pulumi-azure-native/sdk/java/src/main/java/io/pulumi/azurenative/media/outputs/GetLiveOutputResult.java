@@ -309,7 +309,6 @@ public final class GetLiveOutputResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLiveOutputResult build() {
             return new GetLiveOutputResult(archiveWindowLength, assetName, created, description, hls, id, lastModified, manifestName, name, outputSnapTime, provisioningState, resourceState, type);
         }

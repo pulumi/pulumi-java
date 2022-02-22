@@ -15,21 +15,21 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="streamId", required=true)
-    private final String streamId;
+      private final String streamId;
 
     public String getStreamId() {
         return this.streamId;
@@ -88,7 +88,6 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
             this.streamId = Objects.requireNonNull(streamId);
             return this;
         }
-
         public GetStreamArgs build() {
             return new GetStreamArgs(location, project, streamId);
         }

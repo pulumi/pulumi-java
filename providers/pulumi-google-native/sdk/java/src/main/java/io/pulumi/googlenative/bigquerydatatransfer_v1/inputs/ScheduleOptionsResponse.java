@@ -22,7 +22,7 @@ public final class ScheduleOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disableAutoScheduling", required=true)
-    private final Boolean disableAutoScheduling;
+      private final Boolean disableAutoScheduling;
 
     public Boolean getDisableAutoScheduling() {
         return this.disableAutoScheduling;
@@ -33,7 +33,7 @@ public final class ScheduleOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -44,7 +44,7 @@ public final class ScheduleOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class ScheduleOptionsResponse extends io.pulumi.resources.InvokeArg
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ScheduleOptionsResponse build() {
             return new ScheduleOptionsResponse(disableAutoScheduling, endTime, startTime);
         }

@@ -54,7 +54,6 @@ public final class IPAccessControlResponse {
             this.allow = allow;
             return this;
         }
-
         public IPAccessControlResponse build() {
             return new IPAccessControlResponse(allow);
         }

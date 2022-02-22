@@ -138,7 +138,6 @@ public final class ConditionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(iam, op, svc, sys, values);
         }

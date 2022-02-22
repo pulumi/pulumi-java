@@ -204,7 +204,6 @@ public final class BindingResourcePropertiesResponse {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public BindingResourcePropertiesResponse build() {
             return new BindingResourcePropertiesResponse(bindingParameters, createdAt, generatedProperties, key, resourceId, resourceName, resourceType, updatedAt);
         }

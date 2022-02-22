@@ -76,7 +76,6 @@ public final class ApplicationGatewayBackendAddressResponse {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public ApplicationGatewayBackendAddressResponse build() {
             return new ApplicationGatewayBackendAddressResponse(fqdn, ipAddress);
         }

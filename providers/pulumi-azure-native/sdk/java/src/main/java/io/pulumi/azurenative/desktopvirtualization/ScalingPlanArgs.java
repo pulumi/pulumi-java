@@ -29,7 +29,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -40,7 +40,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exclusionTag")
-    private final @Nullable Input<String> exclusionTag;
+        private final @Nullable Input<String> exclusionTag;
 
     public Input<String> getExclusionTag() {
         return this.exclusionTag == null ? Input.empty() : this.exclusionTag;
@@ -51,7 +51,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -62,7 +62,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolReferences")
-    private final @Nullable Input<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
+        private final @Nullable Input<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
 
     public Input<List<ScalingHostPoolReferenceArgs>> getHostPoolReferences() {
         return this.hostPoolReferences == null ? Input.empty() : this.hostPoolReferences;
@@ -73,14 +73,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolType")
-    private final @Nullable Input<Either<String,HostPoolType>> hostPoolType;
+        private final @Nullable Input<Either<String,HostPoolType>> hostPoolType;
 
     public Input<Either<String,HostPoolType>> getHostPoolType() {
         return this.hostPoolType == null ? Input.empty() : this.hostPoolType;
     }
 
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -91,7 +91,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -102,7 +102,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -113,14 +113,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+        private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
     @InputImport(name="plan")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -131,7 +131,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ring")
-    private final @Nullable Input<Integer> ring;
+        private final @Nullable Input<Integer> ring;
 
     public Input<Integer> getRing() {
         return this.ring == null ? Input.empty() : this.ring;
@@ -153,7 +153,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingPlanName")
-    private final @Nullable Input<String> scalingPlanName;
+        private final @Nullable Input<String> scalingPlanName;
 
     public Input<String> getScalingPlanName() {
         return this.scalingPlanName == null ? Input.empty() : this.scalingPlanName;
@@ -164,14 +164,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<ScalingScheduleArgs>> schedules;
+        private final @Nullable Input<List<ScalingScheduleArgs>> schedules;
 
     public Input<List<ScalingScheduleArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
     @InputImport(name="sku")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -182,7 +182,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -193,7 +193,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -477,7 +477,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public ScalingPlanArgs build() {
             return new ScalingPlanArgs(description, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, identity, kind, location, managedBy, plan, resourceGroupName, ring, scalingPlanName, schedules, sku, tags, timeZone);
         }

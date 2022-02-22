@@ -23,7 +23,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
      * 
      */
     @InputImport(name="ref")
-    private final @Nullable Input<String> ref;
+        private final @Nullable Input<String> ref;
 
     public Input<String> getRef() {
         return this.ref == null ? Input.empty() : this.ref;
@@ -66,7 +66,6 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
             this.ref = Input.ofNullable(ref);
             return this;
         }
-
         public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
             return new IntegrationAccountMapPropertiesParametersSchemaArgs(ref);
         }

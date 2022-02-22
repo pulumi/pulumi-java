@@ -24,7 +24,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authorizedResources")
-    private final @Nullable List<String> authorizedResources;
+        private final @Nullable List<String> authorizedResources;
 
     public List<String> getAuthorizedResources() {
         return this.authorizedResources == null ? List.of() : this.authorizedResources;
@@ -35,7 +35,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-    private final String dataSourceId;
+        private final String dataSourceId;
 
     public String getDataSourceId() {
         return this.dataSourceId;
@@ -46,7 +46,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable String query;
+        private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -57,7 +57,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryType")
-    private final @Nullable String queryType;
+        private final @Nullable String queryType;
 
     public Optional<String> getQueryType() {
         return this.queryType == null ? Optional.empty() : Optional.ofNullable(this.queryType);
@@ -126,7 +126,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.queryType = queryType;
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(authorizedResources, dataSourceId, query, queryType);
         }

@@ -96,7 +96,6 @@ public final class GetAliasResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(alias, certsInfo, type);
         }

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
      * 
      */
     @InputImport(name="parts", required=true)
-    private final Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> parts;
+      private final Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> parts;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> getParts() {
         return this.parts;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
      * 
      */
     @InputImport(name="repeatCount")
-    private final @Nullable Input<Integer> repeatCount;
+      private final @Nullable Input<Integer> repeatCount;
 
     public Input<Integer> getRepeatCount() {
         return this.repeatCount == null ? Input.empty() : this.repeatCount;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
             this.repeatCount = Input.ofNullable(repeatCount);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs(parts, repeatCount);
         }

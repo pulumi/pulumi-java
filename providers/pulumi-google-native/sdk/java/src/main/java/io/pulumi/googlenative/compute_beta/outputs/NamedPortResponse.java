@@ -75,7 +75,6 @@ public final class NamedPortResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public NamedPortResponse build() {
             return new NamedPortResponse(name, port);
         }

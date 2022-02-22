@@ -97,7 +97,6 @@ public final class AsymmetricEncryptedSecretResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AsymmetricEncryptedSecretResponse build() {
             return new AsymmetricEncryptedSecretResponse(encryptionAlgorithm, encryptionCertThumbprint, value);
         }

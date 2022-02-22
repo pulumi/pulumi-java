@@ -117,7 +117,6 @@ public final class GetAnalysisResult {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }
-
         public GetAnalysisResult build() {
             return new GetAnalysisResult(analysisResult, createTime, name, requestTime);
         }

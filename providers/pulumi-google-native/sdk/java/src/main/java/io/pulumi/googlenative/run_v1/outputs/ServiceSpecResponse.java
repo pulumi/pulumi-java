@@ -76,7 +76,6 @@ public final class ServiceSpecResponse {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-
         public ServiceSpecResponse build() {
             return new ServiceSpecResponse(template, traffic);
         }

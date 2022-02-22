@@ -24,7 +24,7 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinations")
-    private final @Nullable List<String> destinations;
+        private final @Nullable List<String> destinations;
 
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
@@ -35,7 +35,7 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable List<String> streams;
+        private final @Nullable List<String> streams;
 
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
@@ -84,7 +84,6 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
             this.streams = streams;
             return this;
         }
-
         public DataFlowResponse build() {
             return new DataFlowResponse(destinations, streams);
         }

@@ -17,14 +17,14 @@ public final class UpcomingMaintenanceTimeWindowResponse extends io.pulumi.resou
     public static final UpcomingMaintenanceTimeWindowResponse Empty = new UpcomingMaintenanceTimeWindowResponse();
 
     @InputImport(name="earliest", required=true)
-    private final String earliest;
+      private final String earliest;
 
     public String getEarliest() {
         return this.earliest;
     }
 
     @InputImport(name="latest", required=true)
-    private final String latest;
+      private final String latest;
 
     public String getLatest() {
         return this.latest;
@@ -73,7 +73,6 @@ public final class UpcomingMaintenanceTimeWindowResponse extends io.pulumi.resou
             this.latest = Objects.requireNonNull(latest);
             return this;
         }
-
         public UpcomingMaintenanceTimeWindowResponse build() {
             return new UpcomingMaintenanceTimeWindowResponse(earliest, latest);
         }

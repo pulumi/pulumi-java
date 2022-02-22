@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse extends io
      * 
      */
     @InputImport(name="redirectUri", required=true)
-    private final String redirectUri;
+      private final String redirectUri;
 
     public String getRedirectUri() {
         return this.redirectUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse extends io
             this.redirectUri = Objects.requireNonNull(redirectUri);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleRedirectActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleRedirectActionResponse(redirectUri);
         }

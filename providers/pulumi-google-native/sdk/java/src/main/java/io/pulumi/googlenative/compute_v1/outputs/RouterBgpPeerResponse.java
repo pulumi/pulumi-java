@@ -373,7 +373,6 @@ public final class RouterBgpPeerResponse {
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
         }
-
         public RouterBgpPeerResponse build() {
             return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }

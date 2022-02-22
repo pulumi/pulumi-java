@@ -74,7 +74,6 @@ public final class DatabaseAccountConnectionStringResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public DatabaseAccountConnectionStringResponse build() {
             return new DatabaseAccountConnectionStringResponse(connectionString, description);
         }

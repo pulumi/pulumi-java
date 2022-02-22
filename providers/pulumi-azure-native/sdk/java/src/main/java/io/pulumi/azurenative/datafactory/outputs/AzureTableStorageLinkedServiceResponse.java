@@ -252,7 +252,6 @@ public final class AzureTableStorageLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureTableStorageLinkedServiceResponse build() {
             return new AzureTableStorageLinkedServiceResponse(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, parameters, sasToken, sasUri, type);
         }

@@ -160,7 +160,6 @@ public final class DiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
         }

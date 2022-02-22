@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
             return new GooglePrivacyDlpV2KAnonymityConfigResponse(entityId, quasiIds);
         }

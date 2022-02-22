@@ -15,21 +15,21 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     public static final DatacenterConnectorArgs Empty = new DatacenterConnectorArgs();
 
     @InputImport(name="datacenterConnectorId", required=true)
-    private final Input<String> datacenterConnectorId;
+      private final Input<String> datacenterConnectorId;
 
     public Input<String> getDatacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -40,14 +40,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registrationId")
-    private final @Nullable Input<String> registrationId;
+      private final @Nullable Input<String> registrationId;
 
     public Input<String> getRegistrationId() {
         return this.registrationId == null ? Input.empty() : this.registrationId;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -58,14 +58,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;
@@ -76,7 +76,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -225,7 +225,6 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public DatacenterConnectorArgs build() {
             return new DatacenterConnectorArgs(datacenterConnectorId, location, project, registrationId, requestId, serviceAccount, sourceId, version);
         }

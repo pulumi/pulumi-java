@@ -21,7 +21,7 @@ public final class InterconnectMacsecPreSharedKeyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class InterconnectMacsecPreSharedKeyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -81,7 +81,6 @@ public final class InterconnectMacsecPreSharedKeyResponse extends io.pulumi.reso
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public InterconnectMacsecPreSharedKeyResponse build() {
             return new InterconnectMacsecPreSharedKeyResponse(name, startTime);
         }

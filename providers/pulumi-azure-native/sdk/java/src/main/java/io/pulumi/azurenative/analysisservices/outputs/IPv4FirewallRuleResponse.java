@@ -97,7 +97,6 @@ public final class IPv4FirewallRuleResponse {
             this.rangeStart = rangeStart;
             return this;
         }
-
         public IPv4FirewallRuleResponse build() {
             return new IPv4FirewallRuleResponse(firewallRuleName, rangeEnd, rangeStart);
         }

@@ -24,7 +24,7 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listeners")
-    private final @Nullable Input<List<WinRMListenerArgs>> listeners;
+        private final @Nullable Input<List<WinRMListenerArgs>> listeners;
 
     public Input<List<WinRMListenerArgs>> getListeners() {
         return this.listeners == null ? Input.empty() : this.listeners;
@@ -67,7 +67,6 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.listeners = Input.ofNullable(listeners);
             return this;
         }
-
         public WinRMConfigurationArgs build() {
             return new WinRMConfigurationArgs(listeners);
         }

@@ -77,7 +77,6 @@ public final class TwitterResponse {
             this.registration = registration;
             return this;
         }
-
         public TwitterResponse build() {
             return new TwitterResponse(enabled, registration);
         }

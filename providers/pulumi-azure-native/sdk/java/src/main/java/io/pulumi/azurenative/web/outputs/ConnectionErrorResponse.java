@@ -203,7 +203,6 @@ public final class ConnectionErrorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionErrorResponse build() {
             return new ConnectionErrorResponse(code, etag, id, location, message, name, tags, type);
         }

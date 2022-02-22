@@ -21,7 +21,7 @@ public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputUri", required=true)
-    private final String inputUri;
+      private final String inputUri;
 
     public String getInputUri() {
         return this.inputUri;
@@ -59,7 +59,6 @@ public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public GcsSourceResponse build() {
             return new GcsSourceResponse(inputUri);
         }

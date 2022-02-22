@@ -267,7 +267,6 @@ public final class ManagedNetworkGroupResponse {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ManagedNetworkGroupResponse build() {
             return new ManagedNetworkGroupResponse(etag, id, kind, location, managementGroups, name, provisioningState, subnets, subscriptions, type, virtualNetworks);
         }

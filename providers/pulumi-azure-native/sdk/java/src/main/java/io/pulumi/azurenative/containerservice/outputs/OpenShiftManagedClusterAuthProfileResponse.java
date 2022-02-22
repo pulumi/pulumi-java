@@ -54,7 +54,6 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
             this.identityProviders = identityProviders;
             return this;
         }
-
         public OpenShiftManagedClusterAuthProfileResponse build() {
             return new OpenShiftManagedClusterAuthProfileResponse(identityProviders);
         }

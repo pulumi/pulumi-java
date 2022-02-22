@@ -15,14 +15,14 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
     @InputImport(name="healthCheck", required=true)
-    private final String healthCheck;
+      private final String healthCheck;
 
     public String getHealthCheck() {
         return this.healthCheck;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetHealthCheckArgs build() {
             return new GetHealthCheckArgs(healthCheck, project);
         }

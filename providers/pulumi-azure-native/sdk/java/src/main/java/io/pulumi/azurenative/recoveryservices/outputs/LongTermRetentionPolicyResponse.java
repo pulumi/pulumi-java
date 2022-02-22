@@ -145,7 +145,6 @@ public final class LongTermRetentionPolicyResponse {
             this.yearlySchedule = yearlySchedule;
             return this;
         }
-
         public LongTermRetentionPolicyResponse build() {
             return new LongTermRetentionPolicyResponse(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }

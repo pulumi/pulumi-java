@@ -21,7 +21,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -32,7 +32,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat", required=true)
-    private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
+        private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Input<Either<String,AzureContainerDataFormat>> getDataFormat() {
         return this.dataFormat;
@@ -43,7 +43,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -54,7 +54,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-    private final Input<String> storageAccountName;
+        private final Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName;
@@ -169,7 +169,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
-
         public ContainerArgs build() {
             return new ContainerArgs(containerName, dataFormat, deviceName, resourceGroupName, storageAccountName);
         }

@@ -26,7 +26,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-    private final @Nullable Input<String> keyFrameInterval;
+        private final @Nullable Input<String> keyFrameInterval;
 
     public Input<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
@@ -37,7 +37,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -49,7 +49,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -60,7 +60,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<String> range;
+        private final @Nullable Input<String> range;
 
     public Input<String> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -71,7 +71,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<String> start;
+        private final Input<String> start;
 
     public Input<String> getStart() {
         return this.start;
@@ -82,7 +82,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="step")
-    private final @Nullable Input<String> step;
+        private final @Nullable Input<String> step;
 
     public Input<String> getStep() {
         return this.step == null ? Input.empty() : this.step;
@@ -93,7 +93,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stretchMode")
-    private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+        private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
     public Input<Either<String,StretchMode>> getStretchMode() {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;
@@ -104,7 +104,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMode")
-    private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+        private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
 
     public Input<Either<String,VideoSyncMode>> getSyncMode() {
         return this.syncMode == null ? Input.empty() : this.syncMode;
@@ -253,7 +253,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.syncMode = Input.ofNullable(syncMode);
             return this;
         }
-
         public ImageArgs build() {
             return new ImageArgs(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);
         }

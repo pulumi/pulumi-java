@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
             this.displayed = Objects.requireNonNull(displayed);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(clicked, correctnessLevel, displayed);
         }

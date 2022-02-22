@@ -116,7 +116,6 @@ public final class DeviceConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public DeviceConfigResponse build() {
             return new DeviceConfigResponse(binaryData, cloudUpdateTime, deviceAckTime, version);
         }

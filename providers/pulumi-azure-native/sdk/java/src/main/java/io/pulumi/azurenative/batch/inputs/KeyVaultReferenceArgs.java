@@ -22,7 +22,7 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -92,7 +92,6 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public KeyVaultReferenceArgs build() {
             return new KeyVaultReferenceArgs(id, url);
         }

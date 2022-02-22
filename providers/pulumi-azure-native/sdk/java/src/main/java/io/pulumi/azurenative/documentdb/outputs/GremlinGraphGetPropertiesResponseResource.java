@@ -229,7 +229,6 @@ public final class GremlinGraphGetPropertiesResponseResource {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
-
         public GremlinGraphGetPropertiesResponseResource build() {
             return new GremlinGraphGetPropertiesResponseResource(conflictResolutionPolicy, defaultTtl, etag, id, indexingPolicy, partitionKey, rid, ts, uniqueKeyPolicy);
         }

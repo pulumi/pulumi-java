@@ -117,7 +117,6 @@ public final class ContactResponse {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
-
         public ContactResponse build() {
             return new ContactResponse(email, faxNumber, phoneNumber, postalAddress);
         }

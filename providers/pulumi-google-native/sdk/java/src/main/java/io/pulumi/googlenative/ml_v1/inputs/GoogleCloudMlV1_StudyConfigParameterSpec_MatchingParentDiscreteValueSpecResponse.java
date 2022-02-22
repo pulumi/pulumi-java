@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<Double> values;
+      private final List<Double> values;
 
     public List<Double> getValues() {
         return this.values;
@@ -60,7 +60,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(values);
         }

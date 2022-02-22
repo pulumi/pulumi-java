@@ -481,7 +481,6 @@ public final class ModelResponse {
             this.version = version;
             return this;
         }
-
         public ModelResponse build() {
             return new ModelResponse(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
         }

@@ -185,7 +185,6 @@ public final class CertificateAuthorityPolicyResponse {
             this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
             return this;
         }
-
         public CertificateAuthorityPolicyResponse build() {
             return new CertificateAuthorityPolicyResponse(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
         }

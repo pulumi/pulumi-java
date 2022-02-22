@@ -19,7 +19,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="featureName")
-    private final @Nullable String featureName;
+        private final @Nullable String featureName;
 
     public Optional<String> getFeatureName() {
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
@@ -30,7 +30,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="featureType")
-    private final @Nullable String featureType;
+        private final @Nullable String featureType;
 
     public Optional<String> getFeatureType() {
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
@@ -41,7 +41,7 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="locationId", required=true)
-    private final String locationId;
+        private final String locationId;
 
     public String getLocationId() {
         return this.locationId;
@@ -100,7 +100,6 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
-
         public GetExposureControlFeatureValueArgs build() {
             return new GetExposureControlFeatureValueArgs(featureName, featureType, locationId);
         }

@@ -30,7 +30,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageEndInteractionRespons
         public Builder(GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse();
         }

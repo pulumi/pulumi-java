@@ -168,7 +168,6 @@ public final class GetWorkspaceCollectionResult {
             this.type = type;
             return this;
         }
-
         public GetWorkspaceCollectionResult build() {
             return new GetWorkspaceCollectionResult(id, location, name, properties, sku, tags, type);
         }

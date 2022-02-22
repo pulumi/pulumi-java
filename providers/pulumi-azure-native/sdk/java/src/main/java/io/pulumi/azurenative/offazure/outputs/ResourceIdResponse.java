@@ -44,7 +44,6 @@ public final class ResourceIdResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ResourceIdResponse build() {
             return new ResourceIdResponse(id);
         }

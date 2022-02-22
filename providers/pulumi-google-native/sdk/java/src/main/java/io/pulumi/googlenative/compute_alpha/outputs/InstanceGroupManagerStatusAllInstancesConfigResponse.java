@@ -75,7 +75,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
             this.effective = Objects.requireNonNull(effective);
             return this;
         }
-
         public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
             return new InstanceGroupManagerStatusAllInstancesConfigResponse(currentRevision, effective);
         }

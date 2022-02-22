@@ -286,7 +286,6 @@ public final class InnerHealthErrorResponse {
             this.summaryMessage = summaryMessage;
             return this;
         }
-
         public InnerHealthErrorResponse build() {
             return new InnerHealthErrorResponse(creationTimeUtc, entityId, errorCategory, errorCode, errorLevel, errorMessage, errorSource, errorType, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }

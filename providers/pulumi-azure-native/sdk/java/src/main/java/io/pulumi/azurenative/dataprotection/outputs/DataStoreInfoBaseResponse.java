@@ -74,7 +74,6 @@ public final class DataStoreInfoBaseResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public DataStoreInfoBaseResponse build() {
             return new DataStoreInfoBaseResponse(dataStoreType, objectType);
         }

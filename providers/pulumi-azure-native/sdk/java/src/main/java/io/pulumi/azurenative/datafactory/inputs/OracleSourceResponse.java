@@ -25,7 +25,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Object additionalColumns;
+        private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
@@ -36,7 +36,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -47,7 +47,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -58,7 +58,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleReaderQuery")
-    private final @Nullable Object oracleReaderQuery;
+        private final @Nullable Object oracleReaderQuery;
 
     public Optional<Object> getOracleReaderQuery() {
         return this.oracleReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.oracleReaderQuery);
@@ -69,7 +69,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="partitionOption")
-    private final @Nullable Object partitionOption;
+        private final @Nullable Object partitionOption;
 
     public Optional<Object> getPartitionOption() {
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
@@ -80,7 +80,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="partitionSettings")
-    private final @Nullable OraclePartitionSettingsResponse partitionSettings;
+        private final @Nullable OraclePartitionSettingsResponse partitionSettings;
 
     public Optional<OraclePartitionSettingsResponse> getPartitionSettings() {
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
@@ -91,7 +91,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryTimeout")
-    private final @Nullable Object queryTimeout;
+        private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
@@ -102,7 +102,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -113,7 +113,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -125,7 +125,7 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -254,7 +254,6 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleSourceResponse build() {
             return new OracleSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, oracleReaderQuery, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

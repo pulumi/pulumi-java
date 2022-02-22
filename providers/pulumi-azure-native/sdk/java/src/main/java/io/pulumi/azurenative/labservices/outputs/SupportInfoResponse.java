@@ -118,7 +118,6 @@ public final class SupportInfoResponse {
             this.url = url;
             return this;
         }
-
         public SupportInfoResponse build() {
             return new SupportInfoResponse(email, instructions, phone, url);
         }

@@ -74,7 +74,6 @@ public final class AppliedLicenseResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AppliedLicenseResponse build() {
             return new AppliedLicenseResponse(osLicense, type);
         }

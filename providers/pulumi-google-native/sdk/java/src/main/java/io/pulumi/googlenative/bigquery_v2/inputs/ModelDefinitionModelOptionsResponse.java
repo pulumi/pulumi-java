@@ -18,21 +18,21 @@ public final class ModelDefinitionModelOptionsResponse extends io.pulumi.resourc
     public static final ModelDefinitionModelOptionsResponse Empty = new ModelDefinitionModelOptionsResponse();
 
     @InputImport(name="labels", required=true)
-    private final List<String> labels;
+      private final List<String> labels;
 
     public List<String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="lossType", required=true)
-    private final String lossType;
+      private final String lossType;
 
     public String getLossType() {
         return this.lossType;
     }
 
     @InputImport(name="modelType", required=true)
-    private final String modelType;
+      private final String modelType;
 
     public String getModelType() {
         return this.modelType;
@@ -91,7 +91,6 @@ public final class ModelDefinitionModelOptionsResponse extends io.pulumi.resourc
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public ModelDefinitionModelOptionsResponse build() {
             return new ModelDefinitionModelOptionsResponse(labels, lossType, modelType);
         }

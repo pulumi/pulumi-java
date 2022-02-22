@@ -24,7 +24,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -35,7 +35,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -46,14 +46,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replication", required=true)
-    private final Input<ReplicationArgs> replication;
+      private final Input<ReplicationArgs> replication;
 
     public Input<ReplicationArgs> getReplication() {
         return this.replication;
@@ -75,14 +75,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotation")
-    private final @Nullable Input<RotationArgs> rotation;
+      private final @Nullable Input<RotationArgs> rotation;
 
     public Input<RotationArgs> getRotation() {
         return this.rotation == null ? Input.empty() : this.rotation;
     }
 
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
@@ -93,7 +93,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topics")
-    private final @Nullable Input<List<TopicArgs>> topics;
+      private final @Nullable Input<List<TopicArgs>> topics;
 
     public Input<List<TopicArgs>> getTopics() {
         return this.topics == null ? Input.empty() : this.topics;
@@ -104,7 +104,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -268,7 +268,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(etag, expireTime, labels, project, replication, rotation, secretId, topics, ttl);
         }

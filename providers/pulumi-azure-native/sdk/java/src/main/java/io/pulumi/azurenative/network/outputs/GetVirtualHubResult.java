@@ -545,7 +545,6 @@ public final class GetVirtualHubResult {
             this.vpnGateway = vpnGateway;
             return this;
         }
-
         public GetVirtualHubResult build() {
             return new GetVirtualHubResult(addressPrefix, allowBranchToBranchTraffic, azureFirewall, bgpConnections, etag, expressRouteGateway, id, ipConfigurations, location, name, p2SVpnGateway, provisioningState, routeTable, routingState, securityPartnerProvider, securityProviderName, sku, tags, type, virtualHubRouteTableV2s, virtualRouterAsn, virtualRouterIps, virtualWan, vpnGateway);
         }

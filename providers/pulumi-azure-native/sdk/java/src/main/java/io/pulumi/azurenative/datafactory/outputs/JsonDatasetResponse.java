@@ -287,7 +287,6 @@ public final class JsonDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonDatasetResponse build() {
             return new JsonDatasetResponse(annotations, compression, description, encodingName, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

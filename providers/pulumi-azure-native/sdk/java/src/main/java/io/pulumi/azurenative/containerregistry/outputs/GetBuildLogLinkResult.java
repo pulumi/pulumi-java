@@ -54,7 +54,6 @@ public final class GetBuildLogLinkResult {
             this.logLink = logLink;
             return this;
         }
-
         public GetBuildLogLinkResult build() {
             return new GetBuildLogLinkResult(logLink);
         }

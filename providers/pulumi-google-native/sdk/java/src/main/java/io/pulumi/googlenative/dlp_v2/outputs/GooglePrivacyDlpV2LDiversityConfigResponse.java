@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
             this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityConfigResponse build() {
             return new GooglePrivacyDlpV2LDiversityConfigResponse(quasiIds, sensitiveAttribute);
         }

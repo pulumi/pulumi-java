@@ -75,7 +75,6 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
         }

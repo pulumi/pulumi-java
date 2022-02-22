@@ -197,7 +197,6 @@ public final class GetguestDiagnosticsSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetguestDiagnosticsSettingResult build() {
             return new GetguestDiagnosticsSettingResult(dataSources, id, location, name, osType, proxySetting, tags, type);
         }

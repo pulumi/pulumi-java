@@ -54,7 +54,6 @@ public final class IndexingPolicyResponse {
             this.compositeIndexes = compositeIndexes;
             return this;
         }
-
         public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(compositeIndexes);
         }

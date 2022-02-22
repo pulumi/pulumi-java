@@ -248,7 +248,6 @@ public final class GetLabAccountResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetLabAccountResult build() {
             return new GetLabAccountResult(enabledRegionSelection, id, latestOperationResult, location, name, provisioningState, sizeConfiguration, tags, type, uniqueIdentifier);
         }

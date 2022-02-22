@@ -139,7 +139,6 @@ public final class GetApiPolicyResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetApiPolicyResult build() {
             return new GetApiPolicyResult(format, id, name, type, value);
         }

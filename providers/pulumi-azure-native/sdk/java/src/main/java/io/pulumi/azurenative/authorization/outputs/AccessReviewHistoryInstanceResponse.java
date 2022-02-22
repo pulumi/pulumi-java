@@ -265,7 +265,6 @@ public final class AccessReviewHistoryInstanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessReviewHistoryInstanceResponse build() {
             return new AccessReviewHistoryInstanceResponse(displayName, downloadUri, expiration, fulfilledDateTime, id, name, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime, status, type);
         }

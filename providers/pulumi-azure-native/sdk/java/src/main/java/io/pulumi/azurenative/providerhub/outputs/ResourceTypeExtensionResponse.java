@@ -74,7 +74,6 @@ public final class ResourceTypeExtensionResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ResourceTypeExtensionResponse build() {
             return new ResourceTypeExtensionResponse(endpointUri, extensionCategories, timeout);
         }

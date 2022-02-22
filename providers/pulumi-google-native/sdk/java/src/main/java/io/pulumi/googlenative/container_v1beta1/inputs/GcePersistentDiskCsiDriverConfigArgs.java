@@ -23,7 +23,7 @@ public final class GcePersistentDiskCsiDriverConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class GcePersistentDiskCsiDriverConfigArgs extends io.pulumi.resour
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public GcePersistentDiskCsiDriverConfigArgs build() {
             return new GcePersistentDiskCsiDriverConfigArgs(enabled);
         }

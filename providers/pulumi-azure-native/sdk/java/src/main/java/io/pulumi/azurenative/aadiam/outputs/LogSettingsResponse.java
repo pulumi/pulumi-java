@@ -99,7 +99,6 @@ public final class LogSettingsResponse {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(category, enabled, retentionPolicy);
         }

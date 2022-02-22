@@ -111,7 +111,6 @@ public final class ResourceTypeRegistrationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceTypeRegistrationResponse build() {
             return new ResourceTypeRegistrationResponse(id, name, properties, type);
         }

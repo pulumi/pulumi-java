@@ -21,7 +21,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activatedPolicyTypes")
-    private final @Nullable Input<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
+      private final @Nullable Input<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
     public Input<List<TaxonomyActivatedPolicyTypesItem>> getActivatedPolicyTypes() {
         return this.activatedPolicyTypes == null ? Input.empty() : this.activatedPolicyTypes;
@@ -32,7 +32,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,21 +43,21 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -161,7 +161,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TaxonomyArgs build() {
             return new TaxonomyArgs(activatedPolicyTypes, description, displayName, location, project);
         }

@@ -273,7 +273,6 @@ public final class AzureFunctionActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureFunctionActivityResponse build() {
             return new AzureFunctionActivityResponse(body, dependsOn, description, functionName, headers, linkedServiceName, method, name, policy, type, userProperties);
         }

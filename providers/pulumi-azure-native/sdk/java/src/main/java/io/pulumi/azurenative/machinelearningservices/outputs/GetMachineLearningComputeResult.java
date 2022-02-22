@@ -236,7 +236,6 @@ public final class GetMachineLearningComputeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineLearningComputeResult build() {
             return new GetMachineLearningComputeResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

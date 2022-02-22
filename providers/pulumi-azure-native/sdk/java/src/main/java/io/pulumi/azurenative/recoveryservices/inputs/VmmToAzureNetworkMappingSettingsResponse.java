@@ -22,7 +22,7 @@ public final class VmmToAzureNetworkMappingSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -60,7 +60,6 @@ public final class VmmToAzureNetworkMappingSettingsResponse extends io.pulumi.re
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public VmmToAzureNetworkMappingSettingsResponse build() {
             return new VmmToAzureNetworkMappingSettingsResponse(instanceType);
         }

@@ -95,7 +95,6 @@ public final class SchemaComparisonValidationResultTypeResponse {
             this.updateAction = Objects.requireNonNull(updateAction);
             return this;
         }
-
         public SchemaComparisonValidationResultTypeResponse build() {
             return new SchemaComparisonValidationResultTypeResponse(objectName, objectType, updateAction);
         }

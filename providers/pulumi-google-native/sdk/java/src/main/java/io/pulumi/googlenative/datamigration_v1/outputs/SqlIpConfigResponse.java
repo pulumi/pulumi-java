@@ -119,7 +119,6 @@ public final class SqlIpConfigResponse {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public SqlIpConfigResponse build() {
             return new SqlIpConfigResponse(authorizedNetworks, enableIpv4, privateNetwork, requireSsl);
         }

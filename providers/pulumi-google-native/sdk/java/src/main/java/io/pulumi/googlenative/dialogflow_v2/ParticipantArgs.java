@@ -17,7 +17,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     public static final ParticipantArgs Empty = new ParticipantArgs();
 
     @InputImport(name="conversationId", required=true)
-    private final Input<String> conversationId;
+      private final Input<String> conversationId;
 
     public Input<String> getConversationId() {
         return this.conversationId;
@@ -28,14 +28,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentsMetadataFilters")
-    private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
+      private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
 
     public Input<Map<String,String>> getDocumentsMetadataFilters() {
         return this.documentsMetadataFilters == null ? Input.empty() : this.documentsMetadataFilters;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,14 +46,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<ParticipantRole> role;
+      private final @Nullable Input<ParticipantRole> role;
 
     public Input<ParticipantRole> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -75,7 +75,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sipRecordingMediaLabel")
-    private final @Nullable Input<String> sipRecordingMediaLabel;
+      private final @Nullable Input<String> sipRecordingMediaLabel;
 
     public Input<String> getSipRecordingMediaLabel() {
         return this.sipRecordingMediaLabel == null ? Input.empty() : this.sipRecordingMediaLabel;
@@ -209,7 +209,6 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             this.sipRecordingMediaLabel = Input.ofNullable(sipRecordingMediaLabel);
             return this;
         }
-
         public ParticipantArgs build() {
             return new ParticipantArgs(conversationId, documentsMetadataFilters, location, name, project, role, sipRecordingMediaLabel);
         }

@@ -266,7 +266,6 @@ public final class GetShareResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetShareResult build() {
             return new GetShareResult(createdAt, description, id, name, provisioningState, shareKind, systemData, terms, type, userEmail, userName);
         }

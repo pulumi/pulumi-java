@@ -74,7 +74,6 @@ public final class UrlRewriteResponse {
             this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite);
             return this;
         }
-
         public UrlRewriteResponse build() {
             return new UrlRewriteResponse(hostRewrite, pathPrefixRewrite);
         }

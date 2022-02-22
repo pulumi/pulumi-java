@@ -231,7 +231,6 @@ public final class GetACIServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetACIServiceResult build() {
             return new GetACIServiceResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

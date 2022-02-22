@@ -139,7 +139,6 @@ public final class GalleryImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public GalleryImageReferenceResponse build() {
             return new GalleryImageReferenceResponse(offer, osType, publisher, sku, version);
         }

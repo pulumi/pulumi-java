@@ -30,7 +30,6 @@ public final class AvailabilityCriteriaResponse {
         public Builder(AvailabilityCriteriaResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AvailabilityCriteriaResponse build() {
             return new AvailabilityCriteriaResponse();
         }

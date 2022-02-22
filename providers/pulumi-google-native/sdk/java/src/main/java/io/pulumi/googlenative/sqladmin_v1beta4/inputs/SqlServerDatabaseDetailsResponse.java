@@ -22,7 +22,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="compatibilityLevel", required=true)
-    private final Integer compatibilityLevel;
+      private final Integer compatibilityLevel;
 
     public Integer getCompatibilityLevel() {
         return this.compatibilityLevel;
@@ -33,7 +33,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryModel", required=true)
-    private final String recoveryModel;
+      private final String recoveryModel;
 
     public String getRecoveryModel() {
         return this.recoveryModel;
@@ -82,7 +82,6 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
             this.recoveryModel = Objects.requireNonNull(recoveryModel);
             return this;
         }
-
         public SqlServerDatabaseDetailsResponse build() {
             return new SqlServerDatabaseDetailsResponse(compatibilityLevel, recoveryModel);
         }

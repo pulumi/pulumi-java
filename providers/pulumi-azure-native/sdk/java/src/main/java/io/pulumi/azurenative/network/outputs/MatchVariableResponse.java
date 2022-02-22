@@ -76,7 +76,6 @@ public final class MatchVariableResponse {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public MatchVariableResponse build() {
             return new MatchVariableResponse(selector, variableName);
         }

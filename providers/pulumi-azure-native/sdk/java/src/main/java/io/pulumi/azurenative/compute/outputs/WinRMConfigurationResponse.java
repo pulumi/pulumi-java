@@ -54,7 +54,6 @@ public final class WinRMConfigurationResponse {
             this.listeners = listeners;
             return this;
         }
-
         public WinRMConfigurationResponse build() {
             return new WinRMConfigurationResponse(listeners);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @InputImport(name="confidence", required=true)
-    private final Double confidence;
+      private final Double confidence;
 
     public Double getConfidence() {
         return this.confidence;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @InputImport(name="endOffset", required=true)
-    private final String endOffset;
+      private final String endOffset;
 
     public String getEndOffset() {
         return this.endOffset;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @InputImport(name="startOffset", required=true)
-    private final String startOffset;
+      private final String startOffset;
 
     public String getStartOffset() {
         return this.startOffset;
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @InputImport(name="word", required=true)
-    private final String word;
+      private final String word;
 
     public String getWord() {
         return this.word;
@@ -124,7 +124,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.word = Objects.requireNonNull(word);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(confidence, endOffset, startOffset, word);
         }

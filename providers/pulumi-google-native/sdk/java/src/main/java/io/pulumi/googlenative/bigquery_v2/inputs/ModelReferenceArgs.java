@@ -19,7 +19,7 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -30,7 +30,7 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelId")
-    private final @Nullable Input<String> modelId;
+      private final @Nullable Input<String> modelId;
 
     public Input<String> getModelId() {
         return this.modelId == null ? Input.empty() : this.modelId;
@@ -41,7 +41,7 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,6 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ModelReferenceArgs build() {
             return new ModelReferenceArgs(datasetId, modelId, project);
         }

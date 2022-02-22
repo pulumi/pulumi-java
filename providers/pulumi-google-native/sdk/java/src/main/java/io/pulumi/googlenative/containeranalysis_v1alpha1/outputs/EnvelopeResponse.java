@@ -97,7 +97,6 @@ public final class EnvelopeResponse {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public EnvelopeResponse build() {
             return new EnvelopeResponse(payload, payloadType, signatures);
         }

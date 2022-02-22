@@ -23,7 +23,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -34,7 +34,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcJwks")
-    private final @Nullable Input<String> oidcJwks;
+      private final @Nullable Input<String> oidcJwks;
 
     public Input<String> getOidcJwks() {
         return this.oidcJwks == null ? Input.empty() : this.oidcJwks;
@@ -93,7 +93,6 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             this.oidcJwks = Input.ofNullable(oidcJwks);
             return this;
         }
-
         public AuthorityArgs build() {
             return new AuthorityArgs(issuer, oidcJwks);
         }

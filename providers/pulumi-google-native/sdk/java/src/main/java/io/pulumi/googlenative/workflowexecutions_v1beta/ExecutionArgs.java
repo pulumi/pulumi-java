@@ -20,7 +20,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="argument")
-    private final @Nullable Input<String> argument;
+      private final @Nullable Input<String> argument;
 
     public Input<String> getArgument() {
         return this.argument == null ? Input.empty() : this.argument;
@@ -31,28 +31,28 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callLogLevel")
-    private final @Nullable Input<ExecutionCallLogLevel> callLogLevel;
+      private final @Nullable Input<ExecutionCallLogLevel> callLogLevel;
 
     public Input<ExecutionCallLogLevel> getCallLogLevel() {
         return this.callLogLevel == null ? Input.empty() : this.callLogLevel;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="workflowId", required=true)
-    private final Input<String> workflowId;
+      private final Input<String> workflowId;
 
     public Input<String> getWorkflowId() {
         return this.workflowId;
@@ -156,7 +156,6 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.workflowId = Input.of(Objects.requireNonNull(workflowId));
             return this;
         }
-
         public ExecutionArgs build() {
             return new ExecutionArgs(argument, callLogLevel, location, project, workflowId);
         }

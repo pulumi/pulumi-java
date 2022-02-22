@@ -95,7 +95,6 @@ public final class CompletenessResponse {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
         public CompletenessResponse build() {
             return new CompletenessResponse(arguments, environment, materials);
         }

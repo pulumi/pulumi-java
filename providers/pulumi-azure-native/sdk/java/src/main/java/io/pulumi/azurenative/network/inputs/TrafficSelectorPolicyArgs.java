@@ -23,7 +23,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="localAddressRanges", required=true)
-    private final Input<List<String>> localAddressRanges;
+        private final Input<List<String>> localAddressRanges;
 
     public Input<List<String>> getLocalAddressRanges() {
         return this.localAddressRanges;
@@ -34,7 +34,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remoteAddressRanges", required=true)
-    private final Input<List<String>> remoteAddressRanges;
+        private final Input<List<String>> remoteAddressRanges;
 
     public Input<List<String>> getRemoteAddressRanges() {
         return this.remoteAddressRanges;
@@ -93,7 +93,6 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
             this.remoteAddressRanges = Input.of(Objects.requireNonNull(remoteAddressRanges));
             return this;
         }
-
         public TrafficSelectorPolicyArgs build() {
             return new TrafficSelectorPolicyArgs(localAddressRanges, remoteAddressRanges);
         }

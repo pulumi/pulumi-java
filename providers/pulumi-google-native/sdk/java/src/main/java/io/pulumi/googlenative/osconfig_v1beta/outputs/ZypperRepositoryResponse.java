@@ -96,7 +96,6 @@ public final class ZypperRepositoryResponse {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public ZypperRepositoryResponse build() {
             return new ZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

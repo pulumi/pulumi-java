@@ -19,7 +19,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerId")
-    private final @Nullable Input<String> partnerId;
+        private final @Nullable Input<String> partnerId;
 
     public Input<String> getPartnerId() {
         return this.partnerId == null ? Input.empty() : this.partnerId;
@@ -62,7 +62,6 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
             this.partnerId = Input.ofNullable(partnerId);
             return this;
         }
-
         public PartnerArgs build() {
             return new PartnerArgs(partnerId);
         }

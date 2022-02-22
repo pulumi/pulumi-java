@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
      * 
      */
     @InputImport(name="wordList", required=true)
-    private final GooglePrivacyDlpV2WordListResponse wordList;
+      private final GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse getWordList() {
         return this.wordList;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(wordList);
         }

@@ -75,7 +75,6 @@ public final class ClientCertificateThumbprintResponse {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public ClientCertificateThumbprintResponse build() {
             return new ClientCertificateThumbprintResponse(certificateThumbprint, isAdmin);
         }

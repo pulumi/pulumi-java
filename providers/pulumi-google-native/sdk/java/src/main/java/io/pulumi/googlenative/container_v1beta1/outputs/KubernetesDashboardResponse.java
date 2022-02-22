@@ -52,7 +52,6 @@ public final class KubernetesDashboardResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public KubernetesDashboardResponse build() {
             return new KubernetesDashboardResponse(disabled);
         }

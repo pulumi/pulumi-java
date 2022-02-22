@@ -23,7 +23,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Boolean siteToSiteDataTransfer;
+      private final Boolean siteToSiteDataTransfer;
 
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -34,7 +34,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="uris", required=true)
-    private final List<String> uris;
+      private final List<String> uris;
 
     public List<String> getUris() {
         return this.uris;
@@ -83,7 +83,6 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public LinkedInterconnectAttachmentsResponse build() {
             return new LinkedInterconnectAttachmentsResponse(siteToSiteDataTransfer, uris);
         }

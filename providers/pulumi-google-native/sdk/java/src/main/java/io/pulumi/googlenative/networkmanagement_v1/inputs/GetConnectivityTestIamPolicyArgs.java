@@ -15,21 +15,21 @@ public final class GetConnectivityTestIamPolicyArgs extends io.pulumi.resources.
     public static final GetConnectivityTestIamPolicyArgs Empty = new GetConnectivityTestIamPolicyArgs();
 
     @InputImport(name="connectivityTestId", required=true)
-    private final String connectivityTestId;
+      private final String connectivityTestId;
 
     public String getConnectivityTestId() {
         return this.connectivityTestId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetConnectivityTestIamPolicyArgs extends io.pulumi.resources.
             this.project = project;
             return this;
         }
-
         public GetConnectivityTestIamPolicyArgs build() {
             return new GetConnectivityTestIamPolicyArgs(connectivityTestId, optionsRequestedPolicyVersion, project);
         }

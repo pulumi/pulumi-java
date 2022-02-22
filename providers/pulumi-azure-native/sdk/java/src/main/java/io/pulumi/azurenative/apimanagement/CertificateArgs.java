@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+        private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+        private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
+        private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
 
     public Input<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -64,7 +64,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -194,7 +194,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(certificateId, data, keyVault, password, resourceGroupName, serviceName);
         }

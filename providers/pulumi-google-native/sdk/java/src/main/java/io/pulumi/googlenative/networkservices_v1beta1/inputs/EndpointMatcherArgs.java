@@ -23,7 +23,7 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadataLabelMatcher")
-    private final @Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher;
+      private final @Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
     public Input<MetadataLabelMatcherArgs> getMetadataLabelMatcher() {
         return this.metadataLabelMatcher == null ? Input.empty() : this.metadataLabelMatcher;
@@ -66,7 +66,6 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
             this.metadataLabelMatcher = Input.ofNullable(metadataLabelMatcher);
             return this;
         }
-
         public EndpointMatcherArgs build() {
             return new EndpointMatcherArgs(metadataLabelMatcher);
         }

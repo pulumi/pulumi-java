@@ -54,7 +54,6 @@ public final class IpRuleResponse {
             this.value = value;
             return this;
         }
-
         public IpRuleResponse build() {
             return new IpRuleResponse(value);
         }

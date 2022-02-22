@@ -116,7 +116,6 @@ public final class PlanResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PlanResponse build() {
             return new PlanResponse(name, product, publisher, version);
         }

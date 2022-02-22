@@ -268,7 +268,6 @@ public final class GetPolicyExemptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyExemptionResult build() {
             return new GetPolicyExemptionResult(description, displayName, exemptionCategory, expiresOn, id, metadata, name, policyAssignmentId, policyDefinitionReferenceIds, systemData, type);
         }

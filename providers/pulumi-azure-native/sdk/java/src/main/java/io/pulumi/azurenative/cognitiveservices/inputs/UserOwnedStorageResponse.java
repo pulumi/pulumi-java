@@ -23,7 +23,7 @@ public final class UserOwnedStorageResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -61,7 +61,6 @@ public final class UserOwnedStorageResponse extends io.pulumi.resources.InvokeAr
             this.resourceId = resourceId;
             return this;
         }
-
         public UserOwnedStorageResponse build() {
             return new UserOwnedStorageResponse(resourceId);
         }

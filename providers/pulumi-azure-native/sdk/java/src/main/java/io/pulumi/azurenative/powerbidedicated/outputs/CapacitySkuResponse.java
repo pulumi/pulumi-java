@@ -98,7 +98,6 @@ public final class CapacitySkuResponse {
             this.tier = tier;
             return this;
         }
-
         public CapacitySkuResponse build() {
             return new CapacitySkuResponse(capacity, name, tier);
         }

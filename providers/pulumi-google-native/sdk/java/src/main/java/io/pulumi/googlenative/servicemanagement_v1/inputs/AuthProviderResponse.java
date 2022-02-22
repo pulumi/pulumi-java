@@ -23,7 +23,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="audiences", required=true)
-    private final String audiences;
+      private final String audiences;
 
     public String getAudiences() {
         return this.audiences;
@@ -34,7 +34,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authorizationUrl", required=true)
-    private final String authorizationUrl;
+      private final String authorizationUrl;
 
     public String getAuthorizationUrl() {
         return this.authorizationUrl;
@@ -45,7 +45,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -56,7 +56,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jwksUri", required=true)
-    private final String jwksUri;
+      private final String jwksUri;
 
     public String getJwksUri() {
         return this.jwksUri;
@@ -67,7 +67,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jwtLocations", required=true)
-    private final List<JwtLocationResponse> jwtLocations;
+      private final List<JwtLocationResponse> jwtLocations;
 
     public List<JwtLocationResponse> getJwtLocations() {
         return this.jwtLocations;
@@ -146,7 +146,6 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }
-
         public AuthProviderResponse build() {
             return new AuthProviderResponse(audiences, authorizationUrl, issuer, jwksUri, jwtLocations);
         }

@@ -76,7 +76,6 @@ public final class OSPolicyResourceGroupResponse {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OSPolicyResourceGroupResponse build() {
             return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
         }

@@ -52,7 +52,6 @@ public final class HealthCheckLogConfigResponse {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public HealthCheckLogConfigResponse build() {
             return new HealthCheckLogConfigResponse(enable);
         }

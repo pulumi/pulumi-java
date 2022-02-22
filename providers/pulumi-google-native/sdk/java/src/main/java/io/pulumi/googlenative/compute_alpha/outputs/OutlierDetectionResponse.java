@@ -264,7 +264,6 @@ public final class OutlierDetectionResponse {
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
         }
-
         public OutlierDetectionResponse build() {
             return new OutlierDetectionResponse(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

@@ -117,7 +117,6 @@ public final class SparkRBatchResponse {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
-
         public SparkRBatchResponse build() {
             return new SparkRBatchResponse(archiveUris, args, fileUris, mainRFileUri);
         }

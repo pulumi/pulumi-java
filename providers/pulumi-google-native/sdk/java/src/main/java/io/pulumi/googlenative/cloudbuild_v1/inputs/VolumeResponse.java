@@ -21,7 +21,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -81,7 +81,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(name, path);
         }

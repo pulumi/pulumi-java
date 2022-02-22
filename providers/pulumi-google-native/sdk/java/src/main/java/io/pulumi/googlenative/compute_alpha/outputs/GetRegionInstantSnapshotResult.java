@@ -413,7 +413,6 @@ public final class GetRegionInstantSnapshotResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetRegionInstantSnapshotResult build() {
             return new GetRegionInstantSnapshotResult(architecture, creationTimestamp, description, diskSizeGb, guestFlush, kind, labelFingerprint, labels, name, region, resourceStatus, satisfiesPzs, selfLink, selfLinkWithId, sourceDisk, sourceDiskId, status, zone);
         }

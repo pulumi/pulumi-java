@@ -15,14 +15,14 @@ public final class GetTraceSinkArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTraceSinkArgs Empty = new GetTraceSinkArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="traceSinkId", required=true)
-    private final String traceSinkId;
+      private final String traceSinkId;
 
     public String getTraceSinkId() {
         return this.traceSinkId;
@@ -71,7 +71,6 @@ public final class GetTraceSinkArgs extends io.pulumi.resources.InvokeArgs {
             this.traceSinkId = Objects.requireNonNull(traceSinkId);
             return this;
         }
-
         public GetTraceSinkArgs build() {
             return new GetTraceSinkArgs(project, traceSinkId);
         }

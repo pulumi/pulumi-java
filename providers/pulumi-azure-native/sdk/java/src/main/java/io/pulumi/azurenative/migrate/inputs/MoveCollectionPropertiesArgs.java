@@ -22,7 +22,7 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRegion", required=true)
-    private final Input<String> sourceRegion;
+        private final Input<String> sourceRegion;
 
     public Input<String> getSourceRegion() {
         return this.sourceRegion;
@@ -33,7 +33,7 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetRegion", required=true)
-    private final Input<String> targetRegion;
+        private final Input<String> targetRegion;
 
     public Input<String> getTargetRegion() {
         return this.targetRegion;
@@ -92,7 +92,6 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
             this.targetRegion = Input.of(Objects.requireNonNull(targetRegion));
             return this;
         }
-
         public MoveCollectionPropertiesArgs build() {
             return new MoveCollectionPropertiesArgs(sourceRegion, targetRegion);
         }

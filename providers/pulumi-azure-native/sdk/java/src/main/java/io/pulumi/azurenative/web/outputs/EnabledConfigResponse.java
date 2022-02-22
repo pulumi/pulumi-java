@@ -54,7 +54,6 @@ public final class EnabledConfigResponse {
             this.enabled = enabled;
             return this;
         }
-
         public EnabledConfigResponse build() {
             return new EnabledConfigResponse(enabled);
         }

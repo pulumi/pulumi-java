@@ -25,7 +25,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="access")
-    private final @Nullable Input<String> access;
+        private final @Nullable Input<String> access;
 
     public Input<String> getAccess() {
         return this.access == null ? Input.empty() : this.access;
@@ -36,7 +36,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationAddressPrefix")
-    private final @Nullable Input<String> destinationAddressPrefix;
+        private final @Nullable Input<String> destinationAddressPrefix;
 
     public Input<String> getDestinationAddressPrefix() {
         return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
@@ -61,7 +61,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationPortRange")
-    private final @Nullable Input<String> destinationPortRange;
+        private final @Nullable Input<String> destinationPortRange;
 
     public Input<String> getDestinationPortRange() {
         return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
@@ -73,7 +73,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+        private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -84,7 +84,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -97,7 +97,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -108,7 +108,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -122,7 +122,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceAddressPrefix")
-    private final @Nullable Input<String> sourceAddressPrefix;
+        private final @Nullable Input<String> sourceAddressPrefix;
 
     public Input<String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
@@ -134,7 +134,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourcePortRange")
-    private final @Nullable Input<String> sourcePortRange;
+        private final @Nullable Input<String> sourcePortRange;
 
     public Input<String> getSourcePortRange() {
         return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
@@ -313,7 +313,6 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.sourcePortRange = Input.ofNullable(sourcePortRange);
             return this;
         }
-
         public NsgSecurityRuleArgs build() {
             return new NsgSecurityRuleArgs(access, description, destinationAddressPrefix, destinationPortRange, direction, name, priority, protocol, sourceAddressPrefix, sourcePortRange);
         }

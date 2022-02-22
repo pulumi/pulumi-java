@@ -22,7 +22,7 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -65,7 +65,6 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public CustomerManagedEncryptionArgs build() {
             return new CustomerManagedEncryptionArgs(kmsKeyName);
         }

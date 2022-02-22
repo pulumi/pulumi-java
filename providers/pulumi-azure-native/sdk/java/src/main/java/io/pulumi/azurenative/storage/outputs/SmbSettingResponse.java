@@ -140,7 +140,6 @@ public final class SmbSettingResponse {
             this.versions = versions;
             return this;
         }
-
         public SmbSettingResponse build() {
             return new SmbSettingResponse(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }

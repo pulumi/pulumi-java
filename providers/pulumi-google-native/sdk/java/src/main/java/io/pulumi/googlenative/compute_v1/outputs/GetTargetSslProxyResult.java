@@ -222,7 +222,6 @@ public final class GetTargetSslProxyResult {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
-
         public GetTargetSslProxyResult build() {
             return new GetTargetSslProxyResult(creationTimestamp, description, kind, name, proxyHeader, selfLink, service, sslCertificates, sslPolicy);
         }

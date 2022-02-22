@@ -54,7 +54,6 @@ public final class ApiVersionConstraintResponse {
             this.minApiVersion = minApiVersion;
             return this;
         }
-
         public ApiVersionConstraintResponse build() {
             return new ApiVersionConstraintResponse(minApiVersion);
         }

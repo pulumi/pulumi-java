@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
      * 
      */
     @InputImport(name="text", required=true)
-    private final Input<List<String>> text;
+      private final Input<List<String>> text;
 
     public Input<List<String>> getText() {
         return this.text;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageTextArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTextArgs(text);
         }

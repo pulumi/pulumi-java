@@ -275,7 +275,6 @@ public final class SapBWLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SapBWLinkedServiceResponse build() {
             return new SapBWLinkedServiceResponse(annotations, clientId, connectVia, description, encryptedCredential, parameters, password, server, systemNumber, type, userName);
         }

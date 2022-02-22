@@ -331,7 +331,6 @@ public final class BatchDeploymentResponse {
             this.retrySettings = retrySettings;
             return this;
         }
-
         public BatchDeploymentResponse build() {
             return new BatchDeploymentResponse(codeConfiguration, compute, description, environmentId, environmentVariables, errorThreshold, loggingLevel, miniBatchSize, model, outputConfiguration, partitionKeys, properties, retrySettings);
         }

@@ -23,7 +23,7 @@ public final class PackageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final List<DistributionResponse> distribution;
+      private final List<DistributionResponse> distribution;
 
     public List<DistributionResponse> getDistribution() {
         return this.distribution;
@@ -34,7 +34,7 @@ public final class PackageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class PackageNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageNoteResponse build() {
             return new PackageNoteResponse(distribution, name);
         }

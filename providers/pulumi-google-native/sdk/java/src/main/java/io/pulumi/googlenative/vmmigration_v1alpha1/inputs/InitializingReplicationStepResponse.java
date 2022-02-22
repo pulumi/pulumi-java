@@ -34,7 +34,6 @@ public final class InitializingReplicationStepResponse extends io.pulumi.resourc
         public Builder(InitializingReplicationStepResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public InitializingReplicationStepResponse build() {
             return new InitializingReplicationStepResponse();
         }

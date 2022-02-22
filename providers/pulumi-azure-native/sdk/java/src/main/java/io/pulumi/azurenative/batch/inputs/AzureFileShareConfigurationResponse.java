@@ -15,14 +15,14 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
     public static final AzureFileShareConfigurationResponse Empty = new AzureFileShareConfigurationResponse();
 
     @InputImport(name="accountKey", required=true)
-    private final String accountKey;
+        private final String accountKey;
 
     public String getAccountKey() {
         return this.accountKey;
     }
 
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="azureFileUrl", required=true)
-    private final String azureFileUrl;
+        private final String azureFileUrl;
 
     public String getAzureFileUrl() {
         return this.azureFileUrl;
@@ -44,7 +44,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable String mountOptions;
+        private final @Nullable String mountOptions;
 
     public Optional<String> getMountOptions() {
         return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
@@ -55,7 +55,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final String relativeMountPath;
+        private final String relativeMountPath;
 
     public String getRelativeMountPath() {
         return this.relativeMountPath;
@@ -134,7 +134,6 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public AzureFileShareConfigurationResponse build() {
             return new AzureFileShareConfigurationResponse(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }

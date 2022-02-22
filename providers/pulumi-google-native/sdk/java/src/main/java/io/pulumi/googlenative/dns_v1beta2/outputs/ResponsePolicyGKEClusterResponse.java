@@ -66,7 +66,6 @@ public final class ResponsePolicyGKEClusterResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ResponsePolicyGKEClusterResponse build() {
             return new ResponsePolicyGKEClusterResponse(gkeClusterName, kind);
         }

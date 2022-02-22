@@ -418,7 +418,6 @@ public final class GetDefaultAdminRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDefaultAdminRuleResult build() {
             return new GetDefaultAdminRuleResult(access, description, destinationPortRanges, destinations, direction, displayName, etag, flag, id, kind, name, priority, protocol, provisioningState, sourcePortRanges, sources, systemData, type);
         }

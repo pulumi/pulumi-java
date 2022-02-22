@@ -289,7 +289,6 @@ public final class GetApiDiagnosticResult {
             this.verbosity = verbosity;
             return this;
         }
-
         public GetApiDiagnosticResult build() {
             return new GetApiDiagnosticResult(alwaysLog, backend, frontend, httpCorrelationProtocol, id, logClientIp, loggerId, name, operationNameFormat, sampling, type, verbosity);
         }

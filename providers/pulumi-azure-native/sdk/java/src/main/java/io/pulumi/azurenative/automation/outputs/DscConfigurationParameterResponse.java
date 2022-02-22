@@ -120,7 +120,6 @@ public final class DscConfigurationParameterResponse {
             this.type = type;
             return this;
         }
-
         public DscConfigurationParameterResponse build() {
             return new DscConfigurationParameterResponse(defaultValue, isMandatory, position, type);
         }

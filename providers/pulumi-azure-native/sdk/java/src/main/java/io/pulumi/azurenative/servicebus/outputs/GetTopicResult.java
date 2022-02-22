@@ -437,7 +437,6 @@ public final class GetTopicResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, id, maxSizeInMegabytes, name, requiresDuplicateDetection, sizeInBytes, status, subscriptionCount, supportOrdering, type, updatedAt);
         }

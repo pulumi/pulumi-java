@@ -396,7 +396,6 @@ public final class GetEnvironmentResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(claimedByUserName, claimedByUserObjectId, claimedByUserPrincipalId, id, isClaimed, lastKnownPowerState, latestOperationResult, location, name, networkInterface, passwordLastReset, provisioningState, resourceSets, tags, totalUsage, type, uniqueIdentifier);
         }

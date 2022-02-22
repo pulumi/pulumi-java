@@ -77,7 +77,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
             this.offerThroughput = offerThroughput;
             return this;
         }
-
         public ServiceCosmosDbConfigurationInfoResponse build() {
             return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
         }

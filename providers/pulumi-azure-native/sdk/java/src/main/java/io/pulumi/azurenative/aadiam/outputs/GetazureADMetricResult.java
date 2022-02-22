@@ -153,7 +153,6 @@ public final class GetazureADMetricResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetazureADMetricResult build() {
             return new GetazureADMetricResult(id, location, name, properties, tags, type);
         }

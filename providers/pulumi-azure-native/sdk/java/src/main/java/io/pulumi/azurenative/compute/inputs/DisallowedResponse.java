@@ -24,7 +24,7 @@ public final class DisallowedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskTypes")
-    private final @Nullable List<String> diskTypes;
+        private final @Nullable List<String> diskTypes;
 
     public List<String> getDiskTypes() {
         return this.diskTypes == null ? List.of() : this.diskTypes;
@@ -62,7 +62,6 @@ public final class DisallowedResponse extends io.pulumi.resources.InvokeArgs {
             this.diskTypes = diskTypes;
             return this;
         }
-
         public DisallowedResponse build() {
             return new DisallowedResponse(diskTypes);
         }

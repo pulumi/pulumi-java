@@ -99,7 +99,6 @@ public final class PredictionDistributionDefinitionResponse {
             this.totalPositives = totalPositives;
             return this;
         }
-
         public PredictionDistributionDefinitionResponse build() {
             return new PredictionDistributionDefinitionResponse(distributions, totalNegatives, totalPositives);
         }

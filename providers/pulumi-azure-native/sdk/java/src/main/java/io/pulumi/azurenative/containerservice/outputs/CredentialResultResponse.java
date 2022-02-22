@@ -74,7 +74,6 @@ public final class CredentialResultResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CredentialResultResponse build() {
             return new CredentialResultResponse(name, value);
         }

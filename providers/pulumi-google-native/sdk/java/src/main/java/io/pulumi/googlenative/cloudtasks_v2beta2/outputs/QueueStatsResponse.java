@@ -138,7 +138,6 @@ public final class QueueStatsResponse {
             this.tasksCount = Objects.requireNonNull(tasksCount);
             return this;
         }
-
         public QueueStatsResponse build() {
             return new QueueStatsResponse(concurrentDispatchesCount, effectiveExecutionRate, executedLastMinuteCount, oldestEstimatedArrivalTime, tasksCount);
         }

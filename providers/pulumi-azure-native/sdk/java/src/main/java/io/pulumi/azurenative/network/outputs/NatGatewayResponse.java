@@ -333,7 +333,6 @@ public final class NatGatewayResponse {
             this.zones = zones;
             return this;
         }
-
         public NatGatewayResponse build() {
             return new NatGatewayResponse(etag, id, idleTimeoutInMinutes, location, name, provisioningState, publicIpAddresses, publicIpPrefixes, resourceGuid, sku, subnets, tags, type, zones);
         }

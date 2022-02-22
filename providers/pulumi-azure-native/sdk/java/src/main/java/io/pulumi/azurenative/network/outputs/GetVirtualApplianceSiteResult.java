@@ -182,7 +182,6 @@ public final class GetVirtualApplianceSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualApplianceSiteResult build() {
             return new GetVirtualApplianceSiteResult(addressPrefix, etag, id, name, o365Policy, provisioningState, type);
         }

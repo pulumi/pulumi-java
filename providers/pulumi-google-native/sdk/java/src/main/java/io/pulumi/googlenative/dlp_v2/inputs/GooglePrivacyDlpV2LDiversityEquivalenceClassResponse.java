@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="equivalenceClassSize", required=true)
-    private final String equivalenceClassSize;
+      private final String equivalenceClassSize;
 
     public String getEquivalenceClassSize() {
         return this.equivalenceClassSize;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="numDistinctSensitiveValues", required=true)
-    private final String numDistinctSensitiveValues;
+      private final String numDistinctSensitiveValues;
 
     public String getNumDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="quasiIdsValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="topSensitiveValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
+      private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getTopSensitiveValues() {
         return this.topSensitiveValues;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
             this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(equivalenceClassSize, numDistinctSensitiveValues, quasiIdsValues, topSensitiveValues);
         }

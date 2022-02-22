@@ -25,7 +25,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customEmails")
-    private final @Nullable Input<List<String>> customEmails;
+        private final @Nullable Input<List<String>> customEmails;
 
     public Input<List<String>> getCustomEmails() {
         return this.customEmails == null ? Input.empty() : this.customEmails;
@@ -36,7 +36,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sendToSubscriptionAdministrator")
-    private final @Nullable Input<Boolean> sendToSubscriptionAdministrator;
+        private final @Nullable Input<Boolean> sendToSubscriptionAdministrator;
 
     public Input<Boolean> getSendToSubscriptionAdministrator() {
         return this.sendToSubscriptionAdministrator == null ? Input.empty() : this.sendToSubscriptionAdministrator;
@@ -47,7 +47,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sendToSubscriptionCoAdministrators")
-    private final @Nullable Input<Boolean> sendToSubscriptionCoAdministrators;
+        private final @Nullable Input<Boolean> sendToSubscriptionCoAdministrators;
 
     public Input<Boolean> getSendToSubscriptionCoAdministrators() {
         return this.sendToSubscriptionCoAdministrators == null ? Input.empty() : this.sendToSubscriptionCoAdministrators;
@@ -121,7 +121,6 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
             this.sendToSubscriptionCoAdministrators = Input.ofNullable(sendToSubscriptionCoAdministrators);
             return this;
         }
-
         public EmailNotificationArgs build() {
             return new EmailNotificationArgs(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }

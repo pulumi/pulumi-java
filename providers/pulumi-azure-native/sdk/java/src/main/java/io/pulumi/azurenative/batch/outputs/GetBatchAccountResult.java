@@ -448,7 +448,6 @@ public final class GetBatchAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchAccountResult build() {
             return new GetBatchAccountResult(accountEndpoint, activeJobAndJobScheduleQuota, autoStorage, dedicatedCoreQuota, dedicatedCoreQuotaPerVMFamily, dedicatedCoreQuotaPerVMFamilyEnforced, encryption, id, identity, keyVaultReference, location, lowPriorityCoreQuota, name, poolAllocationMode, poolQuota, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }

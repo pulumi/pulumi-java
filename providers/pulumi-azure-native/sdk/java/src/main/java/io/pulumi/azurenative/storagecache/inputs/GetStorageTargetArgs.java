@@ -17,7 +17,7 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-    private final String cacheName;
+        private final String cacheName;
 
     public String getCacheName() {
         return this.cacheName;
@@ -28,7 +28,7 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageTargetName", required=true)
-    private final String storageTargetName;
+        private final String storageTargetName;
 
     public String getStorageTargetName() {
         return this.storageTargetName;
@@ -98,7 +98,6 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.storageTargetName = Objects.requireNonNull(storageTargetName);
             return this;
         }
-
         public GetStorageTargetArgs build() {
             return new GetStorageTargetArgs(cacheName, resourceGroupName, storageTargetName);
         }

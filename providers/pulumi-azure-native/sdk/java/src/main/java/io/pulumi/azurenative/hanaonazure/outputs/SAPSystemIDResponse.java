@@ -139,7 +139,6 @@ public final class SAPSystemIDResponse {
             this.username = username;
             return this;
         }
-
         public SAPSystemIDResponse build() {
             return new SAPSystemIDResponse(gid, memoryAllocation, sid, uid, username);
         }

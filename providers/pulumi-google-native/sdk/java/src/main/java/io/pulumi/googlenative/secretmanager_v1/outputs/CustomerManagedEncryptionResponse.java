@@ -52,7 +52,6 @@ public final class CustomerManagedEncryptionResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public CustomerManagedEncryptionResponse build() {
             return new CustomerManagedEncryptionResponse(kmsKeyName);
         }

@@ -75,7 +75,6 @@ public final class PeripheralsConfigResponse {
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
         }
-
         public PeripheralsConfigResponse build() {
             return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
         }

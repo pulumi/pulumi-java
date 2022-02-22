@@ -97,7 +97,6 @@ public final class MetadataAuthorResponse {
             this.name = name;
             return this;
         }
-
         public MetadataAuthorResponse build() {
             return new MetadataAuthorResponse(email, link, name);
         }

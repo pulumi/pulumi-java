@@ -75,7 +75,6 @@ public final class ResourceRequirementsResponse {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
-
         public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }

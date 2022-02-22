@@ -74,7 +74,6 @@ public final class DeploymentOutputEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeploymentOutputEntryResponse build() {
             return new DeploymentOutputEntryResponse(key, value);
         }

@@ -97,7 +97,6 @@ public final class GetFhirResult {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
-
         public GetFhirResult build() {
             return new GetFhirResult(contentType, data, extensions);
         }

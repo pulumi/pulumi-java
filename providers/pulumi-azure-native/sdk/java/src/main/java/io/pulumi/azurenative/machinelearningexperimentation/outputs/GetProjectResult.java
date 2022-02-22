@@ -308,7 +308,6 @@ public final class GetProjectResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(accountId, creationDate, description, friendlyName, gitrepo, id, location, name, projectId, provisioningState, tags, type, workspaceId);
         }

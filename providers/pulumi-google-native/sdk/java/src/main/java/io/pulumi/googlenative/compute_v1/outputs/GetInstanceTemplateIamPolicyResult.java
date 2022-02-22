@@ -142,7 +142,6 @@ public final class GetInstanceTemplateIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceTemplateIamPolicyResult build() {
             return new GetInstanceTemplateIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

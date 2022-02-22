@@ -18,7 +18,7 @@ public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
     public static final ParsedDataResponse Empty = new ParsedDataResponse();
 
     @InputImport(name="segments", required=true)
-    private final List<SegmentResponse> segments;
+      private final List<SegmentResponse> segments;
 
     public List<SegmentResponse> getSegments() {
         return this.segments;
@@ -56,7 +56,6 @@ public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
         public ParsedDataResponse build() {
             return new ParsedDataResponse(segments);
         }

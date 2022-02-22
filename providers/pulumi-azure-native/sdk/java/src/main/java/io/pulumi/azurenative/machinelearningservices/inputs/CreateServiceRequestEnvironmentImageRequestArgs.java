@@ -28,7 +28,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="assets")
-    private final @Nullable Input<List<ImageAssetArgs>> assets;
+        private final @Nullable Input<List<ImageAssetArgs>> assets;
 
     public Input<List<ImageAssetArgs>> getAssets() {
         return this.assets == null ? Input.empty() : this.assets;
@@ -39,7 +39,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="driverProgram")
-    private final @Nullable Input<String> driverProgram;
+        private final @Nullable Input<String> driverProgram;
 
     public Input<String> getDriverProgram() {
         return this.driverProgram == null ? Input.empty() : this.driverProgram;
@@ -50,7 +50,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment;
+        private final @Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment;
 
     public Input<EnvironmentImageRequestEnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -61,7 +61,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="environmentReference")
-    private final @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
+        private final @Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
 
     public Input<EnvironmentImageRequestEnvironmentReferenceArgs> getEnvironmentReference() {
         return this.environmentReference == null ? Input.empty() : this.environmentReference;
@@ -72,7 +72,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="modelIds")
-    private final @Nullable Input<List<String>> modelIds;
+        private final @Nullable Input<List<String>> modelIds;
 
     public Input<List<String>> getModelIds() {
         return this.modelIds == null ? Input.empty() : this.modelIds;
@@ -83,7 +83,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * 
      */
     @InputImport(name="models")
-    private final @Nullable Input<List<ModelArgs>> models;
+        private final @Nullable Input<List<ModelArgs>> models;
 
     public Input<List<ModelArgs>> getModels() {
         return this.models == null ? Input.empty() : this.models;
@@ -202,7 +202,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
             this.models = Input.ofNullable(models);
             return this;
         }
-
         public CreateServiceRequestEnvironmentImageRequestArgs build() {
             return new CreateServiceRequestEnvironmentImageRequestArgs(assets, driverProgram, environment, environmentReference, modelIds, models);
         }

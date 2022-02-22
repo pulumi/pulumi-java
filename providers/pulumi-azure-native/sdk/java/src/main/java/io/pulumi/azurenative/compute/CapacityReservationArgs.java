@@ -22,7 +22,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="capacityReservationGroupName", required=true)
-    private final Input<String> capacityReservationGroupName;
+        private final Input<String> capacityReservationGroupName;
 
     public Input<String> getCapacityReservationGroupName() {
         return this.capacityReservationGroupName;
@@ -33,7 +33,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="capacityReservationName")
-    private final @Nullable Input<String> capacityReservationName;
+        private final @Nullable Input<String> capacityReservationName;
 
     public Input<String> getCapacityReservationName() {
         return this.capacityReservationName == null ? Input.empty() : this.capacityReservationName;
@@ -44,7 +44,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -77,7 +77,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -222,7 +222,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public CapacityReservationArgs build() {
             return new CapacityReservationArgs(capacityReservationGroupName, capacityReservationName, location, resourceGroupName, sku, tags, zones);
         }

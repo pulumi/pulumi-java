@@ -23,7 +23,7 @@ public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -83,7 +83,6 @@ public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.version = version;
             return this;
         }
-
         public StackPropertiesResponse build() {
             return new StackPropertiesResponse(id, version);
         }

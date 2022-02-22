@@ -139,7 +139,6 @@ public final class GetEnvironmentSpecificationVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnvironmentSpecificationVersionResult build() {
             return new GetEnvironmentSpecificationVersionResult(id, name, properties, systemData, type);
         }

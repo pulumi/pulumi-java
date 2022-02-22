@@ -74,7 +74,6 @@ public final class LanguageCodePairResponse {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
-
         public LanguageCodePairResponse build() {
             return new LanguageCodePairResponse(sourceLanguageCode, targetLanguageCode);
         }

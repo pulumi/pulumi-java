@@ -231,7 +231,6 @@ public final class DynamicsAXResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicsAXResourceDatasetResponse build() {
             return new DynamicsAXResourceDatasetResponse(annotations, description, folder, linkedServiceName, parameters, path, schema, structure, type);
         }

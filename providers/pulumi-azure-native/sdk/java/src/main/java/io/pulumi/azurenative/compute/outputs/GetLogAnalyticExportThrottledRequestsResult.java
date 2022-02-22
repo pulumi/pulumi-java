@@ -52,7 +52,6 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetLogAnalyticExportThrottledRequestsResult build() {
             return new GetLogAnalyticExportThrottledRequestsResult(properties);
         }

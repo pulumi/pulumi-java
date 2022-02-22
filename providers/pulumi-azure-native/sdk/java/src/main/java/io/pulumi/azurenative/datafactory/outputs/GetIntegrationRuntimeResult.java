@@ -140,7 +140,6 @@ public final class GetIntegrationRuntimeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationRuntimeResult build() {
             return new GetIntegrationRuntimeResult(etag, id, name, properties, type);
         }

@@ -76,7 +76,6 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
             this.coreCount = coreCount;
             return this;
         }
-
         public ExecuteDataFlowActivityTypePropertiesResponseCompute build() {
             return new ExecuteDataFlowActivityTypePropertiesResponseCompute(computeType, coreCount);
         }

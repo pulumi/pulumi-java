@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableId")
-    private final @Nullable Input<String> tableId;
+      private final @Nullable Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId == null ? Input.empty() : this.tableId;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
             this.tableId = Input.ofNullable(tableId);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryTableArgs build() {
             return new GooglePrivacyDlpV2BigQueryTableArgs(datasetId, project, tableId);
         }

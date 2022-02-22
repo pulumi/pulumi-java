@@ -25,7 +25,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudSqlInstance")
-    private final @Nullable Input<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
+      private final @Nullable Input<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
 
     public Input<GoogleCloudRunOpV2CloudSqlInstanceArgs> getCloudSqlInstance() {
         return this.cloudSqlInstance == null ? Input.empty() : this.cloudSqlInstance;
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
+      private final @Nullable Input<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
 
     public Input<GoogleCloudRunOpV2SecretVolumeSourceArgs> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -121,7 +121,6 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2VolumeArgs build() {
             return new GoogleCloudRunOpV2VolumeArgs(cloudSqlInstance, name, secret);
         }

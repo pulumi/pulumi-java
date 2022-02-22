@@ -181,7 +181,6 @@ public final class X12FramingSettingsResponse {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public X12FramingSettingsResponse build() {
             return new X12FramingSettingsResponse(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
         }

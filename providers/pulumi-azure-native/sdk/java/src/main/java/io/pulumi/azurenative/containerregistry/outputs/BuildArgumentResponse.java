@@ -119,7 +119,6 @@ public final class BuildArgumentResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BuildArgumentResponse build() {
             return new BuildArgumentResponse(isSecret, name, type, value);
         }

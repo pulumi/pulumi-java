@@ -24,7 +24,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Integer count;
+        private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -46,7 +46,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Integer status;
+        private final @Nullable Integer status;
 
     public Optional<Integer> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -57,7 +57,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subStatus")
-    private final @Nullable Integer subStatus;
+        private final @Nullable Integer subStatus;
 
     public Optional<Integer> getSubStatus() {
         return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
@@ -68,7 +68,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeInterval")
-    private final @Nullable String timeInterval;
+        private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
@@ -79,7 +79,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="win32Status")
-    private final @Nullable Integer win32Status;
+        private final @Nullable Integer win32Status;
 
     public Optional<Integer> getWin32Status() {
         return this.win32Status == null ? Optional.empty() : Optional.ofNullable(this.win32Status);
@@ -168,7 +168,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
             this.win32Status = win32Status;
             return this;
         }
-
         public StatusCodesBasedTriggerResponse build() {
             return new StatusCodesBasedTriggerResponse(count, path, status, subStatus, timeInterval, win32Status);
         }

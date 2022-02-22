@@ -27,7 +27,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="hub")
-    private final @Nullable Input<ResourceIdArgs> hub;
+        private final @Nullable Input<ResourceIdArgs> hub;
 
     public Input<ResourceIdArgs> getHub() {
         return this.hub == null ? Input.empty() : this.hub;
@@ -38,7 +38,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="mesh")
-    private final @Nullable Input<List<ResourceIdArgs>> mesh;
+        private final @Nullable Input<List<ResourceIdArgs>> mesh;
 
     public Input<List<ResourceIdArgs>> getMesh() {
         return this.mesh == null ? Input.empty() : this.mesh;
@@ -49,7 +49,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="spokes")
-    private final @Nullable Input<List<ResourceIdArgs>> spokes;
+        private final @Nullable Input<List<ResourceIdArgs>> spokes;
 
     public Input<List<ResourceIdArgs>> getSpokes() {
         return this.spokes == null ? Input.empty() : this.spokes;
@@ -60,7 +60,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,Type>> type;
+        private final Input<Either<String,Type>> type;
 
     public Input<Either<String,Type>> getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ManagedNetworkPeeringPolicyPropertiesArgs build() {
             return new ManagedNetworkPeeringPolicyPropertiesArgs(hub, mesh, spokes, type);
         }

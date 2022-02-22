@@ -271,7 +271,6 @@ public final class GetSnapshotPolicyResult {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public GetSnapshotPolicyResult build() {
             return new GetSnapshotPolicyResult(dailySchedule, enabled, hourlySchedule, id, location, monthlySchedule, name, provisioningState, tags, type, weeklySchedule);
         }

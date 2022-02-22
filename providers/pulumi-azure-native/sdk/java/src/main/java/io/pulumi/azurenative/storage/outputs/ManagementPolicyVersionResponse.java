@@ -97,7 +97,6 @@ public final class ManagementPolicyVersionResponse {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public ManagementPolicyVersionResponse build() {
             return new ManagementPolicyVersionResponse(delete, tierToArchive, tierToCool);
         }

@@ -96,7 +96,6 @@ public final class SegmentResponse {
             this.setId = Objects.requireNonNull(setId);
             return this;
         }
-
         public SegmentResponse build() {
             return new SegmentResponse(fields, segmentId, setId);
         }

@@ -76,7 +76,6 @@ public final class ConsortiumResponse {
             this.protocol = protocol;
             return this;
         }
-
         public ConsortiumResponse build() {
             return new ConsortiumResponse(name, protocol);
         }

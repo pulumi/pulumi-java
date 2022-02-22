@@ -226,7 +226,6 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(endedOn, exceptionsAndWarnings, id, isEnabled, message, name, resultType, startedOn, state);
         }

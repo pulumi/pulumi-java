@@ -19,7 +19,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
     public static final GoogleCloudDatalabelingV1beta1AttemptResponse Empty = new GoogleCloudDatalabelingV1beta1AttemptResponse();
 
     @InputImport(name="attemptTime", required=true)
-    private final String attemptTime;
+      private final String attemptTime;
 
     public String getAttemptTime() {
         return this.attemptTime;
@@ -30,7 +30,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
      * 
      */
     @InputImport(name="partialFailures", required=true)
-    private final List<GoogleRpcStatusResponse> partialFailures;
+      private final List<GoogleRpcStatusResponse> partialFailures;
 
     public List<GoogleRpcStatusResponse> getPartialFailures() {
         return this.partialFailures;
@@ -79,7 +79,6 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
             this.partialFailures = Objects.requireNonNull(partialFailures);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
             return new GoogleCloudDatalabelingV1beta1AttemptResponse(attemptTime, partialFailures);
         }

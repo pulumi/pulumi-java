@@ -100,7 +100,6 @@ public final class GetVMwareCollectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVMwareCollectorResult build() {
             return new GetVMwareCollectorResult(eTag, id, name, properties, type);
         }

@@ -78,7 +78,6 @@ public final class ListActiveConnectivityConfigurationResult {
             this.value = value;
             return this;
         }
-
         public ListActiveConnectivityConfigurationResult build() {
             return new ListActiveConnectivityConfigurationResult(skipToken, value);
         }

@@ -227,7 +227,6 @@ public final class AzureDatabricksDeltaLakeSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureDatabricksDeltaLakeSinkResponse build() {
             return new AzureDatabricksDeltaLakeSinkResponse(disableMetricsCollection, importSettings, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

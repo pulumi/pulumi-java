@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="bigqueryRoutineSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
     public Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> getBigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec == null ? Input.empty() : this.bigqueryRoutineSpec;
@@ -38,7 +38,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="definitionBody")
-    private final @Nullable Input<String> definitionBody;
+      private final @Nullable Input<String> definitionBody;
 
     public Input<String> getDefinitionBody() {
         return this.definitionBody == null ? Input.empty() : this.definitionBody;
@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="language")
-    private final @Nullable Input<String> language;
+      private final @Nullable Input<String> language;
 
     public Input<String> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -60,7 +60,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="returnType")
-    private final @Nullable Input<String> returnType;
+      private final @Nullable Input<String> returnType;
 
     public Input<String> getReturnType() {
         return this.returnType == null ? Input.empty() : this.returnType;
@@ -71,7 +71,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="routineArguments")
-    private final @Nullable Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
+      private final @Nullable Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
     public Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> getRoutineArguments() {
         return this.routineArguments == null ? Input.empty() : this.routineArguments;
@@ -82,7 +82,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="routineType")
-    private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
+      private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 
     public Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> getRoutineType() {
         return this.routineType == null ? Input.empty() : this.routineType;
@@ -201,7 +201,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
             this.routineType = Input.ofNullable(routineType);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecArgs build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgs(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
         }

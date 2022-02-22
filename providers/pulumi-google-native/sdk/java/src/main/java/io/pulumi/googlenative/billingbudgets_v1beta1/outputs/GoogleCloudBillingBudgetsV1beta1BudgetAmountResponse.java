@@ -75,7 +75,6 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse {
             this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse(lastPeriodAmount, specifiedAmount);
         }

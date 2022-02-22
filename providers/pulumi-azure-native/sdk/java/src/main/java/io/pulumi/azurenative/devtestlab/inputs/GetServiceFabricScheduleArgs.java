@@ -19,7 +19,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="serviceFabricName", required=true)
-    private final String serviceFabricName;
+        private final String serviceFabricName;
 
     public String getServiceFabricName() {
         return this.serviceFabricName;
@@ -74,7 +74,7 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -163,7 +163,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetServiceFabricScheduleArgs build() {
             return new GetServiceFabricScheduleArgs(expand, labName, name, resourceGroupName, serviceFabricName, userName);
         }

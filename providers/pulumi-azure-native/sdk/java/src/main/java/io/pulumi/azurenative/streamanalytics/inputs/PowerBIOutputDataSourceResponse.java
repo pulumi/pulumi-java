@@ -23,7 +23,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable String dataset;
+        private final @Nullable String dataset;
 
     public Optional<String> getDataset() {
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
@@ -34,7 +34,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable String groupId;
+        private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -45,7 +45,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable String groupName;
+        private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
@@ -56,7 +56,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable String refreshToken;
+        private final @Nullable String refreshToken;
 
     public Optional<String> getRefreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
@@ -67,7 +67,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="table")
-    private final @Nullable String table;
+        private final @Nullable String table;
 
     public Optional<String> getTable() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
@@ -78,7 +78,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tokenUserDisplayName")
-    private final @Nullable String tokenUserDisplayName;
+        private final @Nullable String tokenUserDisplayName;
 
     public Optional<String> getTokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserDisplayName);
@@ -89,7 +89,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tokenUserPrincipalName")
-    private final @Nullable String tokenUserPrincipalName;
+        private final @Nullable String tokenUserPrincipalName;
 
     public Optional<String> getTokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserPrincipalName);
@@ -101,7 +101,7 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -210,7 +210,6 @@ public final class PowerBIOutputDataSourceResponse extends io.pulumi.resources.I
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PowerBIOutputDataSourceResponse build() {
             return new PowerBIOutputDataSourceResponse(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

@@ -247,7 +247,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_ParameterSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_ParameterSpecResponse(categoricalValueSpec, childParameterSpecs, discreteValueSpec, doubleValueSpec, integerValueSpec, parameter, parentCategoricalValues, parentDiscreteValues, parentIntValues, scaleType, type);
         }

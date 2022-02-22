@@ -384,7 +384,6 @@ public final class AmazonS3DatasetResponse {
             this.version = version;
             return this;
         }
-
         public AmazonS3DatasetResponse build() {
             return new AmazonS3DatasetResponse(annotations, bucketName, compression, description, folder, format, key, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, prefix, schema, structure, type, version);
         }

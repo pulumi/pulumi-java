@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2KindExpressionResponse build() {
             return new GooglePrivacyDlpV2KindExpressionResponse(name);
         }

@@ -21,14 +21,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -39,14 +39,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replication", required=true)
-    private final Input<ReplicationArgs> replication;
+      private final Input<ReplicationArgs> replication;
 
     public Input<ReplicationArgs> getReplication() {
         return this.replication;
     }
 
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
@@ -135,7 +135,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(labels, project, replication, secretId);
         }

@@ -310,7 +310,6 @@ public final class GetJobResult {
             this.trainingOutput = Objects.requireNonNull(trainingOutput);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(createTime, endTime, errorMessage, etag, jobId, jobPosition, labels, predictionInput, predictionOutput, startTime, state, trainingInput, trainingOutput);
         }

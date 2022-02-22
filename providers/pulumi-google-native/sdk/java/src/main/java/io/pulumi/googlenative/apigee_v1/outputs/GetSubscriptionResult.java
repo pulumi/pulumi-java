@@ -158,7 +158,6 @@ public final class GetSubscriptionResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(apiproduct, createdAt, endTime, lastModifiedAt, name, startTime);
         }

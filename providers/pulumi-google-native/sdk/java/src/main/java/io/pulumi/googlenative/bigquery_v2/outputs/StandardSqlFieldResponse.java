@@ -75,7 +75,6 @@ public final class StandardSqlFieldResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StandardSqlFieldResponse build() {
             return new StandardSqlFieldResponse(name, type);
         }

@@ -207,7 +207,6 @@ public final class HttpRouteActionResponse {
             this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
             return this;
         }
-
         public HttpRouteActionResponse build() {
             return new HttpRouteActionResponse(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

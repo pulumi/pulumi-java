@@ -24,7 +24,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider")
-    private final @Nullable Input<NetworkPolicyProvider> provider;
+      private final @Nullable Input<NetworkPolicyProvider> provider;
 
     public Input<NetworkPolicyProvider> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
@@ -94,7 +94,6 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.provider = Input.ofNullable(provider);
             return this;
         }
-
         public NetworkPolicyArgs build() {
             return new NetworkPolicyArgs(enabled, provider);
         }

@@ -109,7 +109,6 @@ public final class GetProviderRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProviderRegistrationResult build() {
             return new GetProviderRegistrationResult(id, name, properties, type);
         }

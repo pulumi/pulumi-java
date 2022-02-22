@@ -22,70 +22,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComponentArgs Empty = new ComponentArgs();
 
     @InputImport(name="a", required=true)
-    private final Boolean a;
+        private final Boolean a;
 
     public Boolean getA() {
         return this.a;
     }
 
     @InputImport(name="b")
-    private final @Nullable Boolean b;
+        private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
         return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @InputImport(name="bar")
-    private final @Nullable Foo bar;
+        private final @Nullable Foo bar;
 
     public Optional<Foo> getBar() {
         return this.bar == null ? Optional.empty() : Optional.ofNullable(this.bar);
     }
 
     @InputImport(name="baz")
-    private final @Nullable List<Foo> baz;
+        private final @Nullable List<Foo> baz;
 
     public List<Foo> getBaz() {
         return this.baz == null ? List.of() : this.baz;
     }
 
     @InputImport(name="bazMap")
-    private final @Nullable Map<String,Foo> bazMap;
+        private final @Nullable Map<String,Foo> bazMap;
 
     public Map<String,Foo> getBazMap() {
         return this.bazMap == null ? Map.of() : this.bazMap;
     }
 
     @InputImport(name="c", required=true)
-    private final Integer c;
+        private final Integer c;
 
     public Integer getC() {
         return this.c;
     }
 
     @InputImport(name="d")
-    private final @Nullable Integer d;
+        private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
         return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @InputImport(name="e", required=true)
-    private final String e;
+        private final String e;
 
     public String getE() {
         return this.e;
     }
 
     @InputImport(name="f")
-    private final @Nullable String f;
+        private final @Nullable String f;
 
     public Optional<String> getF() {
         return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
     }
 
     @InputImport(name="foo")
-    private final @Nullable Input<FooArgs> foo;
+        private final @Nullable Input<FooArgs> foo;
 
     public Input<FooArgs> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
@@ -219,7 +219,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.foo = Input.ofNullable(foo);
             return this;
         }
-
         public ComponentArgs build() {
             return new ComponentArgs(a, b, bar, baz, bazMap, c, d, e, f, foo);
         }

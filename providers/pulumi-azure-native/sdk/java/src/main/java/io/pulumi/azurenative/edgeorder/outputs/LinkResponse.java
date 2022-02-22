@@ -74,7 +74,6 @@ public final class LinkResponse {
             this.linkUrl = Objects.requireNonNull(linkUrl);
             return this;
         }
-
         public LinkResponse build() {
             return new LinkResponse(linkType, linkUrl);
         }

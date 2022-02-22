@@ -54,7 +54,6 @@ public final class SystemAssignedIdentityAuthInfoResponse {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public SystemAssignedIdentityAuthInfoResponse build() {
             return new SystemAssignedIdentityAuthInfoResponse(authType);
         }

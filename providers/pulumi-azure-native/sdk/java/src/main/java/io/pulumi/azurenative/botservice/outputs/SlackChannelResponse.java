@@ -142,7 +142,6 @@ public final class SlackChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public SlackChannelResponse build() {
             return new SlackChannelResponse(channelName, etag, location, properties, provisioningState);
         }

@@ -139,7 +139,6 @@ public final class AgentDiskDetailsResponse {
             this.lunId = Objects.requireNonNull(lunId);
             return this;
         }
-
         public AgentDiskDetailsResponse build() {
             return new AgentDiskDetailsResponse(capacityInBytes, diskId, diskName, isOSDisk, lunId);
         }

@@ -229,7 +229,6 @@ public final class MetricCriteriaResponse {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public MetricCriteriaResponse build() {
             return new MetricCriteriaResponse(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
         }

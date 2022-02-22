@@ -161,7 +161,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecResponse(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
         }

@@ -24,7 +24,7 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -35,7 +35,7 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<WebhookConfigState> state;
+      private final @Nullable Input<WebhookConfigState> state;
 
     public Input<WebhookConfigState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -94,7 +94,6 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public WebhookConfigArgs build() {
             return new WebhookConfigArgs(secret, state);
         }

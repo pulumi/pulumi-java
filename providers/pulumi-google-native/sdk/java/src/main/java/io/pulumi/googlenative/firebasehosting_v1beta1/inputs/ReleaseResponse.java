@@ -23,7 +23,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -34,7 +34,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="releaseTime", required=true)
-    private final String releaseTime;
+      private final String releaseTime;
 
     public String getReleaseTime() {
         return this.releaseTime;
@@ -56,7 +56,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="releaseUser", required=true)
-    private final ActingUserResponse releaseUser;
+      private final ActingUserResponse releaseUser;
 
     public ActingUserResponse getReleaseUser() {
         return this.releaseUser;
@@ -67,7 +67,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -78,7 +78,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final VersionResponse version;
+      private final VersionResponse version;
 
     public VersionResponse getVersion() {
         return this.version;
@@ -167,7 +167,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReleaseResponse build() {
             return new ReleaseResponse(message, name, releaseTime, releaseUser, type, version);
         }

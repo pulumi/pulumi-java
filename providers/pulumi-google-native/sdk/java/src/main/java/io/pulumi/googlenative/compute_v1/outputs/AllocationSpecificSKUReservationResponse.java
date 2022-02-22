@@ -96,7 +96,6 @@ public final class AllocationSpecificSKUReservationResponse {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationResponse build() {
             return new AllocationSpecificSKUReservationResponse(count, inUseCount, instanceProperties);
         }

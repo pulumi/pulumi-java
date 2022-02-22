@@ -120,7 +120,6 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetUserTablesSqlSyncTaskOutputResponse build() {
             return new GetUserTablesSqlSyncTaskOutputResponse(databasesToSourceTables, databasesToTargetTables, tableValidationErrors, validationErrors);
         }

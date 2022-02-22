@@ -22,7 +22,7 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
      * 
      */
     @InputImport(name="domainNameLabel", required=true)
-    private final Input<String> domainNameLabel;
+        private final Input<String> domainNameLabel;
 
     public Input<String> getDomainNameLabel() {
         return this.domainNameLabel;
@@ -65,7 +65,6 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
             this.domainNameLabel = Input.of(Objects.requireNonNull(domainNameLabel));
             return this;
         }
-
         public VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs build() {
             return new VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(domainNameLabel);
         }

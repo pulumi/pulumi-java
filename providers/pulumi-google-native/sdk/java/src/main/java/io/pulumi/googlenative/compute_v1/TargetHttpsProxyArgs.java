@@ -22,7 +22,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authorizationPolicy")
-    private final @Nullable Input<String> authorizationPolicy;
+      private final @Nullable Input<String> authorizationPolicy;
 
     public Input<String> getAuthorizationPolicy() {
         return this.authorizationPolicy == null ? Input.empty() : this.authorizationPolicy;
@@ -33,7 +33,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,14 +44,14 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -62,7 +62,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="proxyBind")
-    private final @Nullable Input<Boolean> proxyBind;
+      private final @Nullable Input<Boolean> proxyBind;
 
     public Input<Boolean> getProxyBind() {
         return this.proxyBind == null ? Input.empty() : this.proxyBind;
@@ -73,14 +73,14 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="quicOverride")
-    private final @Nullable Input<TargetHttpsProxyQuicOverride> quicOverride;
+      private final @Nullable Input<TargetHttpsProxyQuicOverride> quicOverride;
 
     public Input<TargetHttpsProxyQuicOverride> getQuicOverride() {
         return this.quicOverride == null ? Input.empty() : this.quicOverride;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -91,7 +91,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverTlsPolicy")
-    private final @Nullable Input<String> serverTlsPolicy;
+      private final @Nullable Input<String> serverTlsPolicy;
 
     public Input<String> getServerTlsPolicy() {
         return this.serverTlsPolicy == null ? Input.empty() : this.serverTlsPolicy;
@@ -102,7 +102,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sslCertificates")
-    private final @Nullable Input<List<String>> sslCertificates;
+      private final @Nullable Input<List<String>> sslCertificates;
 
     public Input<List<String>> getSslCertificates() {
         return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
@@ -113,7 +113,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -124,7 +124,7 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlMap")
-    private final @Nullable Input<String> urlMap;
+      private final @Nullable Input<String> urlMap;
 
     public Input<String> getUrlMap() {
         return this.urlMap == null ? Input.empty() : this.urlMap;
@@ -318,7 +318,6 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }
-
         public TargetHttpsProxyArgs build() {
             return new TargetHttpsProxyArgs(authorizationPolicy, description, name, project, proxyBind, quicOverride, requestId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
         }

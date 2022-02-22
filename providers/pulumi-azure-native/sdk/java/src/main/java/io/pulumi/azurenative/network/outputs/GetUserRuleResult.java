@@ -159,7 +159,6 @@ public final class GetUserRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUserRuleResult build() {
             return new GetUserRuleResult(etag, id, kind, name, systemData, type);
         }

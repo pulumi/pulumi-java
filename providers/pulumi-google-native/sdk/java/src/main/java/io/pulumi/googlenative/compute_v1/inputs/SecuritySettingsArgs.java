@@ -24,7 +24,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientTlsPolicy")
-    private final @Nullable Input<String> clientTlsPolicy;
+      private final @Nullable Input<String> clientTlsPolicy;
 
     public Input<String> getClientTlsPolicy() {
         return this.clientTlsPolicy == null ? Input.empty() : this.clientTlsPolicy;
@@ -35,7 +35,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subjectAltNames")
-    private final @Nullable Input<List<String>> subjectAltNames;
+      private final @Nullable Input<List<String>> subjectAltNames;
 
     public Input<List<String>> getSubjectAltNames() {
         return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
@@ -94,7 +94,6 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
             this.subjectAltNames = Input.ofNullable(subjectAltNames);
             return this;
         }
-
         public SecuritySettingsArgs build() {
             return new SecuritySettingsArgs(clientTlsPolicy, subjectAltNames);
         }

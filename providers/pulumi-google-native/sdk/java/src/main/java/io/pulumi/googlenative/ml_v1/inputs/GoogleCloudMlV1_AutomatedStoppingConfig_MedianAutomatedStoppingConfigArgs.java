@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
      * 
      */
     @InputImport(name="useElapsedTime")
-    private final @Nullable Input<Boolean> useElapsedTime;
+      private final @Nullable Input<Boolean> useElapsedTime;
 
     public Input<Boolean> getUseElapsedTime() {
         return this.useElapsedTime == null ? Input.empty() : this.useElapsedTime;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
             this.useElapsedTime = Input.ofNullable(useElapsedTime);
             return this;
         }
-
         public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs(useElapsedTime);
         }

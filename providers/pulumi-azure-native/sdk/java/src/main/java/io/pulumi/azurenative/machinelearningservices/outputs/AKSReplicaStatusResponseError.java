@@ -52,7 +52,6 @@ public final class AKSReplicaStatusResponseError {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public AKSReplicaStatusResponseError build() {
             return new AKSReplicaStatusResponseError(error);
         }

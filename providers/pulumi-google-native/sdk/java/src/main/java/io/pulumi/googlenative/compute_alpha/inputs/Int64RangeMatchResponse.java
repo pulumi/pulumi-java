@@ -21,7 +21,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rangeEnd", required=true)
-    private final String rangeEnd;
+      private final String rangeEnd;
 
     public String getRangeEnd() {
         return this.rangeEnd;
@@ -32,7 +32,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rangeStart", required=true)
-    private final String rangeStart;
+      private final String rangeStart;
 
     public String getRangeStart() {
         return this.rangeStart;
@@ -81,7 +81,6 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public Int64RangeMatchResponse build() {
             return new Int64RangeMatchResponse(rangeEnd, rangeStart);
         }

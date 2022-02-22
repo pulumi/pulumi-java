@@ -249,7 +249,6 @@ public final class GetStreamingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingPolicyResult build() {
             return new GetStreamingPolicyResult(commonEncryptionCbcs, commonEncryptionCenc, created, defaultContentKeyPolicyName, envelopeEncryption, id, name, noEncryption, systemData, type);
         }

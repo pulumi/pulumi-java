@@ -95,7 +95,6 @@ public final class ErrorHandlerResponse {
             this.staticFile = Objects.requireNonNull(staticFile);
             return this;
         }
-
         public ErrorHandlerResponse build() {
             return new ErrorHandlerResponse(errorCode, mimeType, staticFile);
         }

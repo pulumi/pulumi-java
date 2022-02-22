@@ -205,7 +205,6 @@ public final class AzureMariaDBSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMariaDBSourceResponse build() {
             return new AzureMariaDBSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

@@ -19,7 +19,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
      * 
      */
     @InputImport(name="useElapsedTime")
-    private final @Nullable Input<Boolean> useElapsedTime;
+      private final @Nullable Input<Boolean> useElapsedTime;
 
     public Input<Boolean> getUseElapsedTime() {
         return this.useElapsedTime == null ? Input.empty() : this.useElapsedTime;
@@ -62,7 +62,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
             this.useElapsedTime = Input.ofNullable(useElapsedTime);
             return this;
         }
-
         public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs(useElapsedTime);
         }

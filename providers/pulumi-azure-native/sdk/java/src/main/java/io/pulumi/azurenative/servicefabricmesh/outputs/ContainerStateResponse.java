@@ -139,7 +139,6 @@ public final class ContainerStateResponse {
             this.state = state;
             return this;
         }
-
         public ContainerStateResponse build() {
             return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
         }

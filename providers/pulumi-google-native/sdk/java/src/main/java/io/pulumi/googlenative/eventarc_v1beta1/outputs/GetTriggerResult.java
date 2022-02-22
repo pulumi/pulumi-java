@@ -226,7 +226,6 @@ public final class GetTriggerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(createTime, destination, etag, labels, matchingCriteria, name, serviceAccount, transport, updateTime);
         }

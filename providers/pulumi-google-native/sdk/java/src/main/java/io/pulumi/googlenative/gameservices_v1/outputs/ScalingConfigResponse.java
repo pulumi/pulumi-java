@@ -119,7 +119,6 @@ public final class ScalingConfigResponse {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-
         public ScalingConfigResponse build() {
             return new ScalingConfigResponse(fleetAutoscalerSpec, name, schedules, selectors);
         }

@@ -28,7 +28,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alertChart", required=true)
-    private final AlertChartResponse alertChart;
+      private final AlertChartResponse alertChart;
 
     public AlertChartResponse getAlertChart() {
         return this.alertChart;
@@ -39,7 +39,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blank", required=true)
-    private final EmptyResponse blank;
+      private final EmptyResponse blank;
 
     public EmptyResponse getBlank() {
         return this.blank;
@@ -50,7 +50,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logsPanel", required=true)
-    private final LogsPanelResponse logsPanel;
+      private final LogsPanelResponse logsPanel;
 
     public LogsPanelResponse getLogsPanel() {
         return this.logsPanel;
@@ -61,7 +61,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scorecard", required=true)
-    private final ScorecardResponse scorecard;
+      private final ScorecardResponse scorecard;
 
     public ScorecardResponse getScorecard() {
         return this.scorecard;
@@ -72,7 +72,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="text", required=true)
-    private final TextResponse text;
+      private final TextResponse text;
 
     public TextResponse getText() {
         return this.text;
@@ -83,7 +83,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeSeriesTable", required=true)
-    private final TimeSeriesTableResponse timeSeriesTable;
+      private final TimeSeriesTableResponse timeSeriesTable;
 
     public TimeSeriesTableResponse getTimeSeriesTable() {
         return this.timeSeriesTable;
@@ -94,7 +94,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -105,7 +105,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xyChart", required=true)
-    private final XyChartResponse xyChart;
+      private final XyChartResponse xyChart;
 
     public XyChartResponse getXyChart() {
         return this.xyChart;
@@ -214,7 +214,6 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
             this.xyChart = Objects.requireNonNull(xyChart);
             return this;
         }
-
         public WidgetResponse build() {
             return new WidgetResponse(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }

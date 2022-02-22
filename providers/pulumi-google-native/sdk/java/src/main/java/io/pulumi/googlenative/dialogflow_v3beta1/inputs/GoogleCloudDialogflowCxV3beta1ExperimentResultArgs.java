@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends io
      * 
      */
     @InputImport(name="lastUpdateTime")
-    private final @Nullable Input<String> lastUpdateTime;
+      private final @Nullable Input<String> lastUpdateTime;
 
     public Input<String> getLastUpdateTime() {
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends io
      * 
      */
     @InputImport(name="versionMetrics")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> getVersionMetrics() {
         return this.versionMetrics == null ? Input.empty() : this.versionMetrics;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends io
             this.versionMetrics = Input.ofNullable(versionMetrics);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(lastUpdateTime, versionMetrics);
         }

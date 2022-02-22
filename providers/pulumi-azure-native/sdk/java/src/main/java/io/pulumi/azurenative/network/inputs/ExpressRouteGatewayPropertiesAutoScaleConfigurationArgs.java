@@ -23,7 +23,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
      * 
      */
     @InputImport(name="bounds")
-    private final @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+        private final @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
     public Input<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
         return this.bounds == null ? Input.empty() : this.bounds;
@@ -66,7 +66,6 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
             this.bounds = Input.ofNullable(bounds);
             return this;
         }
-
         public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
             return new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(bounds);
         }

@@ -77,7 +77,6 @@ public final class MediaGraphPemCertificateListResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphPemCertificateListResponse build() {
             return new MediaGraphPemCertificateListResponse(certificates, odataType);
         }

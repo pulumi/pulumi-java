@@ -76,7 +76,6 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-
         public ApplicationPackageLockingPolicyDefinitionResponse build() {
             return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
         }

@@ -54,7 +54,6 @@ public final class ConfigurationProfileResourcePropertiesResponse {
             this.notifications = notifications;
             return this;
         }
-
         public ConfigurationProfileResourcePropertiesResponse build() {
             return new ConfigurationProfileResourcePropertiesResponse(notifications);
         }

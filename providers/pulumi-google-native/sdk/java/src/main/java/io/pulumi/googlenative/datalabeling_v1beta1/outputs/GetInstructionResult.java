@@ -202,7 +202,6 @@ public final class GetInstructionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetInstructionResult build() {
             return new GetInstructionResult(blockingResources, createTime, dataType, description, displayName, name, pdfInstruction, updateTime);
         }

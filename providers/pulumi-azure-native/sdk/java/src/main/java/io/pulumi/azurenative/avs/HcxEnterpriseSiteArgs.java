@@ -19,7 +19,7 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hcxEnterpriseSiteName")
-    private final @Nullable Input<String> hcxEnterpriseSiteName;
+        private final @Nullable Input<String> hcxEnterpriseSiteName;
 
     public Input<String> getHcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName == null ? Input.empty() : this.hcxEnterpriseSiteName;
@@ -30,7 +30,7 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -41,7 +41,7 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +115,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public HcxEnterpriseSiteArgs build() {
             return new HcxEnterpriseSiteArgs(hcxEnterpriseSiteName, privateCloudName, resourceGroupName);
         }

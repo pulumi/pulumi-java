@@ -21,7 +21,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountResourceName", required=true)
-    private final Input<String> accountResourceName;
+        private final Input<String> accountResourceName;
 
     public Input<String> getAccountResourceName() {
         return this.accountResourceName;
@@ -32,7 +32,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionResourceName")
-    private final @Nullable Input<String> extensionResourceName;
+        private final @Nullable Input<String> extensionResourceName;
 
     public Input<String> getExtensionResourceName() {
         return this.extensionResourceName == null ? Input.empty() : this.extensionResourceName;
@@ -43,7 +43,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<ExtensionResourcePlanArgs> plan;
+        private final @Nullable Input<ExtensionResourcePlanArgs> plan;
 
     public Input<ExtensionResourcePlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -65,7 +65,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -76,7 +76,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -221,7 +221,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ExtensionArgs build() {
             return new ExtensionArgs(accountResourceName, extensionResourceName, location, plan, properties, resourceGroupName, tags);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      * 
      */
     @InputImport(name="transcriptSegments", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
+      private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
         return this.transcriptSegments;
@@ -60,7 +60,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
             this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(transcriptSegments);
         }

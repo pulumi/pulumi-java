@@ -53,7 +53,6 @@ public final class TableFieldSchemaCategoriesResponse {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public TableFieldSchemaCategoriesResponse build() {
             return new TableFieldSchemaCategoriesResponse(names);
         }

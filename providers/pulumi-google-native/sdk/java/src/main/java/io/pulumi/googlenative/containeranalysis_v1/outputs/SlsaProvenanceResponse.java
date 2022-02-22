@@ -112,7 +112,6 @@ public final class SlsaProvenanceResponse {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public SlsaProvenanceResponse build() {
             return new SlsaProvenanceResponse(builder, materials, metadata, recipe);
         }

@@ -23,56 +23,56 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
     public static final DefaultRolloutPropertiesSpecificationArgs Empty = new DefaultRolloutPropertiesSpecificationArgs();
 
     @InputImport(name="canary")
-    private final @Nullable Input<DefaultRolloutSpecificationCanaryArgs> canary;
+        private final @Nullable Input<DefaultRolloutSpecificationCanaryArgs> canary;
 
     public Input<DefaultRolloutSpecificationCanaryArgs> getCanary() {
         return this.canary == null ? Input.empty() : this.canary;
     }
 
     @InputImport(name="highTraffic")
-    private final @Nullable Input<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
+        private final @Nullable Input<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
     public Input<DefaultRolloutSpecificationHighTrafficArgs> getHighTraffic() {
         return this.highTraffic == null ? Input.empty() : this.highTraffic;
     }
 
     @InputImport(name="lowTraffic")
-    private final @Nullable Input<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
+        private final @Nullable Input<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
     public Input<DefaultRolloutSpecificationLowTrafficArgs> getLowTraffic() {
         return this.lowTraffic == null ? Input.empty() : this.lowTraffic;
     }
 
     @InputImport(name="mediumTraffic")
-    private final @Nullable Input<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
+        private final @Nullable Input<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
     public Input<DefaultRolloutSpecificationMediumTrafficArgs> getMediumTraffic() {
         return this.mediumTraffic == null ? Input.empty() : this.mediumTraffic;
     }
 
     @InputImport(name="providerRegistration")
-    private final @Nullable Input<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
+        private final @Nullable Input<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
     public Input<DefaultRolloutSpecificationProviderRegistrationArgs> getProviderRegistration() {
         return this.providerRegistration == null ? Input.empty() : this.providerRegistration;
     }
 
     @InputImport(name="resourceTypeRegistrations")
-    private final @Nullable Input<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
+        private final @Nullable Input<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
     public Input<List<ResourceTypeRegistrationArgs>> getResourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? Input.empty() : this.resourceTypeRegistrations;
     }
 
     @InputImport(name="restOfTheWorldGroupOne")
-    private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
+        private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
     public Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> getRestOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Input.empty() : this.restOfTheWorldGroupOne;
     }
 
     @InputImport(name="restOfTheWorldGroupTwo")
-    private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
+        private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 
     public Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> getRestOfTheWorldGroupTwo() {
         return this.restOfTheWorldGroupTwo == null ? Input.empty() : this.restOfTheWorldGroupTwo;
@@ -221,7 +221,6 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             this.restOfTheWorldGroupTwo = Input.ofNullable(restOfTheWorldGroupTwo);
             return this;
         }
-
         public DefaultRolloutPropertiesSpecificationArgs build() {
             return new DefaultRolloutPropertiesSpecificationArgs(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }

@@ -231,7 +231,6 @@ public final class ODataResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ODataResourceDatasetResponse build() {
             return new ODataResourceDatasetResponse(annotations, description, folder, linkedServiceName, parameters, path, schema, structure, type);
         }

@@ -22,7 +22,7 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final Input<String> humanReadableName;
+      private final Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName;
@@ -65,7 +65,6 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
             this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
             return this;
         }
-
         public DSSEHintArgs build() {
             return new DSSEHintArgs(humanReadableName);
         }

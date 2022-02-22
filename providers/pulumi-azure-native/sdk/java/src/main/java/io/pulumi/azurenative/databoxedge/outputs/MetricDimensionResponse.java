@@ -74,7 +74,6 @@ public final class MetricDimensionResponse {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public MetricDimensionResponse build() {
             return new MetricDimensionResponse(sourceName, sourceType);
         }

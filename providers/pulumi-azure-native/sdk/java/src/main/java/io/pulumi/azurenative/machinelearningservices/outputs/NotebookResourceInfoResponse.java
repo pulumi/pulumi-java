@@ -90,7 +90,6 @@ public final class NotebookResourceInfoResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public NotebookResourceInfoResponse build() {
             return new NotebookResourceInfoResponse(fqdn, notebookPreparationError, resourceId);
         }

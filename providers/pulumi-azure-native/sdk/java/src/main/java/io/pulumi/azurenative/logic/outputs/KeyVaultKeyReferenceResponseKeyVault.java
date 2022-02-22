@@ -97,7 +97,6 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KeyVaultKeyReferenceResponseKeyVault build() {
             return new KeyVaultKeyReferenceResponseKeyVault(id, name, type);
         }

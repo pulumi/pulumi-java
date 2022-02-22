@@ -163,7 +163,6 @@ public final class PreprocessingConfigResponse {
             this.pad = Objects.requireNonNull(pad);
             return this;
         }
-
         public PreprocessingConfigResponse build() {
             return new PreprocessingConfigResponse(audio, color, crop, deblock, denoise, pad);
         }

@@ -401,7 +401,6 @@ public final class GetPrivateLinkServiceResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetPrivateLinkServiceResult build() {
             return new GetPrivateLinkServiceResult(alias, autoApproval, enableProxyProtocol, etag, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, name, networkInterfaces, privateEndpointConnections, provisioningState, tags, type, visibility);
         }

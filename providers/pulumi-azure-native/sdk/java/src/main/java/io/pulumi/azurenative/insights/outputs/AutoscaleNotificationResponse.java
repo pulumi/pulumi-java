@@ -100,7 +100,6 @@ public final class AutoscaleNotificationResponse {
             this.webhooks = webhooks;
             return this;
         }
-
         public AutoscaleNotificationResponse build() {
             return new AutoscaleNotificationResponse(email, operation, webhooks);
         }

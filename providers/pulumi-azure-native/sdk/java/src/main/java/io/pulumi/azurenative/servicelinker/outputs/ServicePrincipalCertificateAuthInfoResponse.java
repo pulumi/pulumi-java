@@ -118,7 +118,6 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ServicePrincipalCertificateAuthInfoResponse build() {
             return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
         }

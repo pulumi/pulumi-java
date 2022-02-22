@@ -96,7 +96,6 @@ public final class AS2OneWayAgreementResponse {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public AS2OneWayAgreementResponse build() {
             return new AS2OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

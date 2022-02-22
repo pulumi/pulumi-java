@@ -332,7 +332,6 @@ public final class GetRoutineResult {
             this.strictMode = Objects.requireNonNull(strictMode);
             return this;
         }
-
         public GetRoutineResult build() {
             return new GetRoutineResult(arguments, creationTime, definitionBody, description, determinismLevel, etag, importedLibraries, language, lastModifiedTime, returnTableType, returnType, routineReference, routineType, strictMode);
         }

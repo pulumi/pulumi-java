@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+        private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inventoryItemId")
-    private final @Nullable Input<String> inventoryItemId;
+        private final @Nullable Input<String> inventoryItemId;
 
     public Input<String> getInventoryItemId() {
         return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -65,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moRefId")
-    private final @Nullable Input<String> moRefId;
+        private final @Nullable Input<String> moRefId;
 
     public Input<String> getMoRefId() {
         return this.moRefId == null ? Input.empty() : this.moRefId;
@@ -87,7 +87,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -109,7 +109,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vCenterId")
-    private final @Nullable Input<String> vCenterId;
+        private final @Nullable Input<String> vCenterId;
 
     public Input<String> getVCenterId() {
         return this.vCenterId == null ? Input.empty() : this.vCenterId;
@@ -273,7 +273,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.vCenterId = Input.ofNullable(vCenterId);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(clusterName, extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId);
         }

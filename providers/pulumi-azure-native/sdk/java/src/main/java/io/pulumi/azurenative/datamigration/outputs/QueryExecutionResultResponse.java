@@ -118,7 +118,6 @@ public final class QueryExecutionResultResponse {
             this.targetResult = Objects.requireNonNull(targetResult);
             return this;
         }
-
         public QueryExecutionResultResponse build() {
             return new QueryExecutionResultResponse(queryText, sourceResult, statementsInBatch, targetResult);
         }

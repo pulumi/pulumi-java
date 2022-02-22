@@ -337,7 +337,6 @@ public final class GetVpnGatewayResult {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-
         public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(bgpSettings, connections, etag, id, ipConfigurations, isRoutingPreferenceInternet, location, name, natRules, provisioningState, tags, type, virtualHub, vpnGatewayScaleUnit);
         }

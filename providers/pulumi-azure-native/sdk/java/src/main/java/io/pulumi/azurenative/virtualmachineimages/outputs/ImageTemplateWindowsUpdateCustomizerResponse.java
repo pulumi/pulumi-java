@@ -143,7 +143,6 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
             this.updateLimit = updateLimit;
             return this;
         }
-
         public ImageTemplateWindowsUpdateCustomizerResponse build() {
             return new ImageTemplateWindowsUpdateCustomizerResponse(filters, name, searchCriteria, type, updateLimit);
         }

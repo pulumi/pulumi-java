@@ -76,7 +76,6 @@ public final class ReferenceDataSetKeyPropertyResponse {
             this.type = type;
             return this;
         }
-
         public ReferenceDataSetKeyPropertyResponse build() {
             return new ReferenceDataSetKeyPropertyResponse(name, type);
         }

@@ -376,7 +376,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(databaseSummary, databases, durationInSeconds, endedOn, exceptionsAndWarnings, id, message, migrationReport, resultType, sourceServerBrandVersion, sourceServerVersion, startedOn, status, statusMessage, targetServerBrandVersion, targetServerVersion);
         }

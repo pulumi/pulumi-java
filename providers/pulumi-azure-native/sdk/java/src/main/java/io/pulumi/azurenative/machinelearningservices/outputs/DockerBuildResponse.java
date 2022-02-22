@@ -127,7 +127,6 @@ public final class DockerBuildResponse {
             this.platform = platform;
             return this;
         }
-
         public DockerBuildResponse build() {
             return new DockerBuildResponse(context, dockerSpecificationType, dockerfile, platform);
         }

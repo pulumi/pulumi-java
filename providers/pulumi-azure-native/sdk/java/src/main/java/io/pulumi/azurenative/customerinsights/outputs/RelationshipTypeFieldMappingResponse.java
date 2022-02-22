@@ -74,7 +74,6 @@ public final class RelationshipTypeFieldMappingResponse {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }
-
         public RelationshipTypeFieldMappingResponse build() {
             return new RelationshipTypeFieldMappingResponse(profileFieldName, relatedProfileKeyProperty);
         }

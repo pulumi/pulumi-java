@@ -19,7 +19,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maxAgeSeconds", required=true)
-    private final Integer maxAgeSeconds;
+      private final Integer maxAgeSeconds;
 
     public Integer getMaxAgeSeconds() {
         return this.maxAgeSeconds;
@@ -30,7 +30,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="method", required=true)
-    private final List<String> method;
+      private final List<String> method;
 
     public List<String> getMethod() {
         return this.method;
@@ -41,7 +41,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="origin", required=true)
-    private final List<String> origin;
+      private final List<String> origin;
 
     public List<String> getOrigin() {
         return this.origin;
@@ -52,7 +52,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="responseHeader", required=true)
-    private final List<String> responseHeader;
+      private final List<String> responseHeader;
 
     public List<String> getResponseHeader() {
         return this.responseHeader;
@@ -121,7 +121,6 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }
-
         public BucketCorsItemResponse build() {
             return new BucketCorsItemResponse(maxAgeSeconds, method, origin, responseHeader);
         }

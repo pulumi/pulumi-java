@@ -15,21 +15,21 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyRingArgs Empty = new KeyRingArgs();
 
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,6 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public KeyRingArgs build() {
             return new KeyRingArgs(keyRingId, location, project);
         }

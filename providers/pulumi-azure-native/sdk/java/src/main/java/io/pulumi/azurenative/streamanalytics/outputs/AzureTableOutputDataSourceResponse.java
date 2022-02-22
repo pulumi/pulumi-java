@@ -206,7 +206,6 @@ public final class AzureTableOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureTableOutputDataSourceResponse build() {
             return new AzureTableOutputDataSourceResponse(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
         }

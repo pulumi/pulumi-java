@@ -76,7 +76,6 @@ public final class EnvironmentStateDetailsResponse {
             this.message = message;
             return this;
         }
-
         public EnvironmentStateDetailsResponse build() {
             return new EnvironmentStateDetailsResponse(code, message);
         }

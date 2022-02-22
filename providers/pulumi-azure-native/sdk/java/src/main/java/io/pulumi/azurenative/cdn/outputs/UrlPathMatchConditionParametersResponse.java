@@ -133,7 +133,6 @@ public final class UrlPathMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public UrlPathMatchConditionParametersResponse build() {
             return new UrlPathMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

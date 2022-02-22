@@ -17,7 +17,7 @@ public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="webTestName", required=true)
-    private final String webTestName;
+        private final String webTestName;
 
     public String getWebTestName() {
         return this.webTestName;
@@ -77,7 +77,6 @@ public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }
-
         public GetWebTestArgs build() {
             return new GetWebTestArgs(resourceGroupName, webTestName);
         }

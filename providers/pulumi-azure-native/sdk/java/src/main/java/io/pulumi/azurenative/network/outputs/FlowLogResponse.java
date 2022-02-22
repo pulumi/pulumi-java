@@ -333,7 +333,6 @@ public final class FlowLogResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FlowLogResponse build() {
             return new FlowLogResponse(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
         }

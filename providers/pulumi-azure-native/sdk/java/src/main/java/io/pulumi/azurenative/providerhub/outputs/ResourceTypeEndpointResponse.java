@@ -129,7 +129,6 @@ public final class ResourceTypeEndpointResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ResourceTypeEndpointResponse build() {
             return new ResourceTypeEndpointResponse(apiVersions, enabled, extensions, featuresRule, locations, requiredFeatures, timeout);
         }

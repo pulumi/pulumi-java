@@ -99,7 +99,6 @@ public final class CloudToDevicePropertiesResponse {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public CloudToDevicePropertiesResponse build() {
             return new CloudToDevicePropertiesResponse(defaultTtlAsIso8601, feedback, maxDeliveryCount);
         }

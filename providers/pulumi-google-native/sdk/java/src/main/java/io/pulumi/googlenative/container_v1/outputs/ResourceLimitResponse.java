@@ -95,7 +95,6 @@ public final class ResourceLimitResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceLimitResponse build() {
             return new ResourceLimitResponse(maximum, minimum, resourceType);
         }

@@ -15,35 +15,35 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
     public static final GetServiceLevelObjectiveArgs Empty = new GetServiceLevelObjectiveArgs();
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
     }
 
     @InputImport(name="serviceLevelObjectiveId", required=true)
-    private final String serviceLevelObjectiveId;
+      private final String serviceLevelObjectiveId;
 
     public String getServiceLevelObjectiveId() {
         return this.serviceLevelObjectiveId;
     }
 
     @InputImport(name="v3Id", required=true)
-    private final String v3Id;
+      private final String v3Id;
 
     public String getV3Id() {
         return this.v3Id;
     }
 
     @InputImport(name="v3Id1", required=true)
-    private final String v3Id1;
+      private final String v3Id1;
 
     public String getV3Id1() {
         return this.v3Id1;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -122,7 +122,6 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
             this.view = view;
             return this;
         }
-
         public GetServiceLevelObjectiveArgs build() {
             return new GetServiceLevelObjectiveArgs(serviceId, serviceLevelObjectiveId, v3Id, v3Id1, view);
         }

@@ -74,7 +74,6 @@ public final class TestBaseAccountSKUCapabilityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TestBaseAccountSKUCapabilityResponse build() {
             return new TestBaseAccountSKUCapabilityResponse(name, value);
         }

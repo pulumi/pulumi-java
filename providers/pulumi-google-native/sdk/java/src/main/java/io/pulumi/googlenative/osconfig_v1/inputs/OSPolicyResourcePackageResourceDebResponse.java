@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
      * 
      */
     @InputImport(name="pullDeps", required=true)
-    private final Boolean pullDeps;
+      private final Boolean pullDeps;
 
     public Boolean getPullDeps() {
         return this.pullDeps;
@@ -33,7 +33,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
      * 
      */
     @InputImport(name="source", required=true)
-    private final OSPolicyResourceFileResponse source;
+      private final OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
@@ -82,7 +82,6 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceDebResponse build() {
             return new OSPolicyResourcePackageResourceDebResponse(pullDeps, source);
         }

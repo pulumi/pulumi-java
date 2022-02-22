@@ -181,7 +181,6 @@ public final class GetRoleResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(deleted, description, etag, includedPermissions, name, stage, title);
         }

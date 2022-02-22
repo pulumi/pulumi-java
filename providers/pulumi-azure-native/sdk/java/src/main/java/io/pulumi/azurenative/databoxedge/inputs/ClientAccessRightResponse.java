@@ -21,7 +21,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accessPermission", required=true)
-    private final String accessPermission;
+        private final String accessPermission;
 
     public String getAccessPermission() {
         return this.accessPermission;
@@ -32,7 +32,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="client", required=true)
-    private final String client;
+        private final String client;
 
     public String getClient() {
         return this.client;
@@ -81,7 +81,6 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
             this.client = Objects.requireNonNull(client);
             return this;
         }
-
         public ClientAccessRightResponse build() {
             return new ClientAccessRightResponse(accessPermission, client);
         }

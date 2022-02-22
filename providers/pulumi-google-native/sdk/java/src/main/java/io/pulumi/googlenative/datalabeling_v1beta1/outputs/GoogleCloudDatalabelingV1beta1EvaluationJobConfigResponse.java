@@ -252,7 +252,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
             this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
         }

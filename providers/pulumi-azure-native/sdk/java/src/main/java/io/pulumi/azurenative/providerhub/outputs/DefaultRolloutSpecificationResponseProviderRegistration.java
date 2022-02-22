@@ -111,7 +111,6 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DefaultRolloutSpecificationResponseProviderRegistration build() {
             return new DefaultRolloutSpecificationResponseProviderRegistration(id, name, properties, type);
         }

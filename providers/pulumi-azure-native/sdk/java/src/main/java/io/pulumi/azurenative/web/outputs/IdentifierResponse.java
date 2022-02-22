@@ -139,7 +139,6 @@ public final class IdentifierResponse {
             this.value = value;
             return this;
         }
-
         public IdentifierResponse build() {
             return new IdentifierResponse(id, kind, name, type, value);
         }

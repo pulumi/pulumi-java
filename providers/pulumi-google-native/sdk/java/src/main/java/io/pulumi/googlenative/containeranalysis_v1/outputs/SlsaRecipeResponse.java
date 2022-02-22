@@ -138,7 +138,6 @@ public final class SlsaRecipeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SlsaRecipeResponse build() {
             return new SlsaRecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
         }

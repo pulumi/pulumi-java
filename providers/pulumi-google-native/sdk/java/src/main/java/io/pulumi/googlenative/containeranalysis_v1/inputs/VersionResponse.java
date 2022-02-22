@@ -23,7 +23,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="epoch", required=true)
-    private final Integer epoch;
+      private final Integer epoch;
 
     public Integer getEpoch() {
         return this.epoch;
@@ -34,7 +34,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fullName", required=true)
-    private final String fullName;
+      private final String fullName;
 
     public String getFullName() {
         return this.fullName;
@@ -45,7 +45,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inclusive", required=true)
-    private final Boolean inclusive;
+      private final Boolean inclusive;
 
     public Boolean getInclusive() {
         return this.inclusive;
@@ -56,7 +56,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -67,7 +67,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="revision", required=true)
-    private final String revision;
+      private final String revision;
 
     public String getRevision() {
         return this.revision;
@@ -167,7 +167,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(epoch, fullName, inclusive, kind, name, revision);
         }

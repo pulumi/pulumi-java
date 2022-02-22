@@ -312,7 +312,6 @@ public final class GetJitRequestResult {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }
-
         public GetJitRequestResult build() {
             return new GetJitRequestResult(applicationResourceId, createdBy, id, jitAuthorizationPolicies, jitRequestState, jitSchedulingPolicy, location, name, provisioningState, publisherTenantId, tags, type, updatedBy);
         }

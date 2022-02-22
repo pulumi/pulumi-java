@@ -181,7 +181,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
             this.restrictedValues = Objects.requireNonNull(restrictedValues);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }

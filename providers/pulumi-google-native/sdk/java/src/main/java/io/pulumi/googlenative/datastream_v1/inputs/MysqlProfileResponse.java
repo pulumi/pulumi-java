@@ -23,7 +23,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final String hostname;
+      private final String hostname;
 
     public String getHostname() {
         return this.hostname;
@@ -34,7 +34,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -45,7 +45,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -56,7 +56,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sslConfig", required=true)
-    private final MysqlSslConfigResponse sslConfig;
+      private final MysqlSslConfigResponse sslConfig;
 
     public MysqlSslConfigResponse getSslConfig() {
         return this.sslConfig;
@@ -67,7 +67,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -146,7 +146,6 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MysqlProfileResponse build() {
             return new MysqlProfileResponse(hostname, password, port, sslConfig, username);
         }

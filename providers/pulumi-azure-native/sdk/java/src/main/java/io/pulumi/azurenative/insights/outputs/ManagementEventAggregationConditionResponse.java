@@ -98,7 +98,6 @@ public final class ManagementEventAggregationConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public ManagementEventAggregationConditionResponse build() {
             return new ManagementEventAggregationConditionResponse(operator, threshold, windowSize);
         }

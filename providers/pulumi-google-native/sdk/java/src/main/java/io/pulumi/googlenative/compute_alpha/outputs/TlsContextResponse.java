@@ -75,7 +75,6 @@ public final class TlsContextResponse {
             this.validationContext = Objects.requireNonNull(validationContext);
             return this;
         }
-
         public TlsContextResponse build() {
             return new TlsContextResponse(certificateContext, validationContext);
         }

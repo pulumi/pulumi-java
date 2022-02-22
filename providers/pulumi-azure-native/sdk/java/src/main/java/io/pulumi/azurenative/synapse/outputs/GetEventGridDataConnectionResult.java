@@ -353,7 +353,6 @@ public final class GetEventGridDataConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventGridDataConnectionResult build() {
             return new GetEventGridDataConnectionResult(blobStorageEventType, consumerGroup, dataFormat, eventHubResourceId, id, ignoreFirstRecord, kind, location, mappingRuleName, name, provisioningState, storageAccountResourceId, systemData, tableName, type);
         }

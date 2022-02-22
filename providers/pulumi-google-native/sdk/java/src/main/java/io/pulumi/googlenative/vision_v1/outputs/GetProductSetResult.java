@@ -117,7 +117,6 @@ public final class GetProductSetResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetProductSetResult build() {
             return new GetProductSetResult(displayName, indexError, indexTime, name);
         }

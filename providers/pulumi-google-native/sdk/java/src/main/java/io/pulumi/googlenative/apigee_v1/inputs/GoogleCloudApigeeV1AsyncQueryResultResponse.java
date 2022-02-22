@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
      * 
      */
     @InputImport(name="expires", required=true)
-    private final String expires;
+      private final String expires;
 
     public String getExpires() {
         return this.expires;
@@ -28,7 +28,7 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
      * 
      */
     @InputImport(name="self", required=true)
-    private final String self;
+      private final String self;
 
     public String getSelf() {
         return this.self;
@@ -77,7 +77,6 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
             this.self = Objects.requireNonNull(self);
             return this;
         }
-
         public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
             return new GoogleCloudApigeeV1AsyncQueryResultResponse(expires, self);
         }

@@ -52,7 +52,6 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse build() {
             return new GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(targetUri);
         }

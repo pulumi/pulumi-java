@@ -100,7 +100,6 @@ public final class ImageStorageProfileResponse {
             this.zoneResilient = zoneResilient;
             return this;
         }
-
         public ImageStorageProfileResponse build() {
             return new ImageStorageProfileResponse(dataDisks, osDisk, zoneResilient);
         }

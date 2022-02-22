@@ -28,7 +28,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chartOptions")
-    private final @Nullable Input<ChartOptionsArgs> chartOptions;
+      private final @Nullable Input<ChartOptionsArgs> chartOptions;
 
     public Input<ChartOptionsArgs> getChartOptions() {
         return this.chartOptions == null ? Input.empty() : this.chartOptions;
@@ -39,7 +39,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSets", required=true)
-    private final Input<List<DataSetArgs>> dataSets;
+      private final Input<List<DataSetArgs>> dataSets;
 
     public Input<List<DataSetArgs>> getDataSets() {
         return this.dataSets;
@@ -50,7 +50,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholds")
-    private final @Nullable Input<List<ThresholdArgs>> thresholds;
+      private final @Nullable Input<List<ThresholdArgs>> thresholds;
 
     public Input<List<ThresholdArgs>> getThresholds() {
         return this.thresholds == null ? Input.empty() : this.thresholds;
@@ -61,7 +61,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeshiftDuration")
-    private final @Nullable Input<String> timeshiftDuration;
+      private final @Nullable Input<String> timeshiftDuration;
 
     public Input<String> getTimeshiftDuration() {
         return this.timeshiftDuration == null ? Input.empty() : this.timeshiftDuration;
@@ -72,7 +72,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xAxis")
-    private final @Nullable Input<AxisArgs> xAxis;
+      private final @Nullable Input<AxisArgs> xAxis;
 
     public Input<AxisArgs> getXAxis() {
         return this.xAxis == null ? Input.empty() : this.xAxis;
@@ -83,7 +83,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y2Axis")
-    private final @Nullable Input<AxisArgs> y2Axis;
+      private final @Nullable Input<AxisArgs> y2Axis;
 
     public Input<AxisArgs> getY2Axis() {
         return this.y2Axis == null ? Input.empty() : this.y2Axis;
@@ -94,7 +94,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yAxis")
-    private final @Nullable Input<AxisArgs> yAxis;
+      private final @Nullable Input<AxisArgs> yAxis;
 
     public Input<AxisArgs> getYAxis() {
         return this.yAxis == null ? Input.empty() : this.yAxis;
@@ -228,7 +228,6 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
             this.yAxis = Input.ofNullable(yAxis);
             return this;
         }
-
         public XyChartArgs build() {
             return new XyChartArgs(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }

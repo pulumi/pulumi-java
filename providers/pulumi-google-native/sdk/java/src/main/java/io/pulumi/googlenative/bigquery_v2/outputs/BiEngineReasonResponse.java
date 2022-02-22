@@ -74,7 +74,6 @@ public final class BiEngineReasonResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public BiEngineReasonResponse build() {
             return new BiEngineReasonResponse(code, message);
         }

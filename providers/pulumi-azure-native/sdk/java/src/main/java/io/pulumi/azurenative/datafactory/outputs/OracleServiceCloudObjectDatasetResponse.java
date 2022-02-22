@@ -231,7 +231,6 @@ public final class OracleServiceCloudObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleServiceCloudObjectDatasetResponse build() {
             return new OracleServiceCloudObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

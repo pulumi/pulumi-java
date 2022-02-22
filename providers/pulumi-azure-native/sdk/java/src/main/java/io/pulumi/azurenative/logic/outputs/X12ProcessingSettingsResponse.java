@@ -158,7 +158,6 @@ public final class X12ProcessingSettingsResponse {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public X12ProcessingSettingsResponse build() {
             return new X12ProcessingSettingsResponse(convertImpliedDecimal, createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }

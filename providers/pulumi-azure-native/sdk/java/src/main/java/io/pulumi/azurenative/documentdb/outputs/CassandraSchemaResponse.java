@@ -99,7 +99,6 @@ public final class CassandraSchemaResponse {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public CassandraSchemaResponse build() {
             return new CassandraSchemaResponse(clusterKeys, columns, partitionKeys);
         }

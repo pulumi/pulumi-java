@@ -142,7 +142,6 @@ public final class KikChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public KikChannelResponse build() {
             return new KikChannelResponse(channelName, etag, location, properties, provisioningState);
         }

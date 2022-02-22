@@ -78,7 +78,6 @@ public final class DWCopyCommandSettingsResponse {
             this.defaultValues = defaultValues;
             return this;
         }
-
         public DWCopyCommandSettingsResponse build() {
             return new DWCopyCommandSettingsResponse(additionalOptions, defaultValues);
         }

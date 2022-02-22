@@ -268,7 +268,6 @@ public final class GetNatRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNatRuleResult build() {
             return new GetNatRuleResult(egressVpnSiteLinkConnections, etag, externalMappings, id, ingressVpnSiteLinkConnections, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }

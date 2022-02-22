@@ -26,7 +26,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+        private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
@@ -37,7 +37,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable String instanceType;
+        private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
@@ -48,7 +48,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isLocal")
-    private final @Nullable Boolean isLocal;
+        private final @Nullable Boolean isLocal;
 
     public Optional<Boolean> getIsLocal() {
         return this.isLocal == null ? Optional.empty() : Optional.ofNullable(this.isLocal);
@@ -59,7 +59,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -70,7 +70,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -81,7 +81,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -170,7 +170,6 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
             this.target = target;
             return this;
         }
-
         public ComputeConfigurationResponse build() {
             return new ComputeConfigurationResponse(instanceCount, instanceType, isLocal, location, properties, target);
         }

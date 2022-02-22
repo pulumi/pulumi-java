@@ -77,7 +77,6 @@ public final class ConnectionParameterResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionParameterResponse build() {
             return new ConnectionParameterResponse(oAuthSettings, type);
         }

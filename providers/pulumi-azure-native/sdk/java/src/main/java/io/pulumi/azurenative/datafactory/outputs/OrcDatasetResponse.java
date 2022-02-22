@@ -265,7 +265,6 @@ public final class OrcDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcDatasetResponse build() {
             return new OrcDatasetResponse(annotations, description, folder, linkedServiceName, location, orcCompressionCodec, parameters, schema, structure, type);
         }

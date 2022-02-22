@@ -19,7 +19,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configStoreName", required=true)
-    private final String configStoreName;
+        private final String configStoreName;
 
     public String getConfigStoreName() {
         return this.configStoreName;
@@ -30,7 +30,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -100,7 +100,6 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
             this.skipToken = skipToken;
             return this;
         }
-
         public ListConfigurationStoreKeysArgs build() {
             return new ListConfigurationStoreKeysArgs(configStoreName, resourceGroupName, skipToken);
         }

@@ -19,7 +19,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubsettingArgs Empty = new SubsettingArgs();
 
     @InputImport(name="policy")
-    private final @Nullable Input<SubsettingPolicy> policy;
+      private final @Nullable Input<SubsettingPolicy> policy;
 
     public Input<SubsettingPolicy> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -62,7 +62,6 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
             this.policy = Input.ofNullable(policy);
             return this;
         }
-
         public SubsettingArgs build() {
             return new SubsettingArgs(policy);
         }

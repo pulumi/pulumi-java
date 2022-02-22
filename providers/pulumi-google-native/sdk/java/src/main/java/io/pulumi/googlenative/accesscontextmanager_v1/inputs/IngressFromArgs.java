@@ -26,7 +26,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-    private final @Nullable Input<List<String>> identities;
+      private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -37,7 +37,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType")
-    private final @Nullable Input<IngressFromIdentityType> identityType;
+      private final @Nullable Input<IngressFromIdentityType> identityType;
 
     public Input<IngressFromIdentityType> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -48,7 +48,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<IngressSourceArgs>> sources;
+      private final @Nullable Input<List<IngressSourceArgs>> sources;
 
     public Input<List<IngressSourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -122,7 +122,6 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
             this.sources = Input.ofNullable(sources);
             return this;
         }
-
         public IngressFromArgs build() {
             return new IngressFromArgs(identities, identityType, sources);
         }

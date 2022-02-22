@@ -74,7 +74,6 @@ public final class CertificateRawDataResponse {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }
-
         public CertificateRawDataResponse build() {
             return new CertificateRawDataResponse(privateKey, publicCertificate);
         }

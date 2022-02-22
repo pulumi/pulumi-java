@@ -322,7 +322,6 @@ public final class K8sOnlineDeploymentResponse {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public K8sOnlineDeploymentResponse build() {
             return new K8sOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, provisioningState, requestSettings, scaleSettings);
         }

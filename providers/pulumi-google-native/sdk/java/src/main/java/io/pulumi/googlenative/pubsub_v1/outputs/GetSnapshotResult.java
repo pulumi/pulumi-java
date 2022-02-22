@@ -117,7 +117,6 @@ public final class GetSnapshotResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(expireTime, labels, name, topic);
         }

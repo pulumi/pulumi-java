@@ -21,7 +21,7 @@ public final class DatabaseEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -32,7 +32,7 @@ public final class DatabaseEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -81,7 +81,6 @@ public final class DatabaseEncryptionResponse extends io.pulumi.resources.Invoke
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public DatabaseEncryptionResponse build() {
             return new DatabaseEncryptionResponse(keyName, state);
         }

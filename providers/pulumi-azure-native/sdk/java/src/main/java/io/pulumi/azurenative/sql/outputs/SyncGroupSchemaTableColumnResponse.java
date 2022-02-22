@@ -97,7 +97,6 @@ public final class SyncGroupSchemaTableColumnResponse {
             this.quotedName = quotedName;
             return this;
         }
-
         public SyncGroupSchemaTableColumnResponse build() {
             return new SyncGroupSchemaTableColumnResponse(dataSize, dataType, quotedName);
         }

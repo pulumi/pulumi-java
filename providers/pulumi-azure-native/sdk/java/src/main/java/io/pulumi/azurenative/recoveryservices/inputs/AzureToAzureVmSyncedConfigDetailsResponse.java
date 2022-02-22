@@ -26,7 +26,7 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="inputEndpoints")
-    private final @Nullable List<InputEndpointResponse> inputEndpoints;
+        private final @Nullable List<InputEndpointResponse> inputEndpoints;
 
     public List<InputEndpointResponse> getInputEndpoints() {
         return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
@@ -37,7 +37,7 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -86,7 +86,6 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
             this.tags = tags;
             return this;
         }
-
         public AzureToAzureVmSyncedConfigDetailsResponse build() {
             return new AzureToAzureVmSyncedConfigDetailsResponse(inputEndpoints, tags);
         }

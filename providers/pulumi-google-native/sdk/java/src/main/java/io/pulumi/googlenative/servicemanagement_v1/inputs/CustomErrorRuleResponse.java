@@ -22,7 +22,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isErrorType", required=true)
-    private final Boolean isErrorType;
+      private final Boolean isErrorType;
 
     public Boolean getIsErrorType() {
         return this.isErrorType;
@@ -33,7 +33,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -82,7 +82,6 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public CustomErrorRuleResponse build() {
             return new CustomErrorRuleResponse(isErrorType, selector);
         }

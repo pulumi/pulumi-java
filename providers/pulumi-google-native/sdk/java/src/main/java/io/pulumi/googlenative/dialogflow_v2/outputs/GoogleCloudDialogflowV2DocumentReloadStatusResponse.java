@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
             return new GoogleCloudDialogflowV2DocumentReloadStatusResponse(status, time);
         }

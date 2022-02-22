@@ -118,7 +118,6 @@ public final class SiteMachineKeyResponse {
             this.validationKey = validationKey;
             return this;
         }
-
         public SiteMachineKeyResponse build() {
             return new SiteMachineKeyResponse(decryption, decryptionKey, validation, validationKey);
         }

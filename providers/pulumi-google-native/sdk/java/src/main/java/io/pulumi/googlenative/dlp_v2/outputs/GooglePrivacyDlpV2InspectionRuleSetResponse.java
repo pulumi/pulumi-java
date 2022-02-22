@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
             return new GooglePrivacyDlpV2InspectionRuleSetResponse(infoTypes, rules);
         }

@@ -140,7 +140,6 @@ public final class GetGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(description, id, locationData, name, type);
         }

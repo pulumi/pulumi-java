@@ -530,7 +530,6 @@ public final class SubnetResponse {
             this.type = type;
             return this;
         }
-
         public SubnetResponse build() {
             return new SubnetResponse(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, etag, id, ipAllocations, ipConfigurationProfiles, ipConfigurations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateEndpoints, privateLinkServiceNetworkPolicies, provisioningState, purpose, resourceNavigationLinks, routeTable, serviceAssociationLinks, serviceEndpointPolicies, serviceEndpoints, type);
         }

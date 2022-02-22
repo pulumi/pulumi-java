@@ -237,7 +237,6 @@ public final class GetScheduleResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(createTime, cronSchedule, description, displayName, executionTemplate, name, recentExecutions, state, timeZone, updateTime);
         }

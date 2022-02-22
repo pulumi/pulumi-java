@@ -194,7 +194,6 @@ public final class BackendRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public BackendRuleResponse build() {
             return new BackendRuleResponse(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
         }

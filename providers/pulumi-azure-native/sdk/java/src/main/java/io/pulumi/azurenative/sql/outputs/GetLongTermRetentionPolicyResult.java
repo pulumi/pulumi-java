@@ -182,7 +182,6 @@ public final class GetLongTermRetentionPolicyResult {
             this.yearlyRetention = yearlyRetention;
             return this;
         }
-
         public GetLongTermRetentionPolicyResult build() {
             return new GetLongTermRetentionPolicyResult(id, monthlyRetention, name, type, weekOfYear, weeklyRetention, yearlyRetention);
         }

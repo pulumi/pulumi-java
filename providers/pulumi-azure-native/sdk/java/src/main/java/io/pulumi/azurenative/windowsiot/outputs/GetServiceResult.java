@@ -267,7 +267,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(adminDomainName, billingDomainName, etag, id, location, name, notes, quantity, startDate, tags, type);
         }

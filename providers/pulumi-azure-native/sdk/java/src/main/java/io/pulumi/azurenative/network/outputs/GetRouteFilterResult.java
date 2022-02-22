@@ -248,7 +248,6 @@ public final class GetRouteFilterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRouteFilterResult build() {
             return new GetRouteFilterResult(etag, id, ipv6Peerings, location, name, peerings, provisioningState, rules, tags, type);
         }

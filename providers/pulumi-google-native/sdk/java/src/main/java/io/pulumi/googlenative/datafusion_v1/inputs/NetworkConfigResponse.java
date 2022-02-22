@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipAllocation", required=true)
-    private final String ipAllocation;
+      private final String ipAllocation;
 
     public String getIpAllocation() {
         return this.ipAllocation;
@@ -32,7 +32,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -81,7 +81,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(ipAllocation, network);
         }

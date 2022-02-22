@@ -21,7 +21,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
      * 
      */
     @InputImport(name="phrase", required=true)
-    private final String phrase;
+        private final String phrase;
 
     public String getPhrase() {
         return this.phrase;
@@ -81,7 +81,6 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
             this.phrase = Objects.requireNonNull(phrase);
             return this;
         }
-
         public AssignmentReportResourceComplianceReasonResponse build() {
             return new AssignmentReportResourceComplianceReasonResponse(code, phrase);
         }

@@ -159,7 +159,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeOperationResultResponse build() {
             return new ManagedIntegrationRuntimeOperationResultResponse(activityId, errorCode, parameters, result, startTime, type);
         }

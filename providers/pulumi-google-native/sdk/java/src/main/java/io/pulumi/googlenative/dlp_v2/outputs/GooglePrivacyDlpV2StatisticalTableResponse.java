@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2StatisticalTableResponse build() {
             return new GooglePrivacyDlpV2StatisticalTableResponse(quasiIds, relativeFrequency, table);
         }

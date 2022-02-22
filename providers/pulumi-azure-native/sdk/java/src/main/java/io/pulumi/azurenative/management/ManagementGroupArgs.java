@@ -20,7 +20,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<CreateManagementGroupDetailsArgs> details;
+        private final @Nullable Input<CreateManagementGroupDetailsArgs> details;
 
     public Input<CreateManagementGroupDetailsArgs> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -31,7 +31,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -42,7 +42,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+        private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -53,7 +53,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -142,7 +142,6 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ManagementGroupArgs build() {
             return new ManagementGroupArgs(details, displayName, groupId, name);
         }

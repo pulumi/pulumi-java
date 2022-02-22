@@ -22,7 +22,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progressPercent", required=true)
-    private final Integer progressPercent;
+      private final Integer progressPercent;
 
     public Integer getProgressPercent() {
         return this.progressPercent;
@@ -33,7 +33,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -82,7 +82,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(progressPercent, startTime);
         }

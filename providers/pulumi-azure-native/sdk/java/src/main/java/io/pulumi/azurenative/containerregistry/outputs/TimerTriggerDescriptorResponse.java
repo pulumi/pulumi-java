@@ -76,7 +76,6 @@ public final class TimerTriggerDescriptorResponse {
             this.timerTriggerName = timerTriggerName;
             return this;
         }
-
         public TimerTriggerDescriptorResponse build() {
             return new TimerTriggerDescriptorResponse(scheduleOccurrence, timerTriggerName);
         }

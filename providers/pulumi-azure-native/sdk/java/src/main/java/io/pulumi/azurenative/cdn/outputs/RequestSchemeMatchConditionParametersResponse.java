@@ -112,7 +112,6 @@ public final class RequestSchemeMatchConditionParametersResponse {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public RequestSchemeMatchConditionParametersResponse build() {
             return new RequestSchemeMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }

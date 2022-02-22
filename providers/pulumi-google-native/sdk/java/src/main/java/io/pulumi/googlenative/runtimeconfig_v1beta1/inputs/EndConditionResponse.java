@@ -21,7 +21,7 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cardinality", required=true)
-    private final CardinalityResponse cardinality;
+      private final CardinalityResponse cardinality;
 
     public CardinalityResponse getCardinality() {
         return this.cardinality;
@@ -59,7 +59,6 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
-
         public EndConditionResponse build() {
             return new EndConditionResponse(cardinality);
         }

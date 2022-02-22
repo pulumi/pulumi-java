@@ -60,7 +60,6 @@ public final class AuthorizationActionMappingResponse {
             this.original = original;
             return this;
         }
-
         public AuthorizationActionMappingResponse build() {
             return new AuthorizationActionMappingResponse(desired, original);
         }

@@ -122,7 +122,6 @@ public final class RoutingPropertiesResponse {
             this.routes = routes;
             return this;
         }
-
         public RoutingPropertiesResponse build() {
             return new RoutingPropertiesResponse(endpoints, enrichments, fallbackRoute, routes);
         }

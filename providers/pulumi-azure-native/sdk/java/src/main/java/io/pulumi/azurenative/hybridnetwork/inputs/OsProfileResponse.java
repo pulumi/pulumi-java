@@ -25,7 +25,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable String adminUsername;
+        private final @Nullable String adminUsername;
 
     public Optional<String> getAdminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
@@ -36,7 +36,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable String customData;
+        private final @Nullable String customData;
 
     public Optional<String> getCustomData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
@@ -47,7 +47,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customDataRequired")
-    private final @Nullable Boolean customDataRequired;
+        private final @Nullable Boolean customDataRequired;
 
     public Optional<Boolean> getCustomDataRequired() {
         return this.customDataRequired == null ? Optional.empty() : Optional.ofNullable(this.customDataRequired);
@@ -58,7 +58,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linuxConfiguration")
-    private final @Nullable LinuxConfigurationResponse linuxConfiguration;
+        private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
     public Optional<LinuxConfigurationResponse> getLinuxConfiguration() {
         return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
@@ -127,7 +127,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, customData, customDataRequired, linuxConfiguration);
         }

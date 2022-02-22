@@ -164,7 +164,6 @@ public final class GetHl7V2StoreResult {
             this.rejectDuplicateMessage = Objects.requireNonNull(rejectDuplicateMessage);
             return this;
         }
-
         public GetHl7V2StoreResult build() {
             return new GetHl7V2StoreResult(labels, name, notificationConfig, notificationConfigs, parserConfig, rejectDuplicateMessage);
         }

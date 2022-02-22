@@ -23,7 +23,7 @@ public final class GuestCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -34,7 +34,7 @@ public final class GuestCredentialArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+        private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -93,7 +93,6 @@ public final class GuestCredentialArgs extends io.pulumi.resources.ResourceArgs 
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public GuestCredentialArgs build() {
             return new GuestCredentialArgs(password, username);
         }

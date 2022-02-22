@@ -98,7 +98,6 @@ public final class ServerEndpointRecallStatusResponse {
             this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
             return this;
         }
-
         public ServerEndpointRecallStatusResponse build() {
             return new ServerEndpointRecallStatusResponse(lastUpdatedTimestamp, recallErrors, totalRecallErrorsCount);
         }

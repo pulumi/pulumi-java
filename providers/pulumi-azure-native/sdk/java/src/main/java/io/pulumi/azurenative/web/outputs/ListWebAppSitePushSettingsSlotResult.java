@@ -209,7 +209,6 @@ public final class ListWebAppSitePushSettingsSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppSitePushSettingsSlotResult build() {
             return new ListWebAppSitePushSettingsSlotResult(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

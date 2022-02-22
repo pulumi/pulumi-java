@@ -76,7 +76,6 @@ public final class ImageFormatResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ImageFormatResponse build() {
             return new ImageFormatResponse(filenamePattern, odataType);
         }

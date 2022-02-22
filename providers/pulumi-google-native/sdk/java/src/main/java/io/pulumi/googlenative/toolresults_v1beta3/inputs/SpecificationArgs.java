@@ -24,7 +24,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidTest")
-    private final @Nullable Input<AndroidTestArgs> androidTest;
+      private final @Nullable Input<AndroidTestArgs> androidTest;
 
     public Input<AndroidTestArgs> getAndroidTest() {
         return this.androidTest == null ? Input.empty() : this.androidTest;
@@ -35,7 +35,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosTest")
-    private final @Nullable Input<IosTestArgs> iosTest;
+      private final @Nullable Input<IosTestArgs> iosTest;
 
     public Input<IosTestArgs> getIosTest() {
         return this.iosTest == null ? Input.empty() : this.iosTest;
@@ -94,7 +94,6 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
             this.iosTest = Input.ofNullable(iosTest);
             return this;
         }
-
         public SpecificationArgs build() {
             return new SpecificationArgs(androidTest, iosTest);
         }

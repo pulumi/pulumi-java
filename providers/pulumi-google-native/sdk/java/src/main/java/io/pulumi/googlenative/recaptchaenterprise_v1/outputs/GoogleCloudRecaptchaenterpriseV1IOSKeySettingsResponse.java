@@ -76,7 +76,6 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(allowAllBundleIds, allowedBundleIds);
         }

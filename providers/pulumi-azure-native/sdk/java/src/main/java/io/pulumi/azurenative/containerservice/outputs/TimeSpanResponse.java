@@ -76,7 +76,6 @@ public final class TimeSpanResponse {
             this.start = start;
             return this;
         }
-
         public TimeSpanResponse build() {
             return new TimeSpanResponse(end, start);
         }

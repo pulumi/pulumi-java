@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(mode, name, type);
         }

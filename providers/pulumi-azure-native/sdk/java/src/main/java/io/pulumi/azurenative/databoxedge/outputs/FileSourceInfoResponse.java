@@ -52,7 +52,6 @@ public final class FileSourceInfoResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public FileSourceInfoResponse build() {
             return new FileSourceInfoResponse(shareId);
         }

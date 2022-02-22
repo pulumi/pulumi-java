@@ -17,7 +17,7 @@ public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
     public static final AddressableResponse Empty = new AddressableResponse();
 
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -55,7 +55,6 @@ public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AddressableResponse build() {
             return new AddressableResponse(url);
         }

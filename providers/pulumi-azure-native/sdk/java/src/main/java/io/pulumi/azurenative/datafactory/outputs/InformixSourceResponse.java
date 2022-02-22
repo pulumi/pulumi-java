@@ -205,7 +205,6 @@ public final class InformixSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InformixSourceResponse build() {
             return new InformixSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

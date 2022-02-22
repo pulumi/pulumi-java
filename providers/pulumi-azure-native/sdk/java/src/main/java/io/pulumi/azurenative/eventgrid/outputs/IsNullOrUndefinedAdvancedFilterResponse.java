@@ -78,7 +78,6 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public IsNullOrUndefinedAdvancedFilterResponse build() {
             return new IsNullOrUndefinedAdvancedFilterResponse(key, operatorType);
         }

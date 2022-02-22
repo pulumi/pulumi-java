@@ -54,7 +54,6 @@ public final class DataLakeAnalyticsResponseProperties {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
-
         public DataLakeAnalyticsResponseProperties build() {
             return new DataLakeAnalyticsResponseProperties(dataLakeStoreAccountName);
         }

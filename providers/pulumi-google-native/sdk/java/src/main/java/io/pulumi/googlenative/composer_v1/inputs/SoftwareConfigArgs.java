@@ -25,7 +25,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="airflowConfigOverrides")
-    private final @Nullable Input<Map<String,String>> airflowConfigOverrides;
+      private final @Nullable Input<Map<String,String>> airflowConfigOverrides;
 
     public Input<Map<String,String>> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides == null ? Input.empty() : this.airflowConfigOverrides;
@@ -36,7 +36,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envVariables")
-    private final @Nullable Input<Map<String,String>> envVariables;
+      private final @Nullable Input<Map<String,String>> envVariables;
 
     public Input<Map<String,String>> getEnvVariables() {
         return this.envVariables == null ? Input.empty() : this.envVariables;
@@ -47,7 +47,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageVersion")
-    private final @Nullable Input<String> imageVersion;
+      private final @Nullable Input<String> imageVersion;
 
     public Input<String> getImageVersion() {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
@@ -58,7 +58,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pypiPackages")
-    private final @Nullable Input<Map<String,String>> pypiPackages;
+      private final @Nullable Input<Map<String,String>> pypiPackages;
 
     public Input<Map<String,String>> getPypiPackages() {
         return this.pypiPackages == null ? Input.empty() : this.pypiPackages;
@@ -69,7 +69,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonVersion")
-    private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
@@ -80,7 +80,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulerCount")
-    private final @Nullable Input<Integer> schedulerCount;
+      private final @Nullable Input<Integer> schedulerCount;
 
     public Input<Integer> getSchedulerCount() {
         return this.schedulerCount == null ? Input.empty() : this.schedulerCount;
@@ -199,7 +199,6 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.schedulerCount = Input.ofNullable(schedulerCount);
             return this;
         }
-
         public SoftwareConfigArgs build() {
             return new SoftwareConfigArgs(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

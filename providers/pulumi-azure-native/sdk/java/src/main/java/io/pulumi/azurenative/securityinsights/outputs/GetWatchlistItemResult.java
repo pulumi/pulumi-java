@@ -353,7 +353,6 @@ public final class GetWatchlistItemResult {
             this.watchlistItemType = watchlistItemType;
             return this;
         }
-
         public GetWatchlistItemResult build() {
             return new GetWatchlistItemResult(created, createdBy, entityMapping, etag, id, isDeleted, itemsKeyValue, name, systemData, tenantId, type, updated, updatedBy, watchlistItemId, watchlistItemType);
         }

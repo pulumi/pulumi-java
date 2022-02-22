@@ -23,7 +23,7 @@ public final class MetricDescriptorMetadataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ingestDelay")
-    private final @Nullable Input<String> ingestDelay;
+      private final @Nullable Input<String> ingestDelay;
 
     public Input<String> getIngestDelay() {
         return this.ingestDelay == null ? Input.empty() : this.ingestDelay;
@@ -34,7 +34,7 @@ public final class MetricDescriptorMetadataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="samplePeriod")
-    private final @Nullable Input<String> samplePeriod;
+      private final @Nullable Input<String> samplePeriod;
 
     public Input<String> getSamplePeriod() {
         return this.samplePeriod == null ? Input.empty() : this.samplePeriod;
@@ -93,7 +93,6 @@ public final class MetricDescriptorMetadataArgs extends io.pulumi.resources.Reso
             this.samplePeriod = Input.ofNullable(samplePeriod);
             return this;
         }
-
         public MetricDescriptorMetadataArgs build() {
             return new MetricDescriptorMetadataArgs(ingestDelay, samplePeriod);
         }

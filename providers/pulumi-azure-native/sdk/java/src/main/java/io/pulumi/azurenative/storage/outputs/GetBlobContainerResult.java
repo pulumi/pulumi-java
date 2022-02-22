@@ -459,7 +459,6 @@ public final class GetBlobContainerResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetBlobContainerResult build() {
             return new GetBlobContainerResult(defaultEncryptionScope, deleted, deletedTime, denyEncryptionScopeOverride, etag, hasImmutabilityPolicy, hasLegalHold, id, immutabilityPolicy, lastModifiedTime, leaseDuration, leaseState, leaseStatus, legalHold, metadata, name, publicAccess, remainingRetentionDays, type, version);
         }

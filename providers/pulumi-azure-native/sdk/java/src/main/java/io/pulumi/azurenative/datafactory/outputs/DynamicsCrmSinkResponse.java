@@ -247,7 +247,6 @@ public final class DynamicsCrmSinkResponse {
             this.writeBehavior = Objects.requireNonNull(writeBehavior);
             return this;
         }
-
         public DynamicsCrmSinkResponse build() {
             return new DynamicsCrmSinkResponse(alternateKeyName, disableMetricsCollection, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

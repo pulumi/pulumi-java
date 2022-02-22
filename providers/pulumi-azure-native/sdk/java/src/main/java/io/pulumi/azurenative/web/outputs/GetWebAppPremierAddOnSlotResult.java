@@ -266,7 +266,6 @@ public final class GetWebAppPremierAddOnSlotResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetWebAppPremierAddOnSlotResult build() {
             return new GetWebAppPremierAddOnSlotResult(id, kind, location, marketplaceOffer, marketplacePublisher, name, product, sku, tags, type, vendor);
         }

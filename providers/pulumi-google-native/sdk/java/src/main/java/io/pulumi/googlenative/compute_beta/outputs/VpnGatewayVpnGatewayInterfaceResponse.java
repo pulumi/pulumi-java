@@ -74,7 +74,6 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public VpnGatewayVpnGatewayInterfaceResponse build() {
             return new VpnGatewayVpnGatewayInterfaceResponse(interconnectAttachment, ipAddress);
         }

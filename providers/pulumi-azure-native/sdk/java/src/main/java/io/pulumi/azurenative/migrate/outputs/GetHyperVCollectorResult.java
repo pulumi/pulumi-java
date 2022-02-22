@@ -100,7 +100,6 @@ public final class GetHyperVCollectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHyperVCollectorResult build() {
             return new GetHyperVCollectorResult(eTag, id, name, properties, type);
         }

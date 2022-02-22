@@ -54,7 +54,6 @@ public final class DhcpOptionsResponse {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public DhcpOptionsResponse build() {
             return new DhcpOptionsResponse(dnsServers);
         }

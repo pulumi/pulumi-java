@@ -139,7 +139,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(gcsPath, launchParameters, location, project, validateOnly);
         }

@@ -132,7 +132,6 @@ public final class GetResourceManagementPrivateLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceManagementPrivateLinkResult build() {
             return new GetResourceManagementPrivateLinkResult(id, location, name, properties, type);
         }

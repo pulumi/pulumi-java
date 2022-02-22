@@ -26,7 +26,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -37,7 +37,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OSPolicyResourceFileArgs> file;
+      private final @Nullable Input<OSPolicyResourceFileArgs> file;
 
     public Input<OSPolicyResourceFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -48,7 +48,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final Input<OSPolicyResourceExecResourceExecInterpreter> interpreter;
+      private final Input<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
     public Input<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
         return this.interpreter;
@@ -59,7 +59,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="outputFilePath")
-    private final @Nullable Input<String> outputFilePath;
+      private final @Nullable Input<String> outputFilePath;
 
     public Input<String> getOutputFilePath() {
         return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
@@ -70,7 +70,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -174,7 +174,6 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public OSPolicyResourceExecResourceExecArgs build() {
             return new OSPolicyResourceExecResourceExecArgs(args, file, interpreter, outputFilePath, script);
         }

@@ -23,7 +23,7 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -83,7 +83,6 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
             this.protocol = protocol;
             return this;
         }
-
         public ConsortiumResponse build() {
             return new ConsortiumResponse(name, protocol);
         }

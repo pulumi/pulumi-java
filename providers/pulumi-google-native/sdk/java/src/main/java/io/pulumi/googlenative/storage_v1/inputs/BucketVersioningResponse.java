@@ -21,7 +21,7 @@ public final class BucketVersioningResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class BucketVersioningResponse extends io.pulumi.resources.InvokeAr
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BucketVersioningResponse build() {
             return new BucketVersioningResponse(enabled);
         }

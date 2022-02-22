@@ -22,7 +22,7 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="metrics", required=true)
-    private final List<String> metrics;
+      private final List<String> metrics;
 
     public List<String> getMetrics() {
         return this.metrics;
@@ -33,7 +33,7 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="monitoredResource", required=true)
-    private final String monitoredResource;
+      private final String monitoredResource;
 
     public String getMonitoredResource() {
         return this.monitoredResource;
@@ -82,7 +82,6 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
-
         public BillingDestinationResponse build() {
             return new BillingDestinationResponse(metrics, monitoredResource);
         }

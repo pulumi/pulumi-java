@@ -28,7 +28,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aznsAction")
-    private final @Nullable Input<AzNsActionGroupArgs> aznsAction;
+        private final @Nullable Input<AzNsActionGroupArgs> aznsAction;
 
     public Input<AzNsActionGroupArgs> getAznsAction() {
         return this.aznsAction == null ? Input.empty() : this.aznsAction;
@@ -40,7 +40,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -51,7 +51,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Either<String,AlertSeverity>> severity;
+        private final Input<Either<String,AlertSeverity>> severity;
 
     public Input<Either<String,AlertSeverity>> getSeverity() {
         return this.severity;
@@ -62,7 +62,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttlingInMin")
-    private final @Nullable Input<Integer> throttlingInMin;
+        private final @Nullable Input<Integer> throttlingInMin;
 
     public Input<Integer> getThrottlingInMin() {
         return this.throttlingInMin == null ? Input.empty() : this.throttlingInMin;
@@ -73,7 +73,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final Input<TriggerConditionArgs> trigger;
+        private final Input<TriggerConditionArgs> trigger;
 
     public Input<TriggerConditionArgs> getTrigger() {
         return this.trigger;
@@ -177,7 +177,6 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
             this.trigger = Input.of(Objects.requireNonNull(trigger));
             return this;
         }
-
         public AlertingActionArgs build() {
             return new AlertingActionArgs(aznsAction, odataType, severity, throttlingInMin, trigger);
         }

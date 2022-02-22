@@ -119,7 +119,6 @@ public final class SourceResponse {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSourceUri, context, fileHashes);
         }

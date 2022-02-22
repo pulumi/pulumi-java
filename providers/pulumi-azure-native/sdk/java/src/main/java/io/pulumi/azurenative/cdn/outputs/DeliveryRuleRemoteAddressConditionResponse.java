@@ -77,7 +77,6 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleRemoteAddressConditionResponse build() {
             return new DeliveryRuleRemoteAddressConditionResponse(name, parameters);
         }

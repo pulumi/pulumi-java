@@ -142,7 +142,6 @@ public final class GetResourcePolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetResourcePolicyIamPolicyResult build() {
             return new GetResourcePolicyIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

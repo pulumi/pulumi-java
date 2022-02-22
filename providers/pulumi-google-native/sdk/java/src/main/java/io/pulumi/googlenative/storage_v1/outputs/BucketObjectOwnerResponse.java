@@ -74,7 +74,6 @@ public final class BucketObjectOwnerResponse {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public BucketObjectOwnerResponse build() {
             return new BucketObjectOwnerResponse(entity, entityId);
         }

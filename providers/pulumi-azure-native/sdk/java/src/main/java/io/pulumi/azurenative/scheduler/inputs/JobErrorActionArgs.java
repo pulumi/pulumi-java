@@ -24,7 +24,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueMessage")
-    private final @Nullable Input<StorageQueueMessageArgs> queueMessage;
+        private final @Nullable Input<StorageQueueMessageArgs> queueMessage;
 
     public Input<StorageQueueMessageArgs> getQueueMessage() {
         return this.queueMessage == null ? Input.empty() : this.queueMessage;
@@ -35,7 +35,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-    private final @Nullable Input<HttpRequestArgs> request;
+        private final @Nullable Input<HttpRequestArgs> request;
 
     public Input<HttpRequestArgs> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -46,7 +46,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -57,7 +57,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusQueueMessage")
-    private final @Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
+        private final @Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
     public Input<ServiceBusQueueMessageArgs> getServiceBusQueueMessage() {
         return this.serviceBusQueueMessage == null ? Input.empty() : this.serviceBusQueueMessage;
@@ -68,7 +68,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusTopicMessage")
-    private final @Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
+        private final @Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
     public Input<ServiceBusTopicMessageArgs> getServiceBusTopicMessage() {
         return this.serviceBusTopicMessage == null ? Input.empty() : this.serviceBusTopicMessage;
@@ -79,7 +79,7 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<JobActionType> type;
+        private final @Nullable Input<JobActionType> type;
 
     public Input<JobActionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -198,7 +198,6 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public JobErrorActionArgs build() {
             return new JobErrorActionArgs(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }

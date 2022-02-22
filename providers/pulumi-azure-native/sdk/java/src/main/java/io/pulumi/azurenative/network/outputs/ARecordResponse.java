@@ -54,7 +54,6 @@ public final class ARecordResponse {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public ARecordResponse build() {
             return new ARecordResponse(ipv4Address);
         }

@@ -227,7 +227,6 @@ public final class GetRestorePointCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRestorePointCollectionResult build() {
             return new GetRestorePointCollectionResult(id, location, name, provisioningState, restorePointCollectionId, restorePoints, source, tags, type);
         }

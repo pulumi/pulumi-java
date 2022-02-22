@@ -54,7 +54,6 @@ public final class ConfigurationServiceSettingsResponse {
             this.gitProperty = gitProperty;
             return this;
         }
-
         public ConfigurationServiceSettingsResponse build() {
             return new ConfigurationServiceSettingsResponse(gitProperty);
         }

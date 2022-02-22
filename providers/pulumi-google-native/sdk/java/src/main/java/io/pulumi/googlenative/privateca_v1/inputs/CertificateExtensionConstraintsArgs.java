@@ -25,7 +25,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<ObjectIdArgs>> additionalExtensions;
+      private final @Nullable Input<List<ObjectIdArgs>> additionalExtensions;
 
     public Input<List<ObjectIdArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -36,7 +36,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="knownExtensions")
-    private final @Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
+      private final @Nullable Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
     public Input<List<CertificateExtensionConstraintsKnownExtensionsItem>> getKnownExtensions() {
         return this.knownExtensions == null ? Input.empty() : this.knownExtensions;
@@ -95,7 +95,6 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
             this.knownExtensions = Input.ofNullable(knownExtensions);
             return this;
         }
-
         public CertificateExtensionConstraintsArgs build() {
             return new CertificateExtensionConstraintsArgs(additionalExtensions, knownExtensions);
         }

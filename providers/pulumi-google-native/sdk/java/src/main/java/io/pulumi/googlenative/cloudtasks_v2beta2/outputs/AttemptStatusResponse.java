@@ -117,7 +117,6 @@ public final class AttemptStatusResponse {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public AttemptStatusResponse build() {
             return new AttemptStatusResponse(dispatchTime, responseStatus, responseTime, scheduleTime);
         }

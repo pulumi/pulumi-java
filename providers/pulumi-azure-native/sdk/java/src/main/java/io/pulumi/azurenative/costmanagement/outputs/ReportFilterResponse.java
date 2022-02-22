@@ -140,7 +140,6 @@ public final class ReportFilterResponse {
             this.tag = tag;
             return this;
         }
-
         public ReportFilterResponse build() {
             return new ReportFilterResponse(and, dimension, not, or, tag);
         }

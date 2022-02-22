@@ -22,7 +22,7 @@ public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowedBundleIds", required=true)
-    private final List<String> allowedBundleIds;
+      private final List<String> allowedBundleIds;
 
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;
@@ -60,7 +60,6 @@ public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.Invo
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-
         public V2IosKeyRestrictionsResponse build() {
             return new V2IosKeyRestrictionsResponse(allowedBundleIds);
         }

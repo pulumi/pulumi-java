@@ -54,7 +54,6 @@ public final class SymmetricKeyResponse {
             this.connectionString = connectionString;
             return this;
         }
-
         public SymmetricKeyResponse build() {
             return new SymmetricKeyResponse(connectionString);
         }

@@ -445,7 +445,6 @@ public final class GetActionGroupResult {
             this.webhookReceivers = webhookReceivers;
             return this;
         }
-
         public GetActionGroupResult build() {
             return new GetActionGroupResult(armRoleReceivers, automationRunbookReceivers, azureAppPushReceivers, azureFunctionReceivers, emailReceivers, enabled, groupShortName, id, identity, itsmReceivers, kind, location, logicAppReceivers, name, smsReceivers, tags, type, voiceReceivers, webhookReceivers);
         }

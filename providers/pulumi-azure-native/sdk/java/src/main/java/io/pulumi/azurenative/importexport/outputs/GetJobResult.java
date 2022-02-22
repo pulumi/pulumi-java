@@ -206,7 +206,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(id, identity, location, name, properties, systemData, tags, type);
         }

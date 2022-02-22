@@ -52,7 +52,6 @@ public final class IapTestServiceAccountInfoResponse {
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }
-
         public IapTestServiceAccountInfoResponse build() {
             return new IapTestServiceAccountInfoResponse(targetAudienceClientId);
         }

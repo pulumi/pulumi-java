@@ -228,7 +228,6 @@ public final class GetInstanceFailoverGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceFailoverGroupResult build() {
             return new GetInstanceFailoverGroupResult(id, managedInstancePairs, name, partnerRegions, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, type);
         }

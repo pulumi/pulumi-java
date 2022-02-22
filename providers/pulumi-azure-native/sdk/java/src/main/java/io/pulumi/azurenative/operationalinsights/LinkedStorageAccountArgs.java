@@ -20,7 +20,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataSourceType")
-    private final @Nullable Input<String> dataSourceType;
+        private final @Nullable Input<String> dataSourceType;
 
     public Input<String> getDataSourceType() {
         return this.dataSourceType == null ? Input.empty() : this.dataSourceType;
@@ -31,7 +31,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccountIds")
-    private final @Nullable Input<List<String>> storageAccountIds;
+        private final @Nullable Input<List<String>> storageAccountIds;
 
     public Input<List<String>> getStorageAccountIds() {
         return this.storageAccountIds == null ? Input.empty() : this.storageAccountIds;
@@ -53,7 +53,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -142,7 +142,6 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public LinkedStorageAccountArgs build() {
             return new LinkedStorageAccountArgs(dataSourceType, resourceGroupName, storageAccountIds, workspaceName);
         }

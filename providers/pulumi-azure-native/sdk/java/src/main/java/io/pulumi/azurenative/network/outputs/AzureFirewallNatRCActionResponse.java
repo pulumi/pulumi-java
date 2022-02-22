@@ -54,7 +54,6 @@ public final class AzureFirewallNatRCActionResponse {
             this.type = type;
             return this;
         }
-
         public AzureFirewallNatRCActionResponse build() {
             return new AzureFirewallNatRCActionResponse(type);
         }

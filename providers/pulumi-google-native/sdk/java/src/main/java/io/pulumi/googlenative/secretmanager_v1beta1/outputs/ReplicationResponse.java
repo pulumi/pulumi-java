@@ -75,7 +75,6 @@ public final class ReplicationResponse {
             this.userManaged = Objects.requireNonNull(userManaged);
             return this;
         }
-
         public ReplicationResponse build() {
             return new ReplicationResponse(automatic, userManaged);
         }

@@ -54,7 +54,6 @@ public final class ScopeNamespaceResponse {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public ScopeNamespaceResponse build() {
             return new ScopeNamespaceResponse(targetNamespace);
         }

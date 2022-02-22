@@ -22,7 +22,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="distributionFilter", required=true)
-    private final String distributionFilter;
+      private final String distributionFilter;
 
     public String getDistributionFilter() {
         return this.distributionFilter;
@@ -33,7 +33,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="range", required=true)
-    private final GoogleMonitoringV3RangeResponse range;
+      private final GoogleMonitoringV3RangeResponse range;
 
     public GoogleMonitoringV3RangeResponse getRange() {
         return this.range;
@@ -82,7 +82,6 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public DistributionCutResponse build() {
             return new DistributionCutResponse(distributionFilter, range);
         }

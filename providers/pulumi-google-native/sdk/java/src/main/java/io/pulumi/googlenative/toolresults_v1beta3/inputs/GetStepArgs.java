@@ -15,28 +15,28 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetStepArgs Empty = new GetStepArgs();
 
     @InputImport(name="executionId", required=true)
-    private final String executionId;
+      private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
     }
 
     @InputImport(name="historyId", required=true)
-    private final String historyId;
+      private final String historyId;
 
     public String getHistoryId() {
         return this.historyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="stepId", required=true)
-    private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;
@@ -105,7 +105,6 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public GetStepArgs build() {
             return new GetStepArgs(executionId, historyId, project, stepId);
         }

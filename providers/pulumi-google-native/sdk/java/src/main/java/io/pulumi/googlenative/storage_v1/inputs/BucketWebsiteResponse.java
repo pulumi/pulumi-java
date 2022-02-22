@@ -21,7 +21,7 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mainPageSuffix", required=true)
-    private final String mainPageSuffix;
+      private final String mainPageSuffix;
 
     public String getMainPageSuffix() {
         return this.mainPageSuffix;
@@ -32,7 +32,7 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="notFoundPage", required=true)
-    private final String notFoundPage;
+      private final String notFoundPage;
 
     public String getNotFoundPage() {
         return this.notFoundPage;
@@ -81,7 +81,6 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
         }
-
         public BucketWebsiteResponse build() {
             return new BucketWebsiteResponse(mainPageSuffix, notFoundPage);
         }

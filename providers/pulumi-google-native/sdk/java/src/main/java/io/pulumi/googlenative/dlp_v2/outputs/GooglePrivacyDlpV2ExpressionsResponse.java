@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
             this.logicalOperator = Objects.requireNonNull(logicalOperator);
             return this;
         }
-
         public GooglePrivacyDlpV2ExpressionsResponse build() {
             return new GooglePrivacyDlpV2ExpressionsResponse(conditions, logicalOperator);
         }

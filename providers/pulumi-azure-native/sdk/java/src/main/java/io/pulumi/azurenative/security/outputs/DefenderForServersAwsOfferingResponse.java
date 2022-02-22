@@ -122,7 +122,6 @@ public final class DefenderForServersAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public DefenderForServersAwsOfferingResponse build() {
             return new DefenderForServersAwsOfferingResponse(arcAutoProvisioning, defenderForServers, description, offeringType);
         }

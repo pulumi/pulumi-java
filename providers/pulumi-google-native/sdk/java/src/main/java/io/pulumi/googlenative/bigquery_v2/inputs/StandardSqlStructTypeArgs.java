@@ -16,7 +16,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     public static final StandardSqlStructTypeArgs Empty = new StandardSqlStructTypeArgs();
 
     @InputImport(name="fields")
-    private final @Nullable Input<List<StandardSqlFieldArgs>> fields;
+      private final @Nullable Input<List<StandardSqlFieldArgs>> fields;
 
     public Input<List<StandardSqlFieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -59,7 +59,6 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
             this.fields = Input.ofNullable(fields);
             return this;
         }
-
         public StandardSqlStructTypeArgs build() {
             return new StandardSqlStructTypeArgs(fields);
         }

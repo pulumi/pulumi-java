@@ -75,7 +75,6 @@ public final class PipelineReadyConditionResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public PipelineReadyConditionResponse build() {
             return new PipelineReadyConditionResponse(status, updateTime);
         }

@@ -23,7 +23,7 @@ public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -61,7 +61,6 @@ public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs
             this.url = url;
             return this;
         }
-
         public ConsoleProfileResponse build() {
             return new ConsoleProfileResponse(url);
         }

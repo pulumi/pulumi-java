@@ -53,7 +53,6 @@ public final class ManagementPolicySchemaResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ManagementPolicySchemaResponse build() {
             return new ManagementPolicySchemaResponse(rules);
         }

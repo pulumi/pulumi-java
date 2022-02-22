@@ -25,7 +25,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="appApk", required=true)
-    private final FileReferenceResponse appApk;
+      private final FileReferenceResponse appApk;
 
     public FileReferenceResponse getAppApk() {
         return this.appApk;
@@ -36,7 +36,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="appBundle", required=true)
-    private final AppBundleResponse appBundle;
+      private final AppBundleResponse appBundle;
 
     public AppBundleResponse getAppBundle() {
         return this.appBundle;
@@ -47,7 +47,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="appPackageId", required=true)
-    private final String appPackageId;
+      private final String appPackageId;
 
     public String getAppPackageId() {
         return this.appPackageId;
@@ -58,7 +58,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="orchestratorOption", required=true)
-    private final String orchestratorOption;
+      private final String orchestratorOption;
 
     public String getOrchestratorOption() {
         return this.orchestratorOption;
@@ -69,7 +69,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="shardingOption", required=true)
-    private final ShardingOptionResponse shardingOption;
+      private final ShardingOptionResponse shardingOption;
 
     public ShardingOptionResponse getShardingOption() {
         return this.shardingOption;
@@ -80,7 +80,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testApk", required=true)
-    private final FileReferenceResponse testApk;
+      private final FileReferenceResponse testApk;
 
     public FileReferenceResponse getTestApk() {
         return this.testApk;
@@ -91,7 +91,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testPackageId", required=true)
-    private final String testPackageId;
+      private final String testPackageId;
 
     public String getTestPackageId() {
         return this.testPackageId;
@@ -102,7 +102,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testRunnerClass", required=true)
-    private final String testRunnerClass;
+      private final String testRunnerClass;
 
     public String getTestRunnerClass() {
         return this.testRunnerClass;
@@ -113,7 +113,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testTargets", required=true)
-    private final List<String> testTargets;
+      private final List<String> testTargets;
 
     public List<String> getTestTargets() {
         return this.testTargets;
@@ -232,7 +232,6 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
         }

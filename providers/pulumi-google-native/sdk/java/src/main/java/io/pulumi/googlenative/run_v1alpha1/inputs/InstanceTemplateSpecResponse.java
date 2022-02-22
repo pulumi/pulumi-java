@@ -21,7 +21,7 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="spec", required=true)
-    private final InstanceSpecResponse spec;
+      private final InstanceSpecResponse spec;
 
     public InstanceSpecResponse getSpec() {
         return this.spec;
@@ -59,7 +59,6 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public InstanceTemplateSpecResponse build() {
             return new InstanceTemplateSpecResponse(spec);
         }

@@ -25,7 +25,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="buildpacks")
-    private final @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks;
+        private final @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks;
 
     public Input<List<BuildpackPropertiesArgs>> getBuildpacks() {
         return this.buildpacks == null ? Input.empty() : this.buildpacks;
@@ -36,7 +36,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,6 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public BuildpacksGroupPropertiesArgs build() {
             return new BuildpacksGroupPropertiesArgs(buildpacks, name);
         }

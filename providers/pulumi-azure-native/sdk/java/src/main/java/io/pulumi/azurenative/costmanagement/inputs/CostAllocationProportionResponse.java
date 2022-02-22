@@ -22,7 +22,7 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="percentage", required=true)
-    private final Double percentage;
+        private final Double percentage;
 
     public Double getPercentage() {
         return this.percentage;
@@ -82,7 +82,6 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public CostAllocationProportionResponse build() {
             return new CostAllocationProportionResponse(name, percentage);
         }

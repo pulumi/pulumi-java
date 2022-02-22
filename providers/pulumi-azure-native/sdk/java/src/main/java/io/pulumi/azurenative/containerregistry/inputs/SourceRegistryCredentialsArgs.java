@@ -27,7 +27,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loginMode")
-    private final @Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode;
+        private final @Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode;
 
     public Input<Either<String,SourceRegistryLoginMode>> getLoginMode() {
         return this.loginMode == null ? Input.empty() : this.loginMode;
@@ -70,7 +70,6 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
             this.loginMode = Input.ofNullable(loginMode);
             return this;
         }
-
         public SourceRegistryCredentialsArgs build() {
             return new SourceRegistryCredentialsArgs(loginMode);
         }

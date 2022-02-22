@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
      * 
      */
     @InputImport(name="requestedOptions", required=true)
-    private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
+      private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
     public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
         return this.requestedOptions;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
      * 
      */
     @InputImport(name="result", required=true)
-    private final GooglePrivacyDlpV2ResultResponse result;
+      private final GooglePrivacyDlpV2ResultResponse result;
 
     public GooglePrivacyDlpV2ResultResponse getResult() {
         return this.result;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
             return new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(requestedOptions, result);
         }

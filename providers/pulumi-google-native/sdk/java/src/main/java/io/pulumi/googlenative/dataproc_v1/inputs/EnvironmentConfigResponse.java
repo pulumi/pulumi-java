@@ -22,7 +22,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="executionConfig", required=true)
-    private final ExecutionConfigResponse executionConfig;
+      private final ExecutionConfigResponse executionConfig;
 
     public ExecutionConfigResponse getExecutionConfig() {
         return this.executionConfig;
@@ -33,7 +33,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="peripheralsConfig", required=true)
-    private final PeripheralsConfigResponse peripheralsConfig;
+      private final PeripheralsConfigResponse peripheralsConfig;
 
     public PeripheralsConfigResponse getPeripheralsConfig() {
         return this.peripheralsConfig;
@@ -82,7 +82,6 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
             this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
             return this;
         }
-
         public EnvironmentConfigResponse build() {
             return new EnvironmentConfigResponse(executionConfig, peripheralsConfig);
         }

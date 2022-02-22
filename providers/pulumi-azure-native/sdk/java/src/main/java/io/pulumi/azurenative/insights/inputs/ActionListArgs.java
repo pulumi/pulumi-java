@@ -24,7 +24,7 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroups")
-    private final @Nullable Input<List<ActionGroupArgs>> actionGroups;
+        private final @Nullable Input<List<ActionGroupArgs>> actionGroups;
 
     public Input<List<ActionGroupArgs>> getActionGroups() {
         return this.actionGroups == null ? Input.empty() : this.actionGroups;
@@ -67,7 +67,6 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
             this.actionGroups = Input.ofNullable(actionGroups);
             return this;
         }
-
         public ActionListArgs build() {
             return new ActionListArgs(actionGroups);
         }

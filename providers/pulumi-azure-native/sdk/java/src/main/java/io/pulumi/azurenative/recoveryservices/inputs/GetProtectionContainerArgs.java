@@ -17,7 +17,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -28,7 +28,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+        private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -39,7 +39,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -119,7 +119,6 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetProtectionContainerArgs build() {
             return new GetProtectionContainerArgs(containerName, fabricName, resourceGroupName, vaultName);
         }

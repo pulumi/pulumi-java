@@ -54,7 +54,6 @@ public final class GetSystemTopicEventSubscriptionFullUrlResult {
             this.endpointUrl = endpointUrl;
             return this;
         }
-
         public GetSystemTopicEventSubscriptionFullUrlResult build() {
             return new GetSystemTopicEventSubscriptionFullUrlResult(endpointUrl);
         }

@@ -77,7 +77,6 @@ public final class TargetPropertiesResponse {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
-
         public TargetPropertiesResponse build() {
             return new TargetPropertiesResponse(azureQueries, nonAzureQueries);
         }

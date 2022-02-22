@@ -54,7 +54,6 @@ public final class GetSolutionConfigResult {
             this.publisherSasUri = publisherSasUri;
             return this;
         }
-
         public GetSolutionConfigResult build() {
             return new GetSolutionConfigResult(publisherSasUri);
         }

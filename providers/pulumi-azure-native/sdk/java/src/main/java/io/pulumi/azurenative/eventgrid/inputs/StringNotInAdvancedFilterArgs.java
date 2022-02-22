@@ -24,7 +24,7 @@ public final class StringNotInAdvancedFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -36,7 +36,7 @@ public final class StringNotInAdvancedFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="operatorType", required=true)
-    private final Input<String> operatorType;
+        private final Input<String> operatorType;
 
     public Input<String> getOperatorType() {
         return this.operatorType;
@@ -47,7 +47,7 @@ public final class StringNotInAdvancedFilterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+        private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -121,7 +121,6 @@ public final class StringNotInAdvancedFilterArgs extends io.pulumi.resources.Res
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public StringNotInAdvancedFilterArgs build() {
             return new StringNotInAdvancedFilterArgs(key, operatorType, values);
         }

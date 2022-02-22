@@ -54,7 +54,6 @@ public final class DedicatedCapacityAdministratorsResponse {
             this.members = members;
             return this;
         }
-
         public DedicatedCapacityAdministratorsResponse build() {
             return new DedicatedCapacityAdministratorsResponse(members);
         }

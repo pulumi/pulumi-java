@@ -74,7 +74,6 @@ public final class ServiceMeshTypeResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public ServiceMeshTypeResponse build() {
             return new ServiceMeshTypeResponse(code, displayName);
         }

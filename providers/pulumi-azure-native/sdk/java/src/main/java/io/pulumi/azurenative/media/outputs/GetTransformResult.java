@@ -205,7 +205,6 @@ public final class GetTransformResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTransformResult build() {
             return new GetTransformResult(created, description, id, lastModified, name, outputs, systemData, type);
         }

@@ -288,7 +288,6 @@ public final class GetCommunicationServiceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetCommunicationServiceResult build() {
             return new GetCommunicationServiceResult(dataLocation, hostName, id, immutableResourceId, location, name, notificationHubId, provisioningState, systemData, tags, type, version);
         }

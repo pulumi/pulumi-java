@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
      * 
      */
     @InputImport(name="tableSourceType", required=true)
-    private final String tableSourceType;
+      private final String tableSourceType;
 
     public String getTableSourceType() {
         return this.tableSourceType;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
      * 
      */
     @InputImport(name="tableSpec", required=true)
-    private final GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec;
+      private final GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec;
 
     public GoogleCloudDatacatalogV1beta1TableSpecResponse getTableSpec() {
         return this.tableSpec;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
      * 
      */
     @InputImport(name="viewSpec", required=true)
-    private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
+      private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 
     public GoogleCloudDatacatalogV1beta1ViewSpecResponse getViewSpec() {
         return this.viewSpec;
@@ -104,7 +104,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse extend
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
         }

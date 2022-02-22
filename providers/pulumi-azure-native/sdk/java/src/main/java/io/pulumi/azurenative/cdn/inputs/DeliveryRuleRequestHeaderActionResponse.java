@@ -23,7 +23,7 @@ public final class DeliveryRuleRequestHeaderActionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleRequestHeaderActionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final HeaderActionParametersResponse parameters;
+        private final HeaderActionParametersResponse parameters;
 
     public HeaderActionParametersResponse getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class DeliveryRuleRequestHeaderActionResponse extends io.pulumi.res
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleRequestHeaderActionResponse build() {
             return new DeliveryRuleRequestHeaderActionResponse(name, parameters);
         }

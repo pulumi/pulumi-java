@@ -183,7 +183,6 @@ public final class ContactProfileLinkChannelResponse {
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }
-
         public ContactProfileLinkChannelResponse build() {
             return new ContactProfileLinkChannelResponse(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
         }

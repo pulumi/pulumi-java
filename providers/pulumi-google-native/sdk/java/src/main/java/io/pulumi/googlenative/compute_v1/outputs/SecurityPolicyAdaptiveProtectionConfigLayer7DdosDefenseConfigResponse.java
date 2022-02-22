@@ -75,7 +75,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(enable, ruleVisibility);
         }

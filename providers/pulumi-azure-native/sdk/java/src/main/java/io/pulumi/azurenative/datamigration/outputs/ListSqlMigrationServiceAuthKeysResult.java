@@ -76,7 +76,6 @@ public final class ListSqlMigrationServiceAuthKeysResult {
             this.authKey2 = authKey2;
             return this;
         }
-
         public ListSqlMigrationServiceAuthKeysResult build() {
             return new ListSqlMigrationServiceAuthKeysResult(authKey1, authKey2);
         }

@@ -379,7 +379,6 @@ public final class AmlComputeResponseProperties {
             this.vmSize = vmSize;
             return this;
         }
-
         public AmlComputeResponseProperties build() {
             return new AmlComputeResponseProperties(allocationState, allocationStateTransitionTime, currentNodeCount, enableNodePublicIp, errors, isolatedNetwork, nodeStateCounts, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, targetNodeCount, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
         }

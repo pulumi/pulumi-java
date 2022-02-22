@@ -332,7 +332,6 @@ public final class GetIntegrationAccountAgreementResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountAgreementResult build() {
             return new GetIntegrationAccountAgreementResult(agreementType, changedTime, content, createdTime, guestIdentity, guestPartner, hostIdentity, hostPartner, id, location, metadata, name, tags, type);
         }

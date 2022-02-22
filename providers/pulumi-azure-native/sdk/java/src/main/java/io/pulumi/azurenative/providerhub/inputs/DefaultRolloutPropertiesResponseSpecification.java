@@ -23,56 +23,56 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
     public static final DefaultRolloutPropertiesResponseSpecification Empty = new DefaultRolloutPropertiesResponseSpecification();
 
     @InputImport(name="canary")
-    private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
+        private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
 
     public Optional<DefaultRolloutSpecificationResponseCanary> getCanary() {
         return this.canary == null ? Optional.empty() : Optional.ofNullable(this.canary);
     }
 
     @InputImport(name="highTraffic")
-    private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
+        private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseHighTraffic> getHighTraffic() {
         return this.highTraffic == null ? Optional.empty() : Optional.ofNullable(this.highTraffic);
     }
 
     @InputImport(name="lowTraffic")
-    private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
+        private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseLowTraffic> getLowTraffic() {
         return this.lowTraffic == null ? Optional.empty() : Optional.ofNullable(this.lowTraffic);
     }
 
     @InputImport(name="mediumTraffic")
-    private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
+        private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseMediumTraffic> getMediumTraffic() {
         return this.mediumTraffic == null ? Optional.empty() : Optional.ofNullable(this.mediumTraffic);
     }
 
     @InputImport(name="providerRegistration")
-    private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
+        private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
 
     public Optional<DefaultRolloutSpecificationResponseProviderRegistration> getProviderRegistration() {
         return this.providerRegistration == null ? Optional.empty() : Optional.ofNullable(this.providerRegistration);
     }
 
     @InputImport(name="resourceTypeRegistrations")
-    private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
+        private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
 
     public List<ResourceTypeRegistrationResponse> getResourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
 
     @InputImport(name="restOfTheWorldGroupOne")
-    private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
+        private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> getRestOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
     @InputImport(name="restOfTheWorldGroupTwo")
-    private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
+        private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> getRestOfTheWorldGroupTwo() {
         return this.restOfTheWorldGroupTwo == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupTwo);
@@ -181,7 +181,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
-
         public DefaultRolloutPropertiesResponseSpecification build() {
             return new DefaultRolloutPropertiesResponseSpecification(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }

@@ -97,7 +97,6 @@ public final class DiagnosticStoragePropertiesResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public DiagnosticStoragePropertiesResponse build() {
             return new DiagnosticStoragePropertiesResponse(authenticationType, connectionString, resourceId);
         }

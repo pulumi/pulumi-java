@@ -19,7 +19,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     public static final TestCaseArgs Empty = new TestCaseArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -30,7 +30,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -41,14 +41,14 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastTestResult")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
 
     public Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> getLastTestResult() {
         return this.lastTestResult == null ? Input.empty() : this.lastTestResult;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,14 +70,14 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testCaseConversationTurns")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
 
     public Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getTestCaseConversationTurns() {
         return this.testCaseConversationTurns == null ? Input.empty() : this.testCaseConversationTurns;
@@ -110,7 +110,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testConfig")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
 
     public Input<GoogleCloudDialogflowCxV3TestConfigArgs> getTestConfig() {
         return this.testConfig == null ? Input.empty() : this.testConfig;
@@ -289,7 +289,6 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             this.testConfig = Input.ofNullable(testConfig);
             return this;
         }
-
         public TestCaseArgs build() {
             return new TestCaseArgs(agentId, displayName, lastTestResult, location, name, notes, project, tags, testCaseConversationTurns, testConfig);
         }

@@ -291,7 +291,6 @@ public final class GetGuestAgentResult {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public GetGuestAgentResult build() {
             return new GetGuestAgentResult(credentials, customResourceName, httpProxyConfig, id, name, provisioningAction, provisioningState, status, statuses, systemData, type, uuid);
         }

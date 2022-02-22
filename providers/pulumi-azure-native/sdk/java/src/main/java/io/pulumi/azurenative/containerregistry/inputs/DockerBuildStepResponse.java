@@ -27,7 +27,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable List<ArgumentResponse> arguments;
+        private final @Nullable List<ArgumentResponse> arguments;
 
     public List<ArgumentResponse> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
@@ -38,7 +38,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="baseImageDependencies", required=true)
-    private final List<BaseImageDependencyResponse> baseImageDependencies;
+        private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
         return this.baseImageDependencies;
@@ -49,7 +49,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="contextAccessToken")
-    private final @Nullable String contextAccessToken;
+        private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
@@ -60,7 +60,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="contextPath")
-    private final @Nullable String contextPath;
+        private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
@@ -71,7 +71,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dockerFilePath", required=true)
-    private final String dockerFilePath;
+        private final String dockerFilePath;
 
     public String getDockerFilePath() {
         return this.dockerFilePath;
@@ -82,7 +82,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="imageNames")
-    private final @Nullable List<String> imageNames;
+        private final @Nullable List<String> imageNames;
 
     public List<String> getImageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
@@ -93,7 +93,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isPushEnabled")
-    private final @Nullable Boolean isPushEnabled;
+        private final @Nullable Boolean isPushEnabled;
 
     public Optional<Boolean> getIsPushEnabled() {
         return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
@@ -104,7 +104,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="noCache")
-    private final @Nullable Boolean noCache;
+        private final @Nullable Boolean noCache;
 
     public Optional<Boolean> getNoCache() {
         return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
@@ -115,7 +115,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -127,7 +127,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -256,7 +256,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DockerBuildStepResponse build() {
             return new DockerBuildStepResponse(arguments, baseImageDependencies, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
         }

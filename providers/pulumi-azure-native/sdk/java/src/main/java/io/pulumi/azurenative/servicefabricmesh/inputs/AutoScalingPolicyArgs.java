@@ -24,7 +24,7 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mechanism", required=true)
-    private final Input<AddRemoveReplicaScalingMechanismArgs> mechanism;
+        private final Input<AddRemoveReplicaScalingMechanismArgs> mechanism;
 
     public Input<AddRemoveReplicaScalingMechanismArgs> getMechanism() {
         return this.mechanism;
@@ -35,7 +35,7 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final Input<AverageLoadScalingTriggerArgs> trigger;
+        private final Input<AverageLoadScalingTriggerArgs> trigger;
 
     public Input<AverageLoadScalingTriggerArgs> getTrigger() {
         return this.trigger;
@@ -120,7 +120,6 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.trigger = Input.of(Objects.requireNonNull(trigger));
             return this;
         }
-
         public AutoScalingPolicyArgs build() {
             return new AutoScalingPolicyArgs(mechanism, name, trigger);
         }

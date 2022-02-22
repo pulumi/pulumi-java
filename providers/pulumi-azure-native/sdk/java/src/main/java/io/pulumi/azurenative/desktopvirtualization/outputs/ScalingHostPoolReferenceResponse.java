@@ -77,7 +77,6 @@ public final class ScalingHostPoolReferenceResponse {
             this.scalingPlanEnabled = scalingPlanEnabled;
             return this;
         }
-
         public ScalingHostPoolReferenceResponse build() {
             return new ScalingHostPoolReferenceResponse(hostPoolArmPath, scalingPlanEnabled);
         }

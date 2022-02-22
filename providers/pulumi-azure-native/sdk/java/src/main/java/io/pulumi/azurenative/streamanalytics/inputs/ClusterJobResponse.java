@@ -22,7 +22,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobState", required=true)
-    private final String jobState;
+        private final String jobState;
 
     public String getJobState() {
         return this.jobState;
@@ -44,7 +44,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="streamingUnits", required=true)
-    private final Integer streamingUnits;
+        private final Integer streamingUnits;
 
     public Integer getStreamingUnits() {
         return this.streamingUnits;
@@ -103,7 +103,6 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }
-
         public ClusterJobResponse build() {
             return new ClusterJobResponse(id, jobState, streamingUnits);
         }

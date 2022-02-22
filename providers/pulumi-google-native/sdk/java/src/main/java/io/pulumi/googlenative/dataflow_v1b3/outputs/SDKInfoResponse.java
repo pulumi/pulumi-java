@@ -74,7 +74,6 @@ public final class SDKInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SDKInfoResponse build() {
             return new SDKInfoResponse(language, version);
         }

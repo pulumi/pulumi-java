@@ -439,7 +439,6 @@ public final class GetNodeResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, dataDisks, description, health, healthDescription, labels, metadata, name, networkConfig, networkEndpoints, runtimeVersion, schedulingConfig, serviceAccount, state, symptoms, tags);
         }

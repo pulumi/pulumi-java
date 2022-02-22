@@ -210,7 +210,6 @@ public final class MariaDBLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MariaDBLinkedServiceResponse build() {
             return new MariaDBLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
         }

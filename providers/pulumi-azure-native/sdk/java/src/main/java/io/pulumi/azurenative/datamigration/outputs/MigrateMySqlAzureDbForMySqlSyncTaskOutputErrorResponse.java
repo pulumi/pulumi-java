@@ -98,7 +98,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(error, id, resultType);
         }

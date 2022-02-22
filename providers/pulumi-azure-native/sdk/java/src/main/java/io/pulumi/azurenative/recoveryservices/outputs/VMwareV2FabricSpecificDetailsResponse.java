@@ -139,7 +139,6 @@ public final class VMwareV2FabricSpecificDetailsResponse {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
-
         public VMwareV2FabricSpecificDetailsResponse build() {
             return new VMwareV2FabricSpecificDetailsResponse(instanceType, migrationSolutionId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }

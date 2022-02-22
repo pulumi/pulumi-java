@@ -17,7 +17,7 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListVirtualMachineApplicableSchedulesArgs build() {
             return new ListVirtualMachineApplicableSchedulesArgs(labName, name, resourceGroupName);
         }

@@ -19,7 +19,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minGuestCpuCount")
-    private final @Nullable Input<Integer> minGuestCpuCount;
+      private final @Nullable Input<Integer> minGuestCpuCount;
 
     public Input<Integer> getMinGuestCpuCount() {
         return this.minGuestCpuCount == null ? Input.empty() : this.minGuestCpuCount;
@@ -30,7 +30,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minMemoryMb")
-    private final @Nullable Input<Integer> minMemoryMb;
+      private final @Nullable Input<Integer> minMemoryMb;
 
     public Input<Integer> getMinMemoryMb() {
         return this.minMemoryMb == null ? Input.empty() : this.minMemoryMb;
@@ -89,7 +89,6 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
             this.minMemoryMb = Input.ofNullable(minMemoryMb);
             return this;
         }
-
         public LicenseResourceRequirementsArgs build() {
             return new LicenseResourceRequirementsArgs(minGuestCpuCount, minMemoryMb);
         }

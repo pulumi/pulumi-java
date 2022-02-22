@@ -224,7 +224,6 @@ public final class AzureFirewallNetworkRuleResponse {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public AzureFirewallNetworkRuleResponse build() {
             return new AzureFirewallNetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups);
         }

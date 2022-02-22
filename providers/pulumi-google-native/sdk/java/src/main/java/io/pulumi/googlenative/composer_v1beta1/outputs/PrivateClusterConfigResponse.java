@@ -96,7 +96,6 @@ public final class PrivateClusterConfigResponse {
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, masterIpv4CidrBlock, masterIpv4ReservedRange);
         }

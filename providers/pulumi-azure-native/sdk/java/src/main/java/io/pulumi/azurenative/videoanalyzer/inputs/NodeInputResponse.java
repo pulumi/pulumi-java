@@ -21,7 +21,7 @@ public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodeName", required=true)
-    private final String nodeName;
+        private final String nodeName;
 
     public String getNodeName() {
         return this.nodeName;
@@ -59,7 +59,6 @@ public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
-
         public NodeInputResponse build() {
             return new NodeInputResponse(nodeName);
         }

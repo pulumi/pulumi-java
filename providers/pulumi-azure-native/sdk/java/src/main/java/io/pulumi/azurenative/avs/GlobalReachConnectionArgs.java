@@ -19,7 +19,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable Input<String> authorizationKey;
+        private final @Nullable Input<String> authorizationKey;
 
     public Input<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
@@ -30,7 +30,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="globalReachConnectionName")
-    private final @Nullable Input<String> globalReachConnectionName;
+        private final @Nullable Input<String> globalReachConnectionName;
 
     public Input<String> getGlobalReachConnectionName() {
         return this.globalReachConnectionName == null ? Input.empty() : this.globalReachConnectionName;
@@ -41,7 +41,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peerExpressRouteCircuit")
-    private final @Nullable Input<String> peerExpressRouteCircuit;
+        private final @Nullable Input<String> peerExpressRouteCircuit;
 
     public Input<String> getPeerExpressRouteCircuit() {
         return this.peerExpressRouteCircuit == null ? Input.empty() : this.peerExpressRouteCircuit;
@@ -52,7 +52,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -63,7 +63,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,6 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public GlobalReachConnectionArgs build() {
             return new GlobalReachConnectionArgs(authorizationKey, globalReachConnectionName, peerExpressRouteCircuit, privateCloudName, resourceGroupName);
         }

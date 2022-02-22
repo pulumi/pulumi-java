@@ -311,7 +311,6 @@ public final class GetInboundNatRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInboundNatRuleResult build() {
             return new GetInboundNatRuleResult(backendIPConfiguration, backendPort, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }

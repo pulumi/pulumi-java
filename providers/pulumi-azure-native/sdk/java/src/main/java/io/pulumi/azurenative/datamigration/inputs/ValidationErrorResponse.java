@@ -21,7 +21,7 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+        private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -32,7 +32,7 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+        private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class ValidationErrorResponse extends io.pulumi.resources.InvokeArg
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ValidationErrorResponse build() {
             return new ValidationErrorResponse(severity, text);
         }

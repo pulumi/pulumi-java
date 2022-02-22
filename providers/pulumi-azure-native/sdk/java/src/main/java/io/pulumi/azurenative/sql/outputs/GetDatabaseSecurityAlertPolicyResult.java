@@ -290,7 +290,6 @@ public final class GetDatabaseSecurityAlertPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseSecurityAlertPolicyResult build() {
             return new GetDatabaseSecurityAlertPolicyResult(creationTime, disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, systemData, type);
         }

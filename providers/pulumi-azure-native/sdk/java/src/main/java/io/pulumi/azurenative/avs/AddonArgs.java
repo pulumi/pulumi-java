@@ -21,7 +21,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-    private final @Nullable Input<String> addonName;
+        private final @Nullable Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName == null ? Input.empty() : this.addonName;
@@ -32,7 +32,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonType")
-    private final @Nullable Input<Either<String,AddonType>> addonType;
+        private final @Nullable Input<Either<String,AddonType>> addonType;
 
     public Input<Either<String,AddonType>> getAddonType() {
         return this.addonType == null ? Input.empty() : this.addonType;
@@ -43,7 +43,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseKey")
-    private final @Nullable Input<String> licenseKey;
+        private final @Nullable Input<String> licenseKey;
 
     public Input<String> getLicenseKey() {
         return this.licenseKey == null ? Input.empty() : this.licenseKey;
@@ -54,7 +54,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -65,7 +65,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -169,7 +169,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public AddonArgs build() {
             return new AddonArgs(addonName, addonType, licenseKey, privateCloudName, resourceGroupName);
         }

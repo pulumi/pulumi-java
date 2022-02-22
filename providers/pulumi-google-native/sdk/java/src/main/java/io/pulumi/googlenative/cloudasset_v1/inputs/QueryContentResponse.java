@@ -21,7 +21,7 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iamPolicyAnalysisQuery", required=true)
-    private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
+      private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
     public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
@@ -59,7 +59,6 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
         }
-
         public QueryContentResponse build() {
             return new QueryContentResponse(iamPolicyAnalysisQuery);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @InputImport(name="categoricalFeatures")
-    private final @Nullable Input<Map<String,String>> categoricalFeatures;
+      private final @Nullable Input<Map<String,String>> categoricalFeatures;
 
     public Input<Map<String,String>> getCategoricalFeatures() {
         return this.categoricalFeatures == null ? Input.empty() : this.categoricalFeatures;
@@ -35,7 +35,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @InputImport(name="numericalFeatures")
-    private final @Nullable Input<Map<String,String>> numericalFeatures;
+      private final @Nullable Input<Map<String,String>> numericalFeatures;
 
     public Input<Map<String,String>> getNumericalFeatures() {
         return this.numericalFeatures == null ? Input.empty() : this.numericalFeatures;
@@ -94,7 +94,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
             this.numericalFeatures = Input.ofNullable(numericalFeatures);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(categoricalFeatures, numericalFeatures);
         }

@@ -26,7 +26,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<DsRecordAlgorithm> algorithm;
+      private final @Nullable Input<DsRecordAlgorithm> algorithm;
 
     public Input<DsRecordAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -37,7 +37,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digest")
-    private final @Nullable Input<String> digest;
+      private final @Nullable Input<String> digest;
 
     public Input<String> getDigest() {
         return this.digest == null ? Input.empty() : this.digest;
@@ -48,7 +48,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestType")
-    private final @Nullable Input<DsRecordDigestType> digestType;
+      private final @Nullable Input<DsRecordDigestType> digestType;
 
     public Input<DsRecordDigestType> getDigestType() {
         return this.digestType == null ? Input.empty() : this.digestType;
@@ -59,7 +59,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyTag")
-    private final @Nullable Input<Integer> keyTag;
+      private final @Nullable Input<Integer> keyTag;
 
     public Input<Integer> getKeyTag() {
         return this.keyTag == null ? Input.empty() : this.keyTag;
@@ -148,7 +148,6 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.keyTag = Input.ofNullable(keyTag);
             return this;
         }
-
         public DsRecordArgs build() {
             return new DsRecordArgs(algorithm, digest, digestType, keyTag);
         }

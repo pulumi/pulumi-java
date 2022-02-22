@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCardButtonResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCardButtonResponse(postback, text);
         }

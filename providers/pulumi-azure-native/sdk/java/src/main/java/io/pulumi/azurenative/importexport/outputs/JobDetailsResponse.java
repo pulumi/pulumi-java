@@ -423,7 +423,6 @@ public final class JobDetailsResponse {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public JobDetailsResponse build() {
             return new JobDetailsResponse(backupDriveManifest, cancelRequested, deliveryPackage, diagnosticsPath, driveList, encryptionKey, export, incompleteBlobListUri, jobType, logLevel, percentComplete, provisioningState, returnAddress, returnPackage, returnShipping, shippingInformation, state, storageAccountId);
         }

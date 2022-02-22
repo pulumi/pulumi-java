@@ -24,7 +24,7 @@ public final class SecretObjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -37,7 +37,7 @@ public final class SecretObjectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -86,7 +86,6 @@ public final class SecretObjectResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public SecretObjectResponse build() {
             return new SecretObjectResponse(type, value);
         }

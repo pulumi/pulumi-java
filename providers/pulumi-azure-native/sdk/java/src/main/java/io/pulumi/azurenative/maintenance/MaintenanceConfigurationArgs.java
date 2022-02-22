@@ -22,7 +22,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="extensionProperties")
-    private final @Nullable Input<Map<String,String>> extensionProperties;
+        private final @Nullable Input<Map<String,String>> extensionProperties;
 
     public Input<Map<String,String>> getExtensionProperties() {
         return this.extensionProperties == null ? Input.empty() : this.extensionProperties;
@@ -33,7 +33,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maintenanceScope")
-    private final @Nullable Input<Either<String,MaintenanceScope>> maintenanceScope;
+        private final @Nullable Input<Either<String,MaintenanceScope>> maintenanceScope;
 
     public Input<Either<String,MaintenanceScope>> getMaintenanceScope() {
         return this.maintenanceScope == null ? Input.empty() : this.maintenanceScope;
@@ -55,7 +55,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -66,7 +66,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -88,7 +88,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MaintenanceConfigurationArgs build() {
             return new MaintenanceConfigurationArgs(extensionProperties, location, maintenanceScope, namespace, resourceGroupName, resourceName, tags);
         }

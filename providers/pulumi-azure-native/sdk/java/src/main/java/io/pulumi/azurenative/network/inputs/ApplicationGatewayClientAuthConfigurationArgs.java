@@ -23,7 +23,7 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="verifyClientCertIssuerDN")
-    private final @Nullable Input<Boolean> verifyClientCertIssuerDN;
+        private final @Nullable Input<Boolean> verifyClientCertIssuerDN;
 
     public Input<Boolean> getVerifyClientCertIssuerDN() {
         return this.verifyClientCertIssuerDN == null ? Input.empty() : this.verifyClientCertIssuerDN;
@@ -66,7 +66,6 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
             this.verifyClientCertIssuerDN = Input.ofNullable(verifyClientCertIssuerDN);
             return this;
         }
-
         public ApplicationGatewayClientAuthConfigurationArgs build() {
             return new ApplicationGatewayClientAuthConfigurationArgs(verifyClientCertIssuerDN);
         }

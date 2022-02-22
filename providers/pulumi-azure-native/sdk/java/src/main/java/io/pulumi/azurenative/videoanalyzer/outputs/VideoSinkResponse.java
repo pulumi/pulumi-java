@@ -166,7 +166,6 @@ public final class VideoSinkResponse {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }
-
         public VideoSinkResponse build() {
             return new VideoSinkResponse(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }

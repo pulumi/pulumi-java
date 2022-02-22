@@ -141,7 +141,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
             return new RegistrationAssignmentPropertiesResponseRegistrationDefinition(id, name, plan, properties, type);
         }

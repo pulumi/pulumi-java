@@ -163,7 +163,6 @@ public final class RestorePointSourceVMDataDiskResponse {
             this.name = name;
             return this;
         }
-
         public RestorePointSourceVMDataDiskResponse build() {
             return new RestorePointSourceVMDataDiskResponse(caching, diskRestorePoint, diskSizeGB, lun, managedDisk, name);
         }

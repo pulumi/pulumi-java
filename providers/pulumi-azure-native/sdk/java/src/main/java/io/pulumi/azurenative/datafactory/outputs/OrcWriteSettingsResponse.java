@@ -100,7 +100,6 @@ public final class OrcWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcWriteSettingsResponse build() {
             return new OrcWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }

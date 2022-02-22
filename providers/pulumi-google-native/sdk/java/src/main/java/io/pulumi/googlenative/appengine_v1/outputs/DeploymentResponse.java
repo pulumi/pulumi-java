@@ -120,7 +120,6 @@ public final class DeploymentResponse {
             this.zip = Objects.requireNonNull(zip);
             return this;
         }
-
         public DeploymentResponse build() {
             return new DeploymentResponse(cloudBuildOptions, container, files, zip);
         }

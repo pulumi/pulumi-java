@@ -19,7 +19,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+        private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -30,7 +30,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkResourceId", required=true)
-    private final Input<String> privateLinkResourceId;
+        private final Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
@@ -41,7 +41,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="requestMessage")
-    private final @Nullable Input<String> requestMessage;
+        private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
@@ -52,7 +52,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -74,7 +74,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sharedPrivateLinkResourceName")
-    private final @Nullable Input<String> sharedPrivateLinkResourceName;
+        private final @Nullable Input<String> sharedPrivateLinkResourceName;
 
     public Input<String> getSharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName == null ? Input.empty() : this.sharedPrivateLinkResourceName;
@@ -193,7 +193,6 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
             this.sharedPrivateLinkResourceName = Input.ofNullable(sharedPrivateLinkResourceName);
             return this;
         }
-
         public SignalRSharedPrivateLinkResourceArgs build() {
             return new SignalRSharedPrivateLinkResourceArgs(groupId, privateLinkResourceId, requestMessage, resourceGroupName, resourceName, sharedPrivateLinkResourceName);
         }

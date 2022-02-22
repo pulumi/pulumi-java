@@ -76,7 +76,6 @@ public final class MasterAuthorizedNetworksConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public MasterAuthorizedNetworksConfigResponse build() {
             return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
         }

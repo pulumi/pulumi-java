@@ -24,7 +24,7 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable List<String> value;
+        private final @Nullable List<String> value;
 
     public List<String> getValue() {
         return this.value == null ? List.of() : this.value;
@@ -62,7 +62,6 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public TxtRecordResponse build() {
             return new TxtRecordResponse(value);
         }

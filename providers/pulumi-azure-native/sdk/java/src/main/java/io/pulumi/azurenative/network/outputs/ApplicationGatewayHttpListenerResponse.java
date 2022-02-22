@@ -353,7 +353,6 @@ public final class ApplicationGatewayHttpListenerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayHttpListenerResponse build() {
             return new ApplicationGatewayHttpListenerResponse(customErrorConfigurations, etag, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, provisioningState, requireServerNameIndication, sslCertificate, sslProfile, type);
         }

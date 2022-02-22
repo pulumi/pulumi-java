@@ -181,7 +181,6 @@ public final class GetBackupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, description, endTime, name, restoringServices, serviceRevision, state);
         }

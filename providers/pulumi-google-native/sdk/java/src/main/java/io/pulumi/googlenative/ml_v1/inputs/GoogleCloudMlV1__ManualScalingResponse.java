@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__ManualScalingResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodes", required=true)
-    private final Integer nodes;
+      private final Integer nodes;
 
     public Integer getNodes() {
         return this.nodes;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1__ManualScalingResponse extends io.pulumi.reso
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public GoogleCloudMlV1__ManualScalingResponse build() {
             return new GoogleCloudMlV1__ManualScalingResponse(nodes);
         }

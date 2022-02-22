@@ -23,7 +23,7 @@ public final class PartnerRegionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,6 @@ public final class PartnerRegionInfoArgs extends io.pulumi.resources.ResourceArg
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public PartnerRegionInfoArgs build() {
             return new PartnerRegionInfoArgs(location);
         }

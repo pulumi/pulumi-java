@@ -225,7 +225,6 @@ public final class GetWorkloadGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadGroupResult build() {
             return new GetWorkloadGroupResult(id, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, name, queryExecutionTimeout, type);
         }

@@ -96,7 +96,6 @@ public final class WorkerConfigResponse {
             this.noExternalIp = Objects.requireNonNull(noExternalIp);
             return this;
         }
-
         public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType, noExternalIp);
         }

@@ -180,7 +180,6 @@ public final class CsvOptionsResponse {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
-
         public CsvOptionsResponse build() {
             return new CsvOptionsResponse(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
         }

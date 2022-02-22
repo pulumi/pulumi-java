@@ -441,7 +441,6 @@ public final class GetAutomationAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationAccountResult build() {
             return new GetAutomationAccountResult(automationHybridServiceUrl, creationTime, description, disableLocalAuth, encryption, etag, id, identity, lastModifiedBy, lastModifiedTime, location, name, privateEndpointConnections, publicNetworkAccess, sku, state, systemData, tags, type);
         }

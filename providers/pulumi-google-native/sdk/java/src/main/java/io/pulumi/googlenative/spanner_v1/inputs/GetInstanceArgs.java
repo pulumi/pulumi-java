@@ -15,21 +15,21 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @InputImport(name="fieldMask")
-    private final @Nullable String fieldMask;
+      private final @Nullable String fieldMask;
 
     public Optional<String> getFieldMask() {
         return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetInstanceArgs build() {
             return new GetInstanceArgs(fieldMask, instanceId, project);
         }

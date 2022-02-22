@@ -76,7 +76,6 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
             this.name = name;
             return this;
         }
-
         public AzureMachineLearningWebServiceOutputColumnResponse build() {
             return new AzureMachineLearningWebServiceOutputColumnResponse(dataType, name);
         }

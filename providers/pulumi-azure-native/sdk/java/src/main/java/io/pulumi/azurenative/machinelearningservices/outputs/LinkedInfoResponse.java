@@ -97,7 +97,6 @@ public final class LinkedInfoResponse {
             this.origin = origin;
             return this;
         }
-
         public LinkedInfoResponse build() {
             return new LinkedInfoResponse(linkedId, linkedResourceName, origin);
         }

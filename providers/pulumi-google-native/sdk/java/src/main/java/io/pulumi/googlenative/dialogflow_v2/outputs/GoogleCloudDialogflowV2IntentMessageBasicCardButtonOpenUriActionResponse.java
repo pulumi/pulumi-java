@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(uri);
         }

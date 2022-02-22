@@ -23,7 +23,7 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="percentage", required=true)
-    private final Input<Double> percentage;
+        private final Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage;
@@ -93,7 +93,6 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }
-
         public CostAllocationProportionArgs build() {
             return new CostAllocationProportionArgs(name, percentage);
         }

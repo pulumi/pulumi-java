@@ -24,7 +24,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * 
      */
     @InputImport(name="excludedAccountIds")
-    private final @Nullable List<String> excludedAccountIds;
+        private final @Nullable List<String> excludedAccountIds;
 
     public List<String> getExcludedAccountIds() {
         return this.excludedAccountIds == null ? List.of() : this.excludedAccountIds;
@@ -35,7 +35,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * 
      */
     @InputImport(name="organizationMembershipType")
-    private final @Nullable String organizationMembershipType;
+        private final @Nullable String organizationMembershipType;
 
     public Optional<String> getOrganizationMembershipType() {
         return this.organizationMembershipType == null ? Optional.empty() : Optional.ofNullable(this.organizationMembershipType);
@@ -46,7 +46,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * 
      */
     @InputImport(name="parentHierarchyId")
-    private final @Nullable String parentHierarchyId;
+        private final @Nullable String parentHierarchyId;
 
     public Optional<String> getParentHierarchyId() {
         return this.parentHierarchyId == null ? Optional.empty() : Optional.ofNullable(this.parentHierarchyId);
@@ -57,7 +57,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * 
      */
     @InputImport(name="stacksetName")
-    private final @Nullable String stacksetName;
+        private final @Nullable String stacksetName;
 
     public Optional<String> getStacksetName() {
         return this.stacksetName == null ? Optional.empty() : Optional.ofNullable(this.stacksetName);
@@ -126,7 +126,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
             this.stacksetName = stacksetName;
             return this;
         }
-
         public SecurityConnectorPropertiesResponseOrganizationalData build() {
             return new SecurityConnectorPropertiesResponseOrganizationalData(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }

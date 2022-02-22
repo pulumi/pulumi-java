@@ -44,7 +44,6 @@ public final class SubsettingResponse {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public SubsettingResponse build() {
             return new SubsettingResponse(policy);
         }

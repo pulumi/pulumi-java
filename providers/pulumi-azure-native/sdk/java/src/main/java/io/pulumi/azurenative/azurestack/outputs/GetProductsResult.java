@@ -78,7 +78,6 @@ public final class GetProductsResult {
             this.value = value;
             return this;
         }
-
         public GetProductsResult build() {
             return new GetProductsResult(nextLink, value);
         }

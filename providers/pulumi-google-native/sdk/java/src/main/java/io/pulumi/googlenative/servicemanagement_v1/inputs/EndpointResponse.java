@@ -22,7 +22,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowCors", required=true)
-    private final Boolean allowCors;
+      private final Boolean allowCors;
 
     public Boolean getAllowCors() {
         return this.allowCors;
@@ -33,7 +33,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -103,7 +103,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(allowCors, name, target);
         }

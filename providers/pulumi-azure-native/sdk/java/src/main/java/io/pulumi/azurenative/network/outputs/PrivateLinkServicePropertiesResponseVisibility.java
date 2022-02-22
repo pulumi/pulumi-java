@@ -54,7 +54,6 @@ public final class PrivateLinkServicePropertiesResponseVisibility {
             this.subscriptions = subscriptions;
             return this;
         }
-
         public PrivateLinkServicePropertiesResponseVisibility build() {
             return new PrivateLinkServicePropertiesResponseVisibility(subscriptions);
         }

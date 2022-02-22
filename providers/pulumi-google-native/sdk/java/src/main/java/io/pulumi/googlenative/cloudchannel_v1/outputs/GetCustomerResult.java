@@ -287,7 +287,6 @@ public final class GetCustomerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCustomerResult build() {
             return new GetCustomerResult(alternateEmail, channelPartnerId, cloudIdentityId, cloudIdentityInfo, createTime, domain, languageCode, name, orgDisplayName, orgPostalAddress, primaryContactInfo, updateTime);
         }

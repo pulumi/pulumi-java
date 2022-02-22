@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudRunOpV2VolumeMountResponse build() {
             return new GoogleCloudRunOpV2VolumeMountResponse(mountPath, name);
         }

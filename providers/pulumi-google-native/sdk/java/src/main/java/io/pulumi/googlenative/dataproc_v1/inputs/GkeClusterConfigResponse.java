@@ -21,7 +21,7 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="namespacedGkeDeploymentTarget", required=true)
-    private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
+      private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
     public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
@@ -59,7 +59,6 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
             this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
             return this;
         }
-
         public GkeClusterConfigResponse build() {
             return new GkeClusterConfigResponse(namespacedGkeDeploymentTarget);
         }

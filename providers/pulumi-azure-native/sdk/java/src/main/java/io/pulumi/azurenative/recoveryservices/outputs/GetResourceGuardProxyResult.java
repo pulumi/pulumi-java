@@ -183,7 +183,6 @@ public final class GetResourceGuardProxyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceGuardProxyResult build() {
             return new GetResourceGuardProxyResult(eTag, id, location, name, properties, tags, type);
         }

@@ -160,7 +160,6 @@ public final class GetIndexResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(ancestor, indexId, kind, project, properties, state);
         }

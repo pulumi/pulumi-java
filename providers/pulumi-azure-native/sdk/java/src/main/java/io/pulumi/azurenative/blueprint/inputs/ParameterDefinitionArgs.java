@@ -27,7 +27,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable Input<List<Object>> allowedValues;
+        private final @Nullable Input<List<Object>> allowedValues;
 
     public Input<List<Object>> getAllowedValues() {
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
@@ -38,7 +38,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Object> defaultValue;
+        private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -49,7 +49,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -71,7 +71,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="strongType")
-    private final @Nullable Input<String> strongType;
+        private final @Nullable Input<String> strongType;
 
     public Input<String> getStrongType() {
         return this.strongType == null ? Input.empty() : this.strongType;
@@ -82,7 +82,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,TemplateParameterType>> type;
+        private final Input<Either<String,TemplateParameterType>> type;
 
     public Input<Either<String,TemplateParameterType>> getType() {
         return this.type;
@@ -201,7 +201,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ParameterDefinitionArgs build() {
             return new ParameterDefinitionArgs(allowedValues, defaultValue, description, displayName, strongType, type);
         }

@@ -34,7 +34,6 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(AutomaticResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse();
         }

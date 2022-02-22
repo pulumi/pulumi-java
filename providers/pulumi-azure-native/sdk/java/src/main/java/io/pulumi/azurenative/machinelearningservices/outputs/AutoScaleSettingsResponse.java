@@ -140,7 +140,6 @@ public final class AutoScaleSettingsResponse {
             this.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
-
         public AutoScaleSettingsResponse build() {
             return new AutoScaleSettingsResponse(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);
         }

@@ -227,7 +227,6 @@ public final class AmazonRedshiftSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRedshiftSourceResponse build() {
             return new AmazonRedshiftSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, redshiftUnloadSettings, sourceRetryCount, sourceRetryWait, type);
         }

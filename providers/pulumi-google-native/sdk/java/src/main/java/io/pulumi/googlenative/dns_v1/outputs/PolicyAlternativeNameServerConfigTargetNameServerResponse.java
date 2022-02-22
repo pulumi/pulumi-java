@@ -87,7 +87,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, kind);
         }

@@ -27,7 +27,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,7 +49,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-    private final Input<String> managementGroupId;
+        private final Input<String> managementGroupId;
 
     public Input<String> getManagementGroupId() {
         return this.managementGroupId;
@@ -60,7 +60,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -71,7 +71,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
     public Input<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -82,7 +82,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyDefinitionGroups")
-    private final @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
+        private final @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
     public Input<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
         return this.policyDefinitionGroups == null ? Input.empty() : this.policyDefinitionGroups;
@@ -93,7 +93,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyDefinitions", required=true)
-    private final Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
+        private final Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
     public Input<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
         return this.policyDefinitions;
@@ -104,7 +104,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policySetDefinitionName")
-    private final @Nullable Input<String> policySetDefinitionName;
+        private final @Nullable Input<String> policySetDefinitionName;
 
     public Input<String> getPolicySetDefinitionName() {
         return this.policySetDefinitionName == null ? Input.empty() : this.policySetDefinitionName;
@@ -115,7 +115,7 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<Either<String,PolicyType>> policyType;
+        private final @Nullable Input<Either<String,PolicyType>> policyType;
 
     public Input<Either<String,PolicyType>> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -279,7 +279,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
             this.policyType = Input.ofNullable(policyType);
             return this;
         }
-
         public PolicySetDefinitionAtManagementGroupArgs build() {
             return new PolicySetDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, parameters, policyDefinitionGroups, policyDefinitions, policySetDefinitionName, policyType);
         }

@@ -21,7 +21,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="discovered", required=true)
-    private final DiscoveredResponse discovered;
+      private final DiscoveredResponse discovered;
 
     public DiscoveredResponse getDiscovered() {
         return this.discovered;
@@ -59,7 +59,6 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.reso
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public GrafeasV1beta1DiscoveryDetailsResponse build() {
             return new GrafeasV1beta1DiscoveryDetailsResponse(discovered);
         }

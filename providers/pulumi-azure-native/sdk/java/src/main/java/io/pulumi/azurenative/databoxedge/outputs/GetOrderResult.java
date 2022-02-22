@@ -270,7 +270,6 @@ public final class GetOrderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrderResult build() {
             return new GetOrderResult(contactInformation, currentStatus, deliveryTrackingInfo, id, name, orderHistory, returnTrackingInfo, serialNumber, shipmentType, shippingAddress, type);
         }

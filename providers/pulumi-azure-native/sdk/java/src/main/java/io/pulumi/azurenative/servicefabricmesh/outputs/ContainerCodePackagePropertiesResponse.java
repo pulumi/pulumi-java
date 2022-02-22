@@ -361,7 +361,6 @@ public final class ContainerCodePackagePropertiesResponse {
             this.volumes = volumes;
             return this;
         }
-
         public ContainerCodePackagePropertiesResponse build() {
             return new ContainerCodePackagePropertiesResponse(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, instanceView, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }

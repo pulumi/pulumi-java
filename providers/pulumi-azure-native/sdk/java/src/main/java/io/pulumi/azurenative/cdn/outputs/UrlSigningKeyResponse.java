@@ -75,7 +75,6 @@ public final class UrlSigningKeyResponse {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
-
         public UrlSigningKeyResponse build() {
             return new UrlSigningKeyResponse(keyId, keySourceParameters);
         }

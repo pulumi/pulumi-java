@@ -100,7 +100,6 @@ public final class ParquetFormatResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetFormatResponse build() {
             return new ParquetFormatResponse(deserializer, serializer, type);
         }

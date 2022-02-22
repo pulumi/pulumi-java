@@ -139,7 +139,6 @@ public final class ListMediaServiceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListMediaServiceKeysResult build() {
             return new ListMediaServiceKeysResult(primaryAuthEndpoint, primaryKey, scope, secondaryAuthEndpoint, secondaryKey);
         }

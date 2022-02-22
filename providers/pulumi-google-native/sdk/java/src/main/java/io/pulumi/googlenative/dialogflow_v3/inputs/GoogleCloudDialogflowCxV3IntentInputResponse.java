@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends io.pulum
      * 
      */
     @InputImport(name="intent", required=true)
-    private final String intent;
+      private final String intent;
 
     public String getIntent() {
         return this.intent;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends io.pulum
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentInputResponse build() {
             return new GoogleCloudDialogflowCxV3IntentInputResponse(intent);
         }

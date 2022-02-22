@@ -269,7 +269,6 @@ public final class GetApiOperationResult {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public GetApiOperationResult build() {
             return new GetApiOperationResult(description, displayName, id, method, name, policies, request, responses, templateParameters, type, urlTemplate);
         }

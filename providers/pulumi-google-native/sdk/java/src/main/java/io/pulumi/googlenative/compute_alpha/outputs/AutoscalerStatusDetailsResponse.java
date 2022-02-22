@@ -74,7 +74,6 @@ public final class AutoscalerStatusDetailsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AutoscalerStatusDetailsResponse build() {
             return new AutoscalerStatusDetailsResponse(message, type);
         }

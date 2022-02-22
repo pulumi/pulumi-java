@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final String bucketSize;
+      private final String bucketSize;
 
     public String getBucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * 
      */
     @InputImport(name="bucketValueCount", required=true)
-    private final String bucketValueCount;
+      private final String bucketValueCount;
 
     public String getBucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * 
      */
     @InputImport(name="bucketValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
+      private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getBucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * 
      */
     @InputImport(name="valueFrequencyLowerBound", required=true)
-    private final String valueFrequencyLowerBound;
+      private final String valueFrequencyLowerBound;
 
     public String getValueFrequencyLowerBound() {
         return this.valueFrequencyLowerBound;
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * 
      */
     @InputImport(name="valueFrequencyUpperBound", required=true)
-    private final String valueFrequencyUpperBound;
+      private final String valueFrequencyUpperBound;
 
     public String getValueFrequencyUpperBound() {
         return this.valueFrequencyUpperBound;
@@ -146,7 +146,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
             this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, valueFrequencyLowerBound, valueFrequencyUpperBound);
         }

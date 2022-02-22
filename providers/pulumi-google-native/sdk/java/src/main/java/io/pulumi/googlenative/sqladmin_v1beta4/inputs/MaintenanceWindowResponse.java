@@ -22,7 +22,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="day", required=true)
-    private final Integer day;
+      private final Integer day;
 
     public Integer getDay() {
         return this.day;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="hour", required=true)
-    private final Integer hour;
+      private final Integer hour;
 
     public Integer getHour() {
         return this.hour;
@@ -44,7 +44,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -55,7 +55,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="updateTrack", required=true)
-    private final String updateTrack;
+      private final String updateTrack;
 
     public String getUpdateTrack() {
         return this.updateTrack;
@@ -124,7 +124,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(day, hour, kind, updateTrack);
         }

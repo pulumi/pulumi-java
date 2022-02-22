@@ -138,7 +138,6 @@ public final class GetTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(id, kind, name, systemData, type);
         }

@@ -203,7 +203,6 @@ public final class UrlMapTestResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public UrlMapTestResponse build() {
             return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }

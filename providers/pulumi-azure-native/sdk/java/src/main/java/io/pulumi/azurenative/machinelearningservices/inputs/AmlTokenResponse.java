@@ -22,7 +22,7 @@ public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final String identityType;
+        private final String identityType;
 
     public String getIdentityType() {
         return this.identityType;
@@ -60,7 +60,6 @@ public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public AmlTokenResponse build() {
             return new AmlTokenResponse(identityType);
         }

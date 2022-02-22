@@ -97,7 +97,6 @@ public final class LineRegistrationResponse {
             this.generatedId = Objects.requireNonNull(generatedId);
             return this;
         }
-
         public LineRegistrationResponse build() {
             return new LineRegistrationResponse(channelAccessToken, channelSecret, generatedId);
         }

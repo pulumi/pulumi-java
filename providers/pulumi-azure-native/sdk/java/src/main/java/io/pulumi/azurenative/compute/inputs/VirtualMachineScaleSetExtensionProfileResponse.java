@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
+        private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
     public List<VirtualMachineScaleSetExtensionResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
      * 
      */
     @InputImport(name="extensionsTimeBudget")
-    private final @Nullable String extensionsTimeBudget;
+        private final @Nullable String extensionsTimeBudget;
 
     public Optional<String> getExtensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Optional.empty() : Optional.ofNullable(this.extensionsTimeBudget);
@@ -85,7 +85,6 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-
         public VirtualMachineScaleSetExtensionProfileResponse build() {
             return new VirtualMachineScaleSetExtensionProfileResponse(extensions, extensionsTimeBudget);
         }

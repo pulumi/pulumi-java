@@ -27,7 +27,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptionPreferences")
-    private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
+        private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
@@ -38,7 +38,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managementResourcePreferences")
-    private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
+        private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
     public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
         return this.managementResourcePreferences == null ? Optional.empty() : Optional.ofNullable(this.managementResourcePreferences);
@@ -49,7 +49,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notificationPreferences")
-    private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
+        private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
     public List<NotificationPreferenceResponse> getNotificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
@@ -60,7 +60,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transportPreferences")
-    private final @Nullable TransportPreferencesResponse transportPreferences;
+        private final @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> getTransportPreferences() {
         return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);
@@ -129,7 +129,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }

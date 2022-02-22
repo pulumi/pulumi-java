@@ -246,7 +246,6 @@ public final class DirectLineSiteResponse {
             this.trustedOrigins = trustedOrigins;
             return this;
         }
-
         public DirectLineSiteResponse build() {
             return new DirectLineSiteResponse(isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isV1Enabled, isV3Enabled, key, key2, siteId, siteName, trustedOrigins);
         }

@@ -23,7 +23,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -45,7 +45,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mongoRoleDefinitionId")
-    private final @Nullable Input<String> mongoRoleDefinitionId;
+        private final @Nullable Input<String> mongoRoleDefinitionId;
 
     public Input<String> getMongoRoleDefinitionId() {
         return this.mongoRoleDefinitionId == null ? Input.empty() : this.mongoRoleDefinitionId;
@@ -56,7 +56,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privileges")
-    private final @Nullable Input<List<PrivilegeArgs>> privileges;
+        private final @Nullable Input<List<PrivilegeArgs>> privileges;
 
     public Input<List<PrivilegeArgs>> getPrivileges() {
         return this.privileges == null ? Input.empty() : this.privileges;
@@ -67,7 +67,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+        private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -89,7 +89,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<RoleArgs>> roles;
+        private final @Nullable Input<List<RoleArgs>> roles;
 
     public Input<List<RoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -100,7 +100,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<MongoRoleDefinitionType> type;
+        private final @Nullable Input<MongoRoleDefinitionType> type;
 
     public Input<MongoRoleDefinitionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -249,7 +249,6 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public MongoDBResourceMongoRoleDefinitionArgs build() {
             return new MongoDBResourceMongoRoleDefinitionArgs(accountName, databaseName, mongoRoleDefinitionId, privileges, resourceGroupName, roleName, roles, type);
         }

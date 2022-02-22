@@ -233,7 +233,6 @@ public final class OracleCloudStorageLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleCloudStorageLinkedServiceResponse build() {
             return new OracleCloudStorageLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, type);
         }

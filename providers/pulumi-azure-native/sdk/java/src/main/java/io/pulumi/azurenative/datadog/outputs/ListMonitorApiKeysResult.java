@@ -78,7 +78,6 @@ public final class ListMonitorApiKeysResult {
             this.value = value;
             return this;
         }
-
         public ListMonitorApiKeysResult build() {
             return new ListMonitorApiKeysResult(nextLink, value);
         }

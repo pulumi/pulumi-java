@@ -98,7 +98,6 @@ public final class RetentionPolicyResponse {
             this.status = status;
             return this;
         }
-
         public RetentionPolicyResponse build() {
             return new RetentionPolicyResponse(days, lastUpdatedTime, status);
         }

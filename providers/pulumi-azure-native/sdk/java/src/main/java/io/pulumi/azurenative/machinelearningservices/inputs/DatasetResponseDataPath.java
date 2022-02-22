@@ -28,7 +28,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="additionalProperties")
-    private final @Nullable Map<String,Object> additionalProperties;
+        private final @Nullable Map<String,Object> additionalProperties;
 
     public Map<String,Object> getAdditionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
@@ -39,7 +39,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="azureFilePath", required=true)
-    private final String azureFilePath;
+        private final String azureFilePath;
 
     public String getAzureFilePath() {
         return this.azureFilePath;
@@ -50,7 +50,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="datastoreName", required=true)
-    private final String datastoreName;
+        private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
@@ -61,7 +61,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="httpUrl", required=true)
-    private final String httpUrl;
+        private final String httpUrl;
 
     public String getHttpUrl() {
         return this.httpUrl;
@@ -72,7 +72,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="partitionFormat", required=true)
-    private final String partitionFormat;
+        private final String partitionFormat;
 
     public String getPartitionFormat() {
         return this.partitionFormat;
@@ -83,7 +83,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="partitionFormatIgnoreError", required=true)
-    private final Boolean partitionFormatIgnoreError;
+        private final Boolean partitionFormatIgnoreError;
 
     public Boolean getPartitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
@@ -94,7 +94,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="paths", required=true)
-    private final List<String> paths;
+        private final List<String> paths;
 
     public List<String> getPaths() {
         return this.paths;
@@ -105,7 +105,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="relativePath", required=true)
-    private final String relativePath;
+        private final String relativePath;
 
     public String getRelativePath() {
         return this.relativePath;
@@ -116,7 +116,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sqlDataPath")
-    private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
+        private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
     public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {
         return this.sqlDataPath == null ? Optional.empty() : Optional.ofNullable(this.sqlDataPath);
@@ -235,7 +235,6 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
             this.sqlDataPath = sqlDataPath;
             return this;
         }
-
         public DatasetResponseDataPath build() {
             return new DatasetResponseDataPath(additionalProperties, azureFilePath, datastoreName, httpUrl, partitionFormat, partitionFormatIgnoreError, paths, relativePath, sqlDataPath);
         }

@@ -54,7 +54,6 @@ public final class EdgeProfileResponse {
             this.subscription = subscription;
             return this;
         }
-
         public EdgeProfileResponse build() {
             return new EdgeProfileResponse(subscription);
         }

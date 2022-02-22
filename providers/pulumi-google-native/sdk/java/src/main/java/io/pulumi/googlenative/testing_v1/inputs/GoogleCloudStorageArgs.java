@@ -22,7 +22,7 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gcsPath", required=true)
-    private final Input<String> gcsPath;
+      private final Input<String> gcsPath;
 
     public Input<String> getGcsPath() {
         return this.gcsPath;
@@ -65,7 +65,6 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
             this.gcsPath = Input.of(Objects.requireNonNull(gcsPath));
             return this;
         }
-
         public GoogleCloudStorageArgs build() {
             return new GoogleCloudStorageArgs(gcsPath);
         }

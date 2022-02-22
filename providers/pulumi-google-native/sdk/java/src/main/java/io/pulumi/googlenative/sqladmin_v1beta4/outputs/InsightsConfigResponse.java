@@ -138,7 +138,6 @@ public final class InsightsConfigResponse {
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
         }
-
         public InsightsConfigResponse build() {
             return new InsightsConfigResponse(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
         }

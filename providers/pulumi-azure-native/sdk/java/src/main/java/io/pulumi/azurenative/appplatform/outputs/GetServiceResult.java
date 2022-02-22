@@ -184,7 +184,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(id, location, name, properties, sku, tags, type);
         }

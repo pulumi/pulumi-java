@@ -109,7 +109,6 @@ public final class GetResourceTypeRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceTypeRegistrationResult build() {
             return new GetResourceTypeRegistrationResult(id, name, properties, type);
         }

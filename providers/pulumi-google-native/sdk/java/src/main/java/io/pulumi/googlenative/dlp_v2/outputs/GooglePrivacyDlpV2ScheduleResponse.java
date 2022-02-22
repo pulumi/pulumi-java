@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2ScheduleResponse {
             this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
             return this;
         }
-
         public GooglePrivacyDlpV2ScheduleResponse build() {
             return new GooglePrivacyDlpV2ScheduleResponse(recurrencePeriodDuration);
         }

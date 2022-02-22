@@ -505,7 +505,6 @@ public final class VpnConnectionResponse {
             this.vpnLinkConnections = vpnLinkConnections;
             return this;
         }
-
         public VpnConnectionResponse build() {
             return new VpnConnectionResponse(connectionBandwidth, connectionStatus, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, enableInternetSecurity, enableRateLimiting, etag, id, ingressBytesTransferred, ipsecPolicies, name, provisioningState, remoteVpnSite, routingConfiguration, routingWeight, sharedKey, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnections);
         }

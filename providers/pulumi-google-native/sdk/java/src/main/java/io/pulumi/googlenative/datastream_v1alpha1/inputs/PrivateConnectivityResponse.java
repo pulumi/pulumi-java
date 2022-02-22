@@ -17,7 +17,7 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
     public static final PrivateConnectivityResponse Empty = new PrivateConnectivityResponse();
 
     @InputImport(name="privateConnectionName", required=true)
-    private final String privateConnectionName;
+      private final String privateConnectionName;
 
     public String getPrivateConnectionName() {
         return this.privateConnectionName;
@@ -55,7 +55,6 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
             this.privateConnectionName = Objects.requireNonNull(privateConnectionName);
             return this;
         }
-
         public PrivateConnectivityResponse build() {
             return new PrivateConnectivityResponse(privateConnectionName);
         }

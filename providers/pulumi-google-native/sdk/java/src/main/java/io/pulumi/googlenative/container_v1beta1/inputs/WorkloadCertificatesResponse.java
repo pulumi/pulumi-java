@@ -21,7 +21,7 @@ public final class WorkloadCertificatesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enableCertificates", required=true)
-    private final Boolean enableCertificates;
+      private final Boolean enableCertificates;
 
     public Boolean getEnableCertificates() {
         return this.enableCertificates;
@@ -59,7 +59,6 @@ public final class WorkloadCertificatesResponse extends io.pulumi.resources.Invo
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }
-
         public WorkloadCertificatesResponse build() {
             return new WorkloadCertificatesResponse(enableCertificates);
         }

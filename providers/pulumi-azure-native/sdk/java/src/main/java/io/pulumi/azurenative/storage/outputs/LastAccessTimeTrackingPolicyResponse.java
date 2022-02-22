@@ -121,7 +121,6 @@ public final class LastAccessTimeTrackingPolicyResponse {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
-
         public LastAccessTimeTrackingPolicyResponse build() {
             return new LastAccessTimeTrackingPolicyResponse(blobType, enable, name, trackingGranularityInDays);
         }

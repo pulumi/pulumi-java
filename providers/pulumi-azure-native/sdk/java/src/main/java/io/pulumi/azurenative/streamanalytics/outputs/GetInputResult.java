@@ -121,7 +121,6 @@ public final class GetInputResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInputResult build() {
             return new GetInputResult(id, name, properties, type);
         }

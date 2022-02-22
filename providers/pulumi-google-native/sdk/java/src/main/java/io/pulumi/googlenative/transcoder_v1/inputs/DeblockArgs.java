@@ -24,7 +24,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strength")
-    private final @Nullable Input<Double> strength;
+      private final @Nullable Input<Double> strength;
 
     public Input<Double> getStrength() {
         return this.strength == null ? Input.empty() : this.strength;
@@ -94,7 +94,6 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
             this.strength = Input.ofNullable(strength);
             return this;
         }
-
         public DeblockArgs build() {
             return new DeblockArgs(enabled, strength);
         }

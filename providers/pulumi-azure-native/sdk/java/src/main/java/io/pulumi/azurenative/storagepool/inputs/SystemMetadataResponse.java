@@ -23,7 +23,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable String createdAt;
+        private final @Nullable String createdAt;
 
     public Optional<String> getCreatedAt() {
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
@@ -34,7 +34,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable String createdBy;
+        private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
@@ -45,7 +45,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="createdByType")
-    private final @Nullable String createdByType;
+        private final @Nullable String createdByType;
 
     public Optional<String> getCreatedByType() {
         return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
@@ -56,7 +56,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable String lastModifiedAt;
+        private final @Nullable String lastModifiedAt;
 
     public Optional<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
@@ -67,7 +67,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastModifiedBy")
-    private final @Nullable String lastModifiedBy;
+        private final @Nullable String lastModifiedBy;
 
     public Optional<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
@@ -78,7 +78,7 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastModifiedByType")
-    private final @Nullable String lastModifiedByType;
+        private final @Nullable String lastModifiedByType;
 
     public Optional<String> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedByType);
@@ -167,7 +167,6 @@ public final class SystemMetadataResponse extends io.pulumi.resources.InvokeArgs
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public SystemMetadataResponse build() {
             return new SystemMetadataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

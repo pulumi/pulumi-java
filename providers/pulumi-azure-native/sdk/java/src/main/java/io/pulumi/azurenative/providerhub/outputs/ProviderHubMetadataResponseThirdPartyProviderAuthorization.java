@@ -62,7 +62,6 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
-
         public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
             return new ProviderHubMetadataResponseThirdPartyProviderAuthorization(authorizations, managedByTenantId);
         }

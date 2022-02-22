@@ -13,7 +13,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetBillingAccountArgs Empty = new GetBillingAccountArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
@@ -51,7 +51,6 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public GetBillingAccountArgs build() {
             return new GetBillingAccountArgs(billingAccountId);
         }

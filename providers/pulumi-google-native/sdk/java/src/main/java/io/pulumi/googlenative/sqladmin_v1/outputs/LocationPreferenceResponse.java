@@ -116,7 +116,6 @@ public final class LocationPreferenceResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public LocationPreferenceResponse build() {
             return new LocationPreferenceResponse(followGaeApplication, kind, secondaryZone, zone);
         }

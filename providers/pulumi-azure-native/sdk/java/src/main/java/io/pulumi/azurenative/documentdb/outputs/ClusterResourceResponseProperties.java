@@ -312,7 +312,6 @@ public final class ClusterResourceResponseProperties {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-
         public ClusterResourceResponseProperties build() {
             return new ClusterResourceResponseProperties(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, gossipCertificates, hoursBetweenBackups, prometheusEndpoint, provisioningState, repairEnabled, seedNodes);
         }

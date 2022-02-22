@@ -23,7 +23,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricLocation", required=true)
-    private final String fabricLocation;
+        private final String fabricLocation;
 
     public String getFabricLocation() {
         return this.fabricLocation;
@@ -35,7 +35,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -46,7 +46,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+        private final String path;
 
     public String getPath() {
         return this.path;
@@ -57,7 +57,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+        private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -126,7 +126,6 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
             this.timeout = timeout;
             return this;
         }
-
         public RecoveryPlanScriptActionDetailsResponse build() {
             return new RecoveryPlanScriptActionDetailsResponse(fabricLocation, instanceType, path, timeout);
         }

@@ -244,7 +244,6 @@ public final class GetWorkerPoolResult {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(createTime, deleteTime, name, project, regions, serviceAccountEmail, status, updateTime, workerConfig, workerCount);
         }

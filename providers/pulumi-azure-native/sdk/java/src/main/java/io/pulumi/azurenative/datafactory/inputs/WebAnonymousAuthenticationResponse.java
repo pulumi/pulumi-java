@@ -23,7 +23,7 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+        private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -34,7 +34,7 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="url", required=true)
-    private final Object url;
+        private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -83,7 +83,6 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebAnonymousAuthenticationResponse build() {
             return new WebAnonymousAuthenticationResponse(authenticationType, url);
         }

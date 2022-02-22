@@ -227,7 +227,6 @@ public final class HttpReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpReadSettingsResponse build() {
             return new HttpReadSettingsResponse(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
         }

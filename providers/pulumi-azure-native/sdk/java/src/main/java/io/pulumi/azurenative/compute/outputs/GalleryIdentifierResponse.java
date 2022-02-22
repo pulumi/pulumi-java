@@ -52,7 +52,6 @@ public final class GalleryIdentifierResponse {
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
         }
-
         public GalleryIdentifierResponse build() {
             return new GalleryIdentifierResponse(uniqueName);
         }

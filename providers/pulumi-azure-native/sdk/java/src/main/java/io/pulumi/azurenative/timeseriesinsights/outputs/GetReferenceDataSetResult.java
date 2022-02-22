@@ -226,7 +226,6 @@ public final class GetReferenceDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReferenceDataSetResult build() {
             return new GetReferenceDataSetResult(creationTime, dataStringComparisonBehavior, id, keyProperties, location, name, provisioningState, tags, type);
         }

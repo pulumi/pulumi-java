@@ -118,7 +118,6 @@ public final class RectangleResponse {
             this.width = width;
             return this;
         }
-
         public RectangleResponse build() {
             return new RectangleResponse(height, left, top, width);
         }

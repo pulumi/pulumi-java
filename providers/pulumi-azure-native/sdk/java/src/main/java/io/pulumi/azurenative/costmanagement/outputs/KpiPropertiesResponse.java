@@ -98,7 +98,6 @@ public final class KpiPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public KpiPropertiesResponse build() {
             return new KpiPropertiesResponse(enabled, id, type);
         }

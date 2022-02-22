@@ -183,7 +183,6 @@ public final class GetPrivateLinkScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateLinkScopeResult build() {
             return new GetPrivateLinkScopeResult(id, location, name, properties, systemData, tags, type);
         }

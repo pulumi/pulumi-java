@@ -96,7 +96,6 @@ public final class BitbucketServerRepositoryIdResponse {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }
-
         public BitbucketServerRepositoryIdResponse build() {
             return new BitbucketServerRepositoryIdResponse(projectKey, repoSlug, webhookId);
         }

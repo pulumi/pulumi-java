@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse extends io.
      * 
      */
     @InputImport(name="authorizationRule", required=true)
-    private final ExprResponse authorizationRule;
+      private final ExprResponse authorizationRule;
 
     public ExprResponse getAuthorizationRule() {
         return this.authorizationRule;
@@ -34,7 +34,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse extends io.
      * 
      */
     @InputImport(name="resourceAttributes", required=true)
-    private final List<AttributeResponse> resourceAttributes;
+      private final List<AttributeResponse> resourceAttributes;
 
     public List<AttributeResponse> getResourceAttributes() {
         return this.resourceAttributes;
@@ -83,7 +83,6 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse extends io.
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1ConsentPolicyResponse build() {
             return new GoogleCloudHealthcareV1beta1ConsentPolicyResponse(authorizationRule, resourceAttributes);
         }

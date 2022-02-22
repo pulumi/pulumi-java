@@ -95,7 +95,6 @@ public final class TimeResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TimeResponse build() {
             return new TimeResponse(hours, minutes, seconds);
         }

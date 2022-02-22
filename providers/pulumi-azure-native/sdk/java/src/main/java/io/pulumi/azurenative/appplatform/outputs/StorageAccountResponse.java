@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountName, storageType);
         }

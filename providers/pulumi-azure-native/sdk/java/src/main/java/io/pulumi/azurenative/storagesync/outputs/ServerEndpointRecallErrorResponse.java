@@ -75,7 +75,6 @@ public final class ServerEndpointRecallErrorResponse {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public ServerEndpointRecallErrorResponse build() {
             return new ServerEndpointRecallErrorResponse(count, errorCode);
         }

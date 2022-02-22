@@ -54,7 +54,6 @@ public final class FileSystemTokenStoreResponse {
             this.directory = directory;
             return this;
         }
-
         public FileSystemTokenStoreResponse build() {
             return new FileSystemTokenStoreResponse(directory);
         }

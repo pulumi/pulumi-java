@@ -120,7 +120,6 @@ public final class OsProfileResponse {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, customData, customDataRequired, linuxConfiguration);
         }

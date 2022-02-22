@@ -76,7 +76,6 @@ public final class MigrationRequestPropertiesResponse {
             this.operation = operation;
             return this;
         }
-
         public MigrationRequestPropertiesResponse build() {
             return new MigrationRequestPropertiesResponse(migrationPath, operation);
         }

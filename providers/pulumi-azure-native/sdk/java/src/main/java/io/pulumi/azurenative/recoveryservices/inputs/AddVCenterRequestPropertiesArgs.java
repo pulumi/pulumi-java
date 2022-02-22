@@ -23,7 +23,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -34,7 +34,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -45,7 +45,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+        private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -56,7 +56,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="processServerId")
-    private final @Nullable Input<String> processServerId;
+        private final @Nullable Input<String> processServerId;
 
     public Input<String> getProcessServerId() {
         return this.processServerId == null ? Input.empty() : this.processServerId;
@@ -67,7 +67,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runAsAccountId")
-    private final @Nullable Input<String> runAsAccountId;
+        private final @Nullable Input<String> runAsAccountId;
 
     public Input<String> getRunAsAccountId() {
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
@@ -171,7 +171,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             this.runAsAccountId = Input.ofNullable(runAsAccountId);
             return this;
         }
-
         public AddVCenterRequestPropertiesArgs build() {
             return new AddVCenterRequestPropertiesArgs(friendlyName, ipAddress, port, processServerId, runAsAccountId);
         }

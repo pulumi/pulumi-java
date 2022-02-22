@@ -137,7 +137,6 @@ public final class CacheUpgradeStatusResponse {
             this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
             return this;
         }
-
         public CacheUpgradeStatusResponse build() {
             return new CacheUpgradeStatusResponse(currentFirmwareVersion, firmwareUpdateDeadline, firmwareUpdateStatus, lastFirmwareUpdate, pendingFirmwareVersion);
         }

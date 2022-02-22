@@ -26,7 +26,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate")
-    private final @Nullable Input<Integer> bitrate;
+        private final @Nullable Input<Integer> bitrate;
 
     public Input<Integer> getBitrate() {
         return this.bitrate == null ? Input.empty() : this.bitrate;
@@ -37,7 +37,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channels")
-    private final @Nullable Input<Integer> channels;
+        private final @Nullable Input<Integer> channels;
 
     public Input<Integer> getChannels() {
         return this.channels == null ? Input.empty() : this.channels;
@@ -48,7 +48,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -60,7 +60,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -71,7 +71,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<Either<String,AacAudioProfile>> profile;
+        private final @Nullable Input<Either<String,AacAudioProfile>> profile;
 
     public Input<Either<String,AacAudioProfile>> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -82,7 +82,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samplingRate")
-    private final @Nullable Input<Integer> samplingRate;
+        private final @Nullable Input<Integer> samplingRate;
 
     public Input<Integer> getSamplingRate() {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;
@@ -201,7 +201,6 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }
-
         public AacAudioArgs build() {
             return new AacAudioArgs(bitrate, channels, label, odataType, profile, samplingRate);
         }

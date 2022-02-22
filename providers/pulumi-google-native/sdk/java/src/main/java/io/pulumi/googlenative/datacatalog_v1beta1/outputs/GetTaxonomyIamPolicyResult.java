@@ -98,7 +98,6 @@ public final class GetTaxonomyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTaxonomyIamPolicyResult build() {
             return new GetTaxonomyIamPolicyResult(bindings, etag, version);
         }

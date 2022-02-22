@@ -60,7 +60,6 @@ public final class EtwProviderConfigurationResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public EtwProviderConfigurationResponse build() {
             return new EtwProviderConfigurationResponse(events, id);
         }

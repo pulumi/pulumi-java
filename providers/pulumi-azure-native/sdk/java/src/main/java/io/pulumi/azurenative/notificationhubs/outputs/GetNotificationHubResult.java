@@ -338,7 +338,6 @@ public final class GetNotificationHubResult {
             this.wnsCredential = wnsCredential;
             return this;
         }
-
         public GetNotificationHubResult build() {
             return new GetNotificationHubResult(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, id, location, mpnsCredential, name, registrationTtl, sku, tags, type, wnsCredential);
         }

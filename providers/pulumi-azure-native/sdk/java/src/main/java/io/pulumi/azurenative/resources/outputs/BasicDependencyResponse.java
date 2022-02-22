@@ -97,7 +97,6 @@ public final class BasicDependencyResponse {
             this.resourceType = resourceType;
             return this;
         }
-
         public BasicDependencyResponse build() {
             return new BasicDependencyResponse(id, resourceName, resourceType);
         }

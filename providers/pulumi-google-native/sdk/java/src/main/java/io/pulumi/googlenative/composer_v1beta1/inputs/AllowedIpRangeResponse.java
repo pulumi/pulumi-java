@@ -21,7 +21,7 @@ public final class AllowedIpRangeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class AllowedIpRangeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class AllowedIpRangeResponse extends io.pulumi.resources.InvokeArgs
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AllowedIpRangeResponse build() {
             return new AllowedIpRangeResponse(description, value);
         }

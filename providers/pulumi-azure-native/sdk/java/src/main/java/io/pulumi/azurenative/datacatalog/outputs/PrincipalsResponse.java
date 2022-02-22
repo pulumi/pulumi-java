@@ -76,7 +76,6 @@ public final class PrincipalsResponse {
             this.upn = upn;
             return this;
         }
-
         public PrincipalsResponse build() {
             return new PrincipalsResponse(objectId, upn);
         }

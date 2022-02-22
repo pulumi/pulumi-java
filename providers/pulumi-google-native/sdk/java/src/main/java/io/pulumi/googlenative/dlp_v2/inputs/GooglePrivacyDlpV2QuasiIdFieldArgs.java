@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="customTag")
-    private final @Nullable Input<String> customTag;
+      private final @Nullable Input<String> customTag;
 
     public Input<String> getCustomTag() {
         return this.customTag == null ? Input.empty() : this.customTag;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends io.pulumi.resource
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdFieldArgs build() {
             return new GooglePrivacyDlpV2QuasiIdFieldArgs(customTag, field);
         }

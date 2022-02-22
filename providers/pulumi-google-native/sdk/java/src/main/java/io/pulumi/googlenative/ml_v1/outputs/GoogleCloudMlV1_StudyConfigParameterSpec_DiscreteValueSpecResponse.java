@@ -53,7 +53,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(values);
         }

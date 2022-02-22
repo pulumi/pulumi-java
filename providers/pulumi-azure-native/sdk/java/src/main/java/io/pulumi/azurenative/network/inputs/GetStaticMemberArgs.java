@@ -17,7 +17,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkGroupName", required=true)
-    private final String networkGroupName;
+        private final String networkGroupName;
 
     public String getNetworkGroupName() {
         return this.networkGroupName;
@@ -28,7 +28,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+        private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="staticMemberName", required=true)
-    private final String staticMemberName;
+        private final String staticMemberName;
 
     public String getStaticMemberName() {
         return this.staticMemberName;
@@ -119,7 +119,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
             this.staticMemberName = Objects.requireNonNull(staticMemberName);
             return this;
         }
-
         public GetStaticMemberArgs build() {
             return new GetStaticMemberArgs(networkGroupName, networkManagerName, resourceGroupName, staticMemberName);
         }

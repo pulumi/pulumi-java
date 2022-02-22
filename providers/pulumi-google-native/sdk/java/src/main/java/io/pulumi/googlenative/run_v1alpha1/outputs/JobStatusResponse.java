@@ -225,7 +225,6 @@ public final class JobStatusResponse {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }

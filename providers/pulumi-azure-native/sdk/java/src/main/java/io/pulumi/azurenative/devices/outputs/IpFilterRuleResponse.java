@@ -95,7 +95,6 @@ public final class IpFilterRuleResponse {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public IpFilterRuleResponse build() {
             return new IpFilterRuleResponse(action, filterName, ipMask);
         }

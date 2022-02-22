@@ -22,7 +22,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -44,7 +44,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleState")
-    private final @Nullable Input<ProjectLifecycleState> lifecycleState;
+      private final @Nullable Input<ProjectLifecycleState> lifecycleState;
 
     public Input<ProjectLifecycleState> getLifecycleState() {
         return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
@@ -55,7 +55,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<ResourceIdArgs> parent;
+      private final @Nullable Input<ResourceIdArgs> parent;
 
     public Input<ResourceIdArgs> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -77,7 +77,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -88,7 +88,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectNumber")
-    private final @Nullable Input<String> projectNumber;
+      private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
@@ -222,7 +222,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);
         }

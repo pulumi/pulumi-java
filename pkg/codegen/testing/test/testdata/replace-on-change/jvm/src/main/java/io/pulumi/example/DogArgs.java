@@ -30,7 +30,6 @@ public final class DogArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(DogArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DogArgs build() {
             return new DogArgs();
         }

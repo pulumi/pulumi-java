@@ -44,7 +44,6 @@ public final class AddressableResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AddressableResponse build() {
             return new AddressableResponse(url);
         }

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="equivalenceClassSize", required=true)
-    private final String equivalenceClassSize;
+      private final String equivalenceClassSize;
 
     public String getEquivalenceClassSize() {
         return this.equivalenceClassSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
      * 
      */
     @InputImport(name="quasiIdsValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(equivalenceClassSize, quasiIdsValues);
         }

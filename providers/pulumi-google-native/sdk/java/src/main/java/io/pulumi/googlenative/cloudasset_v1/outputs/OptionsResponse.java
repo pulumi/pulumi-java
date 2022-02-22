@@ -158,7 +158,6 @@ public final class OptionsResponse {
             this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
         }

@@ -74,7 +74,6 @@ public final class ServiceRegistryInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServiceRegistryInstanceResponse build() {
             return new ServiceRegistryInstanceResponse(name, status);
         }

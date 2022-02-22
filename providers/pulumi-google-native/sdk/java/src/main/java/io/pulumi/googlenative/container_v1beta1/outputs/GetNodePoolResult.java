@@ -378,7 +378,6 @@ public final class GetNodePoolResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNodePoolResult build() {
             return new GetNodePoolResult(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
         }

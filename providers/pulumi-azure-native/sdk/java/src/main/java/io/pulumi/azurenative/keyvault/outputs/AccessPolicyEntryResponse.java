@@ -119,7 +119,6 @@ public final class AccessPolicyEntryResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AccessPolicyEntryResponse build() {
             return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
         }

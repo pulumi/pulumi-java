@@ -23,7 +23,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days", required=true)
-    private final Input<List<Either<String,DayOfWeek>>> days;
+        private final Input<List<Either<String,DayOfWeek>>> days;
 
     public Input<List<Either<String,DayOfWeek>>> getDays() {
         return this.days;
@@ -34,7 +34,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -45,7 +45,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rateInMbps", required=true)
-    private final Input<Integer> rateInMbps;
+        private final Input<Integer> rateInMbps;
 
     public Input<Integer> getRateInMbps() {
         return this.rateInMbps;
@@ -67,7 +67,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<String> start;
+        private final Input<String> start;
 
     public Input<String> getStart() {
         return this.start;
@@ -89,7 +89,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stop", required=true)
-    private final Input<String> stop;
+        private final Input<String> stop;
 
     public Input<String> getStop() {
         return this.stop;
@@ -223,7 +223,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             this.stop = Input.of(Objects.requireNonNull(stop));
             return this;
         }
-
         public BandwidthScheduleArgs build() {
             return new BandwidthScheduleArgs(days, deviceName, name, rateInMbps, resourceGroupName, start, stop);
         }

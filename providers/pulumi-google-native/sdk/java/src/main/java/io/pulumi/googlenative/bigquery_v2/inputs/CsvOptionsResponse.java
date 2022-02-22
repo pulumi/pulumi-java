@@ -18,7 +18,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowJaggedRows", required=true)
-    private final Boolean allowJaggedRows;
+      private final Boolean allowJaggedRows;
 
     public Boolean getAllowJaggedRows() {
         return this.allowJaggedRows;
@@ -29,7 +29,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowQuotedNewlines", required=true)
-    private final Boolean allowQuotedNewlines;
+      private final Boolean allowQuotedNewlines;
 
     public Boolean getAllowQuotedNewlines() {
         return this.allowQuotedNewlines;
@@ -40,7 +40,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -51,7 +51,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fieldDelimiter", required=true)
-    private final String fieldDelimiter;
+      private final String fieldDelimiter;
 
     public String getFieldDelimiter() {
         return this.fieldDelimiter;
@@ -62,7 +62,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nullMarker", required=true)
-    private final String nullMarker;
+      private final String nullMarker;
 
     public String getNullMarker() {
         return this.nullMarker;
@@ -73,7 +73,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quote", required=true)
-    private final String quote;
+      private final String quote;
 
     public String getQuote() {
         return this.quote;
@@ -84,7 +84,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skipLeadingRows", required=true)
-    private final String skipLeadingRows;
+      private final String skipLeadingRows;
 
     public String getSkipLeadingRows() {
         return this.skipLeadingRows;
@@ -183,7 +183,6 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
-
         public CsvOptionsResponse build() {
             return new CsvOptionsResponse(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
         }

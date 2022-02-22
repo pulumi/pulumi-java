@@ -74,7 +74,6 @@ public final class BucketLifecycleRuleItemActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BucketLifecycleRuleItemActionResponse build() {
             return new BucketLifecycleRuleItemActionResponse(storageClass, type);
         }

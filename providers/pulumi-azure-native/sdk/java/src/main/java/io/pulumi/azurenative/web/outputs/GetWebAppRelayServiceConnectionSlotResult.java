@@ -210,7 +210,6 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppRelayServiceConnectionSlotResult build() {
             return new GetWebAppRelayServiceConnectionSlotResult(biztalkUri, entityConnectionString, entityName, hostname, id, kind, name, port, resourceConnectionString, resourceType, type);
         }

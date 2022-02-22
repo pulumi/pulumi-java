@@ -185,7 +185,6 @@ public final class ServingConfigResponse {
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
         }
-
         public ServingConfigResponse build() {
             return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
         }

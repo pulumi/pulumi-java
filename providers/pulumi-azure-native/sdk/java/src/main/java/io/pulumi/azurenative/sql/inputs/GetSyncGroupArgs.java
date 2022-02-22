@@ -17,7 +17,7 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final String syncGroupName;
+        private final String syncGroupName;
 
     public String getSyncGroupName() {
         return this.syncGroupName;
@@ -119,7 +119,6 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
-
         public GetSyncGroupArgs build() {
             return new GetSyncGroupArgs(databaseName, resourceGroupName, serverName, syncGroupName);
         }

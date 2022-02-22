@@ -74,7 +74,6 @@ public final class ResourceGroupResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceGroupResponse build() {
             return new ResourceGroupResponse(groupId, resourceType);
         }

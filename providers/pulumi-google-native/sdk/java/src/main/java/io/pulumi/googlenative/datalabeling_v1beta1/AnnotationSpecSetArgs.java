@@ -21,7 +21,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotationSpecs", required=true)
-    private final Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
+      private final Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
 
     public Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> getAnnotationSpecs() {
         return this.annotationSpecs;
@@ -32,7 +32,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,14 +43,14 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -139,7 +139,6 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public AnnotationSpecSetArgs build() {
             return new AnnotationSpecSetArgs(annotationSpecs, description, displayName, project);
         }

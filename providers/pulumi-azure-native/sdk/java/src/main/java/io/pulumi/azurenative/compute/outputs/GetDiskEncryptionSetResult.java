@@ -291,7 +291,6 @@ public final class GetDiskEncryptionSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskEncryptionSetResult build() {
             return new GetDiskEncryptionSetResult(activeKey, encryptionType, id, identity, lastKeyRotationTimestamp, location, name, previousKeys, provisioningState, rotationToLatestKeyVersionEnabled, tags, type);
         }

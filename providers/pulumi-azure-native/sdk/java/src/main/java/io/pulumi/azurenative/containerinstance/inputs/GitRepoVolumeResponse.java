@@ -23,7 +23,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="directory")
-    private final @Nullable String directory;
+        private final @Nullable String directory;
 
     public Optional<String> getDirectory() {
         return this.directory == null ? Optional.empty() : Optional.ofNullable(this.directory);
@@ -34,7 +34,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="repository", required=true)
-    private final String repository;
+        private final String repository;
 
     public String getRepository() {
         return this.repository;
@@ -45,7 +45,7 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable String revision;
+        private final @Nullable String revision;
 
     public Optional<String> getRevision() {
         return this.revision == null ? Optional.empty() : Optional.ofNullable(this.revision);
@@ -104,7 +104,6 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
             this.revision = revision;
             return this;
         }
-
         public GitRepoVolumeResponse build() {
             return new GitRepoVolumeResponse(directory, repository, revision);
         }

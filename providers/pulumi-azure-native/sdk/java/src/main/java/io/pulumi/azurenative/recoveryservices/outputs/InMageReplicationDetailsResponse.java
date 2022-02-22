@@ -844,7 +844,6 @@ public final class InMageReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public InMageReplicationDetailsResponse build() {
             return new InMageReplicationDetailsResponse(activeSiteType, agentDetails, azureStorageAccountId, compressedDataRateInMB, consistencyPoints, datastores, discoveryType, diskResized, infrastructureVmId, instanceType, ipAddress, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDetails, osVersion, processServerId, protectedDisks, protectionStage, rebootAfterUpdateStatus, replicaId, resyncDetails, retentionWindowEnd, retentionWindowStart, rpoInSeconds, sourceVmCpuCount, sourceVmRamSizeInMB, uncompressedDataRateInMB, vCenterInfrastructureId, validationErrors, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

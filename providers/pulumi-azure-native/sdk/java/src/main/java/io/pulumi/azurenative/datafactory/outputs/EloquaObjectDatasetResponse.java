@@ -231,7 +231,6 @@ public final class EloquaObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EloquaObjectDatasetResponse build() {
             return new EloquaObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

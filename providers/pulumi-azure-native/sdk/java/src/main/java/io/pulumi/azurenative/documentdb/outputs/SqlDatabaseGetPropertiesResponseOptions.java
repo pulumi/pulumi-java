@@ -77,7 +77,6 @@ public final class SqlDatabaseGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public SqlDatabaseGetPropertiesResponseOptions build() {
             return new SqlDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

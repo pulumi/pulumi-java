@@ -25,7 +25,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<String> payload;
+      private final @Nullable Input<String> payload;
 
     public Input<String> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -36,7 +36,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadType")
-    private final @Nullable Input<String> payloadType;
+      private final @Nullable Input<String> payloadType;
 
     public Input<String> getPayloadType() {
         return this.payloadType == null ? Input.empty() : this.payloadType;
@@ -47,7 +47,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatures")
-    private final @Nullable Input<List<EnvelopeSignatureArgs>> signatures;
+      private final @Nullable Input<List<EnvelopeSignatureArgs>> signatures;
 
     public Input<List<EnvelopeSignatureArgs>> getSignatures() {
         return this.signatures == null ? Input.empty() : this.signatures;
@@ -121,7 +121,6 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
             this.signatures = Input.ofNullable(signatures);
             return this;
         }
-
         public EnvelopeArgs build() {
             return new EnvelopeArgs(payload, payloadType, signatures);
         }

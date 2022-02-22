@@ -138,7 +138,6 @@ public final class GetRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(id, kind, name, systemData, type);
         }

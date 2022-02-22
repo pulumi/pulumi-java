@@ -17,7 +17,7 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="authprovider", required=true)
-    private final String authprovider;
+        private final String authprovider;
 
     public String getAuthprovider() {
         return this.authprovider;
@@ -28,7 +28,7 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class ListStaticSiteUsersArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListStaticSiteUsersArgs build() {
             return new ListStaticSiteUsersArgs(authprovider, name, resourceGroupName);
         }

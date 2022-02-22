@@ -96,7 +96,6 @@ public final class WindowsUpdateSettingsResponse {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
-
         public WindowsUpdateSettingsResponse build() {
             return new WindowsUpdateSettingsResponse(classifications, excludes, exclusivePatches);
         }

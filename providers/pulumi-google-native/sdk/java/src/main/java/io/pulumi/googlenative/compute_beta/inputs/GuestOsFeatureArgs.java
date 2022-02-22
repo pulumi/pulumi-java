@@ -23,7 +23,7 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GuestOsFeatureType> type;
+      private final @Nullable Input<GuestOsFeatureType> type;
 
     public Input<GuestOsFeatureType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GuestOsFeatureArgs build() {
             return new GuestOsFeatureArgs(type);
         }

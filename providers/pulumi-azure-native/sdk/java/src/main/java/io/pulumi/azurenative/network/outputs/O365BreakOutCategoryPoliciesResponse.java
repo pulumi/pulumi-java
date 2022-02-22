@@ -97,7 +97,6 @@ public final class O365BreakOutCategoryPoliciesResponse {
             this.optimize = optimize;
             return this;
         }
-
         public O365BreakOutCategoryPoliciesResponse build() {
             return new O365BreakOutCategoryPoliciesResponse(allow, $default, optimize);
         }

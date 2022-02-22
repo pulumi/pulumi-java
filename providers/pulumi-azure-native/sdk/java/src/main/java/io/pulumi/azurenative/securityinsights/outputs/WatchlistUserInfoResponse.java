@@ -97,7 +97,6 @@ public final class WatchlistUserInfoResponse {
             this.objectId = objectId;
             return this;
         }
-
         public WatchlistUserInfoResponse build() {
             return new WatchlistUserInfoResponse(email, name, objectId);
         }

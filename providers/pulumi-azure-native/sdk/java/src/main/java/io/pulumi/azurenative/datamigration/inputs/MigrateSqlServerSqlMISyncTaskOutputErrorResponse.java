@@ -18,7 +18,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse extends io.p
      * 
      */
     @InputImport(name="error", required=true)
-    private final ReportableExceptionResponse error;
+        private final ReportableExceptionResponse error;
 
     public ReportableExceptionResponse getError() {
         return this.error;
@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse extends io.p
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -41,7 +41,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse extends io.p
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -100,7 +100,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse extends io.p
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputErrorResponse(error, id, resultType);
         }

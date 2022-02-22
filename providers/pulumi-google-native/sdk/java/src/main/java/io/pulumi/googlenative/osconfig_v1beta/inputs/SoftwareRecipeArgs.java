@@ -27,7 +27,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts;
+      private final @Nullable Input<List<SoftwareRecipeArtifactArgs>> artifacts;
 
     public Input<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -38,7 +38,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredState")
-    private final @Nullable Input<SoftwareRecipeDesiredState> desiredState;
+      private final @Nullable Input<SoftwareRecipeDesiredState> desiredState;
 
     public Input<SoftwareRecipeDesiredState> getDesiredState() {
         return this.desiredState == null ? Input.empty() : this.desiredState;
@@ -49,7 +49,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installSteps")
-    private final @Nullable Input<List<SoftwareRecipeStepArgs>> installSteps;
+      private final @Nullable Input<List<SoftwareRecipeStepArgs>> installSteps;
 
     public Input<List<SoftwareRecipeStepArgs>> getInstallSteps() {
         return this.installSteps == null ? Input.empty() : this.installSteps;
@@ -60,7 +60,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -71,7 +71,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateSteps")
-    private final @Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps;
+      private final @Nullable Input<List<SoftwareRecipeStepArgs>> updateSteps;
 
     public Input<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
         return this.updateSteps == null ? Input.empty() : this.updateSteps;
@@ -82,7 +82,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -201,7 +201,6 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public SoftwareRecipeArgs build() {
             return new SoftwareRecipeArgs(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

@@ -159,7 +159,6 @@ public final class ScriptStackFrameResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ScriptStackFrameResponse build() {
             return new ScriptStackFrameResponse(endColumn, endLine, procedureId, startColumn, startLine, text);
         }

@@ -290,7 +290,6 @@ public final class GetEntitlementResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEntitlementResult build() {
             return new GetEntitlementResult(associationInfo, commitmentSettings, createTime, name, offer, parameters, provisionedService, provisioningState, purchaseOrderId, suspensionReasons, trialSettings, updateTime);
         }

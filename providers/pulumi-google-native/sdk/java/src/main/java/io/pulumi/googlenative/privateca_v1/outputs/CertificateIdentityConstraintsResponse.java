@@ -96,7 +96,6 @@ public final class CertificateIdentityConstraintsResponse {
             this.celExpression = Objects.requireNonNull(celExpression);
             return this;
         }
-
         public CertificateIdentityConstraintsResponse build() {
             return new CertificateIdentityConstraintsResponse(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

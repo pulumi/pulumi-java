@@ -52,7 +52,6 @@ public final class MultiClusterIngressFeatureSpecResponse {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
-
         public MultiClusterIngressFeatureSpecResponse build() {
             return new MultiClusterIngressFeatureSpecResponse(configMembership);
         }

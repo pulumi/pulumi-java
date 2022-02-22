@@ -21,7 +21,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final BindingArgs Empty = new BindingArgs();
 
     @InputImport(name="bindingId")
-    private final @Nullable Input<String> bindingId;
+      private final @Nullable Input<String> bindingId;
 
     public Input<String> getBindingId() {
         return this.bindingId == null ? Input.empty() : this.bindingId;
@@ -32,7 +32,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<ExprArgs> condition;
+      private final @Nullable Input<ExprArgs> condition;
 
     public Input<ExprArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -43,7 +43,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -54,7 +54,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -143,7 +143,6 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public BindingArgs build() {
             return new BindingArgs(bindingId, condition, members, role);
         }

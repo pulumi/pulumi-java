@@ -401,7 +401,6 @@ public final class PhoenixLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public PhoenixLinkedServiceResponse build() {
             return new PhoenixLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, trustedCertPath, type, useSystemTrustStore, username);
         }

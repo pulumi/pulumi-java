@@ -19,7 +19,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -30,7 +30,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -41,7 +41,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validationMethod")
-    private final @Nullable Input<String> validationMethod;
+        private final @Nullable Input<String> validationMethod;
 
     public Input<String> getValidationMethod() {
         return this.validationMethod == null ? Input.empty() : this.validationMethod;
@@ -167,7 +167,6 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
             this.validationMethod = Input.ofNullable(validationMethod);
             return this;
         }
-
         public StaticSiteCustomDomainArgs build() {
             return new StaticSiteCustomDomainArgs(domainName, kind, name, resourceGroupName, validationMethod);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final Input<String> audioUri;
+      private final Input<String> audioUri;
 
     public Input<String> getAudioUri() {
         return this.audioUri;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
             this.audioUri = Input.of(Objects.requireNonNull(audioUri));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs(audioUri);
         }

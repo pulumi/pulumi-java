@@ -77,7 +77,6 @@ public final class DeploymentConfigurationResponse {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
-
         public DeploymentConfigurationResponse build() {
             return new DeploymentConfigurationResponse(cloudServiceConfiguration, virtualMachineConfiguration);
         }

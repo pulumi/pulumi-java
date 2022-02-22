@@ -161,7 +161,6 @@ public final class HttpTargetResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public HttpTargetResponse build() {
             return new HttpTargetResponse(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

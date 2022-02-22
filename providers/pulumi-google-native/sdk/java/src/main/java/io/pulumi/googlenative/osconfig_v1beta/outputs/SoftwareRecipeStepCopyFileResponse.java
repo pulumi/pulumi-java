@@ -117,7 +117,6 @@ public final class SoftwareRecipeStepCopyFileResponse {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public SoftwareRecipeStepCopyFileResponse build() {
             return new SoftwareRecipeStepCopyFileResponse(artifactId, destination, overwrite, permissions);
         }

@@ -182,7 +182,6 @@ public final class LabAnnouncementPropertiesResponse {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public LabAnnouncementPropertiesResponse build() {
             return new LabAnnouncementPropertiesResponse(enabled, expirationDate, expired, markdown, provisioningState, title, uniqueIdentifier);
         }

@@ -75,7 +75,6 @@ public final class FirewallDeniedItemResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public FirewallDeniedItemResponse build() {
             return new FirewallDeniedItemResponse(ipProtocol, ports);
         }

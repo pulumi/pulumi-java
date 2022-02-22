@@ -74,7 +74,6 @@ public final class SourceRepositoryResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public SourceRepositoryResponse build() {
             return new SourceRepositoryResponse(deployedUrl, url);
         }

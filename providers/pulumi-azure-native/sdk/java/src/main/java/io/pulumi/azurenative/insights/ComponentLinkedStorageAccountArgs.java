@@ -19,7 +19,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedStorageAccount")
-    private final @Nullable Input<String> linkedStorageAccount;
+        private final @Nullable Input<String> linkedStorageAccount;
 
     public Input<String> getLinkedStorageAccount() {
         return this.linkedStorageAccount == null ? Input.empty() : this.linkedStorageAccount;
@@ -30,7 +30,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -52,7 +52,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+        private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -141,7 +141,6 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
-
         public ComponentLinkedStorageAccountArgs build() {
             return new ComponentLinkedStorageAccountArgs(linkedStorageAccount, resourceGroupName, resourceName, storageType);
         }

@@ -76,7 +76,6 @@ public final class ProductLinkResponse {
             this.uri = uri;
             return this;
         }
-
         public ProductLinkResponse build() {
             return new ProductLinkResponse(displayName, uri);
         }

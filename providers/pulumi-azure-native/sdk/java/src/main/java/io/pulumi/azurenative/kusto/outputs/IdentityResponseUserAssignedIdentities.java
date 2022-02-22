@@ -74,7 +74,6 @@ public final class IdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public IdentityResponseUserAssignedIdentities build() {
             return new IdentityResponseUserAssignedIdentities(clientId, principalId);
         }

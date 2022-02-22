@@ -162,7 +162,6 @@ public final class ThresholdCustomAlertRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public ThresholdCustomAlertRuleResponse build() {
             return new ThresholdCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType);
         }

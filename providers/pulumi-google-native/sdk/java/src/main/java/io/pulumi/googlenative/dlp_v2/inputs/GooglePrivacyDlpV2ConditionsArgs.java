@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+      private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
     public Input<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionsArgs build() {
             return new GooglePrivacyDlpV2ConditionsArgs(conditions);
         }

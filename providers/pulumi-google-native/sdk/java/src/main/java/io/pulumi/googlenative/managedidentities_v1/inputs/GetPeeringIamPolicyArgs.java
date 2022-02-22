@@ -15,21 +15,21 @@ public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetPeeringIamPolicyArgs Empty = new GetPeeringIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="peeringId", required=true)
-    private final String peeringId;
+      private final String peeringId;
 
     public String getPeeringId() {
         return this.peeringId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetPeeringIamPolicyArgs build() {
             return new GetPeeringIamPolicyArgs(optionsRequestedPolicyVersion, peeringId, project);
         }

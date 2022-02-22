@@ -27,7 +27,7 @@ public final class BinaryReadSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="compressionProperties")
-    private final @Nullable Object compressionProperties;
+        private final @Nullable Object compressionProperties;
 
     public Object getCompressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
@@ -39,7 +39,7 @@ public final class BinaryReadSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -88,7 +88,6 @@ public final class BinaryReadSettingsResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinaryReadSettingsResponse build() {
             return new BinaryReadSettingsResponse(compressionProperties, type);
         }

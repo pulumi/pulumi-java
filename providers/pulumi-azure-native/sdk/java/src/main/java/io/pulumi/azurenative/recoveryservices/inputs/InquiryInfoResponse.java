@@ -26,7 +26,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorDetail")
-    private final @Nullable ErrorDetailResponse errorDetail;
+        private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
@@ -38,7 +38,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inquiryDetails")
-    private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
+        private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
@@ -50,7 +50,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -109,7 +109,6 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public InquiryInfoResponse build() {
             return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
         }

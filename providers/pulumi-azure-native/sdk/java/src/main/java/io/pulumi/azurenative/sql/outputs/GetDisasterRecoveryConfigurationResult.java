@@ -263,7 +263,6 @@ public final class GetDisasterRecoveryConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDisasterRecoveryConfigurationResult build() {
             return new GetDisasterRecoveryConfigurationResult(autoFailover, failoverPolicy, id, location, logicalServerName, name, partnerLogicalServerName, partnerServerId, role, status, type);
         }

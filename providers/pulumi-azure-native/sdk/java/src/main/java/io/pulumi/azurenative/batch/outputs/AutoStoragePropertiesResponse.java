@@ -74,7 +74,6 @@ public final class AutoStoragePropertiesResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public AutoStoragePropertiesResponse build() {
             return new AutoStoragePropertiesResponse(lastKeySync, storageAccountId);
         }

@@ -13,7 +13,7 @@ public final class ResponsePolicyNetworkResponse extends io.pulumi.resources.Inv
     public static final ResponsePolicyNetworkResponse Empty = new ResponsePolicyNetworkResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -24,7 +24,7 @@ public final class ResponsePolicyNetworkResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="networkUrl", required=true)
-    private final String networkUrl;
+      private final String networkUrl;
 
     public String getNetworkUrl() {
         return this.networkUrl;
@@ -73,7 +73,6 @@ public final class ResponsePolicyNetworkResponse extends io.pulumi.resources.Inv
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public ResponsePolicyNetworkResponse build() {
             return new ResponsePolicyNetworkResponse(kind, networkUrl);
         }

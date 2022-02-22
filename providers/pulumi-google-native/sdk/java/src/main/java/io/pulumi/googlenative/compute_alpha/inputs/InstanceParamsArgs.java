@@ -24,7 +24,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceManagerTags")
-    private final @Nullable Input<Map<String,String>> resourceManagerTags;
+      private final @Nullable Input<Map<String,String>> resourceManagerTags;
 
     public Input<Map<String,String>> getResourceManagerTags() {
         return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
@@ -67,7 +67,6 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceManagerTags = Input.ofNullable(resourceManagerTags);
             return this;
         }
-
         public InstanceParamsArgs build() {
             return new InstanceParamsArgs(resourceManagerTags);
         }

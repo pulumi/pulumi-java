@@ -226,7 +226,6 @@ public final class GetGalleryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryResult build() {
             return new GetGalleryResult(description, id, identifier, location, name, provisioningState, sharingProfile, tags, type);
         }

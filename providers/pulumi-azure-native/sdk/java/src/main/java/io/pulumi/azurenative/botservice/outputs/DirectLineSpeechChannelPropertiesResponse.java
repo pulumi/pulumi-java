@@ -161,7 +161,6 @@ public final class DirectLineSpeechChannelPropertiesResponse {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public DirectLineSpeechChannelPropertiesResponse build() {
             return new DirectLineSpeechChannelPropertiesResponse(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
         }

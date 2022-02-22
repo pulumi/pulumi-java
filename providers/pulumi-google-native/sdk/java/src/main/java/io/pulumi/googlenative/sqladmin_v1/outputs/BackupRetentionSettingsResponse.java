@@ -75,7 +75,6 @@ public final class BackupRetentionSettingsResponse {
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }
-
         public BackupRetentionSettingsResponse build() {
             return new BackupRetentionSettingsResponse(retainedBackups, retentionUnit);
         }

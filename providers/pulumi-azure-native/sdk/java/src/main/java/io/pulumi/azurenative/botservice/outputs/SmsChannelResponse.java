@@ -142,7 +142,6 @@ public final class SmsChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public SmsChannelResponse build() {
             return new SmsChannelResponse(channelName, etag, location, properties, provisioningState);
         }

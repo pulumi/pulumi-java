@@ -201,7 +201,6 @@ public final class GetMigrationConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMigrationConfigResult build() {
             return new GetMigrationConfigResult(id, migrationState, name, pendingReplicationOperationsCount, postMigrationName, provisioningState, targetNamespace, type);
         }

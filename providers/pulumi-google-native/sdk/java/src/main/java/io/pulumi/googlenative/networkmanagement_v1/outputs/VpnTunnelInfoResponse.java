@@ -221,7 +221,6 @@ public final class VpnTunnelInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public VpnTunnelInfoResponse build() {
             return new VpnTunnelInfoResponse(displayName, networkUri, region, remoteGateway, remoteGatewayIp, routingType, sourceGateway, sourceGatewayIp, uri);
         }

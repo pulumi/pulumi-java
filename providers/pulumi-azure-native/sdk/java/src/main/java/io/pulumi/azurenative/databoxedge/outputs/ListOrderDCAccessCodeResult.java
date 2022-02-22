@@ -54,7 +54,6 @@ public final class ListOrderDCAccessCodeResult {
             this.authCode = authCode;
             return this;
         }
-
         public ListOrderDCAccessCodeResult build() {
             return new ListOrderDCAccessCodeResult(authCode);
         }

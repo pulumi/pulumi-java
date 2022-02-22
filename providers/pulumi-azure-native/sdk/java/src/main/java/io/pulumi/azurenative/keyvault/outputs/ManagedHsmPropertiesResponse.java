@@ -312,7 +312,6 @@ public final class ManagedHsmPropertiesResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ManagedHsmPropertiesResponse build() {
             return new ManagedHsmPropertiesResponse(createMode, enablePurgeProtection, enableSoftDelete, hsmUri, initialAdminObjectIds, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, scheduledPurgeDate, softDeleteRetentionInDays, statusMessage, tenantId);
         }

@@ -158,7 +158,6 @@ public final class GetAuthorizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAuthorizationResult build() {
             return new GetAuthorizationResult(expressRouteAuthorizationId, expressRouteAuthorizationKey, id, name, provisioningState, type);
         }

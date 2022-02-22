@@ -118,7 +118,6 @@ public final class DataBoxDiskCopyProgressResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataBoxDiskCopyProgressResponse build() {
             return new DataBoxDiskCopyProgressResponse(bytesCopied, percentComplete, serialNumber, status);
         }

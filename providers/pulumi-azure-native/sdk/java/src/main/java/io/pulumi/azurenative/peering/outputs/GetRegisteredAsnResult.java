@@ -161,7 +161,6 @@ public final class GetRegisteredAsnResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredAsnResult build() {
             return new GetRegisteredAsnResult(asn, id, name, peeringServicePrefixKey, provisioningState, type);
         }

@@ -302,7 +302,6 @@ public final class GetMultipleActivationKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMultipleActivationKeyResult build() {
             return new GetMultipleActivationKeyResult(agreementNumber, expirationDate, id, installedServerNumber, isEligible, location, multipleActivationKey, name, osType, provisioningState, supportType, tags, type);
         }

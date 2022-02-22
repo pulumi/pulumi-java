@@ -24,7 +24,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLimit")
-    private final @Nullable Input<String> defaultLimit;
+      private final @Nullable Input<String> defaultLimit;
 
     public Input<String> getDefaultLimit() {
         return this.defaultLimit == null ? Input.empty() : this.defaultLimit;
@@ -35,7 +35,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -68,7 +68,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="freeTier")
-    private final @Nullable Input<String> freeTier;
+      private final @Nullable Input<String> freeTier;
 
     public Input<String> getFreeTier() {
         return this.freeTier == null ? Input.empty() : this.freeTier;
@@ -79,7 +79,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLimit")
-    private final @Nullable Input<String> maxLimit;
+      private final @Nullable Input<String> maxLimit;
 
     public Input<String> getMaxLimit() {
         return this.maxLimit == null ? Input.empty() : this.maxLimit;
@@ -90,7 +90,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<String> metric;
+      private final @Nullable Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -101,7 +101,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -123,7 +123,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<Map<String,String>> values;
+      private final @Nullable Input<Map<String,String>> values;
 
     public Input<Map<String,String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -302,7 +302,6 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public QuotaLimitArgs build() {
             return new QuotaLimitArgs(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
         }

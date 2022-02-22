@@ -118,7 +118,6 @@ public final class GetOrganizationReplayResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetOrganizationReplayResult build() {
             return new GetOrganizationReplayResult(config, name, resultsSummary, state);
         }

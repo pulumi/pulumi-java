@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<MigrateSqlServerSqlDbSyncTaskInputArgs> input;
+        private final @Nullable Input<MigrateSqlServerSqlDbSyncTaskInputArgs> input;
 
     public Input<MigrateSqlServerSqlDbSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+        private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskPropertiesArgs build() {
             return new MigrateSqlServerSqlDbSyncTaskPropertiesArgs(input, taskType);
         }

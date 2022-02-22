@@ -197,7 +197,6 @@ public final class ExcelSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExcelSourceResponse build() {
             return new ExcelSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

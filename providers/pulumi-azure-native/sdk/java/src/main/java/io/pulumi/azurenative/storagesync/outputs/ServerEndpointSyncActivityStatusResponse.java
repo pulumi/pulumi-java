@@ -180,7 +180,6 @@ public final class ServerEndpointSyncActivityStatusResponse {
             this.totalItemCount = Objects.requireNonNull(totalItemCount);
             return this;
         }
-
         public ServerEndpointSyncActivityStatusResponse build() {
             return new ServerEndpointSyncActivityStatusResponse(appliedBytes, appliedItemCount, perItemErrorCount, syncMode, timestamp, totalBytes, totalItemCount);
         }

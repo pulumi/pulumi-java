@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputArgs extends io.pulu
      * 
      */
     @InputImport(name="intent", required=true)
-    private final Input<String> intent;
+      private final Input<String> intent;
 
     public Input<String> getIntent() {
         return this.intent;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputArgs extends io.pulu
             this.intent = Input.of(Objects.requireNonNull(intent));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentInputArgs(intent);
         }

@@ -21,7 +21,7 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="countryCode", required=true)
-    private final String countryCode;
+        private final String countryCode;
 
     public String getCountryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+        private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -102,7 +102,6 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public VoiceReceiverResponse build() {
             return new VoiceReceiverResponse(countryCode, name, phoneNumber);
         }

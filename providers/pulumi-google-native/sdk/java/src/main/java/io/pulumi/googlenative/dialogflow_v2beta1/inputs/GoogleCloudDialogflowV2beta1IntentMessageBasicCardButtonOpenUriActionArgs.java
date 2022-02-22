@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs(uri);
         }

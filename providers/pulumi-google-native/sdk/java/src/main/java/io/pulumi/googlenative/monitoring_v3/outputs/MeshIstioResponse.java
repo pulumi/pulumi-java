@@ -95,7 +95,6 @@ public final class MeshIstioResponse {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public MeshIstioResponse build() {
             return new MeshIstioResponse(meshUid, serviceName, serviceNamespace);
         }

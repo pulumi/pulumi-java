@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTextResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTextResponse(text);
         }

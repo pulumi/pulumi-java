@@ -98,7 +98,6 @@ public final class GetTagTemplateIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTagTemplateIamPolicyResult build() {
             return new GetTagTemplateIamPolicyResult(bindings, etag, version);
         }

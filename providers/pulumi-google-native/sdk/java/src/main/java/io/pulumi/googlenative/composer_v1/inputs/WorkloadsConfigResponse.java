@@ -23,7 +23,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scheduler", required=true)
-    private final SchedulerResourceResponse scheduler;
+      private final SchedulerResourceResponse scheduler;
 
     public SchedulerResourceResponse getScheduler() {
         return this.scheduler;
@@ -34,7 +34,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="webServer", required=true)
-    private final WebServerResourceResponse webServer;
+      private final WebServerResourceResponse webServer;
 
     public WebServerResourceResponse getWebServer() {
         return this.webServer;
@@ -45,7 +45,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="worker", required=true)
-    private final WorkerResourceResponse worker;
+      private final WorkerResourceResponse worker;
 
     public WorkerResourceResponse getWorker() {
         return this.worker;
@@ -104,7 +104,6 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
             this.worker = Objects.requireNonNull(worker);
             return this;
         }
-
         public WorkloadsConfigResponse build() {
             return new WorkloadsConfigResponse(scheduler, webServer, worker);
         }

@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="egressOption", required=true)
-    private final String egressOption;
+      private final String egressOption;
 
     public String getEgressOption() {
         return this.egressOption;
@@ -32,7 +32,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final String peeredNetwork;
+      private final String peeredNetwork;
 
     public String getPeeredNetwork() {
         return this.peeredNetwork;
@@ -81,7 +81,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(egressOption, peeredNetwork);
         }

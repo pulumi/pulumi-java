@@ -24,7 +24,7 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<Map<String,String>> details;
+      private final @Nullable Input<Map<String,String>> details;
 
     public Input<Map<String,String>> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -67,7 +67,6 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
             this.details = Input.ofNullable(details);
             return this;
         }
-
         public SensitiveTextAnnotationArgs build() {
             return new SensitiveTextAnnotationArgs(details);
         }

@@ -246,7 +246,6 @@ public final class SecurityAlertTimelineItemResponse {
             this.timeGenerated = Objects.requireNonNull(timeGenerated);
             return this;
         }
-
         public SecurityAlertTimelineItemResponse build() {
             return new SecurityAlertTimelineItemResponse(alertType, azureResourceId, description, displayName, endTimeUtc, kind, productName, severity, startTimeUtc, timeGenerated);
         }

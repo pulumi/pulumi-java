@@ -95,7 +95,6 @@ public final class TfLiteModelResponse {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public TfLiteModelResponse build() {
             return new TfLiteModelResponse(automlModel, gcsTfliteUri, sizeBytes);
         }

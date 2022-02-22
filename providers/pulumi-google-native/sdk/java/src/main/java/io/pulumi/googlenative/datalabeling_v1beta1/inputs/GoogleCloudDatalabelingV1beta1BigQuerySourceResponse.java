@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse extends 
      * 
      */
     @InputImport(name="inputUri", required=true)
-    private final String inputUri;
+      private final String inputUri;
 
     public String getInputUri() {
         return this.inputUri;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse extends 
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1BigQuerySourceResponse(inputUri);
         }

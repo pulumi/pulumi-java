@@ -396,7 +396,6 @@ public final class GetSourceControlConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlConfigurationResult build() {
             return new GetSourceControlConfigurationResult(complianceStatus, configurationProtectedSettings, enableHelmOperator, helmOperatorProperties, id, name, operatorInstanceName, operatorNamespace, operatorParams, operatorScope, operatorType, provisioningState, repositoryPublicKey, repositoryUrl, sshKnownHostsContents, systemData, type);
         }

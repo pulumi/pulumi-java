@@ -77,7 +77,6 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskOutputResponse build() {
             return new GetTdeCertificatesSqlTaskOutputResponse(base64EncodedCertificates, validationErrors);
         }

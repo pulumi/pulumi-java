@@ -23,7 +23,7 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="capacityGb", required=true)
-    private final String capacityGb;
+      private final String capacityGb;
 
     public String getCapacityGb() {
         return this.capacityGb;
@@ -34,7 +34,7 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="nfsExportOptions", required=true)
-    private final List<NfsExportOptionsResponse> nfsExportOptions;
+      private final List<NfsExportOptionsResponse> nfsExportOptions;
 
     public List<NfsExportOptionsResponse> getNfsExportOptions() {
         return this.nfsExportOptions;
@@ -56,7 +56,7 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceBackup", required=true)
-    private final String sourceBackup;
+      private final String sourceBackup;
 
     public String getSourceBackup() {
         return this.sourceBackup;
@@ -125,7 +125,6 @@ public final class FileShareConfigResponse extends io.pulumi.resources.InvokeArg
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
         }
-
         public FileShareConfigResponse build() {
             return new FileShareConfigResponse(capacityGb, name, nfsExportOptions, sourceBackup);
         }

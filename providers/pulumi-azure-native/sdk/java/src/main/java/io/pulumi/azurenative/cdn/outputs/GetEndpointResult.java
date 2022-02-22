@@ -570,7 +570,6 @@ public final class GetEndpointResult {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, geoFilters, hostName, id, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, name, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, provisioningState, queryStringCachingBehavior, resourceState, systemData, tags, type, urlSigningKeys, webApplicationFirewallPolicyLink);
         }

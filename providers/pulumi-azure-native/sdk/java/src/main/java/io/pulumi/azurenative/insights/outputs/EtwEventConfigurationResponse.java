@@ -74,7 +74,6 @@ public final class EtwEventConfigurationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public EtwEventConfigurationResponse build() {
             return new EtwEventConfigurationResponse(filter, id, name);
         }

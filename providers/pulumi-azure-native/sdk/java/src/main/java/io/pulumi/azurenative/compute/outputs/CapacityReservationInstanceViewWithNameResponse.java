@@ -100,7 +100,6 @@ public final class CapacityReservationInstanceViewWithNameResponse {
             this.utilizationInfo = utilizationInfo;
             return this;
         }
-
         public CapacityReservationInstanceViewWithNameResponse build() {
             return new CapacityReservationInstanceViewWithNameResponse(name, statuses, utilizationInfo);
         }

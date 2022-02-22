@@ -19,7 +19,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+        private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -41,7 +41,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleAssignmentId")
-    private final @Nullable Input<String> roleAssignmentId;
+        private final @Nullable Input<String> roleAssignmentId;
 
     public Input<String> getRoleAssignmentId() {
         return this.roleAssignmentId == null ? Input.empty() : this.roleAssignmentId;
@@ -63,7 +63,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleDefinitionId")
-    private final @Nullable Input<String> roleDefinitionId;
+        private final @Nullable Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
@@ -74,7 +74,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+        private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -193,7 +193,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public SqlResourceSqlRoleAssignmentArgs build() {
             return new SqlResourceSqlRoleAssignmentArgs(accountName, principalId, resourceGroupName, roleAssignmentId, roleDefinitionId, scope);
         }

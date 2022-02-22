@@ -24,7 +24,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="activeDeadlineSeconds", required=true)
-    private final String activeDeadlineSeconds;
+      private final String activeDeadlineSeconds;
 
     public String getActiveDeadlineSeconds() {
         return this.activeDeadlineSeconds;
@@ -35,7 +35,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containers", required=true)
-    private final List<ContainerResponse> containers;
+      private final List<ContainerResponse> containers;
 
     public List<ContainerResponse> getContainers() {
         return this.containers;
@@ -46,7 +46,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restartPolicy", required=true)
-    private final String restartPolicy;
+      private final String restartPolicy;
 
     public String getRestartPolicy() {
         return this.restartPolicy;
@@ -57,7 +57,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccountName", required=true)
-    private final String serviceAccountName;
+      private final String serviceAccountName;
 
     public String getServiceAccountName() {
         return this.serviceAccountName;
@@ -68,7 +68,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="terminationGracePeriodSeconds", required=true)
-    private final String terminationGracePeriodSeconds;
+      private final String terminationGracePeriodSeconds;
 
     public String getTerminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds;
@@ -79,7 +79,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumes", required=true)
-    private final List<VolumeResponse> volumes;
+      private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
         return this.volumes;
@@ -168,7 +168,6 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public InstanceSpecResponse build() {
             return new InstanceSpecResponse(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
         }

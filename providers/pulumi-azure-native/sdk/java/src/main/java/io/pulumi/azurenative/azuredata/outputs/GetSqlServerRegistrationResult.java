@@ -225,7 +225,6 @@ public final class GetSqlServerRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlServerRegistrationResult build() {
             return new GetSqlServerRegistrationResult(id, location, name, propertyBag, resourceGroup, subscriptionId, systemData, tags, type);
         }

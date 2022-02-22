@@ -137,7 +137,6 @@ public final class GetNotebookWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNotebookWorkspaceResult build() {
             return new GetNotebookWorkspaceResult(id, name, notebookServerEndpoint, status, type);
         }

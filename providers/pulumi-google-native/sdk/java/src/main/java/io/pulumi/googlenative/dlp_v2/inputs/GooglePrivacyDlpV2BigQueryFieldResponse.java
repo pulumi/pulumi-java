@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="field", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse field;
+      private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="table", required=true)
-    private final GooglePrivacyDlpV2BigQueryTableResponse table;
+      private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryFieldResponse build() {
             return new GooglePrivacyDlpV2BigQueryFieldResponse(field, table);
         }

@@ -416,7 +416,6 @@ public final class GetExpressRouteCrossConnectionPeeringResult {
             this.vlanId = vlanId;
             return this;
         }
-
         public GetExpressRouteCrossConnectionPeeringResult build() {
             return new GetExpressRouteCrossConnectionPeeringResult(azureASN, etag, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, vlanId);
         }

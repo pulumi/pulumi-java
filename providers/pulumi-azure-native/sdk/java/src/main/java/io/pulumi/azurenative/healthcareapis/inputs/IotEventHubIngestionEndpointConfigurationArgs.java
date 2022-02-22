@@ -23,7 +23,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="consumerGroup")
-    private final @Nullable Input<String> consumerGroup;
+        private final @Nullable Input<String> consumerGroup;
 
     public Input<String> getConsumerGroup() {
         return this.consumerGroup == null ? Input.empty() : this.consumerGroup;
@@ -34,7 +34,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+        private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -45,7 +45,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="fullyQualifiedEventHubNamespace")
-    private final @Nullable Input<String> fullyQualifiedEventHubNamespace;
+        private final @Nullable Input<String> fullyQualifiedEventHubNamespace;
 
     public Input<String> getFullyQualifiedEventHubNamespace() {
         return this.fullyQualifiedEventHubNamespace == null ? Input.empty() : this.fullyQualifiedEventHubNamespace;
@@ -119,7 +119,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
             this.fullyQualifiedEventHubNamespace = Input.ofNullable(fullyQualifiedEventHubNamespace);
             return this;
         }
-
         public IotEventHubIngestionEndpointConfigurationArgs build() {
             return new IotEventHubIngestionEndpointConfigurationArgs(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }

@@ -21,7 +21,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterDns", required=true)
-    private final String clusterDns;
+      private final String clusterDns;
 
     public String getClusterDns() {
         return this.clusterDns;
@@ -32,7 +32,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterDnsDomain", required=true)
-    private final String clusterDnsDomain;
+      private final String clusterDnsDomain;
 
     public String getClusterDnsDomain() {
         return this.clusterDnsDomain;
@@ -43,7 +43,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterDnsScope", required=true)
-    private final String clusterDnsScope;
+      private final String clusterDnsScope;
 
     public String getClusterDnsScope() {
         return this.clusterDnsScope;
@@ -102,7 +102,6 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }
-
         public DNSConfigResponse build() {
             return new DNSConfigResponse(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

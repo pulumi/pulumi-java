@@ -98,7 +98,6 @@ public final class GetRuntimeIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRuntimeIamPolicyResult build() {
             return new GetRuntimeIamPolicyResult(bindings, etag, version);
         }

@@ -74,7 +74,6 @@ public final class DocumentNoteResponse {
             this.spdxVersion = Objects.requireNonNull(spdxVersion);
             return this;
         }
-
         public DocumentNoteResponse build() {
             return new DocumentNoteResponse(dataLicence, spdxVersion);
         }

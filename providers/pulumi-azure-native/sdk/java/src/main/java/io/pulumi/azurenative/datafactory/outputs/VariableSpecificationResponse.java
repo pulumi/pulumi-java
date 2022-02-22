@@ -77,7 +77,6 @@ public final class VariableSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VariableSpecificationResponse build() {
             return new VariableSpecificationResponse(defaultValue, type);
         }

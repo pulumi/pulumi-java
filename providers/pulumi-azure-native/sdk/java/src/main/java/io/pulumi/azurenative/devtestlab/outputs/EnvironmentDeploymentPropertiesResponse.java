@@ -78,7 +78,6 @@ public final class EnvironmentDeploymentPropertiesResponse {
             this.parameters = parameters;
             return this;
         }
-
         public EnvironmentDeploymentPropertiesResponse build() {
             return new EnvironmentDeploymentPropertiesResponse(armTemplateId, parameters);
         }

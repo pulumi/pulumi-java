@@ -54,7 +54,6 @@ public final class StorageAccountPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(resourceId);
         }

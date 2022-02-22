@@ -52,7 +52,6 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse {
             this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey);
             return this;
         }
-
         public SecurityPolicyRecaptchaOptionsConfigResponse build() {
             return new SecurityPolicyRecaptchaOptionsConfigResponse(redirectSiteKey);
         }

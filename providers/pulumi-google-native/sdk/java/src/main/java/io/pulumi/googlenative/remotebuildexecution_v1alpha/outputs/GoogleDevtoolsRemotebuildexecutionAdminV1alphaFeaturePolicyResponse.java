@@ -222,7 +222,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
             this.linuxIsolation = Objects.requireNonNull(linuxIsolation);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(containerImageSources, dockerAddCapabilities, dockerChrootPath, dockerNetwork, dockerPrivileged, dockerRunAsRoot, dockerRuntime, dockerSiblingContainers, linuxIsolation);
         }

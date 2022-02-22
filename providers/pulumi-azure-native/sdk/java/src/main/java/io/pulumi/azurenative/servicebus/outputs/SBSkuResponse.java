@@ -98,7 +98,6 @@ public final class SBSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SBSkuResponse build() {
             return new SBSkuResponse(capacity, name, tier);
         }

@@ -139,7 +139,6 @@ public final class GetLinkedStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedStorageAccountResult build() {
             return new GetLinkedStorageAccountResult(dataSourceType, id, name, storageAccountIds, type);
         }

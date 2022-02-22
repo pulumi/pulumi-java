@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @InputImport(name="media", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse getMedia() {
         return this.media;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @InputImport(name="suggestions", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getSuggestions() {
         return this.suggestions;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -126,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(description, media, suggestions, title);
         }

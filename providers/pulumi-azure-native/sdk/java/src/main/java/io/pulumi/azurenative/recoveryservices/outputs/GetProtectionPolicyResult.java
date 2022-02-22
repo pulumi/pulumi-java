@@ -189,7 +189,6 @@ public final class GetProtectionPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionPolicyResult build() {
             return new GetProtectionPolicyResult(eTag, id, location, name, properties, tags, type);
         }

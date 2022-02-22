@@ -54,7 +54,6 @@ public final class PipelinePolicyResponse {
             this.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }
-
         public PipelinePolicyResponse build() {
             return new PipelinePolicyResponse(elapsedTimeMetric);
         }

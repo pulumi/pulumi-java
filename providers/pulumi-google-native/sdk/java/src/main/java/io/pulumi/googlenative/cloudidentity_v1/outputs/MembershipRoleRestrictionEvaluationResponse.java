@@ -52,7 +52,6 @@ public final class MembershipRoleRestrictionEvaluationResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MembershipRoleRestrictionEvaluationResponse build() {
             return new MembershipRoleRestrictionEvaluationResponse(state);
         }

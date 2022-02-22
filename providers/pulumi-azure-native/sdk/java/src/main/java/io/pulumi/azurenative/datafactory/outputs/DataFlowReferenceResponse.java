@@ -120,7 +120,6 @@ public final class DataFlowReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DataFlowReferenceResponse build() {
             return new DataFlowReferenceResponse(datasetParameters, parameters, referenceName, type);
         }

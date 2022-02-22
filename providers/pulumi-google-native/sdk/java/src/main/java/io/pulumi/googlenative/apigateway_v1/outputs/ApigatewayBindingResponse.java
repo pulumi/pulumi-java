@@ -97,7 +97,6 @@ public final class ApigatewayBindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public ApigatewayBindingResponse build() {
             return new ApigatewayBindingResponse(condition, members, role);
         }

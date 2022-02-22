@@ -395,7 +395,6 @@ public final class GetGalleryImageResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetGalleryImageResult build() {
             return new GetGalleryImageResult(author, createdDate, description, icon, id, imageReference, isEnabled, isOverride, isPlanAuthorized, latestOperationResult, location, name, planId, provisioningState, tags, type, uniqueIdentifier);
         }

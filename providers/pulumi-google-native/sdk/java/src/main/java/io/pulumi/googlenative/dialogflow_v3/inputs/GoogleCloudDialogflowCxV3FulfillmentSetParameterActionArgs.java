@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
      * 
      */
     @InputImport(name="parameter")
-    private final @Nullable Input<String> parameter;
+      private final @Nullable Input<String> parameter;
 
     public Input<String> getParameter() {
         return this.parameter == null ? Input.empty() : this.parameter;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Object> value;
+      private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs build() {
             return new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs(parameter, value);
         }

@@ -200,7 +200,6 @@ public final class GitHubEnterpriseSecretsResponse {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
-
         public GitHubEnterpriseSecretsResponse build() {
             return new GitHubEnterpriseSecretsResponse(oauthClientIdName, oauthClientIdVersionName, oauthSecretName, oauthSecretVersionName, privateKeyName, privateKeyVersionName, webhookSecretName, webhookSecretVersionName);
         }

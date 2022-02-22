@@ -140,7 +140,6 @@ public final class VirtualSCSIControllerResponse {
             this.type = type;
             return this;
         }
-
         public VirtualSCSIControllerResponse build() {
             return new VirtualSCSIControllerResponse(busNumber, controllerKey, scsiCtlrUnitNumber, sharing, type);
         }

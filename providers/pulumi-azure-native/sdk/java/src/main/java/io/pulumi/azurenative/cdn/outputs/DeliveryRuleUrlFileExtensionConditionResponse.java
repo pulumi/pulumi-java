@@ -77,7 +77,6 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleUrlFileExtensionConditionResponse build() {
             return new DeliveryRuleUrlFileExtensionConditionResponse(name, parameters);
         }

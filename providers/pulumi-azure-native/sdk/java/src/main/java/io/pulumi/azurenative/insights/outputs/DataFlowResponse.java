@@ -76,7 +76,6 @@ public final class DataFlowResponse {
             this.streams = streams;
             return this;
         }
-
         public DataFlowResponse build() {
             return new DataFlowResponse(destinations, streams);
         }

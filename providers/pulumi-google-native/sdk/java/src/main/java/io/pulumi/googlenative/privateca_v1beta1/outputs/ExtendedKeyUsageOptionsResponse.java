@@ -158,7 +158,6 @@ public final class ExtendedKeyUsageOptionsResponse {
             this.timeStamping = Objects.requireNonNull(timeStamping);
             return this;
         }
-
         public ExtendedKeyUsageOptionsResponse build() {
             return new ExtendedKeyUsageOptionsResponse(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

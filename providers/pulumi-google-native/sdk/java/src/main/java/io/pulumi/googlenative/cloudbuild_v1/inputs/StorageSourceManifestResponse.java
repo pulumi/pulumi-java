@@ -21,7 +21,7 @@ public final class StorageSourceManifestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class StorageSourceManifestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="generation", required=true)
-    private final String generation;
+      private final String generation;
 
     public String getGeneration() {
         return this.generation;
@@ -43,7 +43,7 @@ public final class StorageSourceManifestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
@@ -102,7 +102,6 @@ public final class StorageSourceManifestResponse extends io.pulumi.resources.Inv
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public StorageSourceManifestResponse build() {
             return new StorageSourceManifestResponse(bucket, generation, object);
         }

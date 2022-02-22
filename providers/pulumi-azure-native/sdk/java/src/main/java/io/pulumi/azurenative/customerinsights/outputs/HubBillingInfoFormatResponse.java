@@ -98,7 +98,6 @@ public final class HubBillingInfoFormatResponse {
             this.skuName = skuName;
             return this;
         }
-
         public HubBillingInfoFormatResponse build() {
             return new HubBillingInfoFormatResponse(maxUnits, minUnits, skuName);
         }

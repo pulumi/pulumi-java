@@ -28,7 +28,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<FieldArgs>> fields;
+      private final @Nullable Input<List<FieldArgs>> fields;
 
     public Input<List<FieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -39,7 +39,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oneofs")
-    private final @Nullable Input<List<String>> oneofs;
+      private final @Nullable Input<List<String>> oneofs;
 
     public Input<List<String>> getOneofs() {
         return this.oneofs == null ? Input.empty() : this.oneofs;
@@ -61,7 +61,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -72,7 +72,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-    private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Input<SourceContextArgs> sourceContext;
 
     public Input<SourceContextArgs> getSourceContext() {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
@@ -83,7 +83,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-    private final @Nullable Input<TypeSyntax> syntax;
+      private final @Nullable Input<TypeSyntax> syntax;
 
     public Input<TypeSyntax> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
@@ -202,7 +202,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
-
         public TypeArgs build() {
             return new TypeArgs(fields, name, oneofs, options, sourceContext, syntax);
         }

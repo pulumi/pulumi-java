@@ -153,7 +153,6 @@ public final class InTotoResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public InTotoResponse build() {
             return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }

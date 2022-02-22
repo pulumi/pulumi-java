@@ -118,7 +118,6 @@ public final class LogDescriptorResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LogDescriptorResponse build() {
             return new LogDescriptorResponse(description, displayName, labels, name);
         }

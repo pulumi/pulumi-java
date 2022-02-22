@@ -23,7 +23,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+        private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -34,7 +34,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -45,7 +45,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serverUrl")
-    private final @Nullable Input<String> serverUrl;
+        private final @Nullable Input<String> serverUrl;
 
     public Input<String> getServerUrl() {
         return this.serverUrl == null ? Input.empty() : this.serverUrl;
@@ -56,7 +56,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+        private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -145,7 +145,6 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public GitHubActionContainerConfigurationArgs build() {
             return new GitHubActionContainerConfigurationArgs(imageName, password, serverUrl, username);
         }

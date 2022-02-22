@@ -120,7 +120,6 @@ public final class GalleryDataDiskImageResponse {
             this.source = source;
             return this;
         }
-
         public GalleryDataDiskImageResponse build() {
             return new GalleryDataDiskImageResponse(hostCaching, lun, sizeInGB, source);
         }

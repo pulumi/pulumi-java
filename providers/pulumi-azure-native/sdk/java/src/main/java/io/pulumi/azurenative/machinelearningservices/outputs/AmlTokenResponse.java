@@ -54,7 +54,6 @@ public final class AmlTokenResponse {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public AmlTokenResponse build() {
             return new AmlTokenResponse(identityType);
         }

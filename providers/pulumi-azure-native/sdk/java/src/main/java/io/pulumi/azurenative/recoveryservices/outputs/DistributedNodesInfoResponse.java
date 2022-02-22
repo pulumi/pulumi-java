@@ -100,7 +100,6 @@ public final class DistributedNodesInfoResponse {
             this.status = status;
             return this;
         }
-
         public DistributedNodesInfoResponse build() {
             return new DistributedNodesInfoResponse(errorDetail, nodeName, status);
         }

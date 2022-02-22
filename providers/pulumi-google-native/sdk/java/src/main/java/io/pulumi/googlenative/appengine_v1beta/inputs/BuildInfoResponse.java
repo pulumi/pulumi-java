@@ -21,7 +21,7 @@ public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudBuildId", required=true)
-    private final String cloudBuildId;
+      private final String cloudBuildId;
 
     public String getCloudBuildId() {
         return this.cloudBuildId;
@@ -59,7 +59,6 @@ public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
             return this;
         }
-
         public BuildInfoResponse build() {
             return new BuildInfoResponse(cloudBuildId);
         }

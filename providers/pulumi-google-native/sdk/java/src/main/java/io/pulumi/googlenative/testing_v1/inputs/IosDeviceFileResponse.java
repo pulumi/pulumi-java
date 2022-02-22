@@ -22,7 +22,7 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final String bundleId;
+      private final String bundleId;
 
     public String getBundleId() {
         return this.bundleId;
@@ -33,7 +33,7 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="content", required=true)
-    private final FileReferenceResponse content;
+      private final FileReferenceResponse content;
 
     public FileReferenceResponse getContent() {
         return this.content;
@@ -44,7 +44,7 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="devicePath", required=true)
-    private final String devicePath;
+      private final String devicePath;
 
     public String getDevicePath() {
         return this.devicePath;
@@ -103,7 +103,6 @@ public final class IosDeviceFileResponse extends io.pulumi.resources.InvokeArgs 
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public IosDeviceFileResponse build() {
             return new IosDeviceFileResponse(bundleId, content, devicePath);
         }

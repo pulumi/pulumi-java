@@ -17,7 +17,7 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -77,7 +77,6 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ApplicationUserAssignedIdentityResponse build() {
             return new ApplicationUserAssignedIdentityResponse(name, principalId);
         }

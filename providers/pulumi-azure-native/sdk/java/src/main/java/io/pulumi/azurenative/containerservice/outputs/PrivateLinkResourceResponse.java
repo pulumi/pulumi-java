@@ -161,7 +161,6 @@ public final class PrivateLinkResourceResponse {
             this.type = type;
             return this;
         }
-
         public PrivateLinkResourceResponse build() {
             return new PrivateLinkResourceResponse(groupId, id, name, privateLinkServiceID, requiredMembers, type);
         }

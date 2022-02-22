@@ -74,7 +74,6 @@ public final class RevocationDetailsResponse {
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
         }
-
         public RevocationDetailsResponse build() {
             return new RevocationDetailsResponse(revocationState, revocationTime);
         }

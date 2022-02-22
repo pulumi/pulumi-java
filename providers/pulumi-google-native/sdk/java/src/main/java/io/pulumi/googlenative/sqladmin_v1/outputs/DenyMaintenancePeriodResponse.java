@@ -95,7 +95,6 @@ public final class DenyMaintenancePeriodResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public DenyMaintenancePeriodResponse build() {
             return new DenyMaintenancePeriodResponse(endDate, startDate, time);
         }

@@ -140,7 +140,6 @@ public final class WorkerProfileResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public WorkerProfileResponse build() {
             return new WorkerProfileResponse(count, diskSizeGB, name, subnetId, vmSize);
         }

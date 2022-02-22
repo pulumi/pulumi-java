@@ -22,7 +22,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sasUri", required=true)
-    private final Input<String> sasUri;
+        private final Input<String> sasUri;
 
     public Input<String> getSasUri() {
         return this.sasUri;
@@ -34,7 +34,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SasAuthenticationArgs build() {
             return new SasAuthenticationArgs(sasUri, type);
         }

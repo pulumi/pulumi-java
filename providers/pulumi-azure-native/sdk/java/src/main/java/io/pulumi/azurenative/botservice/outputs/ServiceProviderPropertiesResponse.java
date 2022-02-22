@@ -161,7 +161,6 @@ public final class ServiceProviderPropertiesResponse {
             this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
             return this;
         }
-
         public ServiceProviderPropertiesResponse build() {
             return new ServiceProviderPropertiesResponse(devPortalUrl, displayName, iconUrl, id, parameters, serviceProviderName);
         }

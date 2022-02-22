@@ -54,7 +54,6 @@ public final class ApiPropertiesResponse {
             this.serverVersion = serverVersion;
             return this;
         }
-
         public ApiPropertiesResponse build() {
             return new ApiPropertiesResponse(serverVersion);
         }

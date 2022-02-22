@@ -97,7 +97,6 @@ public final class WnsCredentialResponse {
             this.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }
-
         public WnsCredentialResponse build() {
             return new WnsCredentialResponse(packageSid, secretKey, windowsLiveEndpoint);
         }

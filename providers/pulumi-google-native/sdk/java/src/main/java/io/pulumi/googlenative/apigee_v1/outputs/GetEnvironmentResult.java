@@ -222,7 +222,6 @@ public final class GetEnvironmentResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(apiProxyType, createdAt, deploymentType, description, displayName, lastModifiedAt, name, properties, state);
         }

@@ -25,7 +25,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authDomain")
-    private final @Nullable Input<String> authDomain;
+      private final @Nullable Input<String> authDomain;
 
     public Input<String> getAuthDomain() {
         return this.authDomain == null ? Input.empty() : this.authDomain;
@@ -36,7 +36,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-    private final @Nullable Input<AppDatabaseType> databaseType;
+      private final @Nullable Input<AppDatabaseType> databaseType;
 
     public Input<AppDatabaseType> getDatabaseType() {
         return this.databaseType == null ? Input.empty() : this.databaseType;
@@ -47,7 +47,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCookieExpiration")
-    private final @Nullable Input<String> defaultCookieExpiration;
+      private final @Nullable Input<String> defaultCookieExpiration;
 
     public Input<String> getDefaultCookieExpiration() {
         return this.defaultCookieExpiration == null ? Input.empty() : this.defaultCookieExpiration;
@@ -58,7 +58,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dispatchRules")
-    private final @Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules;
+      private final @Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules;
 
     public Input<List<UrlDispatchRuleArgs>> getDispatchRules() {
         return this.dispatchRules == null ? Input.empty() : this.dispatchRules;
@@ -69,7 +69,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSettings")
-    private final @Nullable Input<FeatureSettingsArgs> featureSettings;
+      private final @Nullable Input<FeatureSettingsArgs> featureSettings;
 
     public Input<FeatureSettingsArgs> getFeatureSettings() {
         return this.featureSettings == null ? Input.empty() : this.featureSettings;
@@ -80,14 +80,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcrDomain")
-    private final @Nullable Input<String> gcrDomain;
+      private final @Nullable Input<String> gcrDomain;
 
     public Input<String> getGcrDomain() {
         return this.gcrDomain == null ? Input.empty() : this.gcrDomain;
     }
 
     @InputImport(name="iap")
-    private final @Nullable Input<IdentityAwareProxyArgs> iap;
+      private final @Nullable Input<IdentityAwareProxyArgs> iap;
 
     public Input<IdentityAwareProxyArgs> getIap() {
         return this.iap == null ? Input.empty() : this.iap;
@@ -98,7 +98,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -109,7 +109,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -120,7 +120,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -131,7 +131,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servingStatus")
-    private final @Nullable Input<AppServingStatus> servingStatus;
+      private final @Nullable Input<AppServingStatus> servingStatus;
 
     public Input<AppServingStatus> getServingStatus() {
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
@@ -325,7 +325,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(authDomain, databaseType, defaultCookieExpiration, dispatchRules, featureSettings, gcrDomain, iap, id, location, serviceAccount, servingStatus);
         }

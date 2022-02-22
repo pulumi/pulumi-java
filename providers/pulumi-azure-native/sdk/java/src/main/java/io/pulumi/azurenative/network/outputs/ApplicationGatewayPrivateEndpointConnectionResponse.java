@@ -204,7 +204,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateEndpointConnectionResponse build() {
             return new ApplicationGatewayPrivateEndpointConnectionResponse(etag, id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

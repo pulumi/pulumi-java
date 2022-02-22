@@ -141,7 +141,6 @@ public final class ImageTemplateFileCustomizerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateFileCustomizerResponse build() {
             return new ImageTemplateFileCustomizerResponse(destination, name, sha256Checksum, sourceUri, type);
         }

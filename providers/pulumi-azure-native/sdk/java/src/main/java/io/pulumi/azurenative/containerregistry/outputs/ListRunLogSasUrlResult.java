@@ -76,7 +76,6 @@ public final class ListRunLogSasUrlResult {
             this.logLink = logLink;
             return this;
         }
-
         public ListRunLogSasUrlResult build() {
             return new ListRunLogSasUrlResult(logArtifactLink, logLink);
         }

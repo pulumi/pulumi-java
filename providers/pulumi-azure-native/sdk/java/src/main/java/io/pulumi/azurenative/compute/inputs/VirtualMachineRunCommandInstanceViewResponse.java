@@ -26,7 +26,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+        private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -37,7 +37,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="error")
-    private final @Nullable String error;
+        private final @Nullable String error;
 
     public Optional<String> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -48,7 +48,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="executionMessage")
-    private final @Nullable String executionMessage;
+        private final @Nullable String executionMessage;
 
     public Optional<String> getExecutionMessage() {
         return this.executionMessage == null ? Optional.empty() : Optional.ofNullable(this.executionMessage);
@@ -59,7 +59,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="executionState")
-    private final @Nullable String executionState;
+        private final @Nullable String executionState;
 
     public Optional<String> getExecutionState() {
         return this.executionState == null ? Optional.empty() : Optional.ofNullable(this.executionState);
@@ -70,7 +70,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="exitCode")
-    private final @Nullable Integer exitCode;
+        private final @Nullable Integer exitCode;
 
     public Optional<Integer> getExitCode() {
         return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
@@ -81,7 +81,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="output")
-    private final @Nullable String output;
+        private final @Nullable String output;
 
     public Optional<String> getOutput() {
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
@@ -92,7 +92,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -103,7 +103,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -212,7 +212,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
             this.statuses = statuses;
             return this;
         }
-
         public VirtualMachineRunCommandInstanceViewResponse build() {
             return new VirtualMachineRunCommandInstanceViewResponse(endTime, error, executionMessage, executionState, exitCode, output, startTime, statuses);
         }

@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @InputImport(name="aliasContext")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
         return this.aliasContext == null ? Input.empty() : this.aliasContext;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @InputImport(name="gerritProject")
-    private final @Nullable Input<String> gerritProject;
+      private final @Nullable Input<String> gerritProject;
 
     public Input<String> getGerritProject() {
         return this.gerritProject == null ? Input.empty() : this.gerritProject;
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @InputImport(name="hostUri")
-    private final @Nullable Input<String> hostUri;
+      private final @Nullable Input<String> hostUri;
 
     public Input<String> getHostUri() {
         return this.hostUri == null ? Input.empty() : this.hostUri;
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -146,7 +146,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(aliasContext, gerritProject, hostUri, revisionId);
         }

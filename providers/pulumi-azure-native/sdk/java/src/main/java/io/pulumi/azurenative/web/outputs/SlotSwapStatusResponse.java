@@ -95,7 +95,6 @@ public final class SlotSwapStatusResponse {
             this.timestampUtc = Objects.requireNonNull(timestampUtc);
             return this;
         }
-
         public SlotSwapStatusResponse build() {
             return new SlotSwapStatusResponse(destinationSlotName, sourceSlotName, timestampUtc);
         }

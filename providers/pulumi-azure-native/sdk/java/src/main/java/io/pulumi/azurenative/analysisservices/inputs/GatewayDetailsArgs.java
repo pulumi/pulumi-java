@@ -23,7 +23,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayResourceId")
-    private final @Nullable Input<String> gatewayResourceId;
+        private final @Nullable Input<String> gatewayResourceId;
 
     public Input<String> getGatewayResourceId() {
         return this.gatewayResourceId == null ? Input.empty() : this.gatewayResourceId;
@@ -66,7 +66,6 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.gatewayResourceId = Input.ofNullable(gatewayResourceId);
             return this;
         }
-
         public GatewayDetailsArgs build() {
             return new GatewayDetailsArgs(gatewayResourceId);
         }

@@ -119,7 +119,6 @@ public final class ConnectorMappingStructureResponse {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
-
         public ConnectorMappingStructureResponse build() {
             return new ConnectorMappingStructureResponse(columnName, customFormatSpecifier, isEncrypted, propertyName);
         }

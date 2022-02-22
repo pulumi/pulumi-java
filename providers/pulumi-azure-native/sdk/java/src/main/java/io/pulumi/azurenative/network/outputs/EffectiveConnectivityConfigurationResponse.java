@@ -248,7 +248,6 @@ public final class EffectiveConnectivityConfigurationResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EffectiveConnectivityConfigurationResponse build() {
             return new EffectiveConnectivityConfigurationResponse(appliesToGroups, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState);
         }

@@ -25,7 +25,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="androidAppInfo", required=true)
-    private final AndroidAppInfoResponse androidAppInfo;
+      private final AndroidAppInfoResponse androidAppInfo;
 
     public AndroidAppInfoResponse getAndroidAppInfo() {
         return this.androidAppInfo;
@@ -36,7 +36,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="androidInstrumentationTest", required=true)
-    private final AndroidInstrumentationTestResponse androidInstrumentationTest;
+      private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest;
@@ -47,7 +47,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="androidRoboTest", required=true)
-    private final AndroidRoboTestResponse androidRoboTest;
+      private final AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse getAndroidRoboTest() {
         return this.androidRoboTest;
@@ -58,7 +58,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="androidTestLoop", required=true)
-    private final AndroidTestLoopResponse androidTestLoop;
+      private final AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse getAndroidTestLoop() {
         return this.androidTestLoop;
@@ -69,7 +69,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testTimeout", required=true)
-    private final DurationResponse testTimeout;
+      private final DurationResponse testTimeout;
 
     public DurationResponse getTestTimeout() {
         return this.testTimeout;
@@ -148,7 +148,6 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public AndroidTestResponse build() {
             return new AndroidTestResponse(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
         }

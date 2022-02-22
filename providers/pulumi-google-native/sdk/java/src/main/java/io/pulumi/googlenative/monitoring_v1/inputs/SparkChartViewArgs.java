@@ -24,7 +24,7 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod")
-    private final @Nullable Input<String> minAlignmentPeriod;
+      private final @Nullable Input<String> minAlignmentPeriod;
 
     public Input<String> getMinAlignmentPeriod() {
         return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
@@ -35,7 +35,7 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkChartType", required=true)
-    private final Input<SparkChartViewSparkChartType> sparkChartType;
+      private final Input<SparkChartViewSparkChartType> sparkChartType;
 
     public Input<SparkChartViewSparkChartType> getSparkChartType() {
         return this.sparkChartType;
@@ -94,7 +94,6 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
             this.sparkChartType = Input.of(Objects.requireNonNull(sparkChartType));
             return this;
         }
-
         public SparkChartViewArgs build() {
             return new SparkChartViewArgs(minAlignmentPeriod, sparkChartType);
         }

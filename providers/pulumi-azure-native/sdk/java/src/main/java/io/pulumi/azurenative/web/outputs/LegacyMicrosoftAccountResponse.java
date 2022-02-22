@@ -121,7 +121,6 @@ public final class LegacyMicrosoftAccountResponse {
             this.validation = validation;
             return this;
         }
-
         public LegacyMicrosoftAccountResponse build() {
             return new LegacyMicrosoftAccountResponse(enabled, login, registration, validation);
         }

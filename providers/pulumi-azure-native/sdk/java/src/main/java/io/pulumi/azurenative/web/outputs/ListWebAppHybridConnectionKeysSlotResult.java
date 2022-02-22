@@ -160,7 +160,6 @@ public final class ListWebAppHybridConnectionKeysSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppHybridConnectionKeysSlotResult build() {
             return new ListWebAppHybridConnectionKeysSlotResult(id, kind, name, sendKeyName, sendKeyValue, type);
         }

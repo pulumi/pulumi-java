@@ -23,7 +23,7 @@ public final class DiskEncryptionSetParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -66,7 +66,6 @@ public final class DiskEncryptionSetParametersArgs extends io.pulumi.resources.R
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public DiskEncryptionSetParametersArgs build() {
             return new DiskEncryptionSetParametersArgs(id);
         }

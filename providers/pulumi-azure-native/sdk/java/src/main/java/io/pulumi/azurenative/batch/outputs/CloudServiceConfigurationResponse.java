@@ -76,7 +76,6 @@ public final class CloudServiceConfigurationResponse {
             this.osVersion = osVersion;
             return this;
         }
-
         public CloudServiceConfigurationResponse build() {
             return new CloudServiceConfigurationResponse(osFamily, osVersion);
         }

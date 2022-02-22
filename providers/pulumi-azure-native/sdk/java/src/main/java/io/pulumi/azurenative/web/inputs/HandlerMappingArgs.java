@@ -24,7 +24,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<String> arguments;
+        private final @Nullable Input<String> arguments;
 
     public Input<String> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -35,7 +35,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extension")
-    private final @Nullable Input<String> extension;
+        private final @Nullable Input<String> extension;
 
     public Input<String> getExtension() {
         return this.extension == null ? Input.empty() : this.extension;
@@ -46,7 +46,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptProcessor")
-    private final @Nullable Input<String> scriptProcessor;
+        private final @Nullable Input<String> scriptProcessor;
 
     public Input<String> getScriptProcessor() {
         return this.scriptProcessor == null ? Input.empty() : this.scriptProcessor;
@@ -120,7 +120,6 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.scriptProcessor = Input.ofNullable(scriptProcessor);
             return this;
         }
-
         public HandlerMappingArgs build() {
             return new HandlerMappingArgs(arguments, extension, scriptProcessor);
         }

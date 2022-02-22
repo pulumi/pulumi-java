@@ -52,7 +52,6 @@ public final class SecurityContextResponse {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
-
         public SecurityContextResponse build() {
             return new SecurityContextResponse(runAsUser);
         }

@@ -54,7 +54,6 @@ public final class ServiceProviderResponse {
             this.properties = properties;
             return this;
         }
-
         public ServiceProviderResponse build() {
             return new ServiceProviderResponse(properties);
         }

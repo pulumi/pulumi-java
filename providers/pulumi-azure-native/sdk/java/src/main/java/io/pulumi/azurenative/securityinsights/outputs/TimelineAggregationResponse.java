@@ -75,7 +75,6 @@ public final class TimelineAggregationResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public TimelineAggregationResponse build() {
             return new TimelineAggregationResponse(count, kind);
         }

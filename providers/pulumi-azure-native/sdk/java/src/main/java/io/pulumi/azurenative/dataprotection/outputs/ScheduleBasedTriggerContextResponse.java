@@ -100,7 +100,6 @@ public final class ScheduleBasedTriggerContextResponse {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public ScheduleBasedTriggerContextResponse build() {
             return new ScheduleBasedTriggerContextResponse(objectType, schedule, taggingCriteria);
         }

@@ -95,7 +95,6 @@ public final class MaintenanceWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(endTime, recurrence, startTime);
         }

@@ -23,7 +23,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Double maxCapacity;
+        private final @Nullable Double maxCapacity;
 
     public Optional<Double> getMaxCapacity() {
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
@@ -34,7 +34,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Double minCapacity;
+        private final @Nullable Double minCapacity;
 
     public Optional<Double> getMinCapacity() {
         return this.minCapacity == null ? Optional.empty() : Optional.ofNullable(this.minCapacity);
@@ -83,7 +83,6 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
             this.minCapacity = minCapacity;
             return this;
         }
-
         public ElasticPoolPerDatabaseSettingsResponse build() {
             return new ElasticPoolPerDatabaseSettingsResponse(maxCapacity, minCapacity);
         }

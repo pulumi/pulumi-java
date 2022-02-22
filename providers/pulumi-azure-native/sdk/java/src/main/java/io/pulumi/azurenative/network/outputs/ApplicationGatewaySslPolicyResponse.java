@@ -140,7 +140,6 @@ public final class ApplicationGatewaySslPolicyResponse {
             this.policyType = policyType;
             return this;
         }
-
         public ApplicationGatewaySslPolicyResponse build() {
             return new ApplicationGatewaySslPolicyResponse(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
         }

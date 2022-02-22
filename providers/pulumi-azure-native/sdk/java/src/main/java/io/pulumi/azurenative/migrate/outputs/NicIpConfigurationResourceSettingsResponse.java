@@ -208,7 +208,6 @@ public final class NicIpConfigurationResourceSettingsResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NicIpConfigurationResourceSettingsResponse build() {
             return new NicIpConfigurationResourceSettingsResponse(loadBalancerBackendAddressPools, loadBalancerNatRules, name, primary, privateIpAddress, privateIpAllocationMethod, publicIp, subnet);
         }

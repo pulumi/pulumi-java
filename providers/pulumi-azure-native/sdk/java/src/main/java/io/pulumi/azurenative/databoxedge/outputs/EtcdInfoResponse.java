@@ -74,7 +74,6 @@ public final class EtcdInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public EtcdInfoResponse build() {
             return new EtcdInfoResponse(type, version);
         }

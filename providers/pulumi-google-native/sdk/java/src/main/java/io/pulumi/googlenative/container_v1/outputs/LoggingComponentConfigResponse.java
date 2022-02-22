@@ -53,7 +53,6 @@ public final class LoggingComponentConfigResponse {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public LoggingComponentConfigResponse build() {
             return new LoggingComponentConfigResponse(enableComponents);
         }

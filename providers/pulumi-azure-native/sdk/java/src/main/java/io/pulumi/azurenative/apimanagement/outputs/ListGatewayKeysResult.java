@@ -76,7 +76,6 @@ public final class ListGatewayKeysResult {
             this.secondary = secondary;
             return this;
         }
-
         public ListGatewayKeysResult build() {
             return new ListGatewayKeysResult(primary, secondary);
         }

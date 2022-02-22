@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="annotationType", required=true)
-    private final String annotationType;
+      private final String annotationType;
 
     public String getAnnotationType() {
         return this.annotationType;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="bigquerySource", required=true)
-    private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
+      private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
 
     public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse getBigquerySource() {
         return this.bigquerySource;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="classificationMetadata", required=true)
-    private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
+      private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
 
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse getClassificationMetadata() {
         return this.classificationMetadata;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final String dataType;
+      private final String dataType;
 
     public String getDataType() {
         return this.dataType;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="gcsSource", required=true)
-    private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
+      private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
 
     public GoogleCloudDatalabelingV1beta1GcsSourceResponse getGcsSource() {
         return this.gcsSource;
@@ -80,7 +80,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
      * 
      */
     @InputImport(name="textMetadata", required=true)
-    private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
+      private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
     public GoogleCloudDatalabelingV1beta1TextMetadataResponse getTextMetadata() {
         return this.textMetadata;
@@ -169,7 +169,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }

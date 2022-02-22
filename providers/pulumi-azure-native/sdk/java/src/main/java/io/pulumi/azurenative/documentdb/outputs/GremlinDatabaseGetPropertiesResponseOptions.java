@@ -77,7 +77,6 @@ public final class GremlinDatabaseGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public GremlinDatabaseGetPropertiesResponseOptions build() {
             return new GremlinDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

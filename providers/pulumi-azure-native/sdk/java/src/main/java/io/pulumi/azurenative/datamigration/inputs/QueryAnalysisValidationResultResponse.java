@@ -22,7 +22,7 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="queryResults", required=true)
-    private final QueryExecutionResultResponse queryResults;
+        private final QueryExecutionResultResponse queryResults;
 
     public QueryExecutionResultResponse getQueryResults() {
         return this.queryResults;
@@ -33,7 +33,7 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final ValidationErrorResponse validationErrors;
+        private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
@@ -82,7 +82,6 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public QueryAnalysisValidationResultResponse build() {
             return new QueryAnalysisValidationResultResponse(queryResults, validationErrors);
         }

@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
      * 
      */
     @InputImport(name="enableDynamicPosition")
-    private final @Nullable Input<Boolean> enableDynamicPosition;
+      private final @Nullable Input<Boolean> enableDynamicPosition;
 
     public Input<Boolean> getEnableDynamicPosition() {
         return this.enableDynamicPosition == null ? Input.empty() : this.enableDynamicPosition;
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
      * 
      */
     @InputImport(name="excludedFilterKeys")
-    private final @Nullable Input<List<String>> excludedFilterKeys;
+      private final @Nullable Input<List<String>> excludedFilterKeys;
 
     public Input<List<String>> getExcludedFilterKeys() {
         return this.excludedFilterKeys == null ? Input.empty() : this.excludedFilterKeys;
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
      * 
      */
     @InputImport(name="facetKey", required=true)
-    private final Input<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey;
+      private final Input<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey;
 
     public Input<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> getFacetKey() {
         return this.facetKey;
@@ -60,7 +60,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<Integer> limit;
+      private final @Nullable Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -149,7 +149,6 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
             this.limit = Input.ofNullable(limit);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestFacetSpecArgs build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecArgs(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }

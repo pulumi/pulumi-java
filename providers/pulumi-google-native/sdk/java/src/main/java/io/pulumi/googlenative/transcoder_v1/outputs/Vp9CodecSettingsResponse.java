@@ -244,7 +244,6 @@ public final class Vp9CodecSettingsResponse {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
         }
-
         public Vp9CodecSettingsResponse build() {
             return new Vp9CodecSettingsResponse(bitrateBps, crfLevel, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, profile, rateControlMode, widthPixels);
         }

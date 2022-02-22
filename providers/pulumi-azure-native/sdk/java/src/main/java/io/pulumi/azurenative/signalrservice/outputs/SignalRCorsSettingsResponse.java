@@ -54,7 +54,6 @@ public final class SignalRCorsSettingsResponse {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
         public SignalRCorsSettingsResponse build() {
             return new SignalRCorsSettingsResponse(allowedOrigins);
         }

@@ -114,7 +114,6 @@ public final class Foo {
             this.f = f;
             return this;
         }
-
         public Foo build() {
             return new Foo(a, b, c, d, e, f);
         }

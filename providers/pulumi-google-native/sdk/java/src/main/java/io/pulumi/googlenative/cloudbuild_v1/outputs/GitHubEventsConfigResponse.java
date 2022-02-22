@@ -160,7 +160,6 @@ public final class GitHubEventsConfigResponse {
             this.push = Objects.requireNonNull(push);
             return this;
         }
-
         public GitHubEventsConfigResponse build() {
             return new GitHubEventsConfigResponse(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }

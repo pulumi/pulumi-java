@@ -161,7 +161,6 @@ public final class GetNetworkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(id, location, name, properties, tags, type);
         }

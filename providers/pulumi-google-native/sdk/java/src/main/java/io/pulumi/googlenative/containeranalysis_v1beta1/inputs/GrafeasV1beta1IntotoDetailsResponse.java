@@ -19,14 +19,14 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
     public static final GrafeasV1beta1IntotoDetailsResponse Empty = new GrafeasV1beta1IntotoDetailsResponse();
 
     @InputImport(name="signatures", required=true)
-    private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
+      private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
 
     public List<GrafeasV1beta1IntotoSignatureResponse> getSignatures() {
         return this.signatures;
     }
 
     @InputImport(name="signed", required=true)
-    private final LinkResponse signed;
+      private final LinkResponse signed;
 
     public LinkResponse getSigned() {
         return this.signed;
@@ -75,7 +75,6 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
             this.signed = Objects.requireNonNull(signed);
             return this;
         }
-
         public GrafeasV1beta1IntotoDetailsResponse build() {
             return new GrafeasV1beta1IntotoDetailsResponse(signatures, signed);
         }

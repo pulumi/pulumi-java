@@ -23,7 +23,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowInsecure", required=true)
-    private final Boolean allowInsecure;
+      private final Boolean allowInsecure;
 
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="gcs", required=true)
-    private final SoftwareRecipeArtifactGcsResponse gcs;
+      private final SoftwareRecipeArtifactGcsResponse gcs;
 
     public SoftwareRecipeArtifactGcsResponse getGcs() {
         return this.gcs;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="remote", required=true)
-    private final SoftwareRecipeArtifactRemoteResponse remote;
+      private final SoftwareRecipeArtifactRemoteResponse remote;
 
     public SoftwareRecipeArtifactRemoteResponse getRemote() {
         return this.remote;
@@ -104,7 +104,6 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public SoftwareRecipeArtifactResponse build() {
             return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
         }

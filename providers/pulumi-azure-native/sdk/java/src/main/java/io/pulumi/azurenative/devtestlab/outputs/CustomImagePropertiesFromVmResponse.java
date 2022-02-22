@@ -99,7 +99,6 @@ public final class CustomImagePropertiesFromVmResponse {
             this.windowsOsInfo = windowsOsInfo;
             return this;
         }
-
         public CustomImagePropertiesFromVmResponse build() {
             return new CustomImagePropertiesFromVmResponse(linuxOsInfo, sourceVmId, windowsOsInfo);
         }

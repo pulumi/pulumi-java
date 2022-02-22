@@ -30,7 +30,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="counterSpecifiers")
-    private final @Nullable Input<List<String>> counterSpecifiers;
+        private final @Nullable Input<List<String>> counterSpecifiers;
 
     public Input<List<String>> getCounterSpecifiers() {
         return this.counterSpecifiers == null ? Input.empty() : this.counterSpecifiers;
@@ -42,7 +42,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="samplingFrequencyInSeconds")
-    private final @Nullable Input<Integer> samplingFrequencyInSeconds;
+        private final @Nullable Input<Integer> samplingFrequencyInSeconds;
 
     public Input<Integer> getSamplingFrequencyInSeconds() {
         return this.samplingFrequencyInSeconds == null ? Input.empty() : this.samplingFrequencyInSeconds;
@@ -65,7 +65,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
+        private final @Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
 
     public Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -154,7 +154,6 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             this.streams = Input.ofNullable(streams);
             return this;
         }
-
         public PerfCounterDataSourceArgs build() {
             return new PerfCounterDataSourceArgs(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
         }

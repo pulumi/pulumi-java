@@ -141,7 +141,6 @@ public final class TableSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TableSpecificationResponse build() {
             return new TableSpecificationResponse(description, format, properties, title, type);
         }

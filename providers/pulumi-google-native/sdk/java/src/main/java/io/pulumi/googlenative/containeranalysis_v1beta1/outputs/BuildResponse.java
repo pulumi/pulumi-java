@@ -75,7 +75,6 @@ public final class BuildResponse {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildResponse build() {
             return new BuildResponse(builderVersion, signature);
         }

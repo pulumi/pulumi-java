@@ -250,7 +250,6 @@ public final class GetDedicatedHostGroupResult {
             this.zones = zones;
             return this;
         }
-
         public GetDedicatedHostGroupResult build() {
             return new GetDedicatedHostGroupResult(hosts, id, instanceView, location, name, platformFaultDomainCount, supportAutomaticPlacement, tags, type, zones);
         }

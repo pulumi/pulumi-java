@@ -375,7 +375,6 @@ public final class GetVirtualNetworkResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(customResourceName, extendedLocation, id, inventoryItemId, kind, location, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

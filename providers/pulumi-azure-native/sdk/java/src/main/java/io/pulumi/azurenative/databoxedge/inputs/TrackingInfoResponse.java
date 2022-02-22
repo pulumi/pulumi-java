@@ -23,7 +23,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="carrierName")
-    private final @Nullable String carrierName;
+        private final @Nullable String carrierName;
 
     public Optional<String> getCarrierName() {
         return this.carrierName == null ? Optional.empty() : Optional.ofNullable(this.carrierName);
@@ -34,7 +34,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialNumber")
-    private final @Nullable String serialNumber;
+        private final @Nullable String serialNumber;
 
     public Optional<String> getSerialNumber() {
         return this.serialNumber == null ? Optional.empty() : Optional.ofNullable(this.serialNumber);
@@ -45,7 +45,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trackingId")
-    private final @Nullable String trackingId;
+        private final @Nullable String trackingId;
 
     public Optional<String> getTrackingId() {
         return this.trackingId == null ? Optional.empty() : Optional.ofNullable(this.trackingId);
@@ -56,7 +56,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trackingUrl")
-    private final @Nullable String trackingUrl;
+        private final @Nullable String trackingUrl;
 
     public Optional<String> getTrackingUrl() {
         return this.trackingUrl == null ? Optional.empty() : Optional.ofNullable(this.trackingUrl);
@@ -125,7 +125,6 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.trackingUrl = trackingUrl;
             return this;
         }
-
         public TrackingInfoResponse build() {
             return new TrackingInfoResponse(carrierName, serialNumber, trackingId, trackingUrl);
         }

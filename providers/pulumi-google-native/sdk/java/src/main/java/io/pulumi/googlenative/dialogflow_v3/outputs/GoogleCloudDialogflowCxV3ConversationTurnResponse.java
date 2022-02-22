@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ConversationTurnResponse build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnResponse(userInput, virtualAgentOutput);
         }

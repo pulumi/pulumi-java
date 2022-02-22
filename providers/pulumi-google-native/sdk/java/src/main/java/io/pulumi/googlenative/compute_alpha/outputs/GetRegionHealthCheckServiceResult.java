@@ -285,7 +285,6 @@ public final class GetRegionHealthCheckServiceResult {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public GetRegionHealthCheckServiceResult build() {
             return new GetRegionHealthCheckServiceResult(creationTimestamp, description, fingerprint, healthChecks, healthStatusAggregationPolicy, kind, name, networkEndpointGroups, notificationEndpoints, region, selfLink, selfLinkWithId);
         }

@@ -78,7 +78,6 @@ public final class DiskExclusionPropertiesResponse {
             this.isInclusionList = isInclusionList;
             return this;
         }
-
         public DiskExclusionPropertiesResponse build() {
             return new DiskExclusionPropertiesResponse(diskLunList, isInclusionList);
         }

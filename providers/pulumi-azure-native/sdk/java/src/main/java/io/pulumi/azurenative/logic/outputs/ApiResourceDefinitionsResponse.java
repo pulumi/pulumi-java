@@ -76,7 +76,6 @@ public final class ApiResourceDefinitionsResponse {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
-
         public ApiResourceDefinitionsResponse build() {
             return new ApiResourceDefinitionsResponse(modifiedSwaggerUrl, originalSwaggerUrl);
         }

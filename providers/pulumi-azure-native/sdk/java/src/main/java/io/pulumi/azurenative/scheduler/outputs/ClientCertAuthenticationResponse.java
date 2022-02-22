@@ -162,7 +162,6 @@ public final class ClientCertAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClientCertAuthenticationResponse build() {
             return new ClientCertAuthenticationResponse(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }

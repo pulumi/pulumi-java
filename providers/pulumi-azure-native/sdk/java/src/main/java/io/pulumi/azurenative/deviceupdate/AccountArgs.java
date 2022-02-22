@@ -25,7 +25,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -36,7 +36,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -47,7 +47,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,7 +58,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
@@ -69,7 +69,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -80,7 +80,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -225,7 +225,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(accountName, identity, location, privateEndpointConnections, publicNetworkAccess, resourceGroupName, tags);
         }

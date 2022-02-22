@@ -76,7 +76,6 @@ public final class RowResponse {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public RowResponse build() {
             return new RowResponse(weight, widgets);
         }

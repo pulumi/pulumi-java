@@ -72,7 +72,6 @@ public final class ModelDefinitionModelOptionsResponse {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public ModelDefinitionModelOptionsResponse build() {
             return new ModelDefinitionModelOptionsResponse(labels, lossType, modelType);
         }

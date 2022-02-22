@@ -95,7 +95,6 @@ public final class InconclusiveDetailResponse {
             this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
             return this;
         }
-
         public InconclusiveDetailResponse build() {
             return new InconclusiveDetailResponse(abortedByUser, hasErrorLogs, infrastructureFailure);
         }

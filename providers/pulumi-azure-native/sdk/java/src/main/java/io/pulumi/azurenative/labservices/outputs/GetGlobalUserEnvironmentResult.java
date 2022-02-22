@@ -52,7 +52,6 @@ public final class GetGlobalUserEnvironmentResult {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public GetGlobalUserEnvironmentResult build() {
             return new GetGlobalUserEnvironmentResult(environment);
         }

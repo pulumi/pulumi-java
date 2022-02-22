@@ -74,7 +74,6 @@ public final class OracleSourceConfigResponse {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }
-
         public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(allowlist, rejectlist);
         }

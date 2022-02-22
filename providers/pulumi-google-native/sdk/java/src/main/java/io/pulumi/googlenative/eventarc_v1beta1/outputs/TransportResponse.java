@@ -52,7 +52,6 @@ public final class TransportResponse {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
-
         public TransportResponse build() {
             return new TransportResponse(pubsub);
         }

@@ -22,7 +22,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubBillingInfo")
-    private final @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo;
+        private final @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo;
 
     public Input<HubBillingInfoFormatArgs> getHubBillingInfo() {
         return this.hubBillingInfo == null ? Input.empty() : this.hubBillingInfo;
@@ -33,7 +33,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName")
-    private final @Nullable Input<String> hubName;
+        private final @Nullable Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName == null ? Input.empty() : this.hubName;
@@ -44,7 +44,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantFeatures")
-    private final @Nullable Input<Integer> tenantFeatures;
+        private final @Nullable Input<Integer> tenantFeatures;
 
     public Input<Integer> getTenantFeatures() {
         return this.tenantFeatures == null ? Input.empty() : this.tenantFeatures;
@@ -196,7 +196,6 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             this.tenantFeatures = Input.ofNullable(tenantFeatures);
             return this;
         }
-
         public HubArgs build() {
             return new HubArgs(hubBillingInfo, hubName, location, resourceGroupName, tags, tenantFeatures);
         }

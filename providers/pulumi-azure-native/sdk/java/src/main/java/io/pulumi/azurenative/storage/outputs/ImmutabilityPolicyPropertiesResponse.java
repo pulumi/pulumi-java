@@ -143,7 +143,6 @@ public final class ImmutabilityPolicyPropertiesResponse {
             this.updateHistory = Objects.requireNonNull(updateHistory);
             return this;
         }
-
         public ImmutabilityPolicyPropertiesResponse build() {
             return new ImmutabilityPolicyPropertiesResponse(allowProtectedAppendWrites, etag, immutabilityPeriodSinceCreationInDays, state, updateHistory);
         }

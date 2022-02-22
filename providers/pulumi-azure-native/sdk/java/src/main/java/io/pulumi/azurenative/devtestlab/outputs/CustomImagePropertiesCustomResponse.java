@@ -98,7 +98,6 @@ public final class CustomImagePropertiesCustomResponse {
             this.sysPrep = sysPrep;
             return this;
         }
-
         public CustomImagePropertiesCustomResponse build() {
             return new CustomImagePropertiesCustomResponse(imageName, osType, sysPrep);
         }

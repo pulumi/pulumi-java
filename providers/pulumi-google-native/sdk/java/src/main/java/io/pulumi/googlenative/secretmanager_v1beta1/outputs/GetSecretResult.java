@@ -118,7 +118,6 @@ public final class GetSecretResult {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, labels, name, replication);
         }

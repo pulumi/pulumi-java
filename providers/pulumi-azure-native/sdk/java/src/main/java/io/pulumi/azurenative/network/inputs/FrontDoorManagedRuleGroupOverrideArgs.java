@@ -26,7 +26,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
+        private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
 
     public Input<List<ManagedRuleExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -37,7 +37,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-    private final Input<String> ruleGroupName;
+        private final Input<String> ruleGroupName;
 
     public Input<String> getRuleGroupName() {
         return this.ruleGroupName;
@@ -48,7 +48,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules;
+        private final @Nullable Input<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
     public Input<List<FrontDoorManagedRuleOverrideArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -122,7 +122,6 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public FrontDoorManagedRuleGroupOverrideArgs build() {
             return new FrontDoorManagedRuleGroupOverrideArgs(exclusions, ruleGroupName, rules);
         }

@@ -460,7 +460,6 @@ public final class GetIntentResult {
             this.webhookState = Objects.requireNonNull(webhookState);
             return this;
         }
-
         public GetIntentResult build() {
             return new GetIntentResult(action, defaultResponsePlatforms, displayName, endInteraction, events, followupIntentInfo, inputContextNames, isFallback, liveAgentHandoff, messages, mlDisabled, name, outputContexts, parameters, parentFollowupIntentName, priority, resetContexts, rootFollowupIntentName, trainingPhrases, webhookState);
         }

@@ -17,7 +17,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     public static final CustomerArgs Empty = new CustomerArgs();
 
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -28,7 +28,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternateEmail")
-    private final @Nullable Input<String> alternateEmail;
+      private final @Nullable Input<String> alternateEmail;
 
     public Input<String> getAlternateEmail() {
         return this.alternateEmail == null ? Input.empty() : this.alternateEmail;
@@ -39,14 +39,14 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelPartnerId")
-    private final @Nullable Input<String> channelPartnerId;
+      private final @Nullable Input<String> channelPartnerId;
 
     public Input<String> getChannelPartnerId() {
         return this.channelPartnerId == null ? Input.empty() : this.channelPartnerId;
     }
 
     @InputImport(name="channelPartnerLinkId", required=true)
-    private final Input<String> channelPartnerLinkId;
+      private final Input<String> channelPartnerLinkId;
 
     public Input<String> getChannelPartnerLinkId() {
         return this.channelPartnerLinkId;
@@ -57,7 +57,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -68,7 +68,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -79,7 +79,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgDisplayName", required=true)
-    private final Input<String> orgDisplayName;
+      private final Input<String> orgDisplayName;
 
     public Input<String> getOrgDisplayName() {
         return this.orgDisplayName;
@@ -90,7 +90,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgPostalAddress", required=true)
-    private final Input<GoogleTypePostalAddressArgs> orgPostalAddress;
+      private final Input<GoogleTypePostalAddressArgs> orgPostalAddress;
 
     public Input<GoogleTypePostalAddressArgs> getOrgPostalAddress() {
         return this.orgPostalAddress;
@@ -101,7 +101,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryContactInfo")
-    private final @Nullable Input<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
+      private final @Nullable Input<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
     public Input<GoogleCloudChannelV1ContactInfoArgs> getPrimaryContactInfo() {
         return this.primaryContactInfo == null ? Input.empty() : this.primaryContactInfo;
@@ -265,7 +265,6 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             this.primaryContactInfo = Input.ofNullable(primaryContactInfo);
             return this;
         }
-
         public CustomerArgs build() {
             return new CustomerArgs(accountId, alternateEmail, channelPartnerId, channelPartnerLinkId, domain, languageCode, orgDisplayName, orgPostalAddress, primaryContactInfo);
         }

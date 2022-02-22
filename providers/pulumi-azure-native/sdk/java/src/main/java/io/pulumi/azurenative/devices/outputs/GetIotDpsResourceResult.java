@@ -205,7 +205,6 @@ public final class GetIotDpsResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotDpsResourceResult build() {
             return new GetIotDpsResourceResult(etag, id, location, name, properties, sku, tags, type);
         }

@@ -159,7 +159,6 @@ public final class VirtualNetworkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkResponse build() {
             return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
         }

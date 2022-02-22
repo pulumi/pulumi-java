@@ -23,14 +23,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterConfig")
-    private final @Nullable Input<ClusterConfigArgs> clusterConfig;
+      private final @Nullable Input<ClusterConfigArgs> clusterConfig;
 
     public Input<ClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig == null ? Input.empty() : this.clusterConfig;
     }
 
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -41,7 +41,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultStorageType")
-    private final @Nullable Input<ClusterDefaultStorageType> defaultStorageType;
+      private final @Nullable Input<ClusterDefaultStorageType> defaultStorageType;
 
     public Input<ClusterDefaultStorageType> getDefaultStorageType() {
         return this.defaultStorageType == null ? Input.empty() : this.defaultStorageType;
@@ -52,14 +52,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -70,7 +70,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,14 +81,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -99,7 +99,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serveNodes")
-    private final @Nullable Input<Integer> serveNodes;
+      private final @Nullable Input<Integer> serveNodes;
 
     public Input<Integer> getServeNodes() {
         return this.serveNodes == null ? Input.empty() : this.serveNodes;
@@ -263,7 +263,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.serveNodes = Input.ofNullable(serveNodes);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(clusterConfig, clusterId, defaultStorageType, encryptionConfig, instanceId, location, name, project, serveNodes);
         }

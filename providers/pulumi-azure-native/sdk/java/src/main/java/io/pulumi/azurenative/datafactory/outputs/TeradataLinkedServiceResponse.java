@@ -275,7 +275,6 @@ public final class TeradataLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public TeradataLinkedServiceResponse build() {
             return new TeradataLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, description, encryptedCredential, parameters, password, server, type, username);
         }

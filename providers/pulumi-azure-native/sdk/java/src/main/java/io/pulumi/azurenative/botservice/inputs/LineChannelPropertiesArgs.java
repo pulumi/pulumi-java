@@ -23,7 +23,7 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lineRegistrations", required=true)
-    private final Input<List<LineRegistrationArgs>> lineRegistrations;
+        private final Input<List<LineRegistrationArgs>> lineRegistrations;
 
     public Input<List<LineRegistrationArgs>> getLineRegistrations() {
         return this.lineRegistrations;
@@ -66,7 +66,6 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
             this.lineRegistrations = Input.of(Objects.requireNonNull(lineRegistrations));
             return this;
         }
-
         public LineChannelPropertiesArgs build() {
             return new LineChannelPropertiesArgs(lineRegistrations);
         }

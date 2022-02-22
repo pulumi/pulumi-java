@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
      * 
      */
     @InputImport(name="boost", required=true)
-    private final Double boost;
+      private final Double boost;
 
     public Double getBoost() {
         return this.boost;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
      * 
      */
     @InputImport(name="productsFilter", required=true)
-    private final String productsFilter;
+      private final String productsFilter;
 
     public String getProductsFilter() {
         return this.productsFilter;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleBoostActionResponse(boost, productsFilter);
         }

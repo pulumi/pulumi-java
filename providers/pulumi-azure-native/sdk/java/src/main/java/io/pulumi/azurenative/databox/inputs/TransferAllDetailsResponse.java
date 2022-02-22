@@ -24,7 +24,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-    private final String dataAccountType;
+        private final String dataAccountType;
 
     public String getDataAccountType() {
         return this.dataAccountType;
@@ -35,7 +35,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="transferAllBlobs")
-    private final @Nullable Boolean transferAllBlobs;
+        private final @Nullable Boolean transferAllBlobs;
 
     public Optional<Boolean> getTransferAllBlobs() {
         return this.transferAllBlobs == null ? Optional.empty() : Optional.ofNullable(this.transferAllBlobs);
@@ -46,7 +46,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="transferAllFiles")
-    private final @Nullable Boolean transferAllFiles;
+        private final @Nullable Boolean transferAllFiles;
 
     public Optional<Boolean> getTransferAllFiles() {
         return this.transferAllFiles == null ? Optional.empty() : Optional.ofNullable(this.transferAllFiles);
@@ -105,7 +105,6 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
             this.transferAllFiles = transferAllFiles;
             return this;
         }
-
         public TransferAllDetailsResponse build() {
             return new TransferAllDetailsResponse(dataAccountType, transferAllBlobs, transferAllFiles);
         }

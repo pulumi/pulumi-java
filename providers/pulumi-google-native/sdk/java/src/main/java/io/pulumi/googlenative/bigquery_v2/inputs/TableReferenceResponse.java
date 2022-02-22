@@ -17,7 +17,7 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -39,7 +39,7 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -98,7 +98,6 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public TableReferenceResponse build() {
             return new TableReferenceResponse(datasetId, project, tableId);
         }

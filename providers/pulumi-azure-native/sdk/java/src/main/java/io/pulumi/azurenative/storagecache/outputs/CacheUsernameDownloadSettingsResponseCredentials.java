@@ -76,7 +76,6 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
             this.bindPassword = bindPassword;
             return this;
         }
-
         public CacheUsernameDownloadSettingsResponseCredentials build() {
             return new CacheUsernameDownloadSettingsResponseCredentials(bindDn, bindPassword);
         }

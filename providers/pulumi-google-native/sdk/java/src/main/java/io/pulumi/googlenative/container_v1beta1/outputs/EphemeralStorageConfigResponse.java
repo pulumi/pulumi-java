@@ -52,7 +52,6 @@ public final class EphemeralStorageConfigResponse {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public EphemeralStorageConfigResponse build() {
             return new EphemeralStorageConfigResponse(localSsdCount);
         }

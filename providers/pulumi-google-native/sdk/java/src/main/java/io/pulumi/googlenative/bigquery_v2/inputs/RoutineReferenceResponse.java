@@ -17,7 +17,7 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -39,7 +39,7 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="routineId", required=true)
-    private final String routineId;
+      private final String routineId;
 
     public String getRoutineId() {
         return this.routineId;
@@ -98,7 +98,6 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
-
         public RoutineReferenceResponse build() {
             return new RoutineReferenceResponse(datasetId, project, routineId);
         }

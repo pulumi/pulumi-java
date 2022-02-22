@@ -246,7 +246,6 @@ public final class GetSubscriptionDiagnosticSettingResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetSubscriptionDiagnosticSettingResult build() {
             return new GetSubscriptionDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, location, logs, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }

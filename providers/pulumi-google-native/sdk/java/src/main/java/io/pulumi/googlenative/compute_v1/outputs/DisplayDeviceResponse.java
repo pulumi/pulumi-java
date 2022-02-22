@@ -52,7 +52,6 @@ public final class DisplayDeviceResponse {
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }
-
         public DisplayDeviceResponse build() {
             return new DisplayDeviceResponse(enableDisplay);
         }

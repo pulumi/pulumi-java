@@ -76,7 +76,6 @@ public final class ManagedInstancePairInfoResponse {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }
-
         public ManagedInstancePairInfoResponse build() {
             return new ManagedInstancePairInfoResponse(partnerManagedInstanceId, primaryManagedInstanceId);
         }

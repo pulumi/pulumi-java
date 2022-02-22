@@ -24,7 +24,7 @@ public final class ContainerPropertiesResponseInstanceView extends io.pulumi.res
      * 
      */
     @InputImport(name="currentState", required=true)
-    private final ContainerStateResponse currentState;
+        private final ContainerStateResponse currentState;
 
     public ContainerStateResponse getCurrentState() {
         return this.currentState;
@@ -35,7 +35,7 @@ public final class ContainerPropertiesResponseInstanceView extends io.pulumi.res
      * 
      */
     @InputImport(name="events", required=true)
-    private final List<EventResponse> events;
+        private final List<EventResponse> events;
 
     public List<EventResponse> getEvents() {
         return this.events;
@@ -46,7 +46,7 @@ public final class ContainerPropertiesResponseInstanceView extends io.pulumi.res
      * 
      */
     @InputImport(name="previousState", required=true)
-    private final ContainerStateResponse previousState;
+        private final ContainerStateResponse previousState;
 
     public ContainerStateResponse getPreviousState() {
         return this.previousState;
@@ -57,7 +57,7 @@ public final class ContainerPropertiesResponseInstanceView extends io.pulumi.res
      * 
      */
     @InputImport(name="restartCount", required=true)
-    private final Integer restartCount;
+        private final Integer restartCount;
 
     public Integer getRestartCount() {
         return this.restartCount;
@@ -126,7 +126,6 @@ public final class ContainerPropertiesResponseInstanceView extends io.pulumi.res
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
-
         public ContainerPropertiesResponseInstanceView build() {
             return new ContainerPropertiesResponseInstanceView(currentState, events, previousState, restartCount);
         }

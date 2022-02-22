@@ -225,7 +225,6 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
             this.userName = userName;
             return this;
         }
-
         public GetMongoDBResourceMongoUserDefinitionResult build() {
             return new GetMongoDBResourceMongoUserDefinitionResult(customData, databaseName, id, mechanisms, name, password, roles, type, userName);
         }

@@ -52,7 +52,6 @@ public final class OutputResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OutputResponse build() {
             return new OutputResponse(uri);
         }

@@ -205,7 +205,6 @@ public final class MariaDBSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MariaDBSourceResponse build() {
             return new MariaDBSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

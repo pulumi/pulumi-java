@@ -140,7 +140,6 @@ public final class SkuCapacityResponse {
             this.scaleType = scaleType;
             return this;
         }
-
         public SkuCapacityResponse build() {
             return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
         }

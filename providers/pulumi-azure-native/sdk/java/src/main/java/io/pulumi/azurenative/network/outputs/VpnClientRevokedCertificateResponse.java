@@ -139,7 +139,6 @@ public final class VpnClientRevokedCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public VpnClientRevokedCertificateResponse build() {
             return new VpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }

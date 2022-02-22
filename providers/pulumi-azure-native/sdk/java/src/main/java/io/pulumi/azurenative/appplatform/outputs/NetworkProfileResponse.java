@@ -184,7 +184,6 @@ public final class NetworkProfileResponse {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(appNetworkResourceGroup, appSubnetId, outboundIPs, requiredTraffics, serviceCidr, serviceRuntimeNetworkResourceGroup, serviceRuntimeSubnetId);
         }

@@ -76,7 +76,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(issueModel, issues);
         }

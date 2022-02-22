@@ -99,7 +99,6 @@ public final class ActionResponse {
             this.sqlExpression = sqlExpression;
             return this;
         }
-
         public ActionResponse build() {
             return new ActionResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }

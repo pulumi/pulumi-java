@@ -76,7 +76,6 @@ public final class IdAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public IdAssetReferenceResponse build() {
             return new IdAssetReferenceResponse(assetId, referenceType);
         }

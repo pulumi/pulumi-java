@@ -99,7 +99,6 @@ public final class KubernetesRoleResourcesResponse {
             this.storage = storage;
             return this;
         }
-
         public KubernetesRoleResourcesResponse build() {
             return new KubernetesRoleResourcesResponse(compute, network, storage);
         }

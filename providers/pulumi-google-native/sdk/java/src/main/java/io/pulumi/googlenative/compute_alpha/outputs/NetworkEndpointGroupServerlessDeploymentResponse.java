@@ -116,7 +116,6 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public NetworkEndpointGroupServerlessDeploymentResponse build() {
             return new NetworkEndpointGroupServerlessDeploymentResponse(platform, resource, urlMask, version);
         }

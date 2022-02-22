@@ -21,7 +21,7 @@ public final class DockerExecutorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cmd", required=true)
-    private final String cmd;
+      private final String cmd;
 
     public String getCmd() {
         return this.cmd;
@@ -32,7 +32,7 @@ public final class DockerExecutorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+      private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -81,7 +81,6 @@ public final class DockerExecutorResponse extends io.pulumi.resources.InvokeArgs
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public DockerExecutorResponse build() {
             return new DockerExecutorResponse(cmd, imageName);
         }

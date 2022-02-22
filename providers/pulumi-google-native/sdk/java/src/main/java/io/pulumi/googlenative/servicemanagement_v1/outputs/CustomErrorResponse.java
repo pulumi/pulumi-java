@@ -76,7 +76,6 @@ public final class CustomErrorResponse {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public CustomErrorResponse build() {
             return new CustomErrorResponse(rules, types);
         }

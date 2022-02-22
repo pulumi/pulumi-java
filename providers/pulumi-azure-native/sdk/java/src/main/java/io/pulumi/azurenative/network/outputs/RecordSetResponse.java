@@ -162,7 +162,6 @@ public final class RecordSetResponse {
             this.ttl = ttl;
             return this;
         }
-
         public RecordSetResponse build() {
             return new RecordSetResponse(fqdn, ipAddresses, provisioningState, recordSetName, recordType, ttl);
         }

@@ -183,7 +183,6 @@ public final class DocumentDbOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbOutputDataSourceResponse build() {
             return new DocumentDbOutputDataSourceResponse(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
         }

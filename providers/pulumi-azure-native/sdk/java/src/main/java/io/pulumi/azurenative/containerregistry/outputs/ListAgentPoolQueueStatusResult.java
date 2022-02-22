@@ -54,7 +54,6 @@ public final class ListAgentPoolQueueStatusResult {
             this.count = count;
             return this;
         }
-
         public ListAgentPoolQueueStatusResult build() {
             return new ListAgentPoolQueueStatusResult(count);
         }

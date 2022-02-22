@@ -74,7 +74,6 @@ public final class CloudBuildOptionsResponse {
             this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
             return this;
         }
-
         public CloudBuildOptionsResponse build() {
             return new CloudBuildOptionsResponse(appYamlPath, cloudBuildTimeout);
         }

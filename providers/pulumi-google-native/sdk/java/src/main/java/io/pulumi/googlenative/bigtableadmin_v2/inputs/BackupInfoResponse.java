@@ -21,7 +21,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backup", required=true)
-    private final String backup;
+      private final String backup;
 
     public String getBackup() {
         return this.backup;
@@ -32,7 +32,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -43,7 +43,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceTable", required=true)
-    private final String sourceTable;
+      private final String sourceTable;
 
     public String getSourceTable() {
         return this.sourceTable;
@@ -54,7 +54,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -123,7 +123,6 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public BackupInfoResponse build() {
             return new BackupInfoResponse(backup, endTime, sourceTable, startTime);
         }

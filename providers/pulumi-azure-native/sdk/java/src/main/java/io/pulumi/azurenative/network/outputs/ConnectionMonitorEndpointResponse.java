@@ -183,7 +183,6 @@ public final class ConnectionMonitorEndpointResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointResponse build() {
             return new ConnectionMonitorEndpointResponse(address, coverageLevel, filter, name, resourceId, scope, type);
         }

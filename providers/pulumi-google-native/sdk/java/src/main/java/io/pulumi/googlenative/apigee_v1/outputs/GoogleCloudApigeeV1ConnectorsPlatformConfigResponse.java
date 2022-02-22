@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(enabled, expiresAt);
         }

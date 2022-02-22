@@ -74,7 +74,6 @@ public final class GetKeyRingResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKeyRingResult build() {
             return new GetKeyRingResult(createTime, name);
         }

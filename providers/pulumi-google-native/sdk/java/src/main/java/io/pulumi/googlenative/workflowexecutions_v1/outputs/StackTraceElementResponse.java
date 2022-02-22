@@ -96,7 +96,6 @@ public final class StackTraceElementResponse {
             this.step = Objects.requireNonNull(step);
             return this;
         }
-
         public StackTraceElementResponse build() {
             return new StackTraceElementResponse(position, routine, step);
         }

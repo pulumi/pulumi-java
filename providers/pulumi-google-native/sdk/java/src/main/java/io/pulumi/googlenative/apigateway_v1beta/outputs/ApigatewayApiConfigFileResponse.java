@@ -74,7 +74,6 @@ public final class ApigatewayApiConfigFileResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public ApigatewayApiConfigFileResponse build() {
             return new ApigatewayApiConfigFileResponse(contents, path);
         }

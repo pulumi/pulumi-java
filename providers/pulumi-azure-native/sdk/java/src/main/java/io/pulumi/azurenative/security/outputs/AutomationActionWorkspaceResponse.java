@@ -78,7 +78,6 @@ public final class AutomationActionWorkspaceResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AutomationActionWorkspaceResponse build() {
             return new AutomationActionWorkspaceResponse(actionType, workspaceResourceId);
         }

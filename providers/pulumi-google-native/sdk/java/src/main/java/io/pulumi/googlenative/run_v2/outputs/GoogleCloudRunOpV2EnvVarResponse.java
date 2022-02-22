@@ -96,7 +96,6 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarResponse build() {
             return new GoogleCloudRunOpV2EnvVarResponse(name, value, valueSource);
         }

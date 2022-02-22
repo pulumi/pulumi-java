@@ -142,7 +142,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreWriteSettingsResponse build() {
             return new AzureDataLakeStoreWriteSettingsResponse(copyBehavior, disableMetricsCollection, expiryDateTime, maxConcurrentConnections, type);
         }

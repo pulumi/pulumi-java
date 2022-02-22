@@ -23,7 +23,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="autoCreateRoutes", required=true)
-    private final Boolean autoCreateRoutes;
+      private final Boolean autoCreateRoutes;
 
     public Boolean getAutoCreateRoutes() {
         return this.autoCreateRoutes;
@@ -34,7 +34,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exchangeSubnetRoutes", required=true)
-    private final Boolean exchangeSubnetRoutes;
+      private final Boolean exchangeSubnetRoutes;
 
     public Boolean getExchangeSubnetRoutes() {
         return this.exchangeSubnetRoutes;
@@ -45,7 +45,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exportCustomRoutes", required=true)
-    private final Boolean exportCustomRoutes;
+      private final Boolean exportCustomRoutes;
 
     public Boolean getExportCustomRoutes() {
         return this.exportCustomRoutes;
@@ -56,7 +56,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exportSubnetRoutesWithPublicIp", required=true)
-    private final Boolean exportSubnetRoutesWithPublicIp;
+      private final Boolean exportSubnetRoutesWithPublicIp;
 
     public Boolean getExportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp;
@@ -67,7 +67,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="importCustomRoutes", required=true)
-    private final Boolean importCustomRoutes;
+      private final Boolean importCustomRoutes;
 
     public Boolean getImportCustomRoutes() {
         return this.importCustomRoutes;
@@ -78,7 +78,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="importSubnetRoutesWithPublicIp", required=true)
-    private final Boolean importSubnetRoutesWithPublicIp;
+      private final Boolean importSubnetRoutesWithPublicIp;
 
     public Boolean getImportSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp;
@@ -89,7 +89,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -100,7 +100,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -111,7 +111,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="peerMtu", required=true)
-    private final Integer peerMtu;
+      private final Integer peerMtu;
 
     public Integer getPeerMtu() {
         return this.peerMtu;
@@ -122,7 +122,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -133,7 +133,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="stateDetails", required=true)
-    private final String stateDetails;
+      private final String stateDetails;
 
     public String getStateDetails() {
         return this.stateDetails;
@@ -272,7 +272,6 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }
-
         public NetworkPeeringResponse build() {
             return new NetworkPeeringResponse(autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, state, stateDetails);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="doNotAssociateTerms")
-    private final @Nullable Input<List<String>> doNotAssociateTerms;
+      private final @Nullable Input<List<String>> doNotAssociateTerms;
 
     public Input<List<String>> getDoNotAssociateTerms() {
         return this.doNotAssociateTerms == null ? Input.empty() : this.doNotAssociateTerms;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="queryTerms")
-    private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Input<List<String>> queryTerms;
 
     public Input<List<String>> getQueryTerms() {
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="terms")
-    private final @Nullable Input<List<String>> terms;
+      private final @Nullable Input<List<String>> terms;
 
     public Input<List<String>> getTerms() {
         return this.terms == null ? Input.empty() : this.terms;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
             this.terms = Input.ofNullable(terms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(doNotAssociateTerms, queryTerms, terms);
         }

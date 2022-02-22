@@ -22,7 +22,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="appliedBytes", required=true)
-    private final Double appliedBytes;
+        private final Double appliedBytes;
 
     public Double getAppliedBytes() {
         return this.appliedBytes;
@@ -33,7 +33,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="appliedItemCount", required=true)
-    private final Double appliedItemCount;
+        private final Double appliedItemCount;
 
     public Double getAppliedItemCount() {
         return this.appliedItemCount;
@@ -44,7 +44,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="perItemErrorCount", required=true)
-    private final Double perItemErrorCount;
+        private final Double perItemErrorCount;
 
     public Double getPerItemErrorCount() {
         return this.perItemErrorCount;
@@ -55,7 +55,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="syncMode", required=true)
-    private final String syncMode;
+        private final String syncMode;
 
     public String getSyncMode() {
         return this.syncMode;
@@ -66,7 +66,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="timestamp", required=true)
-    private final String timestamp;
+        private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -77,7 +77,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="totalBytes", required=true)
-    private final Double totalBytes;
+        private final Double totalBytes;
 
     public Double getTotalBytes() {
         return this.totalBytes;
@@ -88,7 +88,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="totalItemCount", required=true)
-    private final Double totalItemCount;
+        private final Double totalItemCount;
 
     public Double getTotalItemCount() {
         return this.totalItemCount;
@@ -187,7 +187,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
             this.totalItemCount = Objects.requireNonNull(totalItemCount);
             return this;
         }
-
         public ServerEndpointSyncActivityStatusResponse build() {
             return new ServerEndpointSyncActivityStatusResponse(appliedBytes, appliedItemCount, perItemErrorCount, syncMode, timestamp, totalBytes, totalItemCount);
         }

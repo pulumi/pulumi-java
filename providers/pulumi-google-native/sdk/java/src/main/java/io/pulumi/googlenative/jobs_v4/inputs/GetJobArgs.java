@@ -15,21 +15,21 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetJobArgs Empty = new GetJobArgs();
 
     @InputImport(name="jobId", required=true)
-    private final String jobId;
+      private final String jobId;
 
     public String getJobId() {
         return this.jobId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -88,7 +88,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public GetJobArgs build() {
             return new GetJobArgs(jobId, project, tenantId);
         }

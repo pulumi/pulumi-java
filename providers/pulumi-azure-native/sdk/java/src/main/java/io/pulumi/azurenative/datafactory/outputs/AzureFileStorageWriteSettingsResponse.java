@@ -121,7 +121,6 @@ public final class AzureFileStorageWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureFileStorageWriteSettingsResponse build() {
             return new AzureFileStorageWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }

@@ -97,7 +97,6 @@ public final class ManagedRuleOverrideResponse {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public ManagedRuleOverrideResponse build() {
             return new ManagedRuleOverrideResponse(action, enabledState, ruleId);
         }

@@ -77,7 +77,6 @@ public final class SqlContainerGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseOptions build() {
             return new SqlContainerGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

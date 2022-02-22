@@ -99,7 +99,6 @@ public final class TimelineResultsMetadataResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public TimelineResultsMetadataResponse build() {
             return new TimelineResultsMetadataResponse(aggregations, errors, totalCount);
         }

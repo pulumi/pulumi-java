@@ -24,7 +24,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<LoadBalancerConfigurationPropertiesArgs> properties;
+        private final Input<LoadBalancerConfigurationPropertiesArgs> properties;
 
     public Input<LoadBalancerConfigurationPropertiesArgs> getProperties() {
         return this.properties;
@@ -120,7 +120,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public LoadBalancerConfigurationArgs build() {
             return new LoadBalancerConfigurationArgs(id, name, properties);
         }

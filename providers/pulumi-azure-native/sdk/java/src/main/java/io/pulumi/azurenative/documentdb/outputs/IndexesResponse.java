@@ -98,7 +98,6 @@ public final class IndexesResponse {
             this.precision = precision;
             return this;
         }
-
         public IndexesResponse build() {
             return new IndexesResponse(dataType, kind, precision);
         }

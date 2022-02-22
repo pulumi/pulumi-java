@@ -15,7 +15,7 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
     public static final ContainerRegistryResponse Empty = new ContainerRegistryResponse();
 
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -26,14 +26,14 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="registryServer")
-    private final @Nullable String registryServer;
+        private final @Nullable String registryServer;
 
     public Optional<String> getRegistryServer() {
         return this.registryServer == null ? Optional.empty() : Optional.ofNullable(this.registryServer);
     }
 
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -92,7 +92,6 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ContainerRegistryResponse build() {
             return new ContainerRegistryResponse(password, registryServer, userName);
         }

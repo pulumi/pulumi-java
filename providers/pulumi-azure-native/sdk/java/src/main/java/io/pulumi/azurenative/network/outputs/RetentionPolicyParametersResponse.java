@@ -77,7 +77,6 @@ public final class RetentionPolicyParametersResponse {
             this.enabled = enabled;
             return this;
         }
-
         public RetentionPolicyParametersResponse build() {
             return new RetentionPolicyParametersResponse(days, enabled);
         }

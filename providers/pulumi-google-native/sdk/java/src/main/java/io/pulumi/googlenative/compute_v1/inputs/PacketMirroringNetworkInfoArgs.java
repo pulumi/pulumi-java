@@ -19,7 +19,7 @@ public final class PacketMirroringNetworkInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -62,7 +62,6 @@ public final class PacketMirroringNetworkInfoArgs extends io.pulumi.resources.Re
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public PacketMirroringNetworkInfoArgs build() {
             return new PacketMirroringNetworkInfoArgs(url);
         }

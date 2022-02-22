@@ -76,7 +76,6 @@ public final class ExperimentEndpointResponse {
             this.name = name;
             return this;
         }
-
         public ExperimentEndpointResponse build() {
             return new ExperimentEndpointResponse(endpoint, name);
         }

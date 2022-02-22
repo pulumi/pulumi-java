@@ -15,21 +15,21 @@ public final class GetAuthorizedCertificateArgs extends io.pulumi.resources.Invo
     public static final GetAuthorizedCertificateArgs Empty = new GetAuthorizedCertificateArgs();
 
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
     @InputImport(name="authorizedCertificateId", required=true)
-    private final String authorizedCertificateId;
+      private final String authorizedCertificateId;
 
     public String getAuthorizedCertificateId() {
         return this.authorizedCertificateId;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -88,7 +88,6 @@ public final class GetAuthorizedCertificateArgs extends io.pulumi.resources.Invo
             this.view = view;
             return this;
         }
-
         public GetAuthorizedCertificateArgs build() {
             return new GetAuthorizedCertificateArgs(appId, authorizedCertificateId, view);
         }

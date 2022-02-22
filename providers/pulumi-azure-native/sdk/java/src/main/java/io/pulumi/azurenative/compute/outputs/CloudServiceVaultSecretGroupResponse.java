@@ -78,7 +78,6 @@ public final class CloudServiceVaultSecretGroupResponse {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-
         public CloudServiceVaultSecretGroupResponse build() {
             return new CloudServiceVaultSecretGroupResponse(sourceVault, vaultCertificates);
         }

@@ -247,7 +247,6 @@ public final class GetIntegrationAccountCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountCertificateResult build() {
             return new GetIntegrationAccountCertificateResult(changedTime, createdTime, id, key, location, metadata, name, publicCertificate, tags, type);
         }

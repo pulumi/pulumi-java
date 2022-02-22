@@ -417,7 +417,6 @@ public final class GetServerResult {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
         }
-
         public GetServerResult build() {
             return new GetServerResult(administratorLogin, administrators, fullyQualifiedDomainName, id, identity, keyId, kind, location, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, publicNetworkAccess, state, tags, type, version, workspaceFeature);
         }

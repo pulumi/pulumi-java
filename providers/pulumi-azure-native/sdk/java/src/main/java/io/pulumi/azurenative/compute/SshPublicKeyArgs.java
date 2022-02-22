@@ -20,7 +20,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+        private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -42,7 +42,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKeyName")
-    private final @Nullable Input<String> sshPublicKeyName;
+        private final @Nullable Input<String> sshPublicKeyName;
 
     public Input<String> getSshPublicKeyName() {
         return this.sshPublicKeyName == null ? Input.empty() : this.sshPublicKeyName;
@@ -64,7 +64,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -168,7 +168,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(location, publicKey, resourceGroupName, sshPublicKeyName, tags);
         }

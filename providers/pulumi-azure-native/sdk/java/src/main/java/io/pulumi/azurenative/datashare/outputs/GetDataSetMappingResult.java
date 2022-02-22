@@ -138,7 +138,6 @@ public final class GetDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataSetMappingResult build() {
             return new GetDataSetMappingResult(id, kind, name, systemData, type);
         }

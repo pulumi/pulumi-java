@@ -160,7 +160,6 @@ public final class AzureStorageInfoValueResponse {
             this.type = type;
             return this;
         }
-
         public AzureStorageInfoValueResponse build() {
             return new AzureStorageInfoValueResponse(accessKey, accountName, mountPath, shareName, state, type);
         }

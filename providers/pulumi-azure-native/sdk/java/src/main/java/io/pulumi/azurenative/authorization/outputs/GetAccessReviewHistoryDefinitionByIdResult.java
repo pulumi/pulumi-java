@@ -437,7 +437,6 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }
-
         public GetAccessReviewHistoryDefinitionByIdResult build() {
             return new GetAccessReviewHistoryDefinitionByIdResult(createdDateTime, decisions, displayName, endDate, id, instances, interval, name, numberOfOccurrences, principalId, principalName, principalType, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, scopes, startDate, status, type, userPrincipalName);
         }

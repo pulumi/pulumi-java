@@ -164,7 +164,6 @@ public final class RemotePrivateEndpointResponse {
             this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
             return this;
         }
-
         public RemotePrivateEndpointResponse build() {
             return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
         }

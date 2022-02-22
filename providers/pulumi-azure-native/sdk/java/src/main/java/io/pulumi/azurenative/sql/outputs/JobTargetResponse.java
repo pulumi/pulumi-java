@@ -181,7 +181,6 @@ public final class JobTargetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobTargetResponse build() {
             return new JobTargetResponse(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
         }

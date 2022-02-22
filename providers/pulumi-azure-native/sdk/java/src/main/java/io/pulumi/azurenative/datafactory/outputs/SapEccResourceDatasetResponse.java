@@ -231,7 +231,6 @@ public final class SapEccResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapEccResourceDatasetResponse build() {
             return new SapEccResourceDatasetResponse(annotations, description, folder, linkedServiceName, parameters, path, schema, structure, type);
         }

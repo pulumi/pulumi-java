@@ -97,7 +97,6 @@ public final class ArtifactObjectsResponse {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public ArtifactObjectsResponse build() {
             return new ArtifactObjectsResponse(location, paths, timing);
         }

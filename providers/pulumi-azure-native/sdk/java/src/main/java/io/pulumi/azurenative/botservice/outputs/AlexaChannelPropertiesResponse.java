@@ -117,7 +117,6 @@ public final class AlexaChannelPropertiesResponse {
             this.urlFragment = Objects.requireNonNull(urlFragment);
             return this;
         }
-
         public AlexaChannelPropertiesResponse build() {
             return new AlexaChannelPropertiesResponse(alexaSkillId, isEnabled, serviceEndpointUri, urlFragment);
         }

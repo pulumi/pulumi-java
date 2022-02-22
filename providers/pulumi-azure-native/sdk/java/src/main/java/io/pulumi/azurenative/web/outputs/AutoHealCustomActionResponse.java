@@ -76,7 +76,6 @@ public final class AutoHealCustomActionResponse {
             this.parameters = parameters;
             return this;
         }
-
         public AutoHealCustomActionResponse build() {
             return new AutoHealCustomActionResponse(exe, parameters);
         }

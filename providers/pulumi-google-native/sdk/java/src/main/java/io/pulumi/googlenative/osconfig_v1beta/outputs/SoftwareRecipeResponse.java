@@ -161,7 +161,6 @@ public final class SoftwareRecipeResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SoftwareRecipeResponse build() {
             return new SoftwareRecipeResponse(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

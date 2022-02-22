@@ -186,7 +186,6 @@ public final class DataFactoryResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public DataFactoryResponse build() {
             return new DataFactoryResponse(computeLocation, computeType, description, isAttachedCompute, provisioningErrors, provisioningState, resourceId);
         }

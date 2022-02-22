@@ -163,7 +163,6 @@ public final class GetMaintenanceConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(id, name, notAllowedTime, systemData, timeInWeek, type);
         }

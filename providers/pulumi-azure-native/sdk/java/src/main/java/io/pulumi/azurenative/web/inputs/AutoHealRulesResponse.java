@@ -24,7 +24,7 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable AutoHealActionsResponse actions;
+        private final @Nullable AutoHealActionsResponse actions;
 
     public Optional<AutoHealActionsResponse> getActions() {
         return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
@@ -35,7 +35,7 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable AutoHealTriggersResponse triggers;
+        private final @Nullable AutoHealTriggersResponse triggers;
 
     public Optional<AutoHealTriggersResponse> getTriggers() {
         return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
@@ -84,7 +84,6 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
             this.triggers = triggers;
             return this;
         }
-
         public AutoHealRulesResponse build() {
             return new AutoHealRulesResponse(actions, triggers);
         }

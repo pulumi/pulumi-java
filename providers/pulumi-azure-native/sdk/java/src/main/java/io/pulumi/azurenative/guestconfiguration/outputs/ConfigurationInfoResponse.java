@@ -74,7 +74,6 @@ public final class ConfigurationInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ConfigurationInfoResponse build() {
             return new ConfigurationInfoResponse(name, version);
         }

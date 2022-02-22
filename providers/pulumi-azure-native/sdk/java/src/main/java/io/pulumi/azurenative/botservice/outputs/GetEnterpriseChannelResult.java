@@ -226,7 +226,6 @@ public final class GetEnterpriseChannelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnterpriseChannelResult build() {
             return new GetEnterpriseChannelResult(etag, id, kind, location, name, properties, sku, tags, type);
         }

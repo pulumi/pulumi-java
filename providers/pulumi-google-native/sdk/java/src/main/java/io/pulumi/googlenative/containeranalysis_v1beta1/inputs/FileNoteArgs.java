@@ -25,7 +25,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<List<String>> checksum;
+      private final @Nullable Input<List<String>> checksum;
 
     public Input<List<String>> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -36,7 +36,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileType")
-    private final @Nullable Input<FileNoteFileType> fileType;
+      private final @Nullable Input<FileNoteFileType> fileType;
 
     public Input<FileNoteFileType> getFileType() {
         return this.fileType == null ? Input.empty() : this.fileType;
@@ -47,7 +47,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -121,7 +121,6 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public FileNoteArgs build() {
             return new FileNoteArgs(checksum, fileType, title);
         }

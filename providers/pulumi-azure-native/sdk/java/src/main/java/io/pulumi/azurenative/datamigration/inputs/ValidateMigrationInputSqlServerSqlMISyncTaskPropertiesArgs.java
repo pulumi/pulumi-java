@@ -24,7 +24,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input;
+        private final @Nullable Input<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input;
 
     public Input<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+        private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs(input, taskType);
         }

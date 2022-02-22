@@ -24,7 +24,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowedGroups")
-    private final @Nullable Object allowedGroups;
+        private final @Nullable Object allowedGroups;
 
     public Optional<Object> getAllowedGroups() {
         return this.allowedGroups == null ? Optional.empty() : Optional.ofNullable(this.allowedGroups);
@@ -35,7 +35,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dateFilterColumn")
-    private final @Nullable Object dateFilterColumn;
+        private final @Nullable Object dateFilterColumn;
 
     public Optional<Object> getDateFilterColumn() {
         return this.dateFilterColumn == null ? Optional.empty() : Optional.ofNullable(this.dateFilterColumn);
@@ -46,7 +46,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -57,7 +57,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Object endTime;
+        private final @Nullable Object endTime;
 
     public Optional<Object> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -68,7 +68,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -79,7 +79,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="outputColumns")
-    private final @Nullable Object outputColumns;
+        private final @Nullable Object outputColumns;
 
     public Optional<Object> getOutputColumns() {
         return this.outputColumns == null ? Optional.empty() : Optional.ofNullable(this.outputColumns);
@@ -90,7 +90,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -101,7 +101,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -112,7 +112,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Object startTime;
+        private final @Nullable Object startTime;
 
     public Optional<Object> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -124,7 +124,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -135,7 +135,7 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="userScopeFilterUri")
-    private final @Nullable Object userScopeFilterUri;
+        private final @Nullable Object userScopeFilterUri;
 
     public Optional<Object> getUserScopeFilterUri() {
         return this.userScopeFilterUri == null ? Optional.empty() : Optional.ofNullable(this.userScopeFilterUri);
@@ -274,7 +274,6 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
             this.userScopeFilterUri = userScopeFilterUri;
             return this;
         }
-
         public Office365SourceResponse build() {
             return new Office365SourceResponse(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
         }

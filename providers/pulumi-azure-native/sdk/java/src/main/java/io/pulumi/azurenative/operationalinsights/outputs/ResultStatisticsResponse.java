@@ -75,7 +75,6 @@ public final class ResultStatisticsResponse {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public ResultStatisticsResponse build() {
             return new ResultStatisticsResponse(ingestedRecords, progress);
         }

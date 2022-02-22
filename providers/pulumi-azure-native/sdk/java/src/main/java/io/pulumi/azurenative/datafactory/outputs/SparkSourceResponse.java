@@ -205,7 +205,6 @@ public final class SparkSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SparkSourceResponse build() {
             return new SparkSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

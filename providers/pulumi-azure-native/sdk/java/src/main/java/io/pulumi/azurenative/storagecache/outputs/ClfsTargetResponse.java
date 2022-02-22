@@ -54,7 +54,6 @@ public final class ClfsTargetResponse {
             this.target = target;
             return this;
         }
-
         public ClfsTargetResponse build() {
             return new ClfsTargetResponse(target);
         }

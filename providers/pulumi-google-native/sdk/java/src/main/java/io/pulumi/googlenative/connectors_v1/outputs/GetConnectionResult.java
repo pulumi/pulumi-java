@@ -375,7 +375,6 @@ public final class GetConnectionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(authConfig, configVariables, connectorVersion, createTime, description, egressBackends, envoyImageLocation, imageLocation, labels, lockConfig, name, serviceAccount, serviceDirectory, status, suspended, updateTime);
         }

@@ -99,7 +99,6 @@ public final class CbcsDrmConfigurationResponse {
             this.widevine = widevine;
             return this;
         }
-
         public CbcsDrmConfigurationResponse build() {
             return new CbcsDrmConfigurationResponse(fairPlay, playReady, widevine);
         }

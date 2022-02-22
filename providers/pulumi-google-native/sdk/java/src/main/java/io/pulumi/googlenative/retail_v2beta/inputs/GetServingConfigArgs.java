@@ -15,28 +15,28 @@ public final class GetServingConfigArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServingConfigArgs Empty = new GetServingConfigArgs();
 
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="servingConfigId", required=true)
-    private final String servingConfigId;
+      private final String servingConfigId;
 
     public String getServingConfigId() {
         return this.servingConfigId;
@@ -105,7 +105,6 @@ public final class GetServingConfigArgs extends io.pulumi.resources.InvokeArgs {
             this.servingConfigId = Objects.requireNonNull(servingConfigId);
             return this;
         }
-
         public GetServingConfigArgs build() {
             return new GetServingConfigArgs(catalogId, location, project, servingConfigId);
         }

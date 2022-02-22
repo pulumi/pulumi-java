@@ -96,7 +96,6 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
             return new CloudTieringVolumeFreeSpacePolicyStatusResponse(currentVolumeFreeSpacePercent, effectiveVolumeFreeSpacePolicy, lastUpdatedTimestamp);
         }

@@ -52,7 +52,6 @@ public final class BucketBillingResponse {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }
-
         public BucketBillingResponse build() {
             return new BucketBillingResponse(requesterPays);
         }

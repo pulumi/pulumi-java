@@ -117,7 +117,6 @@ public final class GetRegistrationAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationAssignmentResult build() {
             return new GetRegistrationAssignmentResult(id, name, properties, type);
         }

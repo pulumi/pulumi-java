@@ -359,7 +359,6 @@ public final class MongoDbLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public MongoDbLinkedServiceResponse build() {
             return new MongoDbLinkedServiceResponse(allowSelfSignedServerCert, annotations, authSource, authenticationType, connectVia, databaseName, description, enableSsl, encryptedCredential, parameters, password, port, server, type, username);
         }

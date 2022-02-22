@@ -24,7 +24,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="inheritFromParent", required=true)
-    private final Boolean inheritFromParent;
+      private final Boolean inheritFromParent;
 
     public Boolean getInheritFromParent() {
         return this.inheritFromParent;
@@ -46,7 +46,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="reset", required=true)
-    private final Boolean reset;
+      private final Boolean reset;
 
     public Boolean getReset() {
         return this.reset;
@@ -57,7 +57,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
+      private final List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
 
     public List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> getRules() {
         return this.rules;
@@ -68,7 +68,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -147,7 +147,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecResponse(etag, inheritFromParent, reset, rules, updateTime);
         }

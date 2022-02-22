@@ -118,7 +118,6 @@ public final class SolutionPlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public SolutionPlanResponse build() {
             return new SolutionPlanResponse(name, product, promotionCode, publisher);
         }

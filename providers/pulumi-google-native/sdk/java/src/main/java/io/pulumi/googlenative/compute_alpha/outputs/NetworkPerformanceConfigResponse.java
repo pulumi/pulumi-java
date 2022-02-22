@@ -58,7 +58,6 @@ public final class NetworkPerformanceConfigResponse {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public NetworkPerformanceConfigResponse build() {
             return new NetworkPerformanceConfigResponse(externalIpEgressBandwidthTier, totalEgressBandwidthTier);
         }

@@ -226,7 +226,6 @@ public final class ImageOSDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public ImageOSDiskResponse build() {
             return new ImageOSDiskResponse(blobUri, caching, diskEncryptionSet, diskSizeGB, managedDisk, osState, osType, snapshot, storageAccountType);
         }

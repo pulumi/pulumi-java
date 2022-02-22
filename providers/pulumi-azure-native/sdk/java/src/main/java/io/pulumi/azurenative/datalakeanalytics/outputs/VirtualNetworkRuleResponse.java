@@ -137,7 +137,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, name, subnetId, type, virtualNetworkRuleState);
         }

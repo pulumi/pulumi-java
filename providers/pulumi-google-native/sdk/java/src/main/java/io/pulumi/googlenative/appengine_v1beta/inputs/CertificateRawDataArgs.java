@@ -23,7 +23,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -34,7 +34,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicCertificate")
-    private final @Nullable Input<String> publicCertificate;
+      private final @Nullable Input<String> publicCertificate;
 
     public Input<String> getPublicCertificate() {
         return this.publicCertificate == null ? Input.empty() : this.publicCertificate;
@@ -93,7 +93,6 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
             this.publicCertificate = Input.ofNullable(publicCertificate);
             return this;
         }
-
         public CertificateRawDataArgs build() {
             return new CertificateRawDataArgs(privateKey, publicCertificate);
         }

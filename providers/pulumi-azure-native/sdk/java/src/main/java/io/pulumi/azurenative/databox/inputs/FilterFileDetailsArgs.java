@@ -24,7 +24,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterFilePath", required=true)
-    private final Input<String> filterFilePath;
+        private final Input<String> filterFilePath;
 
     public Input<String> getFilterFilePath() {
         return this.filterFilePath;
@@ -35,7 +35,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterFileType", required=true)
-    private final Input<Either<String,FilterFileType>> filterFileType;
+        private final Input<Either<String,FilterFileType>> filterFileType;
 
     public Input<Either<String,FilterFileType>> getFilterFileType() {
         return this.filterFileType;
@@ -94,7 +94,6 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
             this.filterFileType = Input.of(Objects.requireNonNull(filterFileType));
             return this;
         }
-
         public FilterFileDetailsArgs build() {
             return new FilterFileDetailsArgs(filterFilePath, filterFileType);
         }

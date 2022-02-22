@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      * 
      */
     @InputImport(name="maxValue", required=true)
-    private final String maxValue;
+      private final String maxValue;
 
     public String getMaxValue() {
         return this.maxValue;
@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      * 
      */
     @InputImport(name="minValue", required=true)
-    private final String minValue;
+      private final String minValue;
 
     public String getMinValue() {
         return this.minValue;
@@ -77,7 +77,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(maxValue, minValue);
         }

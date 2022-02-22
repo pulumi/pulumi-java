@@ -19,7 +19,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final CaPoolArgs Empty = new CaPoolArgs();
 
     @InputImport(name="caPoolId", required=true)
-    private final Input<String> caPoolId;
+      private final Input<String> caPoolId;
 
     public Input<String> getCaPoolId() {
         return this.caPoolId;
@@ -30,7 +30,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuancePolicy")
-    private final @Nullable Input<IssuancePolicyArgs> issuancePolicy;
+      private final @Nullable Input<IssuancePolicyArgs> issuancePolicy;
 
     public Input<IssuancePolicyArgs> getIssuancePolicy() {
         return this.issuancePolicy == null ? Input.empty() : this.issuancePolicy;
@@ -41,21 +41,21 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -66,14 +66,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingOptions")
-    private final @Nullable Input<PublishingOptionsArgs> publishingOptions;
+      private final @Nullable Input<PublishingOptionsArgs> publishingOptions;
 
     public Input<PublishingOptionsArgs> getPublishingOptions() {
         return this.publishingOptions == null ? Input.empty() : this.publishingOptions;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -84,7 +84,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<CaPoolTier> tier;
+      private final Input<CaPoolTier> tier;
 
     public Input<CaPoolTier> getTier() {
         return this.tier;
@@ -233,7 +233,6 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public CaPoolArgs build() {
             return new CaPoolArgs(caPoolId, issuancePolicy, labels, location, project, publishingOptions, requestId, tier);
         }

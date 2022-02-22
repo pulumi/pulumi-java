@@ -23,7 +23,7 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -66,7 +66,6 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public PrivateLinkConnectionApprovalRequestArgs build() {
             return new PrivateLinkConnectionApprovalRequestArgs(privateLinkServiceConnectionState);
         }

@@ -120,7 +120,6 @@ public final class GetInstanceTableIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceTableIamPolicyResult build() {
             return new GetInstanceTableIamPolicyResult(auditConfigs, bindings, etag, version);
         }

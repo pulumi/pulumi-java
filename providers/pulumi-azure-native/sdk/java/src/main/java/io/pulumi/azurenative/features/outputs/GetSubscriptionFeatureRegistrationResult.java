@@ -109,7 +109,6 @@ public final class GetSubscriptionFeatureRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubscriptionFeatureRegistrationResult build() {
             return new GetSubscriptionFeatureRegistrationResult(id, name, properties, type);
         }

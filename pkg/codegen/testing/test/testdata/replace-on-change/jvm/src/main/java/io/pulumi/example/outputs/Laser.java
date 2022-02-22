@@ -75,7 +75,6 @@ public final class Laser {
             this.light = light;
             return this;
         }
-
         public Laser build() {
             return new Laser(animal, batteries, light);
         }

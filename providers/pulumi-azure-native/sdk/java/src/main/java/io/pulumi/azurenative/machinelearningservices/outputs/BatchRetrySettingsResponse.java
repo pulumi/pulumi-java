@@ -77,7 +77,6 @@ public final class BatchRetrySettingsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public BatchRetrySettingsResponse build() {
             return new BatchRetrySettingsResponse(maxRetries, timeout);
         }

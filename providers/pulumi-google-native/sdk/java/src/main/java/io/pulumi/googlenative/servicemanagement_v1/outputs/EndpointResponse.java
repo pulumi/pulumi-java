@@ -96,7 +96,6 @@ public final class EndpointResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(allowCors, name, target);
         }

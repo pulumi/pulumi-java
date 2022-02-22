@@ -22,7 +22,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="azureStorageSid", required=true)
-    private final Input<String> azureStorageSid;
+        private final Input<String> azureStorageSid;
 
     public Input<String> getAzureStorageSid() {
         return this.azureStorageSid;
@@ -33,7 +33,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainGuid", required=true)
-    private final Input<String> domainGuid;
+        private final Input<String> domainGuid;
 
     public Input<String> getDomainGuid() {
         return this.domainGuid;
@@ -44,7 +44,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+        private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -55,7 +55,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainSid", required=true)
-    private final Input<String> domainSid;
+        private final Input<String> domainSid;
 
     public Input<String> getDomainSid() {
         return this.domainSid;
@@ -66,7 +66,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forestName", required=true)
-    private final Input<String> forestName;
+        private final Input<String> forestName;
 
     public Input<String> getForestName() {
         return this.forestName;
@@ -77,7 +77,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="netBiosDomainName", required=true)
-    private final Input<String> netBiosDomainName;
+        private final Input<String> netBiosDomainName;
 
     public Input<String> getNetBiosDomainName() {
         return this.netBiosDomainName;
@@ -196,7 +196,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
             this.netBiosDomainName = Input.of(Objects.requireNonNull(netBiosDomainName));
             return this;
         }
-
         public ActiveDirectoryPropertiesArgs build() {
             return new ActiveDirectoryPropertiesArgs(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }

@@ -54,7 +54,6 @@ public final class AssignedStandardItemResponse {
             this.id = id;
             return this;
         }
-
         public AssignedStandardItemResponse build() {
             return new AssignedStandardItemResponse(id);
         }

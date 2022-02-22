@@ -52,7 +52,6 @@ public final class ScriptHandlerResponse {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public ScriptHandlerResponse build() {
             return new ScriptHandlerResponse(scriptPath);
         }

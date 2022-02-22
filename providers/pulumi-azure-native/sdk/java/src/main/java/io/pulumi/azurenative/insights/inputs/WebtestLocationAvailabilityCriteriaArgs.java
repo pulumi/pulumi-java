@@ -23,7 +23,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="componentId", required=true)
-    private final Input<String> componentId;
+        private final Input<String> componentId;
 
     public Input<String> getComponentId() {
         return this.componentId;
@@ -34,7 +34,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-    private final Input<Double> failedLocationCount;
+        private final Input<Double> failedLocationCount;
 
     public Input<Double> getFailedLocationCount() {
         return this.failedLocationCount;
@@ -46,7 +46,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="webTestId", required=true)
-    private final Input<String> webTestId;
+        private final Input<String> webTestId;
 
     public Input<String> getWebTestId() {
         return this.webTestId;
@@ -146,7 +146,6 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
             this.webTestId = Input.of(Objects.requireNonNull(webTestId));
             return this;
         }
-
         public WebtestLocationAvailabilityCriteriaArgs build() {
             return new WebtestLocationAvailabilityCriteriaArgs(componentId, failedLocationCount, odataType, webTestId);
         }

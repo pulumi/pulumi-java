@@ -184,7 +184,6 @@ public final class RelationalSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RelationalSourceResponse build() {
             return new RelationalSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

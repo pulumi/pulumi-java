@@ -52,7 +52,6 @@ public final class AnimationEndResponse {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public AnimationEndResponse build() {
             return new AnimationEndResponse(startTimeOffset);
         }

@@ -76,7 +76,6 @@ public final class DiffDiskSettingsResponse {
             this.placement = placement;
             return this;
         }
-
         public DiffDiskSettingsResponse build() {
             return new DiffDiskSettingsResponse(option, placement);
         }

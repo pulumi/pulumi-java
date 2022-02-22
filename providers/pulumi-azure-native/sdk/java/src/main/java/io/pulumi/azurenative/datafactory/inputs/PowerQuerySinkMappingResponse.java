@@ -25,7 +25,7 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataflowSinks")
-    private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
+        private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
 
     public List<PowerQuerySinkResponse> getDataflowSinks() {
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
@@ -36,7 +36,7 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="queryName")
-    private final @Nullable String queryName;
+        private final @Nullable String queryName;
 
     public Optional<String> getQueryName() {
         return this.queryName == null ? Optional.empty() : Optional.ofNullable(this.queryName);
@@ -85,7 +85,6 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
             this.queryName = queryName;
             return this;
         }
-
         public PowerQuerySinkMappingResponse build() {
             return new PowerQuerySinkMappingResponse(dataflowSinks, queryName);
         }

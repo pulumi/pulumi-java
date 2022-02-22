@@ -205,7 +205,6 @@ public final class GoogleCloudRunOpV2ContainerResponse {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
-
         public GoogleCloudRunOpV2ContainerResponse build() {
             return new GoogleCloudRunOpV2ContainerResponse(args, command, env, image, name, ports, resources, volumeMounts);
         }

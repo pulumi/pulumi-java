@@ -120,7 +120,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

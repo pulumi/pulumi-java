@@ -23,7 +23,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -34,7 +34,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -93,7 +93,6 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public CaseClassificationArgs build() {
             return new CaseClassificationArgs(displayName, id);
         }

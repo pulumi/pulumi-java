@@ -97,7 +97,6 @@ public final class FileShareResponse {
             this.userName = userName;
             return this;
         }
-
         public FileShareResponse build() {
             return new FileShareResponse(password, path, userName);
         }

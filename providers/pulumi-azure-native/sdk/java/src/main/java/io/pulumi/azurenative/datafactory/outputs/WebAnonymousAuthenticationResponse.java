@@ -77,7 +77,6 @@ public final class WebAnonymousAuthenticationResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebAnonymousAuthenticationResponse build() {
             return new WebAnonymousAuthenticationResponse(authenticationType, url);
         }

@@ -99,7 +99,6 @@ public final class AddressPropertiesResponse {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public AddressPropertiesResponse build() {
             return new AddressPropertiesResponse(addressValidationStatus, contactDetails, shippingAddress);
         }

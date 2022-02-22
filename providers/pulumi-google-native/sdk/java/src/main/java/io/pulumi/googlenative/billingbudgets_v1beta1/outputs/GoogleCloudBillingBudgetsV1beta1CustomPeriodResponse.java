@@ -74,7 +74,6 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(endDate, startDate);
         }

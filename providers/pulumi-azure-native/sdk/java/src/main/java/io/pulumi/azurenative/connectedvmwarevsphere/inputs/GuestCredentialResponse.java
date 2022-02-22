@@ -23,7 +23,7 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="username")
-    private final @Nullable String username;
+        private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -61,7 +61,6 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
             this.username = username;
             return this;
         }
-
         public GuestCredentialResponse build() {
             return new GuestCredentialResponse(username);
         }

@@ -205,7 +205,6 @@ public final class BlobSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobSourceResponse build() {
             return new BlobSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
         }

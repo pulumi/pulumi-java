@@ -139,7 +139,6 @@ public final class GetConfigurationServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationServiceResult build() {
             return new GetConfigurationServiceResult(id, name, properties, systemData, type);
         }

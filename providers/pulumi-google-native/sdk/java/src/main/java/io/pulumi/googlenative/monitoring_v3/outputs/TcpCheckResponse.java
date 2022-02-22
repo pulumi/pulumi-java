@@ -52,7 +52,6 @@ public final class TcpCheckResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TcpCheckResponse build() {
             return new TcpCheckResponse(port);
         }

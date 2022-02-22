@@ -26,7 +26,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMethod")
-    private final @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod;
+        private final @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
     public Input<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
         return this.allocationMethod == null ? Input.empty() : this.allocationMethod;
@@ -37,7 +37,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+        private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -48,7 +48,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gateway")
-    private final @Nullable Input<List<String>> gateway;
+        private final @Nullable Input<List<String>> gateway;
 
     public Input<List<String>> getGateway() {
         return this.gateway == null ? Input.empty() : this.gateway;
@@ -59,7 +59,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -70,7 +70,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetMask")
-    private final @Nullable Input<String> subnetMask;
+        private final @Nullable Input<String> subnetMask;
 
     public Input<String> getSubnetMask() {
         return this.subnetMask == null ? Input.empty() : this.subnetMask;
@@ -174,7 +174,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetMask = Input.ofNullable(subnetMask);
             return this;
         }
-
         public NicIPSettingsArgs build() {
             return new NicIPSettingsArgs(allocationMethod, dnsServers, gateway, ipAddress, subnetMask);
         }

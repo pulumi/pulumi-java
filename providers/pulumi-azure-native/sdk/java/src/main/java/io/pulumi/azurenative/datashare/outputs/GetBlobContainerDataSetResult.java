@@ -245,7 +245,6 @@ public final class GetBlobContainerDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobContainerDataSetResult build() {
             return new GetBlobContainerDataSetResult(containerName, dataSetId, id, kind, name, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

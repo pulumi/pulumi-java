@@ -315,7 +315,6 @@ public final class GetIoTRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIoTRoleResult build() {
             return new GetIoTRoleResult(computeResource, hostPlatform, hostPlatformType, id, ioTDeviceDetails, ioTEdgeAgentInfo, ioTEdgeDeviceDetails, kind, name, roleStatus, shareMappings, systemData, type);
         }

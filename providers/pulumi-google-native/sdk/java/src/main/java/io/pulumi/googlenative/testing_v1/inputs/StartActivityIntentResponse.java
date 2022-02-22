@@ -22,7 +22,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -33,7 +33,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="categories", required=true)
-    private final List<String> categories;
+      private final List<String> categories;
 
     public List<String> getCategories() {
         return this.categories;
@@ -44,7 +44,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -103,7 +103,6 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public StartActivityIntentResponse build() {
             return new StartActivityIntentResponse(action, categories, uri);
         }

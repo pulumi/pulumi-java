@@ -206,7 +206,6 @@ public final class GetManagedHsmResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedHsmResult build() {
             return new GetManagedHsmResult(id, location, name, properties, sku, systemData, tags, type);
         }

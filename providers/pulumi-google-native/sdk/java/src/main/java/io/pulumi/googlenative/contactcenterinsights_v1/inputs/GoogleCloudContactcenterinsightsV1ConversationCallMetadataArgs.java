@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @InputImport(name="agentChannel")
-    private final @Nullable Input<Integer> agentChannel;
+      private final @Nullable Input<Integer> agentChannel;
 
     public Input<Integer> getAgentChannel() {
         return this.agentChannel == null ? Input.empty() : this.agentChannel;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
      * 
      */
     @InputImport(name="customerChannel")
-    private final @Nullable Input<Integer> customerChannel;
+      private final @Nullable Input<Integer> customerChannel;
 
     public Input<Integer> getCustomerChannel() {
         return this.customerChannel == null ? Input.empty() : this.customerChannel;
@@ -93,7 +93,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
             this.customerChannel = Input.ofNullable(customerChannel);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(agentChannel, customerChannel);
         }

@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="allowMultiLabel")
-    private final @Nullable Input<Boolean> allowMultiLabel;
+      private final @Nullable Input<Boolean> allowMultiLabel;
 
     public Input<Boolean> getAllowMultiLabel() {
         return this.allowMultiLabel == null ? Input.empty() : this.allowMultiLabel;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final Input<String> annotationSpecSet;
+      private final Input<String> annotationSpecSet;
 
     public Input<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="answerAggregationType")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
     public Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> getAnswerAggregationType() {
         return this.answerAggregationType == null ? Input.empty() : this.answerAggregationType;
@@ -121,7 +121,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
             this.answerAggregationType = Input.ofNullable(answerAggregationType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }

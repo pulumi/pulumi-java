@@ -395,7 +395,6 @@ public final class GetScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, id, interval, isEnabled, lastModifiedTime, name, nextRun, nextRunOffsetMinutes, startTime, startTimeOffsetMinutes, timeZone, type);
         }

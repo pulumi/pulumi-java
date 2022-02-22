@@ -24,7 +24,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedRequestExtensions")
-    private final @Nullable Input<List<String>> allowedRequestExtensions;
+      private final @Nullable Input<List<String>> allowedRequestExtensions;
 
     public Input<List<String>> getAllowedRequestExtensions() {
         return this.allowedRequestExtensions == null ? Input.empty() : this.allowedRequestExtensions;
@@ -35,7 +35,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedResponseExtensions")
-    private final @Nullable Input<List<String>> allowedResponseExtensions;
+      private final @Nullable Input<List<String>> allowedResponseExtensions;
 
     public Input<List<String>> getAllowedResponseExtensions() {
         return this.allowedResponseExtensions == null ? Input.empty() : this.allowedResponseExtensions;
@@ -46,7 +46,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provided")
-    private final @Nullable Input<List<String>> provided;
+      private final @Nullable Input<List<String>> provided;
 
     public Input<List<String>> getProvided() {
         return this.provided == null ? Input.empty() : this.provided;
@@ -57,7 +57,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requested")
-    private final @Nullable Input<List<String>> requested;
+      private final @Nullable Input<List<String>> requested;
 
     public Input<List<String>> getRequested() {
         return this.requested == null ? Input.empty() : this.requested;
@@ -68,7 +68,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -172,7 +172,6 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public ContextRuleArgs build() {
             return new ContextRuleArgs(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
         }

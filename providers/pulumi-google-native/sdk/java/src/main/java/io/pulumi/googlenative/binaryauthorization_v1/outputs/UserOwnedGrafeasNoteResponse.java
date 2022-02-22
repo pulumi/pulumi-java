@@ -97,7 +97,6 @@ public final class UserOwnedGrafeasNoteResponse {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public UserOwnedGrafeasNoteResponse build() {
             return new UserOwnedGrafeasNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }

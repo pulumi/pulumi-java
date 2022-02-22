@@ -168,7 +168,6 @@ public final class GetSqlResourceSqlContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlContainerResult build() {
             return new GetSqlResourceSqlContainerResult(id, location, name, options, resource, tags, type);
         }

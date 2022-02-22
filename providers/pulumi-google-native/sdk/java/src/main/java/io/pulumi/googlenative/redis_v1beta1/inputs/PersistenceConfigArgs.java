@@ -25,7 +25,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="persistenceMode")
-    private final @Nullable Input<PersistenceConfigPersistenceMode> persistenceMode;
+      private final @Nullable Input<PersistenceConfigPersistenceMode> persistenceMode;
 
     public Input<PersistenceConfigPersistenceMode> getPersistenceMode() {
         return this.persistenceMode == null ? Input.empty() : this.persistenceMode;
@@ -36,7 +36,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rdbSnapshotPeriod")
-    private final @Nullable Input<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
+      private final @Nullable Input<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
 
     public Input<PersistenceConfigRdbSnapshotPeriod> getRdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod == null ? Input.empty() : this.rdbSnapshotPeriod;
@@ -47,7 +47,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rdbSnapshotStartTime")
-    private final @Nullable Input<String> rdbSnapshotStartTime;
+      private final @Nullable Input<String> rdbSnapshotStartTime;
 
     public Input<String> getRdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime == null ? Input.empty() : this.rdbSnapshotStartTime;
@@ -121,7 +121,6 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
             this.rdbSnapshotStartTime = Input.ofNullable(rdbSnapshotStartTime);
             return this;
         }
-
         public PersistenceConfigArgs build() {
             return new PersistenceConfigArgs(persistenceMode, rdbSnapshotPeriod, rdbSnapshotStartTime);
         }

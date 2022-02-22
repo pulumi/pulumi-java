@@ -34,7 +34,6 @@ public final class GoogleProtobufEmptyResponse extends io.pulumi.resources.Invok
         public Builder(GoogleProtobufEmptyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleProtobufEmptyResponse build() {
             return new GoogleProtobufEmptyResponse();
         }

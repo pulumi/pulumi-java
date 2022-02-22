@@ -182,7 +182,6 @@ public final class CustomHttpsConfigurationResponse {
             this.vault = vault;
             return this;
         }
-
         public CustomHttpsConfigurationResponse build() {
             return new CustomHttpsConfigurationResponse(certificateSource, certificateType, minimumTlsVersion, protocolType, secretName, secretVersion, vault);
         }

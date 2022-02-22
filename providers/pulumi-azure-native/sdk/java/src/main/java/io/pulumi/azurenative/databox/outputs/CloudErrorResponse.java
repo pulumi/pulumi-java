@@ -141,7 +141,6 @@ public final class CloudErrorResponse {
             this.target = target;
             return this;
         }
-
         public CloudErrorResponse build() {
             return new CloudErrorResponse(additionalInfo, code, details, message, target);
         }

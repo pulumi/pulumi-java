@@ -54,7 +54,6 @@ public final class CloudServiceOsProfileResponse {
             this.secrets = secrets;
             return this;
         }
-
         public CloudServiceOsProfileResponse build() {
             return new CloudServiceOsProfileResponse(secrets);
         }

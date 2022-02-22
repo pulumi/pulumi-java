@@ -74,7 +74,6 @@ public final class TokenClaimResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenClaimResponse build() {
             return new TokenClaimResponse(name, value);
         }

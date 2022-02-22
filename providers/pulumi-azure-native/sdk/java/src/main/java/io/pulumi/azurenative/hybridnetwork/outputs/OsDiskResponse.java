@@ -98,7 +98,6 @@ public final class OsDiskResponse {
             this.osType = osType;
             return this;
         }
-
         public OsDiskResponse build() {
             return new OsDiskResponse(diskSizeGB, name, osType);
         }

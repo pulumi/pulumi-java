@@ -77,7 +77,6 @@ public final class ConnectorMappingErrorManagementResponse {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }
-
         public ConnectorMappingErrorManagementResponse build() {
             return new ConnectorMappingErrorManagementResponse(errorLimit, errorManagementType);
         }

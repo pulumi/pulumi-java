@@ -180,7 +180,6 @@ public final class DeploymentResponse {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public DeploymentResponse build() {
             return new DeploymentResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }

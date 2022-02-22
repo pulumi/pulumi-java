@@ -20,7 +20,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,14 +31,14 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+        private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -49,7 +49,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -60,14 +60,14 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -186,7 +186,6 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppPrivateEndpointConnectionSlotArgs build() {
             return new WebAppPrivateEndpointConnectionSlotArgs(kind, name, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, slot);
         }

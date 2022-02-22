@@ -138,7 +138,6 @@ public final class GetWorkloadIdentityPoolResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetWorkloadIdentityPoolResult build() {
             return new GetWorkloadIdentityPoolResult(description, disabled, displayName, name, state);
         }

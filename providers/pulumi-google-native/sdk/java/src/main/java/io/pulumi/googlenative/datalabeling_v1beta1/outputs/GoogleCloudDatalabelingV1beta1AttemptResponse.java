@@ -68,7 +68,6 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
             this.partialFailures = Objects.requireNonNull(partialFailures);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
             return new GoogleCloudDatalabelingV1beta1AttemptResponse(attemptTime, partialFailures);
         }

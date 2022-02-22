@@ -27,7 +27,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appApk")
-    private final @Nullable Input<FileReferenceArgs> appApk;
+      private final @Nullable Input<FileReferenceArgs> appApk;
 
     public Input<FileReferenceArgs> getAppApk() {
         return this.appApk == null ? Input.empty() : this.appApk;
@@ -38,7 +38,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appBundle")
-    private final @Nullable Input<AppBundleArgs> appBundle;
+      private final @Nullable Input<AppBundleArgs> appBundle;
 
     public Input<AppBundleArgs> getAppBundle() {
         return this.appBundle == null ? Input.empty() : this.appBundle;
@@ -49,7 +49,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appPackageId")
-    private final @Nullable Input<String> appPackageId;
+      private final @Nullable Input<String> appPackageId;
 
     public Input<String> getAppPackageId() {
         return this.appPackageId == null ? Input.empty() : this.appPackageId;
@@ -60,7 +60,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scenarioLabels")
-    private final @Nullable Input<List<String>> scenarioLabels;
+      private final @Nullable Input<List<String>> scenarioLabels;
 
     public Input<List<String>> getScenarioLabels() {
         return this.scenarioLabels == null ? Input.empty() : this.scenarioLabels;
@@ -71,7 +71,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scenarios")
-    private final @Nullable Input<List<Integer>> scenarios;
+      private final @Nullable Input<List<Integer>> scenarios;
 
     public Input<List<Integer>> getScenarios() {
         return this.scenarios == null ? Input.empty() : this.scenarios;
@@ -175,7 +175,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             this.scenarios = Input.ofNullable(scenarios);
             return this;
         }
-
         public AndroidTestLoopArgs build() {
             return new AndroidTestLoopArgs(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }

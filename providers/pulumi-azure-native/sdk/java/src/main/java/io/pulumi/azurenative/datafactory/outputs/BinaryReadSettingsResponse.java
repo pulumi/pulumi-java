@@ -82,7 +82,6 @@ public final class BinaryReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinaryReadSettingsResponse build() {
             return new BinaryReadSettingsResponse(compressionProperties, type);
         }

@@ -95,7 +95,6 @@ public final class DNSConfigResponse {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }
-
         public DNSConfigResponse build() {
             return new DNSConfigResponse(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

@@ -75,7 +75,6 @@ public final class UserPasswordResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UserPasswordResponse build() {
             return new UserPasswordResponse(password, username);
         }

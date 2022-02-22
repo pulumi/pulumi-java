@@ -140,7 +140,6 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerSpecResponse build() {
             return new GoogleCloudMlV1__ContainerSpecResponse(args, command, env, image, ports);
         }

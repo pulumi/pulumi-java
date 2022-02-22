@@ -74,7 +74,6 @@ public final class LatLngResponse {
             this.longitude = Objects.requireNonNull(longitude);
             return this;
         }
-
         public LatLngResponse build() {
             return new LatLngResponse(latitude, longitude);
         }

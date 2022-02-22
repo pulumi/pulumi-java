@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
      * 
      */
     @InputImport(name="speechModelVariant")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
     public Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
         return this.speechModelVariant == null ? Input.empty() : this.speechModelVariant;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
             this.speechModelVariant = Input.ofNullable(speechModelVariant);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(speechModelVariant);
         }

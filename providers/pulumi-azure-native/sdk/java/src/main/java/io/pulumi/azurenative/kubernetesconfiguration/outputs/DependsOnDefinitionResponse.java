@@ -54,7 +54,6 @@ public final class DependsOnDefinitionResponse {
             this.kustomizationName = kustomizationName;
             return this;
         }
-
         public DependsOnDefinitionResponse build() {
             return new DependsOnDefinitionResponse(kustomizationName);
         }

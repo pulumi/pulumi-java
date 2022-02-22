@@ -76,7 +76,6 @@ public final class DatasetReferenceResponse {
             this.name = name;
             return this;
         }
-
         public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(id, name);
         }

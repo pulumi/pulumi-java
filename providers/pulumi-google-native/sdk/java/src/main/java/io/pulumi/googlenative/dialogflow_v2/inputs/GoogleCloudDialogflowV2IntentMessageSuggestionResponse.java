@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse extend
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse extend
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionResponse(title);
         }

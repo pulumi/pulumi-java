@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }

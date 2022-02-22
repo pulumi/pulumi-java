@@ -207,7 +207,6 @@ public final class RestorePointSourceMetadataResponse {
             this.vmId = vmId;
             return this;
         }
-
         public RestorePointSourceMetadataResponse build() {
             return new RestorePointSourceMetadataResponse(diagnosticsProfile, hardwareProfile, licenseType, location, osProfile, securityProfile, storageProfile, vmId);
         }

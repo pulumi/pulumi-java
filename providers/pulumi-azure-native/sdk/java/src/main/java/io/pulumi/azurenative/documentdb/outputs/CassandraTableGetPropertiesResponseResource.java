@@ -184,7 +184,6 @@ public final class CassandraTableGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public CassandraTableGetPropertiesResponseResource build() {
             return new CassandraTableGetPropertiesResponseResource(analyticalStorageTtl, defaultTtl, etag, id, rid, schema, ts);
         }

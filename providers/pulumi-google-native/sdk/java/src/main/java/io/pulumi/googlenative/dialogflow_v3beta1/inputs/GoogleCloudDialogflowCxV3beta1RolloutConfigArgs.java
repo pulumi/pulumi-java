@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * 
      */
     @InputImport(name="failureCondition")
-    private final @Nullable Input<String> failureCondition;
+      private final @Nullable Input<String> failureCondition;
 
     public Input<String> getFailureCondition() {
         return this.failureCondition == null ? Input.empty() : this.failureCondition;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * 
      */
     @InputImport(name="rolloutCondition")
-    private final @Nullable Input<String> rolloutCondition;
+      private final @Nullable Input<String> rolloutCondition;
 
     public Input<String> getRolloutCondition() {
         return this.rolloutCondition == null ? Input.empty() : this.rolloutCondition;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * 
      */
     @InputImport(name="rolloutSteps")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> getRolloutSteps() {
         return this.rolloutSteps == null ? Input.empty() : this.rolloutSteps;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
             this.rolloutSteps = Input.ofNullable(rolloutSteps);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigArgs(failureCondition, rolloutCondition, rolloutSteps);
         }

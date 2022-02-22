@@ -26,7 +26,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -37,7 +37,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationDatabase")
-    private final @Nullable Input<DatabaseTypeArgs> destinationDatabase;
+      private final @Nullable Input<DatabaseTypeArgs> destinationDatabase;
 
     public Input<DatabaseTypeArgs> getDestinationDatabase() {
         return this.destinationDatabase == null ? Input.empty() : this.destinationDatabase;
@@ -48,7 +48,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -59,7 +59,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dumpPath")
-    private final @Nullable Input<String> dumpPath;
+      private final @Nullable Input<String> dumpPath;
 
     public Input<String> getDumpPath() {
         return this.dumpPath == null ? Input.empty() : this.dumpPath;
@@ -70,21 +70,21 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="migrationJobId", required=true)
-    private final Input<String> migrationJobId;
+      private final Input<String> migrationJobId;
 
     public Input<String> getMigrationJobId() {
         return this.migrationJobId;
@@ -95,21 +95,21 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -120,7 +120,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseSshConnectivity")
-    private final @Nullable Input<ReverseSshConnectivityArgs> reverseSshConnectivity;
+      private final @Nullable Input<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
     public Input<ReverseSshConnectivityArgs> getReverseSshConnectivity() {
         return this.reverseSshConnectivity == null ? Input.empty() : this.reverseSshConnectivity;
@@ -131,7 +131,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -142,7 +142,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabase")
-    private final @Nullable Input<DatabaseTypeArgs> sourceDatabase;
+      private final @Nullable Input<DatabaseTypeArgs> sourceDatabase;
 
     public Input<DatabaseTypeArgs> getSourceDatabase() {
         return this.sourceDatabase == null ? Input.empty() : this.sourceDatabase;
@@ -153,7 +153,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<MigrationJobState> state;
+      private final @Nullable Input<MigrationJobState> state;
 
     public Input<MigrationJobState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -164,7 +164,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIpConnectivity")
-    private final @Nullable Input<StaticIpConnectivityArgs> staticIpConnectivity;
+      private final @Nullable Input<StaticIpConnectivityArgs> staticIpConnectivity;
 
     public Input<StaticIpConnectivityArgs> getStaticIpConnectivity() {
         return this.staticIpConnectivity == null ? Input.empty() : this.staticIpConnectivity;
@@ -175,7 +175,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<MigrationJobType> type;
+      private final Input<MigrationJobType> type;
 
     public Input<MigrationJobType> getType() {
         return this.type;
@@ -186,7 +186,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcPeeringConnectivity")
-    private final @Nullable Input<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
+      private final @Nullable Input<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 
     public Input<VpcPeeringConnectivityArgs> getVpcPeeringConnectivity() {
         return this.vpcPeeringConnectivity == null ? Input.empty() : this.vpcPeeringConnectivity;
@@ -470,7 +470,6 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcPeeringConnectivity = Input.ofNullable(vpcPeeringConnectivity);
             return this;
         }
-
         public MigrationJobArgs build() {
             return new MigrationJobArgs(destination, destinationDatabase, displayName, dumpPath, labels, location, migrationJobId, name, project, requestId, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, vpcPeeringConnectivity);
         }

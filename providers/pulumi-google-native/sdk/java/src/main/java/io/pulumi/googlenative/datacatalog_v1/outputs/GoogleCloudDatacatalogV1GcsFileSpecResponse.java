@@ -96,7 +96,6 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public GoogleCloudDatacatalogV1GcsFileSpecResponse build() {
             return new GoogleCloudDatacatalogV1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
         }

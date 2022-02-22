@@ -15,28 +15,28 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="snapshotId", required=true)
-    private final String snapshotId;
+      private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
     }
 
     @InputImport(name="volumeId", required=true)
-    private final String volumeId;
+      private final String volumeId;
 
     public String getVolumeId() {
         return this.volumeId;
@@ -105,7 +105,6 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
-
         public GetSnapshotArgs build() {
             return new GetSnapshotArgs(location, project, snapshotId, volumeId);
         }

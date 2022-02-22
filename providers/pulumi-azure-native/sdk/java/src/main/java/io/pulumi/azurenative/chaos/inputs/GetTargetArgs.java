@@ -17,7 +17,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentProviderNamespace", required=true)
-    private final String parentProviderNamespace;
+        private final String parentProviderNamespace;
 
     public String getParentProviderNamespace() {
         return this.parentProviderNamespace;
@@ -28,7 +28,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentResourceName", required=true)
-    private final String parentResourceName;
+        private final String parentResourceName;
 
     public String getParentResourceName() {
         return this.parentResourceName;
@@ -39,7 +39,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final String parentResourceType;
+        private final String parentResourceType;
 
     public String getParentResourceType() {
         return this.parentResourceType;
@@ -50,7 +50,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-    private final String targetName;
+        private final String targetName;
 
     public String getTargetName() {
         return this.targetName;
@@ -140,7 +140,6 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public GetTargetArgs build() {
             return new GetTargetArgs(parentProviderNamespace, parentResourceName, parentResourceType, resourceGroupName, targetName);
         }

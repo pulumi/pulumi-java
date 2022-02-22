@@ -21,7 +21,7 @@ public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="limitMbps", required=true)
-    private final String limitMbps;
+      private final String limitMbps;
 
     public String getLimitMbps() {
         return this.limitMbps;
@@ -59,7 +59,6 @@ public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs
             this.limitMbps = Objects.requireNonNull(limitMbps);
             return this;
         }
-
         public BandwidthLimitResponse build() {
             return new BandwidthLimitResponse(limitMbps);
         }

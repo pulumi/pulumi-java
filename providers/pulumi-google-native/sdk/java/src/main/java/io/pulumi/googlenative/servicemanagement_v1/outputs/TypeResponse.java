@@ -162,7 +162,6 @@ public final class TypeResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, oneofs, options, sourceContext, syntax);
         }

@@ -394,7 +394,6 @@ public final class GetBookmarkResult {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public GetBookmarkResult build() {
             return new GetBookmarkResult(created, createdBy, displayName, etag, eventTime, id, incidentInfo, labels, name, notes, query, queryEndTime, queryResult, queryStartTime, type, updated, updatedBy);
         }

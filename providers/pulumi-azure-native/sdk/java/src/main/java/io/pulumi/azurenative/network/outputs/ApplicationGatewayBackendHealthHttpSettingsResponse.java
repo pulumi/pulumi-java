@@ -78,7 +78,6 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
             this.servers = servers;
             return this;
         }
-
         public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHealthHttpSettingsResponse(backendHttpSettings, servers);
         }

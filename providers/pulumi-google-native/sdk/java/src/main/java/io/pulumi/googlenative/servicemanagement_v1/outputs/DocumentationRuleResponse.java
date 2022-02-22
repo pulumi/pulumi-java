@@ -95,7 +95,6 @@ public final class DocumentationRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public DocumentationRuleResponse build() {
             return new DocumentationRuleResponse(deprecationDescription, description, selector);
         }

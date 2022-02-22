@@ -245,7 +245,6 @@ public final class SlackChannelPropertiesResponse {
             this.verificationToken = verificationToken;
             return this;
         }
-
         public SlackChannelPropertiesResponse build() {
             return new SlackChannelPropertiesResponse(clientId, clientSecret, isEnabled, isValidated, landingPageUrl, lastSubmissionId, redirectAction, registerBeforeOAuthFlow, signingSecret, verificationToken);
         }

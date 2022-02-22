@@ -75,7 +75,6 @@ public final class AccessSelectorResponse {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public AccessSelectorResponse build() {
             return new AccessSelectorResponse(permissions, roles);
         }

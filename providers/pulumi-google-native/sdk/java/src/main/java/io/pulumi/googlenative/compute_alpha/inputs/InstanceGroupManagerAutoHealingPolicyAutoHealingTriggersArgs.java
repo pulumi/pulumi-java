@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
      * 
      */
     @InputImport(name="onHealthCheck")
-    private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
+      private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
     public Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
         return this.onHealthCheck == null ? Input.empty() : this.onHealthCheck;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
             this.onHealthCheck = Input.ofNullable(onHealthCheck);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(onHealthCheck);
         }

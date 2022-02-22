@@ -23,7 +23,7 @@ public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="smb")
-    private final @Nullable SmbSettingResponse smb;
+        private final @Nullable SmbSettingResponse smb;
 
     public Optional<SmbSettingResponse> getSmb() {
         return this.smb == null ? Optional.empty() : Optional.ofNullable(this.smb);
@@ -61,7 +61,6 @@ public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeAr
             this.smb = smb;
             return this;
         }
-
         public ProtocolSettingsResponse build() {
             return new ProtocolSettingsResponse(smb);
         }

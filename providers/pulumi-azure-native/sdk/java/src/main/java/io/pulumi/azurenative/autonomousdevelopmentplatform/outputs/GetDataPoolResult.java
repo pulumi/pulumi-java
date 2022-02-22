@@ -182,7 +182,6 @@ public final class GetDataPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataPoolResult build() {
             return new GetDataPoolResult(dataPoolId, id, locations, name, provisioningState, systemData, type);
         }

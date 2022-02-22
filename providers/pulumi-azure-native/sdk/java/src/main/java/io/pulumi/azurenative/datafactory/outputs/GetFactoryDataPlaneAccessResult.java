@@ -98,7 +98,6 @@ public final class GetFactoryDataPlaneAccessResult {
             this.policy = policy;
             return this;
         }
-
         public GetFactoryDataPlaneAccessResult build() {
             return new GetFactoryDataPlaneAccessResult(accessToken, dataPlaneUrl, policy);
         }

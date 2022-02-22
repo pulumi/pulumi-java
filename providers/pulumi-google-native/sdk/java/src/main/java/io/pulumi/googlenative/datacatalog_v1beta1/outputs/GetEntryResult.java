@@ -332,7 +332,6 @@ public final class GetEntryResult {
             this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
             return this;
         }
-
         public GetEntryResult build() {
             return new GetEntryResult(bigqueryDateShardedSpec, bigqueryTableSpec, description, displayName, gcsFilesetSpec, integratedSystem, linkedResource, name, schema, sourceSystemTimestamps, type, usageSignal, userSpecifiedSystem, userSpecifiedType);
         }

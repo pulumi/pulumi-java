@@ -54,7 +54,6 @@ public final class HourDetailsResponse {
             this.minute = minute;
             return this;
         }
-
         public HourDetailsResponse build() {
             return new HourDetailsResponse(minute);
         }

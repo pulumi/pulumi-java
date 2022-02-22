@@ -97,7 +97,6 @@ public final class PerformanceThresholdResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public PerformanceThresholdResponse build() {
             return new PerformanceThresholdResponse(basicSliPerformance, performance, threshold);
         }

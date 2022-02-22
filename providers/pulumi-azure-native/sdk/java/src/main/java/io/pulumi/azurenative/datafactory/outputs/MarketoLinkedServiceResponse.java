@@ -296,7 +296,6 @@ public final class MarketoLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public MarketoLinkedServiceResponse build() {
             return new MarketoLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

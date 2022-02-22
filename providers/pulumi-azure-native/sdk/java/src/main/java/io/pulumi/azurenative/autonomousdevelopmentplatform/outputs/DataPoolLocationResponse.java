@@ -77,7 +77,6 @@ public final class DataPoolLocationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataPoolLocationResponse build() {
             return new DataPoolLocationResponse(encryption, name);
         }

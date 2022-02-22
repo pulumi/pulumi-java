@@ -13,14 +13,14 @@ public final class GetServiceConsumerIamPolicyArgs extends io.pulumi.resources.I
     public static final GetServiceConsumerIamPolicyArgs Empty = new GetServiceConsumerIamPolicyArgs();
 
     @InputImport(name="consumerId", required=true)
-    private final String consumerId;
+      private final String consumerId;
 
     public String getConsumerId() {
         return this.consumerId;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -69,7 +69,6 @@ public final class GetServiceConsumerIamPolicyArgs extends io.pulumi.resources.I
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetServiceConsumerIamPolicyArgs build() {
             return new GetServiceConsumerIamPolicyArgs(consumerId, serviceId);
         }

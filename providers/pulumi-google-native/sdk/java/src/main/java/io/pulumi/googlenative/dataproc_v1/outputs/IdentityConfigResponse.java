@@ -53,7 +53,6 @@ public final class IdentityConfigResponse {
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }
-
         public IdentityConfigResponse build() {
             return new IdentityConfigResponse(userServiceAccountMapping);
         }

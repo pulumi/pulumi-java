@@ -78,7 +78,6 @@ public final class AzureActiveDirectoryValidationResponse {
             this.jwtClaimChecks = jwtClaimChecks;
             return this;
         }
-
         public AzureActiveDirectoryValidationResponse build() {
             return new AzureActiveDirectoryValidationResponse(allowedAudiences, jwtClaimChecks);
         }

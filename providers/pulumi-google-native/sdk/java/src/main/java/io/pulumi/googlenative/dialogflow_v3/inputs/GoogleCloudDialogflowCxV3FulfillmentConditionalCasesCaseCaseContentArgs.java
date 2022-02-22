@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @InputImport(name="additionalCases")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
 
     public Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> getAdditionalCases() {
         return this.additionalCases == null ? Input.empty() : this.additionalCases;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs build() {
             return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs(additionalCases, message);
         }

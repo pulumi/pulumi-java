@@ -205,7 +205,6 @@ public final class FileSystemSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public FileSystemSinkResponse build() {
             return new FileSystemSinkResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

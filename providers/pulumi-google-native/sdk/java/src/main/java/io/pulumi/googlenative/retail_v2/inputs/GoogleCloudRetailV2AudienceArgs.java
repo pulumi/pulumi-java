@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ageGroups")
-    private final @Nullable Input<List<String>> ageGroups;
+      private final @Nullable Input<List<String>> ageGroups;
 
     public Input<List<String>> getAgeGroups() {
         return this.ageGroups == null ? Input.empty() : this.ageGroups;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="genders")
-    private final @Nullable Input<List<String>> genders;
+      private final @Nullable Input<List<String>> genders;
 
     public Input<List<String>> getGenders() {
         return this.genders == null ? Input.empty() : this.genders;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2AudienceArgs extends io.pulumi.resources.R
             this.genders = Input.ofNullable(genders);
             return this;
         }
-
         public GoogleCloudRetailV2AudienceArgs build() {
             return new GoogleCloudRetailV2AudienceArgs(ageGroups, genders);
         }

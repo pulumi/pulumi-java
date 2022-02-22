@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryTableResponse build() {
             return new GooglePrivacyDlpV2BigQueryTableResponse(datasetId, project, tableId);
         }

@@ -76,7 +76,6 @@ public final class ListOnlineEndpointKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListOnlineEndpointKeysResult build() {
             return new ListOnlineEndpointKeysResult(primaryKey, secondaryKey);
         }

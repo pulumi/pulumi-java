@@ -294,7 +294,6 @@ public final class GetNotificationHubPnsCredentialsResult {
             this.wnsCredential = wnsCredential;
             return this;
         }
-
         public GetNotificationHubPnsCredentialsResult build() {
             return new GetNotificationHubPnsCredentialsResult(admCredential, apnsCredential, baiduCredential, gcmCredential, id, location, mpnsCredential, name, sku, tags, type, wnsCredential);
         }

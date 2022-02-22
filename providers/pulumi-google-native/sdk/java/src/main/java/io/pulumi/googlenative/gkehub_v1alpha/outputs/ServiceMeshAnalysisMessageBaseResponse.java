@@ -96,7 +96,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceMeshAnalysisMessageBaseResponse build() {
             return new ServiceMeshAnalysisMessageBaseResponse(documentationUrl, level, type);
         }

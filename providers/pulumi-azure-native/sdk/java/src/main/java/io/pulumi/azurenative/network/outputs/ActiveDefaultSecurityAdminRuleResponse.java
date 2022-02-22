@@ -503,7 +503,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public ActiveDefaultSecurityAdminRuleResponse build() {
             return new ActiveDefaultSecurityAdminRuleResponse(access, commitTime, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, flag, id, kind, priority, protocol, provisioningState, region, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

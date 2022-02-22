@@ -22,7 +22,7 @@ public final class ApigatewayAuditLogConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exemptedMembers", required=true)
-    private final List<String> exemptedMembers;
+      private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
@@ -33,7 +33,7 @@ public final class ApigatewayAuditLogConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+      private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -82,7 +82,6 @@ public final class ApigatewayAuditLogConfigResponse extends io.pulumi.resources.
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public ApigatewayAuditLogConfigResponse build() {
             return new ApigatewayAuditLogConfigResponse(exemptedMembers, logType);
         }

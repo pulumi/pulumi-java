@@ -181,7 +181,6 @@ public final class GetCredentialResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetCredentialResult build() {
             return new GetCredentialResult(creationTime, description, id, lastModifiedTime, name, type, userName);
         }

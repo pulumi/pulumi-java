@@ -279,7 +279,6 @@ public final class AvroDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AvroDatasetResponse build() {
             return new AvroDatasetResponse(annotations, avroCompressionCodec, avroCompressionLevel, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

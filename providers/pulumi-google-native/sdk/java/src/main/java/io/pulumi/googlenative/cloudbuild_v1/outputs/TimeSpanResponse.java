@@ -74,7 +74,6 @@ public final class TimeSpanResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeSpanResponse build() {
             return new TimeSpanResponse(endTime, startTime);
         }

@@ -75,7 +75,6 @@ public final class DeviceFileResponse {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
         }
-
         public DeviceFileResponse build() {
             return new DeviceFileResponse(obbFile, regularFile);
         }

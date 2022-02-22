@@ -95,7 +95,6 @@ public final class SoftwareRecipeArtifactGcsResponse {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public SoftwareRecipeArtifactGcsResponse build() {
             return new SoftwareRecipeArtifactGcsResponse(bucket, generation, object);
         }

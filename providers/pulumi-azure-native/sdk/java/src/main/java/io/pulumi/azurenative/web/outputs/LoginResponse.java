@@ -170,7 +170,6 @@ public final class LoginResponse {
             this.tokenStore = tokenStore;
             return this;
         }
-
         public LoginResponse build() {
             return new LoginResponse(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
         }

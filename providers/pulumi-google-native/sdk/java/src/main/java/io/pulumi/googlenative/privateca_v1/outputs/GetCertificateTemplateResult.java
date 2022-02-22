@@ -204,7 +204,6 @@ public final class GetCertificateTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateTemplateResult build() {
             return new GetCertificateTemplateResult(createTime, description, identityConstraints, labels, name, passthroughExtensions, predefinedValues, updateTime);
         }

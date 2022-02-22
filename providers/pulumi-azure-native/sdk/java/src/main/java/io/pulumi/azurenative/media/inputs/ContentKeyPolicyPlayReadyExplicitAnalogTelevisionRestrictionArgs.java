@@ -23,7 +23,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @InputImport(name="bestEffort", required=true)
-    private final Input<Boolean> bestEffort;
+        private final Input<Boolean> bestEffort;
 
     public Input<Boolean> getBestEffort() {
         return this.bestEffort;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @InputImport(name="configurationData", required=true)
-    private final Input<Integer> configurationData;
+        private final Input<Integer> configurationData;
 
     public Input<Integer> getConfigurationData() {
         return this.configurationData;
@@ -93,7 +93,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
             this.configurationData = Input.of(Objects.requireNonNull(configurationData));
             return this;
         }
-
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(bestEffort, configurationData);
         }

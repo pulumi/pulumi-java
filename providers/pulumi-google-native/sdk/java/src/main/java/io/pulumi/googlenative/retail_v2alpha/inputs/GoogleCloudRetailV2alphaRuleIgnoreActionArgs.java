@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
      * 
      */
     @InputImport(name="ignoreTerms")
-    private final @Nullable Input<List<String>> ignoreTerms;
+      private final @Nullable Input<List<String>> ignoreTerms;
 
     public Input<List<String>> getIgnoreTerms() {
         return this.ignoreTerms == null ? Input.empty() : this.ignoreTerms;
@@ -67,7 +67,6 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
             this.ignoreTerms = Input.ofNullable(ignoreTerms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleIgnoreActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleIgnoreActionArgs(ignoreTerms);
         }

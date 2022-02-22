@@ -52,7 +52,6 @@ public final class EntrypointResponse {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public EntrypointResponse build() {
             return new EntrypointResponse(shell);
         }

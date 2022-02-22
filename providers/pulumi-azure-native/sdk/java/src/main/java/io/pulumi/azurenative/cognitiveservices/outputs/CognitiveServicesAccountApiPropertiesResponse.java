@@ -245,7 +245,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
             this.websiteName = websiteName;
             return this;
         }
-
         public CognitiveServicesAccountApiPropertiesResponse build() {
             return new CognitiveServicesAccountApiPropertiesResponse(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
         }

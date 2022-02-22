@@ -24,7 +24,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logType")
-    private final @Nullable String logType;
+        private final @Nullable String logType;
 
     public Optional<String> getLogType() {
         return this.logType == null ? Optional.empty() : Optional.ofNullable(this.logType);
@@ -35,7 +35,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,String> metadata;
+        private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -46,7 +46,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+        private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -57,7 +57,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceKey", required=true)
-    private final String workspaceKey;
+        private final String workspaceKey;
 
     public String getWorkspaceKey() {
         return this.workspaceKey;
@@ -68,7 +68,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable Map<String,String> workspaceResourceId;
+        private final @Nullable Map<String,String> workspaceResourceId;
 
     public Map<String,String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
@@ -147,7 +147,6 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsResponse build() {
             return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }

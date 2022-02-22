@@ -21,7 +21,7 @@ public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -59,7 +59,6 @@ public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public TelemetryResponse build() {
             return new TelemetryResponse(resourceName);
         }

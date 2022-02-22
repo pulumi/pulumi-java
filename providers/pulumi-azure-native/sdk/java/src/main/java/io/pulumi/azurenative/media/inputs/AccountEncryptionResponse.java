@@ -20,7 +20,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+        private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
@@ -31,7 +31,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -80,7 +80,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keyVaultProperties, type);
         }

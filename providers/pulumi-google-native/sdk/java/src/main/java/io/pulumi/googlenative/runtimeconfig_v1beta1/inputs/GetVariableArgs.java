@@ -15,21 +15,21 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
     @InputImport(name="configId", required=true)
-    private final String configId;
+      private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="variableId", required=true)
-    private final String variableId;
+      private final String variableId;
 
     public String getVariableId() {
         return this.variableId;
@@ -88,7 +88,6 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
             this.variableId = Objects.requireNonNull(variableId);
             return this;
         }
-
         public GetVariableArgs build() {
             return new GetVariableArgs(configId, project, variableId);
         }

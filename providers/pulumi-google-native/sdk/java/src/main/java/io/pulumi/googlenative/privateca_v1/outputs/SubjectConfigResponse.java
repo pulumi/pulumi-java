@@ -75,7 +75,6 @@ public final class SubjectConfigResponse {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }
-
         public SubjectConfigResponse build() {
             return new SubjectConfigResponse(subject, subjectAltName);
         }

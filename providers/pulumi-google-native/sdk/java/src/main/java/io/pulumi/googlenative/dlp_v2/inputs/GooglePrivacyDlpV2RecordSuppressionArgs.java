@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
+      private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
     public Input<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
             this.condition = Input.ofNullable(condition);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordSuppressionArgs build() {
             return new GooglePrivacyDlpV2RecordSuppressionArgs(condition);
         }

@@ -23,7 +23,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespacedGkeDeploymentTarget")
-    private final @Nullable Input<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+      private final @Nullable Input<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
     public Input<NamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget == null ? Input.empty() : this.namespacedGkeDeploymentTarget;
@@ -66,7 +66,6 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             this.namespacedGkeDeploymentTarget = Input.ofNullable(namespacedGkeDeploymentTarget);
             return this;
         }
-
         public GkeClusterConfigArgs build() {
             return new GkeClusterConfigArgs(namespacedGkeDeploymentTarget);
         }

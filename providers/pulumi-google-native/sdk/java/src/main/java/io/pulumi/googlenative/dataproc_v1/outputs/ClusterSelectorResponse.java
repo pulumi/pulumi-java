@@ -75,7 +75,6 @@ public final class ClusterSelectorResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ClusterSelectorResponse build() {
             return new ClusterSelectorResponse(clusterLabels, zone);
         }

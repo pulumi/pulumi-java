@@ -158,7 +158,6 @@ public final class X509CertificateDetailsResponse {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public X509CertificateDetailsResponse build() {
             return new X509CertificateDetailsResponse(expiryTime, issuer, publicKeyType, signatureAlgorithm, startTime, subject);
         }

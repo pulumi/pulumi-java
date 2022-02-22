@@ -54,7 +54,6 @@ public final class B2BPartnerContentResponse {
             this.businessIdentities = businessIdentities;
             return this;
         }
-
         public B2BPartnerContentResponse build() {
             return new B2BPartnerContentResponse(businessIdentities);
         }

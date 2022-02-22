@@ -161,7 +161,6 @@ public final class GetAccessPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(description, id, name, principalObjectId, roles, type);
         }

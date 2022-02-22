@@ -160,7 +160,6 @@ public final class ReprotectAgentDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReprotectAgentDetailsResponse build() {
             return new ReprotectAgentDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

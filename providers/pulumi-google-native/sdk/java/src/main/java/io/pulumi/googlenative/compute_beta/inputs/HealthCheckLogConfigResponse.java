@@ -21,7 +21,7 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
@@ -59,7 +59,6 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public HealthCheckLogConfigResponse build() {
             return new HealthCheckLogConfigResponse(enable);
         }

@@ -745,7 +745,6 @@ public final class GetVirtualMachineResult {
             this.zones = zones;
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(additionalCapabilities, availabilitySet, billingProfile, diagnosticsProfile, evictionPolicy, extendedLocation, extensionsTimeBudget, hardwareProfile, host, hostGroup, id, identity, instanceView, licenseType, location, name, networkProfile, osProfile, plan, platformFaultDomain, priority, provisioningState, proximityPlacementGroup, resources, scheduledEventsProfile, securityProfile, storageProfile, tags, type, userData, virtualMachineScaleSet, vmId, zones);
         }

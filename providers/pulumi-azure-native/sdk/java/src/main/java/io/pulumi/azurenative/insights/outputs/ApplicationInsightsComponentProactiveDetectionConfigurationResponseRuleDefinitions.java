@@ -203,7 +203,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
-
         public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
         }

@@ -139,7 +139,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }

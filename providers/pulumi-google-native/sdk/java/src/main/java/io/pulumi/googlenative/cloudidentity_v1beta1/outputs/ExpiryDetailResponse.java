@@ -52,7 +52,6 @@ public final class ExpiryDetailResponse {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public ExpiryDetailResponse build() {
             return new ExpiryDetailResponse(expireTime);
         }

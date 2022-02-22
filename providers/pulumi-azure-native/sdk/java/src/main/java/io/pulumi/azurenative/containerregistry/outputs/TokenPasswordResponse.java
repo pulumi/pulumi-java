@@ -118,7 +118,6 @@ public final class TokenPasswordResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenPasswordResponse build() {
             return new TokenPasswordResponse(creationTime, expiry, name, value);
         }

@@ -139,7 +139,6 @@ public final class GetTableResult {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(clusterStates, columnFamilies, granularity, name, restoreInfo);
         }

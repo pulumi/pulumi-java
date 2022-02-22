@@ -139,7 +139,6 @@ public final class BaseImageDependencyResponse {
             this.type = type;
             return this;
         }
-
         public BaseImageDependencyResponse build() {
             return new BaseImageDependencyResponse(digest, registry, repository, tag, type);
         }

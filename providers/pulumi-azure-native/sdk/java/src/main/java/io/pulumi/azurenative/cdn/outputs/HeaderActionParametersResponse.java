@@ -110,7 +110,6 @@ public final class HeaderActionParametersResponse {
             this.value = value;
             return this;
         }
-
         public HeaderActionParametersResponse build() {
             return new HeaderActionParametersResponse(headerAction, headerName, odataType, value);
         }

@@ -17,7 +17,7 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="datastoreName", required=true)
-    private final String datastoreName;
+        private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
@@ -28,7 +28,7 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetMachineLearningDatastoreArgs build() {
             return new GetMachineLearningDatastoreArgs(datastoreName, resourceGroupName, workspaceName);
         }

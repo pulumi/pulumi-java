@@ -141,7 +141,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public OpenShiftManagedClusterAADIdentityProviderResponse build() {
             return new OpenShiftManagedClusterAADIdentityProviderResponse(clientId, customerAdminGroupId, kind, secret, tenantId);
         }

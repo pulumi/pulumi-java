@@ -23,7 +23,7 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -66,7 +66,6 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.filter = Input.ofNullable(filter);
             return this;
         }
-
         public StreamingConfigArgs build() {
             return new StreamingConfigArgs(filter);
         }

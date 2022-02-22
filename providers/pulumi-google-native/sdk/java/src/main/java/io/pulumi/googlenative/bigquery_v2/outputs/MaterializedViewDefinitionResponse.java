@@ -117,7 +117,6 @@ public final class MaterializedViewDefinitionResponse {
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
         }
-
         public MaterializedViewDefinitionResponse build() {
             return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
         }

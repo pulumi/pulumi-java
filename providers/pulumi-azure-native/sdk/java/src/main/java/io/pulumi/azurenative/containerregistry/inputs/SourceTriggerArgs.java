@@ -28,7 +28,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRepository", required=true)
-    private final Input<SourcePropertiesArgs> sourceRepository;
+        private final Input<SourcePropertiesArgs> sourceRepository;
 
     public Input<SourcePropertiesArgs> getSourceRepository() {
         return this.sourceRepository;
@@ -50,7 +50,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTriggerEvents", required=true)
-    private final Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
+        private final Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
     public Input<List<Either<String,SourceTriggerEvent>>> getSourceTriggerEvents() {
         return this.sourceTriggerEvents;
@@ -61,7 +61,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,TriggerStatus>> status;
+        private final @Nullable Input<Either<String,TriggerStatus>> status;
 
     public Input<Either<String,TriggerStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -150,7 +150,6 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public SourceTriggerArgs build() {
             return new SourceTriggerArgs(name, sourceRepository, sourceTriggerEvents, status);
         }

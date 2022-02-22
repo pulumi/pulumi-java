@@ -25,7 +25,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientInfoDetails")
-    private final @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails;
+      private final @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails;
 
     public Input<List<ClientInfoDetailArgs>> getClientInfoDetails() {
         return this.clientInfoDetails == null ? Input.empty() : this.clientInfoDetails;
@@ -36,7 +36,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ClientInfoArgs build() {
             return new ClientInfoArgs(clientInfoDetails, name);
         }

@@ -26,7 +26,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupItemType")
-    private final @Nullable Input<Either<String,BackupItemType>> backupItemType;
+        private final @Nullable Input<Either<String,BackupItemType>> backupItemType;
 
     public Input<Either<String,BackupItemType>> getBackupItemType() {
         return this.backupItemType == null ? Input.empty() : this.backupItemType;
@@ -37,7 +37,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupItems")
-    private final @Nullable Input<List<String>> backupItems;
+        private final @Nullable Input<List<String>> backupItems;
 
     public Input<List<String>> getBackupItems() {
         return this.backupItems == null ? Input.empty() : this.backupItems;
@@ -48,7 +48,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable Input<String> lastBackupStatus;
+        private final @Nullable Input<String> lastBackupStatus;
 
     public Input<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -59,7 +59,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable Input<String> lastRefreshedAt;
+        private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
@@ -70,7 +70,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -174,7 +174,6 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
-
         public MabContainerExtendedInfoArgs build() {
             return new MabContainerExtendedInfoArgs(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
         }

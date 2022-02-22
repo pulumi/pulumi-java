@@ -23,7 +23,7 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+        private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -34,7 +34,7 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="providerSpecificDetails", required=true)
-    private final Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
+        private final Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
     public Input<VMwareCbtEnableMigrationInputArgs> getProviderSpecificDetails() {
         return this.providerSpecificDetails;
@@ -93,7 +93,6 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
             this.providerSpecificDetails = Input.of(Objects.requireNonNull(providerSpecificDetails));
             return this;
         }
-
         public EnableMigrationInputPropertiesArgs build() {
             return new EnableMigrationInputPropertiesArgs(policyId, providerSpecificDetails);
         }

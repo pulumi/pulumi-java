@@ -75,7 +75,6 @@ public final class CardinalityResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CardinalityResponse build() {
             return new CardinalityResponse(number, path);
         }

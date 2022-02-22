@@ -54,7 +54,6 @@ public final class LabelingJobInstructionsResponse {
             this.uri = uri;
             return this;
         }
-
         public LabelingJobInstructionsResponse build() {
             return new LabelingJobInstructionsResponse(uri);
         }

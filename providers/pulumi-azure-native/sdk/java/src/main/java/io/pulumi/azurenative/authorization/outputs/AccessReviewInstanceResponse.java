@@ -160,7 +160,6 @@ public final class AccessReviewInstanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessReviewInstanceResponse build() {
             return new AccessReviewInstanceResponse(endDateTime, id, name, startDateTime, status, type);
         }

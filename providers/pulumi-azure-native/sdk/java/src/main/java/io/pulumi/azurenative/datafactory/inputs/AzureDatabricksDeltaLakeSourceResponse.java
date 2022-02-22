@@ -25,7 +25,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -36,7 +36,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="exportSettings")
-    private final @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
+        private final @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
 
     public Optional<AzureDatabricksDeltaLakeExportCommandResponse> getExportSettings() {
         return this.exportSettings == null ? Optional.empty() : Optional.ofNullable(this.exportSettings);
@@ -47,7 +47,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -58,7 +58,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Object query;
+        private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -69,7 +69,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -80,7 +80,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -92,7 +92,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -191,7 +191,6 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeSourceResponse build() {
             return new AzureDatabricksDeltaLakeSourceResponse(disableMetricsCollection, exportSettings, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

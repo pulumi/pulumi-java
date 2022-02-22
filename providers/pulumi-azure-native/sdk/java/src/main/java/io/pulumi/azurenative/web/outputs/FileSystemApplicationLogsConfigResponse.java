@@ -54,7 +54,6 @@ public final class FileSystemApplicationLogsConfigResponse {
             this.level = level;
             return this;
         }
-
         public FileSystemApplicationLogsConfigResponse build() {
             return new FileSystemApplicationLogsConfigResponse(level);
         }

@@ -119,7 +119,6 @@ public final class EncryptionConfigurationResponse {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(identity, keyName, keyVersion, vaultBaseUrl);
         }

@@ -74,7 +74,6 @@ public final class SecretManagerSecretResponse {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public SecretManagerSecretResponse build() {
             return new SecretManagerSecretResponse(env, versionName);
         }

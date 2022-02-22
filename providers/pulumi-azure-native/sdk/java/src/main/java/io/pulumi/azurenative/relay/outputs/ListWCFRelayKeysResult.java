@@ -139,7 +139,6 @@ public final class ListWCFRelayKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListWCFRelayKeysResult build() {
             return new ListWCFRelayKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

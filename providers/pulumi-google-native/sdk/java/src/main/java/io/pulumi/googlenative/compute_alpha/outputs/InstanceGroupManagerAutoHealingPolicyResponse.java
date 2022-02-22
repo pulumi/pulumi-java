@@ -132,7 +132,6 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
         }

@@ -140,7 +140,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse {
             this.targetSetting = targetSetting;
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }

@@ -95,7 +95,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
             this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(filter, medium, trainingConversationsCount);
         }

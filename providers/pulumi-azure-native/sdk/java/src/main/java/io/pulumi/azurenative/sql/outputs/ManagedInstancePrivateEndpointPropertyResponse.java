@@ -54,7 +54,6 @@ public final class ManagedInstancePrivateEndpointPropertyResponse {
             this.id = id;
             return this;
         }
-
         public ManagedInstancePrivateEndpointPropertyResponse build() {
             return new ManagedInstancePrivateEndpointPropertyResponse(id);
         }

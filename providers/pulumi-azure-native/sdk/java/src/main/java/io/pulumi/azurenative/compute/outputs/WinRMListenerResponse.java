@@ -76,7 +76,6 @@ public final class WinRMListenerResponse {
             this.protocol = protocol;
             return this;
         }
-
         public WinRMListenerResponse build() {
             return new WinRMListenerResponse(certificateUrl, protocol);
         }

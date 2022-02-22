@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Integer duration;
+      private final Integer duration;
 
     public Integer getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="periodType", required=true)
-    private final String periodType;
+      private final String periodType;
 
     public String getPeriodType() {
         return this.periodType;
@@ -82,7 +82,6 @@ public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resource
             this.periodType = Objects.requireNonNull(periodType);
             return this;
         }
-
         public GoogleCloudChannelV1PeriodResponse build() {
             return new GoogleCloudChannelV1PeriodResponse(duration, periodType);
         }

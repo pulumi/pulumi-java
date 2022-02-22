@@ -52,7 +52,6 @@ public final class HttpLoadBalancingResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HttpLoadBalancingResponse build() {
             return new HttpLoadBalancingResponse(disabled);
         }

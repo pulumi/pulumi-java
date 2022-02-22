@@ -13,14 +13,14 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
     public static final SecurityPolicyAdvancedOptionsConfigResponse Empty = new SecurityPolicyAdvancedOptionsConfigResponse();
 
     @InputImport(name="jsonParsing", required=true)
-    private final String jsonParsing;
+      private final String jsonParsing;
 
     public String getJsonParsing() {
         return this.jsonParsing;
     }
 
     @InputImport(name="logLevel", required=true)
-    private final String logLevel;
+      private final String logLevel;
 
     public String getLogLevel() {
         return this.logLevel;
@@ -69,7 +69,6 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public SecurityPolicyAdvancedOptionsConfigResponse build() {
             return new SecurityPolicyAdvancedOptionsConfigResponse(jsonParsing, logLevel);
         }

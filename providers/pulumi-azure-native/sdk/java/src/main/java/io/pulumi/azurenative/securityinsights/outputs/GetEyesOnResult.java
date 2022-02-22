@@ -185,7 +185,6 @@ public final class GetEyesOnResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEyesOnResult build() {
             return new GetEyesOnResult(etag, id, isEnabled, kind, name, systemData, type);
         }

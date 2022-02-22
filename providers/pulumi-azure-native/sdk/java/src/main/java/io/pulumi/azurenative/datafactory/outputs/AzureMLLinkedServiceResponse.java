@@ -317,7 +317,6 @@ public final class AzureMLLinkedServiceResponse {
             this.updateResourceEndpoint = updateResourceEndpoint;
             return this;
         }
-
         public AzureMLLinkedServiceResponse build() {
             return new AzureMLLinkedServiceResponse(annotations, apiKey, authentication, connectVia, description, encryptedCredential, mlEndpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type, updateResourceEndpoint);
         }

@@ -120,7 +120,6 @@ public final class SizeInfoResponse {
             this.price = price;
             return this;
         }
-
         public SizeInfoResponse build() {
             return new SizeInfoResponse(computeSize, memory, numberOfCores, price);
         }

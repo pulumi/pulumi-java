@@ -138,7 +138,6 @@ public final class BasicYarnAutoscalingConfigResponse {
             this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
             return this;
         }
-
         public BasicYarnAutoscalingConfigResponse build() {
             return new BasicYarnAutoscalingConfigResponse(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

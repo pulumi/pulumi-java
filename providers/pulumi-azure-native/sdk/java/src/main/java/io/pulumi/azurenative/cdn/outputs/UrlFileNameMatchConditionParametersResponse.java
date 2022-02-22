@@ -133,7 +133,6 @@ public final class UrlFileNameMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public UrlFileNameMatchConditionParametersResponse build() {
             return new UrlFileNameMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

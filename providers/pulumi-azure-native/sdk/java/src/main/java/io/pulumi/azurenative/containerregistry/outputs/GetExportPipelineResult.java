@@ -227,7 +227,6 @@ public final class GetExportPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExportPipelineResult build() {
             return new GetExportPipelineResult(id, identity, location, name, options, provisioningState, systemData, target, type);
         }

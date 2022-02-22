@@ -76,7 +76,6 @@ public final class EndpointResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(endpointUrl, type);
         }

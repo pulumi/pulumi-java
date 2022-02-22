@@ -54,7 +54,6 @@ public final class Office365PolicyPropertiesResponse {
             this.breakOutCategories = breakOutCategories;
             return this;
         }
-
         public Office365PolicyPropertiesResponse build() {
             return new Office365PolicyPropertiesResponse(breakOutCategories);
         }

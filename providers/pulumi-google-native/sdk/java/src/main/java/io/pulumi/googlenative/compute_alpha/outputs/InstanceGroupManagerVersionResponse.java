@@ -96,7 +96,6 @@ public final class InstanceGroupManagerVersionResponse {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }
-
         public InstanceGroupManagerVersionResponse build() {
             return new InstanceGroupManagerVersionResponse(instanceTemplate, name, targetSize);
         }

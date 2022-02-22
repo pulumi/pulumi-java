@@ -54,7 +54,6 @@ public final class SubnetDetailsResponse {
             this.id = id;
             return this;
         }
-
         public SubnetDetailsResponse build() {
             return new SubnetDetailsResponse(id);
         }

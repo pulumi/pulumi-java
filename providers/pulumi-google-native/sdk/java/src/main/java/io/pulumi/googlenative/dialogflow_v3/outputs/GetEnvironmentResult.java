@@ -161,7 +161,6 @@ public final class GetEnvironmentResult {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(description, displayName, name, testCasesConfig, updateTime, versionConfigs);
         }

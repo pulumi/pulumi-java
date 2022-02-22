@@ -394,7 +394,6 @@ public final class GetWebAppInstanceFunctionSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppInstanceFunctionSlotResult build() {
             return new GetWebAppInstanceFunctionSlotResult(config, configHref, files, functionAppId, href, id, invokeUrlTemplate, isDisabled, kind, language, name, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref, type);
         }

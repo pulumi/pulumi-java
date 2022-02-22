@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
      * 
      */
     @InputImport(name="allEffective", required=true)
-    private final Boolean allEffective;
+      private final Boolean allEffective;
 
     public Boolean getAllEffective() {
         return this.allEffective;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
             this.allEffective = Objects.requireNonNull(allEffective);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse build() {
             return new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(allEffective);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<Integer> height;
+      private final @Nullable Input<Integer> height;
 
     public Input<Integer> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<Integer> width;
+      private final @Nullable Input<Integer> width;
 
     public Input<Integer> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public GoogleCloudRetailV2alphaImageArgs build() {
             return new GoogleCloudRetailV2alphaImageArgs(height, uri, width);
         }

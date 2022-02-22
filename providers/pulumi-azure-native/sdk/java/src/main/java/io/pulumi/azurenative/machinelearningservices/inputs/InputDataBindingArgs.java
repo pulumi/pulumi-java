@@ -21,7 +21,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataId")
-    private final @Nullable Input<String> dataId;
+        private final @Nullable Input<String> dataId;
 
     public Input<String> getDataId() {
         return this.dataId == null ? Input.empty() : this.dataId;
@@ -32,7 +32,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,DataBindingMode>> mode;
+        private final @Nullable Input<Either<String,DataBindingMode>> mode;
 
     public Input<Either<String,DataBindingMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -43,7 +43,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pathOnCompute")
-    private final @Nullable Input<String> pathOnCompute;
+        private final @Nullable Input<String> pathOnCompute;
 
     public Input<String> getPathOnCompute() {
         return this.pathOnCompute == null ? Input.empty() : this.pathOnCompute;
@@ -117,7 +117,6 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
             this.pathOnCompute = Input.ofNullable(pathOnCompute);
             return this;
         }
-
         public InputDataBindingArgs build() {
             return new InputDataBindingArgs(dataId, mode, pathOnCompute);
         }

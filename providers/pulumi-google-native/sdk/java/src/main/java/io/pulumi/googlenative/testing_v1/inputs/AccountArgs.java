@@ -23,7 +23,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAuto")
-    private final @Nullable Input<GoogleAutoArgs> googleAuto;
+      private final @Nullable Input<GoogleAutoArgs> googleAuto;
 
     public Input<GoogleAutoArgs> getGoogleAuto() {
         return this.googleAuto == null ? Input.empty() : this.googleAuto;
@@ -66,7 +66,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.googleAuto = Input.ofNullable(googleAuto);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(googleAuto);
         }

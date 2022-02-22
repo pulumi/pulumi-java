@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * 
      */
     @InputImport(name="enableSentimentAnalysis", required=true)
-    private final Boolean enableSentimentAnalysis;
+      private final Boolean enableSentimentAnalysis;
 
     public Boolean getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * 
      */
     @InputImport(name="injectedParameters", required=true)
-    private final Map<String,String> injectedParameters;
+      private final Map<String,String> injectedParameters;
 
     public Map<String,String> getInjectedParameters() {
         return this.injectedParameters;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * 
      */
     @InputImport(name="input", required=true)
-    private final GoogleCloudDialogflowCxV3beta1QueryInputResponse input;
+      private final GoogleCloudDialogflowCxV3beta1QueryInputResponse input;
 
     public GoogleCloudDialogflowCxV3beta1QueryInputResponse getInput() {
         return this.input;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * 
      */
     @InputImport(name="isWebhookEnabled", required=true)
-    private final Boolean isWebhookEnabled;
+      private final Boolean isWebhookEnabled;
 
     public Boolean getIsWebhookEnabled() {
         return this.isWebhookEnabled;
@@ -126,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }

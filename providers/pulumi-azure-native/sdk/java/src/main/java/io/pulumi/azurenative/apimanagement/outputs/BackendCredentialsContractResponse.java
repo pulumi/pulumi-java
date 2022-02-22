@@ -142,7 +142,6 @@ public final class BackendCredentialsContractResponse {
             this.query = query;
             return this;
         }
-
         public BackendCredentialsContractResponse build() {
             return new BackendCredentialsContractResponse(authorization, certificate, certificateIds, header, query);
         }

@@ -77,7 +77,6 @@ public final class AutoPausePropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public AutoPausePropertiesResponse build() {
             return new AutoPausePropertiesResponse(delayInMinutes, enabled);
         }

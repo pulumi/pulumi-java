@@ -76,7 +76,6 @@ public final class SourceConfigurationResponse {
             this.value = value;
             return this;
         }
-
         public SourceConfigurationResponse build() {
             return new SourceConfigurationResponse(name, value);
         }

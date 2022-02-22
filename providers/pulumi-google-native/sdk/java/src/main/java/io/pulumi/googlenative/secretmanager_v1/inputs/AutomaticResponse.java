@@ -21,7 +21,7 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption", required=true)
-    private final CustomerManagedEncryptionResponse customerManagedEncryption;
+      private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
         return this.customerManagedEncryption;
@@ -59,7 +59,6 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse(customerManagedEncryption);
         }

@@ -160,7 +160,6 @@ public final class PushInstallerDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PushInstallerDetailsResponse build() {
             return new PushInstallerDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

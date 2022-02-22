@@ -112,7 +112,6 @@ public final class DatadogHostResponse {
             this.name = name;
             return this;
         }
-
         public DatadogHostResponse build() {
             return new DatadogHostResponse(aliases, apps, meta, name);
         }

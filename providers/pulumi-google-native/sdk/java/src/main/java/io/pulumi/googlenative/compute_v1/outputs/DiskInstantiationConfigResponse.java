@@ -117,7 +117,6 @@ public final class DiskInstantiationConfigResponse {
             this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
             return this;
         }
-
         public DiskInstantiationConfigResponse build() {
             return new DiskInstantiationConfigResponse(autoDelete, customImage, deviceName, instantiateFrom);
         }

@@ -182,7 +182,6 @@ public final class GetFeedResult {
             this.relationshipTypes = Objects.requireNonNull(relationshipTypes);
             return this;
         }
-
         public GetFeedResult build() {
             return new GetFeedResult(assetNames, assetTypes, condition, contentType, feedOutputConfig, name, relationshipTypes);
         }

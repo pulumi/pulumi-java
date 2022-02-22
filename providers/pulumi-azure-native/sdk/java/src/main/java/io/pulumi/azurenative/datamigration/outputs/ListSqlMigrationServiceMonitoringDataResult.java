@@ -76,7 +76,6 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ListSqlMigrationServiceMonitoringDataResult build() {
             return new ListSqlMigrationServiceMonitoringDataResult(name, nodes);
         }

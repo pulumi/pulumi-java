@@ -74,7 +74,6 @@ public final class CacheActiveDirectorySettingsResponseCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CacheActiveDirectorySettingsResponseCredentials build() {
             return new CacheActiveDirectorySettingsResponseCredentials(password, username);
         }

@@ -24,7 +24,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endTimestamp")
-    private final @Nullable Input<Double> endTimestamp;
+        private final @Nullable Input<Double> endTimestamp;
 
     public Input<Double> getEndTimestamp() {
         return this.endTimestamp == null ? Input.empty() : this.endTimestamp;
@@ -35,7 +35,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forceEndTimestamp")
-    private final @Nullable Input<Boolean> forceEndTimestamp;
+        private final @Nullable Input<Boolean> forceEndTimestamp;
 
     public Input<Boolean> getForceEndTimestamp() {
         return this.forceEndTimestamp == null ? Input.empty() : this.forceEndTimestamp;
@@ -46,7 +46,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="liveBackoffDuration")
-    private final @Nullable Input<Double> liveBackoffDuration;
+        private final @Nullable Input<Double> liveBackoffDuration;
 
     public Input<Double> getLiveBackoffDuration() {
         return this.liveBackoffDuration == null ? Input.empty() : this.liveBackoffDuration;
@@ -57,7 +57,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="presentationWindowDuration")
-    private final @Nullable Input<Double> presentationWindowDuration;
+        private final @Nullable Input<Double> presentationWindowDuration;
 
     public Input<Double> getPresentationWindowDuration() {
         return this.presentationWindowDuration == null ? Input.empty() : this.presentationWindowDuration;
@@ -68,7 +68,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startTimestamp")
-    private final @Nullable Input<Double> startTimestamp;
+        private final @Nullable Input<Double> startTimestamp;
 
     public Input<Double> getStartTimestamp() {
         return this.startTimestamp == null ? Input.empty() : this.startTimestamp;
@@ -79,7 +79,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timescale")
-    private final @Nullable Input<Double> timescale;
+        private final @Nullable Input<Double> timescale;
 
     public Input<Double> getTimescale() {
         return this.timescale == null ? Input.empty() : this.timescale;
@@ -198,7 +198,6 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
             this.timescale = Input.ofNullable(timescale);
             return this;
         }
-
         public PresentationTimeRangeArgs build() {
             return new PresentationTimeRangeArgs(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
         }

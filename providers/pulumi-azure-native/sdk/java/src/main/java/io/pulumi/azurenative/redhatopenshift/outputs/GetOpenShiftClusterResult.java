@@ -338,7 +338,6 @@ public final class GetOpenShiftClusterResult {
             this.workerProfiles = workerProfiles;
             return this;
         }
-
         public GetOpenShiftClusterResult build() {
             return new GetOpenShiftClusterResult(apiserverProfile, clusterProfile, consoleProfile, id, ingressProfiles, location, masterProfile, name, networkProfile, provisioningState, servicePrincipalProfile, tags, type, workerProfiles);
         }

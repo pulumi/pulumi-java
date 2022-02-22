@@ -14,7 +14,7 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
     public static final SinkConfigurationArgs Empty = new SinkConfigurationArgs();
 
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -57,7 +57,6 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public SinkConfigurationArgs build() {
             return new SinkConfigurationArgs(kind);
         }

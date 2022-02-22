@@ -74,7 +74,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }

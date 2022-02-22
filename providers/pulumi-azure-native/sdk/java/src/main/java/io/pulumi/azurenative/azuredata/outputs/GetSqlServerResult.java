@@ -203,7 +203,6 @@ public final class GetSqlServerResult {
             this.version = version;
             return this;
         }
-
         public GetSqlServerResult build() {
             return new GetSqlServerResult(cores, edition, id, name, propertyBag, registrationID, type, version);
         }

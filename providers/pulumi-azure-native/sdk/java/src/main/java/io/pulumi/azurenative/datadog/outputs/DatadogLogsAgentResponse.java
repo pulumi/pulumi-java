@@ -54,7 +54,6 @@ public final class DatadogLogsAgentResponse {
             this.transport = transport;
             return this;
         }
-
         public DatadogLogsAgentResponse build() {
             return new DatadogLogsAgentResponse(transport);
         }

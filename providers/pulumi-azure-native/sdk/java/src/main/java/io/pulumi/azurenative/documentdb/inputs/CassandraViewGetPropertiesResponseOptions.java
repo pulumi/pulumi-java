@@ -20,7 +20,7 @@ public final class CassandraViewGetPropertiesResponseOptions extends io.pulumi.r
      * 
      */
     @InputImport(name="autoscaleSettings")
-    private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
+        private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
     public Optional<AutoscaleSettingsResponse> getAutoscaleSettings() {
         return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
@@ -31,7 +31,7 @@ public final class CassandraViewGetPropertiesResponseOptions extends io.pulumi.r
      * 
      */
     @InputImport(name="throughput")
-    private final @Nullable Integer throughput;
+        private final @Nullable Integer throughput;
 
     public Optional<Integer> getThroughput() {
         return this.throughput == null ? Optional.empty() : Optional.ofNullable(this.throughput);
@@ -80,7 +80,6 @@ public final class CassandraViewGetPropertiesResponseOptions extends io.pulumi.r
             this.throughput = throughput;
             return this;
         }
-
         public CassandraViewGetPropertiesResponseOptions build() {
             return new CassandraViewGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

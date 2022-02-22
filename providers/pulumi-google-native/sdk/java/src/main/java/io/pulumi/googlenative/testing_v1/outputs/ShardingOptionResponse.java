@@ -75,7 +75,6 @@ public final class ShardingOptionResponse {
             this.uniformSharding = Objects.requireNonNull(uniformSharding);
             return this;
         }
-
         public ShardingOptionResponse build() {
             return new ShardingOptionResponse(manualSharding, uniformSharding);
         }

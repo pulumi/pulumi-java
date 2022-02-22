@@ -22,7 +22,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="aggregationWindowLength", required=true)
-    private final String aggregationWindowLength;
+      private final String aggregationWindowLength;
 
     public String getAggregationWindowLength() {
         return this.aggregationWindowLength;
@@ -33,7 +33,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="targetUtilization", required=true)
-    private final Double targetUtilization;
+      private final Double targetUtilization;
 
     public Double getTargetUtilization() {
         return this.targetUtilization;
@@ -82,7 +82,6 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CpuUtilizationResponse build() {
             return new CpuUtilizationResponse(aggregationWindowLength, targetUtilization);
         }

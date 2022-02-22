@@ -62,7 +62,6 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
             this.preflightSupported = preflightSupported;
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions build() {
             return new ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
         }

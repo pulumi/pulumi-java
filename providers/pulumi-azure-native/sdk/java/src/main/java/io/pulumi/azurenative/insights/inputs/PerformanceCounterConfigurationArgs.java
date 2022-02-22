@@ -15,21 +15,21 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
     public static final PerformanceCounterConfigurationArgs Empty = new PerformanceCounterConfigurationArgs();
 
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="samplingPeriod", required=true)
-    private final Input<String> samplingPeriod;
+        private final Input<String> samplingPeriod;
 
     public Input<String> getSamplingPeriod() {
         return this.samplingPeriod;
@@ -103,7 +103,6 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
             this.samplingPeriod = Input.of(Objects.requireNonNull(samplingPeriod));
             return this;
         }
-
         public PerformanceCounterConfigurationArgs build() {
             return new PerformanceCounterConfigurationArgs(instance, name, samplingPeriod);
         }

@@ -24,7 +24,7 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,MdeIntegration>> status;
+        private final Input<Either<String,MdeIntegration>> status;
 
     public Input<Either<String,MdeIntegration>> getStatus() {
         return this.status;
@@ -67,7 +67,6 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public DefenderSettingsPropertiesMdeIntegrationArgs build() {
             return new DefenderSettingsPropertiesMdeIntegrationArgs(status);
         }

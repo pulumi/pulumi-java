@@ -204,7 +204,6 @@ public final class GetPipelineResult {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(description, docker, inputParameters, name, outputParameters, pipelineId, project, resources);
         }

@@ -97,7 +97,6 @@ public final class GetResourcefileResult {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
-
         public GetResourcefileResult build() {
             return new GetResourcefileResult(contentType, data, extensions);
         }

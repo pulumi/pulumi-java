@@ -21,7 +21,7 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -32,14 +32,14 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -50,28 +50,28 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Input<List<Map<String,String>>> extensions;
 
     public Input<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -205,7 +205,6 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ResourcefileArgs build() {
             return new ResourcefileArgs(contentType, data, environmentId, extensions, name, organizationId, type);
         }

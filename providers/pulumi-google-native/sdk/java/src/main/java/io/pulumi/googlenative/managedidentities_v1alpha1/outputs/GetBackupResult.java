@@ -180,7 +180,6 @@ public final class GetBackupResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, labels, name, state, statusMessage, type, updateTime);
         }

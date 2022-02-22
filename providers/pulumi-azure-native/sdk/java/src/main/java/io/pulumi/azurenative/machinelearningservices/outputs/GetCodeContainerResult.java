@@ -139,7 +139,6 @@ public final class GetCodeContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCodeContainerResult build() {
             return new GetCodeContainerResult(id, name, properties, systemData, type);
         }

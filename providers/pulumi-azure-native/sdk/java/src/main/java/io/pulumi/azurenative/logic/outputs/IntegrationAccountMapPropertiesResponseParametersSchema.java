@@ -54,7 +54,6 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
             this.ref = ref;
             return this;
         }
-
         public IntegrationAccountMapPropertiesResponseParametersSchema build() {
             return new IntegrationAccountMapPropertiesResponseParametersSchema(ref);
         }

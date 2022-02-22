@@ -54,7 +54,6 @@ public final class PolicyParametersResponse {
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
-
         public PolicyParametersResponse build() {
             return new PolicyParametersResponse(dataStoreParametersList);
         }

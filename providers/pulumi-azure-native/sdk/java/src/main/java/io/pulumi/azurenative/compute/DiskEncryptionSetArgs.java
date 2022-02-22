@@ -25,7 +25,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="activeKey")
-    private final @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey;
+        private final @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey;
 
     public Input<KeyForDiskEncryptionSetArgs> getActiveKey() {
         return this.activeKey == null ? Input.empty() : this.activeKey;
@@ -36,7 +36,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="diskEncryptionSetName")
-    private final @Nullable Input<String> diskEncryptionSetName;
+        private final @Nullable Input<String> diskEncryptionSetName;
 
     public Input<String> getDiskEncryptionSetName() {
         return this.diskEncryptionSetName == null ? Input.empty() : this.diskEncryptionSetName;
@@ -47,7 +47,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptionType")
-    private final @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType;
+        private final @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType;
 
     public Input<Either<String,DiskEncryptionSetType>> getEncryptionType() {
         return this.encryptionType == null ? Input.empty() : this.encryptionType;
@@ -58,7 +58,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EncryptionSetIdentityArgs> identity;
+        private final @Nullable Input<EncryptionSetIdentityArgs> identity;
 
     public Input<EncryptionSetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -69,7 +69,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -80,7 +80,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rotationToLatestKeyVersionEnabled")
-    private final @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled;
+        private final @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled;
 
     public Input<Boolean> getRotationToLatestKeyVersionEnabled() {
         return this.rotationToLatestKeyVersionEnabled == null ? Input.empty() : this.rotationToLatestKeyVersionEnabled;
@@ -102,7 +102,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -251,7 +251,6 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DiskEncryptionSetArgs build() {
             return new DiskEncryptionSetArgs(activeKey, diskEncryptionSetName, encryptionType, identity, location, resourceGroupName, rotationToLatestKeyVersionEnabled, tags);
         }

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="buckets")
-    private final @Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets;
+      private final @Nullable Input<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
     public Input<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {
         return this.buckets == null ? Input.empty() : this.buckets;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
             this.buckets = Input.ofNullable(buckets);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketingConfigArgs build() {
             return new GooglePrivacyDlpV2BucketingConfigArgs(buckets);
         }

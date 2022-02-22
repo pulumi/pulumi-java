@@ -23,7 +23,7 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable String secretRef;
+        private final @Nullable String secretRef;
 
     public Optional<String> getSecretRef() {
         return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
@@ -45,7 +45,7 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -104,7 +104,6 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public DaprMetadataResponse build() {
             return new DaprMetadataResponse(name, secretRef, value);
         }

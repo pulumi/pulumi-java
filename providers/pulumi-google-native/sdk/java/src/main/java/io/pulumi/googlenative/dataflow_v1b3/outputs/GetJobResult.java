@@ -523,7 +523,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type);
         }

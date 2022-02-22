@@ -97,7 +97,6 @@ public final class GoogleDomainsDnsResponse {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public GoogleDomainsDnsResponse build() {
             return new GoogleDomainsDnsResponse(dsRecords, dsState, nameServers);
         }

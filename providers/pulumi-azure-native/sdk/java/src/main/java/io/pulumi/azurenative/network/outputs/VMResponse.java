@@ -140,7 +140,6 @@ public final class VMResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VMResponse build() {
             return new VMResponse(id, location, name, tags, type);
         }

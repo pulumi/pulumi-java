@@ -27,7 +27,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendPort", required=true)
-    private final Input<Integer> backendPort;
+        private final Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort;
@@ -38,7 +38,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendPort", required=true)
-    private final Input<Integer> frontendPort;
+        private final Input<Integer> frontendPort;
 
     public Input<Integer> getFrontendPort() {
         return this.frontendPort;
@@ -49,7 +49,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probeProtocol", required=true)
-    private final Input<Either<String,ProbeProtocol>> probeProtocol;
+        private final Input<Either<String,ProbeProtocol>> probeProtocol;
 
     public Input<Either<String,ProbeProtocol>> getProbeProtocol() {
         return this.probeProtocol;
@@ -60,7 +60,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probeRequestPath")
-    private final @Nullable Input<String> probeRequestPath;
+        private final @Nullable Input<String> probeRequestPath;
 
     public Input<String> getProbeRequestPath() {
         return this.probeRequestPath == null ? Input.empty() : this.probeRequestPath;
@@ -71,7 +71,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,Protocol>> protocol;
+        private final Input<Either<String,Protocol>> protocol;
 
     public Input<Either<String,Protocol>> getProtocol() {
         return this.protocol;
@@ -175,7 +175,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public LoadBalancingRuleArgs build() {
             return new LoadBalancingRuleArgs(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }

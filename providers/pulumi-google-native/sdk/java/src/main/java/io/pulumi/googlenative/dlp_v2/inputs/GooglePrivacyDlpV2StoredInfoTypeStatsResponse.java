@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulu
      * 
      */
     @InputImport(name="largeCustomDictionary", required=true)
-    private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
+      private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse getLargeCustomDictionary() {
         return this.largeCustomDictionary;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulu
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(largeCustomDictionary);
         }

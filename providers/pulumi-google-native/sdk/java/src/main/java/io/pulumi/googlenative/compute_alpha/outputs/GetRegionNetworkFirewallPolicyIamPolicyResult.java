@@ -142,7 +142,6 @@ public final class GetRegionNetworkFirewallPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionNetworkFirewallPolicyIamPolicyResult build() {
             return new GetRegionNetworkFirewallPolicyIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

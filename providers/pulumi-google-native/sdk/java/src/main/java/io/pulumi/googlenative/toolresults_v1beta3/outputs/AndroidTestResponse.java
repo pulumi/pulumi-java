@@ -141,7 +141,6 @@ public final class AndroidTestResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public AndroidTestResponse build() {
             return new AndroidTestResponse(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
         }

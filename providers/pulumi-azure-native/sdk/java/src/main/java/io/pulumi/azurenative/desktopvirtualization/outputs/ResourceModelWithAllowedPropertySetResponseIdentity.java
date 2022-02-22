@@ -97,7 +97,6 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity {
             this.type = type;
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetResponseIdentity build() {
             return new ResourceModelWithAllowedPropertySetResponseIdentity(principalId, tenantId, type);
         }

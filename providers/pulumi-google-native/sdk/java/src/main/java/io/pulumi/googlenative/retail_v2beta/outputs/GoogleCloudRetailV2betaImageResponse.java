@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2betaImageResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRetailV2betaImageResponse build() {
             return new GoogleCloudRetailV2betaImageResponse(height, uri, width);
         }

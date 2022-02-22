@@ -21,7 +21,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -32,7 +32,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recurrence", required=true)
-    private final String recurrence;
+      private final String recurrence;
 
     public String getRecurrence() {
         return this.recurrence;
@@ -43,7 +43,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -102,7 +102,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(endTime, recurrence, startTime);
         }

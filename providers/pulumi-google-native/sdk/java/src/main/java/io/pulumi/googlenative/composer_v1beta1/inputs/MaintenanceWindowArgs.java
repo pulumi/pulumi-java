@@ -22,7 +22,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final Input<String> endTime;
+      private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recurrence", required=true)
-    private final Input<String> recurrence;
+      private final Input<String> recurrence;
 
     public Input<String> getRecurrence() {
         return this.recurrence;
@@ -44,7 +44,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -118,7 +118,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(endTime, recurrence, startTime);
         }

@@ -118,7 +118,6 @@ public final class DestinationResponse {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }

@@ -75,7 +75,6 @@ public final class WorkspaceCustomObjectParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomObjectParameterResponse build() {
             return new WorkspaceCustomObjectParameterResponse(type, value);
         }

@@ -265,7 +265,6 @@ public final class GetServerAdvisorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAdvisorResult build() {
             return new GetServerAdvisorResult(advisorStatus, autoExecuteStatus, autoExecuteStatusInheritedFrom, id, kind, lastChecked, location, name, recommendationsStatus, recommendedActions, type);
         }

@@ -76,7 +76,6 @@ public final class ReportConfigSortingResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ReportConfigSortingResponse build() {
             return new ReportConfigSortingResponse(direction, name);
         }

@@ -266,7 +266,6 @@ public final class GetGalleryApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryApplicationResult build() {
             return new GetGalleryApplicationResult(description, endOfLifeDate, eula, id, location, name, privacyStatementUri, releaseNoteUri, supportedOSType, tags, type);
         }

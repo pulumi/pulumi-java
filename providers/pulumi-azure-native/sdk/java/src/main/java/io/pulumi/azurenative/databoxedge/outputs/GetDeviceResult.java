@@ -589,7 +589,6 @@ public final class GetDeviceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(configuredRoleTypes, culture, dataBoxEdgeDeviceStatus, description, deviceHcsVersion, deviceLocalCapacity, deviceModel, deviceSoftwareVersion, deviceType, edgeProfile, etag, friendlyName, id, identity, kind, location, modelDescription, name, nodeCount, resourceMoveDetails, serialNumber, sku, systemData, tags, timeZone, type);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs extend
      * 
      */
     @InputImport(name="enableSpeechAdaptation")
-    private final @Nullable Input<Boolean> enableSpeechAdaptation;
+      private final @Nullable Input<Boolean> enableSpeechAdaptation;
 
     public Input<Boolean> getEnableSpeechAdaptation() {
         return this.enableSpeechAdaptation == null ? Input.empty() : this.enableSpeechAdaptation;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs extend
             this.enableSpeechAdaptation = Input.ofNullable(enableSpeechAdaptation);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs(enableSpeechAdaptation);
         }

@@ -375,7 +375,6 @@ public final class GetHostResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetHostResult build() {
             return new GetHostResult(customResourceName, extendedLocation, id, inventoryItemId, kind, location, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

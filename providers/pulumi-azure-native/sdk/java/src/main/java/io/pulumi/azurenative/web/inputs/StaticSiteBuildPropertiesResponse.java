@@ -24,7 +24,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiBuildCommand")
-    private final @Nullable String apiBuildCommand;
+        private final @Nullable String apiBuildCommand;
 
     public Optional<String> getApiBuildCommand() {
         return this.apiBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.apiBuildCommand);
@@ -35,7 +35,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiLocation")
-    private final @Nullable String apiLocation;
+        private final @Nullable String apiLocation;
 
     public Optional<String> getApiLocation() {
         return this.apiLocation == null ? Optional.empty() : Optional.ofNullable(this.apiLocation);
@@ -46,7 +46,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="appArtifactLocation")
-    private final @Nullable String appArtifactLocation;
+        private final @Nullable String appArtifactLocation;
 
     public Optional<String> getAppArtifactLocation() {
         return this.appArtifactLocation == null ? Optional.empty() : Optional.ofNullable(this.appArtifactLocation);
@@ -57,7 +57,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="appBuildCommand")
-    private final @Nullable String appBuildCommand;
+        private final @Nullable String appBuildCommand;
 
     public Optional<String> getAppBuildCommand() {
         return this.appBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.appBuildCommand);
@@ -68,7 +68,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="appLocation")
-    private final @Nullable String appLocation;
+        private final @Nullable String appLocation;
 
     public Optional<String> getAppLocation() {
         return this.appLocation == null ? Optional.empty() : Optional.ofNullable(this.appLocation);
@@ -79,7 +79,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="githubActionSecretNameOverride")
-    private final @Nullable String githubActionSecretNameOverride;
+        private final @Nullable String githubActionSecretNameOverride;
 
     public Optional<String> getGithubActionSecretNameOverride() {
         return this.githubActionSecretNameOverride == null ? Optional.empty() : Optional.ofNullable(this.githubActionSecretNameOverride);
@@ -90,7 +90,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="outputLocation")
-    private final @Nullable String outputLocation;
+        private final @Nullable String outputLocation;
 
     public Optional<String> getOutputLocation() {
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
@@ -101,7 +101,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="skipGithubActionWorkflowGeneration")
-    private final @Nullable Boolean skipGithubActionWorkflowGeneration;
+        private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
     public Optional<Boolean> getSkipGithubActionWorkflowGeneration() {
         return this.skipGithubActionWorkflowGeneration == null ? Optional.empty() : Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
@@ -210,7 +210,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
-
         public StaticSiteBuildPropertiesResponse build() {
             return new StaticSiteBuildPropertiesResponse(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }

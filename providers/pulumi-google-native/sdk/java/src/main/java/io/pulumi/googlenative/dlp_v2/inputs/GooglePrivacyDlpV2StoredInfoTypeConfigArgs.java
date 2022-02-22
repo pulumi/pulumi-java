@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+      private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Input<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="largeCustomDictionary")
-    private final @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
+      private final @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
     public Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
         return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+      private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Input<GooglePrivacyDlpV2RegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -174,7 +174,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeConfigArgs build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigArgs(description, dictionary, displayName, largeCustomDictionary, regex);
         }

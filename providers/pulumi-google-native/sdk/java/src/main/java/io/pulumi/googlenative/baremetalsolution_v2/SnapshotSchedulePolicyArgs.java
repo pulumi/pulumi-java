@@ -22,7 +22,7 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -44,21 +44,21 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,14 +69,14 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<ScheduleArgs>> schedules;
+      private final @Nullable Input<List<ScheduleArgs>> schedules;
 
     public Input<List<ScheduleArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
     @InputImport(name="snapshotSchedulePolicyId", required=true)
-    private final Input<String> snapshotSchedulePolicyId;
+      private final Input<String> snapshotSchedulePolicyId;
 
     public Input<String> getSnapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
@@ -210,7 +210,6 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
             this.snapshotSchedulePolicyId = Input.of(Objects.requireNonNull(snapshotSchedulePolicyId));
             return this;
         }
-
         public SnapshotSchedulePolicyArgs build() {
             return new SnapshotSchedulePolicyArgs(description, id, labels, location, project, schedules, snapshotSchedulePolicyId);
         }

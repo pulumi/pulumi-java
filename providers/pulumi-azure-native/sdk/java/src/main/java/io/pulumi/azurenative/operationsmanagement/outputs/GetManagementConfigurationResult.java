@@ -140,7 +140,6 @@ public final class GetManagementConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementConfigurationResult build() {
             return new GetManagementConfigurationResult(id, location, name, properties, type);
         }

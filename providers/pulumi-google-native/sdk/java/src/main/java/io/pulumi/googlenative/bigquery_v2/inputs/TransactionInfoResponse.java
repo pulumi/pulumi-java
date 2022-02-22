@@ -17,7 +17,7 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="transactionId", required=true)
-    private final String transactionId;
+      private final String transactionId;
 
     public String getTransactionId() {
         return this.transactionId;
@@ -55,7 +55,6 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
             this.transactionId = Objects.requireNonNull(transactionId);
             return this;
         }
-
         public TransactionInfoResponse build() {
             return new TransactionInfoResponse(transactionId);
         }

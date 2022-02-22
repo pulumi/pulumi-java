@@ -121,7 +121,6 @@ public final class VpnClientConnectionHealthResponse {
             this.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
         }
-
         public VpnClientConnectionHealthResponse build() {
             return new VpnClientConnectionHealthResponse(allocatedIpAddresses, totalEgressBytesTransferred, totalIngressBytesTransferred, vpnClientConnectionsCount);
         }

@@ -161,7 +161,6 @@ public final class GroupConnectivityInformationResponse {
             this.redirectMapId = redirectMapId;
             return this;
         }
-
         public GroupConnectivityInformationResponse build() {
             return new GroupConnectivityInformationResponse(customerVisibleFqdns, groupId, internalFqdn, memberName, privateLinkServiceArmRegion, redirectMapId);
         }

@@ -99,7 +99,6 @@ public final class VaultPropertiesResponseEncryption {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public VaultPropertiesResponseEncryption build() {
             return new VaultPropertiesResponseEncryption(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }

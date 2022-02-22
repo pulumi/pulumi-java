@@ -73,7 +73,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
             this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleResponse(dailySchedule, hourlySchedule, weeklySchedule);
         }

@@ -231,7 +231,6 @@ public final class MagentoObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MagentoObjectDatasetResponse build() {
             return new MagentoObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

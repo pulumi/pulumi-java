@@ -23,7 +23,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nodeConfigDefaults")
-    private final @Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults;
+      private final @Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
     public Input<NodeConfigDefaultsArgs> getNodeConfigDefaults() {
         return this.nodeConfigDefaults == null ? Input.empty() : this.nodeConfigDefaults;
@@ -66,7 +66,6 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
             this.nodeConfigDefaults = Input.ofNullable(nodeConfigDefaults);
             return this;
         }
-
         public NodePoolDefaultsArgs build() {
             return new NodePoolDefaultsArgs(nodeConfigDefaults);
         }

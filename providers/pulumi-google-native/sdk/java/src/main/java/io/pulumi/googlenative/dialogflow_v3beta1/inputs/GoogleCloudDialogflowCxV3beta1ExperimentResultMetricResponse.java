@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      * 
      */
     @InputImport(name="confidenceInterval", required=true)
-    private final GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval;
+      private final GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
     public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
         return this.confidenceInterval;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      * 
      */
     @InputImport(name="count", required=true)
-    private final Double count;
+      private final Double count;
 
     public Double getCount() {
         return this.count;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      * 
      */
     @InputImport(name="countType", required=true)
-    private final String countType;
+      private final String countType;
 
     public String getCountType() {
         return this.countType;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      * 
      */
     @InputImport(name="ratio", required=true)
-    private final Double ratio;
+      private final Double ratio;
 
     public Double getRatio() {
         return this.ratio;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
         }

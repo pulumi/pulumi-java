@@ -77,7 +77,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
             this.statusCodes = statusCodes;
             return this;
         }
-
         public ApplicationGatewayProbeHealthResponseMatchResponse build() {
             return new ApplicationGatewayProbeHealthResponseMatchResponse(body, statusCodes);
         }

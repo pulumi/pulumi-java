@@ -74,7 +74,6 @@ public final class DiskSecretResponse {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }
-
         public DiskSecretResponse build() {
             return new DiskSecretResponse(bitLockerKey, diskSerialNumber);
         }

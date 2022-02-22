@@ -23,7 +23,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<List<LocationArgs>> location;
+      private final Input<List<LocationArgs>> location;
 
     public Input<List<LocationArgs>> getLocation() {
         return this.location;
@@ -66,7 +66,6 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
-
         public InstallationArgs build() {
             return new InstallationArgs(location);
         }

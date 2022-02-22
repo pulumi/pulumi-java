@@ -140,7 +140,6 @@ public final class GetDomainMappingResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(apiVersion, kind, metadata, spec, status);
         }

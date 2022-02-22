@@ -20,14 +20,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryConfig")
-    private final @Nullable Input<DeliveryConfigArgs> deliveryConfig;
+      private final @Nullable Input<DeliveryConfigArgs> deliveryConfig;
 
     public Input<DeliveryConfigArgs> getDeliveryConfig() {
         return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -38,28 +38,28 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="skipBacklog")
-    private final @Nullable Input<String> skipBacklog;
+      private final @Nullable Input<String> skipBacklog;
 
     public Input<String> getSkipBacklog() {
         return this.skipBacklog == null ? Input.empty() : this.skipBacklog;
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -70,7 +70,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -204,7 +204,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(deliveryConfig, location, name, project, skipBacklog, subscriptionId, topic);
         }

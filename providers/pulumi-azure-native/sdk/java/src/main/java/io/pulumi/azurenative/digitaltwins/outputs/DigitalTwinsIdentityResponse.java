@@ -97,7 +97,6 @@ public final class DigitalTwinsIdentityResponse {
             this.type = type;
             return this;
         }
-
         public DigitalTwinsIdentityResponse build() {
             return new DigitalTwinsIdentityResponse(principalId, tenantId, type);
         }

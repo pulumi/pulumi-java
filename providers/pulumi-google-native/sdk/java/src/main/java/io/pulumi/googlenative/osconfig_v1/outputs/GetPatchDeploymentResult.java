@@ -289,7 +289,6 @@ public final class GetPatchDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetPatchDeploymentResult build() {
             return new GetPatchDeploymentResult(createTime, description, duration, instanceFilter, lastExecuteTime, name, oneTimeSchedule, patchConfig, recurringSchedule, rollout, state, updateTime);
         }

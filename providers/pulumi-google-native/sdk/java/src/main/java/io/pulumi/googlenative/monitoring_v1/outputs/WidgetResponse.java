@@ -207,7 +207,6 @@ public final class WidgetResponse {
             this.xyChart = Objects.requireNonNull(xyChart);
             return this;
         }
-
         public WidgetResponse build() {
             return new WidgetResponse(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }

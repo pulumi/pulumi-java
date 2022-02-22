@@ -20,7 +20,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -31,7 +31,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -42,7 +42,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -116,7 +116,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public AccessPolicyArgs build() {
             return new AccessPolicyArgs(parent, scopes, title);
         }

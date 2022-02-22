@@ -23,7 +23,7 @@ public final class VirtualNetworkConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -66,7 +66,6 @@ public final class VirtualNetworkConfigArgs extends io.pulumi.resources.Resource
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public VirtualNetworkConfigArgs build() {
             return new VirtualNetworkConfigArgs(subnetId);
         }

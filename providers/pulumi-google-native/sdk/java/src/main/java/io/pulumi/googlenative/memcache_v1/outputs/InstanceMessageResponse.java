@@ -74,7 +74,6 @@ public final class InstanceMessageResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public InstanceMessageResponse build() {
             return new InstanceMessageResponse(code, message);
         }

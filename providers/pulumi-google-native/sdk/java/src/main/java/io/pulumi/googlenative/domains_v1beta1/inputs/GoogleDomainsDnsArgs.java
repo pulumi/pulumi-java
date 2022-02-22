@@ -22,7 +22,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dsState", required=true)
-    private final Input<GoogleDomainsDnsDsState> dsState;
+      private final Input<GoogleDomainsDnsDsState> dsState;
 
     public Input<GoogleDomainsDnsDsState> getDsState() {
         return this.dsState;
@@ -65,7 +65,6 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
             this.dsState = Input.of(Objects.requireNonNull(dsState));
             return this;
         }
-
         public GoogleDomainsDnsArgs build() {
             return new GoogleDomainsDnsArgs(dsState);
         }

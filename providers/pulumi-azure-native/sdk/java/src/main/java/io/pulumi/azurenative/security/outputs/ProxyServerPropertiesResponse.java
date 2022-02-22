@@ -76,7 +76,6 @@ public final class ProxyServerPropertiesResponse {
             this.port = port;
             return this;
         }
-
         public ProxyServerPropertiesResponse build() {
             return new ProxyServerPropertiesResponse(ip, port);
         }

@@ -142,7 +142,6 @@ public final class ServiceCorsConfigurationInfoResponse {
             this.origins = origins;
             return this;
         }
-
         public ServiceCorsConfigurationInfoResponse build() {
             return new ServiceCorsConfigurationInfoResponse(allowCredentials, headers, maxAge, methods, origins);
         }

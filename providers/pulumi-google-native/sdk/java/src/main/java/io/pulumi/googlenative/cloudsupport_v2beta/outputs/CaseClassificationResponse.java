@@ -52,7 +52,6 @@ public final class CaseClassificationResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public CaseClassificationResponse build() {
             return new CaseClassificationResponse(displayName);
         }

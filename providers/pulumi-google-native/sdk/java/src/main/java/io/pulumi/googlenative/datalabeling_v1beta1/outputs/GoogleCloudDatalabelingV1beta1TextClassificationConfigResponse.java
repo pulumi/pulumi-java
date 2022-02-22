@@ -97,7 +97,6 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
             this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(allowMultiLabel, annotationSpecSet, sentimentConfig);
         }

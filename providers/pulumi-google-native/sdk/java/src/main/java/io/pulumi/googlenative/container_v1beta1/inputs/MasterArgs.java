@@ -34,7 +34,6 @@ public final class MasterArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(MasterArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MasterArgs build() {
             return new MasterArgs();
         }

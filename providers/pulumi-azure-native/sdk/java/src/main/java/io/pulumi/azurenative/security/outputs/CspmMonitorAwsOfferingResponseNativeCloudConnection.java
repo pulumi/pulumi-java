@@ -54,7 +54,6 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public CspmMonitorAwsOfferingResponseNativeCloudConnection build() {
             return new CspmMonitorAwsOfferingResponseNativeCloudConnection(cloudRoleArn);
         }

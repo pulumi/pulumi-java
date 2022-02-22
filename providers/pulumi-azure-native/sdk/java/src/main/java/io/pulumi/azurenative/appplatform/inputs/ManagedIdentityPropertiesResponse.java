@@ -23,7 +23,7 @@ public final class ManagedIdentityPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+        private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -34,7 +34,7 @@ public final class ManagedIdentityPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -45,7 +45,7 @@ public final class ManagedIdentityPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -104,7 +104,6 @@ public final class ManagedIdentityPropertiesResponse extends io.pulumi.resources
             this.type = type;
             return this;
         }
-
         public ManagedIdentityPropertiesResponse build() {
             return new ManagedIdentityPropertiesResponse(principalId, tenantId, type);
         }

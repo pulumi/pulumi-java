@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * 
      */
     @InputImport(name="transcriptIndex", required=true)
-    private final Integer transcriptIndex;
+      private final Integer transcriptIndex;
 
     public Integer getTranscriptIndex() {
         return this.transcriptIndex;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * 
      */
     @InputImport(name="wordIndex", required=true)
-    private final Integer wordIndex;
+      private final Integer wordIndex;
 
     public Integer getWordIndex() {
         return this.wordIndex;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(transcriptIndex, wordIndex);
         }

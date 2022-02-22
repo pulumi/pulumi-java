@@ -160,7 +160,6 @@ public final class GetConsumerGroupResult {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public GetConsumerGroupResult build() {
             return new GetConsumerGroupResult(createdAt, id, name, type, updatedAt, userMetadata);
         }

@@ -23,7 +23,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+        private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -93,7 +93,6 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
-
         public ApplicationGatewayBackendAddressArgs build() {
             return new ApplicationGatewayBackendAddressArgs(fqdn, ipAddress);
         }

@@ -78,7 +78,6 @@ public final class GetActiveSessionsResult {
             this.value = value;
             return this;
         }
-
         public GetActiveSessionsResult build() {
             return new GetActiveSessionsResult(nextLink, value);
         }

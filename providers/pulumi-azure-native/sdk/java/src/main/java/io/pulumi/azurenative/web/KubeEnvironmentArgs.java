@@ -20,7 +20,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     public static final KubeEnvironmentArgs Empty = new KubeEnvironmentArgs();
 
     @InputImport(name="aksResourceID")
-    private final @Nullable Input<String> aksResourceID;
+        private final @Nullable Input<String> aksResourceID;
 
     public Input<String> getAksResourceID() {
         return this.aksResourceID == null ? Input.empty() : this.aksResourceID;
@@ -33,7 +33,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appLogsConfiguration")
-    private final @Nullable Input<AppLogsConfigurationArgs> appLogsConfiguration;
+        private final @Nullable Input<AppLogsConfigurationArgs> appLogsConfiguration;
 
     public Input<AppLogsConfigurationArgs> getAppLogsConfiguration() {
         return this.appLogsConfiguration == null ? Input.empty() : this.appLogsConfiguration;
@@ -46,7 +46,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arcConfiguration")
-    private final @Nullable Input<ArcConfigurationArgs> arcConfiguration;
+        private final @Nullable Input<ArcConfigurationArgs> arcConfiguration;
 
     public Input<ArcConfigurationArgs> getArcConfiguration() {
         return this.arcConfiguration == null ? Input.empty() : this.arcConfiguration;
@@ -57,7 +57,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -68,7 +68,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="internalLoadBalancerEnabled")
-    private final @Nullable Input<Boolean> internalLoadBalancerEnabled;
+        private final @Nullable Input<Boolean> internalLoadBalancerEnabled;
 
     public Input<Boolean> getInternalLoadBalancerEnabled() {
         return this.internalLoadBalancerEnabled == null ? Input.empty() : this.internalLoadBalancerEnabled;
@@ -79,7 +79,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -90,7 +90,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -101,7 +101,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="staticIp")
-    private final @Nullable Input<String> staticIp;
+        private final @Nullable Input<String> staticIp;
 
     public Input<String> getStaticIp() {
         return this.staticIp == null ? Input.empty() : this.staticIp;
@@ -134,7 +134,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -328,7 +328,6 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public KubeEnvironmentArgs build() {
             return new KubeEnvironmentArgs(aksResourceID, appLogsConfiguration, arcConfiguration, extendedLocation, internalLoadBalancerEnabled, kind, location, name, resourceGroupName, staticIp, tags);
         }

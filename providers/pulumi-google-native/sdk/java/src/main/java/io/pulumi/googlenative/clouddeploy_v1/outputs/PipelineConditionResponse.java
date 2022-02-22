@@ -75,7 +75,6 @@ public final class PipelineConditionResponse {
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
         }
-
         public PipelineConditionResponse build() {
             return new PipelineConditionResponse(pipelineReadyCondition, targetsPresentCondition);
         }

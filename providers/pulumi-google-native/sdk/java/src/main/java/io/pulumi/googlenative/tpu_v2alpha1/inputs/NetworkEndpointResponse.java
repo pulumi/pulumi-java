@@ -23,7 +23,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="accessConfig", required=true)
-    private final AccessConfigResponse accessConfig;
+      private final AccessConfigResponse accessConfig;
 
     public AccessConfigResponse getAccessConfig() {
         return this.accessConfig;
@@ -34,7 +34,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -45,7 +45,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -104,7 +104,6 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public NetworkEndpointResponse build() {
             return new NetworkEndpointResponse(accessConfig, ipAddress, port);
         }

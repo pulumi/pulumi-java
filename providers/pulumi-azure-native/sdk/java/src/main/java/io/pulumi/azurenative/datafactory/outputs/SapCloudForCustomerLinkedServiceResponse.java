@@ -233,7 +233,6 @@ public final class SapCloudForCustomerLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SapCloudForCustomerLinkedServiceResponse build() {
             return new SapCloudForCustomerLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, password, type, url, username);
         }

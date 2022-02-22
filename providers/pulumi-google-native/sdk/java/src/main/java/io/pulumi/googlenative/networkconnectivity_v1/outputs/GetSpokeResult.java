@@ -267,7 +267,6 @@ public final class GetSpokeResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetSpokeResult build() {
             return new GetSpokeResult(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, name, state, uniqueId, updateTime);
         }

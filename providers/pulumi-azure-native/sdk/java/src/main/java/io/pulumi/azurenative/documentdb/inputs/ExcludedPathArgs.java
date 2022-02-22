@@ -19,7 +19,7 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -62,7 +62,6 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public ExcludedPathArgs build() {
             return new ExcludedPathArgs(path);
         }

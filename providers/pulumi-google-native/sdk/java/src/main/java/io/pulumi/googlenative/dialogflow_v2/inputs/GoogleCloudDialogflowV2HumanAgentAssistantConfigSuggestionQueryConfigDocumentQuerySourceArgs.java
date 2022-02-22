@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @InputImport(name="documents", required=true)
-    private final Input<List<String>> documents;
+      private final Input<List<String>> documents;
 
     public Input<List<String>> getDocuments() {
         return this.documents;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.documents = Input.of(Objects.requireNonNull(documents));
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(documents);
         }

@@ -24,7 +24,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="and")
-    private final @Nullable Input<List<ReportConfigFilterArgs>> and;
+        private final @Nullable Input<List<ReportConfigFilterArgs>> and;
 
     public Input<List<ReportConfigFilterArgs>> getAnd() {
         return this.and == null ? Input.empty() : this.and;
@@ -35,7 +35,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions;
+        private final @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions;
 
     public Input<ReportConfigComparisonExpressionArgs> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -46,7 +46,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="or")
-    private final @Nullable Input<List<ReportConfigFilterArgs>> or;
+        private final @Nullable Input<List<ReportConfigFilterArgs>> or;
 
     public Input<List<ReportConfigFilterArgs>> getOr() {
         return this.or == null ? Input.empty() : this.or;
@@ -57,7 +57,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey;
+        private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey;
 
     public Input<ReportConfigComparisonExpressionArgs> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;
@@ -68,7 +68,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue;
+        private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue;
 
     public Input<ReportConfigComparisonExpressionArgs> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;
@@ -79,7 +79,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<ReportConfigComparisonExpressionArgs> tags;
+        private final @Nullable Input<ReportConfigComparisonExpressionArgs> tags;
 
     public Input<ReportConfigComparisonExpressionArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -198,7 +198,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ReportConfigFilterArgs build() {
             return new ReportConfigFilterArgs(and, dimensions, or, tagKey, tagValue, tags);
         }

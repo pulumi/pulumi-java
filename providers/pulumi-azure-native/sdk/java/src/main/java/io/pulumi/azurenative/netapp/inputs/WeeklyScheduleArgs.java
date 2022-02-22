@@ -25,7 +25,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<String> day;
+        private final @Nullable Input<String> day;
 
     public Input<String> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -36,7 +36,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hour")
-    private final @Nullable Input<Integer> hour;
+        private final @Nullable Input<Integer> hour;
 
     public Input<Integer> getHour() {
         return this.hour == null ? Input.empty() : this.hour;
@@ -47,7 +47,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minute")
-    private final @Nullable Input<Integer> minute;
+        private final @Nullable Input<Integer> minute;
 
     public Input<Integer> getMinute() {
         return this.minute == null ? Input.empty() : this.minute;
@@ -58,7 +58,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotsToKeep")
-    private final @Nullable Input<Integer> snapshotsToKeep;
+        private final @Nullable Input<Integer> snapshotsToKeep;
 
     public Input<Integer> getSnapshotsToKeep() {
         return this.snapshotsToKeep == null ? Input.empty() : this.snapshotsToKeep;
@@ -69,7 +69,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usedBytes")
-    private final @Nullable Input<Double> usedBytes;
+        private final @Nullable Input<Double> usedBytes;
 
     public Input<Double> getUsedBytes() {
         return this.usedBytes == null ? Input.empty() : this.usedBytes;
@@ -173,7 +173,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.usedBytes = Input.ofNullable(usedBytes);
             return this;
         }
-
         public WeeklyScheduleArgs build() {
             return new WeeklyScheduleArgs(day, hour, minute, snapshotsToKeep, usedBytes);
         }

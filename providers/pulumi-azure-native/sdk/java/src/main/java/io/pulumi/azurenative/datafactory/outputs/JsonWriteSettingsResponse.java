@@ -79,7 +79,6 @@ public final class JsonWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonWriteSettingsResponse build() {
             return new JsonWriteSettingsResponse(filePattern, type);
         }

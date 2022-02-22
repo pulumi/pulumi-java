@@ -184,7 +184,6 @@ public final class MongoDbSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbSourceResponse build() {
             return new MongoDbSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

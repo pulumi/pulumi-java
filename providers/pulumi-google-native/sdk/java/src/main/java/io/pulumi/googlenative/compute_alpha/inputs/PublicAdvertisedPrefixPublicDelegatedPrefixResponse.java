@@ -21,7 +21,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * 
      */
     @InputImport(name="ipRange", required=true)
-    private final String ipRange;
+      private final String ipRange;
 
     public String getIpRange() {
         return this.ipRange;
@@ -32,7 +32,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -54,7 +54,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -65,7 +65,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -144,7 +144,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
             return new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(ipRange, name, project, region, status);
         }

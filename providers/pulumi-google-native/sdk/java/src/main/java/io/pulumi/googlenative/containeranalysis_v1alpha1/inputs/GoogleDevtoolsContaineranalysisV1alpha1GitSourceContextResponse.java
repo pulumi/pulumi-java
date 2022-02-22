@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      * 
      */
     @InputImport(name="revisionId", required=true)
-    private final String revisionId;
+      private final String revisionId;
 
     public String getRevisionId() {
         return this.revisionId;
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -81,7 +81,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(revisionId, url);
         }

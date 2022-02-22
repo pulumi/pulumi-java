@@ -23,7 +23,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<String> generation;
+      private final @Nullable Input<String> generation;
 
     public Input<String> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -45,7 +45,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -119,7 +119,6 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public OSPolicyResourceFileGcsArgs build() {
             return new OSPolicyResourceFileGcsArgs(bucket, generation, object);
         }

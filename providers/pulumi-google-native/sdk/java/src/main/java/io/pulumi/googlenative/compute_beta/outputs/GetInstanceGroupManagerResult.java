@@ -525,7 +525,6 @@ public final class GetInstanceGroupManagerResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupManagerResult build() {
             return new GetInstanceGroupManagerResult(autoHealingPolicies, baseInstanceName, creationTimestamp, currentActions, description, distributionPolicy, failoverAction, fingerprint, instanceGroup, instanceTemplate, kind, name, namedPorts, region, selfLink, serviceAccount, statefulPolicy, status, targetPools, targetSize, updatePolicy, versions, zone);
         }

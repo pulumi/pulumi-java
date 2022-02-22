@@ -96,7 +96,6 @@ public final class TextMappingResponse {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
-
         public TextMappingResponse build() {
             return new TextMappingResponse(atomKey, inputKey, inputTrack);
         }

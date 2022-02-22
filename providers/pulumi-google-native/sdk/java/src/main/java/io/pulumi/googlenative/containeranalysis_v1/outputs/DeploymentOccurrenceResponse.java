@@ -180,7 +180,6 @@ public final class DeploymentOccurrenceResponse {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public DeploymentOccurrenceResponse build() {
             return new DeploymentOccurrenceResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }

@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudDatacatalogV1SystemTimestampsResponse build() {
             return new GoogleCloudDatacatalogV1SystemTimestampsResponse(createTime, expireTime, updateTime);
         }

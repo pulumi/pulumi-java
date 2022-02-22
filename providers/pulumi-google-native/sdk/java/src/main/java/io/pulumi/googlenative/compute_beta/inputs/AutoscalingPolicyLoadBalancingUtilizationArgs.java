@@ -23,7 +23,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
      * 
      */
     @InputImport(name="utilizationTarget")
-    private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Input<Double> utilizationTarget;
 
     public Input<Double> getUtilizationTarget() {
         return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
@@ -66,7 +66,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
             this.utilizationTarget = Input.ofNullable(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
             return new AutoscalingPolicyLoadBalancingUtilizationArgs(utilizationTarget);
         }

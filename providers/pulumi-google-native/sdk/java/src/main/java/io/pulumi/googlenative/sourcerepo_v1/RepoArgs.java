@@ -21,7 +21,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mirrorConfig")
-    private final @Nullable Input<MirrorConfigArgs> mirrorConfig;
+      private final @Nullable Input<MirrorConfigArgs> mirrorConfig;
 
     public Input<MirrorConfigArgs> getMirrorConfig() {
         return this.mirrorConfig == null ? Input.empty() : this.mirrorConfig;
@@ -32,14 +32,14 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -50,7 +50,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfigs")
-    private final @Nullable Input<Map<String,String>> pubsubConfigs;
+      private final @Nullable Input<Map<String,String>> pubsubConfigs;
 
     public Input<Map<String,String>> getPubsubConfigs() {
         return this.pubsubConfigs == null ? Input.empty() : this.pubsubConfigs;
@@ -61,7 +61,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+      private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -72,7 +72,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -191,7 +191,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public RepoArgs build() {
             return new RepoArgs(mirrorConfig, name, project, pubsubConfigs, size, url);
         }

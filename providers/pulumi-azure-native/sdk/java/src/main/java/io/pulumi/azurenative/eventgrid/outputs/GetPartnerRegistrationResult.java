@@ -452,7 +452,6 @@ public final class GetPartnerRegistrationResult {
             this.visibilityState = visibilityState;
             return this;
         }
-
         public GetPartnerRegistrationResult build() {
             return new GetPartnerRegistrationResult(authorizedAzureSubscriptionIds, customerServiceUri, id, location, logoUri, longDescription, name, partnerCustomerServiceExtension, partnerCustomerServiceNumber, partnerName, partnerResourceTypeDescription, partnerResourceTypeDisplayName, partnerResourceTypeName, provisioningState, setupUri, systemData, tags, type, visibilityState);
         }

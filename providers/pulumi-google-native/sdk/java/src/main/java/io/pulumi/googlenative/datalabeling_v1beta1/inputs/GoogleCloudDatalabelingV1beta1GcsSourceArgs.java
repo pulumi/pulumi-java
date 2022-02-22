@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
      * 
      */
     @InputImport(name="inputUri", required=true)
-    private final Input<String> inputUri;
+      private final Input<String> inputUri;
 
     public Input<String> getInputUri() {
         return this.inputUri;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final Input<String> mimeType;
+      private final Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType;
@@ -92,7 +92,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
             this.mimeType = Input.of(Objects.requireNonNull(mimeType));
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceArgs(inputUri, mimeType);
         }

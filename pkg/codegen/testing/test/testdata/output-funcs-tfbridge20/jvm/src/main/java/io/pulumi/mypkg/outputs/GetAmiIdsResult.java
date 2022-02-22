@@ -136,7 +136,6 @@ public final class GetAmiIdsResult {
             this.sortAscending = sortAscending;
             return this;
         }
-
         public GetAmiIdsResult build() {
             return new GetAmiIdsResult(executableUsers, filters, id, ids, nameRegex, owners, sortAscending);
         }

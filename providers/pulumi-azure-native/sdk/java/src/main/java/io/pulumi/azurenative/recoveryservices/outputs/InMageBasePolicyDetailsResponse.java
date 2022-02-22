@@ -142,7 +142,6 @@ public final class InMageBasePolicyDetailsResponse {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
-
         public InMageBasePolicyDetailsResponse build() {
             return new InMageBasePolicyDetailsResponse(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }

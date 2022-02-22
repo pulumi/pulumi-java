@@ -202,7 +202,6 @@ public final class RosettaNetPipActivityBehaviorResponse {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }
-
         public RosettaNetPipActivityBehaviorResponse build() {
             return new RosettaNetPipActivityBehaviorResponse(actionType, isAuthorizationRequired, isSecuredTransportRequired, nonRepudiationOfOriginAndContent, persistentConfidentialityScope, responseType, retryCount, timeToPerformInSeconds);
         }

@@ -74,7 +74,6 @@ public final class ReportGroupingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReportGroupingResponse build() {
             return new ReportGroupingResponse(name, type);
         }

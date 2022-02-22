@@ -250,7 +250,6 @@ public final class GetWorkbookTemplateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkbookTemplateResult build() {
             return new GetWorkbookTemplateResult(author, galleries, id, localized, location, name, priority, tags, templateData, type);
         }

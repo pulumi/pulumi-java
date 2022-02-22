@@ -220,7 +220,6 @@ public final class ApiConnectionDefinitionResponseProperties {
             this.testLinks = testLinks;
             return this;
         }
-
         public ApiConnectionDefinitionResponseProperties build() {
             return new ApiConnectionDefinitionResponseProperties(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
         }

@@ -312,7 +312,6 @@ public final class GetVirtualNetworkResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(allowedSubnets, createdDate, description, externalProviderResourceId, externalSubnets, id, location, name, provisioningState, subnetOverrides, tags, type, uniqueIdentifier);
         }

@@ -77,7 +77,6 @@ public final class MetricAlertActionResponse {
             this.webHookProperties = webHookProperties;
             return this;
         }
-
         public MetricAlertActionResponse build() {
             return new MetricAlertActionResponse(actionGroupId, webHookProperties);
         }

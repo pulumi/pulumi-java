@@ -501,7 +501,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	}
 
 	propertyName := names.Ident(pt.mod.propertyName(prop))
-	propertyModifiers := make([]string, 4)
+	propertyModifiers := make([]string, 2)
 
 	propertyModifiers = append(propertyModifiers, "private")
 	if isFinal {
@@ -509,7 +509,8 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	}
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
-	_, _ = fmt.Fprintf(w, "%s%s %s %s;\n", indent, strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
+	_, _ = fmt.Fprintf(w, "%s%s %s %s;\n",
+		indent, strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Add getter

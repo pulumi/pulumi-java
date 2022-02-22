@@ -138,7 +138,6 @@ public final class GetGroupResult {
             this.parentName = Objects.requireNonNull(parentName);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(displayName, filter, isCluster, name, parentName);
         }

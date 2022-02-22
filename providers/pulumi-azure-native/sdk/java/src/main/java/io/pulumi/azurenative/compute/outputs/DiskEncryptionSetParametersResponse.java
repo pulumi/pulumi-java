@@ -54,7 +54,6 @@ public final class DiskEncryptionSetParametersResponse {
             this.id = id;
             return this;
         }
-
         public DiskEncryptionSetParametersResponse build() {
             return new DiskEncryptionSetParametersResponse(id);
         }

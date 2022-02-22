@@ -74,7 +74,6 @@ public final class RunCommandInputParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RunCommandInputParameterResponse build() {
             return new RunCommandInputParameterResponse(name, value);
         }

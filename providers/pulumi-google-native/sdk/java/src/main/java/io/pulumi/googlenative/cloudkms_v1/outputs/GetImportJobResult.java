@@ -244,7 +244,6 @@ public final class GetImportJobResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetImportJobResult build() {
             return new GetImportJobResult(attestation, createTime, expireEventTime, expireTime, generateTime, importMethod, name, protectionLevel, publicKey, state);
         }

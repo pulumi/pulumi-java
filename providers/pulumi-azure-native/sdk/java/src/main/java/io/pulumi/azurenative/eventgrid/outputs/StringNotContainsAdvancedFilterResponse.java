@@ -100,7 +100,6 @@ public final class StringNotContainsAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringNotContainsAdvancedFilterResponse build() {
             return new StringNotContainsAdvancedFilterResponse(key, operatorType, values);
         }

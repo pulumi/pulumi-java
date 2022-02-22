@@ -75,7 +75,6 @@ public final class SnapshotDefinitionResponse {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }
-
         public SnapshotDefinitionResponse build() {
             return new SnapshotDefinitionResponse(baseTableReference, snapshotTime);
         }

@@ -17,7 +17,7 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+        private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -55,7 +55,6 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends io.pulumi.reso
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GetDiagnosticServiceTokenReadWriteArgs build() {
             return new GetDiagnosticServiceTokenReadWriteArgs(resourceUri);
         }

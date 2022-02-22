@@ -140,7 +140,6 @@ public final class AuthInfoResponse {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
-
         public AuthInfoResponse build() {
             return new AuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }

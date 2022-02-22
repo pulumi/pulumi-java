@@ -245,7 +245,6 @@ public final class AzureFirewallNatRuleResponse {
             this.translatedPort = translatedPort;
             return this;
         }
-
         public AzureFirewallNatRuleResponse build() {
             return new AzureFirewallNatRuleResponse(description, destinationAddresses, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups, translatedAddress, translatedFqdn, translatedPort);
         }

@@ -22,7 +22,7 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-    private final EdifactProtocolSettingsResponse protocolSettings;
+        private final EdifactProtocolSettingsResponse protocolSettings;
 
     public EdifactProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
@@ -33,7 +33,7 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-    private final BusinessIdentityResponse receiverBusinessIdentity;
+        private final BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -44,7 +44,7 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-    private final BusinessIdentityResponse senderBusinessIdentity;
+        private final BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
@@ -103,7 +103,6 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public EdifactOneWayAgreementResponse build() {
             return new EdifactOneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

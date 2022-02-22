@@ -231,7 +231,6 @@ public final class SharePointOnlineListResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharePointOnlineListResourceDatasetResponse build() {
             return new SharePointOnlineListResourceDatasetResponse(annotations, description, folder, linkedServiceName, listName, parameters, schema, structure, type);
         }

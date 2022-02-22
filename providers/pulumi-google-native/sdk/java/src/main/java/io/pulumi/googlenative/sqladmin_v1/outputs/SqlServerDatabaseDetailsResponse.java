@@ -75,7 +75,6 @@ public final class SqlServerDatabaseDetailsResponse {
             this.recoveryModel = Objects.requireNonNull(recoveryModel);
             return this;
         }
-
         public SqlServerDatabaseDetailsResponse build() {
             return new SqlServerDatabaseDetailsResponse(compatibilityLevel, recoveryModel);
         }

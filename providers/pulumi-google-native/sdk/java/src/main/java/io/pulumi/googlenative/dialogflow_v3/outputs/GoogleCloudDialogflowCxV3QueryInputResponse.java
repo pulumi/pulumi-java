@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3QueryInputResponse build() {
             return new GoogleCloudDialogflowCxV3QueryInputResponse(audio, dtmf, event, intent, languageCode, text);
         }

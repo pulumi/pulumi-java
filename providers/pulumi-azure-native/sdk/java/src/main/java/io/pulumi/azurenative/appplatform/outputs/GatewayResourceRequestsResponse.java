@@ -76,7 +76,6 @@ public final class GatewayResourceRequestsResponse {
             this.memory = memory;
             return this;
         }
-
         public GatewayResourceRequestsResponse build() {
             return new GatewayResourceRequestsResponse(cpu, memory);
         }

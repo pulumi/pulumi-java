@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
             this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(displayName, phraseMatcher);
         }

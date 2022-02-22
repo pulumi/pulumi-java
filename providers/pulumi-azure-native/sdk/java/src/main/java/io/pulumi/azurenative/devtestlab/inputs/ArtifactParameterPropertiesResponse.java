@@ -23,7 +23,7 @@ public final class ArtifactParameterPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ArtifactParameterPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -83,7 +83,6 @@ public final class ArtifactParameterPropertiesResponse extends io.pulumi.resourc
             this.value = value;
             return this;
         }
-
         public ArtifactParameterPropertiesResponse build() {
             return new ArtifactParameterPropertiesResponse(name, value);
         }

@@ -46,7 +46,6 @@ public final class TopLevel {
             this.buzz = buzz;
             return this;
         }
-
         public TopLevel build() {
             return new TopLevel(buzz);
         }

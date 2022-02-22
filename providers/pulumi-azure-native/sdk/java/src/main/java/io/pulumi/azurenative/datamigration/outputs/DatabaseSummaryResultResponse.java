@@ -243,7 +243,6 @@ public final class DatabaseSummaryResultResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public DatabaseSummaryResultResponse build() {
             return new DatabaseSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, sizeMB, startedOn, state, statusMessage);
         }

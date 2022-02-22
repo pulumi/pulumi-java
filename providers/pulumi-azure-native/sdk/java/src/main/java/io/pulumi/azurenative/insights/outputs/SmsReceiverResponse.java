@@ -116,7 +116,6 @@ public final class SmsReceiverResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SmsReceiverResponse build() {
             return new SmsReceiverResponse(countryCode, name, phoneNumber, status);
         }

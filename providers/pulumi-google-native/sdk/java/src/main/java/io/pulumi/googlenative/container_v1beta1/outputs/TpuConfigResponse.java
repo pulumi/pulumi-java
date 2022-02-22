@@ -96,7 +96,6 @@ public final class TpuConfigResponse {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }
-
         public TpuConfigResponse build() {
             return new TpuConfigResponse(enabled, ipv4CidrBlock, useServiceNetworking);
         }

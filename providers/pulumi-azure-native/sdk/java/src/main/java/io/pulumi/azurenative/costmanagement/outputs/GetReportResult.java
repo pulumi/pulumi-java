@@ -206,7 +206,6 @@ public final class GetReportResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReportResult build() {
             return new GetReportResult(definition, deliveryInfo, format, id, name, schedule, tags, type);
         }

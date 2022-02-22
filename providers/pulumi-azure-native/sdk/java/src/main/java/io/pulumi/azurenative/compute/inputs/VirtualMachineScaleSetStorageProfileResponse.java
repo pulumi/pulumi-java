@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
+        private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
     public List<VirtualMachineScaleSetDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable ImageReferenceResponse imageReference;
+        private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
+        private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
     public Optional<VirtualMachineScaleSetOSDiskResponse> getOsDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
@@ -107,7 +107,6 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
             this.osDisk = osDisk;
             return this;
         }
-
         public VirtualMachineScaleSetStorageProfileResponse build() {
             return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
         }

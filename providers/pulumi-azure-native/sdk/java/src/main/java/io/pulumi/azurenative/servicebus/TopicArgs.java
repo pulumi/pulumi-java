@@ -22,7 +22,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeleteOnIdle")
-    private final @Nullable Input<String> autoDeleteOnIdle;
+        private final @Nullable Input<String> autoDeleteOnIdle;
 
     public Input<String> getAutoDeleteOnIdle() {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
@@ -33,7 +33,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMessageTimeToLive")
-    private final @Nullable Input<String> defaultMessageTimeToLive;
+        private final @Nullable Input<String> defaultMessageTimeToLive;
 
     public Input<String> getDefaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
@@ -44,7 +44,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
-    private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
+        private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
     public Input<String> getDuplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
@@ -55,7 +55,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBatchedOperations")
-    private final @Nullable Input<Boolean> enableBatchedOperations;
+        private final @Nullable Input<Boolean> enableBatchedOperations;
 
     public Input<Boolean> getEnableBatchedOperations() {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
@@ -66,7 +66,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableExpress")
-    private final @Nullable Input<Boolean> enableExpress;
+        private final @Nullable Input<Boolean> enableExpress;
 
     public Input<Boolean> getEnableExpress() {
         return this.enableExpress == null ? Input.empty() : this.enableExpress;
@@ -77,7 +77,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePartitioning")
-    private final @Nullable Input<Boolean> enablePartitioning;
+        private final @Nullable Input<Boolean> enablePartitioning;
 
     public Input<Boolean> getEnablePartitioning() {
         return this.enablePartitioning == null ? Input.empty() : this.enablePartitioning;
@@ -88,7 +88,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSizeInMegabytes")
-    private final @Nullable Input<Integer> maxSizeInMegabytes;
+        private final @Nullable Input<Integer> maxSizeInMegabytes;
 
     public Input<Integer> getMaxSizeInMegabytes() {
         return this.maxSizeInMegabytes == null ? Input.empty() : this.maxSizeInMegabytes;
@@ -99,7 +99,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -110,7 +110,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresDuplicateDetection")
-    private final @Nullable Input<Boolean> requiresDuplicateDetection;
+        private final @Nullable Input<Boolean> requiresDuplicateDetection;
 
     public Input<Boolean> getRequiresDuplicateDetection() {
         return this.requiresDuplicateDetection == null ? Input.empty() : this.requiresDuplicateDetection;
@@ -121,7 +121,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -132,7 +132,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<EntityStatus> status;
+        private final @Nullable Input<EntityStatus> status;
 
     public Input<EntityStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -143,7 +143,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportOrdering")
-    private final @Nullable Input<Boolean> supportOrdering;
+        private final @Nullable Input<Boolean> supportOrdering;
 
     public Input<Boolean> getSupportOrdering() {
         return this.supportOrdering == null ? Input.empty() : this.supportOrdering;
@@ -154,7 +154,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName")
-    private final @Nullable Input<String> topicName;
+        private final @Nullable Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName == null ? Input.empty() : this.topicName;
@@ -378,7 +378,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.topicName = Input.ofNullable(topicName);
             return this;
         }
-
         public TopicArgs build() {
             return new TopicArgs(autoDeleteOnIdle, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, maxSizeInMegabytes, namespaceName, requiresDuplicateDetection, resourceGroupName, status, supportOrdering, topicName);
         }

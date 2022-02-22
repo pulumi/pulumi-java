@@ -118,7 +118,6 @@ public final class SoftwareRecipeStepExecFileResponse {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public SoftwareRecipeStepExecFileResponse build() {
             return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
         }

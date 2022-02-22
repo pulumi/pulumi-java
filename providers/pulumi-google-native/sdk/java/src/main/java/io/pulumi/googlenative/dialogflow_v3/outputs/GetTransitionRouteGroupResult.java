@@ -97,7 +97,6 @@ public final class GetTransitionRouteGroupResult {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GetTransitionRouteGroupResult build() {
             return new GetTransitionRouteGroupResult(displayName, name, transitionRoutes);
         }

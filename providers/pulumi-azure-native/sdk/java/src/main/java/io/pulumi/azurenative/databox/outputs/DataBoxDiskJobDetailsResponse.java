@@ -430,7 +430,6 @@ public final class DataBoxDiskJobDetailsResponse {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public DataBoxDiskJobDetailsResponse build() {
             return new DataBoxDiskJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, disksAndSizeDetails, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, passkey, preferences, preferredDisks, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
         }

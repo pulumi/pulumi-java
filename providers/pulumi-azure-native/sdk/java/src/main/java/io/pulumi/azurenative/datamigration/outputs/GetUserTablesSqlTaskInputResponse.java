@@ -76,7 +76,6 @@ public final class GetUserTablesSqlTaskInputResponse {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public GetUserTablesSqlTaskInputResponse build() {
             return new GetUserTablesSqlTaskInputResponse(connectionInfo, selectedDatabases);
         }

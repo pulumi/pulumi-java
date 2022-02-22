@@ -23,7 +23,7 @@ public final class LabPlanNetworkProfileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+        private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -61,7 +61,6 @@ public final class LabPlanNetworkProfileResponse extends io.pulumi.resources.Inv
             this.subnetId = subnetId;
             return this;
         }
-
         public LabPlanNetworkProfileResponse build() {
             return new LabPlanNetworkProfileResponse(subnetId);
         }

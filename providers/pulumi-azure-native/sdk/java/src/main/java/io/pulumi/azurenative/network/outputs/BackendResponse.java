@@ -287,7 +287,6 @@ public final class BackendResponse {
             this.weight = weight;
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }

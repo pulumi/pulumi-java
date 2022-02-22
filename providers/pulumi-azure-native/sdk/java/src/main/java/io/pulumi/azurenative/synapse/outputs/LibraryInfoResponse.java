@@ -181,7 +181,6 @@ public final class LibraryInfoResponse {
             this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
             return this;
         }
-
         public LibraryInfoResponse build() {
             return new LibraryInfoResponse(containerName, creatorId, name, path, provisioningStatus, type, uploadedTimestamp);
         }

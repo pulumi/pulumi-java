@@ -22,7 +22,7 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="documentationUrl", required=true)
-    private final String documentationUrl;
+      private final String documentationUrl;
 
     public String getDocumentationUrl() {
         return this.documentationUrl;
@@ -33,7 +33,7 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="level", required=true)
-    private final String level;
+      private final String level;
 
     public String getLevel() {
         return this.level;
@@ -44,7 +44,7 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final ServiceMeshTypeResponse type;
+      private final ServiceMeshTypeResponse type;
 
     public ServiceMeshTypeResponse getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceMeshAnalysisMessageBaseResponse build() {
             return new ServiceMeshAnalysisMessageBaseResponse(documentationUrl, level, type);
         }

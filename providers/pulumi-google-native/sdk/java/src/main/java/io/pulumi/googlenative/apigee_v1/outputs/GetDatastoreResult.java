@@ -180,7 +180,6 @@ public final class GetDatastoreResult {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(createTime, datastoreConfig, displayName, lastUpdateTime, org, self, targetType);
         }

@@ -23,7 +23,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="city")
-    private final @Nullable Input<String> city;
+        private final @Nullable Input<String> city;
 
     public Input<String> getCity() {
         return this.city == null ? Input.empty() : this.city;
@@ -34,7 +34,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryOrRegion")
-    private final @Nullable Input<String> countryOrRegion;
+        private final @Nullable Input<String> countryOrRegion;
 
     public Input<String> getCountryOrRegion() {
         return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
@@ -45,7 +45,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="district")
-    private final @Nullable Input<String> district;
+        private final @Nullable Input<String> district;
 
     public Input<String> getDistrict() {
         return this.district == null ? Input.empty() : this.district;
@@ -56,7 +56,7 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -145,7 +145,6 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public LocationDataArgs build() {
             return new LocationDataArgs(city, countryOrRegion, district, name);
         }

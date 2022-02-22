@@ -26,7 +26,7 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Double> capacity;
+        private final @Nullable Input<Double> capacity;
 
     public Input<Double> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,IotDpsSku>> name;
+        private final @Nullable Input<Either<String,IotDpsSku>> name;
 
     public Input<Either<String,IotDpsSku>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,6 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public IotDpsSkuInfoArgs build() {
             return new IotDpsSkuInfoArgs(capacity, name);
         }

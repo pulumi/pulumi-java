@@ -20,7 +20,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointFilter")
-    private final @Nullable Input<String> endpointFilter;
+      private final @Nullable Input<String> endpointFilter;
 
     public Input<String> getEndpointFilter() {
         return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
@@ -42,14 +42,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -60,14 +60,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -78,14 +78,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
     }
 
     @InputImport(name="serviceBindingId", required=true)
-    private final Input<String> serviceBindingId;
+      private final Input<String> serviceBindingId;
 
     public Input<String> getServiceBindingId() {
         return this.serviceBindingId;
@@ -234,7 +234,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceBindingId = Input.of(Objects.requireNonNull(serviceBindingId));
             return this;
         }
-
         public ServiceBindingArgs build() {
             return new ServiceBindingArgs(description, endpointFilter, labels, location, name, project, service, serviceBindingId);
         }

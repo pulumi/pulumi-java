@@ -338,7 +338,6 @@ public final class SquareLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public SquareLinkedServiceResponse build() {
             return new SquareLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, connectionProperties, description, encryptedCredential, host, parameters, redirectUri, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

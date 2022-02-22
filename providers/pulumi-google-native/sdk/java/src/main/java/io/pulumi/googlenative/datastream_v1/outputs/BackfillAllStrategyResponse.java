@@ -75,7 +75,6 @@ public final class BackfillAllStrategyResponse {
             this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
             return this;
         }
-
         public BackfillAllStrategyResponse build() {
             return new BackfillAllStrategyResponse(mysqlExcludedObjects, oracleExcludedObjects);
         }

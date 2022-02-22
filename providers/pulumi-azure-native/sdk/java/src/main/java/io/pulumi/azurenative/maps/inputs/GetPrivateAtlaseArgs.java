@@ -17,7 +17,7 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateAtlasName", required=true)
-    private final String privateAtlasName;
+        private final String privateAtlasName;
 
     public String getPrivateAtlasName() {
         return this.privateAtlasName;
@@ -39,7 +39,7 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrivateAtlaseArgs build() {
             return new GetPrivateAtlaseArgs(accountName, privateAtlasName, resourceGroupName);
         }

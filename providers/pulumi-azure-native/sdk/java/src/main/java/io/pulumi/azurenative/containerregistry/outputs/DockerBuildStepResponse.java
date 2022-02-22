@@ -250,7 +250,6 @@ public final class DockerBuildStepResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DockerBuildStepResponse build() {
             return new DockerBuildStepResponse(arguments, baseImageDependencies, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
         }

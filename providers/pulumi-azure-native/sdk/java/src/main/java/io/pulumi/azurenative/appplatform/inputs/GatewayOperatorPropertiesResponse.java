@@ -23,7 +23,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<GatewayInstanceResponse> instances;
+        private final List<GatewayInstanceResponse> instances;
 
     public List<GatewayInstanceResponse> getInstances() {
         return this.instances;
@@ -34,7 +34,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceRequests", required=true)
-    private final GatewayOperatorResourceRequestsResponse resourceRequests;
+        private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
     public GatewayOperatorResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
@@ -83,7 +83,6 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public GatewayOperatorPropertiesResponse build() {
             return new GatewayOperatorPropertiesResponse(instances, resourceRequests);
         }

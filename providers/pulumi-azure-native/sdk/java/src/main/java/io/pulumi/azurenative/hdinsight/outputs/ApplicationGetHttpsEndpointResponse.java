@@ -184,7 +184,6 @@ public final class ApplicationGetHttpsEndpointResponse {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
-
         public ApplicationGetHttpsEndpointResponse build() {
             return new ApplicationGetHttpsEndpointResponse(accessModes, destinationPort, disableGatewayAuth, location, privateIPAddress, publicPort, subDomainSuffix);
         }

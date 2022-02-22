@@ -96,7 +96,6 @@ public final class AssignmentStatusResponse {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public AssignmentStatusResponse build() {
             return new AssignmentStatusResponse(lastModified, managedResources, timeCreated);
         }

@@ -78,7 +78,6 @@ public final class AutoscaleScheduleResponse {
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }
-
         public AutoscaleScheduleResponse build() {
             return new AutoscaleScheduleResponse(days, timeAndCapacity);
         }

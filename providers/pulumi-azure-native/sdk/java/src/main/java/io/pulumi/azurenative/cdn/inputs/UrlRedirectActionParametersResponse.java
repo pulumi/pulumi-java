@@ -23,7 +23,7 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customFragment")
-    private final @Nullable String customFragment;
+        private final @Nullable String customFragment;
 
     public Optional<String> getCustomFragment() {
         return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
@@ -34,7 +34,7 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customHostname")
-    private final @Nullable String customHostname;
+        private final @Nullable String customHostname;
 
     public Optional<String> getCustomHostname() {
         return this.customHostname == null ? Optional.empty() : Optional.ofNullable(this.customHostname);
@@ -45,7 +45,7 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customPath")
-    private final @Nullable String customPath;
+        private final @Nullable String customPath;
 
     public Optional<String> getCustomPath() {
         return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
@@ -56,7 +56,7 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customQueryString")
-    private final @Nullable String customQueryString;
+        private final @Nullable String customQueryString;
 
     public Optional<String> getCustomQueryString() {
         return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
@@ -67,14 +67,14 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="destinationProtocol")
-    private final @Nullable String destinationProtocol;
+        private final @Nullable String destinationProtocol;
 
     public Optional<String> getDestinationProtocol() {
         return this.destinationProtocol == null ? Optional.empty() : Optional.ofNullable(this.destinationProtocol);
     }
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -85,7 +85,7 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="redirectType", required=true)
-    private final String redirectType;
+        private final String redirectType;
 
     public String getRedirectType() {
         return this.redirectType;
@@ -184,7 +184,6 @@ public final class UrlRedirectActionParametersResponse extends io.pulumi.resourc
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }
-
         public UrlRedirectActionParametersResponse build() {
             return new UrlRedirectActionParametersResponse(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }

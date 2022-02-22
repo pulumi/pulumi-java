@@ -167,7 +167,6 @@ public final class LoadBalancerResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public LoadBalancerResourceSettingsResponse build() {
             return new LoadBalancerResourceSettingsResponse(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
         }

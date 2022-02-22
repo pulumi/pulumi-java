@@ -143,7 +143,6 @@ public final class RulesEngineRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public RulesEngineRuleResponse build() {
             return new RulesEngineRuleResponse(action, matchConditions, matchProcessingBehavior, name, priority);
         }

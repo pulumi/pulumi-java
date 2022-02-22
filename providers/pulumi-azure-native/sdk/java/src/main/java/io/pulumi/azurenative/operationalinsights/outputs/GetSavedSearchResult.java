@@ -268,7 +268,6 @@ public final class GetSavedSearchResult {
             this.version = version;
             return this;
         }
-
         public GetSavedSearchResult build() {
             return new GetSavedSearchResult(category, displayName, etag, functionAlias, functionParameters, id, name, query, tags, type, version);
         }

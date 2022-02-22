@@ -25,7 +25,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -36,7 +36,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="link")
-    private final @Nullable Input<String> link;
+        private final @Nullable Input<String> link;
 
     public Input<String> getLink() {
         return this.link == null ? Input.empty() : this.link;
@@ -47,7 +47,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<Either<String,SupportTier>> tier;
+        private final Input<Either<String,SupportTier>> tier;
 
     public Input<Either<String,SupportTier>> getTier() {
         return this.tier;
@@ -147,7 +147,6 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public MetadataSupportArgs build() {
             return new MetadataSupportArgs(email, link, name, tier);
         }

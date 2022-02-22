@@ -76,7 +76,6 @@ public final class SqlServerResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public SqlServerResourceSettingsResponse build() {
             return new SqlServerResourceSettingsResponse(resourceType, targetResourceName);
         }

@@ -290,7 +290,6 @@ public final class BackendBucketCdnPolicyResponse {
             this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
             return this;
         }
-
         public BackendBucketCdnPolicyResponse build() {
             return new BackendBucketCdnPolicyResponse(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec, signedUrlKeyNames);
         }

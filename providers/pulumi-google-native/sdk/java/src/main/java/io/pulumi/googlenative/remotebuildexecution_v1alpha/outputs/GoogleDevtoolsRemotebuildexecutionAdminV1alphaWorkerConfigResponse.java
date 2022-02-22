@@ -266,7 +266,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }

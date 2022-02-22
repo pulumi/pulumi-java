@@ -17,7 +17,7 @@ public final class GetBlockchainMemberArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="blockchainMemberName", required=true)
-    private final String blockchainMemberName;
+        private final String blockchainMemberName;
 
     public String getBlockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,7 +28,7 @@ public final class GetBlockchainMemberArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetBlockchainMemberArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetBlockchainMemberArgs build() {
             return new GetBlockchainMemberArgs(blockchainMemberName, resourceGroupName);
         }

@@ -247,7 +247,6 @@ public final class GetLogProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLogProfileResult build() {
             return new GetLogProfileResult(categories, id, location, locations, name, retentionPolicy, serviceBusRuleId, storageAccountId, tags, type);
         }

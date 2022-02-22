@@ -25,7 +25,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleColumns")
-    private final @Nullable Input<List<OracleColumnArgs>> oracleColumns;
+      private final @Nullable Input<List<OracleColumnArgs>> oracleColumns;
 
     public Input<List<OracleColumnArgs>> getOracleColumns() {
         return this.oracleColumns == null ? Input.empty() : this.oracleColumns;
@@ -36,7 +36,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -95,7 +95,6 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
-
         public OracleTableArgs build() {
             return new OracleTableArgs(oracleColumns, tableName);
         }

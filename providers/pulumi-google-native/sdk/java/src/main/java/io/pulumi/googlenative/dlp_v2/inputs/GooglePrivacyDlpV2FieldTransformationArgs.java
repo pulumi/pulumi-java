@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
+      private final @Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
     public Input<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
+      private final Input<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
 
     public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getFields() {
         return this.fields;
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="infoTypeTransformations")
-    private final @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
+      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
     public Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> getInfoTypeTransformations() {
         return this.infoTypeTransformations == null ? Input.empty() : this.infoTypeTransformations;
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="primitiveTransformation")
-    private final @Nullable Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+      private final @Nullable Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
     public Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {
         return this.primitiveTransformation == null ? Input.empty() : this.primitiveTransformation;
@@ -149,7 +149,6 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
             this.primitiveTransformation = Input.ofNullable(primitiveTransformation);
             return this;
         }
-
         public GooglePrivacyDlpV2FieldTransformationArgs build() {
             return new GooglePrivacyDlpV2FieldTransformationArgs(condition, fields, infoTypeTransformations, primitiveTransformation);
         }

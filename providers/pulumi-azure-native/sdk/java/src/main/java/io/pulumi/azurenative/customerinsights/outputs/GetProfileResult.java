@@ -480,7 +480,6 @@ public final class GetProfileResult {
             this.typeName = typeName;
             return this;
         }
-
         public GetProfileResult build() {
             return new GetProfileResult(apiEntitySetName, attributes, description, displayName, entityType, fields, id, instancesCount, largeImage, lastChangedUtc, localizedAttributes, mediumImage, name, provisioningState, schemaItemTypeLink, smallImage, strongIds, tenantId, timestampFieldName, type, typeName);
         }

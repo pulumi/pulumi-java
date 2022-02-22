@@ -76,7 +76,6 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
         }
-
         public ContentKeyPolicyWidevineConfigurationResponse build() {
             return new ContentKeyPolicyWidevineConfigurationResponse(odataType, widevineTemplate);
         }

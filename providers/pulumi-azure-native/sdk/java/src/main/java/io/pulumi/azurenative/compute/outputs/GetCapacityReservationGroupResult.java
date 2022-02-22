@@ -226,7 +226,6 @@ public final class GetCapacityReservationGroupResult {
             this.zones = zones;
             return this;
         }
-
         public GetCapacityReservationGroupResult build() {
             return new GetCapacityReservationGroupResult(capacityReservations, id, instanceView, location, name, tags, type, virtualMachinesAssociated, zones);
         }

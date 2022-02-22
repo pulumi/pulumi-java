@@ -74,7 +74,6 @@ public final class AcceleratorResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public AcceleratorResponse build() {
             return new AcceleratorResponse(acceleratorType, state);
         }

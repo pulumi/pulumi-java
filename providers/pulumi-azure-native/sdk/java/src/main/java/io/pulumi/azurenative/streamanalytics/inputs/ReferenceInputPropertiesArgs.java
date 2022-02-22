@@ -28,7 +28,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="datasource")
-    private final @Nullable Input<BlobReferenceInputDataSourceArgs> datasource;
+        private final @Nullable Input<BlobReferenceInputDataSourceArgs> datasource;
 
     public Input<BlobReferenceInputDataSourceArgs> getDatasource() {
         return this.datasource == null ? Input.empty() : this.datasource;
@@ -39,7 +39,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serialization")
-    private final @Nullable Input<Object> serialization;
+        private final @Nullable Input<Object> serialization;
 
     public Input<Object> getSerialization() {
         return this.serialization == null ? Input.empty() : this.serialization;
@@ -51,7 +51,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -125,7 +125,6 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ReferenceInputPropertiesArgs build() {
             return new ReferenceInputPropertiesArgs(datasource, serialization, type);
         }

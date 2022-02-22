@@ -99,7 +99,6 @@ public final class ListWorkspaceKeysResult {
             this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
             return this;
         }
-
         public ListWorkspaceKeysResult build() {
             return new ListWorkspaceKeysResult(appInsightsInstrumentationKey, containerRegistryCredentials, notebookAccessKeys, userStorageKey, userStorageResourceId);
         }

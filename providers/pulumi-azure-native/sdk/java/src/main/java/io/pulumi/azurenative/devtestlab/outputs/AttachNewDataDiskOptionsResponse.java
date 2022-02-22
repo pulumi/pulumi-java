@@ -98,7 +98,6 @@ public final class AttachNewDataDiskOptionsResponse {
             this.diskType = diskType;
             return this;
         }
-
         public AttachNewDataDiskOptionsResponse build() {
             return new AttachNewDataDiskOptionsResponse(diskName, diskSizeGiB, diskType);
         }

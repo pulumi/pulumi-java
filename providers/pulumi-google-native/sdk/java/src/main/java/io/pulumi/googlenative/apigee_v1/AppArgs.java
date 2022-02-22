@@ -21,7 +21,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiProducts")
-    private final @Nullable Input<List<String>> apiProducts;
+      private final @Nullable Input<List<String>> apiProducts;
 
     public Input<List<String>> getApiProducts() {
         return this.apiProducts == null ? Input.empty() : this.apiProducts;
@@ -32,7 +32,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appFamily")
-    private final @Nullable Input<String> appFamily;
+      private final @Nullable Input<String> appFamily;
 
     public Input<String> getAppFamily() {
         return this.appFamily == null ? Input.empty() : this.appFamily;
@@ -43,7 +43,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -54,7 +54,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -65,7 +65,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callbackUrl")
-    private final @Nullable Input<String> callbackUrl;
+      private final @Nullable Input<String> callbackUrl;
 
     public Input<String> getCallbackUrl() {
         return this.callbackUrl == null ? Input.empty() : this.callbackUrl;
@@ -76,7 +76,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerId", required=true)
-    private final Input<String> developerId;
+      private final Input<String> developerId;
 
     public Input<String> getDeveloperId() {
         return this.developerId;
@@ -87,7 +87,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyExpiresIn")
-    private final @Nullable Input<String> keyExpiresIn;
+      private final @Nullable Input<String> keyExpiresIn;
 
     public Input<String> getKeyExpiresIn() {
         return this.keyExpiresIn == null ? Input.empty() : this.keyExpiresIn;
@@ -98,14 +98,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -116,7 +116,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -127,7 +127,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -321,7 +321,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(apiProducts, appFamily, appId, attributes, callbackUrl, developerId, keyExpiresIn, name, organizationId, scopes, status);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pu
      * 
      */
     @InputImport(name="ignoreTerms", required=true)
-    private final List<String> ignoreTerms;
+      private final List<String> ignoreTerms;
 
     public List<String> getIgnoreTerms() {
         return this.ignoreTerms;
@@ -60,7 +60,6 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends io.pu
             this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleIgnoreActionResponse build() {
             return new GoogleCloudRetailV2betaRuleIgnoreActionResponse(ignoreTerms);
         }

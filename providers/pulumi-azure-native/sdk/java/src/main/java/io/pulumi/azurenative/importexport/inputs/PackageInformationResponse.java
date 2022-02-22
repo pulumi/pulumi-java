@@ -22,7 +22,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final String carrierName;
+        private final String carrierName;
 
     public String getCarrierName() {
         return this.carrierName;
@@ -33,7 +33,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="driveCount", required=true)
-    private final Double driveCount;
+        private final Double driveCount;
 
     public Double getDriveCount() {
         return this.driveCount;
@@ -44,7 +44,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="shipDate", required=true)
-    private final String shipDate;
+        private final String shipDate;
 
     public String getShipDate() {
         return this.shipDate;
@@ -55,7 +55,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="trackingNumber", required=true)
-    private final String trackingNumber;
+        private final String trackingNumber;
 
     public String getTrackingNumber() {
         return this.trackingNumber;
@@ -124,7 +124,6 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public PackageInformationResponse build() {
             return new PackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }

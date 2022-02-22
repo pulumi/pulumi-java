@@ -75,7 +75,6 @@ public final class ObbFileResponse {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }
-
         public ObbFileResponse build() {
             return new ObbFileResponse(obb, obbFileName);
         }

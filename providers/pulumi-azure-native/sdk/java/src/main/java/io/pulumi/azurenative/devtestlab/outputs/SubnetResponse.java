@@ -97,7 +97,6 @@ public final class SubnetResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public SubnetResponse build() {
             return new SubnetResponse(allowPublicIp, labSubnetName, resourceId);
         }

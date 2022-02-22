@@ -25,7 +25,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomKey", required=true)
-    private final Input<String> atomKey;
+      private final Input<String> atomKey;
 
     public Input<String> getAtomKey() {
         return this.atomKey;
@@ -36,7 +36,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gainDb")
-    private final @Nullable Input<Double> gainDb;
+      private final @Nullable Input<Double> gainDb;
 
     public Input<Double> getGainDb() {
         return this.gainDb == null ? Input.empty() : this.gainDb;
@@ -47,7 +47,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputChannel", required=true)
-    private final Input<Integer> inputChannel;
+      private final Input<Integer> inputChannel;
 
     public Input<Integer> getInputChannel() {
         return this.inputChannel;
@@ -58,7 +58,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputKey", required=true)
-    private final Input<String> inputKey;
+      private final Input<String> inputKey;
 
     public Input<String> getInputKey() {
         return this.inputKey;
@@ -69,7 +69,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputTrack", required=true)
-    private final Input<Integer> inputTrack;
+      private final Input<Integer> inputTrack;
 
     public Input<Integer> getInputTrack() {
         return this.inputTrack;
@@ -80,7 +80,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputChannel", required=true)
-    private final Input<Integer> outputChannel;
+      private final Input<Integer> outputChannel;
 
     public Input<Integer> getOutputChannel() {
         return this.outputChannel;
@@ -199,7 +199,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.outputChannel = Input.of(Objects.requireNonNull(outputChannel));
             return this;
         }
-
         public AudioMappingArgs build() {
             return new AudioMappingArgs(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }

@@ -22,7 +22,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="context", required=true)
-    private final String context;
+      private final String context;
 
     public String getContext() {
         return this.context;
@@ -33,7 +33,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="payload", required=true)
-    private final String payload;
+      private final String payload;
 
     public String getPayload() {
         return this.payload;
@@ -44,7 +44,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stackTrace", required=true)
-    private final StackTraceResponse stackTrace;
+      private final StackTraceResponse stackTrace;
 
     public StackTraceResponse getStackTrace() {
         return this.stackTrace;
@@ -103,7 +103,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ErrorResponse build() {
             return new ErrorResponse(context, payload, stackTrace);
         }

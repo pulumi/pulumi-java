@@ -15,7 +15,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     public static final WebAppRelayServiceConnectionArgs Empty = new WebAppRelayServiceConnectionArgs();
 
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -58,7 +58,6 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public WebAppRelayServiceConnectionArgs build() {
             return new WebAppRelayServiceConnectionArgs(resourceType);
         }

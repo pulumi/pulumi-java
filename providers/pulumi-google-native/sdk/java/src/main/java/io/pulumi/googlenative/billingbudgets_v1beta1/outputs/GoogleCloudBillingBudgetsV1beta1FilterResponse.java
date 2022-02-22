@@ -203,7 +203,6 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
             this.subaccounts = Objects.requireNonNull(subaccounts);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1FilterResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1FilterResponse(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
         }

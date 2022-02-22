@@ -17,7 +17,7 @@ public final class ListDelegationSettingSecretsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListDelegationSettingSecretsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -77,7 +77,6 @@ public final class ListDelegationSettingSecretsArgs extends io.pulumi.resources.
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ListDelegationSettingSecretsArgs build() {
             return new ListDelegationSettingSecretsArgs(resourceGroupName, serviceName);
         }

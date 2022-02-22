@@ -19,7 +19,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -30,7 +30,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+        private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
@@ -115,7 +115,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleSetName = Input.ofNullable(ruleSetName);
             return this;
         }
-
         public RuleSetArgs build() {
             return new RuleSetArgs(profileName, resourceGroupName, ruleSetName);
         }

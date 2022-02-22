@@ -75,7 +75,6 @@ public final class AutoscalingSettingsResponse {
             this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
             return this;
         }
-
         public AutoscalingSettingsResponse build() {
             return new AutoscalingSettingsResponse(algorithm, maxNumWorkers);
         }

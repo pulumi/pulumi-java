@@ -118,7 +118,6 @@ public final class RouterNatRuleResponse {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }
-
         public RouterNatRuleResponse build() {
             return new RouterNatRuleResponse(action, description, match, ruleNumber);
         }

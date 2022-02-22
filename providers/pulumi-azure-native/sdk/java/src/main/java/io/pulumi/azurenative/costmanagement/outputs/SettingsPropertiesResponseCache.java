@@ -160,7 +160,6 @@ public final class SettingsPropertiesResponseCache {
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }
-
         public SettingsPropertiesResponseCache build() {
             return new SettingsPropertiesResponseCache(channel, id, name, parent, status, subchannel);
         }

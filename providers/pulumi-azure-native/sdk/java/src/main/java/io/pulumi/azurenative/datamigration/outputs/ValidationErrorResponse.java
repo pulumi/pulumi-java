@@ -74,7 +74,6 @@ public final class ValidationErrorResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ValidationErrorResponse build() {
             return new ValidationErrorResponse(severity, text);
         }

@@ -24,7 +24,7 @@ public final class ContainerExecResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="command")
-    private final @Nullable List<String> command;
+        private final @Nullable List<String> command;
 
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
@@ -62,7 +62,6 @@ public final class ContainerExecResponse extends io.pulumi.resources.InvokeArgs 
             this.command = command;
             return this;
         }
-
         public ContainerExecResponse build() {
             return new ContainerExecResponse(command);
         }

@@ -225,7 +225,6 @@ public final class GetDeviceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(deviceType, id, location, name, networkFunctions, provisioningState, status, tags, type);
         }

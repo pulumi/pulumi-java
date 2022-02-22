@@ -142,7 +142,6 @@ public final class GetServiceAttachmentIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetServiceAttachmentIamPolicyResult build() {
             return new GetServiceAttachmentIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

@@ -166,7 +166,6 @@ public final class ScheduleTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScheduleTriggerResponse build() {
             return new ScheduleTriggerResponse(annotations, description, pipelines, recurrence, runtimeState, type);
         }

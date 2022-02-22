@@ -23,7 +23,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="planId")
-    private final @Nullable String planId;
+        private final @Nullable String planId;
 
     public Optional<String> getPlanId() {
         return this.planId == null ? Optional.empty() : Optional.ofNullable(this.planId);
@@ -45,7 +45,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="planName")
-    private final @Nullable String planName;
+        private final @Nullable String planName;
 
     public Optional<String> getPlanName() {
         return this.planName == null ? Optional.empty() : Optional.ofNullable(this.planName);
@@ -56,7 +56,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="publisherId")
-    private final @Nullable String publisherId;
+        private final @Nullable String publisherId;
 
     public Optional<String> getPublisherId() {
         return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
@@ -67,7 +67,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -78,7 +78,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
      * 
      */
     @InputImport(name="termUnit")
-    private final @Nullable String termUnit;
+        private final @Nullable String termUnit;
 
     public Optional<String> getTermUnit() {
         return this.termUnit == null ? Optional.empty() : Optional.ofNullable(this.termUnit);
@@ -167,7 +167,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
             this.termUnit = termUnit;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseOfferDetail build() {
             return new OrganizationResourcePropertiesResponseOfferDetail(id, planId, planName, publisherId, status, termUnit);
         }

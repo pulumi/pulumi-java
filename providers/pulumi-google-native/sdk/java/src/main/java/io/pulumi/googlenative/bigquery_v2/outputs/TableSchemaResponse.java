@@ -53,7 +53,6 @@ public final class TableSchemaResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public TableSchemaResponse build() {
             return new TableSchemaResponse(fields);
         }

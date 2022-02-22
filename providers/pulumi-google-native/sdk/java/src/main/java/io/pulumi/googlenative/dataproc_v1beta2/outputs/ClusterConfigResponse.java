@@ -359,7 +359,6 @@ public final class ClusterConfigResponse {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public ClusterConfigResponse build() {
             return new ClusterConfigResponse(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
         }

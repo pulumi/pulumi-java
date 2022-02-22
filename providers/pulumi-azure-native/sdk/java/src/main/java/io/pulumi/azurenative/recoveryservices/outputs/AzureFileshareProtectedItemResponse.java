@@ -481,7 +481,6 @@ public final class AzureFileshareProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureFileshareProtectedItemResponse build() {
             return new AzureFileshareProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemType, protectionState, protectionStatus, sourceResourceId, workloadType);
         }

@@ -20,7 +20,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheck")
-    private final @Nullable Input<String> healthCheck;
+      private final @Nullable Input<String> healthCheck;
 
     public Input<String> getHealthCheck() {
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="initialDelaySec")
-    private final @Nullable Input<Integer> initialDelaySec;
+      private final @Nullable Input<Integer> initialDelaySec;
 
     public Input<Integer> getInitialDelaySec() {
         return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
@@ -90,7 +90,6 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             this.initialDelaySec = Input.ofNullable(initialDelaySec);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyArgs(healthCheck, initialDelaySec);
         }

@@ -76,7 +76,6 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public VpnServerConfigRadiusClientRootCertificateResponse build() {
             return new VpnServerConfigRadiusClientRootCertificateResponse(name, thumbprint);
         }

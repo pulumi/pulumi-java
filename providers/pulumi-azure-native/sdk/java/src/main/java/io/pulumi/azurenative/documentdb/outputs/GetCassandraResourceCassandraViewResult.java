@@ -190,7 +190,6 @@ public final class GetCassandraResourceCassandraViewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraResourceCassandraViewResult build() {
             return new GetCassandraResourceCassandraViewResult(id, identity, location, name, options, resource, tags, type);
         }

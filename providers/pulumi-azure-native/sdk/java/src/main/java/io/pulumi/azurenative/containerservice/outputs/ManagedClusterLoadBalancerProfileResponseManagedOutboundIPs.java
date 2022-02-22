@@ -54,7 +54,6 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
             this.count = count;
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs build() {
             return new ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(count);
         }

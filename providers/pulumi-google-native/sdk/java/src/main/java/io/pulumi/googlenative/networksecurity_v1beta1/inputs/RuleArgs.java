@@ -25,7 +25,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations")
-    private final @Nullable Input<List<DestinationArgs>> destinations;
+      private final @Nullable Input<List<DestinationArgs>> destinations;
 
     public Input<List<DestinationArgs>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
@@ -36,7 +36,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<SourceArgs>> sources;
+      private final @Nullable Input<List<SourceArgs>> sources;
 
     public Input<List<SourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -95,7 +95,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.sources = Input.ofNullable(sources);
             return this;
         }
-
         public RuleArgs build() {
             return new RuleArgs(destinations, sources);
         }

@@ -297,7 +297,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
             this.zones = zones;
             return this;
         }
-
         public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
             return new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(error, id, identity, location, name, plan, properties, sku, status, tags, type, zones);
         }

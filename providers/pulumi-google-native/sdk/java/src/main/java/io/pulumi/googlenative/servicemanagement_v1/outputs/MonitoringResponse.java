@@ -75,7 +75,6 @@ public final class MonitoringResponse {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }
-
         public MonitoringResponse build() {
             return new MonitoringResponse(consumerDestinations, producerDestinations);
         }

@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
             this.minAnonymity = Objects.requireNonNull(minAnonymity);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxAnonymity, minAnonymity);
         }

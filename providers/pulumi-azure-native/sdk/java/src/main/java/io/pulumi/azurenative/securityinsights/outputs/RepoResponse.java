@@ -98,7 +98,6 @@ public final class RepoResponse {
             this.url = url;
             return this;
         }
-
         public RepoResponse build() {
             return new RepoResponse(branches, fullName, url);
         }

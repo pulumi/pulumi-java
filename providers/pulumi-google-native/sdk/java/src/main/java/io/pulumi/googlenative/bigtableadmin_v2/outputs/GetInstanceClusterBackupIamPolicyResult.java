@@ -120,7 +120,6 @@ public final class GetInstanceClusterBackupIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceClusterBackupIamPolicyResult build() {
             return new GetInstanceClusterBackupIamPolicyResult(auditConfigs, bindings, etag, version);
         }

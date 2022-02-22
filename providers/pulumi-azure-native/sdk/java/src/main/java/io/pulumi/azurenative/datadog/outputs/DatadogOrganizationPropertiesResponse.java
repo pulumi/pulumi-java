@@ -74,7 +74,6 @@ public final class DatadogOrganizationPropertiesResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DatadogOrganizationPropertiesResponse build() {
             return new DatadogOrganizationPropertiesResponse(id, name);
         }

@@ -519,7 +519,6 @@ public final class GetSnapshotResult {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, snapshotEncryptionKey, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, status, storageBytes, storageBytesStatus, storageLocations);
         }

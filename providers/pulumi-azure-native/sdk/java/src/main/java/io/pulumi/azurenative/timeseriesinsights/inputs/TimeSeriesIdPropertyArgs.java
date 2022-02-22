@@ -25,7 +25,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,PropertyType>> type;
+        private final @Nullable Input<Either<String,PropertyType>> type;
 
     public Input<Either<String,PropertyType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -95,7 +95,6 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public TimeSeriesIdPropertyArgs build() {
             return new TimeSeriesIdPropertyArgs(name, type);
         }

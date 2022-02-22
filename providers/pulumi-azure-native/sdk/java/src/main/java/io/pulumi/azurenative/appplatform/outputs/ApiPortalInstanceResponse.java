@@ -74,7 +74,6 @@ public final class ApiPortalInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ApiPortalInstanceResponse build() {
             return new ApiPortalInstanceResponse(name, status);
         }

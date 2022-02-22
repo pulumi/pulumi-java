@@ -266,7 +266,6 @@ public final class ExpressRouteLinkResponse {
             this.routerName = Objects.requireNonNull(routerName);
             return this;
         }
-
         public ExpressRouteLinkResponse build() {
             return new ExpressRouteLinkResponse(adminState, connectorType, etag, id, interfaceName, macSecConfig, name, patchPanelId, provisioningState, rackId, routerName);
         }

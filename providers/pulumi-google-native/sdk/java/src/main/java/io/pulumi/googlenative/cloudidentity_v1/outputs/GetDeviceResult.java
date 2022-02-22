@@ -623,7 +623,6 @@ public final class GetDeviceResult {
             this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(androidSpecificAttributes, assetTag, basebandVersion, bootloaderVersion, brand, buildNumber, compromisedState, createTime, deviceType, enabledDeveloperOptions, enabledUsbDebugging, encryptionState, imei, kernelVersion, lastSyncTime, managementState, manufacturer, meid, model, name, networkOperator, osVersion, otherAccounts, ownerType, releaseVersion, securityPatchTime, serialNumber, wifiMacAddresses);
         }

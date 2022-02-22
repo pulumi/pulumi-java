@@ -21,7 +21,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends io.
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+        private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -59,7 +59,6 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends io.
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public DataCollectionEndpointResponseConfigurationAccess build() {
             return new DataCollectionEndpointResponseConfigurationAccess(endpoint);
         }

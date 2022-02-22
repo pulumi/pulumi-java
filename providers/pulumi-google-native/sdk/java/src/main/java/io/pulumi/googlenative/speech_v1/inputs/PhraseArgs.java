@@ -24,7 +24,7 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boost")
-    private final @Nullable Input<Double> boost;
+      private final @Nullable Input<Double> boost;
 
     public Input<Double> getBoost() {
         return this.boost == null ? Input.empty() : this.boost;
@@ -35,7 +35,7 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public PhraseArgs build() {
             return new PhraseArgs(boost, value);
         }

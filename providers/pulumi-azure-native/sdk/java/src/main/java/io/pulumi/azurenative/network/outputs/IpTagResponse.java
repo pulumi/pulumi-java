@@ -76,7 +76,6 @@ public final class IpTagResponse {
             this.tag = tag;
             return this;
         }
-
         public IpTagResponse build() {
             return new IpTagResponse(ipTagType, tag);
         }

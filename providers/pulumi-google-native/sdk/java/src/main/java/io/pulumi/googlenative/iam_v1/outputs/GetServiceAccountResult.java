@@ -201,7 +201,6 @@ public final class GetServiceAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetServiceAccountResult build() {
             return new GetServiceAccountResult(description, disabled, displayName, email, name, oauth2ClientId, project, uniqueId);
         }

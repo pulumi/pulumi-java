@@ -15,28 +15,28 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
     @InputImport(name="documentId", required=true)
-    private final String documentId;
+      private final String documentId;
 
     public String getDocumentId() {
         return this.documentId;
     }
 
     @InputImport(name="knowledgeBaseId", required=true)
-    private final String knowledgeBaseId;
+      private final String knowledgeBaseId;
 
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDocumentArgs build() {
             return new GetDocumentArgs(documentId, knowledgeBaseId, location, project);
         }

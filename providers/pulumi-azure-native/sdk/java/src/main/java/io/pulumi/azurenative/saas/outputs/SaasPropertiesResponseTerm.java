@@ -97,7 +97,6 @@ public final class SaasPropertiesResponseTerm {
             this.termUnit = termUnit;
             return this;
         }
-
         public SaasPropertiesResponseTerm build() {
             return new SaasPropertiesResponseTerm(endDate, startDate, termUnit);
         }

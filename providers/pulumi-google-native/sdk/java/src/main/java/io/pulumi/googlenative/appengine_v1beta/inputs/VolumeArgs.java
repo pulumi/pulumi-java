@@ -24,7 +24,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-    private final @Nullable Input<Double> sizeGb;
+      private final @Nullable Input<Double> sizeGb;
 
     public Input<Double> getSizeGb() {
         return this.sizeGb == null ? Input.empty() : this.sizeGb;
@@ -46,7 +46,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;
@@ -120,7 +120,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }
-
         public VolumeArgs build() {
             return new VolumeArgs(name, sizeGb, volumeType);
         }

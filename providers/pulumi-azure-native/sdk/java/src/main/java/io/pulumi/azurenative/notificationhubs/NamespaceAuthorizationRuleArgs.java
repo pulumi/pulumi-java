@@ -20,7 +20,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authorizationRuleName")
-    private final @Nullable Input<String> authorizationRuleName;
+        private final @Nullable Input<String> authorizationRuleName;
 
     public Input<String> getAuthorizationRuleName() {
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
@@ -31,7 +31,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -42,7 +42,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
+        private final Input<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
     public Input<SharedAccessAuthorizationRulePropertiesArgs> getProperties() {
         return this.properties;
@@ -53,7 +53,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public NamespaceAuthorizationRuleArgs build() {
             return new NamespaceAuthorizationRuleArgs(authorizationRuleName, namespaceName, properties, resourceGroupName);
         }

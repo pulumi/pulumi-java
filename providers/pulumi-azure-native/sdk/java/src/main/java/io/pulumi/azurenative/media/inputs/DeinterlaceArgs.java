@@ -26,7 +26,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,DeinterlaceMode>> mode;
+        private final @Nullable Input<Either<String,DeinterlaceMode>> mode;
 
     public Input<Either<String,DeinterlaceMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -37,7 +37,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parity")
-    private final @Nullable Input<Either<String,DeinterlaceParity>> parity;
+        private final @Nullable Input<Either<String,DeinterlaceParity>> parity;
 
     public Input<Either<String,DeinterlaceParity>> getParity() {
         return this.parity == null ? Input.empty() : this.parity;
@@ -96,7 +96,6 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
             this.parity = Input.ofNullable(parity);
             return this;
         }
-
         public DeinterlaceArgs build() {
             return new DeinterlaceArgs(mode, parity);
         }

@@ -54,7 +54,6 @@ public final class AccountEncryptionResponse {
             this.keySource = keySource;
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keySource);
         }

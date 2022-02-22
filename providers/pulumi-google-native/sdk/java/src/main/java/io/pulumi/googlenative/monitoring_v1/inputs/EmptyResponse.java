@@ -34,7 +34,6 @@ public final class EmptyResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(EmptyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public EmptyResponse build() {
             return new EmptyResponse();
         }

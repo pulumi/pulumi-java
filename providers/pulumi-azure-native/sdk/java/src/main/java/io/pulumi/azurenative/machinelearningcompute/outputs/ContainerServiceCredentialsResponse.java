@@ -96,7 +96,6 @@ public final class ContainerServiceCredentialsResponse {
             this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
             return this;
         }
-
         public ContainerServiceCredentialsResponse build() {
             return new ContainerServiceCredentialsResponse(acsKubeConfig, imagePullSecretName, servicePrincipalConfiguration);
         }

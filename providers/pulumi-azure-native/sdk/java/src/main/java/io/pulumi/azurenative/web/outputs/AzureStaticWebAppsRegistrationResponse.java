@@ -54,7 +54,6 @@ public final class AzureStaticWebAppsRegistrationResponse {
             this.clientId = clientId;
             return this;
         }
-
         public AzureStaticWebAppsRegistrationResponse build() {
             return new AzureStaticWebAppsRegistrationResponse(clientId);
         }

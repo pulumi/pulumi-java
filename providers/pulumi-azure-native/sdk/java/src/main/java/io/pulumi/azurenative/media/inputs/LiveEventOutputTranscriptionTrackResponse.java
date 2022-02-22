@@ -21,7 +21,7 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="trackName", required=true)
-    private final String trackName;
+        private final String trackName;
 
     public String getTrackName() {
         return this.trackName;
@@ -59,7 +59,6 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
-
         public LiveEventOutputTranscriptionTrackResponse build() {
             return new LiveEventOutputTranscriptionTrackResponse(trackName);
         }

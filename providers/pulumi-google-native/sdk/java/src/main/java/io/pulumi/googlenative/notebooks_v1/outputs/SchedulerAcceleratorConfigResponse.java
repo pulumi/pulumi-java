@@ -74,7 +74,6 @@ public final class SchedulerAcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SchedulerAcceleratorConfigResponse build() {
             return new SchedulerAcceleratorConfigResponse(coreCount, type);
         }

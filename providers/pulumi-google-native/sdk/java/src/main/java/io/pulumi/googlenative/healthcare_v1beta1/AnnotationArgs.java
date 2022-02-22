@@ -24,14 +24,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotationSource")
-    private final @Nullable Input<AnnotationSourceArgs> annotationSource;
+      private final @Nullable Input<AnnotationSourceArgs> annotationSource;
 
     public Input<AnnotationSourceArgs> getAnnotationSource() {
         return this.annotationSource == null ? Input.empty() : this.annotationSource;
     }
 
     @InputImport(name="annotationStoreId", required=true)
-    private final Input<String> annotationStoreId;
+      private final Input<String> annotationStoreId;
 
     public Input<String> getAnnotationStoreId() {
         return this.annotationStoreId;
@@ -42,14 +42,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable Input<Map<String,String>> customData;
+      private final @Nullable Input<Map<String,String>> customData;
 
     public Input<Map<String,String>> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -60,14 +60,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageAnnotation")
-    private final @Nullable Input<ImageAnnotationArgs> imageAnnotation;
+      private final @Nullable Input<ImageAnnotationArgs> imageAnnotation;
 
     public Input<ImageAnnotationArgs> getImageAnnotation() {
         return this.imageAnnotation == null ? Input.empty() : this.imageAnnotation;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,14 +78,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceAnnotation")
-    private final @Nullable Input<ResourceAnnotationArgs> resourceAnnotation;
+      private final @Nullable Input<ResourceAnnotationArgs> resourceAnnotation;
 
     public Input<ResourceAnnotationArgs> getResourceAnnotation() {
         return this.resourceAnnotation == null ? Input.empty() : this.resourceAnnotation;
@@ -107,7 +107,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="textAnnotation")
-    private final @Nullable Input<SensitiveTextAnnotationArgs> textAnnotation;
+      private final @Nullable Input<SensitiveTextAnnotationArgs> textAnnotation;
 
     public Input<SensitiveTextAnnotationArgs> getTextAnnotation() {
         return this.textAnnotation == null ? Input.empty() : this.textAnnotation;
@@ -286,7 +286,6 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             this.textAnnotation = Input.ofNullable(textAnnotation);
             return this;
         }
-
         public AnnotationArgs build() {
             return new AnnotationArgs(annotationSource, annotationStoreId, customData, datasetId, imageAnnotation, location, name, project, resourceAnnotation, textAnnotation);
         }

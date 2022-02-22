@@ -97,7 +97,6 @@ public final class UserInfoResponse {
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(emailAddress, name, phoneNumber);
         }

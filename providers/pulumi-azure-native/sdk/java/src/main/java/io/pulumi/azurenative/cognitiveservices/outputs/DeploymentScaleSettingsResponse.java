@@ -77,7 +77,6 @@ public final class DeploymentScaleSettingsResponse {
             this.scaleType = scaleType;
             return this;
         }
-
         public DeploymentScaleSettingsResponse build() {
             return new DeploymentScaleSettingsResponse(capacity, scaleType);
         }

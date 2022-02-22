@@ -23,7 +23,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<Map<String,String>> description;
+        private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<Map<String,String>> displayName;
+        private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -56,7 +56,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interactionType", required=true)
-    private final Input<String> interactionType;
+        private final Input<String> interactionType;
 
     public Input<String> getInteractionType() {
         return this.interactionType;
@@ -67,7 +67,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mappings")
-    private final @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings;
+        private final @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings;
 
     public Input<List<RelationshipLinkFieldMappingArgs>> getMappings() {
         return this.mappings == null ? Input.empty() : this.mappings;
@@ -78,7 +78,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profilePropertyReferences", required=true)
-    private final Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
+        private final Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
     public Input<List<ParticipantProfilePropertyReferenceArgs>> getProfilePropertyReferences() {
         return this.profilePropertyReferences;
@@ -89,7 +89,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relatedProfilePropertyReferences", required=true)
-    private final Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
+        private final Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
     public Input<List<ParticipantProfilePropertyReferenceArgs>> getRelatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
@@ -100,7 +100,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relationshipLinkName")
-    private final @Nullable Input<String> relationshipLinkName;
+        private final @Nullable Input<String> relationshipLinkName;
 
     public Input<String> getRelationshipLinkName() {
         return this.relationshipLinkName == null ? Input.empty() : this.relationshipLinkName;
@@ -111,7 +111,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relationshipName", required=true)
-    private final Input<String> relationshipName;
+        private final Input<String> relationshipName;
 
     public Input<String> getRelationshipName() {
         return this.relationshipName;
@@ -122,7 +122,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -301,7 +301,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public RelationshipLinkArgs build() {
             return new RelationshipLinkArgs(description, displayName, hubName, interactionType, mappings, profilePropertyReferences, relatedProfilePropertyReferences, relationshipLinkName, relationshipName, resourceGroupName);
         }

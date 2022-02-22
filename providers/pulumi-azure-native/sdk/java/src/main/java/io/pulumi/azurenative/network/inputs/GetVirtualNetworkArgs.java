@@ -19,7 +19,7 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="virtualNetworkName", required=true)
-    private final String virtualNetworkName;
+        private final String virtualNetworkName;
 
     public String getVirtualNetworkName() {
         return this.virtualNetworkName;
@@ -100,7 +100,6 @@ public final class GetVirtualNetworkArgs extends io.pulumi.resources.InvokeArgs 
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
-
         public GetVirtualNetworkArgs build() {
             return new GetVirtualNetworkArgs(expand, resourceGroupName, virtualNetworkName);
         }

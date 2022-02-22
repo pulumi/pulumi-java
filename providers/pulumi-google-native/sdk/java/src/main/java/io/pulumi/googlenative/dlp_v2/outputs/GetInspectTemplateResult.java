@@ -159,7 +159,6 @@ public final class GetInspectTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetInspectTemplateResult build() {
             return new GetInspectTemplateResult(createTime, description, displayName, inspectConfig, name, updateTime);
         }

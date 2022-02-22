@@ -159,7 +159,6 @@ public final class SparkBatchResponse {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
-
         public SparkBatchResponse build() {
             return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }

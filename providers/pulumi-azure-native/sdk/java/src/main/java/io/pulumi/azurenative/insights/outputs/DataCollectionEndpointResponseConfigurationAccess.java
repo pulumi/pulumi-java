@@ -52,7 +52,6 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public DataCollectionEndpointResponseConfigurationAccess build() {
             return new DataCollectionEndpointResponseConfigurationAccess(endpoint);
         }

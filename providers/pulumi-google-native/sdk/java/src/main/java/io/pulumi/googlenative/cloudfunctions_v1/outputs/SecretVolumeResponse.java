@@ -118,7 +118,6 @@ public final class SecretVolumeResponse {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public SecretVolumeResponse build() {
             return new SecretVolumeResponse(mountPath, project, secret, versions);
         }

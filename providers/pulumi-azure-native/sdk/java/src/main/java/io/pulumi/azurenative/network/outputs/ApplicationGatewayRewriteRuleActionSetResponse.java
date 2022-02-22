@@ -99,7 +99,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
             this.urlConfiguration = urlConfiguration;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleActionSetResponse build() {
             return new ApplicationGatewayRewriteRuleActionSetResponse(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
         }

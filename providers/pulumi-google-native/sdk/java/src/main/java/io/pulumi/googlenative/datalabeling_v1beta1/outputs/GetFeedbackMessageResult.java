@@ -144,7 +144,6 @@ public final class GetFeedbackMessageResult {
             this.requesterFeedbackMetadata = Objects.requireNonNull(requesterFeedbackMetadata);
             return this;
         }
-
         public GetFeedbackMessageResult build() {
             return new GetFeedbackMessageResult(body, createTime, image, name, operatorFeedbackMetadata, requesterFeedbackMetadata);
         }

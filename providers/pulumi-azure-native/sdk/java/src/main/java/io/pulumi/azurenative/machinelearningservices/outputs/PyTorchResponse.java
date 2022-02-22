@@ -79,7 +79,6 @@ public final class PyTorchResponse {
             this.processCount = processCount;
             return this;
         }
-
         public PyTorchResponse build() {
             return new PyTorchResponse(distributionType, processCount);
         }

@@ -76,7 +76,6 @@ public final class HttpResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public HttpResponse build() {
             return new HttpResponse(fullyDecodeReservedExpansion, rules);
         }

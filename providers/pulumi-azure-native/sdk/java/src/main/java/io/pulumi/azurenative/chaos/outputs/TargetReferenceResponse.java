@@ -74,7 +74,6 @@ public final class TargetReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TargetReferenceResponse build() {
             return new TargetReferenceResponse(id, type);
         }

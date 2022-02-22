@@ -418,7 +418,6 @@ public final class GetScriptExecutionLogsResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetScriptExecutionLogsResult build() {
             return new GetScriptExecutionLogsResult(errors, failureReason, finishedAt, hiddenParameters, id, information, name, namedOutputs, output, parameters, provisioningState, retention, scriptCmdletId, startedAt, submittedAt, timeout, type, warnings);
         }

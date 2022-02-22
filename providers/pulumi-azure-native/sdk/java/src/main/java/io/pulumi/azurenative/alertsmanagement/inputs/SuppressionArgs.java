@@ -28,7 +28,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<ConditionsArgs> conditions;
+        private final @Nullable Input<ConditionsArgs> conditions;
 
     public Input<ConditionsArgs> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -39,7 +39,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<ScopeArgs> scope;
+        private final @Nullable Input<ScopeArgs> scope;
 
     public Input<ScopeArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -61,7 +61,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,ActionRuleStatus>> status;
+        private final @Nullable Input<Either<String,ActionRuleStatus>> status;
 
     public Input<Either<String,ActionRuleStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -72,7 +72,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suppressionConfig", required=true)
-    private final Input<SuppressionConfigArgs> suppressionConfig;
+        private final Input<SuppressionConfigArgs> suppressionConfig;
 
     public Input<SuppressionConfigArgs> getSuppressionConfig() {
         return this.suppressionConfig;
@@ -84,7 +84,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -203,7 +203,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SuppressionArgs build() {
             return new SuppressionArgs(conditions, description, scope, status, suppressionConfig, type);
         }

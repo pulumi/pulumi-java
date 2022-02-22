@@ -75,7 +75,6 @@ public final class RolloutPolicyResponse {
             this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
             return this;
         }
-
         public RolloutPolicyResponse build() {
             return new RolloutPolicyResponse(defaultRolloutTime, locationRolloutPolicies);
         }

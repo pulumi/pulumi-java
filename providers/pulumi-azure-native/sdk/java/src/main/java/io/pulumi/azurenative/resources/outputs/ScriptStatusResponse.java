@@ -161,7 +161,6 @@ public final class ScriptStatusResponse {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public ScriptStatusResponse build() {
             return new ScriptStatusResponse(containerInstanceId, endTime, error, expirationTime, startTime, storageAccountId);
         }

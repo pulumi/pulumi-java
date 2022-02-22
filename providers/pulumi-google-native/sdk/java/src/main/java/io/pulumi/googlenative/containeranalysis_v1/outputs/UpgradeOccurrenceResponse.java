@@ -119,7 +119,6 @@ public final class UpgradeOccurrenceResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
-
         public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion, windowsUpdate);
         }

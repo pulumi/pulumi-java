@@ -22,7 +22,7 @@ public final class CardinalityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="number", required=true)
-    private final Integer number;
+      private final Integer number;
 
     public Integer getNumber() {
         return this.number;
@@ -33,7 +33,7 @@ public final class CardinalityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -82,7 +82,6 @@ public final class CardinalityResponse extends io.pulumi.resources.InvokeArgs {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CardinalityResponse build() {
             return new CardinalityResponse(number, path);
         }

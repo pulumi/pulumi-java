@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @InputImport(name="minDuration")
-    private final @Nullable Input<String> minDuration;
+      private final @Nullable Input<String> minDuration;
 
     public Input<String> getMinDuration() {
         return this.minDuration == null ? Input.empty() : this.minDuration;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * 
      */
     @InputImport(name="trafficPercent")
-    private final @Nullable Input<Integer> trafficPercent;
+      private final @Nullable Input<Integer> trafficPercent;
 
     public Input<Integer> getTrafficPercent() {
         return this.trafficPercent == null ? Input.empty() : this.trafficPercent;
@@ -120,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
             this.trafficPercent = Input.ofNullable(trafficPercent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(displayName, minDuration, trafficPercent);
         }

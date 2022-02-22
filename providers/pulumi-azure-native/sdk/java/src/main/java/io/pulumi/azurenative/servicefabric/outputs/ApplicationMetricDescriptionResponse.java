@@ -139,7 +139,6 @@ public final class ApplicationMetricDescriptionResponse {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
-
         public ApplicationMetricDescriptionResponse build() {
             return new ApplicationMetricDescriptionResponse(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }

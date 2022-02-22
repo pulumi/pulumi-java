@@ -144,7 +144,6 @@ public final class AzureBlobFileSystemConfigurationResponse {
             this.sasKey = sasKey;
             return this;
         }
-
         public AzureBlobFileSystemConfigurationResponse build() {
             return new AzureBlobFileSystemConfigurationResponse(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
         }

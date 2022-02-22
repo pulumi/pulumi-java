@@ -24,7 +24,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+        private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -120,7 +120,6 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public IPConfigurationProfileArgs build() {
             return new IPConfigurationProfileArgs(id, name, subnet);
         }

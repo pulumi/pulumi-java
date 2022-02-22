@@ -184,7 +184,6 @@ public final class GetLedgerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLedgerResult build() {
             return new GetLedgerResult(id, location, name, properties, systemData, tags, type);
         }

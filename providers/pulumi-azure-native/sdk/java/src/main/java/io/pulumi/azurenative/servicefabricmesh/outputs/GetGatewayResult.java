@@ -333,7 +333,6 @@ public final class GetGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(description, destinationNetwork, http, id, ipAddress, location, name, provisioningState, sourceNetwork, status, statusDetails, tags, tcp, type);
         }

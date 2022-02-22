@@ -380,7 +380,6 @@ public final class HBaseLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public HBaseLinkedServiceResponse build() {
             return new HBaseLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, trustedCertPath, type, username);
         }

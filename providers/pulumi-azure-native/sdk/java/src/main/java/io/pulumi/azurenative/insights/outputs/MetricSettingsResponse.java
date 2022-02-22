@@ -120,7 +120,6 @@ public final class MetricSettingsResponse {
             this.timeGrain = timeGrain;
             return this;
         }
-
         public MetricSettingsResponse build() {
             return new MetricSettingsResponse(category, enabled, retentionPolicy, timeGrain);
         }

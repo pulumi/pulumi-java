@@ -588,7 +588,6 @@ public final class GetVersionResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(acceleratorConfig, autoScaling, container, createTime, deploymentUri, description, errorMessage, etag, explanationConfig, framework, isDefault, labels, lastMigrationModelId, lastMigrationTime, lastUseTime, machineType, manualScaling, name, packageUris, predictionClass, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount, state);
         }

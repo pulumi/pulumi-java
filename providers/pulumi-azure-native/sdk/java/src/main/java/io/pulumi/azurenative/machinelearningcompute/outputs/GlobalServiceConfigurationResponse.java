@@ -121,7 +121,6 @@ public final class GlobalServiceConfigurationResponse {
             this.ssl = ssl;
             return this;
         }
-
         public GlobalServiceConfigurationResponse build() {
             return new GlobalServiceConfigurationResponse(autoScale, etag, serviceAuth, ssl);
         }

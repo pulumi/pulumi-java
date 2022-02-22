@@ -22,7 +22,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="consumers", required=true)
-    private final List<ConsumerResponse> consumers;
+      private final List<ConsumerResponse> consumers;
 
     public List<ConsumerResponse> getConsumers() {
         return this.consumers;
@@ -60,7 +60,6 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.consumers = Objects.requireNonNull(consumers);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(consumers);
         }

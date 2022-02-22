@@ -44,7 +44,6 @@ public final class DataAccessOptionsResponse {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }
-
         public DataAccessOptionsResponse build() {
             return new DataAccessOptionsResponse(logMode);
         }

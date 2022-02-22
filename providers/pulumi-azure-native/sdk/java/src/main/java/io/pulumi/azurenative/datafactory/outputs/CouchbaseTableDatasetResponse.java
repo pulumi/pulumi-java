@@ -231,7 +231,6 @@ public final class CouchbaseTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CouchbaseTableDatasetResponse build() {
             return new CouchbaseTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

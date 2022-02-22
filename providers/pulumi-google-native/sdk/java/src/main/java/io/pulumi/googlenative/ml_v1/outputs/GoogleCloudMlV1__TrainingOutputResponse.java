@@ -206,7 +206,6 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingOutputResponse build() {
             return new GoogleCloudMlV1__TrainingOutputResponse(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials, webAccessUris);
         }

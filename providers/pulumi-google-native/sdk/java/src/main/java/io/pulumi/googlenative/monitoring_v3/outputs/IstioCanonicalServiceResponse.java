@@ -95,7 +95,6 @@ public final class IstioCanonicalServiceResponse {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public IstioCanonicalServiceResponse build() {
             return new IstioCanonicalServiceResponse(canonicalService, canonicalServiceNamespace, meshUid);
         }

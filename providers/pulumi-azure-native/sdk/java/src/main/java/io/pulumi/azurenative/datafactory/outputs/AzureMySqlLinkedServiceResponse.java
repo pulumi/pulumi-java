@@ -210,7 +210,6 @@ public final class AzureMySqlLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMySqlLinkedServiceResponse build() {
             return new AzureMySqlLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

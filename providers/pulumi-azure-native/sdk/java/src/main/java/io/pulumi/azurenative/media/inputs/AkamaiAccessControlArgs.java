@@ -24,7 +24,7 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
-    private final @Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
+        private final @Nullable Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
     public Input<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> getAkamaiSignatureHeaderAuthenticationKeyList() {
         return this.akamaiSignatureHeaderAuthenticationKeyList == null ? Input.empty() : this.akamaiSignatureHeaderAuthenticationKeyList;
@@ -67,7 +67,6 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
             this.akamaiSignatureHeaderAuthenticationKeyList = Input.ofNullable(akamaiSignatureHeaderAuthenticationKeyList);
             return this;
         }
-
         public AkamaiAccessControlArgs build() {
             return new AkamaiAccessControlArgs(akamaiSignatureHeaderAuthenticationKeyList);
         }

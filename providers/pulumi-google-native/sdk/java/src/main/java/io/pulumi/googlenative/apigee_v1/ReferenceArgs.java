@@ -19,14 +19,14 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -37,14 +37,14 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -55,7 +55,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refers", required=true)
-    private final Input<String> refers;
+      private final Input<String> refers;
 
     public Input<String> getRefers() {
         return this.refers;
@@ -66,7 +66,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -185,7 +185,6 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public ReferenceArgs build() {
             return new ReferenceArgs(description, environmentId, name, organizationId, refers, resourceType);
         }

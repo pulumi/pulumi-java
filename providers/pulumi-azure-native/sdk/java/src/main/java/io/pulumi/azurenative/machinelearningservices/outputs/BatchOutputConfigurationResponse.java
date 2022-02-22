@@ -76,7 +76,6 @@ public final class BatchOutputConfigurationResponse {
             this.outputAction = outputAction;
             return this;
         }
-
         public BatchOutputConfigurationResponse build() {
             return new BatchOutputConfigurationResponse(appendRowFileName, outputAction);
         }

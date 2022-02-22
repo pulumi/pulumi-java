@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="expressions")
-    private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+      private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
     public Input<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
         return this.expressions == null ? Input.empty() : this.expressions;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
             this.expressions = Input.ofNullable(expressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordConditionArgs build() {
             return new GooglePrivacyDlpV2RecordConditionArgs(expressions);
         }

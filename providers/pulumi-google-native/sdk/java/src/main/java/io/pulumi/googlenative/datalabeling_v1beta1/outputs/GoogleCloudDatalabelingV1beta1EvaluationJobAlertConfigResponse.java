@@ -75,7 +75,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(email, minAcceptableMeanAveragePrecision);
         }

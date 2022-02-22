@@ -54,7 +54,6 @@ public final class LinuxConfigurationResponse {
             this.ssh = ssh;
             return this;
         }
-
         public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(ssh);
         }

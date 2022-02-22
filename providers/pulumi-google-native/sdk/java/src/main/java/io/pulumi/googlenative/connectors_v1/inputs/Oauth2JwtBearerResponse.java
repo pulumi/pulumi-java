@@ -22,7 +22,7 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clientKey", required=true)
-    private final SecretResponse clientKey;
+      private final SecretResponse clientKey;
 
     public SecretResponse getClientKey() {
         return this.clientKey;
@@ -33,7 +33,7 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="jwtClaims", required=true)
-    private final JwtClaimsResponse jwtClaims;
+      private final JwtClaimsResponse jwtClaims;
 
     public JwtClaimsResponse getJwtClaims() {
         return this.jwtClaims;
@@ -82,7 +82,6 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
         }
-
         public Oauth2JwtBearerResponse build() {
             return new Oauth2JwtBearerResponse(clientKey, jwtClaims);
         }

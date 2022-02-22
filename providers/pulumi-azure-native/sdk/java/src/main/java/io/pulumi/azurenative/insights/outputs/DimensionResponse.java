@@ -96,7 +96,6 @@ public final class DimensionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DimensionResponse build() {
             return new DimensionResponse(name, operator, values);
         }

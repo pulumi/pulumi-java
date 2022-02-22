@@ -20,7 +20,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="forwardingPath")
-    private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
+      private final @Nullable Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
     public Input<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
         return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
@@ -31,14 +31,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -112,7 +112,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address, kind);
         }

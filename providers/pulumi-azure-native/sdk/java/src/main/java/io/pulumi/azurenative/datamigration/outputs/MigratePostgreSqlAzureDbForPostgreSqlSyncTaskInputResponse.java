@@ -97,7 +97,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

@@ -210,7 +210,6 @@ public final class CouchbaseLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CouchbaseLinkedServiceResponse build() {
             return new CouchbaseLinkedServiceResponse(annotations, connectVia, connectionString, credString, description, encryptedCredential, parameters, type);
         }

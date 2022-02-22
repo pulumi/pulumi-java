@@ -15,14 +15,14 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMachineImageArgs Empty = new GetMachineImageArgs();
 
     @InputImport(name="machineImage", required=true)
-    private final String machineImage;
+      private final String machineImage;
 
     public String getMachineImage() {
         return this.machineImage;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetMachineImageArgs build() {
             return new GetMachineImageArgs(machineImage, project);
         }

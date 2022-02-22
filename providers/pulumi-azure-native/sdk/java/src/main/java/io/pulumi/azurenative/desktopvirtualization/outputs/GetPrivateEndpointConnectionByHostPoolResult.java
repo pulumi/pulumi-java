@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionByHostPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionByHostPoolResult build() {
             return new GetPrivateEndpointConnectionByHostPoolResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

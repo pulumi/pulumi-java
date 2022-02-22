@@ -139,7 +139,6 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateResponse {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public P2SVpnServerConfigRadiusServerRootCertificateResponse build() {
             return new P2SVpnServerConfigRadiusServerRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }

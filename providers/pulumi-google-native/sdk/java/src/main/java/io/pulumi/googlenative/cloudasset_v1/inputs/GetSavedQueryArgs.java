@@ -13,21 +13,21 @@ public final class GetSavedQueryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSavedQueryArgs Empty = new GetSavedQueryArgs();
 
     @InputImport(name="savedQueryId", required=true)
-    private final String savedQueryId;
+      private final String savedQueryId;
 
     public String getSavedQueryId() {
         return this.savedQueryId;
     }
 
     @InputImport(name="v1Id", required=true)
-    private final String v1Id;
+      private final String v1Id;
 
     public String getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-    private final String v1Id1;
+      private final String v1Id1;
 
     public String getV1Id1() {
         return this.v1Id1;
@@ -86,7 +86,6 @@ public final class GetSavedQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
-
         public GetSavedQueryArgs build() {
             return new GetSavedQueryArgs(savedQueryId, v1Id, v1Id1);
         }

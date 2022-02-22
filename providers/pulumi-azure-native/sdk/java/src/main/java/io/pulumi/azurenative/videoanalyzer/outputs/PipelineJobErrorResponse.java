@@ -76,7 +76,6 @@ public final class PipelineJobErrorResponse {
             this.message = message;
             return this;
         }
-
         public PipelineJobErrorResponse build() {
             return new PipelineJobErrorResponse(code, message);
         }

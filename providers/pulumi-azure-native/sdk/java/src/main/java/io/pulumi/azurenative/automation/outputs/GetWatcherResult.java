@@ -351,7 +351,6 @@ public final class GetWatcherResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWatcherResult build() {
             return new GetWatcherResult(creationTime, description, etag, executionFrequencyInSeconds, id, lastModifiedBy, lastModifiedTime, location, name, scriptName, scriptParameters, scriptRunOn, status, tags, type);
         }

@@ -24,7 +24,7 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="daysOfTheMonth")
-    private final @Nullable List<DayResponse> daysOfTheMonth;
+        private final @Nullable List<DayResponse> daysOfTheMonth;
 
     public List<DayResponse> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
@@ -62,7 +62,6 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-
         public DailyRetentionFormatResponse build() {
             return new DailyRetentionFormatResponse(daysOfTheMonth);
         }

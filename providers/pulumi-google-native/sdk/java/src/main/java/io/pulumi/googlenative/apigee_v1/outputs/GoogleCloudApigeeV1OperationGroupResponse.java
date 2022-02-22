@@ -76,7 +76,6 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationGroupResponse build() {
             return new GoogleCloudApigeeV1OperationGroupResponse(operationConfigType, operationConfigs);
         }

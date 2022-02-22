@@ -166,7 +166,6 @@ public final class WaitActivityResponse {
             this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
             return this;
         }
-
         public WaitActivityResponse build() {
             return new WaitActivityResponse(dependsOn, description, name, type, userProperties, waitTimeInSeconds);
         }

@@ -419,7 +419,6 @@ public final class GetExpressRoutePortResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRoutePortResult build() {
             return new GetExpressRoutePortResult(allocationDate, bandwidthInGbps, circuits, encapsulation, etag, etherType, id, identity, links, location, mtu, name, peeringLocation, provisionedBandwidthInGbps, provisioningState, resourceGuid, tags, type);
         }

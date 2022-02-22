@@ -402,7 +402,6 @@ public final class GetLoadBalancerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(backendAddressPools, etag, extendedLocation, frontendIPConfigurations, id, inboundNatPools, inboundNatRules, loadBalancingRules, location, name, outboundRules, probes, provisioningState, resourceGuid, sku, tags, type);
         }

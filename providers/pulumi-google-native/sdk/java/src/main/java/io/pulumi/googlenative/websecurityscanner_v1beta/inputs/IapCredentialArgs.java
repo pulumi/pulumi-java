@@ -23,7 +23,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iapTestServiceAccountInfo")
-    private final @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+      private final @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
     public Input<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo == null ? Input.empty() : this.iapTestServiceAccountInfo;
@@ -66,7 +66,6 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.iapTestServiceAccountInfo = Input.ofNullable(iapTestServiceAccountInfo);
             return this;
         }
-
         public IapCredentialArgs build() {
             return new IapCredentialArgs(iapTestServiceAccountInfo);
         }

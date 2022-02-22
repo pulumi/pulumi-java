@@ -95,7 +95,6 @@ public final class InterconnectCircuitInfoResponse {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }
-
         public InterconnectCircuitInfoResponse build() {
             return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
         }

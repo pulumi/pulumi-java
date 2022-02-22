@@ -22,7 +22,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="disks", required=true)
-    private final Map<String,String> disks;
+      private final Map<String,String> disks;
 
     public Map<String,String> getDisks() {
         return this.disks;
@@ -60,7 +60,6 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks);
         }

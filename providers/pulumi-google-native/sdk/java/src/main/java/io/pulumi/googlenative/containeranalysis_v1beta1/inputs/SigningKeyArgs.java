@@ -23,7 +23,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -34,7 +34,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyScheme")
-    private final @Nullable Input<String> keyScheme;
+      private final @Nullable Input<String> keyScheme;
 
     public Input<String> getKeyScheme() {
         return this.keyScheme == null ? Input.empty() : this.keyScheme;
@@ -45,7 +45,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<String> keyType;
+      private final @Nullable Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
@@ -56,7 +56,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyValue")
-    private final @Nullable Input<String> publicKeyValue;
+      private final @Nullable Input<String> publicKeyValue;
 
     public Input<String> getPublicKeyValue() {
         return this.publicKeyValue == null ? Input.empty() : this.publicKeyValue;
@@ -145,7 +145,6 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.publicKeyValue = Input.ofNullable(publicKeyValue);
             return this;
         }
-
         public SigningKeyArgs build() {
             return new SigningKeyArgs(keyId, keyScheme, keyType, publicKeyValue);
         }

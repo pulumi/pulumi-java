@@ -21,7 +21,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -32,7 +32,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importance")
-    private final @Nullable Input<String> importance;
+        private final @Nullable Input<String> importance;
 
     public Input<String> getImportance() {
         return this.importance == null ? Input.empty() : this.importance;
@@ -43,7 +43,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxResourcePercent", required=true)
-    private final Input<Integer> maxResourcePercent;
+        private final Input<Integer> maxResourcePercent;
 
     public Input<Integer> getMaxResourcePercent() {
         return this.maxResourcePercent;
@@ -54,7 +54,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxResourcePercentPerRequest")
-    private final @Nullable Input<Double> maxResourcePercentPerRequest;
+        private final @Nullable Input<Double> maxResourcePercentPerRequest;
 
     public Input<Double> getMaxResourcePercentPerRequest() {
         return this.maxResourcePercentPerRequest == null ? Input.empty() : this.maxResourcePercentPerRequest;
@@ -65,7 +65,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minResourcePercent", required=true)
-    private final Input<Integer> minResourcePercent;
+        private final Input<Integer> minResourcePercent;
 
     public Input<Integer> getMinResourcePercent() {
         return this.minResourcePercent;
@@ -76,7 +76,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minResourcePercentPerRequest", required=true)
-    private final Input<Double> minResourcePercentPerRequest;
+        private final Input<Double> minResourcePercentPerRequest;
 
     public Input<Double> getMinResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
@@ -87,7 +87,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryExecutionTimeout")
-    private final @Nullable Input<Integer> queryExecutionTimeout;
+        private final @Nullable Input<Integer> queryExecutionTimeout;
 
     public Input<Integer> getQueryExecutionTimeout() {
         return this.queryExecutionTimeout == null ? Input.empty() : this.queryExecutionTimeout;
@@ -98,7 +98,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -109,7 +109,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -120,7 +120,7 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workloadGroupName")
-    private final @Nullable Input<String> workloadGroupName;
+        private final @Nullable Input<String> workloadGroupName;
 
     public Input<String> getWorkloadGroupName() {
         return this.workloadGroupName == null ? Input.empty() : this.workloadGroupName;
@@ -299,7 +299,6 @@ public final class WorkloadGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.workloadGroupName = Input.ofNullable(workloadGroupName);
             return this;
         }
-
         public WorkloadGroupArgs build() {
             return new WorkloadGroupArgs(databaseName, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, queryExecutionTimeout, resourceGroupName, serverName, workloadGroupName);
         }

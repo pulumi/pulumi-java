@@ -139,7 +139,6 @@ public final class GetTransparentDataEncryptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTransparentDataEncryptionResult build() {
             return new GetTransparentDataEncryptionResult(id, location, name, status, type);
         }

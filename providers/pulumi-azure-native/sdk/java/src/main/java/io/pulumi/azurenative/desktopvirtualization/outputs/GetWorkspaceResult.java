@@ -352,7 +352,6 @@ public final class GetWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(applicationGroupReferences, cloudPcResource, description, etag, friendlyName, id, identity, kind, location, managedBy, name, objectId, plan, sku, tags, type);
         }

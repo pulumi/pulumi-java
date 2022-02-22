@@ -95,7 +95,6 @@ public final class DataTransferRegionalServiceResourceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferRegionalServiceResourceResponse build() {
             return new DataTransferRegionalServiceResourceResponse(location, name, status);
         }

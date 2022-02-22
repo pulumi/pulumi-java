@@ -17,7 +17,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
     @InputImport(name="connectorId", required=true)
-    private final Input<String> connectorId;
+      private final Input<String> connectorId;
 
     public Input<String> getConnectorId() {
         return this.connectorId;
@@ -28,14 +28,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -57,7 +57,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -68,7 +68,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxThroughput")
-    private final @Nullable Input<Integer> maxThroughput;
+      private final @Nullable Input<Integer> maxThroughput;
 
     public Input<Integer> getMaxThroughput() {
         return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
@@ -79,7 +79,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -90,7 +90,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minThroughput")
-    private final @Nullable Input<Integer> minThroughput;
+      private final @Nullable Input<Integer> minThroughput;
 
     public Input<Integer> getMinThroughput() {
         return this.minThroughput == null ? Input.empty() : this.minThroughput;
@@ -101,7 +101,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,14 +112,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -130,7 +130,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -339,7 +339,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public ConnectorArgs build() {
             return new ConnectorArgs(connectorId, ipCidrRange, location, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, project, subnet);
         }

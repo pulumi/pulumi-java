@@ -121,7 +121,6 @@ public final class ContainerPartitionKeyResponse {
             this.version = version;
             return this;
         }
-
         public ContainerPartitionKeyResponse build() {
             return new ContainerPartitionKeyResponse(kind, paths, systemKey, version);
         }

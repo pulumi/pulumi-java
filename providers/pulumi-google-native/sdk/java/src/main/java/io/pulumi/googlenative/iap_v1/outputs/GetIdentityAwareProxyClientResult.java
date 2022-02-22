@@ -95,7 +95,6 @@ public final class GetIdentityAwareProxyClientResult {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GetIdentityAwareProxyClientResult build() {
             return new GetIdentityAwareProxyClientResult(displayName, name, secret);
         }

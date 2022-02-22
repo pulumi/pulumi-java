@@ -23,7 +23,7 @@ public final class ContentKeyPolicyUnknownConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -66,7 +66,6 @@ public final class ContentKeyPolicyUnknownConfigurationArgs extends io.pulumi.re
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public ContentKeyPolicyUnknownConfigurationArgs build() {
             return new ContentKeyPolicyUnknownConfigurationArgs(odataType);
         }

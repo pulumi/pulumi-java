@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @InputImport(name="datasetUri", required=true)
-    private final String datasetUri;
+      private final String datasetUri;
 
     public String getDatasetUri() {
         return this.datasetUri;
@@ -34,7 +34,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @InputImport(name="force", required=true)
-    private final Boolean force;
+      private final Boolean force;
 
     public Boolean getForce() {
         return this.force;
@@ -45,7 +45,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @InputImport(name="schemaConfig", required=true)
-    private final SchemaConfigResponse schemaConfig;
+      private final SchemaConfigResponse schemaConfig;
 
     public SchemaConfigResponse getSchemaConfig() {
         return this.schemaConfig;
@@ -56,7 +56,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
      * 
      */
     @InputImport(name="writeDisposition", required=true)
-    private final String writeDisposition;
+      private final String writeDisposition;
 
     public String getWriteDisposition() {
         return this.writeDisposition;
@@ -125,7 +125,6 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(datasetUri, force, schemaConfig, writeDisposition);
         }

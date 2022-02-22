@@ -76,7 +76,6 @@ public final class RedirectIncompatibleRowSettingsResponse {
             this.path = path;
             return this;
         }
-
         public RedirectIncompatibleRowSettingsResponse build() {
             return new RedirectIncompatibleRowSettingsResponse(linkedServiceName, path);
         }

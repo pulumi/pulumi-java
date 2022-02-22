@@ -205,7 +205,6 @@ public final class MongoDbAtlasSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public MongoDbAtlasSinkResponse build() {
             return new MongoDbAtlasSinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

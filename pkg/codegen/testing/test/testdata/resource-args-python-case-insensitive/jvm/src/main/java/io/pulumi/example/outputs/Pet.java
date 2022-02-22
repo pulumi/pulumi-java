@@ -46,7 +46,6 @@ public final class Pet {
             this.name = name;
             return this;
         }
-
         public Pet build() {
             return new Pet(name);
         }

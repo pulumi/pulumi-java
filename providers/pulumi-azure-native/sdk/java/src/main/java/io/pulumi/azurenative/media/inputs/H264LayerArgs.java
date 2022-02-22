@@ -28,7 +28,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adaptiveBFrame")
-    private final @Nullable Input<Boolean> adaptiveBFrame;
+        private final @Nullable Input<Boolean> adaptiveBFrame;
 
     public Input<Boolean> getAdaptiveBFrame() {
         return this.adaptiveBFrame == null ? Input.empty() : this.adaptiveBFrame;
@@ -39,7 +39,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bFrames")
-    private final @Nullable Input<Integer> bFrames;
+        private final @Nullable Input<Integer> bFrames;
 
     public Input<Integer> getBFrames() {
         return this.bFrames == null ? Input.empty() : this.bFrames;
@@ -50,7 +50,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-    private final Input<Integer> bitrate;
+        private final Input<Integer> bitrate;
 
     public Input<Integer> getBitrate() {
         return this.bitrate;
@@ -61,7 +61,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bufferWindow")
-    private final @Nullable Input<String> bufferWindow;
+        private final @Nullable Input<String> bufferWindow;
 
     public Input<String> getBufferWindow() {
         return this.bufferWindow == null ? Input.empty() : this.bufferWindow;
@@ -72,7 +72,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entropyMode")
-    private final @Nullable Input<Either<String,EntropyMode>> entropyMode;
+        private final @Nullable Input<Either<String,EntropyMode>> entropyMode;
 
     public Input<Either<String,EntropyMode>> getEntropyMode() {
         return this.entropyMode == null ? Input.empty() : this.entropyMode;
@@ -83,7 +83,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameRate")
-    private final @Nullable Input<String> frameRate;
+        private final @Nullable Input<String> frameRate;
 
     public Input<String> getFrameRate() {
         return this.frameRate == null ? Input.empty() : this.frameRate;
@@ -94,7 +94,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<String> height;
+        private final @Nullable Input<String> height;
 
     public Input<String> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -105,7 +105,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -116,7 +116,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<String> level;
+        private final @Nullable Input<String> level;
 
     public Input<String> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -127,7 +127,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBitrate")
-    private final @Nullable Input<Integer> maxBitrate;
+        private final @Nullable Input<Integer> maxBitrate;
 
     public Input<Integer> getMaxBitrate() {
         return this.maxBitrate == null ? Input.empty() : this.maxBitrate;
@@ -139,7 +139,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -150,7 +150,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<Either<String,H264VideoProfile>> profile;
+        private final @Nullable Input<Either<String,H264VideoProfile>> profile;
 
     public Input<Either<String,H264VideoProfile>> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -161,7 +161,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceFrames")
-    private final @Nullable Input<Integer> referenceFrames;
+        private final @Nullable Input<Integer> referenceFrames;
 
     public Input<Integer> getReferenceFrames() {
         return this.referenceFrames == null ? Input.empty() : this.referenceFrames;
@@ -172,7 +172,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slices")
-    private final @Nullable Input<Integer> slices;
+        private final @Nullable Input<Integer> slices;
 
     public Input<Integer> getSlices() {
         return this.slices == null ? Input.empty() : this.slices;
@@ -183,7 +183,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<String> width;
+        private final @Nullable Input<String> width;
 
     public Input<String> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -437,7 +437,6 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public H264LayerArgs build() {
             return new H264LayerArgs(adaptiveBFrame, bFrames, bitrate, bufferWindow, entropyMode, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }

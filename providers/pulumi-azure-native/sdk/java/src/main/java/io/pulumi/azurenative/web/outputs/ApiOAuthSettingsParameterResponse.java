@@ -98,7 +98,6 @@ public final class ApiOAuthSettingsParameterResponse {
             this.value = value;
             return this;
         }
-
         public ApiOAuthSettingsParameterResponse build() {
             return new ApiOAuthSettingsParameterResponse(options, uiDefinition, value);
         }

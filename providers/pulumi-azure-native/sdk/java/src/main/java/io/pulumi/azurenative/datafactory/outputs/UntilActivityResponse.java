@@ -246,7 +246,6 @@ public final class UntilActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public UntilActivityResponse build() {
             return new UntilActivityResponse(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }

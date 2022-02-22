@@ -29,7 +29,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<MethodArgs>> methods;
+      private final @Nullable Input<List<MethodArgs>> methods;
 
     public Input<List<MethodArgs>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -40,7 +40,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mixins")
-    private final @Nullable Input<List<MixinArgs>> mixins;
+      private final @Nullable Input<List<MixinArgs>> mixins;
 
     public Input<List<MixinArgs>> getMixins() {
         return this.mixins == null ? Input.empty() : this.mixins;
@@ -51,7 +51,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -73,7 +73,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-    private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Input<SourceContextArgs> sourceContext;
 
     public Input<SourceContextArgs> getSourceContext() {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
@@ -84,7 +84,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-    private final @Nullable Input<ApiSyntax> syntax;
+      private final @Nullable Input<ApiSyntax> syntax;
 
     public Input<ApiSyntax> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
@@ -95,7 +95,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -229,7 +229,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ApiArgs build() {
             return new ApiArgs(methods, mixins, name, options, sourceContext, syntax, version);
         }

@@ -23,7 +23,7 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-    private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Input<Boolean> requesterPays;
 
     public Input<Boolean> getRequesterPays() {
         return this.requesterPays == null ? Input.empty() : this.requesterPays;
@@ -66,7 +66,6 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }
-
         public BucketBillingArgs build() {
             return new BucketBillingArgs(requesterPays);
         }

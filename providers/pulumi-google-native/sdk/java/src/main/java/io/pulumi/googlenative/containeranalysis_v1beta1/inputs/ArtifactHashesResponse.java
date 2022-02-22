@@ -17,7 +17,7 @@ public final class ArtifactHashesResponse extends io.pulumi.resources.InvokeArgs
     public static final ArtifactHashesResponse Empty = new ArtifactHashesResponse();
 
     @InputImport(name="sha256", required=true)
-    private final String sha256;
+      private final String sha256;
 
     public String getSha256() {
         return this.sha256;
@@ -55,7 +55,6 @@ public final class ArtifactHashesResponse extends io.pulumi.resources.InvokeArgs
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }
-
         public ArtifactHashesResponse build() {
             return new ArtifactHashesResponse(sha256);
         }

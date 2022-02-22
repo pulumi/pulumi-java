@@ -247,7 +247,6 @@ public final class ApplicationGatewayUrlPathMapResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayUrlPathMapResponse build() {
             return new ApplicationGatewayUrlPathMapResponse(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, etag, id, name, pathRules, provisioningState, type);
         }

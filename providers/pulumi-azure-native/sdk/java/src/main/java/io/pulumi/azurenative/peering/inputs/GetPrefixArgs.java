@@ -19,7 +19,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-    private final String peeringServiceName;
+        private final String peeringServiceName;
 
     public String getPeeringServiceName() {
         return this.peeringServiceName;
@@ -41,7 +41,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefixName", required=true)
-    private final String prefixName;
+        private final String prefixName;
 
     public String getPrefixName() {
         return this.prefixName;
@@ -52,7 +52,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -121,7 +121,6 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrefixArgs build() {
             return new GetPrefixArgs(expand, peeringServiceName, prefixName, resourceGroupName);
         }

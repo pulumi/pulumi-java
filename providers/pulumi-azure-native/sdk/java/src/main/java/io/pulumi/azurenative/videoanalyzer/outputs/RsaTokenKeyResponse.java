@@ -139,7 +139,6 @@ public final class RsaTokenKeyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RsaTokenKeyResponse build() {
             return new RsaTokenKeyResponse(alg, e, kid, n, type);
         }

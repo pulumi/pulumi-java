@@ -311,7 +311,6 @@ public final class GetCapacityDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCapacityDetailsResult build() {
             return new GetCapacityDetailsResult(administration, friendlyName, id, location, mode, name, provisioningState, sku, state, systemData, tags, tenantId, type);
         }

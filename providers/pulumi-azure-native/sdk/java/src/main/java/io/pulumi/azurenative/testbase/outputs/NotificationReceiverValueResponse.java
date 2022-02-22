@@ -99,7 +99,6 @@ public final class NotificationReceiverValueResponse {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
-
         public NotificationReceiverValueResponse build() {
             return new NotificationReceiverValueResponse(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
         }

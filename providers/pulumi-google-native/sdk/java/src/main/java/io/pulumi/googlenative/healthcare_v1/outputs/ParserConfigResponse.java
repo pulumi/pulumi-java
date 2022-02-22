@@ -118,7 +118,6 @@ public final class ParserConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ParserConfigResponse build() {
             return new ParserConfigResponse(allowNullHeader, schema, segmentTerminator, version);
         }

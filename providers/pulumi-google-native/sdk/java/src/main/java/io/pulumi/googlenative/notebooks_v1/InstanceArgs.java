@@ -32,7 +32,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<AcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Input<AcceleratorConfigArgs> acceleratorConfig;
 
     public Input<AcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -43,7 +43,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-    private final @Nullable Input<String> bootDiskSizeGb;
+      private final @Nullable Input<String> bootDiskSizeGb;
 
     public Input<String> getBootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
@@ -54,7 +54,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskType")
-    private final @Nullable Input<InstanceBootDiskType> bootDiskType;
+      private final @Nullable Input<InstanceBootDiskType> bootDiskType;
 
     public Input<InstanceBootDiskType> getBootDiskType() {
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
@@ -65,7 +65,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-    private final @Nullable Input<ContainerImageArgs> containerImage;
+      private final @Nullable Input<ContainerImageArgs> containerImage;
 
     public Input<ContainerImageArgs> getContainerImage() {
         return this.containerImage == null ? Input.empty() : this.containerImage;
@@ -76,7 +76,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customGpuDriverPath")
-    private final @Nullable Input<String> customGpuDriverPath;
+      private final @Nullable Input<String> customGpuDriverPath;
 
     public Input<String> getCustomGpuDriverPath() {
         return this.customGpuDriverPath == null ? Input.empty() : this.customGpuDriverPath;
@@ -87,7 +87,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGb")
-    private final @Nullable Input<String> dataDiskSizeGb;
+      private final @Nullable Input<String> dataDiskSizeGb;
 
     public Input<String> getDataDiskSizeGb() {
         return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
@@ -98,7 +98,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskType")
-    private final @Nullable Input<InstanceDataDiskType> dataDiskType;
+      private final @Nullable Input<InstanceDataDiskType> dataDiskType;
 
     public Input<InstanceDataDiskType> getDataDiskType() {
         return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
@@ -109,7 +109,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryption")
-    private final @Nullable Input<InstanceDiskEncryption> diskEncryption;
+      private final @Nullable Input<InstanceDiskEncryption> diskEncryption;
 
     public Input<InstanceDiskEncryption> getDiskEncryption() {
         return this.diskEncryption == null ? Input.empty() : this.diskEncryption;
@@ -120,14 +120,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installGpuDriver")
-    private final @Nullable Input<Boolean> installGpuDriver;
+      private final @Nullable Input<Boolean> installGpuDriver;
 
     public Input<Boolean> getInstallGpuDriver() {
         return this.installGpuDriver == null ? Input.empty() : this.installGpuDriver;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -138,7 +138,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceOwners")
-    private final @Nullable Input<List<String>> instanceOwners;
+      private final @Nullable Input<List<String>> instanceOwners;
 
     public Input<List<String>> getInstanceOwners() {
         return this.instanceOwners == null ? Input.empty() : this.instanceOwners;
@@ -149,7 +149,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -160,14 +160,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -178,7 +178,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -189,7 +189,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -200,7 +200,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -211,7 +211,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nicType")
-    private final @Nullable Input<InstanceNicType> nicType;
+      private final @Nullable Input<InstanceNicType> nicType;
 
     public Input<InstanceNicType> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -222,7 +222,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noProxyAccess")
-    private final @Nullable Input<Boolean> noProxyAccess;
+      private final @Nullable Input<Boolean> noProxyAccess;
 
     public Input<Boolean> getNoProxyAccess() {
         return this.noProxyAccess == null ? Input.empty() : this.noProxyAccess;
@@ -233,7 +233,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noPublicIp")
-    private final @Nullable Input<Boolean> noPublicIp;
+      private final @Nullable Input<Boolean> noPublicIp;
 
     public Input<Boolean> getNoPublicIp() {
         return this.noPublicIp == null ? Input.empty() : this.noPublicIp;
@@ -244,7 +244,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noRemoveDataDisk")
-    private final @Nullable Input<Boolean> noRemoveDataDisk;
+      private final @Nullable Input<Boolean> noRemoveDataDisk;
 
     public Input<Boolean> getNoRemoveDataDisk() {
         return this.noRemoveDataDisk == null ? Input.empty() : this.noRemoveDataDisk;
@@ -255,14 +255,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStartupScript")
-    private final @Nullable Input<String> postStartupScript;
+      private final @Nullable Input<String> postStartupScript;
 
     public Input<String> getPostStartupScript() {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -273,7 +273,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationAffinity")
-    private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
     public Input<ReservationAffinityArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -284,7 +284,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -295,7 +295,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountScopes")
-    private final @Nullable Input<List<String>> serviceAccountScopes;
+      private final @Nullable Input<List<String>> serviceAccountScopes;
 
     public Input<List<String>> getServiceAccountScopes() {
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
@@ -306,7 +306,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -317,7 +317,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<String> subnet;
+      private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -328,7 +328,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -339,7 +339,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeHistory")
-    private final @Nullable Input<List<UpgradeHistoryEntryArgs>> upgradeHistory;
+      private final @Nullable Input<List<UpgradeHistoryEntryArgs>> upgradeHistory;
 
     public Input<List<UpgradeHistoryEntryArgs>> getUpgradeHistory() {
         return this.upgradeHistory == null ? Input.empty() : this.upgradeHistory;
@@ -350,7 +350,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-    private final @Nullable Input<VmImageArgs> vmImage;
+      private final @Nullable Input<VmImageArgs> vmImage;
 
     public Input<VmImageArgs> getVmImage() {
         return this.vmImage == null ? Input.empty() : this.vmImage;
@@ -844,7 +844,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, installGpuDriver, instanceId, instanceOwners, kmsKey, labels, location, machineType, metadata, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, project, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnet, tags, upgradeHistory, vmImage);
         }

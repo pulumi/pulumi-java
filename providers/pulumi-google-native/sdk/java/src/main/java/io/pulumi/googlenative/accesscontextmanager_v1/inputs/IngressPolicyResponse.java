@@ -22,7 +22,7 @@ public final class IngressPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ingressFrom", required=true)
-    private final IngressFromResponse ingressFrom;
+      private final IngressFromResponse ingressFrom;
 
     public IngressFromResponse getIngressFrom() {
         return this.ingressFrom;
@@ -33,7 +33,7 @@ public final class IngressPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ingressTo", required=true)
-    private final IngressToResponse ingressTo;
+      private final IngressToResponse ingressTo;
 
     public IngressToResponse getIngressTo() {
         return this.ingressTo;
@@ -82,7 +82,6 @@ public final class IngressPolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.ingressTo = Objects.requireNonNull(ingressTo);
             return this;
         }
-
         public IngressPolicyResponse build() {
             return new IngressPolicyResponse(ingressFrom, ingressTo);
         }

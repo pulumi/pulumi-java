@@ -99,7 +99,6 @@ public final class SecurityProfileResponse {
             this.uefiSettings = uefiSettings;
             return this;
         }
-
         public SecurityProfileResponse build() {
             return new SecurityProfileResponse(encryptionAtHost, securityType, uefiSettings);
         }

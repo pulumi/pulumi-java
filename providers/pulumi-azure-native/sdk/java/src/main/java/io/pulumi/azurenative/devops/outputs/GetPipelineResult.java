@@ -227,7 +227,6 @@ public final class GetPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(bootstrapConfiguration, id, location, name, pipelineId, pipelineType, systemData, tags, type);
         }

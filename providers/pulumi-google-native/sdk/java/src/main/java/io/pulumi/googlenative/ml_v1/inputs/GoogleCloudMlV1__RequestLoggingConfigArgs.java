@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bigqueryTableName", required=true)
-    private final Input<String> bigqueryTableName;
+      private final Input<String> bigqueryTableName;
 
     public Input<String> getBigqueryTableName() {
         return this.bigqueryTableName;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="samplingPercentage")
-    private final @Nullable Input<Double> samplingPercentage;
+      private final @Nullable Input<Double> samplingPercentage;
 
     public Input<Double> getSamplingPercentage() {
         return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
@@ -94,7 +94,6 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
             this.samplingPercentage = Input.ofNullable(samplingPercentage);
             return this;
         }
-
         public GoogleCloudMlV1__RequestLoggingConfigArgs build() {
             return new GoogleCloudMlV1__RequestLoggingConfigArgs(bigqueryTableName, samplingPercentage);
         }

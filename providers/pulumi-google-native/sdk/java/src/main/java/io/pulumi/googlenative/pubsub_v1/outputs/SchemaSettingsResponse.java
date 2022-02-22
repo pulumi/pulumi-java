@@ -74,7 +74,6 @@ public final class SchemaSettingsResponse {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public SchemaSettingsResponse build() {
             return new SchemaSettingsResponse(encoding, schema);
         }

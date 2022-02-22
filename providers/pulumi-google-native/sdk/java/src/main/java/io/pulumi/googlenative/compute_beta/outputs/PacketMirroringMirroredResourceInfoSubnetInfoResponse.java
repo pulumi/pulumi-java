@@ -74,7 +74,6 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoSubnetInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoSubnetInfoResponse(canonicalUrl, url);
         }

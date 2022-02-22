@@ -24,7 +24,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -35,7 +35,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -46,7 +46,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -57,7 +57,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainRFileUri", required=true)
-    private final Input<String> mainRFileUri;
+      private final Input<String> mainRFileUri;
 
     public Input<String> getMainRFileUri() {
         return this.mainRFileUri;
@@ -146,7 +146,6 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
             this.mainRFileUri = Input.of(Objects.requireNonNull(mainRFileUri));
             return this;
         }
-
         public SparkRBatchArgs build() {
             return new SparkRBatchArgs(archiveUris, args, fileUris, mainRFileUri);
         }

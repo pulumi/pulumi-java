@@ -54,7 +54,6 @@ public final class PtrRecordResponse {
             this.ptrdname = ptrdname;
             return this;
         }
-
         public PtrRecordResponse build() {
             return new PtrRecordResponse(ptrdname);
         }

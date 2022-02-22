@@ -119,7 +119,6 @@ public final class FixedScaleSettingsResponse {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
-
         public FixedScaleSettingsResponse build() {
             return new FixedScaleSettingsResponse(nodeDeallocationOption, resizeTimeout, targetDedicatedNodes, targetLowPriorityNodes);
         }

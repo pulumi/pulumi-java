@@ -252,7 +252,6 @@ public final class Office365DatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Office365DatasetResponse build() {
             return new Office365DatasetResponse(annotations, description, folder, linkedServiceName, parameters, predicate, schema, structure, tableName, type);
         }

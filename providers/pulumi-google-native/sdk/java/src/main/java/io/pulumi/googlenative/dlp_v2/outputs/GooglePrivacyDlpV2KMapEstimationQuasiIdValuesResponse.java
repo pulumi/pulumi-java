@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(estimatedAnonymity, quasiIdsValues);
         }

@@ -44,7 +44,6 @@ public final class AttestationResponse {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }
-
         public AttestationResponse build() {
             return new AttestationResponse(pgpSignedAttestation);
         }

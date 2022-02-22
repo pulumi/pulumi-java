@@ -122,7 +122,6 @@ public final class ApplicationGatewayRewriteRuleResponse {
             this.ruleSequence = ruleSequence;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleResponse build() {
             return new ApplicationGatewayRewriteRuleResponse(actionSet, conditions, name, ruleSequence);
         }

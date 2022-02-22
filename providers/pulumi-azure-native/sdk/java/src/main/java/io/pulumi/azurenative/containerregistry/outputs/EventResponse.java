@@ -99,7 +99,6 @@ public final class EventResponse {
             this.id = id;
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(eventRequestMessage, eventResponseMessage, id);
         }

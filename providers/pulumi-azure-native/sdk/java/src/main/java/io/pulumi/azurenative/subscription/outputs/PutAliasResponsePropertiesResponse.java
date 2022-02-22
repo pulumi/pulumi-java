@@ -76,7 +76,6 @@ public final class PutAliasResponsePropertiesResponse {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public PutAliasResponsePropertiesResponse build() {
             return new PutAliasResponsePropertiesResponse(provisioningState, subscriptionId);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusiveMaximum")
-    private final @Nullable Input<Double> exclusiveMaximum;
+      private final @Nullable Input<Double> exclusiveMaximum;
 
     public Input<Double> getExclusiveMaximum() {
         return this.exclusiveMaximum == null ? Input.empty() : this.exclusiveMaximum;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusiveMinimum")
-    private final @Nullable Input<Double> exclusiveMinimum;
+      private final @Nullable Input<Double> exclusiveMinimum;
 
     public Input<Double> getExclusiveMinimum() {
         return this.exclusiveMinimum == null ? Input.empty() : this.exclusiveMinimum;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximum")
-    private final @Nullable Input<Double> maximum;
+      private final @Nullable Input<Double> maximum;
 
     public Input<Double> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimum")
-    private final @Nullable Input<Double> minimum;
+      private final @Nullable Input<Double> minimum;
 
     public Input<Double> getMinimum() {
         return this.minimum == null ? Input.empty() : this.minimum;
@@ -145,7 +145,6 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
             this.minimum = Input.ofNullable(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2alphaIntervalArgs build() {
             return new GoogleCloudRetailV2alphaIntervalArgs(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

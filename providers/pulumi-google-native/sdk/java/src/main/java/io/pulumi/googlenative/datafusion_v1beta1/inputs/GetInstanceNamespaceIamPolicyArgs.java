@@ -15,35 +15,35 @@ public final class GetInstanceNamespaceIamPolicyArgs extends io.pulumi.resources
     public static final GetInstanceNamespaceIamPolicyArgs Empty = new GetInstanceNamespaceIamPolicyArgs();
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final String namespaceId;
+      private final String namespaceId;
 
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetInstanceNamespaceIamPolicyArgs extends io.pulumi.resources
             this.project = project;
             return this;
         }
-
         public GetInstanceNamespaceIamPolicyArgs build() {
             return new GetInstanceNamespaceIamPolicyArgs(instanceId, location, namespaceId, optionsRequestedPolicyVersion, project);
         }

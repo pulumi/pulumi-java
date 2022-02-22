@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2AudienceResponse {
             this.genders = Objects.requireNonNull(genders);
             return this;
         }
-
         public GoogleCloudRetailV2AudienceResponse build() {
             return new GoogleCloudRetailV2AudienceResponse(ageGroups, genders);
         }

@@ -53,7 +53,6 @@ public final class OutputFileResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public OutputFileResponse build() {
             return new OutputFileResponse(labels);
         }

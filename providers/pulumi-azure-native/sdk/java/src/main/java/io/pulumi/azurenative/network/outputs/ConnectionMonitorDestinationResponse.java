@@ -98,7 +98,6 @@ public final class ConnectionMonitorDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ConnectionMonitorDestinationResponse build() {
             return new ConnectionMonitorDestinationResponse(address, port, resourceId);
         }

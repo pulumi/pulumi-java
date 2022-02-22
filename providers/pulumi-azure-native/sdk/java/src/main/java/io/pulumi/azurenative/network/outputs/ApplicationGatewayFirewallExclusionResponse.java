@@ -95,7 +95,6 @@ public final class ApplicationGatewayFirewallExclusionResponse {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ApplicationGatewayFirewallExclusionResponse build() {
             return new ApplicationGatewayFirewallExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

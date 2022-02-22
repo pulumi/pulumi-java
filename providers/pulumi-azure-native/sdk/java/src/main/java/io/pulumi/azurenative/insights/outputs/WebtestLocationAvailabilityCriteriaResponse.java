@@ -119,7 +119,6 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }
-
         public WebtestLocationAvailabilityCriteriaResponse build() {
             return new WebtestLocationAvailabilityCriteriaResponse(componentId, failedLocationCount, odataType, webTestId);
         }

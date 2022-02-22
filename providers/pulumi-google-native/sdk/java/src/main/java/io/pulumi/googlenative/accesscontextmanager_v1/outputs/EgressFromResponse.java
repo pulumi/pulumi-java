@@ -75,7 +75,6 @@ public final class EgressFromResponse {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public EgressFromResponse build() {
             return new EgressFromResponse(identities, identityType);
         }

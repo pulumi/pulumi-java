@@ -246,7 +246,6 @@ public final class GetTrialResult {
             this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
             return this;
         }
-
         public GetTrialResult build() {
             return new GetTrialResult(clientId, endTime, finalMeasurement, infeasibleReason, measurements, name, parameters, startTime, state, trialInfeasible);
         }

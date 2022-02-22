@@ -25,7 +25,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosAppInfo", required=true)
-    private final IosAppInfoResponse iosAppInfo;
+      private final IosAppInfoResponse iosAppInfo;
 
     public IosAppInfoResponse getIosAppInfo() {
         return this.iosAppInfo;
@@ -36,7 +36,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosRoboTest", required=true)
-    private final IosRoboTestResponse iosRoboTest;
+      private final IosRoboTestResponse iosRoboTest;
 
     public IosRoboTestResponse getIosRoboTest() {
         return this.iosRoboTest;
@@ -47,7 +47,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosTestLoop", required=true)
-    private final IosTestLoopResponse iosTestLoop;
+      private final IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse getIosTestLoop() {
         return this.iosTestLoop;
@@ -58,7 +58,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosXcTest", required=true)
-    private final IosXcTestResponse iosXcTest;
+      private final IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse getIosXcTest() {
         return this.iosXcTest;
@@ -69,7 +69,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testTimeout", required=true)
-    private final DurationResponse testTimeout;
+      private final DurationResponse testTimeout;
 
     public DurationResponse getTestTimeout() {
         return this.testTimeout;
@@ -148,7 +148,6 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public IosTestResponse build() {
             return new IosTestResponse(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }

@@ -139,7 +139,6 @@ public final class GetProductResult {
             this.productLabels = Objects.requireNonNull(productLabels);
             return this;
         }
-
         public GetProductResult build() {
             return new GetProductResult(description, displayName, name, productCategory, productLabels);
         }

@@ -52,7 +52,6 @@ public final class MeshCertificatesResponse {
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }
-
         public MeshCertificatesResponse build() {
             return new MeshCertificatesResponse(enableCertificates);
         }

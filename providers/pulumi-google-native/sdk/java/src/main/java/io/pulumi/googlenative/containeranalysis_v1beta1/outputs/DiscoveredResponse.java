@@ -96,7 +96,6 @@ public final class DiscoveredResponse {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
-
         public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis);
         }

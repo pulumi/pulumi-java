@@ -24,7 +24,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<VirtualDiskArgs>> disks;
+        private final @Nullable Input<List<VirtualDiskArgs>> disks;
 
     public Input<List<VirtualDiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -67,7 +67,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.disks = Input.ofNullable(disks);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(disks);
         }

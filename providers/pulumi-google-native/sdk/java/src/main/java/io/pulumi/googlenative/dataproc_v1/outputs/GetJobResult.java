@@ -447,7 +447,6 @@ public final class GetJobResult {
             this.yarnApplications = Objects.requireNonNull(yarnApplications);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(done, driverControlFilesUri, driverOutputResourceUri, hadoopJob, hiveJob, jobUuid, labels, pigJob, placement, prestoJob, pysparkJob, reference, scheduling, sparkJob, sparkRJob, sparkSqlJob, status, statusHistory, yarnApplications);
         }

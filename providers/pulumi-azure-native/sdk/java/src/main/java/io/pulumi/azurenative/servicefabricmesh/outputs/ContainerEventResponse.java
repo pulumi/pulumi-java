@@ -161,7 +161,6 @@ public final class ContainerEventResponse {
             this.type = type;
             return this;
         }
-
         public ContainerEventResponse build() {
             return new ContainerEventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

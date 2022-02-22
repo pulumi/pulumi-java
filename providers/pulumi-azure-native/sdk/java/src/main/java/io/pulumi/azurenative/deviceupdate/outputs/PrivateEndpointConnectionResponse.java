@@ -206,7 +206,6 @@ public final class PrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(groupIds, id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

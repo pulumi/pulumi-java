@@ -54,7 +54,6 @@ public final class GetUserSharedAccessTokenResult {
             this.value = value;
             return this;
         }
-
         public GetUserSharedAccessTokenResult build() {
             return new GetUserSharedAccessTokenResult(value);
         }

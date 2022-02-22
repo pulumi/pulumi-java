@@ -17,7 +17,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="eventSubscriptionName", required=true)
-    private final String eventSubscriptionName;
+        private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetEventSubscriptionArgs build() {
             return new GetEventSubscriptionArgs(eventSubscriptionName, scope);
         }

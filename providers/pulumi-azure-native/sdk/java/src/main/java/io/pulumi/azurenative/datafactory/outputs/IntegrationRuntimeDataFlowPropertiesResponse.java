@@ -120,7 +120,6 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
             this.timeToLive = timeToLive;
             return this;
         }
-
         public IntegrationRuntimeDataFlowPropertiesResponse build() {
             return new IntegrationRuntimeDataFlowPropertiesResponse(cleanup, computeType, coreCount, timeToLive);
         }

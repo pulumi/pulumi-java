@@ -331,7 +331,6 @@ public final class SUCSchedulePropertiesResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public SUCSchedulePropertiesResponse build() {
             return new SUCSchedulePropertiesResponse(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, interval, isEnabled, lastModifiedTime, nextRun, nextRunOffsetMinutes, startTime, startTimeOffsetMinutes, timeZone);
         }

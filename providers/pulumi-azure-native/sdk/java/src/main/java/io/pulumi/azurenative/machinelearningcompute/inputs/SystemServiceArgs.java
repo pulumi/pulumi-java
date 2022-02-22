@@ -24,7 +24,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemServiceType", required=true)
-    private final Input<Either<String,SystemServiceType>> systemServiceType;
+        private final Input<Either<String,SystemServiceType>> systemServiceType;
 
     public Input<Either<String,SystemServiceType>> getSystemServiceType() {
         return this.systemServiceType;
@@ -67,7 +67,6 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.systemServiceType = Input.of(Objects.requireNonNull(systemServiceType));
             return this;
         }
-
         public SystemServiceArgs build() {
             return new SystemServiceArgs(systemServiceType);
         }

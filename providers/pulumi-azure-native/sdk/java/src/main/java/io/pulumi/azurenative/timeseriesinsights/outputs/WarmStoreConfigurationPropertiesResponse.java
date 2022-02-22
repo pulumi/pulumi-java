@@ -52,7 +52,6 @@ public final class WarmStoreConfigurationPropertiesResponse {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
-
         public WarmStoreConfigurationPropertiesResponse build() {
             return new WarmStoreConfigurationPropertiesResponse(dataRetention);
         }

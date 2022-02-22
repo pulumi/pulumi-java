@@ -97,7 +97,6 @@ public final class MonitoredResourceResponse {
             this.sendingLogs = sendingLogs;
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, sendingLogs);
         }

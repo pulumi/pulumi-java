@@ -98,7 +98,6 @@ public final class GetImageUploadUrlForDataResult {
             this.relativePath = relativePath;
             return this;
         }
-
         public GetImageUploadUrlForDataResult build() {
             return new GetImageUploadUrlForDataResult(contentUrl, imageExists, relativePath);
         }

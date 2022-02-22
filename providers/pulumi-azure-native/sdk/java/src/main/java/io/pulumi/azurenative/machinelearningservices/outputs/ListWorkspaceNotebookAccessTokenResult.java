@@ -137,7 +137,6 @@ public final class ListWorkspaceNotebookAccessTokenResult {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
-
         public ListWorkspaceNotebookAccessTokenResult build() {
             return new ListWorkspaceNotebookAccessTokenResult(accessToken, expiresIn, hostName, notebookResourceId, publicDns, refreshToken, scope, tokenType);
         }

@@ -76,7 +76,6 @@ public final class RuleResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(destinations, sources);
         }

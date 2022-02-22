@@ -290,7 +290,6 @@ public final class GetCapacityReservationResult {
             this.zones = zones;
             return this;
         }
-
         public GetCapacityReservationResult build() {
             return new GetCapacityReservationResult(id, instanceView, location, name, provisioningState, provisioningTime, reservationId, sku, tags, type, virtualMachinesAssociated, zones);
         }

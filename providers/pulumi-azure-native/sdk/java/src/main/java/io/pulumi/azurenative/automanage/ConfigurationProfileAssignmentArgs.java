@@ -20,7 +20,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configurationProfileAssignmentName")
-    private final @Nullable Input<String> configurationProfileAssignmentName;
+        private final @Nullable Input<String> configurationProfileAssignmentName;
 
     public Input<String> getConfigurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName == null ? Input.empty() : this.configurationProfileAssignmentName;
@@ -31,7 +31,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties;
+        private final @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
     public Input<ConfigurationProfileAssignmentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final Input<String> vmName;
+        private final Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName;
@@ -142,7 +142,6 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
             this.vmName = Input.of(Objects.requireNonNull(vmName));
             return this;
         }
-
         public ConfigurationProfileAssignmentArgs build() {
             return new ConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, properties, resourceGroupName, vmName);
         }

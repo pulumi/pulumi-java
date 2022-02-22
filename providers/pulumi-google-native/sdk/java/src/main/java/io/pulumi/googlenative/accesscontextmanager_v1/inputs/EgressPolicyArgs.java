@@ -24,7 +24,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressFrom")
-    private final @Nullable Input<EgressFromArgs> egressFrom;
+      private final @Nullable Input<EgressFromArgs> egressFrom;
 
     public Input<EgressFromArgs> getEgressFrom() {
         return this.egressFrom == null ? Input.empty() : this.egressFrom;
@@ -35,7 +35,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressTo")
-    private final @Nullable Input<EgressToArgs> egressTo;
+      private final @Nullable Input<EgressToArgs> egressTo;
 
     public Input<EgressToArgs> getEgressTo() {
         return this.egressTo == null ? Input.empty() : this.egressTo;
@@ -94,7 +94,6 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.egressTo = Input.ofNullable(egressTo);
             return this;
         }
-
         public EgressPolicyArgs build() {
             return new EgressPolicyArgs(egressFrom, egressTo);
         }

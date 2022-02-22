@@ -222,7 +222,6 @@ public final class GetExecutionResult {
             this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(argument, callLogLevel, endTime, error, name, result, startTime, state, workflowRevisionId);
         }

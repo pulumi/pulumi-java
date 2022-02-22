@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoKeyResponse build() {
             return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
         }

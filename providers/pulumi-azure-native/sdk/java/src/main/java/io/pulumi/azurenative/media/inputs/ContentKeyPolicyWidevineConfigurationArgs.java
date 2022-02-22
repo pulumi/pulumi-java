@@ -23,7 +23,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="widevineTemplate", required=true)
-    private final Input<String> widevineTemplate;
+        private final Input<String> widevineTemplate;
 
     public Input<String> getWidevineTemplate() {
         return this.widevineTemplate;
@@ -93,7 +93,6 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
             this.widevineTemplate = Input.of(Objects.requireNonNull(widevineTemplate));
             return this;
         }
-
         public ContentKeyPolicyWidevineConfigurationArgs build() {
             return new ContentKeyPolicyWidevineConfigurationArgs(odataType, widevineTemplate);
         }

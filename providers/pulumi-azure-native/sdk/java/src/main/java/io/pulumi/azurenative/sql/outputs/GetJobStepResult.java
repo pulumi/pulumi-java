@@ -227,7 +227,6 @@ public final class GetJobStepResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobStepResult build() {
             return new GetJobStepResult(action, credential, executionOptions, id, name, output, stepId, targetGroup, type);
         }

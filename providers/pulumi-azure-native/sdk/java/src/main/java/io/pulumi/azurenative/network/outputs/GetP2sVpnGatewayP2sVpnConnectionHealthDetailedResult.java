@@ -54,7 +54,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
             this.sasUrl = sasUrl;
             return this;
         }
-
         public GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult build() {
             return new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult(sasUrl);
         }

@@ -23,7 +23,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="city")
-    private final @Nullable Input<String> city;
+        private final @Nullable Input<String> city;
 
     public Input<String> getCity() {
         return this.city == null ? Input.empty() : this.city;
@@ -34,7 +34,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="countryOrRegion")
-    private final @Nullable Input<String> countryOrRegion;
+        private final @Nullable Input<String> countryOrRegion;
 
     public Input<String> getCountryOrRegion() {
         return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
@@ -45,7 +45,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="phone")
-    private final @Nullable Input<String> phone;
+        private final @Nullable Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone == null ? Input.empty() : this.phone;
@@ -56,7 +56,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="postalCode")
-    private final @Nullable Input<String> postalCode;
+        private final @Nullable Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode == null ? Input.empty() : this.postalCode;
@@ -67,7 +67,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recipientName")
-    private final @Nullable Input<String> recipientName;
+        private final @Nullable Input<String> recipientName;
 
     public Input<String> getRecipientName() {
         return this.recipientName == null ? Input.empty() : this.recipientName;
@@ -78,7 +78,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stateOrProvince")
-    private final @Nullable Input<String> stateOrProvince;
+        private final @Nullable Input<String> stateOrProvince;
 
     public Input<String> getStateOrProvince() {
         return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
@@ -89,7 +89,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streetAddress1")
-    private final @Nullable Input<String> streetAddress1;
+        private final @Nullable Input<String> streetAddress1;
 
     public Input<String> getStreetAddress1() {
         return this.streetAddress1 == null ? Input.empty() : this.streetAddress1;
@@ -100,7 +100,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streetAddress2")
-    private final @Nullable Input<String> streetAddress2;
+        private final @Nullable Input<String> streetAddress2;
 
     public Input<String> getStreetAddress2() {
         return this.streetAddress2 == null ? Input.empty() : this.streetAddress2;
@@ -249,7 +249,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             this.streetAddress2 = Input.ofNullable(streetAddress2);
             return this;
         }
-
         public ShippingInformationArgs build() {
             return new ShippingInformationArgs(city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

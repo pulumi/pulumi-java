@@ -76,7 +76,6 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(description, status);
         }

@@ -116,7 +116,6 @@ public final class SavedDiskResponse {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }
-
         public SavedDiskResponse build() {
             return new SavedDiskResponse(kind, sourceDisk, storageBytes, storageBytesStatus);
         }

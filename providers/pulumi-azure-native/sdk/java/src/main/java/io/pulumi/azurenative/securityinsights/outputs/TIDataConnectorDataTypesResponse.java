@@ -54,7 +54,6 @@ public final class TIDataConnectorDataTypesResponse {
             this.indicators = indicators;
             return this;
         }
-
         public TIDataConnectorDataTypesResponse build() {
             return new TIDataConnectorDataTypesResponse(indicators);
         }

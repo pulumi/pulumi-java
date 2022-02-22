@@ -23,7 +23,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable Input<String> keySource;
+        private final @Nullable Input<String> keySource;
 
     public Input<String> getKeySource() {
         return this.keySource == null ? Input.empty() : this.keySource;
@@ -66,7 +66,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             this.keySource = Input.ofNullable(keySource);
             return this;
         }
-
         public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(keySource);
         }

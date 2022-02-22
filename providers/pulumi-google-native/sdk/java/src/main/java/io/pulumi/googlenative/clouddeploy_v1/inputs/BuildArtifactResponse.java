@@ -21,7 +21,7 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="image", required=true)
-    private final String image;
+      private final String image;
 
     public String getImage() {
         return this.image;
@@ -32,7 +32,7 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -81,7 +81,6 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public BuildArtifactResponse build() {
             return new BuildArtifactResponse(image, tag);
         }

@@ -630,7 +630,6 @@ public final class RecommendedActionResponse {
             this.validSince = Objects.requireNonNull(validSince);
             return this;
         }
-
         public RecommendedActionResponse build() {
             return new RecommendedActionResponse(details, errorDetails, estimatedImpact, executeActionDuration, executeActionInitiatedBy, executeActionInitiatedTime, executeActionStartTime, id, implementationDetails, isArchivedAction, isExecutableAction, isRevertableAction, kind, lastRefresh, linkedObjects, location, name, observedImpact, recommendationReason, revertActionDuration, revertActionInitiatedBy, revertActionInitiatedTime, revertActionStartTime, score, state, timeSeries, type, validSince);
         }

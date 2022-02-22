@@ -52,7 +52,6 @@ public final class ExpressRouteConnectionIdResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ExpressRouteConnectionIdResponse build() {
             return new ExpressRouteConnectionIdResponse(id);
         }

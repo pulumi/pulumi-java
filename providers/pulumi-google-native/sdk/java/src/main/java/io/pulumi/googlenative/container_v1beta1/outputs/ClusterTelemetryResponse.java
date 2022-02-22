@@ -52,7 +52,6 @@ public final class ClusterTelemetryResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClusterTelemetryResponse build() {
             return new ClusterTelemetryResponse(type);
         }

@@ -76,7 +76,6 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
             this.token = token;
             return this;
         }
-
         public ListSaasSubscriptionLevelAccessTokenResult build() {
             return new ListSaasSubscriptionLevelAccessTokenResult(publisherOfferBaseUri, token);
         }

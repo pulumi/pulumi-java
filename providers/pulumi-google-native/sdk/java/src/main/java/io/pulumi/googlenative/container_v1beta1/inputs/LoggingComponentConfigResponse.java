@@ -22,7 +22,7 @@ public final class LoggingComponentConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableComponents", required=true)
-    private final List<String> enableComponents;
+      private final List<String> enableComponents;
 
     public List<String> getEnableComponents() {
         return this.enableComponents;
@@ -60,7 +60,6 @@ public final class LoggingComponentConfigResponse extends io.pulumi.resources.In
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public LoggingComponentConfigResponse build() {
             return new LoggingComponentConfigResponse(enableComponents);
         }

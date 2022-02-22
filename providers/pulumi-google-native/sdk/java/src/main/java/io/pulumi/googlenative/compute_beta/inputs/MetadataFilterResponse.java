@@ -23,7 +23,7 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="filterLabels", required=true)
-    private final List<MetadataFilterLabelMatchResponse> filterLabels;
+      private final List<MetadataFilterLabelMatchResponse> filterLabels;
 
     public List<MetadataFilterLabelMatchResponse> getFilterLabels() {
         return this.filterLabels;
@@ -34,7 +34,7 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="filterMatchCriteria", required=true)
-    private final String filterMatchCriteria;
+      private final String filterMatchCriteria;
 
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
@@ -83,7 +83,6 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public MetadataFilterResponse build() {
             return new MetadataFilterResponse(filterLabels, filterMatchCriteria);
         }

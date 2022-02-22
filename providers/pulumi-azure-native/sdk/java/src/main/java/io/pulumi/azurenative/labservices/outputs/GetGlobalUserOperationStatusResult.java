@@ -52,7 +52,6 @@ public final class GetGlobalUserOperationStatusResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalUserOperationStatusResult build() {
             return new GetGlobalUserOperationStatusResult(status);
         }

@@ -21,7 +21,7 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -59,7 +59,6 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public CloudFunctionEndpointResponse build() {
             return new CloudFunctionEndpointResponse(uri);
         }

@@ -161,7 +161,6 @@ public final class GetTaxonomyResult {
             this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
             return this;
         }
-
         public GetTaxonomyResult build() {
             return new GetTaxonomyResult(activatedPolicyTypes, description, displayName, name, policyTagCount, taxonomyTimestamps);
         }

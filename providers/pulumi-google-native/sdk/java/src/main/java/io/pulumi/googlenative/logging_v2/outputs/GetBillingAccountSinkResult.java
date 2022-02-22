@@ -267,7 +267,6 @@ public final class GetBillingAccountSinkResult {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }
-
         public GetBillingAccountSinkResult build() {
             return new GetBillingAccountSinkResult(bigqueryOptions, createTime, description, destination, disabled, exclusions, filter, includeChildren, name, updateTime, writerIdentity);
         }

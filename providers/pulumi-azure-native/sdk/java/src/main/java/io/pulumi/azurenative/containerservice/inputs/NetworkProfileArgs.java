@@ -23,7 +23,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerVnetId")
-    private final @Nullable Input<String> peerVnetId;
+        private final @Nullable Input<String> peerVnetId;
 
     public Input<String> getPeerVnetId() {
         return this.peerVnetId == null ? Input.empty() : this.peerVnetId;
@@ -34,7 +34,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetCidr")
-    private final @Nullable Input<String> vnetCidr;
+        private final @Nullable Input<String> vnetCidr;
 
     public Input<String> getVnetCidr() {
         return this.vnetCidr == null ? Input.empty() : this.vnetCidr;
@@ -45,7 +45,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vnetId")
-    private final @Nullable Input<String> vnetId;
+        private final @Nullable Input<String> vnetId;
 
     public Input<String> getVnetId() {
         return this.vnetId == null ? Input.empty() : this.vnetId;
@@ -119,7 +119,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.vnetId = Input.ofNullable(vnetId);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(peerVnetId, vnetCidr, vnetId);
         }

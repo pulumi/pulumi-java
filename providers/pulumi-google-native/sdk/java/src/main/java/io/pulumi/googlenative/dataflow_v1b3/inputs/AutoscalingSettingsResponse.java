@@ -22,7 +22,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxNumWorkers", required=true)
-    private final Integer maxNumWorkers;
+      private final Integer maxNumWorkers;
 
     public Integer getMaxNumWorkers() {
         return this.maxNumWorkers;
@@ -82,7 +82,6 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
             this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
             return this;
         }
-
         public AutoscalingSettingsResponse build() {
             return new AutoscalingSettingsResponse(algorithm, maxNumWorkers);
         }

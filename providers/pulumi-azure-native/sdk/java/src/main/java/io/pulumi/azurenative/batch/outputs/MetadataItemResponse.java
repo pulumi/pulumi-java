@@ -58,7 +58,6 @@ public final class MetadataItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MetadataItemResponse build() {
             return new MetadataItemResponse(name, value);
         }

@@ -117,7 +117,6 @@ public final class WorkerConfigResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType, network, tag);
         }

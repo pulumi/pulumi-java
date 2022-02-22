@@ -75,7 +75,6 @@ public final class SslSettingsResponse {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
         }
-
         public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, isManagedCertificate);
         }

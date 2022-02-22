@@ -353,7 +353,6 @@ public final class GetRelationshipResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRelationshipResult build() {
             return new GetRelationshipResult(cardinality, description, displayName, expiryDateTimeUtc, fields, id, lookupMappings, name, profileType, provisioningState, relatedProfileType, relationshipGuidId, relationshipName, tenantId, type);
         }

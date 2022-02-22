@@ -120,7 +120,6 @@ public final class ManagementPolicyRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagementPolicyRuleResponse build() {
             return new ManagementPolicyRuleResponse(definition, enabled, name, type);
         }

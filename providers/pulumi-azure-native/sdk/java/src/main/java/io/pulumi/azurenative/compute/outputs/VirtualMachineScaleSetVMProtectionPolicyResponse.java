@@ -76,7 +76,6 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }
-
         public VirtualMachineScaleSetVMProtectionPolicyResponse build() {
             return new VirtualMachineScaleSetVMProtectionPolicyResponse(protectFromScaleIn, protectFromScaleSetActions);
         }
