@@ -52,7 +52,6 @@ public final class TaskSchedule {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public TaskSchedule build() {
             return new TaskSchedule(scheduleExpression);
         }

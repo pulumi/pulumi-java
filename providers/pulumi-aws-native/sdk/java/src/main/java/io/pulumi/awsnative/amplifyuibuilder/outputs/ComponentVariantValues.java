@@ -30,7 +30,6 @@ public final class ComponentVariantValues {
         public Builder(ComponentVariantValues defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentVariantValues build() {
             return new ComponentVariantValues();
         }

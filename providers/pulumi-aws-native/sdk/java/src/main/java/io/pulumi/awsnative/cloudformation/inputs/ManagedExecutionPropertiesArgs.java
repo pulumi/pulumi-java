@@ -19,7 +19,7 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
     public static final ManagedExecutionPropertiesArgs Empty = new ManagedExecutionPropertiesArgs();
 
     @InputImport(name="active")
-    private final @Nullable Input<Boolean> active;
+        private final @Nullable Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -62,7 +62,6 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
             this.active = Input.ofNullable(active);
             return this;
         }
-
         public ManagedExecutionPropertiesArgs build() {
             return new ManagedExecutionPropertiesArgs(active);
         }

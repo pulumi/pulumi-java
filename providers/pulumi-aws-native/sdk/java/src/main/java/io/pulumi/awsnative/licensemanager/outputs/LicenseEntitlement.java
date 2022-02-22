@@ -114,7 +114,6 @@ public final class LicenseEntitlement {
             this.value = value;
             return this;
         }
-
         public LicenseEntitlement build() {
             return new LicenseEntitlement(allowCheckIn, maxCount, name, overage, unit, value);
         }

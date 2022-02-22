@@ -14,21 +14,21 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     public static final BackupSelectionConditionResourceTypeArgs Empty = new BackupSelectionConditionResourceTypeArgs();
 
     @InputImport(name="conditionKey", required=true)
-    private final Input<String> conditionKey;
+        private final Input<String> conditionKey;
 
     public Input<String> getConditionKey() {
         return this.conditionKey;
     }
 
     @InputImport(name="conditionType", required=true)
-    private final Input<String> conditionType;
+        private final Input<String> conditionType;
 
     public Input<String> getConditionType() {
         return this.conditionType;
     }
 
     @InputImport(name="conditionValue", required=true)
-    private final Input<String> conditionValue;
+        private final Input<String> conditionValue;
 
     public Input<String> getConditionValue() {
         return this.conditionValue;
@@ -102,7 +102,6 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
             this.conditionValue = Input.of(Objects.requireNonNull(conditionValue));
             return this;
         }
-
         public BackupSelectionConditionResourceTypeArgs build() {
             return new BackupSelectionConditionResourceTypeArgs(conditionKey, conditionType, conditionValue);
         }

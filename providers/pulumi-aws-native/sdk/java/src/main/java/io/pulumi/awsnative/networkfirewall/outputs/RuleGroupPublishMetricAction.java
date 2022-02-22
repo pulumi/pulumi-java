@@ -45,7 +45,6 @@ public final class RuleGroupPublishMetricAction {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public RuleGroupPublishMetricAction build() {
             return new RuleGroupPublishMetricAction(dimensions);
         }

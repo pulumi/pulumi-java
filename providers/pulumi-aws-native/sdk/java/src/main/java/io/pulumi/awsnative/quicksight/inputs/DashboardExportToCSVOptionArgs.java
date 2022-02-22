@@ -19,7 +19,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
     public static final DashboardExportToCSVOptionArgs Empty = new DashboardExportToCSVOptionArgs();
 
     @InputImport(name="availabilityStatus")
-    private final @Nullable Input<DashboardBehavior> availabilityStatus;
+        private final @Nullable Input<DashboardBehavior> availabilityStatus;
 
     public Input<DashboardBehavior> getAvailabilityStatus() {
         return this.availabilityStatus == null ? Input.empty() : this.availabilityStatus;
@@ -62,7 +62,6 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
             this.availabilityStatus = Input.ofNullable(availabilityStatus);
             return this;
         }
-
         public DashboardExportToCSVOptionArgs build() {
             return new DashboardExportToCSVOptionArgs(availabilityStatus);
         }

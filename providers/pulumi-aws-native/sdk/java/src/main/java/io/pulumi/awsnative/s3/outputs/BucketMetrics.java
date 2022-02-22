@@ -61,7 +61,6 @@ public final class BucketMetrics {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketMetrics build() {
             return new BucketMetrics(eventThreshold, status);
         }

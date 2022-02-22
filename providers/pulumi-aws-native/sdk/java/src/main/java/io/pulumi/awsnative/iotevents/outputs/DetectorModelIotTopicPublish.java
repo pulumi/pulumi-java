@@ -69,7 +69,6 @@ public final class DetectorModelIotTopicPublish {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelIotTopicPublish build() {
             return new DetectorModelIotTopicPublish(mqttTopic, payload);
         }

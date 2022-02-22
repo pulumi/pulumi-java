@@ -97,7 +97,6 @@ public final class DeviceLocation {
             this.longitude = longitude;
             return this;
         }
-
         public DeviceLocation build() {
             return new DeviceLocation(address, latitude, longitude);
         }

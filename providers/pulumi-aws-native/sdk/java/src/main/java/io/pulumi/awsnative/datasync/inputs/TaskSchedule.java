@@ -21,7 +21,7 @@ public final class TaskSchedule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final String scheduleExpression;
+        private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;
@@ -59,7 +59,6 @@ public final class TaskSchedule extends io.pulumi.resources.InvokeArgs {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public TaskSchedule build() {
             return new TaskSchedule(scheduleExpression);
         }

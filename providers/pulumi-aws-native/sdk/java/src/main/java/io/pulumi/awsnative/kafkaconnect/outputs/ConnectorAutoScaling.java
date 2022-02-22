@@ -123,7 +123,6 @@ public final class ConnectorAutoScaling {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
         }
-
         public ConnectorAutoScaling build() {
             return new ConnectorAutoScaling(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
         }

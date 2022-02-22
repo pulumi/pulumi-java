@@ -61,7 +61,6 @@ public final class DistributionOriginGroups {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public DistributionOriginGroups build() {
             return new DistributionOriginGroups(items, quantity);
         }

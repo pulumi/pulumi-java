@@ -26,7 +26,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="decryption")
-    private final @Nullable FlowEncryption decryption;
+        private final @Nullable FlowEncryption decryption;
 
     public Optional<FlowEncryption> getDecryption() {
         return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
@@ -37,7 +37,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="entitlementArn")
-    private final @Nullable String entitlementArn;
+        private final @Nullable String entitlementArn;
 
     public Optional<String> getEntitlementArn() {
         return this.entitlementArn == null ? Optional.empty() : Optional.ofNullable(this.entitlementArn);
@@ -59,7 +59,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ingestIp")
-    private final @Nullable String ingestIp;
+        private final @Nullable String ingestIp;
 
     public Optional<String> getIngestIp() {
         return this.ingestIp == null ? Optional.empty() : Optional.ofNullable(this.ingestIp);
@@ -70,7 +70,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ingestPort")
-    private final @Nullable Integer ingestPort;
+        private final @Nullable Integer ingestPort;
 
     public Optional<Integer> getIngestPort() {
         return this.ingestPort == null ? Optional.empty() : Optional.ofNullable(this.ingestPort);
@@ -81,7 +81,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxBitrate")
-    private final @Nullable Integer maxBitrate;
+        private final @Nullable Integer maxBitrate;
 
     public Optional<Integer> getMaxBitrate() {
         return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
@@ -92,7 +92,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxLatency")
-    private final @Nullable Integer maxLatency;
+        private final @Nullable Integer maxLatency;
 
     public Optional<Integer> getMaxLatency() {
         return this.maxLatency == null ? Optional.empty() : Optional.ofNullable(this.maxLatency);
@@ -103,7 +103,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minLatency")
-    private final @Nullable Integer minLatency;
+        private final @Nullable Integer minLatency;
 
     public Optional<Integer> getMinLatency() {
         return this.minLatency == null ? Optional.empty() : Optional.ofNullable(this.minLatency);
@@ -114,7 +114,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -125,7 +125,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable FlowSourceProtocol protocol;
+        private final @Nullable FlowSourceProtocol protocol;
 
     public Optional<FlowSourceProtocol> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -136,7 +136,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceArn")
-    private final @Nullable String sourceArn;
+        private final @Nullable String sourceArn;
 
     public Optional<String> getSourceArn() {
         return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
@@ -147,7 +147,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceIngestPort")
-    private final @Nullable String sourceIngestPort;
+        private final @Nullable String sourceIngestPort;
 
     public Optional<String> getSourceIngestPort() {
         return this.sourceIngestPort == null ? Optional.empty() : Optional.ofNullable(this.sourceIngestPort);
@@ -158,7 +158,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="streamId")
-    private final @Nullable String streamId;
+        private final @Nullable String streamId;
 
     public Optional<String> getStreamId() {
         return this.streamId == null ? Optional.empty() : Optional.ofNullable(this.streamId);
@@ -169,7 +169,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcInterfaceName")
-    private final @Nullable String vpcInterfaceName;
+        private final @Nullable String vpcInterfaceName;
 
     public Optional<String> getVpcInterfaceName() {
         return this.vpcInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.vpcInterfaceName);
@@ -180,7 +180,7 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="whitelistCidr")
-    private final @Nullable String whitelistCidr;
+        private final @Nullable String whitelistCidr;
 
     public Optional<String> getWhitelistCidr() {
         return this.whitelistCidr == null ? Optional.empty() : Optional.ofNullable(this.whitelistCidr);
@@ -359,7 +359,6 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public FlowSource build() {
             return new FlowSource(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }

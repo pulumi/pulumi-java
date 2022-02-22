@@ -77,7 +77,6 @@ public final class AccessPointRootDirectory {
             this.path = path;
             return this;
         }
-
         public AccessPointRootDirectory build() {
             return new AccessPointRootDirectory(creationInfo, path);
         }

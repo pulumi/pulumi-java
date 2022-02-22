@@ -61,7 +61,6 @@ public final class TableEncryptionSpecification {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
-
         public TableEncryptionSpecification build() {
             return new TableEncryptionSpecification(encryptionType, kmsKeyIdentifier);
         }

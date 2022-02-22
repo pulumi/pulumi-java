@@ -19,14 +19,14 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
     public static final DatasetS3LocationArgs Empty = new DatasetS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -85,7 +85,6 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public DatasetS3LocationArgs build() {
             return new DatasetS3LocationArgs(bucket, key);
         }

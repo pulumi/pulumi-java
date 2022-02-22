@@ -183,7 +183,6 @@ public final class GetApplicationInstanceResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationInstanceResult build() {
             return new GetApplicationInstanceResult(applicationInstanceId, arn, createdTime, defaultRuntimeContextDeviceName, deviceId, healthStatus, lastUpdatedTime, status, statusDescription, statusFilter, tags);
         }

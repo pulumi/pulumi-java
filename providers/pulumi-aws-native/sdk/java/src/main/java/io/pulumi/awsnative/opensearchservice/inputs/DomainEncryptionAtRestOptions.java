@@ -16,14 +16,14 @@ public final class DomainEncryptionAtRestOptions extends io.pulumi.resources.Inv
     public static final DomainEncryptionAtRestOptions Empty = new DomainEncryptionAtRestOptions();
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable String kmsKeyId;
+        private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
@@ -72,7 +72,6 @@ public final class DomainEncryptionAtRestOptions extends io.pulumi.resources.Inv
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public DomainEncryptionAtRestOptions build() {
             return new DomainEncryptionAtRestOptions(enabled, kmsKeyId);
         }

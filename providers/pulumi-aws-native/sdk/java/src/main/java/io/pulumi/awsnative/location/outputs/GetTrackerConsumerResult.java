@@ -30,7 +30,6 @@ public final class GetTrackerConsumerResult {
         public Builder(GetTrackerConsumerResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetTrackerConsumerResult build() {
             return new GetTrackerConsumerResult();
         }

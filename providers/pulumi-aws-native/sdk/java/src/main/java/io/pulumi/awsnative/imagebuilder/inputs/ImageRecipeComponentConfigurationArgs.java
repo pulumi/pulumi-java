@@ -25,7 +25,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="componentArn")
-    private final @Nullable Input<String> componentArn;
+        private final @Nullable Input<String> componentArn;
 
     public Input<String> getComponentArn() {
         return this.componentArn == null ? Input.empty() : this.componentArn;
@@ -36,7 +36,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters;
+        private final @Nullable Input<List<ImageRecipeComponentParameterArgs>> parameters;
 
     public Input<List<ImageRecipeComponentParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -95,7 +95,6 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public ImageRecipeComponentConfigurationArgs build() {
             return new ImageRecipeComponentConfigurationArgs(componentArn, parameters);
         }

@@ -102,7 +102,6 @@ public final class ScheduledQueryMixedMeasureMapping {
             this.targetMeasureName = targetMeasureName;
             return this;
         }
-
         public ScheduledQueryMixedMeasureMapping build() {
             return new ScheduledQueryMixedMeasureMapping(measureName, measureValueType, multiMeasureAttributeMappings, sourceColumn, targetMeasureName);
         }

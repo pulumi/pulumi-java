@@ -184,7 +184,6 @@ public final class GetNetworkInsightsAnalysisResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInsightsAnalysisResult build() {
             return new GetNetworkInsightsAnalysisResult(alternatePathHints, explanations, forwardPathComponents, networkInsightsAnalysisArn, networkInsightsAnalysisId, networkPathFound, returnPathComponents, startDate, status, statusMessage, tags);
         }

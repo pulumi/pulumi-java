@@ -13,7 +13,7 @@ public final class SpotFleetInstanceIpv6Address extends io.pulumi.resources.Invo
     public static final SpotFleetInstanceIpv6Address Empty = new SpotFleetInstanceIpv6Address();
 
     @InputImport(name="ipv6Address", required=true)
-    private final String ipv6Address;
+        private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
@@ -51,7 +51,6 @@ public final class SpotFleetInstanceIpv6Address extends io.pulumi.resources.Invo
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public SpotFleetInstanceIpv6Address build() {
             return new SpotFleetInstanceIpv6Address(ipv6Address);
         }

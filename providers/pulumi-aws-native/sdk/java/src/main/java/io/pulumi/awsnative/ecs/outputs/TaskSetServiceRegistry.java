@@ -119,7 +119,6 @@ public final class TaskSetServiceRegistry {
             this.registryArn = registryArn;
             return this;
         }
-
         public TaskSetServiceRegistry build() {
             return new TaskSetServiceRegistry(containerName, containerPort, port, registryArn);
         }

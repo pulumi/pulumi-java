@@ -86,7 +86,6 @@ public final class AppCustomRule {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AppCustomRule build() {
             return new AppCustomRule(condition, source, status, target);
         }

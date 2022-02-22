@@ -90,7 +90,6 @@ public final class SamplingRuleRecord {
             this.samplingRule = samplingRule;
             return this;
         }
-
         public SamplingRuleRecord build() {
             return new SamplingRuleRecord(createdAt, modifiedAt, samplingRule);
         }

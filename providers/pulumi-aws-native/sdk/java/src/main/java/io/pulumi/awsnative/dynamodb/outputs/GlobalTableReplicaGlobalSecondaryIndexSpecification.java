@@ -75,7 +75,6 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
-
         public GlobalTableReplicaGlobalSecondaryIndexSpecification build() {
             return new GlobalTableReplicaGlobalSecondaryIndexSpecification(contributorInsightsSpecification, indexName, readProvisionedThroughputSettings);
         }

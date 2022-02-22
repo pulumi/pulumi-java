@@ -116,7 +116,6 @@ public final class GetAuthorizerResult {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }
-
         public GetAuthorizerResult build() {
             return new GetAuthorizerResult(arn, authorizerFunctionArn, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }

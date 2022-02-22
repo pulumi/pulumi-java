@@ -74,7 +74,6 @@ public final class DetectorModelTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DetectorModelTag build() {
             return new DetectorModelTag(key, value);
         }

@@ -76,7 +76,6 @@ public final class DashboardDecimalParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardDecimalParameter build() {
             return new DashboardDecimalParameter(name, values);
         }

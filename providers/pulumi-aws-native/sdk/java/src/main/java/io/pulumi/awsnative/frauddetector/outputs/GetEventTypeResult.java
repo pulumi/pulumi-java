@@ -183,7 +183,6 @@ public final class GetEventTypeResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventTypeResult build() {
             return new GetEventTypeResult(arn, createdTime, description, entityTypes, eventVariables, labels, lastUpdatedTime, tags);
         }

@@ -15,14 +15,14 @@ public final class ServiceProfileTagArgs extends io.pulumi.resources.ResourceArg
     public static final ServiceProfileTagArgs Empty = new ServiceProfileTagArgs();
 
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class ServiceProfileTagArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ServiceProfileTagArgs build() {
             return new ServiceProfileTagArgs(key, value);
         }

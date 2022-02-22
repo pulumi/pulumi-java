@@ -74,7 +74,6 @@ public final class TopicRuleRepublishAction {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TopicRuleRepublishAction build() {
             return new TopicRuleRepublishAction(qos, roleArn, topic);
         }

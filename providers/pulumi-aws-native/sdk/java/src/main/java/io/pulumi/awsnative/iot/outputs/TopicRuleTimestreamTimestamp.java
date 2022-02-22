@@ -58,7 +58,6 @@ public final class TopicRuleTimestreamTimestamp {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTimestreamTimestamp build() {
             return new TopicRuleTimestreamTimestamp(unit, value);
         }

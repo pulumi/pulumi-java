@@ -17,7 +17,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoScalingGroupName", required=true)
-    private final String autoScalingGroupName;
+        private final String autoScalingGroupName;
 
     public String getAutoScalingGroupName() {
         return this.autoScalingGroupName;
@@ -28,7 +28,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lifecycleHookName", required=true)
-    private final String lifecycleHookName;
+        private final String lifecycleHookName;
 
     public String getLifecycleHookName() {
         return this.lifecycleHookName;
@@ -77,7 +77,6 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
             this.lifecycleHookName = Objects.requireNonNull(lifecycleHookName);
             return this;
         }
-
         public GetLifecycleHookArgs build() {
             return new GetLifecycleHookArgs(autoScalingGroupName, lifecycleHookName);
         }

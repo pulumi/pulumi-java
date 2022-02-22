@@ -75,7 +75,6 @@ public final class ContactTargetInfo {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
         }
-
         public ContactTargetInfo build() {
             return new ContactTargetInfo(contactId, isEssential);
         }

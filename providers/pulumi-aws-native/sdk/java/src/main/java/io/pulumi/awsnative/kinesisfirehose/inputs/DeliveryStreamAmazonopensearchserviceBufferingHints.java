@@ -15,14 +15,14 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHints extends i
     public static final DeliveryStreamAmazonopensearchserviceBufferingHints Empty = new DeliveryStreamAmazonopensearchserviceBufferingHints();
 
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+        private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
     @InputImport(name="sizeInMBs")
-    private final @Nullable Integer sizeInMBs;
+        private final @Nullable Integer sizeInMBs;
 
     public Optional<Integer> getSizeInMBs() {
         return this.sizeInMBs == null ? Optional.empty() : Optional.ofNullable(this.sizeInMBs);
@@ -71,7 +71,6 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHints extends i
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceBufferingHints build() {
             return new DeliveryStreamAmazonopensearchserviceBufferingHints(intervalInSeconds, sizeInMBs);
         }

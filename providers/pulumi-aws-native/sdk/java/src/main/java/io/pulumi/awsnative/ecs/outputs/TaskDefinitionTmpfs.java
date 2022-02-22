@@ -75,7 +75,6 @@ public final class TaskDefinitionTmpfs {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public TaskDefinitionTmpfs build() {
             return new TaskDefinitionTmpfs(containerPath, mountOptions, size);
         }

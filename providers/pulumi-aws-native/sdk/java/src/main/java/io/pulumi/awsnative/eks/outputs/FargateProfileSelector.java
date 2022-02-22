@@ -61,7 +61,6 @@ public final class FargateProfileSelector {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public FargateProfileSelector build() {
             return new FargateProfileSelector(labels, namespace);
         }

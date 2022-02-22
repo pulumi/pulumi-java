@@ -76,7 +76,6 @@ public final class LoadBalancerTag {
             this.value = value;
             return this;
         }
-
         public LoadBalancerTag build() {
             return new LoadBalancerTag(key, value);
         }

@@ -14,14 +14,14 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final ImageVersionArgs Empty = new ImageVersionArgs();
 
     @InputImport(name="baseImage", required=true)
-    private final Input<String> baseImage;
+        private final Input<String> baseImage;
 
     public Input<String> getBaseImage() {
         return this.baseImage;
     }
 
     @InputImport(name="imageName", required=true)
-    private final Input<String> imageName;
+        private final Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName;
@@ -80,7 +80,6 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.imageName = Input.of(Objects.requireNonNull(imageName));
             return this;
         }
-
         public ImageVersionArgs build() {
             return new ImageVersionArgs(baseImage, imageName);
         }

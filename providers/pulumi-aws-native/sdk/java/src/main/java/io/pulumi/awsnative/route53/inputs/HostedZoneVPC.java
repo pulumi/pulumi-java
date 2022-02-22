@@ -21,7 +21,7 @@ public final class HostedZoneVPC extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vPCId", required=true)
-    private final String vPCId;
+        private final String vPCId;
 
     public String getVPCId() {
         return this.vPCId;
@@ -32,7 +32,7 @@ public final class HostedZoneVPC extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vPCRegion", required=true)
-    private final String vPCRegion;
+        private final String vPCRegion;
 
     public String getVPCRegion() {
         return this.vPCRegion;
@@ -81,7 +81,6 @@ public final class HostedZoneVPC extends io.pulumi.resources.InvokeArgs {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
-
         public HostedZoneVPC build() {
             return new HostedZoneVPC(vPCId, vPCRegion);
         }

@@ -23,7 +23,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+        private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
@@ -34,7 +34,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+        private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -93,7 +93,6 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
             this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public InfrastructureConfigurationS3LogsArgs build() {
             return new InfrastructureConfigurationS3LogsArgs(s3BucketName, s3KeyPrefix);
         }

@@ -17,7 +17,7 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
     public static final RecipeStep Empty = new RecipeStep();
 
     @InputImport(name="action", required=true)
-    private final RecipeAction action;
+        private final RecipeAction action;
 
     public RecipeAction getAction() {
         return this.action;
@@ -28,7 +28,7 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditionExpressions")
-    private final @Nullable List<RecipeConditionExpression> conditionExpressions;
+        private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
     public List<RecipeConditionExpression> getConditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
@@ -77,7 +77,6 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
-
         public RecipeStep build() {
             return new RecipeStep(action, conditionExpressions);
         }

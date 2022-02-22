@@ -293,7 +293,6 @@ public final class DistributionConfig {
             this.webACLId = webACLId;
             return this;
         }
-
         public DistributionConfig build() {
             return new DistributionConfig(aliases, cNAMEs, cacheBehaviors, comment, customErrorResponses, customOrigin, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, iPV6Enabled, logging, originGroups, origins, priceClass, restrictions, s3Origin, viewerCertificate, webACLId);
         }

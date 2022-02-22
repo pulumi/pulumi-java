@@ -75,7 +75,6 @@ public final class DashboardDateTimeParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardDateTimeParameter build() {
             return new DashboardDateTimeParameter(name, values);
         }

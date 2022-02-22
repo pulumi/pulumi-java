@@ -75,7 +75,6 @@ public final class FHIRDatastoreCreatedAt {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public FHIRDatastoreCreatedAt build() {
             return new FHIRDatastoreCreatedAt(nanos, seconds);
         }

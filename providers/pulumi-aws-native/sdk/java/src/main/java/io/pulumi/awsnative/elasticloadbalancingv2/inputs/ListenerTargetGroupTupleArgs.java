@@ -16,14 +16,14 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
     public static final ListenerTargetGroupTupleArgs Empty = new ListenerTargetGroupTupleArgs();
 
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+        private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -82,7 +82,6 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ListenerTargetGroupTupleArgs build() {
             return new ListenerTargetGroupTupleArgs(targetGroupArn, weight);
         }

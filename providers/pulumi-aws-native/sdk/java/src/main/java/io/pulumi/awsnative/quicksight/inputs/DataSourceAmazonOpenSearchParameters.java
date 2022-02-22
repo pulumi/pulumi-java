@@ -21,7 +21,7 @@ public final class DataSourceAmazonOpenSearchParameters extends io.pulumi.resour
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+        private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -59,7 +59,6 @@ public final class DataSourceAmazonOpenSearchParameters extends io.pulumi.resour
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public DataSourceAmazonOpenSearchParameters build() {
             return new DataSourceAmazonOpenSearchParameters(domain);
         }

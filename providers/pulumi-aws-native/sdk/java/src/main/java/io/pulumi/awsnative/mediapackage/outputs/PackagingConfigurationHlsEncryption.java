@@ -91,7 +91,6 @@ public final class PackagingConfigurationHlsEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public PackagingConfigurationHlsEncryption build() {
             return new PackagingConfigurationHlsEncryption(constantInitializationVector, encryptionMethod, spekeKeyProvider);
         }

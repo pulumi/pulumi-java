@@ -17,7 +17,7 @@ public final class MonitoringScheduleMonitoringResources extends io.pulumi.resou
     public static final MonitoringScheduleMonitoringResources Empty = new MonitoringScheduleMonitoringResources();
 
     @InputImport(name="clusterConfig", required=true)
-    private final MonitoringScheduleClusterConfig clusterConfig;
+        private final MonitoringScheduleClusterConfig clusterConfig;
 
     public MonitoringScheduleClusterConfig getClusterConfig() {
         return this.clusterConfig;
@@ -55,7 +55,6 @@ public final class MonitoringScheduleMonitoringResources extends io.pulumi.resou
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public MonitoringScheduleMonitoringResources build() {
             return new MonitoringScheduleMonitoringResources(clusterConfig);
         }

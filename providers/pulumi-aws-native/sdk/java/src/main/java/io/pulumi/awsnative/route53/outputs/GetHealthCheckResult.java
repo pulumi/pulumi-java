@@ -92,7 +92,6 @@ public final class GetHealthCheckResult {
             this.healthCheckTags = healthCheckTags;
             return this;
         }
-
         public GetHealthCheckResult build() {
             return new GetHealthCheckResult(healthCheckConfig, healthCheckId, healthCheckTags);
         }

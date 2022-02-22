@@ -87,7 +87,6 @@ public final class GetResourcePolicyResult {
             this.revisionId = revisionId;
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(id, policy, resourceArn, revisionId);
         }

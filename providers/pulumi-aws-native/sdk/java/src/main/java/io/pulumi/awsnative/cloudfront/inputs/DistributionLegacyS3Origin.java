@@ -15,14 +15,14 @@ public final class DistributionLegacyS3Origin extends io.pulumi.resources.Invoke
     public static final DistributionLegacyS3Origin Empty = new DistributionLegacyS3Origin();
 
     @InputImport(name="dNSName", required=true)
-    private final String dNSName;
+        private final String dNSName;
 
     public String getDNSName() {
         return this.dNSName;
     }
 
     @InputImport(name="originAccessIdentity")
-    private final @Nullable String originAccessIdentity;
+        private final @Nullable String originAccessIdentity;
 
     public Optional<String> getOriginAccessIdentity() {
         return this.originAccessIdentity == null ? Optional.empty() : Optional.ofNullable(this.originAccessIdentity);
@@ -71,7 +71,6 @@ public final class DistributionLegacyS3Origin extends io.pulumi.resources.Invoke
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
-
         public DistributionLegacyS3Origin build() {
             return new DistributionLegacyS3Origin(dNSName, originAccessIdentity);
         }

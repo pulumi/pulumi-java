@@ -53,7 +53,6 @@ public final class BucketLifecycleConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketLifecycleConfiguration build() {
             return new BucketLifecycleConfiguration(rules);
         }

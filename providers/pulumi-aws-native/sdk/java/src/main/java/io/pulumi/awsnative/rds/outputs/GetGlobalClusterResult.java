@@ -54,7 +54,6 @@ public final class GetGlobalClusterResult {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public GetGlobalClusterResult build() {
             return new GetGlobalClusterResult(deletionProtection);
         }

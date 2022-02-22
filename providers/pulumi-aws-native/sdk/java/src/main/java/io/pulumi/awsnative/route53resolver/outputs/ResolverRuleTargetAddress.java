@@ -76,7 +76,6 @@ public final class ResolverRuleTargetAddress {
             this.port = port;
             return this;
         }
-
         public ResolverRuleTargetAddress build() {
             return new ResolverRuleTargetAddress(ip, port);
         }

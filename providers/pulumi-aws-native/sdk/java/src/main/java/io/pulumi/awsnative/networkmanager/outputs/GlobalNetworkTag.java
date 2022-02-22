@@ -60,7 +60,6 @@ public final class GlobalNetworkTag {
             this.value = value;
             return this;
         }
-
         public GlobalNetworkTag build() {
             return new GlobalNetworkTag(key, value);
         }

@@ -46,7 +46,6 @@ public final class ResponsePlanAction {
             this.ssmAutomation = ssmAutomation;
             return this;
         }
-
         public ResponsePlanAction build() {
             return new ResponsePlanAction(ssmAutomation);
         }

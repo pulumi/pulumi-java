@@ -18,21 +18,21 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicRuleArgs Empty = new TopicRuleArgs();
 
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<TopicRuleTagArgs>> tags;
+        private final @Nullable Input<List<TopicRuleTagArgs>> tags;
 
     public Input<List<TopicRuleTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="topicRulePayload", required=true)
-    private final Input<TopicRulePayloadArgs> topicRulePayload;
+        private final Input<TopicRulePayloadArgs> topicRulePayload;
 
     public Input<TopicRulePayloadArgs> getTopicRulePayload() {
         return this.topicRulePayload;
@@ -106,7 +106,6 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.topicRulePayload = Input.of(Objects.requireNonNull(topicRulePayload));
             return this;
         }
-
         public TopicRuleArgs build() {
             return new TopicRuleArgs(ruleName, tags, topicRulePayload);
         }

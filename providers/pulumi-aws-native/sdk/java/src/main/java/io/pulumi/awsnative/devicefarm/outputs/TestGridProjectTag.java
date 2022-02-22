@@ -58,7 +58,6 @@ public final class TestGridProjectTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TestGridProjectTag build() {
             return new TestGridProjectTag(key, value);
         }

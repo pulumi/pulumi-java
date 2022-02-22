@@ -58,7 +58,6 @@ public final class VPCEConfigurationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VPCEConfigurationTag build() {
             return new VPCEConfigurationTag(key, value);
         }

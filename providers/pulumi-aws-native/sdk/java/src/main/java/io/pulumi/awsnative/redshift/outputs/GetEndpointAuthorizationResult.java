@@ -226,7 +226,6 @@ public final class GetEndpointAuthorizationResult {
             this.vpcIds = vpcIds;
             return this;
         }
-
         public GetEndpointAuthorizationResult build() {
             return new GetEndpointAuthorizationResult(allowedAllVPCs, allowedVPCs, authorizeTime, clusterStatus, endpointCount, grantee, grantor, status, vpcIds);
         }

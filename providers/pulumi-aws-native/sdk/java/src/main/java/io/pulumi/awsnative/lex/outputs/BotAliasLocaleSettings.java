@@ -69,7 +69,6 @@ public final class BotAliasLocaleSettings {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BotAliasLocaleSettings build() {
             return new BotAliasLocaleSettings(codeHookSpecification, enabled);
         }

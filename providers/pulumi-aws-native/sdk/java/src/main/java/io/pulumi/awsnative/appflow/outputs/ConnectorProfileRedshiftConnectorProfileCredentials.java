@@ -74,7 +74,6 @@ public final class ConnectorProfileRedshiftConnectorProfileCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfileCredentials build() {
             return new ConnectorProfileRedshiftConnectorProfileCredentials(password, username);
         }

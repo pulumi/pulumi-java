@@ -140,7 +140,6 @@ public final class GetThemeResult {
             this.values = values;
             return this;
         }
-
         public GetThemeResult build() {
             return new GetThemeResult(appId, createdAt, environmentName, id, modifiedAt, name, overrides, values);
         }

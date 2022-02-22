@@ -74,7 +74,6 @@ public final class GetResponseHeadersPolicyResult {
             this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
         }
-
         public GetResponseHeadersPolicyResult build() {
             return new GetResponseHeadersPolicyResult(id, lastModifiedTime, responseHeadersPolicyConfig);
         }

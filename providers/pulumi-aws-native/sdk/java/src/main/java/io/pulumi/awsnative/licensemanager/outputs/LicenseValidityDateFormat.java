@@ -74,7 +74,6 @@ public final class LicenseValidityDateFormat {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public LicenseValidityDateFormat build() {
             return new LicenseValidityDateFormat(begin, end);
         }

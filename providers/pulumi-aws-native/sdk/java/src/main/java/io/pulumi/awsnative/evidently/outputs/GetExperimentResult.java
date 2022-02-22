@@ -152,7 +152,6 @@ public final class GetExperimentResult {
             this.treatments = treatments;
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(arn, description, metricGoals, onlineAbConfig, randomizationSalt, samplingRate, tags, treatments);
         }

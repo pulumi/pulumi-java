@@ -75,7 +75,6 @@ public final class RuleGroup {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
-
         public RuleGroup build() {
             return new RuleGroup(ruleVariables, rulesSource, statefulRuleOptions);
         }

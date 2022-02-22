@@ -24,7 +24,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="containerArguments")
-    private final @Nullable Input<List<String>> containerArguments;
+        private final @Nullable Input<List<String>> containerArguments;
 
     public Input<List<String>> getContainerArguments() {
         return this.containerArguments == null ? Input.empty() : this.containerArguments;
@@ -35,7 +35,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="containerEntrypoint")
-    private final @Nullable Input<List<String>> containerEntrypoint;
+        private final @Nullable Input<List<String>> containerEntrypoint;
 
     public Input<List<String>> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? Input.empty() : this.containerEntrypoint;
@@ -46,7 +46,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final Input<String> imageUri;
+        private final Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri;
@@ -57,7 +57,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="postAnalyticsProcessorSourceUri")
-    private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
+        private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
 
     public Input<String> getPostAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Input.empty() : this.postAnalyticsProcessorSourceUri;
@@ -68,7 +68,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
      * 
      */
     @InputImport(name="recordPreprocessorSourceUri")
-    private final @Nullable Input<String> recordPreprocessorSourceUri;
+        private final @Nullable Input<String> recordPreprocessorSourceUri;
 
     public Input<String> getRecordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Input.empty() : this.recordPreprocessorSourceUri;
@@ -172,7 +172,6 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
             this.recordPreprocessorSourceUri = Input.ofNullable(recordPreprocessorSourceUri);
             return this;
         }
-
         public MonitoringScheduleMonitoringAppSpecificationArgs build() {
             return new MonitoringScheduleMonitoringAppSpecificationArgs(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

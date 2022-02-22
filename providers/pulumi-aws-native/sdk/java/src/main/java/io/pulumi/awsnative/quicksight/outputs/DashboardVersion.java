@@ -243,7 +243,6 @@ public final class DashboardVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public DashboardVersion build() {
             return new DashboardVersion(arn, createdTime, dataSetArns, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }

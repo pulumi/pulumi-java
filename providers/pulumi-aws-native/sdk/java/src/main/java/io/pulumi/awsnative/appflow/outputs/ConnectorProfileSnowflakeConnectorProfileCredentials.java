@@ -74,7 +74,6 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectorProfileSnowflakeConnectorProfileCredentials build() {
             return new ConnectorProfileSnowflakeConnectorProfileCredentials(password, username);
         }

@@ -23,7 +23,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+        private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -34,7 +34,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+        private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -56,7 +56,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ContactFlowState> state;
+        private final @Nullable Input<ContactFlowState> state;
 
     public Input<ContactFlowState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -78,7 +78,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ContactFlowTagArgs>> tags;
+        private final @Nullable Input<List<ContactFlowTagArgs>> tags;
 
     public Input<List<ContactFlowTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ContactFlowType> type;
+        private final @Nullable Input<ContactFlowType> type;
 
     public Input<ContactFlowType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -223,7 +223,6 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ContactFlowArgs build() {
             return new ContactFlowArgs(content, description, instanceArn, name, state, tags, type);
         }

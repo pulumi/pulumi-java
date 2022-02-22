@@ -148,7 +148,6 @@ public final class GetReplicaKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetReplicaKeyResult build() {
             return new GetReplicaKeyResult(arn, description, enabled, keyId, keyPolicy, tags);
         }

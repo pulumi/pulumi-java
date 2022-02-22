@@ -58,7 +58,6 @@ public final class ConnectionBasicAuthParameters {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectionBasicAuthParameters build() {
             return new ConnectionBasicAuthParameters(password, username);
         }

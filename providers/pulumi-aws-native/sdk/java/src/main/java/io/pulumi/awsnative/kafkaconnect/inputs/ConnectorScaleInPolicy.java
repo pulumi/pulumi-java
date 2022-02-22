@@ -21,7 +21,7 @@ public final class ConnectorScaleInPolicy extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-    private final Integer cpuUtilizationPercentage;
+        private final Integer cpuUtilizationPercentage;
 
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
@@ -59,7 +59,6 @@ public final class ConnectorScaleInPolicy extends io.pulumi.resources.InvokeArgs
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }
-
         public ConnectorScaleInPolicy build() {
             return new ConnectorScaleInPolicy(cpuUtilizationPercentage);
         }

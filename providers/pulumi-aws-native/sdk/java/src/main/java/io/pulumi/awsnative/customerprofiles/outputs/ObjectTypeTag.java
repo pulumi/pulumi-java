@@ -58,7 +58,6 @@ public final class ObjectTypeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ObjectTypeTag build() {
             return new ObjectTypeTag(key, value);
         }

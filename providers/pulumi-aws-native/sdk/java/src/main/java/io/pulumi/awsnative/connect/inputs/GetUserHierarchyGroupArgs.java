@@ -17,7 +17,7 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userHierarchyGroupArn", required=true)
-    private final String userHierarchyGroupArn;
+        private final String userHierarchyGroupArn;
 
     public String getUserHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
@@ -55,7 +55,6 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
             this.userHierarchyGroupArn = Objects.requireNonNull(userHierarchyGroupArn);
             return this;
         }
-
         public GetUserHierarchyGroupArgs build() {
             return new GetUserHierarchyGroupArgs(userHierarchyGroupArn);
         }

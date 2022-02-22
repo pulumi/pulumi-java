@@ -46,7 +46,6 @@ public final class DeliveryStreamHiveJsonSerDe {
             this.timestampFormats = timestampFormats;
             return this;
         }
-
         public DeliveryStreamHiveJsonSerDe build() {
             return new DeliveryStreamHiveJsonSerDe(timestampFormats);
         }

@@ -74,7 +74,6 @@ public final class TaskDefinitionMountPoint {
             this.sourceVolume = sourceVolume;
             return this;
         }
-
         public TaskDefinitionMountPoint build() {
             return new TaskDefinitionMountPoint(containerPath, readOnly, sourceVolume);
         }

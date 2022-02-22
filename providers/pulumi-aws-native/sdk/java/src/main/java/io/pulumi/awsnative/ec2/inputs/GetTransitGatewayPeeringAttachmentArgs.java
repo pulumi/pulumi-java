@@ -17,7 +17,7 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final String transitGatewayAttachmentId;
+        private final String transitGatewayAttachmentId;
 
     public String getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -55,7 +55,6 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
-
         public GetTransitGatewayPeeringAttachmentArgs build() {
             return new GetTransitGatewayPeeringAttachmentArgs(transitGatewayAttachmentId);
         }

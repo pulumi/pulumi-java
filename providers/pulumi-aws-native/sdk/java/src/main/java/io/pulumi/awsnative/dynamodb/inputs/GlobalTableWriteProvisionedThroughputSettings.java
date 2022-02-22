@@ -15,7 +15,7 @@ public final class GlobalTableWriteProvisionedThroughputSettings extends io.pulu
     public static final GlobalTableWriteProvisionedThroughputSettings Empty = new GlobalTableWriteProvisionedThroughputSettings();
 
     @InputImport(name="writeCapacityAutoScalingSettings")
-    private final @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
+        private final @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
 
     public Optional<GlobalTableCapacityAutoScalingSettings> getWriteCapacityAutoScalingSettings() {
         return this.writeCapacityAutoScalingSettings == null ? Optional.empty() : Optional.ofNullable(this.writeCapacityAutoScalingSettings);
@@ -53,7 +53,6 @@ public final class GlobalTableWriteProvisionedThroughputSettings extends io.pulu
             this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
         }
-
         public GlobalTableWriteProvisionedThroughputSettings build() {
             return new GlobalTableWriteProvisionedThroughputSettings(writeCapacityAutoScalingSettings);
         }

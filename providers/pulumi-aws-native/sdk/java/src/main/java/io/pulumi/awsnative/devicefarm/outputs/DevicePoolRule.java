@@ -99,7 +99,6 @@ public final class DevicePoolRule {
             this.value = value;
             return this;
         }
-
         public DevicePoolRule build() {
             return new DevicePoolRule(attribute, operator, value);
         }

@@ -54,7 +54,6 @@ public final class ModelExplainabilityJobDefinitionConstraintsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public ModelExplainabilityJobDefinitionConstraintsResource build() {
             return new ModelExplainabilityJobDefinitionConstraintsResource(s3Uri);
         }

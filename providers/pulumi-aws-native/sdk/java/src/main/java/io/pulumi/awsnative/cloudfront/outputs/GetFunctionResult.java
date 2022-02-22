@@ -101,7 +101,6 @@ public final class GetFunctionResult {
             this.stage = stage;
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(functionARN, functionConfig, functionMetadata, name, stage);
         }

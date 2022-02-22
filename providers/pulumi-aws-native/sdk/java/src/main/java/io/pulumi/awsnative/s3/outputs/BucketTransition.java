@@ -75,7 +75,6 @@ public final class BucketTransition {
             this.transitionInDays = transitionInDays;
             return this;
         }
-
         public BucketTransition build() {
             return new BucketTransition(storageClass, transitionDate, transitionInDays);
         }

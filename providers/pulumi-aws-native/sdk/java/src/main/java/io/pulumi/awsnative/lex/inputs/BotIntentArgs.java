@@ -30,84 +30,84 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotIntentArgs Empty = new BotIntentArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="dialogCodeHook")
-    private final @Nullable Input<BotDialogCodeHookSettingArgs> dialogCodeHook;
+        private final @Nullable Input<BotDialogCodeHookSettingArgs> dialogCodeHook;
 
     public Input<BotDialogCodeHookSettingArgs> getDialogCodeHook() {
         return this.dialogCodeHook == null ? Input.empty() : this.dialogCodeHook;
     }
 
     @InputImport(name="fulfillmentCodeHook")
-    private final @Nullable Input<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
+        private final @Nullable Input<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
 
     public Input<BotFulfillmentCodeHookSettingArgs> getFulfillmentCodeHook() {
         return this.fulfillmentCodeHook == null ? Input.empty() : this.fulfillmentCodeHook;
     }
 
     @InputImport(name="inputContexts")
-    private final @Nullable Input<List<BotInputContextArgs>> inputContexts;
+        private final @Nullable Input<List<BotInputContextArgs>> inputContexts;
 
     public Input<List<BotInputContextArgs>> getInputContexts() {
         return this.inputContexts == null ? Input.empty() : this.inputContexts;
     }
 
     @InputImport(name="intentClosingSetting")
-    private final @Nullable Input<BotIntentClosingSettingArgs> intentClosingSetting;
+        private final @Nullable Input<BotIntentClosingSettingArgs> intentClosingSetting;
 
     public Input<BotIntentClosingSettingArgs> getIntentClosingSetting() {
         return this.intentClosingSetting == null ? Input.empty() : this.intentClosingSetting;
     }
 
     @InputImport(name="intentConfirmationSetting")
-    private final @Nullable Input<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
+        private final @Nullable Input<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
 
     public Input<BotIntentConfirmationSettingArgs> getIntentConfirmationSetting() {
         return this.intentConfirmationSetting == null ? Input.empty() : this.intentConfirmationSetting;
     }
 
     @InputImport(name="kendraConfiguration")
-    private final @Nullable Input<BotKendraConfigurationArgs> kendraConfiguration;
+        private final @Nullable Input<BotKendraConfigurationArgs> kendraConfiguration;
 
     public Input<BotKendraConfigurationArgs> getKendraConfiguration() {
         return this.kendraConfiguration == null ? Input.empty() : this.kendraConfiguration;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="outputContexts")
-    private final @Nullable Input<List<BotOutputContextArgs>> outputContexts;
+        private final @Nullable Input<List<BotOutputContextArgs>> outputContexts;
 
     public Input<List<BotOutputContextArgs>> getOutputContexts() {
         return this.outputContexts == null ? Input.empty() : this.outputContexts;
     }
 
     @InputImport(name="parentIntentSignature")
-    private final @Nullable Input<String> parentIntentSignature;
+        private final @Nullable Input<String> parentIntentSignature;
 
     public Input<String> getParentIntentSignature() {
         return this.parentIntentSignature == null ? Input.empty() : this.parentIntentSignature;
     }
 
     @InputImport(name="sampleUtterances")
-    private final @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
+        private final @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
 
     public Input<List<BotSampleUtteranceArgs>> getSampleUtterances() {
         return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
     }
 
     @InputImport(name="slotPriorities")
-    private final @Nullable Input<List<BotSlotPriorityArgs>> slotPriorities;
+        private final @Nullable Input<List<BotSlotPriorityArgs>> slotPriorities;
 
     public Input<List<BotSlotPriorityArgs>> getSlotPriorities() {
         return this.slotPriorities == null ? Input.empty() : this.slotPriorities;
@@ -118,7 +118,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slots")
-    private final @Nullable Input<List<BotSlotArgs>> slots;
+        private final @Nullable Input<List<BotSlotArgs>> slots;
 
     public Input<List<BotSlotArgs>> getSlots() {
         return this.slots == null ? Input.empty() : this.slots;
@@ -342,7 +342,6 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             this.slots = Input.ofNullable(slots);
             return this;
         }
-
         public BotIntentArgs build() {
             return new BotIntentArgs(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
         }

@@ -103,7 +103,6 @@ public final class IntegrationTask {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public IntegrationTask build() {
             return new IntegrationTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

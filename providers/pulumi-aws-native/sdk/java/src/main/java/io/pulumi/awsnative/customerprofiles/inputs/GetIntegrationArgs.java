@@ -17,7 +17,7 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+        private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+        private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -77,7 +77,6 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetIntegrationArgs build() {
             return new GetIntegrationArgs(domainName, uri);
         }

@@ -77,7 +77,6 @@ public final class ReplicationConfigurationReplicationRule {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
-
         public ReplicationConfigurationReplicationRule build() {
             return new ReplicationConfigurationReplicationRule(destinations, repositoryFilters);
         }

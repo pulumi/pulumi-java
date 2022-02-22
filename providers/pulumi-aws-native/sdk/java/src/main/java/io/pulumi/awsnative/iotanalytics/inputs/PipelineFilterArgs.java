@@ -15,21 +15,21 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineFilterArgs Empty = new PipelineFilterArgs();
 
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+        private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -103,7 +103,6 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.next = Input.ofNullable(next);
             return this;
         }
-
         public PipelineFilterArgs build() {
             return new PipelineFilterArgs(filter, name, next);
         }

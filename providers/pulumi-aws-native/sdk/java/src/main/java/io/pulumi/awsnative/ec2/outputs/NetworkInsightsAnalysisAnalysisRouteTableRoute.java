@@ -164,7 +164,6 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
             return new NetworkInsightsAnalysisAnalysisRouteTableRoute(destinationCidr, destinationPrefixListId, egressOnlyInternetGatewayId, gatewayId, instanceId, natGatewayId, networkInterfaceId, origin, transitGatewayId, vpcPeeringConnectionId);
         }

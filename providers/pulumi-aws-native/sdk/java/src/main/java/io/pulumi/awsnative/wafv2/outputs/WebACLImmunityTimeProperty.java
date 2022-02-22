@@ -44,7 +44,6 @@ public final class WebACLImmunityTimeProperty {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public WebACLImmunityTimeProperty build() {
             return new WebACLImmunityTimeProperty(immunityTime);
         }

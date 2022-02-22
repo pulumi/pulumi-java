@@ -142,7 +142,6 @@ public final class GetControlPanelResult {
             this.status = status;
             return this;
         }
-
         public GetControlPanelResult build() {
             return new GetControlPanelResult(controlPanelArn, defaultControlPanel, name, routingControlCount, status);
         }

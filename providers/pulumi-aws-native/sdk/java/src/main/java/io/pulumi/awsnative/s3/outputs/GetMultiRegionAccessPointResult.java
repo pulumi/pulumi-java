@@ -76,7 +76,6 @@ public final class GetMultiRegionAccessPointResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public GetMultiRegionAccessPointResult build() {
             return new GetMultiRegionAccessPointResult(alias, createdAt);
         }

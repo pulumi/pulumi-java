@@ -61,7 +61,6 @@ public final class GetSchedulingPolicyResult {
             this.fairsharePolicy = fairsharePolicy;
             return this;
         }
-
         public GetSchedulingPolicyResult build() {
             return new GetSchedulingPolicyResult(arn, fairsharePolicy);
         }

@@ -16,28 +16,28 @@ public final class FlowSnowflakeDestinationPropertiesArgs extends io.pulumi.reso
     public static final FlowSnowflakeDestinationPropertiesArgs Empty = new FlowSnowflakeDestinationPropertiesArgs();
 
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+        private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="errorHandlingConfig")
-    private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+        private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
     public Input<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
     }
 
     @InputImport(name="intermediateBucketName", required=true)
-    private final Input<String> intermediateBucketName;
+        private final Input<String> intermediateBucketName;
 
     public Input<String> getIntermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -126,7 +126,6 @@ public final class FlowSnowflakeDestinationPropertiesArgs extends io.pulumi.reso
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public FlowSnowflakeDestinationPropertiesArgs build() {
             return new FlowSnowflakeDestinationPropertiesArgs(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }

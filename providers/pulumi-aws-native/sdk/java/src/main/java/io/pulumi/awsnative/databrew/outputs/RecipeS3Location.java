@@ -60,7 +60,6 @@ public final class RecipeS3Location {
             this.key = key;
             return this;
         }
-
         public RecipeS3Location build() {
             return new RecipeS3Location(bucket, key);
         }

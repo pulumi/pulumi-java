@@ -59,7 +59,6 @@ public final class FirewallPolicyStatelessRuleGroupReference {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public FirewallPolicyStatelessRuleGroupReference build() {
             return new FirewallPolicyStatelessRuleGroupReference(priority, resourceArn);
         }

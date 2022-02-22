@@ -22,98 +22,98 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppArgs Empty = new AppArgs();
 
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+        private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
     @InputImport(name="autoBranchCreationConfig")
-    private final @Nullable Input<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
+        private final @Nullable Input<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
 
     public Input<AppAutoBranchCreationConfigArgs> getAutoBranchCreationConfig() {
         return this.autoBranchCreationConfig == null ? Input.empty() : this.autoBranchCreationConfig;
     }
 
     @InputImport(name="basicAuthConfig")
-    private final @Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig;
+        private final @Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig;
 
     public Input<AppBasicAuthConfigArgs> getBasicAuthConfig() {
         return this.basicAuthConfig == null ? Input.empty() : this.basicAuthConfig;
     }
 
     @InputImport(name="buildSpec")
-    private final @Nullable Input<String> buildSpec;
+        private final @Nullable Input<String> buildSpec;
 
     public Input<String> getBuildSpec() {
         return this.buildSpec == null ? Input.empty() : this.buildSpec;
     }
 
     @InputImport(name="customHeaders")
-    private final @Nullable Input<String> customHeaders;
+        private final @Nullable Input<String> customHeaders;
 
     public Input<String> getCustomHeaders() {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
     }
 
     @InputImport(name="customRules")
-    private final @Nullable Input<List<AppCustomRuleArgs>> customRules;
+        private final @Nullable Input<List<AppCustomRuleArgs>> customRules;
 
     public Input<List<AppCustomRuleArgs>> getCustomRules() {
         return this.customRules == null ? Input.empty() : this.customRules;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="enableBranchAutoDeletion")
-    private final @Nullable Input<Boolean> enableBranchAutoDeletion;
+        private final @Nullable Input<Boolean> enableBranchAutoDeletion;
 
     public Input<Boolean> getEnableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion == null ? Input.empty() : this.enableBranchAutoDeletion;
     }
 
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables;
+        private final @Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
     @InputImport(name="iAMServiceRole")
-    private final @Nullable Input<String> iAMServiceRole;
+        private final @Nullable Input<String> iAMServiceRole;
 
     public Input<String> getIAMServiceRole() {
         return this.iAMServiceRole == null ? Input.empty() : this.iAMServiceRole;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="oauthToken")
-    private final @Nullable Input<String> oauthToken;
+        private final @Nullable Input<String> oauthToken;
 
     public Input<String> getOauthToken() {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
     }
 
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+        private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<AppTagArgs>> tags;
+        private final @Nullable Input<List<AppTagArgs>> tags;
 
     public Input<List<AppTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -352,7 +352,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(accessToken, autoBranchCreationConfig, basicAuthConfig, buildSpec, customHeaders, customRules, description, enableBranchAutoDeletion, environmentVariables, iAMServiceRole, name, oauthToken, repository, tags);
         }

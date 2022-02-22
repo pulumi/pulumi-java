@@ -181,7 +181,6 @@ public final class GetDomainNameResult {
             this.tags = tags;
             return this;
         }
-
         public GetDomainNameResult build() {
             return new GetDomainNameResult(certificateArn, distributionDomainName, distributionHostedZoneId, endpointConfiguration, mutualTlsAuthentication, ownershipVerificationCertificateArn, regionalCertificateArn, regionalDomainName, regionalHostedZoneId, securityPolicy, tags);
         }

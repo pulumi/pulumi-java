@@ -54,7 +54,6 @@ public final class GetDocumentResult {
             this.tags = tags;
             return this;
         }
-
         public GetDocumentResult build() {
             return new GetDocumentResult(tags);
         }

@@ -60,7 +60,6 @@ public final class CertificateAuthorityTag {
             this.value = value;
             return this;
         }
-
         public CertificateAuthorityTag build() {
             return new CertificateAuthorityTag(key, value);
         }

@@ -25,7 +25,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="durationInMinutes", required=true)
-    private final Input<Integer> durationInMinutes;
+        private final Input<Integer> durationInMinutes;
 
     public Input<Integer> getDurationInMinutes() {
         return this.durationInMinutes;
@@ -36,7 +36,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<ContactTargetsArgs>> targets;
+        private final @Nullable Input<List<ContactTargetsArgs>> targets;
 
     public Input<List<ContactTargetsArgs>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
@@ -95,7 +95,6 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
             this.targets = Input.ofNullable(targets);
             return this;
         }
-
         public ContactStageArgs build() {
             return new ContactStageArgs(durationInMinutes, targets);
         }

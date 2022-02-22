@@ -141,7 +141,6 @@ public final class GetAccessPolicyResult {
             this.accessPolicyResource = accessPolicyResource;
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(accessPolicyArn, accessPolicyId, accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
         }

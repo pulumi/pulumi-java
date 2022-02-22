@@ -25,7 +25,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * 
      */
     @InputImport(name="overrideDynamicGroups")
-    private final @Nullable Input<Boolean> overrideDynamicGroups;
+        private final @Nullable Input<Boolean> overrideDynamicGroups;
 
     public Input<Boolean> getOverrideDynamicGroups() {
         return this.overrideDynamicGroups == null ? Input.empty() : this.overrideDynamicGroups;
@@ -36,7 +36,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * 
      */
     @InputImport(name="thingGroupNames", required=true)
-    private final Input<List<String>> thingGroupNames;
+        private final Input<List<String>> thingGroupNames;
 
     public Input<List<String>> getThingGroupNames() {
         return this.thingGroupNames;
@@ -95,7 +95,6 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
             this.thingGroupNames = Input.of(Objects.requireNonNull(thingGroupNames));
             return this;
         }
-
         public MitigationActionAddThingsToThingGroupParamsArgs build() {
             return new MitigationActionAddThingsToThingGroupParamsArgs(overrideDynamicGroups, thingGroupNames);
         }

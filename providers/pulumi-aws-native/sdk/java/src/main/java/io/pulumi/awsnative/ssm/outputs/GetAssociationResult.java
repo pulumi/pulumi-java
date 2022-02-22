@@ -327,7 +327,6 @@ public final class GetAssociationResult {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }
-
         public GetAssociationResult build() {
             return new GetAssociationResult(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }

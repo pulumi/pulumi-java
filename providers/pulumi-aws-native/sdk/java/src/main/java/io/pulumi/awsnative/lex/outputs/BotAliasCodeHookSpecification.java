@@ -44,7 +44,6 @@ public final class BotAliasCodeHookSpecification {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }
-
         public BotAliasCodeHookSpecification build() {
             return new BotAliasCodeHookSpecification(lambdaCodeHook);
         }

@@ -17,7 +17,7 @@ public final class GetOIDCProviderArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -55,7 +55,6 @@ public final class GetOIDCProviderArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetOIDCProviderArgs build() {
             return new GetOIDCProviderArgs(arn);
         }

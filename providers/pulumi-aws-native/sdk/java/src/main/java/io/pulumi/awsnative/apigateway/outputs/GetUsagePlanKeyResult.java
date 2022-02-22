@@ -54,7 +54,6 @@ public final class GetUsagePlanKeyResult {
             this.id = id;
             return this;
         }
-
         public GetUsagePlanKeyResult build() {
             return new GetUsagePlanKeyResult(id);
         }

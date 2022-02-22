@@ -168,7 +168,6 @@ public final class GetFirewallResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallResult build() {
             return new GetFirewallResult(deleteProtection, description, endpointIds, firewallArn, firewallId, firewallPolicyArn, firewallPolicyChangeProtection, subnetChangeProtection, subnetMappings, tags);
         }

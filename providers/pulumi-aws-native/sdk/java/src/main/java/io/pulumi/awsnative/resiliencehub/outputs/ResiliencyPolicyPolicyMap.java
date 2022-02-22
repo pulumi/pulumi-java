@@ -30,7 +30,6 @@ public final class ResiliencyPolicyPolicyMap {
         public Builder(ResiliencyPolicyPolicyMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ResiliencyPolicyPolicyMap build() {
             return new ResiliencyPolicyPolicyMap();
         }

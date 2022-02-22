@@ -61,7 +61,6 @@ public final class RecipeParametersInputProperties {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public RecipeParametersInputProperties build() {
             return new RecipeParametersInputProperties(dataCatalogInputDefinition, s3InputDefinition);
         }

@@ -74,7 +74,6 @@ public final class StackSetParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public StackSetParameter build() {
             return new StackSetParameter(parameterKey, parameterValue);
         }

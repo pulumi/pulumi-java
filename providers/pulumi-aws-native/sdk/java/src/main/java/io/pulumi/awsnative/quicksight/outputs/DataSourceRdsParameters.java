@@ -74,7 +74,6 @@ public final class DataSourceRdsParameters {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public DataSourceRdsParameters build() {
             return new DataSourceRdsParameters(database, instanceId);
         }

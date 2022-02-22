@@ -78,7 +78,6 @@ public final class AppImageConfigKernelGatewayImageConfig {
             this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
             return this;
         }
-
         public AppImageConfigKernelGatewayImageConfig build() {
             return new AppImageConfigKernelGatewayImageConfig(fileSystemConfig, kernelSpecs);
         }

@@ -44,7 +44,6 @@ public final class IntegrationMarketoSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public IntegrationMarketoSourceProperties build() {
             return new IntegrationMarketoSourceProperties(object);
         }

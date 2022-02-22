@@ -21,14 +21,14 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     public static final BotAliasConversationLogSettingsArgs Empty = new BotAliasConversationLogSettingsArgs();
 
     @InputImport(name="audioLogSettings")
-    private final @Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
+        private final @Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
 
     public Input<List<BotAliasAudioLogSettingArgs>> getAudioLogSettings() {
         return this.audioLogSettings == null ? Input.empty() : this.audioLogSettings;
     }
 
     @InputImport(name="textLogSettings")
-    private final @Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings;
+        private final @Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
     public Input<List<BotAliasTextLogSettingArgs>> getTextLogSettings() {
         return this.textLogSettings == null ? Input.empty() : this.textLogSettings;
@@ -87,7 +87,6 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
             this.textLogSettings = Input.ofNullable(textLogSettings);
             return this;
         }
-
         public BotAliasConversationLogSettingsArgs build() {
             return new BotAliasConversationLogSettingsArgs(audioLogSettings, textLogSettings);
         }

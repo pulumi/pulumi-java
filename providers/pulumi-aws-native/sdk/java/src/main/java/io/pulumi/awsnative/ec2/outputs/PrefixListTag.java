@@ -60,7 +60,6 @@ public final class PrefixListTag {
             this.value = value;
             return this;
         }
-
         public PrefixListTag build() {
             return new PrefixListTag(key, value);
         }

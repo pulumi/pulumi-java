@@ -78,7 +78,6 @@ public final class MonitoringScheduleMonitoringOutputConfig {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public MonitoringScheduleMonitoringOutputConfig build() {
             return new MonitoringScheduleMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }

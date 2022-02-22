@@ -119,7 +119,6 @@ public final class ConnectorProfileSlackConnectorProfileCredentials {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public ConnectorProfileSlackConnectorProfileCredentials build() {
             return new ConnectorProfileSlackConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }

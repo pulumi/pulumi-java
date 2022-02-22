@@ -97,7 +97,6 @@ public final class BotAliasS3BucketLogDestination {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
-
         public BotAliasS3BucketLogDestination build() {
             return new BotAliasS3BucketLogDestination(kmsKeyArn, logPrefix, s3BucketArn);
         }

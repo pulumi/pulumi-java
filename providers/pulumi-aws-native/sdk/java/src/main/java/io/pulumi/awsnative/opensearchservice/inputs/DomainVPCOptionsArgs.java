@@ -16,14 +16,14 @@ public final class DomainVPCOptionsArgs extends io.pulumi.resources.ResourceArgs
     public static final DomainVPCOptionsArgs Empty = new DomainVPCOptionsArgs();
 
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+        private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+        private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -82,7 +82,6 @@ public final class DomainVPCOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
-
         public DomainVPCOptionsArgs build() {
             return new DomainVPCOptionsArgs(securityGroupIds, subnetIds);
         }

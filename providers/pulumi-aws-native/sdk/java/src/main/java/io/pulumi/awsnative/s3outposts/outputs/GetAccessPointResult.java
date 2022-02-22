@@ -77,7 +77,6 @@ public final class GetAccessPointResult {
             this.policy = policy;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(arn, policy);
         }

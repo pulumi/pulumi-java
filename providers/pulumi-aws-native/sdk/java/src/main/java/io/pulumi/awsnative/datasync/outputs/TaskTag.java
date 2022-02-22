@@ -74,7 +74,6 @@ public final class TaskTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TaskTag build() {
             return new TaskTag(key, value);
         }

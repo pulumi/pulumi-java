@@ -59,7 +59,6 @@ public final class DatasetRetentionPeriod {
             this.unlimited = Objects.requireNonNull(unlimited);
             return this;
         }
-
         public DatasetRetentionPeriod build() {
             return new DatasetRetentionPeriod(numberOfDays, unlimited);
         }

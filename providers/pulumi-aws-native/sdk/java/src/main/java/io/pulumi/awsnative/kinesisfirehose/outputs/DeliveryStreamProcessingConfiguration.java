@@ -62,7 +62,6 @@ public final class DeliveryStreamProcessingConfiguration {
             this.processors = processors;
             return this;
         }
-
         public DeliveryStreamProcessingConfiguration build() {
             return new DeliveryStreamProcessingConfiguration(enabled, processors);
         }

@@ -119,7 +119,6 @@ public final class ContainerRecipeInstanceBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public ContainerRecipeInstanceBlockDeviceMapping build() {
             return new ContainerRecipeInstanceBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

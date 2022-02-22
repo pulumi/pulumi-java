@@ -102,7 +102,6 @@ public final class ResponseHeadersPolicyConfig {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
-
         public ResponseHeadersPolicyConfig build() {
             return new ResponseHeadersPolicyConfig(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);
         }

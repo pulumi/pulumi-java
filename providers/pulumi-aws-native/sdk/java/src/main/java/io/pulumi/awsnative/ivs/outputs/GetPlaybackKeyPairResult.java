@@ -99,7 +99,6 @@ public final class GetPlaybackKeyPairResult {
             this.tags = tags;
             return this;
         }
-
         public GetPlaybackKeyPairResult build() {
             return new GetPlaybackKeyPairResult(arn, fingerprint, tags);
         }

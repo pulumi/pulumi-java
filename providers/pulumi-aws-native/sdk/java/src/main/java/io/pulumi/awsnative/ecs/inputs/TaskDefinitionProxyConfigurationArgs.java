@@ -17,21 +17,21 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
     public static final TaskDefinitionProxyConfigurationArgs Empty = new TaskDefinitionProxyConfigurationArgs();
 
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
     }
 
     @InputImport(name="proxyConfigurationProperties")
-    private final @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
+        private final @Nullable Input<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
 
     public Input<List<TaskDefinitionKeyValuePairArgs>> getProxyConfigurationProperties() {
         return this.proxyConfigurationProperties == null ? Input.empty() : this.proxyConfigurationProperties;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -105,7 +105,6 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public TaskDefinitionProxyConfigurationArgs build() {
             return new TaskDefinitionProxyConfigurationArgs(containerName, proxyConfigurationProperties, type);
         }

@@ -24,7 +24,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPermissions")
-    private final @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions;
+        private final @Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions;
 
     public Input<AgentPermissionsPropertiesArgs> getAgentPermissions() {
         return this.agentPermissions == null ? Input.empty() : this.agentPermissions;
@@ -35,7 +35,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anomalyDetectionNotificationConfiguration")
-    private final @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
+        private final @Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
     public Input<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration == null ? Input.empty() : this.anomalyDetectionNotificationConfiguration;
@@ -46,7 +46,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePlatform")
-    private final @Nullable Input<ProfilingGroupComputePlatform> computePlatform;
+        private final @Nullable Input<ProfilingGroupComputePlatform> computePlatform;
 
     public Input<ProfilingGroupComputePlatform> getComputePlatform() {
         return this.computePlatform == null ? Input.empty() : this.computePlatform;
@@ -57,7 +57,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profilingGroupName")
-    private final @Nullable Input<String> profilingGroupName;
+        private final @Nullable Input<String> profilingGroupName;
 
     public Input<String> getProfilingGroupName() {
         return this.profilingGroupName == null ? Input.empty() : this.profilingGroupName;
@@ -68,7 +68,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ProfilingGroupTagArgs>> tags;
+        private final @Nullable Input<List<ProfilingGroupTagArgs>> tags;
 
     public Input<List<ProfilingGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,6 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ProfilingGroupArgs build() {
             return new ProfilingGroupArgs(agentPermissions, anomalyDetectionNotificationConfiguration, computePlatform, profilingGroupName, tags);
         }

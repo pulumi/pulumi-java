@@ -399,7 +399,6 @@ public final class GetEventSourceMappingResult {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }
-
         public GetEventSourceMappingResult build() {
             return new GetEventSourceMappingResult(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, filterCriteria, functionName, functionResponseTypes, id, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, sourceAccessConfigurations, startingPositionTimestamp, topics, tumblingWindowInSeconds);
         }

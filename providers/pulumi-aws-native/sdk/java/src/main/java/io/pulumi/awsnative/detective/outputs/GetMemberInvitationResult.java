@@ -98,7 +98,6 @@ public final class GetMemberInvitationResult {
             this.message = message;
             return this;
         }
-
         public GetMemberInvitationResult build() {
             return new GetMemberInvitationResult(disableEmailNotification, memberEmailAddress, message);
         }

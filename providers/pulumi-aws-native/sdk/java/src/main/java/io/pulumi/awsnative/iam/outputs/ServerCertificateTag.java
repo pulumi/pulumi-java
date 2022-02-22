@@ -74,7 +74,6 @@ public final class ServerCertificateTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ServerCertificateTag build() {
             return new ServerCertificateTag(key, value);
         }

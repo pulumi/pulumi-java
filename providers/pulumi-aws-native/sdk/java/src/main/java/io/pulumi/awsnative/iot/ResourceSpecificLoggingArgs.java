@@ -20,7 +20,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logLevel", required=true)
-    private final Input<ResourceSpecificLoggingLogLevel> logLevel;
+        private final Input<ResourceSpecificLoggingLogLevel> logLevel;
 
     public Input<ResourceSpecificLoggingLogLevel> getLogLevel() {
         return this.logLevel;
@@ -31,7 +31,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetName", required=true)
-    private final Input<String> targetName;
+        private final Input<String> targetName;
 
     public Input<String> getTargetName() {
         return this.targetName;
@@ -42,7 +42,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetType", required=true)
-    private final Input<ResourceSpecificLoggingTargetType> targetType;
+        private final Input<ResourceSpecificLoggingTargetType> targetType;
 
     public Input<ResourceSpecificLoggingTargetType> getTargetType() {
         return this.targetType;
@@ -116,7 +116,6 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
             this.targetType = Input.of(Objects.requireNonNull(targetType));
             return this;
         }
-
         public ResourceSpecificLoggingArgs build() {
             return new ResourceSpecificLoggingArgs(logLevel, targetName, targetType);
         }

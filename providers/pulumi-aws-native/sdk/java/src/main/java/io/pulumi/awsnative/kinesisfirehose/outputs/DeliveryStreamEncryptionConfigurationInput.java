@@ -61,7 +61,6 @@ public final class DeliveryStreamEncryptionConfigurationInput {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public DeliveryStreamEncryptionConfigurationInput build() {
             return new DeliveryStreamEncryptionConfigurationInput(keyARN, keyType);
         }

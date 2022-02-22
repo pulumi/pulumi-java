@@ -118,7 +118,6 @@ public final class GetImageResult {
             this.name = name;
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(arn, containerRecipeArn, imageId, name);
         }

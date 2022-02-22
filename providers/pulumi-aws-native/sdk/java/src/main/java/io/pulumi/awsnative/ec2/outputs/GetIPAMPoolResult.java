@@ -369,7 +369,6 @@ public final class GetIPAMPoolResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMPoolResult build() {
             return new GetIPAMPoolResult(allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, arn, autoImport, description, ipamArn, ipamPoolId, ipamScopeArn, ipamScopeType, poolDepth, provisionedCidrs, state, stateMessage, tags);
         }

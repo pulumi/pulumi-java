@@ -132,7 +132,6 @@ public final class GlobalTableReplicaSpecification {
             this.tags = tags;
             return this;
         }
-
         public GlobalTableReplicaSpecification build() {
             return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
         }

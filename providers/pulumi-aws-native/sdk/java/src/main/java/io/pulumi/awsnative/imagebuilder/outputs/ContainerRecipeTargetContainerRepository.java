@@ -77,7 +77,6 @@ public final class ContainerRecipeTargetContainerRepository {
             this.service = service;
             return this;
         }
-
         public ContainerRecipeTargetContainerRepository build() {
             return new ContainerRecipeTargetContainerRepository(repositoryName, service);
         }

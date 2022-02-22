@@ -18,7 +18,7 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     public static final MitigationActionUpdateCACertificateParamsArgs Empty = new MitigationActionUpdateCACertificateParamsArgs();
 
     @InputImport(name="action", required=true)
-    private final Input<MitigationActionUpdateCACertificateParamsAction> action;
+        private final Input<MitigationActionUpdateCACertificateParamsAction> action;
 
     public Input<MitigationActionUpdateCACertificateParamsAction> getAction() {
         return this.action;
@@ -61,7 +61,6 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
-
         public MitigationActionUpdateCACertificateParamsArgs build() {
             return new MitigationActionUpdateCACertificateParamsArgs(action);
         }

@@ -135,7 +135,6 @@ public final class WorkflowStep {
             this.type = type;
             return this;
         }
-
         public WorkflowStep build() {
             return new WorkflowStep(copyStepDetails, customStepDetails, deleteStepDetails, tagStepDetails, type);
         }

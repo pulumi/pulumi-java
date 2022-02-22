@@ -22,7 +22,7 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyDocument", required=true)
-    private final Input<String> policyDocument;
+        private final Input<String> policyDocument;
 
     public Input<String> getPolicyDocument() {
         return this.policyDocument;
@@ -33,7 +33,7 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final Input<String> policyName;
+        private final Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName;
@@ -92,7 +92,6 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyName = Input.of(Objects.requireNonNull(policyName));
             return this;
         }
-
         public RolePolicyArgs build() {
             return new RolePolicyArgs(policyDocument, policyName);
         }

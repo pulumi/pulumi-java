@@ -173,7 +173,6 @@ public final class PipelineActivity {
             this.selectAttributes = selectAttributes;
             return this;
         }
-
         public PipelineActivity build() {
             return new PipelineActivity(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);
         }

@@ -16,14 +16,14 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
     public static final IndexUserTokenConfigurationArgs Empty = new IndexUserTokenConfigurationArgs();
 
     @InputImport(name="jsonTokenTypeConfiguration")
-    private final @Nullable Input<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
+        private final @Nullable Input<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
 
     public Input<IndexJsonTokenTypeConfigurationArgs> getJsonTokenTypeConfiguration() {
         return this.jsonTokenTypeConfiguration == null ? Input.empty() : this.jsonTokenTypeConfiguration;
     }
 
     @InputImport(name="jwtTokenTypeConfiguration")
-    private final @Nullable Input<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
+        private final @Nullable Input<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
 
     public Input<IndexJwtTokenTypeConfigurationArgs> getJwtTokenTypeConfiguration() {
         return this.jwtTokenTypeConfiguration == null ? Input.empty() : this.jwtTokenTypeConfiguration;
@@ -82,7 +82,6 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
             this.jwtTokenTypeConfiguration = Input.ofNullable(jwtTokenTypeConfiguration);
             return this;
         }
-
         public IndexUserTokenConfigurationArgs build() {
             return new IndexUserTokenConfigurationArgs(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
         }

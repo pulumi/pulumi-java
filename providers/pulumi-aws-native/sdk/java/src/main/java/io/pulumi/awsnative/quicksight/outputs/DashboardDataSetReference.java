@@ -74,7 +74,6 @@ public final class DashboardDataSetReference {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public DashboardDataSetReference build() {
             return new DashboardDataSetReference(dataSetArn, dataSetPlaceholder);
         }

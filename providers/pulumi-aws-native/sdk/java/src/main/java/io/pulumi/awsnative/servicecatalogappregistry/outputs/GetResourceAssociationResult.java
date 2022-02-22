@@ -137,7 +137,6 @@ public final class GetResourceAssociationResult {
             this.resourceType = resourceType;
             return this;
         }
-
         public GetResourceAssociationResult build() {
             return new GetResourceAssociationResult(application, applicationArn, id, resource, resourceArn, resourceType);
         }

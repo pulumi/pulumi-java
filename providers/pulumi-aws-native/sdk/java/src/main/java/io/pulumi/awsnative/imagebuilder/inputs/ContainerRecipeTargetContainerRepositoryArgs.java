@@ -24,7 +24,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+        private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -35,7 +35,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<ContainerRecipeTargetContainerRepositoryService> service;
+        private final @Nullable Input<ContainerRecipeTargetContainerRepositoryService> service;
 
     public Input<ContainerRecipeTargetContainerRepositoryService> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -94,7 +94,6 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ContainerRecipeTargetContainerRepositoryArgs build() {
             return new ContainerRecipeTargetContainerRepositoryArgs(repositoryName, service);
         }

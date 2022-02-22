@@ -17,7 +17,7 @@ public final class GetReadinessCheckArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="readinessCheckName", required=true)
-    private final String readinessCheckName;
+        private final String readinessCheckName;
 
     public String getReadinessCheckName() {
         return this.readinessCheckName;
@@ -55,7 +55,6 @@ public final class GetReadinessCheckArgs extends io.pulumi.resources.InvokeArgs 
             this.readinessCheckName = Objects.requireNonNull(readinessCheckName);
             return this;
         }
-
         public GetReadinessCheckArgs build() {
             return new GetReadinessCheckArgs(readinessCheckName);
         }

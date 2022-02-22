@@ -17,7 +17,7 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final String gatewayId;
+        private final String gatewayId;
 
     public String getGatewayId() {
         return this.gatewayId;
@@ -55,7 +55,6 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public GetGatewayArgs build() {
             return new GetGatewayArgs(gatewayId);
         }

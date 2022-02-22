@@ -141,7 +141,6 @@ public final class CertificateAuthorityGeneralName {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }
-
         public CertificateAuthorityGeneralName build() {
             return new CertificateAuthorityGeneralName(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
         }

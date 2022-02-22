@@ -125,7 +125,6 @@ public final class GetClusterResult {
             this.tags = tags;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(arn, capacityProviders, clusterSettings, configuration, defaultCapacityProviderStrategy, tags);
         }

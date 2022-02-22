@@ -118,7 +118,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.userIds = userIds;
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(organizationArns, organizationalUnitArns, userGroups, userIds);
         }

@@ -163,7 +163,6 @@ public final class GetResolverRuleResult {
             this.targetIps = targetIps;
             return this;
         }
-
         public GetResolverRuleResult build() {
             return new GetResolverRuleResult(arn, name, resolverEndpointId, resolverRuleId, tags, targetIps);
         }

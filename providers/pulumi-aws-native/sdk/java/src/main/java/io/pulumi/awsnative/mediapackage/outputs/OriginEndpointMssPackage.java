@@ -104,7 +104,6 @@ public final class OriginEndpointMssPackage {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public OriginEndpointMssPackage build() {
             return new OriginEndpointMssPackage(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
         }

@@ -74,7 +74,6 @@ public final class ProfilingGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ProfilingGroupTag build() {
             return new ProfilingGroupTag(key, value);
         }

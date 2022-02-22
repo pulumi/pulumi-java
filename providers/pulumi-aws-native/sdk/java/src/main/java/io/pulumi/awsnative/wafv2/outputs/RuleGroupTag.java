@@ -60,7 +60,6 @@ public final class RuleGroupTag {
             this.value = value;
             return this;
         }
-
         public RuleGroupTag build() {
             return new RuleGroupTag(key, value);
         }

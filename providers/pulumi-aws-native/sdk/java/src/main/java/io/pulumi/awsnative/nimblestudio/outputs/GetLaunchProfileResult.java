@@ -150,7 +150,6 @@ public final class GetLaunchProfileResult {
             this.studioComponentIds = studioComponentIds;
             return this;
         }
-
         public GetLaunchProfileResult build() {
             return new GetLaunchProfileResult(description, launchProfileId, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds);
         }

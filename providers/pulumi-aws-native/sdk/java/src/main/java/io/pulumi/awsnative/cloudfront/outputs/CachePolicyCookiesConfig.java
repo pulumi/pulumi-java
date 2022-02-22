@@ -60,7 +60,6 @@ public final class CachePolicyCookiesConfig {
             this.cookies = cookies;
             return this;
         }
-
         public CachePolicyCookiesConfig build() {
             return new CachePolicyCookiesConfig(cookieBehavior, cookies);
         }

@@ -97,7 +97,6 @@ public final class GetHostResult {
             this.hostRecovery = hostRecovery;
             return this;
         }
-
         public GetHostResult build() {
             return new GetHostResult(autoPlacement, hostId, hostRecovery);
         }

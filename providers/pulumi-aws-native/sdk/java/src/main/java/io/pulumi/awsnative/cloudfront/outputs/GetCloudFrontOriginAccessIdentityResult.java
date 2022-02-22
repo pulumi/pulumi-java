@@ -74,7 +74,6 @@ public final class GetCloudFrontOriginAccessIdentityResult {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
-
         public GetCloudFrontOriginAccessIdentityResult build() {
             return new GetCloudFrontOriginAccessIdentityResult(cloudFrontOriginAccessIdentityConfig, id, s3CanonicalUserId);
         }

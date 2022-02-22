@@ -73,7 +73,6 @@ public final class DomainMasterUserOptions {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
-
         public DomainMasterUserOptions build() {
             return new DomainMasterUserOptions(masterUserARN, masterUserName, masterUserPassword);
         }

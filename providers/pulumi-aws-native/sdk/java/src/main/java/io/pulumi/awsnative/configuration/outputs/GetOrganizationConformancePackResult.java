@@ -120,7 +120,6 @@ public final class GetOrganizationConformancePackResult {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
-
         public GetOrganizationConformancePackResult build() {
             return new GetOrganizationConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix, excludedAccounts);
         }

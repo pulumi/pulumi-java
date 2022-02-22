@@ -24,7 +24,7 @@ public final class ThemeGutterStyle extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="show")
-    private final @Nullable Boolean show;
+        private final @Nullable Boolean show;
 
     public Optional<Boolean> getShow() {
         return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
@@ -62,7 +62,6 @@ public final class ThemeGutterStyle extends io.pulumi.resources.InvokeArgs {
             this.show = show;
             return this;
         }
-
         public ThemeGutterStyle build() {
             return new ThemeGutterStyle(show);
         }

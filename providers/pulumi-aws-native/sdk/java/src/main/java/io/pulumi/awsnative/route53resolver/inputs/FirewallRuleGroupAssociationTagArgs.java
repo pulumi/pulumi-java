@@ -22,7 +22,7 @@ public final class FirewallRuleGroupAssociationTagArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class FirewallRuleGroupAssociationTagArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class FirewallRuleGroupAssociationTagArgs extends io.pulumi.resourc
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public FirewallRuleGroupAssociationTagArgs build() {
             return new FirewallRuleGroupAssociationTagArgs(key, value);
         }

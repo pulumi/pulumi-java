@@ -98,7 +98,6 @@ public final class GetResolverConfigResult {
             this.ownerId = ownerId;
             return this;
         }
-
         public GetResolverConfigResult build() {
             return new GetResolverConfigResult(autodefinedReverse, id, ownerId);
         }

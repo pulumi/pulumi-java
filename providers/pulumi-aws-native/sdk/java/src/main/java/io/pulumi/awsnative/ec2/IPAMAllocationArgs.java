@@ -16,14 +16,14 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
     public static final IPAMAllocationArgs Empty = new IPAMAllocationArgs();
 
     @InputImport(name="cidr")
-    private final @Nullable Input<String> cidr;
+        private final @Nullable Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr == null ? Input.empty() : this.cidr;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamPoolId", required=true)
-    private final Input<String> ipamPoolId;
+        private final Input<String> ipamPoolId;
 
     public Input<String> getIpamPoolId() {
         return this.ipamPoolId;
@@ -45,7 +45,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netmaskLength")
-    private final @Nullable Input<Integer> netmaskLength;
+        private final @Nullable Input<Integer> netmaskLength;
 
     public Input<Integer> getNetmaskLength() {
         return this.netmaskLength == null ? Input.empty() : this.netmaskLength;
@@ -134,7 +134,6 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
             this.netmaskLength = Input.ofNullable(netmaskLength);
             return this;
         }
-
         public IPAMAllocationArgs build() {
             return new IPAMAllocationArgs(cidr, description, ipamPoolId, netmaskLength);
         }

@@ -14,14 +14,14 @@ public final class ProvisioningTemplateTagArgs extends io.pulumi.resources.Resou
     public static final ProvisioningTemplateTagArgs Empty = new ProvisioningTemplateTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class ProvisioningTemplateTagArgs extends io.pulumi.resources.Resou
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ProvisioningTemplateTagArgs build() {
             return new ProvisioningTemplateTagArgs(key, value);
         }

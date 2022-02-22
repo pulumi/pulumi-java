@@ -44,7 +44,6 @@ public final class GlobalTableReplicaSSESpecification {
             this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
             return this;
         }
-
         public GlobalTableReplicaSSESpecification build() {
             return new GlobalTableReplicaSSESpecification(kMSMasterKeyId);
         }

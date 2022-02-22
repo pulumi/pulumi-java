@@ -78,7 +78,6 @@ public final class ContainerRecipeInstanceConfiguration {
             this.image = image;
             return this;
         }
-
         public ContainerRecipeInstanceConfiguration build() {
             return new ContainerRecipeInstanceConfiguration(blockDeviceMappings, image);
         }

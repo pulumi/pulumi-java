@@ -60,7 +60,6 @@ public final class NetworkInsightsPathTag {
             this.value = value;
             return this;
         }
-
         public NetworkInsightsPathTag build() {
             return new NetworkInsightsPathTag(key, value);
         }

@@ -17,21 +17,21 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
     public static final RuleGroupRegexMatchStatementArgs Empty = new RuleGroupRegexMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+        private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="regexString", required=true)
-    private final Input<String> regexString;
+        private final Input<String> regexString;
 
     public Input<String> getRegexString() {
         return this.regexString;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -105,7 +105,6 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public RuleGroupRegexMatchStatementArgs build() {
             return new RuleGroupRegexMatchStatementArgs(fieldToMatch, regexString, textTransformations);
         }

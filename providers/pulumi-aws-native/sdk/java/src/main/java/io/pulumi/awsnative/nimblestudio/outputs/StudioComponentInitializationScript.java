@@ -104,7 +104,6 @@ public final class StudioComponentInitializationScript {
             this.script = script;
             return this;
         }
-
         public StudioComponentInitializationScript build() {
             return new StudioComponentInitializationScript(launchProfileProtocolVersion, platform, runContext, script);
         }

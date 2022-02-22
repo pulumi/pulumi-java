@@ -46,7 +46,6 @@ public final class FunctionMetadata {
             this.functionARN = functionARN;
             return this;
         }
-
         public FunctionMetadata build() {
             return new FunctionMetadata(functionARN);
         }

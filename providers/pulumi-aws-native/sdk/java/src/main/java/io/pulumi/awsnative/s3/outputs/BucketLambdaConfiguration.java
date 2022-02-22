@@ -98,7 +98,6 @@ public final class BucketLambdaConfiguration {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public BucketLambdaConfiguration build() {
             return new BucketLambdaConfiguration(event, filter, function);
         }

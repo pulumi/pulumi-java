@@ -17,7 +17,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams extends io.
     public static final MitigationActionReplaceDefaultPolicyVersionParams Empty = new MitigationActionReplaceDefaultPolicyVersionParams();
 
     @InputImport(name="templateName", required=true)
-    private final MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
+        private final MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
 
     public MitigationActionReplaceDefaultPolicyVersionParamsTemplateName getTemplateName() {
         return this.templateName;
@@ -55,7 +55,6 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams extends io.
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public MitigationActionReplaceDefaultPolicyVersionParams build() {
             return new MitigationActionReplaceDefaultPolicyVersionParams(templateName);
         }

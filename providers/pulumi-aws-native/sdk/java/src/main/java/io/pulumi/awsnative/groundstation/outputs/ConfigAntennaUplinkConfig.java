@@ -75,7 +75,6 @@ public final class ConfigAntennaUplinkConfig {
             this.transmitDisabled = transmitDisabled;
             return this;
         }
-
         public ConfigAntennaUplinkConfig build() {
             return new ConfigAntennaUplinkConfig(spectrumConfig, targetEirp, transmitDisabled);
         }

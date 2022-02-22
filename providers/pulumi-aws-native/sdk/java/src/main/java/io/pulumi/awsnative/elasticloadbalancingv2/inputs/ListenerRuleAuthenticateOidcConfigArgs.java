@@ -18,84 +18,84 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
     public static final ListenerRuleAuthenticateOidcConfigArgs Empty = new ListenerRuleAuthenticateOidcConfigArgs();
 
     @InputImport(name="authenticationRequestExtraParams")
-    private final @Nullable Input<Object> authenticationRequestExtraParams;
+        private final @Nullable Input<Object> authenticationRequestExtraParams;
 
     public Input<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
     }
 
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+        private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+        private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
     }
 
     @InputImport(name="clientSecret", required=true)
-    private final Input<String> clientSecret;
+        private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
     }
 
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+        private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
     }
 
     @InputImport(name="onUnauthenticatedRequest")
-    private final @Nullable Input<String> onUnauthenticatedRequest;
+        private final @Nullable Input<String> onUnauthenticatedRequest;
 
     public Input<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
     }
 
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+        private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
     @InputImport(name="sessionCookieName")
-    private final @Nullable Input<String> sessionCookieName;
+        private final @Nullable Input<String> sessionCookieName;
 
     public Input<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
     }
 
     @InputImport(name="sessionTimeout")
-    private final @Nullable Input<Integer> sessionTimeout;
+        private final @Nullable Input<Integer> sessionTimeout;
 
     public Input<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
     }
 
     @InputImport(name="tokenEndpoint", required=true)
-    private final Input<String> tokenEndpoint;
+        private final Input<String> tokenEndpoint;
 
     public Input<String> getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @InputImport(name="useExistingClientSecret")
-    private final @Nullable Input<Boolean> useExistingClientSecret;
+        private final @Nullable Input<Boolean> useExistingClientSecret;
 
     public Input<Boolean> getUseExistingClientSecret() {
         return this.useExistingClientSecret == null ? Input.empty() : this.useExistingClientSecret;
     }
 
     @InputImport(name="userInfoEndpoint", required=true)
-    private final Input<String> userInfoEndpoint;
+        private final Input<String> userInfoEndpoint;
 
     public Input<String> getUserInfoEndpoint() {
         return this.userInfoEndpoint;
@@ -304,7 +304,6 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
             this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }
-
         public ListenerRuleAuthenticateOidcConfigArgs build() {
             return new ListenerRuleAuthenticateOidcConfigArgs(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, useExistingClientSecret, userInfoEndpoint);
         }

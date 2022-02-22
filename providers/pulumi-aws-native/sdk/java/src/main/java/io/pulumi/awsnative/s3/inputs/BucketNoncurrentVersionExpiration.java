@@ -23,7 +23,7 @@ public final class BucketNoncurrentVersionExpiration extends io.pulumi.resources
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-    private final @Nullable Integer newerNoncurrentVersions;
+        private final @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> getNewerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Optional.empty() : Optional.ofNullable(this.newerNoncurrentVersions);
@@ -34,7 +34,7 @@ public final class BucketNoncurrentVersionExpiration extends io.pulumi.resources
      * 
      */
     @InputImport(name="noncurrentDays", required=true)
-    private final Integer noncurrentDays;
+        private final Integer noncurrentDays;
 
     public Integer getNoncurrentDays() {
         return this.noncurrentDays;
@@ -83,7 +83,6 @@ public final class BucketNoncurrentVersionExpiration extends io.pulumi.resources
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }
-
         public BucketNoncurrentVersionExpiration build() {
             return new BucketNoncurrentVersionExpiration(newerNoncurrentVersions, noncurrentDays);
         }

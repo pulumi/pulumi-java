@@ -83,7 +83,6 @@ public final class GetServiceResult {
             this.tags = tags;
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(arn, serviceIdentifier, tags);
         }

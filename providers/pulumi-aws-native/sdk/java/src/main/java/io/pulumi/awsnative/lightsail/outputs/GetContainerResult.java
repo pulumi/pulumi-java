@@ -200,7 +200,6 @@ public final class GetContainerResult {
             this.url = url;
             return this;
         }
-
         public GetContainerResult build() {
             return new GetContainerResult(containerArn, containerServiceDeployment, isDisabled, power, publicDomainNames, scale, tags, url);
         }

@@ -54,7 +54,6 @@ public final class GetSchemaVersionResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetSchemaVersionResult build() {
             return new GetSchemaVersionResult(versionId);
         }

@@ -222,7 +222,6 @@ public final class BotIntent {
             this.slots = slots;
             return this;
         }
-
         public BotIntent build() {
             return new BotIntent(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
         }

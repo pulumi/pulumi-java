@@ -30,7 +30,6 @@ public final class DataSetPhysicalTableMap extends io.pulumi.resources.InvokeArg
         public Builder(DataSetPhysicalTableMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetPhysicalTableMap build() {
             return new DataSetPhysicalTableMap();
         }

@@ -17,21 +17,21 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     public static final ComponentVersionArgs Empty = new ComponentVersionArgs();
 
     @InputImport(name="inlineRecipe")
-    private final @Nullable Input<String> inlineRecipe;
+        private final @Nullable Input<String> inlineRecipe;
 
     public Input<String> getInlineRecipe() {
         return this.inlineRecipe == null ? Input.empty() : this.inlineRecipe;
     }
 
     @InputImport(name="lambdaFunction")
-    private final @Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
+        private final @Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
     public Input<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
         return this.lambdaFunction == null ? Input.empty() : this.lambdaFunction;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+        private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -105,7 +105,6 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ComponentVersionArgs build() {
             return new ComponentVersionArgs(inlineRecipe, lambdaFunction, tags);
         }

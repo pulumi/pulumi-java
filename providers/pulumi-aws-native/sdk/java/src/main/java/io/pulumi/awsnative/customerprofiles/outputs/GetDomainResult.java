@@ -163,7 +163,6 @@ public final class GetDomainResult {
             this.tags = tags;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(createdAt, deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, lastUpdatedAt, tags);
         }

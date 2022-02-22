@@ -100,7 +100,6 @@ public final class GetBucketResult {
             this.tags = tags;
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(arn, lifecycleConfiguration, tags);
         }

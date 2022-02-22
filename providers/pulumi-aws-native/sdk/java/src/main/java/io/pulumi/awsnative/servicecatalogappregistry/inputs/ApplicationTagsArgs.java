@@ -30,7 +30,6 @@ public final class ApplicationTagsArgs extends io.pulumi.resources.ResourceArgs 
         public Builder(ApplicationTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ApplicationTagsArgs build() {
             return new ApplicationTagsArgs();
         }

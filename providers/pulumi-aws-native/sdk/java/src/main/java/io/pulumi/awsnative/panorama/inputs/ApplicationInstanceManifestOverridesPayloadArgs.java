@@ -15,7 +15,7 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     public static final ApplicationInstanceManifestOverridesPayloadArgs Empty = new ApplicationInstanceManifestOverridesPayloadArgs();
 
     @InputImport(name="payloadData")
-    private final @Nullable Input<String> payloadData;
+        private final @Nullable Input<String> payloadData;
 
     public Input<String> getPayloadData() {
         return this.payloadData == null ? Input.empty() : this.payloadData;
@@ -58,7 +58,6 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
             this.payloadData = Input.ofNullable(payloadData);
             return this;
         }
-
         public ApplicationInstanceManifestOverridesPayloadArgs build() {
             return new ApplicationInstanceManifestOverridesPayloadArgs(payloadData);
         }

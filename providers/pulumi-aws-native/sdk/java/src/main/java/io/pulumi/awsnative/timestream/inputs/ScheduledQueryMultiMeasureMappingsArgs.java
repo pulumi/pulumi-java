@@ -21,14 +21,14 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();
 
     @InputImport(name="multiMeasureAttributeMappings", required=true)
-    private final Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
+        private final Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
     public Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
 
     @InputImport(name="targetMultiMeasureName")
-    private final @Nullable Input<String> targetMultiMeasureName;
+        private final @Nullable Input<String> targetMultiMeasureName;
 
     public Input<String> getTargetMultiMeasureName() {
         return this.targetMultiMeasureName == null ? Input.empty() : this.targetMultiMeasureName;
@@ -87,7 +87,6 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
             this.targetMultiMeasureName = Input.ofNullable(targetMultiMeasureName);
             return this;
         }
-
         public ScheduledQueryMultiMeasureMappingsArgs build() {
             return new ScheduledQueryMultiMeasureMappingsArgs(multiMeasureAttributeMappings, targetMultiMeasureName);
         }

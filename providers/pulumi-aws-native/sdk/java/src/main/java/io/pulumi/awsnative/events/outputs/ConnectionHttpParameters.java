@@ -73,7 +73,6 @@ public final class ConnectionHttpParameters {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
-
         public ConnectionHttpParameters build() {
             return new ConnectionHttpParameters(bodyParameters, headerParameters, queryStringParameters);
         }

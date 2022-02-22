@@ -16,21 +16,21 @@ public final class DeliveryStreamOpenXJsonSerDe extends io.pulumi.resources.Invo
     public static final DeliveryStreamOpenXJsonSerDe Empty = new DeliveryStreamOpenXJsonSerDe();
 
     @InputImport(name="caseInsensitive")
-    private final @Nullable Boolean caseInsensitive;
+        private final @Nullable Boolean caseInsensitive;
 
     public Optional<Boolean> getCaseInsensitive() {
         return this.caseInsensitive == null ? Optional.empty() : Optional.ofNullable(this.caseInsensitive);
     }
 
     @InputImport(name="columnToJsonKeyMappings")
-    private final @Nullable Object columnToJsonKeyMappings;
+        private final @Nullable Object columnToJsonKeyMappings;
 
     public Optional<Object> getColumnToJsonKeyMappings() {
         return this.columnToJsonKeyMappings == null ? Optional.empty() : Optional.ofNullable(this.columnToJsonKeyMappings);
     }
 
     @InputImport(name="convertDotsInJsonKeysToUnderscores")
-    private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
+        private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
     public Optional<Boolean> getConvertDotsInJsonKeysToUnderscores() {
         return this.convertDotsInJsonKeysToUnderscores == null ? Optional.empty() : Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
@@ -89,7 +89,6 @@ public final class DeliveryStreamOpenXJsonSerDe extends io.pulumi.resources.Invo
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
-
         public DeliveryStreamOpenXJsonSerDe build() {
             return new DeliveryStreamOpenXJsonSerDe(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }

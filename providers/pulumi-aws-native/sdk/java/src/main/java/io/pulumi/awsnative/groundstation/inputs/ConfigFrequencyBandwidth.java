@@ -16,14 +16,14 @@ public final class ConfigFrequencyBandwidth extends io.pulumi.resources.InvokeAr
     public static final ConfigFrequencyBandwidth Empty = new ConfigFrequencyBandwidth();
 
     @InputImport(name="units")
-    private final @Nullable ConfigBandwidthUnits units;
+        private final @Nullable ConfigBandwidthUnits units;
 
     public Optional<ConfigBandwidthUnits> getUnits() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @InputImport(name="value")
-    private final @Nullable Double value;
+        private final @Nullable Double value;
 
     public Optional<Double> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -72,7 +72,6 @@ public final class ConfigFrequencyBandwidth extends io.pulumi.resources.InvokeAr
             this.value = value;
             return this;
         }
-
         public ConfigFrequencyBandwidth build() {
             return new ConfigFrequencyBandwidth(units, value);
         }

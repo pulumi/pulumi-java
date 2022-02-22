@@ -118,7 +118,6 @@ public final class Template {
             this.textPart = textPart;
             return this;
         }
-
         public Template build() {
             return new Template(htmlPart, subjectPart, templateName, textPart);
         }

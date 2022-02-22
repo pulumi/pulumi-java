@@ -46,7 +46,6 @@ public final class AssetModelAttribute {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public AssetModelAttribute build() {
             return new AssetModelAttribute(defaultValue);
         }

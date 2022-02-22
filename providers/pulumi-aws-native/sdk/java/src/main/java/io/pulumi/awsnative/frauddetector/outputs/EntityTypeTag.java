@@ -58,7 +58,6 @@ public final class EntityTypeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntityTypeTag build() {
             return new EntityTypeTag(key, value);
         }

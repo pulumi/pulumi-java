@@ -58,7 +58,6 @@ public final class DatastoreTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatastoreTag build() {
             return new DatastoreTag(key, value);
         }

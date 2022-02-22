@@ -22,7 +22,7 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
      * 
      */
     @InputImport(name="s3Uri", required=true)
-    private final Input<String> s3Uri;
+        private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;
@@ -65,7 +65,6 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
             this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
             return this;
         }
-
         public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs build() {
             return new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(s3Uri);
         }

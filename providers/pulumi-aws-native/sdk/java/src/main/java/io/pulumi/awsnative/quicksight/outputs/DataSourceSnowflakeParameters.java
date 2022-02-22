@@ -95,7 +95,6 @@ public final class DataSourceSnowflakeParameters {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
-
         public DataSourceSnowflakeParameters build() {
             return new DataSourceSnowflakeParameters(database, host, warehouse);
         }

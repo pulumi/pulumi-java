@@ -17,14 +17,14 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     public static final JobEntityDetectorConfigurationArgs Empty = new JobEntityDetectorConfigurationArgs();
 
     @InputImport(name="allowedStatistics")
-    private final @Nullable Input<JobAllowedStatisticsArgs> allowedStatistics;
+        private final @Nullable Input<JobAllowedStatisticsArgs> allowedStatistics;
 
     public Input<JobAllowedStatisticsArgs> getAllowedStatistics() {
         return this.allowedStatistics == null ? Input.empty() : this.allowedStatistics;
     }
 
     @InputImport(name="entityTypes", required=true)
-    private final Input<List<String>> entityTypes;
+        private final Input<List<String>> entityTypes;
 
     public Input<List<String>> getEntityTypes() {
         return this.entityTypes;
@@ -83,7 +83,6 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
             this.entityTypes = Input.of(Objects.requireNonNull(entityTypes));
             return this;
         }
-
         public JobEntityDetectorConfigurationArgs build() {
             return new JobEntityDetectorConfigurationArgs(allowedStatistics, entityTypes);
         }

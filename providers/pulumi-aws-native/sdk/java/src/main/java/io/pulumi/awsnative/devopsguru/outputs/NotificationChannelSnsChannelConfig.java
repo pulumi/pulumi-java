@@ -46,7 +46,6 @@ public final class NotificationChannelSnsChannelConfig {
             this.topicArn = topicArn;
             return this;
         }
-
         public NotificationChannelSnsChannelConfig build() {
             return new NotificationChannelSnsChannelConfig(topicArn);
         }

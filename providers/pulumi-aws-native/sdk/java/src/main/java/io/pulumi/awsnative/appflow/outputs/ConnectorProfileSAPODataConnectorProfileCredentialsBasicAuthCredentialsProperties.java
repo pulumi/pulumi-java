@@ -76,7 +76,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
             this.username = username;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties(password, username);
         }

@@ -60,7 +60,6 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHints {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceBufferingHints build() {
             return new DeliveryStreamAmazonopensearchserviceBufferingHints(intervalInSeconds, sizeInMBs);
         }

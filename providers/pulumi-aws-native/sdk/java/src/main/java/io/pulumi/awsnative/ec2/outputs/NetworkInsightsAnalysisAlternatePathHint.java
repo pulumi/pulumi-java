@@ -60,7 +60,6 @@ public final class NetworkInsightsAnalysisAlternatePathHint {
             this.componentId = componentId;
             return this;
         }
-
         public NetworkInsightsAnalysisAlternatePathHint build() {
             return new NetworkInsightsAnalysisAlternatePathHint(componentArn, componentId);
         }

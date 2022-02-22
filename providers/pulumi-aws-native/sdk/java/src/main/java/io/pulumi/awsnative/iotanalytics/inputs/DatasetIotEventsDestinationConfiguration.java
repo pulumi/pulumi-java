@@ -13,14 +13,14 @@ public final class DatasetIotEventsDestinationConfiguration extends io.pulumi.re
     public static final DatasetIotEventsDestinationConfiguration Empty = new DatasetIotEventsDestinationConfiguration();
 
     @InputImport(name="inputName", required=true)
-    private final String inputName;
+        private final String inputName;
 
     public String getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -69,7 +69,6 @@ public final class DatasetIotEventsDestinationConfiguration extends io.pulumi.re
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public DatasetIotEventsDestinationConfiguration build() {
             return new DatasetIotEventsDestinationConfiguration(inputName, roleArn);
         }

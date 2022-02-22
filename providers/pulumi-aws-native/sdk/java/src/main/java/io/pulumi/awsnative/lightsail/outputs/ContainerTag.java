@@ -76,7 +76,6 @@ public final class ContainerTag {
             this.value = value;
             return this;
         }
-
         public ContainerTag build() {
             return new ContainerTag(key, value);
         }

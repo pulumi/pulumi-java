@@ -92,7 +92,6 @@ public final class GetRulesetResult {
             this.tags = tags;
             return this;
         }
-
         public GetRulesetResult build() {
             return new GetRulesetResult(description, rules, tags);
         }

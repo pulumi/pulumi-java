@@ -69,7 +69,6 @@ public final class DashboardError {
             this.type = type;
             return this;
         }
-
         public DashboardError build() {
             return new DashboardError(message, type);
         }

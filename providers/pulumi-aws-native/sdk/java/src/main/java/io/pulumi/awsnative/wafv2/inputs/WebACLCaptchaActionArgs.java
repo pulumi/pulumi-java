@@ -19,7 +19,7 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
     public static final WebACLCaptchaActionArgs Empty = new WebACLCaptchaActionArgs();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
+        private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
     public Input<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
@@ -62,7 +62,6 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
             this.customRequestHandling = Input.ofNullable(customRequestHandling);
             return this;
         }
-
         public WebACLCaptchaActionArgs build() {
             return new WebACLCaptchaActionArgs(customRequestHandling);
         }

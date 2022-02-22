@@ -89,7 +89,6 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }
-
         public DeliveryStreamDataFormatConversionConfiguration build() {
             return new DeliveryStreamDataFormatConversionConfiguration(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
         }

@@ -18,14 +18,14 @@ public final class FlowTaskPropertiesObject extends io.pulumi.resources.InvokeAr
     public static final FlowTaskPropertiesObject Empty = new FlowTaskPropertiesObject();
 
     @InputImport(name="key", required=true)
-    private final FlowOperatorPropertiesKeys key;
+        private final FlowOperatorPropertiesKeys key;
 
     public FlowOperatorPropertiesKeys getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -74,7 +74,6 @@ public final class FlowTaskPropertiesObject extends io.pulumi.resources.InvokeAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FlowTaskPropertiesObject build() {
             return new FlowTaskPropertiesObject(key, value);
         }

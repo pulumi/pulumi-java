@@ -17,7 +17,7 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-    private final String domainId;
+        private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
@@ -55,7 +55,6 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public GetDomainArgs build() {
             return new GetDomainArgs(domainId);
         }

@@ -17,7 +17,7 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="awsAccountId", required=true)
-    private final String awsAccountId;
+        private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
@@ -55,7 +55,6 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public GetSessionArgs build() {
             return new GetSessionArgs(awsAccountId);
         }

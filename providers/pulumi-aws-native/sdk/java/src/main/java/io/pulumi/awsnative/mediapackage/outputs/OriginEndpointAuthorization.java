@@ -74,7 +74,6 @@ public final class OriginEndpointAuthorization {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
-
         public OriginEndpointAuthorization build() {
             return new OriginEndpointAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }

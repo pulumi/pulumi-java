@@ -97,7 +97,6 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
             this.state = state;
             return this;
         }
-
         public GetTransitGatewayMulticastDomainAssociationResult build() {
             return new GetTransitGatewayMulticastDomainAssociationResult(resourceId, resourceType, state);
         }

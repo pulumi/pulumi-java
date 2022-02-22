@@ -14,21 +14,21 @@ public final class ResponseHeadersPolicyCustomHeader extends io.pulumi.resources
     public static final ResponseHeadersPolicyCustomHeader Empty = new ResponseHeadersPolicyCustomHeader();
 
     @InputImport(name="header", required=true)
-    private final String header;
+        private final String header;
 
     public String getHeader() {
         return this.header;
     }
 
     @InputImport(name="override", required=true)
-    private final Boolean override;
+        private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -87,7 +87,6 @@ public final class ResponseHeadersPolicyCustomHeader extends io.pulumi.resources
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ResponseHeadersPolicyCustomHeader build() {
             return new ResponseHeadersPolicyCustomHeader(header, override, value);
         }

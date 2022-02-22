@@ -121,7 +121,6 @@ public final class GetDatasetResult {
             this.pathOptions = pathOptions;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(format, formatOptions, input, pathOptions);
         }

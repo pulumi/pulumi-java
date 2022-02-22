@@ -24,7 +24,7 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final SimulationApplicationSimulationSoftwareSuiteName name;
+        private final SimulationApplicationSimulationSoftwareSuiteName name;
 
     public SimulationApplicationSimulationSoftwareSuiteName getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
      * 
      */
     @InputImport(name="version")
-    private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
+        private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -84,7 +84,6 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
             this.version = version;
             return this;
         }
-
         public SimulationApplicationSimulationSoftwareSuite build() {
             return new SimulationApplicationSimulationSoftwareSuite(name, version);
         }

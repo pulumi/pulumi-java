@@ -45,7 +45,6 @@ public final class LoggingConfiguration {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public LoggingConfiguration build() {
             return new LoggingConfiguration(logDestinationConfigs);
         }

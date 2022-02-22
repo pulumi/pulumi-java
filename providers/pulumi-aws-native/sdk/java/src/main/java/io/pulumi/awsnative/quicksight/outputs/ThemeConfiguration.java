@@ -89,7 +89,6 @@ public final class ThemeConfiguration {
             this.uIColorPalette = uIColorPalette;
             return this;
         }
-
         public ThemeConfiguration build() {
             return new ThemeConfiguration(dataColorPalette, sheet, typography, uIColorPalette);
         }

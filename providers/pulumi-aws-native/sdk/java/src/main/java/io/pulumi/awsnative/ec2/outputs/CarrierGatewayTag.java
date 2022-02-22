@@ -60,7 +60,6 @@ public final class CarrierGatewayTag {
             this.value = value;
             return this;
         }
-
         public CarrierGatewayTag build() {
             return new CarrierGatewayTag(key, value);
         }

@@ -18,7 +18,7 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     public static final ConnectorLogDeliveryArgs Empty = new ConnectorLogDeliveryArgs();
 
     @InputImport(name="workerLogDelivery", required=true)
-    private final Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
+        private final Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
     public Input<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {
         return this.workerLogDelivery;
@@ -61,7 +61,6 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
             this.workerLogDelivery = Input.of(Objects.requireNonNull(workerLogDelivery));
             return this;
         }
-
         public ConnectorLogDeliveryArgs build() {
             return new ConnectorLogDeliveryArgs(workerLogDelivery);
         }

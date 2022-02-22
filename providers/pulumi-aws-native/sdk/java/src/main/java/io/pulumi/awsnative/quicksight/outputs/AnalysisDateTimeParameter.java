@@ -75,7 +75,6 @@ public final class AnalysisDateTimeParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisDateTimeParameter build() {
             return new AnalysisDateTimeParameter(name, values);
         }

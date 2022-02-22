@@ -72,7 +72,6 @@ public final class ResponseHeadersPolicyCustomHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ResponseHeadersPolicyCustomHeader build() {
             return new ResponseHeadersPolicyCustomHeader(header, override, value);
         }

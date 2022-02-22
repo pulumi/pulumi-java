@@ -22,7 +22,7 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="coreDeviceThingName", required=true)
-    private final Input<String> coreDeviceThingName;
+        private final Input<String> coreDeviceThingName;
 
     public Input<String> getCoreDeviceThingName() {
         return this.coreDeviceThingName;
@@ -65,7 +65,6 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
             this.coreDeviceThingName = Input.of(Objects.requireNonNull(coreDeviceThingName));
             return this;
         }
-
         public GatewayGreengrassV2Args build() {
             return new GatewayGreengrassV2Args(coreDeviceThingName);
         }

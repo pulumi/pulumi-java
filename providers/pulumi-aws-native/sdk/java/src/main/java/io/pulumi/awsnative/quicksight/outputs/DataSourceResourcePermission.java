@@ -103,7 +103,6 @@ public final class DataSourceResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public DataSourceResourcePermission build() {
             return new DataSourceResourcePermission(actions, principal);
         }

@@ -74,7 +74,6 @@ public final class JobTemplateTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public JobTemplateTag build() {
             return new JobTemplateTag(key, value);
         }

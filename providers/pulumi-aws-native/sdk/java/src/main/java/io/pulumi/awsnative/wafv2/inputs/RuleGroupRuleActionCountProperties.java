@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionCountProperties extends io.pulumi.resource
     public static final RuleGroupRuleActionCountProperties Empty = new RuleGroupRuleActionCountProperties();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+        private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
     public Optional<RuleGroupCustomRequestHandling> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
@@ -57,7 +57,6 @@ public final class RuleGroupRuleActionCountProperties extends io.pulumi.resource
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionCountProperties build() {
             return new RuleGroupRuleActionCountProperties(customRequestHandling);
         }

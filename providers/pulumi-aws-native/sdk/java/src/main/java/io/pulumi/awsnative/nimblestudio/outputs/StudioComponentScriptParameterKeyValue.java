@@ -76,7 +76,6 @@ public final class StudioComponentScriptParameterKeyValue {
             this.value = value;
             return this;
         }
-
         public StudioComponentScriptParameterKeyValue build() {
             return new StudioComponentScriptParameterKeyValue(key, value);
         }

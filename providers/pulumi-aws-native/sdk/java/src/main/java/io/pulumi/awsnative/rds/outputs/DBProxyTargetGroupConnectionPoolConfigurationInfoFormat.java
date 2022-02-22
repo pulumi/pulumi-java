@@ -141,7 +141,6 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
-
         public DBProxyTargetGroupConnectionPoolConfigurationInfoFormat build() {
             return new DBProxyTargetGroupConnectionPoolConfigurationInfoFormat(connectionBorrowTimeout, initQuery, maxConnectionsPercent, maxIdleConnectionsPercent, sessionPinningFilters);
         }

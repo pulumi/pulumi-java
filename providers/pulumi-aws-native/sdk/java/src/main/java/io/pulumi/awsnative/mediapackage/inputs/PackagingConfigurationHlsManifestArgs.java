@@ -27,7 +27,7 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="adMarkers")
-    private final @Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
+        private final @Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
 
     public Input<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
         return this.adMarkers == null ? Input.empty() : this.adMarkers;
@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includeIframeOnlyStream")
-    private final @Nullable Input<Boolean> includeIframeOnlyStream;
+        private final @Nullable Input<Boolean> includeIframeOnlyStream;
 
     public Input<Boolean> getIncludeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Input.empty() : this.includeIframeOnlyStream;
     }
 
     @InputImport(name="manifestName")
-    private final @Nullable Input<String> manifestName;
+        private final @Nullable Input<String> manifestName;
 
     public Input<String> getManifestName() {
         return this.manifestName == null ? Input.empty() : this.manifestName;
@@ -56,7 +56,7 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="programDateTimeIntervalSeconds")
-    private final @Nullable Input<Integer> programDateTimeIntervalSeconds;
+        private final @Nullable Input<Integer> programDateTimeIntervalSeconds;
 
     public Input<Integer> getProgramDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Input.empty() : this.programDateTimeIntervalSeconds;
@@ -67,14 +67,14 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="repeatExtXKey")
-    private final @Nullable Input<Boolean> repeatExtXKey;
+        private final @Nullable Input<Boolean> repeatExtXKey;
 
     public Input<Boolean> getRepeatExtXKey() {
         return this.repeatExtXKey == null ? Input.empty() : this.repeatExtXKey;
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
     public Input<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;
@@ -193,7 +193,6 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }
-
         public PackagingConfigurationHlsManifestArgs build() {
             return new PackagingConfigurationHlsManifestArgs(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }

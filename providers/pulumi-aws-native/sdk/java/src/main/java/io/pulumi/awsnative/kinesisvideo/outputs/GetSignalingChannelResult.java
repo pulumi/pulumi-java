@@ -122,7 +122,6 @@ public final class GetSignalingChannelResult {
             this.type = type;
             return this;
         }
-
         public GetSignalingChannelResult build() {
             return new GetSignalingChannelResult(arn, messageTtlSeconds, tags, type);
         }

@@ -76,7 +76,6 @@ public final class TransitGatewayMulticastDomainTag {
             this.value = value;
             return this;
         }
-
         public TransitGatewayMulticastDomainTag build() {
             return new TransitGatewayMulticastDomainTag(key, value);
         }

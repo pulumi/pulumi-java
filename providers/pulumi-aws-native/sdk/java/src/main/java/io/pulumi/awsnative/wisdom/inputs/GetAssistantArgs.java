@@ -13,7 +13,7 @@ public final class GetAssistantArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAssistantArgs Empty = new GetAssistantArgs();
 
     @InputImport(name="assistantId", required=true)
-    private final String assistantId;
+        private final String assistantId;
 
     public String getAssistantId() {
         return this.assistantId;
@@ -51,7 +51,6 @@ public final class GetAssistantArgs extends io.pulumi.resources.InvokeArgs {
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
         }
-
         public GetAssistantArgs build() {
             return new GetAssistantArgs(assistantId);
         }

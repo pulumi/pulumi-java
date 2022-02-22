@@ -74,7 +74,6 @@ public final class QueueTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public QueueTag build() {
             return new QueueTag(key, value);
         }

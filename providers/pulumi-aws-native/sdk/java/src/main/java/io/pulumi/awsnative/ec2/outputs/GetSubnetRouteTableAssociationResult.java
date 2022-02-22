@@ -46,7 +46,6 @@ public final class GetSubnetRouteTableAssociationResult {
             this.id = id;
             return this;
         }
-
         public GetSubnetRouteTableAssociationResult build() {
             return new GetSubnetRouteTableAssociationResult(id);
         }

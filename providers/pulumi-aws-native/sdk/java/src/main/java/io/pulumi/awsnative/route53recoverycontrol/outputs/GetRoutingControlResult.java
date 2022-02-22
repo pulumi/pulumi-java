@@ -98,7 +98,6 @@ public final class GetRoutingControlResult {
             this.status = status;
             return this;
         }
-
         public GetRoutingControlResult build() {
             return new GetRoutingControlResult(name, routingControlArn, status);
         }

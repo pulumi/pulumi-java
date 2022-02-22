@@ -122,7 +122,6 @@ public final class GetResourceDefaultVersionResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetResourceDefaultVersionResult build() {
             return new GetResourceDefaultVersionResult(arn, typeName, typeVersionArn, versionId);
         }

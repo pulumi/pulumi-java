@@ -74,7 +74,6 @@ public final class PackagingGroupAuthorization {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
-
         public PackagingGroupAuthorization build() {
             return new PackagingGroupAuthorization(cdnIdentifierSecret, secretsRoleArn);
         }

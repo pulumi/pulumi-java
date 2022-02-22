@@ -74,7 +74,6 @@ public final class AssessmentTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssessmentTag build() {
             return new AssessmentTag(key, value);
         }

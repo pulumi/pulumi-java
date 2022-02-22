@@ -77,7 +77,6 @@ public final class ConnectorCloudWatchLogsLogDelivery {
             this.logGroup = logGroup;
             return this;
         }
-
         public ConnectorCloudWatchLogsLogDelivery build() {
             return new ConnectorCloudWatchLogsLogDelivery(enabled, logGroup);
         }

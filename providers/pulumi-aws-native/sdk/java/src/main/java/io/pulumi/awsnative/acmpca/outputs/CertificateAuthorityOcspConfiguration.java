@@ -61,7 +61,6 @@ public final class CertificateAuthorityOcspConfiguration {
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }
-
         public CertificateAuthorityOcspConfiguration build() {
             return new CertificateAuthorityOcspConfiguration(enabled, ocspCustomCname);
         }

@@ -81,7 +81,6 @@ public final class LoggingConfigurationLogDestinationConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public LoggingConfigurationLogDestinationConfig build() {
             return new LoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
         }

@@ -22,7 +22,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorConfig", required=true)
-    private final Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
+        private final Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
     public Input<AnomalyDetectorConfigArgs> getAnomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
@@ -33,7 +33,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorDescription")
-    private final @Nullable Input<String> anomalyDetectorDescription;
+        private final @Nullable Input<String> anomalyDetectorDescription;
 
     public Input<String> getAnomalyDetectorDescription() {
         return this.anomalyDetectorDescription == null ? Input.empty() : this.anomalyDetectorDescription;
@@ -44,7 +44,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorName")
-    private final @Nullable Input<String> anomalyDetectorName;
+        private final @Nullable Input<String> anomalyDetectorName;
 
     public Input<String> getAnomalyDetectorName() {
         return this.anomalyDetectorName == null ? Input.empty() : this.anomalyDetectorName;
@@ -55,7 +55,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+        private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -66,7 +66,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metricSetList", required=true)
-    private final Input<List<AnomalyDetectorMetricSetArgs>> metricSetList;
+        private final Input<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
     public Input<List<AnomalyDetectorMetricSetArgs>> getMetricSetList() {
         return this.metricSetList;
@@ -170,7 +170,6 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
             this.metricSetList = Input.of(Objects.requireNonNull(metricSetList));
             return this;
         }
-
         public AnomalyDetectorArgs build() {
             return new AnomalyDetectorArgs(anomalyDetectorConfig, anomalyDetectorDescription, anomalyDetectorName, kmsKeyArn, metricSetList);
         }

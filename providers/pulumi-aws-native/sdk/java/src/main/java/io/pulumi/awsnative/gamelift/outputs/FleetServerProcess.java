@@ -106,7 +106,6 @@ public final class FleetServerProcess {
             this.parameters = parameters;
             return this;
         }
-
         public FleetServerProcess build() {
             return new FleetServerProcess(concurrentExecutions, launchPath, parameters);
         }

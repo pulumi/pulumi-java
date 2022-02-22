@@ -75,7 +75,6 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
             this.throughResources = throughResources;
             return this;
         }
-
         public NetworkInsightsAccessScopeAccessScopePathRequest build() {
             return new NetworkInsightsAccessScopeAccessScopePathRequest(destination, source, throughResources);
         }

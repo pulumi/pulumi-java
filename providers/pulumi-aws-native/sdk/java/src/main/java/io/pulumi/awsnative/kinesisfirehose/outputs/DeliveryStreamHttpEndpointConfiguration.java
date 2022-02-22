@@ -73,7 +73,6 @@ public final class DeliveryStreamHttpEndpointConfiguration {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DeliveryStreamHttpEndpointConfiguration build() {
             return new DeliveryStreamHttpEndpointConfiguration(accessKey, name, url);
         }

@@ -60,7 +60,6 @@ public final class GetSimulationApplicationVersionResult {
             this.arn = arn;
             return this;
         }
-
         public GetSimulationApplicationVersionResult build() {
             return new GetSimulationApplicationVersionResult(applicationVersion, arn);
         }

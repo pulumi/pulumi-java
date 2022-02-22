@@ -119,7 +119,6 @@ public final class GetQueryDefinitionResult {
             this.queryString = queryString;
             return this;
         }
-
         public GetQueryDefinitionResult build() {
             return new GetQueryDefinitionResult(logGroupNames, name, queryDefinitionId, queryString);
         }

@@ -273,7 +273,6 @@ public final class SamplingRuleUpdate {
             this.uRLPath = uRLPath;
             return this;
         }
-
         public SamplingRuleUpdate build() {
             return new SamplingRuleUpdate(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath);
         }

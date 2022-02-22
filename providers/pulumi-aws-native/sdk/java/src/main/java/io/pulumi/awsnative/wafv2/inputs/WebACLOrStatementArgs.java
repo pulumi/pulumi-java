@@ -15,7 +15,7 @@ public final class WebACLOrStatementArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLOrStatementArgs Empty = new WebACLOrStatementArgs();
 
     @InputImport(name="statements", required=true)
-    private final Input<List<WebACLStatementArgs>> statements;
+        private final Input<List<WebACLStatementArgs>> statements;
 
     public Input<List<WebACLStatementArgs>> getStatements() {
         return this.statements;
@@ -58,7 +58,6 @@ public final class WebACLOrStatementArgs extends io.pulumi.resources.ResourceArg
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }
-
         public WebACLOrStatementArgs build() {
             return new WebACLOrStatementArgs(statements);
         }

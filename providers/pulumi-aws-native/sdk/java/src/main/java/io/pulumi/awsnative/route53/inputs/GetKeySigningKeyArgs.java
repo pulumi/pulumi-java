@@ -17,7 +17,7 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-    private final String hostedZoneId;
+        private final String hostedZoneId;
 
     public String getHostedZoneId() {
         return this.hostedZoneId;
@@ -28,7 +28,7 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,6 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKeySigningKeyArgs build() {
             return new GetKeySigningKeyArgs(hostedZoneId, name);
         }

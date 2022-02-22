@@ -164,7 +164,6 @@ public final class GetBotAliasResult {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
-
         public GetBotAliasResult build() {
             return new GetBotAliasResult(arn, botAliasId, botAliasLocaleSettings, botAliasName, botAliasStatus, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
         }

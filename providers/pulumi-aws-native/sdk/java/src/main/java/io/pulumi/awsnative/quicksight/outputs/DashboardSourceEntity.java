@@ -46,7 +46,6 @@ public final class DashboardSourceEntity {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
-
         public DashboardSourceEntity build() {
             return new DashboardSourceEntity(sourceTemplate);
         }

@@ -22,7 +22,7 @@ public final class ConfigurationAggregatorTagArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class ConfigurationAggregatorTagArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class ConfigurationAggregatorTagArgs extends io.pulumi.resources.Re
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ConfigurationAggregatorTagArgs build() {
             return new ConfigurationAggregatorTagArgs(key, value);
         }

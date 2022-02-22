@@ -18,14 +18,14 @@ public final class ResponsePlanSsmParameter extends io.pulumi.resources.InvokeAr
     public static final ResponsePlanSsmParameter Empty = new ResponsePlanSsmParameter();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -74,7 +74,6 @@ public final class ResponsePlanSsmParameter extends io.pulumi.resources.InvokeAr
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ResponsePlanSsmParameter build() {
             return new ResponsePlanSsmParameter(key, values);
         }

@@ -60,7 +60,6 @@ public final class DeviceTag {
             this.value = value;
             return this;
         }
-
         public DeviceTag build() {
             return new DeviceTag(key, value);
         }

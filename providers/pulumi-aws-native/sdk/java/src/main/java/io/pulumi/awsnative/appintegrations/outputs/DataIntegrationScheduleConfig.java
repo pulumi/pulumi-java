@@ -95,7 +95,6 @@ public final class DataIntegrationScheduleConfig {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public DataIntegrationScheduleConfig build() {
             return new DataIntegrationScheduleConfig(firstExecutionFrom, object, scheduleExpression);
         }

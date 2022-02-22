@@ -142,7 +142,6 @@ public final class ResponsePlanSsmAutomation {
             this.targetAccount = targetAccount;
             return this;
         }
-
         public ResponsePlanSsmAutomation build() {
             return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
         }

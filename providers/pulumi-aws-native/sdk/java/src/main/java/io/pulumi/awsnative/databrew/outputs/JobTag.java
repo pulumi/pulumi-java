@@ -58,7 +58,6 @@ public final class JobTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public JobTag build() {
             return new JobTag(key, value);
         }

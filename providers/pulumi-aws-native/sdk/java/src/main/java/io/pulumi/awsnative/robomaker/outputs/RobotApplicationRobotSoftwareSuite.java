@@ -77,7 +77,6 @@ public final class RobotApplicationRobotSoftwareSuite {
             this.version = version;
             return this;
         }
-
         public RobotApplicationRobotSoftwareSuite build() {
             return new RobotApplicationRobotSoftwareSuite(name, version);
         }

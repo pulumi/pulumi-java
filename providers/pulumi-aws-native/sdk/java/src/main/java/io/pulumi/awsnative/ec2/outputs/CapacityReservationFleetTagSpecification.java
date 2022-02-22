@@ -62,7 +62,6 @@ public final class CapacityReservationFleetTagSpecification {
             this.tags = tags;
             return this;
         }
-
         public CapacityReservationFleetTagSpecification build() {
             return new CapacityReservationFleetTagSpecification(resourceType, tags);
         }

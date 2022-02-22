@@ -22,7 +22,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="logDestinationConfigs", required=true)
-    private final Input<List<String>> logDestinationConfigs;
+        private final Input<List<String>> logDestinationConfigs;
 
     public Input<List<String>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
@@ -33,7 +33,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="loggingFilter")
-    private final @Nullable Input<LoggingFilterPropertiesArgs> loggingFilter;
+        private final @Nullable Input<LoggingFilterPropertiesArgs> loggingFilter;
 
     public Input<LoggingFilterPropertiesArgs> getLoggingFilter() {
         return this.loggingFilter == null ? Input.empty() : this.loggingFilter;
@@ -44,7 +44,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="redactedFields")
-    private final @Nullable Input<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
+        private final @Nullable Input<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
 
     public Input<List<LoggingConfigurationFieldToMatchArgs>> getRedactedFields() {
         return this.redactedFields == null ? Input.empty() : this.redactedFields;
@@ -55,7 +55,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+        private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;
@@ -144,7 +144,6 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public LoggingConfigurationArgs build() {
             return new LoggingConfigurationArgs(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
         }

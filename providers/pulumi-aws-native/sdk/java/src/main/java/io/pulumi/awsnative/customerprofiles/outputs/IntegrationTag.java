@@ -58,7 +58,6 @@ public final class IntegrationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IntegrationTag build() {
             return new IntegrationTag(key, value);
         }

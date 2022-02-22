@@ -13,7 +13,7 @@ public final class GetSubnetRouteTableAssociationArgs extends io.pulumi.resource
     public static final GetSubnetRouteTableAssociationArgs Empty = new GetSubnetRouteTableAssociationArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetSubnetRouteTableAssociationArgs extends io.pulumi.resource
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetSubnetRouteTableAssociationArgs build() {
             return new GetSubnetRouteTableAssociationArgs(id);
         }

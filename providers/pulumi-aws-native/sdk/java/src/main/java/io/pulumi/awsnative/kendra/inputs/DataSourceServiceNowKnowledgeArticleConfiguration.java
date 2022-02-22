@@ -18,49 +18,49 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration extends io.
     public static final DataSourceServiceNowKnowledgeArticleConfiguration Empty = new DataSourceServiceNowKnowledgeArticleConfiguration();
 
     @InputImport(name="crawlAttachments")
-    private final @Nullable Boolean crawlAttachments;
+        private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
     @InputImport(name="documentDataFieldName", required=true)
-    private final String documentDataFieldName;
+        private final String documentDataFieldName;
 
     public String getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable String documentTitleFieldName;
+        private final @Nullable String documentTitleFieldName;
 
     public Optional<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @InputImport(name="excludeAttachmentFilePatterns")
-    private final @Nullable List<String> excludeAttachmentFilePatterns;
+        private final @Nullable List<String> excludeAttachmentFilePatterns;
 
     public List<String> getExcludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @InputImport(name="filterQuery")
-    private final @Nullable String filterQuery;
+        private final @Nullable String filterQuery;
 
     public Optional<String> getFilterQuery() {
         return this.filterQuery == null ? Optional.empty() : Optional.ofNullable(this.filterQuery);
     }
 
     @InputImport(name="includeAttachmentFilePatterns")
-    private final @Nullable List<String> includeAttachmentFilePatterns;
+        private final @Nullable List<String> includeAttachmentFilePatterns;
 
     public List<String> getIncludeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
@@ -159,7 +159,6 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration extends io.
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
         public DataSourceServiceNowKnowledgeArticleConfiguration build() {
             return new DataSourceServiceNowKnowledgeArticleConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
         }

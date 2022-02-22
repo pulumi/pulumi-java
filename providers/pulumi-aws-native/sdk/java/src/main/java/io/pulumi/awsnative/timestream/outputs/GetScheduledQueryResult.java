@@ -230,7 +230,6 @@ public final class GetScheduledQueryResult {
             this.tags = tags;
             return this;
         }
-
         public GetScheduledQueryResult build() {
             return new GetScheduledQueryResult(arn, sQErrorReportConfiguration, sQKmsKeyId, sQName, sQNotificationConfiguration, sQQueryString, sQScheduleConfiguration, sQScheduledQueryExecutionRoleArn, sQTargetConfiguration, tags);
         }

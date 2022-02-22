@@ -250,7 +250,6 @@ public final class GetObjectTypeResult {
             this.templateId = templateId;
             return this;
         }
-
         public GetObjectTypeResult build() {
             return new GetObjectTypeResult(allowProfileCreation, createdAt, description, encryptionKey, expirationDays, fields, keys, lastUpdatedAt, tags, templateId);
         }

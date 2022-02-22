@@ -16,21 +16,21 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     public static final DistributionOriginGroupArgs Empty = new DistributionOriginGroupArgs();
 
     @InputImport(name="failoverCriteria", required=true)
-    private final Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
+        private final Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
 
     public Input<DistributionOriginGroupFailoverCriteriaArgs> getFailoverCriteria() {
         return this.failoverCriteria;
     }
 
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<DistributionOriginGroupMembersArgs> members;
+        private final Input<DistributionOriginGroupMembersArgs> members;
 
     public Input<DistributionOriginGroupMembersArgs> getMembers() {
         return this.members;
@@ -104,7 +104,6 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
-
         public DistributionOriginGroupArgs build() {
             return new DistributionOriginGroupArgs(failoverCriteria, id, members);
         }

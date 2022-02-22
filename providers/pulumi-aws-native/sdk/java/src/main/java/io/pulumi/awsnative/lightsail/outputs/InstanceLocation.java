@@ -76,7 +76,6 @@ public final class InstanceLocation {
             this.regionName = regionName;
             return this;
         }
-
         public InstanceLocation build() {
             return new InstanceLocation(availabilityZone, regionName);
         }

@@ -100,7 +100,6 @@ public final class ClusterExecuteCommandLogConfiguration {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ClusterExecuteCommandLogConfiguration build() {
             return new ClusterExecuteCommandLogConfiguration(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketName, s3EncryptionEnabled, s3KeyPrefix);
         }

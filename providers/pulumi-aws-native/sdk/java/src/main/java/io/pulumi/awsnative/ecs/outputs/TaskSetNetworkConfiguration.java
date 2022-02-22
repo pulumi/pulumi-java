@@ -46,7 +46,6 @@ public final class TaskSetNetworkConfiguration {
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }
-
         public TaskSetNetworkConfiguration build() {
             return new TaskSetNetworkConfiguration(awsVpcConfiguration);
         }

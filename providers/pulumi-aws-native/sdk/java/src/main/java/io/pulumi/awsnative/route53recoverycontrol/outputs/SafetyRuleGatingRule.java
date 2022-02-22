@@ -99,7 +99,6 @@ public final class SafetyRuleGatingRule {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
-
         public SafetyRuleGatingRule build() {
             return new SafetyRuleGatingRule(gatingControls, targetControls, waitPeriodMs);
         }

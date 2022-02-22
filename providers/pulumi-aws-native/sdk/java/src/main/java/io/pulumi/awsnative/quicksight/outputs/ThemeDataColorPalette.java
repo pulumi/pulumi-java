@@ -100,7 +100,6 @@ public final class ThemeDataColorPalette {
             this.minMaxGradient = minMaxGradient;
             return this;
         }
-
         public ThemeDataColorPalette build() {
             return new ThemeDataColorPalette(colors, emptyFillColor, minMaxGradient);
         }

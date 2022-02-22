@@ -18,28 +18,28 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     public static final AuthParametersPropertiesArgs Empty = new AuthParametersPropertiesArgs();
 
     @InputImport(name="apiKeyAuthParameters")
-    private final @Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
+        private final @Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
 
     public Input<ConnectionApiKeyAuthParametersArgs> getApiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Input.empty() : this.apiKeyAuthParameters;
     }
 
     @InputImport(name="basicAuthParameters")
-    private final @Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters;
+        private final @Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters;
 
     public Input<ConnectionBasicAuthParametersArgs> getBasicAuthParameters() {
         return this.basicAuthParameters == null ? Input.empty() : this.basicAuthParameters;
     }
 
     @InputImport(name="invocationHttpParameters")
-    private final @Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters;
+        private final @Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters;
 
     public Input<ConnectionHttpParametersArgs> getInvocationHttpParameters() {
         return this.invocationHttpParameters == null ? Input.empty() : this.invocationHttpParameters;
     }
 
     @InputImport(name="oAuthParameters")
-    private final @Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters;
+        private final @Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters;
 
     public Input<ConnectionOAuthParametersArgs> getOAuthParameters() {
         return this.oAuthParameters == null ? Input.empty() : this.oAuthParameters;
@@ -128,7 +128,6 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
             this.oAuthParameters = Input.ofNullable(oAuthParameters);
             return this;
         }
-
         public AuthParametersPropertiesArgs build() {
             return new AuthParametersPropertiesArgs(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }

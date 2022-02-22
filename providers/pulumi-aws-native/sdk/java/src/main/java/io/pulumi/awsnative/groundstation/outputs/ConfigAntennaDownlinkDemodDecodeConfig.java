@@ -75,7 +75,6 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public ConfigAntennaDownlinkDemodDecodeConfig build() {
             return new ConfigAntennaDownlinkDemodDecodeConfig(decodeConfig, demodulationConfig, spectrumConfig);
         }

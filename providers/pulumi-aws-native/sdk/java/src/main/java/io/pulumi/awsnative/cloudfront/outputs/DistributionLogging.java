@@ -74,7 +74,6 @@ public final class DistributionLogging {
             this.prefix = prefix;
             return this;
         }
-
         public DistributionLogging build() {
             return new DistributionLogging(bucket, includeCookies, prefix);
         }

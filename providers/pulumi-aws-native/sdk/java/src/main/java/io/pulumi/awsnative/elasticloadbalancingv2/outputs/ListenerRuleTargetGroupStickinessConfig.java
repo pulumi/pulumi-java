@@ -61,7 +61,6 @@ public final class ListenerRuleTargetGroupStickinessConfig {
             this.enabled = enabled;
             return this;
         }
-
         public ListenerRuleTargetGroupStickinessConfig build() {
             return new ListenerRuleTargetGroupStickinessConfig(durationSeconds, enabled);
         }

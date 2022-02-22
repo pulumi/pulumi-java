@@ -46,7 +46,6 @@ public final class FlowAggregationConfig {
             this.aggregationType = aggregationType;
             return this;
         }
-
         public FlowAggregationConfig build() {
             return new FlowAggregationConfig(aggregationType);
         }

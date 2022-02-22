@@ -68,7 +68,6 @@ public final class AnalyzerArchiveRule {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public AnalyzerArchiveRule build() {
             return new AnalyzerArchiveRule(filter, ruleName);
         }

@@ -71,7 +71,6 @@ public final class TopicRuleSigV4Authorization {
             this.signingRegion = Objects.requireNonNull(signingRegion);
             return this;
         }
-
         public TopicRuleSigV4Authorization build() {
             return new TopicRuleSigV4Authorization(roleArn, serviceName, signingRegion);
         }

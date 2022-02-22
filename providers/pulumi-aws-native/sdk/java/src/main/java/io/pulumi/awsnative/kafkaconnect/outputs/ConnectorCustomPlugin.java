@@ -75,7 +75,6 @@ public final class ConnectorCustomPlugin {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public ConnectorCustomPlugin build() {
             return new ConnectorCustomPlugin(customPluginArn, revision);
         }

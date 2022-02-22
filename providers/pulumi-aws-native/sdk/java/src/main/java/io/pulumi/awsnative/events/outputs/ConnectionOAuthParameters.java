@@ -89,7 +89,6 @@ public final class ConnectionOAuthParameters {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }
-
         public ConnectionOAuthParameters build() {
             return new ConnectionOAuthParameters(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
         }

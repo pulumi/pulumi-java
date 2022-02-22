@@ -102,7 +102,6 @@ public final class TaskDefinitionEFSVolumeConfiguration {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
-
         public TaskDefinitionEFSVolumeConfiguration build() {
             return new TaskDefinitionEFSVolumeConfiguration(authorizationConfig, filesystemId, rootDirectory, transitEncryption, transitEncryptionPort);
         }

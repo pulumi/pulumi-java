@@ -23,7 +23,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfMonth")
-    private final @Nullable Input<String> dayOfMonth;
+        private final @Nullable Input<String> dayOfMonth;
 
     public Input<String> getDayOfMonth() {
         return this.dayOfMonth == null ? Input.empty() : this.dayOfMonth;
@@ -34,7 +34,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek")
-    private final @Nullable Input<ScheduledAuditDayOfWeek> dayOfWeek;
+        private final @Nullable Input<ScheduledAuditDayOfWeek> dayOfWeek;
 
     public Input<ScheduledAuditDayOfWeek> getDayOfWeek() {
         return this.dayOfWeek == null ? Input.empty() : this.dayOfWeek;
@@ -45,7 +45,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final Input<ScheduledAuditFrequency> frequency;
+        private final Input<ScheduledAuditFrequency> frequency;
 
     public Input<ScheduledAuditFrequency> getFrequency() {
         return this.frequency;
@@ -56,7 +56,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduledAuditName")
-    private final @Nullable Input<String> scheduledAuditName;
+        private final @Nullable Input<String> scheduledAuditName;
 
     public Input<String> getScheduledAuditName() {
         return this.scheduledAuditName == null ? Input.empty() : this.scheduledAuditName;
@@ -67,7 +67,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ScheduledAuditTagArgs>> tags;
+        private final @Nullable Input<List<ScheduledAuditTagArgs>> tags;
 
     public Input<List<ScheduledAuditTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetCheckNames", required=true)
-    private final Input<List<String>> targetCheckNames;
+        private final Input<List<String>> targetCheckNames;
 
     public Input<List<String>> getTargetCheckNames() {
         return this.targetCheckNames;
@@ -197,7 +197,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             this.targetCheckNames = Input.of(Objects.requireNonNull(targetCheckNames));
             return this;
         }
-
         public ScheduledAuditArgs build() {
             return new ScheduledAuditArgs(dayOfMonth, dayOfWeek, frequency, scheduledAuditName, tags, targetCheckNames);
         }

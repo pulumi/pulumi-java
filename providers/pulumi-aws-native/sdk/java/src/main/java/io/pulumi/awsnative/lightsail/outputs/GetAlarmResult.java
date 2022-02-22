@@ -240,7 +240,6 @@ public final class GetAlarmResult {
             this.treatMissingData = treatMissingData;
             return this;
         }
-
         public GetAlarmResult build() {
             return new GetAlarmResult(alarmArn, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, notificationEnabled, notificationTriggers, state, threshold, treatMissingData);
         }

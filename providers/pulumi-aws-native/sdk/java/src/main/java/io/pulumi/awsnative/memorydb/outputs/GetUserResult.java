@@ -99,7 +99,6 @@ public final class GetUserResult {
             this.tags = tags;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(arn, status, tags);
         }

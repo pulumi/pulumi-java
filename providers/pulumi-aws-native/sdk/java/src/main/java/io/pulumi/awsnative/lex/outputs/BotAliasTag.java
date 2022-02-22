@@ -74,7 +74,6 @@ public final class BotAliasTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotAliasTag build() {
             return new BotAliasTag(key, value);
         }

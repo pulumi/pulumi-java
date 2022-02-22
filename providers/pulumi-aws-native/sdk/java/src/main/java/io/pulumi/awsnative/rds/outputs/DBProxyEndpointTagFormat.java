@@ -60,7 +60,6 @@ public final class DBProxyEndpointTagFormat {
             this.value = value;
             return this;
         }
-
         public DBProxyEndpointTagFormat build() {
             return new DBProxyEndpointTagFormat(key, value);
         }

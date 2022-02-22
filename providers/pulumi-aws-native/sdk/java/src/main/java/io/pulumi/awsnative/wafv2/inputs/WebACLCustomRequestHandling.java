@@ -22,7 +22,7 @@ public final class WebACLCustomRequestHandling extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-    private final List<WebACLCustomHTTPHeader> insertHeaders;
+        private final List<WebACLCustomHTTPHeader> insertHeaders;
 
     public List<WebACLCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;
@@ -60,7 +60,6 @@ public final class WebACLCustomRequestHandling extends io.pulumi.resources.Invok
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public WebACLCustomRequestHandling build() {
             return new WebACLCustomRequestHandling(insertHeaders);
         }

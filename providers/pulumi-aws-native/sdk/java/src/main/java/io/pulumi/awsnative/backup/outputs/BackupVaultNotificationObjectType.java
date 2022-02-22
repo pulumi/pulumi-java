@@ -59,7 +59,6 @@ public final class BackupVaultNotificationObjectType {
             this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
             return this;
         }
-
         public BackupVaultNotificationObjectType build() {
             return new BackupVaultNotificationObjectType(backupVaultEvents, sNSTopicArn);
         }

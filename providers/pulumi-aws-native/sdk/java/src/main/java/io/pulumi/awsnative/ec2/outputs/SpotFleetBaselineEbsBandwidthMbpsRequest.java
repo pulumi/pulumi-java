@@ -60,7 +60,6 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
             return new SpotFleetBaselineEbsBandwidthMbpsRequest(max, min);
         }

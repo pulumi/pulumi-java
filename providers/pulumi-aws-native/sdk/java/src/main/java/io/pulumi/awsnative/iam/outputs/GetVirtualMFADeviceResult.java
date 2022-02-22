@@ -75,7 +75,6 @@ public final class GetVirtualMFADeviceResult {
             this.users = users;
             return this;
         }
-
         public GetVirtualMFADeviceResult build() {
             return new GetVirtualMFADeviceResult(serialNumber, tags, users);
         }

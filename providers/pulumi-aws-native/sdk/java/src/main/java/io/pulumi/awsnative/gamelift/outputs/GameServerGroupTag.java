@@ -76,7 +76,6 @@ public final class GameServerGroupTag {
             this.value = value;
             return this;
         }
-
         public GameServerGroupTag build() {
             return new GameServerGroupTag(key, value);
         }

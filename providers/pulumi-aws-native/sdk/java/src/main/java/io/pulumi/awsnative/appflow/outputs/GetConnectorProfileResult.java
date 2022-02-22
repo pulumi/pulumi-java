@@ -98,7 +98,6 @@ public final class GetConnectorProfileResult {
             this.credentialsArn = credentialsArn;
             return this;
         }
-
         public GetConnectorProfileResult build() {
             return new GetConnectorProfileResult(connectionMode, connectorProfileArn, credentialsArn);
         }

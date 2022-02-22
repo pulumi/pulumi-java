@@ -187,7 +187,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
-
         public MonitoringScheduleMonitoringExecutionSummary build() {
             return new MonitoringScheduleMonitoringExecutionSummary(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }

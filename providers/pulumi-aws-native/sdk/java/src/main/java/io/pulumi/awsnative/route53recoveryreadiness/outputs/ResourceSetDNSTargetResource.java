@@ -132,7 +132,6 @@ public final class ResourceSetDNSTargetResource {
             this.targetResource = targetResource;
             return this;
         }
-
         public ResourceSetDNSTargetResource build() {
             return new ResourceSetDNSTargetResource(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }

@@ -71,7 +71,6 @@ public final class FeatureGroupDataCatalogConfig {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public FeatureGroupDataCatalogConfig build() {
             return new FeatureGroupDataCatalogConfig(catalog, database, tableName);
         }

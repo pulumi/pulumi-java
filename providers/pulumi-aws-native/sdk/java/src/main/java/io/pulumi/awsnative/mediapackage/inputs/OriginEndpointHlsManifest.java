@@ -30,7 +30,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="adMarkers")
-    private final @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
+        private final @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
 
     public Optional<OriginEndpointHlsManifestAdMarkers> getAdMarkers() {
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
@@ -41,14 +41,14 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="adTriggers")
-    private final @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
+        private final @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
 
     public List<OriginEndpointHlsManifestAdTriggersItem> getAdTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
 
     @InputImport(name="adsOnDeliveryRestrictions")
-    private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
+        private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
     public Optional<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
@@ -59,7 +59,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -70,7 +70,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="includeIframeOnlyStream")
-    private final @Nullable Boolean includeIframeOnlyStream;
+        private final @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> getIncludeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
@@ -81,7 +81,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="manifestName")
-    private final @Nullable String manifestName;
+        private final @Nullable String manifestName;
 
     public Optional<String> getManifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
@@ -92,7 +92,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="playlistType")
-    private final @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
+        private final @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
 
     public Optional<OriginEndpointHlsManifestPlaylistType> getPlaylistType() {
         return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
@@ -103,7 +103,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="playlistWindowSeconds")
-    private final @Nullable Integer playlistWindowSeconds;
+        private final @Nullable Integer playlistWindowSeconds;
 
     public Optional<Integer> getPlaylistWindowSeconds() {
         return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
@@ -114,7 +114,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="programDateTimeIntervalSeconds")
-    private final @Nullable Integer programDateTimeIntervalSeconds;
+        private final @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> getProgramDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
@@ -125,7 +125,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -254,7 +254,6 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
             this.url = url;
             return this;
         }
-
         public OriginEndpointHlsManifest build() {
             return new OriginEndpointHlsManifest(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
         }

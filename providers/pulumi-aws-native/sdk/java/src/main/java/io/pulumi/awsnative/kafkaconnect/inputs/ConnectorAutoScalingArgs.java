@@ -24,7 +24,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxWorkerCount", required=true)
-    private final Input<Integer> maxWorkerCount;
+        private final Input<Integer> maxWorkerCount;
 
     public Input<Integer> getMaxWorkerCount() {
         return this.maxWorkerCount;
@@ -35,7 +35,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mcuCount", required=true)
-    private final Input<Integer> mcuCount;
+        private final Input<Integer> mcuCount;
 
     public Input<Integer> getMcuCount() {
         return this.mcuCount;
@@ -46,21 +46,21 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minWorkerCount", required=true)
-    private final Input<Integer> minWorkerCount;
+        private final Input<Integer> minWorkerCount;
 
     public Input<Integer> getMinWorkerCount() {
         return this.minWorkerCount;
     }
 
     @InputImport(name="scaleInPolicy", required=true)
-    private final Input<ConnectorScaleInPolicyArgs> scaleInPolicy;
+        private final Input<ConnectorScaleInPolicyArgs> scaleInPolicy;
 
     public Input<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @InputImport(name="scaleOutPolicy", required=true)
-    private final Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
+        private final Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
     public Input<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {
         return this.scaleOutPolicy;
@@ -164,7 +164,6 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
             this.scaleOutPolicy = Input.of(Objects.requireNonNull(scaleOutPolicy));
             return this;
         }
-
         public ConnectorAutoScalingArgs build() {
             return new ConnectorAutoScalingArgs(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
         }

@@ -13,7 +13,7 @@ public final class JobS3TableOutputOptions extends io.pulumi.resources.InvokeArg
     public static final JobS3TableOutputOptions Empty = new JobS3TableOutputOptions();
 
     @InputImport(name="location", required=true)
-    private final JobS3Location location;
+        private final JobS3Location location;
 
     public JobS3Location getLocation() {
         return this.location;
@@ -51,7 +51,6 @@ public final class JobS3TableOutputOptions extends io.pulumi.resources.InvokeArg
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public JobS3TableOutputOptions build() {
             return new JobS3TableOutputOptions(location);
         }

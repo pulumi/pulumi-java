@@ -331,7 +331,6 @@ public final class GetEnvironmentResult {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(airflowConfigurationOptions, airflowVersion, arn, dagS3Path, environmentClass, executionRoleArn, loggingConfiguration, maxWorkers, minWorkers, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, schedulers, sourceBucketArn, tags, webserverAccessMode, webserverUrl, weeklyMaintenanceWindowStart);
         }

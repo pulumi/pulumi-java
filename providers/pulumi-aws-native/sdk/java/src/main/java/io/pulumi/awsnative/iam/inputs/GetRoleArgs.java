@@ -17,7 +17,7 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-    private final String roleName;
+        private final String roleName;
 
     public String getRoleName() {
         return this.roleName;
@@ -55,7 +55,6 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public GetRoleArgs build() {
             return new GetRoleArgs(roleName);
         }

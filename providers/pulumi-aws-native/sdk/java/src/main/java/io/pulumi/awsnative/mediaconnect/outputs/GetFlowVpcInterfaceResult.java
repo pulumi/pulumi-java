@@ -119,7 +119,6 @@ public final class GetFlowVpcInterfaceResult {
             this.subnetId = subnetId;
             return this;
         }
-
         public GetFlowVpcInterfaceResult build() {
             return new GetFlowVpcInterfaceResult(networkInterfaceIds, roleArn, securityGroupIds, subnetId);
         }

@@ -247,7 +247,6 @@ public final class DeploymentMethodSetting {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public DeploymentMethodSetting build() {
             return new DeploymentMethodSetting(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
         }

@@ -20,7 +20,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final Input<String> restApiId;
+        private final Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId;
@@ -42,7 +42,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="validateRequestBody")
-    private final @Nullable Input<Boolean> validateRequestBody;
+        private final @Nullable Input<Boolean> validateRequestBody;
 
     public Input<Boolean> getValidateRequestBody() {
         return this.validateRequestBody == null ? Input.empty() : this.validateRequestBody;
@@ -53,7 +53,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="validateRequestParameters")
-    private final @Nullable Input<Boolean> validateRequestParameters;
+        private final @Nullable Input<Boolean> validateRequestParameters;
 
     public Input<Boolean> getValidateRequestParameters() {
         return this.validateRequestParameters == null ? Input.empty() : this.validateRequestParameters;
@@ -142,7 +142,6 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
             this.validateRequestParameters = Input.ofNullable(validateRequestParameters);
             return this;
         }
-
         public RequestValidatorArgs build() {
             return new RequestValidatorArgs(name, restApiId, validateRequestBody, validateRequestParameters);
         }

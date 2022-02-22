@@ -74,7 +74,6 @@ public final class IPAMPoolTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IPAMPoolTag build() {
             return new IPAMPoolTag(key, value);
         }

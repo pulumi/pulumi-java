@@ -46,7 +46,6 @@ public final class AssistantServerSideEncryptionConfiguration {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public AssistantServerSideEncryptionConfiguration build() {
             return new AssistantServerSideEncryptionConfiguration(kmsKeyId);
         }

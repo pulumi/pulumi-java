@@ -132,7 +132,6 @@ public final class GetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(arn, configuration, description, resourceQuery, resources, tags);
         }

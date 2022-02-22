@@ -117,7 +117,6 @@ public final class GetSamplingRuleResult {
             this.tags = tags;
             return this;
         }
-
         public GetSamplingRuleResult build() {
             return new GetSamplingRuleResult(ruleARN, ruleName, samplingRule, samplingRuleRecord, samplingRuleUpdate, tags);
         }

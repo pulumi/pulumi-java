@@ -86,7 +86,6 @@ public final class AppPhysicalResourceId {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AppPhysicalResourceId build() {
             return new AppPhysicalResourceId(awsAccountId, awsRegion, identifier, type);
         }

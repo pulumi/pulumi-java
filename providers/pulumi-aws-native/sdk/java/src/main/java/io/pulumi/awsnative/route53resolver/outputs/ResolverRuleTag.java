@@ -74,7 +74,6 @@ public final class ResolverRuleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ResolverRuleTag build() {
             return new ResolverRuleTag(key, value);
         }

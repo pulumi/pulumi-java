@@ -22,7 +22,7 @@ public final class ReplicationConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<ReplicationConfigurationReplicationRule> rules;
+        private final List<ReplicationConfigurationReplicationRule> rules;
 
     public List<ReplicationConfigurationReplicationRule> getRules() {
         return this.rules;
@@ -60,7 +60,6 @@ public final class ReplicationConfiguration extends io.pulumi.resources.InvokeAr
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ReplicationConfiguration build() {
             return new ReplicationConfiguration(rules);
         }

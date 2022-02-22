@@ -18,7 +18,7 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
     public static final ScheduledQueryScheduleConfigurationArgs Empty = new ScheduledQueryScheduleConfigurationArgs();
 
     @InputImport(name="scheduleExpression", required=true)
-    private final Input<String> scheduleExpression;
+        private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;
@@ -61,7 +61,6 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
-
         public ScheduledQueryScheduleConfigurationArgs build() {
             return new ScheduledQueryScheduleConfigurationArgs(scheduleExpression);
         }

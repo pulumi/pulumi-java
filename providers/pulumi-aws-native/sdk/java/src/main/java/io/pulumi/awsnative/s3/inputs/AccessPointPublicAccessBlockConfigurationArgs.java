@@ -23,7 +23,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="blockPublicAcls")
-    private final @Nullable Input<Boolean> blockPublicAcls;
+        private final @Nullable Input<Boolean> blockPublicAcls;
 
     public Input<Boolean> getBlockPublicAcls() {
         return this.blockPublicAcls == null ? Input.empty() : this.blockPublicAcls;
@@ -34,7 +34,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="blockPublicPolicy")
-    private final @Nullable Input<Boolean> blockPublicPolicy;
+        private final @Nullable Input<Boolean> blockPublicPolicy;
 
     public Input<Boolean> getBlockPublicPolicy() {
         return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
@@ -45,7 +45,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="ignorePublicAcls")
-    private final @Nullable Input<Boolean> ignorePublicAcls;
+        private final @Nullable Input<Boolean> ignorePublicAcls;
 
     public Input<Boolean> getIgnorePublicAcls() {
         return this.ignorePublicAcls == null ? Input.empty() : this.ignorePublicAcls;
@@ -57,7 +57,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="restrictPublicBuckets")
-    private final @Nullable Input<Boolean> restrictPublicBuckets;
+        private final @Nullable Input<Boolean> restrictPublicBuckets;
 
     public Input<Boolean> getRestrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Input.empty() : this.restrictPublicBuckets;
@@ -146,7 +146,6 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
             this.restrictPublicBuckets = Input.ofNullable(restrictPublicBuckets);
             return this;
         }
-
         public AccessPointPublicAccessBlockConfigurationArgs build() {
             return new AccessPointPublicAccessBlockConfigurationArgs(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

@@ -16,7 +16,7 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
     public static final DataSourceConfluenceBlogConfiguration Empty = new DataSourceConfluenceBlogConfiguration();
 
     @InputImport(name="blogFieldMappings")
-    private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
+        private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
 
     public List<DataSourceConfluenceBlogToIndexFieldMapping> getBlogFieldMappings() {
         return this.blogFieldMappings == null ? List.of() : this.blogFieldMappings;
@@ -54,7 +54,6 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
-
         public DataSourceConfluenceBlogConfiguration build() {
             return new DataSourceConfluenceBlogConfiguration(blogFieldMappings);
         }

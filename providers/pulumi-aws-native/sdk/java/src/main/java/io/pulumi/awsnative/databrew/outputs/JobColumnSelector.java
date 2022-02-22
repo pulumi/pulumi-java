@@ -60,7 +60,6 @@ public final class JobColumnSelector {
             this.regex = regex;
             return this;
         }
-
         public JobColumnSelector build() {
             return new JobColumnSelector(name, regex);
         }

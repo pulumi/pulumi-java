@@ -120,7 +120,6 @@ public final class GetPackagingGroupResult {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
-
         public GetPackagingGroupResult build() {
             return new GetPackagingGroupResult(arn, authorization, domainName, egressAccessLogs);
         }

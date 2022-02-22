@@ -46,7 +46,6 @@ public final class DatastoreIotSiteWiseMultiLayerStorage {
             this.customerManagedS3Storage = customerManagedS3Storage;
             return this;
         }
-
         public DatastoreIotSiteWiseMultiLayerStorage build() {
             return new DatastoreIotSiteWiseMultiLayerStorage(customerManagedS3Storage);
         }

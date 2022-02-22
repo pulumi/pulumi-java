@@ -98,7 +98,6 @@ public final class OriginEndpointStreamSelection {
             this.streamOrder = streamOrder;
             return this;
         }
-
         public OriginEndpointStreamSelection build() {
             return new OriginEndpointStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }

@@ -16,21 +16,21 @@ public final class DataSourceProxyConfiguration extends io.pulumi.resources.Invo
     public static final DataSourceProxyConfiguration Empty = new DataSourceProxyConfiguration();
 
     @InputImport(name="credentials")
-    private final @Nullable String credentials;
+        private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
     @InputImport(name="host", required=true)
-    private final String host;
+        private final String host;
 
     public String getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -89,7 +89,6 @@ public final class DataSourceProxyConfiguration extends io.pulumi.resources.Invo
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceProxyConfiguration build() {
             return new DataSourceProxyConfiguration(credentials, host, port);
         }

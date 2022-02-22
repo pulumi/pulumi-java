@@ -128,7 +128,6 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
-
         public CloudFormationProvisionedProductProvisioningPreferences build() {
             return new CloudFormationProvisionedProductProvisioningPreferences(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }

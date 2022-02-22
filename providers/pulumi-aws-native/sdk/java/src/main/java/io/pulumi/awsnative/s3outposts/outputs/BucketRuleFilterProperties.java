@@ -99,7 +99,6 @@ public final class BucketRuleFilterProperties {
             this.tag = tag;
             return this;
         }
-
         public BucketRuleFilterProperties build() {
             return new BucketRuleFilterProperties(andOperator, prefix, tag);
         }

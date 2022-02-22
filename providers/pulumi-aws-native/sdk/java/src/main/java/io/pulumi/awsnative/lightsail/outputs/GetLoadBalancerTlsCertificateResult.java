@@ -90,7 +90,6 @@ public final class GetLoadBalancerTlsCertificateResult {
             this.status = status;
             return this;
         }
-
         public GetLoadBalancerTlsCertificateResult build() {
             return new GetLoadBalancerTlsCertificateResult(isAttached, loadBalancerTlsCertificateArn, status);
         }

@@ -18,7 +18,7 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     public static final ScheduledQueryTargetConfigurationArgs Empty = new ScheduledQueryTargetConfigurationArgs();
 
     @InputImport(name="timestreamConfiguration", required=true)
-    private final Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
+        private final Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
 
     public Input<ScheduledQueryTimestreamConfigurationArgs> getTimestreamConfiguration() {
         return this.timestreamConfiguration;
@@ -61,7 +61,6 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
             this.timestreamConfiguration = Input.of(Objects.requireNonNull(timestreamConfiguration));
             return this;
         }
-
         public ScheduledQueryTargetConfigurationArgs build() {
             return new ScheduledQueryTargetConfigurationArgs(timestreamConfiguration);
         }

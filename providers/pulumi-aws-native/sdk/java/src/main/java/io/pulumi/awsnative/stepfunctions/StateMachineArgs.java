@@ -23,70 +23,70 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     public static final StateMachineArgs Empty = new StateMachineArgs();
 
     @InputImport(name="definition")
-    private final @Nullable Input<StateMachineDefinitionArgs> definition;
+        private final @Nullable Input<StateMachineDefinitionArgs> definition;
 
     public Input<StateMachineDefinitionArgs> getDefinition() {
         return this.definition == null ? Input.empty() : this.definition;
     }
 
     @InputImport(name="definitionS3Location")
-    private final @Nullable Input<StateMachineS3LocationArgs> definitionS3Location;
+        private final @Nullable Input<StateMachineS3LocationArgs> definitionS3Location;
 
     public Input<StateMachineS3LocationArgs> getDefinitionS3Location() {
         return this.definitionS3Location == null ? Input.empty() : this.definitionS3Location;
     }
 
     @InputImport(name="definitionString")
-    private final @Nullable Input<String> definitionString;
+        private final @Nullable Input<String> definitionString;
 
     public Input<String> getDefinitionString() {
         return this.definitionString == null ? Input.empty() : this.definitionString;
     }
 
     @InputImport(name="definitionSubstitutions")
-    private final @Nullable Input<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
+        private final @Nullable Input<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
 
     public Input<StateMachineDefinitionSubstitutionsArgs> getDefinitionSubstitutions() {
         return this.definitionSubstitutions == null ? Input.empty() : this.definitionSubstitutions;
     }
 
     @InputImport(name="loggingConfiguration")
-    private final @Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration;
+        private final @Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
     public Input<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stateMachineName")
-    private final @Nullable Input<String> stateMachineName;
+        private final @Nullable Input<String> stateMachineName;
 
     public Input<String> getStateMachineName() {
         return this.stateMachineName == null ? Input.empty() : this.stateMachineName;
     }
 
     @InputImport(name="stateMachineType")
-    private final @Nullable Input<StateMachineType> stateMachineType;
+        private final @Nullable Input<StateMachineType> stateMachineType;
 
     public Input<StateMachineType> getStateMachineType() {
         return this.stateMachineType == null ? Input.empty() : this.stateMachineType;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<StateMachineTagsEntryArgs>> tags;
+        private final @Nullable Input<List<StateMachineTagsEntryArgs>> tags;
 
     public Input<List<StateMachineTagsEntryArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tracingConfiguration")
-    private final @Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration;
+        private final @Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
     public Input<StateMachineTracingConfigurationArgs> getTracingConfiguration() {
         return this.tracingConfiguration == null ? Input.empty() : this.tracingConfiguration;
@@ -265,7 +265,6 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.tracingConfiguration = Input.ofNullable(tracingConfiguration);
             return this;
         }
-
         public StateMachineArgs build() {
             return new StateMachineArgs(definition, definitionS3Location, definitionString, definitionSubstitutions, loggingConfiguration, roleArn, stateMachineName, stateMachineType, tags, tracingConfiguration);
         }

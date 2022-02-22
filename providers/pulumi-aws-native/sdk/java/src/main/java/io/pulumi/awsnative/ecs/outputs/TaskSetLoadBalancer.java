@@ -119,7 +119,6 @@ public final class TaskSetLoadBalancer {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public TaskSetLoadBalancer build() {
             return new TaskSetLoadBalancer(containerName, containerPort, loadBalancerName, targetGroupArn);
         }

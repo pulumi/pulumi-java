@@ -112,7 +112,6 @@ public final class RuleGroupHeader {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public RuleGroupHeader build() {
             return new RuleGroupHeader(destination, destinationPort, direction, protocol, source, sourcePort);
         }

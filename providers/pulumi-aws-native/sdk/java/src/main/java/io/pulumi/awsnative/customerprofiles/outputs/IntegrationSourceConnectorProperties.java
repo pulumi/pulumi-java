@@ -103,7 +103,6 @@ public final class IntegrationSourceConnectorProperties {
             this.zendesk = zendesk;
             return this;
         }
-
         public IntegrationSourceConnectorProperties build() {
             return new IntegrationSourceConnectorProperties(marketo, s3, salesforce, serviceNow, zendesk);
         }

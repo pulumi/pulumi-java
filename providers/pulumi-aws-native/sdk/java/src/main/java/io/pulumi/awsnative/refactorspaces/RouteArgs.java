@@ -19,28 +19,28 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     public static final RouteArgs Empty = new RouteArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-    private final Input<String> applicationIdentifier;
+        private final Input<String> applicationIdentifier;
 
     public Input<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-    private final Input<String> environmentIdentifier;
+        private final Input<String> environmentIdentifier;
 
     public Input<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="routeType")
-    private final @Nullable Input<RouteType> routeType;
+        private final @Nullable Input<RouteType> routeType;
 
     public Input<RouteType> getRouteType() {
         return this.routeType == null ? Input.empty() : this.routeType;
     }
 
     @InputImport(name="serviceIdentifier", required=true)
-    private final Input<String> serviceIdentifier;
+        private final Input<String> serviceIdentifier;
 
     public Input<String> getServiceIdentifier() {
         return this.serviceIdentifier;
@@ -51,14 +51,14 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RouteTagArgs>> tags;
+        private final @Nullable Input<List<RouteTagArgs>> tags;
 
     public Input<List<RouteTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="uriPathRoute")
-    private final @Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute;
+        private final @Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute;
 
     public Input<RouteUriPathRouteInputArgs> getUriPathRoute() {
         return this.uriPathRoute == null ? Input.empty() : this.uriPathRoute;
@@ -177,7 +177,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.uriPathRoute = Input.ofNullable(uriPathRoute);
             return this;
         }
-
         public RouteArgs build() {
             return new RouteArgs(applicationIdentifier, environmentIdentifier, routeType, serviceIdentifier, tags, uriPathRoute);
         }

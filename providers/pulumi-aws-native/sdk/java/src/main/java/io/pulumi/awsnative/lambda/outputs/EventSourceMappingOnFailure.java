@@ -54,7 +54,6 @@ public final class EventSourceMappingOnFailure {
             this.destination = destination;
             return this;
         }
-
         public EventSourceMappingOnFailure build() {
             return new EventSourceMappingOnFailure(destination);
         }

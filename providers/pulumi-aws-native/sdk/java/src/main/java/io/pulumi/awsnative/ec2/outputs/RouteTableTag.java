@@ -58,7 +58,6 @@ public final class RouteTableTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RouteTableTag build() {
             return new RouteTableTag(key, value);
         }

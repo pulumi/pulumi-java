@@ -28,7 +28,7 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
     public static final MonitoringScheduleMonitoringJobDefinition Empty = new MonitoringScheduleMonitoringJobDefinition();
 
     @InputImport(name="baselineConfig")
-    private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
+        private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
 
     public Optional<MonitoringScheduleBaselineConfig> getBaselineConfig() {
         return this.baselineConfig == null ? Optional.empty() : Optional.ofNullable(this.baselineConfig);
@@ -39,42 +39,42 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Object environment;
+        private final @Nullable Object environment;
 
     public Optional<Object> getEnvironment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
     @InputImport(name="monitoringAppSpecification", required=true)
-    private final MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification;
+        private final MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification;
 
     public MonitoringScheduleMonitoringAppSpecification getMonitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @InputImport(name="monitoringInputs", required=true)
-    private final List<MonitoringScheduleMonitoringInput> monitoringInputs;
+        private final List<MonitoringScheduleMonitoringInput> monitoringInputs;
 
     public List<MonitoringScheduleMonitoringInput> getMonitoringInputs() {
         return this.monitoringInputs;
     }
 
     @InputImport(name="monitoringOutputConfig", required=true)
-    private final MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig;
+        private final MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig;
 
     public MonitoringScheduleMonitoringOutputConfig getMonitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @InputImport(name="monitoringResources", required=true)
-    private final MonitoringScheduleMonitoringResources monitoringResources;
+        private final MonitoringScheduleMonitoringResources monitoringResources;
 
     public MonitoringScheduleMonitoringResources getMonitoringResources() {
         return this.monitoringResources;
     }
 
     @InputImport(name="networkConfig")
-    private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
+        private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
 
     public Optional<MonitoringScheduleNetworkConfig> getNetworkConfig() {
         return this.networkConfig == null ? Optional.empty() : Optional.ofNullable(this.networkConfig);
@@ -85,14 +85,14 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-    private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
+        private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
 
     public Optional<MonitoringScheduleStoppingCondition> getStoppingCondition() {
         return this.stoppingCondition == null ? Optional.empty() : Optional.ofNullable(this.stoppingCondition);
@@ -211,7 +211,6 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
             this.stoppingCondition = stoppingCondition;
             return this;
         }
-
         public MonitoringScheduleMonitoringJobDefinition build() {
             return new MonitoringScheduleMonitoringJobDefinition(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
         }

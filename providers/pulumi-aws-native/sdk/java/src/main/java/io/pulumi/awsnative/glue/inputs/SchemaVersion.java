@@ -24,7 +24,7 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isLatest")
-    private final @Nullable Boolean isLatest;
+        private final @Nullable Boolean isLatest;
 
     public Optional<Boolean> getIsLatest() {
         return this.isLatest == null ? Optional.empty() : Optional.ofNullable(this.isLatest);
@@ -35,7 +35,7 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionNumber")
-    private final @Nullable Integer versionNumber;
+        private final @Nullable Integer versionNumber;
 
     public Optional<Integer> getVersionNumber() {
         return this.versionNumber == null ? Optional.empty() : Optional.ofNullable(this.versionNumber);
@@ -84,7 +84,6 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public SchemaVersion build() {
             return new SchemaVersion(isLatest, versionNumber);
         }

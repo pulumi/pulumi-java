@@ -223,7 +223,6 @@ public final class GetComponentResult {
             this.variants = variants;
             return this;
         }
-
         public GetComponentResult build() {
             return new GetComponentResult(appId, bindingProperties, children, collectionProperties, componentType, createdAt, environmentName, id, modifiedAt, name, overrides, properties, sourceId, variants);
         }

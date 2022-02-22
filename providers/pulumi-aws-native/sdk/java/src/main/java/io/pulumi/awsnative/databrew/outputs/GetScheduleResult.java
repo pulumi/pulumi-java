@@ -69,7 +69,6 @@ public final class GetScheduleResult {
             this.jobNames = jobNames;
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(cronExpression, jobNames);
         }

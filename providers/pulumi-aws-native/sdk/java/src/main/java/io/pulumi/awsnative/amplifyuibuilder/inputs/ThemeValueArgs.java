@@ -17,14 +17,14 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeValueArgs Empty = new ThemeValueArgs();
 
     @InputImport(name="children")
-    private final @Nullable Input<List<ThemeValuesArgs>> children;
+        private final @Nullable Input<List<ThemeValuesArgs>> children;
 
     public Input<List<ThemeValuesArgs>> getChildren() {
         return this.children == null ? Input.empty() : this.children;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -83,7 +83,6 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ThemeValueArgs build() {
             return new ThemeValueArgs(children, value);
         }

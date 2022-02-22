@@ -61,7 +61,6 @@ public final class IndexUserTokenConfiguration {
             this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
         }
-
         public IndexUserTokenConfiguration build() {
             return new IndexUserTokenConfiguration(jsonTokenTypeConfiguration, jwtTokenTypeConfiguration);
         }

@@ -169,7 +169,6 @@ public final class GetResiliencyPolicyResult {
             this.tier = tier;
             return this;
         }
-
         public GetResiliencyPolicyResult build() {
             return new GetResiliencyPolicyResult(dataLocationConstraint, policy, policyArn, policyDescription, policyName, tags, tier);
         }

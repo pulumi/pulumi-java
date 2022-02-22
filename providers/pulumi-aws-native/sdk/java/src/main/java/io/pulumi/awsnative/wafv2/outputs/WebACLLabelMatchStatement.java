@@ -59,7 +59,6 @@ public final class WebACLLabelMatchStatement {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public WebACLLabelMatchStatement build() {
             return new WebACLLabelMatchStatement(key, scope);
         }

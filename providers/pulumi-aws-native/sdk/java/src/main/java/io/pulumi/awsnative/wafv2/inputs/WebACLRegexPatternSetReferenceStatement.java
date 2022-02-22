@@ -16,21 +16,21 @@ public final class WebACLRegexPatternSetReferenceStatement extends io.pulumi.res
     public static final WebACLRegexPatternSetReferenceStatement Empty = new WebACLRegexPatternSetReferenceStatement();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-    private final WebACLFieldToMatch fieldToMatch;
+        private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final List<WebACLTextTransformation> textTransformations;
+        private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {
         return this.textTransformations;
@@ -89,7 +89,6 @@ public final class WebACLRegexPatternSetReferenceStatement extends io.pulumi.res
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLRegexPatternSetReferenceStatement build() {
             return new WebACLRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }

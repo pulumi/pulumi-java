@@ -76,7 +76,6 @@ public final class StackSetDeploymentTargets {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-
         public StackSetDeploymentTargets build() {
             return new StackSetDeploymentTargets(accounts, organizationalUnitIds);
         }

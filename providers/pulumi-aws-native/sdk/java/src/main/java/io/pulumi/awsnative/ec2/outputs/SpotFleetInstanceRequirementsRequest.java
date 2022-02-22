@@ -327,7 +327,6 @@ public final class SpotFleetInstanceRequirementsRequest {
             this.vCpuCount = vCpuCount;
             return this;
         }
-
         public SpotFleetInstanceRequirementsRequest build() {
             return new SpotFleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }

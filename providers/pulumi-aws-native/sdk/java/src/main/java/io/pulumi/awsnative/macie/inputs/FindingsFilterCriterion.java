@@ -34,7 +34,6 @@ public final class FindingsFilterCriterion extends io.pulumi.resources.InvokeArg
         public Builder(FindingsFilterCriterion defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public FindingsFilterCriterion build() {
             return new FindingsFilterCriterion();
         }

@@ -20,49 +20,49 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     public static final LaunchArgs Empty = new LaunchArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="groups", required=true)
-    private final Input<List<LaunchGroupObjectArgs>> groups;
+        private final Input<List<LaunchGroupObjectArgs>> groups;
 
     public Input<List<LaunchGroupObjectArgs>> getGroups() {
         return this.groups;
     }
 
     @InputImport(name="metricMonitors")
-    private final @Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
+        private final @Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
     public Input<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
         return this.metricMonitors == null ? Input.empty() : this.metricMonitors;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
     }
 
     @InputImport(name="randomizationSalt")
-    private final @Nullable Input<String> randomizationSalt;
+        private final @Nullable Input<String> randomizationSalt;
 
     public Input<String> getRandomizationSalt() {
         return this.randomizationSalt == null ? Input.empty() : this.randomizationSalt;
     }
 
     @InputImport(name="scheduledSplitsConfig", required=true)
-    private final Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
+        private final Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
     public Input<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
@@ -73,7 +73,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LaunchTagArgs>> tags;
+        private final @Nullable Input<List<LaunchTagArgs>> tags;
 
     public Input<List<LaunchTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LaunchArgs build() {
             return new LaunchArgs(description, groups, metricMonitors, name, project, randomizationSalt, scheduledSplitsConfig, tags);
         }

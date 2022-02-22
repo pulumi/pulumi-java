@@ -19,7 +19,7 @@ public final class WebACLBlockAction extends io.pulumi.resources.InvokeArgs {
     public static final WebACLBlockAction Empty = new WebACLBlockAction();
 
     @InputImport(name="customResponse")
-    private final @Nullable WebACLCustomResponse customResponse;
+        private final @Nullable WebACLCustomResponse customResponse;
 
     public Optional<WebACLCustomResponse> getCustomResponse() {
         return this.customResponse == null ? Optional.empty() : Optional.ofNullable(this.customResponse);
@@ -57,7 +57,6 @@ public final class WebACLBlockAction extends io.pulumi.resources.InvokeArgs {
             this.customResponse = customResponse;
             return this;
         }
-
         public WebACLBlockAction build() {
             return new WebACLBlockAction(customResponse);
         }

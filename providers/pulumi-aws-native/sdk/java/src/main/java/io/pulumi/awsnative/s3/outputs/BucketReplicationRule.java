@@ -168,7 +168,6 @@ public final class BucketReplicationRule {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketReplicationRule build() {
             return new BucketReplicationRule(deleteMarkerReplication, destination, filter, id, prefix, priority, sourceSelectionCriteria, status);
         }

@@ -30,7 +30,6 @@ public final class GetCustomerGatewayAssociationResult {
         public Builder(GetCustomerGatewayAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetCustomerGatewayAssociationResult build() {
             return new GetCustomerGatewayAssociationResult();
         }

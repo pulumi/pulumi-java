@@ -44,7 +44,6 @@ public final class ConnectorPlugin {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
         }
-
         public ConnectorPlugin build() {
             return new ConnectorPlugin(customPlugin);
         }

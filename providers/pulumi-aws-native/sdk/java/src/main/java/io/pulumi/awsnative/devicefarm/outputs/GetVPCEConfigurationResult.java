@@ -114,7 +114,6 @@ public final class GetVPCEConfigurationResult {
             this.vpceServiceName = vpceServiceName;
             return this;
         }
-
         public GetVPCEConfigurationResult build() {
             return new GetVPCEConfigurationResult(arn, serviceDnsName, tags, vpceConfigurationDescription, vpceConfigurationName, vpceServiceName);
         }

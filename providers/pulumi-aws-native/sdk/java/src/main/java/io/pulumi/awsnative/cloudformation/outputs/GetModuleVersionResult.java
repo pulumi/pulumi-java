@@ -212,7 +212,6 @@ public final class GetModuleVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetModuleVersionResult build() {
             return new GetModuleVersionResult(arn, description, documentationUrl, isDefaultVersion, schema, timeCreated, versionId, visibility);
         }

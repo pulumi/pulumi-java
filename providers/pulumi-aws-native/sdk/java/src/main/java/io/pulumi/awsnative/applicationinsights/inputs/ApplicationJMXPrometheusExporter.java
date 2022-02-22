@@ -23,7 +23,7 @@ public final class ApplicationJMXPrometheusExporter extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostPort")
-    private final @Nullable String hostPort;
+        private final @Nullable String hostPort;
 
     public Optional<String> getHostPort() {
         return this.hostPort == null ? Optional.empty() : Optional.ofNullable(this.hostPort);
@@ -34,7 +34,7 @@ public final class ApplicationJMXPrometheusExporter extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jMXURL")
-    private final @Nullable String jMXURL;
+        private final @Nullable String jMXURL;
 
     public Optional<String> getJMXURL() {
         return this.jMXURL == null ? Optional.empty() : Optional.ofNullable(this.jMXURL);
@@ -45,7 +45,7 @@ public final class ApplicationJMXPrometheusExporter extends io.pulumi.resources.
      * 
      */
     @InputImport(name="prometheusPort")
-    private final @Nullable String prometheusPort;
+        private final @Nullable String prometheusPort;
 
     public Optional<String> getPrometheusPort() {
         return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);
@@ -104,7 +104,6 @@ public final class ApplicationJMXPrometheusExporter extends io.pulumi.resources.
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationJMXPrometheusExporter build() {
             return new ApplicationJMXPrometheusExporter(hostPort, jMXURL, prometheusPort);
         }

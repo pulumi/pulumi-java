@@ -110,7 +110,6 @@ public final class GetTransitGatewayVpcAttachmentResult {
             this.tags = tags;
             return this;
         }
-
         public GetTransitGatewayVpcAttachmentResult build() {
             return new GetTransitGatewayVpcAttachmentResult(addSubnetIds, id, options, removeSubnetIds, tags);
         }

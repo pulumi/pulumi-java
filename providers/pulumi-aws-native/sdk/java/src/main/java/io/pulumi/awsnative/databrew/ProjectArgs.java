@@ -22,7 +22,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName", required=true)
-    private final Input<String> datasetName;
+        private final Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName;
@@ -33,7 +33,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipeName", required=true)
-    private final Input<String> recipeName;
+        private final Input<String> recipeName;
 
     public Input<String> getRecipeName() {
         return this.recipeName;
@@ -55,7 +55,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -66,14 +66,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sample")
-    private final @Nullable Input<ProjectSampleArgs> sample;
+        private final @Nullable Input<ProjectSampleArgs> sample;
 
     public Input<ProjectSampleArgs> getSample() {
         return this.sample == null ? Input.empty() : this.sample;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ProjectTagArgs>> tags;
+        private final @Nullable Input<List<ProjectTagArgs>> tags;
 
     public Input<List<ProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -192,7 +192,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(datasetName, name, recipeName, roleArn, sample, tags);
         }

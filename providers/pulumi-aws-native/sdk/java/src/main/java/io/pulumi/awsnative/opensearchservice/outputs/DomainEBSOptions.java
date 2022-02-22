@@ -88,7 +88,6 @@ public final class DomainEBSOptions {
             this.volumeType = volumeType;
             return this;
         }
-
         public DomainEBSOptions build() {
             return new DomainEBSOptions(eBSEnabled, iops, volumeSize, volumeType);
         }

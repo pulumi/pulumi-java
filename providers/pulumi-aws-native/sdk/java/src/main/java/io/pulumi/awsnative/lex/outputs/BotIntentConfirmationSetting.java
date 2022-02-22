@@ -75,7 +75,6 @@ public final class BotIntentConfirmationSetting {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
         }
-
         public BotIntentConfirmationSetting build() {
             return new BotIntentConfirmationSetting(declinationResponse, isActive, promptSpecification);
         }

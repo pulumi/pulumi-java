@@ -30,7 +30,6 @@ public final class DataSetLogicalTableMap extends io.pulumi.resources.InvokeArgs
         public Builder(DataSetLogicalTableMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetLogicalTableMap build() {
             return new DataSetLogicalTableMap();
         }

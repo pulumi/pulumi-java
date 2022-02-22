@@ -46,7 +46,6 @@ public final class ListenerRuleHttpRequestMethodConfig {
             this.values = values;
             return this;
         }
-
         public ListenerRuleHttpRequestMethodConfig build() {
             return new ListenerRuleHttpRequestMethodConfig(values);
         }

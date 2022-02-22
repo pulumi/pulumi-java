@@ -74,7 +74,6 @@ public final class VirtualMFADeviceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VirtualMFADeviceTag build() {
             return new VirtualMFADeviceTag(key, value);
         }

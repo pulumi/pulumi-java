@@ -74,7 +74,6 @@ public final class WorkflowTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkflowTag build() {
             return new WorkflowTag(key, value);
         }

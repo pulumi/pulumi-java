@@ -183,7 +183,6 @@ public final class GetSlackChannelConfigurationResult {
             this.userRoleRequired = userRoleRequired;
             return this;
         }
-
         public GetSlackChannelConfigurationResult build() {
             return new GetSlackChannelConfigurationResult(arn, guardrailPolicies, iamRoleArn, loggingLevel, slackChannelId, snsTopicArns, userRoleRequired);
         }

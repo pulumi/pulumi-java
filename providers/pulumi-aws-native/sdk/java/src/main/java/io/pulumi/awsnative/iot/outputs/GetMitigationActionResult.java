@@ -110,7 +110,6 @@ public final class GetMitigationActionResult {
             this.tags = tags;
             return this;
         }
-
         public GetMitigationActionResult build() {
             return new GetMitigationActionResult(actionParams, mitigationActionArn, mitigationActionId, roleArn, tags);
         }

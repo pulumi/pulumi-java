@@ -22,7 +22,7 @@ public final class ConnectorScaleOutPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cpuUtilizationPercentage", required=true)
-    private final Input<Integer> cpuUtilizationPercentage;
+        private final Input<Integer> cpuUtilizationPercentage;
 
     public Input<Integer> getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
@@ -65,7 +65,6 @@ public final class ConnectorScaleOutPolicyArgs extends io.pulumi.resources.Resou
             this.cpuUtilizationPercentage = Input.of(Objects.requireNonNull(cpuUtilizationPercentage));
             return this;
         }
-
         public ConnectorScaleOutPolicyArgs build() {
             return new ConnectorScaleOutPolicyArgs(cpuUtilizationPercentage);
         }

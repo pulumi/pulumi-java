@@ -14,7 +14,7 @@ public final class IntegrationZendeskSourcePropertiesArgs extends io.pulumi.reso
     public static final IntegrationZendeskSourcePropertiesArgs Empty = new IntegrationZendeskSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -57,7 +57,6 @@ public final class IntegrationZendeskSourcePropertiesArgs extends io.pulumi.reso
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public IntegrationZendeskSourcePropertiesArgs build() {
             return new IntegrationZendeskSourcePropertiesArgs(object);
         }

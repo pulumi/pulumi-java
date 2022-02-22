@@ -208,7 +208,6 @@ public final class GetTaskDefinitionResult {
             this.update = update;
             return this;
         }
-
         public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(arn, autoCreateTasks, id, loRaWANUpdateGatewayTaskEntry, name, tags, taskDefinitionType, update);
         }

@@ -61,7 +61,6 @@ public final class AssessmentReportsDestination {
             this.destinationType = destinationType;
             return this;
         }
-
         public AssessmentReportsDestination build() {
             return new AssessmentReportsDestination(destination, destinationType);
         }

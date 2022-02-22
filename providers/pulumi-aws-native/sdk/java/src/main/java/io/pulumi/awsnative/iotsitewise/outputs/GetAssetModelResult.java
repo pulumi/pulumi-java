@@ -207,7 +207,6 @@ public final class GetAssetModelResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssetModelResult build() {
             return new GetAssetModelResult(assetModelArn, assetModelCompositeModels, assetModelDescription, assetModelHierarchies, assetModelId, assetModelName, assetModelProperties, tags);
         }

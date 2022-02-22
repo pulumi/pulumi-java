@@ -140,7 +140,6 @@ public final class ListenerRuleAuthenticateCognitoConfig {
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
         }
-
         public ListenerRuleAuthenticateCognitoConfig build() {
             return new ListenerRuleAuthenticateCognitoConfig(authenticationRequestExtraParams, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, userPoolArn, userPoolClientId, userPoolDomain);
         }

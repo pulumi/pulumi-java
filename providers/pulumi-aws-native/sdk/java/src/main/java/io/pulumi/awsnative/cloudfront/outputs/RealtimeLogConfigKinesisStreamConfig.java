@@ -58,7 +58,6 @@ public final class RealtimeLogConfigKinesisStreamConfig {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
-
         public RealtimeLogConfigKinesisStreamConfig build() {
             return new RealtimeLogConfigKinesisStreamConfig(roleArn, streamArn);
         }

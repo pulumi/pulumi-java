@@ -16,21 +16,21 @@ public final class ConnectionParameter extends io.pulumi.resources.InvokeArgs {
     public static final ConnectionParameter Empty = new ConnectionParameter();
 
     @InputImport(name="isValueSecret")
-    private final @Nullable Boolean isValueSecret;
+        private final @Nullable Boolean isValueSecret;
 
     public Optional<Boolean> getIsValueSecret() {
         return this.isValueSecret == null ? Optional.empty() : Optional.ofNullable(this.isValueSecret);
     }
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -89,7 +89,6 @@ public final class ConnectionParameter extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnectionParameter build() {
             return new ConnectionParameter(isValueSecret, key, value);
         }

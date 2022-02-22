@@ -30,7 +30,6 @@ public final class RobotTags {
         public Builder(RobotTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RobotTags build() {
             return new RobotTags();
         }

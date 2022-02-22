@@ -76,7 +76,6 @@ public final class RulesetColumnSelector {
             this.regex = regex;
             return this;
         }
-
         public RulesetColumnSelector build() {
             return new RulesetColumnSelector(name, regex);
         }

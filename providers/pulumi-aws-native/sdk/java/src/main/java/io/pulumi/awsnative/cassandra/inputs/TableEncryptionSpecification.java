@@ -20,14 +20,14 @@ public final class TableEncryptionSpecification extends io.pulumi.resources.Invo
     public static final TableEncryptionSpecification Empty = new TableEncryptionSpecification();
 
     @InputImport(name="encryptionType", required=true)
-    private final TableEncryptionType encryptionType;
+        private final TableEncryptionType encryptionType;
 
     public TableEncryptionType getEncryptionType() {
         return this.encryptionType;
     }
 
     @InputImport(name="kmsKeyIdentifier")
-    private final @Nullable String kmsKeyIdentifier;
+        private final @Nullable String kmsKeyIdentifier;
 
     public Optional<String> getKmsKeyIdentifier() {
         return this.kmsKeyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyIdentifier);
@@ -76,7 +76,6 @@ public final class TableEncryptionSpecification extends io.pulumi.resources.Invo
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
-
         public TableEncryptionSpecification build() {
             return new TableEncryptionSpecification(encryptionType, kmsKeyIdentifier);
         }

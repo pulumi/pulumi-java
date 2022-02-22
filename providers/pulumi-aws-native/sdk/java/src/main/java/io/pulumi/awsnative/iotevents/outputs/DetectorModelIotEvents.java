@@ -69,7 +69,6 @@ public final class DetectorModelIotEvents {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelIotEvents build() {
             return new DetectorModelIotEvents(inputName, payload);
         }

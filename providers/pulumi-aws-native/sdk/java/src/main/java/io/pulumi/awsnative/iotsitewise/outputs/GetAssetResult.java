@@ -169,7 +169,6 @@ public final class GetAssetResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssetResult build() {
             return new GetAssetResult(assetArn, assetHierarchies, assetId, assetModelId, assetName, assetProperties, tags);
         }

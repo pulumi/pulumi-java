@@ -70,7 +70,6 @@ public final class GetRecipeResult {
             this.steps = steps;
             return this;
         }
-
         public GetRecipeResult build() {
             return new GetRecipeResult(description, steps);
         }

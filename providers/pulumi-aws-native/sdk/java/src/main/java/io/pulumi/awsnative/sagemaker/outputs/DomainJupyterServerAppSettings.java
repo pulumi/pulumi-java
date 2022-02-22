@@ -46,7 +46,6 @@ public final class DomainJupyterServerAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public DomainJupyterServerAppSettings build() {
             return new DomainJupyterServerAppSettings(defaultResourceSpec);
         }

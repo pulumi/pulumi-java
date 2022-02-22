@@ -75,7 +75,6 @@ public final class GetAccessPointResult {
             this.arn = arn;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(accessPointId, accessPointTags, arn);
         }

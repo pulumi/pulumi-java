@@ -281,7 +281,6 @@ public final class DetectorModelDynamoDB {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DetectorModelDynamoDB build() {
             return new DetectorModelDynamoDB(hashKeyField, hashKeyType, hashKeyValue, operation, payload, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, tableName);
         }

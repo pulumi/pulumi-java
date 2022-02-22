@@ -99,7 +99,6 @@ public final class GetLocationFSxWindowsResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationFSxWindowsResult build() {
             return new GetLocationFSxWindowsResult(locationArn, locationUri, tags);
         }

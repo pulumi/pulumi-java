@@ -13,7 +13,7 @@ public final class CloudFrontOriginAccessIdentityConfig extends io.pulumi.resour
     public static final CloudFrontOriginAccessIdentityConfig Empty = new CloudFrontOriginAccessIdentityConfig();
 
     @InputImport(name="comment", required=true)
-    private final String comment;
+        private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -51,7 +51,6 @@ public final class CloudFrontOriginAccessIdentityConfig extends io.pulumi.resour
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public CloudFrontOriginAccessIdentityConfig build() {
             return new CloudFrontOriginAccessIdentityConfig(comment);
         }

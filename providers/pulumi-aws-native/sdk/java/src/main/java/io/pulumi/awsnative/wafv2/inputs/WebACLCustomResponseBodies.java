@@ -34,7 +34,6 @@ public final class WebACLCustomResponseBodies extends io.pulumi.resources.Invoke
         public Builder(WebACLCustomResponseBodies defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public WebACLCustomResponseBodies build() {
             return new WebACLCustomResponseBodies();
         }

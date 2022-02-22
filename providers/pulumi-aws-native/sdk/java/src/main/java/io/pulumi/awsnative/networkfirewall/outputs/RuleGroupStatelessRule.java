@@ -59,7 +59,6 @@ public final class RuleGroupStatelessRule {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
-
         public RuleGroupStatelessRule build() {
             return new RuleGroupStatelessRule(priority, ruleDefinition);
         }

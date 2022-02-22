@@ -141,7 +141,6 @@ public final class GetEntityTypeResult {
             this.tags = tags;
             return this;
         }
-
         public GetEntityTypeResult build() {
             return new GetEntityTypeResult(arn, createdTime, description, lastUpdatedTime, tags);
         }

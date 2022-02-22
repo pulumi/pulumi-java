@@ -75,7 +75,6 @@ public final class CapacityProviderAutoScalingGroupProvider {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }
-
         public CapacityProviderAutoScalingGroupProvider build() {
             return new CapacityProviderAutoScalingGroupProvider(autoScalingGroupArn, managedScaling, managedTerminationProtection);
         }

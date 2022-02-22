@@ -46,7 +46,6 @@ public final class BotExternalSourceSetting {
             this.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
         }
-
         public BotExternalSourceSetting build() {
             return new BotExternalSourceSetting(grammarSlotTypeSetting);
         }

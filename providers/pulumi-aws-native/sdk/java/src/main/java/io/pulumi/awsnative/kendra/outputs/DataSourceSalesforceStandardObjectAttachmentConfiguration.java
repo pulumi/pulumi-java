@@ -62,7 +62,6 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
             return new DataSourceSalesforceStandardObjectAttachmentConfiguration(documentTitleFieldName, fieldMappings);
         }

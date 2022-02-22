@@ -77,7 +77,6 @@ public final class ProjectSample {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ProjectSample build() {
             return new ProjectSample(size, type);
         }

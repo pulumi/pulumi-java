@@ -185,7 +185,6 @@ public final class FirewallRuleGroupFirewallRule {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public FirewallRuleGroupFirewallRule build() {
             return new FirewallRuleGroupFirewallRule(action, blockOverrideDnsType, blockOverrideDomain, blockOverrideTtl, blockResponse, firewallDomainListId, priority);
         }

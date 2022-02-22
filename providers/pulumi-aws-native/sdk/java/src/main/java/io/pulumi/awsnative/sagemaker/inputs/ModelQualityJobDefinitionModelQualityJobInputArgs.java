@@ -19,14 +19,14 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
     public static final ModelQualityJobDefinitionModelQualityJobInputArgs Empty = new ModelQualityJobDefinitionModelQualityJobInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-    private final Input<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
+        private final Input<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Input<ModelQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
     @InputImport(name="groundTruthS3Input", required=true)
-    private final Input<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+        private final Input<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Input<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {
         return this.groundTruthS3Input;
@@ -85,7 +85,6 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
             this.groundTruthS3Input = Input.of(Objects.requireNonNull(groundTruthS3Input));
             return this;
         }
-
         public ModelQualityJobDefinitionModelQualityJobInputArgs build() {
             return new ModelQualityJobDefinitionModelQualityJobInputArgs(endpointInput, groundTruthS3Input);
         }

@@ -198,7 +198,6 @@ public final class GetIPAMResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMResult build() {
             return new GetIPAMResult(arn, description, ipamId, operatingRegions, privateDefaultScopeId, publicDefaultScopeId, scopeCount, tags);
         }

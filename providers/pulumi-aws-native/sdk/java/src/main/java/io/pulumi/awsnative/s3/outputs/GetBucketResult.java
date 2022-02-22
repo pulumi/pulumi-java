@@ -504,7 +504,6 @@ public final class GetBucketResult {
             this.websiteURL = websiteURL;
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(accelerateConfiguration, accessControl, analyticsConfigurations, arn, bucketEncryption, corsConfiguration, domainName, dualStackDomainName, intelligentTieringConfigurations, inventoryConfigurations, lifecycleConfiguration, loggingConfiguration, metricsConfigurations, notificationConfiguration, objectLockConfiguration, ownershipControls, publicAccessBlockConfiguration, regionalDomainName, replicationConfiguration, tags, versioningConfiguration, websiteConfiguration, websiteURL);
         }

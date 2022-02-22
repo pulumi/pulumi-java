@@ -17,7 +17,7 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="agentArn", required=true)
-    private final String agentArn;
+        private final String agentArn;
 
     public String getAgentArn() {
         return this.agentArn;
@@ -55,7 +55,6 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentArn = Objects.requireNonNull(agentArn);
             return this;
         }
-
         public GetAgentArgs build() {
             return new GetAgentArgs(agentArn);
         }

@@ -77,7 +77,6 @@ public final class BucketAccessRules {
             this.getObject = getObject;
             return this;
         }
-
         public BucketAccessRules build() {
             return new BucketAccessRules(allowPublicOverrides, getObject);
         }

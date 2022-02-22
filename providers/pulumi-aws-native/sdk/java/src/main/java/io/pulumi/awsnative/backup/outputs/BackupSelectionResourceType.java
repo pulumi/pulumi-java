@@ -115,7 +115,6 @@ public final class BackupSelectionResourceType {
             this.selectionName = Objects.requireNonNull(selectionName);
             return this;
         }
-
         public BackupSelectionResourceType build() {
             return new BackupSelectionResourceType(conditions, iamRoleArn, listOfTags, notResources, resources, selectionName);
         }

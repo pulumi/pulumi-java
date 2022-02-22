@@ -189,7 +189,6 @@ public final class WebACLFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public WebACLFieldToMatch build() {
             return new WebACLFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

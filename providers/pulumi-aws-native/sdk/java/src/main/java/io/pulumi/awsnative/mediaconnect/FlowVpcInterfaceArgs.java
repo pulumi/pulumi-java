@@ -20,7 +20,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="flowArn", required=true)
-    private final Input<String> flowArn;
+        private final Input<String> flowArn;
 
     public Input<String> getFlowArn() {
         return this.flowArn;
@@ -31,7 +31,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -53,7 +53,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+        private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -64,7 +64,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -168,7 +168,6 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public FlowVpcInterfaceArgs build() {
             return new FlowVpcInterfaceArgs(flowArn, name, roleArn, securityGroupIds, subnetId);
         }

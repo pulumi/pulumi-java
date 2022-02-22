@@ -55,7 +55,6 @@ public final class ProviderDefaultTagsArgs {
             this.tags = tags;
             return this;
         }
-
         public ProviderDefaultTagsArgs build() {
             return new ProviderDefaultTagsArgs(tags);
         }

@@ -143,7 +143,6 @@ public final class BucketIntelligentTieringConfiguration {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
-
         public BucketIntelligentTieringConfiguration build() {
             return new BucketIntelligentTieringConfiguration(id, prefix, status, tagFilters, tierings);
         }

@@ -14,21 +14,21 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="scope", required=true)
-    private final RuleGroupScope scope;
+        private final RuleGroupScope scope;
 
     public RuleGroupScope getScope() {
         return this.scope;
@@ -87,7 +87,6 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetRuleGroupArgs build() {
             return new GetRuleGroupArgs(id, name, scope);
         }

@@ -15,7 +15,7 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
     public static final ApplicationInstanceManifestPayloadArgs Empty = new ApplicationInstanceManifestPayloadArgs();
 
     @InputImport(name="payloadData")
-    private final @Nullable Input<String> payloadData;
+        private final @Nullable Input<String> payloadData;
 
     public Input<String> getPayloadData() {
         return this.payloadData == null ? Input.empty() : this.payloadData;
@@ -58,7 +58,6 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
             this.payloadData = Input.ofNullable(payloadData);
             return this;
         }
-
         public ApplicationInstanceManifestPayloadArgs build() {
             return new ApplicationInstanceManifestPayloadArgs(payloadData);
         }

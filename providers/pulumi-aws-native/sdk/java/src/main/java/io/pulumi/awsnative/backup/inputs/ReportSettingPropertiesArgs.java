@@ -24,7 +24,7 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="frameworkArns")
-    private final @Nullable Input<List<String>> frameworkArns;
+        private final @Nullable Input<List<String>> frameworkArns;
 
     public Input<List<String>> getFrameworkArns() {
         return this.frameworkArns == null ? Input.empty() : this.frameworkArns;
@@ -35,7 +35,7 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="reportTemplate", required=true)
-    private final Input<String> reportTemplate;
+        private final Input<String> reportTemplate;
 
     public Input<String> getReportTemplate() {
         return this.reportTemplate;
@@ -94,7 +94,6 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
             this.reportTemplate = Input.of(Objects.requireNonNull(reportTemplate));
             return this;
         }
-
         public ReportSettingPropertiesArgs build() {
             return new ReportSettingPropertiesArgs(frameworkArns, reportTemplate);
         }

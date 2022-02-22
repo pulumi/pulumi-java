@@ -99,7 +99,6 @@ public final class EnvironmentLoggingConfiguration {
             this.workerLogs = workerLogs;
             return this;
         }
-
         public EnvironmentLoggingConfiguration build() {
             return new EnvironmentLoggingConfiguration(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }

@@ -78,7 +78,6 @@ public final class GetDeviceResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(device, tags);
         }

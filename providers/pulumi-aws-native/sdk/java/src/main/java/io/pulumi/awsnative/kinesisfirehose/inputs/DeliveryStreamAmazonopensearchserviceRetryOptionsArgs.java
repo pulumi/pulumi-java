@@ -15,7 +15,7 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptionsArgs extends
     public static final DeliveryStreamAmazonopensearchserviceRetryOptionsArgs Empty = new DeliveryStreamAmazonopensearchserviceRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable Input<Integer> durationInSeconds;
+        private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
@@ -58,7 +58,6 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptionsArgs extends
             this.durationInSeconds = Input.ofNullable(durationInSeconds);
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceRetryOptionsArgs build() {
             return new DeliveryStreamAmazonopensearchserviceRetryOptionsArgs(durationInSeconds);
         }

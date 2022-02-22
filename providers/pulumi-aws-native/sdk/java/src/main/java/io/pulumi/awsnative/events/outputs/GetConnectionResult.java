@@ -125,7 +125,6 @@ public final class GetConnectionResult {
             this.secretArn = secretArn;
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(arn, authParameters, authorizationType, description, secretArn);
         }

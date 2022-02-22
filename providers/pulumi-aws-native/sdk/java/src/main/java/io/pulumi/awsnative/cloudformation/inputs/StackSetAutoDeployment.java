@@ -19,7 +19,7 @@ public final class StackSetAutoDeployment extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -30,7 +30,7 @@ public final class StackSetAutoDeployment extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="retainStacksOnAccountRemoval")
-    private final @Nullable Boolean retainStacksOnAccountRemoval;
+        private final @Nullable Boolean retainStacksOnAccountRemoval;
 
     public Optional<Boolean> getRetainStacksOnAccountRemoval() {
         return this.retainStacksOnAccountRemoval == null ? Optional.empty() : Optional.ofNullable(this.retainStacksOnAccountRemoval);
@@ -79,7 +79,6 @@ public final class StackSetAutoDeployment extends io.pulumi.resources.InvokeArgs
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
-
         public StackSetAutoDeployment build() {
             return new StackSetAutoDeployment(enabled, retainStacksOnAccountRemoval);
         }

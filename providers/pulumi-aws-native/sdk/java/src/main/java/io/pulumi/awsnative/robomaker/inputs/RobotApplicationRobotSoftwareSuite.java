@@ -24,7 +24,7 @@ public final class RobotApplicationRobotSoftwareSuite extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final RobotApplicationRobotSoftwareSuiteName name;
+        private final RobotApplicationRobotSoftwareSuiteName name;
 
     public RobotApplicationRobotSoftwareSuiteName getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class RobotApplicationRobotSoftwareSuite extends io.pulumi.resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
+        private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
     public Optional<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -84,7 +84,6 @@ public final class RobotApplicationRobotSoftwareSuite extends io.pulumi.resource
             this.version = version;
             return this;
         }
-
         public RobotApplicationRobotSoftwareSuite build() {
             return new RobotApplicationRobotSoftwareSuite(name, version);
         }

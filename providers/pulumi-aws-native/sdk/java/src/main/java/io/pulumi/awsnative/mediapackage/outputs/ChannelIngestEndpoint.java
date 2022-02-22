@@ -118,7 +118,6 @@ public final class ChannelIngestEndpoint {
             this.username = username;
             return this;
         }
-
         public ChannelIngestEndpoint build() {
             return new ChannelIngestEndpoint(id, password, url, username);
         }

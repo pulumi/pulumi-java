@@ -60,7 +60,6 @@ public final class NetworkInsightsAnalysisPortRange {
             this.to = to;
             return this;
         }
-
         public NetworkInsightsAnalysisPortRange build() {
             return new NetworkInsightsAnalysisPortRange(from, to);
         }

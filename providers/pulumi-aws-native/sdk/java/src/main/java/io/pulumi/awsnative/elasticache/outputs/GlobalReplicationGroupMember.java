@@ -98,7 +98,6 @@ public final class GlobalReplicationGroupMember {
             this.role = role;
             return this;
         }
-
         public GlobalReplicationGroupMember build() {
             return new GlobalReplicationGroupMember(replicationGroupId, replicationGroupRegion, role);
         }

@@ -121,7 +121,6 @@ public final class GetDatasetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatasetGroupResult build() {
             return new GetDatasetGroupResult(datasetArns, datasetGroupArn, domain, tags);
         }

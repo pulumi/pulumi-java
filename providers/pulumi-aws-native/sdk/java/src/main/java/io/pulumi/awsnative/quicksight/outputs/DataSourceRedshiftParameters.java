@@ -121,7 +121,6 @@ public final class DataSourceRedshiftParameters {
             this.port = port;
             return this;
         }
-
         public DataSourceRedshiftParameters build() {
             return new DataSourceRedshiftParameters(clusterId, database, host, port);
         }

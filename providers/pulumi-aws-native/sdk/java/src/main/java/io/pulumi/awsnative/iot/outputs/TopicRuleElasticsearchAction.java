@@ -97,7 +97,6 @@ public final class TopicRuleElasticsearchAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TopicRuleElasticsearchAction build() {
             return new TopicRuleElasticsearchAction(endpoint, id, index, roleArn, type);
         }

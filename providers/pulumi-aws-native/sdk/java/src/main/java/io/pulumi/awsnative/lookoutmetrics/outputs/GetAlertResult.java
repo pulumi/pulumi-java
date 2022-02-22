@@ -54,7 +54,6 @@ public final class GetAlertResult {
             this.arn = arn;
             return this;
         }
-
         public GetAlertResult build() {
             return new GetAlertResult(arn);
         }

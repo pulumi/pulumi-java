@@ -52,7 +52,6 @@ public final class BucketVersioningConfiguration {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketVersioningConfiguration build() {
             return new BucketVersioningConfiguration(status);
         }

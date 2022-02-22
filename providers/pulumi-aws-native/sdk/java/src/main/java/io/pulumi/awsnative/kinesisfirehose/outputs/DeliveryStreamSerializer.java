@@ -61,7 +61,6 @@ public final class DeliveryStreamSerializer {
             this.parquetSerDe = parquetSerDe;
             return this;
         }
-
         public DeliveryStreamSerializer build() {
             return new DeliveryStreamSerializer(orcSerDe, parquetSerDe);
         }

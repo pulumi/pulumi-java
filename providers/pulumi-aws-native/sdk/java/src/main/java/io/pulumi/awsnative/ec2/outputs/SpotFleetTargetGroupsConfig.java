@@ -45,7 +45,6 @@ public final class SpotFleetTargetGroupsConfig {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
         public SpotFleetTargetGroupsConfig build() {
             return new SpotFleetTargetGroupsConfig(targetGroups);
         }

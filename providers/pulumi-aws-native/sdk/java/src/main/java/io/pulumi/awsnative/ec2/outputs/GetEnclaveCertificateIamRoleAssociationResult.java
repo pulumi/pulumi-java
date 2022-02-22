@@ -97,7 +97,6 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
             this.encryptionKmsKeyId = encryptionKmsKeyId;
             return this;
         }
-
         public GetEnclaveCertificateIamRoleAssociationResult build() {
             return new GetEnclaveCertificateIamRoleAssociationResult(certificateS3BucketName, certificateS3ObjectKey, encryptionKmsKeyId);
         }

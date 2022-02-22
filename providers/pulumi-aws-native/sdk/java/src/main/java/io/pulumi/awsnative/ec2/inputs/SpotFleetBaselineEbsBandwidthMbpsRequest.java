@@ -15,14 +15,14 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequest extends io.pulumi.re
     public static final SpotFleetBaselineEbsBandwidthMbpsRequest Empty = new SpotFleetBaselineEbsBandwidthMbpsRequest();
 
     @InputImport(name="max")
-    private final @Nullable Integer max;
+        private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @InputImport(name="min")
-    private final @Nullable Integer min;
+        private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
@@ -71,7 +71,6 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequest extends io.pulumi.re
             this.min = min;
             return this;
         }
-
         public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
             return new SpotFleetBaselineEbsBandwidthMbpsRequest(max, min);
         }

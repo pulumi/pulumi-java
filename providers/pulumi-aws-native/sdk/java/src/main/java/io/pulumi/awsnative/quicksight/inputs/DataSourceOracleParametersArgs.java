@@ -15,21 +15,21 @@ public final class DataSourceOracleParametersArgs extends io.pulumi.resources.Re
     public static final DataSourceOracleParametersArgs Empty = new DataSourceOracleParametersArgs();
 
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
     }
 
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+        private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-    private final Input<Double> port;
+        private final Input<Double> port;
 
     public Input<Double> getPort() {
         return this.port;
@@ -103,7 +103,6 @@ public final class DataSourceOracleParametersArgs extends io.pulumi.resources.Re
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public DataSourceOracleParametersArgs build() {
             return new DataSourceOracleParametersArgs(database, host, port);
         }

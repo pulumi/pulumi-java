@@ -184,7 +184,6 @@ public final class GetContactFlowResult {
             this.tags = tags;
             return this;
         }
-
         public GetContactFlowResult build() {
             return new GetContactFlowResult(contactFlowArn, content, description, instanceArn, name, state, tags);
         }

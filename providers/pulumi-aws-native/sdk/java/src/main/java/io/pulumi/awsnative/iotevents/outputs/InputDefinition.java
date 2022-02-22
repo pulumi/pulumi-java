@@ -53,7 +53,6 @@ public final class InputDefinition {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public InputDefinition build() {
             return new InputDefinition(attributes);
         }

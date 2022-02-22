@@ -19,21 +19,21 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     public static final BotOutputContextArgs Empty = new BotOutputContextArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="timeToLiveInSeconds", required=true)
-    private final Input<Integer> timeToLiveInSeconds;
+        private final Input<Integer> timeToLiveInSeconds;
 
     public Input<Integer> getTimeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
 
     @InputImport(name="turnsToLive", required=true)
-    private final Input<Integer> turnsToLive;
+        private final Input<Integer> turnsToLive;
 
     public Input<Integer> getTurnsToLive() {
         return this.turnsToLive;
@@ -107,7 +107,6 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
             this.turnsToLive = Input.of(Objects.requireNonNull(turnsToLive));
             return this;
         }
-
         public BotOutputContextArgs build() {
             return new BotOutputContextArgs(name, timeToLiveInSeconds, turnsToLive);
         }

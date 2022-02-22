@@ -13,7 +13,7 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
     @InputImport(name="knowledgeBaseId", required=true)
-    private final String knowledgeBaseId;
+        private final String knowledgeBaseId;
 
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
@@ -51,7 +51,6 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
-
         public GetKnowledgeBaseArgs build() {
             return new GetKnowledgeBaseArgs(knowledgeBaseId);
         }

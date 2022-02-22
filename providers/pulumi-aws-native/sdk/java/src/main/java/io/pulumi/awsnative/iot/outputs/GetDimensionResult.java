@@ -99,7 +99,6 @@ public final class GetDimensionResult {
             this.tags = tags;
             return this;
         }
-
         public GetDimensionResult build() {
             return new GetDimensionResult(arn, stringValues, tags);
         }

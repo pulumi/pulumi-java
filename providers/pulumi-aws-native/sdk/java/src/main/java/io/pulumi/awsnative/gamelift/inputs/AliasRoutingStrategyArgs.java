@@ -20,7 +20,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fleetId")
-    private final @Nullable Input<String> fleetId;
+        private final @Nullable Input<String> fleetId;
 
     public Input<String> getFleetId() {
         return this.fleetId == null ? Input.empty() : this.fleetId;
@@ -31,7 +31,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -42,7 +42,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<AliasRoutingStrategyType> type;
+        private final Input<AliasRoutingStrategyType> type;
 
     public Input<AliasRoutingStrategyType> getType() {
         return this.type;
@@ -116,7 +116,6 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AliasRoutingStrategyArgs build() {
             return new AliasRoutingStrategyArgs(fleetId, message, type);
         }

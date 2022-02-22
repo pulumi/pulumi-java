@@ -21,7 +21,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isPublic", required=true)
-    private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
+        private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
         return this.isPublic;
@@ -59,7 +59,6 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }
-
         public PolicyStatusProperties build() {
             return new PolicyStatusProperties(isPublic);
         }

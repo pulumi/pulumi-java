@@ -135,7 +135,6 @@ public final class OriginEndpointHlsEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointHlsEncryption build() {
             return new OriginEndpointHlsEncryption(constantInitializationVector, encryptionMethod, keyRotationIntervalSeconds, repeatExtXKey, spekeKeyProvider);
         }

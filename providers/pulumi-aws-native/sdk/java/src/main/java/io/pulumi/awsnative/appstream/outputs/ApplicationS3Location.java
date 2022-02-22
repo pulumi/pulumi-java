@@ -58,7 +58,6 @@ public final class ApplicationS3Location {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public ApplicationS3Location build() {
             return new ApplicationS3Location(s3Bucket, s3Key);
         }

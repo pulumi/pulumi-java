@@ -60,7 +60,6 @@ public final class AssetModelTumblingWindow {
             this.offset = offset;
             return this;
         }
-
         public AssetModelTumblingWindow build() {
             return new AssetModelTumblingWindow(interval, offset);
         }

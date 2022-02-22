@@ -27,7 +27,7 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
      * 
      */
     @InputImport(name="amiDistributionConfiguration")
-    private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
+        private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
 
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> getAmiDistributionConfiguration() {
         return this.amiDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.amiDistributionConfiguration);
@@ -38,7 +38,7 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
      * 
      */
     @InputImport(name="containerDistributionConfiguration")
-    private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
+        private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
 
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> getContainerDistributionConfiguration() {
         return this.containerDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerDistributionConfiguration);
@@ -49,7 +49,7 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
      * 
      */
     @InputImport(name="launchTemplateConfigurations")
-    private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
+        private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
 
     public List<DistributionConfigurationLaunchTemplateConfiguration> getLaunchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
@@ -60,7 +60,7 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
      * 
      */
     @InputImport(name="licenseConfigurationArns")
-    private final @Nullable List<String> licenseConfigurationArns;
+        private final @Nullable List<String> licenseConfigurationArns;
 
     public List<String> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
@@ -71,7 +71,7 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
@@ -150,7 +150,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }

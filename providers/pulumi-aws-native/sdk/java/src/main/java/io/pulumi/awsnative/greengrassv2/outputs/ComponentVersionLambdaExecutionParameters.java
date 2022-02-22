@@ -184,7 +184,6 @@ public final class ComponentVersionLambdaExecutionParameters {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public ComponentVersionLambdaExecutionParameters build() {
             return new ComponentVersionLambdaExecutionParameters(environmentVariables, eventSources, execArgs, inputPayloadEncodingType, linuxProcessParams, maxIdleTimeInSeconds, maxInstancesCount, maxQueueSize, pinned, statusTimeoutInSeconds, timeoutInSeconds);
         }

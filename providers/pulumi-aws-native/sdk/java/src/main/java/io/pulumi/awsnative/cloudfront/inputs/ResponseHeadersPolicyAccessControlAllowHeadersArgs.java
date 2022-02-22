@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyAccessControlAllowHeadersArgs extends io
     public static final ResponseHeadersPolicyAccessControlAllowHeadersArgs Empty = new ResponseHeadersPolicyAccessControlAllowHeadersArgs();
 
     @InputImport(name="items", required=true)
-    private final Input<List<String>> items;
+        private final Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items;
@@ -58,7 +58,6 @@ public final class ResponseHeadersPolicyAccessControlAllowHeadersArgs extends io
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
-
         public ResponseHeadersPolicyAccessControlAllowHeadersArgs build() {
             return new ResponseHeadersPolicyAccessControlAllowHeadersArgs(items);
         }

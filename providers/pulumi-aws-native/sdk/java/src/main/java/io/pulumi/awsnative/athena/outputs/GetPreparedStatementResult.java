@@ -76,7 +76,6 @@ public final class GetPreparedStatementResult {
             this.queryStatement = queryStatement;
             return this;
         }
-
         public GetPreparedStatementResult build() {
             return new GetPreparedStatementResult(description, queryStatement);
         }

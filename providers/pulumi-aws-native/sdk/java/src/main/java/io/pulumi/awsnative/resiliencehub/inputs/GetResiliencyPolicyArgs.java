@@ -17,7 +17,7 @@ public final class GetResiliencyPolicyArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="policyArn", required=true)
-    private final String policyArn;
+        private final String policyArn;
 
     public String getPolicyArn() {
         return this.policyArn;
@@ -55,7 +55,6 @@ public final class GetResiliencyPolicyArgs extends io.pulumi.resources.InvokeArg
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
-
         public GetResiliencyPolicyArgs build() {
             return new GetResiliencyPolicyArgs(policyArn);
         }

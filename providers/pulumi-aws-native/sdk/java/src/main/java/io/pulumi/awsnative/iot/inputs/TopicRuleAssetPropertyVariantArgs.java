@@ -15,28 +15,28 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
     public static final TopicRuleAssetPropertyVariantArgs Empty = new TopicRuleAssetPropertyVariantArgs();
 
     @InputImport(name="booleanValue")
-    private final @Nullable Input<String> booleanValue;
+        private final @Nullable Input<String> booleanValue;
 
     public Input<String> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Input<String> doubleValue;
+        private final @Nullable Input<String> doubleValue;
 
     public Input<String> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
     @InputImport(name="integerValue")
-    private final @Nullable Input<String> integerValue;
+        private final @Nullable Input<String> integerValue;
 
     public Input<String> getIntegerValue() {
         return this.integerValue == null ? Input.empty() : this.integerValue;
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+        private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -125,7 +125,6 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
-
         public TopicRuleAssetPropertyVariantArgs build() {
             return new TopicRuleAssetPropertyVariantArgs(booleanValue, doubleValue, integerValue, stringValue);
         }

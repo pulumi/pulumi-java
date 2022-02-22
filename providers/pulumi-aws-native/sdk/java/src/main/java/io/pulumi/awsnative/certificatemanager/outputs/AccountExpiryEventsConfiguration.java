@@ -46,7 +46,6 @@ public final class AccountExpiryEventsConfiguration {
             this.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }
-
         public AccountExpiryEventsConfiguration build() {
             return new AccountExpiryEventsConfiguration(daysBeforeExpiry);
         }

@@ -91,7 +91,6 @@ public final class DiskAddOn {
             this.status = status;
             return this;
         }
-
         public DiskAddOn build() {
             return new DiskAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }

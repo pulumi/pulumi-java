@@ -58,7 +58,6 @@ public final class CertificateAuthorityOtherName {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateAuthorityOtherName build() {
             return new CertificateAuthorityOtherName(typeId, value);
         }

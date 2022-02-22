@@ -89,7 +89,6 @@ public final class AssetModelPropertyType {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public AssetModelPropertyType build() {
             return new AssetModelPropertyType(attribute, metric, transform, typeName);
         }

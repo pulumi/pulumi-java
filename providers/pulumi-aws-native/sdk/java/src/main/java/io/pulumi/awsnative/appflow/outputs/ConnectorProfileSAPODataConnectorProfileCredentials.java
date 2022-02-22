@@ -61,7 +61,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
             this.oAuthCredentials = oAuthCredentials;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileCredentials build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentials(basicAuthCredentials, oAuthCredentials);
         }

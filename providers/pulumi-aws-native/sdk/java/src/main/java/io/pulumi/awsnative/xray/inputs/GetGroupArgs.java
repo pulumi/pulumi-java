@@ -17,7 +17,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupARN", required=true)
-    private final String groupARN;
+        private final String groupARN;
 
     public String getGroupARN() {
         return this.groupARN;
@@ -55,7 +55,6 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.groupARN = Objects.requireNonNull(groupARN);
             return this;
         }
-
         public GetGroupArgs build() {
             return new GetGroupArgs(groupARN);
         }

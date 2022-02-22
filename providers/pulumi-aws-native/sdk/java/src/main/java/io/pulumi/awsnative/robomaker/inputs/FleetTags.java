@@ -34,7 +34,6 @@ public final class FleetTags extends io.pulumi.resources.InvokeArgs {
         public Builder(FleetTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public FleetTags build() {
             return new FleetTags();
         }

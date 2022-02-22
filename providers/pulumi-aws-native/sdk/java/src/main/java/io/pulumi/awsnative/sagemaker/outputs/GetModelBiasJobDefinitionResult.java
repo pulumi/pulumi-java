@@ -76,7 +76,6 @@ public final class GetModelBiasJobDefinitionResult {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }
-
         public GetModelBiasJobDefinitionResult build() {
             return new GetModelBiasJobDefinitionResult(creationTime, jobDefinitionArn);
         }

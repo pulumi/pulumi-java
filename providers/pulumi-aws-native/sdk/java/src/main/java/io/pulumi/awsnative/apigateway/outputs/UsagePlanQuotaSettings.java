@@ -98,7 +98,6 @@ public final class UsagePlanQuotaSettings {
             this.period = period;
             return this;
         }
-
         public UsagePlanQuotaSettings build() {
             return new UsagePlanQuotaSettings(limit, offset, period);
         }

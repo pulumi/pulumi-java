@@ -19,7 +19,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     public static final BucketDataExportArgs Empty = new BucketDataExportArgs();
 
     @InputImport(name="destination", required=true)
-    private final Input<BucketDestinationArgs> destination;
+        private final Input<BucketDestinationArgs> destination;
 
     public Input<BucketDestinationArgs> getDestination() {
         return this.destination;
@@ -30,7 +30,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outputSchemaVersion", required=true)
-    private final Input<String> outputSchemaVersion;
+        private final Input<String> outputSchemaVersion;
 
     public Input<String> getOutputSchemaVersion() {
         return this.outputSchemaVersion;
@@ -89,7 +89,6 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
             this.outputSchemaVersion = Input.of(Objects.requireNonNull(outputSchemaVersion));
             return this;
         }
-
         public BucketDataExportArgs build() {
             return new BucketDataExportArgs(destination, outputSchemaVersion);
         }

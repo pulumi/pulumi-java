@@ -128,7 +128,6 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
         public DataSourceServiceNowKnowledgeArticleConfiguration build() {
             return new DataSourceServiceNowKnowledgeArticleConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
         }

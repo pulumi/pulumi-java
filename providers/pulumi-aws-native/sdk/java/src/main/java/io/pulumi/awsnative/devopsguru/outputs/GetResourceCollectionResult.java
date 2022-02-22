@@ -69,7 +69,6 @@ public final class GetResourceCollectionResult {
             this.resourceCollectionType = resourceCollectionType;
             return this;
         }
-
         public GetResourceCollectionResult build() {
             return new GetResourceCollectionResult(resourceCollectionFilter, resourceCollectionType);
         }

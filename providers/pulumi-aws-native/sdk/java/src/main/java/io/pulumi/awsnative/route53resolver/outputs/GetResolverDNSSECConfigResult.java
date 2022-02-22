@@ -98,7 +98,6 @@ public final class GetResolverDNSSECConfigResult {
             this.validationStatus = validationStatus;
             return this;
         }
-
         public GetResolverDNSSECConfigResult build() {
             return new GetResolverDNSSECConfigResult(id, ownerId, validationStatus);
         }

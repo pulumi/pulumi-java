@@ -105,7 +105,6 @@ public final class BotFulfillmentUpdatesSpecification {
             this.updateResponse = updateResponse;
             return this;
         }
-
         public BotFulfillmentUpdatesSpecification build() {
             return new BotFulfillmentUpdatesSpecification(active, startResponse, timeoutInSeconds, updateResponse);
         }

@@ -60,7 +60,6 @@ public final class SpotFleetVCpuCountRangeRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetVCpuCountRangeRequest build() {
             return new SpotFleetVCpuCountRangeRequest(max, min);
         }

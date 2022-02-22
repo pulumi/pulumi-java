@@ -185,7 +185,6 @@ public final class GetGlobalTableResult {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-
         public GetGlobalTableResult build() {
             return new GetGlobalTableResult(arn, attributeDefinitions, billingMode, globalSecondaryIndexes, replicas, sSESpecification, streamArn, streamSpecification, tableId, timeToLiveSpecification, writeProvisionedThroughputSettings);
         }

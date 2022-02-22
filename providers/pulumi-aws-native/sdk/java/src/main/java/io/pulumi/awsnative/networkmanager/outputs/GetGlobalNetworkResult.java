@@ -120,7 +120,6 @@ public final class GetGlobalNetworkResult {
             this.tags = tags;
             return this;
         }
-
         public GetGlobalNetworkResult build() {
             return new GetGlobalNetworkResult(arn, description, id, tags);
         }

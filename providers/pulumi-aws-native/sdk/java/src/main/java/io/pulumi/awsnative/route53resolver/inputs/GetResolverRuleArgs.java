@@ -17,7 +17,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolverRuleId", required=true)
-    private final String resolverRuleId;
+        private final String resolverRuleId;
 
     public String getResolverRuleId() {
         return this.resolverRuleId;
@@ -55,7 +55,6 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }
-
         public GetResolverRuleArgs build() {
             return new GetResolverRuleArgs(resolverRuleId);
         }

@@ -60,7 +60,6 @@ public final class GetDomainNameApiAssociationResult {
             this.apiId = apiId;
             return this;
         }
-
         public GetDomainNameApiAssociationResult build() {
             return new GetDomainNameApiAssociationResult(apiAssociationIdentifier, apiId);
         }

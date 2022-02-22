@@ -62,7 +62,6 @@ public final class BucketReplicationRuleAndOperator {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public BucketReplicationRuleAndOperator build() {
             return new BucketReplicationRuleAndOperator(prefix, tagFilters);
         }

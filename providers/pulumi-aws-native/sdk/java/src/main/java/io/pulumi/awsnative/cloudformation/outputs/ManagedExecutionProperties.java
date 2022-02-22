@@ -46,7 +46,6 @@ public final class ManagedExecutionProperties {
             this.active = active;
             return this;
         }
-
         public ManagedExecutionProperties build() {
             return new ManagedExecutionProperties(active);
         }

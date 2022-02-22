@@ -69,7 +69,6 @@ public final class OriginEndpointDashEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointDashEncryption build() {
             return new OriginEndpointDashEncryption(keyRotationIntervalSeconds, spekeKeyProvider);
         }

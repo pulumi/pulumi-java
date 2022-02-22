@@ -75,7 +75,6 @@ public final class BackupPlanResourceType {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }
-
         public BackupPlanResourceType build() {
             return new BackupPlanResourceType(advancedBackupSettings, backupPlanName, backupPlanRule);
         }

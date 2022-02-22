@@ -60,7 +60,6 @@ public final class SuiteDefinitionDeviceUnderTest {
             this.thingArn = thingArn;
             return this;
         }
-
         public SuiteDefinitionDeviceUnderTest build() {
             return new SuiteDefinitionDeviceUnderTest(certificateArn, thingArn);
         }

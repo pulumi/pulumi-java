@@ -74,7 +74,6 @@ public final class TopicRuleSqsAction {
             this.useBase64 = useBase64;
             return this;
         }
-
         public TopicRuleSqsAction build() {
             return new TopicRuleSqsAction(queueUrl, roleArn, useBase64);
         }

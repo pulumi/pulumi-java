@@ -60,7 +60,6 @@ public final class StorageLensBucketsAndRegions {
             this.regions = regions;
             return this;
         }
-
         public StorageLensBucketsAndRegions build() {
             return new StorageLensBucketsAndRegions(buckets, regions);
         }

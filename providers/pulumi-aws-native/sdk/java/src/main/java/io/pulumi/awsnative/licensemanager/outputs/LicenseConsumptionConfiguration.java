@@ -75,7 +75,6 @@ public final class LicenseConsumptionConfiguration {
             this.renewType = renewType;
             return this;
         }
-
         public LicenseConsumptionConfiguration build() {
             return new LicenseConsumptionConfiguration(borrowConfiguration, provisionalConfiguration, renewType);
         }

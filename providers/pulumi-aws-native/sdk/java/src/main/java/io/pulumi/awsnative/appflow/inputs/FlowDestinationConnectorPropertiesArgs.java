@@ -26,56 +26,56 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     public static final FlowDestinationConnectorPropertiesArgs Empty = new FlowDestinationConnectorPropertiesArgs();
 
     @InputImport(name="eventBridge")
-    private final @Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
+        private final @Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge;
 
     public Input<FlowEventBridgeDestinationPropertiesArgs> getEventBridge() {
         return this.eventBridge == null ? Input.empty() : this.eventBridge;
     }
 
     @InputImport(name="lookoutMetrics")
-    private final @Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
+        private final @Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics;
 
     public Input<FlowLookoutMetricsDestinationPropertiesArgs> getLookoutMetrics() {
         return this.lookoutMetrics == null ? Input.empty() : this.lookoutMetrics;
     }
 
     @InputImport(name="redshift")
-    private final @Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift;
+        private final @Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift;
 
     public Input<FlowRedshiftDestinationPropertiesArgs> getRedshift() {
         return this.redshift == null ? Input.empty() : this.redshift;
     }
 
     @InputImport(name="s3")
-    private final @Nullable Input<FlowS3DestinationPropertiesArgs> s3;
+        private final @Nullable Input<FlowS3DestinationPropertiesArgs> s3;
 
     public Input<FlowS3DestinationPropertiesArgs> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
     @InputImport(name="salesforce")
-    private final @Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce;
+        private final @Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce;
 
     public Input<FlowSalesforceDestinationPropertiesArgs> getSalesforce() {
         return this.salesforce == null ? Input.empty() : this.salesforce;
     }
 
     @InputImport(name="snowflake")
-    private final @Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake;
+        private final @Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake;
 
     public Input<FlowSnowflakeDestinationPropertiesArgs> getSnowflake() {
         return this.snowflake == null ? Input.empty() : this.snowflake;
     }
 
     @InputImport(name="upsolver")
-    private final @Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver;
+        private final @Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver;
 
     public Input<FlowUpsolverDestinationPropertiesArgs> getUpsolver() {
         return this.upsolver == null ? Input.empty() : this.upsolver;
     }
 
     @InputImport(name="zendesk")
-    private final @Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk;
+        private final @Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk;
 
     public Input<FlowZendeskDestinationPropertiesArgs> getZendesk() {
         return this.zendesk == null ? Input.empty() : this.zendesk;
@@ -224,7 +224,6 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }
-
         public FlowDestinationConnectorPropertiesArgs build() {
             return new FlowDestinationConnectorPropertiesArgs(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
         }

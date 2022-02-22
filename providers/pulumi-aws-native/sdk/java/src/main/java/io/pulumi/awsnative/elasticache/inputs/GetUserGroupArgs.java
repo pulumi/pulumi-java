@@ -17,7 +17,7 @@ public final class GetUserGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userGroupId", required=true)
-    private final String userGroupId;
+        private final String userGroupId;
 
     public String getUserGroupId() {
         return this.userGroupId;
@@ -55,7 +55,6 @@ public final class GetUserGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.userGroupId = Objects.requireNonNull(userGroupId);
             return this;
         }
-
         public GetUserGroupArgs build() {
             return new GetUserGroupArgs(userGroupId);
         }

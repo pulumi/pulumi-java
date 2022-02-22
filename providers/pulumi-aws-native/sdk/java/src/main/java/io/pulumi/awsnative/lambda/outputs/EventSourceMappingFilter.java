@@ -54,7 +54,6 @@ public final class EventSourceMappingFilter {
             this.pattern = pattern;
             return this;
         }
-
         public EventSourceMappingFilter build() {
             return new EventSourceMappingFilter(pattern);
         }

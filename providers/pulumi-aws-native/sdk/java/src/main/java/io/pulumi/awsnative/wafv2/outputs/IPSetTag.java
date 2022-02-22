@@ -60,7 +60,6 @@ public final class IPSetTag {
             this.value = value;
             return this;
         }
-
         public IPSetTag build() {
             return new IPSetTag(key, value);
         }

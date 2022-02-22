@@ -44,7 +44,6 @@ public final class JobS3TableOutputOptions {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public JobS3TableOutputOptions build() {
             return new JobS3TableOutputOptions(location);
         }

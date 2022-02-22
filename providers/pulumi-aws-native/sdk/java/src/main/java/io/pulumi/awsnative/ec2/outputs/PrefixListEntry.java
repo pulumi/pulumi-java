@@ -60,7 +60,6 @@ public final class PrefixListEntry {
             this.description = description;
             return this;
         }
-
         public PrefixListEntry build() {
             return new PrefixListEntry(cidr, description);
         }

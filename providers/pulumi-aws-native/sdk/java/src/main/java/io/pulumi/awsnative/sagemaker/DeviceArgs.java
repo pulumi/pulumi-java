@@ -21,7 +21,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="device")
-    private final @Nullable Input<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
+        private final @Nullable Input<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
     public Input<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> getDevice() {
         return this.device == null ? Input.empty() : this.device;
@@ -32,7 +32,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-    private final Input<String> deviceFleetName;
+        private final Input<String> deviceFleetName;
 
     public Input<String> getDeviceFleetName() {
         return this.deviceFleetName;
@@ -43,7 +43,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeviceTagArgs>> tags;
+        private final @Nullable Input<List<DeviceTagArgs>> tags;
 
     public Input<List<DeviceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(device, deviceFleetName, tags);
         }

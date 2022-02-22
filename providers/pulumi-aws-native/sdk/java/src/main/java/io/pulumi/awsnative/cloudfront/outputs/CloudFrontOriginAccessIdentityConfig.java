@@ -44,7 +44,6 @@ public final class CloudFrontOriginAccessIdentityConfig {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public CloudFrontOriginAccessIdentityConfig build() {
             return new CloudFrontOriginAccessIdentityConfig(comment);
         }

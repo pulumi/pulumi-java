@@ -44,7 +44,6 @@ public final class ReplicationSetRegionConfiguration {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
         }
-
         public ReplicationSetRegionConfiguration build() {
             return new ReplicationSetRegionConfiguration(sseKmsKeyId);
         }

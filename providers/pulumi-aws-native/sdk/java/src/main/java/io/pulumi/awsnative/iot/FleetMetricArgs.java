@@ -23,14 +23,14 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregationField")
-    private final @Nullable Input<String> aggregationField;
+        private final @Nullable Input<String> aggregationField;
 
     public Input<String> getAggregationField() {
         return this.aggregationField == null ? Input.empty() : this.aggregationField;
     }
 
     @InputImport(name="aggregationType")
-    private final @Nullable Input<FleetMetricAggregationTypeArgs> aggregationType;
+        private final @Nullable Input<FleetMetricAggregationTypeArgs> aggregationType;
 
     public Input<FleetMetricAggregationTypeArgs> getAggregationType() {
         return this.aggregationType == null ? Input.empty() : this.aggregationType;
@@ -41,7 +41,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexName")
-    private final @Nullable Input<String> indexName;
+        private final @Nullable Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName == null ? Input.empty() : this.indexName;
@@ -63,7 +63,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -74,7 +74,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<Integer> period;
+        private final @Nullable Input<Integer> period;
 
     public Input<Integer> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -85,7 +85,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<String> queryString;
+        private final @Nullable Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -96,7 +96,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryVersion")
-    private final @Nullable Input<String> queryVersion;
+        private final @Nullable Input<String> queryVersion;
 
     public Input<String> getQueryVersion() {
         return this.queryVersion == null ? Input.empty() : this.queryVersion;
@@ -107,7 +107,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FleetMetricTagArgs>> tags;
+        private final @Nullable Input<List<FleetMetricTagArgs>> tags;
 
     public Input<List<FleetMetricTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+        private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -297,7 +297,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.unit = Input.ofNullable(unit);
             return this;
         }
-
         public FleetMetricArgs build() {
             return new FleetMetricArgs(aggregationField, aggregationType, description, indexName, metricName, period, queryString, queryVersion, tags, unit);
         }

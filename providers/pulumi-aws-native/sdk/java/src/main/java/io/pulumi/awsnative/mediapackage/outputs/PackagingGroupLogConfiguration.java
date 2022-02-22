@@ -54,7 +54,6 @@ public final class PackagingGroupLogConfiguration {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public PackagingGroupLogConfiguration build() {
             return new PackagingGroupLogConfiguration(logGroupName);
         }

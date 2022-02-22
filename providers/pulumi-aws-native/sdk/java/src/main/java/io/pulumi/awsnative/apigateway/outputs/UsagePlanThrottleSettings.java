@@ -77,7 +77,6 @@ public final class UsagePlanThrottleSettings {
             this.rateLimit = rateLimit;
             return this;
         }
-
         public UsagePlanThrottleSettings build() {
             return new UsagePlanThrottleSettings(burstLimit, rateLimit);
         }

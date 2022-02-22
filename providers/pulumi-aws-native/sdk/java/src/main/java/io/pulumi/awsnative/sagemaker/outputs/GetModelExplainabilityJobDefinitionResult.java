@@ -76,7 +76,6 @@ public final class GetModelExplainabilityJobDefinitionResult {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }
-
         public GetModelExplainabilityJobDefinitionResult build() {
             return new GetModelExplainabilityJobDefinitionResult(creationTime, jobDefinitionArn);
         }

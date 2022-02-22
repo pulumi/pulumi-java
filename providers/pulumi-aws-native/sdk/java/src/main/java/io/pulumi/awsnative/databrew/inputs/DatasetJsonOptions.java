@@ -19,7 +19,7 @@ public final class DatasetJsonOptions extends io.pulumi.resources.InvokeArgs {
     public static final DatasetJsonOptions Empty = new DatasetJsonOptions();
 
     @InputImport(name="multiLine")
-    private final @Nullable Boolean multiLine;
+        private final @Nullable Boolean multiLine;
 
     public Optional<Boolean> getMultiLine() {
         return this.multiLine == null ? Optional.empty() : Optional.ofNullable(this.multiLine);
@@ -57,7 +57,6 @@ public final class DatasetJsonOptions extends io.pulumi.resources.InvokeArgs {
             this.multiLine = multiLine;
             return this;
         }
-
         public DatasetJsonOptions build() {
             return new DatasetJsonOptions(multiLine);
         }

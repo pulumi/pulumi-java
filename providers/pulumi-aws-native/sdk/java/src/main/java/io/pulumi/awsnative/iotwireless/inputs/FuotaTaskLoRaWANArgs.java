@@ -19,7 +19,7 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rfRegion", required=true)
-    private final Input<String> rfRegion;
+        private final Input<String> rfRegion;
 
     public Input<String> getRfRegion() {
         return this.rfRegion;
@@ -30,7 +30,7 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -89,7 +89,6 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public FuotaTaskLoRaWANArgs build() {
             return new FuotaTaskLoRaWANArgs(rfRegion, startTime);
         }

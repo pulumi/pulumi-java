@@ -30,7 +30,6 @@ public final class DataSetPhysicalTableMap {
         public Builder(DataSetPhysicalTableMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetPhysicalTableMap build() {
             return new DataSetPhysicalTableMap();
         }

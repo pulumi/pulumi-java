@@ -192,7 +192,6 @@ public final class GetSimulationApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetSimulationApplicationResult build() {
             return new GetSimulationApplicationResult(arn, currentRevisionId, environment, renderingEngine, robotSoftwareSuite, simulationSoftwareSuite, sources, tags);
         }

@@ -58,7 +58,6 @@ public final class CapacityReservationFleetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CapacityReservationFleetTag build() {
             return new CapacityReservationFleetTag(key, value);
         }

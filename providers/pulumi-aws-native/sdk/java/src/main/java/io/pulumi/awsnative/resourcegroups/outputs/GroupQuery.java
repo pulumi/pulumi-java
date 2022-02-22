@@ -75,7 +75,6 @@ public final class GroupQuery {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public GroupQuery build() {
             return new GroupQuery(resourceTypeFilters, stackIdentifier, tagFilters);
         }

@@ -74,7 +74,6 @@ public final class FirewallDomainListTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FirewallDomainListTag build() {
             return new FirewallDomainListTag(key, value);
         }

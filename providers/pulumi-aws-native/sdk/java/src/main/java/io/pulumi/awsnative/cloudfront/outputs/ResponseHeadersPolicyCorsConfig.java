@@ -130,7 +130,6 @@ public final class ResponseHeadersPolicyCorsConfig {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }
-
         public ResponseHeadersPolicyCorsConfig build() {
             return new ResponseHeadersPolicyCorsConfig(accessControlAllowCredentials, accessControlAllowHeaders, accessControlAllowMethods, accessControlAllowOrigins, accessControlExposeHeaders, accessControlMaxAgeSec, originOverride);
         }

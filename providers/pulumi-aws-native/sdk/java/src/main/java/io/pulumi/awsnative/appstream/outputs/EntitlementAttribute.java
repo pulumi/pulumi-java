@@ -58,7 +58,6 @@ public final class EntitlementAttribute {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntitlementAttribute build() {
             return new EntitlementAttribute(name, value);
         }

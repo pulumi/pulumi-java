@@ -15,14 +15,14 @@ public final class NetworkInsightsAccessScopeAnalysisTag extends io.pulumi.resou
     public static final NetworkInsightsAccessScopeAnalysisTag Empty = new NetworkInsightsAccessScopeAnalysisTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -71,7 +71,6 @@ public final class NetworkInsightsAccessScopeAnalysisTag extends io.pulumi.resou
             this.value = value;
             return this;
         }
-
         public NetworkInsightsAccessScopeAnalysisTag build() {
             return new NetworkInsightsAccessScopeAnalysisTag(key, value);
         }

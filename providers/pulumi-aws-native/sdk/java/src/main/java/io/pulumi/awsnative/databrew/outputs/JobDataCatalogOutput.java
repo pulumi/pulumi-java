@@ -115,7 +115,6 @@ public final class JobDataCatalogOutput {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public JobDataCatalogOutput build() {
             return new JobDataCatalogOutput(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
         }

@@ -97,7 +97,6 @@ public final class DatasetDatetimeOptions {
             this.timezoneOffset = timezoneOffset;
             return this;
         }
-
         public DatasetDatetimeOptions build() {
             return new DatasetDatetimeOptions(format, localeCode, timezoneOffset);
         }

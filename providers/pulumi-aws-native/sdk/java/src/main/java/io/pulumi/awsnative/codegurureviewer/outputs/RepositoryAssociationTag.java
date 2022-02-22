@@ -74,7 +74,6 @@ public final class RepositoryAssociationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RepositoryAssociationTag build() {
             return new RepositoryAssociationTag(key, value);
         }

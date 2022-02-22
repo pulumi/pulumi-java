@@ -121,7 +121,6 @@ public final class GetAgentResult {
             this.tags = tags;
             return this;
         }
-
         public GetAgentResult build() {
             return new GetAgentResult(agentArn, agentName, endpointType, tags);
         }

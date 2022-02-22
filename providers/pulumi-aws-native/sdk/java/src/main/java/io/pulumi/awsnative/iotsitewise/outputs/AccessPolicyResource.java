@@ -61,7 +61,6 @@ public final class AccessPolicyResource {
             this.project = project;
             return this;
         }
-
         public AccessPolicyResource build() {
             return new AccessPolicyResource(portal, project);
         }

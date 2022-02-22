@@ -163,7 +163,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.targetAccountIds = targetAccountIds;
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(amiTags, description, kmsKeyId, launchPermissionConfiguration, name, targetAccountIds);
         }

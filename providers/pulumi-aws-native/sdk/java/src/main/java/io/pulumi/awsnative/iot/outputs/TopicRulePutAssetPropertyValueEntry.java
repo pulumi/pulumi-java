@@ -101,7 +101,6 @@ public final class TopicRulePutAssetPropertyValueEntry {
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }
-
         public TopicRulePutAssetPropertyValueEntry build() {
             return new TopicRulePutAssetPropertyValueEntry(assetId, entryId, propertyAlias, propertyId, propertyValues);
         }

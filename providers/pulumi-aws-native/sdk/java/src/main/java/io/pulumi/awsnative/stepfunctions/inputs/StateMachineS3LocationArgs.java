@@ -15,21 +15,21 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
     public static final StateMachineS3LocationArgs Empty = new StateMachineS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -103,7 +103,6 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public StateMachineS3LocationArgs build() {
             return new StateMachineS3LocationArgs(bucket, key, version);
         }

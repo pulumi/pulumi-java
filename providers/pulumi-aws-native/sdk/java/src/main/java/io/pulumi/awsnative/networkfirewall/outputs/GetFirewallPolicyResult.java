@@ -102,7 +102,6 @@ public final class GetFirewallPolicyResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(description, firewallPolicy, firewallPolicyArn, firewallPolicyId, tags);
         }

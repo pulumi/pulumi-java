@@ -22,21 +22,21 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
     public static final DetectorModelState Empty = new DetectorModelState();
 
     @InputImport(name="onEnter")
-    private final @Nullable DetectorModelOnEnter onEnter;
+        private final @Nullable DetectorModelOnEnter onEnter;
 
     public Optional<DetectorModelOnEnter> getOnEnter() {
         return this.onEnter == null ? Optional.empty() : Optional.ofNullable(this.onEnter);
     }
 
     @InputImport(name="onExit")
-    private final @Nullable DetectorModelOnExit onExit;
+        private final @Nullable DetectorModelOnExit onExit;
 
     public Optional<DetectorModelOnExit> getOnExit() {
         return this.onExit == null ? Optional.empty() : Optional.ofNullable(this.onExit);
     }
 
     @InputImport(name="onInput")
-    private final @Nullable DetectorModelOnInput onInput;
+        private final @Nullable DetectorModelOnInput onInput;
 
     public Optional<DetectorModelOnInput> getOnInput() {
         return this.onInput == null ? Optional.empty() : Optional.ofNullable(this.onInput);
@@ -47,7 +47,7 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stateName", required=true)
-    private final String stateName;
+        private final String stateName;
 
     public String getStateName() {
         return this.stateName;
@@ -116,7 +116,6 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }
-
         public DetectorModelState build() {
             return new DetectorModelState(onEnter, onExit, onInput, stateName);
         }

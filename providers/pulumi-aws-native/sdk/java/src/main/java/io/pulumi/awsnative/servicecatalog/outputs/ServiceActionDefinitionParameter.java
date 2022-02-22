@@ -58,7 +58,6 @@ public final class ServiceActionDefinitionParameter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ServiceActionDefinitionParameter build() {
             return new ServiceActionDefinitionParameter(key, value);
         }

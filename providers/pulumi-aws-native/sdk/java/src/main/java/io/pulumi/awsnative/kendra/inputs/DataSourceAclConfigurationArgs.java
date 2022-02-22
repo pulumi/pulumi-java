@@ -14,7 +14,7 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceAclConfigurationArgs Empty = new DataSourceAclConfigurationArgs();
 
     @InputImport(name="allowedGroupsColumnName", required=true)
-    private final Input<String> allowedGroupsColumnName;
+        private final Input<String> allowedGroupsColumnName;
 
     public Input<String> getAllowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
@@ -57,7 +57,6 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
             this.allowedGroupsColumnName = Input.of(Objects.requireNonNull(allowedGroupsColumnName));
             return this;
         }
-
         public DataSourceAclConfigurationArgs build() {
             return new DataSourceAclConfigurationArgs(allowedGroupsColumnName);
         }

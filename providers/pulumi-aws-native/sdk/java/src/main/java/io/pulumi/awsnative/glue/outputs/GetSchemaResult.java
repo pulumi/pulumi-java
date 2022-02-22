@@ -156,7 +156,6 @@ public final class GetSchemaResult {
             this.tags = tags;
             return this;
         }
-
         public GetSchemaResult build() {
             return new GetSchemaResult(arn, checkpointVersion, compatibility, description, initialSchemaVersionId, tags);
         }

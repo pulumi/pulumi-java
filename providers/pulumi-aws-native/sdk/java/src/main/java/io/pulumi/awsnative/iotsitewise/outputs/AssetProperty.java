@@ -98,7 +98,6 @@ public final class AssetProperty {
             this.notificationState = notificationState;
             return this;
         }
-
         public AssetProperty build() {
             return new AssetProperty(alias, logicalId, notificationState);
         }

@@ -19,7 +19,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
     public static final BotAliasAudioLogDestinationArgs Empty = new BotAliasAudioLogDestinationArgs();
 
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<BotAliasS3BucketLogDestinationArgs> s3Bucket;
+        private final @Nullable Input<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
     public Input<BotAliasS3BucketLogDestinationArgs> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -62,7 +62,6 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }
-
         public BotAliasAudioLogDestinationArgs build() {
             return new BotAliasAudioLogDestinationArgs(s3Bucket);
         }

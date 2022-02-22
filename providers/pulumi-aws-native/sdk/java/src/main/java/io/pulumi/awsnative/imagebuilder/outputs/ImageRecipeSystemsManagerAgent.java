@@ -54,7 +54,6 @@ public final class ImageRecipeSystemsManagerAgent {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }
-
         public ImageRecipeSystemsManagerAgent build() {
             return new ImageRecipeSystemsManagerAgent(uninstallAfterBuild);
         }

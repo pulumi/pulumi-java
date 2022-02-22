@@ -78,7 +78,6 @@ public final class MitigationActionAddThingsToThingGroupParams {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }
-
         public MitigationActionAddThingsToThingGroupParams build() {
             return new MitigationActionAddThingsToThingGroupParams(overrideDynamicGroups, thingGroupNames);
         }

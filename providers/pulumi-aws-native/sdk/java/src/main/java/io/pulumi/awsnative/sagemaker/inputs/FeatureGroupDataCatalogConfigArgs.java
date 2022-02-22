@@ -14,21 +14,21 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     public static final FeatureGroupDataCatalogConfigArgs Empty = new FeatureGroupDataCatalogConfigArgs();
 
     @InputImport(name="catalog", required=true)
-    private final Input<String> catalog;
+        private final Input<String> catalog;
 
     public Input<String> getCatalog() {
         return this.catalog;
     }
 
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
     }
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+        private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -102,7 +102,6 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public FeatureGroupDataCatalogConfigArgs build() {
             return new FeatureGroupDataCatalogConfigArgs(catalog, database, tableName);
         }

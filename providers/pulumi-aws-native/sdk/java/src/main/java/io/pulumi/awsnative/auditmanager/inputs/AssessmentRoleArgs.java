@@ -20,14 +20,14 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssessmentRoleArgs Empty = new AssessmentRoleArgs();
 
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
     @InputImport(name="roleType")
-    private final @Nullable Input<AssessmentRoleType> roleType;
+        private final @Nullable Input<AssessmentRoleType> roleType;
 
     public Input<AssessmentRoleType> getRoleType() {
         return this.roleType == null ? Input.empty() : this.roleType;
@@ -86,7 +86,6 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.roleType = Input.ofNullable(roleType);
             return this;
         }
-
         public AssessmentRoleArgs build() {
             return new AssessmentRoleArgs(roleArn, roleType);
         }

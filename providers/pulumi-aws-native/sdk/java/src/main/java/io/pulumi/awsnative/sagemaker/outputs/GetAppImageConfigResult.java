@@ -77,7 +77,6 @@ public final class GetAppImageConfigResult {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
-
         public GetAppImageConfigResult build() {
             return new GetAppImageConfigResult(appImageConfigArn, kernelGatewayImageConfig);
         }

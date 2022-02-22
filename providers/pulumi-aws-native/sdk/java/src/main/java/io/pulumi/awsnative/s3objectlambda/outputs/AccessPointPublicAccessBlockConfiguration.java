@@ -128,7 +128,6 @@ public final class AccessPointPublicAccessBlockConfiguration {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public AccessPointPublicAccessBlockConfiguration build() {
             return new AccessPointPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

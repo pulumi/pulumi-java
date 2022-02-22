@@ -88,7 +88,6 @@ public final class WorkGroupResultConfigurationUpdates {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }
-
         public WorkGroupResultConfigurationUpdates build() {
             return new WorkGroupResultConfigurationUpdates(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);
         }

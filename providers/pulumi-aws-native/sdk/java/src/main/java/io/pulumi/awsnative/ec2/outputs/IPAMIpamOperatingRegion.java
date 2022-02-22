@@ -52,7 +52,6 @@ public final class IPAMIpamOperatingRegion {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public IPAMIpamOperatingRegion build() {
             return new IPAMIpamOperatingRegion(regionName);
         }

@@ -15,14 +15,14 @@ public final class SpotFleetMemoryMiBRequest extends io.pulumi.resources.InvokeA
     public static final SpotFleetMemoryMiBRequest Empty = new SpotFleetMemoryMiBRequest();
 
     @InputImport(name="max")
-    private final @Nullable Integer max;
+        private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @InputImport(name="min")
-    private final @Nullable Integer min;
+        private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
@@ -71,7 +71,6 @@ public final class SpotFleetMemoryMiBRequest extends io.pulumi.resources.InvokeA
             this.min = min;
             return this;
         }
-
         public SpotFleetMemoryMiBRequest build() {
             return new SpotFleetMemoryMiBRequest(max, min);
         }

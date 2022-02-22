@@ -113,7 +113,6 @@ public final class FilterPackageFilter {
             this.version = version;
             return this;
         }
-
         public FilterPackageFilter build() {
             return new FilterPackageFilter(architecture, epoch, name, release, sourceLayerHash, version);
         }

@@ -75,7 +75,6 @@ public final class ConnectorVpc {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ConnectorVpc build() {
             return new ConnectorVpc(securityGroups, subnets);
         }

@@ -61,7 +61,6 @@ public final class DatasetContentDeliveryRuleDestination {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
-
         public DatasetContentDeliveryRuleDestination build() {
             return new DatasetContentDeliveryRuleDestination(iotEventsDestinationConfiguration, s3DestinationConfiguration);
         }

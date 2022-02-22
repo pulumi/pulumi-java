@@ -16,21 +16,21 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
     public static final TaskDefinitionPortMappingArgs Empty = new TaskDefinitionPortMappingArgs();
 
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+        private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
     }
 
     @InputImport(name="hostPort")
-    private final @Nullable Input<Integer> hostPort;
+        private final @Nullable Input<Integer> hostPort;
 
     public Input<Integer> getHostPort() {
         return this.hostPort == null ? Input.empty() : this.hostPort;
     }
 
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -104,7 +104,6 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public TaskDefinitionPortMappingArgs build() {
             return new TaskDefinitionPortMappingArgs(containerPort, hostPort, protocol);
         }

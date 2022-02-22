@@ -20,7 +20,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gid", required=true)
-    private final Input<String> gid;
+        private final Input<String> gid;
 
     public Input<String> getGid() {
         return this.gid;
@@ -31,7 +31,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secondaryGids")
-    private final @Nullable Input<List<String>> secondaryGids;
+        private final @Nullable Input<List<String>> secondaryGids;
 
     public Input<List<String>> getSecondaryGids() {
         return this.secondaryGids == null ? Input.empty() : this.secondaryGids;
@@ -42,7 +42,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="uid", required=true)
-    private final Input<String> uid;
+        private final Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid;
@@ -116,7 +116,6 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
             this.uid = Input.of(Objects.requireNonNull(uid));
             return this;
         }
-
         public AccessPointPosixUserArgs build() {
             return new AccessPointPosixUserArgs(gid, secondaryGids, uid);
         }

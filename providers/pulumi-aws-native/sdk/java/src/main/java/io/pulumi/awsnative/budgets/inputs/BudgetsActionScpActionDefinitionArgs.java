@@ -15,14 +15,14 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
     public static final BudgetsActionScpActionDefinitionArgs Empty = new BudgetsActionScpActionDefinitionArgs();
 
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+        private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
     }
 
     @InputImport(name="targetIds", required=true)
-    private final Input<List<String>> targetIds;
+        private final Input<List<String>> targetIds;
 
     public Input<List<String>> getTargetIds() {
         return this.targetIds;
@@ -81,7 +81,6 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
             this.targetIds = Input.of(Objects.requireNonNull(targetIds));
             return this;
         }
-
         public BudgetsActionScpActionDefinitionArgs build() {
             return new BudgetsActionScpActionDefinitionArgs(policyId, targetIds);
         }

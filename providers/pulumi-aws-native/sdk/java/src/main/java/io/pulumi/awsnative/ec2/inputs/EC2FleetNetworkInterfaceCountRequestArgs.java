@@ -15,14 +15,14 @@ public final class EC2FleetNetworkInterfaceCountRequestArgs extends io.pulumi.re
     public static final EC2FleetNetworkInterfaceCountRequestArgs Empty = new EC2FleetNetworkInterfaceCountRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Integer> max;
+        private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Integer> min;
+        private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class EC2FleetNetworkInterfaceCountRequestArgs extends io.pulumi.re
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public EC2FleetNetworkInterfaceCountRequestArgs build() {
             return new EC2FleetNetworkInterfaceCountRequestArgs(max, min);
         }

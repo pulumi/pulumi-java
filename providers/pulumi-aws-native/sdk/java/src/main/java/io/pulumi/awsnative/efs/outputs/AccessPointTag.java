@@ -60,7 +60,6 @@ public final class AccessPointTag {
             this.value = value;
             return this;
         }
-
         public AccessPointTag build() {
             return new AccessPointTag(key, value);
         }

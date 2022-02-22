@@ -45,7 +45,6 @@ public final class CidrResult {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public CidrResult build() {
             return new CidrResult(subnets);
         }

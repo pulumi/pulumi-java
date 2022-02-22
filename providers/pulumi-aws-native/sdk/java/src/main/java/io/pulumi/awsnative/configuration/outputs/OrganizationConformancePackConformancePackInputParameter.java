@@ -58,7 +58,6 @@ public final class OrganizationConformancePackConformancePackInputParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public OrganizationConformancePackConformancePackInputParameter build() {
             return new OrganizationConformancePackConformancePackInputParameter(parameterName, parameterValue);
         }

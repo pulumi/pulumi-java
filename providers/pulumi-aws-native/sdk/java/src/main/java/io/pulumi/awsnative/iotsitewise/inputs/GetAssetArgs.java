@@ -17,7 +17,7 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="assetId", required=true)
-    private final String assetId;
+        private final String assetId;
 
     public String getAssetId() {
         return this.assetId;
@@ -55,7 +55,6 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
-
         public GetAssetArgs build() {
             return new GetAssetArgs(assetId);
         }

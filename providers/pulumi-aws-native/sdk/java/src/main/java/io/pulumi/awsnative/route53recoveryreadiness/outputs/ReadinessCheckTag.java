@@ -59,7 +59,6 @@ public final class ReadinessCheckTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ReadinessCheckTag build() {
             return new ReadinessCheckTag(key, value);
         }

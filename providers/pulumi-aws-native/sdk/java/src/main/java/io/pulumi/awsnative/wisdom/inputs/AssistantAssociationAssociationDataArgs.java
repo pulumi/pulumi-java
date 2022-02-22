@@ -14,7 +14,7 @@ public final class AssistantAssociationAssociationDataArgs extends io.pulumi.res
     public static final AssistantAssociationAssociationDataArgs Empty = new AssistantAssociationAssociationDataArgs();
 
     @InputImport(name="knowledgeBaseId", required=true)
-    private final Input<String> knowledgeBaseId;
+        private final Input<String> knowledgeBaseId;
 
     public Input<String> getKnowledgeBaseId() {
         return this.knowledgeBaseId;
@@ -57,7 +57,6 @@ public final class AssistantAssociationAssociationDataArgs extends io.pulumi.res
             this.knowledgeBaseId = Input.of(Objects.requireNonNull(knowledgeBaseId));
             return this;
         }
-
         public AssistantAssociationAssociationDataArgs build() {
             return new AssistantAssociationAssociationDataArgs(knowledgeBaseId);
         }

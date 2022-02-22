@@ -13,7 +13,7 @@ public final class FlowSAPODataSourceProperties extends io.pulumi.resources.Invo
     public static final FlowSAPODataSourceProperties Empty = new FlowSAPODataSourceProperties();
 
     @InputImport(name="objectPath", required=true)
-    private final String objectPath;
+        private final String objectPath;
 
     public String getObjectPath() {
         return this.objectPath;
@@ -51,7 +51,6 @@ public final class FlowSAPODataSourceProperties extends io.pulumi.resources.Invo
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
         }
-
         public FlowSAPODataSourceProperties build() {
             return new FlowSAPODataSourceProperties(objectPath);
         }

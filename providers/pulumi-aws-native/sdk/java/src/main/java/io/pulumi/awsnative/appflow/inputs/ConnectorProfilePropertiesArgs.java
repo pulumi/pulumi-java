@@ -30,84 +30,84 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
     public static final ConnectorProfilePropertiesArgs Empty = new ConnectorProfilePropertiesArgs();
 
     @InputImport(name="datadog")
-    private final @Nullable Input<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
+        private final @Nullable Input<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
 
     public Input<ConnectorProfileDatadogConnectorProfilePropertiesArgs> getDatadog() {
         return this.datadog == null ? Input.empty() : this.datadog;
     }
 
     @InputImport(name="dynatrace")
-    private final @Nullable Input<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
+        private final @Nullable Input<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
 
     public Input<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> getDynatrace() {
         return this.dynatrace == null ? Input.empty() : this.dynatrace;
     }
 
     @InputImport(name="inforNexus")
-    private final @Nullable Input<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
+        private final @Nullable Input<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
 
     public Input<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> getInforNexus() {
         return this.inforNexus == null ? Input.empty() : this.inforNexus;
     }
 
     @InputImport(name="marketo")
-    private final @Nullable Input<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
+        private final @Nullable Input<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
 
     public Input<ConnectorProfileMarketoConnectorProfilePropertiesArgs> getMarketo() {
         return this.marketo == null ? Input.empty() : this.marketo;
     }
 
     @InputImport(name="redshift")
-    private final @Nullable Input<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
+        private final @Nullable Input<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
 
     public Input<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> getRedshift() {
         return this.redshift == null ? Input.empty() : this.redshift;
     }
 
     @InputImport(name="sAPOData")
-    private final @Nullable Input<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
+        private final @Nullable Input<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
 
     public Input<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> getSAPOData() {
         return this.sAPOData == null ? Input.empty() : this.sAPOData;
     }
 
     @InputImport(name="salesforce")
-    private final @Nullable Input<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
+        private final @Nullable Input<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
 
     public Input<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> getSalesforce() {
         return this.salesforce == null ? Input.empty() : this.salesforce;
     }
 
     @InputImport(name="serviceNow")
-    private final @Nullable Input<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
+        private final @Nullable Input<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
 
     public Input<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> getServiceNow() {
         return this.serviceNow == null ? Input.empty() : this.serviceNow;
     }
 
     @InputImport(name="slack")
-    private final @Nullable Input<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
+        private final @Nullable Input<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
 
     public Input<ConnectorProfileSlackConnectorProfilePropertiesArgs> getSlack() {
         return this.slack == null ? Input.empty() : this.slack;
     }
 
     @InputImport(name="snowflake")
-    private final @Nullable Input<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
+        private final @Nullable Input<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
 
     public Input<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> getSnowflake() {
         return this.snowflake == null ? Input.empty() : this.snowflake;
     }
 
     @InputImport(name="veeva")
-    private final @Nullable Input<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
+        private final @Nullable Input<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
 
     public Input<ConnectorProfileVeevaConnectorProfilePropertiesArgs> getVeeva() {
         return this.veeva == null ? Input.empty() : this.veeva;
     }
 
     @InputImport(name="zendesk")
-    private final @Nullable Input<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
+        private final @Nullable Input<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
 
     public Input<ConnectorProfileZendeskConnectorProfilePropertiesArgs> getZendesk() {
         return this.zendesk == null ? Input.empty() : this.zendesk;
@@ -316,7 +316,6 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }
-
         public ConnectorProfilePropertiesArgs build() {
             return new ConnectorProfilePropertiesArgs(datadog, dynatrace, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, slack, snowflake, veeva, zendesk);
         }

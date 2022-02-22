@@ -17,7 +17,7 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="actionName", required=true)
-    private final String actionName;
+        private final String actionName;
 
     public String getActionName() {
         return this.actionName;
@@ -55,7 +55,6 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public GetMitigationActionArgs build() {
             return new GetMitigationActionArgs(actionName);
         }

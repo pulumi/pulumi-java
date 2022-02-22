@@ -44,7 +44,6 @@ public final class FlowDatadogSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowDatadogSourceProperties build() {
             return new FlowDatadogSourceProperties(object);
         }

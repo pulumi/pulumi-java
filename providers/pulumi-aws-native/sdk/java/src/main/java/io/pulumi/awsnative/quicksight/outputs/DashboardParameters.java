@@ -121,7 +121,6 @@ public final class DashboardParameters {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public DashboardParameters build() {
             return new DashboardParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

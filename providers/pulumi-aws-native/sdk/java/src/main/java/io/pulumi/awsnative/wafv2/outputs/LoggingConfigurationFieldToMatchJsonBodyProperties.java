@@ -99,7 +99,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyProperties(invalidFallbackBehavior, matchPattern, matchScope);
         }

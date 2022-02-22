@@ -58,7 +58,6 @@ public final class StorageLensTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StorageLensTag build() {
             return new StorageLensTag(key, value);
         }

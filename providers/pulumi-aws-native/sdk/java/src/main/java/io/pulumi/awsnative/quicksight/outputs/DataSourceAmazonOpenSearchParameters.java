@@ -52,7 +52,6 @@ public final class DataSourceAmazonOpenSearchParameters {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public DataSourceAmazonOpenSearchParameters build() {
             return new DataSourceAmazonOpenSearchParameters(domain);
         }

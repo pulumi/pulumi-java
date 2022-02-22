@@ -312,7 +312,6 @@ public final class GetInfrastructureConfigurationResult {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
-
         public GetInfrastructureConfigurationResult build() {
             return new GetInfrastructureConfigurationResult(arn, description, instanceMetadataOptions, instanceProfileName, instanceTypes, keyPair, logging, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, terminateInstanceOnFailure);
         }

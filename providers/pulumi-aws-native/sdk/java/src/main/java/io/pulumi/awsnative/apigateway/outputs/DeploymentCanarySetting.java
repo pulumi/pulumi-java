@@ -99,7 +99,6 @@ public final class DeploymentCanarySetting {
             this.useStageCache = useStageCache;
             return this;
         }
-
         public DeploymentCanarySetting build() {
             return new DeploymentCanarySetting(percentTraffic, stageVariableOverrides, useStageCache);
         }

@@ -74,7 +74,6 @@ public final class DeliveryStreamCloudWatchLoggingOptions {
             this.logStreamName = logStreamName;
             return this;
         }
-
         public DeliveryStreamCloudWatchLoggingOptions build() {
             return new DeliveryStreamCloudWatchLoggingOptions(enabled, logGroupName, logStreamName);
         }

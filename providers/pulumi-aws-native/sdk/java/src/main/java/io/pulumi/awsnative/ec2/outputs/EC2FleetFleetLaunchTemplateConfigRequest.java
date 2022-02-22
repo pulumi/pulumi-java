@@ -62,7 +62,6 @@ public final class EC2FleetFleetLaunchTemplateConfigRequest {
             this.overrides = overrides;
             return this;
         }
-
         public EC2FleetFleetLaunchTemplateConfigRequest build() {
             return new EC2FleetFleetLaunchTemplateConfigRequest(launchTemplateSpecification, overrides);
         }

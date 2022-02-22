@@ -21,7 +21,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientAssociationMetadata")
-    private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
+        private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
     public List<EventIntegrationMetadata> getClientAssociationMetadata() {
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
@@ -32,7 +32,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -43,7 +43,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="eventBridgeRuleName")
-    private final @Nullable String eventBridgeRuleName;
+        private final @Nullable String eventBridgeRuleName;
 
     public Optional<String> getEventBridgeRuleName() {
         return this.eventBridgeRuleName == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeRuleName);
@@ -54,7 +54,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="eventIntegrationAssociationArn")
-    private final @Nullable String eventIntegrationAssociationArn;
+        private final @Nullable String eventIntegrationAssociationArn;
 
     public Optional<String> getEventIntegrationAssociationArn() {
         return this.eventIntegrationAssociationArn == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationArn);
@@ -65,7 +65,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="eventIntegrationAssociationId")
-    private final @Nullable String eventIntegrationAssociationId;
+        private final @Nullable String eventIntegrationAssociationId;
 
     public Optional<String> getEventIntegrationAssociationId() {
         return this.eventIntegrationAssociationId == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationId);
@@ -144,7 +144,6 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
         }
-
         public EventIntegrationAssociation build() {
             return new EventIntegrationAssociation(clientAssociationMetadata, clientId, eventBridgeRuleName, eventIntegrationAssociationArn, eventIntegrationAssociationId);
         }

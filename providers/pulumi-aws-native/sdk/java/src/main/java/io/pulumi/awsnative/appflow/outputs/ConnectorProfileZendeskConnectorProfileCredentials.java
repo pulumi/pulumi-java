@@ -119,7 +119,6 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public ConnectorProfileZendeskConnectorProfileCredentials build() {
             return new ConnectorProfileZendeskConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }

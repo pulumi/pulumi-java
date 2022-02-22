@@ -101,7 +101,6 @@ public final class AnalyzerFilter {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public AnalyzerFilter build() {
             return new AnalyzerFilter(contains, eq, exists, neq, property);
         }

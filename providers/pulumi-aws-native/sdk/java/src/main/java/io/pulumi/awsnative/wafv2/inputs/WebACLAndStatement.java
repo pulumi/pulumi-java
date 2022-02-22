@@ -14,7 +14,7 @@ public final class WebACLAndStatement extends io.pulumi.resources.InvokeArgs {
     public static final WebACLAndStatement Empty = new WebACLAndStatement();
 
     @InputImport(name="statements", required=true)
-    private final List<WebACLStatement> statements;
+        private final List<WebACLStatement> statements;
 
     public List<WebACLStatement> getStatements() {
         return this.statements;
@@ -52,7 +52,6 @@ public final class WebACLAndStatement extends io.pulumi.resources.InvokeArgs {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public WebACLAndStatement build() {
             return new WebACLAndStatement(statements);
         }

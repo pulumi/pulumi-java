@@ -76,7 +76,6 @@ public final class DetectorModelDefinition {
             this.states = Objects.requireNonNull(states);
             return this;
         }
-
         public DetectorModelDefinition build() {
             return new DetectorModelDefinition(initialStateName, states);
         }

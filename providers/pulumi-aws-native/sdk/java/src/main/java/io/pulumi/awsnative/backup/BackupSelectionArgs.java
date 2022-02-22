@@ -15,14 +15,14 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     public static final BackupSelectionArgs Empty = new BackupSelectionArgs();
 
     @InputImport(name="backupPlanId", required=true)
-    private final Input<String> backupPlanId;
+        private final Input<String> backupPlanId;
 
     public Input<String> getBackupPlanId() {
         return this.backupPlanId;
     }
 
     @InputImport(name="backupSelection", required=true)
-    private final Input<BackupSelectionResourceTypeArgs> backupSelection;
+        private final Input<BackupSelectionResourceTypeArgs> backupSelection;
 
     public Input<BackupSelectionResourceTypeArgs> getBackupSelection() {
         return this.backupSelection;
@@ -81,7 +81,6 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
             this.backupSelection = Input.of(Objects.requireNonNull(backupSelection));
             return this;
         }
-
         public BackupSelectionArgs build() {
             return new BackupSelectionArgs(backupPlanId, backupSelection);
         }

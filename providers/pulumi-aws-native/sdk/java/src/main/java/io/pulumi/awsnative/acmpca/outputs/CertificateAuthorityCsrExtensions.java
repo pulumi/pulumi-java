@@ -62,7 +62,6 @@ public final class CertificateAuthorityCsrExtensions {
             this.subjectInformationAccess = subjectInformationAccess;
             return this;
         }
-
         public CertificateAuthorityCsrExtensions build() {
             return new CertificateAuthorityCsrExtensions(keyUsage, subjectInformationAccess);
         }

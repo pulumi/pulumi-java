@@ -46,7 +46,6 @@ public final class ListenerCertificate {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public ListenerCertificate build() {
             return new ListenerCertificate(certificateArn);
         }

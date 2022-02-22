@@ -183,7 +183,6 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
-
         public ConnectorProfileSnowflakeConnectorProfileProperties build() {
             return new ConnectorProfileSnowflakeConnectorProfileProperties(accountName, bucketName, bucketPrefix, privateLinkServiceName, region, stage, warehouse);
         }

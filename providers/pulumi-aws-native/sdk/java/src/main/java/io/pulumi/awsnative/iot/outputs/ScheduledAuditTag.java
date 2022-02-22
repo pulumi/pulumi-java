@@ -74,7 +74,6 @@ public final class ScheduledAuditTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ScheduledAuditTag build() {
             return new ScheduledAuditTag(key, value);
         }

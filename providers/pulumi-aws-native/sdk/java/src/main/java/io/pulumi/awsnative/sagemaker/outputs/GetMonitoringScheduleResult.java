@@ -212,7 +212,6 @@ public final class GetMonitoringScheduleResult {
             this.tags = tags;
             return this;
         }
-
         public GetMonitoringScheduleResult build() {
             return new GetMonitoringScheduleResult(creationTime, endpointName, failureReason, lastModifiedTime, lastMonitoringExecutionSummary, monitoringScheduleArn, monitoringScheduleConfig, monitoringScheduleStatus, tags);
         }

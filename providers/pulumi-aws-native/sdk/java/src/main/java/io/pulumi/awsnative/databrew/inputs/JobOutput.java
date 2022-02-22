@@ -21,42 +21,42 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
     public static final JobOutput Empty = new JobOutput();
 
     @InputImport(name="compressionFormat")
-    private final @Nullable JobOutputCompressionFormat compressionFormat;
+        private final @Nullable JobOutputCompressionFormat compressionFormat;
 
     public Optional<JobOutputCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Optional.empty() : Optional.ofNullable(this.compressionFormat);
     }
 
     @InputImport(name="format")
-    private final @Nullable JobOutputFormat format;
+        private final @Nullable JobOutputFormat format;
 
     public Optional<JobOutputFormat> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
     @InputImport(name="formatOptions")
-    private final @Nullable JobOutputFormatOptions formatOptions;
+        private final @Nullable JobOutputFormatOptions formatOptions;
 
     public Optional<JobOutputFormatOptions> getFormatOptions() {
         return this.formatOptions == null ? Optional.empty() : Optional.ofNullable(this.formatOptions);
     }
 
     @InputImport(name="location", required=true)
-    private final JobS3Location location;
+        private final JobS3Location location;
 
     public JobS3Location getLocation() {
         return this.location;
     }
 
     @InputImport(name="overwrite")
-    private final @Nullable Boolean overwrite;
+        private final @Nullable Boolean overwrite;
 
     public Optional<Boolean> getOverwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
     @InputImport(name="partitionColumns")
-    private final @Nullable List<String> partitionColumns;
+        private final @Nullable List<String> partitionColumns;
 
     public List<String> getPartitionColumns() {
         return this.partitionColumns == null ? List.of() : this.partitionColumns;
@@ -145,7 +145,6 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
             this.partitionColumns = partitionColumns;
             return this;
         }
-
         public JobOutput build() {
             return new JobOutput(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }

@@ -74,7 +74,6 @@ public final class EventIntegrationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventIntegrationTag build() {
             return new EventIntegrationTag(key, value);
         }

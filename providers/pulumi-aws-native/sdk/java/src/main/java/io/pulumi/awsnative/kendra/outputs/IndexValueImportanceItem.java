@@ -61,7 +61,6 @@ public final class IndexValueImportanceItem {
             this.value = value;
             return this;
         }
-
         public IndexValueImportanceItem build() {
             return new IndexValueImportanceItem(key, value);
         }

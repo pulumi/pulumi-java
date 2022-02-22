@@ -77,7 +77,6 @@ public final class SecurityProfileMetricDimension {
             this.operator = operator;
             return this;
         }
-
         public SecurityProfileMetricDimension build() {
             return new SecurityProfileMetricDimension(dimensionName, operator);
         }

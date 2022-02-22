@@ -46,7 +46,6 @@ public final class DataSourceDocumentsMetadataConfiguration {
             this.s3Prefix = s3Prefix;
             return this;
         }
-
         public DataSourceDocumentsMetadataConfiguration build() {
             return new DataSourceDocumentsMetadataConfiguration(s3Prefix);
         }

@@ -183,7 +183,6 @@ public final class GetAssessmentResult {
             this.tags = tags;
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(arn, assessmentId, assessmentReportsDestination, creationTime, delegations, roles, scope, status, tags);
         }

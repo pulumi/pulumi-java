@@ -76,7 +76,6 @@ public final class LinkBandwidth {
             this.uploadSpeed = uploadSpeed;
             return this;
         }
-
         public LinkBandwidth build() {
             return new LinkBandwidth(downloadSpeed, uploadSpeed);
         }

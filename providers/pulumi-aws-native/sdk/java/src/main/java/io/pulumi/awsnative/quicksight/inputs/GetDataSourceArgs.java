@@ -13,14 +13,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @InputImport(name="awsAccountId", required=true)
-    private final String awsAccountId;
+        private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
     @InputImport(name="dataSourceId", required=true)
-    private final String dataSourceId;
+        private final String dataSourceId;
 
     public String getDataSourceId() {
         return this.dataSourceId;
@@ -69,7 +69,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public GetDataSourceArgs build() {
             return new GetDataSourceArgs(awsAccountId, dataSourceId);
         }

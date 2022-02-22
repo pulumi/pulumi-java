@@ -90,7 +90,6 @@ public final class JobProfileConfiguration {
             this.profileColumns = profileColumns;
             return this;
         }
-
         public JobProfileConfiguration build() {
             return new JobProfileConfiguration(columnStatisticsConfigurations, datasetStatisticsConfiguration, entityDetectorConfiguration, profileColumns);
         }

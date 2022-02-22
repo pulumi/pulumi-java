@@ -24,7 +24,7 @@ public final class TrailDataResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -35,7 +35,7 @@ public final class TrailDataResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+        private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -84,7 +84,6 @@ public final class TrailDataResource extends io.pulumi.resources.InvokeArgs {
             this.values = values;
             return this;
         }
-
         public TrailDataResource build() {
             return new TrailDataResource(type, values);
         }

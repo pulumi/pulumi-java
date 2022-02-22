@@ -18,7 +18,7 @@ public final class BucketAccessControlTranslationArgs extends io.pulumi.resource
     public static final BucketAccessControlTranslationArgs Empty = new BucketAccessControlTranslationArgs();
 
     @InputImport(name="owner", required=true)
-    private final Input<String> owner;
+        private final Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner;
@@ -61,7 +61,6 @@ public final class BucketAccessControlTranslationArgs extends io.pulumi.resource
             this.owner = Input.of(Objects.requireNonNull(owner));
             return this;
         }
-
         public BucketAccessControlTranslationArgs build() {
             return new BucketAccessControlTranslationArgs(owner);
         }

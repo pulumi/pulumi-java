@@ -14,7 +14,7 @@ public final class RuleGroupDimensionArgs extends io.pulumi.resources.ResourceAr
     public static final RuleGroupDimensionArgs Empty = new RuleGroupDimensionArgs();
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -57,7 +57,6 @@ public final class RuleGroupDimensionArgs extends io.pulumi.resources.ResourceAr
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public RuleGroupDimensionArgs build() {
             return new RuleGroupDimensionArgs(value);
         }

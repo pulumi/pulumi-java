@@ -22,7 +22,7 @@ public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -65,7 +65,6 @@ public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public BotCustomPayloadArgs build() {
             return new BotCustomPayloadArgs(value);
         }

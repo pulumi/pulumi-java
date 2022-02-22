@@ -69,7 +69,6 @@ public final class GetConnectorResult {
             this.connectorArn = connectorArn;
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(capacity, connectorArn);
         }

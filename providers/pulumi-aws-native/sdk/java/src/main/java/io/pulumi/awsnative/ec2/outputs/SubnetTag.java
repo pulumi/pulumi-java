@@ -58,7 +58,6 @@ public final class SubnetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SubnetTag build() {
             return new SubnetTag(key, value);
         }

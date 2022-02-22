@@ -126,7 +126,6 @@ public final class GetAccessPointResult {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(arn, creationDate, objectLambdaConfiguration, policyStatus, publicAccessBlockConfiguration);
         }

@@ -20,7 +20,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fleetId")
-    private final @Nullable String fleetId;
+        private final @Nullable String fleetId;
 
     public Optional<String> getFleetId() {
         return this.fleetId == null ? Optional.empty() : Optional.ofNullable(this.fleetId);
@@ -31,7 +31,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -42,7 +42,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final AliasRoutingStrategyType type;
+        private final AliasRoutingStrategyType type;
 
     public AliasRoutingStrategyType getType() {
         return this.type;
@@ -101,7 +101,6 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AliasRoutingStrategy build() {
             return new AliasRoutingStrategy(fleetId, message, type);
         }

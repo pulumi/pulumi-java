@@ -19,14 +19,14 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
     public static final ServiceCatalogProvisionedProductDetailsProperties Empty = new ServiceCatalogProvisionedProductDetailsProperties();
 
     @InputImport(name="provisionedProductId")
-    private final @Nullable String provisionedProductId;
+        private final @Nullable String provisionedProductId;
 
     public Optional<String> getProvisionedProductId() {
         return this.provisionedProductId == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductId);
     }
 
     @InputImport(name="provisionedProductStatusMessage")
-    private final @Nullable String provisionedProductStatusMessage;
+        private final @Nullable String provisionedProductStatusMessage;
 
     public Optional<String> getProvisionedProductStatusMessage() {
         return this.provisionedProductStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductStatusMessage);
@@ -75,7 +75,6 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
         }
-
         public ServiceCatalogProvisionedProductDetailsProperties build() {
             return new ServiceCatalogProvisionedProductDetailsProperties(provisionedProductId, provisionedProductStatusMessage);
         }

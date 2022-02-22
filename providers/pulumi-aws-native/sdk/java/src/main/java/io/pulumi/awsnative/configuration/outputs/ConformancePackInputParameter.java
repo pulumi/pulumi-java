@@ -58,7 +58,6 @@ public final class ConformancePackInputParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public ConformancePackInputParameter build() {
             return new ConformancePackInputParameter(parameterName, parameterValue);
         }

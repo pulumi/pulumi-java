@@ -103,7 +103,6 @@ public final class IntegrationConnectorOperator {
             this.zendesk = zendesk;
             return this;
         }
-
         public IntegrationConnectorOperator build() {
             return new IntegrationConnectorOperator(marketo, s3, salesforce, serviceNow, zendesk);
         }

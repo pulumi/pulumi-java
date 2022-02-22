@@ -74,7 +74,6 @@ public final class UsagePlanTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UsagePlanTag build() {
             return new UsagePlanTag(key, value);
         }

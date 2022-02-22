@@ -13,7 +13,7 @@ public final class GetClusterCapacityProviderAssociationsArgs extends io.pulumi.
     public static final GetClusterCapacityProviderAssociationsArgs Empty = new GetClusterCapacityProviderAssociationsArgs();
 
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+        private final String cluster;
 
     public String getCluster() {
         return this.cluster;
@@ -51,7 +51,6 @@ public final class GetClusterCapacityProviderAssociationsArgs extends io.pulumi.
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GetClusterCapacityProviderAssociationsArgs build() {
             return new GetClusterCapacityProviderAssociationsArgs(cluster);
         }

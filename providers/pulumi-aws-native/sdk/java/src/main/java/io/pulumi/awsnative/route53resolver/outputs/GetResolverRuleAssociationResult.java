@@ -54,7 +54,6 @@ public final class GetResolverRuleAssociationResult {
             this.resolverRuleAssociationId = resolverRuleAssociationId;
             return this;
         }
-
         public GetResolverRuleAssociationResult build() {
             return new GetResolverRuleAssociationResult(resolverRuleAssociationId);
         }

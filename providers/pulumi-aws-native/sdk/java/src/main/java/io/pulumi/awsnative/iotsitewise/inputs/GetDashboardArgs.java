@@ -17,7 +17,7 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dashboardId", required=true)
-    private final String dashboardId;
+        private final String dashboardId;
 
     public String getDashboardId() {
         return this.dashboardId;
@@ -55,7 +55,6 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }
-
         public GetDashboardArgs build() {
             return new GetDashboardArgs(dashboardId);
         }

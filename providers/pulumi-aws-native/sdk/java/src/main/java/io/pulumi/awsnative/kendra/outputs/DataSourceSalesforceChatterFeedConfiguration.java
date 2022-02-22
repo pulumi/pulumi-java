@@ -89,7 +89,6 @@ public final class DataSourceSalesforceChatterFeedConfiguration {
             this.includeFilterTypes = includeFilterTypes;
             return this;
         }
-
         public DataSourceSalesforceChatterFeedConfiguration build() {
             return new DataSourceSalesforceChatterFeedConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, includeFilterTypes);
         }

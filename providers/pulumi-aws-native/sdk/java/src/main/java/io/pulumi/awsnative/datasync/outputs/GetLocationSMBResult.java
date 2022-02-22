@@ -176,7 +176,6 @@ public final class GetLocationSMBResult {
             this.user = user;
             return this;
         }
-
         public GetLocationSMBResult build() {
             return new GetLocationSMBResult(agentArns, domain, locationArn, locationUri, mountOptions, tags, user);
         }

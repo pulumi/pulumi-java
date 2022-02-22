@@ -70,7 +70,6 @@ public final class InstanceNetworking {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public InstanceNetworking build() {
             return new InstanceNetworking(monthlyTransfer, ports);
         }

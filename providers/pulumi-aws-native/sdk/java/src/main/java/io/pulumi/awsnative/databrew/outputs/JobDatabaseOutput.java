@@ -91,7 +91,6 @@ public final class JobDatabaseOutput {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
-
         public JobDatabaseOutput build() {
             return new JobDatabaseOutput(databaseOptions, databaseOutputMode, glueConnectionName);
         }

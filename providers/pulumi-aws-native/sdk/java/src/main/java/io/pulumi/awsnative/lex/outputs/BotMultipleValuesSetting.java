@@ -46,7 +46,6 @@ public final class BotMultipleValuesSetting {
             this.allowMultipleValues = allowMultipleValues;
             return this;
         }
-
         public BotMultipleValuesSetting build() {
             return new BotMultipleValuesSetting(allowMultipleValues);
         }

@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ClusterTagArgs>> tags;
+        private final @Nullable Input<List<ClusterTagArgs>> tags;
 
     public Input<List<ClusterTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(name, tags);
         }

@@ -97,7 +97,6 @@ public final class SiteLocation {
             this.longitude = longitude;
             return this;
         }
-
         public SiteLocation build() {
             return new SiteLocation(address, latitude, longitude);
         }

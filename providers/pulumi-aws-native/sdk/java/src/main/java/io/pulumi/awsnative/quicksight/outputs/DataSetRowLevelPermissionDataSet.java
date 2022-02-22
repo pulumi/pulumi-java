@@ -104,7 +104,6 @@ public final class DataSetRowLevelPermissionDataSet {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }
-
         public DataSetRowLevelPermissionDataSet build() {
             return new DataSetRowLevelPermissionDataSet(arn, formatVersion, namespace, permissionPolicy);
         }

@@ -52,7 +52,6 @@ public final class TemplateSourceTemplate {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public TemplateSourceTemplate build() {
             return new TemplateSourceTemplate(arn);
         }

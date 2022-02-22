@@ -52,7 +52,6 @@ public final class BucketReplicaModifications {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketReplicaModifications build() {
             return new BucketReplicaModifications(status);
         }

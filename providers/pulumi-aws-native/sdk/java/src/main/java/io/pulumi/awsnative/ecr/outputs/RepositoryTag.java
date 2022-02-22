@@ -74,7 +74,6 @@ public final class RepositoryTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RepositoryTag build() {
             return new RepositoryTag(key, value);
         }

@@ -16,21 +16,21 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
     public static final IntegrationSalesforceSourcePropertiesArgs Empty = new IntegrationSalesforceSourcePropertiesArgs();
 
     @InputImport(name="enableDynamicFieldUpdate")
-    private final @Nullable Input<Boolean> enableDynamicFieldUpdate;
+        private final @Nullable Input<Boolean> enableDynamicFieldUpdate;
 
     public Input<Boolean> getEnableDynamicFieldUpdate() {
         return this.enableDynamicFieldUpdate == null ? Input.empty() : this.enableDynamicFieldUpdate;
     }
 
     @InputImport(name="includeDeletedRecords")
-    private final @Nullable Input<Boolean> includeDeletedRecords;
+        private final @Nullable Input<Boolean> includeDeletedRecords;
 
     public Input<Boolean> getIncludeDeletedRecords() {
         return this.includeDeletedRecords == null ? Input.empty() : this.includeDeletedRecords;
     }
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -104,7 +104,6 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public IntegrationSalesforceSourcePropertiesArgs build() {
             return new IntegrationSalesforceSourcePropertiesArgs(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }

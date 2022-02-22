@@ -61,7 +61,6 @@ public final class ListenerRuleHttpHeaderConfig {
             this.values = values;
             return this;
         }
-
         public ListenerRuleHttpHeaderConfig build() {
             return new ListenerRuleHttpHeaderConfig(httpHeaderName, values);
         }

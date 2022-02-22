@@ -44,7 +44,6 @@ public final class BotDialogCodeHookSetting {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BotDialogCodeHookSetting build() {
             return new BotDialogCodeHookSetting(enabled);
         }

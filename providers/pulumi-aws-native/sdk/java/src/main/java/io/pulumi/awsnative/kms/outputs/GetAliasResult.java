@@ -54,7 +54,6 @@ public final class GetAliasResult {
             this.targetKeyId = targetKeyId;
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(targetKeyId);
         }

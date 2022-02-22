@@ -24,7 +24,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentBasedDeduplication")
-    private final @Nullable Input<Boolean> contentBasedDeduplication;
+        private final @Nullable Input<Boolean> contentBasedDeduplication;
 
     public Input<Boolean> getContentBasedDeduplication() {
         return this.contentBasedDeduplication == null ? Input.empty() : this.contentBasedDeduplication;
@@ -35,7 +35,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deduplicationScope")
-    private final @Nullable Input<String> deduplicationScope;
+        private final @Nullable Input<String> deduplicationScope;
 
     public Input<String> getDeduplicationScope() {
         return this.deduplicationScope == null ? Input.empty() : this.deduplicationScope;
@@ -46,7 +46,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delaySeconds")
-    private final @Nullable Input<Integer> delaySeconds;
+        private final @Nullable Input<Integer> delaySeconds;
 
     public Input<Integer> getDelaySeconds() {
         return this.delaySeconds == null ? Input.empty() : this.delaySeconds;
@@ -57,7 +57,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fifoQueue")
-    private final @Nullable Input<Boolean> fifoQueue;
+        private final @Nullable Input<Boolean> fifoQueue;
 
     public Input<Boolean> getFifoQueue() {
         return this.fifoQueue == null ? Input.empty() : this.fifoQueue;
@@ -68,7 +68,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fifoThroughputLimit")
-    private final @Nullable Input<String> fifoThroughputLimit;
+        private final @Nullable Input<String> fifoThroughputLimit;
 
     public Input<String> getFifoThroughputLimit() {
         return this.fifoThroughputLimit == null ? Input.empty() : this.fifoThroughputLimit;
@@ -79,7 +79,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsDataKeyReusePeriodSeconds")
-    private final @Nullable Input<Integer> kmsDataKeyReusePeriodSeconds;
+        private final @Nullable Input<Integer> kmsDataKeyReusePeriodSeconds;
 
     public Input<Integer> getKmsDataKeyReusePeriodSeconds() {
         return this.kmsDataKeyReusePeriodSeconds == null ? Input.empty() : this.kmsDataKeyReusePeriodSeconds;
@@ -90,7 +90,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsMasterKeyId")
-    private final @Nullable Input<String> kmsMasterKeyId;
+        private final @Nullable Input<String> kmsMasterKeyId;
 
     public Input<String> getKmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Input.empty() : this.kmsMasterKeyId;
@@ -101,7 +101,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumMessageSize")
-    private final @Nullable Input<Integer> maximumMessageSize;
+        private final @Nullable Input<Integer> maximumMessageSize;
 
     public Input<Integer> getMaximumMessageSize() {
         return this.maximumMessageSize == null ? Input.empty() : this.maximumMessageSize;
@@ -112,7 +112,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionPeriod")
-    private final @Nullable Input<Integer> messageRetentionPeriod;
+        private final @Nullable Input<Integer> messageRetentionPeriod;
 
     public Input<Integer> getMessageRetentionPeriod() {
         return this.messageRetentionPeriod == null ? Input.empty() : this.messageRetentionPeriod;
@@ -123,7 +123,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable Input<String> queueName;
+        private final @Nullable Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName == null ? Input.empty() : this.queueName;
@@ -134,7 +134,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="receiveMessageWaitTimeSeconds")
-    private final @Nullable Input<Integer> receiveMessageWaitTimeSeconds;
+        private final @Nullable Input<Integer> receiveMessageWaitTimeSeconds;
 
     public Input<Integer> getReceiveMessageWaitTimeSeconds() {
         return this.receiveMessageWaitTimeSeconds == null ? Input.empty() : this.receiveMessageWaitTimeSeconds;
@@ -145,7 +145,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redriveAllowPolicy")
-    private final @Nullable Input<Object> redriveAllowPolicy;
+        private final @Nullable Input<Object> redriveAllowPolicy;
 
     public Input<Object> getRedriveAllowPolicy() {
         return this.redriveAllowPolicy == null ? Input.empty() : this.redriveAllowPolicy;
@@ -156,7 +156,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redrivePolicy")
-    private final @Nullable Input<Object> redrivePolicy;
+        private final @Nullable Input<Object> redrivePolicy;
 
     public Input<Object> getRedrivePolicy() {
         return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
@@ -167,7 +167,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<QueueTagArgs>> tags;
+        private final @Nullable Input<List<QueueTagArgs>> tags;
 
     public Input<List<QueueTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -178,7 +178,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityTimeout")
-    private final @Nullable Input<Integer> visibilityTimeout;
+        private final @Nullable Input<Integer> visibilityTimeout;
 
     public Input<Integer> getVisibilityTimeout() {
         return this.visibilityTimeout == null ? Input.empty() : this.visibilityTimeout;
@@ -432,7 +432,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.visibilityTimeout = Input.ofNullable(visibilityTimeout);
             return this;
         }
-
         public QueueArgs build() {
             return new QueueArgs(contentBasedDeduplication, deduplicationScope, delaySeconds, fifoQueue, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueName, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
         }

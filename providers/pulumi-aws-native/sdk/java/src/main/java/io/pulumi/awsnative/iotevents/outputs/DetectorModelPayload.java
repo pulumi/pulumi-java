@@ -74,7 +74,6 @@ public final class DetectorModelPayload {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DetectorModelPayload build() {
             return new DetectorModelPayload(contentExpression, type);
         }

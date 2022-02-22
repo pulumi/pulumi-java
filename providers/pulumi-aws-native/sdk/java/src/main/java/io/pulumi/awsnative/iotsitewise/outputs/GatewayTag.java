@@ -58,7 +58,6 @@ public final class GatewayTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GatewayTag build() {
             return new GatewayTag(key, value);
         }

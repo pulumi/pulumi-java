@@ -26,7 +26,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="alarmMetrics")
-    private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
+        private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
@@ -37,7 +37,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable List<ApplicationLog> logs;
+        private final @Nullable List<ApplicationLog> logs;
 
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
@@ -48,7 +48,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="windowsEvents")
-    private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
+        private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
@@ -107,7 +107,6 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationSubComponentConfigurationDetails build() {
             return new ApplicationSubComponentConfigurationDetails(alarmMetrics, logs, windowsEvents);
         }

@@ -59,7 +59,6 @@ public final class ResponseHeadersPolicyReferrerPolicy {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }
-
         public ResponseHeadersPolicyReferrerPolicy build() {
             return new ResponseHeadersPolicyReferrerPolicy(override, referrerPolicy);
         }

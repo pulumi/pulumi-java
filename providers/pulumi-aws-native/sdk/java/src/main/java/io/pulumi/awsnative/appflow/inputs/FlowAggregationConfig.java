@@ -15,7 +15,7 @@ public final class FlowAggregationConfig extends io.pulumi.resources.InvokeArgs 
     public static final FlowAggregationConfig Empty = new FlowAggregationConfig();
 
     @InputImport(name="aggregationType")
-    private final @Nullable FlowAggregationType aggregationType;
+        private final @Nullable FlowAggregationType aggregationType;
 
     public Optional<FlowAggregationType> getAggregationType() {
         return this.aggregationType == null ? Optional.empty() : Optional.ofNullable(this.aggregationType);
@@ -53,7 +53,6 @@ public final class FlowAggregationConfig extends io.pulumi.resources.InvokeArgs 
             this.aggregationType = aggregationType;
             return this;
         }
-
         public FlowAggregationConfig build() {
             return new FlowAggregationConfig(aggregationType);
         }

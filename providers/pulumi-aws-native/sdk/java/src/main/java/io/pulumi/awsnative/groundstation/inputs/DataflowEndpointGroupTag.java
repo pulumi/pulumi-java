@@ -15,14 +15,14 @@ public final class DataflowEndpointGroupTag extends io.pulumi.resources.InvokeAr
     public static final DataflowEndpointGroupTag Empty = new DataflowEndpointGroupTag();
 
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -71,7 +71,6 @@ public final class DataflowEndpointGroupTag extends io.pulumi.resources.InvokeAr
             this.value = value;
             return this;
         }
-
         public DataflowEndpointGroupTag build() {
             return new DataflowEndpointGroupTag(key, value);
         }

@@ -73,7 +73,6 @@ public final class TopicRuleSnsAction {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public TopicRuleSnsAction build() {
             return new TopicRuleSnsAction(messageFormat, roleArn, targetArn);
         }

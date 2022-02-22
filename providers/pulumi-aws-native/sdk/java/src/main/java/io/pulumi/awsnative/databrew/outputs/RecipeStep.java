@@ -69,7 +69,6 @@ public final class RecipeStep {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
-
         public RecipeStep build() {
             return new RecipeStep(action, conditionExpressions);
         }

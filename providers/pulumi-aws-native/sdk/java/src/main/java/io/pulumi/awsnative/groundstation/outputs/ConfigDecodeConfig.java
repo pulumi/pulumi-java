@@ -46,7 +46,6 @@ public final class ConfigDecodeConfig {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-
         public ConfigDecodeConfig build() {
             return new ConfigDecodeConfig(unvalidatedJSON);
         }

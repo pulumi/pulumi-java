@@ -17,7 +17,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+        private final String cluster;
 
     public String getCluster() {
         return this.cluster;
@@ -28,7 +28,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -39,7 +39,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+        private final String service;
 
     public String getService() {
         return this.service;
@@ -98,7 +98,6 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetTaskSetArgs build() {
             return new GetTaskSetArgs(cluster, id, service);
         }

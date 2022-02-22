@@ -238,7 +238,6 @@ public final class GetAuthorizerResult {
             this.type = type;
             return this;
         }
-
         public GetAuthorizerResult build() {
             return new GetAuthorizerResult(authType, authorizerCredentials, authorizerId, authorizerResultTtlInSeconds, authorizerUri, identitySource, identityValidationExpression, name, providerARNs, type);
         }

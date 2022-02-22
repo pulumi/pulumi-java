@@ -17,7 +17,7 @@ public final class GetLaunchConfigurationArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="launchConfigurationName", required=true)
-    private final String launchConfigurationName;
+        private final String launchConfigurationName;
 
     public String getLaunchConfigurationName() {
         return this.launchConfigurationName;
@@ -55,7 +55,6 @@ public final class GetLaunchConfigurationArgs extends io.pulumi.resources.Invoke
             this.launchConfigurationName = Objects.requireNonNull(launchConfigurationName);
             return this;
         }
-
         public GetLaunchConfigurationArgs build() {
             return new GetLaunchConfigurationArgs(launchConfigurationName);
         }

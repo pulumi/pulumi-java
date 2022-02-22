@@ -13,7 +13,7 @@ public final class GetApplicationInstanceArgs extends io.pulumi.resources.Invoke
     public static final GetApplicationInstanceArgs Empty = new GetApplicationInstanceArgs();
 
     @InputImport(name="applicationInstanceId", required=true)
-    private final String applicationInstanceId;
+        private final String applicationInstanceId;
 
     public String getApplicationInstanceId() {
         return this.applicationInstanceId;
@@ -51,7 +51,6 @@ public final class GetApplicationInstanceArgs extends io.pulumi.resources.Invoke
             this.applicationInstanceId = Objects.requireNonNull(applicationInstanceId);
             return this;
         }
-
         public GetApplicationInstanceArgs build() {
             return new GetApplicationInstanceArgs(applicationInstanceId);
         }

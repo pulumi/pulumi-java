@@ -61,7 +61,6 @@ public final class GetMountTargetResult {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public GetMountTargetResult build() {
             return new GetMountTargetResult(id, securityGroups);
         }

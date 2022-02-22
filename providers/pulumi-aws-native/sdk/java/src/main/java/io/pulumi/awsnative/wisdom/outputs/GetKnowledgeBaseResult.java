@@ -74,7 +74,6 @@ public final class GetKnowledgeBaseResult {
             this.renderingConfiguration = renderingConfiguration;
             return this;
         }
-
         public GetKnowledgeBaseResult build() {
             return new GetKnowledgeBaseResult(knowledgeBaseArn, knowledgeBaseId, renderingConfiguration);
         }

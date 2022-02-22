@@ -23,7 +23,7 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+        private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -34,7 +34,7 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+        private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -93,7 +93,6 @@ public final class ModelBiasJobDefinitionVpcConfigArgs extends io.pulumi.resourc
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
-
         public ModelBiasJobDefinitionVpcConfigArgs build() {
             return new ModelBiasJobDefinitionVpcConfigArgs(securityGroupIds, subnets);
         }

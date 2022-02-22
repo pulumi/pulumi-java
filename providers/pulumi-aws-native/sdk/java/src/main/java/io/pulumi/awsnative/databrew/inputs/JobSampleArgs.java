@@ -20,14 +20,14 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobSampleArgs Empty = new JobSampleArgs();
 
     @InputImport(name="mode")
-    private final @Nullable Input<JobSampleMode> mode;
+        private final @Nullable Input<JobSampleMode> mode;
 
     public Input<JobSampleMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+        private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -86,7 +86,6 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
             this.size = Input.ofNullable(size);
             return this;
         }
-
         public JobSampleArgs build() {
             return new JobSampleArgs(mode, size);
         }

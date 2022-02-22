@@ -54,7 +54,6 @@ public final class GetPrimaryTaskSetResult {
             this.taskSetId = taskSetId;
             return this;
         }
-
         public GetPrimaryTaskSetResult build() {
             return new GetPrimaryTaskSetResult(taskSetId);
         }

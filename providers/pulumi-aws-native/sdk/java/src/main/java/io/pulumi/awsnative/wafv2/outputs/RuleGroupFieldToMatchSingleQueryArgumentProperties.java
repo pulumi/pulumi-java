@@ -44,7 +44,6 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupFieldToMatchSingleQueryArgumentProperties build() {
             return new RuleGroupFieldToMatchSingleQueryArgumentProperties(name);
         }

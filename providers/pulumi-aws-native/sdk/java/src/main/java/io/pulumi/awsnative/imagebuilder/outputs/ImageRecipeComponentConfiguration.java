@@ -78,7 +78,6 @@ public final class ImageRecipeComponentConfiguration {
             this.parameters = parameters;
             return this;
         }
-
         public ImageRecipeComponentConfiguration build() {
             return new ImageRecipeComponentConfiguration(componentArn, parameters);
         }

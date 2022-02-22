@@ -17,28 +17,28 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     public static final OIDCProviderArgs Empty = new OIDCProviderArgs();
 
     @InputImport(name="clientIdList")
-    private final @Nullable Input<List<String>> clientIdList;
+        private final @Nullable Input<List<String>> clientIdList;
 
     public Input<List<String>> getClientIdList() {
         return this.clientIdList == null ? Input.empty() : this.clientIdList;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<OIDCProviderTagArgs>> tags;
+        private final @Nullable Input<List<OIDCProviderTagArgs>> tags;
 
     public Input<List<OIDCProviderTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="thumbprintList", required=true)
-    private final Input<List<String>> thumbprintList;
+        private final Input<List<String>> thumbprintList;
 
     public Input<List<String>> getThumbprintList() {
         return this.thumbprintList;
     }
 
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -127,7 +127,6 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public OIDCProviderArgs build() {
             return new OIDCProviderArgs(clientIdList, tags, thumbprintList, url);
         }

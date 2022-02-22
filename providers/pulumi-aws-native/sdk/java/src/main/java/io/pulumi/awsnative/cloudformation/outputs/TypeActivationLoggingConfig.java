@@ -76,7 +76,6 @@ public final class TypeActivationLoggingConfig {
             this.logRoleArn = logRoleArn;
             return this;
         }
-
         public TypeActivationLoggingConfig build() {
             return new TypeActivationLoggingConfig(logGroupName, logRoleArn);
         }

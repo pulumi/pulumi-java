@@ -46,7 +46,6 @@ public final class JobCsvOutputOptions {
             this.delimiter = delimiter;
             return this;
         }
-
         public JobCsvOutputOptions build() {
             return new JobCsvOutputOptions(delimiter);
         }

@@ -44,7 +44,6 @@ public final class BucketNotificationFilter {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public BucketNotificationFilter build() {
             return new BucketNotificationFilter(s3Key);
         }

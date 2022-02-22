@@ -15,7 +15,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     public static final StateMachineCloudWatchLogsLogGroupArgs Empty = new StateMachineCloudWatchLogsLogGroupArgs();
 
     @InputImport(name="logGroupArn")
-    private final @Nullable Input<String> logGroupArn;
+        private final @Nullable Input<String> logGroupArn;
 
     public Input<String> getLogGroupArn() {
         return this.logGroupArn == null ? Input.empty() : this.logGroupArn;
@@ -58,7 +58,6 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
             this.logGroupArn = Input.ofNullable(logGroupArn);
             return this;
         }
-
         public StateMachineCloudWatchLogsLogGroupArgs build() {
             return new StateMachineCloudWatchLogsLogGroupArgs(logGroupArn);
         }

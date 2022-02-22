@@ -25,7 +25,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+        private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-    private final Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private final Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
@@ -95,7 +95,6 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
             this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-
         public ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }

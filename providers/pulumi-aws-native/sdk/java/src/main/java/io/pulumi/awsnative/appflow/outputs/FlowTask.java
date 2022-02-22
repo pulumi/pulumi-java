@@ -143,7 +143,6 @@ public final class FlowTask {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public FlowTask build() {
             return new FlowTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

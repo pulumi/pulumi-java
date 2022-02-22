@@ -25,7 +25,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsAccounts")
-    private final @Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts;
+        private final @Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts;
 
     public Input<List<AssessmentAWSAccountArgs>> getAwsAccounts() {
         return this.awsAccounts == null ? Input.empty() : this.awsAccounts;
@@ -36,7 +36,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsServices")
-    private final @Nullable Input<List<AssessmentAWSServiceArgs>> awsServices;
+        private final @Nullable Input<List<AssessmentAWSServiceArgs>> awsServices;
 
     public Input<List<AssessmentAWSServiceArgs>> getAwsServices() {
         return this.awsServices == null ? Input.empty() : this.awsServices;
@@ -95,7 +95,6 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.awsServices = Input.ofNullable(awsServices);
             return this;
         }
-
         public AssessmentScopeArgs build() {
             return new AssessmentScopeArgs(awsAccounts, awsServices);
         }

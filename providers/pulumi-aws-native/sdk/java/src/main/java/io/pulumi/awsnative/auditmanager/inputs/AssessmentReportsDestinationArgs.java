@@ -20,14 +20,14 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     public static final AssessmentReportsDestinationArgs Empty = new AssessmentReportsDestinationArgs();
 
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
     @InputImport(name="destinationType")
-    private final @Nullable Input<AssessmentReportDestinationType> destinationType;
+        private final @Nullable Input<AssessmentReportDestinationType> destinationType;
 
     public Input<AssessmentReportDestinationType> getDestinationType() {
         return this.destinationType == null ? Input.empty() : this.destinationType;
@@ -86,7 +86,6 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
             this.destinationType = Input.ofNullable(destinationType);
             return this;
         }
-
         public AssessmentReportsDestinationArgs build() {
             return new AssessmentReportsDestinationArgs(destination, destinationType);
         }

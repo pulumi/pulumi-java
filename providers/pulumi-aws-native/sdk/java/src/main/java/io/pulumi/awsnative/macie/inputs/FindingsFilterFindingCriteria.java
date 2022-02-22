@@ -15,7 +15,7 @@ public final class FindingsFilterFindingCriteria extends io.pulumi.resources.Inv
     public static final FindingsFilterFindingCriteria Empty = new FindingsFilterFindingCriteria();
 
     @InputImport(name="criterion")
-    private final @Nullable FindingsFilterCriterion criterion;
+        private final @Nullable FindingsFilterCriterion criterion;
 
     public Optional<FindingsFilterCriterion> getCriterion() {
         return this.criterion == null ? Optional.empty() : Optional.ofNullable(this.criterion);
@@ -53,7 +53,6 @@ public final class FindingsFilterFindingCriteria extends io.pulumi.resources.Inv
             this.criterion = criterion;
             return this;
         }
-
         public FindingsFilterFindingCriteria build() {
             return new FindingsFilterFindingCriteria(criterion);
         }

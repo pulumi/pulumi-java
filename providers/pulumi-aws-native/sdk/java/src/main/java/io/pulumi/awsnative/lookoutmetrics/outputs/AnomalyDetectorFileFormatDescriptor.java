@@ -61,7 +61,6 @@ public final class AnomalyDetectorFileFormatDescriptor {
             this.jsonFormatDescriptor = jsonFormatDescriptor;
             return this;
         }
-
         public AnomalyDetectorFileFormatDescriptor build() {
             return new AnomalyDetectorFileFormatDescriptor(csvFormatDescriptor, jsonFormatDescriptor);
         }

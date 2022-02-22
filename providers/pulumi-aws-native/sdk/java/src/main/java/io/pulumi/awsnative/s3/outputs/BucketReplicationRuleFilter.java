@@ -75,7 +75,6 @@ public final class BucketReplicationRuleFilter {
             this.tagFilter = tagFilter;
             return this;
         }
-
         public BucketReplicationRuleFilter build() {
             return new BucketReplicationRuleFilter(and, prefix, tagFilter);
         }

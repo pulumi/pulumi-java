@@ -17,49 +17,49 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     public static final ConnectorProfileSAPODataConnectorProfilePropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfilePropertiesArgs();
 
     @InputImport(name="applicationHostUrl")
-    private final @Nullable Input<String> applicationHostUrl;
+        private final @Nullable Input<String> applicationHostUrl;
 
     public Input<String> getApplicationHostUrl() {
         return this.applicationHostUrl == null ? Input.empty() : this.applicationHostUrl;
     }
 
     @InputImport(name="applicationServicePath")
-    private final @Nullable Input<String> applicationServicePath;
+        private final @Nullable Input<String> applicationServicePath;
 
     public Input<String> getApplicationServicePath() {
         return this.applicationServicePath == null ? Input.empty() : this.applicationServicePath;
     }
 
     @InputImport(name="clientNumber")
-    private final @Nullable Input<String> clientNumber;
+        private final @Nullable Input<String> clientNumber;
 
     public Input<String> getClientNumber() {
         return this.clientNumber == null ? Input.empty() : this.clientNumber;
     }
 
     @InputImport(name="logonLanguage")
-    private final @Nullable Input<String> logonLanguage;
+        private final @Nullable Input<String> logonLanguage;
 
     public Input<String> getLogonLanguage() {
         return this.logonLanguage == null ? Input.empty() : this.logonLanguage;
     }
 
     @InputImport(name="oAuthProperties")
-    private final @Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
+        private final @Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
 
     public Input<ConnectorProfileOAuthPropertiesArgs> getOAuthProperties() {
         return this.oAuthProperties == null ? Input.empty() : this.oAuthProperties;
     }
 
     @InputImport(name="portNumber")
-    private final @Nullable Input<Integer> portNumber;
+        private final @Nullable Input<Integer> portNumber;
 
     public Input<Integer> getPortNumber() {
         return this.portNumber == null ? Input.empty() : this.portNumber;
     }
 
     @InputImport(name="privateLinkServiceName")
-    private final @Nullable Input<String> privateLinkServiceName;
+        private final @Nullable Input<String> privateLinkServiceName;
 
     public Input<String> getPrivateLinkServiceName() {
         return this.privateLinkServiceName == null ? Input.empty() : this.privateLinkServiceName;
@@ -193,7 +193,6 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
             this.privateLinkServiceName = Input.ofNullable(privateLinkServiceName);
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSAPODataConnectorProfilePropertiesArgs(applicationHostUrl, applicationServicePath, clientNumber, logonLanguage, oAuthProperties, portNumber, privateLinkServiceName);
         }

@@ -72,7 +72,6 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
             this.root = root;
             return this;
         }
-
         public LaunchProfileStreamConfigurationSessionStorage build() {
             return new LaunchProfileStreamConfigurationSessionStorage(mode, root);
         }

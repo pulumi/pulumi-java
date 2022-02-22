@@ -46,7 +46,6 @@ public final class GetSubnetNetworkAclAssociationResult {
             this.associationId = associationId;
             return this;
         }
-
         public GetSubnetNetworkAclAssociationResult build() {
             return new GetSubnetNetworkAclAssociationResult(associationId);
         }

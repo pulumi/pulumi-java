@@ -17,7 +17,7 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+        private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -55,7 +55,6 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public GetSchemaVersionArgs build() {
             return new GetSchemaVersionArgs(versionId);
         }

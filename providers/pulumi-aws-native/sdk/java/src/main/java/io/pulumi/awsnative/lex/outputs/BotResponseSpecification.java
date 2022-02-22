@@ -70,7 +70,6 @@ public final class BotResponseSpecification {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
         public BotResponseSpecification build() {
             return new BotResponseSpecification(allowInterrupt, messageGroupsList);
         }

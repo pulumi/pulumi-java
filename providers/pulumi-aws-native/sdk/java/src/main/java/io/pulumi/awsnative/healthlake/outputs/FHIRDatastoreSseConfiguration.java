@@ -44,7 +44,6 @@ public final class FHIRDatastoreSseConfiguration {
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }
-
         public FHIRDatastoreSseConfiguration build() {
             return new FHIRDatastoreSseConfiguration(kmsEncryptionConfig);
         }

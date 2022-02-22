@@ -78,7 +78,6 @@ public final class ClusterEncryptionConfig {
             this.resources = resources;
             return this;
         }
-
         public ClusterEncryptionConfig build() {
             return new ClusterEncryptionConfig(provider, resources);
         }

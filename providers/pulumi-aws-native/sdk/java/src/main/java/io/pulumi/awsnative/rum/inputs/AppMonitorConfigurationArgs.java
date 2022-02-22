@@ -27,7 +27,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowCookies")
-    private final @Nullable Input<Boolean> allowCookies;
+        private final @Nullable Input<Boolean> allowCookies;
 
     public Input<Boolean> getAllowCookies() {
         return this.allowCookies == null ? Input.empty() : this.allowCookies;
@@ -38,7 +38,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableXRay")
-    private final @Nullable Input<Boolean> enableXRay;
+        private final @Nullable Input<Boolean> enableXRay;
 
     public Input<Boolean> getEnableXRay() {
         return this.enableXRay == null ? Input.empty() : this.enableXRay;
@@ -49,7 +49,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="excludedPages")
-    private final @Nullable Input<List<String>> excludedPages;
+        private final @Nullable Input<List<String>> excludedPages;
 
     public Input<List<String>> getExcludedPages() {
         return this.excludedPages == null ? Input.empty() : this.excludedPages;
@@ -60,7 +60,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="favoritePages")
-    private final @Nullable Input<List<String>> favoritePages;
+        private final @Nullable Input<List<String>> favoritePages;
 
     public Input<List<String>> getFavoritePages() {
         return this.favoritePages == null ? Input.empty() : this.favoritePages;
@@ -71,7 +71,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="guestRoleArn")
-    private final @Nullable Input<String> guestRoleArn;
+        private final @Nullable Input<String> guestRoleArn;
 
     public Input<String> getGuestRoleArn() {
         return this.guestRoleArn == null ? Input.empty() : this.guestRoleArn;
@@ -82,7 +82,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identityPoolId")
-    private final @Nullable Input<String> identityPoolId;
+        private final @Nullable Input<String> identityPoolId;
 
     public Input<String> getIdentityPoolId() {
         return this.identityPoolId == null ? Input.empty() : this.identityPoolId;
@@ -93,7 +93,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includedPages")
-    private final @Nullable Input<List<String>> includedPages;
+        private final @Nullable Input<List<String>> includedPages;
 
     public Input<List<String>> getIncludedPages() {
         return this.includedPages == null ? Input.empty() : this.includedPages;
@@ -104,7 +104,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sessionSampleRate")
-    private final @Nullable Input<Double> sessionSampleRate;
+        private final @Nullable Input<Double> sessionSampleRate;
 
     public Input<Double> getSessionSampleRate() {
         return this.sessionSampleRate == null ? Input.empty() : this.sessionSampleRate;
@@ -115,7 +115,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="telemetries")
-    private final @Nullable Input<List<AppMonitorTelemetry>> telemetries;
+        private final @Nullable Input<List<AppMonitorTelemetry>> telemetries;
 
     public Input<List<AppMonitorTelemetry>> getTelemetries() {
         return this.telemetries == null ? Input.empty() : this.telemetries;
@@ -279,7 +279,6 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             this.telemetries = Input.ofNullable(telemetries);
             return this;
         }
-
         public AppMonitorConfigurationArgs build() {
             return new AppMonitorConfigurationArgs(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
         }

@@ -77,7 +77,6 @@ public final class ContactStage {
             this.targets = targets;
             return this;
         }
-
         public ContactStage build() {
             return new ContactStage(durationInMinutes, targets);
         }

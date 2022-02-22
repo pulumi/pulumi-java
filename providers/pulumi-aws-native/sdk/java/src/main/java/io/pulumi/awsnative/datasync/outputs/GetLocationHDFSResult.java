@@ -284,7 +284,6 @@ public final class GetLocationHDFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationHDFSResult build() {
             return new GetLocationHDFSResult(agentArns, authenticationType, blockSize, kerberosPrincipal, kmsKeyProviderUri, locationArn, locationUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, tags);
         }

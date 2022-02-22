@@ -13,7 +13,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
     @InputImport(name="datastoreName", required=true)
-    private final String datastoreName;
+        private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
@@ -51,7 +51,6 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
-
         public GetDatastoreArgs build() {
             return new GetDatastoreArgs(datastoreName);
         }

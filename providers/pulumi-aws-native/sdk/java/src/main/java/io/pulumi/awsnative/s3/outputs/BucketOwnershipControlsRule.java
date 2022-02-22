@@ -54,7 +54,6 @@ public final class BucketOwnershipControlsRule {
             this.objectOwnership = objectOwnership;
             return this;
         }
-
         public BucketOwnershipControlsRule build() {
             return new BucketOwnershipControlsRule(objectOwnership);
         }

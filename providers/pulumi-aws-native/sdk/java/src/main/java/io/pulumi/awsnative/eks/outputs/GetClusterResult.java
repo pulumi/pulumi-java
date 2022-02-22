@@ -232,7 +232,6 @@ public final class GetClusterResult {
             this.version = version;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(arn, certificateAuthorityData, clusterSecurityGroupId, encryptionConfigKeyArn, endpoint, logging, openIdConnectIssuerUrl, resourcesVpcConfig, tags, version);
         }

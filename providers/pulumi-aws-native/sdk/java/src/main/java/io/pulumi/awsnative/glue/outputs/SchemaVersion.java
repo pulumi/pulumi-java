@@ -77,7 +77,6 @@ public final class SchemaVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public SchemaVersion build() {
             return new SchemaVersion(isLatest, versionNumber);
         }

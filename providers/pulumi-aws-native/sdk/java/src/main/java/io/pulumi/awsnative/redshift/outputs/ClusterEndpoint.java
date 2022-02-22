@@ -60,7 +60,6 @@ public final class ClusterEndpoint {
             this.port = port;
             return this;
         }
-
         public ClusterEndpoint build() {
             return new ClusterEndpoint(address, port);
         }

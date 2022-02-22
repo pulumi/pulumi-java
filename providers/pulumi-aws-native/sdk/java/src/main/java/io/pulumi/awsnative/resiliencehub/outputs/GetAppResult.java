@@ -155,7 +155,6 @@ public final class GetAppResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appArn, appTemplateBody, description, resiliencyPolicyArn, resourceMappings, tags);
         }

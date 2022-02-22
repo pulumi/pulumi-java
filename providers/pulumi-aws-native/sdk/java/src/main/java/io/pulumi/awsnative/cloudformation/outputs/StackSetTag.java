@@ -74,7 +74,6 @@ public final class StackSetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StackSetTag build() {
             return new StackSetTag(key, value);
         }

@@ -156,7 +156,6 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInsightsAccessScopeAnalysisResult build() {
             return new GetNetworkInsightsAccessScopeAnalysisResult(analyzedEniCount, endDate, findingsFound, networkInsightsAccessScopeAnalysisArn, networkInsightsAccessScopeAnalysisId, startDate, status, statusMessage, tags);
         }

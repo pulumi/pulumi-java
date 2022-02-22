@@ -60,7 +60,6 @@ public final class ProfilingGroupChannel {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }
-
         public ProfilingGroupChannel build() {
             return new ProfilingGroupChannel(channelId, channelUri);
         }

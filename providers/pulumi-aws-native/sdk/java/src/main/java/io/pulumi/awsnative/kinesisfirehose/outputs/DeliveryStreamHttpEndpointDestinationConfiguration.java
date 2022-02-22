@@ -158,7 +158,6 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public DeliveryStreamHttpEndpointDestinationConfiguration build() {
             return new DeliveryStreamHttpEndpointDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, endpointConfiguration, processingConfiguration, requestConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration);
         }

@@ -21,14 +21,14 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
     public static final CertificateAuthorityCsrExtensionsArgs Empty = new CertificateAuthorityCsrExtensionsArgs();
 
     @InputImport(name="keyUsage")
-    private final @Nullable Input<CertificateAuthorityKeyUsageArgs> keyUsage;
+        private final @Nullable Input<CertificateAuthorityKeyUsageArgs> keyUsage;
 
     public Input<CertificateAuthorityKeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
     @InputImport(name="subjectInformationAccess")
-    private final @Nullable Input<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
+        private final @Nullable Input<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
 
     public Input<List<CertificateAuthorityAccessDescriptionArgs>> getSubjectInformationAccess() {
         return this.subjectInformationAccess == null ? Input.empty() : this.subjectInformationAccess;
@@ -87,7 +87,6 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
             this.subjectInformationAccess = Input.ofNullable(subjectInformationAccess);
             return this;
         }
-
         public CertificateAuthorityCsrExtensionsArgs build() {
             return new CertificateAuthorityCsrExtensionsArgs(keyUsage, subjectInformationAccess);
         }

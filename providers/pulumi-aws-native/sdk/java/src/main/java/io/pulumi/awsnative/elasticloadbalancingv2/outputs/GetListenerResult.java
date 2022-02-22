@@ -129,7 +129,6 @@ public final class GetListenerResult {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public GetListenerResult build() {
             return new GetListenerResult(alpnPolicy, certificates, defaultActions, listenerArn, port, protocol, sslPolicy);
         }

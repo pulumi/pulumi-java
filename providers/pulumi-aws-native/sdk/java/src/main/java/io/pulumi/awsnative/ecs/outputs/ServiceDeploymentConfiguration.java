@@ -74,7 +74,6 @@ public final class ServiceDeploymentConfiguration {
             this.minimumHealthyPercent = minimumHealthyPercent;
             return this;
         }
-
         public ServiceDeploymentConfiguration build() {
             return new ServiceDeploymentConfiguration(deploymentCircuitBreaker, maximumPercent, minimumHealthyPercent);
         }

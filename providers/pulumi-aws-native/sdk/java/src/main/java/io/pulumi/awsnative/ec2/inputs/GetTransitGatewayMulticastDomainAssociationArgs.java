@@ -17,7 +17,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final String subnetId;
+        private final String subnetId;
 
     public String getSubnetId() {
         return this.subnetId;
@@ -28,7 +28,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final String transitGatewayAttachmentId;
+        private final String transitGatewayAttachmentId;
 
     public String getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -39,7 +39,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-    private final String transitGatewayMulticastDomainId;
+        private final String transitGatewayMulticastDomainId;
 
     public String getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
@@ -98,7 +98,6 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
-
         public GetTransitGatewayMulticastDomainAssociationArgs build() {
             return new GetTransitGatewayMulticastDomainAssociationArgs(subnetId, transitGatewayAttachmentId, transitGatewayMulticastDomainId);
         }

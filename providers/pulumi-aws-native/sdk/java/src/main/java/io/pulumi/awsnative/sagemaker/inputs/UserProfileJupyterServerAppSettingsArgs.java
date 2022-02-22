@@ -19,7 +19,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     public static final UserProfileJupyterServerAppSettingsArgs Empty = new UserProfileJupyterServerAppSettingsArgs();
 
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
 
     public Input<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
@@ -62,7 +62,6 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }
-
         public UserProfileJupyterServerAppSettingsArgs build() {
             return new UserProfileJupyterServerAppSettingsArgs(defaultResourceSpec);
         }

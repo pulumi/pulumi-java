@@ -16,7 +16,7 @@ public final class ListenerRulePathPatternConfig extends io.pulumi.resources.Inv
     public static final ListenerRulePathPatternConfig Empty = new ListenerRulePathPatternConfig();
 
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+        private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -54,7 +54,6 @@ public final class ListenerRulePathPatternConfig extends io.pulumi.resources.Inv
             this.values = values;
             return this;
         }
-
         public ListenerRulePathPatternConfig build() {
             return new ListenerRulePathPatternConfig(values);
         }

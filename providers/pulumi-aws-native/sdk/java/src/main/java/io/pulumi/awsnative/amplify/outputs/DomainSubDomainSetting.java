@@ -58,7 +58,6 @@ public final class DomainSubDomainSetting {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public DomainSubDomainSetting build() {
             return new DomainSubDomainSetting(branchName, prefix);
         }

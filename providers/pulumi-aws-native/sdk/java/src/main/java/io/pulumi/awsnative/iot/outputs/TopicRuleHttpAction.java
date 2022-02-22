@@ -89,7 +89,6 @@ public final class TopicRuleHttpAction {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public TopicRuleHttpAction build() {
             return new TopicRuleHttpAction(auth, confirmationUrl, headers, url);
         }

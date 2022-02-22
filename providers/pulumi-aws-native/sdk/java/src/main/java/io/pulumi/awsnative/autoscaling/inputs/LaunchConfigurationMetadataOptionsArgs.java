@@ -24,7 +24,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpEndpoint")
-    private final @Nullable Input<String> httpEndpoint;
+        private final @Nullable Input<String> httpEndpoint;
 
     public Input<String> getHttpEndpoint() {
         return this.httpEndpoint == null ? Input.empty() : this.httpEndpoint;
@@ -35,7 +35,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpPutResponseHopLimit")
-    private final @Nullable Input<Integer> httpPutResponseHopLimit;
+        private final @Nullable Input<Integer> httpPutResponseHopLimit;
 
     public Input<Integer> getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit == null ? Input.empty() : this.httpPutResponseHopLimit;
@@ -46,7 +46,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpTokens")
-    private final @Nullable Input<String> httpTokens;
+        private final @Nullable Input<String> httpTokens;
 
     public Input<String> getHttpTokens() {
         return this.httpTokens == null ? Input.empty() : this.httpTokens;
@@ -120,7 +120,6 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
             this.httpTokens = Input.ofNullable(httpTokens);
             return this;
         }
-
         public LaunchConfigurationMetadataOptionsArgs build() {
             return new LaunchConfigurationMetadataOptionsArgs(httpEndpoint, httpPutResponseHopLimit, httpTokens);
         }

@@ -13,7 +13,7 @@ public final class DistributionOriginGroupFailoverCriteria extends io.pulumi.res
     public static final DistributionOriginGroupFailoverCriteria Empty = new DistributionOriginGroupFailoverCriteria();
 
     @InputImport(name="statusCodes", required=true)
-    private final DistributionStatusCodes statusCodes;
+        private final DistributionStatusCodes statusCodes;
 
     public DistributionStatusCodes getStatusCodes() {
         return this.statusCodes;
@@ -51,7 +51,6 @@ public final class DistributionOriginGroupFailoverCriteria extends io.pulumi.res
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
-
         public DistributionOriginGroupFailoverCriteria build() {
             return new DistributionOriginGroupFailoverCriteria(statusCodes);
         }

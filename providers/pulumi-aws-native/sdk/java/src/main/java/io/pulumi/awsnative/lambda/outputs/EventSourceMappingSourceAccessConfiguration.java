@@ -77,7 +77,6 @@ public final class EventSourceMappingSourceAccessConfiguration {
             this.uRI = uRI;
             return this;
         }
-
         public EventSourceMappingSourceAccessConfiguration build() {
             return new EventSourceMappingSourceAccessConfiguration(type, uRI);
         }

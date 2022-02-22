@@ -256,7 +256,6 @@ public final class GetDetectorResult {
             this.tags = tags;
             return this;
         }
-
         public GetDetectorResult build() {
             return new GetDetectorResult(arn, associatedModels, createdTime, description, detectorVersionId, detectorVersionStatus, eventType, lastUpdatedTime, ruleExecutionMode, rules, tags);
         }

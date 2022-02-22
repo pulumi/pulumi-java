@@ -18,35 +18,35 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     public static final SuiteDefinitionConfigurationPropertiesArgs Empty = new SuiteDefinitionConfigurationPropertiesArgs();
 
     @InputImport(name="devicePermissionRoleArn", required=true)
-    private final Input<String> devicePermissionRoleArn;
+        private final Input<String> devicePermissionRoleArn;
 
     public Input<String> getDevicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
 
     @InputImport(name="devices")
-    private final @Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
+        private final @Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
 
     public Input<List<SuiteDefinitionDeviceUnderTestArgs>> getDevices() {
         return this.devices == null ? Input.empty() : this.devices;
     }
 
     @InputImport(name="intendedForQualification")
-    private final @Nullable Input<Boolean> intendedForQualification;
+        private final @Nullable Input<Boolean> intendedForQualification;
 
     public Input<Boolean> getIntendedForQualification() {
         return this.intendedForQualification == null ? Input.empty() : this.intendedForQualification;
     }
 
     @InputImport(name="rootGroup", required=true)
-    private final Input<String> rootGroup;
+        private final Input<String> rootGroup;
 
     public Input<String> getRootGroup() {
         return this.rootGroup;
     }
 
     @InputImport(name="suiteDefinitionName")
-    private final @Nullable Input<String> suiteDefinitionName;
+        private final @Nullable Input<String> suiteDefinitionName;
 
     public Input<String> getSuiteDefinitionName() {
         return this.suiteDefinitionName == null ? Input.empty() : this.suiteDefinitionName;
@@ -150,7 +150,6 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
             this.suiteDefinitionName = Input.ofNullable(suiteDefinitionName);
             return this;
         }
-
         public SuiteDefinitionConfigurationPropertiesArgs build() {
             return new SuiteDefinitionConfigurationPropertiesArgs(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
         }

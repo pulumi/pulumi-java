@@ -338,7 +338,6 @@ public final class GetInstanceResult {
             this.userName = userName;
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(addOns, hardware, instanceArn, isStaticIp, keyPairName, location, networking, privateIpAddress, publicIpAddress, resourceType, sshKeyName, state, supportCode, tags, userData, userName);
         }

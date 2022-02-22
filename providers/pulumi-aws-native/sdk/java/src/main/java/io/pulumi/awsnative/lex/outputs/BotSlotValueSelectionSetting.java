@@ -61,7 +61,6 @@ public final class BotSlotValueSelectionSetting {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
         }
-
         public BotSlotValueSelectionSetting build() {
             return new BotSlotValueSelectionSetting(regexFilter, resolutionStrategy);
         }

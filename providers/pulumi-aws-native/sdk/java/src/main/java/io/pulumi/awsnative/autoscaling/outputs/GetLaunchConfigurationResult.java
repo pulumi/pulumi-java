@@ -30,7 +30,6 @@ public final class GetLaunchConfigurationResult {
         public Builder(GetLaunchConfigurationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetLaunchConfigurationResult build() {
             return new GetLaunchConfigurationResult();
         }

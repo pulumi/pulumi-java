@@ -13,7 +13,7 @@ public final class GetReplicaKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReplicaKeyArgs Empty = new GetReplicaKeyArgs();
 
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+        private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -51,7 +51,6 @@ public final class GetReplicaKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public GetReplicaKeyArgs build() {
             return new GetReplicaKeyArgs(keyId);
         }

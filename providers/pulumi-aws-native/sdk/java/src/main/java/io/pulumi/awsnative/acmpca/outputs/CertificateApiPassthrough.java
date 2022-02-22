@@ -61,7 +61,6 @@ public final class CertificateApiPassthrough {
             this.subject = subject;
             return this;
         }
-
         public CertificateApiPassthrough build() {
             return new CertificateApiPassthrough(extensions, subject);
         }

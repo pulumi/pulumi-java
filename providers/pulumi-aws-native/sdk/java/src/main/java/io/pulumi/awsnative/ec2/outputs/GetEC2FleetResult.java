@@ -88,7 +88,6 @@ public final class GetEC2FleetResult {
             this.targetCapacitySpecification = targetCapacitySpecification;
             return this;
         }
-
         public GetEC2FleetResult build() {
             return new GetEC2FleetResult(context, excessCapacityTerminationPolicy, fleetId, targetCapacitySpecification);
         }

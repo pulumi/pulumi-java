@@ -60,7 +60,6 @@ public final class TaskDefinitionSystemControl {
             this.value = value;
             return this;
         }
-
         public TaskDefinitionSystemControl build() {
             return new TaskDefinitionSystemControl(namespace, value);
         }

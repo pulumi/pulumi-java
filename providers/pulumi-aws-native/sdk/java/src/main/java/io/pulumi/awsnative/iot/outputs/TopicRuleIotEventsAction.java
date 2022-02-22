@@ -87,7 +87,6 @@ public final class TopicRuleIotEventsAction {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleIotEventsAction build() {
             return new TopicRuleIotEventsAction(batchMode, inputName, messageId, roleArn);
         }

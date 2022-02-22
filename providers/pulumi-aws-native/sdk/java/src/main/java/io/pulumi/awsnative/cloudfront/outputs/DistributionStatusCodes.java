@@ -59,7 +59,6 @@ public final class DistributionStatusCodes {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public DistributionStatusCodes build() {
             return new DistributionStatusCodes(items, quantity);
         }

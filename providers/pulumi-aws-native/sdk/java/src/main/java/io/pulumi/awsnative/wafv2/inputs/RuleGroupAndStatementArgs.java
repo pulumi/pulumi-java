@@ -15,7 +15,7 @@ public final class RuleGroupAndStatementArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupAndStatementArgs Empty = new RuleGroupAndStatementArgs();
 
     @InputImport(name="statements", required=true)
-    private final Input<List<RuleGroupStatementArgs>> statements;
+        private final Input<List<RuleGroupStatementArgs>> statements;
 
     public Input<List<RuleGroupStatementArgs>> getStatements() {
         return this.statements;
@@ -58,7 +58,6 @@ public final class RuleGroupAndStatementArgs extends io.pulumi.resources.Resourc
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }
-
         public RuleGroupAndStatementArgs build() {
             return new RuleGroupAndStatementArgs(statements);
         }

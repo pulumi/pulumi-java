@@ -351,7 +351,6 @@ public final class GetTrailResult {
             this.tags = tags;
             return this;
         }
-
         public GetTrailResult build() {
             return new GetTrailResult(arn, cloudWatchLogsLogGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, eventSelectors, includeGlobalServiceEvents, insightSelectors, isLogging, isMultiRegionTrail, isOrganizationTrail, kMSKeyId, s3BucketName, s3KeyPrefix, snsTopicArn, snsTopicName, tags);
         }

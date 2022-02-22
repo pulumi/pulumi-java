@@ -98,7 +98,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification(configUri, environment, imageUri);
         }

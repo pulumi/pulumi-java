@@ -14,7 +14,7 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
     public static final ServiceLambdaEndpointInputArgs Empty = new ServiceLambdaEndpointInputArgs();
 
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+        private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -57,7 +57,6 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public ServiceLambdaEndpointInputArgs build() {
             return new ServiceLambdaEndpointInputArgs(arn);
         }

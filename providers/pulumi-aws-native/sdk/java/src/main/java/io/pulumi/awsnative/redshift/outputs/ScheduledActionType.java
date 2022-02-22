@@ -75,7 +75,6 @@ public final class ScheduledActionType {
             this.resumeCluster = resumeCluster;
             return this;
         }
-
         public ScheduledActionType build() {
             return new ScheduledActionType(pauseCluster, resizeCluster, resumeCluster);
         }

@@ -77,7 +77,6 @@ public final class SimulationApplicationSimulationSoftwareSuite {
             this.version = version;
             return this;
         }
-
         public SimulationApplicationSimulationSoftwareSuite build() {
             return new SimulationApplicationSimulationSoftwareSuite(name, version);
         }

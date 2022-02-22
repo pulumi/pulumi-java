@@ -61,7 +61,6 @@ public final class ContactTargets {
             this.contactTargetInfo = contactTargetInfo;
             return this;
         }
-
         public ContactTargets build() {
             return new ContactTargets(channelTargetInfo, contactTargetInfo);
         }

@@ -16,14 +16,14 @@ public final class DatasetContentDeliveryRule extends io.pulumi.resources.Invoke
     public static final DatasetContentDeliveryRule Empty = new DatasetContentDeliveryRule();
 
     @InputImport(name="destination", required=true)
-    private final DatasetContentDeliveryRuleDestination destination;
+        private final DatasetContentDeliveryRuleDestination destination;
 
     public DatasetContentDeliveryRuleDestination getDestination() {
         return this.destination;
     }
 
     @InputImport(name="entryName")
-    private final @Nullable String entryName;
+        private final @Nullable String entryName;
 
     public Optional<String> getEntryName() {
         return this.entryName == null ? Optional.empty() : Optional.ofNullable(this.entryName);
@@ -72,7 +72,6 @@ public final class DatasetContentDeliveryRule extends io.pulumi.resources.Invoke
             this.entryName = entryName;
             return this;
         }
-
         public DatasetContentDeliveryRule build() {
             return new DatasetContentDeliveryRule(destination, entryName);
         }

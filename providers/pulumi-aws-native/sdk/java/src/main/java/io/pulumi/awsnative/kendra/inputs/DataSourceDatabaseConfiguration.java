@@ -20,42 +20,42 @@ public final class DataSourceDatabaseConfiguration extends io.pulumi.resources.I
     public static final DataSourceDatabaseConfiguration Empty = new DataSourceDatabaseConfiguration();
 
     @InputImport(name="aclConfiguration")
-    private final @Nullable DataSourceAclConfiguration aclConfiguration;
+        private final @Nullable DataSourceAclConfiguration aclConfiguration;
 
     public Optional<DataSourceAclConfiguration> getAclConfiguration() {
         return this.aclConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aclConfiguration);
     }
 
     @InputImport(name="columnConfiguration", required=true)
-    private final DataSourceColumnConfiguration columnConfiguration;
+        private final DataSourceColumnConfiguration columnConfiguration;
 
     public DataSourceColumnConfiguration getColumnConfiguration() {
         return this.columnConfiguration;
     }
 
     @InputImport(name="connectionConfiguration", required=true)
-    private final DataSourceConnectionConfiguration connectionConfiguration;
+        private final DataSourceConnectionConfiguration connectionConfiguration;
 
     public DataSourceConnectionConfiguration getConnectionConfiguration() {
         return this.connectionConfiguration;
     }
 
     @InputImport(name="databaseEngineType", required=true)
-    private final DataSourceDatabaseEngineType databaseEngineType;
+        private final DataSourceDatabaseEngineType databaseEngineType;
 
     public DataSourceDatabaseEngineType getDatabaseEngineType() {
         return this.databaseEngineType;
     }
 
     @InputImport(name="sqlConfiguration")
-    private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
+        private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
 
     public Optional<DataSourceSqlConfiguration> getSqlConfiguration() {
         return this.sqlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sqlConfiguration);
     }
 
     @InputImport(name="vpcConfiguration")
-    private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
+        private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
@@ -144,7 +144,6 @@ public final class DataSourceDatabaseConfiguration extends io.pulumi.resources.I
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DataSourceDatabaseConfiguration build() {
             return new DataSourceDatabaseConfiguration(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);
         }

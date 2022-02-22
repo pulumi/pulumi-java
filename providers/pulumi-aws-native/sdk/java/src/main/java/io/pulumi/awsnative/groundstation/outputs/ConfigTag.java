@@ -60,7 +60,6 @@ public final class ConfigTag {
             this.value = value;
             return this;
         }
-
         public ConfigTag build() {
             return new ConfigTag(key, value);
         }

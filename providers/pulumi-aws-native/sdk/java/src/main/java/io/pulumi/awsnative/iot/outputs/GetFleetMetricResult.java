@@ -304,7 +304,6 @@ public final class GetFleetMetricResult {
             this.version = version;
             return this;
         }
-
         public GetFleetMetricResult build() {
             return new GetFleetMetricResult(aggregationField, aggregationType, creationDate, description, indexName, lastModifiedDate, metricArn, period, queryString, queryVersion, tags, unit, version);
         }

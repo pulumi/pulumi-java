@@ -22,7 +22,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -33,7 +33,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValues", required=true)
-    private final Input<List<String>> stringValues;
+        private final Input<List<String>> stringValues;
 
     public Input<List<String>> getStringValues() {
         return this.stringValues;
@@ -44,7 +44,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DimensionTagArgs>> tags;
+        private final @Nullable Input<List<DimensionTagArgs>> tags;
 
     public Input<List<DimensionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -55,7 +55,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<DimensionType> type;
+        private final Input<DimensionType> type;
 
     public Input<DimensionType> getType() {
         return this.type;
@@ -144,7 +144,6 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DimensionArgs build() {
             return new DimensionArgs(name, stringValues, tags, type);
         }

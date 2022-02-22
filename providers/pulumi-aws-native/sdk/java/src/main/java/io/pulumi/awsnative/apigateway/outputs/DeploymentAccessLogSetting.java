@@ -76,7 +76,6 @@ public final class DeploymentAccessLogSetting {
             this.format = format;
             return this;
         }
-
         public DeploymentAccessLogSetting build() {
             return new DeploymentAccessLogSetting(destinationArn, format);
         }

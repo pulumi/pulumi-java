@@ -122,7 +122,6 @@ public final class GetDataCatalogResult {
             this.type = type;
             return this;
         }
-
         public GetDataCatalogResult build() {
             return new GetDataCatalogResult(description, parameters, tags, type);
         }

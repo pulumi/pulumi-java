@@ -13,7 +13,7 @@ public final class GetCachePolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCachePolicyArgs Empty = new GetCachePolicyArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetCachePolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetCachePolicyArgs build() {
             return new GetCachePolicyArgs(id);
         }

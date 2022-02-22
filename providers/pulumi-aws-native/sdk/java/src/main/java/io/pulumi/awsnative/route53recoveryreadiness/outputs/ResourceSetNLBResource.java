@@ -54,7 +54,6 @@ public final class ResourceSetNLBResource {
             this.arn = arn;
             return this;
         }
-
         public ResourceSetNLBResource build() {
             return new ResourceSetNLBResource(arn);
         }

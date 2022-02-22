@@ -86,7 +86,6 @@ public final class IndexSearch {
             this.sortable = sortable;
             return this;
         }
-
         public IndexSearch build() {
             return new IndexSearch(displayable, facetable, searchable, sortable);
         }

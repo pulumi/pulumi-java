@@ -73,7 +73,6 @@ public final class DataSourceToIndexFieldMapping {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceToIndexFieldMapping build() {
             return new DataSourceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

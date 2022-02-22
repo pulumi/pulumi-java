@@ -58,7 +58,6 @@ public final class BranchTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BranchTag build() {
             return new BranchTag(key, value);
         }

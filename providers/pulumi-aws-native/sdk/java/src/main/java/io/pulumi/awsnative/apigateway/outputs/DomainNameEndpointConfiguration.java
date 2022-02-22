@@ -46,7 +46,6 @@ public final class DomainNameEndpointConfiguration {
             this.types = types;
             return this;
         }
-
         public DomainNameEndpointConfiguration build() {
             return new DomainNameEndpointConfiguration(types);
         }

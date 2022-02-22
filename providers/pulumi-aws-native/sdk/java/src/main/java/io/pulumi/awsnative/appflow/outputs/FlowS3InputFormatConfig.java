@@ -46,7 +46,6 @@ public final class FlowS3InputFormatConfig {
             this.s3InputFileType = s3InputFileType;
             return this;
         }
-
         public FlowS3InputFormatConfig build() {
             return new FlowS3InputFormatConfig(s3InputFileType);
         }

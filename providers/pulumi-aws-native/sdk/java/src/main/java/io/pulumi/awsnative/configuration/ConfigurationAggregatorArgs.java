@@ -19,7 +19,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     public static final ConfigurationAggregatorArgs Empty = new ConfigurationAggregatorArgs();
 
     @InputImport(name="accountAggregationSources")
-    private final @Nullable Input<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
+        private final @Nullable Input<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
 
     public Input<List<ConfigurationAggregatorAccountAggregationSourceArgs>> getAccountAggregationSources() {
         return this.accountAggregationSources == null ? Input.empty() : this.accountAggregationSources;
@@ -30,14 +30,14 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="configurationAggregatorName")
-    private final @Nullable Input<String> configurationAggregatorName;
+        private final @Nullable Input<String> configurationAggregatorName;
 
     public Input<String> getConfigurationAggregatorName() {
         return this.configurationAggregatorName == null ? Input.empty() : this.configurationAggregatorName;
     }
 
     @InputImport(name="organizationAggregationSource")
-    private final @Nullable Input<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
+        private final @Nullable Input<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
     public Input<ConfigurationAggregatorOrganizationAggregationSourceArgs> getOrganizationAggregationSource() {
         return this.organizationAggregationSource == null ? Input.empty() : this.organizationAggregationSource;
@@ -48,7 +48,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ConfigurationAggregatorTagArgs>> tags;
+        private final @Nullable Input<List<ConfigurationAggregatorTagArgs>> tags;
 
     public Input<List<ConfigurationAggregatorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -137,7 +137,6 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConfigurationAggregatorArgs build() {
             return new ConfigurationAggregatorArgs(accountAggregationSources, configurationAggregatorName, organizationAggregationSource, tags);
         }

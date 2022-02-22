@@ -58,7 +58,6 @@ public final class ChannelTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ChannelTag build() {
             return new ChannelTag(key, value);
         }

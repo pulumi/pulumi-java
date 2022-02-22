@@ -115,7 +115,6 @@ public final class NetworkInsightsAnalysisAnalysisAclRule {
             this.ruleNumber = ruleNumber;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisAclRule build() {
             return new NetworkInsightsAnalysisAnalysisAclRule(cidr, egress, portRange, protocol, ruleAction, ruleNumber);
         }

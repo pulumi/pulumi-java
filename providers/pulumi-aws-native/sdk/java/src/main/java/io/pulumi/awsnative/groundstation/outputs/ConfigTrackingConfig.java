@@ -46,7 +46,6 @@ public final class ConfigTrackingConfig {
             this.autotrack = autotrack;
             return this;
         }
-
         public ConfigTrackingConfig build() {
             return new ConfigTrackingConfig(autotrack);
         }

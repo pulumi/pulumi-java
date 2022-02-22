@@ -15,14 +15,14 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
     public static final FirewallPolicyStatelessRuleGroupReferenceArgs Empty = new FirewallPolicyStatelessRuleGroupReferenceArgs();
 
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
     }
 
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+        private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;
@@ -81,7 +81,6 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public FirewallPolicyStatelessRuleGroupReferenceArgs build() {
             return new FirewallPolicyStatelessRuleGroupReferenceArgs(priority, resourceArn);
         }

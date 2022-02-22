@@ -22,7 +22,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN")
-    private final @Nullable Input<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
+        private final @Nullable Input<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
 
     public Input<ServiceProfileLoRaWANServiceProfileArgs> getLoRaWAN() {
         return this.loRaWAN == null ? Input.empty() : this.loRaWAN;
@@ -33,7 +33,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ServiceProfileTagArgs>> tags;
+        private final @Nullable Input<List<ServiceProfileTagArgs>> tags;
 
     public Input<List<ServiceProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServiceProfileArgs build() {
             return new ServiceProfileArgs(loRaWAN, name, tags);
         }

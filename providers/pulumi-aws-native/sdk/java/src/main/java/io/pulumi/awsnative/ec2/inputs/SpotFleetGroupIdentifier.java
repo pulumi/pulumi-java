@@ -13,7 +13,7 @@ public final class SpotFleetGroupIdentifier extends io.pulumi.resources.InvokeAr
     public static final SpotFleetGroupIdentifier Empty = new SpotFleetGroupIdentifier();
 
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+        private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -51,7 +51,6 @@ public final class SpotFleetGroupIdentifier extends io.pulumi.resources.InvokeAr
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public SpotFleetGroupIdentifier build() {
             return new SpotFleetGroupIdentifier(groupId);
         }

@@ -16,7 +16,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
     public static final ListenerRuleQueryStringConfigArgs Empty = new ListenerRuleQueryStringConfigArgs();
 
     @InputImport(name="values")
-    private final @Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values;
+        private final @Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values;
 
     public Input<List<ListenerRuleQueryStringKeyValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -59,7 +59,6 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ListenerRuleQueryStringConfigArgs build() {
             return new ListenerRuleQueryStringConfigArgs(values);
         }

@@ -53,7 +53,6 @@ public final class ReplicationConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ReplicationConfiguration build() {
             return new ReplicationConfiguration(rules);
         }

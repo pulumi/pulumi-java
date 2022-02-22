@@ -19,7 +19,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     public static final WorkflowInputFileLocationArgs Empty = new WorkflowInputFileLocationArgs();
 
     @InputImport(name="s3FileLocation")
-    private final @Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation;
+        private final @Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
     public Input<WorkflowS3InputFileLocationArgs> getS3FileLocation() {
         return this.s3FileLocation == null ? Input.empty() : this.s3FileLocation;
@@ -62,7 +62,6 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
             this.s3FileLocation = Input.ofNullable(s3FileLocation);
             return this;
         }
-
         public WorkflowInputFileLocationArgs build() {
             return new WorkflowInputFileLocationArgs(s3FileLocation);
         }

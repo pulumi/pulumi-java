@@ -28,14 +28,14 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="copySourceArn")
-    private final @Nullable Input<String> copySourceArn;
+        private final @Nullable Input<String> copySourceArn;
 
     public Input<String> getCopySourceArn() {
         return this.copySourceArn == null ? Input.empty() : this.copySourceArn;
     }
 
     @InputImport(name="credentialPair")
-    private final @Nullable Input<DataSourceCredentialPairArgs> credentialPair;
+        private final @Nullable Input<DataSourceCredentialPairArgs> credentialPair;
 
     public Input<DataSourceCredentialPairArgs> getCredentialPair() {
         return this.credentialPair == null ? Input.empty() : this.credentialPair;
@@ -94,7 +94,6 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
             this.credentialPair = Input.ofNullable(credentialPair);
             return this;
         }
-
         public DataSourceCredentialsArgs build() {
             return new DataSourceCredentialsArgs(copySourceArn, credentialPair);
         }

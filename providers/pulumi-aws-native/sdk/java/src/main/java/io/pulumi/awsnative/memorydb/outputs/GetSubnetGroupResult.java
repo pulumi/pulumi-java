@@ -120,7 +120,6 @@ public final class GetSubnetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetSubnetGroupResult build() {
             return new GetSubnetGroupResult(aRN, description, subnetIds, tags);
         }

@@ -26,14 +26,14 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliverLogsPermissionArn")
-    private final @Nullable Input<String> deliverLogsPermissionArn;
+        private final @Nullable Input<String> deliverLogsPermissionArn;
 
     public Input<String> getDeliverLogsPermissionArn() {
         return this.deliverLogsPermissionArn == null ? Input.empty() : this.deliverLogsPermissionArn;
     }
 
     @InputImport(name="destinationOptions")
-    private final @Nullable Input<DestinationOptionsPropertiesArgs> destinationOptions;
+        private final @Nullable Input<DestinationOptionsPropertiesArgs> destinationOptions;
 
     public Input<DestinationOptionsPropertiesArgs> getDestinationOptions() {
         return this.destinationOptions == null ? Input.empty() : this.destinationOptions;
@@ -44,7 +44,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logDestination")
-    private final @Nullable Input<String> logDestination;
+        private final @Nullable Input<String> logDestination;
 
     public Input<String> getLogDestination() {
         return this.logDestination == null ? Input.empty() : this.logDestination;
@@ -55,7 +55,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logDestinationType")
-    private final @Nullable Input<FlowLogLogDestinationType> logDestinationType;
+        private final @Nullable Input<FlowLogLogDestinationType> logDestinationType;
 
     public Input<FlowLogLogDestinationType> getLogDestinationType() {
         return this.logDestinationType == null ? Input.empty() : this.logDestinationType;
@@ -66,7 +66,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logFormat")
-    private final @Nullable Input<String> logFormat;
+        private final @Nullable Input<String> logFormat;
 
     public Input<String> getLogFormat() {
         return this.logFormat == null ? Input.empty() : this.logFormat;
@@ -77,7 +77,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable Input<String> logGroupName;
+        private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -88,7 +88,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAggregationInterval")
-    private final @Nullable Input<Integer> maxAggregationInterval;
+        private final @Nullable Input<Integer> maxAggregationInterval;
 
     public Input<Integer> getMaxAggregationInterval() {
         return this.maxAggregationInterval == null ? Input.empty() : this.maxAggregationInterval;
@@ -99,7 +99,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -110,7 +110,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<FlowLogResourceType> resourceType;
+        private final Input<FlowLogResourceType> resourceType;
 
     public Input<FlowLogResourceType> getPropResourceType() {
         return this.resourceType;
@@ -121,7 +121,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FlowLogTagArgs>> tags;
+        private final @Nullable Input<List<FlowLogTagArgs>> tags;
 
     public Input<List<FlowLogTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficType", required=true)
-    private final Input<FlowLogTrafficType> trafficType;
+        private final Input<FlowLogTrafficType> trafficType;
 
     public Input<FlowLogTrafficType> getTrafficType() {
         return this.trafficType;
@@ -326,7 +326,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             this.trafficType = Input.of(Objects.requireNonNull(trafficType));
             return this;
         }
-
         public FlowLogArgs build() {
             return new FlowLogArgs(deliverLogsPermissionArn, destinationOptions, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, resourceId, resourceType, tags, trafficType);
         }

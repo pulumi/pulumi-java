@@ -247,7 +247,6 @@ public final class StageMethodSetting {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public StageMethodSetting build() {
             return new StageMethodSetting(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
         }

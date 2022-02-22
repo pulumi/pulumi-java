@@ -61,7 +61,6 @@ public final class TemplateSourceEntity {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
-
         public TemplateSourceEntity build() {
             return new TemplateSourceEntity(sourceAnalysis, sourceTemplate);
         }

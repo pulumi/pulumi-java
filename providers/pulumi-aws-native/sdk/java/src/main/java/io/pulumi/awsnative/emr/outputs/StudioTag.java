@@ -74,7 +74,6 @@ public final class StudioTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StudioTag build() {
             return new StudioTag(key, value);
         }

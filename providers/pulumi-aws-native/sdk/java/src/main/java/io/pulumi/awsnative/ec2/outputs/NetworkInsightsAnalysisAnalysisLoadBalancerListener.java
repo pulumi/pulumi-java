@@ -60,7 +60,6 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener {
             this.loadBalancerPort = loadBalancerPort;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisLoadBalancerListener build() {
             return new NetworkInsightsAnalysisAnalysisLoadBalancerListener(instancePort, loadBalancerPort);
         }

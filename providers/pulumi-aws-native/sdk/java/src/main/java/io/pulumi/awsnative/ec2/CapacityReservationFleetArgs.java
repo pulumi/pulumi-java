@@ -22,63 +22,63 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
     public static final CapacityReservationFleetArgs Empty = new CapacityReservationFleetArgs();
 
     @InputImport(name="allocationStrategy")
-    private final @Nullable Input<String> allocationStrategy;
+        private final @Nullable Input<String> allocationStrategy;
 
     public Input<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
     }
 
     @InputImport(name="endDate")
-    private final @Nullable Input<String> endDate;
+        private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
     @InputImport(name="instanceMatchCriteria")
-    private final @Nullable Input<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
+        private final @Nullable Input<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
     public Input<CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
         return this.instanceMatchCriteria == null ? Input.empty() : this.instanceMatchCriteria;
     }
 
     @InputImport(name="instanceTypeSpecifications")
-    private final @Nullable Input<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
+        private final @Nullable Input<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
 
     public Input<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> getInstanceTypeSpecifications() {
         return this.instanceTypeSpecifications == null ? Input.empty() : this.instanceTypeSpecifications;
     }
 
     @InputImport(name="noRemoveEndDate")
-    private final @Nullable Input<Boolean> noRemoveEndDate;
+        private final @Nullable Input<Boolean> noRemoveEndDate;
 
     public Input<Boolean> getNoRemoveEndDate() {
         return this.noRemoveEndDate == null ? Input.empty() : this.noRemoveEndDate;
     }
 
     @InputImport(name="removeEndDate")
-    private final @Nullable Input<Boolean> removeEndDate;
+        private final @Nullable Input<Boolean> removeEndDate;
 
     public Input<Boolean> getRemoveEndDate() {
         return this.removeEndDate == null ? Input.empty() : this.removeEndDate;
     }
 
     @InputImport(name="tagSpecifications")
-    private final @Nullable Input<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
+        private final @Nullable Input<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
 
     public Input<List<CapacityReservationFleetTagSpecificationArgs>> getTagSpecifications() {
         return this.tagSpecifications == null ? Input.empty() : this.tagSpecifications;
     }
 
     @InputImport(name="tenancy")
-    private final @Nullable Input<CapacityReservationFleetTenancy> tenancy;
+        private final @Nullable Input<CapacityReservationFleetTenancy> tenancy;
 
     public Input<CapacityReservationFleetTenancy> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;
     }
 
     @InputImport(name="totalTargetCapacity")
-    private final @Nullable Input<Integer> totalTargetCapacity;
+        private final @Nullable Input<Integer> totalTargetCapacity;
 
     public Input<Integer> getTotalTargetCapacity() {
         return this.totalTargetCapacity == null ? Input.empty() : this.totalTargetCapacity;
@@ -242,7 +242,6 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             this.totalTargetCapacity = Input.ofNullable(totalTargetCapacity);
             return this;
         }
-
         public CapacityReservationFleetArgs build() {
             return new CapacityReservationFleetArgs(allocationStrategy, endDate, instanceMatchCriteria, instanceTypeSpecifications, noRemoveEndDate, removeEndDate, tagSpecifications, tenancy, totalTargetCapacity);
         }

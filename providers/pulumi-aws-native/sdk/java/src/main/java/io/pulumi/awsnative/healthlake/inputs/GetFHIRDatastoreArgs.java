@@ -13,7 +13,7 @@ public final class GetFHIRDatastoreArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFHIRDatastoreArgs Empty = new GetFHIRDatastoreArgs();
 
     @InputImport(name="datastoreId", required=true)
-    private final String datastoreId;
+        private final String datastoreId;
 
     public String getDatastoreId() {
         return this.datastoreId;
@@ -51,7 +51,6 @@ public final class GetFHIRDatastoreArgs extends io.pulumi.resources.InvokeArgs {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
         }
-
         public GetFHIRDatastoreArgs build() {
             return new GetFHIRDatastoreArgs(datastoreId);
         }

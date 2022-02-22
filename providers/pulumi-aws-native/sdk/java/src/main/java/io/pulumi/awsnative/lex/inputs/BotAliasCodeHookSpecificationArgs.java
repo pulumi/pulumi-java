@@ -18,7 +18,7 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     public static final BotAliasCodeHookSpecificationArgs Empty = new BotAliasCodeHookSpecificationArgs();
 
     @InputImport(name="lambdaCodeHook", required=true)
-    private final Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
+        private final Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
     public Input<BotAliasLambdaCodeHookArgs> getLambdaCodeHook() {
         return this.lambdaCodeHook;
@@ -61,7 +61,6 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
             this.lambdaCodeHook = Input.of(Objects.requireNonNull(lambdaCodeHook));
             return this;
         }
-
         public BotAliasCodeHookSpecificationArgs build() {
             return new BotAliasCodeHookSpecificationArgs(lambdaCodeHook);
         }

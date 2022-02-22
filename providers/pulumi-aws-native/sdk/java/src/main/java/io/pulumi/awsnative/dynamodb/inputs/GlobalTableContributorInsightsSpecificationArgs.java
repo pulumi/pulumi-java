@@ -14,7 +14,7 @@ public final class GlobalTableContributorInsightsSpecificationArgs extends io.pu
     public static final GlobalTableContributorInsightsSpecificationArgs Empty = new GlobalTableContributorInsightsSpecificationArgs();
 
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -57,7 +57,6 @@ public final class GlobalTableContributorInsightsSpecificationArgs extends io.pu
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public GlobalTableContributorInsightsSpecificationArgs build() {
             return new GlobalTableContributorInsightsSpecificationArgs(enabled);
         }

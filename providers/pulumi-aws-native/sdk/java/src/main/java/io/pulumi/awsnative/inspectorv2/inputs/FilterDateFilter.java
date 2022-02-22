@@ -15,14 +15,14 @@ public final class FilterDateFilter extends io.pulumi.resources.InvokeArgs {
     public static final FilterDateFilter Empty = new FilterDateFilter();
 
     @InputImport(name="endInclusive")
-    private final @Nullable Integer endInclusive;
+        private final @Nullable Integer endInclusive;
 
     public Optional<Integer> getEndInclusive() {
         return this.endInclusive == null ? Optional.empty() : Optional.ofNullable(this.endInclusive);
     }
 
     @InputImport(name="startInclusive")
-    private final @Nullable Integer startInclusive;
+        private final @Nullable Integer startInclusive;
 
     public Optional<Integer> getStartInclusive() {
         return this.startInclusive == null ? Optional.empty() : Optional.ofNullable(this.startInclusive);
@@ -71,7 +71,6 @@ public final class FilterDateFilter extends io.pulumi.resources.InvokeArgs {
             this.startInclusive = startInclusive;
             return this;
         }
-
         public FilterDateFilter build() {
             return new FilterDateFilter(endInclusive, startInclusive);
         }

@@ -14,14 +14,14 @@ public final class ResponseHeadersPolicyContentSecurityPolicy extends io.pulumi.
     public static final ResponseHeadersPolicyContentSecurityPolicy Empty = new ResponseHeadersPolicyContentSecurityPolicy();
 
     @InputImport(name="contentSecurityPolicy", required=true)
-    private final String contentSecurityPolicy;
+        private final String contentSecurityPolicy;
 
     public String getContentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
     @InputImport(name="override", required=true)
-    private final Boolean override;
+        private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
@@ -70,7 +70,6 @@ public final class ResponseHeadersPolicyContentSecurityPolicy extends io.pulumi.
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyContentSecurityPolicy build() {
             return new ResponseHeadersPolicyContentSecurityPolicy(contentSecurityPolicy, override);
         }

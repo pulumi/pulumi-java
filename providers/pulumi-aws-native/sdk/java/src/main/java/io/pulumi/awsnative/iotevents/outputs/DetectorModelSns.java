@@ -69,7 +69,6 @@ public final class DetectorModelSns {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public DetectorModelSns build() {
             return new DetectorModelSns(payload, targetArn);
         }

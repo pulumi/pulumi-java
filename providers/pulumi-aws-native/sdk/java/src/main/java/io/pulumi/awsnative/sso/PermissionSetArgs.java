@@ -22,7 +22,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inlinePolicy")
-    private final @Nullable Input<Object> inlinePolicy;
+        private final @Nullable Input<Object> inlinePolicy;
 
     public Input<Object> getInlinePolicy() {
         return this.inlinePolicy == null ? Input.empty() : this.inlinePolicy;
@@ -44,14 +44,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+        private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
     }
 
     @InputImport(name="managedPolicies")
-    private final @Nullable Input<List<String>> managedPolicies;
+        private final @Nullable Input<List<String>> managedPolicies;
 
     public Input<List<String>> getManagedPolicies() {
         return this.managedPolicies == null ? Input.empty() : this.managedPolicies;
@@ -62,7 +62,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayStateType")
-    private final @Nullable Input<String> relayStateType;
+        private final @Nullable Input<String> relayStateType;
 
     public Input<String> getRelayStateType() {
         return this.relayStateType == null ? Input.empty() : this.relayStateType;
@@ -84,14 +84,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionDuration")
-    private final @Nullable Input<String> sessionDuration;
+        private final @Nullable Input<String> sessionDuration;
 
     public Input<String> getSessionDuration() {
         return this.sessionDuration == null ? Input.empty() : this.sessionDuration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<PermissionSetTagArgs>> tags;
+        private final @Nullable Input<List<PermissionSetTagArgs>> tags;
 
     public Input<List<PermissionSetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -240,7 +240,6 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PermissionSetArgs build() {
             return new PermissionSetArgs(description, inlinePolicy, instanceArn, managedPolicies, name, relayStateType, sessionDuration, tags);
         }

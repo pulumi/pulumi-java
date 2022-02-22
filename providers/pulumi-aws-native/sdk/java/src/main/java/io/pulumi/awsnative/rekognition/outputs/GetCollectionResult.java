@@ -70,7 +70,6 @@ public final class GetCollectionResult {
             this.tags = tags;
             return this;
         }
-
         public GetCollectionResult build() {
             return new GetCollectionResult(arn, tags);
         }

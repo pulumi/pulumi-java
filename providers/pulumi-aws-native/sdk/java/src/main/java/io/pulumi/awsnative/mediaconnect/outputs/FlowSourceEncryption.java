@@ -225,7 +225,6 @@ public final class FlowSourceEncryption {
             this.url = url;
             return this;
         }
-
         public FlowSourceEncryption build() {
             return new FlowSourceEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }

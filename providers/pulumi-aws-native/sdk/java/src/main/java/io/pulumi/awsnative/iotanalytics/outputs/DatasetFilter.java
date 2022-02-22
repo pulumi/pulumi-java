@@ -46,7 +46,6 @@ public final class DatasetFilter {
             this.deltaTime = deltaTime;
             return this;
         }
-
         public DatasetFilter build() {
             return new DatasetFilter(deltaTime);
         }

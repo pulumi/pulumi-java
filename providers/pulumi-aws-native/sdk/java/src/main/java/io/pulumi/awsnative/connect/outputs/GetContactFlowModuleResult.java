@@ -206,7 +206,6 @@ public final class GetContactFlowModuleResult {
             this.tags = tags;
             return this;
         }
-
         public GetContactFlowModuleResult build() {
             return new GetContactFlowModuleResult(contactFlowModuleArn, content, description, instanceArn, name, state, status, tags);
         }

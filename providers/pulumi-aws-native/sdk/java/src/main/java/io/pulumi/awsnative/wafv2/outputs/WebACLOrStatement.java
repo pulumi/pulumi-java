@@ -45,7 +45,6 @@ public final class WebACLOrStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public WebACLOrStatement build() {
             return new WebACLOrStatement(statements);
         }

@@ -303,7 +303,6 @@ public final class GetDataSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataSetResult build() {
             return new GetDataSetResult(arn, columnGroups, columnLevelPermissionRules, consumedSpiceCapacityInBytes, createdTime, importMode, lastUpdatedTime, logicalTableMap, name, outputColumns, permissions, physicalTableMap, rowLevelPermissionDataSet, tags);
         }

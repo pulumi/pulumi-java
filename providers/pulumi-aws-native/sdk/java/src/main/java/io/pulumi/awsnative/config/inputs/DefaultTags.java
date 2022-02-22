@@ -24,7 +24,7 @@ public final class DefaultTags extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -62,7 +62,6 @@ public final class DefaultTags extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public DefaultTags build() {
             return new DefaultTags(tags);
         }

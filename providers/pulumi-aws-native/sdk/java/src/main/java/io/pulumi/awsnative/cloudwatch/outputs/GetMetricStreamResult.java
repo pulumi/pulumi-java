@@ -225,7 +225,6 @@ public final class GetMetricStreamResult {
             this.state = state;
             return this;
         }
-
         public GetMetricStreamResult build() {
             return new GetMetricStreamResult(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, outputFormat, roleArn, state);
         }

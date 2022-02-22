@@ -74,7 +74,6 @@ public final class CollectionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CollectionTag build() {
             return new CollectionTag(key, value);
         }

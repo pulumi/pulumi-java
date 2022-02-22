@@ -68,7 +68,6 @@ public final class BucketLoggingConfiguration {
             this.logFilePrefix = logFilePrefix;
             return this;
         }
-
         public BucketLoggingConfiguration build() {
             return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
         }

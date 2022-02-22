@@ -19,14 +19,14 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     public static final GameServerGroupInstanceDefinitionArgs Empty = new GameServerGroupInstanceDefinitionArgs();
 
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+        private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
     }
 
     @InputImport(name="weightedCapacity")
-    private final @Nullable Input<String> weightedCapacity;
+        private final @Nullable Input<String> weightedCapacity;
 
     public Input<String> getWeightedCapacity() {
         return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
@@ -85,7 +85,6 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }
-
         public GameServerGroupInstanceDefinitionArgs build() {
             return new GameServerGroupInstanceDefinitionArgs(instanceType, weightedCapacity);
         }

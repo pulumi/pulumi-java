@@ -60,7 +60,6 @@ public final class ClusterLoggingProperties {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ClusterLoggingProperties build() {
             return new ClusterLoggingProperties(bucketName, s3KeyPrefix);
         }

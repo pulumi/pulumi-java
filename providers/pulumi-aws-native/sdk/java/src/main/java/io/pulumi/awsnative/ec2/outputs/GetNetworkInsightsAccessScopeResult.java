@@ -101,7 +101,6 @@ public final class GetNetworkInsightsAccessScopeResult {
             this.updatedDate = updatedDate;
             return this;
         }
-
         public GetNetworkInsightsAccessScopeResult build() {
             return new GetNetworkInsightsAccessScopeResult(createdDate, networkInsightsAccessScopeArn, networkInsightsAccessScopeId, tags, updatedDate);
         }

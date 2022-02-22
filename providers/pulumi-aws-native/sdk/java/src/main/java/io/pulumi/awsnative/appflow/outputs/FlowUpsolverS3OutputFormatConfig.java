@@ -75,7 +75,6 @@ public final class FlowUpsolverS3OutputFormatConfig {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
         }
-
         public FlowUpsolverS3OutputFormatConfig build() {
             return new FlowUpsolverS3OutputFormatConfig(aggregationConfig, fileType, prefixConfig);
         }

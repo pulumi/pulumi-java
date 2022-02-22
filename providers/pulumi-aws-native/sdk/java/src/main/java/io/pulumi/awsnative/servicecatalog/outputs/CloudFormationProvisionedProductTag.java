@@ -58,7 +58,6 @@ public final class CloudFormationProvisionedProductTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CloudFormationProvisionedProductTag build() {
             return new CloudFormationProvisionedProductTag(key, value);
         }

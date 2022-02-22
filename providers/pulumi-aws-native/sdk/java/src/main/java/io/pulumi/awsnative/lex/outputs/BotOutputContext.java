@@ -72,7 +72,6 @@ public final class BotOutputContext {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }
-
         public BotOutputContext build() {
             return new BotOutputContext(name, timeToLiveInSeconds, turnsToLive);
         }

@@ -58,7 +58,6 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public DeliveryStreamKinesisStreamSourceConfiguration build() {
             return new DeliveryStreamKinesisStreamSourceConfiguration(kinesisStreamARN, roleARN);
         }

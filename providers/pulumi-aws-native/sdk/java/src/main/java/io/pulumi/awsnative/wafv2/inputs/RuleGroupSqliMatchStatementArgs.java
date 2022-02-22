@@ -20,14 +20,14 @@ public final class RuleGroupSqliMatchStatementArgs extends io.pulumi.resources.R
     public static final RuleGroupSqliMatchStatementArgs Empty = new RuleGroupSqliMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+        private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -86,7 +86,6 @@ public final class RuleGroupSqliMatchStatementArgs extends io.pulumi.resources.R
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public RuleGroupSqliMatchStatementArgs build() {
             return new RuleGroupSqliMatchStatementArgs(fieldToMatch, textTransformations);
         }

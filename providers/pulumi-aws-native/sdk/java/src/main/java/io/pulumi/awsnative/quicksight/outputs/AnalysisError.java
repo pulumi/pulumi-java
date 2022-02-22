@@ -69,7 +69,6 @@ public final class AnalysisError {
             this.type = type;
             return this;
         }
-
         public AnalysisError build() {
             return new AnalysisError(message, type);
         }

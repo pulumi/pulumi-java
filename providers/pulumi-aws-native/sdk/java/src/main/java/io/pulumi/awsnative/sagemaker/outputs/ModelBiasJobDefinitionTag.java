@@ -74,7 +74,6 @@ public final class ModelBiasJobDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ModelBiasJobDefinitionTag build() {
             return new ModelBiasJobDefinitionTag(key, value);
         }

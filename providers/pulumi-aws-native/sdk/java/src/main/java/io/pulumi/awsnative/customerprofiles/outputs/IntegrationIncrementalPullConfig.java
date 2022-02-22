@@ -46,7 +46,6 @@ public final class IntegrationIncrementalPullConfig {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-
         public IntegrationIncrementalPullConfig build() {
             return new IntegrationIncrementalPullConfig(datetimeTypeFieldName);
         }

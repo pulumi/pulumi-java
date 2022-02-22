@@ -30,7 +30,6 @@ public final class RuleGroupCustomResponseBodies {
         public Builder(RuleGroupCustomResponseBodies defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RuleGroupCustomResponseBodies build() {
             return new RuleGroupCustomResponseBodies();
         }

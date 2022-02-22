@@ -44,7 +44,6 @@ public final class DatasetSchedule {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public DatasetSchedule build() {
             return new DatasetSchedule(scheduleExpression);
         }

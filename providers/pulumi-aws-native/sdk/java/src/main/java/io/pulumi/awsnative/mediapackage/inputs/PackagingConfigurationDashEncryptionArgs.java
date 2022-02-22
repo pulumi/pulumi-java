@@ -18,7 +18,7 @@ public final class PackagingConfigurationDashEncryptionArgs extends io.pulumi.re
     public static final PackagingConfigurationDashEncryptionArgs Empty = new PackagingConfigurationDashEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -61,7 +61,6 @@ public final class PackagingConfigurationDashEncryptionArgs extends io.pulumi.re
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
-
         public PackagingConfigurationDashEncryptionArgs build() {
             return new PackagingConfigurationDashEncryptionArgs(spekeKeyProvider);
         }

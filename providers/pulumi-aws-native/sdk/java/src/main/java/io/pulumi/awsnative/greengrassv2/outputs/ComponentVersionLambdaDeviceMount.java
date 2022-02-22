@@ -75,7 +75,6 @@ public final class ComponentVersionLambdaDeviceMount {
             this.permission = permission;
             return this;
         }
-
         public ComponentVersionLambdaDeviceMount build() {
             return new ComponentVersionLambdaDeviceMount(addGroupOwner, path, permission);
         }

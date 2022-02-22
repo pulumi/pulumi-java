@@ -87,7 +87,6 @@ public final class ServiceRegistry {
             this.registryArn = registryArn;
             return this;
         }
-
         public ServiceRegistry build() {
             return new ServiceRegistry(containerName, containerPort, port, registryArn);
         }

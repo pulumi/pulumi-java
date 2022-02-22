@@ -23,7 +23,7 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="show")
-    private final @Nullable Input<Boolean> show;
+        private final @Nullable Input<Boolean> show;
 
     public Input<Boolean> getShow() {
         return this.show == null ? Input.empty() : this.show;
@@ -66,7 +66,6 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
             this.show = Input.ofNullable(show);
             return this;
         }
-
         public ThemeBorderStyleArgs build() {
             return new ThemeBorderStyleArgs(show);
         }

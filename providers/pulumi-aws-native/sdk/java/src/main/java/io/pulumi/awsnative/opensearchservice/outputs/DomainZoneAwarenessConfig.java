@@ -46,7 +46,6 @@ public final class DomainZoneAwarenessConfig {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
         }
-
         public DomainZoneAwarenessConfig build() {
             return new DomainZoneAwarenessConfig(availabilityZoneCount);
         }

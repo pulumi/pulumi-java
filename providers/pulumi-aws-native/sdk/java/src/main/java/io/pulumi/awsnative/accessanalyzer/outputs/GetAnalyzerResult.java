@@ -92,7 +92,6 @@ public final class GetAnalyzerResult {
             this.tags = tags;
             return this;
         }
-
         public GetAnalyzerResult build() {
             return new GetAnalyzerResult(archiveRules, arn, tags);
         }

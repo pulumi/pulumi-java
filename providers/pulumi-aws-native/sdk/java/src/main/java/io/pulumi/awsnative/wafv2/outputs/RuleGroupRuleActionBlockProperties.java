@@ -46,7 +46,6 @@ public final class RuleGroupRuleActionBlockProperties {
             this.customResponse = customResponse;
             return this;
         }
-
         public RuleGroupRuleActionBlockProperties build() {
             return new RuleGroupRuleActionBlockProperties(customResponse);
         }

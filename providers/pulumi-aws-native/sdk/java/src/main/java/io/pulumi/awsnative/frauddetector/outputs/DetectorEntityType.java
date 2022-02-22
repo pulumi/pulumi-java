@@ -160,7 +160,6 @@ public final class DetectorEntityType {
             this.tags = tags;
             return this;
         }
-
         public DetectorEntityType build() {
             return new DetectorEntityType(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

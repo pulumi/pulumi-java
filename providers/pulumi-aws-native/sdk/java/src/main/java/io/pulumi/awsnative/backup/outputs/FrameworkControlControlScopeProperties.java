@@ -98,7 +98,6 @@ public final class FrameworkControlControlScopeProperties {
             this.tags = tags;
             return this;
         }
-
         public FrameworkControlControlScopeProperties build() {
             return new FrameworkControlControlScopeProperties(complianceResourceIds, complianceResourceTypes, tags);
         }

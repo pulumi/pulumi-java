@@ -70,7 +70,6 @@ public final class RuleGroupJsonMatchPattern {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public RuleGroupJsonMatchPattern build() {
             return new RuleGroupJsonMatchPattern(all, includedPaths);
         }

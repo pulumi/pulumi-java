@@ -75,7 +75,6 @@ public final class ServiceAwsVpcConfiguration {
             this.subnets = subnets;
             return this;
         }
-
         public ServiceAwsVpcConfiguration build() {
             return new ServiceAwsVpcConfiguration(assignPublicIp, securityGroups, subnets);
         }

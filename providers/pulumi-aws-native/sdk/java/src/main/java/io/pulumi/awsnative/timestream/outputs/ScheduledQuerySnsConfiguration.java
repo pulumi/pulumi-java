@@ -44,7 +44,6 @@ public final class ScheduledQuerySnsConfiguration {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public ScheduledQuerySnsConfiguration build() {
             return new ScheduledQuerySnsConfiguration(topicArn);
         }

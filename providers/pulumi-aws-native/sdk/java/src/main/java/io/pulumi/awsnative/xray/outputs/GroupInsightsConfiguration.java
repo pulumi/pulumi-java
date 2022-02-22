@@ -76,7 +76,6 @@ public final class GroupInsightsConfiguration {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
-
         public GroupInsightsConfiguration build() {
             return new GroupInsightsConfiguration(insightsEnabled, notificationsEnabled);
         }

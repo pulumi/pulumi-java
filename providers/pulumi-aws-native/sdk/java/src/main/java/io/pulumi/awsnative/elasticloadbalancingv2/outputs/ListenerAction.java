@@ -144,7 +144,6 @@ public final class ListenerAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListenerAction build() {
             return new ListenerAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }

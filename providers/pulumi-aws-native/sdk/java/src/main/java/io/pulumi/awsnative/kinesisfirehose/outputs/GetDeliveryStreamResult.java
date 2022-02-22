@@ -174,7 +174,6 @@ public final class GetDeliveryStreamResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeliveryStreamResult build() {
             return new GetDeliveryStreamResult(amazonopensearchserviceDestinationConfiguration, arn, deliveryStreamEncryptionConfigurationInput, elasticsearchDestinationConfiguration, extendedS3DestinationConfiguration, httpEndpointDestinationConfiguration, redshiftDestinationConfiguration, s3DestinationConfiguration, splunkDestinationConfiguration, tags);
         }

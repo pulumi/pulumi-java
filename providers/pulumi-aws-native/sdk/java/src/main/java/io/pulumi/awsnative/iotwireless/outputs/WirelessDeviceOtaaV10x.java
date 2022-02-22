@@ -58,7 +58,6 @@ public final class WirelessDeviceOtaaV10x {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
-
         public WirelessDeviceOtaaV10x build() {
             return new WirelessDeviceOtaaV10x(appEui, appKey);
         }

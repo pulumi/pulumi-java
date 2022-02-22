@@ -69,7 +69,6 @@ public final class BucketRoutingRule {
             this.routingRuleCondition = routingRuleCondition;
             return this;
         }
-
         public BucketRoutingRule build() {
             return new BucketRoutingRule(redirectRule, routingRuleCondition);
         }

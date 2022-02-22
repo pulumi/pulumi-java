@@ -13,7 +13,7 @@ public final class GetSimulationApplicationVersionArgs extends io.pulumi.resourc
     public static final GetSimulationApplicationVersionArgs Empty = new GetSimulationApplicationVersionArgs();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -51,7 +51,6 @@ public final class GetSimulationApplicationVersionArgs extends io.pulumi.resourc
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetSimulationApplicationVersionArgs build() {
             return new GetSimulationApplicationVersionArgs(arn);
         }

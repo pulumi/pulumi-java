@@ -16,14 +16,14 @@ public final class FlowEventBridgeDestinationProperties extends io.pulumi.resour
     public static final FlowEventBridgeDestinationProperties Empty = new FlowEventBridgeDestinationProperties();
 
     @InputImport(name="errorHandlingConfig")
-    private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+        private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
     }
 
     @InputImport(name="object", required=true)
-    private final String object;
+        private final String object;
 
     public String getObject() {
         return this.object;
@@ -72,7 +72,6 @@ public final class FlowEventBridgeDestinationProperties extends io.pulumi.resour
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowEventBridgeDestinationProperties build() {
             return new FlowEventBridgeDestinationProperties(errorHandlingConfig, object);
         }

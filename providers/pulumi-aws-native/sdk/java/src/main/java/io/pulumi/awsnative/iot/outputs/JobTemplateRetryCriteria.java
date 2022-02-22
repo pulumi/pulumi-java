@@ -61,7 +61,6 @@ public final class JobTemplateRetryCriteria {
             this.numberOfRetries = numberOfRetries;
             return this;
         }
-
         public JobTemplateRetryCriteria build() {
             return new JobTemplateRetryCriteria(failureType, numberOfRetries);
         }

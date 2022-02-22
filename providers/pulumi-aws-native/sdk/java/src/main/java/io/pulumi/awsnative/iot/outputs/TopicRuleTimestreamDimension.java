@@ -58,7 +58,6 @@ public final class TopicRuleTimestreamDimension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTimestreamDimension build() {
             return new TopicRuleTimestreamDimension(name, value);
         }

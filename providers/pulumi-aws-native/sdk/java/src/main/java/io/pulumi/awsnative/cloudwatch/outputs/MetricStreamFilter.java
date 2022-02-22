@@ -52,7 +52,6 @@ public final class MetricStreamFilter {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public MetricStreamFilter build() {
             return new MetricStreamFilter(namespace);
         }

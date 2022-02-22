@@ -78,7 +78,6 @@ public final class TemplateSheet {
             this.sheetId = sheetId;
             return this;
         }
-
         public TemplateSheet build() {
             return new TemplateSheet(name, sheetId);
         }

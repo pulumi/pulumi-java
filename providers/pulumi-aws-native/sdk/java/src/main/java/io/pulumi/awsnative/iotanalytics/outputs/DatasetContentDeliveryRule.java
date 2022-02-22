@@ -61,7 +61,6 @@ public final class DatasetContentDeliveryRule {
             this.entryName = entryName;
             return this;
         }
-
         public DatasetContentDeliveryRule build() {
             return new DatasetContentDeliveryRule(destination, entryName);
         }

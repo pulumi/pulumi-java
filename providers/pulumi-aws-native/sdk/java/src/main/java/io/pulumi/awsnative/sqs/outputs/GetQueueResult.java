@@ -354,7 +354,6 @@ public final class GetQueueResult {
             this.visibilityTimeout = visibilityTimeout;
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(arn, contentBasedDeduplication, deduplicationScope, delaySeconds, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueUrl, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
         }

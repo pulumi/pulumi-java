@@ -60,7 +60,6 @@ public final class MissionProfileTag {
             this.value = value;
             return this;
         }
-
         public MissionProfileTag build() {
             return new MissionProfileTag(key, value);
         }

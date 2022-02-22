@@ -69,7 +69,6 @@ public final class ThemeError {
             this.type = type;
             return this;
         }
-
         public ThemeError build() {
             return new ThemeError(message, type);
         }

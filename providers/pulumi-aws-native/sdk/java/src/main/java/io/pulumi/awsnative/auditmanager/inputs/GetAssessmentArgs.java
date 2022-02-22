@@ -13,7 +13,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAssessmentArgs Empty = new GetAssessmentArgs();
 
     @InputImport(name="assessmentId", required=true)
-    private final String assessmentId;
+        private final String assessmentId;
 
     public String getAssessmentId() {
         return this.assessmentId;
@@ -51,7 +51,6 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
             this.assessmentId = Objects.requireNonNull(assessmentId);
             return this;
         }
-
         public GetAssessmentArgs build() {
             return new GetAssessmentArgs(assessmentId);
         }

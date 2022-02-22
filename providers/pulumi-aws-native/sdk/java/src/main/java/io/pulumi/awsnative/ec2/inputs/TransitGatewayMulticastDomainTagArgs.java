@@ -19,7 +19,7 @@ public final class TransitGatewayMulticastDomainTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -30,7 +30,7 @@ public final class TransitGatewayMulticastDomainTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -89,7 +89,6 @@ public final class TransitGatewayMulticastDomainTagArgs extends io.pulumi.resour
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TransitGatewayMulticastDomainTagArgs build() {
             return new TransitGatewayMulticastDomainTagArgs(key, value);
         }

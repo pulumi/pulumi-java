@@ -58,7 +58,6 @@ public final class PlaybackKeyPairTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PlaybackKeyPairTag build() {
             return new PlaybackKeyPairTag(key, value);
         }

@@ -62,7 +62,6 @@ public final class RuleGroupGeoMatchStatement {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public RuleGroupGeoMatchStatement build() {
             return new RuleGroupGeoMatchStatement(countryCodes, forwardedIPConfig);
         }

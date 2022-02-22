@@ -73,7 +73,6 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
             this.station = station;
             return this;
         }
-
         public TaskDefinitionLoRaWANGatewayVersion build() {
             return new TaskDefinitionLoRaWANGatewayVersion(model, packageVersion, station);
         }

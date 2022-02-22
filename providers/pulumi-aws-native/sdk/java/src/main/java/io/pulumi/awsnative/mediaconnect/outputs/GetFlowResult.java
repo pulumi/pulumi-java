@@ -120,7 +120,6 @@ public final class GetFlowResult {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(flowArn, flowAvailabilityZone, source, sourceFailoverConfig);
         }

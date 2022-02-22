@@ -15,14 +15,14 @@ public final class NetworkInsightsAnalysisAnalysisComponent extends io.pulumi.re
     public static final NetworkInsightsAnalysisAnalysisComponent Empty = new NetworkInsightsAnalysisAnalysisComponent();
 
     @InputImport(name="arn")
-    private final @Nullable String arn;
+        private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -71,7 +71,6 @@ public final class NetworkInsightsAnalysisAnalysisComponent extends io.pulumi.re
             this.id = id;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisComponent build() {
             return new NetworkInsightsAnalysisAnalysisComponent(arn, id);
         }

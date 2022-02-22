@@ -73,7 +73,6 @@ public final class PipelineChannel {
             this.next = next;
             return this;
         }
-
         public PipelineChannel build() {
             return new PipelineChannel(channelName, name, next);
         }

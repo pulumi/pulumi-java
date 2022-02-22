@@ -99,7 +99,6 @@ public final class GetComponentResult {
             this.type = type;
             return this;
         }
-
         public GetComponentResult build() {
             return new GetComponentResult(arn, encrypted, type);
         }

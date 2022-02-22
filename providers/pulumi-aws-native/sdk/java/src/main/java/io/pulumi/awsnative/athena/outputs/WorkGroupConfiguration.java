@@ -115,7 +115,6 @@ public final class WorkGroupConfiguration {
             this.resultConfiguration = resultConfiguration;
             return this;
         }
-
         public WorkGroupConfiguration build() {
             return new WorkGroupConfiguration(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, requesterPaysEnabled, resultConfiguration);
         }

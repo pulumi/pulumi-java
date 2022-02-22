@@ -118,7 +118,6 @@ public final class DetectorModelAssetPropertyVariant {
             this.stringValue = stringValue;
             return this;
         }
-
         public DetectorModelAssetPropertyVariant build() {
             return new DetectorModelAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }

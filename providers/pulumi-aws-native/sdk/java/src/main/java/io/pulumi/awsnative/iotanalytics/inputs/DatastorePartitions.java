@@ -16,7 +16,7 @@ public final class DatastorePartitions extends io.pulumi.resources.InvokeArgs {
     public static final DatastorePartitions Empty = new DatastorePartitions();
 
     @InputImport(name="partitions")
-    private final @Nullable List<DatastorePartition> partitions;
+        private final @Nullable List<DatastorePartition> partitions;
 
     public List<DatastorePartition> getPartitions() {
         return this.partitions == null ? List.of() : this.partitions;
@@ -54,7 +54,6 @@ public final class DatastorePartitions extends io.pulumi.resources.InvokeArgs {
             this.partitions = partitions;
             return this;
         }
-
         public DatastorePartitions build() {
             return new DatastorePartitions(partitions);
         }

@@ -75,7 +75,6 @@ public final class MonitoringScheduleVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public MonitoringScheduleVpcConfig build() {
             return new MonitoringScheduleVpcConfig(securityGroupIds, subnets);
         }

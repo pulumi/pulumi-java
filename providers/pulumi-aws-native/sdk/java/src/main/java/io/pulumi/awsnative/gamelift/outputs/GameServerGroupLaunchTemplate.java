@@ -73,7 +73,6 @@ public final class GameServerGroupLaunchTemplate {
             this.version = version;
             return this;
         }
-
         public GameServerGroupLaunchTemplate build() {
             return new GameServerGroupLaunchTemplate(launchTemplateId, launchTemplateName, version);
         }

@@ -60,7 +60,6 @@ public final class GetAppBlockResult {
             this.createdTime = createdTime;
             return this;
         }
-
         public GetAppBlockResult build() {
             return new GetAppBlockResult(arn, createdTime);
         }

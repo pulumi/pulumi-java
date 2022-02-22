@@ -58,7 +58,6 @@ public final class DomainConfigurationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DomainConfigurationTag build() {
             return new DomainConfigurationTag(key, value);
         }

@@ -20,49 +20,49 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     public static final AuthorizerArgs Empty = new AuthorizerArgs();
 
     @InputImport(name="authorizerFunctionArn", required=true)
-    private final Input<String> authorizerFunctionArn;
+        private final Input<String> authorizerFunctionArn;
 
     public Input<String> getAuthorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
 
     @InputImport(name="authorizerName")
-    private final @Nullable Input<String> authorizerName;
+        private final @Nullable Input<String> authorizerName;
 
     public Input<String> getAuthorizerName() {
         return this.authorizerName == null ? Input.empty() : this.authorizerName;
     }
 
     @InputImport(name="signingDisabled")
-    private final @Nullable Input<Boolean> signingDisabled;
+        private final @Nullable Input<Boolean> signingDisabled;
 
     public Input<Boolean> getSigningDisabled() {
         return this.signingDisabled == null ? Input.empty() : this.signingDisabled;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<AuthorizerStatus> status;
+        private final @Nullable Input<AuthorizerStatus> status;
 
     public Input<AuthorizerStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<AuthorizerTagArgs>> tags;
+        private final @Nullable Input<List<AuthorizerTagArgs>> tags;
 
     public Input<List<AuthorizerTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tokenKeyName")
-    private final @Nullable Input<String> tokenKeyName;
+        private final @Nullable Input<String> tokenKeyName;
 
     public Input<String> getTokenKeyName() {
         return this.tokenKeyName == null ? Input.empty() : this.tokenKeyName;
     }
 
     @InputImport(name="tokenSigningPublicKeys")
-    private final @Nullable Input<Object> tokenSigningPublicKeys;
+        private final @Nullable Input<Object> tokenSigningPublicKeys;
 
     public Input<Object> getTokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys == null ? Input.empty() : this.tokenSigningPublicKeys;
@@ -196,7 +196,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
             this.tokenSigningPublicKeys = Input.ofNullable(tokenSigningPublicKeys);
             return this;
         }
-
         public AuthorizerArgs build() {
             return new AuthorizerArgs(authorizerFunctionArn, authorizerName, signingDisabled, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }

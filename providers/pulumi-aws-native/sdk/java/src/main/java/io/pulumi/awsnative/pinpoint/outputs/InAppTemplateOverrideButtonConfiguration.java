@@ -61,7 +61,6 @@ public final class InAppTemplateOverrideButtonConfiguration {
             this.link = link;
             return this;
         }
-
         public InAppTemplateOverrideButtonConfiguration build() {
             return new InAppTemplateOverrideButtonConfiguration(buttonAction, link);
         }

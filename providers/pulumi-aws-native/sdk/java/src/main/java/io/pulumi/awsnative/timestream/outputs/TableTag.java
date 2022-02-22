@@ -60,7 +60,6 @@ public final class TableTag {
             this.value = value;
             return this;
         }
-
         public TableTag build() {
             return new TableTag(key, value);
         }

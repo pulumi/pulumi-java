@@ -141,7 +141,6 @@ public final class GetLabelResult {
             this.tags = tags;
             return this;
         }
-
         public GetLabelResult build() {
             return new GetLabelResult(arn, createdTime, description, lastUpdatedTime, tags);
         }

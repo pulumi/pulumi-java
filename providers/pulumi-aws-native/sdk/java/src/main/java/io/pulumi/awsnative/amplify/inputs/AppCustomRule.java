@@ -15,28 +15,28 @@ public final class AppCustomRule extends io.pulumi.resources.InvokeArgs {
     public static final AppCustomRule Empty = new AppCustomRule();
 
     @InputImport(name="condition")
-    private final @Nullable String condition;
+        private final @Nullable String condition;
 
     public Optional<String> getCondition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
     @InputImport(name="source", required=true)
-    private final String source;
+        private final String source;
 
     public String getSource() {
         return this.source;
     }
 
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
     @InputImport(name="target", required=true)
-    private final String target;
+        private final String target;
 
     public String getTarget() {
         return this.target;
@@ -105,7 +105,6 @@ public final class AppCustomRule extends io.pulumi.resources.InvokeArgs {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AppCustomRule build() {
             return new AppCustomRule(condition, source, status, target);
         }

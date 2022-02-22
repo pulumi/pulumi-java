@@ -96,7 +96,6 @@ public final class DataSourcePostgreSqlParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourcePostgreSqlParameters build() {
             return new DataSourcePostgreSqlParameters(database, host, port);
         }

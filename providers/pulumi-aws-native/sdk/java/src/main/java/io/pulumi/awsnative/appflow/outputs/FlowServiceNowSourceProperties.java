@@ -44,7 +44,6 @@ public final class FlowServiceNowSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowServiceNowSourceProperties build() {
             return new FlowServiceNowSourceProperties(object);
         }

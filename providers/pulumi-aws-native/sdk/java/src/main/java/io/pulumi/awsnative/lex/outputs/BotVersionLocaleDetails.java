@@ -44,7 +44,6 @@ public final class BotVersionLocaleDetails {
             this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
             return this;
         }
-
         public BotVersionLocaleDetails build() {
             return new BotVersionLocaleDetails(sourceBotVersion);
         }

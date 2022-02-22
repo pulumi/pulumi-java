@@ -62,7 +62,6 @@ public final class GetActivityResult {
             this.tags = tags;
             return this;
         }
-
         public GetActivityResult build() {
             return new GetActivityResult(arn, tags);
         }

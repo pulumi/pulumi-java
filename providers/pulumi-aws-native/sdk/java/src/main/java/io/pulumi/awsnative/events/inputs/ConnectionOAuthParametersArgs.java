@@ -18,28 +18,28 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
     public static final ConnectionOAuthParametersArgs Empty = new ConnectionOAuthParametersArgs();
 
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+        private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @InputImport(name="clientParameters", required=true)
-    private final Input<ConnectionClientParametersArgs> clientParameters;
+        private final Input<ConnectionClientParametersArgs> clientParameters;
 
     public Input<ConnectionClientParametersArgs> getClientParameters() {
         return this.clientParameters;
     }
 
     @InputImport(name="httpMethod", required=true)
-    private final Input<ConnectionOAuthParametersHttpMethod> httpMethod;
+        private final Input<ConnectionOAuthParametersHttpMethod> httpMethod;
 
     public Input<ConnectionOAuthParametersHttpMethod> getHttpMethod() {
         return this.httpMethod;
     }
 
     @InputImport(name="oAuthHttpParameters")
-    private final @Nullable Input<ConnectionHttpParametersArgs> oAuthHttpParameters;
+        private final @Nullable Input<ConnectionHttpParametersArgs> oAuthHttpParameters;
 
     public Input<ConnectionHttpParametersArgs> getOAuthHttpParameters() {
         return this.oAuthHttpParameters == null ? Input.empty() : this.oAuthHttpParameters;
@@ -128,7 +128,6 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
             this.oAuthHttpParameters = Input.ofNullable(oAuthHttpParameters);
             return this;
         }
-
         public ConnectionOAuthParametersArgs build() {
             return new ConnectionOAuthParametersArgs(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
         }

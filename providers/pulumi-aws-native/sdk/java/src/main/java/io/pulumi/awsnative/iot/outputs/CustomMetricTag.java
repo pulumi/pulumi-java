@@ -74,7 +74,6 @@ public final class CustomMetricTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CustomMetricTag build() {
             return new CustomMetricTag(key, value);
         }

@@ -157,7 +157,6 @@ public final class DataSourceWebCrawlerConfiguration {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
         public DataSourceWebCrawlerConfiguration build() {
             return new DataSourceWebCrawlerConfiguration(authenticationConfiguration, crawlDepth, maxContentSizePerPageInMegaBytes, maxLinksPerPage, maxUrlsPerMinuteCrawlRate, proxyConfiguration, urlExclusionPatterns, urlInclusionPatterns, urls);
         }

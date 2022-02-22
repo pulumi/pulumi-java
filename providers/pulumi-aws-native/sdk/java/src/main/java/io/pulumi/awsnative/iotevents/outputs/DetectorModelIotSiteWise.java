@@ -132,7 +132,6 @@ public final class DetectorModelIotSiteWise {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }
-
         public DetectorModelIotSiteWise build() {
             return new DetectorModelIotSiteWise(assetId, entryId, propertyAlias, propertyId, propertyValue);
         }

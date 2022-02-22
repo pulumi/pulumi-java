@@ -73,7 +73,6 @@ public final class AssessmentAWSAccount {
             this.name = name;
             return this;
         }
-
         public AssessmentAWSAccount build() {
             return new AssessmentAWSAccount(emailAddress, id, name);
         }

@@ -13,21 +13,21 @@ public final class GetPackageVersionArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetPackageVersionArgs Empty = new GetPackageVersionArgs();
 
     @InputImport(name="packageId", required=true)
-    private final String packageId;
+        private final String packageId;
 
     public String getPackageId() {
         return this.packageId;
     }
 
     @InputImport(name="packageVersion", required=true)
-    private final String packageVersion;
+        private final String packageVersion;
 
     public String getPackageVersion() {
         return this.packageVersion;
     }
 
     @InputImport(name="patchVersion", required=true)
-    private final String patchVersion;
+        private final String patchVersion;
 
     public String getPatchVersion() {
         return this.patchVersion;
@@ -86,7 +86,6 @@ public final class GetPackageVersionArgs extends io.pulumi.resources.InvokeArgs 
             this.patchVersion = Objects.requireNonNull(patchVersion);
             return this;
         }
-
         public GetPackageVersionArgs build() {
             return new GetPackageVersionArgs(packageId, packageVersion, patchVersion);
         }

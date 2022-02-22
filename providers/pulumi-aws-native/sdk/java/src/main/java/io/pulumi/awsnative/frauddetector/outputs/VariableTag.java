@@ -58,7 +58,6 @@ public final class VariableTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VariableTag build() {
             return new VariableTag(key, value);
         }

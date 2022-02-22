@@ -75,7 +75,6 @@ public final class DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration build() {
             return new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings);
         }

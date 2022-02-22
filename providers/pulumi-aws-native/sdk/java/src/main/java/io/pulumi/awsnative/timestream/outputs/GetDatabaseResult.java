@@ -91,7 +91,6 @@ public final class GetDatabaseResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(arn, kmsKeyId, tags);
         }

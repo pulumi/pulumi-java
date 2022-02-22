@@ -161,7 +161,6 @@ public final class SecurityProfileBehaviorCriteria {
             this.value = value;
             return this;
         }
-
         public SecurityProfileBehaviorCriteria build() {
             return new SecurityProfileBehaviorCriteria(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }

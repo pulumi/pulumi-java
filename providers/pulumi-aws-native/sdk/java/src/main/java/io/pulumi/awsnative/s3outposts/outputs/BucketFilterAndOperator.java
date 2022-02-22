@@ -30,7 +30,6 @@ public final class BucketFilterAndOperator {
         public Builder(BucketFilterAndOperator defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BucketFilterAndOperator build() {
             return new BucketFilterAndOperator();
         }

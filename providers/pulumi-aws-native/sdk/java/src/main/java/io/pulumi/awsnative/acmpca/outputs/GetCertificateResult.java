@@ -76,7 +76,6 @@ public final class GetCertificateResult {
             this.certificate = certificate;
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(arn, certificate);
         }

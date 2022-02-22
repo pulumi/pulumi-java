@@ -44,7 +44,6 @@ public final class AnomalyDetectorCloudwatchConfig {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AnomalyDetectorCloudwatchConfig build() {
             return new AnomalyDetectorCloudwatchConfig(roleArn);
         }

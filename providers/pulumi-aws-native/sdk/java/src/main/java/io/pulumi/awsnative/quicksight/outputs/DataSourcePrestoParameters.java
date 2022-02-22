@@ -96,7 +96,6 @@ public final class DataSourcePrestoParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourcePrestoParameters build() {
             return new DataSourcePrestoParameters(catalog, host, port);
         }

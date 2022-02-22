@@ -30,7 +30,6 @@ public final class DatastoreJsonConfiguration {
         public Builder(DatastoreJsonConfiguration defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreJsonConfiguration build() {
             return new DatastoreJsonConfiguration();
         }

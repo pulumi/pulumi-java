@@ -97,7 +97,6 @@ public final class ServiceSourceConfiguration {
             this.imageRepository = imageRepository;
             return this;
         }
-
         public ServiceSourceConfiguration build() {
             return new ServiceSourceConfiguration(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }

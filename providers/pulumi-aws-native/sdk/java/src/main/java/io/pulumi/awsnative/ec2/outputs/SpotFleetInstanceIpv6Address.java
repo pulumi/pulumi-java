@@ -44,7 +44,6 @@ public final class SpotFleetInstanceIpv6Address {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public SpotFleetInstanceIpv6Address build() {
             return new SpotFleetInstanceIpv6Address(ipv6Address);
         }

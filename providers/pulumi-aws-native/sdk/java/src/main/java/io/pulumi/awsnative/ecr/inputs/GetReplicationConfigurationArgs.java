@@ -17,7 +17,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+        private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;
@@ -55,7 +55,6 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public GetReplicationConfigurationArgs build() {
             return new GetReplicationConfigurationArgs(registryId);
         }

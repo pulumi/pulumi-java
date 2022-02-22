@@ -58,7 +58,6 @@ public final class TopicRuleCloudwatchLogsAction {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleCloudwatchLogsAction build() {
             return new TopicRuleCloudwatchLogsAction(logGroupName, roleArn);
         }

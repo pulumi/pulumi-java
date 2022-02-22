@@ -271,7 +271,6 @@ public final class GetNetworkInterfaceResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(description, groupSet, id, ipv6AddressCount, ipv6Addresses, primaryPrivateIpAddress, privateIpAddresses, secondaryPrivateIpAddressCount, secondaryPrivateIpAddresses, sourceDestCheck, tags);
         }

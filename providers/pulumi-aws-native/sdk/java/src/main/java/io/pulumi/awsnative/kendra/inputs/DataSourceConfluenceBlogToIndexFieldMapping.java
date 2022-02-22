@@ -16,21 +16,21 @@ public final class DataSourceConfluenceBlogToIndexFieldMapping extends io.pulumi
     public static final DataSourceConfluenceBlogToIndexFieldMapping Empty = new DataSourceConfluenceBlogToIndexFieldMapping();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final DataSourceConfluenceBlogFieldName dataSourceFieldName;
+        private final DataSourceConfluenceBlogFieldName dataSourceFieldName;
 
     public DataSourceConfluenceBlogFieldName getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable String dateFieldFormat;
+        private final @Nullable String dateFieldFormat;
 
     public Optional<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final String indexFieldName;
+        private final String indexFieldName;
 
     public String getIndexFieldName() {
         return this.indexFieldName;
@@ -89,7 +89,6 @@ public final class DataSourceConfluenceBlogToIndexFieldMapping extends io.pulumi
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluenceBlogToIndexFieldMapping build() {
             return new DataSourceConfluenceBlogToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

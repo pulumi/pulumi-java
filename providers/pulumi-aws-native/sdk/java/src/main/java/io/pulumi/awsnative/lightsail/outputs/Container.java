@@ -142,7 +142,6 @@ public final class Container {
             this.ports = ports;
             return this;
         }
-
         public Container build() {
             return new Container(command, containerName, environment, image, ports);
         }

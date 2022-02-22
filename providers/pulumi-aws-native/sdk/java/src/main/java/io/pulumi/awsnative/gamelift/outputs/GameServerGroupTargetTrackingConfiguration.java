@@ -44,7 +44,6 @@ public final class GameServerGroupTargetTrackingConfiguration {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public GameServerGroupTargetTrackingConfiguration build() {
             return new GameServerGroupTargetTrackingConfiguration(targetValue);
         }

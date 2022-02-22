@@ -82,7 +82,6 @@ public final class AnomalyDetectorMetric {
             this.namespace = namespace;
             return this;
         }
-
         public AnomalyDetectorMetric build() {
             return new AnomalyDetectorMetric(aggregationFunction, metricName, namespace);
         }

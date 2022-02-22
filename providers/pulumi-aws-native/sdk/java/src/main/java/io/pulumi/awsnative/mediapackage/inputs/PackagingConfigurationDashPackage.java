@@ -29,14 +29,14 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="dashManifests", required=true)
-    private final List<PackagingConfigurationDashManifest> dashManifests;
+        private final List<PackagingConfigurationDashManifest> dashManifests;
 
     public List<PackagingConfigurationDashManifest> getDashManifests() {
         return this.dashManifests;
     }
 
     @InputImport(name="encryption")
-    private final @Nullable PackagingConfigurationDashEncryption encryption;
+        private final @Nullable PackagingConfigurationDashEncryption encryption;
 
     public Optional<PackagingConfigurationDashEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -47,7 +47,7 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="includeEncoderConfigurationInSegments")
-    private final @Nullable Boolean includeEncoderConfigurationInSegments;
+        private final @Nullable Boolean includeEncoderConfigurationInSegments;
 
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
@@ -58,14 +58,14 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="periodTriggers")
-    private final @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers;
+        private final @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers;
 
     public List<PackagingConfigurationDashPackagePeriodTriggersItem> getPeriodTriggers() {
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+        private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
@@ -76,7 +76,7 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="segmentTemplateFormat")
-    private final @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
+        private final @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
     public Optional<PackagingConfigurationDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
         return this.segmentTemplateFormat == null ? Optional.empty() : Optional.ofNullable(this.segmentTemplateFormat);
@@ -165,7 +165,6 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-
         public PackagingConfigurationDashPackage build() {
             return new PackagingConfigurationDashPackage(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
         }

@@ -21,7 +21,7 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
     public static final MonitoringScheduleEndpointInputArgs Empty = new MonitoringScheduleEndpointInputArgs();
 
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+        private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -32,7 +32,7 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final Input<String> localPath;
+        private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -43,7 +43,7 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="s3DataDistributionType")
-    private final @Nullable Input<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType;
+        private final @Nullable Input<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Input<MonitoringScheduleEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
@@ -54,7 +54,7 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="s3InputMode")
-    private final @Nullable Input<MonitoringScheduleEndpointInputS3InputMode> s3InputMode;
+        private final @Nullable Input<MonitoringScheduleEndpointInputS3InputMode> s3InputMode;
 
     public Input<MonitoringScheduleEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
@@ -143,7 +143,6 @@ public final class MonitoringScheduleEndpointInputArgs extends io.pulumi.resourc
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }
-
         public MonitoringScheduleEndpointInputArgs build() {
             return new MonitoringScheduleEndpointInputArgs(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }

@@ -69,7 +69,6 @@ public final class BucketServerSideEncryptionByDefault {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }
-
         public BucketServerSideEncryptionByDefault build() {
             return new BucketServerSideEncryptionByDefault(kMSMasterKeyID, sSEAlgorithm);
         }

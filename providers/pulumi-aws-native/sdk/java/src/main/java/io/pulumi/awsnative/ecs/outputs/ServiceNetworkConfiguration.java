@@ -46,7 +46,6 @@ public final class ServiceNetworkConfiguration {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }
-
         public ServiceNetworkConfiguration build() {
             return new ServiceNetworkConfiguration(awsvpcConfiguration);
         }

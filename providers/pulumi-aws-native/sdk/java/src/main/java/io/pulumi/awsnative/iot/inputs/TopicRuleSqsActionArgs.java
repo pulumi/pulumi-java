@@ -16,21 +16,21 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     public static final TopicRuleSqsActionArgs Empty = new TopicRuleSqsActionArgs();
 
     @InputImport(name="queueUrl", required=true)
-    private final Input<String> queueUrl;
+        private final Input<String> queueUrl;
 
     public Input<String> getQueueUrl() {
         return this.queueUrl;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="useBase64")
-    private final @Nullable Input<Boolean> useBase64;
+        private final @Nullable Input<Boolean> useBase64;
 
     public Input<Boolean> getUseBase64() {
         return this.useBase64 == null ? Input.empty() : this.useBase64;
@@ -104,7 +104,6 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
             this.useBase64 = Input.ofNullable(useBase64);
             return this;
         }
-
         public TopicRuleSqsActionArgs build() {
             return new TopicRuleSqsActionArgs(queueUrl, roleArn, useBase64);
         }

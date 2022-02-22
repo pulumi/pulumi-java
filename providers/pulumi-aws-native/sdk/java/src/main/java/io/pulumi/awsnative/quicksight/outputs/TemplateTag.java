@@ -74,7 +74,6 @@ public final class TemplateTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TemplateTag build() {
             return new TemplateTag(key, value);
         }

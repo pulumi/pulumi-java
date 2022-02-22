@@ -46,7 +46,6 @@ public final class TopicRuleDestinationHttpUrlDestinationSummary {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
-
         public TopicRuleDestinationHttpUrlDestinationSummary build() {
             return new TopicRuleDestinationHttpUrlDestinationSummary(confirmationUrl);
         }

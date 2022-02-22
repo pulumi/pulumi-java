@@ -13,7 +13,7 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
     public static final GetModelPackageGroupArgs Empty = new GetModelPackageGroupArgs();
 
     @InputImport(name="modelPackageGroupArn", required=true)
-    private final String modelPackageGroupArn;
+        private final String modelPackageGroupArn;
 
     public String getModelPackageGroupArn() {
         return this.modelPackageGroupArn;
@@ -51,7 +51,6 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
             this.modelPackageGroupArn = Objects.requireNonNull(modelPackageGroupArn);
             return this;
         }
-
         public GetModelPackageGroupArgs build() {
             return new GetModelPackageGroupArgs(modelPackageGroupArn);
         }

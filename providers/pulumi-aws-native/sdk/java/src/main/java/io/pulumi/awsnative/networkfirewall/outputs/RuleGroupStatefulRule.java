@@ -74,7 +74,6 @@ public final class RuleGroupStatefulRule {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
-
         public RuleGroupStatefulRule build() {
             return new RuleGroupStatefulRule(action, header, ruleOptions);
         }

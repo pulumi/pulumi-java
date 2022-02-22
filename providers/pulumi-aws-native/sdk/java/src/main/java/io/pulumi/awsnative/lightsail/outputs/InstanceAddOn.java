@@ -91,7 +91,6 @@ public final class InstanceAddOn {
             this.status = status;
             return this;
         }
-
         public InstanceAddOn build() {
             return new InstanceAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }

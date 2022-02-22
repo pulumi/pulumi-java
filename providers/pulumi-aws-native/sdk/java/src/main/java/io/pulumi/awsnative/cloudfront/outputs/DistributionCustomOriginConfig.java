@@ -114,7 +114,6 @@ public final class DistributionCustomOriginConfig {
             this.originSSLProtocols = originSSLProtocols;
             return this;
         }
-
         public DistributionCustomOriginConfig build() {
             return new DistributionCustomOriginConfig(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
         }

@@ -88,7 +88,6 @@ public final class DatasetContainerAction {
             this.variables = variables;
             return this;
         }
-
         public DatasetContainerAction build() {
             return new DatasetContainerAction(executionRoleArn, image, resourceConfiguration, variables);
         }

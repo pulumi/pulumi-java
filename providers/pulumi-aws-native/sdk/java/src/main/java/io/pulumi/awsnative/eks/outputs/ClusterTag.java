@@ -74,7 +74,6 @@ public final class ClusterTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ClusterTag build() {
             return new ClusterTag(key, value);
         }

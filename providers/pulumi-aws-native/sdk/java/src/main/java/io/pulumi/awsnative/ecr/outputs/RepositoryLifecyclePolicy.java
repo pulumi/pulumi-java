@@ -60,7 +60,6 @@ public final class RepositoryLifecyclePolicy {
             this.registryId = registryId;
             return this;
         }
-
         public RepositoryLifecyclePolicy build() {
             return new RepositoryLifecyclePolicy(lifecyclePolicyText, registryId);
         }

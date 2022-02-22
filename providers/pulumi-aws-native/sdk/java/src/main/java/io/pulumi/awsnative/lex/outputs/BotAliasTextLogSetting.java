@@ -61,7 +61,6 @@ public final class BotAliasTextLogSetting {
             this.enabled = enabled;
             return this;
         }
-
         public BotAliasTextLogSetting build() {
             return new BotAliasTextLogSetting(destination, enabled);
         }

@@ -19,7 +19,7 @@ public final class ResponsePlanNotificationTargetItem extends io.pulumi.resource
     public static final ResponsePlanNotificationTargetItem Empty = new ResponsePlanNotificationTargetItem();
 
     @InputImport(name="snsTopicArn")
-    private final @Nullable String snsTopicArn;
+        private final @Nullable String snsTopicArn;
 
     public Optional<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Optional.empty() : Optional.ofNullable(this.snsTopicArn);
@@ -57,7 +57,6 @@ public final class ResponsePlanNotificationTargetItem extends io.pulumi.resource
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public ResponsePlanNotificationTargetItem build() {
             return new ResponsePlanNotificationTargetItem(snsTopicArn);
         }

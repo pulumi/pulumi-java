@@ -52,7 +52,6 @@ public final class BucketEventBridgeConfiguration {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
         }
-
         public BucketEventBridgeConfiguration build() {
             return new BucketEventBridgeConfiguration(eventBridgeEnabled);
         }

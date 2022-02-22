@@ -61,7 +61,6 @@ public final class CertificateAuthorityRevocationConfiguration {
             this.ocspConfiguration = ocspConfiguration;
             return this;
         }
-
         public CertificateAuthorityRevocationConfiguration build() {
             return new CertificateAuthorityRevocationConfiguration(crlConfiguration, ocspConfiguration);
         }

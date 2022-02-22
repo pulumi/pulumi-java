@@ -16,21 +16,21 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
     public static final WebACLIPSetForwardedIPConfigurationArgs Empty = new WebACLIPSetForwardedIPConfigurationArgs();
 
     @InputImport(name="fallbackBehavior", required=true)
-    private final Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+        private final Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
     public Input<WebACLIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="position", required=true)
-    private final Input<WebACLIPSetForwardedIPConfigurationPosition> position;
+        private final Input<WebACLIPSetForwardedIPConfigurationPosition> position;
 
     public Input<WebACLIPSetForwardedIPConfigurationPosition> getPosition() {
         return this.position;
@@ -104,7 +104,6 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
-
         public WebACLIPSetForwardedIPConfigurationArgs build() {
             return new WebACLIPSetForwardedIPConfigurationArgs(fallbackBehavior, headerName, position);
         }

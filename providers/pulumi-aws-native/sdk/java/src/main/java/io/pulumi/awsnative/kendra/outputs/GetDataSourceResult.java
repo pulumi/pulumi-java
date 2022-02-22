@@ -162,7 +162,6 @@ public final class GetDataSourceResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(arn, dataSourceConfiguration, description, id, indexId, name, roleArn, schedule, tags);
         }

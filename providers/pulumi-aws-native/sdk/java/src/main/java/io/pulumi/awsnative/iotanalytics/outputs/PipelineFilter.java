@@ -73,7 +73,6 @@ public final class PipelineFilter {
             this.next = next;
             return this;
         }
-
         public PipelineFilter build() {
             return new PipelineFilter(filter, name, next);
         }

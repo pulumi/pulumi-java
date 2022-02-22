@@ -100,7 +100,6 @@ public final class DomainEndpointOptions {
             this.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
         }
-
         public DomainEndpointOptions build() {
             return new DomainEndpointOptions(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);
         }

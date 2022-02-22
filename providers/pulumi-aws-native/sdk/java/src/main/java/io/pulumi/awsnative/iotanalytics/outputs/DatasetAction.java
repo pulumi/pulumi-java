@@ -75,7 +75,6 @@ public final class DatasetAction {
             this.queryAction = queryAction;
             return this;
         }
-
         public DatasetAction build() {
             return new DatasetAction(actionName, containerAction, queryAction);
         }

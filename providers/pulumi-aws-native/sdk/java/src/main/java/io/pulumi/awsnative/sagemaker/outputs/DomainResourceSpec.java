@@ -98,7 +98,6 @@ public final class DomainResourceSpec {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public DomainResourceSpec build() {
             return new DomainResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

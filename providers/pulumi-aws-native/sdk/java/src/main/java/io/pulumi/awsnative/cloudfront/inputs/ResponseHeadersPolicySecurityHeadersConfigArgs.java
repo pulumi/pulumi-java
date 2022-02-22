@@ -20,42 +20,42 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
     public static final ResponseHeadersPolicySecurityHeadersConfigArgs Empty = new ResponseHeadersPolicySecurityHeadersConfigArgs();
 
     @InputImport(name="contentSecurityPolicy")
-    private final @Nullable Input<ResponseHeadersPolicyContentSecurityPolicyArgs> contentSecurityPolicy;
+        private final @Nullable Input<ResponseHeadersPolicyContentSecurityPolicyArgs> contentSecurityPolicy;
 
     public Input<ResponseHeadersPolicyContentSecurityPolicyArgs> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Input.empty() : this.contentSecurityPolicy;
     }
 
     @InputImport(name="contentTypeOptions")
-    private final @Nullable Input<ResponseHeadersPolicyContentTypeOptionsArgs> contentTypeOptions;
+        private final @Nullable Input<ResponseHeadersPolicyContentTypeOptionsArgs> contentTypeOptions;
 
     public Input<ResponseHeadersPolicyContentTypeOptionsArgs> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Input.empty() : this.contentTypeOptions;
     }
 
     @InputImport(name="frameOptions")
-    private final @Nullable Input<ResponseHeadersPolicyFrameOptionsArgs> frameOptions;
+        private final @Nullable Input<ResponseHeadersPolicyFrameOptionsArgs> frameOptions;
 
     public Input<ResponseHeadersPolicyFrameOptionsArgs> getFrameOptions() {
         return this.frameOptions == null ? Input.empty() : this.frameOptions;
     }
 
     @InputImport(name="referrerPolicy")
-    private final @Nullable Input<ResponseHeadersPolicyReferrerPolicyArgs> referrerPolicy;
+        private final @Nullable Input<ResponseHeadersPolicyReferrerPolicyArgs> referrerPolicy;
 
     public Input<ResponseHeadersPolicyReferrerPolicyArgs> getReferrerPolicy() {
         return this.referrerPolicy == null ? Input.empty() : this.referrerPolicy;
     }
 
     @InputImport(name="strictTransportSecurity")
-    private final @Nullable Input<ResponseHeadersPolicyStrictTransportSecurityArgs> strictTransportSecurity;
+        private final @Nullable Input<ResponseHeadersPolicyStrictTransportSecurityArgs> strictTransportSecurity;
 
     public Input<ResponseHeadersPolicyStrictTransportSecurityArgs> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Input.empty() : this.strictTransportSecurity;
     }
 
     @InputImport(name="xSSProtection")
-    private final @Nullable Input<ResponseHeadersPolicyXSSProtectionArgs> xSSProtection;
+        private final @Nullable Input<ResponseHeadersPolicyXSSProtectionArgs> xSSProtection;
 
     public Input<ResponseHeadersPolicyXSSProtectionArgs> getXSSProtection() {
         return this.xSSProtection == null ? Input.empty() : this.xSSProtection;
@@ -174,7 +174,6 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
             this.xSSProtection = Input.ofNullable(xSSProtection);
             return this;
         }
-
         public ResponseHeadersPolicySecurityHeadersConfigArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigArgs(contentSecurityPolicy, contentTypeOptions, frameOptions, referrerPolicy, strictTransportSecurity, xSSProtection);
         }

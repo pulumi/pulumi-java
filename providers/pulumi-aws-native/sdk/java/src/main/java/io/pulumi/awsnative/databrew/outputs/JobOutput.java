@@ -118,7 +118,6 @@ public final class JobOutput {
             this.partitionColumns = partitionColumns;
             return this;
         }
-
         public JobOutput build() {
             return new JobOutput(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }

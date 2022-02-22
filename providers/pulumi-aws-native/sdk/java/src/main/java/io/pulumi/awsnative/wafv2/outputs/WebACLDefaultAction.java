@@ -61,7 +61,6 @@ public final class WebACLDefaultAction {
             this.block = block;
             return this;
         }
-
         public WebACLDefaultAction build() {
             return new WebACLDefaultAction(allow, block);
         }

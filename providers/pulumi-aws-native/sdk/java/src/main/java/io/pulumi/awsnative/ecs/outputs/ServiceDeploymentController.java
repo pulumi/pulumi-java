@@ -46,7 +46,6 @@ public final class ServiceDeploymentController {
             this.type = type;
             return this;
         }
-
         public ServiceDeploymentController build() {
             return new ServiceDeploymentController(type);
         }

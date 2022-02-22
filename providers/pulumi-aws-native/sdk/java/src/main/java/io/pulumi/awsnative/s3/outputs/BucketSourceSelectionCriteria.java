@@ -77,7 +77,6 @@ public final class BucketSourceSelectionCriteria {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-
         public BucketSourceSelectionCriteria build() {
             return new BucketSourceSelectionCriteria(replicaModifications, sseKmsEncryptedObjects);
         }

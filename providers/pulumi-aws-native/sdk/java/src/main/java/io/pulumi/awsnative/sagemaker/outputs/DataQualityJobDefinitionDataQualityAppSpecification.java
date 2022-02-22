@@ -162,7 +162,6 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityAppSpecification build() {
             return new DataQualityJobDefinitionDataQualityAppSpecification(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

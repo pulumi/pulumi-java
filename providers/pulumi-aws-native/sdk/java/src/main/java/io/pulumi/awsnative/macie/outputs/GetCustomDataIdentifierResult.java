@@ -76,7 +76,6 @@ public final class GetCustomDataIdentifierResult {
             this.id = id;
             return this;
         }
-
         public GetCustomDataIdentifierResult build() {
             return new GetCustomDataIdentifierResult(arn, id);
         }

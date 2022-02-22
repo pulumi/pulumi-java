@@ -16,49 +16,49 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     public static final IndexJwtTokenTypeConfigurationArgs Empty = new IndexJwtTokenTypeConfigurationArgs();
 
     @InputImport(name="claimRegex")
-    private final @Nullable Input<String> claimRegex;
+        private final @Nullable Input<String> claimRegex;
 
     public Input<String> getClaimRegex() {
         return this.claimRegex == null ? Input.empty() : this.claimRegex;
     }
 
     @InputImport(name="groupAttributeField")
-    private final @Nullable Input<String> groupAttributeField;
+        private final @Nullable Input<String> groupAttributeField;
 
     public Input<String> getGroupAttributeField() {
         return this.groupAttributeField == null ? Input.empty() : this.groupAttributeField;
     }
 
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+        private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
     }
 
     @InputImport(name="keyLocation", required=true)
-    private final Input<IndexKeyLocation> keyLocation;
+        private final Input<IndexKeyLocation> keyLocation;
 
     public Input<IndexKeyLocation> getKeyLocation() {
         return this.keyLocation;
     }
 
     @InputImport(name="secretManagerArn")
-    private final @Nullable Input<String> secretManagerArn;
+        private final @Nullable Input<String> secretManagerArn;
 
     public Input<String> getSecretManagerArn() {
         return this.secretManagerArn == null ? Input.empty() : this.secretManagerArn;
     }
 
     @InputImport(name="uRL")
-    private final @Nullable Input<String> uRL;
+        private final @Nullable Input<String> uRL;
 
     public Input<String> getURL() {
         return this.uRL == null ? Input.empty() : this.uRL;
     }
 
     @InputImport(name="userNameAttributeField")
-    private final @Nullable Input<String> userNameAttributeField;
+        private final @Nullable Input<String> userNameAttributeField;
 
     public Input<String> getUserNameAttributeField() {
         return this.userNameAttributeField == null ? Input.empty() : this.userNameAttributeField;
@@ -192,7 +192,6 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
             this.userNameAttributeField = Input.ofNullable(userNameAttributeField);
             return this;
         }
-
         public IndexJwtTokenTypeConfigurationArgs build() {
             return new IndexJwtTokenTypeConfigurationArgs(claimRegex, groupAttributeField, issuer, keyLocation, secretManagerArn, uRL, userNameAttributeField);
         }

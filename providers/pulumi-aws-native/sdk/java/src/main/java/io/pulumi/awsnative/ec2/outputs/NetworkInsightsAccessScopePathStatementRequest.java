@@ -61,7 +61,6 @@ public final class NetworkInsightsAccessScopePathStatementRequest {
             this.resourceStatement = resourceStatement;
             return this;
         }
-
         public NetworkInsightsAccessScopePathStatementRequest build() {
             return new NetworkInsightsAccessScopePathStatementRequest(packetHeaderStatement, resourceStatement);
         }

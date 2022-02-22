@@ -19,35 +19,35 @@ public final class EnvironmentLoggingConfiguration extends io.pulumi.resources.I
     public static final EnvironmentLoggingConfiguration Empty = new EnvironmentLoggingConfiguration();
 
     @InputImport(name="dagProcessingLogs")
-    private final @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs;
+        private final @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getDagProcessingLogs() {
         return this.dagProcessingLogs == null ? Optional.empty() : Optional.ofNullable(this.dagProcessingLogs);
     }
 
     @InputImport(name="schedulerLogs")
-    private final @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs;
+        private final @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getSchedulerLogs() {
         return this.schedulerLogs == null ? Optional.empty() : Optional.ofNullable(this.schedulerLogs);
     }
 
     @InputImport(name="taskLogs")
-    private final @Nullable EnvironmentModuleLoggingConfiguration taskLogs;
+        private final @Nullable EnvironmentModuleLoggingConfiguration taskLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getTaskLogs() {
         return this.taskLogs == null ? Optional.empty() : Optional.ofNullable(this.taskLogs);
     }
 
     @InputImport(name="webserverLogs")
-    private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
+        private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getWebserverLogs() {
         return this.webserverLogs == null ? Optional.empty() : Optional.ofNullable(this.webserverLogs);
     }
 
     @InputImport(name="workerLogs")
-    private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
+        private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getWorkerLogs() {
         return this.workerLogs == null ? Optional.empty() : Optional.ofNullable(this.workerLogs);
@@ -126,7 +126,6 @@ public final class EnvironmentLoggingConfiguration extends io.pulumi.resources.I
             this.workerLogs = workerLogs;
             return this;
         }
-
         public EnvironmentLoggingConfiguration build() {
             return new EnvironmentLoggingConfiguration(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }

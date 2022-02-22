@@ -17,14 +17,14 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
     public static final DistributionOriginGroups Empty = new DistributionOriginGroups();
 
     @InputImport(name="items")
-    private final @Nullable List<DistributionOriginGroup> items;
+        private final @Nullable List<DistributionOriginGroup> items;
 
     public List<DistributionOriginGroup> getItems() {
         return this.items == null ? List.of() : this.items;
     }
 
     @InputImport(name="quantity", required=true)
-    private final Integer quantity;
+        private final Integer quantity;
 
     public Integer getQuantity() {
         return this.quantity;
@@ -73,7 +73,6 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public DistributionOriginGroups build() {
             return new DistributionOriginGroups(items, quantity);
         }

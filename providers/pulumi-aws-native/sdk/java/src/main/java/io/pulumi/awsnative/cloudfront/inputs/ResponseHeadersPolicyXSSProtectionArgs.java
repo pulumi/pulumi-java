@@ -16,28 +16,28 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
     public static final ResponseHeadersPolicyXSSProtectionArgs Empty = new ResponseHeadersPolicyXSSProtectionArgs();
 
     @InputImport(name="modeBlock")
-    private final @Nullable Input<Boolean> modeBlock;
+        private final @Nullable Input<Boolean> modeBlock;
 
     public Input<Boolean> getModeBlock() {
         return this.modeBlock == null ? Input.empty() : this.modeBlock;
     }
 
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+        private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="protection", required=true)
-    private final Input<Boolean> protection;
+        private final Input<Boolean> protection;
 
     public Input<Boolean> getProtection() {
         return this.protection;
     }
 
     @InputImport(name="reportUri")
-    private final @Nullable Input<String> reportUri;
+        private final @Nullable Input<String> reportUri;
 
     public Input<String> getReportUri() {
         return this.reportUri == null ? Input.empty() : this.reportUri;
@@ -126,7 +126,6 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
             this.reportUri = Input.ofNullable(reportUri);
             return this;
         }
-
         public ResponseHeadersPolicyXSSProtectionArgs build() {
             return new ResponseHeadersPolicyXSSProtectionArgs(modeBlock, override, protection, reportUri);
         }

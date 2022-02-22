@@ -74,7 +74,6 @@ public final class RouteTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RouteTag build() {
             return new RouteTag(key, value);
         }

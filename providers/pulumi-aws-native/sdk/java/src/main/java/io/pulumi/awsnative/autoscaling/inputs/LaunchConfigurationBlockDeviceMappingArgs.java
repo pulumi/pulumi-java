@@ -25,7 +25,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -36,7 +36,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ebs")
-    private final @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs;
+        private final @Nullable Input<LaunchConfigurationBlockDeviceArgs> ebs;
 
     public Input<LaunchConfigurationBlockDeviceArgs> getEbs() {
         return this.ebs == null ? Input.empty() : this.ebs;
@@ -47,7 +47,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="noDevice")
-    private final @Nullable Input<Boolean> noDevice;
+        private final @Nullable Input<Boolean> noDevice;
 
     public Input<Boolean> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
@@ -58,7 +58,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+        private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;
@@ -147,7 +147,6 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }
-
         public LaunchConfigurationBlockDeviceMappingArgs build() {
             return new LaunchConfigurationBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);
         }

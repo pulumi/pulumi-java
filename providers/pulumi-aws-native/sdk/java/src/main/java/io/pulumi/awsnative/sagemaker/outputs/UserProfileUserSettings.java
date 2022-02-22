@@ -143,7 +143,6 @@ public final class UserProfileUserSettings {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public UserProfileUserSettings build() {
             return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }

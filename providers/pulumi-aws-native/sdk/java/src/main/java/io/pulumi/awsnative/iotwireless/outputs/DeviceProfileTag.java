@@ -60,7 +60,6 @@ public final class DeviceProfileTag {
             this.value = value;
             return this;
         }
-
         public DeviceProfileTag build() {
             return new DeviceProfileTag(key, value);
         }

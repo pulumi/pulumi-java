@@ -131,7 +131,6 @@ public final class ConfigData {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
         }
-
         public ConfigData build() {
             return new ConfigData(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);
         }

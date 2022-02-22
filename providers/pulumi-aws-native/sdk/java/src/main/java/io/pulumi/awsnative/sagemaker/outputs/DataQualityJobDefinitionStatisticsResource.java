@@ -54,7 +54,6 @@ public final class DataQualityJobDefinitionStatisticsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public DataQualityJobDefinitionStatisticsResource build() {
             return new DataQualityJobDefinitionStatisticsResource(s3Uri);
         }

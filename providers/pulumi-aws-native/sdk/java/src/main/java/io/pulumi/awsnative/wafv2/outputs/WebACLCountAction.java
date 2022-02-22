@@ -46,7 +46,6 @@ public final class WebACLCountAction {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLCountAction build() {
             return new WebACLCountAction(customRequestHandling);
         }

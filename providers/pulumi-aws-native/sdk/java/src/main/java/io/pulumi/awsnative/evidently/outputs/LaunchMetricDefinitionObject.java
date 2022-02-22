@@ -123,7 +123,6 @@ public final class LaunchMetricDefinitionObject {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
-
         public LaunchMetricDefinitionObject build() {
             return new LaunchMetricDefinitionObject(entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }

@@ -121,7 +121,6 @@ public final class RuleGroupRuleAction {
             this.count = count;
             return this;
         }
-
         public RuleGroupRuleAction build() {
             return new RuleGroupRuleAction(allow, block, captcha, count);
         }

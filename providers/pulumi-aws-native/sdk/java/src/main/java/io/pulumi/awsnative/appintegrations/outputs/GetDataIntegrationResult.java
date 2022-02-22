@@ -141,7 +141,6 @@ public final class GetDataIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataIntegrationResult build() {
             return new GetDataIntegrationResult(dataIntegrationArn, description, id, name, tags);
         }

@@ -14,7 +14,7 @@ public final class BucketCorsConfiguration extends io.pulumi.resources.InvokeArg
     public static final BucketCorsConfiguration Empty = new BucketCorsConfiguration();
 
     @InputImport(name="corsRules", required=true)
-    private final List<BucketCorsRule> corsRules;
+        private final List<BucketCorsRule> corsRules;
 
     public List<BucketCorsRule> getCorsRules() {
         return this.corsRules;
@@ -52,7 +52,6 @@ public final class BucketCorsConfiguration extends io.pulumi.resources.InvokeArg
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }
-
         public BucketCorsConfiguration build() {
             return new BucketCorsConfiguration(corsRules);
         }

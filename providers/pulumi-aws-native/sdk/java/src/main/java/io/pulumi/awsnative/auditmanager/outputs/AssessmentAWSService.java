@@ -46,7 +46,6 @@ public final class AssessmentAWSService {
             this.serviceName = serviceName;
             return this;
         }
-
         public AssessmentAWSService build() {
             return new AssessmentAWSService(serviceName);
         }

@@ -169,7 +169,6 @@ public final class GetBranchResult {
             this.tags = tags;
             return this;
         }
-
         public GetBranchResult build() {
             return new GetBranchResult(arn, buildSpec, description, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage, tags);
         }

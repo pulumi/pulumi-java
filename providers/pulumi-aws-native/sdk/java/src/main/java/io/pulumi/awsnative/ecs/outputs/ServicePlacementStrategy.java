@@ -61,7 +61,6 @@ public final class ServicePlacementStrategy {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServicePlacementStrategy build() {
             return new ServicePlacementStrategy(field, type);
         }

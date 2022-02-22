@@ -121,7 +121,6 @@ public final class GetGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(gatewayCapabilitySummaries, gatewayId, gatewayName, tags);
         }

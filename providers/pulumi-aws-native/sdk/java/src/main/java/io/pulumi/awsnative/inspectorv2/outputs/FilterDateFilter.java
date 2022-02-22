@@ -60,7 +60,6 @@ public final class FilterDateFilter {
             this.startInclusive = startInclusive;
             return this;
         }
-
         public FilterDateFilter build() {
             return new FilterDateFilter(endInclusive, startInclusive);
         }

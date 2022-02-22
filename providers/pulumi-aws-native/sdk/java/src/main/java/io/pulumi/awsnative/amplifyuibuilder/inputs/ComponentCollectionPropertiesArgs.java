@@ -30,7 +30,6 @@ public final class ComponentCollectionPropertiesArgs extends io.pulumi.resources
         public Builder(ComponentCollectionPropertiesArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentCollectionPropertiesArgs build() {
             return new ComponentCollectionPropertiesArgs();
         }

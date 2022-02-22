@@ -23,7 +23,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<ReplicationConfigurationReplicationRuleArgs>> rules;
+        private final Input<List<ReplicationConfigurationReplicationRuleArgs>> rules;
 
     public Input<List<ReplicationConfigurationReplicationRuleArgs>> getRules() {
         return this.rules;
@@ -66,7 +66,6 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public ReplicationConfigurationArgs build() {
             return new ReplicationConfigurationArgs(rules);
         }

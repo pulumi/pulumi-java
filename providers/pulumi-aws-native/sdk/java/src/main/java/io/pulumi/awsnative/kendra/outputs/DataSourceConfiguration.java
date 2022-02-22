@@ -173,7 +173,6 @@ public final class DataSourceConfiguration {
             this.workDocsConfiguration = workDocsConfiguration;
             return this;
         }
-
         public DataSourceConfiguration build() {
             return new DataSourceConfiguration(confluenceConfiguration, databaseConfiguration, googleDriveConfiguration, oneDriveConfiguration, s3Configuration, salesforceConfiguration, serviceNowConfiguration, sharePointConfiguration, webCrawlerConfiguration, workDocsConfiguration);
         }

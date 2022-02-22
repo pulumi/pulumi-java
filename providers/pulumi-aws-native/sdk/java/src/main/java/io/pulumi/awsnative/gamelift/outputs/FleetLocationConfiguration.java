@@ -61,7 +61,6 @@ public final class FleetLocationConfiguration {
             this.locationCapacity = locationCapacity;
             return this;
         }
-
         public FleetLocationConfiguration build() {
             return new FleetLocationConfiguration(location, locationCapacity);
         }

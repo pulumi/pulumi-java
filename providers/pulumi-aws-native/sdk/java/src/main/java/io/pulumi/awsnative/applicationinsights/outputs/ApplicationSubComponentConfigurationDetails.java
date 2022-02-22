@@ -99,7 +99,6 @@ public final class ApplicationSubComponentConfigurationDetails {
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationSubComponentConfigurationDetails build() {
             return new ApplicationSubComponentConfigurationDetails(alarmMetrics, logs, windowsEvents);
         }

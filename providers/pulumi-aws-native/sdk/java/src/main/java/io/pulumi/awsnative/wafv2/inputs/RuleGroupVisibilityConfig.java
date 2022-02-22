@@ -18,21 +18,21 @@ public final class RuleGroupVisibilityConfig extends io.pulumi.resources.InvokeA
     public static final RuleGroupVisibilityConfig Empty = new RuleGroupVisibilityConfig();
 
     @InputImport(name="cloudWatchMetricsEnabled", required=true)
-    private final Boolean cloudWatchMetricsEnabled;
+        private final Boolean cloudWatchMetricsEnabled;
 
     public Boolean getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+        private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="sampledRequestsEnabled", required=true)
-    private final Boolean sampledRequestsEnabled;
+        private final Boolean sampledRequestsEnabled;
 
     public Boolean getSampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
@@ -91,7 +91,6 @@ public final class RuleGroupVisibilityConfig extends io.pulumi.resources.InvokeA
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public RuleGroupVisibilityConfig build() {
             return new RuleGroupVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }

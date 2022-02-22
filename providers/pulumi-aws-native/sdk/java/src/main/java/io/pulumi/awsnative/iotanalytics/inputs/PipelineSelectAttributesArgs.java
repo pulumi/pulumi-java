@@ -16,21 +16,21 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
     public static final PipelineSelectAttributesArgs Empty = new PipelineSelectAttributesArgs();
 
     @InputImport(name="attributes", required=true)
-    private final Input<List<String>> attributes;
+        private final Input<List<String>> attributes;
 
     public Input<List<String>> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+        private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -104,7 +104,6 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
             this.next = Input.ofNullable(next);
             return this;
         }
-
         public PipelineSelectAttributesArgs build() {
             return new PipelineSelectAttributesArgs(attributes, name, next);
         }

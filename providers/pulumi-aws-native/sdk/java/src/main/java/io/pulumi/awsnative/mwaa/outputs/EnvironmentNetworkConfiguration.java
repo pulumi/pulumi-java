@@ -76,7 +76,6 @@ public final class EnvironmentNetworkConfiguration {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public EnvironmentNetworkConfiguration build() {
             return new EnvironmentNetworkConfiguration(securityGroupIds, subnetIds);
         }

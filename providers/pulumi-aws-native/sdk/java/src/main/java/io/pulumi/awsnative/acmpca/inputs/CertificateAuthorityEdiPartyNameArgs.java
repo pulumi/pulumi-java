@@ -18,14 +18,14 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     public static final CertificateAuthorityEdiPartyNameArgs Empty = new CertificateAuthorityEdiPartyNameArgs();
 
     @InputImport(name="nameAssigner", required=true)
-    private final Input<String> nameAssigner;
+        private final Input<String> nameAssigner;
 
     public Input<String> getNameAssigner() {
         return this.nameAssigner;
     }
 
     @InputImport(name="partyName", required=true)
-    private final Input<String> partyName;
+        private final Input<String> partyName;
 
     public Input<String> getPartyName() {
         return this.partyName;
@@ -84,7 +84,6 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
             this.partyName = Input.of(Objects.requireNonNull(partyName));
             return this;
         }
-
         public CertificateAuthorityEdiPartyNameArgs build() {
             return new CertificateAuthorityEdiPartyNameArgs(nameAssigner, partyName);
         }

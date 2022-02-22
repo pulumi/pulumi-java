@@ -23,7 +23,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<String> condition;
+        private final Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition;
@@ -34,7 +34,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetColumn", required=true)
-    private final Input<String> targetColumn;
+        private final Input<String> targetColumn;
 
     public Input<String> getTargetColumn() {
         return this.targetColumn;
@@ -45,7 +45,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -119,7 +119,6 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public RecipeConditionExpressionArgs build() {
             return new RecipeConditionExpressionArgs(condition, targetColumn, value);
         }

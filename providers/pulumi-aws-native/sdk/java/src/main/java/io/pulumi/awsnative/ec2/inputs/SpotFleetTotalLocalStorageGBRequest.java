@@ -15,14 +15,14 @@ public final class SpotFleetTotalLocalStorageGBRequest extends io.pulumi.resourc
     public static final SpotFleetTotalLocalStorageGBRequest Empty = new SpotFleetTotalLocalStorageGBRequest();
 
     @InputImport(name="max")
-    private final @Nullable Double max;
+        private final @Nullable Double max;
 
     public Optional<Double> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @InputImport(name="min")
-    private final @Nullable Double min;
+        private final @Nullable Double min;
 
     public Optional<Double> getMin() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
@@ -71,7 +71,6 @@ public final class SpotFleetTotalLocalStorageGBRequest extends io.pulumi.resourc
             this.min = min;
             return this;
         }
-
         public SpotFleetTotalLocalStorageGBRequest build() {
             return new SpotFleetTotalLocalStorageGBRequest(max, min);
         }

@@ -19,14 +19,14 @@ public final class ClusterSettings extends io.pulumi.resources.InvokeArgs {
     public static final ClusterSettings Empty = new ClusterSettings();
 
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -75,7 +75,6 @@ public final class ClusterSettings extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public ClusterSettings build() {
             return new ClusterSettings(name, value);
         }

@@ -73,7 +73,6 @@ public final class BudgetsActionSsmActionDefinition {
             this.subtype = Objects.requireNonNull(subtype);
             return this;
         }
-
         public BudgetsActionSsmActionDefinition build() {
             return new BudgetsActionSsmActionDefinition(instanceIds, region, subtype);
         }

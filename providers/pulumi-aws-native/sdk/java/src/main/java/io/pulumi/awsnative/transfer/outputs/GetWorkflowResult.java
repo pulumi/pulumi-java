@@ -99,7 +99,6 @@ public final class GetWorkflowResult {
             this.workflowId = workflowId;
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(arn, tags, workflowId);
         }

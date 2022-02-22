@@ -46,7 +46,6 @@ public final class BucketObjectLockRule {
             this.defaultRetention = defaultRetention;
             return this;
         }
-
         public BucketObjectLockRule build() {
             return new BucketObjectLockRule(defaultRetention);
         }

@@ -60,7 +60,6 @@ public final class ServiceUrlEndpointInput {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ServiceUrlEndpointInput build() {
             return new ServiceUrlEndpointInput(healthUrl, url);
         }

@@ -26,28 +26,28 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuleGroupRuleArgs Empty = new RuleGroupRuleArgs();
 
     @InputImport(name="action")
-    private final @Nullable Input<RuleGroupRuleActionArgs> action;
+        private final @Nullable Input<RuleGroupRuleActionArgs> action;
 
     public Input<RuleGroupRuleActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
     }
 
     @InputImport(name="captchaConfig")
-    private final @Nullable Input<RuleGroupCaptchaConfigArgs> captchaConfig;
+        private final @Nullable Input<RuleGroupCaptchaConfigArgs> captchaConfig;
 
     public Input<RuleGroupCaptchaConfigArgs> getCaptchaConfig() {
         return this.captchaConfig == null ? Input.empty() : this.captchaConfig;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -58,21 +58,21 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleLabels")
-    private final @Nullable Input<List<RuleGroupLabelArgs>> ruleLabels;
+        private final @Nullable Input<List<RuleGroupLabelArgs>> ruleLabels;
 
     public Input<List<RuleGroupLabelArgs>> getRuleLabels() {
         return this.ruleLabels == null ? Input.empty() : this.ruleLabels;
     }
 
     @InputImport(name="statement", required=true)
-    private final Input<RuleGroupStatementArgs> statement;
+        private final Input<RuleGroupStatementArgs> statement;
 
     public Input<RuleGroupStatementArgs> getStatement() {
         return this.statement;
     }
 
     @InputImport(name="visibilityConfig", required=true)
-    private final Input<RuleGroupVisibilityConfigArgs> visibilityConfig;
+        private final Input<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
     public Input<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {
         return this.visibilityConfig;
@@ -206,7 +206,6 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }
-
         public RuleGroupRuleArgs build() {
             return new RuleGroupRuleArgs(action, captchaConfig, name, priority, ruleLabels, statement, visibilityConfig);
         }

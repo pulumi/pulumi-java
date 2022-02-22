@@ -17,14 +17,14 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
     public static final DeliveryStreamHttpEndpointRequestConfigurationArgs Empty = new DeliveryStreamHttpEndpointRequestConfigurationArgs();
 
     @InputImport(name="commonAttributes")
-    private final @Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
+        private final @Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
 
     public Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> getCommonAttributes() {
         return this.commonAttributes == null ? Input.empty() : this.commonAttributes;
     }
 
     @InputImport(name="contentEncoding")
-    private final @Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
+        private final @Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
 
     public Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
@@ -83,7 +83,6 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
             this.contentEncoding = Input.ofNullable(contentEncoding);
             return this;
         }
-
         public DeliveryStreamHttpEndpointRequestConfigurationArgs build() {
             return new DeliveryStreamHttpEndpointRequestConfigurationArgs(commonAttributes, contentEncoding);
         }

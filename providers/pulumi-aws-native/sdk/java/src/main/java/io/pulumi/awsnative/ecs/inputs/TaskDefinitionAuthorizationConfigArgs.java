@@ -16,14 +16,14 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
     public static final TaskDefinitionAuthorizationConfigArgs Empty = new TaskDefinitionAuthorizationConfigArgs();
 
     @InputImport(name="accessPointId")
-    private final @Nullable Input<String> accessPointId;
+        private final @Nullable Input<String> accessPointId;
 
     public Input<String> getAccessPointId() {
         return this.accessPointId == null ? Input.empty() : this.accessPointId;
     }
 
     @InputImport(name="iAM")
-    private final @Nullable Input<TaskDefinitionAuthorizationConfigIAM> iAM;
+        private final @Nullable Input<TaskDefinitionAuthorizationConfigIAM> iAM;
 
     public Input<TaskDefinitionAuthorizationConfigIAM> getIAM() {
         return this.iAM == null ? Input.empty() : this.iAM;
@@ -82,7 +82,6 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
             this.iAM = Input.ofNullable(iAM);
             return this;
         }
-
         public TaskDefinitionAuthorizationConfigArgs build() {
             return new TaskDefinitionAuthorizationConfigArgs(accessPointId, iAM);
         }

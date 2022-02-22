@@ -60,7 +60,6 @@ public final class DistributionFunctionAssociation {
             this.functionARN = functionARN;
             return this;
         }
-
         public DistributionFunctionAssociation build() {
             return new DistributionFunctionAssociation(eventType, functionARN);
         }

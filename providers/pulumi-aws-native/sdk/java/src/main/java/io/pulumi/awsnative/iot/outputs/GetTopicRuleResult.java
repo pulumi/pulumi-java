@@ -76,7 +76,6 @@ public final class GetTopicRuleResult {
             this.topicRulePayload = topicRulePayload;
             return this;
         }
-
         public GetTopicRuleResult build() {
             return new GetTopicRuleResult(arn, tags, topicRulePayload);
         }

@@ -74,7 +74,6 @@ public final class ThemeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ThemeTag build() {
             return new ThemeTag(key, value);
         }

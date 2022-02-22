@@ -120,7 +120,6 @@ public final class GetCellResult {
             this.tags = tags;
             return this;
         }
-
         public GetCellResult build() {
             return new GetCellResult(cellArn, cells, parentReadinessScopes, tags);
         }

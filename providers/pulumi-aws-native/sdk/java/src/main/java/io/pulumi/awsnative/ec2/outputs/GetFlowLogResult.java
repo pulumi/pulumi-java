@@ -78,7 +78,6 @@ public final class GetFlowLogResult {
             this.tags = tags;
             return this;
         }
-
         public GetFlowLogResult build() {
             return new GetFlowLogResult(id, tags);
         }

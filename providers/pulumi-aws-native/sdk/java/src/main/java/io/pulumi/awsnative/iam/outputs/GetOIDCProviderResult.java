@@ -96,7 +96,6 @@ public final class GetOIDCProviderResult {
             this.thumbprintList = thumbprintList;
             return this;
         }
-
         public GetOIDCProviderResult build() {
             return new GetOIDCProviderResult(arn, clientIdList, tags, thumbprintList);
         }

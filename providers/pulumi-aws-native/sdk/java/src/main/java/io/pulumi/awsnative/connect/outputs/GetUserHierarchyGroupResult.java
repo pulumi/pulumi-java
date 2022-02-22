@@ -97,7 +97,6 @@ public final class GetUserHierarchyGroupResult {
             this.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
         }
-
         public GetUserHierarchyGroupResult build() {
             return new GetUserHierarchyGroupResult(instanceArn, name, userHierarchyGroupArn);
         }

@@ -21,7 +21,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     public static final SchemaArgs Empty = new SchemaArgs();
 
     @InputImport(name="checkpointVersion")
-    private final @Nullable Input<SchemaVersionArgs> checkpointVersion;
+        private final @Nullable Input<SchemaVersionArgs> checkpointVersion;
 
     public Input<SchemaVersionArgs> getCheckpointVersion() {
         return this.checkpointVersion == null ? Input.empty() : this.checkpointVersion;
@@ -32,7 +32,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibility", required=true)
-    private final Input<SchemaCompatibility> compatibility;
+        private final Input<SchemaCompatibility> compatibility;
 
     public Input<SchemaCompatibility> getCompatibility() {
         return this.compatibility;
@@ -43,7 +43,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat", required=true)
-    private final Input<SchemaDataFormat> dataFormat;
+        private final Input<SchemaDataFormat> dataFormat;
 
     public Input<SchemaDataFormat> getDataFormat() {
         return this.dataFormat;
@@ -54,7 +54,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,14 +65,14 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="registry")
-    private final @Nullable Input<SchemaRegistryArgs> registry;
+        private final @Nullable Input<SchemaRegistryArgs> registry;
 
     public Input<SchemaRegistryArgs> getRegistry() {
         return this.registry == null ? Input.empty() : this.registry;
@@ -83,7 +83,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-    private final Input<String> schemaDefinition;
+        private final Input<String> schemaDefinition;
 
     public Input<String> getSchemaDefinition() {
         return this.schemaDefinition;
@@ -94,7 +94,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<SchemaTagArgs>> tags;
+        private final @Nullable Input<List<SchemaTagArgs>> tags;
 
     public Input<List<SchemaTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -243,7 +243,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SchemaArgs build() {
             return new SchemaArgs(checkpointVersion, compatibility, dataFormat, description, name, registry, schemaDefinition, tags);
         }

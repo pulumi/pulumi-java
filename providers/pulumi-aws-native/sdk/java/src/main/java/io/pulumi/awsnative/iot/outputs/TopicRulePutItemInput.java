@@ -44,7 +44,6 @@ public final class TopicRulePutItemInput {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public TopicRulePutItemInput build() {
             return new TopicRulePutItemInput(tableName);
         }

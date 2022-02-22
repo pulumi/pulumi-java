@@ -98,7 +98,6 @@ public final class LoggingConfigurationFilter {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
-
         public LoggingConfigurationFilter build() {
             return new LoggingConfigurationFilter(behavior, conditions, requirement);
         }

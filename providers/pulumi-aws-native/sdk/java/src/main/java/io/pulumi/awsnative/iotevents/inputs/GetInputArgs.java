@@ -17,7 +17,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputName", required=true)
-    private final String inputName;
+        private final String inputName;
 
     public String getInputName() {
         return this.inputName;
@@ -55,7 +55,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public GetInputArgs build() {
             return new GetInputArgs(inputName);
         }

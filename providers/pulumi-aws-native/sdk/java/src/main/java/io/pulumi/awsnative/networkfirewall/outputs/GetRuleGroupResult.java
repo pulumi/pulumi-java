@@ -102,7 +102,6 @@ public final class GetRuleGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetRuleGroupResult build() {
             return new GetRuleGroupResult(description, ruleGroup, ruleGroupArn, ruleGroupId, tags);
         }

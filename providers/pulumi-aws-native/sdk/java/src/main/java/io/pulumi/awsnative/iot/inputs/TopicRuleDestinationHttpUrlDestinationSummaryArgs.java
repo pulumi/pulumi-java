@@ -15,7 +15,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     public static final TopicRuleDestinationHttpUrlDestinationSummaryArgs Empty = new TopicRuleDestinationHttpUrlDestinationSummaryArgs();
 
     @InputImport(name="confirmationUrl")
-    private final @Nullable Input<String> confirmationUrl;
+        private final @Nullable Input<String> confirmationUrl;
 
     public Input<String> getConfirmationUrl() {
         return this.confirmationUrl == null ? Input.empty() : this.confirmationUrl;
@@ -58,7 +58,6 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
             this.confirmationUrl = Input.ofNullable(confirmationUrl);
             return this;
         }
-
         public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
             return new TopicRuleDestinationHttpUrlDestinationSummaryArgs(confirmationUrl);
         }

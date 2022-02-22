@@ -74,7 +74,6 @@ public final class InputTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InputTag build() {
             return new InputTag(key, value);
         }

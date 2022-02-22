@@ -72,7 +72,6 @@ public final class RuleGroupVisibilityConfig {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public RuleGroupVisibilityConfig build() {
             return new RuleGroupVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }

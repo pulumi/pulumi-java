@@ -86,7 +86,6 @@ public final class BackupSelectionResourceTypeConditionsProperties {
             this.stringNotLike = stringNotLike;
             return this;
         }
-
         public BackupSelectionResourceTypeConditionsProperties build() {
             return new BackupSelectionResourceTypeConditionsProperties(stringEquals, stringLike, stringNotEquals, stringNotLike);
         }

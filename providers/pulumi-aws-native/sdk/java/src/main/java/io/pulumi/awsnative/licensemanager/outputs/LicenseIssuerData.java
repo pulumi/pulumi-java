@@ -60,7 +60,6 @@ public final class LicenseIssuerData {
             this.signKey = signKey;
             return this;
         }
-
         public LicenseIssuerData build() {
             return new LicenseIssuerData(name, signKey);
         }

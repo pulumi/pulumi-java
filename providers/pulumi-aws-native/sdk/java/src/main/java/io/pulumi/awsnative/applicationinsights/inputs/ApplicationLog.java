@@ -24,7 +24,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable ApplicationLogEncoding encoding;
+        private final @Nullable ApplicationLogEncoding encoding;
 
     public Optional<ApplicationLogEncoding> getEncoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
@@ -35,7 +35,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable String logGroupName;
+        private final @Nullable String logGroupName;
 
     public Optional<String> getLogGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
@@ -46,7 +46,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logPath")
-    private final @Nullable String logPath;
+        private final @Nullable String logPath;
 
     public Optional<String> getLogPath() {
         return this.logPath == null ? Optional.empty() : Optional.ofNullable(this.logPath);
@@ -57,7 +57,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+        private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -68,7 +68,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="patternSet")
-    private final @Nullable String patternSet;
+        private final @Nullable String patternSet;
 
     public Optional<String> getPatternSet() {
         return this.patternSet == null ? Optional.empty() : Optional.ofNullable(this.patternSet);
@@ -147,7 +147,6 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationLog build() {
             return new ApplicationLog(encoding, logGroupName, logPath, logType, patternSet);
         }

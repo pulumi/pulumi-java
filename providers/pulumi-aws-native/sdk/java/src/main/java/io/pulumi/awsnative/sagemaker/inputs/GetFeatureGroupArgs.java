@@ -17,7 +17,7 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="featureGroupName", required=true)
-    private final String featureGroupName;
+        private final String featureGroupName;
 
     public String getFeatureGroupName() {
         return this.featureGroupName;
@@ -55,7 +55,6 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.featureGroupName = Objects.requireNonNull(featureGroupName);
             return this;
         }
-
         public GetFeatureGroupArgs build() {
             return new GetFeatureGroupArgs(featureGroupName);
         }

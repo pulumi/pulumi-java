@@ -114,7 +114,6 @@ public final class FlowScheduledTriggerProperties {
             this.timeZone = timeZone;
             return this;
         }
-
         public FlowScheduledTriggerProperties build() {
             return new FlowScheduledTriggerProperties(dataPullMode, scheduleEndTime, scheduleExpression, scheduleOffset, scheduleStartTime, timeZone);
         }

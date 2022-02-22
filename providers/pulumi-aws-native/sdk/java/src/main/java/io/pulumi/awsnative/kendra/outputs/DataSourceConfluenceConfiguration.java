@@ -171,7 +171,6 @@ public final class DataSourceConfluenceConfiguration {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DataSourceConfluenceConfiguration build() {
             return new DataSourceConfluenceConfiguration(attachmentConfiguration, blogConfiguration, exclusionPatterns, inclusionPatterns, pageConfiguration, secretArn, serverUrl, spaceConfiguration, version, vpcConfiguration);
         }

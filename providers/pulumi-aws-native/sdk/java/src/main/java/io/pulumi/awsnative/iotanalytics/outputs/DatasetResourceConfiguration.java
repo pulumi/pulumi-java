@@ -59,7 +59,6 @@ public final class DatasetResourceConfiguration {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public DatasetResourceConfiguration build() {
             return new DatasetResourceConfiguration(computeType, volumeSizeInGB);
         }

@@ -99,7 +99,6 @@ public final class DetectorModelEvent {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public DetectorModelEvent build() {
             return new DetectorModelEvent(actions, condition, eventName);
         }

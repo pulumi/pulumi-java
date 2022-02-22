@@ -70,7 +70,6 @@ public final class GetNetworkAclResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkAclResult build() {
             return new GetNetworkAclResult(id, tags);
         }

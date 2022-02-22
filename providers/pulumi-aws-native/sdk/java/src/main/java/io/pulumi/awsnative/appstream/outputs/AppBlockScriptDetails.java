@@ -88,7 +88,6 @@ public final class AppBlockScriptDetails {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public AppBlockScriptDetails build() {
             return new AppBlockScriptDetails(executableParameters, executablePath, scriptS3Location, timeoutInSeconds);
         }

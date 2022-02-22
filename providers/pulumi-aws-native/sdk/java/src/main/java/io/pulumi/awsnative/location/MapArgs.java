@@ -17,28 +17,28 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     public static final MapArgs Empty = new MapArgs();
 
     @InputImport(name="configuration", required=true)
-    private final Input<MapConfigurationArgs> configuration;
+        private final Input<MapConfigurationArgs> configuration;
 
     public Input<MapConfigurationArgs> getConfiguration() {
         return this.configuration;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="mapName")
-    private final @Nullable Input<String> mapName;
+        private final @Nullable Input<String> mapName;
 
     public Input<String> getMapName() {
         return this.mapName == null ? Input.empty() : this.mapName;
     }
 
     @InputImport(name="pricingPlan")
-    private final @Nullable Input<MapPricingPlan> pricingPlan;
+        private final @Nullable Input<MapPricingPlan> pricingPlan;
 
     public Input<MapPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
@@ -127,7 +127,6 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
-
         public MapArgs build() {
             return new MapArgs(configuration, description, mapName, pricingPlan);
         }

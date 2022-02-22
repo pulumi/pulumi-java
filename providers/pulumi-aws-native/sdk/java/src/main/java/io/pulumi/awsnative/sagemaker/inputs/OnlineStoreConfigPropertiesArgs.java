@@ -16,14 +16,14 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
     public static final OnlineStoreConfigPropertiesArgs Empty = new OnlineStoreConfigPropertiesArgs();
 
     @InputImport(name="enableOnlineStore")
-    private final @Nullable Input<Boolean> enableOnlineStore;
+        private final @Nullable Input<Boolean> enableOnlineStore;
 
     public Input<Boolean> getEnableOnlineStore() {
         return this.enableOnlineStore == null ? Input.empty() : this.enableOnlineStore;
     }
 
     @InputImport(name="securityConfig")
-    private final @Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
+        private final @Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
     public Input<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {
         return this.securityConfig == null ? Input.empty() : this.securityConfig;
@@ -82,7 +82,6 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
             this.securityConfig = Input.ofNullable(securityConfig);
             return this;
         }
-
         public OnlineStoreConfigPropertiesArgs build() {
             return new OnlineStoreConfigPropertiesArgs(enableOnlineStore, securityConfig);
         }

@@ -58,7 +58,6 @@ public final class RuleGroupPortRange {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public RuleGroupPortRange build() {
             return new RuleGroupPortRange(fromPort, toPort);
         }

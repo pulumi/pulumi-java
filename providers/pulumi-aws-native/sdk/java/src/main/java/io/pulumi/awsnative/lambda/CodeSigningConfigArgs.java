@@ -21,7 +21,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowedPublishers", required=true)
-    private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+        private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Input<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
         return this.allowedPublishers;
@@ -32,7 +32,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="codeSigningPolicies")
-    private final @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
+        private final @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
     public Input<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
         return this.codeSigningPolicies == null ? Input.empty() : this.codeSigningPolicies;
@@ -43,7 +43,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -117,7 +117,6 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
             this.description = Input.ofNullable(description);
             return this;
         }
-
         public CodeSigningConfigArgs build() {
             return new CodeSigningConfigArgs(allowedPublishers, codeSigningPolicies, description);
         }

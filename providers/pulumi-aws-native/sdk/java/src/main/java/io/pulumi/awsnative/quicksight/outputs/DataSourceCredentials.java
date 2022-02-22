@@ -75,7 +75,6 @@ public final class DataSourceCredentials {
             this.credentialPair = credentialPair;
             return this;
         }
-
         public DataSourceCredentials build() {
             return new DataSourceCredentials(copySourceArn, credentialPair);
         }

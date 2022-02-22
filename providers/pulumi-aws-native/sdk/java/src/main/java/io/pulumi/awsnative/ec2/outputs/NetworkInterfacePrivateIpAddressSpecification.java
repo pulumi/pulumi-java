@@ -59,7 +59,6 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public NetworkInterfacePrivateIpAddressSpecification build() {
             return new NetworkInterfacePrivateIpAddressSpecification(primary, privateIpAddress);
         }

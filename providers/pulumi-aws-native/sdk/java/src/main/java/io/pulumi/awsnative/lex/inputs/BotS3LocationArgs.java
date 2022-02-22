@@ -23,7 +23,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket", required=true)
-    private final Input<String> s3Bucket;
+        private final Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket;
@@ -34,7 +34,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectKey", required=true)
-    private final Input<String> s3ObjectKey;
+        private final Input<String> s3ObjectKey;
 
     public Input<String> getS3ObjectKey() {
         return this.s3ObjectKey;
@@ -45,7 +45,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectVersion")
-    private final @Nullable Input<String> s3ObjectVersion;
+        private final @Nullable Input<String> s3ObjectVersion;
 
     public Input<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
@@ -119,7 +119,6 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.s3ObjectVersion = Input.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public BotS3LocationArgs build() {
             return new BotS3LocationArgs(s3Bucket, s3ObjectKey, s3ObjectVersion);
         }

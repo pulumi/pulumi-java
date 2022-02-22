@@ -91,7 +91,6 @@ public final class GetCertificateResult {
             this.tags = tags;
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(certificateArn, status, tags);
         }

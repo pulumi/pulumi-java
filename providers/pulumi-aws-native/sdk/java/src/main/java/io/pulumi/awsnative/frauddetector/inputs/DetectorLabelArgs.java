@@ -18,7 +18,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
     public static final DetectorLabelArgs Empty = new DetectorLabelArgs();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+        private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -29,7 +29,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+        private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -40,14 +40,14 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="inline")
-    private final @Nullable Input<Boolean> inline;
+        private final @Nullable Input<Boolean> inline;
 
     public Input<Boolean> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
@@ -58,14 +58,14 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable Input<String> lastUpdatedTime;
+        private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DetectorTagArgs>> tags;
+        private final @Nullable Input<List<DetectorTagArgs>> tags;
 
     public Input<List<DetectorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -210,7 +210,6 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DetectorLabelArgs build() {
             return new DetectorLabelArgs(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

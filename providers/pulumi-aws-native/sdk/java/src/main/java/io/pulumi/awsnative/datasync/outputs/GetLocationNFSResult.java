@@ -127,7 +127,6 @@ public final class GetLocationNFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationNFSResult build() {
             return new GetLocationNFSResult(locationArn, locationUri, mountOptions, onPremConfig, tags);
         }

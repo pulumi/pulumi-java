@@ -52,7 +52,6 @@ public final class EventIntegrationEventFilter {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public EventIntegrationEventFilter build() {
             return new EventIntegrationEventFilter(source);
         }

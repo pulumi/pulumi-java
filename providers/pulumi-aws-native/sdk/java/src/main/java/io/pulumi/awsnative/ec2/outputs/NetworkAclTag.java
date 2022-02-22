@@ -58,7 +58,6 @@ public final class NetworkAclTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public NetworkAclTag build() {
             return new NetworkAclTag(key, value);
         }

@@ -164,7 +164,6 @@ public final class GetScheduledAuditResult {
             this.targetCheckNames = targetCheckNames;
             return this;
         }
-
         public GetScheduledAuditResult build() {
             return new GetScheduledAuditResult(dayOfMonth, dayOfWeek, frequency, scheduledAuditArn, tags, targetCheckNames);
         }

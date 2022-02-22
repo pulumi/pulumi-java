@@ -30,7 +30,6 @@ public final class ComponentTags {
         public Builder(ComponentTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentTags build() {
             return new ComponentTags();
         }

@@ -14,14 +14,14 @@ public final class RuleGroupForwardedIPConfiguration extends io.pulumi.resources
     public static final RuleGroupForwardedIPConfiguration Empty = new RuleGroupForwardedIPConfiguration();
 
     @InputImport(name="fallbackBehavior", required=true)
-    private final RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior;
+        private final RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public RuleGroupForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+        private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -70,7 +70,6 @@ public final class RuleGroupForwardedIPConfiguration extends io.pulumi.resources
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public RuleGroupForwardedIPConfiguration build() {
             return new RuleGroupForwardedIPConfiguration(fallbackBehavior, headerName);
         }

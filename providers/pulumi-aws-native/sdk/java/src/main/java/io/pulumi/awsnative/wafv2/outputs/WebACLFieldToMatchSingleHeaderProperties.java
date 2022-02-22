@@ -44,7 +44,6 @@ public final class WebACLFieldToMatchSingleHeaderProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLFieldToMatchSingleHeaderProperties build() {
             return new WebACLFieldToMatchSingleHeaderProperties(name);
         }

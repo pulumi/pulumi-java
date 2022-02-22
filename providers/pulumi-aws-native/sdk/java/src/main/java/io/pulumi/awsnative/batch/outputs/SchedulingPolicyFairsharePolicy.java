@@ -83,7 +83,6 @@ public final class SchedulingPolicyFairsharePolicy {
             this.shareDistribution = shareDistribution;
             return this;
         }
-
         public SchedulingPolicyFairsharePolicy build() {
             return new SchedulingPolicyFairsharePolicy(computeReservation, shareDecaySeconds, shareDistribution);
         }

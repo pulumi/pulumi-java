@@ -21,63 +21,63 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
     public static final BackupPlanBackupRuleResourceTypeArgs Empty = new BackupPlanBackupRuleResourceTypeArgs();
 
     @InputImport(name="completionWindowMinutes")
-    private final @Nullable Input<Double> completionWindowMinutes;
+        private final @Nullable Input<Double> completionWindowMinutes;
 
     public Input<Double> getCompletionWindowMinutes() {
         return this.completionWindowMinutes == null ? Input.empty() : this.completionWindowMinutes;
     }
 
     @InputImport(name="copyActions")
-    private final @Nullable Input<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
+        private final @Nullable Input<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
 
     public Input<List<BackupPlanCopyActionResourceTypeArgs>> getCopyActions() {
         return this.copyActions == null ? Input.empty() : this.copyActions;
     }
 
     @InputImport(name="enableContinuousBackup")
-    private final @Nullable Input<Boolean> enableContinuousBackup;
+        private final @Nullable Input<Boolean> enableContinuousBackup;
 
     public Input<Boolean> getEnableContinuousBackup() {
         return this.enableContinuousBackup == null ? Input.empty() : this.enableContinuousBackup;
     }
 
     @InputImport(name="lifecycle")
-    private final @Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+        private final @Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
     public Input<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
         return this.lifecycle == null ? Input.empty() : this.lifecycle;
     }
 
     @InputImport(name="recoveryPointTags")
-    private final @Nullable Input<Object> recoveryPointTags;
+        private final @Nullable Input<Object> recoveryPointTags;
 
     public Input<Object> getRecoveryPointTags() {
         return this.recoveryPointTags == null ? Input.empty() : this.recoveryPointTags;
     }
 
     @InputImport(name="ruleName", required=true)
-    private final Input<String> ruleName;
+        private final Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName;
     }
 
     @InputImport(name="scheduleExpression")
-    private final @Nullable Input<String> scheduleExpression;
+        private final @Nullable Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
     }
 
     @InputImport(name="startWindowMinutes")
-    private final @Nullable Input<Double> startWindowMinutes;
+        private final @Nullable Input<Double> startWindowMinutes;
 
     public Input<Double> getStartWindowMinutes() {
         return this.startWindowMinutes == null ? Input.empty() : this.startWindowMinutes;
     }
 
     @InputImport(name="targetBackupVault", required=true)
-    private final Input<String> targetBackupVault;
+        private final Input<String> targetBackupVault;
 
     public Input<String> getTargetBackupVault() {
         return this.targetBackupVault;
@@ -241,7 +241,6 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             this.targetBackupVault = Input.of(Objects.requireNonNull(targetBackupVault));
             return this;
         }
-
         public BackupPlanBackupRuleResourceTypeArgs build() {
             return new BackupPlanBackupRuleResourceTypeArgs(completionWindowMinutes, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, scheduleExpression, startWindowMinutes, targetBackupVault);
         }

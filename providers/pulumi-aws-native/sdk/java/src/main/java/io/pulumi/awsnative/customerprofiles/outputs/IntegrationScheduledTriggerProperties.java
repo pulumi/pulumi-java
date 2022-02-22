@@ -128,7 +128,6 @@ public final class IntegrationScheduledTriggerProperties {
             this.timezone = timezone;
             return this;
         }
-
         public IntegrationScheduledTriggerProperties build() {
             return new IntegrationScheduledTriggerProperties(dataPullMode, firstExecutionFrom, scheduleEndTime, scheduleExpression, scheduleOffset, scheduleStartTime, timezone);
         }

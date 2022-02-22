@@ -22,7 +22,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-    private final Input<String> family;
+        private final Input<String> family;
 
     public Input<String> getFamily() {
         return this.family;
@@ -44,7 +44,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterGroupName")
-    private final @Nullable Input<String> parameterGroupName;
+        private final @Nullable Input<String> parameterGroupName;
 
     public Input<String> getParameterGroupName() {
         return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
@@ -55,7 +55,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Object> parameters;
+        private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -66,7 +66,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ParameterGroupTagArgs>> tags;
+        private final @Nullable Input<List<ParameterGroupTagArgs>> tags;
 
     public Input<List<ParameterGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -170,7 +170,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ParameterGroupArgs build() {
             return new ParameterGroupArgs(description, family, parameterGroupName, parameters, tags);
         }

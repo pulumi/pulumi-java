@@ -54,7 +54,6 @@ public final class GetResourcePolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(policyDocument);
         }

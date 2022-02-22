@@ -30,7 +30,6 @@ public final class GetConfigurationSetResult {
         public Builder(GetConfigurationSetResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetConfigurationSetResult build() {
             return new GetConfigurationSetResult();
         }

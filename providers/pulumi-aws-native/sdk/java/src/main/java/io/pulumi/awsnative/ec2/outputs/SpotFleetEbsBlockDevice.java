@@ -115,7 +115,6 @@ public final class SpotFleetEbsBlockDevice {
             this.volumeType = volumeType;
             return this;
         }
-
         public SpotFleetEbsBlockDevice build() {
             return new SpotFleetEbsBlockDevice(deleteOnTermination, encrypted, iops, snapshotId, volumeSize, volumeType);
         }

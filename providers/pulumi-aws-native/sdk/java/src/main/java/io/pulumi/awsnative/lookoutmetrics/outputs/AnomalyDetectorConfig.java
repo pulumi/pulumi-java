@@ -52,7 +52,6 @@ public final class AnomalyDetectorConfig {
             this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
             return this;
         }
-
         public AnomalyDetectorConfig build() {
             return new AnomalyDetectorConfig(anomalyDetectorFrequency);
         }

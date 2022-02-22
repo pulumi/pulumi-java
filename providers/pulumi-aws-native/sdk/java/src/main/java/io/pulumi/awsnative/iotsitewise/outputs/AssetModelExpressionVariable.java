@@ -75,7 +75,6 @@ public final class AssetModelExpressionVariable {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssetModelExpressionVariable build() {
             return new AssetModelExpressionVariable(name, value);
         }

@@ -74,7 +74,6 @@ public final class ApplicationInstanceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApplicationInstanceTag build() {
             return new ApplicationInstanceTag(key, value);
         }

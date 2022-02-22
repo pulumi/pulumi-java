@@ -121,7 +121,6 @@ public final class GetTemplateResult {
             this.tags = tags;
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(arn, name, permissions, tags);
         }

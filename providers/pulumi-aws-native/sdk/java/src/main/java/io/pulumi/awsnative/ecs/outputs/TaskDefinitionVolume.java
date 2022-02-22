@@ -89,7 +89,6 @@ public final class TaskDefinitionVolume {
             this.name = name;
             return this;
         }
-
         public TaskDefinitionVolume build() {
             return new TaskDefinitionVolume(dockerVolumeConfiguration, eFSVolumeConfiguration, host, name);
         }

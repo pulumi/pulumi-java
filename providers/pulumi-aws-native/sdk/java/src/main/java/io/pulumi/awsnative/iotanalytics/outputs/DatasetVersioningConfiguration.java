@@ -61,7 +61,6 @@ public final class DatasetVersioningConfiguration {
             this.unlimited = unlimited;
             return this;
         }
-
         public DatasetVersioningConfiguration build() {
             return new DatasetVersioningConfiguration(maxVersions, unlimited);
         }

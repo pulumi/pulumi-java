@@ -58,7 +58,6 @@ public final class FileSystemElasticFileSystemTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FileSystemElasticFileSystemTag build() {
             return new FileSystemElasticFileSystemTag(key, value);
         }

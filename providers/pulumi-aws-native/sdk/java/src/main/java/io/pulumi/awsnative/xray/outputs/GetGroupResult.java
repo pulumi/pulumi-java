@@ -126,7 +126,6 @@ public final class GetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(filterExpression, groupARN, groupName, insightsConfiguration, tags);
         }

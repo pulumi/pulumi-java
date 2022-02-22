@@ -248,7 +248,6 @@ public final class GetFirewallDomainListResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallDomainListResult build() {
             return new GetFirewallDomainListResult(arn, creationTime, creatorRequestId, domainCount, id, managedOwnerName, modificationTime, status, statusMessage, tags);
         }

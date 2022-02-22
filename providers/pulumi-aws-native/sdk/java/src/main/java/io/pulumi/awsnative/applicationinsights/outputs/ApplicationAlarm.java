@@ -77,7 +77,6 @@ public final class ApplicationAlarm {
             this.severity = severity;
             return this;
         }
-
         public ApplicationAlarm build() {
             return new ApplicationAlarm(alarmName, severity);
         }

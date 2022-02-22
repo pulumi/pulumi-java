@@ -15,14 +15,14 @@ public final class CanarySchedule extends io.pulumi.resources.InvokeArgs {
     public static final CanarySchedule Empty = new CanarySchedule();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable String durationInSeconds;
+        private final @Nullable String durationInSeconds;
 
     public Optional<String> getDurationInSeconds() {
         return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
     }
 
     @InputImport(name="expression", required=true)
-    private final String expression;
+        private final String expression;
 
     public String getExpression() {
         return this.expression;
@@ -71,7 +71,6 @@ public final class CanarySchedule extends io.pulumi.resources.InvokeArgs {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public CanarySchedule build() {
             return new CanarySchedule(durationInSeconds, expression);
         }

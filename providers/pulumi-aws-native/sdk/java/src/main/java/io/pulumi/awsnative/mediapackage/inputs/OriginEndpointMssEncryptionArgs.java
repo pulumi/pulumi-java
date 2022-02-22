@@ -18,7 +18,7 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     public static final OriginEndpointMssEncryptionArgs Empty = new OriginEndpointMssEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -61,7 +61,6 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
-
         public OriginEndpointMssEncryptionArgs build() {
             return new OriginEndpointMssEncryptionArgs(spekeKeyProvider);
         }

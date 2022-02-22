@@ -91,7 +91,6 @@ public final class ServiceImageRepository {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
-
         public ServiceImageRepository build() {
             return new ServiceImageRepository(imageConfiguration, imageIdentifier, imageRepositoryType);
         }

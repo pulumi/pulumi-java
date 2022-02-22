@@ -98,7 +98,6 @@ public final class MonitoringScheduleS3Output {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public MonitoringScheduleS3Output build() {
             return new MonitoringScheduleS3Output(localPath, s3UploadMode, s3Uri);
         }

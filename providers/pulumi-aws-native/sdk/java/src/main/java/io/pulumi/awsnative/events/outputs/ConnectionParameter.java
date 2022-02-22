@@ -74,7 +74,6 @@ public final class ConnectionParameter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnectionParameter build() {
             return new ConnectionParameter(isValueSecret, key, value);
         }

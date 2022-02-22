@@ -74,7 +74,6 @@ public final class MitigationActionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MitigationActionTag build() {
             return new MitigationActionTag(key, value);
         }

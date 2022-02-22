@@ -101,7 +101,6 @@ public final class FeatureVariationObject {
             this.variationName = variationName;
             return this;
         }
-
         public FeatureVariationObject build() {
             return new FeatureVariationObject(booleanValue, doubleValue, longValue, stringValue, variationName);
         }

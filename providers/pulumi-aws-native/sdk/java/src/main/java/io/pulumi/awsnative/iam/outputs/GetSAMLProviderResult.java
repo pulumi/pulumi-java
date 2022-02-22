@@ -83,7 +83,6 @@ public final class GetSAMLProviderResult {
             this.tags = tags;
             return this;
         }
-
         public GetSAMLProviderResult build() {
             return new GetSAMLProviderResult(arn, samlMetadataDocument, tags);
         }

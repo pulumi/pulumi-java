@@ -46,7 +46,6 @@ public final class DomainSnapshotOptions {
             this.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
         }
-
         public DomainSnapshotOptions build() {
             return new DomainSnapshotOptions(automatedSnapshotStartHour);
         }

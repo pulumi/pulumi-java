@@ -119,7 +119,6 @@ public final class ModelExplainabilityJobDefinitionClusterConfig {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionClusterConfig build() {
             return new ModelExplainabilityJobDefinitionClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

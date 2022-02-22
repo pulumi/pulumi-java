@@ -125,7 +125,6 @@ public final class GetRegexPatternSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetRegexPatternSetResult build() {
             return new GetRegexPatternSetResult(arn, description, id, regularExpressionList, tags);
         }

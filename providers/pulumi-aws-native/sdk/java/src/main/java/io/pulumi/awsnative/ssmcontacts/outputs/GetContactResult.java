@@ -76,7 +76,6 @@ public final class GetContactResult {
             this.displayName = displayName;
             return this;
         }
-
         public GetContactResult build() {
             return new GetContactResult(arn, displayName);
         }

@@ -60,7 +60,6 @@ public final class EC2FleetMemoryMiBRequest {
             this.min = min;
             return this;
         }
-
         public EC2FleetMemoryMiBRequest build() {
             return new EC2FleetMemoryMiBRequest(max, min);
         }

@@ -74,7 +74,6 @@ public final class ParameterGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ParameterGroupTag build() {
             return new ParameterGroupTag(key, value);
         }

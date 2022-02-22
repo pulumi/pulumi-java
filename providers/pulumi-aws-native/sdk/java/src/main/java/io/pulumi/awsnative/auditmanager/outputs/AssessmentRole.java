@@ -61,7 +61,6 @@ public final class AssessmentRole {
             this.roleType = roleType;
             return this;
         }
-
         public AssessmentRole build() {
             return new AssessmentRole(roleArn, roleType);
         }

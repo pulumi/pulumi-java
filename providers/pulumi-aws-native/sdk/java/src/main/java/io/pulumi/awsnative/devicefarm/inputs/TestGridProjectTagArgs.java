@@ -14,14 +14,14 @@ public final class TestGridProjectTagArgs extends io.pulumi.resources.ResourceAr
     public static final TestGridProjectTagArgs Empty = new TestGridProjectTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class TestGridProjectTagArgs extends io.pulumi.resources.ResourceAr
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public TestGridProjectTagArgs build() {
             return new TestGridProjectTagArgs(key, value);
         }

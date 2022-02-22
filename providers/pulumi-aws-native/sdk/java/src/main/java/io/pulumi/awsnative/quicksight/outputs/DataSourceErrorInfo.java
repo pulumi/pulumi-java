@@ -69,7 +69,6 @@ public final class DataSourceErrorInfo {
             this.type = type;
             return this;
         }
-
         public DataSourceErrorInfo build() {
             return new DataSourceErrorInfo(message, type);
         }

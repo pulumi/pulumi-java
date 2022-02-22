@@ -46,7 +46,6 @@ public final class GetResourceDataSyncResult {
             this.syncSource = syncSource;
             return this;
         }
-
         public GetResourceDataSyncResult build() {
             return new GetResourceDataSyncResult(syncSource);
         }

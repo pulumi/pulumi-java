@@ -163,7 +163,6 @@ public final class GetTransitGatewayMulticastDomainResult {
             this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
-
         public GetTransitGatewayMulticastDomainResult build() {
             return new GetTransitGatewayMulticastDomainResult(creationTime, options, state, tags, transitGatewayMulticastDomainArn, transitGatewayMulticastDomainId);
         }

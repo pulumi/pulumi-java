@@ -46,7 +46,6 @@ public final class DetectorModel {
             this.arn = arn;
             return this;
         }
-
         public DetectorModel build() {
             return new DetectorModel(arn);
         }

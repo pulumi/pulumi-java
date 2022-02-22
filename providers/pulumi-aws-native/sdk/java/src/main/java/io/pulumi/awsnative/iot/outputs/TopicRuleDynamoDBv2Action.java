@@ -61,7 +61,6 @@ public final class TopicRuleDynamoDBv2Action {
             this.roleArn = roleArn;
             return this;
         }
-
         public TopicRuleDynamoDBv2Action build() {
             return new TopicRuleDynamoDBv2Action(putItem, roleArn);
         }

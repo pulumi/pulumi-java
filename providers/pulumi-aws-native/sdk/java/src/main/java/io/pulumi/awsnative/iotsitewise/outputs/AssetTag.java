@@ -58,7 +58,6 @@ public final class AssetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssetTag build() {
             return new AssetTag(key, value);
         }

@@ -61,7 +61,6 @@ public final class BotAliasConversationLogSettings {
             this.textLogSettings = textLogSettings;
             return this;
         }
-
         public BotAliasConversationLogSettings build() {
             return new BotAliasConversationLogSettings(audioLogSettings, textLogSettings);
         }

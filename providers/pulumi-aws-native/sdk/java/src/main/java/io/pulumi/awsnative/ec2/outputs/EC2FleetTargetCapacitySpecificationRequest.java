@@ -101,7 +101,6 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }
-
         public EC2FleetTargetCapacitySpecificationRequest build() {
             return new EC2FleetTargetCapacitySpecificationRequest(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, targetCapacityUnitType, totalTargetCapacity);
         }

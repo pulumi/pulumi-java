@@ -177,7 +177,6 @@ public final class GetAcceleratorResult {
             this.tags = tags;
             return this;
         }
-
         public GetAcceleratorResult build() {
             return new GetAcceleratorResult(acceleratorArn, dnsName, enabled, ipAddressType, ipAddresses, name, tags);
         }

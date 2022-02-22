@@ -59,7 +59,6 @@ public final class RecoveryGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecoveryGroupTag build() {
             return new RecoveryGroupTag(key, value);
         }

@@ -119,7 +119,6 @@ public final class DataQualityJobDefinitionClusterConfig {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public DataQualityJobDefinitionClusterConfig build() {
             return new DataQualityJobDefinitionClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

@@ -77,7 +77,6 @@ public final class GetMultiRegionAccessPointPolicyResult {
             this.policyStatus = policyStatus;
             return this;
         }
-
         public GetMultiRegionAccessPointPolicyResult build() {
             return new GetMultiRegionAccessPointPolicyResult(policy, policyStatus);
         }

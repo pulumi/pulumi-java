@@ -18,42 +18,42 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+        private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
     }
 
     @InputImport(name="autoSubDomainCreationPatterns")
-    private final @Nullable Input<List<String>> autoSubDomainCreationPatterns;
+        private final @Nullable Input<List<String>> autoSubDomainCreationPatterns;
 
     public Input<List<String>> getAutoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns == null ? Input.empty() : this.autoSubDomainCreationPatterns;
     }
 
     @InputImport(name="autoSubDomainIAMRole")
-    private final @Nullable Input<String> autoSubDomainIAMRole;
+        private final @Nullable Input<String> autoSubDomainIAMRole;
 
     public Input<String> getAutoSubDomainIAMRole() {
         return this.autoSubDomainIAMRole == null ? Input.empty() : this.autoSubDomainIAMRole;
     }
 
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
     @InputImport(name="enableAutoSubDomain")
-    private final @Nullable Input<Boolean> enableAutoSubDomain;
+        private final @Nullable Input<Boolean> enableAutoSubDomain;
 
     public Input<Boolean> getEnableAutoSubDomain() {
         return this.enableAutoSubDomain == null ? Input.empty() : this.enableAutoSubDomain;
     }
 
     @InputImport(name="subDomainSettings", required=true)
-    private final Input<List<DomainSubDomainSettingArgs>> subDomainSettings;
+        private final Input<List<DomainSubDomainSettingArgs>> subDomainSettings;
 
     public Input<List<DomainSubDomainSettingArgs>> getSubDomainSettings() {
         return this.subDomainSettings;
@@ -172,7 +172,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.subDomainSettings = Input.of(Objects.requireNonNull(subDomainSettings));
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(appId, autoSubDomainCreationPatterns, autoSubDomainIAMRole, domainName, enableAutoSubDomain, subDomainSettings);
         }

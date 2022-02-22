@@ -76,7 +76,6 @@ public final class BucketReplicationConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketReplicationConfiguration build() {
             return new BucketReplicationConfiguration(role, rules);
         }

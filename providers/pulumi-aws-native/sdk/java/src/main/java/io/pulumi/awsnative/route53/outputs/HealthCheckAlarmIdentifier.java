@@ -74,7 +74,6 @@ public final class HealthCheckAlarmIdentifier {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public HealthCheckAlarmIdentifier build() {
             return new HealthCheckAlarmIdentifier(name, region);
         }

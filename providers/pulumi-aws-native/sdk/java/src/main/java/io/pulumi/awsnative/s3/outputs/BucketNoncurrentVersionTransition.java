@@ -98,7 +98,6 @@ public final class BucketNoncurrentVersionTransition {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
-
         public BucketNoncurrentVersionTransition build() {
             return new BucketNoncurrentVersionTransition(newerNoncurrentVersions, storageClass, transitionInDays);
         }

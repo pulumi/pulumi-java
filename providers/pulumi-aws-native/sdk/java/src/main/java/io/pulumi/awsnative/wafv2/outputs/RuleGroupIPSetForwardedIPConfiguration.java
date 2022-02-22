@@ -73,7 +73,6 @@ public final class RuleGroupIPSetForwardedIPConfiguration {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public RuleGroupIPSetForwardedIPConfiguration build() {
             return new RuleGroupIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
         }

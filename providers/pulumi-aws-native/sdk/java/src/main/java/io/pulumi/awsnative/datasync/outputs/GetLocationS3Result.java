@@ -99,7 +99,6 @@ public final class GetLocationS3Result {
             this.tags = tags;
             return this;
         }
-
         public GetLocationS3Result build() {
             return new GetLocationS3Result(locationArn, locationUri, tags);
         }

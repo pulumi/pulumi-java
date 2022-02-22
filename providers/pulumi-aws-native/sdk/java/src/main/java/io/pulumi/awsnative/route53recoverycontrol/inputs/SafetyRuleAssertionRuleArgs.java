@@ -24,7 +24,7 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="assertedControls", required=true)
-    private final Input<List<String>> assertedControls;
+        private final Input<List<String>> assertedControls;
 
     public Input<List<String>> getAssertedControls() {
         return this.assertedControls;
@@ -35,7 +35,7 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-    private final Input<Integer> waitPeriodMs;
+        private final Input<Integer> waitPeriodMs;
 
     public Input<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs;
@@ -94,7 +94,6 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
             this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }
-
         public SafetyRuleAssertionRuleArgs build() {
             return new SafetyRuleAssertionRuleArgs(assertedControls, waitPeriodMs);
         }

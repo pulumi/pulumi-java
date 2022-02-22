@@ -52,7 +52,6 @@ public final class CodeSigningConfigCodeSigningPolicies {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
-
         public CodeSigningConfigCodeSigningPolicies build() {
             return new CodeSigningConfigCodeSigningPolicies(untrustedArtifactOnDeployment);
         }

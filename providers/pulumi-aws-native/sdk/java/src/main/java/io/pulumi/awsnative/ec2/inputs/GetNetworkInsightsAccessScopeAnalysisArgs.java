@@ -13,7 +13,7 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.r
     public static final GetNetworkInsightsAccessScopeAnalysisArgs Empty = new GetNetworkInsightsAccessScopeAnalysisArgs();
 
     @InputImport(name="networkInsightsAccessScopeAnalysisId", required=true)
-    private final String networkInsightsAccessScopeAnalysisId;
+        private final String networkInsightsAccessScopeAnalysisId;
 
     public String getNetworkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
@@ -51,7 +51,6 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.r
             this.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull(networkInsightsAccessScopeAnalysisId);
             return this;
         }
-
         public GetNetworkInsightsAccessScopeAnalysisArgs build() {
             return new GetNetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeAnalysisId);
         }

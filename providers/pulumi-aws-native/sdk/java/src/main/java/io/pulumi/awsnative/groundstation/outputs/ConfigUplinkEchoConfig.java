@@ -61,7 +61,6 @@ public final class ConfigUplinkEchoConfig {
             this.enabled = enabled;
             return this;
         }
-
         public ConfigUplinkEchoConfig build() {
             return new ConfigUplinkEchoConfig(antennaUplinkConfigArn, enabled);
         }

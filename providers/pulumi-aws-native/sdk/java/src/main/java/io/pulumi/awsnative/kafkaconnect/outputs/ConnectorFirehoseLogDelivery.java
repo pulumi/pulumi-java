@@ -77,7 +77,6 @@ public final class ConnectorFirehoseLogDelivery {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConnectorFirehoseLogDelivery build() {
             return new ConnectorFirehoseLogDelivery(deliveryStream, enabled);
         }

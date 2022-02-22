@@ -98,7 +98,6 @@ public final class GetTopicRuleDestinationResult {
             this.statusReason = statusReason;
             return this;
         }
-
         public GetTopicRuleDestinationResult build() {
             return new GetTopicRuleDestinationResult(arn, status, statusReason);
         }

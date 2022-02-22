@@ -16,21 +16,21 @@ public final class DeliveryStreamCloudWatchLoggingOptions extends io.pulumi.reso
     public static final DeliveryStreamCloudWatchLoggingOptions Empty = new DeliveryStreamCloudWatchLoggingOptions();
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="logGroupName")
-    private final @Nullable String logGroupName;
+        private final @Nullable String logGroupName;
 
     public Optional<String> getLogGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
     }
 
     @InputImport(name="logStreamName")
-    private final @Nullable String logStreamName;
+        private final @Nullable String logStreamName;
 
     public Optional<String> getLogStreamName() {
         return this.logStreamName == null ? Optional.empty() : Optional.ofNullable(this.logStreamName);
@@ -89,7 +89,6 @@ public final class DeliveryStreamCloudWatchLoggingOptions extends io.pulumi.reso
             this.logStreamName = logStreamName;
             return this;
         }
-
         public DeliveryStreamCloudWatchLoggingOptions build() {
             return new DeliveryStreamCloudWatchLoggingOptions(enabled, logGroupName, logStreamName);
         }

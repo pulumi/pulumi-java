@@ -116,7 +116,6 @@ public final class GetInAppTemplateResult {
             this.templateDescription = templateDescription;
             return this;
         }
-
         public GetInAppTemplateResult build() {
             return new GetInAppTemplateResult(arn, content, customConfig, layout, tags, templateDescription);
         }

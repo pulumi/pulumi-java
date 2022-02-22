@@ -98,7 +98,6 @@ public final class AssetModelMetric {
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public AssetModelMetric build() {
             return new AssetModelMetric(expression, variables, window);
         }

@@ -30,7 +30,6 @@ public final class JobParameterMap {
         public Builder(JobParameterMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public JobParameterMap build() {
             return new JobParameterMap();
         }

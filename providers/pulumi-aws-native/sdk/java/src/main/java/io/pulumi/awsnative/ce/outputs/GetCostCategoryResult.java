@@ -145,7 +145,6 @@ public final class GetCostCategoryResult {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
-
         public GetCostCategoryResult build() {
             return new GetCostCategoryResult(arn, defaultValue, effectiveStart, ruleVersion, rules, splitChargeRules);
         }

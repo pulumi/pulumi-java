@@ -69,7 +69,6 @@ public final class JobValidationConfiguration {
             this.validationMode = validationMode;
             return this;
         }
-
         public JobValidationConfiguration build() {
             return new JobValidationConfiguration(rulesetArn, validationMode);
         }

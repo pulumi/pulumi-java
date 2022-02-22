@@ -76,7 +76,6 @@ public final class JobRecipe {
             this.version = version;
             return this;
         }
-
         public JobRecipe build() {
             return new JobRecipe(name, version);
         }

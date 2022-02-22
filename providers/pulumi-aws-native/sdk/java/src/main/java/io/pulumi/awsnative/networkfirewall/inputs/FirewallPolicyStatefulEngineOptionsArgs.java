@@ -15,7 +15,7 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     public static final FirewallPolicyStatefulEngineOptionsArgs Empty = new FirewallPolicyStatefulEngineOptionsArgs();
 
     @InputImport(name="ruleOrder")
-    private final @Nullable Input<FirewallPolicyRuleOrder> ruleOrder;
+        private final @Nullable Input<FirewallPolicyRuleOrder> ruleOrder;
 
     public Input<FirewallPolicyRuleOrder> getRuleOrder() {
         return this.ruleOrder == null ? Input.empty() : this.ruleOrder;
@@ -58,7 +58,6 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
             this.ruleOrder = Input.ofNullable(ruleOrder);
             return this;
         }
-
         public FirewallPolicyStatefulEngineOptionsArgs build() {
             return new FirewallPolicyStatefulEngineOptionsArgs(ruleOrder);
         }

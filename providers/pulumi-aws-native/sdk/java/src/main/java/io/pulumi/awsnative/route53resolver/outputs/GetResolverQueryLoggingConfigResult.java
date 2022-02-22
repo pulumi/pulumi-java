@@ -205,7 +205,6 @@ public final class GetResolverQueryLoggingConfigResult {
             this.status = status;
             return this;
         }
-
         public GetResolverQueryLoggingConfigResult build() {
             return new GetResolverQueryLoggingConfigResult(arn, associationCount, creationTime, creatorRequestId, id, ownerId, shareStatus, status);
         }

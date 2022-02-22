@@ -77,7 +77,6 @@ public final class ProviderIgnoreTagsArgs {
             this.keys = keys;
             return this;
         }
-
         public ProviderIgnoreTagsArgs build() {
             return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
         }

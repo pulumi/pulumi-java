@@ -16,14 +16,14 @@ public final class SpotFleetSpotCapacityRebalance extends io.pulumi.resources.In
     public static final SpotFleetSpotCapacityRebalance Empty = new SpotFleetSpotCapacityRebalance();
 
     @InputImport(name="replacementStrategy")
-    private final @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
+        private final @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
 
     public Optional<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
         return this.replacementStrategy == null ? Optional.empty() : Optional.ofNullable(this.replacementStrategy);
     }
 
     @InputImport(name="terminationDelay")
-    private final @Nullable Integer terminationDelay;
+        private final @Nullable Integer terminationDelay;
 
     public Optional<Integer> getTerminationDelay() {
         return this.terminationDelay == null ? Optional.empty() : Optional.ofNullable(this.terminationDelay);
@@ -72,7 +72,6 @@ public final class SpotFleetSpotCapacityRebalance extends io.pulumi.resources.In
             this.terminationDelay = terminationDelay;
             return this;
         }
-
         public SpotFleetSpotCapacityRebalance build() {
             return new SpotFleetSpotCapacityRebalance(replacementStrategy, terminationDelay);
         }

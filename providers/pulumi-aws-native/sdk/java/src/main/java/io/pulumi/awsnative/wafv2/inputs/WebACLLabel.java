@@ -13,7 +13,7 @@ public final class WebACLLabel extends io.pulumi.resources.InvokeArgs {
     public static final WebACLLabel Empty = new WebACLLabel();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class WebACLLabel extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLLabel build() {
             return new WebACLLabel(name);
         }

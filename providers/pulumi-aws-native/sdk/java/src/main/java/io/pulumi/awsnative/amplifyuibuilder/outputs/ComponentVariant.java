@@ -61,7 +61,6 @@ public final class ComponentVariant {
             this.variantValues = variantValues;
             return this;
         }
-
         public ComponentVariant build() {
             return new ComponentVariant(overrides, variantValues);
         }

@@ -19,7 +19,7 @@ public final class PackagingGroupLogConfiguration extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable String logGroupName;
+        private final @Nullable String logGroupName;
 
     public Optional<String> getLogGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
@@ -57,7 +57,6 @@ public final class PackagingGroupLogConfiguration extends io.pulumi.resources.In
             this.logGroupName = logGroupName;
             return this;
         }
-
         public PackagingGroupLogConfiguration build() {
             return new PackagingGroupLogConfiguration(logGroupName);
         }

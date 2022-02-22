@@ -13,7 +13,7 @@ public final class WebACLFieldToMatchSingleHeaderProperties extends io.pulumi.re
     public static final WebACLFieldToMatchSingleHeaderProperties Empty = new WebACLFieldToMatchSingleHeaderProperties();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class WebACLFieldToMatchSingleHeaderProperties extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLFieldToMatchSingleHeaderProperties build() {
             return new WebACLFieldToMatchSingleHeaderProperties(name);
         }

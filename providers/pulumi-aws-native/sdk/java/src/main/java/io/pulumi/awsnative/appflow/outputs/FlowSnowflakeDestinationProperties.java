@@ -87,7 +87,6 @@ public final class FlowSnowflakeDestinationProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowSnowflakeDestinationProperties build() {
             return new FlowSnowflakeDestinationProperties(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }

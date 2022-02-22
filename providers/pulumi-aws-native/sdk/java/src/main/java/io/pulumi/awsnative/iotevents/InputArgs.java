@@ -18,7 +18,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     public static final InputArgs Empty = new InputArgs();
 
     @InputImport(name="inputDefinition", required=true)
-    private final Input<InputDefinitionArgs> inputDefinition;
+        private final Input<InputDefinitionArgs> inputDefinition;
 
     public Input<InputDefinitionArgs> getInputDefinition() {
         return this.inputDefinition;
@@ -29,7 +29,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDescription")
-    private final @Nullable Input<String> inputDescription;
+        private final @Nullable Input<String> inputDescription;
 
     public Input<String> getInputDescription() {
         return this.inputDescription == null ? Input.empty() : this.inputDescription;
@@ -40,7 +40,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputName")
-    private final @Nullable Input<String> inputName;
+        private final @Nullable Input<String> inputName;
 
     public Input<String> getInputName() {
         return this.inputName == null ? Input.empty() : this.inputName;
@@ -53,7 +53,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<InputTagArgs>> tags;
+        private final @Nullable Input<List<InputTagArgs>> tags;
 
     public Input<List<InputTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -142,7 +142,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InputArgs build() {
             return new InputArgs(inputDefinition, inputDescription, inputName, tags);
         }

@@ -15,7 +15,7 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
     public static final FlowS3InputFormatConfigArgs Empty = new FlowS3InputFormatConfigArgs();
 
     @InputImport(name="s3InputFileType")
-    private final @Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
+        private final @Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
 
     public Input<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {
         return this.s3InputFileType == null ? Input.empty() : this.s3InputFileType;
@@ -58,7 +58,6 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
             this.s3InputFileType = Input.ofNullable(s3InputFileType);
             return this;
         }
-
         public FlowS3InputFormatConfigArgs build() {
             return new FlowS3InputFormatConfigArgs(s3InputFileType);
         }

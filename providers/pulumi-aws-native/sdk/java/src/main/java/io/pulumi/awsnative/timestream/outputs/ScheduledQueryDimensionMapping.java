@@ -59,7 +59,6 @@ public final class ScheduledQueryDimensionMapping {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ScheduledQueryDimensionMapping build() {
             return new ScheduledQueryDimensionMapping(dimensionValueType, name);
         }

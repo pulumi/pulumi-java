@@ -88,7 +88,6 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration build() {
             return new DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }

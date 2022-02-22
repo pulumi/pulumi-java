@@ -160,7 +160,6 @@ public final class DetectorLabel {
             this.tags = tags;
             return this;
         }
-
         public DetectorLabel build() {
             return new DetectorLabel(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

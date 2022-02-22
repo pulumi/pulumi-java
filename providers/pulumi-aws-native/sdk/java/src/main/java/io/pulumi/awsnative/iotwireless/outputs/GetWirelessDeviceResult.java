@@ -269,7 +269,6 @@ public final class GetWirelessDeviceResult {
             this.type = type;
             return this;
         }
-
         public GetWirelessDeviceResult build() {
             return new GetWirelessDeviceResult(arn, description, destinationName, id, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, thingName, type);
         }

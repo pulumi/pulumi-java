@@ -46,7 +46,6 @@ public final class JobExecutionsRetryConfigProperties {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }
-
         public JobExecutionsRetryConfigProperties build() {
             return new JobExecutionsRetryConfigProperties(retryCriteriaList);
         }

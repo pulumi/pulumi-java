@@ -76,7 +76,6 @@ public final class GetConnectionAliasResult {
             this.connectionAliasState = connectionAliasState;
             return this;
         }
-
         public GetConnectionAliasResult build() {
             return new GetConnectionAliasResult(aliasId, associations, connectionAliasState);
         }

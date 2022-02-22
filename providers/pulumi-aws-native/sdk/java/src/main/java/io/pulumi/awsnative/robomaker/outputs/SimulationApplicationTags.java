@@ -30,7 +30,6 @@ public final class SimulationApplicationTags {
         public Builder(SimulationApplicationTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SimulationApplicationTags build() {
             return new SimulationApplicationTags();
         }

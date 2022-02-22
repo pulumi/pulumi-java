@@ -69,7 +69,6 @@ public final class BucketServerSideEncryptionRule {
             this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
         }
-
         public BucketServerSideEncryptionRule build() {
             return new BucketServerSideEncryptionRule(bucketKeyEnabled, serverSideEncryptionByDefault);
         }
