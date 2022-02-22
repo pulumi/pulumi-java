@@ -20,21 +20,21 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ObjectArgs Empty = new ObjectArgs();
 
     @InputImport(name="bar")
-        private final @Nullable Input<String> bar;
+      private final @Nullable Input<String> bar;
 
     public Input<String> getBar() {
         return this.bar == null ? Input.empty() : this.bar;
     }
 
     @InputImport(name="configs")
-        private final @Nullable Input<List<ConfigMapArgs>> configs;
+      private final @Nullable Input<List<ConfigMapArgs>> configs;
 
     public Input<List<ConfigMapArgs>> getConfigs() {
         return this.configs == null ? Input.empty() : this.configs;
     }
 
     @InputImport(name="foo")
-        private final @Nullable Input<Resource> foo;
+      private final @Nullable Input<Resource> foo;
 
     public Input<Resource> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
@@ -45,7 +45,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="others")
-        private final @Nullable Input<List<List<SomeOtherObjectArgs>>> others;
+      private final @Nullable Input<List<List<SomeOtherObjectArgs>>> others;
 
     public Input<List<List<SomeOtherObjectArgs>>> getOthers() {
         return this.others == null ? Input.empty() : this.others;
@@ -56,7 +56,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stillOthers")
-        private final @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
+      private final @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
     public Input<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {
         return this.stillOthers == null ? Input.empty() : this.stillOthers;

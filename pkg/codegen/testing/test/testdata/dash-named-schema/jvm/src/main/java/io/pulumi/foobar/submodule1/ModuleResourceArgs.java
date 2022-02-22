@@ -15,7 +15,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @InputImport(name="thing")
-        private final @Nullable Input<TopLevelArgs> thing;
+      private final @Nullable Input<TopLevelArgs> thing;
 
     public Input<TopLevelArgs> getThing() {
         return this.thing == null ? Input.empty() : this.thing;

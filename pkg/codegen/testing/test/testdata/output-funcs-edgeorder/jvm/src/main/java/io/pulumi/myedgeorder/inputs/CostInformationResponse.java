@@ -23,7 +23,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="billingInfoUrl", required=true)
-        private final String billingInfoUrl;
+      private final String billingInfoUrl;
 
     public String getBillingInfoUrl() {
         return this.billingInfoUrl;
@@ -34,7 +34,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="billingMeterDetails", required=true)
-        private final List<BillingMeterDetailsResponse> billingMeterDetails;
+      private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
     public List<BillingMeterDetailsResponse> getBillingMeterDetails() {
         return this.billingMeterDetails;

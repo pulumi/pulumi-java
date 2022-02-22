@@ -21,7 +21,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkType", required=true)
-        private final String linkType;
+      private final String linkType;
 
     public String getLinkType() {
         return this.linkType;
@@ -32,7 +32,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkUrl", required=true)
-        private final String linkUrl;
+      private final String linkUrl;
 
     public String getLinkUrl() {
         return this.linkUrl;

@@ -17,7 +17,7 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="slot", required=true)
-        private final String slot;
+      private final String slot;
 
     public String getSlot() {
         return this.slot;

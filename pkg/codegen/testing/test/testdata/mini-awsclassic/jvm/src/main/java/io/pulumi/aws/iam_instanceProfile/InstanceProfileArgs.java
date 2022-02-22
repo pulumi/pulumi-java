@@ -19,7 +19,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

@@ -23,7 +23,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="netFrameworkVersion")
-        private final @Nullable String netFrameworkVersion;
+      private final @Nullable String netFrameworkVersion;
 
     public Optional<String> getNetFrameworkVersion() {
         return this.netFrameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.netFrameworkVersion);

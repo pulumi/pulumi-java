@@ -21,7 +21,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-        private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -32,7 +32,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-        private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -43,7 +43,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeClientSettings", json=true)
-        private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
+      private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
 
     public Input<KubeClientSettingsArgs> getKubeClientSettings() {
         return this.kubeClientSettings == null ? Input.empty() : this.kubeClientSettings;
@@ -54,7 +54,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeconfig")
-        private final @Nullable Input<String> kubeconfig;
+      private final @Nullable Input<String> kubeconfig;
 
     public Input<String> getKubeconfig() {
         return this.kubeconfig == null ? Input.empty() : this.kubeconfig;

@@ -15,7 +15,7 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     public static final PetArgs Empty = new PetArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

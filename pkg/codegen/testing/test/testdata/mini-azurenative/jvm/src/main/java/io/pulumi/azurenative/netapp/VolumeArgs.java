@@ -15,7 +15,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     @InputImport(name="throughputMibps")
-        private final @Nullable Input<Double> throughputMibps;
+      private final @Nullable Input<Double> throughputMibps;
 
     public Input<Double> getThroughputMibps() {
         return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
@@ -26,7 +26,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageThreshold", required=true)
-        private final Input<Double> usageThreshold;
+      private final Input<Double> usageThreshold;
 
     public Input<Double> getUsageThreshold() {
         return this.usageThreshold;

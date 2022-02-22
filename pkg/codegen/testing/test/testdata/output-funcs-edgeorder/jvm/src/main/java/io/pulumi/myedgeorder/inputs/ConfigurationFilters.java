@@ -25,7 +25,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterableProperty")
-        private final @Nullable List<FilterableProperty> filterableProperty;
+      private final @Nullable List<FilterableProperty> filterableProperty;
 
     public List<FilterableProperty> getFilterableProperty() {
         return this.filterableProperty == null ? List.of() : this.filterableProperty;
@@ -36,7 +36,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-        private final HierarchyInformation hierarchyInformation;
+      private final HierarchyInformation hierarchyInformation;
 
     public HierarchyInformation getHierarchyInformation() {
         return this.hierarchyInformation;

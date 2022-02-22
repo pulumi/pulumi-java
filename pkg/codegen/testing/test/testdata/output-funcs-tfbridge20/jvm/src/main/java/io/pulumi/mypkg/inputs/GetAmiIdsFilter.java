@@ -14,14 +14,14 @@ public final class GetAmiIdsFilter extends io.pulumi.resources.InvokeArgs {
     public static final GetAmiIdsFilter Empty = new GetAmiIdsFilter();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

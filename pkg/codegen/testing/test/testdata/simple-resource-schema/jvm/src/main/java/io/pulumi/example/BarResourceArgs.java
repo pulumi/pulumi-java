@@ -15,7 +15,7 @@ public final class BarResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final BarResourceArgs Empty = new BarResourceArgs();
 
     @InputImport(name="foo")
-        private final @Nullable Input<Resource> foo;
+      private final @Nullable Input<Resource> foo;
 
     public Input<Resource> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
