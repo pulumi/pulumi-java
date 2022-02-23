@@ -205,7 +205,6 @@ public final class GetWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(etag, id, location, name, properties, systemData, tags, type);
         }

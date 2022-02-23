@@ -22,7 +22,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="eventTypes", required=true)
-    private final List<String> eventTypes;
+      private final List<String> eventTypes;
 
     public List<String> getEventTypes() {
         return this.eventTypes;
@@ -33,7 +33,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="payloadFormat", required=true)
-    private final String payloadFormat;
+      private final String payloadFormat;
 
     public String getPayloadFormat() {
         return this.payloadFormat;
@@ -44,7 +44,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final String pubsubTopic;
+      private final String pubsubTopic;
 
     public String getPubsubTopic() {
         return this.pubsubTopic;
@@ -103,7 +103,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(eventTypes, payloadFormat, pubsubTopic);
         }

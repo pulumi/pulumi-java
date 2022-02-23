@@ -21,7 +21,7 @@ public final class ResourceProviderDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-    private final String resourceProviderNamespace;
+        private final String resourceProviderNamespace;
 
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -59,7 +59,6 @@ public final class ResourceProviderDetailsResponse extends io.pulumi.resources.I
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public ResourceProviderDetailsResponse build() {
             return new ResourceProviderDetailsResponse(resourceProviderNamespace);
         }

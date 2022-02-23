@@ -15,21 +15,21 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSubnetworkArgs Empty = new GetSubnetworkArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -88,7 +88,6 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public GetSubnetworkArgs build() {
             return new GetSubnetworkArgs(project, region, subnetwork);
         }

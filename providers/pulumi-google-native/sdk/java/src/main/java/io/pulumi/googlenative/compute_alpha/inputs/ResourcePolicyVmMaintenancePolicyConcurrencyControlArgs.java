@@ -19,7 +19,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
 
     @InputImport(name="concurrencyLimit")
-    private final @Nullable Input<Integer> concurrencyLimit;
+      private final @Nullable Input<Integer> concurrencyLimit;
 
     public Input<Integer> getConcurrencyLimit() {
         return this.concurrencyLimit == null ? Input.empty() : this.concurrencyLimit;
@@ -62,7 +62,6 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
             this.concurrencyLimit = Input.ofNullable(concurrencyLimit);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(concurrencyLimit);
         }

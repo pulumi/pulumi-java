@@ -96,7 +96,6 @@ public final class ReportComparisonExpressionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReportComparisonExpressionResponse build() {
             return new ReportComparisonExpressionResponse(name, operator, values);
         }

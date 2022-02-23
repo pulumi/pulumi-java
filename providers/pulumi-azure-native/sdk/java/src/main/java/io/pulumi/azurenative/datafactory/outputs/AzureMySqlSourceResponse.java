@@ -205,7 +205,6 @@ public final class AzureMySqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMySqlSourceResponse build() {
             return new AzureMySqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

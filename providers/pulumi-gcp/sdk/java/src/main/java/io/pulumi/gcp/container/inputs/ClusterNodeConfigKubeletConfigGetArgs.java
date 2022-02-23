@@ -21,7 +21,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpuCfsQuota")
-    private final @Nullable Input<Boolean> cpuCfsQuota;
+        private final @Nullable Input<Boolean> cpuCfsQuota;
 
     public Input<Boolean> getCpuCfsQuota() {
         return this.cpuCfsQuota == null ? Input.empty() : this.cpuCfsQuota;
@@ -35,7 +35,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpuCfsQuotaPeriod")
-    private final @Nullable Input<String> cpuCfsQuotaPeriod;
+        private final @Nullable Input<String> cpuCfsQuotaPeriod;
 
     public Input<String> getCpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Input.empty() : this.cpuCfsQuotaPeriod;
@@ -48,7 +48,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpuManagerPolicy", required=true)
-    private final Input<String> cpuManagerPolicy;
+        private final Input<String> cpuManagerPolicy;
 
     public Input<String> getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
@@ -122,7 +122,6 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
             this.cpuManagerPolicy = Input.of(Objects.requireNonNull(cpuManagerPolicy));
             return this;
         }
-
         public ClusterNodeConfigKubeletConfigGetArgs build() {
             return new ClusterNodeConfigKubeletConfigGetArgs(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

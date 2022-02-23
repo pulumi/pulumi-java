@@ -54,7 +54,6 @@ public final class VolumePropertiesResponseExportPolicy {
             this.rules = rules;
             return this;
         }
-
         public VolumePropertiesResponseExportPolicy build() {
             return new VolumePropertiesResponseExportPolicy(rules);
         }

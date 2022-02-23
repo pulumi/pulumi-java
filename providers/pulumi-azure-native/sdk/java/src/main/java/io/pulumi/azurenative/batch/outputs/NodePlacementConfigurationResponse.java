@@ -54,7 +54,6 @@ public final class NodePlacementConfigurationResponse {
             this.policy = policy;
             return this;
         }
-
         public NodePlacementConfigurationResponse build() {
             return new NodePlacementConfigurationResponse(policy);
         }

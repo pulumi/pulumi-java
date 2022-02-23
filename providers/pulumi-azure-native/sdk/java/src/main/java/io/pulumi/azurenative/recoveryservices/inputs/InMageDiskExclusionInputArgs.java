@@ -25,7 +25,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskSignatureOptions")
-    private final @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
+        private final @Nullable Input<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
     public Input<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
         return this.diskSignatureOptions == null ? Input.empty() : this.diskSignatureOptions;
@@ -36,7 +36,7 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="volumeOptions")
-    private final @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+        private final @Nullable Input<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
     public Input<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {
         return this.volumeOptions == null ? Input.empty() : this.volumeOptions;
@@ -95,7 +95,6 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
             this.volumeOptions = Input.ofNullable(volumeOptions);
             return this;
         }
-
         public InMageDiskExclusionInputArgs build() {
             return new InMageDiskExclusionInputArgs(diskSignatureOptions, volumeOptions);
         }

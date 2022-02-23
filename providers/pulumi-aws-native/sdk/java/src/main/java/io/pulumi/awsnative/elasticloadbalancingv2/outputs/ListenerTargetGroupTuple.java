@@ -61,7 +61,6 @@ public final class ListenerTargetGroupTuple {
             this.weight = weight;
             return this;
         }
-
         public ListenerTargetGroupTuple build() {
             return new ListenerTargetGroupTuple(targetGroupArn, weight);
         }

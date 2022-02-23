@@ -268,7 +268,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(dataIntegrityValidationResult, endedOn, id, migrationId, queryAnalysisValidationResult, resultType, schemaValidationResult, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }

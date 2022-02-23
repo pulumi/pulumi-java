@@ -161,7 +161,6 @@ public final class PresentationTimeRangeResponse {
             this.timescale = timescale;
             return this;
         }
-
         public PresentationTimeRangeResponse build() {
             return new PresentationTimeRangeResponse(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
         }

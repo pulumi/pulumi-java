@@ -20,14 +20,14 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final FilterArgs Empty = new FilterArgs();
 
     @InputImport(name="compositeFilter")
-    private final @Nullable Input<CompositeFilterArgs> compositeFilter;
+      private final @Nullable Input<CompositeFilterArgs> compositeFilter;
 
     public Input<CompositeFilterArgs> getCompositeFilter() {
         return this.compositeFilter == null ? Input.empty() : this.compositeFilter;
     }
 
     @InputImport(name="valueFilter")
-    private final @Nullable Input<ValueFilterArgs> valueFilter;
+      private final @Nullable Input<ValueFilterArgs> valueFilter;
 
     public Input<ValueFilterArgs> getValueFilter() {
         return this.valueFilter == null ? Input.empty() : this.valueFilter;
@@ -86,7 +86,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.valueFilter = Input.ofNullable(valueFilter);
             return this;
         }
-
         public FilterArgs build() {
             return new FilterArgs(compositeFilter, valueFilter);
         }

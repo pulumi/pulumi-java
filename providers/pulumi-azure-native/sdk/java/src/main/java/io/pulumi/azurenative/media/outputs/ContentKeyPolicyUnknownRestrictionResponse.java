@@ -54,7 +54,6 @@ public final class ContentKeyPolicyUnknownRestrictionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyUnknownRestrictionResponse build() {
             return new ContentKeyPolicyUnknownRestrictionResponse(odataType);
         }

@@ -185,7 +185,6 @@ public final class GetFileServicePropertiesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFileServicePropertiesResult build() {
             return new GetFileServicePropertiesResult(cors, id, name, protocolSettings, shareDeleteRetentionPolicy, sku, type);
         }

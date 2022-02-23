@@ -14,7 +14,7 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
     public static final ClusterMasterAuthClientCertificateConfigGetArgs Empty = new ClusterMasterAuthClientCertificateConfigGetArgs();
 
     @InputImport(name="issueClientCertificate", required=true)
-    private final Input<Boolean> issueClientCertificate;
+        private final Input<Boolean> issueClientCertificate;
 
     public Input<Boolean> getIssueClientCertificate() {
         return this.issueClientCertificate;
@@ -57,7 +57,6 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
             this.issueClientCertificate = Input.of(Objects.requireNonNull(issueClientCertificate));
             return this;
         }
-
         public ClusterMasterAuthClientCertificateConfigGetArgs build() {
             return new ClusterMasterAuthClientCertificateConfigGetArgs(issueClientCertificate);
         }

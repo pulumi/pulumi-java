@@ -75,7 +75,6 @@ public final class ServiceAccountResponse {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email, scopes);
         }

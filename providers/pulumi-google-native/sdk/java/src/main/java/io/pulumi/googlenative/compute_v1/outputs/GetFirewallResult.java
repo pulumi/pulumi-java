@@ -416,7 +416,6 @@ public final class GetFirewallResult {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
-
         public GetFirewallResult build() {
             return new GetFirewallResult(allowed, creationTimestamp, denied, description, destinationRanges, direction, disabled, kind, logConfig, name, network, priority, selfLink, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
         }

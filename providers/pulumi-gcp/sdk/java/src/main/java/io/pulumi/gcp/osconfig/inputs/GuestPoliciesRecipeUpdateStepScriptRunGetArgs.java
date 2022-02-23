@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+        private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
      * 
      */
     @InputImport(name="interpreter")
-    private final @Nullable Input<String> interpreter;
+        private final @Nullable Input<String> interpreter;
 
     public Input<String> getInterpreter() {
         return this.interpreter == null ? Input.empty() : this.interpreter;
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
      * 
      */
     @InputImport(name="script", required=true)
-    private final Input<String> script;
+        private final Input<String> script;
 
     public Input<String> getScript() {
         return this.script;
@@ -119,7 +119,6 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunGetArgs extends io.pulu
             this.script = Input.of(Objects.requireNonNull(script));
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepScriptRunGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepScriptRunGetArgs(allowedExitCodes, interpreter, script);
         }

@@ -95,7 +95,6 @@ public final class PosixGroupResponse {
             this.systemId = Objects.requireNonNull(systemId);
             return this;
         }
-
         public PosixGroupResponse build() {
             return new PosixGroupResponse(gid, name, systemId);
         }

@@ -79,7 +79,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(field, table);
         }

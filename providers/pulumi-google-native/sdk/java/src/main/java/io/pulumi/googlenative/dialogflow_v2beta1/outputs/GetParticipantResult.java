@@ -117,7 +117,6 @@ public final class GetParticipantResult {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetParticipantResult build() {
             return new GetParticipantResult(documentsMetadataFilters, name, obfuscatedExternalUserId, role);
         }

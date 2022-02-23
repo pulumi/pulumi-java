@@ -120,7 +120,6 @@ public final class GetSessionResult {
             this.status = status;
             return this;
         }
-
         public GetSessionResult build() {
             return new GetSessionResult(awsAccountId, findingPublishingFrequency, serviceRole, status);
         }

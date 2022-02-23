@@ -139,7 +139,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion, validationErrors);
         }

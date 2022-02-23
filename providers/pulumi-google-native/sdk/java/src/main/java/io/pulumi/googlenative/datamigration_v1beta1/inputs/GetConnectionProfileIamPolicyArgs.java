@@ -15,28 +15,28 @@ public final class GetConnectionProfileIamPolicyArgs extends io.pulumi.resources
     public static final GetConnectionProfileIamPolicyArgs Empty = new GetConnectionProfileIamPolicyArgs();
 
     @InputImport(name="connectionProfileId", required=true)
-    private final String connectionProfileId;
+      private final String connectionProfileId;
 
     public String getConnectionProfileId() {
         return this.connectionProfileId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetConnectionProfileIamPolicyArgs extends io.pulumi.resources
             this.project = project;
             return this;
         }
-
         public GetConnectionProfileIamPolicyArgs build() {
             return new GetConnectionProfileIamPolicyArgs(connectionProfileId, location, optionsRequestedPolicyVersion, project);
         }

@@ -119,7 +119,6 @@ public final class MetricTarget {
             this.value = value;
             return this;
         }
-
         public MetricTarget build() {
             return new MetricTarget(averageUtilization, averageValue, type, value);
         }

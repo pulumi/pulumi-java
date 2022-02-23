@@ -162,7 +162,6 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstancePrivateEndpointConnectionResult build() {
             return new GetManagedInstancePrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

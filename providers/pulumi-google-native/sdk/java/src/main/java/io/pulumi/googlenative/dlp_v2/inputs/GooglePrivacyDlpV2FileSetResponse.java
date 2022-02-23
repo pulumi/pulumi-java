@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2FileSetResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="regexFileSet", required=true)
-    private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
+      private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
 
     public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse getRegexFileSet() {
         return this.regexFileSet;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2FileSetResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2FileSetResponse extends io.pulumi.resources
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GooglePrivacyDlpV2FileSetResponse build() {
             return new GooglePrivacyDlpV2FileSetResponse(regexFileSet, url);
         }

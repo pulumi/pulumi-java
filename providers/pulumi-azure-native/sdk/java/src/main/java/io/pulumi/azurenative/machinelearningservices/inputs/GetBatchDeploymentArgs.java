@@ -17,7 +17,7 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -28,7 +28,7 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -39,7 +39,7 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetBatchDeploymentArgs build() {
             return new GetBatchDeploymentArgs(deploymentName, endpointName, resourceGroupName, workspaceName);
         }

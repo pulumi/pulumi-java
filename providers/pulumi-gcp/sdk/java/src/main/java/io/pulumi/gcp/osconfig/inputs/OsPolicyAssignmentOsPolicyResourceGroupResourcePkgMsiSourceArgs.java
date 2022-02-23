@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+        private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs> gcs;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs> gcs;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+        private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs> remote;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs> remote;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -144,7 +144,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceAr
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs(allowInsecure, gcs, localPath, remote);
         }

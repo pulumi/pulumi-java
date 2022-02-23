@@ -142,7 +142,6 @@ public final class GetImageIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetImageIamPolicyResult build() {
             return new GetImageIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

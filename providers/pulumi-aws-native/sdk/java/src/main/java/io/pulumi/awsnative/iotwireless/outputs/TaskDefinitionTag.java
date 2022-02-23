@@ -60,7 +60,6 @@ public final class TaskDefinitionTag {
             this.value = value;
             return this;
         }
-
         public TaskDefinitionTag build() {
             return new TaskDefinitionTag(key, value);
         }

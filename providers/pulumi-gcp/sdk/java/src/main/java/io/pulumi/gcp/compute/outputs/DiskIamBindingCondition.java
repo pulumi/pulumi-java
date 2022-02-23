@@ -73,7 +73,6 @@ public final class DiskIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DiskIamBindingCondition build() {
             return new DiskIamBindingCondition(description, expression, title);
         }

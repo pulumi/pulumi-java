@@ -60,7 +60,6 @@ public final class ContainerEnvironmentVariable {
             this.variable = variable;
             return this;
         }
-
         public ContainerEnvironmentVariable build() {
             return new ContainerEnvironmentVariable(value, variable);
         }

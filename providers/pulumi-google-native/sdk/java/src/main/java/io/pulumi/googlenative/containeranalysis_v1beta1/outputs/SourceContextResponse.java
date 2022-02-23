@@ -120,7 +120,6 @@ public final class SourceContextResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public SourceContextResponse build() {
             return new SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

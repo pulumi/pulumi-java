@@ -23,14 +23,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpTarget")
-    private final @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
+      private final @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
 
     public Input<AppEngineHttpTargetArgs> getAppEngineHttpTarget() {
         return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,14 +41,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullTarget")
-    private final @Nullable Input<PullTargetArgs> pullTarget;
+      private final @Nullable Input<PullTargetArgs> pullTarget;
 
     public Input<PullTargetArgs> getPullTarget() {
         return this.pullTarget == null ? Input.empty() : this.pullTarget;
@@ -70,7 +70,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimits")
-    private final @Nullable Input<RateLimitsArgs> rateLimits;
+      private final @Nullable Input<RateLimitsArgs> rateLimits;
 
     public Input<RateLimitsArgs> getRateLimits() {
         return this.rateLimits == null ? Input.empty() : this.rateLimits;
@@ -81,7 +81,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-    private final @Nullable Input<RetryConfigArgs> retryConfig;
+      private final @Nullable Input<RetryConfigArgs> retryConfig;
 
     public Input<RetryConfigArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -92,7 +92,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskTtl")
-    private final @Nullable Input<String> taskTtl;
+      private final @Nullable Input<String> taskTtl;
 
     public Input<String> getTaskTtl() {
         return this.taskTtl == null ? Input.empty() : this.taskTtl;
@@ -103,7 +103,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tombstoneTtl")
-    private final @Nullable Input<String> tombstoneTtl;
+      private final @Nullable Input<String> tombstoneTtl;
 
     public Input<String> getTombstoneTtl() {
         return this.tombstoneTtl == null ? Input.empty() : this.tombstoneTtl;
@@ -267,7 +267,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.tombstoneTtl = Input.ofNullable(tombstoneTtl);
             return this;
         }
-
         public QueueArgs build() {
             return new QueueArgs(appEngineHttpTarget, location, name, project, pullTarget, rateLimits, retryConfig, taskTtl, tombstoneTtl);
         }

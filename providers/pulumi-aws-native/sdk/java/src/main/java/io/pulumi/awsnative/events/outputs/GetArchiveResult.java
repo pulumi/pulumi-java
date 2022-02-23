@@ -88,7 +88,6 @@ public final class GetArchiveResult {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public GetArchiveResult build() {
             return new GetArchiveResult(arn, description, eventPattern, retentionDays);
         }

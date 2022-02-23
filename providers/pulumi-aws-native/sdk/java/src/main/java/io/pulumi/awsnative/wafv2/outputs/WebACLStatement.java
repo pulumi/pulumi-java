@@ -243,7 +243,6 @@ public final class WebACLStatement {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
-
         public WebACLStatement build() {
             return new WebACLStatement(andStatement, byteMatchStatement, geoMatchStatement, iPSetReferenceStatement, labelMatchStatement, managedRuleGroupStatement, notStatement, orStatement, rateBasedStatement, regexMatchStatement, regexPatternSetReferenceStatement, ruleGroupReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }

@@ -44,7 +44,6 @@ public final class GetClusterAuthenticatorGroupsConfig {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public GetClusterAuthenticatorGroupsConfig build() {
             return new GetClusterAuthenticatorGroupsConfig(securityGroup);
         }

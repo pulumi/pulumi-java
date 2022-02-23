@@ -54,7 +54,6 @@ public final class WorkflowTemplateJobPysparkJobLoggingConfig {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public WorkflowTemplateJobPysparkJobLoggingConfig build() {
             return new WorkflowTemplateJobPysparkJobLoggingConfig(driverLogLevels);
         }

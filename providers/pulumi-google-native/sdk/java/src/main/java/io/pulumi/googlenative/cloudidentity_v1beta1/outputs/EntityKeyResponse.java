@@ -52,7 +52,6 @@ public final class EntityKeyResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public EntityKeyResponse build() {
             return new EntityKeyResponse(namespace);
         }

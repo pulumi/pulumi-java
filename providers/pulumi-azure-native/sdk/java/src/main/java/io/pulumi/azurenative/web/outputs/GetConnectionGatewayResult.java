@@ -175,7 +175,6 @@ public final class GetConnectionGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionGatewayResult build() {
             return new GetConnectionGatewayResult(etag, id, location, name, properties, tags, type);
         }

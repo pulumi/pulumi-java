@@ -74,7 +74,6 @@ public final class ListEdgeModuleProvisioningTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public ListEdgeModuleProvisioningTokenResult build() {
             return new ListEdgeModuleProvisioningTokenResult(expirationDate, token);
         }

@@ -120,7 +120,6 @@ public final class GetDatasetIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatasetIamPolicyResult build() {
             return new GetDatasetIamPolicyResult(auditConfigs, bindings, etag, version);
         }

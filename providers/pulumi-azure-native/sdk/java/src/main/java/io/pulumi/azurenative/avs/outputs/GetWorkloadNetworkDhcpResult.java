@@ -204,7 +204,6 @@ public final class GetWorkloadNetworkDhcpResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDhcpResult build() {
             return new GetWorkloadNetworkDhcpResult(dhcpType, displayName, id, name, provisioningState, revision, segments, type);
         }

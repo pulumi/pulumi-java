@@ -61,7 +61,6 @@ public final class AuthorityAccessUrl {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }
-
         public AuthorityAccessUrl build() {
             return new AuthorityAccessUrl(caCertificateAccessUrl, crlAccessUrls);
         }

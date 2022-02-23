@@ -23,7 +23,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -34,7 +34,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="link")
-    private final @Nullable Input<String> link;
+        private final @Nullable Input<String> link;
 
     public Input<String> getLink() {
         return this.link == null ? Input.empty() : this.link;
@@ -45,7 +45,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -119,7 +119,6 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public MetadataAuthorArgs build() {
             return new MetadataAuthorArgs(email, link, name);
         }

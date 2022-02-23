@@ -140,7 +140,6 @@ public final class CycleStepResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public CycleStepResponse build() {
             return new CycleStepResponse(endTime, initializingReplication, postProcessing, replicating, startTime);
         }

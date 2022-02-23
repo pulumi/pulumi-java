@@ -246,7 +246,6 @@ public final class CorrelationFilterResponse {
             this.to = to;
             return this;
         }
-
         public CorrelationFilterResponse build() {
             return new CorrelationFilterResponse(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
         }

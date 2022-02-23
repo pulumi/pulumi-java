@@ -62,7 +62,6 @@ public final class SkuResourceResponseProperties {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
-
         public SkuResourceResponseProperties build() {
             return new SkuResourceResponseProperties(provisioningState, skuSettings);
         }

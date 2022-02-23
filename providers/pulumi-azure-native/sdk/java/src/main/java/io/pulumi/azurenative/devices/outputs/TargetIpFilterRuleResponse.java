@@ -118,7 +118,6 @@ public final class TargetIpFilterRuleResponse {
             this.target = target;
             return this;
         }
-
         public TargetIpFilterRuleResponse build() {
             return new TargetIpFilterRuleResponse(action, filterName, ipMask, target);
         }

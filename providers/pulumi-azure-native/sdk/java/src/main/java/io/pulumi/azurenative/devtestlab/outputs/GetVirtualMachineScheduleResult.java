@@ -375,7 +375,6 @@ public final class GetVirtualMachineScheduleResult {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public GetVirtualMachineScheduleResult build() {
             return new GetVirtualMachineScheduleResult(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }

@@ -18,7 +18,7 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+        private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -29,7 +29,7 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -88,7 +88,6 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public JitSchedulingPolicyArgs build() {
             return new JitSchedulingPolicyArgs(duration, startTime);
         }

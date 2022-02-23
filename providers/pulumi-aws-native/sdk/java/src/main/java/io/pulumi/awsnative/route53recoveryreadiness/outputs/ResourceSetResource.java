@@ -112,7 +112,6 @@ public final class ResourceSetResource {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public ResourceSetResource build() {
             return new ResourceSetResource(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }

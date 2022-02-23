@@ -163,7 +163,6 @@ public final class AzureDataLakeStoreSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreSourceResponse build() {
             return new AzureDataLakeStoreSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }

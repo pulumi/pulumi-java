@@ -73,7 +73,6 @@ public final class DeliveryStreamCopyCommand {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }
-
         public DeliveryStreamCopyCommand build() {
             return new DeliveryStreamCopyCommand(copyOptions, dataTableColumns, dataTableName);
         }

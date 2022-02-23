@@ -23,7 +23,7 @@ public final class ScanRunErrorTraceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -34,7 +34,7 @@ public final class ScanRunErrorTraceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mostCommonHttpErrorCode", required=true)
-    private final Integer mostCommonHttpErrorCode;
+      private final Integer mostCommonHttpErrorCode;
 
     public Integer getMostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode;
@@ -45,7 +45,7 @@ public final class ScanRunErrorTraceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="scanConfigError", required=true)
-    private final ScanConfigErrorResponse scanConfigError;
+      private final ScanConfigErrorResponse scanConfigError;
 
     public ScanConfigErrorResponse getScanConfigError() {
         return this.scanConfigError;
@@ -104,7 +104,6 @@ public final class ScanRunErrorTraceResponse extends io.pulumi.resources.InvokeA
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
         }
-
         public ScanRunErrorTraceResponse build() {
             return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
         }

@@ -74,7 +74,6 @@ public final class StatusResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(code, description);
         }

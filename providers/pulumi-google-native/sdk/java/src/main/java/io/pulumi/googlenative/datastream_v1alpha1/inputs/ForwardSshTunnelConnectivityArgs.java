@@ -24,7 +24,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final Input<String> hostname;
+      private final Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname;
@@ -35,7 +35,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -46,7 +46,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -57,7 +57,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -68,7 +68,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -172,7 +172,6 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public ForwardSshTunnelConnectivityArgs build() {
             return new ForwardSshTunnelConnectivityArgs(hostname, password, port, privateKey, username);
         }

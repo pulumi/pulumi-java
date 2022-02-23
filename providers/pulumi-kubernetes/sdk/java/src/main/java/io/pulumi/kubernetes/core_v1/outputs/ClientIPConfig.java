@@ -54,7 +54,6 @@ public final class ClientIPConfig {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public ClientIPConfig build() {
             return new ClientIPConfig(timeoutSeconds);
         }

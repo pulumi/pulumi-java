@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @InputImport(name="minAcceptableMeanAveragePrecision", required=true)
-    private final Input<Double> minAcceptableMeanAveragePrecision;
+      private final Input<Double> minAcceptableMeanAveragePrecision;
 
     public Input<Double> getMinAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
             this.minAcceptableMeanAveragePrecision = Input.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(email, minAcceptableMeanAveragePrecision);
         }

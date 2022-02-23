@@ -54,7 +54,6 @@ public final class GetAccessPointPolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetAccessPointPolicyResult build() {
             return new GetAccessPointPolicyResult(policyDocument);
         }

@@ -75,7 +75,6 @@ public final class ManagementGroupLogSettingsResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ManagementGroupLogSettingsResponse build() {
             return new ManagementGroupLogSettingsResponse(category, enabled);
         }

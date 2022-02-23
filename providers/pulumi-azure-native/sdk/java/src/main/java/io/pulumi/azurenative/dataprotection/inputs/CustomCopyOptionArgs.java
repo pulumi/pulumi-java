@@ -23,7 +23,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -35,7 +35,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -94,7 +94,6 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public CustomCopyOptionArgs build() {
             return new CustomCopyOptionArgs(duration, objectType);
         }

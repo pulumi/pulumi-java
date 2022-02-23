@@ -52,7 +52,6 @@ public final class PoolOptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PoolOptionResponse build() {
             return new PoolOptionResponse(name);
         }

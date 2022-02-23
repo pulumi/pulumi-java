@@ -76,7 +76,6 @@ public final class ListConnectedClusterUserCredentialsResult {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-
         public ListConnectedClusterUserCredentialsResult build() {
             return new ListConnectedClusterUserCredentialsResult(hybridConnectionConfig, kubeconfigs);
         }

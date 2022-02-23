@@ -52,7 +52,6 @@ public final class UniformShardingResponse {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
-
         public UniformShardingResponse build() {
             return new UniformShardingResponse(numShards);
         }

@@ -21,7 +21,7 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customClassId", required=true)
-    private final Input<String> customClassId;
+      private final Input<String> customClassId;
 
     public Input<String> getCustomClassId() {
         return this.customClassId;
@@ -32,14 +32,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<ClassItemArgs>> items;
+      private final @Nullable Input<List<ClassItemArgs>> items;
 
     public Input<List<ClassItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -50,14 +50,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -161,7 +161,6 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public CustomClassArgs build() {
             return new CustomClassArgs(customClassId, items, location, name, project);
         }

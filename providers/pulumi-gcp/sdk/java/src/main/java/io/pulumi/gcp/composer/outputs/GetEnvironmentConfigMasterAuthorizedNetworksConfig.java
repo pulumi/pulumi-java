@@ -60,7 +60,6 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
             return new GetEnvironmentConfigMasterAuthorizedNetworksConfig(cidrBlocks, enabled);
         }

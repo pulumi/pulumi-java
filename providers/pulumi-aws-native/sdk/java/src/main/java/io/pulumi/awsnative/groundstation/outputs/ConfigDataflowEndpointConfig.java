@@ -60,7 +60,6 @@ public final class ConfigDataflowEndpointConfig {
             this.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
         }
-
         public ConfigDataflowEndpointConfig build() {
             return new ConfigDataflowEndpointConfig(dataflowEndpointName, dataflowEndpointRegion);
         }

@@ -76,7 +76,6 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }
-
         public GoogleCloudHealthcareV1ConsentPolicyResponse build() {
             return new GoogleCloudHealthcareV1ConsentPolicyResponse(authorizationRule, resourceAttributes);
         }

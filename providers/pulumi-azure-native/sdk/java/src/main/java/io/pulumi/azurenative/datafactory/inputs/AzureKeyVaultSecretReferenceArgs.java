@@ -25,7 +25,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final Input<Object> secretName;
+        private final Input<Object> secretName;
 
     public Input<Object> getSecretName() {
         return this.secretName;
@@ -36,7 +36,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable Input<Object> secretVersion;
+        private final @Nullable Input<Object> secretVersion;
 
     public Input<Object> getSecretVersion() {
         return this.secretVersion == null ? Input.empty() : this.secretVersion;
@@ -47,7 +47,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="store", required=true)
-    private final Input<LinkedServiceReferenceArgs> store;
+        private final Input<LinkedServiceReferenceArgs> store;
 
     public Input<LinkedServiceReferenceArgs> getStore() {
         return this.store;
@@ -59,7 +59,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureKeyVaultSecretReferenceArgs build() {
             return new AzureKeyVaultSecretReferenceArgs(secretName, secretVersion, store, type);
         }

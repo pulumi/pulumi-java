@@ -99,7 +99,6 @@ public final class ModuleAssetParameterResponse {
             this.parameterType = parameterType;
             return this;
         }
-
         public ModuleAssetParameterResponse build() {
             return new ModuleAssetParameterResponse(modeValuesInfo, name, parameterType);
         }

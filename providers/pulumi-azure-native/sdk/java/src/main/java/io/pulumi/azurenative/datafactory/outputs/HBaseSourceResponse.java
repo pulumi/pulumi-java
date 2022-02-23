@@ -205,7 +205,6 @@ public final class HBaseSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HBaseSourceResponse build() {
             return new HBaseSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

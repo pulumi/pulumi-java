@@ -99,7 +99,6 @@ public final class NetworkConfigurationResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }

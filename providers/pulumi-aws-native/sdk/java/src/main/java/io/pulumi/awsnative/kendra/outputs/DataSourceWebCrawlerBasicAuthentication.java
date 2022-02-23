@@ -72,7 +72,6 @@ public final class DataSourceWebCrawlerBasicAuthentication {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceWebCrawlerBasicAuthentication build() {
             return new DataSourceWebCrawlerBasicAuthentication(credentials, host, port);
         }

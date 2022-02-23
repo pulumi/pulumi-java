@@ -46,7 +46,6 @@ public final class SpotFleetMonitoring {
             this.enabled = enabled;
             return this;
         }
-
         public SpotFleetMonitoring build() {
             return new SpotFleetMonitoring(enabled);
         }

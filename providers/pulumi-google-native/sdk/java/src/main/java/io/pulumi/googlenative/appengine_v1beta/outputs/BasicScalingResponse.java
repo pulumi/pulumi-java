@@ -75,7 +75,6 @@ public final class BasicScalingResponse {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public BasicScalingResponse build() {
             return new BasicScalingResponse(idleTimeout, maxInstances);
         }

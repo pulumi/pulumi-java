@@ -21,7 +21,7 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TargetReferenceResponse build() {
             return new TargetReferenceResponse(id, type);
         }

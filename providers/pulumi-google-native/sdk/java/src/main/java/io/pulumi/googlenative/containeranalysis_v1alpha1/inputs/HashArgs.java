@@ -24,7 +24,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<HashType> type;
+      private final @Nullable Input<HashType> type;
 
     public Input<HashType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -35,7 +35,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public HashArgs build() {
             return new HashArgs(type, value);
         }

@@ -179,7 +179,6 @@ public final class GetFleetResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFleetResult build() {
             return new GetFleetResult(createTime, deleteTime, displayName, fleetName, name, uid, updateTime);
         }

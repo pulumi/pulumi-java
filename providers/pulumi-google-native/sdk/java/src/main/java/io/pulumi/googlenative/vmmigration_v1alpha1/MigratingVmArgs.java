@@ -22,7 +22,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeEngineTargetDefaults")
-    private final @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
+      private final @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
     public Input<ComputeEngineTargetDefaultsArgs> getComputeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults == null ? Input.empty() : this.computeEngineTargetDefaults;
@@ -33,7 +33,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,21 +55,21 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="migratingVmId", required=true)
-    private final Input<String> migratingVmId;
+      private final Input<String> migratingVmId;
 
     public Input<String> getMigratingVmId() {
         return this.migratingVmId;
@@ -80,28 +80,28 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<SchedulePolicyArgs> policy;
+      private final @Nullable Input<SchedulePolicyArgs> policy;
 
     public Input<SchedulePolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;
@@ -112,7 +112,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVmId")
-    private final @Nullable Input<String> sourceVmId;
+      private final @Nullable Input<String> sourceVmId;
 
     public Input<String> getSourceVmId() {
         return this.sourceVmId == null ? Input.empty() : this.sourceVmId;
@@ -306,7 +306,6 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceVmId = Input.ofNullable(sourceVmId);
             return this;
         }
-
         public MigratingVmArgs build() {
             return new MigratingVmArgs(computeEngineTargetDefaults, description, displayName, labels, location, migratingVmId, policy, project, requestId, sourceId, sourceVmId);
         }

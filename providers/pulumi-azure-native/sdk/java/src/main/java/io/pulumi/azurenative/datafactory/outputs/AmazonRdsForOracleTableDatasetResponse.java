@@ -231,7 +231,6 @@ public final class AmazonRdsForOracleTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForOracleTableDatasetResponse build() {
             return new AmazonRdsForOracleTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

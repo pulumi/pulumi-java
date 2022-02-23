@@ -44,7 +44,6 @@ public final class RuleGroupImmunityTimeProperty {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public RuleGroupImmunityTimeProperty build() {
             return new RuleGroupImmunityTimeProperty(immunityTime);
         }

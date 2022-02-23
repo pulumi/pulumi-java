@@ -161,7 +161,6 @@ public final class NetworkInterfaceIPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
         }

@@ -23,7 +23,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+        private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -34,7 +34,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="regionName")
-    private final @Nullable Input<String> regionName;
+        private final @Nullable Input<String> regionName;
 
     public Input<String> getRegionName() {
         return this.regionName == null ? Input.empty() : this.regionName;
@@ -93,7 +93,6 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
             this.regionName = Input.ofNullable(regionName);
             return this;
         }
-
         public InstanceLocationArgs build() {
             return new InstanceLocationArgs(availabilityZone, regionName);
         }

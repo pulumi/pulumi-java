@@ -13,7 +13,7 @@ public final class GetStudioArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetStudioArgs Empty = new GetStudioArgs();
 
     @InputImport(name="studioId", required=true)
-    private final String studioId;
+        private final String studioId;
 
     public String getStudioId() {
         return this.studioId;
@@ -51,7 +51,6 @@ public final class GetStudioArgs extends io.pulumi.resources.InvokeArgs {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public GetStudioArgs build() {
             return new GetStudioArgs(studioId);
         }

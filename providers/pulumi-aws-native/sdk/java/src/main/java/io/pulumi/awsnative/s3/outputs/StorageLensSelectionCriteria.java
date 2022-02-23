@@ -99,7 +99,6 @@ public final class StorageLensSelectionCriteria {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
-
         public StorageLensSelectionCriteria build() {
             return new StorageLensSelectionCriteria(delimiter, maxDepth, minStorageBytesPercentage);
         }

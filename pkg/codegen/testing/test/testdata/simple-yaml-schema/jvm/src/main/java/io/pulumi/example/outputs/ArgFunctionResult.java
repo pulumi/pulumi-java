@@ -46,7 +46,6 @@ public final class ArgFunctionResult {
             this.result = result;
             return this;
         }
-
         public ArgFunctionResult build() {
             return new ArgFunctionResult(result);
         }

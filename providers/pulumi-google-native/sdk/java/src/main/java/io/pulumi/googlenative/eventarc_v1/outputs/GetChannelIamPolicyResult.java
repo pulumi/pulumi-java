@@ -120,7 +120,6 @@ public final class GetChannelIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetChannelIamPolicyResult build() {
             return new GetChannelIamPolicyResult(auditConfigs, bindings, etag, version);
         }

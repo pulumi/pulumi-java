@@ -76,7 +76,6 @@ public final class MediaServicesForPutRequestResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public MediaServicesForPutRequestResponse build() {
             return new MediaServicesForPutRequestResponse(resourceId, userAssignedIdentity);
         }

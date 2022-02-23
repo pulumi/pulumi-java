@@ -21,7 +21,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+        private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -43,7 +43,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+        private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -54,7 +54,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpPort")
-    private final @Nullable Input<Integer> httpPort;
+        private final @Nullable Input<Integer> httpPort;
 
     public Input<Integer> getHttpPort() {
         return this.httpPort == null ? Input.empty() : this.httpPort;
@@ -65,7 +65,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsPort")
-    private final @Nullable Input<Integer> httpsPort;
+        private final @Nullable Input<Integer> httpsPort;
 
     public Input<Integer> getHttpsPort() {
         return this.httpsPort == null ? Input.empty() : this.httpsPort;
@@ -76,7 +76,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originHostHeader")
-    private final @Nullable Input<String> originHostHeader;
+        private final @Nullable Input<String> originHostHeader;
 
     public Input<String> getOriginHostHeader() {
         return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
@@ -87,7 +87,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originName")
-    private final @Nullable Input<String> originName;
+        private final @Nullable Input<String> originName;
 
     public Input<String> getOriginName() {
         return this.originName == null ? Input.empty() : this.originName;
@@ -98,7 +98,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -109,7 +109,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkAlias")
-    private final @Nullable Input<String> privateLinkAlias;
+        private final @Nullable Input<String> privateLinkAlias;
 
     public Input<String> getPrivateLinkAlias() {
         return this.privateLinkAlias == null ? Input.empty() : this.privateLinkAlias;
@@ -120,7 +120,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkApprovalMessage")
-    private final @Nullable Input<String> privateLinkApprovalMessage;
+        private final @Nullable Input<String> privateLinkApprovalMessage;
 
     public Input<String> getPrivateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage == null ? Input.empty() : this.privateLinkApprovalMessage;
@@ -131,7 +131,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkLocation")
-    private final @Nullable Input<String> privateLinkLocation;
+        private final @Nullable Input<String> privateLinkLocation;
 
     public Input<String> getPrivateLinkLocation() {
         return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
@@ -142,7 +142,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable Input<String> privateLinkResourceId;
+        private final @Nullable Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
@@ -153,7 +153,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -164,7 +164,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -175,7 +175,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -429,7 +429,6 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public OriginArgs build() {
             return new OriginArgs(enabled, endpointName, hostName, httpPort, httpsPort, originHostHeader, originName, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, profileName, resourceGroupName, weight);
         }

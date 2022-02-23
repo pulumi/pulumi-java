@@ -23,7 +23,7 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerGroupName")
-    private final @Nullable String containerGroupName;
+        private final @Nullable String containerGroupName;
 
     public Optional<String> getContainerGroupName() {
         return this.containerGroupName == null ? Optional.empty() : Optional.ofNullable(this.containerGroupName);
@@ -61,7 +61,6 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
             this.containerGroupName = containerGroupName;
             return this;
         }
-
         public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerGroupName);
         }

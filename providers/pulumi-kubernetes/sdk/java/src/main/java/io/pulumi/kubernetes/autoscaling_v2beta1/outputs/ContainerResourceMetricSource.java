@@ -119,7 +119,6 @@ public final class ContainerResourceMetricSource {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public ContainerResourceMetricSource build() {
             return new ContainerResourceMetricSource(container, name, targetAverageUtilization, targetAverageValue);
         }

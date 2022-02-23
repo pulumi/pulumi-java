@@ -17,7 +17,7 @@ public final class GetLocationSMBArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final String locationArn;
+        private final String locationArn;
 
     public String getLocationArn() {
         return this.locationArn;
@@ -55,7 +55,6 @@ public final class GetLocationSMBArgs extends io.pulumi.resources.InvokeArgs {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
-
         public GetLocationSMBArgs build() {
             return new GetLocationSMBArgs(locationArn);
         }

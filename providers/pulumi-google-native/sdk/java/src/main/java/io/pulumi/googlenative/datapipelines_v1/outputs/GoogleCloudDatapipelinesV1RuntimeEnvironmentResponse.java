@@ -372,7 +372,6 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
             return new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }

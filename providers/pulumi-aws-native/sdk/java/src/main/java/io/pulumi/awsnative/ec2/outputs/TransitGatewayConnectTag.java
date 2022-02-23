@@ -76,7 +76,6 @@ public final class TransitGatewayConnectTag {
             this.value = value;
             return this;
         }
-
         public TransitGatewayConnectTag build() {
             return new TransitGatewayConnectTag(key, value);
         }

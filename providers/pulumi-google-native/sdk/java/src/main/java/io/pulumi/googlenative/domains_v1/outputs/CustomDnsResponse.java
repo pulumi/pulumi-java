@@ -76,7 +76,6 @@ public final class CustomDnsResponse {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public CustomDnsResponse build() {
             return new CustomDnsResponse(dsRecords, nameServers);
         }

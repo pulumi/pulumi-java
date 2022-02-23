@@ -75,7 +75,6 @@ public final class ApigatewayAuditLogConfigResponse {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public ApigatewayAuditLogConfigResponse build() {
             return new ApigatewayAuditLogConfigResponse(exemptedMembers, logType);
         }

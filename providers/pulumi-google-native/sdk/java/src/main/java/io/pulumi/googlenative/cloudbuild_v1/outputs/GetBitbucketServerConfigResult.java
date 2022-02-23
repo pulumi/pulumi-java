@@ -245,7 +245,6 @@ public final class GetBitbucketServerConfigResult {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }
-
         public GetBitbucketServerConfigResult build() {
             return new GetBitbucketServerConfigResult(apiKey, connectedRepositories, createTime, hostUri, name, peeredNetwork, secrets, sslCa, username, webhookKey);
         }

@@ -77,7 +77,6 @@ public final class GetImageRecipeResult {
             this.arn = arn;
             return this;
         }
-
         public GetImageRecipeResult build() {
             return new GetImageRecipeResult(additionalInstanceConfiguration, arn);
         }

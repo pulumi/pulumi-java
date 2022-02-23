@@ -20,7 +20,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * 
      */
     @InputImport(name="httpStatus", required=true)
-    private final Input<Integer> httpStatus;
+        private final Input<Integer> httpStatus;
 
     public Input<Integer> getHttpStatus() {
         return this.httpStatus;
@@ -32,7 +32,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * 
      */
     @InputImport(name="percentage", required=true)
-    private final Input<Double> percentage;
+        private final Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage;
@@ -91,7 +91,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs(httpStatus, percentage);
         }

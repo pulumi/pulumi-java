@@ -91,7 +91,6 @@ public final class FhirStoreStreamConfig {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public FhirStoreStreamConfig build() {
             return new FhirStoreStreamConfig(bigqueryDestination, resourceTypes);
         }

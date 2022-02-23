@@ -84,7 +84,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
             this.min = min;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange(max, min);
         }

@@ -120,7 +120,6 @@ public final class GetAddonResult {
             this.tags = tags;
             return this;
         }
-
         public GetAddonResult build() {
             return new GetAddonResult(addonVersion, arn, serviceAccountRoleArn, tags);
         }

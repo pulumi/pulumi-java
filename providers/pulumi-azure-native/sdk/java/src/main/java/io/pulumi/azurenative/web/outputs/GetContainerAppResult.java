@@ -289,7 +289,6 @@ public final class GetContainerAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContainerAppResult build() {
             return new GetContainerAppResult(configuration, id, kind, kubeEnvironmentId, latestRevisionFqdn, latestRevisionName, location, name, provisioningState, tags, template, type);
         }

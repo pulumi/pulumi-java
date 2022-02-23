@@ -98,7 +98,6 @@ public final class NodeInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeInfoResponse build() {
             return new NodeInfoResponse(ipConfiguration, name, type);
         }

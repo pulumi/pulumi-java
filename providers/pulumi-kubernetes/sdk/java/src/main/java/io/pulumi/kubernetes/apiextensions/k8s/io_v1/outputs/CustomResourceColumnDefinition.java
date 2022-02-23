@@ -161,7 +161,6 @@ public final class CustomResourceColumnDefinition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomResourceColumnDefinition build() {
             return new CustomResourceColumnDefinition(description, format, jsonPath, name, priority, type);
         }

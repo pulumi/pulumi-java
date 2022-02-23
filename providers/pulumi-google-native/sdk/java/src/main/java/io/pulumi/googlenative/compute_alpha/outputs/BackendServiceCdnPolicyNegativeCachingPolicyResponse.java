@@ -74,7 +74,6 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyResponse {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public BackendServiceCdnPolicyNegativeCachingPolicyResponse build() {
             return new BackendServiceCdnPolicyNegativeCachingPolicyResponse(code, ttl);
         }

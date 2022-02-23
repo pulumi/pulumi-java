@@ -13,21 +13,21 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-    private final String applicationIdentifier;
+        private final String applicationIdentifier;
 
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="environmentIdentifier", required=true)
-    private final String environmentIdentifier;
+        private final String environmentIdentifier;
 
     public String getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @InputImport(name="serviceIdentifier", required=true)
-    private final String serviceIdentifier;
+        private final String serviceIdentifier;
 
     public String getServiceIdentifier() {
         return this.serviceIdentifier;
@@ -86,7 +86,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
             return this;
         }
-
         public GetServiceArgs build() {
             return new GetServiceArgs(applicationIdentifier, environmentIdentifier, serviceIdentifier);
         }

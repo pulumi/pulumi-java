@@ -21,7 +21,7 @@ public final class ClusterNodeConfigLinuxNodeConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sysctls", required=true)
-    private final Input<Map<String,String>> sysctls;
+        private final Input<Map<String,String>> sysctls;
 
     public Input<Map<String,String>> getSysctls() {
         return this.sysctls;
@@ -64,7 +64,6 @@ public final class ClusterNodeConfigLinuxNodeConfigArgs extends io.pulumi.resour
             this.sysctls = Input.of(Objects.requireNonNull(sysctls));
             return this;
         }
-
         public ClusterNodeConfigLinuxNodeConfigArgs build() {
             return new ClusterNodeConfigLinuxNodeConfigArgs(sysctls);
         }

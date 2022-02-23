@@ -119,7 +119,6 @@ public final class GetAdvancedThreatProtectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAdvancedThreatProtectionResult build() {
             return new GetAdvancedThreatProtectionResult(id, isEnabled, name, type);
         }

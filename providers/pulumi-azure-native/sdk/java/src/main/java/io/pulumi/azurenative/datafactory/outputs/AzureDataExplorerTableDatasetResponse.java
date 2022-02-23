@@ -231,7 +231,6 @@ public final class AzureDataExplorerTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerTableDatasetResponse build() {
             return new AzureDataExplorerTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

@@ -21,84 +21,84 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyArgs Empty = new PolicyArgs();
 
     @InputImport(name="deleteAllPolicyResources")
-    private final @Nullable Input<Boolean> deleteAllPolicyResources;
+        private final @Nullable Input<Boolean> deleteAllPolicyResources;
 
     public Input<Boolean> getDeleteAllPolicyResources() {
         return this.deleteAllPolicyResources == null ? Input.empty() : this.deleteAllPolicyResources;
     }
 
     @InputImport(name="excludeMap")
-    private final @Nullable Input<PolicyIEMapArgs> excludeMap;
+        private final @Nullable Input<PolicyIEMapArgs> excludeMap;
 
     public Input<PolicyIEMapArgs> getExcludeMap() {
         return this.excludeMap == null ? Input.empty() : this.excludeMap;
     }
 
     @InputImport(name="excludeResourceTags", required=true)
-    private final Input<Boolean> excludeResourceTags;
+        private final Input<Boolean> excludeResourceTags;
 
     public Input<Boolean> getExcludeResourceTags() {
         return this.excludeResourceTags;
     }
 
     @InputImport(name="includeMap")
-    private final @Nullable Input<PolicyIEMapArgs> includeMap;
+        private final @Nullable Input<PolicyIEMapArgs> includeMap;
 
     public Input<PolicyIEMapArgs> getIncludeMap() {
         return this.includeMap == null ? Input.empty() : this.includeMap;
     }
 
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
     @InputImport(name="remediationEnabled", required=true)
-    private final Input<Boolean> remediationEnabled;
+        private final Input<Boolean> remediationEnabled;
 
     public Input<Boolean> getRemediationEnabled() {
         return this.remediationEnabled;
     }
 
     @InputImport(name="resourceTags")
-    private final @Nullable Input<List<PolicyResourceTagArgs>> resourceTags;
+        private final @Nullable Input<List<PolicyResourceTagArgs>> resourceTags;
 
     public Input<List<PolicyResourceTagArgs>> getResourceTags() {
         return this.resourceTags == null ? Input.empty() : this.resourceTags;
     }
 
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+        private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
     }
 
     @InputImport(name="resourceTypeList")
-    private final @Nullable Input<List<String>> resourceTypeList;
+        private final @Nullable Input<List<String>> resourceTypeList;
 
     public Input<List<String>> getResourceTypeList() {
         return this.resourceTypeList == null ? Input.empty() : this.resourceTypeList;
     }
 
     @InputImport(name="resourcesCleanUp")
-    private final @Nullable Input<Boolean> resourcesCleanUp;
+        private final @Nullable Input<Boolean> resourcesCleanUp;
 
     public Input<Boolean> getResourcesCleanUp() {
         return this.resourcesCleanUp == null ? Input.empty() : this.resourcesCleanUp;
     }
 
     @InputImport(name="securityServicePolicyData", required=true)
-    private final Input<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData;
+        private final Input<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData;
 
     public Input<SecurityServicePolicyDataPropertiesArgs> getSecurityServicePolicyData() {
         return this.securityServicePolicyData;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<PolicyTagArgs>> tags;
+        private final @Nullable Input<List<PolicyTagArgs>> tags;
 
     public Input<List<PolicyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -307,7 +307,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(deleteAllPolicyResources, excludeMap, excludeResourceTags, includeMap, policyName, remediationEnabled, resourceTags, resourceType, resourceTypeList, resourcesCleanUp, securityServicePolicyData, tags);
         }

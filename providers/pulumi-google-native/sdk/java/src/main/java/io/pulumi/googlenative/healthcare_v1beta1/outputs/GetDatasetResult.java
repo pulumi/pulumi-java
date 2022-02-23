@@ -74,7 +74,6 @@ public final class GetDatasetResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(name, timeZone);
         }

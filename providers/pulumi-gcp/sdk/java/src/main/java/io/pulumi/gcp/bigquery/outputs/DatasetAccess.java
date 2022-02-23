@@ -183,7 +183,6 @@ public final class DatasetAccess {
             this.view = view;
             return this;
         }
-
         public DatasetAccess build() {
             return new DatasetAccess(domain, groupByEmail, role, specialGroup, userByEmail, view);
         }

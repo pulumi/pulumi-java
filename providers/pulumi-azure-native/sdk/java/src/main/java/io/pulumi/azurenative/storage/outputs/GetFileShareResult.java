@@ -416,7 +416,6 @@ public final class GetFileShareResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFileShareResult build() {
             return new GetFileShareResult(accessTier, accessTierChangeTime, accessTierStatus, deleted, deletedTime, enabledProtocols, etag, id, lastModifiedTime, metadata, name, remainingRetentionDays, rootSquash, shareQuota, shareUsageBytes, snapshotTime, type, version);
         }

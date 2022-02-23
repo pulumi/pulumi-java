@@ -34,7 +34,6 @@ public final class SimulationApplicationTagsArgs extends io.pulumi.resources.Res
         public Builder(SimulationApplicationTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SimulationApplicationTagsArgs build() {
             return new SimulationApplicationTagsArgs();
         }

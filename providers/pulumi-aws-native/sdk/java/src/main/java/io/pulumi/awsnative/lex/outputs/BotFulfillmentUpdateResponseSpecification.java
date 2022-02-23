@@ -92,7 +92,6 @@ public final class BotFulfillmentUpdateResponseSpecification {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-
         public BotFulfillmentUpdateResponseSpecification build() {
             return new BotFulfillmentUpdateResponseSpecification(allowInterrupt, frequencyInSeconds, messageGroups);
         }

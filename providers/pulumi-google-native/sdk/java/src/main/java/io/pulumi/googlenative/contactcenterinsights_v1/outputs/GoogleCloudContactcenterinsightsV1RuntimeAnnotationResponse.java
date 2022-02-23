@@ -249,7 +249,6 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
             this.startBoundary = Objects.requireNonNull(startBoundary);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(annotationId, answerFeedback, articleSuggestion, createTime, dialogflowInteraction, endBoundary, faqAnswer, smartComposeSuggestion, smartReply, startBoundary);
         }

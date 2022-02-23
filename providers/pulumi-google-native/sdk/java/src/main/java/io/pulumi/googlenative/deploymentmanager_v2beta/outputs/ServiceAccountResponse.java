@@ -52,7 +52,6 @@ public final class ServiceAccountResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email);
         }

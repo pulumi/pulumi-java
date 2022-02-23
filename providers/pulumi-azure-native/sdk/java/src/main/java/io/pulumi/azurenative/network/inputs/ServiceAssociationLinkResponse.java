@@ -25,7 +25,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowDelete")
-    private final @Nullable Boolean allowDelete;
+        private final @Nullable Boolean allowDelete;
 
     public Optional<Boolean> getAllowDelete() {
         return this.allowDelete == null ? Optional.empty() : Optional.ofNullable(this.allowDelete);
@@ -36,7 +36,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -47,7 +47,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="link")
-    private final @Nullable String link;
+        private final @Nullable String link;
 
     public Optional<String> getLink() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
@@ -69,7 +69,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="linkedResourceType")
-    private final @Nullable String linkedResourceType;
+        private final @Nullable String linkedResourceType;
 
     public Optional<String> getLinkedResourceType() {
         return this.linkedResourceType == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceType);
@@ -80,7 +80,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable List<String> locations;
+        private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
@@ -91,7 +91,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -102,7 +102,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -113,7 +113,7 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -232,7 +232,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceAssociationLinkResponse build() {
             return new ServiceAssociationLinkResponse(allowDelete, etag, id, link, linkedResourceType, locations, name, provisioningState, type);
         }

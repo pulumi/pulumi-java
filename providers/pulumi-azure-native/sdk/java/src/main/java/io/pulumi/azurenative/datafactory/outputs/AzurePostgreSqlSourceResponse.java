@@ -205,7 +205,6 @@ public final class AzurePostgreSqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzurePostgreSqlSourceResponse build() {
             return new AzurePostgreSqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

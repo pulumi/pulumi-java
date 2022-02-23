@@ -14,14 +14,14 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     public static final GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting Empty = new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting();
 
     @InputImport(name="retainedBackups", required=true)
-    private final Integer retainedBackups;
+        private final Integer retainedBackups;
 
     public Integer getRetainedBackups() {
         return this.retainedBackups;
     }
 
     @InputImport(name="retentionUnit", required=true)
-    private final String retentionUnit;
+        private final String retentionUnit;
 
     public String getRetentionUnit() {
         return this.retentionUnit;
@@ -70,7 +70,6 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }
-
         public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
             return new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(retainedBackups, retentionUnit);
         }

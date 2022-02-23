@@ -359,7 +359,6 @@ public final class NodePoolNodeConfig {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
-
         public NodePoolNodeConfig build() {
             return new NodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }

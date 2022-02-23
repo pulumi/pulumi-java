@@ -24,7 +24,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -35,7 +35,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetPrefixLength")
-    private final @Nullable Input<Integer> subnetPrefixLength;
+        private final @Nullable Input<Integer> subnetPrefixLength;
 
     public Input<Integer> getSubnetPrefixLength() {
         return this.subnetPrefixLength == null ? Input.empty() : this.subnetPrefixLength;
@@ -120,7 +120,6 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetPrefixLength = Input.ofNullable(subnetPrefixLength);
             return this;
         }
-
         public IPRangeArgs build() {
             return new IPRangeArgs(address, name, subnetPrefixLength);
         }

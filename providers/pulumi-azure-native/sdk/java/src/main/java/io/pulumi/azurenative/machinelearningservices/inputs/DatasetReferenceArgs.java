@@ -23,7 +23,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public DatasetReferenceArgs build() {
             return new DatasetReferenceArgs(id, name);
         }

@@ -52,7 +52,6 @@ public final class GkeClusterConfigResponse {
             this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
             return this;
         }
-
         public GkeClusterConfigResponse build() {
             return new GkeClusterConfigResponse(namespacedGkeDeploymentTarget);
         }

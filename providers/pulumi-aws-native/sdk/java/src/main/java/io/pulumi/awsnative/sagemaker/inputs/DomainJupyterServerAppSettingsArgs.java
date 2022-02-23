@@ -19,7 +19,7 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     public static final DomainJupyterServerAppSettingsArgs Empty = new DomainJupyterServerAppSettingsArgs();
 
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+        private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
 
     public Input<DomainResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
@@ -62,7 +62,6 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }
-
         public DomainJupyterServerAppSettingsArgs build() {
             return new DomainJupyterServerAppSettingsArgs(defaultResourceSpec);
         }

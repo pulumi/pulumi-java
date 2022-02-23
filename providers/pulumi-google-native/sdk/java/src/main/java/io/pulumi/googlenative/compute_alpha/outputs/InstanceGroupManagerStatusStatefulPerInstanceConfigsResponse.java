@@ -52,7 +52,6 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
             this.allEffective = Objects.requireNonNull(allEffective);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse build() {
             return new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(allEffective);
         }

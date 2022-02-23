@@ -21,7 +21,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="checkIntervalSec")
-    private final @Nullable Input<Integer> checkIntervalSec;
+        private final @Nullable Input<Integer> checkIntervalSec;
 
     public Input<Integer> getCheckIntervalSec() {
         return this.checkIntervalSec == null ? Input.empty() : this.checkIntervalSec;
@@ -33,7 +33,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Input<Integer> healthyThreshold;
+        private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
@@ -58,7 +58,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -75,7 +75,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -99,7 +99,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestPath")
-    private final @Nullable Input<String> requestPath;
+        private final @Nullable Input<String> requestPath;
 
     public Input<String> getRequestPath() {
         return this.requestPath == null ? Input.empty() : this.requestPath;
@@ -124,7 +124,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+        private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -136,7 +136,7 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Input<Integer> unhealthyThreshold;
+        private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
@@ -315,7 +315,6 @@ public final class HttpsHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }
-
         public HttpsHealthCheckArgs build() {
             return new HttpsHealthCheckArgs(checkIntervalSec, description, healthyThreshold, host, name, port, project, requestPath, timeoutSec, unhealthyThreshold);
         }

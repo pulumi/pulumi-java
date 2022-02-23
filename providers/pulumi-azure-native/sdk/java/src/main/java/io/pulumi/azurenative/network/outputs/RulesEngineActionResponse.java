@@ -101,7 +101,6 @@ public final class RulesEngineActionResponse {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-
         public RulesEngineActionResponse build() {
             return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }

@@ -23,7 +23,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable String vmSize;
+        private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -61,7 +61,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
             this.vmSize = vmSize;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(vmSize);
         }

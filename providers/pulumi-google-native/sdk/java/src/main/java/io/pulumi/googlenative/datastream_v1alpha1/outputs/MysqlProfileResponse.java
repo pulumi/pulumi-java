@@ -139,7 +139,6 @@ public final class MysqlProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MysqlProfileResponse build() {
             return new MysqlProfileResponse(hostname, password, port, sslConfig, username);
         }

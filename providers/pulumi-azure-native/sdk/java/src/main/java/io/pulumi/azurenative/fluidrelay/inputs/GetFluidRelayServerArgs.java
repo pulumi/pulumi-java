@@ -17,7 +17,7 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final String resourceGroup;
+        private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;
@@ -77,7 +77,6 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public GetFluidRelayServerArgs build() {
             return new GetFluidRelayServerArgs(name, resourceGroup);
         }

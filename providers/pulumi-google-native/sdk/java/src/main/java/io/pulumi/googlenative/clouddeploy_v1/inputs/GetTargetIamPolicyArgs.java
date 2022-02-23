@@ -15,28 +15,28 @@ public final class GetTargetIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetTargetIamPolicyArgs Empty = new GetTargetIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetId", required=true)
-    private final String targetId;
+      private final String targetId;
 
     public String getTargetId() {
         return this.targetId;
@@ -105,7 +105,6 @@ public final class GetTargetIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public GetTargetIamPolicyArgs build() {
             return new GetTargetIamPolicyArgs(location, optionsRequestedPolicyVersion, project, targetId);
         }

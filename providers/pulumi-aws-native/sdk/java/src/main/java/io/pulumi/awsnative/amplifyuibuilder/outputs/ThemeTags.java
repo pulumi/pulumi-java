@@ -30,7 +30,6 @@ public final class ThemeTags {
         public Builder(ThemeTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ThemeTags build() {
             return new ThemeTags();
         }

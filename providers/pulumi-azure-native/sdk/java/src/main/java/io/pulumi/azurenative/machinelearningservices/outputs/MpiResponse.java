@@ -79,7 +79,6 @@ public final class MpiResponse {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
-
         public MpiResponse build() {
             return new MpiResponse(distributionType, processCountPerInstance);
         }

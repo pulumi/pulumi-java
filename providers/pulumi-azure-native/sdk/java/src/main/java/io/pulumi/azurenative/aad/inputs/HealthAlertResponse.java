@@ -21,7 +21,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issue", required=true)
-    private final String issue;
+        private final String issue;
 
     public String getIssue() {
         return this.issue;
@@ -43,7 +43,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastDetected", required=true)
-    private final String lastDetected;
+        private final String lastDetected;
 
     public String getLastDetected() {
         return this.lastDetected;
@@ -54,7 +54,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -65,7 +65,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="raised", required=true)
-    private final String raised;
+        private final String raised;
 
     public String getRaised() {
         return this.raised;
@@ -76,7 +76,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolutionUri", required=true)
-    private final String resolutionUri;
+        private final String resolutionUri;
 
     public String getResolutionUri() {
         return this.resolutionUri;
@@ -87,7 +87,7 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+        private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -186,7 +186,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthAlertResponse build() {
             return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
         }

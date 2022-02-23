@@ -76,7 +76,6 @@ public final class DeviceCredentialPublicKey {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public DeviceCredentialPublicKey build() {
             return new DeviceCredentialPublicKey(format, key);
         }

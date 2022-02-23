@@ -15,21 +15,21 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends io.pulumi.r
     public static final SpotFleetFleetLaunchTemplateSpecification Empty = new SpotFleetFleetLaunchTemplateSpecification();
 
     @InputImport(name="launchTemplateId")
-    private final @Nullable String launchTemplateId;
+        private final @Nullable String launchTemplateId;
 
     public Optional<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
     @InputImport(name="launchTemplateName")
-    private final @Nullable String launchTemplateName;
+        private final @Nullable String launchTemplateName;
 
     public Optional<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
     }
 
     @InputImport(name="version", required=true)
-    private final String version;
+        private final String version;
 
     public String getVersion() {
         return this.version;
@@ -88,7 +88,6 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends io.pulumi.r
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SpotFleetFleetLaunchTemplateSpecification build() {
             return new SpotFleetFleetLaunchTemplateSpecification(launchTemplateId, launchTemplateName, version);
         }

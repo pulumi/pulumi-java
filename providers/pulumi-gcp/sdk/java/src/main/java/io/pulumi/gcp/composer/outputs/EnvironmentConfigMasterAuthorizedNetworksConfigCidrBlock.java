@@ -60,7 +60,6 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
             this.displayName = displayName;
             return this;
         }
-
         public EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock build() {
             return new EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }

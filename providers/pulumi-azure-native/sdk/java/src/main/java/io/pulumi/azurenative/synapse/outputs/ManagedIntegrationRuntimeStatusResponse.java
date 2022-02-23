@@ -185,7 +185,6 @@ public final class ManagedIntegrationRuntimeStatusResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeStatusResponse build() {
             return new ManagedIntegrationRuntimeStatusResponse(createTime, dataFactoryName, lastOperation, nodes, otherErrors, state, type);
         }

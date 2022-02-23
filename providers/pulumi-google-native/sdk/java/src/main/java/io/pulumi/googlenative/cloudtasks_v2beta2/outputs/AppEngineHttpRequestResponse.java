@@ -139,7 +139,6 @@ public final class AppEngineHttpRequestResponse {
             this.relativeUrl = Objects.requireNonNull(relativeUrl);
             return this;
         }
-
         public AppEngineHttpRequestResponse build() {
             return new AppEngineHttpRequestResponse(appEngineRouting, headers, httpMethod, payload, relativeUrl);
         }

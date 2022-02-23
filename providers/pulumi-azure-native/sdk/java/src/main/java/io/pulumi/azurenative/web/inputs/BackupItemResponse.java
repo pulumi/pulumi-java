@@ -28,7 +28,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupId", required=true)
-    private final Integer backupId;
+        private final Integer backupId;
 
     public Integer getBackupId() {
         return this.backupId;
@@ -39,7 +39,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blobName", required=true)
-    private final String blobName;
+        private final String blobName;
 
     public String getBlobName() {
         return this.blobName;
@@ -50,7 +50,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="correlationId", required=true)
-    private final String correlationId;
+        private final String correlationId;
 
     public String getCorrelationId() {
         return this.correlationId;
@@ -61,7 +61,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="created", required=true)
-    private final String created;
+        private final String created;
 
     public String getCreated() {
         return this.created;
@@ -72,7 +72,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databases", required=true)
-    private final List<DatabaseBackupSettingResponse> databases;
+        private final List<DatabaseBackupSettingResponse> databases;
 
     public List<DatabaseBackupSettingResponse> getDatabases() {
         return this.databases;
@@ -83,7 +83,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="finishedTimeStamp", required=true)
-    private final String finishedTimeStamp;
+        private final String finishedTimeStamp;
 
     public String getFinishedTimeStamp() {
         return this.finishedTimeStamp;
@@ -94,7 +94,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -105,7 +105,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -116,7 +116,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastRestoreTimeStamp", required=true)
-    private final String lastRestoreTimeStamp;
+        private final String lastRestoreTimeStamp;
 
     public String getLastRestoreTimeStamp() {
         return this.lastRestoreTimeStamp;
@@ -127,7 +127,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="log", required=true)
-    private final String log;
+        private final String log;
 
     public String getLog() {
         return this.log;
@@ -138,7 +138,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -149,7 +149,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduled", required=true)
-    private final Boolean scheduled;
+        private final Boolean scheduled;
 
     public Boolean getScheduled() {
         return this.scheduled;
@@ -160,7 +160,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeInBytes", required=true)
-    private final Double sizeInBytes;
+        private final Double sizeInBytes;
 
     public Double getSizeInBytes() {
         return this.sizeInBytes;
@@ -171,7 +171,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -182,7 +182,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountUrl", required=true)
-    private final String storageAccountUrl;
+        private final String storageAccountUrl;
 
     public String getStorageAccountUrl() {
         return this.storageAccountUrl;
@@ -193,7 +193,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -204,7 +204,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="websiteSizeInBytes", required=true)
-    private final Double websiteSizeInBytes;
+        private final Double websiteSizeInBytes;
 
     public Double getWebsiteSizeInBytes() {
         return this.websiteSizeInBytes;
@@ -403,7 +403,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
         }
-
         public BackupItemResponse build() {
             return new BackupItemResponse(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
         }

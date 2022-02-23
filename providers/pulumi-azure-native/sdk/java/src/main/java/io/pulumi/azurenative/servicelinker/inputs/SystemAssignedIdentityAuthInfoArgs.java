@@ -23,7 +23,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authType", required=true)
-    private final Input<String> authType;
+        private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;
@@ -66,7 +66,6 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }
-
         public SystemAssignedIdentityAuthInfoArgs build() {
             return new SystemAssignedIdentityAuthInfoArgs(authType);
         }

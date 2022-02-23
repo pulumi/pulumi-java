@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForEDMUploadResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForEDMUploadResult build() {
             return new GetprivateLinkServicesForEDMUploadResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

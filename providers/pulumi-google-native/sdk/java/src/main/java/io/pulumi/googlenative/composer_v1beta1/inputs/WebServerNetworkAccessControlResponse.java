@@ -22,7 +22,7 @@ public final class WebServerNetworkAccessControlResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="allowedIpRanges", required=true)
-    private final List<AllowedIpRangeResponse> allowedIpRanges;
+      private final List<AllowedIpRangeResponse> allowedIpRanges;
 
     public List<AllowedIpRangeResponse> getAllowedIpRanges() {
         return this.allowedIpRanges;
@@ -60,7 +60,6 @@ public final class WebServerNetworkAccessControlResponse extends io.pulumi.resou
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }
-
         public WebServerNetworkAccessControlResponse build() {
             return new WebServerNetworkAccessControlResponse(allowedIpRanges);
         }

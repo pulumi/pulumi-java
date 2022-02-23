@@ -45,7 +45,6 @@ public final class WebACLAndStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public WebACLAndStatement build() {
             return new WebACLAndStatement(statements);
         }

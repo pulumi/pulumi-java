@@ -52,7 +52,6 @@ public final class DataSourceVpcConnectionProperties {
             this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
             return this;
         }
-
         public DataSourceVpcConnectionProperties build() {
             return new DataSourceVpcConnectionProperties(vpcConnectionArn);
         }

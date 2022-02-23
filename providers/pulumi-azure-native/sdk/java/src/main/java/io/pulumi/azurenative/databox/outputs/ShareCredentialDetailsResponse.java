@@ -138,7 +138,6 @@ public final class ShareCredentialDetailsResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ShareCredentialDetailsResponse build() {
             return new ShareCredentialDetailsResponse(password, shareName, shareType, supportedAccessProtocols, userName);
         }

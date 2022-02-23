@@ -77,7 +77,6 @@ public final class StorageProfileResponse {
             this.scsiControllers = Objects.requireNonNull(scsiControllers);
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(disks, scsiControllers);
         }

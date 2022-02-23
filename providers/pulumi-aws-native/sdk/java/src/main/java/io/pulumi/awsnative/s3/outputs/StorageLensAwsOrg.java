@@ -44,7 +44,6 @@ public final class StorageLensAwsOrg {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public StorageLensAwsOrg build() {
             return new StorageLensAwsOrg(arn);
         }

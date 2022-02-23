@@ -17,7 +17,7 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publisherId", required=true)
-    private final String publisherId;
+        private final String publisherId;
 
     public String getPublisherId() {
         return this.publisherId;
@@ -55,7 +55,6 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
             this.publisherId = Objects.requireNonNull(publisherId);
             return this;
         }
-
         public GetPublisherArgs build() {
             return new GetPublisherArgs(publisherId);
         }

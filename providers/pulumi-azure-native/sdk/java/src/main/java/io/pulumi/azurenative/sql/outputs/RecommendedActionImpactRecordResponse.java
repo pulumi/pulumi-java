@@ -138,7 +138,6 @@ public final class RecommendedActionImpactRecordResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public RecommendedActionImpactRecordResponse build() {
             return new RecommendedActionImpactRecordResponse(absoluteValue, changeValueAbsolute, changeValueRelative, dimensionName, unit);
         }

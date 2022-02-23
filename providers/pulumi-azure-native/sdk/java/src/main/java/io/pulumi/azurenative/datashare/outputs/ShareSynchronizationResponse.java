@@ -245,7 +245,6 @@ public final class ShareSynchronizationResponse {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }
-
         public ShareSynchronizationResponse build() {
             return new ShareSynchronizationResponse(consumerEmail, consumerName, consumerTenantName, durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }

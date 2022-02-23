@@ -121,7 +121,6 @@ public final class ValidatingWebhookConfiguration {
             this.webhooks = webhooks;
             return this;
         }
-
         public ValidatingWebhookConfiguration build() {
             return new ValidatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }

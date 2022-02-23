@@ -62,7 +62,6 @@ public final class SpotFleetTagSpecification {
             this.tags = tags;
             return this;
         }
-
         public SpotFleetTagSpecification build() {
             return new SpotFleetTagSpecification(resourceType, tags);
         }

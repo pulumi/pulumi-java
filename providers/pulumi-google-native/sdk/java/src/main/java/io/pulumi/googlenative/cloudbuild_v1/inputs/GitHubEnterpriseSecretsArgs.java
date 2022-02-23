@@ -23,7 +23,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oauthClientIdName")
-    private final @Nullable Input<String> oauthClientIdName;
+      private final @Nullable Input<String> oauthClientIdName;
 
     public Input<String> getOauthClientIdName() {
         return this.oauthClientIdName == null ? Input.empty() : this.oauthClientIdName;
@@ -34,7 +34,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oauthClientIdVersionName")
-    private final @Nullable Input<String> oauthClientIdVersionName;
+      private final @Nullable Input<String> oauthClientIdVersionName;
 
     public Input<String> getOauthClientIdVersionName() {
         return this.oauthClientIdVersionName == null ? Input.empty() : this.oauthClientIdVersionName;
@@ -45,7 +45,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oauthSecretName")
-    private final @Nullable Input<String> oauthSecretName;
+      private final @Nullable Input<String> oauthSecretName;
 
     public Input<String> getOauthSecretName() {
         return this.oauthSecretName == null ? Input.empty() : this.oauthSecretName;
@@ -56,7 +56,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oauthSecretVersionName")
-    private final @Nullable Input<String> oauthSecretVersionName;
+      private final @Nullable Input<String> oauthSecretVersionName;
 
     public Input<String> getOauthSecretVersionName() {
         return this.oauthSecretVersionName == null ? Input.empty() : this.oauthSecretVersionName;
@@ -67,7 +67,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateKeyName")
-    private final @Nullable Input<String> privateKeyName;
+      private final @Nullable Input<String> privateKeyName;
 
     public Input<String> getPrivateKeyName() {
         return this.privateKeyName == null ? Input.empty() : this.privateKeyName;
@@ -78,7 +78,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateKeyVersionName")
-    private final @Nullable Input<String> privateKeyVersionName;
+      private final @Nullable Input<String> privateKeyVersionName;
 
     public Input<String> getPrivateKeyVersionName() {
         return this.privateKeyVersionName == null ? Input.empty() : this.privateKeyVersionName;
@@ -89,7 +89,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="webhookSecretName")
-    private final @Nullable Input<String> webhookSecretName;
+      private final @Nullable Input<String> webhookSecretName;
 
     public Input<String> getWebhookSecretName() {
         return this.webhookSecretName == null ? Input.empty() : this.webhookSecretName;
@@ -100,7 +100,7 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="webhookSecretVersionName")
-    private final @Nullable Input<String> webhookSecretVersionName;
+      private final @Nullable Input<String> webhookSecretVersionName;
 
     public Input<String> getWebhookSecretVersionName() {
         return this.webhookSecretVersionName == null ? Input.empty() : this.webhookSecretVersionName;
@@ -249,7 +249,6 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
             this.webhookSecretVersionName = Input.ofNullable(webhookSecretVersionName);
             return this;
         }
-
         public GitHubEnterpriseSecretsArgs build() {
             return new GitHubEnterpriseSecretsArgs(oauthClientIdName, oauthClientIdVersionName, oauthSecretName, oauthSecretVersionName, privateKeyName, privateKeyVersionName, webhookSecretName, webhookSecretVersionName);
         }

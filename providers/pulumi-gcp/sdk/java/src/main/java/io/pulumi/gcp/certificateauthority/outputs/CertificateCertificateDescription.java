@@ -154,7 +154,6 @@ public final class CertificateCertificateDescription {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }
-
         public CertificateCertificateDescription build() {
             return new CertificateCertificateDescription(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds);
         }

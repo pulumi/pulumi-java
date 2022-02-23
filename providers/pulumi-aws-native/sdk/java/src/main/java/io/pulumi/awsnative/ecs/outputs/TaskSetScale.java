@@ -77,7 +77,6 @@ public final class TaskSetScale {
             this.value = value;
             return this;
         }
-
         public TaskSetScale build() {
             return new TaskSetScale(unit, value);
         }

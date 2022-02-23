@@ -54,7 +54,6 @@ public final class TrustedExternalTenantResponse {
             this.value = value;
             return this;
         }
-
         public TrustedExternalTenantResponse build() {
             return new TrustedExternalTenantResponse(value);
         }

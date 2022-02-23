@@ -180,7 +180,6 @@ public final class DimensionsResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public DimensionsResponse build() {
             return new DimensionsResponse(depth, height, length, lengthHeightUnit, weight, weightUnit, width);
         }

@@ -74,7 +74,6 @@ public final class TaskDefinitionDevice {
             this.permissions = permissions;
             return this;
         }
-
         public TaskDefinitionDevice build() {
             return new TaskDefinitionDevice(containerPath, hostPath, permissions);
         }

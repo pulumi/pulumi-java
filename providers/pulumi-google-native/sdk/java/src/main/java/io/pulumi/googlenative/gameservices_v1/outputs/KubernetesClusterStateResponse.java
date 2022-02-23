@@ -158,7 +158,6 @@ public final class KubernetesClusterStateResponse {
             this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage);
             return this;
         }
-
         public KubernetesClusterStateResponse build() {
             return new KubernetesClusterStateResponse(agonesVersionInstalled, agonesVersionTargeted, installationState, kubernetesVersionInstalled, provider, versionInstalledErrorMessage);
         }

@@ -120,7 +120,6 @@ public final class GetDigitalTwinsEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDigitalTwinsEndpointResult build() {
             return new GetDigitalTwinsEndpointResult(id, name, properties, type);
         }

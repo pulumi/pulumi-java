@@ -20,7 +20,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final Input<String> backendService;
+        private final Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService;
@@ -31,7 +31,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,7 +74,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyHeader")
-    private final @Nullable Input<String> proxyHeader;
+        private final @Nullable Input<String> proxyHeader;
 
     public Input<String> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
@@ -87,7 +87,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslCertificates", required=true)
-    private final Input<List<String>> sslCertificates;
+        private final Input<List<String>> sslCertificates;
 
     public Input<List<String>> getSslCertificates() {
         return this.sslCertificates;
@@ -100,7 +100,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+        private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -234,7 +234,6 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
-
         public TargetSSLProxyArgs build() {
             return new TargetSSLProxyArgs(backendService, description, name, project, proxyHeader, sslCertificates, sslPolicy);
         }

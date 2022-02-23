@@ -95,7 +95,6 @@ public final class PerNodeExtensionStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public PerNodeExtensionStateResponse build() {
             return new PerNodeExtensionStateResponse(extension, name, state);
         }

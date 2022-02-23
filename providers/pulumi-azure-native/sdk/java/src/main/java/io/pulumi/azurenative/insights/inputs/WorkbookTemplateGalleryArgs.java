@@ -24,7 +24,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+        private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -35,7 +35,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+        private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -57,7 +57,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -68,7 +68,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,6 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public WorkbookTemplateGalleryArgs build() {
             return new WorkbookTemplateGalleryArgs(category, name, order, resourceType, type);
         }

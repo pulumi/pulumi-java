@@ -46,7 +46,6 @@ public final class WebACLCaptchaConfig {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
-
         public WebACLCaptchaConfig build() {
             return new WebACLCaptchaConfig(immunityTimeProperty);
         }

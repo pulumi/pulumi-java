@@ -180,7 +180,6 @@ public final class GetConversationResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetConversationResult build() {
             return new GetConversationResult(conversationProfile, conversationStage, endTime, lifecycleState, name, phoneNumber, startTime);
         }

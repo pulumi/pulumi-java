@@ -13,7 +13,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @InputImport(name="snsTopicArn", required=true)
-    private final String snsTopicArn;
+        private final String snsTopicArn;
 
     public String getSnsTopicArn() {
         return this.snsTopicArn;
@@ -51,7 +51,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
-
         public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(snsTopicArn);
         }

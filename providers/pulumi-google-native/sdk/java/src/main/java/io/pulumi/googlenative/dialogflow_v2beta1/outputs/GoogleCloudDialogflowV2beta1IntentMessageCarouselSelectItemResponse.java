@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse(description, image, info, title);
         }

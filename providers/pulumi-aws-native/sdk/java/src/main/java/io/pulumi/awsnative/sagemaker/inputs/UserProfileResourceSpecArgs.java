@@ -20,7 +20,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<UserProfileResourceSpecInstanceType> instanceType;
+        private final @Nullable Input<UserProfileResourceSpecInstanceType> instanceType;
 
     public Input<UserProfileResourceSpecInstanceType> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -31,7 +31,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sageMakerImageArn")
-    private final @Nullable Input<String> sageMakerImageArn;
+        private final @Nullable Input<String> sageMakerImageArn;
 
     public Input<String> getSageMakerImageArn() {
         return this.sageMakerImageArn == null ? Input.empty() : this.sageMakerImageArn;
@@ -42,7 +42,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sageMakerImageVersionArn")
-    private final @Nullable Input<String> sageMakerImageVersionArn;
+        private final @Nullable Input<String> sageMakerImageVersionArn;
 
     public Input<String> getSageMakerImageVersionArn() {
         return this.sageMakerImageVersionArn == null ? Input.empty() : this.sageMakerImageVersionArn;
@@ -116,7 +116,6 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
             this.sageMakerImageVersionArn = Input.ofNullable(sageMakerImageVersionArn);
             return this;
         }
-
         public UserProfileResourceSpecArgs build() {
             return new UserProfileResourceSpecArgs(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

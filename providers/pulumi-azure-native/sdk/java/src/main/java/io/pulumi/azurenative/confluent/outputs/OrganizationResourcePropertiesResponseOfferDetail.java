@@ -160,7 +160,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
             this.termUnit = termUnit;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseOfferDetail build() {
             return new OrganizationResourcePropertiesResponseOfferDetail(id, planId, planName, publisherId, status, termUnit);
         }

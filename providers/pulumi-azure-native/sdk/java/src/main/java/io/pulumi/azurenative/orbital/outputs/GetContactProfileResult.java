@@ -291,7 +291,6 @@ public final class GetContactProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContactProfileResult build() {
             return new GetContactProfileResult(autoTrackingConfiguration, etag, eventHubUri, id, links, location, minimumElevationDegrees, minimumViableContactDuration, name, systemData, tags, type);
         }

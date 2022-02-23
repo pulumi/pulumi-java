@@ -193,7 +193,6 @@ public final class GetNetworkProfileResult {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
         }
-
         public GetNetworkProfileResult build() {
             return new GetNetworkProfileResult(arn, description, downlinkBandwidthBits, downlinkDelayMs, downlinkJitterMs, downlinkLossPercent, name, tags, uplinkBandwidthBits, uplinkDelayMs, uplinkJitterMs, uplinkLossPercent);
         }

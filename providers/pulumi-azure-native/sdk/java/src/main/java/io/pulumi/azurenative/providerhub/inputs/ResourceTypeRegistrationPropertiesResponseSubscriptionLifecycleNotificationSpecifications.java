@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
     public static final ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications Empty = new ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications();
 
     @InputImport(name="softDeleteTTL")
-    private final @Nullable String softDeleteTTL;
+        private final @Nullable String softDeleteTTL;
 
     public Optional<String> getSoftDeleteTTL() {
         return this.softDeleteTTL == null ? Optional.empty() : Optional.ofNullable(this.softDeleteTTL);
     }
 
     @InputImport(name="subscriptionStateOverrideActions")
-    private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
+        private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
     public List<SubscriptionStateOverrideActionResponse> getSubscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;
@@ -73,7 +73,6 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
             return new ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(softDeleteTTL, subscriptionStateOverrideActions);
         }

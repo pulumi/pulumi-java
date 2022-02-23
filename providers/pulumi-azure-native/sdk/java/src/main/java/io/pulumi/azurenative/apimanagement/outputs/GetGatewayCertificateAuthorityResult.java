@@ -119,7 +119,6 @@ public final class GetGatewayCertificateAuthorityResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayCertificateAuthorityResult build() {
             return new GetGatewayCertificateAuthorityResult(id, isTrusted, name, type);
         }

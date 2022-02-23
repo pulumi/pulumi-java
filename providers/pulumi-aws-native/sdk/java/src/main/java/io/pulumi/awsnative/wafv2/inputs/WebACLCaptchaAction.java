@@ -19,7 +19,7 @@ public final class WebACLCaptchaAction extends io.pulumi.resources.InvokeArgs {
     public static final WebACLCaptchaAction Empty = new WebACLCaptchaAction();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+        private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
@@ -57,7 +57,6 @@ public final class WebACLCaptchaAction extends io.pulumi.resources.InvokeArgs {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLCaptchaAction build() {
             return new WebACLCaptchaAction(customRequestHandling);
         }

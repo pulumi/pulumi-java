@@ -100,7 +100,6 @@ public final class EncryptionSettingsCollectionResponse {
             this.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }
-
         public EncryptionSettingsCollectionResponse build() {
             return new EncryptionSettingsCollectionResponse(enabled, encryptionSettings, encryptionSettingsVersion);
         }

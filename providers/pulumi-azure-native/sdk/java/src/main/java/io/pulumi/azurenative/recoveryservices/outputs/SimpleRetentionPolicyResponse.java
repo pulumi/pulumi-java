@@ -79,7 +79,6 @@ public final class SimpleRetentionPolicyResponse {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
-
         public SimpleRetentionPolicyResponse build() {
             return new SimpleRetentionPolicyResponse(retentionDuration, retentionPolicyType);
         }

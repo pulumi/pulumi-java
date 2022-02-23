@@ -141,7 +141,6 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public EC2FleetFleetLaunchTemplateOverridesRequest build() {
             return new EC2FleetFleetLaunchTemplateOverridesRequest(availabilityZone, instanceRequirements, instanceType, maxPrice, placement, priority, subnetId, weightedCapacity);
         }

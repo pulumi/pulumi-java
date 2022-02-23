@@ -54,7 +54,6 @@ public final class ContainerExecResponse {
             this.command = command;
             return this;
         }
-
         public ContainerExecResponse build() {
             return new ContainerExecResponse(command);
         }

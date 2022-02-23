@@ -174,7 +174,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

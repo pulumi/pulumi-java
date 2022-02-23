@@ -21,7 +21,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="matchVariable", required=true)
-    private final String matchVariable;
+        private final String matchVariable;
 
     public String getMatchVariable() {
         return this.matchVariable;
@@ -32,7 +32,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+        private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -43,7 +43,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-    private final String selectorMatchOperator;
+        private final String selectorMatchOperator;
 
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;
@@ -102,7 +102,6 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ManagedRuleExclusionResponse build() {
             return new ManagedRuleExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

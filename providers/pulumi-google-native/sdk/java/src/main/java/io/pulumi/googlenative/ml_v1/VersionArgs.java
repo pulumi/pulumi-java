@@ -29,7 +29,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
 
     public Input<GoogleCloudMlV1__AcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -40,7 +40,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScaling")
-    private final @Nullable Input<GoogleCloudMlV1__AutoScalingArgs> autoScaling;
+      private final @Nullable Input<GoogleCloudMlV1__AutoScalingArgs> autoScaling;
 
     public Input<GoogleCloudMlV1__AutoScalingArgs> getAutoScaling() {
         return this.autoScaling == null ? Input.empty() : this.autoScaling;
@@ -51,7 +51,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<GoogleCloudMlV1__ContainerSpecArgs> container;
+      private final @Nullable Input<GoogleCloudMlV1__ContainerSpecArgs> container;
 
     public Input<GoogleCloudMlV1__ContainerSpecArgs> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -62,7 +62,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentUri")
-    private final @Nullable Input<String> deploymentUri;
+      private final @Nullable Input<String> deploymentUri;
 
     public Input<String> getDeploymentUri() {
         return this.deploymentUri == null ? Input.empty() : this.deploymentUri;
@@ -73,7 +73,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,7 +84,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -95,7 +95,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="explanationConfig")
-    private final @Nullable Input<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig;
+      private final @Nullable Input<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig;
 
     public Input<GoogleCloudMlV1__ExplanationConfigArgs> getExplanationConfig() {
         return this.explanationConfig == null ? Input.empty() : this.explanationConfig;
@@ -106,7 +106,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable Input<VersionFramework> framework;
+      private final @Nullable Input<VersionFramework> framework;
 
     public Input<VersionFramework> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -117,7 +117,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -128,7 +128,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -139,14 +139,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualScaling")
-    private final @Nullable Input<GoogleCloudMlV1__ManualScalingArgs> manualScaling;
+      private final @Nullable Input<GoogleCloudMlV1__ManualScalingArgs> manualScaling;
 
     public Input<GoogleCloudMlV1__ManualScalingArgs> getManualScaling() {
         return this.manualScaling == null ? Input.empty() : this.manualScaling;
     }
 
     @InputImport(name="modelId", required=true)
-    private final Input<String> modelId;
+      private final Input<String> modelId;
 
     public Input<String> getModelId() {
         return this.modelId;
@@ -157,7 +157,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -168,7 +168,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageUris")
-    private final @Nullable Input<List<String>> packageUris;
+      private final @Nullable Input<List<String>> packageUris;
 
     public Input<List<String>> getPackageUris() {
         return this.packageUris == null ? Input.empty() : this.packageUris;
@@ -179,14 +179,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictionClass")
-    private final @Nullable Input<String> predictionClass;
+      private final @Nullable Input<String> predictionClass;
 
     public Input<String> getPredictionClass() {
         return this.predictionClass == null ? Input.empty() : this.predictionClass;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -197,7 +197,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonVersion", required=true)
-    private final Input<String> pythonVersion;
+      private final Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion;
@@ -208,7 +208,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestLoggingConfig")
-    private final @Nullable Input<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig;
+      private final @Nullable Input<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig;
 
     public Input<GoogleCloudMlV1__RequestLoggingConfigArgs> getRequestLoggingConfig() {
         return this.requestLoggingConfig == null ? Input.empty() : this.requestLoggingConfig;
@@ -219,7 +219,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<GoogleCloudMlV1__RouteMapArgs> routes;
+      private final @Nullable Input<GoogleCloudMlV1__RouteMapArgs> routes;
 
     public Input<GoogleCloudMlV1__RouteMapArgs> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -230,7 +230,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-    private final Input<String> runtimeVersion;
+      private final Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion;
@@ -241,7 +241,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -585,7 +585,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
-
         public VersionArgs build() {
             return new VersionArgs(acceleratorConfig, autoScaling, container, deploymentUri, description, etag, explanationConfig, framework, labels, machineType, manualScaling, modelId, name, packageUris, predictionClass, project, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount);
         }

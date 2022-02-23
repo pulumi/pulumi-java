@@ -30,7 +30,6 @@ public final class StreamingImageTagsArgs extends io.pulumi.resources.ResourceAr
         public Builder(StreamingImageTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StreamingImageTagsArgs build() {
             return new StreamingImageTagsArgs();
         }

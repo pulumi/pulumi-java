@@ -95,7 +95,6 @@ public final class SyncMigrationDatabaseErrorEventResponse {
             this.timestampString = Objects.requireNonNull(timestampString);
             return this;
         }
-
         public SyncMigrationDatabaseErrorEventResponse build() {
             return new SyncMigrationDatabaseErrorEventResponse(eventText, eventTypeString, timestampString);
         }

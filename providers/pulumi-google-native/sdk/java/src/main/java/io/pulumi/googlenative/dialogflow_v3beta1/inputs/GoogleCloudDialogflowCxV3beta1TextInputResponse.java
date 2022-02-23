@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends io.pu
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends io.pu
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TextInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TextInputResponse(text);
         }

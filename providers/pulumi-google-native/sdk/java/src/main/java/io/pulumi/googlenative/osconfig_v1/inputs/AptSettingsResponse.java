@@ -22,7 +22,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="excludes", required=true)
-    private final List<String> excludes;
+      private final List<String> excludes;
 
     public List<String> getExcludes() {
         return this.excludes;
@@ -33,7 +33,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exclusivePackages", required=true)
-    private final List<String> exclusivePackages;
+      private final List<String> exclusivePackages;
 
     public List<String> getExclusivePackages() {
         return this.exclusivePackages;
@@ -44,7 +44,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AptSettingsResponse build() {
             return new AptSettingsResponse(excludes, exclusivePackages, type);
         }

@@ -74,7 +74,6 @@ public final class VersionSourceResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VersionSourceResponse build() {
             return new VersionSourceResponse(mshField, value);
         }

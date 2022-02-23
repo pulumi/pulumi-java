@@ -371,7 +371,6 @@ public final class GetArtifactSourceResult {
             this.uri = uri;
             return this;
         }
-
         public GetArtifactSourceResult build() {
             return new GetArtifactSourceResult(armTemplateFolderPath, branchRef, createdDate, displayName, folderPath, id, location, name, provisioningState, securityToken, sourceType, status, tags, type, uniqueIdentifier, uri);
         }

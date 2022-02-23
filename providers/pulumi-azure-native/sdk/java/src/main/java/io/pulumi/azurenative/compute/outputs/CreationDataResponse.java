@@ -226,7 +226,6 @@ public final class CreationDataResponse {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
-
         public CreationDataResponse build() {
             return new CreationDataResponse(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUniqueId, sourceUri, storageAccountId, uploadSizeBytes);
         }

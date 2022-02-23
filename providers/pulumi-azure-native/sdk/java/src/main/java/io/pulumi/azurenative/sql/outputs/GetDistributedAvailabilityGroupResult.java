@@ -307,7 +307,6 @@ public final class GetDistributedAvailabilityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDistributedAvailabilityGroupResult build() {
             return new GetDistributedAvailabilityGroupResult(distributedAvailabilityGroupId, id, lastHardenedLsn, linkState, name, primaryAvailabilityGroupName, replicationMode, secondaryAvailabilityGroupName, sourceEndpoint, sourceReplicaId, targetDatabase, targetReplicaId, type);
         }

@@ -23,7 +23,7 @@ public final class DataConnectorDataTypeCommonResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -61,7 +61,6 @@ public final class DataConnectorDataTypeCommonResponse extends io.pulumi.resourc
             this.state = state;
             return this;
         }
-
         public DataConnectorDataTypeCommonResponse build() {
             return new DataConnectorDataTypeCommonResponse(state);
         }

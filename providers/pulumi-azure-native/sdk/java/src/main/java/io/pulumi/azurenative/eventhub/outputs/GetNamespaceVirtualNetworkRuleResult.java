@@ -118,7 +118,6 @@ public final class GetNamespaceVirtualNetworkRuleResult {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public GetNamespaceVirtualNetworkRuleResult build() {
             return new GetNamespaceVirtualNetworkRuleResult(id, name, type, virtualNetworkSubnetId);
         }

@@ -26,7 +26,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+        private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,ClusterSkuName>> name;
+        private final Input<Either<String,ClusterSkuName>> name;
 
     public Input<Either<String,ClusterSkuName>> getName() {
         return this.name;
@@ -96,7 +96,6 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ClusterSkuArgs build() {
             return new ClusterSkuArgs(capacity, name);
         }

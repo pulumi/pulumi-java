@@ -86,7 +86,6 @@ public final class GetPlaceIndexResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetPlaceIndexResult build() {
             return new GetPlaceIndexResult(arn, createTime, indexArn, updateTime);
         }

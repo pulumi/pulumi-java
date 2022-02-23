@@ -23,7 +23,7 @@ public final class OfficeDataConnectorDataTypesResponseExchange extends io.pulum
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -61,7 +61,6 @@ public final class OfficeDataConnectorDataTypesResponseExchange extends io.pulum
             this.state = state;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponseExchange build() {
             return new OfficeDataConnectorDataTypesResponseExchange(state);
         }

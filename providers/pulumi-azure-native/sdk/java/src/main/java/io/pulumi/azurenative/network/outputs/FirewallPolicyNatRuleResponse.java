@@ -189,7 +189,6 @@ public final class FirewallPolicyNatRuleResponse {
             this.translatedPort = translatedPort;
             return this;
         }
-
         public FirewallPolicyNatRuleResponse build() {
             return new FirewallPolicyNatRuleResponse(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);
         }

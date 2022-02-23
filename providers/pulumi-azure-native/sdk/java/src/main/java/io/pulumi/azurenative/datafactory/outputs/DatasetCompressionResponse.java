@@ -76,7 +76,6 @@ public final class DatasetCompressionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatasetCompressionResponse build() {
             return new DatasetCompressionResponse(level, type);
         }

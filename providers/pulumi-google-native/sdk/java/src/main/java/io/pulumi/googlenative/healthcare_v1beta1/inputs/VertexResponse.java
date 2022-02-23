@@ -21,7 +21,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="x", required=true)
-    private final Double x;
+      private final Double x;
 
     public Double getX() {
         return this.x;
@@ -32,7 +32,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="y", required=true)
-    private final Double y;
+      private final Double y;
 
     public Double getY() {
         return this.y;
@@ -81,7 +81,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public VertexResponse build() {
             return new VertexResponse(x, y);
         }

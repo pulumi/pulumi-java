@@ -17,7 +17,7 @@ public final class MonitoringScheduleMonitoringInput extends io.pulumi.resources
     public static final MonitoringScheduleMonitoringInput Empty = new MonitoringScheduleMonitoringInput();
 
     @InputImport(name="endpointInput", required=true)
-    private final MonitoringScheduleEndpointInput endpointInput;
+        private final MonitoringScheduleEndpointInput endpointInput;
 
     public MonitoringScheduleEndpointInput getEndpointInput() {
         return this.endpointInput;
@@ -55,7 +55,6 @@ public final class MonitoringScheduleMonitoringInput extends io.pulumi.resources
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public MonitoringScheduleMonitoringInput build() {
             return new MonitoringScheduleMonitoringInput(endpointInput);
         }

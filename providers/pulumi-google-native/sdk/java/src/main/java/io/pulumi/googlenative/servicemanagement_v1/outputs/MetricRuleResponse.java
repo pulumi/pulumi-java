@@ -75,7 +75,6 @@ public final class MetricRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public MetricRuleResponse build() {
             return new MetricRuleResponse(metricCosts, selector);
         }

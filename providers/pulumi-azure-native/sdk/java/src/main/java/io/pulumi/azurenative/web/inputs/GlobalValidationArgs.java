@@ -26,7 +26,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="excludedPaths")
-    private final @Nullable Input<List<String>> excludedPaths;
+        private final @Nullable Input<List<String>> excludedPaths;
 
     public Input<List<String>> getExcludedPaths() {
         return this.excludedPaths == null ? Input.empty() : this.excludedPaths;
@@ -39,7 +39,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redirectToProvider")
-    private final @Nullable Input<String> redirectToProvider;
+        private final @Nullable Input<String> redirectToProvider;
 
     public Input<String> getRedirectToProvider() {
         return this.redirectToProvider == null ? Input.empty() : this.redirectToProvider;
@@ -50,7 +50,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requireAuthentication")
-    private final @Nullable Input<Boolean> requireAuthentication;
+        private final @Nullable Input<Boolean> requireAuthentication;
 
     public Input<Boolean> getRequireAuthentication() {
         return this.requireAuthentication == null ? Input.empty() : this.requireAuthentication;
@@ -61,7 +61,7 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unauthenticatedClientAction")
-    private final @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction;
+        private final @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
     public Input<UnauthenticatedClientActionV2> getUnauthenticatedClientAction() {
         return this.unauthenticatedClientAction == null ? Input.empty() : this.unauthenticatedClientAction;
@@ -150,7 +150,6 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
             this.unauthenticatedClientAction = Input.ofNullable(unauthenticatedClientAction);
             return this;
         }
-
         public GlobalValidationArgs build() {
             return new GlobalValidationArgs(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
         }

@@ -25,7 +25,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sendNotification", required=true)
-    private final Input<Boolean> sendNotification;
+        private final Input<Boolean> sendNotification;
 
     public Input<Boolean> getSendNotification() {
         return this.sendNotification;
@@ -36,7 +36,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stageName", required=true)
-    private final Input<Either<String,NotificationStageName>> stageName;
+        private final Input<Either<String,NotificationStageName>> stageName;
 
     public Input<Either<String,NotificationStageName>> getStageName() {
         return this.stageName;
@@ -95,7 +95,6 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
             this.stageName = Input.of(Objects.requireNonNull(stageName));
             return this;
         }
-
         public NotificationPreferenceArgs build() {
             return new NotificationPreferenceArgs(sendNotification, stageName);
         }

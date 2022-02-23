@@ -54,7 +54,6 @@ public final class BulkCreationParametersResponse {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public BulkCreationParametersResponse build() {
             return new BulkCreationParametersResponse(instanceCount);
         }

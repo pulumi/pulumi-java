@@ -349,7 +349,6 @@ public final class SynchronizationDetailsResponse {
             this.vCore = Objects.requireNonNull(vCore);
             return this;
         }
-
         public SynchronizationDetailsResponse build() {
             return new SynchronizationDetailsResponse(dataSetId, dataSetType, durationMs, endTime, filesRead, filesWritten, message, name, rowsCopied, rowsRead, sizeRead, sizeWritten, startTime, status, vCore);
         }

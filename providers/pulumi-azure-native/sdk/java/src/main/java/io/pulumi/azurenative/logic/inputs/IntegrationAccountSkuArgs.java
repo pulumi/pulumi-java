@@ -24,7 +24,7 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,IntegrationAccountSkuName>> name;
+        private final Input<Either<String,IntegrationAccountSkuName>> name;
 
     public Input<Either<String,IntegrationAccountSkuName>> getName() {
         return this.name;
@@ -67,7 +67,6 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public IntegrationAccountSkuArgs build() {
             return new IntegrationAccountSkuArgs(name);
         }

@@ -20,7 +20,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+        private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -32,7 +32,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -44,7 +44,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -118,7 +118,6 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public ApplicationUrlDispatchRulesDispatchRuleArgs build() {
             return new ApplicationUrlDispatchRulesDispatchRuleArgs(domain, path, service);
         }

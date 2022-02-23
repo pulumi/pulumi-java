@@ -164,7 +164,6 @@ public final class IssuancePolicyResponse {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }
-
         public IssuancePolicyResponse build() {
             return new IssuancePolicyResponse(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }

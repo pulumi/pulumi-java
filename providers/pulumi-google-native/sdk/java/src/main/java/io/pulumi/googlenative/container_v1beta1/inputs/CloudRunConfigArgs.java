@@ -24,7 +24,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -35,7 +35,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerType")
-    private final @Nullable Input<CloudRunConfigLoadBalancerType> loadBalancerType;
+      private final @Nullable Input<CloudRunConfigLoadBalancerType> loadBalancerType;
 
     public Input<CloudRunConfigLoadBalancerType> getLoadBalancerType() {
         return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
@@ -94,7 +94,6 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }
-
         public CloudRunConfigArgs build() {
             return new CloudRunConfigArgs(disabled, loadBalancerType);
         }

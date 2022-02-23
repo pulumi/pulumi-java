@@ -53,7 +53,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(categories);
         }

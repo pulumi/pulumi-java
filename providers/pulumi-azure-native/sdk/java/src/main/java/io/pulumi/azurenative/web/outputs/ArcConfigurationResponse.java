@@ -113,7 +113,6 @@ public final class ArcConfigurationResponse {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
-
         public ArcConfigurationResponse build() {
             return new ArcConfigurationResponse(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration);
         }

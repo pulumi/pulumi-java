@@ -97,7 +97,6 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
             this.status = status;
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState build() {
             return new PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState(actionsRequired, description, status);
         }

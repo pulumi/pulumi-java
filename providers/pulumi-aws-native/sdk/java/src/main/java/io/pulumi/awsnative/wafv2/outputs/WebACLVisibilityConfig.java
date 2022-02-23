@@ -72,7 +72,6 @@ public final class WebACLVisibilityConfig {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public WebACLVisibilityConfig build() {
             return new WebACLVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }

@@ -318,7 +318,6 @@ public final class HDInsightLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public HDInsightLinkedServiceResponse build() {
             return new HDInsightLinkedServiceResponse(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);
         }

@@ -182,7 +182,6 @@ public final class GetVirtualRouterPeeringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualRouterPeeringResult build() {
             return new GetVirtualRouterPeeringResult(etag, id, name, peerAsn, peerIp, provisioningState, type);
         }

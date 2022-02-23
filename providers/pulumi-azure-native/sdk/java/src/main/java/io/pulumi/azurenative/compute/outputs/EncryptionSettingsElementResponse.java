@@ -77,7 +77,6 @@ public final class EncryptionSettingsElementResponse {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public EncryptionSettingsElementResponse build() {
             return new EncryptionSettingsElementResponse(diskEncryptionKey, keyEncryptionKey);
         }

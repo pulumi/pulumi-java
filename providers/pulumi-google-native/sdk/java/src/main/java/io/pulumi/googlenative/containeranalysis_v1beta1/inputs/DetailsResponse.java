@@ -21,7 +21,7 @@ public final class DetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attestation", required=true)
-    private final AttestationResponse attestation;
+      private final AttestationResponse attestation;
 
     public AttestationResponse getAttestation() {
         return this.attestation;
@@ -59,7 +59,6 @@ public final class DetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public DetailsResponse build() {
             return new DetailsResponse(attestation);
         }

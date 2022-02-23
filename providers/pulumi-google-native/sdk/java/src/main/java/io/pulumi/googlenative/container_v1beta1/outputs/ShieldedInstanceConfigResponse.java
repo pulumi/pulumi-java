@@ -74,7 +74,6 @@ public final class ShieldedInstanceConfigResponse {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot);
         }

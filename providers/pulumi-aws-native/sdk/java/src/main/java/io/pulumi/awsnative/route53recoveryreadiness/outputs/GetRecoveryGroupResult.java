@@ -99,7 +99,6 @@ public final class GetRecoveryGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetRecoveryGroupResult build() {
             return new GetRecoveryGroupResult(cells, recoveryGroupArn, tags);
         }

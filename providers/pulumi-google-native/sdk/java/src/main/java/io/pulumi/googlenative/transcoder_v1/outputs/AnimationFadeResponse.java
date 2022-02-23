@@ -117,7 +117,6 @@ public final class AnimationFadeResponse {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationFadeResponse build() {
             return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
         }

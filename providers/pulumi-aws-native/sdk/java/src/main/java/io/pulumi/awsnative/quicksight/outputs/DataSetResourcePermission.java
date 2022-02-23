@@ -103,7 +103,6 @@ public final class DataSetResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public DataSetResourcePermission build() {
             return new DataSetResourcePermission(actions, principal);
         }

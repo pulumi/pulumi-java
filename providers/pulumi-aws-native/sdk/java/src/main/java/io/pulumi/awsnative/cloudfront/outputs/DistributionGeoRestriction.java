@@ -60,7 +60,6 @@ public final class DistributionGeoRestriction {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }
-
         public DistributionGeoRestriction build() {
             return new DistributionGeoRestriction(locations, restrictionType);
         }

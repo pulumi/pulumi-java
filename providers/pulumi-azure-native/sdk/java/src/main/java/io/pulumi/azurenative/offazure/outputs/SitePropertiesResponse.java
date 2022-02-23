@@ -141,7 +141,6 @@ public final class SitePropertiesResponse {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
-
         public SitePropertiesResponse build() {
             return new SitePropertiesResponse(agentDetails, applianceName, discoverySolutionId, serviceEndpoint, servicePrincipalIdentityDetails);
         }

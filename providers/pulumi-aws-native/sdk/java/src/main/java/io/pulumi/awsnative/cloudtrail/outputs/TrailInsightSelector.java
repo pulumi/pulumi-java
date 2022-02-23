@@ -54,7 +54,6 @@ public final class TrailInsightSelector {
             this.insightType = insightType;
             return this;
         }
-
         public TrailInsightSelector build() {
             return new TrailInsightSelector(insightType);
         }

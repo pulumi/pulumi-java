@@ -27,7 +27,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aofEnabled")
-    private final @Nullable Input<Boolean> aofEnabled;
+        private final @Nullable Input<Boolean> aofEnabled;
 
     public Input<Boolean> getAofEnabled() {
         return this.aofEnabled == null ? Input.empty() : this.aofEnabled;
@@ -38,7 +38,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aofFrequency")
-    private final @Nullable Input<Either<String,AofFrequency>> aofFrequency;
+        private final @Nullable Input<Either<String,AofFrequency>> aofFrequency;
 
     public Input<Either<String,AofFrequency>> getAofFrequency() {
         return this.aofFrequency == null ? Input.empty() : this.aofFrequency;
@@ -49,7 +49,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdbEnabled")
-    private final @Nullable Input<Boolean> rdbEnabled;
+        private final @Nullable Input<Boolean> rdbEnabled;
 
     public Input<Boolean> getRdbEnabled() {
         return this.rdbEnabled == null ? Input.empty() : this.rdbEnabled;
@@ -60,7 +60,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdbFrequency")
-    private final @Nullable Input<Either<String,RdbFrequency>> rdbFrequency;
+        private final @Nullable Input<Either<String,RdbFrequency>> rdbFrequency;
 
     public Input<Either<String,RdbFrequency>> getRdbFrequency() {
         return this.rdbFrequency == null ? Input.empty() : this.rdbFrequency;
@@ -149,7 +149,6 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             this.rdbFrequency = Input.ofNullable(rdbFrequency);
             return this;
         }
-
         public PersistenceArgs build() {
             return new PersistenceArgs(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
         }

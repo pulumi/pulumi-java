@@ -341,7 +341,6 @@ public final class TaskOptions {
             this.verifyMode = verifyMode;
             return this;
         }
-
         public TaskOptions build() {
             return new TaskOptions(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);
         }

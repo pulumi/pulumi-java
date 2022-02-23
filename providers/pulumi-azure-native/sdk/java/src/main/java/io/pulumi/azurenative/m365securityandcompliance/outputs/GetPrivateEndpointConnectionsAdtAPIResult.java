@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsAdtAPIResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsAdtAPIResult build() {
             return new GetPrivateEndpointConnectionsAdtAPIResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

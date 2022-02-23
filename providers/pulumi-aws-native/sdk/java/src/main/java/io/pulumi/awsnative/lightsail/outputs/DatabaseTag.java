@@ -76,7 +76,6 @@ public final class DatabaseTag {
             this.value = value;
             return this;
         }
-
         public DatabaseTag build() {
             return new DatabaseTag(key, value);
         }

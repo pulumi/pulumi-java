@@ -225,7 +225,6 @@ public final class GetTokenResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTokenResult build() {
             return new GetTokenResult(creationDate, credentials, id, name, provisioningState, scopeMapId, status, systemData, type);
         }

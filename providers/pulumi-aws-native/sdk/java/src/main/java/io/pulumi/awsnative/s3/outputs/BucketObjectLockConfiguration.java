@@ -61,7 +61,6 @@ public final class BucketObjectLockConfiguration {
             this.rule = rule;
             return this;
         }
-
         public BucketObjectLockConfiguration build() {
             return new BucketObjectLockConfiguration(objectLockEnabled, rule);
         }

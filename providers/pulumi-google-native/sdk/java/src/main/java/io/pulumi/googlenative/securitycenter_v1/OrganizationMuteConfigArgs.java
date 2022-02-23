@@ -19,7 +19,7 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -41,14 +41,14 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="muteConfigId", required=true)
-    private final Input<String> muteConfigId;
+      private final Input<String> muteConfigId;
 
     public Input<String> getMuteConfigId() {
         return this.muteConfigId;
@@ -59,14 +59,14 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -185,7 +185,6 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public OrganizationMuteConfigArgs build() {
             return new OrganizationMuteConfigArgs(description, displayName, filter, muteConfigId, name, organizationId);
         }

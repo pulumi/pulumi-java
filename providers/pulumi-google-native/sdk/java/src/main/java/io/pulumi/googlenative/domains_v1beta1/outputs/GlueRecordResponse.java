@@ -96,7 +96,6 @@ public final class GlueRecordResponse {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
-
         public GlueRecordResponse build() {
             return new GlueRecordResponse(hostName, ipv4Addresses, ipv6Addresses);
         }

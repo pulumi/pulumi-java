@@ -54,7 +54,6 @@ public final class LoadBalancerStatus {
             this.ingress = ingress;
             return this;
         }
-
         public LoadBalancerStatus build() {
             return new LoadBalancerStatus(ingress);
         }

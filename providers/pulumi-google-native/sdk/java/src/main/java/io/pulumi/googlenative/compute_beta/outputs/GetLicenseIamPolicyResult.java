@@ -142,7 +142,6 @@ public final class GetLicenseIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetLicenseIamPolicyResult build() {
             return new GetLicenseIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

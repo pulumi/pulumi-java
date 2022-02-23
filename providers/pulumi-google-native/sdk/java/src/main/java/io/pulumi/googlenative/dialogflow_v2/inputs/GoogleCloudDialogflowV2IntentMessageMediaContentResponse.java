@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * 
      */
     @InputImport(name="mediaObjects", required=true)
-    private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
+      private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
         return this.mediaObjects;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * 
      */
     @InputImport(name="mediaType", required=true)
-    private final String mediaType;
+      private final String mediaType;
 
     public String getMediaType() {
         return this.mediaType;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageMediaContentResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentResponse(mediaObjects, mediaType);
         }

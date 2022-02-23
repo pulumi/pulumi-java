@@ -96,7 +96,6 @@ public final class MigrationPropertiesResponse {
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
         }
-
         public MigrationPropertiesResponse build() {
             return new MigrationPropertiesResponse(migrationProgress, oldSubnetId, oldVnetSiteId);
         }

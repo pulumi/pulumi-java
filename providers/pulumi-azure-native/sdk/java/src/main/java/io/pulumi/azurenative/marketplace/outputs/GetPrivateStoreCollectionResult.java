@@ -269,7 +269,6 @@ public final class GetPrivateStoreCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateStoreCollectionResult build() {
             return new GetPrivateStoreCollectionResult(allSubscriptions, claim, collectionId, collectionName, enabled, id, name, numberOfOffers, subscriptionsList, systemData, type);
         }

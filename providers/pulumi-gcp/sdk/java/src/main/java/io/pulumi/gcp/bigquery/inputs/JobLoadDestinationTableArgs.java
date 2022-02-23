@@ -19,7 +19,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+        private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -30,7 +30,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -42,7 +42,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+        private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -116,7 +116,6 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public JobLoadDestinationTableArgs build() {
             return new JobLoadDestinationTableArgs(datasetId, projectId, tableId);
         }

@@ -26,7 +26,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+        private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -37,7 +37,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pipelineReference")
-    private final @Nullable Input<PipelineReferenceArgs> pipelineReference;
+        private final @Nullable Input<PipelineReferenceArgs> pipelineReference;
 
     public Input<PipelineReferenceArgs> getPipelineReference() {
         return this.pipelineReference == null ? Input.empty() : this.pipelineReference;
@@ -96,7 +96,6 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
             this.pipelineReference = Input.ofNullable(pipelineReference);
             return this;
         }
-
         public TriggerPipelineReferenceArgs build() {
             return new TriggerPipelineReferenceArgs(parameters, pipelineReference);
         }

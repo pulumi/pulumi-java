@@ -162,7 +162,6 @@ public final class GetDeploymentAtScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentAtScopeResult build() {
             return new GetDeploymentAtScopeResult(id, location, name, properties, tags, type);
         }

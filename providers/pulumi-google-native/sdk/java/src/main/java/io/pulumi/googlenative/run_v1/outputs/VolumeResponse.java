@@ -81,7 +81,6 @@ public final class VolumeResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(configMap, name, secret);
         }

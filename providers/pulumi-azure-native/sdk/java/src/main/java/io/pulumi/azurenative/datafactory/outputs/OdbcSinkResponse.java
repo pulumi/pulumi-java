@@ -205,7 +205,6 @@ public final class OdbcSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public OdbcSinkResponse build() {
             return new OdbcSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

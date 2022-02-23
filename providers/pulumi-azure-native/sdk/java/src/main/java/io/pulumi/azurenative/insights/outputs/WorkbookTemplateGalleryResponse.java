@@ -140,7 +140,6 @@ public final class WorkbookTemplateGalleryResponse {
             this.type = type;
             return this;
         }
-
         public WorkbookTemplateGalleryResponse build() {
             return new WorkbookTemplateGalleryResponse(category, name, order, resourceType, type);
         }

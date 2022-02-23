@@ -27,7 +27,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+      private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -49,7 +49,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -60,7 +60,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -71,7 +71,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -82,7 +82,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="licenses")
-    private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Input<List<String>> licenses;
 
     public Input<List<String>> getLicenses() {
         return this.licenses == null ? Input.empty() : this.licenses;
@@ -93,7 +93,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onUpdateAction")
-    private final @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
+      private final @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
     public Input<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
         return this.onUpdateAction == null ? Input.empty() : this.onUpdateAction;
@@ -104,7 +104,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisionedIops")
-    private final @Nullable Input<String> provisionedIops;
+      private final @Nullable Input<String> provisionedIops;
 
     public Input<String> getProvisionedIops() {
         return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
@@ -115,7 +115,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Input<List<String>> resourcePolicies;
 
     public Input<List<String>> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -126,7 +126,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceImage")
-    private final @Nullable Input<String> sourceImage;
+      private final @Nullable Input<String> sourceImage;
 
     public Input<String> getSourceImage() {
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
@@ -137,7 +137,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
@@ -148,7 +148,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceSnapshot")
-    private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Input<String> sourceSnapshot;
 
     public Input<String> getSourceSnapshot() {
         return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
@@ -159,7 +159,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
@@ -383,7 +383,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public AttachedDiskInitializeParamsArgs build() {
             return new AttachedDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels, licenses, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
         }

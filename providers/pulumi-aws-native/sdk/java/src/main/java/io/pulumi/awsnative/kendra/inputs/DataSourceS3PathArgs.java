@@ -14,14 +14,14 @@ public final class DataSourceS3PathArgs extends io.pulumi.resources.ResourceArgs
     public static final DataSourceS3PathArgs Empty = new DataSourceS3PathArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -80,7 +80,6 @@ public final class DataSourceS3PathArgs extends io.pulumi.resources.ResourceArgs
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public DataSourceS3PathArgs build() {
             return new DataSourceS3PathArgs(bucket, key);
         }

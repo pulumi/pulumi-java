@@ -25,7 +25,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Input<List<DistributionArgs>> distribution;
+      private final @Nullable Input<List<DistributionArgs>> distribution;
 
     public Input<List<DistributionArgs>> getDistribution() {
         return this.distribution == null ? Input.empty() : this.distribution;
@@ -36,7 +36,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public PackageArgs build() {
             return new PackageArgs(distribution, name);
         }

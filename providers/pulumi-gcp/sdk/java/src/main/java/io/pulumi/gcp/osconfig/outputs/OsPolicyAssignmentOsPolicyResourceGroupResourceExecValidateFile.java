@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile(allowInsecure, gcs, localPath, remote);
         }

@@ -231,7 +231,6 @@ public final class InformixTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InformixTableDatasetResponse build() {
             return new InformixTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

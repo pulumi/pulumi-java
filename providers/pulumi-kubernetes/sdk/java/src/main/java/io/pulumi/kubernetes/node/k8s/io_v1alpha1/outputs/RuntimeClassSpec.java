@@ -99,7 +99,6 @@ public final class RuntimeClassSpec {
             this.scheduling = scheduling;
             return this;
         }
-
         public RuntimeClassSpec build() {
             return new RuntimeClassSpec(overhead, runtimeHandler, scheduling);
         }

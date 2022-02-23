@@ -31,7 +31,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Object accessKeyId;
+        private final Object accessKeyId;
 
     public Object getAccessKeyId() {
         return this.accessKeyId;
@@ -42,7 +42,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -53,7 +53,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -64,7 +64,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -75,7 +75,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -86,7 +86,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Object endpoint;
+        private final Object endpoint;
 
     public Object getEndpoint() {
         return this.endpoint;
@@ -97,7 +97,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="marketplaceID", required=true)
-    private final Object marketplaceID;
+        private final Object marketplaceID;
 
     public Object getMarketplaceID() {
         return this.marketplaceID;
@@ -108,7 +108,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mwsAuthToken")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getMwsAuthToken() {
         return this.mwsAuthToken == null ? null : this.mwsAuthToken;
@@ -119,7 +119,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -130,7 +130,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="secretKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecretKey() {
         return this.secretKey == null ? null : this.secretKey;
@@ -141,7 +141,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sellerID", required=true)
-    private final Object sellerID;
+        private final Object sellerID;
 
     public Object getSellerID() {
         return this.sellerID;
@@ -153,7 +153,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -164,7 +164,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Object useEncryptedEndpoints;
+        private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
@@ -175,7 +175,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Object useHostVerification;
+        private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
@@ -186,7 +186,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Object usePeerVerification;
+        private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
@@ -365,7 +365,6 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public AmazonMWSLinkedServiceResponse build() {
             return new AmazonMWSLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

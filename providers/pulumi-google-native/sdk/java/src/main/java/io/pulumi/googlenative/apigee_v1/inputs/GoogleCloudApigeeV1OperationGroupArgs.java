@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operationConfigType")
-    private final @Nullable Input<String> operationConfigType;
+      private final @Nullable Input<String> operationConfigType;
 
     public Input<String> getOperationConfigType() {
         return this.operationConfigType == null ? Input.empty() : this.operationConfigType;
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operationConfigs", required=true)
-    private final Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
+      private final Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
 
     public Input<List<GoogleCloudApigeeV1OperationConfigArgs>> getOperationConfigs() {
         return this.operationConfigs;
@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
             this.operationConfigs = Input.of(Objects.requireNonNull(operationConfigs));
             return this;
         }
-
         public GoogleCloudApigeeV1OperationGroupArgs build() {
             return new GoogleCloudApigeeV1OperationGroupArgs(operationConfigType, operationConfigs);
         }

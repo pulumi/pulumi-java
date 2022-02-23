@@ -74,7 +74,6 @@ public final class IngestionConnectionStringResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IngestionConnectionStringResponse build() {
             return new IngestionConnectionStringResponse(location, value);
         }

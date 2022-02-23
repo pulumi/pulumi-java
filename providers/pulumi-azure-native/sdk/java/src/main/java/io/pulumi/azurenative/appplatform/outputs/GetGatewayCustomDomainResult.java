@@ -139,7 +139,6 @@ public final class GetGatewayCustomDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayCustomDomainResult build() {
             return new GetGatewayCustomDomainResult(id, name, properties, systemData, type);
         }

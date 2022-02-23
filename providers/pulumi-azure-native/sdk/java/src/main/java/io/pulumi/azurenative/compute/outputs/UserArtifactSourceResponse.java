@@ -76,7 +76,6 @@ public final class UserArtifactSourceResponse {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
-
         public UserArtifactSourceResponse build() {
             return new UserArtifactSourceResponse(defaultConfigurationLink, mediaLink);
         }

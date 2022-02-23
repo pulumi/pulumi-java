@@ -54,7 +54,6 @@ public final class ListBitLockerKeyResult {
             this.value = value;
             return this;
         }
-
         public ListBitLockerKeyResult build() {
             return new ListBitLockerKeyResult(value);
         }

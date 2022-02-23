@@ -120,7 +120,6 @@ public final class ApplicationWindowsEvent {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationWindowsEvent build() {
             return new ApplicationWindowsEvent(eventLevels, eventName, logGroupName, patternSet);
         }

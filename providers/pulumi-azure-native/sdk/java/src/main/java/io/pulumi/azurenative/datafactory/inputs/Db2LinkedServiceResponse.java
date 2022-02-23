@@ -31,7 +31,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+        private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -53,7 +53,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="certificateCommonName")
-    private final @Nullable Object certificateCommonName;
+        private final @Nullable Object certificateCommonName;
 
     public Optional<Object> getCertificateCommonName() {
         return this.certificateCommonName == null ? Optional.empty() : Optional.ofNullable(this.certificateCommonName);
@@ -64,7 +64,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -75,7 +75,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Object connectionString;
+        private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -86,7 +86,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Object database;
+        private final @Nullable Object database;
 
     public Optional<Object> getDatabase() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
@@ -97,7 +97,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -108,7 +108,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -119,7 +119,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="packageCollection")
-    private final @Nullable Object packageCollection;
+        private final @Nullable Object packageCollection;
 
     public Optional<Object> getPackageCollection() {
         return this.packageCollection == null ? Optional.empty() : Optional.ofNullable(this.packageCollection);
@@ -130,7 +130,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -141,7 +141,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -152,7 +152,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Object server;
+        private final @Nullable Object server;
 
     public Optional<Object> getServer() {
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
@@ -164,7 +164,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -175,7 +175,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Object username;
+        private final @Nullable Object username;
 
     public Optional<Object> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -344,7 +344,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
             this.username = username;
             return this;
         }
-
         public Db2LinkedServiceResponse build() {
             return new Db2LinkedServiceResponse(annotations, authenticationType, certificateCommonName, connectVia, connectionString, database, description, encryptedCredential, packageCollection, parameters, password, server, type, username);
         }

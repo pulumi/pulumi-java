@@ -21,7 +21,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-    private final Input<String> cryptoKeyId;
+        private final Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId;
@@ -33,7 +33,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -92,7 +92,6 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public CryptoKeyIAMPolicyArgs build() {
             return new CryptoKeyIAMPolicyArgs(cryptoKeyId, policyData);
         }

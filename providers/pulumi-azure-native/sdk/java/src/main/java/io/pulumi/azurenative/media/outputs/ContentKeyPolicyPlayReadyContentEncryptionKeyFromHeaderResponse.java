@@ -54,7 +54,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse build() {
             return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(odataType);
         }

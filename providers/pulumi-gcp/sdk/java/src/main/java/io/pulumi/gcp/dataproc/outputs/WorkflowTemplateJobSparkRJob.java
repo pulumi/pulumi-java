@@ -163,7 +163,6 @@ public final class WorkflowTemplateJobSparkRJob {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplateJobSparkRJob build() {
             return new WorkflowTemplateJobSparkRJob(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

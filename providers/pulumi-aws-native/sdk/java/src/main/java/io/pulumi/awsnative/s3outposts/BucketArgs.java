@@ -22,7 +22,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+        private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -33,7 +33,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleConfiguration")
-    private final @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
+        private final @Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
     public Input<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
         return this.lifecycleConfiguration == null ? Input.empty() : this.lifecycleConfiguration;
@@ -44,7 +44,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-    private final Input<String> outpostId;
+        private final Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId;
@@ -55,7 +55,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<BucketTagArgs>> tags;
+        private final @Nullable Input<List<BucketTagArgs>> tags;
 
     public Input<List<BucketTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public BucketArgs build() {
             return new BucketArgs(bucketName, lifecycleConfiguration, outpostId, tags);
         }

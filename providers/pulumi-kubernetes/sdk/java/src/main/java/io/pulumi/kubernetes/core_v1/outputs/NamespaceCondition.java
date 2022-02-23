@@ -129,7 +129,6 @@ public final class NamespaceCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NamespaceCondition build() {
             return new NamespaceCondition(lastTransitionTime, message, reason, status, type);
         }

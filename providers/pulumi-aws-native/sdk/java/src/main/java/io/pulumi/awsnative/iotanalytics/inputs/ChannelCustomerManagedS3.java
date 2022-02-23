@@ -15,21 +15,21 @@ public final class ChannelCustomerManagedS3 extends io.pulumi.resources.InvokeAr
     public static final ChannelCustomerManagedS3 Empty = new ChannelCustomerManagedS3();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+        private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="keyPrefix")
-    private final @Nullable String keyPrefix;
+        private final @Nullable String keyPrefix;
 
     public Optional<String> getKeyPrefix() {
         return this.keyPrefix == null ? Optional.empty() : Optional.ofNullable(this.keyPrefix);
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -88,7 +88,6 @@ public final class ChannelCustomerManagedS3 extends io.pulumi.resources.InvokeAr
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ChannelCustomerManagedS3 build() {
             return new ChannelCustomerManagedS3(bucket, keyPrefix, roleArn);
         }

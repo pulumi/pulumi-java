@@ -23,7 +23,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -34,7 +34,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -93,7 +93,6 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
-
         public SslCertificateSelfManagedSslCertificateArgs build() {
             return new SslCertificateSelfManagedSslCertificateArgs(certificate, privateKey);
         }

@@ -24,7 +24,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="elapsedTime", required=true)
-    private final DurationResponse elapsedTime;
+      private final DurationResponse elapsedTime;
 
     public DurationResponse getElapsedTime() {
         return this.elapsedTime;
@@ -35,7 +35,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="errorCount", required=true)
-    private final Integer errorCount;
+      private final Integer errorCount;
 
     public Integer getErrorCount() {
         return this.errorCount;
@@ -46,7 +46,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="failureCount", required=true)
-    private final Integer failureCount;
+      private final Integer failureCount;
 
     public Integer getFailureCount() {
         return this.failureCount;
@@ -57,7 +57,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="flakyCount", required=true)
-    private final Integer flakyCount;
+      private final Integer flakyCount;
 
     public Integer getFlakyCount() {
         return this.flakyCount;
@@ -68,7 +68,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="skippedCount", required=true)
-    private final Integer skippedCount;
+      private final Integer skippedCount;
 
     public Integer getSkippedCount() {
         return this.skippedCount;
@@ -90,7 +90,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="totalCount", required=true)
-    private final Integer totalCount;
+      private final Integer totalCount;
 
     public Integer getTotalCount() {
         return this.totalCount;
@@ -101,7 +101,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="xmlSource", required=true)
-    private final FileReferenceResponse xmlSource;
+      private final FileReferenceResponse xmlSource;
 
     public FileReferenceResponse getXmlSource() {
         return this.xmlSource;
@@ -210,7 +210,6 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
             this.xmlSource = Objects.requireNonNull(xmlSource);
             return this;
         }
-
         public TestSuiteOverviewResponse build() {
             return new TestSuiteOverviewResponse(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }

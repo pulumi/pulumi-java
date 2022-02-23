@@ -22,7 +22,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -44,7 +44,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -66,7 +66,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="entity", required=true)
-    private final String entity;
+      private final String entity;
 
     public String getEntity() {
         return this.entity;
@@ -77,7 +77,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="entityId", required=true)
-    private final String entityId;
+      private final String entityId;
 
     public String getEntityId() {
         return this.entityId;
@@ -88,7 +88,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -99,7 +99,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="generation", required=true)
-    private final String generation;
+      private final String generation;
 
     public String getGeneration() {
         return this.generation;
@@ -110,7 +110,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -121,7 +121,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="object", required=true)
-    private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;
@@ -132,7 +132,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="projectTeam", required=true)
-    private final ObjectAccessControlProjectTeamResponse projectTeam;
+      private final ObjectAccessControlProjectTeamResponse projectTeam;
 
     public ObjectAccessControlProjectTeamResponse getProjectTeam() {
         return this.projectTeam;
@@ -143,7 +143,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -154,7 +154,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
@@ -303,7 +303,6 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public ObjectAccessControlResponse build() {
             return new ObjectAccessControlResponse(bucket, domain, email, entity, entityId, etag, generation, kind, object, projectTeam, role, selfLink);
         }

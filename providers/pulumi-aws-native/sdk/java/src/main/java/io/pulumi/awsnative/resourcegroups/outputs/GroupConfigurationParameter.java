@@ -61,7 +61,6 @@ public final class GroupConfigurationParameter {
             this.values = values;
             return this;
         }
-
         public GroupConfigurationParameter build() {
             return new GroupConfigurationParameter(name, values);
         }

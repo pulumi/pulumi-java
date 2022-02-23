@@ -77,7 +77,6 @@ public final class CostAllocationRuleDetailsResponse {
             this.targetResources = targetResources;
             return this;
         }
-
         public CostAllocationRuleDetailsResponse build() {
             return new CostAllocationRuleDetailsResponse(sourceResources, targetResources);
         }

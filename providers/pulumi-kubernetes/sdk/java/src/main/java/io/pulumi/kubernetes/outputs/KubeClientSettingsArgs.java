@@ -77,7 +77,6 @@ public final class KubeClientSettingsArgs {
             this.qps = qps;
             return this;
         }
-
         public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);
         }

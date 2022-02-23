@@ -83,7 +83,6 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public TableExternalDataConfigurationGoogleSheetsOptions build() {
             return new TableExternalDataConfigurationGoogleSheetsOptions(range, skipLeadingRows);
         }

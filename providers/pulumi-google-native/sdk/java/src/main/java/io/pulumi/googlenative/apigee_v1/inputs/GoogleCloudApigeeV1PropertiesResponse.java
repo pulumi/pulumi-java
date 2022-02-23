@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1PropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="property", required=true)
-    private final List<GoogleCloudApigeeV1PropertyResponse> property;
+      private final List<GoogleCloudApigeeV1PropertyResponse> property;
 
     public List<GoogleCloudApigeeV1PropertyResponse> getProperty() {
         return this.property;
@@ -60,7 +60,6 @@ public final class GoogleCloudApigeeV1PropertiesResponse extends io.pulumi.resou
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public GoogleCloudApigeeV1PropertiesResponse build() {
             return new GoogleCloudApigeeV1PropertiesResponse(property);
         }

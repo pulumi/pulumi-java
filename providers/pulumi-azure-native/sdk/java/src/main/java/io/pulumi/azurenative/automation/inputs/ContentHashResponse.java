@@ -21,7 +21,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+        private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ContentHashResponse build() {
             return new ContentHashResponse(algorithm, value);
         }

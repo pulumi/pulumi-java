@@ -76,7 +76,6 @@ public final class UserRecommendationResponse {
             this.username = username;
             return this;
         }
-
         public UserRecommendationResponse build() {
             return new UserRecommendationResponse(recommendationAction, username);
         }

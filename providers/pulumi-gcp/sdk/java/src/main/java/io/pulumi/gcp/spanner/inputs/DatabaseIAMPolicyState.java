@@ -19,7 +19,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+        private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -30,7 +30,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -41,7 +41,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -53,7 +53,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -65,7 +65,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -169,7 +169,6 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatabaseIAMPolicyState build() {
             return new DatabaseIAMPolicyState(database, etag, instance, policyData, project);
         }

@@ -96,7 +96,6 @@ public final class FileNoteResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FileNoteResponse build() {
             return new FileNoteResponse(checksum, fileType, title);
         }

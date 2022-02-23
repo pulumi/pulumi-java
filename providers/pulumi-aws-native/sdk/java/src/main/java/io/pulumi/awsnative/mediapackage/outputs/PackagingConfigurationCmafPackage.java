@@ -106,7 +106,6 @@ public final class PackagingConfigurationCmafPackage {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationCmafPackage build() {
             return new PackagingConfigurationCmafPackage(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }

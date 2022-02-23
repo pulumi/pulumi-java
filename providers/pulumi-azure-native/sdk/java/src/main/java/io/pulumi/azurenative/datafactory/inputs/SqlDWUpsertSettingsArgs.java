@@ -23,7 +23,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interimSchemaName")
-    private final @Nullable Input<Object> interimSchemaName;
+        private final @Nullable Input<Object> interimSchemaName;
 
     public Input<Object> getInterimSchemaName() {
         return this.interimSchemaName == null ? Input.empty() : this.interimSchemaName;
@@ -34,7 +34,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<Object> keys;
+        private final @Nullable Input<Object> keys;
 
     public Input<Object> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -93,7 +93,6 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
             this.keys = Input.ofNullable(keys);
             return this;
         }
-
         public SqlDWUpsertSettingsArgs build() {
             return new SqlDWUpsertSettingsArgs(interimSchemaName, keys);
         }

@@ -119,7 +119,6 @@ public final class OSPolicyResourceRepositoryResourceResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceResponse build() {
             return new OSPolicyResourceRepositoryResourceResponse(apt, goo, yum, zypper);
         }

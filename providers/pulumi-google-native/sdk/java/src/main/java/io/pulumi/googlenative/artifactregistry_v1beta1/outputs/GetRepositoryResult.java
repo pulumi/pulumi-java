@@ -180,7 +180,6 @@ public final class GetRepositoryResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, name, updateTime);
         }

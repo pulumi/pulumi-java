@@ -205,7 +205,6 @@ public final class GetDataStoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataStoreResult build() {
             return new GetDataStoreResult(customerSecrets, dataStoreTypeId, extendedProperties, id, name, repositoryId, state, type);
         }

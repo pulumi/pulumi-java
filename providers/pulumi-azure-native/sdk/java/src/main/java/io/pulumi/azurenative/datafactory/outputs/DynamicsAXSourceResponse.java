@@ -226,7 +226,6 @@ public final class DynamicsAXSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicsAXSourceResponse build() {
             return new DynamicsAXSourceResponse(additionalColumns, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

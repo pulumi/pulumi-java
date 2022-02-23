@@ -24,7 +24,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automatic")
-    private final @Nullable Input<AutomaticArgs> automatic;
+      private final @Nullable Input<AutomaticArgs> automatic;
 
     public Input<AutomaticArgs> getAutomatic() {
         return this.automatic == null ? Input.empty() : this.automatic;
@@ -35,7 +35,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userManaged")
-    private final @Nullable Input<UserManagedArgs> userManaged;
+      private final @Nullable Input<UserManagedArgs> userManaged;
 
     public Input<UserManagedArgs> getUserManaged() {
         return this.userManaged == null ? Input.empty() : this.userManaged;
@@ -94,7 +94,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }
-
         public ReplicationArgs build() {
             return new ReplicationArgs(automatic, userManaged);
         }

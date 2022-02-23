@@ -116,7 +116,6 @@ public final class ExternalRefResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExternalRefResponse build() {
             return new ExternalRefResponse(category, comment, locator, type);
         }

@@ -20,7 +20,7 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="iterationResults", required=true)
-    private final List<BqmlIterationResultResponse> iterationResults;
+      private final List<BqmlIterationResultResponse> iterationResults;
 
     public List<BqmlIterationResultResponse> getIterationResults() {
         return this.iterationResults;
@@ -31,7 +31,7 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -42,7 +42,7 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -53,7 +53,7 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trainingOptions", required=true)
-    private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
+      private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
     public BqmlTrainingRunTrainingOptionsResponse getTrainingOptions() {
         return this.trainingOptions;
@@ -122,7 +122,6 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
         }
-
         public BqmlTrainingRunResponse build() {
             return new BqmlTrainingRunResponse(iterationResults, startTime, state, trainingOptions);
         }

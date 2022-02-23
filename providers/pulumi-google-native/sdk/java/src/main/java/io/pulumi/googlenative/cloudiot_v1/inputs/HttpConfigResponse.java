@@ -21,7 +21,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpEnabledState", required=true)
-    private final String httpEnabledState;
+      private final String httpEnabledState;
 
     public String getHttpEnabledState() {
         return this.httpEnabledState;
@@ -59,7 +59,6 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(httpEnabledState);
         }

@@ -74,7 +74,6 @@ public final class HoursOfOperationTimeSlice {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public HoursOfOperationTimeSlice build() {
             return new HoursOfOperationTimeSlice(hours, minutes);
         }

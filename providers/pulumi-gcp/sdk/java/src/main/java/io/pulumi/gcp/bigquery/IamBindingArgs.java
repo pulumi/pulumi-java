@@ -22,21 +22,21 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<IamBindingConditionArgs> condition;
+        private final @Nullable Input<IamBindingConditionArgs> condition;
 
     public Input<IamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -48,7 +48,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -61,14 +61,14 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+        private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -187,7 +187,6 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public IamBindingArgs build() {
             return new IamBindingArgs(condition, datasetId, members, project, role, tableId);
         }

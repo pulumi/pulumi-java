@@ -74,7 +74,6 @@ public final class NormalizedCoordinateResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public NormalizedCoordinateResponse build() {
             return new NormalizedCoordinateResponse(x, y);
         }

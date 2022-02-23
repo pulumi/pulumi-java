@@ -53,7 +53,6 @@ public final class PoolEndpointConfigurationResponse {
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
-
         public PoolEndpointConfigurationResponse build() {
             return new PoolEndpointConfigurationResponse(inboundNatPools);
         }

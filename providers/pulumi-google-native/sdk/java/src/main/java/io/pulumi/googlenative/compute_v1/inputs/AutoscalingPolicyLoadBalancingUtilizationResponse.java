@@ -21,7 +21,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
      * 
      */
     @InputImport(name="utilizationTarget", required=true)
-    private final Double utilizationTarget;
+      private final Double utilizationTarget;
 
     public Double getUtilizationTarget() {
         return this.utilizationTarget;
@@ -59,7 +59,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyLoadBalancingUtilizationResponse build() {
             return new AutoscalingPolicyLoadBalancingUtilizationResponse(utilizationTarget);
         }

@@ -24,7 +24,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="callingWebHook")
-    private final @Nullable String callingWebHook;
+        private final @Nullable String callingWebHook;
 
     public Optional<String> getCallingWebHook() {
         return this.callingWebHook == null ? Optional.empty() : Optional.ofNullable(this.callingWebHook);
@@ -35,7 +35,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableCalling")
-    private final @Nullable Boolean enableCalling;
+        private final @Nullable Boolean enableCalling;
 
     public Optional<Boolean> getEnableCalling() {
         return this.enableCalling == null ? Optional.empty() : Optional.ofNullable(this.enableCalling);
@@ -46,7 +46,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableGroups")
-    private final @Nullable Boolean enableGroups;
+        private final @Nullable Boolean enableGroups;
 
     public Optional<Boolean> getEnableGroups() {
         return this.enableGroups == null ? Optional.empty() : Optional.ofNullable(this.enableGroups);
@@ -57,7 +57,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableMediaCards")
-    private final @Nullable Boolean enableMediaCards;
+        private final @Nullable Boolean enableMediaCards;
 
     public Optional<Boolean> getEnableMediaCards() {
         return this.enableMediaCards == null ? Optional.empty() : Optional.ofNullable(this.enableMediaCards);
@@ -68,7 +68,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableMessaging")
-    private final @Nullable Boolean enableMessaging;
+        private final @Nullable Boolean enableMessaging;
 
     public Optional<Boolean> getEnableMessaging() {
         return this.enableMessaging == null ? Optional.empty() : Optional.ofNullable(this.enableMessaging);
@@ -79,7 +79,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableScreenSharing")
-    private final @Nullable Boolean enableScreenSharing;
+        private final @Nullable Boolean enableScreenSharing;
 
     public Optional<Boolean> getEnableScreenSharing() {
         return this.enableScreenSharing == null ? Optional.empty() : Optional.ofNullable(this.enableScreenSharing);
@@ -90,7 +90,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableVideo")
-    private final @Nullable Boolean enableVideo;
+        private final @Nullable Boolean enableVideo;
 
     public Optional<Boolean> getEnableVideo() {
         return this.enableVideo == null ? Optional.empty() : Optional.ofNullable(this.enableVideo);
@@ -101,7 +101,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="groupsMode")
-    private final @Nullable String groupsMode;
+        private final @Nullable String groupsMode;
 
     public Optional<String> getGroupsMode() {
         return this.groupsMode == null ? Optional.empty() : Optional.ofNullable(this.groupsMode);
@@ -112,7 +112,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="incomingCallRoute")
-    private final @Nullable String incomingCallRoute;
+        private final @Nullable String incomingCallRoute;
 
     public Optional<String> getIncomingCallRoute() {
         return this.incomingCallRoute == null ? Optional.empty() : Optional.ofNullable(this.incomingCallRoute);
@@ -123,7 +123,7 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -252,7 +252,6 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public SkypeChannelPropertiesResponse build() {
             return new SkypeChannelPropertiesResponse(callingWebHook, enableCalling, enableGroups, enableMediaCards, enableMessaging, enableScreenSharing, enableVideo, groupsMode, incomingCallRoute, isEnabled);
         }

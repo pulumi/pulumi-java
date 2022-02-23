@@ -99,7 +99,6 @@ public final class VolumePropertiesResponseDataProtection {
             this.snapshot = snapshot;
             return this;
         }
-
         public VolumePropertiesResponseDataProtection build() {
             return new VolumePropertiesResponseDataProtection(backup, replication, snapshot);
         }

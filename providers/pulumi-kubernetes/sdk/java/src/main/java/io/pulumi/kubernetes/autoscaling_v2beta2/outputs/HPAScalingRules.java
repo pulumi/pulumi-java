@@ -100,7 +100,6 @@ public final class HPAScalingRules {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
-
         public HPAScalingRules build() {
             return new HPAScalingRules(policies, selectPolicy, stabilizationWindowSeconds);
         }

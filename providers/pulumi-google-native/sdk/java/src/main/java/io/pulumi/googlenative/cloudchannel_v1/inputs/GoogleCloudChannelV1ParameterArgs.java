@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<GoogleCloudChannelV1ValueArgs> value;
+      private final @Nullable Input<GoogleCloudChannelV1ValueArgs> value;
 
     public Input<GoogleCloudChannelV1ValueArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -94,7 +94,6 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudChannelV1ParameterArgs build() {
             return new GoogleCloudChannelV1ParameterArgs(name, value);
         }

@@ -99,7 +99,6 @@ public final class NetworkPolicyPort {
             this.protocol = protocol;
             return this;
         }
-
         public NetworkPolicyPort build() {
             return new NetworkPolicyPort(endPort, port, protocol);
         }

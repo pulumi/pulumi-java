@@ -22,7 +22,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReportConfigComparisonExpressionResponse build() {
             return new ReportConfigComparisonExpressionResponse(name, operator, values);
         }

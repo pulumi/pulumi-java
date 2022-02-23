@@ -52,7 +52,6 @@ public final class ConnectorScaleOutPolicy {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }
-
         public ConnectorScaleOutPolicy build() {
             return new ConnectorScaleOutPolicy(cpuUtilizationPercentage);
         }

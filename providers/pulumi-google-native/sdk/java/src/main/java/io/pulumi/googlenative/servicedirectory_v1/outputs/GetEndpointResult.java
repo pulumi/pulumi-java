@@ -139,7 +139,6 @@ public final class GetEndpointResult {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(address, annotations, name, network, port);
         }

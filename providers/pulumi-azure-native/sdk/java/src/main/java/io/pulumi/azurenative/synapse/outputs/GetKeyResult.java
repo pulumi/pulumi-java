@@ -140,7 +140,6 @@ public final class GetKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(id, isActiveCMK, keyVaultUrl, name, type);
         }

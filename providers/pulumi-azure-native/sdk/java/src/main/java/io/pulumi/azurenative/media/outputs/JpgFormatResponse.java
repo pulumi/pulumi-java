@@ -76,7 +76,6 @@ public final class JpgFormatResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JpgFormatResponse build() {
             return new JpgFormatResponse(filenamePattern, odataType);
         }

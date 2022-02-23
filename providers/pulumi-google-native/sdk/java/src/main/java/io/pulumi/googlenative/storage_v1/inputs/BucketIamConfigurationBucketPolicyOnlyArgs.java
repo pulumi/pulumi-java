@@ -24,7 +24,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lockedTime")
-    private final @Nullable Input<String> lockedTime;
+      private final @Nullable Input<String> lockedTime;
 
     public Input<String> getLockedTime() {
         return this.lockedTime == null ? Input.empty() : this.lockedTime;
@@ -94,7 +94,6 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
             this.lockedTime = Input.ofNullable(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationBucketPolicyOnlyArgs build() {
             return new BucketIamConfigurationBucketPolicyOnlyArgs(enabled, lockedTime);
         }

@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
+      private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
     public List<GooglePrivacyDlpV2ConditionResponse> getConditions() {
         return this.conditions;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionsResponse build() {
             return new GooglePrivacyDlpV2ConditionsResponse(conditions);
         }

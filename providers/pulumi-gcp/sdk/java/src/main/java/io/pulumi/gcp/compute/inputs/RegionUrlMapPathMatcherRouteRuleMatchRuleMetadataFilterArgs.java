@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
      * 
      */
     @InputImport(name="filterLabels", required=true)
-    private final Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
+        private final Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
         return this.filterLabels;
@@ -40,7 +40,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
      * 
      */
     @InputImport(name="filterMatchCriteria", required=true)
-    private final Input<String> filterMatchCriteria;
+        private final Input<String> filterMatchCriteria;
 
     public Input<String> getFilterMatchCriteria() {
         return this.filterMatchCriteria;
@@ -99,7 +99,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
             this.filterMatchCriteria = Input.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(filterLabels, filterMatchCriteria);
         }

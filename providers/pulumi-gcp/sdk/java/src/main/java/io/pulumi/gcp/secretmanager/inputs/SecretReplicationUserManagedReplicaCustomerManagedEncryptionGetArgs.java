@@ -18,7 +18,7 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionG
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -61,7 +61,6 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionG
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs build() {
             return new SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs(kmsKeyName);
         }

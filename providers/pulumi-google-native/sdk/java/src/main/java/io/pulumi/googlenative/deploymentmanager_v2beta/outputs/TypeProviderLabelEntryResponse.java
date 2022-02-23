@@ -74,7 +74,6 @@ public final class TypeProviderLabelEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TypeProviderLabelEntryResponse build() {
             return new TypeProviderLabelEntryResponse(key, value);
         }

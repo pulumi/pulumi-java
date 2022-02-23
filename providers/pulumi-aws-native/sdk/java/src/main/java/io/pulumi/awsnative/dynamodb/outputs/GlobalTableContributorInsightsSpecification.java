@@ -44,7 +44,6 @@ public final class GlobalTableContributorInsightsSpecification {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GlobalTableContributorInsightsSpecification build() {
             return new GlobalTableContributorInsightsSpecification(enabled);
         }

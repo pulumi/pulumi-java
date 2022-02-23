@@ -850,7 +850,6 @@ public final class GetStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageAccountResult build() {
             return new GetStorageAccountResult(accessTier, allowBlobPublicAccess, allowSharedKeyAccess, azureFilesIdentityBasedAuthentication, blobRestoreStatus, creationTime, customDomain, enableHttpsTrafficOnly, enableNfsV3, encryption, extendedLocation, failoverInProgress, geoReplicationStats, id, identity, isHnsEnabled, keyCreationTime, keyPolicy, kind, largeFileSharesState, lastGeoFailoverTime, location, minimumTlsVersion, name, networkRuleSet, primaryEndpoints, primaryLocation, privateEndpointConnections, provisioningState, routingPreference, sasPolicy, secondaryEndpoints, secondaryLocation, sku, statusOfPrimary, statusOfSecondary, tags, type);
         }

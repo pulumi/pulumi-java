@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2BucketResponse {
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketResponse build() {
             return new GooglePrivacyDlpV2BucketResponse(max, min, replacementValue);
         }

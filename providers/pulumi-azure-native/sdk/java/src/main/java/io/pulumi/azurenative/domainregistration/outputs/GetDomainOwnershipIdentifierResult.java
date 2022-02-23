@@ -161,7 +161,6 @@ public final class GetDomainOwnershipIdentifierResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainOwnershipIdentifierResult build() {
             return new GetDomainOwnershipIdentifierResult(id, kind, name, ownershipId, systemData, type);
         }

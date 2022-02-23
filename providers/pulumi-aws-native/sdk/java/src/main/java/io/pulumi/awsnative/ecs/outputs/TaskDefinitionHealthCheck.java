@@ -141,7 +141,6 @@ public final class TaskDefinitionHealthCheck {
             this.timeout = timeout;
             return this;
         }
-
         public TaskDefinitionHealthCheck build() {
             return new TaskDefinitionHealthCheck(command, interval, retries, startPeriod, timeout);
         }

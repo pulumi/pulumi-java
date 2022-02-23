@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final String defaultValue;
+      private final String defaultValue;
 
     public String getDefaultValue() {
         return this.defaultValue;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="entityTypeDisplayName", required=true)
-    private final String entityTypeDisplayName;
+      private final String entityTypeDisplayName;
 
     public String getEntityTypeDisplayName() {
         return this.entityTypeDisplayName;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="isList", required=true)
-    private final Boolean isList;
+      private final Boolean isList;
 
     public Boolean getIsList() {
         return this.isList;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="mandatory", required=true)
-    private final Boolean mandatory;
+      private final Boolean mandatory;
 
     public Boolean getMandatory() {
         return this.mandatory;
@@ -78,7 +78,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="prompts", required=true)
-    private final List<String> prompts;
+      private final List<String> prompts;
 
     public List<String> getPrompts() {
         return this.prompts;
@@ -100,7 +100,7 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -209,7 +209,6 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse extends io.pul
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentParameterResponse build() {
             return new GoogleCloudDialogflowV2IntentParameterResponse(defaultValue, displayName, entityTypeDisplayName, isList, mandatory, name, prompts, value);
         }

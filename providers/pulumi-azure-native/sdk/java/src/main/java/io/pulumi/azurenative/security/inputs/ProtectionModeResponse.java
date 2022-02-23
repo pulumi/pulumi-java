@@ -23,7 +23,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exe")
-    private final @Nullable String exe;
+        private final @Nullable String exe;
 
     public Optional<String> getExe() {
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
@@ -34,7 +34,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="executable")
-    private final @Nullable String executable;
+        private final @Nullable String executable;
 
     public Optional<String> getExecutable() {
         return this.executable == null ? Optional.empty() : Optional.ofNullable(this.executable);
@@ -45,7 +45,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="msi")
-    private final @Nullable String msi;
+        private final @Nullable String msi;
 
     public Optional<String> getMsi() {
         return this.msi == null ? Optional.empty() : Optional.ofNullable(this.msi);
@@ -56,7 +56,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="script")
-    private final @Nullable String script;
+        private final @Nullable String script;
 
     public Optional<String> getScript() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
@@ -125,7 +125,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
             this.script = script;
             return this;
         }
-
         public ProtectionModeResponse build() {
             return new ProtectionModeResponse(exe, executable, msi, script);
         }

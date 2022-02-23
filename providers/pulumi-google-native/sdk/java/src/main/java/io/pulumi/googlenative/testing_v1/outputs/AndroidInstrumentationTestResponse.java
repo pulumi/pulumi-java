@@ -225,7 +225,6 @@ public final class AndroidInstrumentationTestResponse {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
         }

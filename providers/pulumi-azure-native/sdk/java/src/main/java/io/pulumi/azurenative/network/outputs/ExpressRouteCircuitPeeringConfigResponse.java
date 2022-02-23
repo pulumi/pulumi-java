@@ -162,7 +162,6 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
             this.routingRegistryName = routingRegistryName;
             return this;
         }
-
         public ExpressRouteCircuitPeeringConfigResponse build() {
             return new ExpressRouteCircuitPeeringConfigResponse(advertisedCommunities, advertisedPublicPrefixes, advertisedPublicPrefixesState, customerASN, legacyMode, routingRegistryName);
         }

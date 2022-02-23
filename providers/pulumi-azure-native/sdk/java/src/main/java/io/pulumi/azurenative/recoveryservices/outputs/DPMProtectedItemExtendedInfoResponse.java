@@ -331,7 +331,6 @@ public final class DPMProtectedItemExtendedInfoResponse {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }
-
         public DPMProtectedItemExtendedInfoResponse build() {
             return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }

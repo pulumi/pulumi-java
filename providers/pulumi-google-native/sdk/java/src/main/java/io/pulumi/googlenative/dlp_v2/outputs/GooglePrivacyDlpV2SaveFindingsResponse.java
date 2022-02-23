@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2SaveFindingsResponse build() {
             return new GooglePrivacyDlpV2SaveFindingsResponse(outputConfig);
         }

@@ -119,7 +119,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
             this.vNetId = vNetId;
             return this;
         }
-
         public IntegrationRuntimeVNetPropertiesResponse build() {
             return new IntegrationRuntimeVNetPropertiesResponse(publicIPs, subnet, subnetId, vNetId);
         }

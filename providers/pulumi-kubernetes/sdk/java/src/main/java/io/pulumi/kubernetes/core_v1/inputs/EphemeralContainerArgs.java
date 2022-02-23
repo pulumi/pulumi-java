@@ -38,7 +38,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -49,7 +49,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+        private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -60,7 +60,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<EnvVarArgs>> env;
+        private final @Nullable Input<List<EnvVarArgs>> env;
 
     public Input<List<EnvVarArgs>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -71,7 +71,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="envFrom")
-    private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
+        private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
 
     public Input<List<EnvFromSourceArgs>> getEnvFrom() {
         return this.envFrom == null ? Input.empty() : this.envFrom;
@@ -82,7 +82,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+        private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -98,7 +98,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imagePullPolicy")
-    private final @Nullable Input<String> imagePullPolicy;
+        private final @Nullable Input<String> imagePullPolicy;
 
     public Input<String> getImagePullPolicy() {
         return this.imagePullPolicy == null ? Input.empty() : this.imagePullPolicy;
@@ -109,7 +109,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lifecycle")
-    private final @Nullable Input<LifecycleArgs> lifecycle;
+        private final @Nullable Input<LifecycleArgs> lifecycle;
 
     public Input<LifecycleArgs> getLifecycle() {
         return this.lifecycle == null ? Input.empty() : this.lifecycle;
@@ -120,7 +120,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable Input<ProbeArgs> livenessProbe;
+        private final @Nullable Input<ProbeArgs> livenessProbe;
 
     public Input<ProbeArgs> getLivenessProbe() {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
@@ -131,7 +131,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -142,7 +142,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<ContainerPortArgs>> ports;
+        private final @Nullable Input<List<ContainerPortArgs>> ports;
 
     public Input<List<ContainerPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -153,7 +153,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="readinessProbe")
-    private final @Nullable Input<ProbeArgs> readinessProbe;
+        private final @Nullable Input<ProbeArgs> readinessProbe;
 
     public Input<ProbeArgs> getReadinessProbe() {
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
@@ -164,7 +164,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<ResourceRequirementsArgs> resources;
+        private final @Nullable Input<ResourceRequirementsArgs> resources;
 
     public Input<ResourceRequirementsArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -175,7 +175,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityContext")
-    private final @Nullable Input<SecurityContextArgs> securityContext;
+        private final @Nullable Input<SecurityContextArgs> securityContext;
 
     public Input<SecurityContextArgs> getSecurityContext() {
         return this.securityContext == null ? Input.empty() : this.securityContext;
@@ -186,7 +186,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startupProbe")
-    private final @Nullable Input<ProbeArgs> startupProbe;
+        private final @Nullable Input<ProbeArgs> startupProbe;
 
     public Input<ProbeArgs> getStartupProbe() {
         return this.startupProbe == null ? Input.empty() : this.startupProbe;
@@ -197,7 +197,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stdin")
-    private final @Nullable Input<Boolean> stdin;
+        private final @Nullable Input<Boolean> stdin;
 
     public Input<Boolean> getStdin() {
         return this.stdin == null ? Input.empty() : this.stdin;
@@ -208,7 +208,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stdinOnce")
-    private final @Nullable Input<Boolean> stdinOnce;
+        private final @Nullable Input<Boolean> stdinOnce;
 
     public Input<Boolean> getStdinOnce() {
         return this.stdinOnce == null ? Input.empty() : this.stdinOnce;
@@ -221,7 +221,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetContainerName")
-    private final @Nullable Input<String> targetContainerName;
+        private final @Nullable Input<String> targetContainerName;
 
     public Input<String> getTargetContainerName() {
         return this.targetContainerName == null ? Input.empty() : this.targetContainerName;
@@ -232,7 +232,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="terminationMessagePath")
-    private final @Nullable Input<String> terminationMessagePath;
+        private final @Nullable Input<String> terminationMessagePath;
 
     public Input<String> getTerminationMessagePath() {
         return this.terminationMessagePath == null ? Input.empty() : this.terminationMessagePath;
@@ -247,7 +247,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="terminationMessagePolicy")
-    private final @Nullable Input<String> terminationMessagePolicy;
+        private final @Nullable Input<String> terminationMessagePolicy;
 
     public Input<String> getTerminationMessagePolicy() {
         return this.terminationMessagePolicy == null ? Input.empty() : this.terminationMessagePolicy;
@@ -258,7 +258,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tty")
-    private final @Nullable Input<Boolean> tty;
+        private final @Nullable Input<Boolean> tty;
 
     public Input<Boolean> getTty() {
         return this.tty == null ? Input.empty() : this.tty;
@@ -269,7 +269,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeDevices")
-    private final @Nullable Input<List<VolumeDeviceArgs>> volumeDevices;
+        private final @Nullable Input<List<VolumeDeviceArgs>> volumeDevices;
 
     public Input<List<VolumeDeviceArgs>> getVolumeDevices() {
         return this.volumeDevices == null ? Input.empty() : this.volumeDevices;
@@ -280,7 +280,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+        private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
     public Input<List<VolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -291,7 +291,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workingDir")
-    private final @Nullable Input<String> workingDir;
+        private final @Nullable Input<String> workingDir;
 
     public Input<String> getWorkingDir() {
         return this.workingDir == null ? Input.empty() : this.workingDir;
@@ -665,7 +665,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
             this.workingDir = Input.ofNullable(workingDir);
             return this;
         }
-
         public EphemeralContainerArgs build() {
             return new EphemeralContainerArgs(args, command, env, envFrom, image, imagePullPolicy, lifecycle, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, stdin, stdinOnce, targetContainerName, terminationMessagePath, terminationMessagePolicy, tty, volumeDevices, volumeMounts, workingDir);
         }

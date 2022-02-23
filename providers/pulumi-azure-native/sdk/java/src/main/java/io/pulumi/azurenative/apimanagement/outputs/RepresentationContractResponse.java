@@ -141,7 +141,6 @@ public final class RepresentationContractResponse {
             this.typeName = typeName;
             return this;
         }
-
         public RepresentationContractResponse build() {
             return new RepresentationContractResponse(contentType, formParameters, sample, schemaId, typeName);
         }

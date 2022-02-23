@@ -24,7 +24,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable Input<String> addressPrefix;
+        private final @Nullable Input<String> addressPrefix;
 
     public Input<String> getAddressPrefix() {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
@@ -35,7 +35,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkSecurityGroup")
-    private final @Nullable Input<NsgReferenceArgs> networkSecurityGroup;
+        private final @Nullable Input<NsgReferenceArgs> networkSecurityGroup;
 
     public Input<NsgReferenceArgs> getNetworkSecurityGroup() {
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
@@ -120,7 +120,6 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
             this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
             return this;
         }
-
         public SubnetResourceSettingsArgs build() {
             return new SubnetResourceSettingsArgs(addressPrefix, name, networkSecurityGroup);
         }

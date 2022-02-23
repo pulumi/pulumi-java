@@ -166,7 +166,6 @@ public final class XmlReadSettingsResponse {
             this.validationMode = validationMode;
             return this;
         }
-
         public XmlReadSettingsResponse build() {
             return new XmlReadSettingsResponse(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);
         }

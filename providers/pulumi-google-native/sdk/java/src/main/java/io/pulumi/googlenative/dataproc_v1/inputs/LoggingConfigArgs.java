@@ -24,7 +24,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driverLogLevels")
-    private final @Nullable Input<Map<String,String>> driverLogLevels;
+      private final @Nullable Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels == null ? Input.empty() : this.driverLogLevels;
@@ -67,7 +67,6 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.driverLogLevels = Input.ofNullable(driverLogLevels);
             return this;
         }
-
         public LoggingConfigArgs build() {
             return new LoggingConfigArgs(driverLogLevels);
         }

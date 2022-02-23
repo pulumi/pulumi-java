@@ -258,7 +258,6 @@ public final class TableFieldSchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TableFieldSchemaResponse build() {
             return new TableFieldSchemaResponse(categories, collationSpec, description, fields, maxLength, mode, name, policyTags, precision, scale, type);
         }

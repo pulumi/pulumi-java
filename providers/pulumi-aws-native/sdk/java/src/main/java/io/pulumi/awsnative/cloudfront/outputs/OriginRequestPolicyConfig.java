@@ -102,7 +102,6 @@ public final class OriginRequestPolicyConfig {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public OriginRequestPolicyConfig build() {
             return new OriginRequestPolicyConfig(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
         }

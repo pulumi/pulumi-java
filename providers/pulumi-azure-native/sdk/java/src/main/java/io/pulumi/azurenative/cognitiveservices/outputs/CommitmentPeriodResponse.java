@@ -141,7 +141,6 @@ public final class CommitmentPeriodResponse {
             this.tier = tier;
             return this;
         }
-
         public CommitmentPeriodResponse build() {
             return new CommitmentPeriodResponse(count, endDate, quota, startDate, tier);
         }

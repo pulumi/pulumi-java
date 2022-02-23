@@ -96,7 +96,6 @@ public final class DataSourceAuroraParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceAuroraParameters build() {
             return new DataSourceAuroraParameters(database, host, port);
         }

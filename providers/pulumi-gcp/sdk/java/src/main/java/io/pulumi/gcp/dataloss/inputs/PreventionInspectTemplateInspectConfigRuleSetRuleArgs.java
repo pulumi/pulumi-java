@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * 
      */
     @InputImport(name="exclusionRule")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> getExclusionRule() {
         return this.exclusionRule == null ? Input.empty() : this.exclusionRule;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * 
      */
     @InputImport(name="hotwordRule")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> getHotwordRule() {
         return this.hotwordRule == null ? Input.empty() : this.hotwordRule;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleArgs(exclusionRule, hotwordRule);
         }

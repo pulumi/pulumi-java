@@ -61,7 +61,6 @@ public final class CloudServiceVaultAndSecretReferenceResponse {
             this.sourceVault = sourceVault;
             return this;
         }
-
         public CloudServiceVaultAndSecretReferenceResponse build() {
             return new CloudServiceVaultAndSecretReferenceResponse(secretUrl, sourceVault);
         }

@@ -77,7 +77,6 @@ public final class RunAsUserStrategyOptions {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public RunAsUserStrategyOptions build() {
             return new RunAsUserStrategyOptions(ranges, rule);
         }

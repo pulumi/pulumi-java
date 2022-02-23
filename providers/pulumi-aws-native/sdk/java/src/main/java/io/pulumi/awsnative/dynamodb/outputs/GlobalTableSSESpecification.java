@@ -61,7 +61,6 @@ public final class GlobalTableSSESpecification {
             this.sSEType = sSEType;
             return this;
         }
-
         public GlobalTableSSESpecification build() {
             return new GlobalTableSSESpecification(sSEEnabled, sSEType);
         }

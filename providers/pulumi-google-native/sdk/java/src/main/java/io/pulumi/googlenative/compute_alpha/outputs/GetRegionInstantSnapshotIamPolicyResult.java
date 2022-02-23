@@ -142,7 +142,6 @@ public final class GetRegionInstantSnapshotIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionInstantSnapshotIamPolicyResult build() {
             return new GetRegionInstantSnapshotIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

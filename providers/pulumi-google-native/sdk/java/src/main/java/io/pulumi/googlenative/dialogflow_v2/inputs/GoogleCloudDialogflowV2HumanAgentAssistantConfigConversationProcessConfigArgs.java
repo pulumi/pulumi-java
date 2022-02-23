@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * 
      */
     @InputImport(name="recentSentencesCount")
-    private final @Nullable Input<Integer> recentSentencesCount;
+      private final @Nullable Input<Integer> recentSentencesCount;
 
     public Input<Integer> getRecentSentencesCount() {
         return this.recentSentencesCount == null ? Input.empty() : this.recentSentencesCount;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
             this.recentSentencesCount = Input.ofNullable(recentSentencesCount);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(recentSentencesCount);
         }

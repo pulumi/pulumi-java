@@ -183,7 +183,6 @@ public final class ManagedClusterAADProfileResponse {
             this.tenantID = tenantID;
             return this;
         }
-
         public ManagedClusterAADProfileResponse build() {
             return new ManagedClusterAADProfileResponse(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }

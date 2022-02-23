@@ -286,7 +286,6 @@ public final class DisplayDataResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DisplayDataResponse build() {
             return new DisplayDataResponse(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
         }

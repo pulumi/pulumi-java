@@ -116,7 +116,6 @@ public final class GetClientConfigResult {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public GetClientConfigResult build() {
             return new GetClientConfigResult(clientId, objectId, subscriptionId, tenantId);
         }

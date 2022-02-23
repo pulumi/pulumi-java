@@ -161,7 +161,6 @@ public final class HttpRequestResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpRequestResponse build() {
             return new HttpRequestResponse(body, headers, httpMethod, oauthToken, oidcToken, url);
         }

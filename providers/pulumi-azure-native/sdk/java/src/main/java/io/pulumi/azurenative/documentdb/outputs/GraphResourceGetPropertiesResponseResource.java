@@ -52,7 +52,6 @@ public final class GraphResourceGetPropertiesResponseResource {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GraphResourceGetPropertiesResponseResource build() {
             return new GraphResourceGetPropertiesResponseResource(id);
         }

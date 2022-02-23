@@ -14,14 +14,14 @@ public final class RecoveryGroupTag extends io.pulumi.resources.InvokeArgs {
     public static final RecoveryGroupTag Empty = new RecoveryGroupTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final List<String> value;
+        private final List<String> value;
 
     public List<String> getValue() {
         return this.value;
@@ -70,7 +70,6 @@ public final class RecoveryGroupTag extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecoveryGroupTag build() {
             return new RecoveryGroupTag(key, value);
         }

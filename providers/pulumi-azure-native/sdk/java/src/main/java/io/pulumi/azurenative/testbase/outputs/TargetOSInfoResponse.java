@@ -75,7 +75,6 @@ public final class TargetOSInfoResponse {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
-
         public TargetOSInfoResponse build() {
             return new TargetOSInfoResponse(osUpdateType, targetOSs);
         }

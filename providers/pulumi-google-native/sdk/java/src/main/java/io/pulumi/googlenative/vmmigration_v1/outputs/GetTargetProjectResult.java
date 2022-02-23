@@ -137,7 +137,6 @@ public final class GetTargetProjectResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTargetProjectResult build() {
             return new GetTargetProjectResult(createTime, description, name, project, updateTime);
         }

@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
      * 
      */
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
      * 
      */
     @InputImport(name="intervalSec", required=true)
-    private final Integer intervalSec;
+      private final Integer intervalSec;
 
     public Integer getIntervalSec() {
         return this.intervalSec;
@@ -77,7 +77,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdResponse(count, intervalSec);
         }

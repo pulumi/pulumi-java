@@ -480,7 +480,6 @@ public final class GetIncidentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIncidentResult build() {
             return new GetIncidentResult(additionalData, classification, classificationComment, classificationReason, createdTimeUtc, description, etag, firstActivityTimeUtc, id, incidentNumber, incidentUrl, labels, lastActivityTimeUtc, lastModifiedTimeUtc, name, owner, relatedAnalyticRuleIds, severity, status, title, type);
         }

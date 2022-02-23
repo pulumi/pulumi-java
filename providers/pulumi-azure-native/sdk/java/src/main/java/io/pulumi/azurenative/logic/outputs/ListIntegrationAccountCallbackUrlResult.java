@@ -54,7 +54,6 @@ public final class ListIntegrationAccountCallbackUrlResult {
             this.value = value;
             return this;
         }
-
         public ListIntegrationAccountCallbackUrlResult build() {
             return new ListIntegrationAccountCallbackUrlResult(value);
         }

@@ -54,7 +54,6 @@ public final class ServiceProviderParameterResponseConstraints {
             this.required = required;
             return this;
         }
-
         public ServiceProviderParameterResponseConstraints build() {
             return new ServiceProviderParameterResponseConstraints(required);
         }

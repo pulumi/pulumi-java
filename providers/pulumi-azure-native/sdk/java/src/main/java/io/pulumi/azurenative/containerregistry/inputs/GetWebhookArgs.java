@@ -17,7 +17,7 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+        private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="webhookName", required=true)
-    private final String webhookName;
+        private final String webhookName;
 
     public String getWebhookName() {
         return this.webhookName;
@@ -98,7 +98,6 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
             this.webhookName = Objects.requireNonNull(webhookName);
             return this;
         }
-
         public GetWebhookArgs build() {
             return new GetWebhookArgs(registryName, resourceGroupName, webhookName);
         }

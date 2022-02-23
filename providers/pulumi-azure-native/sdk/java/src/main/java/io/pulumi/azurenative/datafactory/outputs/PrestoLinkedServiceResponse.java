@@ -443,7 +443,6 @@ public final class PrestoLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public PrestoLinkedServiceResponse build() {
             return new PrestoLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, catalog, connectVia, description, enableSsl, encryptedCredential, host, parameters, password, port, serverVersion, timeZoneID, trustedCertPath, type, useSystemTrustStore, username);
         }

@@ -13,14 +13,14 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="stackName", required=true)
-    private final String stackName;
+        private final String stackName;
 
     public String getStackName() {
         return this.stackName;
@@ -69,7 +69,6 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
-
         public GetEntitlementArgs build() {
             return new GetEntitlementArgs(name, stackName);
         }

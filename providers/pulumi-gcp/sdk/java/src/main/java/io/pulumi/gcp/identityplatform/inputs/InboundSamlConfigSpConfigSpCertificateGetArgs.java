@@ -20,7 +20,7 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends io.pulu
      * 
      */
     @InputImport(name="x509Certificate")
-    private final @Nullable Input<String> x509Certificate;
+        private final @Nullable Input<String> x509Certificate;
 
     public Input<String> getX509Certificate() {
         return this.x509Certificate == null ? Input.empty() : this.x509Certificate;
@@ -63,7 +63,6 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends io.pulu
             this.x509Certificate = Input.ofNullable(x509Certificate);
             return this;
         }
-
         public InboundSamlConfigSpConfigSpCertificateGetArgs build() {
             return new InboundSamlConfigSpConfigSpCertificateGetArgs(x509Certificate);
         }

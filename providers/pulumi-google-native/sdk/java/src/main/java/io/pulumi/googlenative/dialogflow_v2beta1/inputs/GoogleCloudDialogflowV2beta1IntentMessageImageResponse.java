@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
      * 
      */
     @InputImport(name="accessibilityText", required=true)
-    private final String accessibilityText;
+      private final String accessibilityText;
 
     public String getAccessibilityText() {
         return this.accessibilityText;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageImageResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageImageResponse(accessibilityText, imageUri);
         }

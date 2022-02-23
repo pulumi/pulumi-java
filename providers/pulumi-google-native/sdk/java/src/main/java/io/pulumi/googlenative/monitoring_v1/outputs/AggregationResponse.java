@@ -117,7 +117,6 @@ public final class AggregationResponse {
             this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
             return this;
         }
-
         public AggregationResponse build() {
             return new AggregationResponse(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

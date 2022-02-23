@@ -23,7 +23,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayCommand")
-    private final @Nullable Input<String> displayCommand;
+      private final @Nullable Input<String> displayCommand;
 
     public Input<String> getDisplayCommand() {
         return this.displayCommand == null ? Input.empty() : this.displayCommand;
@@ -34,7 +34,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -45,7 +45,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+      private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -119,7 +119,6 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
             this.reason = Input.ofNullable(reason);
             return this;
         }
-
         public NonCompliantFileArgs build() {
             return new NonCompliantFileArgs(displayCommand, path, reason);
         }

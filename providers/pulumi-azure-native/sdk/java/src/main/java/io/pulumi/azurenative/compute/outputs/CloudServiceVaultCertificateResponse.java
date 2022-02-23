@@ -54,7 +54,6 @@ public final class CloudServiceVaultCertificateResponse {
             this.certificateUrl = certificateUrl;
             return this;
         }
-
         public CloudServiceVaultCertificateResponse build() {
             return new CloudServiceVaultCertificateResponse(certificateUrl);
         }

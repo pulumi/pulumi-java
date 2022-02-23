@@ -181,7 +181,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__ParameterSpecResponse build() {
             return new GoogleCloudMlV1__ParameterSpecResponse(categoricalValues, discreteValues, maxValue, minValue, parameterName, scaleType, type);
         }

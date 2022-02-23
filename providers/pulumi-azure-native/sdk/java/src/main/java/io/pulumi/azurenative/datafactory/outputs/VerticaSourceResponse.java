@@ -205,7 +205,6 @@ public final class VerticaSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VerticaSourceResponse build() {
             return new VerticaSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

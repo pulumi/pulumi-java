@@ -101,7 +101,6 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AuthorityConfigX509ConfigAdditionalExtension build() {
             return new AuthorityConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }

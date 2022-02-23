@@ -99,7 +99,6 @@ public final class StorageBlobDeadLetterDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageBlobDeadLetterDestinationResponse build() {
             return new StorageBlobDeadLetterDestinationResponse(blobContainerName, endpointType, resourceId);
         }

@@ -268,7 +268,6 @@ public final class GetAccountResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(createdAt, id, identity, location, name, provisioningState, systemData, tags, type, userEmail, userName);
         }

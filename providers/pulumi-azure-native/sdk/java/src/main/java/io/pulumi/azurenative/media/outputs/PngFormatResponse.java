@@ -76,7 +76,6 @@ public final class PngFormatResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public PngFormatResponse build() {
             return new PngFormatResponse(filenamePattern, odataType);
         }

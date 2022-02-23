@@ -61,7 +61,6 @@ public final class ChannelStorage {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public ChannelStorage build() {
             return new ChannelStorage(customerManagedS3, serviceManagedS3);
         }

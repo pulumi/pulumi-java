@@ -25,7 +25,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactName", required=true)
-    private final Input<String> contactName;
+        private final Input<String> contactName;
 
     public Input<String> getContactName() {
         return this.contactName;
@@ -36,7 +36,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailList", required=true)
-    private final Input<List<String>> emailList;
+        private final Input<List<String>> emailList;
 
     public Input<List<String>> getEmailList() {
         return this.emailList;
@@ -47,7 +47,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mobile")
-    private final @Nullable Input<String> mobile;
+        private final @Nullable Input<String> mobile;
 
     public Input<String> getMobile() {
         return this.mobile == null ? Input.empty() : this.mobile;
@@ -58,7 +58,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPreference")
-    private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference;
+        private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreference;
 
     public Input<List<NotificationPreferenceArgs>> getNotificationPreference() {
         return this.notificationPreference == null ? Input.empty() : this.notificationPreference;
@@ -69,7 +69,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-    private final Input<String> phone;
+        private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;
@@ -80,7 +80,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneExtension")
-    private final @Nullable Input<String> phoneExtension;
+        private final @Nullable Input<String> phoneExtension;
 
     public Input<String> getPhoneExtension() {
         return this.phoneExtension == null ? Input.empty() : this.phoneExtension;
@@ -199,7 +199,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.phoneExtension = Input.ofNullable(phoneExtension);
             return this;
         }
-
         public ContactDetailsArgs build() {
             return new ContactDetailsArgs(contactName, emailList, mobile, notificationPreference, phone, phoneExtension);
         }

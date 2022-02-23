@@ -74,7 +74,6 @@ public final class ListSpatialAnchorsAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListSpatialAnchorsAccountKeysResult build() {
             return new ListSpatialAnchorsAccountKeysResult(primaryKey, secondaryKey);
         }

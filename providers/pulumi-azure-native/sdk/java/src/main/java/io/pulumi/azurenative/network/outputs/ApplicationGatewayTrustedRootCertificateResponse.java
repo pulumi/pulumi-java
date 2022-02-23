@@ -181,7 +181,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayTrustedRootCertificateResponse build() {
             return new ApplicationGatewayTrustedRootCertificateResponse(data, etag, id, keyVaultSecretId, name, provisioningState, type);
         }

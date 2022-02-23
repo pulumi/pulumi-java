@@ -24,7 +24,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientValidationCa")
-    private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
+      private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
 
     public Input<List<ValidationCAArgs>> getClientValidationCa() {
         return this.clientValidationCa == null ? Input.empty() : this.clientValidationCa;
@@ -67,7 +67,6 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.clientValidationCa = Input.ofNullable(clientValidationCa);
             return this;
         }
-
         public MTLSPolicyArgs build() {
             return new MTLSPolicyArgs(clientValidationCa);
         }

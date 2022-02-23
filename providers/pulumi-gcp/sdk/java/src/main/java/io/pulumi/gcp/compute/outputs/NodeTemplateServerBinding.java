@@ -74,7 +74,6 @@ public final class NodeTemplateServerBinding {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeTemplateServerBinding build() {
             return new NodeTemplateServerBinding(type);
         }

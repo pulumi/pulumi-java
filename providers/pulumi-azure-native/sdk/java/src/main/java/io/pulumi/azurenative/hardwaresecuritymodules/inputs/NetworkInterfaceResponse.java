@@ -23,7 +23,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable String privateIpAddress;
+        private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
@@ -83,7 +83,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(id, privateIpAddress);
         }

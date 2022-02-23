@@ -75,7 +75,6 @@ public final class DefaultRolloutResponseProperties {
             this.status = status;
             return this;
         }
-
         public DefaultRolloutResponseProperties build() {
             return new DefaultRolloutResponseProperties(provisioningState, specification, status);
         }

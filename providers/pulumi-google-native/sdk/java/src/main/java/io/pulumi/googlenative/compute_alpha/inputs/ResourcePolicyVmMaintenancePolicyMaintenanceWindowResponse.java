@@ -17,7 +17,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse();
 
     @InputImport(name="dailyMaintenanceWindow", required=true)
-    private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
+      private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
     public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
@@ -55,7 +55,6 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
             return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(dailyMaintenanceWindow);
         }

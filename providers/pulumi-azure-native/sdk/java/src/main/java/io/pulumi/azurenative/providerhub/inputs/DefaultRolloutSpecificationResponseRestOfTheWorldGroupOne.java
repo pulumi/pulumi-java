@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne ext
     public static final DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne Empty = new DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne();
 
     @InputImport(name="regions")
-    private final @Nullable List<String> regions;
+        private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @InputImport(name="waitDuration")
-    private final @Nullable String waitDuration;
+        private final @Nullable String waitDuration;
 
     public Optional<String> getWaitDuration() {
         return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
@@ -72,7 +72,6 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne ext
             this.waitDuration = waitDuration;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne build() {
             return new DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne(regions, waitDuration);
         }

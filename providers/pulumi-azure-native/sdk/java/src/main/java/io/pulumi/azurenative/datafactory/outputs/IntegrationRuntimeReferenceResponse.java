@@ -98,7 +98,6 @@ public final class IntegrationRuntimeReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IntegrationRuntimeReferenceResponse build() {
             return new IntegrationRuntimeReferenceResponse(parameters, referenceName, type);
         }

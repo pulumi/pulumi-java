@@ -22,7 +22,7 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final CapacityResponse capacity;
+      private final CapacityResponse capacity;
 
     public CapacityResponse getCapacity() {
         return this.capacity;
@@ -33,7 +33,7 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="count", required=true)
-    private final String count;
+      private final String count;
 
     public String getCount() {
         return this.count;
@@ -82,7 +82,6 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public PartitionConfigResponse build() {
             return new PartitionConfigResponse(capacity, count);
         }

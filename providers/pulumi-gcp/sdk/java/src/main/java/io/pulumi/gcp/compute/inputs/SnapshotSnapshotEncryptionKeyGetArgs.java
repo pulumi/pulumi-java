@@ -19,7 +19,7 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeySelfLink")
-    private final @Nullable Input<String> kmsKeySelfLink;
+        private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
@@ -31,7 +31,7 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-    private final @Nullable Input<String> kmsKeyServiceAccount;
+        private final @Nullable Input<String> kmsKeyServiceAccount;
 
     public Input<String> getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
@@ -44,7 +44,7 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+        private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -57,7 +57,7 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sha256")
-    private final @Nullable Input<String> sha256;
+        private final @Nullable Input<String> sha256;
 
     public Input<String> getSha256() {
         return this.sha256 == null ? Input.empty() : this.sha256;
@@ -146,7 +146,6 @@ public final class SnapshotSnapshotEncryptionKeyGetArgs extends io.pulumi.resour
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }
-
         public SnapshotSnapshotEncryptionKeyGetArgs build() {
             return new SnapshotSnapshotEncryptionKeyGetArgs(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

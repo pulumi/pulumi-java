@@ -25,7 +25,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -36,7 +36,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<List<String>> scope;
+        private final @Nullable Input<List<String>> scope;
 
     public Input<List<String>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -47,7 +47,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagSettings")
-    private final @Nullable Input<TagSettingsPropertiesArgs> tagSettings;
+        private final @Nullable Input<TagSettingsPropertiesArgs> tagSettings;
 
     public Input<TagSettingsPropertiesArgs> getTagSettings() {
         return this.tagSettings == null ? Input.empty() : this.tagSettings;
@@ -121,7 +121,6 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
             this.tagSettings = Input.ofNullable(tagSettings);
             return this;
         }
-
         public AzureQueryPropertiesArgs build() {
             return new AzureQueryPropertiesArgs(locations, scope, tagSettings);
         }

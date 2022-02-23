@@ -141,7 +141,6 @@ public final class GetPrivateDnsZoneGroupResult {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public GetPrivateDnsZoneGroupResult build() {
             return new GetPrivateDnsZoneGroupResult(etag, id, name, privateDnsZoneConfigs, provisioningState);
         }

@@ -142,7 +142,6 @@ public final class MySqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MySqlConnectionInfoResponse build() {
             return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
         }

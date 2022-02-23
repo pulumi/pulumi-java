@@ -176,7 +176,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
             this.versions = versions;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance(availability, latency, locations, methods, versions);
         }

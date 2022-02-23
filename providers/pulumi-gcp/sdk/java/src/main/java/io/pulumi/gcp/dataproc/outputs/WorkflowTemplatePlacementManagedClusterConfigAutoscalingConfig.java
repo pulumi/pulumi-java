@@ -54,7 +54,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             this.policy = policy;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig(policy);
         }

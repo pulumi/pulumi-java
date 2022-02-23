@@ -141,7 +141,6 @@ public final class WeeklyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public WeeklyScheduleResponse build() {
             return new WeeklyScheduleResponse(day, hour, minute, snapshotsToKeep, usedBytes);
         }

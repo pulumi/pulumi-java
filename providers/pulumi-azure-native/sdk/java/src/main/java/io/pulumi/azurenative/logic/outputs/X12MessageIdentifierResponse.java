@@ -52,7 +52,6 @@ public final class X12MessageIdentifierResponse {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public X12MessageIdentifierResponse build() {
             return new X12MessageIdentifierResponse(messageId);
         }

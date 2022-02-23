@@ -21,7 +21,7 @@ public final class WebTypeAppEngingIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+        private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -33,14 +33,14 @@ public final class WebTypeAppEngingIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<WebTypeAppEngingIamBindingConditionArgs> condition;
+        private final @Nullable Input<WebTypeAppEngingIamBindingConditionArgs> condition;
 
     public Input<WebTypeAppEngingIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class WebTypeAppEngingIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class WebTypeAppEngingIamBindingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -169,7 +169,6 @@ public final class WebTypeAppEngingIamBindingArgs extends io.pulumi.resources.Re
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public WebTypeAppEngingIamBindingArgs build() {
             return new WebTypeAppEngingIamBindingArgs(appId, condition, members, project, role);
         }

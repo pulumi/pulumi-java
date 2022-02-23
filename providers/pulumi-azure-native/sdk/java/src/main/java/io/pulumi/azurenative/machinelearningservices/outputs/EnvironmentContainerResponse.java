@@ -98,7 +98,6 @@ public final class EnvironmentContainerResponse {
             this.tags = tags;
             return this;
         }
-
         public EnvironmentContainerResponse build() {
             return new EnvironmentContainerResponse(description, properties, tags);
         }

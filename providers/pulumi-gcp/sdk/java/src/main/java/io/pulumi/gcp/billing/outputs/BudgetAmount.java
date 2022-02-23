@@ -89,7 +89,6 @@ public final class BudgetAmount {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
-
         public BudgetAmount build() {
             return new BudgetAmount(lastPeriodAmount, specifiedAmount);
         }

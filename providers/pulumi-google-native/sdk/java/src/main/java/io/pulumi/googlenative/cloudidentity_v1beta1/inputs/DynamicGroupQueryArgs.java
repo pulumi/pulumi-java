@@ -24,14 +24,14 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
     }
 
     @InputImport(name="resourceType")
-    private final @Nullable Input<DynamicGroupQueryResourceType> resourceType;
+      private final @Nullable Input<DynamicGroupQueryResourceType> resourceType;
 
     public Input<DynamicGroupQueryResourceType> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -90,7 +90,6 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public DynamicGroupQueryArgs build() {
             return new DynamicGroupQueryArgs(query, resourceType);
         }

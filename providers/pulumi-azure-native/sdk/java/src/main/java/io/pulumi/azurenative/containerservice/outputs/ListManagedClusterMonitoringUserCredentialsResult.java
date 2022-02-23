@@ -53,7 +53,6 @@ public final class ListManagedClusterMonitoringUserCredentialsResult {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-
         public ListManagedClusterMonitoringUserCredentialsResult build() {
             return new ListManagedClusterMonitoringUserCredentialsResult(kubeconfigs);
         }

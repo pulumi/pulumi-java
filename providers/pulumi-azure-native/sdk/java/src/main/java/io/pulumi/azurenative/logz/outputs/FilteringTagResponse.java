@@ -97,7 +97,6 @@ public final class FilteringTagResponse {
             this.value = value;
             return this;
         }
-
         public FilteringTagResponse build() {
             return new FilteringTagResponse(action, name, value);
         }

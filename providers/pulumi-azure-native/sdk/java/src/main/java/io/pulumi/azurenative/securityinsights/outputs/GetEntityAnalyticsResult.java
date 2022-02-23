@@ -185,7 +185,6 @@ public final class GetEntityAnalyticsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEntityAnalyticsResult build() {
             return new GetEntityAnalyticsResult(etag, id, isEnabled, kind, name, systemData, type);
         }

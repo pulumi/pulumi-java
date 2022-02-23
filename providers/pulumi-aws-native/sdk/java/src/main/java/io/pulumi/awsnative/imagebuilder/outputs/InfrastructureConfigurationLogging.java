@@ -46,7 +46,6 @@ public final class InfrastructureConfigurationLogging {
             this.s3Logs = s3Logs;
             return this;
         }
-
         public InfrastructureConfigurationLogging build() {
             return new InfrastructureConfigurationLogging(s3Logs);
         }

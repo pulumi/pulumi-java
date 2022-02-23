@@ -14,42 +14,42 @@ public final class GetHealthCheckTcpHealthCheck extends io.pulumi.resources.Invo
     public static final GetHealthCheckTcpHealthCheck Empty = new GetHealthCheckTcpHealthCheck();
 
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
     }
 
     @InputImport(name="portName", required=true)
-    private final String portName;
+        private final String portName;
 
     public String getPortName() {
         return this.portName;
     }
 
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+        private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
     }
 
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+        private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
     }
 
     @InputImport(name="request", required=true)
-    private final String request;
+        private final String request;
 
     public String getRequest() {
         return this.request;
     }
 
     @InputImport(name="response", required=true)
-    private final String response;
+        private final String response;
 
     public String getResponse() {
         return this.response;
@@ -138,7 +138,6 @@ public final class GetHealthCheckTcpHealthCheck extends io.pulumi.resources.Invo
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckTcpHealthCheck build() {
             return new GetHealthCheckTcpHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

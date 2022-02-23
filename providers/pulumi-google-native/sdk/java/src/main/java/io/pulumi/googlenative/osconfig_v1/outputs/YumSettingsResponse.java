@@ -118,7 +118,6 @@ public final class YumSettingsResponse {
             this.security = Objects.requireNonNull(security);
             return this;
         }
-
         public YumSettingsResponse build() {
             return new YumSettingsResponse(excludes, exclusivePackages, minimal, security);
         }

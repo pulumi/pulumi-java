@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * 
      */
     @InputImport(name="condition", required=true)
-    private final String condition;
+      private final String condition;
 
     public String getCondition() {
         return this.condition;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * 
      */
     @InputImport(name="versionVariants", required=true)
-    private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+      private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse getVersionVariants() {
         return this.versionVariants;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(condition, versionVariants);
         }

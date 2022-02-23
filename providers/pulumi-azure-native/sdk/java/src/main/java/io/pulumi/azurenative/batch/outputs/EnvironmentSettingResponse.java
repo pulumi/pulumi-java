@@ -60,7 +60,6 @@ public final class EnvironmentSettingResponse {
             this.value = value;
             return this;
         }
-
         public EnvironmentSettingResponse build() {
             return new EnvironmentSettingResponse(name, value);
         }

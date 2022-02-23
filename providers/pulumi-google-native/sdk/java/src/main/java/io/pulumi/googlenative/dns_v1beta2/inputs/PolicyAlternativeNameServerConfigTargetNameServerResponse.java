@@ -17,7 +17,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @InputImport(name="forwardingPath", required=true)
-    private final String forwardingPath;
+      private final String forwardingPath;
 
     public String getForwardingPath() {
         return this.forwardingPath;
@@ -28,7 +28,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @InputImport(name="ipv4Address", required=true)
-    private final String ipv4Address;
+      private final String ipv4Address;
 
     public String getIpv4Address() {
         return this.ipv4Address;
@@ -39,14 +39,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @InputImport(name="ipv6Address", required=true)
-    private final String ipv6Address;
+      private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -115,7 +115,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, ipv6Address, kind);
         }

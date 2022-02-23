@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
      * 
      */
     @InputImport(name="segments", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
+      private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
 
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> getSegments() {
         return this.segments;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(segments);
         }

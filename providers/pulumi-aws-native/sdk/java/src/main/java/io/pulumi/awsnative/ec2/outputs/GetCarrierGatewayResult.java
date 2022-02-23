@@ -120,7 +120,6 @@ public final class GetCarrierGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetCarrierGatewayResult build() {
             return new GetCarrierGatewayResult(carrierGatewayId, ownerId, state, tags);
         }

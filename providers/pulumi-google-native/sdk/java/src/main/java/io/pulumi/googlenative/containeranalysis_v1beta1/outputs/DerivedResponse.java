@@ -120,7 +120,6 @@ public final class DerivedResponse {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }
-
         public DerivedResponse build() {
             return new DerivedResponse(baseResourceUrl, distance, fingerprint, layerInfo);
         }

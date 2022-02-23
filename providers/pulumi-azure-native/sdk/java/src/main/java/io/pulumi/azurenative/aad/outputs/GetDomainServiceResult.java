@@ -506,7 +506,6 @@ public final class GetDomainServiceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDomainServiceResult build() {
             return new GetDomainServiceResult(deploymentId, domainConfigurationType, domainName, domainSecuritySettings, etag, filteredSync, id, ldapsSettings, location, migrationProperties, name, notificationSettings, provisioningState, replicaSets, resourceForestSettings, sku, syncOwner, systemData, tags, tenantId, type, version);
         }

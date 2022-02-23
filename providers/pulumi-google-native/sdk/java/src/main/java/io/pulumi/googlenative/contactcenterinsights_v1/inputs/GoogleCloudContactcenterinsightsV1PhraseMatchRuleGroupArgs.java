@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * 
      */
     @InputImport(name="phraseMatchRules")
-    private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
+      private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
     public Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
         return this.phraseMatchRules == null ? Input.empty() : this.phraseMatchRules;
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
+      private final Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
     public Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {
         return this.type;
@@ -95,7 +95,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs(phraseMatchRules, type);
         }

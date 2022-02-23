@@ -159,7 +159,6 @@ public final class DeprecationStatusResponse {
             this.stateOverride = Objects.requireNonNull(stateOverride);
             return this;
         }
-
         public DeprecationStatusResponse build() {
             return new DeprecationStatusResponse(deleted, deprecated, obsolete, replacement, state, stateOverride);
         }

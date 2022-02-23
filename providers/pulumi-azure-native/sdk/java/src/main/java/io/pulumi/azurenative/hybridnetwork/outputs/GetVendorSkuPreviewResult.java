@@ -95,7 +95,6 @@ public final class GetVendorSkuPreviewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVendorSkuPreviewResult build() {
             return new GetVendorSkuPreviewResult(id, name, type);
         }

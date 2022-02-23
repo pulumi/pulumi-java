@@ -201,7 +201,6 @@ public final class FlexibleAppVersionHandler {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public FlexibleAppVersionHandler build() {
             return new FlexibleAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

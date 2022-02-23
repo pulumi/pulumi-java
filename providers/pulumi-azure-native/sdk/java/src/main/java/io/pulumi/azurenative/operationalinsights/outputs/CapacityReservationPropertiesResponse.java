@@ -75,7 +75,6 @@ public final class CapacityReservationPropertiesResponse {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public CapacityReservationPropertiesResponse build() {
             return new CapacityReservationPropertiesResponse(lastSkuUpdate, minCapacity);
         }

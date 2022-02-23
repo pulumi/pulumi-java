@@ -139,7 +139,6 @@ public final class JobErrorResponse {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public JobErrorResponse build() {
             return new JobErrorResponse(category, code, details, message, retry);
         }

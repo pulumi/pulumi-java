@@ -142,7 +142,6 @@ public final class OsPolicyAssignmentOsPolicy {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicy build() {
             return new OsPolicyAssignmentOsPolicy(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }

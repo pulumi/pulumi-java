@@ -46,7 +46,6 @@ public final class WebACLBlockAction {
             this.customResponse = customResponse;
             return this;
         }
-
         public WebACLBlockAction build() {
             return new WebACLBlockAction(customResponse);
         }

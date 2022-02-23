@@ -22,7 +22,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgp")
-    private final @Nullable Input<RouterBgpArgs> bgp;
+        private final @Nullable Input<RouterBgpArgs> bgp;
 
     public Input<RouterBgpArgs> getBgp() {
         return this.bgp == null ? Input.empty() : this.bgp;
@@ -33,7 +33,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedInterconnectRouter")
-    private final @Nullable Input<Boolean> encryptedInterconnectRouter;
+        private final @Nullable Input<Boolean> encryptedInterconnectRouter;
 
     public Input<Boolean> getEncryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
@@ -62,7 +62,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -85,7 +85,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -230,7 +230,6 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public RouterArgs build() {
             return new RouterArgs(bgp, description, encryptedInterconnectRouter, name, network, project, region);
         }

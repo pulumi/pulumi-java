@@ -141,7 +141,6 @@ public final class GetFilterResult {
             this.name = name;
             return this;
         }
-
         public GetFilterResult build() {
             return new GetFilterResult(arn, description, filterAction, filterCriteria, name);
         }

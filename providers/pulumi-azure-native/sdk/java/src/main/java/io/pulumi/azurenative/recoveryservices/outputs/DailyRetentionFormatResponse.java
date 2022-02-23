@@ -54,7 +54,6 @@ public final class DailyRetentionFormatResponse {
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-
         public DailyRetentionFormatResponse build() {
             return new DailyRetentionFormatResponse(daysOfTheMonth);
         }

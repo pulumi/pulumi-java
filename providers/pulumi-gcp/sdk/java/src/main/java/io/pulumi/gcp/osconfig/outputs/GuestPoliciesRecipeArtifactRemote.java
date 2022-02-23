@@ -80,7 +80,6 @@ public final class GuestPoliciesRecipeArtifactRemote {
             this.uri = uri;
             return this;
         }
-
         public GuestPoliciesRecipeArtifactRemote build() {
             return new GuestPoliciesRecipeArtifactRemote(checkSum, uri);
         }

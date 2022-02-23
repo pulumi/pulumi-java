@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse(key, synonyms);
         }

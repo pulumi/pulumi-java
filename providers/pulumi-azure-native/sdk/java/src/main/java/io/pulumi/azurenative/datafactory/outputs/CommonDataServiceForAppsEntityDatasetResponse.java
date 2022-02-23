@@ -231,7 +231,6 @@ public final class CommonDataServiceForAppsEntityDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CommonDataServiceForAppsEntityDatasetResponse build() {
             return new CommonDataServiceForAppsEntityDatasetResponse(annotations, description, entityName, folder, linkedServiceName, parameters, schema, structure, type);
         }

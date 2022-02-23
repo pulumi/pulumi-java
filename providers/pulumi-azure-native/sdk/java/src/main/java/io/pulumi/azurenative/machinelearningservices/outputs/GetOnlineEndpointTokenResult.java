@@ -119,7 +119,6 @@ public final class GetOnlineEndpointTokenResult {
             this.tokenType = tokenType;
             return this;
         }
-
         public GetOnlineEndpointTokenResult build() {
             return new GetOnlineEndpointTokenResult(accessToken, expiryTimeUtc, refreshAfterTimeUtc, tokenType);
         }

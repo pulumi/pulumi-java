@@ -98,7 +98,6 @@ public final class GetQueueIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetQueueIamPolicyResult build() {
             return new GetQueueIamPolicyResult(bindings, etag, version);
         }

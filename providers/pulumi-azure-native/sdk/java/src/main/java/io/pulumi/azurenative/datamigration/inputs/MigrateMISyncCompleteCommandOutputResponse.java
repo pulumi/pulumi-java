@@ -24,7 +24,7 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable List<ReportableExceptionResponse> errors;
+        private final @Nullable List<ReportableExceptionResponse> errors;
 
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -62,7 +62,6 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.
             this.errors = errors;
             return this;
         }
-
         public MigrateMISyncCompleteCommandOutputResponse build() {
             return new MigrateMISyncCompleteCommandOutputResponse(errors);
         }

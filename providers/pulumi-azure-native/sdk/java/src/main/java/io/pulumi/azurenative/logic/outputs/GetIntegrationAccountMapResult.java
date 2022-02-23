@@ -311,7 +311,6 @@ public final class GetIntegrationAccountMapResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountMapResult build() {
             return new GetIntegrationAccountMapResult(changedTime, content, contentLink, contentType, createdTime, id, location, mapType, metadata, name, parametersSchema, tags, type);
         }

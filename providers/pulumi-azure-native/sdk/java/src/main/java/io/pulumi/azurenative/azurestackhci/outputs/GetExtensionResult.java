@@ -416,7 +416,6 @@ public final class GetExtensionResult {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(aggregateState, autoUpgradeMinorVersion, createdAt, createdBy, createdByType, forceUpdateTag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeExtensionDetails, protectedSettings, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

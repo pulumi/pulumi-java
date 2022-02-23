@@ -74,7 +74,6 @@ public final class GetOriginRequestPolicyResult {
             this.originRequestPolicyConfig = originRequestPolicyConfig;
             return this;
         }
-
         public GetOriginRequestPolicyResult build() {
             return new GetOriginRequestPolicyResult(id, lastModifiedTime, originRequestPolicyConfig);
         }

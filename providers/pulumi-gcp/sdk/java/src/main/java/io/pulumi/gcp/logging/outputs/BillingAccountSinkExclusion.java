@@ -121,7 +121,6 @@ public final class BillingAccountSinkExclusion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BillingAccountSinkExclusion build() {
             return new BillingAccountSinkExclusion(description, disabled, filter, name);
         }

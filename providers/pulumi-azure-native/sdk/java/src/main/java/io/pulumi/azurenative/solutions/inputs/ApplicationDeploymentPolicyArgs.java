@@ -24,7 +24,7 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deploymentMode", required=true)
-    private final Input<Either<String,DeploymentMode>> deploymentMode;
+        private final Input<Either<String,DeploymentMode>> deploymentMode;
 
     public Input<Either<String,DeploymentMode>> getDeploymentMode() {
         return this.deploymentMode;
@@ -67,7 +67,6 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
             this.deploymentMode = Input.of(Objects.requireNonNull(deploymentMode));
             return this;
         }
-
         public ApplicationDeploymentPolicyArgs build() {
             return new ApplicationDeploymentPolicyArgs(deploymentMode);
         }

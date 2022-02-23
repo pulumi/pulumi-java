@@ -17,7 +17,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -28,7 +28,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="kmsKeyServiceAccount", required=true)
-    private final String kmsKeyServiceAccount;
+      private final String kmsKeyServiceAccount;
 
     public String getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount;
@@ -39,7 +39,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rawKey", required=true)
-    private final String rawKey;
+      private final String rawKey;
 
     public String getRawKey() {
         return this.rawKey;
@@ -50,7 +50,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rsaEncryptedKey", required=true)
-    private final String rsaEncryptedKey;
+      private final String rsaEncryptedKey;
 
     public String getRsaEncryptedKey() {
         return this.rsaEncryptedKey;
@@ -61,7 +61,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sha256", required=true)
-    private final String sha256;
+      private final String sha256;
 
     public String getSha256() {
         return this.sha256;
@@ -140,7 +140,6 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }
-
         public CustomerEncryptionKeyResponse build() {
             return new CustomerEncryptionKeyResponse(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey, sha256);
         }

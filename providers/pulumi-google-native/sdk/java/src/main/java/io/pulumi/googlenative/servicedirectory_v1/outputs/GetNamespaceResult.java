@@ -75,7 +75,6 @@ public final class GetNamespaceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(labels, name);
         }

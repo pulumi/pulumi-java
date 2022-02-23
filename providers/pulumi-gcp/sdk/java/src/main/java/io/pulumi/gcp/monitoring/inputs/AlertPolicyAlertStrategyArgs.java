@@ -20,7 +20,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoClose")
-    private final @Nullable Input<String> autoClose;
+        private final @Nullable Input<String> autoClose;
 
     public Input<String> getAutoClose() {
         return this.autoClose == null ? Input.empty() : this.autoClose;
@@ -33,7 +33,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationRateLimit")
-    private final @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
+        private final @Nullable Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
     public Input<AlertPolicyAlertStrategyNotificationRateLimitArgs> getNotificationRateLimit() {
         return this.notificationRateLimit == null ? Input.empty() : this.notificationRateLimit;
@@ -92,7 +92,6 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
             this.notificationRateLimit = Input.ofNullable(notificationRateLimit);
             return this;
         }
-
         public AlertPolicyAlertStrategyArgs build() {
             return new AlertPolicyAlertStrategyArgs(autoClose, notificationRateLimit);
         }

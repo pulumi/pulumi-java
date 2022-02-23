@@ -100,7 +100,6 @@ public final class GalleryImageVersionStorageProfileResponse {
             this.source = source;
             return this;
         }
-
         public GalleryImageVersionStorageProfileResponse build() {
             return new GalleryImageVersionStorageProfileResponse(dataDiskImages, osDiskImage, source);
         }

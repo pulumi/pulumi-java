@@ -141,7 +141,6 @@ public final class DomainMappingStatusResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DomainMappingStatusResponse build() {
             return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }

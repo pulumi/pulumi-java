@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2TriggerResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public GooglePrivacyDlpV2TriggerResponse build() {
             return new GooglePrivacyDlpV2TriggerResponse(manual, schedule);
         }

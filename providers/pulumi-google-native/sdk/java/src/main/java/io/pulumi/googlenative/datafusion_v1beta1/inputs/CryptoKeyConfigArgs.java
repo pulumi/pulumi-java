@@ -23,7 +23,7 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyReference")
-    private final @Nullable Input<String> keyReference;
+      private final @Nullable Input<String> keyReference;
 
     public Input<String> getKeyReference() {
         return this.keyReference == null ? Input.empty() : this.keyReference;
@@ -66,7 +66,6 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.keyReference = Input.ofNullable(keyReference);
             return this;
         }
-
         public CryptoKeyConfigArgs build() {
             return new CryptoKeyConfigArgs(keyReference);
         }

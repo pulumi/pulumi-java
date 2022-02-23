@@ -24,7 +24,7 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<String>> images;
+        private final @Nullable Input<List<String>> images;
 
     public Input<List<String>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -40,7 +40,7 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objects")
-    private final @Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects;
+        private final @Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects;
 
     public Input<TriggerBuildArtifactsObjectsGetArgs> getObjects() {
         return this.objects == null ? Input.empty() : this.objects;
@@ -99,7 +99,6 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
             this.objects = Input.ofNullable(objects);
             return this;
         }
-
         public TriggerBuildArtifactsGetArgs build() {
             return new TriggerBuildArtifactsGetArgs(images, objects);
         }

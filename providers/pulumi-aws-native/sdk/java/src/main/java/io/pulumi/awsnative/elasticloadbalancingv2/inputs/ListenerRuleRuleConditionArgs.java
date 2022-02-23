@@ -22,56 +22,56 @@ public final class ListenerRuleRuleConditionArgs extends io.pulumi.resources.Res
     public static final ListenerRuleRuleConditionArgs Empty = new ListenerRuleRuleConditionArgs();
 
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
     }
 
     @InputImport(name="hostHeaderConfig")
-    private final @Nullable Input<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig;
+        private final @Nullable Input<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig;
 
     public Input<ListenerRuleHostHeaderConfigArgs> getHostHeaderConfig() {
         return this.hostHeaderConfig == null ? Input.empty() : this.hostHeaderConfig;
     }
 
     @InputImport(name="httpHeaderConfig")
-    private final @Nullable Input<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig;
+        private final @Nullable Input<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig;
 
     public Input<ListenerRuleHttpHeaderConfigArgs> getHttpHeaderConfig() {
         return this.httpHeaderConfig == null ? Input.empty() : this.httpHeaderConfig;
     }
 
     @InputImport(name="httpRequestMethodConfig")
-    private final @Nullable Input<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig;
+        private final @Nullable Input<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig;
 
     public Input<ListenerRuleHttpRequestMethodConfigArgs> getHttpRequestMethodConfig() {
         return this.httpRequestMethodConfig == null ? Input.empty() : this.httpRequestMethodConfig;
     }
 
     @InputImport(name="pathPatternConfig")
-    private final @Nullable Input<ListenerRulePathPatternConfigArgs> pathPatternConfig;
+        private final @Nullable Input<ListenerRulePathPatternConfigArgs> pathPatternConfig;
 
     public Input<ListenerRulePathPatternConfigArgs> getPathPatternConfig() {
         return this.pathPatternConfig == null ? Input.empty() : this.pathPatternConfig;
     }
 
     @InputImport(name="queryStringConfig")
-    private final @Nullable Input<ListenerRuleQueryStringConfigArgs> queryStringConfig;
+        private final @Nullable Input<ListenerRuleQueryStringConfigArgs> queryStringConfig;
 
     public Input<ListenerRuleQueryStringConfigArgs> getQueryStringConfig() {
         return this.queryStringConfig == null ? Input.empty() : this.queryStringConfig;
     }
 
     @InputImport(name="sourceIpConfig")
-    private final @Nullable Input<ListenerRuleSourceIpConfigArgs> sourceIpConfig;
+        private final @Nullable Input<ListenerRuleSourceIpConfigArgs> sourceIpConfig;
 
     public Input<ListenerRuleSourceIpConfigArgs> getSourceIpConfig() {
         return this.sourceIpConfig == null ? Input.empty() : this.sourceIpConfig;
     }
 
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+        private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -220,7 +220,6 @@ public final class ListenerRuleRuleConditionArgs extends io.pulumi.resources.Res
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ListenerRuleRuleConditionArgs build() {
             return new ListenerRuleRuleConditionArgs(field, hostHeaderConfig, httpHeaderConfig, httpRequestMethodConfig, pathPatternConfig, queryStringConfig, sourceIpConfig, values);
         }

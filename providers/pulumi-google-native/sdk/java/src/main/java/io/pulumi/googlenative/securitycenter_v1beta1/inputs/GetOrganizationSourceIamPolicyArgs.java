@@ -13,14 +13,14 @@ public final class GetOrganizationSourceIamPolicyArgs extends io.pulumi.resource
     public static final GetOrganizationSourceIamPolicyArgs Empty = new GetOrganizationSourceIamPolicyArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -69,7 +69,6 @@ public final class GetOrganizationSourceIamPolicyArgs extends io.pulumi.resource
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public GetOrganizationSourceIamPolicyArgs build() {
             return new GetOrganizationSourceIamPolicyArgs(organizationId, sourceId);
         }

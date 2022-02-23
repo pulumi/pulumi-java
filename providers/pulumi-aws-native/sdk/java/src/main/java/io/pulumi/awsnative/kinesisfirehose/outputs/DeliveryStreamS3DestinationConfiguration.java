@@ -142,7 +142,6 @@ public final class DeliveryStreamS3DestinationConfiguration {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public DeliveryStreamS3DestinationConfiguration build() {
             return new DeliveryStreamS3DestinationConfiguration(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, encryptionConfiguration, errorOutputPrefix, prefix, roleARN);
         }

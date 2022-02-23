@@ -23,7 +23,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+        private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="current", required=true)
-    private final Input<MetricValueStatusArgs> current;
+        private final Input<MetricValueStatusArgs> current;
 
     public Input<MetricValueStatusArgs> getCurrent() {
         return this.current;
@@ -45,7 +45,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,6 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ContainerResourceMetricStatusArgs build() {
             return new ContainerResourceMetricStatusArgs(container, current, name);
         }

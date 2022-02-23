@@ -142,7 +142,6 @@ public final class FacebookChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public FacebookChannelResponse build() {
             return new FacebookChannelResponse(channelName, etag, location, properties, provisioningState);
         }

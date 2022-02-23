@@ -139,7 +139,6 @@ public final class PriorityLevelConfigurationCondition {
             this.type = type;
             return this;
         }
-
         public PriorityLevelConfigurationCondition build() {
             return new PriorityLevelConfigurationCondition(lastTransitionTime, message, reason, status, type);
         }

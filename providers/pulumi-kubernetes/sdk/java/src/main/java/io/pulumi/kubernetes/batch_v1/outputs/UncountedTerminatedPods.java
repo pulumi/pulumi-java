@@ -76,7 +76,6 @@ public final class UncountedTerminatedPods {
             this.succeeded = succeeded;
             return this;
         }
-
         public UncountedTerminatedPods build() {
             return new UncountedTerminatedPods(failed, succeeded);
         }

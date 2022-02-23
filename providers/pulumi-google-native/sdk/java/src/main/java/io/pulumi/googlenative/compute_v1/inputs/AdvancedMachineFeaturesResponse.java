@@ -22,7 +22,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enableNestedVirtualization", required=true)
-    private final Boolean enableNestedVirtualization;
+      private final Boolean enableNestedVirtualization;
 
     public Boolean getEnableNestedVirtualization() {
         return this.enableNestedVirtualization;
@@ -33,7 +33,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enableUefiNetworking", required=true)
-    private final Boolean enableUefiNetworking;
+      private final Boolean enableUefiNetworking;
 
     public Boolean getEnableUefiNetworking() {
         return this.enableUefiNetworking;
@@ -44,7 +44,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="threadsPerCore", required=true)
-    private final Integer threadsPerCore;
+      private final Integer threadsPerCore;
 
     public Integer getThreadsPerCore() {
         return this.threadsPerCore;
@@ -103,7 +103,6 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
         }

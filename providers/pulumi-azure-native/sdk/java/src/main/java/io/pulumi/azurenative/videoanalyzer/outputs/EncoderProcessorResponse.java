@@ -123,7 +123,6 @@ public final class EncoderProcessorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderProcessorResponse build() {
             return new EncoderProcessorResponse(inputs, name, preset, type);
         }

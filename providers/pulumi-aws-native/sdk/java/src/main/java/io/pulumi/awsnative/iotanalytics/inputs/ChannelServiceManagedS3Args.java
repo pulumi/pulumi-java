@@ -30,7 +30,6 @@ public final class ChannelServiceManagedS3Args extends io.pulumi.resources.Resou
         public Builder(ChannelServiceManagedS3Args defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ChannelServiceManagedS3Args build() {
             return new ChannelServiceManagedS3Args();
         }

@@ -120,7 +120,6 @@ public final class GetCaPoolIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetCaPoolIamPolicyResult build() {
             return new GetCaPoolIamPolicyResult(auditConfigs, bindings, etag, version);
         }

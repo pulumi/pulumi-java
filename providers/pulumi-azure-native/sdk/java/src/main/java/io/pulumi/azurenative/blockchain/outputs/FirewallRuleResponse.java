@@ -97,7 +97,6 @@ public final class FirewallRuleResponse {
             this.startIpAddress = startIpAddress;
             return this;
         }
-
         public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, ruleName, startIpAddress);
         }

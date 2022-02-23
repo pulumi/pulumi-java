@@ -116,7 +116,6 @@ public final class RelationshipOccurrenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RelationshipOccurrenceResponse build() {
             return new RelationshipOccurrenceResponse(comment, source, target, type);
         }

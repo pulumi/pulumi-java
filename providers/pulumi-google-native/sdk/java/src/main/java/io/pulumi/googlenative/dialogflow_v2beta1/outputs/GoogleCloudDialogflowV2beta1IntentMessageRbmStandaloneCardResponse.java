@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
             this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(cardContent, cardOrientation, thumbnailImageAlignment);
         }

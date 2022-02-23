@@ -154,7 +154,6 @@ public final class PostgresInstancePropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PostgresInstancePropertiesResponse build() {
             return new PostgresInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate, provisioningState);
         }

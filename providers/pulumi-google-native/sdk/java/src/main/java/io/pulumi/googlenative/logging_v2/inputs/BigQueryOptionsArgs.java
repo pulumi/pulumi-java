@@ -23,7 +23,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usePartitionedTables")
-    private final @Nullable Input<Boolean> usePartitionedTables;
+      private final @Nullable Input<Boolean> usePartitionedTables;
 
     public Input<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables == null ? Input.empty() : this.usePartitionedTables;
@@ -66,7 +66,6 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.usePartitionedTables = Input.ofNullable(usePartitionedTables);
             return this;
         }
-
         public BigQueryOptionsArgs build() {
             return new BigQueryOptionsArgs(usePartitionedTables);
         }

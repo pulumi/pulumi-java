@@ -89,7 +89,6 @@ public final class UserPhoneConfig {
             this.phoneType = Objects.requireNonNull(phoneType);
             return this;
         }
-
         public UserPhoneConfig build() {
             return new UserPhoneConfig(afterContactWorkTimeLimit, autoAccept, deskPhoneNumber, phoneType);
         }

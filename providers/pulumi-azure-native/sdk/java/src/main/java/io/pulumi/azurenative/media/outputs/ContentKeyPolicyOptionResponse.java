@@ -127,7 +127,6 @@ public final class ContentKeyPolicyOptionResponse {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }
-
         public ContentKeyPolicyOptionResponse build() {
             return new ContentKeyPolicyOptionResponse(configuration, name, policyOptionId, restriction);
         }

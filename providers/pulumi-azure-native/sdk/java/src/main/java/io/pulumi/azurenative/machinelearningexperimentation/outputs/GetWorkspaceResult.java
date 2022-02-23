@@ -266,7 +266,6 @@ public final class GetWorkspaceResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(accountId, creationDate, description, friendlyName, id, location, name, provisioningState, tags, type, workspaceId);
         }

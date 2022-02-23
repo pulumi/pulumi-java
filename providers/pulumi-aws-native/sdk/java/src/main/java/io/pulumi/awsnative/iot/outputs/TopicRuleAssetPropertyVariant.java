@@ -86,7 +86,6 @@ public final class TopicRuleAssetPropertyVariant {
             this.stringValue = stringValue;
             return this;
         }
-
         public TopicRuleAssetPropertyVariant build() {
             return new TopicRuleAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }

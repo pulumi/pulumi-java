@@ -223,7 +223,6 @@ public final class GetSqlPoolWorkloadClassifierResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolWorkloadClassifierResult build() {
             return new GetSqlPoolWorkloadClassifierResult(context, endTime, id, importance, label, memberName, name, startTime, type);
         }

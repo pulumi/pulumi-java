@@ -53,7 +53,6 @@ public final class V2AndroidKeyRestrictionsResponse {
             this.allowedApplications = Objects.requireNonNull(allowedApplications);
             return this;
         }
-
         public V2AndroidKeyRestrictionsResponse build() {
             return new V2AndroidKeyRestrictionsResponse(allowedApplications);
         }

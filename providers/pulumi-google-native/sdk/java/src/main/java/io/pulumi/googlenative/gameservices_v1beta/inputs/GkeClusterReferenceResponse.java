@@ -21,7 +21,7 @@ public final class GkeClusterReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+      private final String cluster;
 
     public String getCluster() {
         return this.cluster;
@@ -59,7 +59,6 @@ public final class GkeClusterReferenceResponse extends io.pulumi.resources.Invok
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GkeClusterReferenceResponse build() {
             return new GkeClusterReferenceResponse(cluster);
         }

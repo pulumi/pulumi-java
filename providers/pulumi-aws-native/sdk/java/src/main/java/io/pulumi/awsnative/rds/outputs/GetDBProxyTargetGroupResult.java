@@ -96,7 +96,6 @@ public final class GetDBProxyTargetGroupResult {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public GetDBProxyTargetGroupResult build() {
             return new GetDBProxyTargetGroupResult(connectionPoolConfigurationInfo, dBClusterIdentifiers, dBInstanceIdentifiers, targetGroupArn);
         }

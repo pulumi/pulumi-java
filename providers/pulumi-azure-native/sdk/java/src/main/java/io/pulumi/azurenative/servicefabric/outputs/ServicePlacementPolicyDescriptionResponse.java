@@ -52,7 +52,6 @@ public final class ServicePlacementPolicyDescriptionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServicePlacementPolicyDescriptionResponse build() {
             return new ServicePlacementPolicyDescriptionResponse(type);
         }

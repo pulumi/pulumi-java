@@ -22,7 +22,7 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dispatchRules")
-    private final @Nullable Input<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
+        private final @Nullable Input<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
 
     public Input<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> getDispatchRules() {
         return this.dispatchRules == null ? Input.empty() : this.dispatchRules;
@@ -34,7 +34,7 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -93,7 +93,6 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ApplicationUrlDispatchRulesState build() {
             return new ApplicationUrlDispatchRulesState(dispatchRules, project);
         }

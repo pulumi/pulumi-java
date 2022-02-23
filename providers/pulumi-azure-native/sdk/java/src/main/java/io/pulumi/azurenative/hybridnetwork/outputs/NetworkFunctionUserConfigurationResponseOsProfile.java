@@ -54,7 +54,6 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile {
             this.customData = customData;
             return this;
         }
-
         public NetworkFunctionUserConfigurationResponseOsProfile build() {
             return new NetworkFunctionUserConfigurationResponseOsProfile(customData);
         }

@@ -246,7 +246,6 @@ public final class GetAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(applicationId, displayName, id, location, name, sku, subdomain, tags, template, type);
         }

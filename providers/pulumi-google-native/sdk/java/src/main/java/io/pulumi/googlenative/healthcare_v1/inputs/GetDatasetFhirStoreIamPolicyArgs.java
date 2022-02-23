@@ -15,35 +15,35 @@ public final class GetDatasetFhirStoreIamPolicyArgs extends io.pulumi.resources.
     public static final GetDatasetFhirStoreIamPolicyArgs Empty = new GetDatasetFhirStoreIamPolicyArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="fhirStoreId", required=true)
-    private final String fhirStoreId;
+      private final String fhirStoreId;
 
     public String getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetDatasetFhirStoreIamPolicyArgs extends io.pulumi.resources.
             this.project = project;
             return this;
         }
-
         public GetDatasetFhirStoreIamPolicyArgs build() {
             return new GetDatasetFhirStoreIamPolicyArgs(datasetId, fhirStoreId, location, optionsRequestedPolicyVersion, project);
         }

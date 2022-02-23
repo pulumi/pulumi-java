@@ -142,7 +142,6 @@ public final class VolumeAttachment {
             this.status = status;
             return this;
         }
-
         public VolumeAttachment build() {
             return new VolumeAttachment(apiVersion, kind, metadata, spec, status);
         }

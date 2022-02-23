@@ -28,7 +28,7 @@ public final class WebPubSubNetworkACLsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable Input<Either<String,ACLAction>> defaultAction;
+        private final @Nullable Input<Either<String,ACLAction>> defaultAction;
 
     public Input<Either<String,ACLAction>> getDefaultAction() {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
@@ -39,7 +39,7 @@ public final class WebPubSubNetworkACLsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateEndpoints")
-    private final @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints;
+        private final @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints;
 
     public Input<List<PrivateEndpointACLArgs>> getPrivateEndpoints() {
         return this.privateEndpoints == null ? Input.empty() : this.privateEndpoints;
@@ -50,7 +50,7 @@ public final class WebPubSubNetworkACLsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicNetwork")
-    private final @Nullable Input<NetworkACLArgs> publicNetwork;
+        private final @Nullable Input<NetworkACLArgs> publicNetwork;
 
     public Input<NetworkACLArgs> getPublicNetwork() {
         return this.publicNetwork == null ? Input.empty() : this.publicNetwork;
@@ -124,7 +124,6 @@ public final class WebPubSubNetworkACLsArgs extends io.pulumi.resources.Resource
             this.publicNetwork = Input.ofNullable(publicNetwork);
             return this;
         }
-
         public WebPubSubNetworkACLsArgs build() {
             return new WebPubSubNetworkACLsArgs(defaultAction, privateEndpoints, publicNetwork);
         }

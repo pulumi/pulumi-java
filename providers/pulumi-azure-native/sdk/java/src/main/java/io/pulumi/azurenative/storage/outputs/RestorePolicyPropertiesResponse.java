@@ -120,7 +120,6 @@ public final class RestorePolicyPropertiesResponse {
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
         }
-
         public RestorePolicyPropertiesResponse build() {
             return new RestorePolicyPropertiesResponse(days, enabled, lastEnabledTime, minRestoreTime);
         }

@@ -23,7 +23,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="humanReadableName")
-    private final @Nullable Input<String> humanReadableName;
+      private final @Nullable Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName == null ? Input.empty() : this.humanReadableName;
@@ -66,7 +66,6 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
             this.humanReadableName = Input.ofNullable(humanReadableName);
             return this;
         }
-
         public AttestationAuthorityHintArgs build() {
             return new AttestationAuthorityHintArgs(humanReadableName);
         }

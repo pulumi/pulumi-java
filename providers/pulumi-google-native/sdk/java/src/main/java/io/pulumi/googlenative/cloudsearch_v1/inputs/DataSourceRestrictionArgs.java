@@ -25,7 +25,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterOptions")
-    private final @Nullable Input<List<FilterOptionsArgs>> filterOptions;
+      private final @Nullable Input<List<FilterOptionsArgs>> filterOptions;
 
     public Input<List<FilterOptionsArgs>> getFilterOptions() {
         return this.filterOptions == null ? Input.empty() : this.filterOptions;
@@ -36,7 +36,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<SourceArgs> source;
+      private final @Nullable Input<SourceArgs> source;
 
     public Input<SourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -95,7 +95,6 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public DataSourceRestrictionArgs build() {
             return new DataSourceRestrictionArgs(filterOptions, source);
         }

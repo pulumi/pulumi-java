@@ -76,7 +76,6 @@ public final class ListAccountKeysResult {
             this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(atlasKafkaPrimaryEndpoint, atlasKafkaSecondaryEndpoint);
         }

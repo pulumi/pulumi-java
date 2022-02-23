@@ -58,7 +58,6 @@ public final class TopicRuleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTag build() {
             return new TopicRuleTag(key, value);
         }

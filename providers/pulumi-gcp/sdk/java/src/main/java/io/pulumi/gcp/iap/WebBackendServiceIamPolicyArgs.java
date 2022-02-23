@@ -20,7 +20,7 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,7 +32,7 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -43,7 +43,7 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="webBackendService", required=true)
-    private final Input<String> webBackendService;
+        private final Input<String> webBackendService;
 
     public Input<String> getWebBackendService() {
         return this.webBackendService;
@@ -117,7 +117,6 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
             this.webBackendService = Input.of(Objects.requireNonNull(webBackendService));
             return this;
         }
-
         public WebBackendServiceIamPolicyArgs build() {
             return new WebBackendServiceIamPolicyArgs(policyData, project, webBackendService);
         }

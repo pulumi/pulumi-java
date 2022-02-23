@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
      * 
      */
     @InputImport(name="valueFrequencyHistogramBuckets", required=true)
-    private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
+      private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
             this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsResultResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsResultResponse(valueFrequencyHistogramBuckets);
         }

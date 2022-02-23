@@ -132,7 +132,6 @@ public final class FlexibleAppVersionDeployment {
             this.zip = zip;
             return this;
         }
-
         public FlexibleAppVersionDeployment build() {
             return new FlexibleAppVersionDeployment(cloudBuildOptions, container, files, zip);
         }

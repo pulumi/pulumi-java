@@ -99,7 +99,6 @@ public final class BasicAuthenticationResponse {
             this.username = username;
             return this;
         }
-
         public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, type, username);
         }

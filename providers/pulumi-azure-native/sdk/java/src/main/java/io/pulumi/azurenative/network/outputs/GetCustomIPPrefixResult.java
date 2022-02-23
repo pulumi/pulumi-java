@@ -311,7 +311,6 @@ public final class GetCustomIPPrefixResult {
             this.zones = zones;
             return this;
         }
-
         public GetCustomIPPrefixResult build() {
             return new GetCustomIPPrefixResult(cidr, commissionedState, etag, extendedLocation, id, location, name, provisioningState, publicIpPrefixes, resourceGuid, tags, type, zones);
         }

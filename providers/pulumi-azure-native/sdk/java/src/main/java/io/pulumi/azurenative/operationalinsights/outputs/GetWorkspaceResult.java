@@ -420,7 +420,6 @@ public final class GetWorkspaceResult {
             this.workspaceCapping = workspaceCapping;
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(createdDate, customerId, eTag, features, forceCmkForQuery, id, location, modifiedDate, name, privateLinkScopedResources, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, retentionInDays, sku, tags, type, workspaceCapping);
         }

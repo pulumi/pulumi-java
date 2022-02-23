@@ -180,7 +180,6 @@ public final class ComputePolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ComputePolicyResponse build() {
             return new ComputePolicyResponse(id, maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType, type);
         }

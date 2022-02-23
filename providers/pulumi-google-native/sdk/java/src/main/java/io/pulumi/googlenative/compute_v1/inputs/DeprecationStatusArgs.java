@@ -24,7 +24,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deleted")
-    private final @Nullable Input<String> deleted;
+      private final @Nullable Input<String> deleted;
 
     public Input<String> getDeleted() {
         return this.deleted == null ? Input.empty() : this.deleted;
@@ -35,7 +35,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deprecated")
-    private final @Nullable Input<String> deprecated;
+      private final @Nullable Input<String> deprecated;
 
     public Input<String> getDeprecated() {
         return this.deprecated == null ? Input.empty() : this.deprecated;
@@ -46,7 +46,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="obsolete")
-    private final @Nullable Input<String> obsolete;
+      private final @Nullable Input<String> obsolete;
 
     public Input<String> getObsolete() {
         return this.obsolete == null ? Input.empty() : this.obsolete;
@@ -57,7 +57,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replacement")
-    private final @Nullable Input<String> replacement;
+      private final @Nullable Input<String> replacement;
 
     public Input<String> getReplacement() {
         return this.replacement == null ? Input.empty() : this.replacement;
@@ -68,7 +68,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<DeprecationStatusState> state;
+      private final @Nullable Input<DeprecationStatusState> state;
 
     public Input<DeprecationStatusState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -172,7 +172,6 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public DeprecationStatusArgs build() {
             return new DeprecationStatusArgs(deleted, deprecated, obsolete, replacement, state);
         }

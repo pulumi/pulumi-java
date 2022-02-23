@@ -295,7 +295,6 @@ public final class AddonsConfigResponse {
             this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
             return this;
         }
-
         public AddonsConfigResponse build() {
             return new AddonsConfigResponse(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, gkeBackupAgentConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, kubernetesDashboard, networkPolicyConfig);
         }

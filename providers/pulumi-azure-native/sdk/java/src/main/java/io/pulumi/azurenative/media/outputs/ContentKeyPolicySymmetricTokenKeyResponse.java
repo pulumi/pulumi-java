@@ -76,7 +76,6 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicySymmetricTokenKeyResponse build() {
             return new ContentKeyPolicySymmetricTokenKeyResponse(keyValue, odataType);
         }

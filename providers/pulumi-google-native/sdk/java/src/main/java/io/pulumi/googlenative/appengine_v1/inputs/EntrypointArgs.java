@@ -23,7 +23,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shell")
-    private final @Nullable Input<String> shell;
+      private final @Nullable Input<String> shell;
 
     public Input<String> getShell() {
         return this.shell == null ? Input.empty() : this.shell;
@@ -66,7 +66,6 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
             this.shell = Input.ofNullable(shell);
             return this;
         }
-
         public EntrypointArgs build() {
             return new EntrypointArgs(shell);
         }

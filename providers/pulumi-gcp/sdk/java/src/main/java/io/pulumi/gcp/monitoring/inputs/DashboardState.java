@@ -20,7 +20,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardJson")
-    private final @Nullable Input<String> dashboardJson;
+        private final @Nullable Input<String> dashboardJson;
 
     public Input<String> getDashboardJson() {
         return this.dashboardJson == null ? Input.empty() : this.dashboardJson;
@@ -32,7 +32,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,6 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DashboardState build() {
             return new DashboardState(dashboardJson, project);
         }

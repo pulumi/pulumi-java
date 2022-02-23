@@ -53,7 +53,6 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse(synonyms);
         }

@@ -95,7 +95,6 @@ public final class NetworkResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkResponse build() {
             return new NetworkResponse(network, project, subnetwork);
         }

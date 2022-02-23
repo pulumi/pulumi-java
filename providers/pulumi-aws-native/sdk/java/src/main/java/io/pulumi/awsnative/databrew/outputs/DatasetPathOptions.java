@@ -76,7 +76,6 @@ public final class DatasetPathOptions {
             this.parameters = parameters;
             return this;
         }
-
         public DatasetPathOptions build() {
             return new DatasetPathOptions(filesLimit, lastModifiedDateCondition, parameters);
         }

@@ -74,7 +74,6 @@ public final class BlueprintStatusResponse {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public BlueprintStatusResponse build() {
             return new BlueprintStatusResponse(lastModified, timeCreated);
         }

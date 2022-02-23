@@ -87,7 +87,6 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
             this.storageGb = storageGb;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigScheduler build() {
             return new EnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
         }

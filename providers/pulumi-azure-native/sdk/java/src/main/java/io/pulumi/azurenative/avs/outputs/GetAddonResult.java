@@ -160,7 +160,6 @@ public final class GetAddonResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddonResult build() {
             return new GetAddonResult(addonType, id, licenseKey, name, provisioningState, type);
         }

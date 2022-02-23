@@ -22,7 +22,7 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<ExportDeliveryDestinationArgs> destination;
+        private final Input<ExportDeliveryDestinationArgs> destination;
 
     public Input<ExportDeliveryDestinationArgs> getDestination() {
         return this.destination;
@@ -65,7 +65,6 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public ExportDeliveryInfoArgs build() {
             return new ExportDeliveryInfoArgs(destination);
         }

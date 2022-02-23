@@ -118,7 +118,6 @@ public final class SignatureResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public SignatureResponse build() {
             return new SignatureResponse(image, metadata, signatureTime, userId);
         }

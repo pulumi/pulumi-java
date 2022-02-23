@@ -160,7 +160,6 @@ public final class EventTypeLabel {
             this.tags = tags;
             return this;
         }
-
         public EventTypeLabel build() {
             return new EventTypeLabel(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

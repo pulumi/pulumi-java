@@ -21,7 +21,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analyzeServiceAccountImpersonation", required=true)
-    private final Boolean analyzeServiceAccountImpersonation;
+      private final Boolean analyzeServiceAccountImpersonation;
 
     public Boolean getAnalyzeServiceAccountImpersonation() {
         return this.analyzeServiceAccountImpersonation;
@@ -32,7 +32,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expandGroups", required=true)
-    private final Boolean expandGroups;
+      private final Boolean expandGroups;
 
     public Boolean getExpandGroups() {
         return this.expandGroups;
@@ -43,7 +43,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expandResources", required=true)
-    private final Boolean expandResources;
+      private final Boolean expandResources;
 
     public Boolean getExpandResources() {
         return this.expandResources;
@@ -54,7 +54,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expandRoles", required=true)
-    private final Boolean expandRoles;
+      private final Boolean expandRoles;
 
     public Boolean getExpandRoles() {
         return this.expandRoles;
@@ -65,7 +65,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputGroupEdges", required=true)
-    private final Boolean outputGroupEdges;
+      private final Boolean outputGroupEdges;
 
     public Boolean getOutputGroupEdges() {
         return this.outputGroupEdges;
@@ -76,7 +76,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputResourceEdges", required=true)
-    private final Boolean outputResourceEdges;
+      private final Boolean outputResourceEdges;
 
     public Boolean getOutputResourceEdges() {
         return this.outputResourceEdges;
@@ -165,7 +165,6 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
         }

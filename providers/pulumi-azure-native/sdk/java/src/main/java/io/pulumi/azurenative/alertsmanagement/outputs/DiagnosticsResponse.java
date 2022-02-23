@@ -227,7 +227,6 @@ public final class DiagnosticsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, type);
         }

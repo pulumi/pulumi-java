@@ -54,7 +54,6 @@ public final class AdditionalCapabilitiesResponse {
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
-
         public AdditionalCapabilitiesResponse build() {
             return new AdditionalCapabilitiesResponse(ultraSSDEnabled);
         }

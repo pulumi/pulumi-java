@@ -14,14 +14,14 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     public static final ConnectionClientParametersArgs Empty = new ConnectionClientParametersArgs();
 
     @InputImport(name="clientID", required=true)
-    private final Input<String> clientID;
+        private final Input<String> clientID;
 
     public Input<String> getClientID() {
         return this.clientID;
     }
 
     @InputImport(name="clientSecret", required=true)
-    private final Input<String> clientSecret;
+        private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
@@ -80,7 +80,6 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public ConnectionClientParametersArgs build() {
             return new ConnectionClientParametersArgs(clientID, clientSecret);
         }

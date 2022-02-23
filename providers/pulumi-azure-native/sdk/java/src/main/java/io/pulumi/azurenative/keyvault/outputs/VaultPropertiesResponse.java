@@ -356,7 +356,6 @@ public final class VaultPropertiesResponse {
             this.vaultUri = vaultUri;
             return this;
         }
-
         public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(accessPolicies, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, hsmPoolResourceId, networkAcls, privateEndpointConnections, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
         }

@@ -276,7 +276,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
             return new AzureDatabricksDeltaLakeLinkedServiceResponse(accessToken, annotations, clusterId, connectVia, credential, description, domain, encryptedCredential, parameters, type, workspaceResourceId);
         }

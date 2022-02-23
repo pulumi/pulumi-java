@@ -188,7 +188,6 @@ public final class ApplicationConfigurationDetails {
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationConfigurationDetails build() {
             return new ApplicationConfigurationDetails(alarmMetrics, alarms, hAClusterPrometheusExporter, hANAPrometheusExporter, jMXPrometheusExporter, logs, windowsEvents);
         }

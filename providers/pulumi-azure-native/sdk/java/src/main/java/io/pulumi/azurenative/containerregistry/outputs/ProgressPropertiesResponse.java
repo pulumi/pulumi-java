@@ -54,7 +54,6 @@ public final class ProgressPropertiesResponse {
             this.percentage = percentage;
             return this;
         }
-
         public ProgressPropertiesResponse build() {
             return new ProgressPropertiesResponse(percentage);
         }

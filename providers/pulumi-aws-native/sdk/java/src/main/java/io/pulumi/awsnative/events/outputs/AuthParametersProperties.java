@@ -89,7 +89,6 @@ public final class AuthParametersProperties {
             this.oAuthParameters = oAuthParameters;
             return this;
         }
-
         public AuthParametersProperties build() {
             return new AuthParametersProperties(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }

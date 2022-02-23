@@ -92,7 +92,6 @@ public final class BotFulfillmentStartResponseSpecification {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-
         public BotFulfillmentStartResponseSpecification build() {
             return new BotFulfillmentStartResponseSpecification(allowInterrupt, delayInSeconds, messageGroups);
         }

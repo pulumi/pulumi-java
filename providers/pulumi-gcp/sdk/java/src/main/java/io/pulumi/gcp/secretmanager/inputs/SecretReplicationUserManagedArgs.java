@@ -20,7 +20,7 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final Input<List<SecretReplicationUserManagedReplicaArgs>> replicas;
+        private final Input<List<SecretReplicationUserManagedReplicaArgs>> replicas;
 
     public Input<List<SecretReplicationUserManagedReplicaArgs>> getReplicas() {
         return this.replicas;
@@ -63,7 +63,6 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }
-
         public SecretReplicationUserManagedArgs build() {
             return new SecretReplicationUserManagedArgs(replicas);
         }

@@ -34,7 +34,6 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
         public Builder(AndroidTestLoopResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse();
         }

@@ -309,7 +309,6 @@ public final class GetPartnerNamespaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPartnerNamespaceResult build() {
             return new GetPartnerNamespaceResult(disableLocalAuth, endpoint, id, inboundIpRules, location, name, partnerRegistrationFullyQualifiedId, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }

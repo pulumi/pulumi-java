@@ -186,7 +186,6 @@ public final class GetAccountFilterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountFilterResult build() {
             return new GetAccountFilterResult(firstQuality, id, name, presentationTimeRange, systemData, tracks, type);
         }

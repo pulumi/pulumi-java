@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="confidenceInterval")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
     public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> getConfidenceInterval() {
         return this.confidenceInterval == null ? Input.empty() : this.confidenceInterval;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Double> count;
+      private final @Nullable Input<Double> count;
 
     public Input<Double> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="countType")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
 
     public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> getCountType() {
         return this.countType == null ? Input.empty() : this.countType;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="ratio")
-    private final @Nullable Input<Double> ratio;
+      private final @Nullable Input<Double> ratio;
 
     public Input<Double> getRatio() {
         return this.ratio == null ? Input.empty() : this.ratio;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
 
     public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -174,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs(confidenceInterval, count, countType, ratio, type);
         }

@@ -54,7 +54,6 @@ public final class InstanceMonthlyTransfer {
             this.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }
-
         public InstanceMonthlyTransfer build() {
             return new InstanceMonthlyTransfer(gbPerMonthAllocated);
         }

@@ -395,7 +395,6 @@ public final class AzureSqlProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureSqlProtectedItemResponse build() {
             return new AzureSqlProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, sourceResourceId, workloadType);
         }

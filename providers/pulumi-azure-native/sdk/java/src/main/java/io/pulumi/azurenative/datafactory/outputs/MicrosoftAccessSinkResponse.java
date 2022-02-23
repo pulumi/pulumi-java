@@ -205,7 +205,6 @@ public final class MicrosoftAccessSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public MicrosoftAccessSinkResponse build() {
             return new MicrosoftAccessSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

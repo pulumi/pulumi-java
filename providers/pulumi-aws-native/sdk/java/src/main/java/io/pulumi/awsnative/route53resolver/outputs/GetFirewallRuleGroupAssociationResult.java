@@ -291,7 +291,6 @@ public final class GetFirewallRuleGroupAssociationResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallRuleGroupAssociationResult build() {
             return new GetFirewallRuleGroupAssociationResult(arn, creationTime, creatorRequestId, id, managedOwnerName, modificationTime, mutationProtection, name, priority, status, statusMessage, tags);
         }

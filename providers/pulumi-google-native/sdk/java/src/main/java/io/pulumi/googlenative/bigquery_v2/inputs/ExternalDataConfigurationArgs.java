@@ -29,7 +29,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autodetect")
-    private final @Nullable Input<Boolean> autodetect;
+      private final @Nullable Input<Boolean> autodetect;
 
     public Input<Boolean> getAutodetect() {
         return this.autodetect == null ? Input.empty() : this.autodetect;
@@ -40,7 +40,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="avroOptions")
-    private final @Nullable Input<AvroOptionsArgs> avroOptions;
+      private final @Nullable Input<AvroOptionsArgs> avroOptions;
 
     public Input<AvroOptionsArgs> getAvroOptions() {
         return this.avroOptions == null ? Input.empty() : this.avroOptions;
@@ -51,7 +51,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bigtableOptions")
-    private final @Nullable Input<BigtableOptionsArgs> bigtableOptions;
+      private final @Nullable Input<BigtableOptionsArgs> bigtableOptions;
 
     public Input<BigtableOptionsArgs> getBigtableOptions() {
         return this.bigtableOptions == null ? Input.empty() : this.bigtableOptions;
@@ -62,7 +62,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -73,7 +73,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+      private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;
@@ -84,7 +84,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="csvOptions")
-    private final @Nullable Input<CsvOptionsArgs> csvOptions;
+      private final @Nullable Input<CsvOptionsArgs> csvOptions;
 
     public Input<CsvOptionsArgs> getCsvOptions() {
         return this.csvOptions == null ? Input.empty() : this.csvOptions;
@@ -95,7 +95,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="decimalTargetTypes")
-    private final @Nullable Input<List<String>> decimalTargetTypes;
+      private final @Nullable Input<List<String>> decimalTargetTypes;
 
     public Input<List<String>> getDecimalTargetTypes() {
         return this.decimalTargetTypes == null ? Input.empty() : this.decimalTargetTypes;
@@ -106,7 +106,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="googleSheetsOptions")
-    private final @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions;
+      private final @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions;
 
     public Input<GoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
         return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
@@ -117,7 +117,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hivePartitioningOptions")
-    private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
+      private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
     public Input<HivePartitioningOptionsArgs> getHivePartitioningOptions() {
         return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
@@ -128,7 +128,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ignoreUnknownValues")
-    private final @Nullable Input<Boolean> ignoreUnknownValues;
+      private final @Nullable Input<Boolean> ignoreUnknownValues;
 
     public Input<Boolean> getIgnoreUnknownValues() {
         return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
@@ -139,7 +139,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxBadRecords")
-    private final @Nullable Input<Integer> maxBadRecords;
+      private final @Nullable Input<Integer> maxBadRecords;
 
     public Input<Integer> getMaxBadRecords() {
         return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
@@ -150,7 +150,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parquetOptions")
-    private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
+      private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
 
     public Input<ParquetOptionsArgs> getParquetOptions() {
         return this.parquetOptions == null ? Input.empty() : this.parquetOptions;
@@ -161,7 +161,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<TableSchemaArgs> schema;
+      private final @Nullable Input<TableSchemaArgs> schema;
 
     public Input<TableSchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -172,7 +172,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceFormat")
-    private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Input<String> sourceFormat;
 
     public Input<String> getSourceFormat() {
         return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
@@ -183,7 +183,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceUris")
-    private final @Nullable Input<List<String>> sourceUris;
+      private final @Nullable Input<List<String>> sourceUris;
 
     public Input<List<String>> getSourceUris() {
         return this.sourceUris == null ? Input.empty() : this.sourceUris;
@@ -437,7 +437,6 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             this.sourceUris = Input.ofNullable(sourceUris);
             return this;
         }
-
         public ExternalDataConfigurationArgs build() {
             return new ExternalDataConfigurationArgs(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }

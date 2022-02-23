@@ -126,7 +126,6 @@ public final class DataSourceGoogleDriveConfiguration {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public DataSourceGoogleDriveConfiguration build() {
             return new DataSourceGoogleDriveConfiguration(excludeMimeTypes, excludeSharedDrives, excludeUserAccounts, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn);
         }

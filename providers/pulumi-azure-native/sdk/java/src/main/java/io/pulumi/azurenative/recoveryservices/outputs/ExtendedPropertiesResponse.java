@@ -54,7 +54,6 @@ public final class ExtendedPropertiesResponse {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
-
         public ExtendedPropertiesResponse build() {
             return new ExtendedPropertiesResponse(diskExclusionProperties);
         }

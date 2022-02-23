@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="baseEntitlement")
-    private final @Nullable Input<String> baseEntitlement;
+      private final @Nullable Input<String> baseEntitlement;
 
     public Input<String> getBaseEntitlement() {
         return this.baseEntitlement == null ? Input.empty() : this.baseEntitlement;
@@ -66,7 +66,6 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
             this.baseEntitlement = Input.ofNullable(baseEntitlement);
             return this;
         }
-
         public GoogleCloudChannelV1AssociationInfoArgs build() {
             return new GoogleCloudChannelV1AssociationInfoArgs(baseEntitlement);
         }

@@ -119,7 +119,6 @@ public final class OSPolicyResourceResponse {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public OSPolicyResourceResponse build() {
             return new OSPolicyResourceResponse(exec, file, pkg, repository);
         }

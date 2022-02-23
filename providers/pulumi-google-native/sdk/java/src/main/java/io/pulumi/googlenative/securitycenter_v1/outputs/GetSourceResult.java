@@ -116,7 +116,6 @@ public final class GetSourceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSourceResult build() {
             return new GetSourceResult(canonicalName, description, displayName, name);
         }

@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2ManualArgs extends io.pulumi.resources.Reso
         public Builder(GooglePrivacyDlpV2ManualArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ManualArgs build() {
             return new GooglePrivacyDlpV2ManualArgs();
         }

@@ -328,7 +328,6 @@ public final class GetTopicResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(endpoint, id, inboundIpRules, inputSchema, inputSchemaMapping, location, metricResourceId, name, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }

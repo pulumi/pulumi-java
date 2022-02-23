@@ -99,7 +99,6 @@ public final class PolicyRulesWithSubjects {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
-
         public PolicyRulesWithSubjects build() {
             return new PolicyRulesWithSubjects(nonResourceRules, resourceRules, subjects);
         }

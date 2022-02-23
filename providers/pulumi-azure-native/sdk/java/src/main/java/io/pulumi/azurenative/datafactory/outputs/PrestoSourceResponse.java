@@ -205,7 +205,6 @@ public final class PrestoSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrestoSourceResponse build() {
             return new PrestoSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

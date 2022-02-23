@@ -20,7 +20,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+        private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -31,7 +31,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -42,7 +42,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -53,7 +53,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -64,7 +64,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+        private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
@@ -75,7 +75,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -221,7 +221,6 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public OauthIdpConfigArgs build() {
             return new OauthIdpConfigArgs(clientId, clientSecret, displayName, enabled, issuer, name, project);
         }

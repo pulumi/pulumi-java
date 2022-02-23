@@ -98,7 +98,6 @@ public final class LinkedServiceReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LinkedServiceReferenceResponse build() {
             return new LinkedServiceReferenceResponse(parameters, referenceName, type);
         }

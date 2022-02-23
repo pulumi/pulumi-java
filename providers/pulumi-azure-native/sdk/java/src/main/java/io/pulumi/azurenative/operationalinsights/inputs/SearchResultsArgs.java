@@ -24,7 +24,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endSearchTime")
-    private final @Nullable Input<String> endSearchTime;
+        private final @Nullable Input<String> endSearchTime;
 
     public Input<String> getEndSearchTime() {
         return this.endSearchTime == null ? Input.empty() : this.endSearchTime;
@@ -46,7 +46,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<Integer> limit;
+        private final @Nullable Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -57,7 +57,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+        private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -68,7 +68,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startSearchTime")
-    private final @Nullable Input<String> startSearchTime;
+        private final @Nullable Input<String> startSearchTime;
 
     public Input<String> getStartSearchTime() {
         return this.startSearchTime == null ? Input.empty() : this.startSearchTime;
@@ -172,7 +172,6 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             this.startSearchTime = Input.ofNullable(startSearchTime);
             return this;
         }
-
         public SearchResultsArgs build() {
             return new SearchResultsArgs(description, endSearchTime, limit, query, startSearchTime);
         }

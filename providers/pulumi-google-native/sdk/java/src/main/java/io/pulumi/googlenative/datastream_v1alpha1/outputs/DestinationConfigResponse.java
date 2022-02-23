@@ -75,7 +75,6 @@ public final class DestinationConfigResponse {
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
         }
-
         public DestinationConfigResponse build() {
             return new DestinationConfigResponse(destinationConnectionProfileName, gcsDestinationConfig);
         }

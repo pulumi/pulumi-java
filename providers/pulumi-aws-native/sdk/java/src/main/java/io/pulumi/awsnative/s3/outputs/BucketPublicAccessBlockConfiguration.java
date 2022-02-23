@@ -130,7 +130,6 @@ public final class BucketPublicAccessBlockConfiguration {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public BucketPublicAccessBlockConfiguration build() {
             return new BucketPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

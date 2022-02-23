@@ -21,7 +21,7 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="perPartitionBytes", required=true)
-    private final String perPartitionBytes;
+      private final String perPartitionBytes;
 
     public String getPerPartitionBytes() {
         return this.perPartitionBytes;
@@ -32,7 +32,7 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="period", required=true)
-    private final String period;
+      private final String period;
 
     public String getPeriod() {
         return this.period;
@@ -81,7 +81,6 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public RetentionConfigResponse build() {
             return new RetentionConfigResponse(perPartitionBytes, period);
         }

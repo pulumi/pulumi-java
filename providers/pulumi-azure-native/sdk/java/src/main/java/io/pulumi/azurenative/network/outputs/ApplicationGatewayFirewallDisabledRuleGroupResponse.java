@@ -77,7 +77,6 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
             this.rules = rules;
             return this;
         }
-
         public ApplicationGatewayFirewallDisabledRuleGroupResponse build() {
             return new ApplicationGatewayFirewallDisabledRuleGroupResponse(ruleGroupName, rules);
         }

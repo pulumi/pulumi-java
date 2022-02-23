@@ -102,7 +102,6 @@ public final class DefaultRolloutPropertiesResponseStatus {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
         }
-
         public DefaultRolloutPropertiesResponseStatus build() {
             return new DefaultRolloutPropertiesResponseStatus(completedRegions, failedOrSkippedRegions, nextTrafficRegion, nextTrafficRegionScheduledTime, subscriptionReregistrationResult);
         }

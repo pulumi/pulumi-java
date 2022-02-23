@@ -77,7 +77,6 @@ public final class RestResponseResponseRegex {
             this.matches = matches;
             return this;
         }
-
         public RestResponseResponseRegex build() {
             return new RestResponseResponseRegex(matchQuantifier, matches);
         }

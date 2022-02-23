@@ -224,7 +224,6 @@ public final class GetIncidentRelationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIncidentRelationResult build() {
             return new GetIncidentRelationResult(etag, id, name, relatedResourceId, relatedResourceKind, relatedResourceName, relatedResourceType, systemData, type);
         }

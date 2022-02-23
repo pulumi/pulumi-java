@@ -141,7 +141,6 @@ public final class LoggingConfigurationFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public LoggingConfigurationFieldToMatch build() {
             return new LoggingConfigurationFieldToMatch(jsonBody, method, queryString, singleHeader, uriPath);
         }

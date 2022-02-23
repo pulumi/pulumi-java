@@ -22,7 +22,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
      * 
      */
     @InputImport(name="lockedTime", required=true)
-    private final String lockedTime;
+      private final String lockedTime;
 
     public String getLockedTime() {
         return this.lockedTime;
@@ -82,7 +82,6 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
             return new BucketIamConfigurationUniformBucketLevelAccessResponse(enabled, lockedTime);
         }

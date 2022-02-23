@@ -117,7 +117,6 @@ public final class GetNamespaceResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createTime, labels, name, updateTime);
         }

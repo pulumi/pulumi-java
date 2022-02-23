@@ -76,7 +76,6 @@ public final class DataDiskStorageTypeInfoResponse {
             this.storageType = storageType;
             return this;
         }
-
         public DataDiskStorageTypeInfoResponse build() {
             return new DataDiskStorageTypeInfoResponse(lun, storageType);
         }

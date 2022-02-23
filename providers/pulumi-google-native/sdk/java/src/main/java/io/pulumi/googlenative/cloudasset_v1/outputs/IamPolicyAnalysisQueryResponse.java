@@ -163,7 +163,6 @@ public final class IamPolicyAnalysisQueryResponse {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public IamPolicyAnalysisQueryResponse build() {
             return new IamPolicyAnalysisQueryResponse(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }

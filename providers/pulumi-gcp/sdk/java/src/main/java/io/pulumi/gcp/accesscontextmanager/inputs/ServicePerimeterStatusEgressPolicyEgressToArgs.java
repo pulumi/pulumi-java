@@ -23,7 +23,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
+        private final @Nullable Input<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
     public Input<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -38,7 +38,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+        private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -97,7 +97,6 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
             this.resources = Input.ofNullable(resources);
             return this;
         }
-
         public ServicePerimeterStatusEgressPolicyEgressToArgs build() {
             return new ServicePerimeterStatusEgressPolicyEgressToArgs(operations, resources);
         }

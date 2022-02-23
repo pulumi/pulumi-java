@@ -24,7 +24,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceRedistributionType")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
 
     public Input<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> getInstanceRedistributionType() {
         return this.instanceRedistributionType == null ? Input.empty() : this.instanceRedistributionType;
@@ -35,7 +35,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxSurge")
-    private final @Nullable Input<FixedOrPercentArgs> maxSurge;
+      private final @Nullable Input<FixedOrPercentArgs> maxSurge;
 
     public Input<FixedOrPercentArgs> getMaxSurge() {
         return this.maxSurge == null ? Input.empty() : this.maxSurge;
@@ -46,7 +46,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxUnavailable")
-    private final @Nullable Input<FixedOrPercentArgs> maxUnavailable;
+      private final @Nullable Input<FixedOrPercentArgs> maxUnavailable;
 
     public Input<FixedOrPercentArgs> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
@@ -57,7 +57,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimalAction")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
 
     public Input<InstanceGroupManagerUpdatePolicyMinimalAction> getMinimalAction() {
         return this.minimalAction == null ? Input.empty() : this.minimalAction;
@@ -68,7 +68,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mostDisruptiveAllowedAction")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
 
     public Input<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> getMostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Input.empty() : this.mostDisruptiveAllowedAction;
@@ -79,7 +79,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="replacementMethod")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
 
     public Input<InstanceGroupManagerUpdatePolicyReplacementMethod> getReplacementMethod() {
         return this.replacementMethod == null ? Input.empty() : this.replacementMethod;
@@ -90,7 +90,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyType> type;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyType> type;
 
     public Input<InstanceGroupManagerUpdatePolicyType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -224,7 +224,6 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicyArgs build() {
             return new InstanceGroupManagerUpdatePolicyArgs(instanceRedistributionType, maxSurge, maxUnavailable, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }

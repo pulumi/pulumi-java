@@ -173,7 +173,6 @@ public final class GetCertificateResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(certificate, certificateId, creationTimestamp, description, id, name, namePrefix, privateKey, project, selfLink);
         }

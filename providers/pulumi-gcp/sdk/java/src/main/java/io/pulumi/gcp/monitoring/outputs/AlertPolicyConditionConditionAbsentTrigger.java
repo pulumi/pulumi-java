@@ -85,7 +85,6 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
             this.percent = percent;
             return this;
         }
-
         public AlertPolicyConditionConditionAbsentTrigger build() {
             return new AlertPolicyConditionConditionAbsentTrigger(count, percent);
         }

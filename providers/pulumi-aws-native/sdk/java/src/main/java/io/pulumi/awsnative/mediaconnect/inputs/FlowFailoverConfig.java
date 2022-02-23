@@ -24,14 +24,14 @@ public final class FlowFailoverConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryWindow")
-    private final @Nullable Integer recoveryWindow;
+        private final @Nullable Integer recoveryWindow;
 
     public Optional<Integer> getRecoveryWindow() {
         return this.recoveryWindow == null ? Optional.empty() : Optional.ofNullable(this.recoveryWindow);
     }
 
     @InputImport(name="state")
-    private final @Nullable FlowFailoverConfigState state;
+        private final @Nullable FlowFailoverConfigState state;
 
     public Optional<FlowFailoverConfigState> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -80,7 +80,6 @@ public final class FlowFailoverConfig extends io.pulumi.resources.InvokeArgs {
             this.state = state;
             return this;
         }
-
         public FlowFailoverConfig build() {
             return new FlowFailoverConfig(recoveryWindow, state);
         }

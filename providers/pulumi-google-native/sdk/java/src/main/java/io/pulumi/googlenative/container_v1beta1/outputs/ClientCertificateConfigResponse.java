@@ -52,7 +52,6 @@ public final class ClientCertificateConfigResponse {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
-
         public ClientCertificateConfigResponse build() {
             return new ClientCertificateConfigResponse(issueClientCertificate);
         }

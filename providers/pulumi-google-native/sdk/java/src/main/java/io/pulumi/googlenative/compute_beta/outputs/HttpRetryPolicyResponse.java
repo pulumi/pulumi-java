@@ -98,7 +98,6 @@ public final class HttpRetryPolicyResponse {
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }
-
         public HttpRetryPolicyResponse build() {
             return new HttpRetryPolicyResponse(numRetries, perTryTimeout, retryConditions);
         }

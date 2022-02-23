@@ -118,7 +118,6 @@ public final class LocationDataResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LocationDataResponse build() {
             return new LocationDataResponse(city, countryOrRegion, district, name);
         }

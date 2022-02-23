@@ -160,7 +160,6 @@ public final class ZypperSettingsResponse {
             this.withUpdate = Objects.requireNonNull(withUpdate);
             return this;
         }
-
         public ZypperSettingsResponse build() {
             return new ZypperSettingsResponse(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

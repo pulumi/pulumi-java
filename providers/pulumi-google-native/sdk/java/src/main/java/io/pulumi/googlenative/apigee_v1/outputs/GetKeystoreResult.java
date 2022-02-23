@@ -75,7 +75,6 @@ public final class GetKeystoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetKeystoreResult build() {
             return new GetKeystoreResult(aliases, name);
         }

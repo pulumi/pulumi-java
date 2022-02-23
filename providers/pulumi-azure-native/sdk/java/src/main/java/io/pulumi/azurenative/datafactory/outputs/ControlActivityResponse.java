@@ -144,7 +144,6 @@ public final class ControlActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ControlActivityResponse build() {
             return new ControlActivityResponse(dependsOn, description, name, type, userProperties);
         }

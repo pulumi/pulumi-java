@@ -131,7 +131,6 @@ public final class GetEnvironmentResult {
             this.region = region;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(configs, id, labels, name, project, region);
         }

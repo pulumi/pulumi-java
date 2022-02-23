@@ -76,7 +76,6 @@ public final class ColumnResponse {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(weight, widgets);
         }

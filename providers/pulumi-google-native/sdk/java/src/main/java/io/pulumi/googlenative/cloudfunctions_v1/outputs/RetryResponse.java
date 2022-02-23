@@ -30,7 +30,6 @@ public final class RetryResponse {
         public Builder(RetryResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RetryResponse build() {
             return new RetryResponse();
         }

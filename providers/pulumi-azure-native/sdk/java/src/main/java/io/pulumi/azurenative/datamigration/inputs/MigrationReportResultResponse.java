@@ -21,7 +21,7 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="reportUrl", required=true)
-    private final String reportUrl;
+        private final String reportUrl;
 
     public String getReportUrl() {
         return this.reportUrl;
@@ -81,7 +81,6 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
             this.reportUrl = Objects.requireNonNull(reportUrl);
             return this;
         }
-
         public MigrationReportResultResponse build() {
             return new MigrationReportResultResponse(id, reportUrl);
         }

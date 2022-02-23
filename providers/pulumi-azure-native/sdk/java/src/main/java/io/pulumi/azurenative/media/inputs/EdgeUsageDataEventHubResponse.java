@@ -19,7 +19,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -30,7 +30,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable String namespace;
+        private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -41,7 +41,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="token")
-    private final @Nullable String token;
+        private final @Nullable String token;
 
     public Optional<String> getToken() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
@@ -100,7 +100,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
             this.token = token;
             return this;
         }
-
         public EdgeUsageDataEventHubResponse build() {
             return new EdgeUsageDataEventHubResponse(name, namespace, token);
         }

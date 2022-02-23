@@ -184,7 +184,6 @@ public final class PrestoJobResponse {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
-
         public PrestoJobResponse build() {
             return new PrestoJobResponse(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }

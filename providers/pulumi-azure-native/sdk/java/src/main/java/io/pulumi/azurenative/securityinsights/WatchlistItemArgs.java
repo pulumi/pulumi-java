@@ -22,7 +22,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-    private final @Nullable Input<String> created;
+        private final @Nullable Input<String> created;
 
     public Input<String> getCreated() {
         return this.created == null ? Input.empty() : this.created;
@@ -33,7 +33,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
+        private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
 
     public Input<WatchlistUserInfoArgs> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -44,7 +44,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityMapping")
-    private final @Nullable Input<Object> entityMapping;
+        private final @Nullable Input<Object> entityMapping;
 
     public Input<Object> getEntityMapping() {
         return this.entityMapping == null ? Input.empty() : this.entityMapping;
@@ -55,7 +55,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDeleted")
-    private final @Nullable Input<Boolean> isDeleted;
+        private final @Nullable Input<Boolean> isDeleted;
 
     public Input<Boolean> getIsDeleted() {
         return this.isDeleted == null ? Input.empty() : this.isDeleted;
@@ -66,7 +66,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemsKeyValue", required=true)
-    private final Input<Object> itemsKeyValue;
+        private final Input<Object> itemsKeyValue;
 
     public Input<Object> getItemsKeyValue() {
         return this.itemsKeyValue;
@@ -77,7 +77,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -88,7 +88,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -110,7 +110,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-    private final @Nullable Input<String> updated;
+        private final @Nullable Input<String> updated;
 
     public Input<String> getUpdated() {
         return this.updated == null ? Input.empty() : this.updated;
@@ -121,7 +121,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedBy")
-    private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
+        private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
 
     public Input<WatchlistUserInfoArgs> getUpdatedBy() {
         return this.updatedBy == null ? Input.empty() : this.updatedBy;
@@ -132,7 +132,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistAlias", required=true)
-    private final Input<String> watchlistAlias;
+        private final Input<String> watchlistAlias;
 
     public Input<String> getWatchlistAlias() {
         return this.watchlistAlias;
@@ -143,7 +143,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistItemId")
-    private final @Nullable Input<String> watchlistItemId;
+        private final @Nullable Input<String> watchlistItemId;
 
     public Input<String> getWatchlistItemId() {
         return this.watchlistItemId == null ? Input.empty() : this.watchlistItemId;
@@ -154,7 +154,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistItemType")
-    private final @Nullable Input<String> watchlistItemType;
+        private final @Nullable Input<String> watchlistItemType;
 
     public Input<String> getWatchlistItemType() {
         return this.watchlistItemType == null ? Input.empty() : this.watchlistItemType;
@@ -165,7 +165,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -404,7 +404,6 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public WatchlistItemArgs build() {
             return new WatchlistItemArgs(created, createdBy, entityMapping, isDeleted, itemsKeyValue, operationalInsightsResourceProvider, resourceGroupName, tenantId, updated, updatedBy, watchlistAlias, watchlistItemId, watchlistItemType, workspaceName);
         }

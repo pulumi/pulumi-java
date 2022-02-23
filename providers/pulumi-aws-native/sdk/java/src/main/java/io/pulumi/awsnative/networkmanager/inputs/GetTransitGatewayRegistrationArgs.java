@@ -17,7 +17,7 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final String globalNetworkId;
+        private final String globalNetworkId;
 
     public String getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -28,7 +28,7 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitGatewayArn", required=true)
-    private final String transitGatewayArn;
+        private final String transitGatewayArn;
 
     public String getTransitGatewayArn() {
         return this.transitGatewayArn;
@@ -77,7 +77,6 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
             this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
             return this;
         }
-
         public GetTransitGatewayRegistrationArgs build() {
             return new GetTransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
         }

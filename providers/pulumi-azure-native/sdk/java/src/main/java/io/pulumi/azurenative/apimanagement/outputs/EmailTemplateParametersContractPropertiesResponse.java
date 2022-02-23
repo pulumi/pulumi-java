@@ -97,7 +97,6 @@ public final class EmailTemplateParametersContractPropertiesResponse {
             this.title = title;
             return this;
         }
-
         public EmailTemplateParametersContractPropertiesResponse build() {
             return new EmailTemplateParametersContractPropertiesResponse(description, name, title);
         }

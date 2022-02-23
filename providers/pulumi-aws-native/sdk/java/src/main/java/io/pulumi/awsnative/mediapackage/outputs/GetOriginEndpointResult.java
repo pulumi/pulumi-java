@@ -318,7 +318,6 @@ public final class GetOriginEndpointResult {
             this.whitelist = whitelist;
             return this;
         }
-
         public GetOriginEndpointResult build() {
             return new GetOriginEndpointResult(arn, authorization, channelId, cmafPackage, dashPackage, description, hlsPackage, manifestName, mssPackage, origination, startoverWindowSeconds, tags, timeDelaySeconds, url, whitelist);
         }

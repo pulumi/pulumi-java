@@ -21,7 +21,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id);
         }

@@ -30,7 +30,6 @@ public final class GetProfilePermissionResult {
         public Builder(GetProfilePermissionResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetProfilePermissionResult build() {
             return new GetProfilePermissionResult();
         }

@@ -95,7 +95,6 @@ public final class UserAssignedIdentityResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId, tenantId);
         }

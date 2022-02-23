@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * 
      */
     @InputImport(name="urlTypeHint", required=true)
-    private final String urlTypeHint;
+      private final String urlTypeHint;
 
     public String getUrlTypeHint() {
         return this.urlTypeHint;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(url, urlTypeHint);
         }

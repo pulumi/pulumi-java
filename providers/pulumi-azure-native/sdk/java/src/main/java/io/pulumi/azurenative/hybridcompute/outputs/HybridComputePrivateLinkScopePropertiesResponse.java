@@ -97,7 +97,6 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public HybridComputePrivateLinkScopePropertiesResponse build() {
             return new HybridComputePrivateLinkScopePropertiesResponse(privateLinkScopeId, provisioningState, publicNetworkAccess);
         }

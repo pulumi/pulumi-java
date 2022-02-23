@@ -17,7 +17,7 @@ public final class GetModelExplainabilityJobDefinitionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="jobDefinitionArn", required=true)
-    private final String jobDefinitionArn;
+        private final String jobDefinitionArn;
 
     public String getJobDefinitionArn() {
         return this.jobDefinitionArn;
@@ -55,7 +55,6 @@ public final class GetModelExplainabilityJobDefinitionArgs extends io.pulumi.res
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
         }
-
         public GetModelExplainabilityJobDefinitionArgs build() {
             return new GetModelExplainabilityJobDefinitionArgs(jobDefinitionArn);
         }

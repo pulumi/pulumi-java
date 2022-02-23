@@ -161,7 +161,6 @@ public final class GetPrivateAtlaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateAtlaseResult build() {
             return new GetPrivateAtlaseResult(id, location, name, properties, tags, type);
         }

@@ -21,7 +21,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<GlobalNetworkTagArgs>> tags;
+        private final @Nullable Input<List<GlobalNetworkTagArgs>> tags;
 
     public Input<List<GlobalNetworkTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,6 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GlobalNetworkArgs build() {
             return new GlobalNetworkArgs(description, tags);
         }

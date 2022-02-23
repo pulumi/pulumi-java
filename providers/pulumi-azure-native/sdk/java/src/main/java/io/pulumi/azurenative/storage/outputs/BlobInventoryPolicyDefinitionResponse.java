@@ -52,7 +52,6 @@ public final class BlobInventoryPolicyDefinitionResponse {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public BlobInventoryPolicyDefinitionResponse build() {
             return new BlobInventoryPolicyDefinitionResponse(filters);
         }

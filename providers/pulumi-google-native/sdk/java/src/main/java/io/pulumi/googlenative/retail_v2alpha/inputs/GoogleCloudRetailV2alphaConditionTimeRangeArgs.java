@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -93,7 +93,6 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public GoogleCloudRetailV2alphaConditionTimeRangeArgs build() {
             return new GoogleCloudRetailV2alphaConditionTimeRangeArgs(endTime, startTime);
         }

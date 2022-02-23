@@ -22,7 +22,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="days", required=true)
-    private final Integer days;
+        private final Integer days;
 
     public Integer getDays() {
         return this.days;
@@ -33,7 +33,7 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -82,7 +82,6 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public RetentionPolicyResponse build() {
             return new RetentionPolicyResponse(days, enabled);
         }

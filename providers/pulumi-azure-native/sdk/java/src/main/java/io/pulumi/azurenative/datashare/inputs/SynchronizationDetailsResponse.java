@@ -23,7 +23,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dataSetId", required=true)
-    private final String dataSetId;
+        private final String dataSetId;
 
     public String getDataSetId() {
         return this.dataSetId;
@@ -34,7 +34,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dataSetType", required=true)
-    private final String dataSetType;
+        private final String dataSetType;
 
     public String getDataSetType() {
         return this.dataSetType;
@@ -45,7 +45,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="durationMs", required=true)
-    private final Integer durationMs;
+        private final Integer durationMs;
 
     public Integer getDurationMs() {
         return this.durationMs;
@@ -56,7 +56,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+        private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -67,7 +67,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="filesRead", required=true)
-    private final Double filesRead;
+        private final Double filesRead;
 
     public Double getFilesRead() {
         return this.filesRead;
@@ -78,7 +78,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="filesWritten", required=true)
-    private final Double filesWritten;
+        private final Double filesWritten;
 
     public Double getFilesWritten() {
         return this.filesWritten;
@@ -89,7 +89,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -100,7 +100,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -111,7 +111,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rowsCopied", required=true)
-    private final Double rowsCopied;
+        private final Double rowsCopied;
 
     public Double getRowsCopied() {
         return this.rowsCopied;
@@ -122,7 +122,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rowsRead", required=true)
-    private final Double rowsRead;
+        private final Double rowsRead;
 
     public Double getRowsRead() {
         return this.rowsRead;
@@ -133,7 +133,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sizeRead", required=true)
-    private final Double sizeRead;
+        private final Double sizeRead;
 
     public Double getSizeRead() {
         return this.sizeRead;
@@ -144,7 +144,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sizeWritten", required=true)
-    private final Double sizeWritten;
+        private final Double sizeWritten;
 
     public Double getSizeWritten() {
         return this.sizeWritten;
@@ -155,7 +155,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -166,7 +166,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -177,7 +177,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vCore", required=true)
-    private final Double vCore;
+        private final Double vCore;
 
     public Double getVCore() {
         return this.vCore;
@@ -356,7 +356,6 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
             this.vCore = Objects.requireNonNull(vCore);
             return this;
         }
-
         public SynchronizationDetailsResponse build() {
             return new SynchronizationDetailsResponse(dataSetId, dataSetType, durationMs, endTime, filesRead, filesWritten, message, name, rowsCopied, rowsRead, sizeRead, sizeWritten, startTime, status, vCore);
         }

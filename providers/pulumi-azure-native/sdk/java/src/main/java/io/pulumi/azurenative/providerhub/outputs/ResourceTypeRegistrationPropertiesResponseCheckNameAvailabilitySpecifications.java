@@ -62,7 +62,6 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications build() {
             return new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(enableDefaultValidation, resourceTypesWithCustomValidation);
         }

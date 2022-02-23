@@ -29,7 +29,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final String backupManagementType;
+        private final String backupManagementType;
 
     public String getBackupManagementType() {
         return this.backupManagementType;
@@ -40,7 +40,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="makePolicyConsistent")
-    private final @Nullable Boolean makePolicyConsistent;
+        private final @Nullable Boolean makePolicyConsistent;
 
     public Optional<Boolean> getMakePolicyConsistent() {
         return this.makePolicyConsistent == null ? Optional.empty() : Optional.ofNullable(this.makePolicyConsistent);
@@ -51,7 +51,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Integer protectedItemsCount;
+        private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
@@ -62,7 +62,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable SettingsResponse settings;
+        private final @Nullable SettingsResponse settings;
 
     public Optional<SettingsResponse> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -73,7 +73,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="subProtectionPolicy")
-    private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
+        private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
@@ -84,7 +84,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="workLoadType")
-    private final @Nullable String workLoadType;
+        private final @Nullable String workLoadType;
 
     public Optional<String> getWorkLoadType() {
         return this.workLoadType == null ? Optional.empty() : Optional.ofNullable(this.workLoadType);
@@ -173,7 +173,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureVmWorkloadProtectionPolicyResponse build() {
             return new AzureVmWorkloadProtectionPolicyResponse(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }

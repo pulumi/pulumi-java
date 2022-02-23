@@ -121,7 +121,6 @@ public final class GetEventIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventIntegrationResult build() {
             return new GetEventIntegrationResult(associations, description, eventIntegrationArn, tags);
         }

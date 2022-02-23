@@ -24,7 +24,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataBoxEdgeDeviceStatus")
-    private final @Nullable Input<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
+        private final @Nullable Input<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
 
     public Input<Either<String,DataBoxEdgeDeviceStatus>> getDataBoxEdgeDeviceStatus() {
         return this.dataBoxEdgeDeviceStatus == null ? Input.empty() : this.dataBoxEdgeDeviceStatus;
@@ -35,7 +35,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+        private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -46,7 +46,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -57,7 +57,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -68,7 +68,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -90,7 +90,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -224,7 +224,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(dataBoxEdgeDeviceStatus, deviceName, identity, location, resourceGroupName, sku, tags);
         }

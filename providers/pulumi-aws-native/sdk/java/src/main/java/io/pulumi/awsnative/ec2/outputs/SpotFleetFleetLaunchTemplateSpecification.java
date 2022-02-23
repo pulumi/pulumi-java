@@ -73,7 +73,6 @@ public final class SpotFleetFleetLaunchTemplateSpecification {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SpotFleetFleetLaunchTemplateSpecification build() {
             return new SpotFleetFleetLaunchTemplateSpecification(launchTemplateId, launchTemplateName, version);
         }

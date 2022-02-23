@@ -74,7 +74,6 @@ public final class TagResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TagResponse build() {
             return new TagResponse(name, value);
         }

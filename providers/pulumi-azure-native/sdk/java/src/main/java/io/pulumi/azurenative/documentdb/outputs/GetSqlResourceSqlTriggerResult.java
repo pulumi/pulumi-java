@@ -154,7 +154,6 @@ public final class GetSqlResourceSqlTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlTriggerResult build() {
             return new GetSqlResourceSqlTriggerResult(id, location, name, resource, tags, type);
         }

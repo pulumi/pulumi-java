@@ -52,7 +52,6 @@ public final class WorkloadCertificatesResponse {
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }
-
         public WorkloadCertificatesResponse build() {
             return new WorkloadCertificatesResponse(enableCertificates);
         }

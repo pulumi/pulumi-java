@@ -140,7 +140,6 @@ public final class RuleGroupRule {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public RuleGroupRule build() {
             return new RuleGroupRule(action, captchaConfig, name, priority, ruleLabels, statement, visibilityConfig);
         }

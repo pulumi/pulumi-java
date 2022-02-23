@@ -54,7 +54,6 @@ public final class DetectorModelOnExit {
             this.events = events;
             return this;
         }
-
         public DetectorModelOnExit build() {
             return new DetectorModelOnExit(events);
         }

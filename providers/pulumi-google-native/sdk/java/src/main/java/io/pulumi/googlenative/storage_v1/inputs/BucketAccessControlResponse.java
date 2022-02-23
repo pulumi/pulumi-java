@@ -22,7 +22,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -44,7 +44,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -66,7 +66,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="entity", required=true)
-    private final String entity;
+      private final String entity;
 
     public String getEntity() {
         return this.entity;
@@ -77,7 +77,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="entityId", required=true)
-    private final String entityId;
+      private final String entityId;
 
     public String getEntityId() {
         return this.entityId;
@@ -88,7 +88,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -99,7 +99,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -110,7 +110,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="projectTeam", required=true)
-    private final BucketAccessControlProjectTeamResponse projectTeam;
+      private final BucketAccessControlProjectTeamResponse projectTeam;
 
     public BucketAccessControlProjectTeamResponse getProjectTeam() {
         return this.projectTeam;
@@ -121,7 +121,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -132,7 +132,7 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
@@ -261,7 +261,6 @@ public final class BucketAccessControlResponse extends io.pulumi.resources.Invok
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public BucketAccessControlResponse build() {
             return new BucketAccessControlResponse(bucket, domain, email, entity, entityId, etag, kind, projectTeam, role, selfLink);
         }

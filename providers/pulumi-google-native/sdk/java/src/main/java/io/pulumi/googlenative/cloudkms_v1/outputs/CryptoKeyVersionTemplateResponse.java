@@ -74,7 +74,6 @@ public final class CryptoKeyVersionTemplateResponse {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public CryptoKeyVersionTemplateResponse build() {
             return new CryptoKeyVersionTemplateResponse(algorithm, protectionLevel);
         }

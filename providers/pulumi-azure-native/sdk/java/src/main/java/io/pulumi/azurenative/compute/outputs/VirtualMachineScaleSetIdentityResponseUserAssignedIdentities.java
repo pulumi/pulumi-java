@@ -74,7 +74,6 @@ public final class VirtualMachineScaleSetIdentityResponseUserAssignedIdentities 
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public VirtualMachineScaleSetIdentityResponseUserAssignedIdentities build() {
             return new VirtualMachineScaleSetIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

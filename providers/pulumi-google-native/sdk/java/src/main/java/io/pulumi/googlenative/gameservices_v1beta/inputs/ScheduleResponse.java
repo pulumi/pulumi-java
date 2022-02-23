@@ -21,7 +21,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cronJobDuration", required=true)
-    private final String cronJobDuration;
+      private final String cronJobDuration;
 
     public String getCronJobDuration() {
         return this.cronJobDuration;
@@ -32,7 +32,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cronSpec", required=true)
-    private final String cronSpec;
+      private final String cronSpec;
 
     public String getCronSpec() {
         return this.cronSpec;
@@ -43,7 +43,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -54,7 +54,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -123,7 +123,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(cronJobDuration, cronSpec, endTime, startTime);
         }

@@ -76,7 +76,6 @@ public final class GetSharedKeysResult {
             this.secondarySharedKey = secondarySharedKey;
             return this;
         }
-
         public GetSharedKeysResult build() {
             return new GetSharedKeysResult(primarySharedKey, secondarySharedKey);
         }

@@ -95,7 +95,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable(datasetId, projectId, tableId);
         }

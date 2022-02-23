@@ -58,7 +58,6 @@ public final class DashboardTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DashboardTag build() {
             return new DashboardTag(key, value);
         }

@@ -97,7 +97,6 @@ public final class TemplateMetadataResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public TemplateMetadataResponse build() {
             return new TemplateMetadataResponse(description, name, parameters);
         }

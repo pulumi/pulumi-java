@@ -23,7 +23,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable String keySource;
+        private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
@@ -61,7 +61,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
             this.keySource = keySource;
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keySource);
         }

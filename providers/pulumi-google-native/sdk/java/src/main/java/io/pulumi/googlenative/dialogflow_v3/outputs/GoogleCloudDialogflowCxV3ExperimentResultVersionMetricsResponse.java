@@ -98,7 +98,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(metrics, sessionCount, version);
         }

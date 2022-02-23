@@ -78,7 +78,6 @@ public final class ServerCertificateCommonNamesResponse {
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public ServerCertificateCommonNamesResponse build() {
             return new ServerCertificateCommonNamesResponse(commonNames, x509StoreName);
         }

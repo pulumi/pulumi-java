@@ -54,7 +54,6 @@ public final class LanguageExtensionResponse {
             this.languageExtensionName = languageExtensionName;
             return this;
         }
-
         public LanguageExtensionResponse build() {
             return new LanguageExtensionResponse(languageExtensionName);
         }

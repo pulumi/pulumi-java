@@ -88,7 +88,6 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate {
             this.updateVersion = updateVersion;
             return this;
         }
-
         public TaskDefinitionLoRaWANUpdateGatewayTaskCreate build() {
             return new TaskDefinitionLoRaWANUpdateGatewayTaskCreate(currentVersion, sigKeyCrc, updateSignature, updateVersion);
         }

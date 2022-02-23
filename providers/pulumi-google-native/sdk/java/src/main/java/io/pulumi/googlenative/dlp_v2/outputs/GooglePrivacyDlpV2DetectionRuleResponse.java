@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }
-
         public GooglePrivacyDlpV2DetectionRuleResponse build() {
             return new GooglePrivacyDlpV2DetectionRuleResponse(hotwordRule);
         }

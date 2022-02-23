@@ -206,7 +206,6 @@ public final class GetExperimentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(id, identity, location, name, properties, systemData, tags, type);
         }

@@ -54,7 +54,6 @@ public final class KubernetesClusterPropertiesResponse {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public KubernetesClusterPropertiesResponse build() {
             return new KubernetesClusterPropertiesResponse(servicePrincipal);
         }

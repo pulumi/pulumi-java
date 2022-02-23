@@ -183,7 +183,6 @@ public final class GetSqlServerInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlServerInstanceResult build() {
             return new GetSqlServerInstanceResult(id, location, name, properties, systemData, tags, type);
         }

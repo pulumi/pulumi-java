@@ -52,7 +52,6 @@ public final class IosAppInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IosAppInfoResponse build() {
             return new IosAppInfoResponse(name);
         }

@@ -95,7 +95,6 @@ public final class ViolationResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public ViolationResponse build() {
             return new ViolationResponse(errorMessage, id, userId);
         }

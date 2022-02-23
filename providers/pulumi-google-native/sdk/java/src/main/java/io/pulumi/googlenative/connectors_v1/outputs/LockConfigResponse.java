@@ -75,7 +75,6 @@ public final class LockConfigResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public LockConfigResponse build() {
             return new LockConfigResponse(locked, reason);
         }

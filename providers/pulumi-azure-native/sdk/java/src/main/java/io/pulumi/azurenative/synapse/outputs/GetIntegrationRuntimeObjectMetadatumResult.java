@@ -82,7 +82,6 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             this.value = value;
             return this;
         }
-
         public GetIntegrationRuntimeObjectMetadatumResult build() {
             return new GetIntegrationRuntimeObjectMetadatumResult(nextLink, value);
         }

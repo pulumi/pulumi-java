@@ -269,7 +269,6 @@ public final class GetServiceEndpointPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceEndpointPolicyResult build() {
             return new GetServiceEndpointPolicyResult(etag, id, kind, location, name, provisioningState, resourceGuid, serviceEndpointPolicyDefinitions, subnets, tags, type);
         }

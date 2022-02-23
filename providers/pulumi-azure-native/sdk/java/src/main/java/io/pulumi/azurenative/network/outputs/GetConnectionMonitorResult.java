@@ -443,7 +443,6 @@ public final class GetConnectionMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionMonitorResult build() {
             return new GetConnectionMonitorResult(autoStart, connectionMonitorType, destination, endpoints, etag, id, location, monitoringIntervalInSeconds, monitoringStatus, name, notes, outputs, provisioningState, source, startTime, tags, testConfigurations, testGroups, type);
         }

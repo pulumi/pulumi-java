@@ -158,7 +158,6 @@ public final class Toleration {
             this.value = value;
             return this;
         }
-
         public Toleration build() {
             return new Toleration(effect, key, operator, tolerationSeconds, value);
         }

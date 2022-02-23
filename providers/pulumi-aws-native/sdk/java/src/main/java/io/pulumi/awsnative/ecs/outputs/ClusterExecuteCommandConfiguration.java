@@ -74,7 +74,6 @@ public final class ClusterExecuteCommandConfiguration {
             this.logging = logging;
             return this;
         }
-
         public ClusterExecuteCommandConfiguration build() {
             return new ClusterExecuteCommandConfiguration(kmsKeyId, logConfiguration, logging);
         }

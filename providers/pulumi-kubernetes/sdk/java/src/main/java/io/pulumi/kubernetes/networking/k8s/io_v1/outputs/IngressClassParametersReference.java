@@ -139,7 +139,6 @@ public final class IngressClassParametersReference {
             this.scope = scope;
             return this;
         }
-
         public IngressClassParametersReference build() {
             return new IngressClassParametersReference(apiGroup, kind, name, namespace, scope);
         }

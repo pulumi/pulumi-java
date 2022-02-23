@@ -140,7 +140,6 @@ public final class AssignmentResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public AssignmentResponse build() {
             return new AssignmentResponse(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * 
      */
     @InputImport(name="confidenceLevel")
-    private final @Nullable Input<Double> confidenceLevel;
+      private final @Nullable Input<Double> confidenceLevel;
 
     public Input<Double> getConfidenceLevel() {
         return this.confidenceLevel == null ? Input.empty() : this.confidenceLevel;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * 
      */
     @InputImport(name="lowerBound")
-    private final @Nullable Input<Double> lowerBound;
+      private final @Nullable Input<Double> lowerBound;
 
     public Input<Double> getLowerBound() {
         return this.lowerBound == null ? Input.empty() : this.lowerBound;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * 
      */
     @InputImport(name="ratio")
-    private final @Nullable Input<Double> ratio;
+      private final @Nullable Input<Double> ratio;
 
     public Input<Double> getRatio() {
         return this.ratio == null ? Input.empty() : this.ratio;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * 
      */
     @InputImport(name="upperBound")
-    private final @Nullable Input<Double> upperBound;
+      private final @Nullable Input<Double> upperBound;
 
     public Input<Double> getUpperBound() {
         return this.upperBound == null ? Input.empty() : this.upperBound;
@@ -145,7 +145,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
             this.upperBound = Input.ofNullable(upperBound);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs(confidenceLevel, lowerBound, ratio, upperBound);
         }

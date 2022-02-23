@@ -16,14 +16,14 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     public static final TableClusteringKeyColumnArgs Empty = new TableClusteringKeyColumnArgs();
 
     @InputImport(name="column", required=true)
-    private final Input<TableColumnArgs> column;
+        private final Input<TableColumnArgs> column;
 
     public Input<TableColumnArgs> getColumn() {
         return this.column;
     }
 
     @InputImport(name="orderBy")
-    private final @Nullable Input<TableClusteringKeyColumnOrderBy> orderBy;
+        private final @Nullable Input<TableClusteringKeyColumnOrderBy> orderBy;
 
     public Input<TableClusteringKeyColumnOrderBy> getOrderBy() {
         return this.orderBy == null ? Input.empty() : this.orderBy;
@@ -82,7 +82,6 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
             this.orderBy = Input.ofNullable(orderBy);
             return this;
         }
-
         public TableClusteringKeyColumnArgs build() {
             return new TableClusteringKeyColumnArgs(column, orderBy);
         }

@@ -20,7 +20,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalingGroupName", required=true)
-    private final Input<String> autoScalingGroupName;
+        private final Input<String> autoScalingGroupName;
 
     public Input<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
@@ -31,7 +31,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultResult")
-    private final @Nullable Input<String> defaultResult;
+        private final @Nullable Input<String> defaultResult;
 
     public Input<String> getDefaultResult() {
         return this.defaultResult == null ? Input.empty() : this.defaultResult;
@@ -42,7 +42,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="heartbeatTimeout")
-    private final @Nullable Input<Integer> heartbeatTimeout;
+        private final @Nullable Input<Integer> heartbeatTimeout;
 
     public Input<Integer> getHeartbeatTimeout() {
         return this.heartbeatTimeout == null ? Input.empty() : this.heartbeatTimeout;
@@ -53,7 +53,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleHookName")
-    private final @Nullable Input<String> lifecycleHookName;
+        private final @Nullable Input<String> lifecycleHookName;
 
     public Input<String> getLifecycleHookName() {
         return this.lifecycleHookName == null ? Input.empty() : this.lifecycleHookName;
@@ -64,7 +64,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleTransition", required=true)
-    private final Input<String> lifecycleTransition;
+        private final Input<String> lifecycleTransition;
 
     public Input<String> getLifecycleTransition() {
         return this.lifecycleTransition;
@@ -75,7 +75,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationMetadata")
-    private final @Nullable Input<String> notificationMetadata;
+        private final @Nullable Input<String> notificationMetadata;
 
     public Input<String> getNotificationMetadata() {
         return this.notificationMetadata == null ? Input.empty() : this.notificationMetadata;
@@ -86,7 +86,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationTargetARN")
-    private final @Nullable Input<String> notificationTargetARN;
+        private final @Nullable Input<String> notificationTargetARN;
 
     public Input<String> getNotificationTargetARN() {
         return this.notificationTargetARN == null ? Input.empty() : this.notificationTargetARN;
@@ -97,7 +97,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleARN")
-    private final @Nullable Input<String> roleARN;
+        private final @Nullable Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN == null ? Input.empty() : this.roleARN;
@@ -246,7 +246,6 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
             this.roleARN = Input.ofNullable(roleARN);
             return this;
         }
-
         public LifecycleHookArgs build() {
             return new LifecycleHookArgs(autoScalingGroupName, defaultResult, heartbeatTimeout, lifecycleHookName, lifecycleTransition, notificationMetadata, notificationTargetARN, roleARN);
         }

@@ -139,7 +139,6 @@ public final class DataStoreResponse {
             this.uuid = uuid;
             return this;
         }
-
         public DataStoreResponse build() {
             return new DataStoreResponse(capacity, freeSpace, symbolicName, type, uuid);
         }

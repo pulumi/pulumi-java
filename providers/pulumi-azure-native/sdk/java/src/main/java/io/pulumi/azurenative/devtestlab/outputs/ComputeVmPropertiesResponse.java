@@ -184,7 +184,6 @@ public final class ComputeVmPropertiesResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeVmPropertiesResponse build() {
             return new ComputeVmPropertiesResponse(dataDiskIds, dataDisks, networkInterfaceId, osDiskId, osType, statuses, vmSize);
         }

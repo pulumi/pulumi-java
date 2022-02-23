@@ -98,7 +98,6 @@ public final class GetAttestorIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetAttestorIamPolicyResult build() {
             return new GetAttestorIamPolicyResult(bindings, etag, version);
         }

@@ -183,7 +183,6 @@ public final class ExecutionStageSummaryResponse {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }
-
         public ExecutionStageSummaryResponse build() {
             return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
         }

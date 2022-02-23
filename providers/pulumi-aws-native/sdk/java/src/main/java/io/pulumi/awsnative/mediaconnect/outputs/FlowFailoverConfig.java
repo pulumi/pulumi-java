@@ -69,7 +69,6 @@ public final class FlowFailoverConfig {
             this.state = state;
             return this;
         }
-
         public FlowFailoverConfig build() {
             return new FlowFailoverConfig(recoveryWindow, state);
         }

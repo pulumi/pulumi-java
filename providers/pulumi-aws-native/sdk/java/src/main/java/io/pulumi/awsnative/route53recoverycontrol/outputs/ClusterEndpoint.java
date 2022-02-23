@@ -60,7 +60,6 @@ public final class ClusterEndpoint {
             this.region = region;
             return this;
         }
-
         public ClusterEndpoint build() {
             return new ClusterEndpoint(endpoint, region);
         }

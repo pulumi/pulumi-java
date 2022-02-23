@@ -44,7 +44,6 @@ public final class IntegrationServiceNowSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public IntegrationServiceNowSourceProperties build() {
             return new IntegrationServiceNowSourceProperties(object);
         }

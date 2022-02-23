@@ -141,7 +141,6 @@ public final class GetSigningProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetSigningProfileResult build() {
             return new GetSigningProfileResult(arn, profileName, profileVersion, profileVersionArn, tags);
         }

@@ -25,7 +25,7 @@ public final class ObjectTypeKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fieldNames")
-    private final @Nullable List<String> fieldNames;
+        private final @Nullable List<String> fieldNames;
 
     public List<String> getFieldNames() {
         return this.fieldNames == null ? List.of() : this.fieldNames;
@@ -36,7 +36,7 @@ public final class ObjectTypeKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="standardIdentifiers")
-    private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
+        private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
 
     public List<ObjectTypeKeyStandardIdentifiersItem> getStandardIdentifiers() {
         return this.standardIdentifiers == null ? List.of() : this.standardIdentifiers;
@@ -85,7 +85,6 @@ public final class ObjectTypeKey extends io.pulumi.resources.InvokeArgs {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }
-
         public ObjectTypeKey build() {
             return new ObjectTypeKey(fieldNames, standardIdentifiers);
         }

@@ -76,7 +76,6 @@ public final class AppRegistrationResponse {
             this.appSecretSettingName = appSecretSettingName;
             return this;
         }
-
         public AppRegistrationResponse build() {
             return new AppRegistrationResponse(appId, appSecretSettingName);
         }

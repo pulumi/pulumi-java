@@ -74,7 +74,6 @@ public final class TextResponse {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public TextResponse build() {
             return new TextResponse(content, format);
         }

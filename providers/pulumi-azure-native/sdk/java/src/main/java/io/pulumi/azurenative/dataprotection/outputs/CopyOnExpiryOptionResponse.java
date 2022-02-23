@@ -54,7 +54,6 @@ public final class CopyOnExpiryOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CopyOnExpiryOptionResponse build() {
             return new CopyOnExpiryOptionResponse(objectType);
         }

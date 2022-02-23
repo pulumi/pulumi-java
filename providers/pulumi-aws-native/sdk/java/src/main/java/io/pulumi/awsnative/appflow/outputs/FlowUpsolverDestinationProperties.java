@@ -74,7 +74,6 @@ public final class FlowUpsolverDestinationProperties {
             this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
             return this;
         }
-
         public FlowUpsolverDestinationProperties build() {
             return new FlowUpsolverDestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
         }

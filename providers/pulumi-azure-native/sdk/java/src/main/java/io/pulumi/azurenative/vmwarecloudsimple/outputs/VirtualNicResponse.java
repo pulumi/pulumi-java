@@ -206,7 +206,6 @@ public final class VirtualNicResponse {
             this.virtualNicName = Objects.requireNonNull(virtualNicName);
             return this;
         }
-
         public VirtualNicResponse build() {
             return new VirtualNicResponse(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId, virtualNicName);
         }

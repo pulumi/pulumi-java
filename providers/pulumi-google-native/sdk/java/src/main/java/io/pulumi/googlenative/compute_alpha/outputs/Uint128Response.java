@@ -58,7 +58,6 @@ public final class Uint128Response {
             this.low = Objects.requireNonNull(low);
             return this;
         }
-
         public Uint128Response build() {
             return new Uint128Response(high, low);
         }

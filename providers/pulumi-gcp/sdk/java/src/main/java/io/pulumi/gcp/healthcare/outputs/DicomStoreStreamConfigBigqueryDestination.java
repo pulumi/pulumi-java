@@ -52,7 +52,6 @@ public final class DicomStoreStreamConfigBigqueryDestination {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
-
         public DicomStoreStreamConfigBigqueryDestination build() {
             return new DicomStoreStreamConfigBigqueryDestination(tableUri);
         }

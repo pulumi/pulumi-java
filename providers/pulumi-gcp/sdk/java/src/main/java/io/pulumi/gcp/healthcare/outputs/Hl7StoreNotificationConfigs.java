@@ -102,7 +102,6 @@ public final class Hl7StoreNotificationConfigs {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Hl7StoreNotificationConfigs build() {
             return new Hl7StoreNotificationConfigs(filter, pubsubTopic);
         }

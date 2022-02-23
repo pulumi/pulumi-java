@@ -76,7 +76,6 @@ public final class Nfs3TargetResponse {
             this.usageModel = usageModel;
             return this;
         }
-
         public Nfs3TargetResponse build() {
             return new Nfs3TargetResponse(target, usageModel);
         }

@@ -83,7 +83,6 @@ public final class ClusterClusterConfigInitializationAction {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public ClusterClusterConfigInitializationAction build() {
             return new ClusterClusterConfigInitializationAction(script, timeoutSec);
         }

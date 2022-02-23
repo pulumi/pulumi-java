@@ -120,7 +120,6 @@ public final class ResourceRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public ResourceRule build() {
             return new ResourceRule(apiGroups, resourceNames, resources, verbs);
         }

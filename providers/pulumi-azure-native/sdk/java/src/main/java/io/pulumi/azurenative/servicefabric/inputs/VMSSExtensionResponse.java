@@ -26,7 +26,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Boolean autoUpgradeMinorVersion;
+        private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
@@ -37,7 +37,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable String forceUpdateTag;
+        private final @Nullable String forceUpdateTag;
 
     public Optional<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
@@ -48,7 +48,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable Object protectedSettings;
+        private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
@@ -70,7 +70,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="provisionAfterExtensions")
-    private final @Nullable List<String> provisionAfterExtensions;
+        private final @Nullable List<String> provisionAfterExtensions;
 
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
@@ -81,7 +81,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -92,7 +92,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="publisher", required=true)
-    private final String publisher;
+        private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
@@ -103,7 +103,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Object settings;
+        private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -114,7 +114,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -125,7 +125,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="typeHandlerVersion", required=true)
-    private final String typeHandlerVersion;
+        private final String typeHandlerVersion;
 
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;
@@ -254,7 +254,6 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public VMSSExtensionResponse build() {
             return new VMSSExtensionResponse(autoUpgradeMinorVersion, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

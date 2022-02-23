@@ -89,7 +89,6 @@ public final class GetRealtimeLogConfigResult {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public GetRealtimeLogConfigResult build() {
             return new GetRealtimeLogConfigResult(arn, endPoints, fields, samplingRate);
         }

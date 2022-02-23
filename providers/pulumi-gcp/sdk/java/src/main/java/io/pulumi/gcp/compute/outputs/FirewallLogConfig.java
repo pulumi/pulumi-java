@@ -54,7 +54,6 @@ public final class FirewallLogConfig {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public FirewallLogConfig build() {
             return new FirewallLogConfig(metadata);
         }

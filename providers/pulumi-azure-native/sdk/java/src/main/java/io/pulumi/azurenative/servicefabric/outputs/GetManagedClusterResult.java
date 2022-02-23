@@ -525,7 +525,6 @@ public final class GetManagedClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedClusterResult build() {
             return new GetManagedClusterResult(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCertificateThumbprint, clusterCodeVersion, clusterId, clusterState, dnsName, etag, fabricSettings, fqdn, httpGatewayConnectionPort, id, loadBalancingRules, location, name, provisioningState, sku, tags, type);
         }

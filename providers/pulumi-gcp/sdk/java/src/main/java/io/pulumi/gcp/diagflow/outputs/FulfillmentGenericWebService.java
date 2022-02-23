@@ -119,7 +119,6 @@ public final class FulfillmentGenericWebService {
             this.username = username;
             return this;
         }
-
         public FulfillmentGenericWebService build() {
             return new FulfillmentGenericWebService(password, requestHeaders, uri, username);
         }

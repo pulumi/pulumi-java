@@ -168,7 +168,6 @@ public final class GetGremlinResourceGremlinDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGremlinResourceGremlinDatabaseResult build() {
             return new GetGremlinResourceGremlinDatabaseResult(id, location, name, options, resource, tags, type);
         }

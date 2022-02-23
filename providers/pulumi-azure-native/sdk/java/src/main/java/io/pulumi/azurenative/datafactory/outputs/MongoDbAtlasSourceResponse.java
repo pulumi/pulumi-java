@@ -248,7 +248,6 @@ public final class MongoDbAtlasSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbAtlasSourceResponse build() {
             return new MongoDbAtlasSourceResponse(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

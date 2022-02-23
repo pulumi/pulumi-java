@@ -287,7 +287,6 @@ public final class GetInstanceGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupResult build() {
             return new GetInstanceGroupResult(creationTimestamp, description, fingerprint, kind, name, namedPorts, network, region, selfLink, size, subnetwork, zone);
         }

@@ -27,7 +27,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="continueOnFailure")
-    private final @Nullable Input<Boolean> continueOnFailure;
+      private final @Nullable Input<Boolean> continueOnFailure;
 
     public Input<Boolean> getContinueOnFailure() {
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
@@ -38,7 +38,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -49,7 +49,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -60,7 +60,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryFileUri")
-    private final @Nullable Input<String> queryFileUri;
+      private final @Nullable Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
@@ -71,7 +71,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryList")
-    private final @Nullable Input<QueryListArgs> queryList;
+      private final @Nullable Input<QueryListArgs> queryList;
 
     public Input<QueryListArgs> getQueryList() {
         return this.queryList == null ? Input.empty() : this.queryList;
@@ -82,7 +82,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptVariables")
-    private final @Nullable Input<Map<String,String>> scriptVariables;
+      private final @Nullable Input<Map<String,String>> scriptVariables;
 
     public Input<Map<String,String>> getScriptVariables() {
         return this.scriptVariables == null ? Input.empty() : this.scriptVariables;
@@ -201,7 +201,6 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
             this.scriptVariables = Input.ofNullable(scriptVariables);
             return this;
         }
-
         public HiveJobArgs build() {
             return new HiveJobArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

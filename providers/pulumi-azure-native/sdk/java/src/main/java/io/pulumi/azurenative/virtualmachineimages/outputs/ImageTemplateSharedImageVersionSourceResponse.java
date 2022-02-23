@@ -76,7 +76,6 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageVersionSourceResponse build() {
             return new ImageTemplateSharedImageVersionSourceResponse(imageVersionId, type);
         }

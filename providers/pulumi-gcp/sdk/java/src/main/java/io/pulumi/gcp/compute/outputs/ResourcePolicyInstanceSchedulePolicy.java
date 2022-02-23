@@ -147,7 +147,6 @@ public final class ResourcePolicyInstanceSchedulePolicy {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicy build() {
             return new ResourcePolicyInstanceSchedulePolicy(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

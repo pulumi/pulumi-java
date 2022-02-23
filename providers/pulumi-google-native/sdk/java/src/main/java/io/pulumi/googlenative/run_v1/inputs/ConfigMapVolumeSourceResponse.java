@@ -25,7 +25,7 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="defaultMode", required=true)
-    private final Integer defaultMode;
+      private final Integer defaultMode;
 
     public Integer getDefaultMode() {
         return this.defaultMode;
@@ -36,7 +36,7 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<KeyToPathResponse> items;
+      private final List<KeyToPathResponse> items;
 
     public List<KeyToPathResponse> getItems() {
         return this.items;
@@ -47,7 +47,7 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+      private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -127,7 +127,6 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapVolumeSourceResponse build() {
             return new ConfigMapVolumeSourceResponse(defaultMode, items, name, optional);
         }

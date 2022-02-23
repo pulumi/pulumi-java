@@ -117,7 +117,6 @@ public final class GetMoveResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMoveResourceResult build() {
             return new GetMoveResourceResult(id, name, properties, type);
         }

@@ -19,7 +19,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+        private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -62,7 +62,6 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
-
         public AccessPointVpcConfigurationArgs build() {
             return new AccessPointVpcConfigurationArgs(vpcId);
         }

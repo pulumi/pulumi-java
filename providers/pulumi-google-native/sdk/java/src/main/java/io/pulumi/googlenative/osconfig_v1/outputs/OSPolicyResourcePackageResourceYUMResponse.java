@@ -52,7 +52,6 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OSPolicyResourcePackageResourceYUMResponse build() {
             return new OSPolicyResourcePackageResourceYUMResponse(name);
         }

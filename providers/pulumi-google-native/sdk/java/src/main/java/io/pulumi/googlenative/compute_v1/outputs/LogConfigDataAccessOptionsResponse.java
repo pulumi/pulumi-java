@@ -52,7 +52,6 @@ public final class LogConfigDataAccessOptionsResponse {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }
-
         public LogConfigDataAccessOptionsResponse build() {
             return new LogConfigDataAccessOptionsResponse(logMode);
         }

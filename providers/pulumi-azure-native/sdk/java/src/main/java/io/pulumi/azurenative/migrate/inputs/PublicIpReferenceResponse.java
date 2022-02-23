@@ -21,7 +21,7 @@ public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final String sourceArmResourceId;
+        private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -59,7 +59,6 @@ public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeA
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public PublicIpReferenceResponse build() {
             return new PublicIpReferenceResponse(sourceArmResourceId);
         }

@@ -95,7 +95,6 @@ public final class GetNatAddressResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetNatAddressResult build() {
             return new GetNatAddressResult(ipAddress, name, state);
         }

@@ -241,7 +241,6 @@ public final class JobStatus {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }
-
         public JobStatus build() {
             return new JobStatus(active, completedIndexes, completionTime, conditions, failed, ready, startTime, succeeded, uncountedTerminatedPods);
         }

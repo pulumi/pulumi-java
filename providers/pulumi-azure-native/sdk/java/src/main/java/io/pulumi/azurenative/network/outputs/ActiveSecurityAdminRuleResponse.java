@@ -482,7 +482,6 @@ public final class ActiveSecurityAdminRuleResponse {
             this.sources = sources;
             return this;
         }
-
         public ActiveSecurityAdminRuleResponse build() {
             return new ActiveSecurityAdminRuleResponse(access, commitTime, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, id, kind, priority, protocol, provisioningState, region, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

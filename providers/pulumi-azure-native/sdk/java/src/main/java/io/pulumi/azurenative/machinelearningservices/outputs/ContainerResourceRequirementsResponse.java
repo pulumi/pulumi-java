@@ -169,7 +169,6 @@ public final class ContainerResourceRequirementsResponse {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
         }
-
         public ContainerResourceRequirementsResponse build() {
             return new ContainerResourceRequirementsResponse(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
         }

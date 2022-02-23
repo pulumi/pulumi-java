@@ -97,7 +97,6 @@ public final class GetDicomStoreResult {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public GetDicomStoreResult build() {
             return new GetDicomStoreResult(labels, name, notificationConfig);
         }

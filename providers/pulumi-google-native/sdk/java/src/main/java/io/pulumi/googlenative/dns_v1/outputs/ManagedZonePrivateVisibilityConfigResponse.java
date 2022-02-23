@@ -68,7 +68,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(kind, networks);
         }

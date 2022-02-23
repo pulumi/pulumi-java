@@ -30,7 +30,6 @@ public final class ApplicationTags {
         public Builder(ApplicationTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ApplicationTags build() {
             return new ApplicationTags();
         }

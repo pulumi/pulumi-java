@@ -118,7 +118,6 @@ public final class FileShareConfigResponse {
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
         }
-
         public FileShareConfigResponse build() {
             return new FileShareConfigResponse(capacityGb, name, nfsExportOptions, sourceBackup);
         }

@@ -24,7 +24,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -35,7 +35,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -94,7 +94,6 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public ConnectionMonitorSourceArgs build() {
             return new ConnectionMonitorSourceArgs(port, resourceId);
         }

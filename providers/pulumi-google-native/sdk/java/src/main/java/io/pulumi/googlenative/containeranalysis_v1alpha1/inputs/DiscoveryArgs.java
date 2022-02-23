@@ -23,7 +23,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind")
-    private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
+      private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
 
     public Input<DiscoveryAnalysisKind> getAnalysisKind() {
         return this.analysisKind == null ? Input.empty() : this.analysisKind;
@@ -66,7 +66,6 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = Input.ofNullable(analysisKind);
             return this;
         }
-
         public DiscoveryArgs build() {
             return new DiscoveryArgs(analysisKind);
         }

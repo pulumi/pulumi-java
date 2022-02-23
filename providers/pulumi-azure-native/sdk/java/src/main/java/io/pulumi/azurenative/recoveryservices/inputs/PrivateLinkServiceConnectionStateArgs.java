@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionRequired")
-    private final @Nullable Input<String> actionRequired;
+        private final @Nullable Input<String> actionRequired;
 
     public Input<String> getActionRequired() {
         return this.actionRequired == null ? Input.empty() : this.actionRequired;
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PrivateEndpointConnectionStatus>> status;
+        private final @Nullable Input<Either<String,PrivateEndpointConnectionStatus>> status;
 
     public Input<Either<String,PrivateEndpointConnectionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -121,7 +121,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(actionRequired, description, status);
         }

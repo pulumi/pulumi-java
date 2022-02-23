@@ -75,7 +75,6 @@ public final class SqlOutOfDiskReportResponse {
             this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState);
             return this;
         }
-
         public SqlOutOfDiskReportResponse build() {
             return new SqlOutOfDiskReportResponse(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);
         }

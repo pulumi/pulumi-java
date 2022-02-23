@@ -98,7 +98,6 @@ public final class AttestationOccurrenceResponse {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public AttestationOccurrenceResponse build() {
             return new AttestationOccurrenceResponse(jwts, serializedPayload, signatures);
         }

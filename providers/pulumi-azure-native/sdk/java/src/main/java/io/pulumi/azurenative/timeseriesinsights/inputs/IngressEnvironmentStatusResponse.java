@@ -24,7 +24,7 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -35,7 +35,7 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="stateDetails", required=true)
-    private final EnvironmentStateDetailsResponse stateDetails;
+        private final EnvironmentStateDetailsResponse stateDetails;
 
     public EnvironmentStateDetailsResponse getStateDetails() {
         return this.stateDetails;
@@ -84,7 +84,6 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }
-
         public IngressEnvironmentStatusResponse build() {
             return new IngressEnvironmentStatusResponse(state, stateDetails);
         }

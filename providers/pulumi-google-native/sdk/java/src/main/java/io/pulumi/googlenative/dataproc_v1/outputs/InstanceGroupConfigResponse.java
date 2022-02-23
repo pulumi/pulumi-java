@@ -270,7 +270,6 @@ public final class InstanceGroupConfigResponse {
             this.preemptibility = Objects.requireNonNull(preemptibility);
             return this;
         }
-
         public InstanceGroupConfigResponse build() {
             return new InstanceGroupConfigResponse(accelerators, diskConfig, imageUri, instanceNames, instanceReferences, isPreemptible, machineTypeUri, managedGroupConfig, minCpuPlatform, numInstances, preemptibility);
         }

@@ -96,7 +96,6 @@ public final class MoneyResponse {
             this.units = Objects.requireNonNull(units);
             return this;
         }
-
         public MoneyResponse build() {
             return new MoneyResponse(currencyCode, nanos, units);
         }

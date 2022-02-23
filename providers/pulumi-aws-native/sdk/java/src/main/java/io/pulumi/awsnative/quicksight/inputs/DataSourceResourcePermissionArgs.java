@@ -23,7 +23,7 @@ public final class DataSourceResourcePermissionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+        private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
@@ -48,7 +48,7 @@ public final class DataSourceResourcePermissionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+        private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -107,7 +107,6 @@ public final class DataSourceResourcePermissionArgs extends io.pulumi.resources.
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public DataSourceResourcePermissionArgs build() {
             return new DataSourceResourcePermissionArgs(actions, principal);
         }

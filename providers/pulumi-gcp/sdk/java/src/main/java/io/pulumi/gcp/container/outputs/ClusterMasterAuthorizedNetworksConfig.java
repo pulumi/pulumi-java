@@ -56,7 +56,6 @@ public final class ClusterMasterAuthorizedNetworksConfig {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfig build() {
             return new ClusterMasterAuthorizedNetworksConfig(cidrBlocks);
         }

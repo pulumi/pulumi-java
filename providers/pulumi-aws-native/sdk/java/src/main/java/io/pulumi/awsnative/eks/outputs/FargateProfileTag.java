@@ -74,7 +74,6 @@ public final class FargateProfileTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FargateProfileTag build() {
             return new FargateProfileTag(key, value);
         }

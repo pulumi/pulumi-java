@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
      * 
      */
     @InputImport(name="cells", required=true)
-    private final List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells;
+      private final List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells;
 
     public List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> getCells() {
         return this.cells;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
      * 
      */
     @InputImport(name="dividerAfter", required=true)
-    private final Boolean dividerAfter;
+      private final Boolean dividerAfter;
 
     public Boolean getDividerAfter() {
         return this.dividerAfter;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardRowResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(cells, dividerAfter);
         }

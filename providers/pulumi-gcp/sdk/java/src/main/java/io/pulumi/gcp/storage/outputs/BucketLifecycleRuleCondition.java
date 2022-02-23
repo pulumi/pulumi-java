@@ -225,7 +225,6 @@ public final class BucketLifecycleRuleCondition {
             this.withState = withState;
             return this;
         }
-
         public BucketLifecycleRuleCondition build() {
             return new BucketLifecycleRuleCondition(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, matchesStorageClasses, noncurrentTimeBefore, numNewerVersions, withState);
         }

@@ -45,7 +45,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final DatasetReferenceResponse dataset;
+        private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
@@ -56,7 +56,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -67,7 +67,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -78,7 +78,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Object enableLogging;
+        private final @Nullable Object enableLogging;
 
     public Optional<Object> getEnableLogging() {
         return this.enableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableLogging);
@@ -89,7 +89,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -100,7 +100,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="logStorageSettings")
-    private final @Nullable LogStorageSettingsResponse logStorageSettings;
+        private final @Nullable LogStorageSettingsResponse logStorageSettings;
 
     public Optional<LogStorageSettingsResponse> getLogStorageSettings() {
         return this.logStorageSettings == null ? Optional.empty() : Optional.ofNullable(this.logStorageSettings);
@@ -111,7 +111,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Integer maxConcurrentConnections;
+        private final @Nullable Integer maxConcurrentConnections;
 
     public Optional<Integer> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -122,7 +122,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -133,7 +133,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+        private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -144,7 +144,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Object recursive;
+        private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
@@ -155,7 +155,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storeSettings")
-    private final @Nullable Object storeSettings;
+        private final @Nullable Object storeSettings;
 
     public Object getStoreSettings() {
         return this.storeSettings == null ? null : this.storeSettings;
@@ -167,7 +167,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -178,7 +178,7 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -337,7 +337,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
             this.userProperties = userProperties;
             return this;
         }
-
         public DeleteActivityResponse build() {
             return new DeleteActivityResponse(dataset, dependsOn, description, enableLogging, linkedServiceName, logStorageSettings, maxConcurrentConnections, name, policy, recursive, storeSettings, type, userProperties);
         }

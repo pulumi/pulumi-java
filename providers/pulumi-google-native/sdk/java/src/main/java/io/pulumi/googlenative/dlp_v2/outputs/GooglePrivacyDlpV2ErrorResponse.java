@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2ErrorResponse {
             this.timestamps = Objects.requireNonNull(timestamps);
             return this;
         }
-
         public GooglePrivacyDlpV2ErrorResponse build() {
             return new GooglePrivacyDlpV2ErrorResponse(details, timestamps);
         }

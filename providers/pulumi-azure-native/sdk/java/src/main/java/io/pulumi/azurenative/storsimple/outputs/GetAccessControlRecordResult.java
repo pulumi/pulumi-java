@@ -161,7 +161,6 @@ public final class GetAccessControlRecordResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetAccessControlRecordResult build() {
             return new GetAccessControlRecordResult(id, initiatorName, kind, name, type, volumeCount);
         }

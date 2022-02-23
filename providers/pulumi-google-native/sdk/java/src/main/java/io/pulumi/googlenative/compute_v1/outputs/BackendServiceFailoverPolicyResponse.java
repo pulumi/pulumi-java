@@ -96,7 +96,6 @@ public final class BackendServiceFailoverPolicyResponse {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }
-
         public BackendServiceFailoverPolicyResponse build() {
             return new BackendServiceFailoverPolicyResponse(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

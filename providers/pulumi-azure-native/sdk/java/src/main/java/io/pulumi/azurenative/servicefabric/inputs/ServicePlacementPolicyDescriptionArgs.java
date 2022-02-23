@@ -24,7 +24,7 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ServicePlacementPolicyType>> type;
+        private final Input<Either<String,ServicePlacementPolicyType>> type;
 
     public Input<Either<String,ServicePlacementPolicyType>> getType() {
         return this.type;
@@ -67,7 +67,6 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ServicePlacementPolicyDescriptionArgs build() {
             return new ServicePlacementPolicyDescriptionArgs(type);
         }

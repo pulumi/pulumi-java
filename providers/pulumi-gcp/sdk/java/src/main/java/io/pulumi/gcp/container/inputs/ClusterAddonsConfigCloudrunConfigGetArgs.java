@@ -21,7 +21,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Input<Boolean> disabled;
+        private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;
@@ -33,7 +33,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="loadBalancerType")
-    private final @Nullable Input<String> loadBalancerType;
+        private final @Nullable Input<String> loadBalancerType;
 
     public Input<String> getLoadBalancerType() {
         return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
@@ -92,7 +92,6 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }
-
         public ClusterAddonsConfigCloudrunConfigGetArgs build() {
             return new ClusterAddonsConfigCloudrunConfigGetArgs(disabled, loadBalancerType);
         }

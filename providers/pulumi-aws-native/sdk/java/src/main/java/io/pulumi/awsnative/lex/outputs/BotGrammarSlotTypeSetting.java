@@ -46,7 +46,6 @@ public final class BotGrammarSlotTypeSetting {
             this.source = source;
             return this;
         }
-
         public BotGrammarSlotTypeSetting build() {
             return new BotGrammarSlotTypeSetting(source);
         }

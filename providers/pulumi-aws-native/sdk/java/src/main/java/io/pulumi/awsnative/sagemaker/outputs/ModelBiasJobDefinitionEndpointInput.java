@@ -231,7 +231,6 @@ public final class ModelBiasJobDefinitionEndpointInput {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public ModelBiasJobDefinitionEndpointInput build() {
             return new ModelBiasJobDefinitionEndpointInput(endTimeOffset, endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }

@@ -52,7 +52,6 @@ public final class GCPolicyMaxVersion {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public GCPolicyMaxVersion build() {
             return new GCPolicyMaxVersion(number);
         }

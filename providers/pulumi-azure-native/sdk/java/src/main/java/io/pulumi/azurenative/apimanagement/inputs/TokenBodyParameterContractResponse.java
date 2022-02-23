@@ -21,7 +21,7 @@ public final class TokenBodyParameterContractResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class TokenBodyParameterContractResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class TokenBodyParameterContractResponse extends io.pulumi.resource
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenBodyParameterContractResponse build() {
             return new TokenBodyParameterContractResponse(name, value);
         }

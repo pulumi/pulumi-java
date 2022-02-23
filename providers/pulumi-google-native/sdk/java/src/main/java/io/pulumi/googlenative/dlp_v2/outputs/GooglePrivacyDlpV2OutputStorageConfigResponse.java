@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
             return new GooglePrivacyDlpV2OutputStorageConfigResponse(outputSchema, table);
         }

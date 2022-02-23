@@ -21,7 +21,7 @@ public final class DebugOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableHotKeyLogging", required=true)
-    private final Boolean enableHotKeyLogging;
+      private final Boolean enableHotKeyLogging;
 
     public Boolean getEnableHotKeyLogging() {
         return this.enableHotKeyLogging;
@@ -59,7 +59,6 @@ public final class DebugOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging);
             return this;
         }
-
         public DebugOptionsResponse build() {
             return new DebugOptionsResponse(enableHotKeyLogging);
         }

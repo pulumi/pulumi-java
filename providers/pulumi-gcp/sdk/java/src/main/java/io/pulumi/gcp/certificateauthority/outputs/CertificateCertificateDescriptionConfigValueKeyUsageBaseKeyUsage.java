@@ -46,7 +46,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             this.keyUsageOptions = keyUsageOptions;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage(keyUsageOptions);
         }

@@ -22,7 +22,7 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="managementKey", required=true)
-    private final Input<String> managementKey;
+        private final Input<String> managementKey;
 
     public Input<String> getManagementKey() {
         return this.managementKey;
@@ -92,7 +92,6 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
             this.managementKey = Input.of(Objects.requireNonNull(managementKey));
             return this;
         }
-
         public Gen2StorageConfigurationInputArgs build() {
             return new Gen2StorageConfigurationInputArgs(accountName, managementKey);
         }

@@ -74,7 +74,6 @@ public final class DailyMaintenanceWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public DailyMaintenanceWindowResponse build() {
             return new DailyMaintenanceWindowResponse(duration, startTime);
         }

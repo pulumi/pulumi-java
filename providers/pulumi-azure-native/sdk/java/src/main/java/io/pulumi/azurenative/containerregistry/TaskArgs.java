@@ -33,7 +33,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentConfiguration")
-    private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+        private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
     public Input<AgentPropertiesArgs> getAgentConfiguration() {
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
@@ -44,7 +44,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable Input<String> agentPoolName;
+        private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -55,7 +55,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<CredentialsArgs> credentials;
+        private final @Nullable Input<CredentialsArgs> credentials;
 
     public Input<CredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -66,7 +66,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityPropertiesArgs> identity;
+        private final @Nullable Input<IdentityPropertiesArgs> identity;
 
     public Input<IdentityPropertiesArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -77,7 +77,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSystemTask")
-    private final @Nullable Input<Boolean> isSystemTask;
+        private final @Nullable Input<Boolean> isSystemTask;
 
     public Input<Boolean> getIsSystemTask() {
         return this.isSystemTask == null ? Input.empty() : this.isSystemTask;
@@ -88,7 +88,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -99,7 +99,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable Input<String> logTemplate;
+        private final @Nullable Input<String> logTemplate;
 
     public Input<String> getLogTemplate() {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
@@ -110,7 +110,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<PlatformPropertiesArgs> platform;
+        private final @Nullable Input<PlatformPropertiesArgs> platform;
 
     public Input<PlatformPropertiesArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -121,7 +121,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final Input<String> registryName;
+        private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -132,7 +132,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -143,7 +143,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,TaskStatus>> status;
+        private final @Nullable Input<Either<String,TaskStatus>> status;
 
     public Input<Either<String,TaskStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -154,7 +154,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="step")
-    private final @Nullable Input<Object> step;
+        private final @Nullable Input<Object> step;
 
     public Input<Object> getStep() {
         return this.step == null ? Input.empty() : this.step;
@@ -165,7 +165,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -176,7 +176,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskName")
-    private final @Nullable Input<String> taskName;
+        private final @Nullable Input<String> taskName;
 
     public Input<String> getTaskName() {
         return this.taskName == null ? Input.empty() : this.taskName;
@@ -187,7 +187,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+        private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -198,7 +198,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<TriggerPropertiesArgs> trigger;
+        private final @Nullable Input<TriggerPropertiesArgs> trigger;
 
     public Input<TriggerPropertiesArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -467,7 +467,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public TaskArgs build() {
             return new TaskArgs(agentConfiguration, agentPoolName, credentials, identity, isSystemTask, location, logTemplate, platform, registryName, resourceGroupName, status, step, tags, taskName, timeout, trigger);
         }

@@ -26,7 +26,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configMap")
-    private final @Nullable Input<ConfigMapProjectionArgs> configMap;
+        private final @Nullable Input<ConfigMapProjectionArgs> configMap;
 
     public Input<ConfigMapProjectionArgs> getConfigMap() {
         return this.configMap == null ? Input.empty() : this.configMap;
@@ -37,7 +37,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="downwardAPI")
-    private final @Nullable Input<DownwardAPIProjectionArgs> downwardAPI;
+        private final @Nullable Input<DownwardAPIProjectionArgs> downwardAPI;
 
     public Input<DownwardAPIProjectionArgs> getDownwardAPI() {
         return this.downwardAPI == null ? Input.empty() : this.downwardAPI;
@@ -48,7 +48,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<SecretProjectionArgs> secret;
+        private final @Nullable Input<SecretProjectionArgs> secret;
 
     public Input<SecretProjectionArgs> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -59,7 +59,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccountToken")
-    private final @Nullable Input<ServiceAccountTokenProjectionArgs> serviceAccountToken;
+        private final @Nullable Input<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
     public Input<ServiceAccountTokenProjectionArgs> getServiceAccountToken() {
         return this.serviceAccountToken == null ? Input.empty() : this.serviceAccountToken;
@@ -148,7 +148,6 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             this.serviceAccountToken = Input.ofNullable(serviceAccountToken);
             return this;
         }
-
         public VolumeProjectionArgs build() {
             return new VolumeProjectionArgs(configMap, downwardAPI, secret, serviceAccountToken);
         }

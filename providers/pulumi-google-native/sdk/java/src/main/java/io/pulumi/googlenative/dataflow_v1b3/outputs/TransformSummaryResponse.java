@@ -139,7 +139,6 @@ public final class TransformSummaryResponse {
             this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
             return this;
         }
-
         public TransformSummaryResponse build() {
             return new TransformSummaryResponse(displayData, inputCollectionName, kind, name, outputCollectionName);
         }

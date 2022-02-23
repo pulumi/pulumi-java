@@ -143,7 +143,6 @@ public final class DistributionConfigurationDistribution {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }

@@ -659,7 +659,6 @@ public final class AKSServiceResponseResponse {
             this.type = type;
             return this;
         }
-
         public AKSServiceResponseResponse build() {
             return new AKSServiceResponseResponse(aadAuthEnabled, appInsightsEnabled, authEnabled, autoScaler, computeName, computeType, containerResourceRequirements, dataCollection, deploymentStatus, deploymentType, description, environmentImageRequest, error, isDefault, kvTags, livenessProbeRequirements, maxConcurrentRequestsPerContainer, maxQueueWaitMs, modelConfigMap, models, namespace, numReplicas, properties, scoringTimeoutMs, scoringUri, state, swaggerUri, trafficPercentile, type);
         }

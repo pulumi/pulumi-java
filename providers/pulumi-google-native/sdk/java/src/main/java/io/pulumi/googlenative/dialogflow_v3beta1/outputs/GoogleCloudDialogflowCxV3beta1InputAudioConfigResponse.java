@@ -182,7 +182,6 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
             this.singleUtterance = Objects.requireNonNull(singleUtterance);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse(audioEncoding, enableWordInfo, model, modelVariant, phraseHints, sampleRateHertz, singleUtterance);
         }

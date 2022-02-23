@@ -78,7 +78,6 @@ public final class UnencryptedCredentialsResponse {
             this.jobSecrets = Objects.requireNonNull(jobSecrets);
             return this;
         }
-
         public UnencryptedCredentialsResponse build() {
             return new UnencryptedCredentialsResponse(jobName, jobSecrets);
         }

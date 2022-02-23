@@ -76,7 +76,6 @@ public final class ListWorkspaceKeysResult {
             this.secondaryToken = secondaryToken;
             return this;
         }
-
         public ListWorkspaceKeysResult build() {
             return new ListWorkspaceKeysResult(primaryToken, secondaryToken);
         }

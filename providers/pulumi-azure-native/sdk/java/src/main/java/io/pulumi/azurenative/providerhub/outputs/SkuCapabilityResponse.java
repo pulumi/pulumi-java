@@ -58,7 +58,6 @@ public final class SkuCapabilityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SkuCapabilityResponse build() {
             return new SkuCapabilityResponse(name, value);
         }

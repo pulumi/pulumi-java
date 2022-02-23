@@ -54,7 +54,6 @@ public final class DPMContainerExtendedInfoResponse {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public DPMContainerExtendedInfoResponse build() {
             return new DPMContainerExtendedInfoResponse(lastRefreshedAt);
         }

@@ -225,7 +225,6 @@ public final class GetEncryptionScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEncryptionScopeResult build() {
             return new GetEncryptionScopeResult(creationTime, id, keyVaultProperties, lastModifiedTime, name, requireInfrastructureEncryption, source, state, type);
         }

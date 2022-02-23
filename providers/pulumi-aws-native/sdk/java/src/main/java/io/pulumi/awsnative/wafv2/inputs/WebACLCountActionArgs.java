@@ -19,7 +19,7 @@ public final class WebACLCountActionArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLCountActionArgs Empty = new WebACLCountActionArgs();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
+        private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
     public Input<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
@@ -62,7 +62,6 @@ public final class WebACLCountActionArgs extends io.pulumi.resources.ResourceArg
             this.customRequestHandling = Input.ofNullable(customRequestHandling);
             return this;
         }
-
         public WebACLCountActionArgs build() {
             return new WebACLCountActionArgs(customRequestHandling);
         }

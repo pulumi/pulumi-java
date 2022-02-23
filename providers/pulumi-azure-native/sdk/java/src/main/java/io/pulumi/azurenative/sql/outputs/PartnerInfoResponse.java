@@ -95,7 +95,6 @@ public final class PartnerInfoResponse {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public PartnerInfoResponse build() {
             return new PartnerInfoResponse(id, location, replicationRole);
         }

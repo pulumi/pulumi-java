@@ -16,7 +16,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
     public static final JobIAMMemberState Empty = new JobIAMMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<JobIAMMemberConditionGetArgs> condition;
+        private final @Nullable Input<JobIAMMemberConditionGetArgs> condition;
 
     public Input<JobIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,21 +27,21 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+        private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -53,7 +53,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -78,7 +78,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -212,7 +212,6 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public JobIAMMemberState build() {
             return new JobIAMMemberState(condition, etag, jobId, member, project, region, role);
         }

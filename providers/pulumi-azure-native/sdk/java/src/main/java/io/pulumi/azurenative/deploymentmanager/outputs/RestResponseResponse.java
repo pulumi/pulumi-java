@@ -78,7 +78,6 @@ public final class RestResponseResponse {
             this.successStatusCodes = successStatusCodes;
             return this;
         }
-
         public RestResponseResponse build() {
             return new RestResponseResponse(regex, successStatusCodes);
         }

@@ -300,7 +300,6 @@ public final class AzureBlobFSDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobFSDatasetResponse build() {
             return new AzureBlobFSDatasetResponse(annotations, compression, description, fileName, folder, folderPath, format, linkedServiceName, parameters, schema, structure, type);
         }

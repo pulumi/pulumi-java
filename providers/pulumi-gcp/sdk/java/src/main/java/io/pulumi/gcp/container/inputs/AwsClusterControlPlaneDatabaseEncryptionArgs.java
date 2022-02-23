@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneDatabaseEncryptionArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyArn", required=true)
-    private final Input<String> kmsKeyArn;
+        private final Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn;
@@ -61,7 +61,6 @@ public final class AwsClusterControlPlaneDatabaseEncryptionArgs extends io.pulum
             this.kmsKeyArn = Input.of(Objects.requireNonNull(kmsKeyArn));
             return this;
         }
-
         public AwsClusterControlPlaneDatabaseEncryptionArgs build() {
             return new AwsClusterControlPlaneDatabaseEncryptionArgs(kmsKeyArn);
         }

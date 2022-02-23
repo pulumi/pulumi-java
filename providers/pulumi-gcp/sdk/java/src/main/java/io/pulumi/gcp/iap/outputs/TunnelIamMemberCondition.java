@@ -97,7 +97,6 @@ public final class TunnelIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TunnelIamMemberCondition build() {
             return new TunnelIamMemberCondition(description, expression, title);
         }

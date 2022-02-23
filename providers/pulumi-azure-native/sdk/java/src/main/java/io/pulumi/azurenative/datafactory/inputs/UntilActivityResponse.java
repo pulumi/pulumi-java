@@ -65,7 +65,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="activities", required=true)
-    private final List<Object> activities;
+        private final List<Object> activities;
 
     public List<Object> getActivities() {
         return this.activities;
@@ -76,7 +76,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -87,7 +87,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -98,7 +98,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expression", required=true)
-    private final ExpressionResponse expression;
+        private final ExpressionResponse expression;
 
     public ExpressionResponse getExpression() {
         return this.expression;
@@ -109,7 +109,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -120,7 +120,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Object timeout;
+        private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -132,7 +132,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -252,7 +252,6 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
             this.userProperties = userProperties;
             return this;
         }
-
         public UntilActivityResponse build() {
             return new UntilActivityResponse(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }

@@ -95,7 +95,6 @@ public final class ListBatchAccountKeysResult {
             this.secondary = Objects.requireNonNull(secondary);
             return this;
         }
-
         public ListBatchAccountKeysResult build() {
             return new ListBatchAccountKeysResult(accountName, primary, secondary);
         }

@@ -224,7 +224,6 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
             this.trustStore = Objects.requireNonNull(trustStore);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoResponse build() {
             return new GoogleCloudApigeeV1TlsInfoResponse(ciphers, clientAuthEnabled, commonName, enabled, ignoreValidationErrors, keyAlias, keyStore, protocols, trustStore);
         }

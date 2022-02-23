@@ -204,7 +204,6 @@ public final class RuntimeSoftwareConfigResponse {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public RuntimeSoftwareConfigResponse build() {
             return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }

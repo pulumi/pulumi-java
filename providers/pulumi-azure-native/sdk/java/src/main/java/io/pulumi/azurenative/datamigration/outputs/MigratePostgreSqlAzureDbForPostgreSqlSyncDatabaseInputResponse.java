@@ -140,7 +140,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
             this.targetSetting = targetSetting;
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }

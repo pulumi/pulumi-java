@@ -30,7 +30,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="agentConfiguration")
-    private final @Nullable AgentPropertiesResponse agentConfiguration;
+        private final @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
@@ -41,7 +41,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable String agentPoolName;
+        private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
@@ -52,7 +52,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable CredentialsResponse credentials;
+        private final @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -63,7 +63,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Boolean isArchiveEnabled;
+        private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
@@ -74,7 +74,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable String logTemplate;
+        private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
@@ -85,7 +85,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="platform", required=true)
-    private final PlatformPropertiesResponse platform;
+        private final PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse getPlatform() {
         return this.platform;
@@ -97,7 +97,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sourceLocation")
-    private final @Nullable String sourceLocation;
+        private final @Nullable String sourceLocation;
 
     public Optional<String> getSourceLocation() {
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
@@ -108,7 +108,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-    private final String taskFilePath;
+        private final String taskFilePath;
 
     public String getTaskFilePath() {
         return this.taskFilePath;
@@ -119,7 +119,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Integer timeout;
+        private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -131,7 +131,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<SetValueResponse> values;
+        private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -153,7 +153,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="valuesFilePath")
-    private final @Nullable String valuesFilePath;
+        private final @Nullable String valuesFilePath;
 
     public Optional<String> getValuesFilePath() {
         return this.valuesFilePath == null ? Optional.empty() : Optional.ofNullable(this.valuesFilePath);
@@ -302,7 +302,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
             this.valuesFilePath = valuesFilePath;
             return this;
         }
-
         public FileTaskRunRequestResponse build() {
             return new FileTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, isArchiveEnabled, logTemplate, platform, sourceLocation, taskFilePath, timeout, type, values, valuesFilePath);
         }

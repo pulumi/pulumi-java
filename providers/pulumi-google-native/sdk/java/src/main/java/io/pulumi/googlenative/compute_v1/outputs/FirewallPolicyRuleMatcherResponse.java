@@ -97,7 +97,6 @@ public final class FirewallPolicyRuleMatcherResponse {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
         }

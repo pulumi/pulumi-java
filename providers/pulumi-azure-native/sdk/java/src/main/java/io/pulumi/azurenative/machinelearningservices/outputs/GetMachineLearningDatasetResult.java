@@ -206,7 +206,6 @@ public final class GetMachineLearningDatasetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineLearningDatasetResult build() {
             return new GetMachineLearningDatasetResult(id, identity, location, name, properties, sku, tags, type);
         }

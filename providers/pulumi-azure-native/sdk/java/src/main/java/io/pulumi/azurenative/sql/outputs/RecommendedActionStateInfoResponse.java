@@ -95,7 +95,6 @@ public final class RecommendedActionStateInfoResponse {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public RecommendedActionStateInfoResponse build() {
             return new RecommendedActionStateInfoResponse(actionInitiatedBy, currentValue, lastModified);
         }

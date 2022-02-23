@@ -17,7 +17,7 @@ public final class ListContainerAppSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class ListContainerAppSecretsArgs extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ListContainerAppSecretsArgs build() {
             return new ListContainerAppSecretsArgs(name);
         }

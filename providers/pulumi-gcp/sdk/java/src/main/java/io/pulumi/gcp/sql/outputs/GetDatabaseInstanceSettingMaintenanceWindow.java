@@ -72,7 +72,6 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }
-
         public GetDatabaseInstanceSettingMaintenanceWindow build() {
             return new GetDatabaseInstanceSettingMaintenanceWindow(day, hour, updateTrack);
         }

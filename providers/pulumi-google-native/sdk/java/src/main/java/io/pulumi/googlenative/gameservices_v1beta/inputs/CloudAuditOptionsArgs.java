@@ -24,7 +24,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authorizationLoggingOptions")
-    private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
+      private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
     public Input<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions == null ? Input.empty() : this.authorizationLoggingOptions;
@@ -35,7 +35,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logName")
-    private final @Nullable Input<CloudAuditOptionsLogName> logName;
+      private final @Nullable Input<CloudAuditOptionsLogName> logName;
 
     public Input<CloudAuditOptionsLogName> getLogName() {
         return this.logName == null ? Input.empty() : this.logName;
@@ -94,7 +94,6 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
             this.logName = Input.ofNullable(logName);
             return this;
         }
-
         public CloudAuditOptionsArgs build() {
             return new CloudAuditOptionsArgs(authorizationLoggingOptions, logName);
         }

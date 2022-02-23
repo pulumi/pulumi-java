@@ -252,7 +252,6 @@ public final class AzurePostgreSqlTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzurePostgreSqlTableDatasetResponse build() {
             return new AzurePostgreSqlTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

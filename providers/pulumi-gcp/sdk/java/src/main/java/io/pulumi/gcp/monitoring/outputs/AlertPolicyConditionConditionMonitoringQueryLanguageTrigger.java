@@ -85,7 +85,6 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
             this.percent = percent;
             return this;
         }
-
         public AlertPolicyConditionConditionMonitoringQueryLanguageTrigger build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageTrigger(count, percent);
         }

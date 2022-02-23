@@ -23,7 +23,7 @@ public final class Office365PolicyPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="breakOutCategories")
-    private final @Nullable Input<BreakOutCategoryPoliciesArgs> breakOutCategories;
+        private final @Nullable Input<BreakOutCategoryPoliciesArgs> breakOutCategories;
 
     public Input<BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
         return this.breakOutCategories == null ? Input.empty() : this.breakOutCategories;
@@ -66,7 +66,6 @@ public final class Office365PolicyPropertiesArgs extends io.pulumi.resources.Res
             this.breakOutCategories = Input.ofNullable(breakOutCategories);
             return this;
         }
-
         public Office365PolicyPropertiesArgs build() {
             return new Office365PolicyPropertiesArgs(breakOutCategories);
         }

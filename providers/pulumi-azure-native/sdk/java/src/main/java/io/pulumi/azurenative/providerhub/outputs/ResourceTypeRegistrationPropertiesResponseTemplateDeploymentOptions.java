@@ -62,7 +62,6 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
             this.preflightSupported = preflightSupported;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions build() {
             return new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
         }

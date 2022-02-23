@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2TaggedFieldResponse build() {
             return new GooglePrivacyDlpV2TaggedFieldResponse(customTag, field, inferred, infoType);
         }

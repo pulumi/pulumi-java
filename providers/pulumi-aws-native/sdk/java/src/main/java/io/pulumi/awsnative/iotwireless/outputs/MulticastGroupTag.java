@@ -60,7 +60,6 @@ public final class MulticastGroupTag {
             this.value = value;
             return this;
         }
-
         public MulticastGroupTag build() {
             return new MulticastGroupTag(key, value);
         }

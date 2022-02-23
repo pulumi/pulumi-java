@@ -15,14 +15,14 @@ public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
     public static final GetPatchDeploymentArgs Empty = new GetPatchDeploymentArgs();
 
     @InputImport(name="patchDeploymentId", required=true)
-    private final String patchDeploymentId;
+      private final String patchDeploymentId;
 
     public String getPatchDeploymentId() {
         return this.patchDeploymentId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public GetPatchDeploymentArgs build() {
             return new GetPatchDeploymentArgs(patchDeploymentId, project);
         }

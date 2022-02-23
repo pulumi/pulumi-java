@@ -140,7 +140,6 @@ public final class ResourcesResponse {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public ResourcesResponse build() {
             return new ResourcesResponse(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }

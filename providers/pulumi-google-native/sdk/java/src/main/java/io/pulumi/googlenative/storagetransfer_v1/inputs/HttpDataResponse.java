@@ -21,7 +21,7 @@ public final class HttpDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="listUrl", required=true)
-    private final String listUrl;
+      private final String listUrl;
 
     public String getListUrl() {
         return this.listUrl;
@@ -59,7 +59,6 @@ public final class HttpDataResponse extends io.pulumi.resources.InvokeArgs {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public HttpDataResponse build() {
             return new HttpDataResponse(listUrl);
         }

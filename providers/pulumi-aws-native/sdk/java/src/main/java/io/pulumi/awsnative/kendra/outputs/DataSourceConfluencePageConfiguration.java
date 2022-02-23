@@ -46,7 +46,6 @@ public final class DataSourceConfluencePageConfiguration {
             this.pageFieldMappings = pageFieldMappings;
             return this;
         }
-
         public DataSourceConfluencePageConfiguration build() {
             return new DataSourceConfluencePageConfiguration(pageFieldMappings);
         }

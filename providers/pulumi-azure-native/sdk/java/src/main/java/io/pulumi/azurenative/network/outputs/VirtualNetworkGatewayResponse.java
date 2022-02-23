@@ -548,7 +548,6 @@ public final class VirtualNetworkGatewayResponse {
             this.vpnType = vpnType;
             return this;
         }
-
         public VirtualNetworkGatewayResponse build() {
             return new VirtualNetworkGatewayResponse(activeActive, bgpSettings, customRoutes, enableBgp, enableDnsForwarding, enablePrivateIpAddress, etag, extendedLocation, gatewayDefaultSite, gatewayType, id, inboundDnsForwardingEndpoint, ipConfigurations, location, name, provisioningState, resourceGuid, sku, tags, type, vNetExtendedLocationResourceId, vpnClientConfiguration, vpnGatewayGeneration, vpnType);
         }

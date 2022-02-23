@@ -119,7 +119,6 @@ public final class BlobInventoryPolicySchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobInventoryPolicySchemaResponse build() {
             return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
         }

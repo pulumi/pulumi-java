@@ -335,7 +335,6 @@ public final class GetP2sVpnGatewayResult {
             this.vpnServerConfiguration = vpnServerConfiguration;
             return this;
         }
-
         public GetP2sVpnGatewayResult build() {
             return new GetP2sVpnGatewayResult(customDnsServers, etag, id, isRoutingPreferenceInternet, location, name, p2SConnectionConfigurations, provisioningState, tags, type, virtualHub, vpnClientConnectionHealth, vpnGatewayScaleUnit, vpnServerConfiguration);
         }

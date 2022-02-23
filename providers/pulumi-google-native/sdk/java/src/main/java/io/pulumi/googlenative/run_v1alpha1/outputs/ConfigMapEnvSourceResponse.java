@@ -97,7 +97,6 @@ public final class ConfigMapEnvSourceResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapEnvSourceResponse build() {
             return new ConfigMapEnvSourceResponse(localObjectReference, name, optional);
         }

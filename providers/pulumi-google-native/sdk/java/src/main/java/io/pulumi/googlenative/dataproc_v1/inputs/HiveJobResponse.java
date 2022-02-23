@@ -25,7 +25,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="continueOnFailure", required=true)
-    private final Boolean continueOnFailure;
+      private final Boolean continueOnFailure;
 
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
@@ -36,7 +36,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -47,7 +47,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Map<String,String> properties;
+      private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties;
@@ -58,7 +58,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryFileUri", required=true)
-    private final String queryFileUri;
+      private final String queryFileUri;
 
     public String getQueryFileUri() {
         return this.queryFileUri;
@@ -69,7 +69,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryList", required=true)
-    private final QueryListResponse queryList;
+      private final QueryListResponse queryList;
 
     public QueryListResponse getQueryList() {
         return this.queryList;
@@ -80,7 +80,7 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scriptVariables", required=true)
-    private final Map<String,String> scriptVariables;
+      private final Map<String,String> scriptVariables;
 
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
@@ -169,7 +169,6 @@ public final class HiveJobResponse extends io.pulumi.resources.InvokeArgs {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public HiveJobResponse build() {
             return new HiveJobResponse(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

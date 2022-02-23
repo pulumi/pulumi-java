@@ -160,7 +160,6 @@ public final class GetSchemaResult {
             this.value = value;
             return this;
         }
-
         public GetSchemaResult build() {
             return new GetSchemaResult(description, id, name, schemaType, type, value);
         }

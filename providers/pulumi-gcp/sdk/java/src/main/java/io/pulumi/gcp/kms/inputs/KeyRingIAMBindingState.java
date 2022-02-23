@@ -22,7 +22,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<KeyRingIAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<KeyRingIAMBindingConditionGetArgs> condition;
 
     public Input<KeyRingIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -47,14 +47,14 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyRingId")
-    private final @Nullable Input<String> keyRingId;
+        private final @Nullable Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId == null ? Input.empty() : this.keyRingId;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -67,7 +67,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -171,7 +171,6 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public KeyRingIAMBindingState build() {
             return new KeyRingIAMBindingState(condition, etag, keyRingId, members, role);
         }

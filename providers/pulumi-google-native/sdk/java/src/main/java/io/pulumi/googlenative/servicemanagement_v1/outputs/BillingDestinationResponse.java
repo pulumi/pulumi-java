@@ -75,7 +75,6 @@ public final class BillingDestinationResponse {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
-
         public BillingDestinationResponse build() {
             return new BillingDestinationResponse(metrics, monitoredResource);
         }

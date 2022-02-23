@@ -180,7 +180,6 @@ public final class EdifactValidationOverrideResponse {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public EdifactValidationOverrideResponse build() {
             return new EdifactValidationOverrideResponse(allowLeadingAndTrailingSpacesAndZeroes, enforceCharacterSet, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateEDITypes, validateXSDTypes);
         }

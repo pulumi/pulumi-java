@@ -53,7 +53,6 @@ public final class CapacityReservationUtilizationResponse {
             this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated);
             return this;
         }
-
         public CapacityReservationUtilizationResponse build() {
             return new CapacityReservationUtilizationResponse(virtualMachinesAllocated);
         }

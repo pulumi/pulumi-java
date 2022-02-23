@@ -60,7 +60,6 @@ public final class DistributionCookies {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
-
         public DistributionCookies build() {
             return new DistributionCookies(forward, whitelistedNames);
         }

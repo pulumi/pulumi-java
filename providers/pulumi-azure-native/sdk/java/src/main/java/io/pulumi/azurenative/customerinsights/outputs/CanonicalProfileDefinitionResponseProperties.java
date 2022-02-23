@@ -140,7 +140,6 @@ public final class CanonicalProfileDefinitionResponseProperties {
             this.value = value;
             return this;
         }
-
         public CanonicalProfileDefinitionResponseProperties build() {
             return new CanonicalProfileDefinitionResponseProperties(profileName, profilePropertyName, rank, type, value);
         }

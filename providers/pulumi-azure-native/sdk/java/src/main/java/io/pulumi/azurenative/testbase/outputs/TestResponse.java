@@ -121,7 +121,6 @@ public final class TestResponse {
             this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
             return this;
         }
-
         public TestResponse build() {
             return new TestResponse(commands, isActive, testType, validationRunStatus);
         }

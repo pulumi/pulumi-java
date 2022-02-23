@@ -357,7 +357,6 @@ public final class GetStepResult {
             this.toolExecutionStep = Objects.requireNonNull(toolExecutionStep);
             return this;
         }
-
         public GetStepResult build() {
             return new GetStepResult(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, hasImages, labels, multiStep, name, outcome, runDuration, state, stepId, testExecutionStep, toolExecutionStep);
         }

@@ -140,7 +140,6 @@ public final class StorageConfigurationSettingsResponse {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }
-
         public StorageConfigurationSettingsResponse build() {
             return new StorageConfigurationSettingsResponse(diskConfigurationType, sqlDataSettings, sqlLogSettings, sqlTempDbSettings, storageWorkloadType);
         }

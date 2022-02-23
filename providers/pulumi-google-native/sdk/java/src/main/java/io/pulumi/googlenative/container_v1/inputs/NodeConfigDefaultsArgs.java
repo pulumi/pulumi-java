@@ -23,7 +23,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gcfsConfig")
-    private final @Nullable Input<GcfsConfigArgs> gcfsConfig;
+      private final @Nullable Input<GcfsConfigArgs> gcfsConfig;
 
     public Input<GcfsConfigArgs> getGcfsConfig() {
         return this.gcfsConfig == null ? Input.empty() : this.gcfsConfig;
@@ -66,7 +66,6 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
             this.gcfsConfig = Input.ofNullable(gcfsConfig);
             return this;
         }
-
         public NodeConfigDefaultsArgs build() {
             return new NodeConfigDefaultsArgs(gcfsConfig);
         }

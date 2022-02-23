@@ -26,7 +26,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="access", required=true)
-    private final String access;
+        private final String access;
 
     public String getAccess() {
         return this.access;
@@ -37,7 +37,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefix")
-    private final @Nullable String destinationAddressPrefix;
+        private final @Nullable String destinationAddressPrefix;
 
     public Optional<String> getDestinationAddressPrefix() {
         return this.destinationAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.destinationAddressPrefix);
@@ -59,7 +59,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefixes")
-    private final @Nullable List<String> destinationAddressPrefixes;
+        private final @Nullable List<String> destinationAddressPrefixes;
 
     public List<String> getDestinationAddressPrefixes() {
         return this.destinationAddressPrefixes == null ? List.of() : this.destinationAddressPrefixes;
@@ -70,7 +70,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationApplicationSecurityGroups")
-    private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
+        private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
 
     public List<ApplicationSecurityGroupResponse> getDestinationApplicationSecurityGroups() {
         return this.destinationApplicationSecurityGroups == null ? List.of() : this.destinationApplicationSecurityGroups;
@@ -81,7 +81,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationPortRange")
-    private final @Nullable String destinationPortRange;
+        private final @Nullable String destinationPortRange;
 
     public Optional<String> getDestinationPortRange() {
         return this.destinationPortRange == null ? Optional.empty() : Optional.ofNullable(this.destinationPortRange);
@@ -92,7 +92,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationPortRanges")
-    private final @Nullable List<String> destinationPortRanges;
+        private final @Nullable List<String> destinationPortRanges;
 
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
@@ -103,7 +103,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+        private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -114,7 +114,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -125,7 +125,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -136,7 +136,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -147,7 +147,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -158,7 +158,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -169,7 +169,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -180,7 +180,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefix")
-    private final @Nullable String sourceAddressPrefix;
+        private final @Nullable String sourceAddressPrefix;
 
     public Optional<String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.sourceAddressPrefix);
@@ -191,7 +191,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefixes")
-    private final @Nullable List<String> sourceAddressPrefixes;
+        private final @Nullable List<String> sourceAddressPrefixes;
 
     public List<String> getSourceAddressPrefixes() {
         return this.sourceAddressPrefixes == null ? List.of() : this.sourceAddressPrefixes;
@@ -202,7 +202,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceApplicationSecurityGroups")
-    private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
+        private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
 
     public List<ApplicationSecurityGroupResponse> getSourceApplicationSecurityGroups() {
         return this.sourceApplicationSecurityGroups == null ? List.of() : this.sourceApplicationSecurityGroups;
@@ -213,7 +213,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourcePortRange")
-    private final @Nullable String sourcePortRange;
+        private final @Nullable String sourcePortRange;
 
     public Optional<String> getSourcePortRange() {
         return this.sourcePortRange == null ? Optional.empty() : Optional.ofNullable(this.sourcePortRange);
@@ -224,7 +224,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourcePortRanges")
-    private final @Nullable List<String> sourcePortRanges;
+        private final @Nullable List<String> sourcePortRanges;
 
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
@@ -235,7 +235,7 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -464,7 +464,6 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public SecurityRuleResponse build() {
             return new SecurityRuleResponse(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, etag, id, name, priority, protocol, provisioningState, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }

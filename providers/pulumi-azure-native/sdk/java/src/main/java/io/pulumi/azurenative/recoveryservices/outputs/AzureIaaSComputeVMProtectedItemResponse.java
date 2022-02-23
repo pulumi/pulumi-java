@@ -589,7 +589,6 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureIaaSComputeVMProtectedItemResponse build() {
             return new AzureIaaSComputeVMProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthDetails, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
         }

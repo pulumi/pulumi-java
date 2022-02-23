@@ -15,14 +15,14 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetRepositoryArgs build() {
             return new GetRepositoryArgs(name, project);
         }

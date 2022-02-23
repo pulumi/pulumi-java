@@ -97,7 +97,6 @@ public final class AnimationResponse {
             this.animationStatic = Objects.requireNonNull(animationStatic);
             return this;
         }
-
         public AnimationResponse build() {
             return new AnimationResponse(animationEnd, animationFade, animationStatic);
         }

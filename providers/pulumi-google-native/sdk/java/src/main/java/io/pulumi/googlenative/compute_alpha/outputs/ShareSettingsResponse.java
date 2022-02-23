@@ -118,7 +118,6 @@ public final class ShareSettingsResponse {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }
-
         public ShareSettingsResponse build() {
             return new ShareSettingsResponse(folderMap, projectMap, projects, shareType);
         }

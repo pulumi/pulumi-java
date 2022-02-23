@@ -23,7 +23,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRunService")
-    private final @Nullable Input<CloudRunServiceArgs> cloudRunService;
+      private final @Nullable Input<CloudRunServiceArgs> cloudRunService;
 
     public Input<CloudRunServiceArgs> getCloudRunService() {
         return this.cloudRunService == null ? Input.empty() : this.cloudRunService;
@@ -66,7 +66,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudRunService = Input.ofNullable(cloudRunService);
             return this;
         }
-
         public DestinationArgs build() {
             return new DestinationArgs(cloudRunService);
         }

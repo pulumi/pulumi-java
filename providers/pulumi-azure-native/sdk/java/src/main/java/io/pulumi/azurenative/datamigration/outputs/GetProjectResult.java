@@ -294,7 +294,6 @@ public final class GetProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(creationTime, databasesInfo, id, location, name, provisioningState, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform, type);
         }

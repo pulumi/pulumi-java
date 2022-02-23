@@ -58,7 +58,6 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }
-
         public DeliveryStreamHttpEndpointCommonAttribute build() {
             return new DeliveryStreamHttpEndpointCommonAttribute(attributeName, attributeValue);
         }

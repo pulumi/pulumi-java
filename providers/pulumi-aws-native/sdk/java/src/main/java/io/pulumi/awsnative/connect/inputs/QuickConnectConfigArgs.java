@@ -22,28 +22,28 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
     public static final QuickConnectConfigArgs Empty = new QuickConnectConfigArgs();
 
     @InputImport(name="phoneConfig")
-    private final @Nullable Input<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig;
+        private final @Nullable Input<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig;
 
     public Input<QuickConnectPhoneNumberQuickConnectConfigArgs> getPhoneConfig() {
         return this.phoneConfig == null ? Input.empty() : this.phoneConfig;
     }
 
     @InputImport(name="queueConfig")
-    private final @Nullable Input<QuickConnectQueueQuickConnectConfigArgs> queueConfig;
+        private final @Nullable Input<QuickConnectQueueQuickConnectConfigArgs> queueConfig;
 
     public Input<QuickConnectQueueQuickConnectConfigArgs> getQueueConfig() {
         return this.queueConfig == null ? Input.empty() : this.queueConfig;
     }
 
     @InputImport(name="quickConnectType", required=true)
-    private final Input<QuickConnectType> quickConnectType;
+        private final Input<QuickConnectType> quickConnectType;
 
     public Input<QuickConnectType> getQuickConnectType() {
         return this.quickConnectType;
     }
 
     @InputImport(name="userConfig")
-    private final @Nullable Input<QuickConnectUserQuickConnectConfigArgs> userConfig;
+        private final @Nullable Input<QuickConnectUserQuickConnectConfigArgs> userConfig;
 
     public Input<QuickConnectUserQuickConnectConfigArgs> getUserConfig() {
         return this.userConfig == null ? Input.empty() : this.userConfig;
@@ -132,7 +132,6 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
             this.userConfig = Input.ofNullable(userConfig);
             return this;
         }
-
         public QuickConnectConfigArgs build() {
             return new QuickConnectConfigArgs(phoneConfig, queueConfig, quickConnectType, userConfig);
         }

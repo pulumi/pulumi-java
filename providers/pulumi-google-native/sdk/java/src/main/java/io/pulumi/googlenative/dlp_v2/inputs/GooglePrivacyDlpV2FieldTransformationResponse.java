@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
      * 
      */
     @InputImport(name="condition", required=true)
-    private final GooglePrivacyDlpV2RecordConditionResponse condition;
+      private final GooglePrivacyDlpV2RecordConditionResponse condition;
 
     public GooglePrivacyDlpV2RecordConditionResponse getCondition() {
         return this.condition;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> fields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> fields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getFields() {
         return this.fields;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
      * 
      */
     @InputImport(name="infoTypeTransformations", required=true)
-    private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
+      private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse getInfoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
      * 
      */
     @InputImport(name="primitiveTransformation", required=true)
-    private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
+      private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
     public GooglePrivacyDlpV2PrimitiveTransformationResponse getPrimitiveTransformation() {
         return this.primitiveTransformation;
@@ -127,7 +127,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
-
         public GooglePrivacyDlpV2FieldTransformationResponse build() {
             return new GooglePrivacyDlpV2FieldTransformationResponse(condition, fields, infoTypeTransformations, primitiveTransformation);
         }

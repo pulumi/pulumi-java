@@ -15,14 +15,14 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetImageArgs Empty = new GetImageArgs();
 
     @InputImport(name="image", required=true)
-    private final String image;
+      private final String image;
 
     public String getImage() {
         return this.image;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetImageArgs build() {
             return new GetImageArgs(image, project);
         }

@@ -117,7 +117,6 @@ public final class GetConfigurationProfileAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationProfileAssignmentResult build() {
             return new GetConfigurationProfileAssignmentResult(id, name, properties, type);
         }

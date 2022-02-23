@@ -24,7 +24,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="contentId")
-    private final @Nullable String contentId;
+        private final @Nullable String contentId;
 
     public Optional<String> getContentId() {
         return this.contentId == null ? Optional.empty() : Optional.ofNullable(this.contentId);
@@ -35,7 +35,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="criteria")
-    private final @Nullable List<MetadataDependenciesResponse> criteria;
+        private final @Nullable List<MetadataDependenciesResponse> criteria;
 
     public List<MetadataDependenciesResponse> getCriteria() {
         return this.criteria == null ? List.of() : this.criteria;
@@ -46,7 +46,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -57,7 +57,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -68,7 +68,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable String operator;
+        private final @Nullable String operator;
 
     public Optional<String> getOperator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
@@ -79,7 +79,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -168,7 +168,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
             this.version = version;
             return this;
         }
-
         public MetadataDependenciesResponse build() {
             return new MetadataDependenciesResponse(contentId, criteria, kind, name, operator, version);
         }

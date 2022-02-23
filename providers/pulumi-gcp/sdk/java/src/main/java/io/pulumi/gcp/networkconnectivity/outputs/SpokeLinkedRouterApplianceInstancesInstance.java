@@ -76,7 +76,6 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstancesInstance build() {
             return new SpokeLinkedRouterApplianceInstancesInstance(ipAddress, virtualMachine);
         }

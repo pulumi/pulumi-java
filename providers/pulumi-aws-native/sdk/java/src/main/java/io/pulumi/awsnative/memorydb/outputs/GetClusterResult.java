@@ -484,7 +484,6 @@ public final class GetClusterResult {
             this.tags = tags;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(aCLName, aRN, autoMinorVersionUpgrade, clusterEndpoint, description, engineVersion, finalSnapshotName, maintenanceWindow, nodeType, numReplicasPerShard, numShards, parameterGroupName, parameterGroupStatus, securityGroupIds, snapshotRetentionLimit, snapshotWindow, snsTopicArn, snsTopicStatus, status, subnetGroupName, tags);
         }

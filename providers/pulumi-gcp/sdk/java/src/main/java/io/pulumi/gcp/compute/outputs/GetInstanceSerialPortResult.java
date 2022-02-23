@@ -127,7 +127,6 @@ public final class GetInstanceSerialPortResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceSerialPortResult build() {
             return new GetInstanceSerialPortResult(contents, id, instance, port, project, zone);
         }

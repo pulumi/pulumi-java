@@ -421,7 +421,6 @@ public final class GetFrontDoorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFrontDoorResult build() {
             return new GetFrontDoorResult(backendPools, backendPoolsSettings, cname, enabledState, friendlyName, frontdoorId, frontendEndpoints, healthProbeSettings, id, loadBalancingSettings, location, name, provisioningState, resourceState, routingRules, rulesEngines, tags, type);
         }

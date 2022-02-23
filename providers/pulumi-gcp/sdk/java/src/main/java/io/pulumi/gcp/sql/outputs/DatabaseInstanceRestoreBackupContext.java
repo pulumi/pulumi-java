@@ -100,7 +100,6 @@ public final class DatabaseInstanceRestoreBackupContext {
             this.project = project;
             return this;
         }
-
         public DatabaseInstanceRestoreBackupContext build() {
             return new DatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }

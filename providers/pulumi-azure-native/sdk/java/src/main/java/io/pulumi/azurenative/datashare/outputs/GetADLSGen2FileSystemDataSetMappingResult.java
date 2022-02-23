@@ -287,7 +287,6 @@ public final class GetADLSGen2FileSystemDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetADLSGen2FileSystemDataSetMappingResult build() {
             return new GetADLSGen2FileSystemDataSetMappingResult(dataSetId, dataSetMappingStatus, fileSystem, id, kind, name, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

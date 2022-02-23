@@ -23,7 +23,7 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable String primary;
+        private final @Nullable String primary;
 
     public Optional<String> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -34,7 +34,7 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="secondary")
-    private final @Nullable String secondary;
+        private final @Nullable String secondary;
 
     public Optional<String> getSecondary() {
         return this.secondary == null ? Optional.empty() : Optional.ofNullable(this.secondary);
@@ -83,7 +83,6 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
             this.secondary = secondary;
             return this;
         }
-
         public WebServiceKeysResponse build() {
             return new WebServiceKeysResponse(primary, secondary);
         }

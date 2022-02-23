@@ -24,7 +24,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appBundleId", required=true)
-    private final String appBundleId;
+      private final String appBundleId;
 
     public String getAppBundleId() {
         return this.appBundleId;
@@ -35,7 +35,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appIpa", required=true)
-    private final FileReferenceResponse appIpa;
+      private final FileReferenceResponse appIpa;
 
     public FileReferenceResponse getAppIpa() {
         return this.appIpa;
@@ -46,7 +46,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scenarios", required=true)
-    private final List<Integer> scenarios;
+      private final List<Integer> scenarios;
 
     public List<Integer> getScenarios() {
         return this.scenarios;
@@ -105,7 +105,6 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(appBundleId, appIpa, scenarios);
         }

@@ -77,7 +77,6 @@ public final class RecurrenceScheduleOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public RecurrenceScheduleOccurrenceResponse build() {
             return new RecurrenceScheduleOccurrenceResponse(day, occurrence);
         }

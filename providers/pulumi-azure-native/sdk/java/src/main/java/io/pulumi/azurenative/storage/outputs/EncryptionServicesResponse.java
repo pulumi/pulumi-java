@@ -118,7 +118,6 @@ public final class EncryptionServicesResponse {
             this.table = table;
             return this;
         }
-
         public EncryptionServicesResponse build() {
             return new EncryptionServicesResponse(blob, file, queue, table);
         }

@@ -54,7 +54,6 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
             this.allowedPorts = allowedPorts;
             return this;
         }
-
         public SubnetSharedPublicIpAddressConfigurationResponse build() {
             return new SubnetSharedPublicIpAddressConfigurationResponse(allowedPorts);
         }

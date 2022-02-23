@@ -58,7 +58,6 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
             return new GetClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

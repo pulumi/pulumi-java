@@ -95,7 +95,6 @@ public final class SpannerIODetailsResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public SpannerIODetailsResponse build() {
             return new SpannerIODetailsResponse(databaseId, instanceId, project);
         }

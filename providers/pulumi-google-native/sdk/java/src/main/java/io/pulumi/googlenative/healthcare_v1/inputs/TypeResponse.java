@@ -23,7 +23,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<FieldResponse> fields;
+      private final List<FieldResponse> fields;
 
     public List<FieldResponse> getFields() {
         return this.fields;
@@ -34,7 +34,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primitive", required=true)
-    private final String primitive;
+      private final String primitive;
 
     public String getPrimitive() {
         return this.primitive;
@@ -104,7 +104,6 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, primitive);
         }

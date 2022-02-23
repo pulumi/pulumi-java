@@ -98,7 +98,6 @@ public final class LineChannelPropertiesResponse {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
-
         public LineChannelPropertiesResponse build() {
             return new LineChannelPropertiesResponse(callbackUrl, isValidated, lineRegistrations);
         }

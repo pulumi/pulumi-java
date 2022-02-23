@@ -120,7 +120,6 @@ public final class MABContainerHealthDetailsResponse {
             this.title = title;
             return this;
         }
-
         public MABContainerHealthDetailsResponse build() {
             return new MABContainerHealthDetailsResponse(code, message, recommendations, title);
         }

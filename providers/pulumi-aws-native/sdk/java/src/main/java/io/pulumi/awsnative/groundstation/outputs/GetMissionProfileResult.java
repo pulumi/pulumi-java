@@ -200,7 +200,6 @@ public final class GetMissionProfileResult {
             this.trackingConfigArn = trackingConfigArn;
             return this;
         }
-
         public GetMissionProfileResult build() {
             return new GetMissionProfileResult(arn, contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, id, minimumViableContactDurationSeconds, name, region, tags, trackingConfigArn);
         }

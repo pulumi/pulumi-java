@@ -16,7 +16,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DebugSessionArgs Empty = new DebugSessionArgs();
 
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -27,14 +27,14 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -45,7 +45,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -56,21 +56,21 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="revisionId", required=true)
-    private final Input<String> revisionId;
+      private final Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId;
@@ -81,7 +81,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -92,7 +92,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracesize")
-    private final @Nullable Input<Integer> tracesize;
+      private final @Nullable Input<Integer> tracesize;
 
     public Input<Integer> getTracesize() {
         return this.tracesize == null ? Input.empty() : this.tracesize;
@@ -103,7 +103,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-    private final @Nullable Input<Integer> validity;
+      private final @Nullable Input<Integer> validity;
 
     public Input<Integer> getValidity() {
         return this.validity == null ? Input.empty() : this.validity;
@@ -282,7 +282,6 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             this.validity = Input.ofNullable(validity);
             return this;
         }
-
         public DebugSessionArgs build() {
             return new DebugSessionArgs(apiId, count, environmentId, filter, name, organizationId, revisionId, timeout, tracesize, validity);
         }

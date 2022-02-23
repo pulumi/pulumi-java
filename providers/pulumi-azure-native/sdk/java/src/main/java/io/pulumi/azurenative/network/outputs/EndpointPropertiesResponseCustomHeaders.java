@@ -76,7 +76,6 @@ public final class EndpointPropertiesResponseCustomHeaders {
             this.value = value;
             return this;
         }
-
         public EndpointPropertiesResponseCustomHeaders build() {
             return new EndpointPropertiesResponseCustomHeaders(name, value);
         }

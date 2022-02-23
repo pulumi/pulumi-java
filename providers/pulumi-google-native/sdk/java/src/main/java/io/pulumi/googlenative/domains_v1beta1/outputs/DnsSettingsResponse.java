@@ -98,7 +98,6 @@ public final class DnsSettingsResponse {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(customDns, glueRecords, googleDomainsDns);
         }

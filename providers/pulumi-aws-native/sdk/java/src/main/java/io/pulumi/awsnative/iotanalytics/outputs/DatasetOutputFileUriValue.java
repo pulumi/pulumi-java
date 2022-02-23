@@ -44,7 +44,6 @@ public final class DatasetOutputFileUriValue {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public DatasetOutputFileUriValue build() {
             return new DatasetOutputFileUriValue(fileName);
         }

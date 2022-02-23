@@ -25,7 +25,7 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -36,7 +36,7 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final BackupScheduleResponse schedule;
+        private final BackupScheduleResponse schedule;
 
     public BackupScheduleResponse getSchedule() {
         return this.schedule;
@@ -47,7 +47,7 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-    private final List<TaggingCriteriaResponse> taggingCriteria;
+        private final List<TaggingCriteriaResponse> taggingCriteria;
 
     public List<TaggingCriteriaResponse> getTaggingCriteria() {
         return this.taggingCriteria;
@@ -106,7 +106,6 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public ScheduleBasedTriggerContextResponse build() {
             return new ScheduleBasedTriggerContextResponse(objectType, schedule, taggingCriteria);
         }

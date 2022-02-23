@@ -99,7 +99,6 @@ public final class CanaryCode {
             this.script = script;
             return this;
         }
-
         public CanaryCode build() {
             return new CanaryCode(handler, s3Bucket, s3Key, s3ObjectVersion, script);
         }

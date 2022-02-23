@@ -77,7 +77,6 @@ public final class UpstreamAuthSettingsResponse {
             this.type = type;
             return this;
         }
-
         public UpstreamAuthSettingsResponse build() {
             return new UpstreamAuthSettingsResponse(managedIdentity, type);
         }

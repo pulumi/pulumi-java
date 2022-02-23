@@ -25,7 +25,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,GlobalParameterType>> type;
+        private final Input<Either<String,GlobalParameterType>> type;
 
     public Input<Either<String,GlobalParameterType>> getType() {
         return this.type;
@@ -36,7 +36,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<Object> value;
+        private final Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value;
@@ -95,7 +95,6 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public GlobalParameterSpecificationArgs build() {
             return new GlobalParameterSpecificationArgs(type, value);
         }

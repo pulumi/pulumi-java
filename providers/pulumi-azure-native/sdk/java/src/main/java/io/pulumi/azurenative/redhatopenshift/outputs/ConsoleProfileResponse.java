@@ -54,7 +54,6 @@ public final class ConsoleProfileResponse {
             this.url = url;
             return this;
         }
-
         public ConsoleProfileResponse build() {
             return new ConsoleProfileResponse(url);
         }

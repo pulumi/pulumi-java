@@ -395,7 +395,6 @@ public final class SaasResourceResponseProperties {
             this.termId = termId;
             return this;
         }
-
         public SaasResourceResponseProperties build() {
             return new SaasResourceResponseProperties(autoRenew, created, isFreeTrial, lastModified, offerId, paymentChannelMetadata, paymentChannelType, publisherId, publisherTestEnvironment, quantity, saasResourceName, saasSessionId, saasSubscriptionId, skuId, status, term, termId);
         }

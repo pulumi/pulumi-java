@@ -15,21 +15,21 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
     public static final DatabaseInstanceServerCaCertGetArgs Empty = new DatabaseInstanceServerCaCertGetArgs();
 
     @InputImport(name="cert")
-    private final @Nullable Input<String> cert;
+        private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
     }
 
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+        private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -41,14 +41,14 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
     @InputImport(name="sha1Fingerprint")
-    private final @Nullable Input<String> sha1Fingerprint;
+        private final @Nullable Input<String> sha1Fingerprint;
 
     public Input<String> getSha1Fingerprint() {
         return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
@@ -152,7 +152,6 @@ public final class DatabaseInstanceServerCaCertGetArgs extends io.pulumi.resourc
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }
-
         public DatabaseInstanceServerCaCertGetArgs build() {
             return new DatabaseInstanceServerCaCertGetArgs(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

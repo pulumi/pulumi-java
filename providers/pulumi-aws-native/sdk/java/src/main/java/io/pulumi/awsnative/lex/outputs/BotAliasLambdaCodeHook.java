@@ -74,7 +74,6 @@ public final class BotAliasLambdaCodeHook {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public BotAliasLambdaCodeHook build() {
             return new BotAliasLambdaCodeHook(codeHookInterfaceVersion, lambdaArn);
         }

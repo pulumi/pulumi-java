@@ -26,7 +26,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-    private final Input<Either<String,DataAccountType>> dataAccountType;
+        private final Input<Either<String,DataAccountType>> dataAccountType;
 
     public Input<Either<String,DataAccountType>> getDataAccountType() {
         return this.dataAccountType;
@@ -37,7 +37,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferAllBlobs")
-    private final @Nullable Input<Boolean> transferAllBlobs;
+        private final @Nullable Input<Boolean> transferAllBlobs;
 
     public Input<Boolean> getTransferAllBlobs() {
         return this.transferAllBlobs == null ? Input.empty() : this.transferAllBlobs;
@@ -48,7 +48,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferAllFiles")
-    private final @Nullable Input<Boolean> transferAllFiles;
+        private final @Nullable Input<Boolean> transferAllFiles;
 
     public Input<Boolean> getTransferAllFiles() {
         return this.transferAllFiles == null ? Input.empty() : this.transferAllFiles;
@@ -122,7 +122,6 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
             this.transferAllFiles = Input.ofNullable(transferAllFiles);
             return this;
         }
-
         public TransferAllDetailsArgs build() {
             return new TransferAllDetailsArgs(dataAccountType, transferAllBlobs, transferAllFiles);
         }

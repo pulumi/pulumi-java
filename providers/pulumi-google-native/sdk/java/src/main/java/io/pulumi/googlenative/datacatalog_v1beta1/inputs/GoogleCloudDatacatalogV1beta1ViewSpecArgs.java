@@ -34,7 +34,6 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecArgs extends io.pulumi.r
         public Builder(GoogleCloudDatacatalogV1beta1ViewSpecArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatacatalogV1beta1ViewSpecArgs build() {
             return new GoogleCloudDatacatalogV1beta1ViewSpecArgs();
         }

@@ -54,7 +54,6 @@ public final class ServiceProviderParameterResponseMetadata {
             this.constraints = constraints;
             return this;
         }
-
         public ServiceProviderParameterResponseMetadata build() {
             return new ServiceProviderParameterResponseMetadata(constraints);
         }

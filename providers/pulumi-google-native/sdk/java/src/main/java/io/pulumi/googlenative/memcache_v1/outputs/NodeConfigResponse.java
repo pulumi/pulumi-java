@@ -74,7 +74,6 @@ public final class NodeConfigResponse {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(cpuCount, memorySizeMb);
         }

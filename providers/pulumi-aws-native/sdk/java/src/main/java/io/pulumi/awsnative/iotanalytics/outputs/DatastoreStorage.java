@@ -75,7 +75,6 @@ public final class DatastoreStorage {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public DatastoreStorage build() {
             return new DatastoreStorage(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);
         }

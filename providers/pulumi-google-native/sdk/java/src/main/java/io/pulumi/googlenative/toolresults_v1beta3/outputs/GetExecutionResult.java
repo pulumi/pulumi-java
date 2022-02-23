@@ -205,7 +205,6 @@ public final class GetExecutionResult {
             this.testExecutionMatrixId = Objects.requireNonNull(testExecutionMatrixId);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(completionTime, creationTime, dimensionDefinitions, executionId, outcome, specification, state, testExecutionMatrixId);
         }

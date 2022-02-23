@@ -129,7 +129,6 @@ public final class WirelessDeviceLoRaWANDevice {
             this.serviceProfileId = serviceProfileId;
             return this;
         }
-
         public WirelessDeviceLoRaWANDevice build() {
             return new WirelessDeviceLoRaWANDevice(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);
         }

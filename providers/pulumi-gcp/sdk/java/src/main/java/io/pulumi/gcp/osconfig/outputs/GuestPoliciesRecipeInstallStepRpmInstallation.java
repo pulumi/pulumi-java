@@ -52,7 +52,6 @@ public final class GuestPoliciesRecipeInstallStepRpmInstallation {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepRpmInstallation build() {
             return new GuestPoliciesRecipeInstallStepRpmInstallation(artifactId);
         }

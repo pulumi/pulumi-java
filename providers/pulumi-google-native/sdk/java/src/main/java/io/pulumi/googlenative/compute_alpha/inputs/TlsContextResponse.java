@@ -22,7 +22,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certificateContext", required=true)
-    private final TlsCertificateContextResponse certificateContext;
+      private final TlsCertificateContextResponse certificateContext;
 
     public TlsCertificateContextResponse getCertificateContext() {
         return this.certificateContext;
@@ -33,7 +33,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="validationContext", required=true)
-    private final TlsValidationContextResponse validationContext;
+      private final TlsValidationContextResponse validationContext;
 
     public TlsValidationContextResponse getValidationContext() {
         return this.validationContext;
@@ -82,7 +82,6 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
             this.validationContext = Objects.requireNonNull(validationContext);
             return this;
         }
-
         public TlsContextResponse build() {
             return new TlsContextResponse(certificateContext, validationContext);
         }

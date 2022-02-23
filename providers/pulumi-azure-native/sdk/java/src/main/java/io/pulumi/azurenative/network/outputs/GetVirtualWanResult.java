@@ -311,7 +311,6 @@ public final class GetVirtualWanResult {
             this.vpnSites = Objects.requireNonNull(vpnSites);
             return this;
         }
-
         public GetVirtualWanResult build() {
             return new GetVirtualWanResult(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, etag, id, location, name, office365LocalBreakoutCategory, provisioningState, tags, type, virtualHubs, vpnSites);
         }

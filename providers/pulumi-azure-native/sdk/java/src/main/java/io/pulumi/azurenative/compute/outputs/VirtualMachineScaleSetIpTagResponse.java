@@ -76,7 +76,6 @@ public final class VirtualMachineScaleSetIpTagResponse {
             this.tag = tag;
             return this;
         }
-
         public VirtualMachineScaleSetIpTagResponse build() {
             return new VirtualMachineScaleSetIpTagResponse(ipTagType, tag);
         }

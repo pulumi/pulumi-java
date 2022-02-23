@@ -78,7 +78,6 @@ public final class DomainKernelGatewayAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public DomainKernelGatewayAppSettings build() {
             return new DomainKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }

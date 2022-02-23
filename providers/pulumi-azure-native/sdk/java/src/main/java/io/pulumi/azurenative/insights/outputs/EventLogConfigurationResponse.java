@@ -60,7 +60,6 @@ public final class EventLogConfigurationResponse {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public EventLogConfigurationResponse build() {
             return new EventLogConfigurationResponse(filter, logName);
         }

@@ -138,7 +138,6 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse {
             this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType);
             return this;
         }
-
         public AutoscalingPolicyCustomMetricUtilizationResponse build() {
             return new AutoscalingPolicyCustomMetricUtilizationResponse(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);
         }

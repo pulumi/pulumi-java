@@ -24,7 +24,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignment", required=true)
-    private final Input<AssignmentArgs> assignment;
+      private final Input<AssignmentArgs> assignment;
 
     public Input<AssignmentArgs> getAssignment() {
         return this.assignment;
@@ -35,7 +35,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,14 +46,14 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="guestPolicyId", required=true)
-    private final Input<String> guestPolicyId;
+      private final Input<String> guestPolicyId;
 
     public Input<String> getGuestPolicyId() {
         return this.guestPolicyId;
@@ -64,7 +64,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageRepositories")
-    private final @Nullable Input<List<PackageRepositoryArgs>> packageRepositories;
+      private final @Nullable Input<List<PackageRepositoryArgs>> packageRepositories;
 
     public Input<List<PackageRepositoryArgs>> getPackageRepositories() {
         return this.packageRepositories == null ? Input.empty() : this.packageRepositories;
@@ -86,14 +86,14 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packages")
-    private final @Nullable Input<List<PackageArgs>> packages;
+      private final @Nullable Input<List<PackageArgs>> packages;
 
     public Input<List<PackageArgs>> getPackages() {
         return this.packages == null ? Input.empty() : this.packages;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -104,7 +104,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipes")
-    private final @Nullable Input<List<SoftwareRecipeArgs>> recipes;
+      private final @Nullable Input<List<SoftwareRecipeArgs>> recipes;
 
     public Input<List<SoftwareRecipeArgs>> getRecipes() {
         return this.recipes == null ? Input.empty() : this.recipes;
@@ -268,7 +268,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.recipes = Input.ofNullable(recipes);
             return this;
         }
-
         public GuestPolicyArgs build() {
             return new GuestPolicyArgs(assignment, description, etag, guestPolicyId, name, packageRepositories, packages, project, recipes);
         }

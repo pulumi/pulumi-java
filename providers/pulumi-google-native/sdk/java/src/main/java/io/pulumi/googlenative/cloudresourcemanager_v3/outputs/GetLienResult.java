@@ -159,7 +159,6 @@ public final class GetLienResult {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-
         public GetLienResult build() {
             return new GetLienResult(createTime, name, origin, parent, reason, restrictions);
         }

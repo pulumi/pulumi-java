@@ -19,21 +19,21 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
     public static final AssessmentAWSAccountArgs Empty = new AssessmentAWSAccountArgs();
 
     @InputImport(name="emailAddress")
-    private final @Nullable Input<String> emailAddress;
+        private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
     }
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -107,7 +107,6 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public AssessmentAWSAccountArgs build() {
             return new AssessmentAWSAccountArgs(emailAddress, id, name);
         }

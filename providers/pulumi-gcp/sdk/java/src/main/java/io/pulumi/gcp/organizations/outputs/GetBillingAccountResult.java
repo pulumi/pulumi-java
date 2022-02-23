@@ -138,7 +138,6 @@ public final class GetBillingAccountResult {
             this.projectIds = Objects.requireNonNull(projectIds);
             return this;
         }
-
         public GetBillingAccountResult build() {
             return new GetBillingAccountResult(billingAccount, displayName, id, name, open, projectIds);
         }

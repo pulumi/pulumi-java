@@ -418,7 +418,6 @@ public final class DatasetResponseLatest {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public DatasetResponseLatest build() {
             return new DatasetResponseLatest(createdBy, createdTime, dataPath, dataflow, datasetDefinitionState, datasetId, description, etag, fileType, modifiedTime, notes, partitionFormatInPath, properties, savedDatasetId, tags, telemetryInfo, useDescriptionTagsFromDefinition, versionId);
         }

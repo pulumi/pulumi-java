@@ -162,7 +162,6 @@ public final class RulesEngineMatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RulesEngineMatchConditionResponse build() {
             return new RulesEngineMatchConditionResponse(negateCondition, rulesEngineMatchValue, rulesEngineMatchVariable, rulesEngineOperator, selector, transforms);
         }

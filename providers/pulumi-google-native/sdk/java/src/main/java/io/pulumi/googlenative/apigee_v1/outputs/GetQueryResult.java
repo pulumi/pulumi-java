@@ -307,7 +307,6 @@ public final class GetQueryResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetQueryResult build() {
             return new GetQueryResult(created, envgroupHostname, error, executionTime, name, queryParams, reportDefinitionId, result, resultFileSize, resultRows, self, state, updated);
         }

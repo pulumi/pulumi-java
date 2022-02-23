@@ -23,7 +23,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentUri")
-    private final @Nullable Input<String> contentUri;
+      private final @Nullable Input<String> contentUri;
 
     public Input<String> getContentUri() {
         return this.contentUri == null ? Input.empty() : this.contentUri;
@@ -45,7 +45,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -56,21 +56,21 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoReload")
-    private final @Nullable Input<Boolean> enableAutoReload;
+      private final @Nullable Input<Boolean> enableAutoReload;
 
     public Input<Boolean> getEnableAutoReload() {
         return this.enableAutoReload == null ? Input.empty() : this.enableAutoReload;
     }
 
     @InputImport(name="importGcsCustomMetadata")
-    private final @Nullable Input<String> importGcsCustomMetadata;
+      private final @Nullable Input<String> importGcsCustomMetadata;
 
     public Input<String> getImportGcsCustomMetadata() {
         return this.importGcsCustomMetadata == null ? Input.empty() : this.importGcsCustomMetadata;
     }
 
     @InputImport(name="knowledgeBaseId", required=true)
-    private final Input<String> knowledgeBaseId;
+      private final Input<String> knowledgeBaseId;
 
     public Input<String> getKnowledgeBaseId() {
         return this.knowledgeBaseId;
@@ -81,14 +81,14 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="knowledgeTypes", required=true)
-    private final Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
+      private final Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
     public Input<List<DocumentKnowledgeTypesItem>> getKnowledgeTypes() {
         return this.knowledgeTypes;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -99,7 +99,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -110,7 +110,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final Input<String> mimeType;
+      private final Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType;
@@ -121,14 +121,14 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -139,7 +139,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawContent")
-    private final @Nullable Input<String> rawContent;
+      private final @Nullable Input<String> rawContent;
 
     public Input<String> getRawContent() {
         return this.rawContent == null ? Input.empty() : this.rawContent;
@@ -363,7 +363,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             this.rawContent = Input.ofNullable(rawContent);
             return this;
         }
-
         public DocumentArgs build() {
             return new DocumentArgs(content, contentUri, displayName, enableAutoReload, importGcsCustomMetadata, knowledgeBaseId, knowledgeTypes, location, metadata, mimeType, name, project, rawContent);
         }

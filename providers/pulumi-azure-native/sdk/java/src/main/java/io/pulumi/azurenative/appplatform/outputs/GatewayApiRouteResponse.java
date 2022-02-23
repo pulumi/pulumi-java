@@ -226,7 +226,6 @@ public final class GatewayApiRouteResponse {
             this.uri = uri;
             return this;
         }
-
         public GatewayApiRouteResponse build() {
             return new GatewayApiRouteResponse(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
         }

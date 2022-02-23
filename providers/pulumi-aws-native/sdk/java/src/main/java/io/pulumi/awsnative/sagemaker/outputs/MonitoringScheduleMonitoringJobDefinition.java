@@ -176,7 +176,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
-
         public MonitoringScheduleMonitoringJobDefinition build() {
             return new MonitoringScheduleMonitoringJobDefinition(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
         }

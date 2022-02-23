@@ -30,7 +30,6 @@ public final class InitializingReplicationStepResponse {
         public Builder(InitializingReplicationStepResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public InitializingReplicationStepResponse build() {
             return new InitializingReplicationStepResponse();
         }

@@ -116,7 +116,6 @@ public final class StageDetailsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public StageDetailsResponse build() {
             return new StageDetailsResponse(displayName, stageName, stageStatus, startTime);
         }

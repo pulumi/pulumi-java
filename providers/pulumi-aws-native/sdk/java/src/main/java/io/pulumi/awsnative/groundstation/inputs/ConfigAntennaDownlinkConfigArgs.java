@@ -15,7 +15,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     public static final ConfigAntennaDownlinkConfigArgs Empty = new ConfigAntennaDownlinkConfigArgs();
 
     @InputImport(name="spectrumConfig")
-    private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+        private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Input<ConfigSpectrumConfigArgs> getSpectrumConfig() {
         return this.spectrumConfig == null ? Input.empty() : this.spectrumConfig;
@@ -58,7 +58,6 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
             this.spectrumConfig = Input.ofNullable(spectrumConfig);
             return this;
         }
-
         public ConfigAntennaDownlinkConfigArgs build() {
             return new ConfigAntennaDownlinkConfigArgs(spectrumConfig);
         }

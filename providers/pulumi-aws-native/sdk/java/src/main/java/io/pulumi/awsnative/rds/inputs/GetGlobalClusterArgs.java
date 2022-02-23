@@ -17,7 +17,7 @@ public final class GetGlobalClusterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier", required=true)
-    private final String globalClusterIdentifier;
+        private final String globalClusterIdentifier;
 
     public String getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier;
@@ -55,7 +55,6 @@ public final class GetGlobalClusterArgs extends io.pulumi.resources.InvokeArgs {
             this.globalClusterIdentifier = Objects.requireNonNull(globalClusterIdentifier);
             return this;
         }
-
         public GetGlobalClusterArgs build() {
             return new GetGlobalClusterArgs(globalClusterIdentifier);
         }

@@ -18,7 +18,7 @@ public final class WorkerPoolNetworkConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final Input<String> peeredNetwork;
+        private final Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork;
@@ -61,7 +61,6 @@ public final class WorkerPoolNetworkConfigArgs extends io.pulumi.resources.Resou
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
-
         public WorkerPoolNetworkConfigArgs build() {
             return new WorkerPoolNetworkConfigArgs(peeredNetwork);
         }

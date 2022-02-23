@@ -140,7 +140,6 @@ public final class BigtableColumnFamilyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BigtableColumnFamilyResponse build() {
             return new BigtableColumnFamilyResponse(columns, encoding, familyId, onlyReadLatest, type);
         }

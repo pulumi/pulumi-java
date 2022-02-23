@@ -23,7 +23,7 @@ public final class FirewallPolicyNatRuleCollectionActionResponse extends io.pulu
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -61,7 +61,6 @@ public final class FirewallPolicyNatRuleCollectionActionResponse extends io.pulu
             this.type = type;
             return this;
         }
-
         public FirewallPolicyNatRuleCollectionActionResponse build() {
             return new FirewallPolicyNatRuleCollectionActionResponse(type);
         }

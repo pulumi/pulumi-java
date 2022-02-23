@@ -97,7 +97,6 @@ public final class UserAssignedIdentityResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, objectId, resourceId);
         }

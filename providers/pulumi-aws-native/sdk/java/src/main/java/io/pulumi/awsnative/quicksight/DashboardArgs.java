@@ -21,21 +21,21 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     public static final DashboardArgs Empty = new DashboardArgs();
 
     @InputImport(name="awsAccountId", required=true)
-    private final Input<String> awsAccountId;
+        private final Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
     @InputImport(name="dashboardId", required=true)
-    private final Input<String> dashboardId;
+        private final Input<String> dashboardId;
 
     public Input<String> getDashboardId() {
         return this.dashboardId;
     }
 
     @InputImport(name="dashboardPublishOptions")
-    private final @Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions;
+        private final @Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
     public Input<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
         return this.dashboardPublishOptions == null ? Input.empty() : this.dashboardPublishOptions;
@@ -46,14 +46,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="parameters")
-    private final @Nullable Input<DashboardParametersArgs> parameters;
+        private final @Nullable Input<DashboardParametersArgs> parameters;
 
     public Input<DashboardParametersArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -68,14 +68,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<DashboardResourcePermissionArgs>> permissions;
+        private final @Nullable Input<List<DashboardResourcePermissionArgs>> permissions;
 
     public Input<List<DashboardResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-    private final Input<DashboardSourceEntityArgs> sourceEntity;
+        private final Input<DashboardSourceEntityArgs> sourceEntity;
 
     public Input<DashboardSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
@@ -87,7 +87,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DashboardTagArgs>> tags;
+        private final @Nullable Input<List<DashboardTagArgs>> tags;
 
     public Input<List<DashboardTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="themeArn")
-    private final @Nullable Input<String> themeArn;
+        private final @Nullable Input<String> themeArn;
 
     public Input<String> getThemeArn() {
         return this.themeArn == null ? Input.empty() : this.themeArn;
@@ -112,7 +112,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-    private final @Nullable Input<String> versionDescription;
+        private final @Nullable Input<String> versionDescription;
 
     public Input<String> getVersionDescription() {
         return this.versionDescription == null ? Input.empty() : this.versionDescription;
@@ -291,7 +291,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.versionDescription = Input.ofNullable(versionDescription);
             return this;
         }
-
         public DashboardArgs build() {
             return new DashboardArgs(awsAccountId, dashboardId, dashboardPublishOptions, name, parameters, permissions, sourceEntity, tags, themeArn, versionDescription);
         }

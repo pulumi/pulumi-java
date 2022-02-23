@@ -73,7 +73,6 @@ public final class GetDomainNameResult {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public GetDomainNameResult build() {
             return new GetDomainNameResult(appSyncDomainName, description, hostedZoneId);
         }

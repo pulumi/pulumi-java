@@ -288,7 +288,6 @@ public final class GetTransferJobResult {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }
-
         public GetTransferJobResult build() {
             return new GetTransferJobResult(creationTime, deletionTime, description, lastModificationTime, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);
         }

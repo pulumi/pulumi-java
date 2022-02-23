@@ -52,7 +52,6 @@ public final class BucketAccelerateConfiguration {
             this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
             return this;
         }
-
         public BucketAccelerateConfiguration build() {
             return new BucketAccelerateConfiguration(accelerationStatus);
         }

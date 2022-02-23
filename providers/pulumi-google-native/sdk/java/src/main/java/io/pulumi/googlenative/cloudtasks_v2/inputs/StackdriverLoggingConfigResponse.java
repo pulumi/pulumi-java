@@ -21,7 +21,7 @@ public final class StackdriverLoggingConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="samplingRatio", required=true)
-    private final Double samplingRatio;
+      private final Double samplingRatio;
 
     public Double getSamplingRatio() {
         return this.samplingRatio;
@@ -59,7 +59,6 @@ public final class StackdriverLoggingConfigResponse extends io.pulumi.resources.
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
-
         public StackdriverLoggingConfigResponse build() {
             return new StackdriverLoggingConfigResponse(samplingRatio);
         }

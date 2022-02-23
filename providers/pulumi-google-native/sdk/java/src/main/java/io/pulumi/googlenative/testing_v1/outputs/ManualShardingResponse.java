@@ -53,7 +53,6 @@ public final class ManualShardingResponse {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public ManualShardingResponse build() {
             return new ManualShardingResponse(testTargetsForShard);
         }

@@ -160,7 +160,6 @@ public final class MonitoredResourceDescriptorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MonitoredResourceDescriptorResponse build() {
             return new MonitoredResourceDescriptorResponse(description, displayName, labels, launchStage, name, type);
         }

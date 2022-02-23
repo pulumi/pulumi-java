@@ -21,7 +21,7 @@ public final class WebServerConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -59,7 +59,6 @@ public final class WebServerConfigResponse extends io.pulumi.resources.InvokeArg
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WebServerConfigResponse build() {
             return new WebServerConfigResponse(machineType);
         }

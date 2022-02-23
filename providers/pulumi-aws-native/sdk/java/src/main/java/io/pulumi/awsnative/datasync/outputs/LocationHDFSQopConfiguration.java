@@ -77,7 +77,6 @@ public final class LocationHDFSQopConfiguration {
             this.rpcProtection = rpcProtection;
             return this;
         }
-
         public LocationHDFSQopConfiguration build() {
             return new LocationHDFSQopConfiguration(dataTransferProtection, rpcProtection);
         }

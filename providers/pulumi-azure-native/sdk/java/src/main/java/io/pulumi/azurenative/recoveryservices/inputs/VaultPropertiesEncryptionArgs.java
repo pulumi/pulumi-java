@@ -27,7 +27,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="infrastructureEncryption")
-    private final @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
+        private final @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
     public Input<Either<String,InfrastructureEncryptionState>> getInfrastructureEncryption() {
         return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
@@ -38,7 +38,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kekIdentity")
-    private final @Nullable Input<CmkKekIdentityArgs> kekIdentity;
+        private final @Nullable Input<CmkKekIdentityArgs> kekIdentity;
 
     public Input<CmkKekIdentityArgs> getKekIdentity() {
         return this.kekIdentity == null ? Input.empty() : this.kekIdentity;
@@ -49,7 +49,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<CmkKeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -123,7 +123,6 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
-
         public VaultPropertiesEncryptionArgs build() {
             return new VaultPropertiesEncryptionArgs(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }

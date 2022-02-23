@@ -19,7 +19,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+      private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -30,7 +30,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="clientName")
-    private final @Nullable Input<String> clientName;
+      private final @Nullable Input<String> clientName;
 
     public Input<String> getClientName() {
         return this.clientName == null ? Input.empty() : this.clientName;
@@ -41,7 +41,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="developerEmailAddress")
-    private final @Nullable Input<String> developerEmailAddress;
+      private final @Nullable Input<String> developerEmailAddress;
 
     public Input<String> getDeveloperEmailAddress() {
         return this.developerEmailAddress == null ? Input.empty() : this.developerEmailAddress;
@@ -115,7 +115,6 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
             this.developerEmailAddress = Input.ofNullable(developerEmailAddress);
             return this;
         }
-
         public BackendServiceIAPOAuth2ClientInfoArgs build() {
             return new BackendServiceIAPOAuth2ClientInfoArgs(applicationName, clientName, developerEmailAddress);
         }

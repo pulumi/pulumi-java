@@ -17,7 +17,7 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="geoBackupPolicyName", required=true)
-    private final String geoBackupPolicyName;
+        private final String geoBackupPolicyName;
 
     public String getGeoBackupPolicyName() {
         return this.geoBackupPolicyName;
@@ -39,7 +39,7 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -119,7 +119,6 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetGeoBackupPolicyArgs build() {
             return new GetGeoBackupPolicyArgs(databaseName, geoBackupPolicyName, resourceGroupName, serverName);
         }

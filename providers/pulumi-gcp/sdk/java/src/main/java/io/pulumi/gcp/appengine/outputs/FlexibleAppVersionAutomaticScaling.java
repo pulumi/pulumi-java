@@ -305,7 +305,6 @@ public final class FlexibleAppVersionAutomaticScaling {
             this.requestUtilization = requestUtilization;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScaling build() {
             return new FlexibleAppVersionAutomaticScaling(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization);
         }

@@ -26,7 +26,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * 
      */
     @InputImport(name="minimalSeverity")
-    private final @Nullable Input<Either<String,MinimalSeverity>> minimalSeverity;
+        private final @Nullable Input<Either<String,MinimalSeverity>> minimalSeverity;
 
     public Input<Either<String,MinimalSeverity>> getMinimalSeverity() {
         return this.minimalSeverity == null ? Input.empty() : this.minimalSeverity;
@@ -37,7 +37,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+        private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -96,7 +96,6 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SecurityContactPropertiesAlertNotificationsArgs build() {
             return new SecurityContactPropertiesAlertNotificationsArgs(minimalSeverity, state);
         }

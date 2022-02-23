@@ -18,7 +18,7 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     public static final FleetCertificateConfigurationArgs Empty = new FleetCertificateConfigurationArgs();
 
     @InputImport(name="certificateType", required=true)
-    private final Input<FleetCertificateConfigurationCertificateType> certificateType;
+        private final Input<FleetCertificateConfigurationCertificateType> certificateType;
 
     public Input<FleetCertificateConfigurationCertificateType> getCertificateType() {
         return this.certificateType;
@@ -61,7 +61,6 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
             this.certificateType = Input.of(Objects.requireNonNull(certificateType));
             return this;
         }
-
         public FleetCertificateConfigurationArgs build() {
             return new FleetCertificateConfigurationArgs(certificateType);
         }

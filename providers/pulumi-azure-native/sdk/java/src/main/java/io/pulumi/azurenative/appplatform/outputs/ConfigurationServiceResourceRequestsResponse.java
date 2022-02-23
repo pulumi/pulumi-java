@@ -96,7 +96,6 @@ public final class ConfigurationServiceResourceRequestsResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public ConfigurationServiceResourceRequestsResponse build() {
             return new ConfigurationServiceResourceRequestsResponse(cpu, instanceCount, memory);
         }

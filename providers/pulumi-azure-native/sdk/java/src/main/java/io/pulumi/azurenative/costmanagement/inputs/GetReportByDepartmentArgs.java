@@ -17,7 +17,7 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="departmentId", required=true)
-    private final String departmentId;
+        private final String departmentId;
 
     public String getDepartmentId() {
         return this.departmentId;
@@ -28,7 +28,7 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="reportName", required=true)
-    private final String reportName;
+        private final String reportName;
 
     public String getReportName() {
         return this.reportName;
@@ -77,7 +77,6 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }
-
         public GetReportByDepartmentArgs build() {
             return new GetReportByDepartmentArgs(departmentId, reportName);
         }

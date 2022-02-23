@@ -74,7 +74,6 @@ public final class OsDiskImageResponse {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }
-
         public OsDiskImageResponse build() {
             return new OsDiskImageResponse(operatingSystem, sourceBlobSasUri);
         }

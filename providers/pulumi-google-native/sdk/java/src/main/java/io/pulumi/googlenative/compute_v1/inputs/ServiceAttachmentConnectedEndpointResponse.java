@@ -21,7 +21,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+      private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -32,7 +32,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * 
      */
     @InputImport(name="pscConnectionId", required=true)
-    private final String pscConnectionId;
+      private final String pscConnectionId;
 
     public String getPscConnectionId() {
         return this.pscConnectionId;
@@ -43,7 +43,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -102,7 +102,6 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServiceAttachmentConnectedEndpointResponse build() {
             return new ServiceAttachmentConnectedEndpointResponse(endpoint, pscConnectionId, status);
         }

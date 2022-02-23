@@ -97,7 +97,6 @@ public final class ForwardProxyResponse {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
-
         public ForwardProxyResponse build() {
             return new ForwardProxyResponse(convention, customHostHeaderName, customProtoHeaderName);
         }

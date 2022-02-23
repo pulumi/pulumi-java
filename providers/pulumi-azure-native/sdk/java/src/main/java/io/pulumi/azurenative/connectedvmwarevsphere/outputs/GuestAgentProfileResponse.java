@@ -139,7 +139,6 @@ public final class GuestAgentProfileResponse {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }
-
         public GuestAgentProfileResponse build() {
             return new GuestAgentProfileResponse(agentVersion, errorDetails, lastStatusChange, status, vmUuid);
         }

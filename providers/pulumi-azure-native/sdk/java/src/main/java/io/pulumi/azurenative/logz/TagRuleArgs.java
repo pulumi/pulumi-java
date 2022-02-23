@@ -20,7 +20,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final Input<String> monitorName;
+        private final Input<String> monitorName;
 
     public Input<String> getMonitorName() {
         return this.monitorName;
@@ -31,7 +31,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
+        private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
 
     public Input<MonitoringTagRulesPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,14 +42,14 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+        private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
@@ -138,7 +138,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleSetName = Input.ofNullable(ruleSetName);
             return this;
         }
-
         public TagRuleArgs build() {
             return new TagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName);
         }

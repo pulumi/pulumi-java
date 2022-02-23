@@ -52,7 +52,6 @@ public final class X12MessageFilterResponse {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }
-
         public X12MessageFilterResponse build() {
             return new X12MessageFilterResponse(messageFilterType);
         }

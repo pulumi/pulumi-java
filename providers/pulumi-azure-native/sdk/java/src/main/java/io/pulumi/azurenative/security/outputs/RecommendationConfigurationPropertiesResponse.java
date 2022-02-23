@@ -87,7 +87,6 @@ public final class RecommendationConfigurationPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RecommendationConfigurationPropertiesResponse build() {
             return new RecommendationConfigurationPropertiesResponse(name, recommendationType, status);
         }

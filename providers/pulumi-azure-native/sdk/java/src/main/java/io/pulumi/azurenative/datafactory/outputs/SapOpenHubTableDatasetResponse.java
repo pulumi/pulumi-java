@@ -273,7 +273,6 @@ public final class SapOpenHubTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapOpenHubTableDatasetResponse build() {
             return new SapOpenHubTableDatasetResponse(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
         }

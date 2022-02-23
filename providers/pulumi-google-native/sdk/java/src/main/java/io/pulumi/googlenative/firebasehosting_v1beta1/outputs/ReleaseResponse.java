@@ -160,7 +160,6 @@ public final class ReleaseResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReleaseResponse build() {
             return new ReleaseResponse(message, name, releaseTime, releaseUser, type, version);
         }

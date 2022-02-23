@@ -121,7 +121,6 @@ public final class MountConfigurationResponse {
             this.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
-
         public MountConfigurationResponse build() {
             return new MountConfigurationResponse(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
         }

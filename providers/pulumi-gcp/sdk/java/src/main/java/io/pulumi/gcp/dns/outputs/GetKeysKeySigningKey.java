@@ -246,7 +246,6 @@ public final class GetKeysKeySigningKey {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public GetKeysKeySigningKey build() {
             return new GetKeysKeySigningKey(algorithm, creationTime, description, digests, dsRecord, id, isActive, keyLength, keyTag, publicKey);
         }

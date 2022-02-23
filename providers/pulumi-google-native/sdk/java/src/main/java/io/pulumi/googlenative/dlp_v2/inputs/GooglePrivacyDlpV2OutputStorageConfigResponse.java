@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="outputSchema", required=true)
-    private final String outputSchema;
+      private final String outputSchema;
 
     public String getOutputSchema() {
         return this.outputSchema;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="table", required=true)
-    private final GooglePrivacyDlpV2BigQueryTableResponse table;
+      private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
             return new GooglePrivacyDlpV2OutputStorageConfigResponse(outputSchema, table);
         }

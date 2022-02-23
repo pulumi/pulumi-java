@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Integer> mode;
+      private final @Nullable Input<Integer> mode;
 
     public Input<Integer> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -120,7 +120,6 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GoogleCloudRunOpV2VersionToPathArgs build() {
             return new GoogleCloudRunOpV2VersionToPathArgs(mode, path, version);
         }

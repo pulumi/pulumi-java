@@ -18,7 +18,7 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
     public static final ScheduledQuerySnsConfigurationArgs Empty = new ScheduledQuerySnsConfigurationArgs();
 
     @InputImport(name="topicArn", required=true)
-    private final Input<String> topicArn;
+        private final Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn;
@@ -61,7 +61,6 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }
-
         public ScheduledQuerySnsConfigurationArgs build() {
             return new ScheduledQuerySnsConfigurationArgs(topicArn);
         }

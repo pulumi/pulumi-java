@@ -54,7 +54,6 @@ public final class EventSourceMappingSelfManagedEventSource {
             this.endpoints = endpoints;
             return this;
         }
-
         public EventSourceMappingSelfManagedEventSource build() {
             return new EventSourceMappingSelfManagedEventSource(endpoints);
         }

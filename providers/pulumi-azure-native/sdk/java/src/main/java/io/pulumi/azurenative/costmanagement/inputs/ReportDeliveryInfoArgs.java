@@ -22,7 +22,7 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<ReportDeliveryDestinationArgs> destination;
+        private final Input<ReportDeliveryDestinationArgs> destination;
 
     public Input<ReportDeliveryDestinationArgs> getDestination() {
         return this.destination;
@@ -65,7 +65,6 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public ReportDeliveryInfoArgs build() {
             return new ReportDeliveryInfoArgs(destination);
         }

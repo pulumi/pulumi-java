@@ -73,7 +73,6 @@ public final class ImportCollectorPropertiesResponse {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public ImportCollectorPropertiesResponse build() {
             return new ImportCollectorPropertiesResponse(createdTimestamp, discoverySiteId, updatedTimestamp);
         }

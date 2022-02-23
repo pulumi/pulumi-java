@@ -74,7 +74,6 @@ public final class NetworkConfigResponse {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(ipAllocation, network);
         }

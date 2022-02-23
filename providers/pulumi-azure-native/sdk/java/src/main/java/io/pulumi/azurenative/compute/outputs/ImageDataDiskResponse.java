@@ -205,7 +205,6 @@ public final class ImageDataDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public ImageDataDiskResponse build() {
             return new ImageDataDiskResponse(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);
         }

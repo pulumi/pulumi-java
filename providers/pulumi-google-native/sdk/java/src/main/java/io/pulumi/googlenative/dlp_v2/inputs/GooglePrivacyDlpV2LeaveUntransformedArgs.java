@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2LeaveUntransformedArgs extends io.pulumi.re
         public Builder(GooglePrivacyDlpV2LeaveUntransformedArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2LeaveUntransformedArgs build() {
             return new GooglePrivacyDlpV2LeaveUntransformedArgs();
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse ext
      * 
      */
     @InputImport(name="allowPlaybackInterruption", required=true)
-    private final Boolean allowPlaybackInterruption;
+      private final Boolean allowPlaybackInterruption;
 
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse ext
      * 
      */
     @InputImport(name="text", required=true)
-    private final List<String> text;
+      private final List<String> text;
 
     public List<String> getText() {
         return this.text;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse ext
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse(allowPlaybackInterruption, text);
         }

@@ -58,7 +58,6 @@ public final class ServiceDeploymentCircuitBreaker {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }
-
         public ServiceDeploymentCircuitBreaker build() {
             return new ServiceDeploymentCircuitBreaker(enable, rollback);
         }

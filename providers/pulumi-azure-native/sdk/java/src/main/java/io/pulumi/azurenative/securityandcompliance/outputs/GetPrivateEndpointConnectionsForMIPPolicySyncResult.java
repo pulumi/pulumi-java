@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsForMIPPolicySyncResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsForMIPPolicySyncResult build() {
             return new GetPrivateEndpointConnectionsForMIPPolicySyncResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

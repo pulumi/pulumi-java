@@ -17,7 +17,7 @@ public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="workspaceSettingName", required=true)
-    private final String workspaceSettingName;
+        private final String workspaceSettingName;
 
     public String getWorkspaceSettingName() {
         return this.workspaceSettingName;
@@ -55,7 +55,6 @@ public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArg
             this.workspaceSettingName = Objects.requireNonNull(workspaceSettingName);
             return this;
         }
-
         public GetWorkspaceSettingArgs build() {
             return new GetWorkspaceSettingArgs(workspaceSettingName);
         }

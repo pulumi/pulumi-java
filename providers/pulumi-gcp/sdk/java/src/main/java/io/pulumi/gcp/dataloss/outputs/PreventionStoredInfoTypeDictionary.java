@@ -81,7 +81,6 @@ public final class PreventionStoredInfoTypeDictionary {
             this.wordList = wordList;
             return this;
         }
-
         public PreventionStoredInfoTypeDictionary build() {
             return new PreventionStoredInfoTypeDictionary(cloudStoragePath, wordList);
         }

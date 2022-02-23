@@ -139,7 +139,6 @@ public final class EccTokenKeyResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public EccTokenKeyResponse build() {
             return new EccTokenKeyResponse(alg, kid, type, x, y);
         }

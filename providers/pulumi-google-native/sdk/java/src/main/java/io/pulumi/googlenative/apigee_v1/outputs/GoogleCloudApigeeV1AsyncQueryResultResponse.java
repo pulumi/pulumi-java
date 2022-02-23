@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
             this.self = Objects.requireNonNull(self);
             return this;
         }
-
         public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
             return new GoogleCloudApigeeV1AsyncQueryResultResponse(expires, self);
         }

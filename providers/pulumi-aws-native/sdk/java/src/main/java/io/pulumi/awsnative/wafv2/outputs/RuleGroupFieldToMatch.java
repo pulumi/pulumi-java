@@ -189,7 +189,6 @@ public final class RuleGroupFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public RuleGroupFieldToMatch build() {
             return new RuleGroupFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

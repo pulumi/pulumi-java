@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(confidence, dialogflowIntentId);
         }

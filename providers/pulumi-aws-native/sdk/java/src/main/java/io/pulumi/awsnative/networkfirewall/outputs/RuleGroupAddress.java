@@ -44,7 +44,6 @@ public final class RuleGroupAddress {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }
-
         public RuleGroupAddress build() {
             return new RuleGroupAddress(addressDefinition);
         }

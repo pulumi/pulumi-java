@@ -44,7 +44,6 @@ public final class IntegrationZendeskSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public IntegrationZendeskSourceProperties build() {
             return new IntegrationZendeskSourceProperties(object);
         }

@@ -54,7 +54,6 @@ public final class PrivateAtlasPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public PrivateAtlasPropertiesResponse build() {
             return new PrivateAtlasPropertiesResponse(provisioningState);
         }

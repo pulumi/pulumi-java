@@ -116,7 +116,6 @@ public final class GetDevicePoolResult {
             this.tags = tags;
             return this;
         }
-
         public GetDevicePoolResult build() {
             return new GetDevicePoolResult(arn, description, maxDevices, name, rules, tags);
         }

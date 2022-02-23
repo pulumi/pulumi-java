@@ -54,7 +54,6 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
             this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfig build() {
             return new SecurityPolicyAdaptiveProtectionConfig(layer7DdosDefenseConfig);
         }

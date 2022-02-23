@@ -76,7 +76,6 @@ public final class ListBatchEndpointKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListBatchEndpointKeysResult build() {
             return new ListBatchEndpointKeysResult(primaryKey, secondaryKey);
         }

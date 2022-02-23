@@ -373,7 +373,6 @@ public final class GetSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlResult build() {
             return new GetSourceControlResult(contentTypes, createdAt, createdBy, createdByType, description, displayName, etag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, repoType, repository, systemData, type);
         }

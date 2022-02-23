@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
      * 
      */
     @InputImport(name="categoricalFeatures", required=true)
-    private final Map<String,String> categoricalFeatures;
+      private final Map<String,String> categoricalFeatures;
 
     public Map<String,String> getCategoricalFeatures() {
         return this.categoricalFeatures;
@@ -33,7 +33,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
      * 
      */
     @InputImport(name="numericalFeatures", required=true)
-    private final Map<String,String> numericalFeatures;
+      private final Map<String,String> numericalFeatures;
 
     public Map<String,String> getNumericalFeatures() {
         return this.numericalFeatures;
@@ -82,7 +82,6 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
             this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(categoricalFeatures, numericalFeatures);
         }

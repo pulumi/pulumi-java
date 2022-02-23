@@ -25,7 +25,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cores", required=true)
-    private final Integer cores;
+        private final Integer cores;
 
     public Integer getCores() {
         return this.cores;
@@ -36,7 +36,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="galleryImageResourceId")
-    private final @Nullable String galleryImageResourceId;
+        private final @Nullable String galleryImageResourceId;
 
     public Optional<String> getGalleryImageResourceId() {
         return this.galleryImageResourceId == null ? Optional.empty() : Optional.ofNullable(this.galleryImageResourceId);
@@ -47,7 +47,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -58,7 +58,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+        private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -69,7 +69,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="referenceVm", required=true)
-    private final ReferenceVmResponse referenceVm;
+        private final ReferenceVmResponse referenceVm;
 
     public ReferenceVmResponse getReferenceVm() {
         return this.referenceVm;
@@ -80,7 +80,7 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="size")
-    private final @Nullable String size;
+        private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -169,7 +169,6 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
             this.size = size;
             return this;
         }
-
         public ResourceSettingsResponse build() {
             return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
         }

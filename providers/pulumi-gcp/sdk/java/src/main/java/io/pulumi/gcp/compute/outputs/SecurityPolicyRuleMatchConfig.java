@@ -57,7 +57,6 @@ public final class SecurityPolicyRuleMatchConfig {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatchConfig build() {
             return new SecurityPolicyRuleMatchConfig(srcIpRanges);
         }

@@ -351,7 +351,6 @@ public final class ObjectMetaResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public ObjectMetaResponse build() {
             return new ObjectMetaResponse(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

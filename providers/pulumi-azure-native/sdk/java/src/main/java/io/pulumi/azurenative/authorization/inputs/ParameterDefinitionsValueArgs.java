@@ -28,7 +28,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable Input<List<Object>> allowedValues;
+        private final @Nullable Input<List<Object>> allowedValues;
 
     public Input<List<Object>> getAllowedValues() {
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
@@ -39,7 +39,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Object> defaultValue;
+        private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -50,7 +50,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata;
+        private final @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata;
 
     public Input<ParameterDefinitionsValueMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -61,7 +61,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ParameterType>> type;
+        private final @Nullable Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -150,7 +150,6 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ParameterDefinitionsValueArgs build() {
             return new ParameterDefinitionsValueArgs(allowedValues, defaultValue, metadata, type);
         }

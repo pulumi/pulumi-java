@@ -105,7 +105,6 @@ public final class BucketWebsiteConfiguration {
             this.routingRules = routingRules;
             return this;
         }
-
         public BucketWebsiteConfiguration build() {
             return new BucketWebsiteConfiguration(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }

@@ -18,7 +18,7 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="allowedConfigValues", required=true)
-    private final List<ReusableConfigWrapperResponse> allowedConfigValues;
+      private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
     public List<ReusableConfigWrapperResponse> getAllowedConfigValues() {
         return this.allowedConfigValues;
@@ -56,7 +56,6 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
-
         public AllowedConfigListResponse build() {
             return new AllowedConfigListResponse(allowedConfigValues);
         }

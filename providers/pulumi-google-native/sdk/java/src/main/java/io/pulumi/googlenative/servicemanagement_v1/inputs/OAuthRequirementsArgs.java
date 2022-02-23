@@ -23,7 +23,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="canonicalScopes")
-    private final @Nullable Input<String> canonicalScopes;
+      private final @Nullable Input<String> canonicalScopes;
 
     public Input<String> getCanonicalScopes() {
         return this.canonicalScopes == null ? Input.empty() : this.canonicalScopes;
@@ -66,7 +66,6 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
             this.canonicalScopes = Input.ofNullable(canonicalScopes);
             return this;
         }
-
         public OAuthRequirementsArgs build() {
             return new OAuthRequirementsArgs(canonicalScopes);
         }

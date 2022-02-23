@@ -24,7 +24,7 @@ public final class PredictionResponseGrades extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="gradeName")
-    private final @Nullable String gradeName;
+        private final @Nullable String gradeName;
 
     public Optional<String> getGradeName() {
         return this.gradeName == null ? Optional.empty() : Optional.ofNullable(this.gradeName);
@@ -35,7 +35,7 @@ public final class PredictionResponseGrades extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxScoreThreshold")
-    private final @Nullable Integer maxScoreThreshold;
+        private final @Nullable Integer maxScoreThreshold;
 
     public Optional<Integer> getMaxScoreThreshold() {
         return this.maxScoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.maxScoreThreshold);
@@ -46,7 +46,7 @@ public final class PredictionResponseGrades extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="minScoreThreshold")
-    private final @Nullable Integer minScoreThreshold;
+        private final @Nullable Integer minScoreThreshold;
 
     public Optional<Integer> getMinScoreThreshold() {
         return this.minScoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.minScoreThreshold);
@@ -105,7 +105,6 @@ public final class PredictionResponseGrades extends io.pulumi.resources.InvokeAr
             this.minScoreThreshold = minScoreThreshold;
             return this;
         }
-
         public PredictionResponseGrades build() {
             return new PredictionResponseGrades(gradeName, maxScoreThreshold, minScoreThreshold);
         }

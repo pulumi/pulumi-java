@@ -97,7 +97,6 @@ public final class AliasPatternResponse {
             this.variable = variable;
             return this;
         }
-
         public AliasPatternResponse build() {
             return new AliasPatternResponse(phrase, type, variable);
         }

@@ -119,7 +119,6 @@ public final class GetTopicResult {
             this.retentionConfig = Objects.requireNonNull(retentionConfig);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(name, partitionConfig, reservationConfig, retentionConfig);
         }

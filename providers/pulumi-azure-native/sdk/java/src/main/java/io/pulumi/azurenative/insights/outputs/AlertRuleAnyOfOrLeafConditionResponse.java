@@ -122,7 +122,6 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
             this.field = field;
             return this;
         }
-
         public AlertRuleAnyOfOrLeafConditionResponse build() {
             return new AlertRuleAnyOfOrLeafConditionResponse(anyOf, containsAny, equals, field);
         }

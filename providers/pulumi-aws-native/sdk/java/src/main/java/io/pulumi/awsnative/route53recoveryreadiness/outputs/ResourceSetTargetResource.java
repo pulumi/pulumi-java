@@ -61,7 +61,6 @@ public final class ResourceSetTargetResource {
             this.r53Resource = r53Resource;
             return this;
         }
-
         public ResourceSetTargetResource build() {
             return new ResourceSetTargetResource(nLBResource, r53Resource);
         }

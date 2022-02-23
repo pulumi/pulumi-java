@@ -58,7 +58,6 @@ public final class AuthorizerTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AuthorizerTag build() {
             return new AuthorizerTag(key, value);
         }

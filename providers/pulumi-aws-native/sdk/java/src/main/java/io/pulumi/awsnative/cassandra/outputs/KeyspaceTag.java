@@ -58,7 +58,6 @@ public final class KeyspaceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyspaceTag build() {
             return new KeyspaceTag(key, value);
         }

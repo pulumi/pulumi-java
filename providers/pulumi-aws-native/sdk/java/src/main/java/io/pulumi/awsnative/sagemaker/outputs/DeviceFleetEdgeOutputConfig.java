@@ -76,7 +76,6 @@ public final class DeviceFleetEdgeOutputConfig {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
-
         public DeviceFleetEdgeOutputConfig build() {
             return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
         }

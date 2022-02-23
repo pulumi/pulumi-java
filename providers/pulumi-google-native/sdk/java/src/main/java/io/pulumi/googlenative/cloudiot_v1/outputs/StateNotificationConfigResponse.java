@@ -52,7 +52,6 @@ public final class StateNotificationConfigResponse {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public StateNotificationConfigResponse build() {
             return new StateNotificationConfigResponse(pubsubTopicName);
         }

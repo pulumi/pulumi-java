@@ -23,7 +23,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -34,7 +34,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientSecretSettingName")
-    private final @Nullable Input<String> clientSecretSettingName;
+        private final @Nullable Input<String> clientSecretSettingName;
 
     public Input<String> getClientSecretSettingName() {
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
@@ -93,7 +93,6 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
             this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
             return this;
         }
-
         public AppleRegistrationArgs build() {
             return new AppleRegistrationArgs(clientId, clientSecretSettingName);
         }

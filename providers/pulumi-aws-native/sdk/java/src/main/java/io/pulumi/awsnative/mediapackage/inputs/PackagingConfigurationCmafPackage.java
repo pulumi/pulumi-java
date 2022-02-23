@@ -23,7 +23,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
     public static final PackagingConfigurationCmafPackage Empty = new PackagingConfigurationCmafPackage();
 
     @InputImport(name="encryption")
-    private final @Nullable PackagingConfigurationCmafEncryption encryption;
+        private final @Nullable PackagingConfigurationCmafEncryption encryption;
 
     public Optional<PackagingConfigurationCmafEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -34,7 +34,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-    private final List<PackagingConfigurationHlsManifest> hlsManifests;
+        private final List<PackagingConfigurationHlsManifest> hlsManifests;
 
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
@@ -45,14 +45,14 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
      * 
      */
     @InputImport(name="includeEncoderConfigurationInSegments")
-    private final @Nullable Boolean includeEncoderConfigurationInSegments;
+        private final @Nullable Boolean includeEncoderConfigurationInSegments;
 
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+        private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
@@ -121,7 +121,6 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationCmafPackage build() {
             return new PackagingConfigurationCmafPackage(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }

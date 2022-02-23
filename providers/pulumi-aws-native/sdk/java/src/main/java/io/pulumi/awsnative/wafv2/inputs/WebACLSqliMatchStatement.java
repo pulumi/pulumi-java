@@ -19,14 +19,14 @@ public final class WebACLSqliMatchStatement extends io.pulumi.resources.InvokeAr
     public static final WebACLSqliMatchStatement Empty = new WebACLSqliMatchStatement();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final WebACLFieldToMatch fieldToMatch;
+        private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final List<WebACLTextTransformation> textTransformations;
+        private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {
         return this.textTransformations;
@@ -75,7 +75,6 @@ public final class WebACLSqliMatchStatement extends io.pulumi.resources.InvokeAr
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLSqliMatchStatement build() {
             return new WebACLSqliMatchStatement(fieldToMatch, textTransformations);
         }

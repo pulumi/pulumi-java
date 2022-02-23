@@ -74,7 +74,6 @@ public final class ConfigurationServiceInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConfigurationServiceInstanceResponse build() {
             return new ConfigurationServiceInstanceResponse(name, status);
         }

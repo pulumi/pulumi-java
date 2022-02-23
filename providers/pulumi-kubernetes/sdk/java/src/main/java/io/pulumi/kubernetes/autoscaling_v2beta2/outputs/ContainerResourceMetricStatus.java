@@ -96,7 +96,6 @@ public final class ContainerResourceMetricStatus {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ContainerResourceMetricStatus build() {
             return new ContainerResourceMetricStatus(container, current, name);
         }

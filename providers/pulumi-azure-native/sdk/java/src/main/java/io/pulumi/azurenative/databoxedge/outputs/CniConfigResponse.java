@@ -116,7 +116,6 @@ public final class CniConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CniConfigResponse build() {
             return new CniConfigResponse(podSubnet, serviceSubnet, type, version);
         }

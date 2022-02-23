@@ -80,7 +80,6 @@ public final class AzureActiveDirectoryLoginResponse {
             this.loginParameters = loginParameters;
             return this;
         }
-
         public AzureActiveDirectoryLoginResponse build() {
             return new AzureActiveDirectoryLoginResponse(disableWWWAuthenticate, loginParameters);
         }

@@ -96,7 +96,6 @@ public final class GroupMembershipPreferredMemberKey {
             this.namespace = namespace;
             return this;
         }
-
         public GroupMembershipPreferredMemberKey build() {
             return new GroupMembershipPreferredMemberKey(id, namespace);
         }

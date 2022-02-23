@@ -17,7 +17,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiArgs Empty = new ApiArgs();
 
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -28,7 +28,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -39,7 +39,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -50,28 +50,28 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Input<List<Map<String,String>>> extensions;
 
     public Input<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="validate")
-    private final @Nullable Input<String> validate;
+      private final @Nullable Input<String> validate;
 
     public Input<String> getValidate() {
         return this.validate == null ? Input.empty() : this.validate;
@@ -205,7 +205,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.validate = Input.ofNullable(validate);
             return this;
         }
-
         public ApiArgs build() {
             return new ApiArgs(action, contentType, data, extensions, name, organizationId, validate);
         }

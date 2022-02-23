@@ -22,7 +22,7 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final Object filePath;
+        private final Object filePath;
 
     public Object getFilePath() {
         return this.filePath;
@@ -33,7 +33,7 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -82,7 +82,6 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public AzureMLWebServiceFileResponse build() {
             return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
         }

@@ -119,7 +119,6 @@ public final class GetSnapshotSchedulePolicyResult {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
         public GetSnapshotSchedulePolicyResult build() {
             return new GetSnapshotSchedulePolicyResult(description, labels, name, schedules);
         }

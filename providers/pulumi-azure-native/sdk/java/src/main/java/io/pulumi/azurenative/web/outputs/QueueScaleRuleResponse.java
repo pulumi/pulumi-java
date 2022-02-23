@@ -100,7 +100,6 @@ public final class QueueScaleRuleResponse {
             this.queueName = queueName;
             return this;
         }
-
         public QueueScaleRuleResponse build() {
             return new QueueScaleRuleResponse(auth, queueLength, queueName);
         }

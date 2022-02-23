@@ -23,7 +23,7 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="throughputReservation")
-    private final @Nullable Input<String> throughputReservation;
+      private final @Nullable Input<String> throughputReservation;
 
     public Input<String> getThroughputReservation() {
         return this.throughputReservation == null ? Input.empty() : this.throughputReservation;
@@ -66,7 +66,6 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
             this.throughputReservation = Input.ofNullable(throughputReservation);
             return this;
         }
-
         public ReservationConfigArgs build() {
             return new ReservationConfigArgs(throughputReservation);
         }

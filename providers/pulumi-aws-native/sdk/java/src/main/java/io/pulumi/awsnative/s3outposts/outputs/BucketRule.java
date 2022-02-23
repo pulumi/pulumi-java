@@ -156,7 +156,6 @@ public final class BucketRule {
             this.status = status;
             return this;
         }
-
         public BucketRule build() {
             return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
         }

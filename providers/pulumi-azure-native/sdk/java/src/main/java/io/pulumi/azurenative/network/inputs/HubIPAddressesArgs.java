@@ -24,7 +24,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable Input<String> privateIPAddress;
+        private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -35,7 +35,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIPs")
-    private final @Nullable Input<HubPublicIPAddressesArgs> publicIPs;
+        private final @Nullable Input<HubPublicIPAddressesArgs> publicIPs;
 
     public Input<HubPublicIPAddressesArgs> getPublicIPs() {
         return this.publicIPs == null ? Input.empty() : this.publicIPs;
@@ -94,7 +94,6 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
             this.publicIPs = Input.ofNullable(publicIPs);
             return this;
         }
-
         public HubIPAddressesArgs build() {
             return new HubIPAddressesArgs(privateIPAddress, publicIPs);
         }

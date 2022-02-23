@@ -25,7 +25,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoprovisioningLocations", required=true)
-    private final List<String> autoprovisioningLocations;
+      private final List<String> autoprovisioningLocations;
 
     public List<String> getAutoprovisioningLocations() {
         return this.autoprovisioningLocations;
@@ -36,7 +36,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoprovisioningNodePoolDefaults", required=true)
-    private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
+      private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
     public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
@@ -47,7 +47,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoscalingProfile", required=true)
-    private final String autoscalingProfile;
+      private final String autoscalingProfile;
 
     public String getAutoscalingProfile() {
         return this.autoscalingProfile;
@@ -58,7 +58,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableNodeAutoprovisioning", required=true)
-    private final Boolean enableNodeAutoprovisioning;
+      private final Boolean enableNodeAutoprovisioning;
 
     public Boolean getEnableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
@@ -69,7 +69,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceLimits", required=true)
-    private final List<ResourceLimitResponse> resourceLimits;
+      private final List<ResourceLimitResponse> resourceLimits;
 
     public List<ResourceLimitResponse> getResourceLimits() {
         return this.resourceLimits;
@@ -148,7 +148,6 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-
         public ClusterAutoscalingResponse build() {
             return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }

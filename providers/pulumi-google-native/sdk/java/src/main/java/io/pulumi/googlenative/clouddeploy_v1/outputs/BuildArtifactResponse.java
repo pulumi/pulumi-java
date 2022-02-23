@@ -74,7 +74,6 @@ public final class BuildArtifactResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public BuildArtifactResponse build() {
             return new BuildArtifactResponse(image, tag);
         }

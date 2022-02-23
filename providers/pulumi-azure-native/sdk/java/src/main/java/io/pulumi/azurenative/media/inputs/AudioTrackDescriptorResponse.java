@@ -23,7 +23,7 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="channelMapping")
-    private final @Nullable String channelMapping;
+        private final @Nullable String channelMapping;
 
     public Optional<String> getChannelMapping() {
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
@@ -35,7 +35,7 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -84,7 +84,6 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public AudioTrackDescriptorResponse build() {
             return new AudioTrackDescriptorResponse(channelMapping, odataType);
         }

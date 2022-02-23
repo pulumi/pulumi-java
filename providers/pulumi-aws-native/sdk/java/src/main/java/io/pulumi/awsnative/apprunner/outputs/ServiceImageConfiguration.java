@@ -91,7 +91,6 @@ public final class ServiceImageConfiguration {
             this.startCommand = startCommand;
             return this;
         }
-
         public ServiceImageConfiguration build() {
             return new ServiceImageConfiguration(port, runtimeEnvironmentVariables, startCommand);
         }

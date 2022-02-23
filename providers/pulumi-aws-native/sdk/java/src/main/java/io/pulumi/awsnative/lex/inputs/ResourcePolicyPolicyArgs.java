@@ -34,7 +34,6 @@ public final class ResourcePolicyPolicyArgs extends io.pulumi.resources.Resource
         public Builder(ResourcePolicyPolicyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ResourcePolicyPolicyArgs build() {
             return new ResourcePolicyPolicyArgs();
         }

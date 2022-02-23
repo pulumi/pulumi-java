@@ -24,14 +24,14 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Integer count;
+        private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -42,7 +42,7 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="statusCodes")
-    private final @Nullable String statusCodes;
+        private final @Nullable String statusCodes;
 
     public Optional<String> getStatusCodes() {
         return this.statusCodes == null ? Optional.empty() : Optional.ofNullable(this.statusCodes);
@@ -53,7 +53,7 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeInterval")
-    private final @Nullable String timeInterval;
+        private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
@@ -122,7 +122,6 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
             this.timeInterval = timeInterval;
             return this;
         }
-
         public StatusCodesRangeBasedTriggerResponse build() {
             return new StatusCodesRangeBasedTriggerResponse(count, path, statusCodes, timeInterval);
         }

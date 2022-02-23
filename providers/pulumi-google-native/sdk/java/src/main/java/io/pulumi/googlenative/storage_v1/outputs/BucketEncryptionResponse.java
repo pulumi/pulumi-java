@@ -52,7 +52,6 @@ public final class BucketEncryptionResponse {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public BucketEncryptionResponse build() {
             return new BucketEncryptionResponse(defaultKmsKeyName);
         }

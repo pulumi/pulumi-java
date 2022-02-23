@@ -77,7 +77,6 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public FirewallPolicyLogAnalyticsWorkspaceResponse build() {
             return new FirewallPolicyLogAnalyticsWorkspaceResponse(region, workspaceId);
         }

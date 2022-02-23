@@ -252,7 +252,6 @@ public final class WebTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public WebTableDatasetResponse build() {
             return new WebTableDatasetResponse(annotations, description, folder, index, linkedServiceName, parameters, path, schema, structure, type);
         }

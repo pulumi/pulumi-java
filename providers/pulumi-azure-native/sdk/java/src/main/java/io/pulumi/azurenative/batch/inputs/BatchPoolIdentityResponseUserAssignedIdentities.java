@@ -17,7 +17,7 @@ public final class BatchPoolIdentityResponseUserAssignedIdentities extends io.pu
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+        private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -28,7 +28,7 @@ public final class BatchPoolIdentityResponseUserAssignedIdentities extends io.pu
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -77,7 +77,6 @@ public final class BatchPoolIdentityResponseUserAssignedIdentities extends io.pu
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public BatchPoolIdentityResponseUserAssignedIdentities build() {
             return new BatchPoolIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

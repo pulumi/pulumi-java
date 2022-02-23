@@ -165,7 +165,6 @@ public final class GetServiceResult {
             this.traffics = Objects.requireNonNull(traffics);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(autogenerateRevisionName, id, location, metadatas, name, project, statuses, templates, traffics);
         }

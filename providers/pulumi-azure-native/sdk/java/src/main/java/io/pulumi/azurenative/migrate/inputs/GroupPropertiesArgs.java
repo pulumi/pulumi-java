@@ -23,7 +23,7 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupType")
-    private final @Nullable Input<String> groupType;
+        private final @Nullable Input<String> groupType;
 
     public Input<String> getGroupType() {
         return this.groupType == null ? Input.empty() : this.groupType;
@@ -66,7 +66,6 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.groupType = Input.ofNullable(groupType);
             return this;
         }
-
         public GroupPropertiesArgs build() {
             return new GroupPropertiesArgs(groupType);
         }

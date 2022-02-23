@@ -227,7 +227,6 @@ public final class BookmarkTimelineItemResponse {
             this.startTimeUtc = startTimeUtc;
             return this;
         }
-
         public BookmarkTimelineItemResponse build() {
             return new BookmarkTimelineItemResponse(azureResourceId, createdBy, displayName, endTimeUtc, eventTime, kind, labels, notes, startTimeUtc);
         }

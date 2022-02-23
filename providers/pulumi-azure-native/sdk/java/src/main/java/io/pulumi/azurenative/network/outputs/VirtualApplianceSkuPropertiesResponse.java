@@ -97,7 +97,6 @@ public final class VirtualApplianceSkuPropertiesResponse {
             this.vendor = vendor;
             return this;
         }
-
         public VirtualApplianceSkuPropertiesResponse build() {
             return new VirtualApplianceSkuPropertiesResponse(bundledScaleUnit, marketPlaceVersion, vendor);
         }

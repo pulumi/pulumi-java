@@ -317,7 +317,6 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeAnalyticsLinkedServiceResponse build() {
             return new AzureDataLakeAnalyticsLinkedServiceResponse(accountName, annotations, connectVia, dataLakeAnalyticsUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }

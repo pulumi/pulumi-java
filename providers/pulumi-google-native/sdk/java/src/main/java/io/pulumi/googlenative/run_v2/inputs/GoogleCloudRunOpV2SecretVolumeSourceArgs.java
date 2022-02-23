@@ -26,7 +26,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="defaultMode")
-    private final @Nullable Input<Integer> defaultMode;
+      private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<GoogleCloudRunOpV2VersionToPathArgs>> items;
+      private final @Nullable Input<List<GoogleCloudRunOpV2VersionToPathArgs>> items;
 
     public Input<List<GoogleCloudRunOpV2VersionToPathArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -48,7 +48,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -122,7 +122,6 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends io.pulumi.re
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public GoogleCloudRunOpV2SecretVolumeSourceArgs build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceArgs(defaultMode, items, secret);
         }

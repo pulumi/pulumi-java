@@ -54,7 +54,6 @@ public final class ApiEntityReferenceResponse {
             this.id = id;
             return this;
         }
-
         public ApiEntityReferenceResponse build() {
             return new ApiEntityReferenceResponse(id);
         }

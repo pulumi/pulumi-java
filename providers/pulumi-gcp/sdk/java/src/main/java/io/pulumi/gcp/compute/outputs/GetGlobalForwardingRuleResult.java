@@ -240,7 +240,6 @@ public final class GetGlobalForwardingRuleResult {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public GetGlobalForwardingRuleResult build() {
             return new GetGlobalForwardingRuleResult(description, id, ipAddress, ipProtocol, ipVersion, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, portRange, project, selfLink, target);
         }

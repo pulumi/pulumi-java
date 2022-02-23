@@ -95,7 +95,6 @@ public final class FleetLocationCapacity {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public FleetLocationCapacity build() {
             return new FleetLocationCapacity(desiredEC2Instances, maxSize, minSize);
         }

@@ -80,7 +80,6 @@ public final class RegionPerInstanceConfigPreservedState {
             this.metadata = metadata;
             return this;
         }
-
         public RegionPerInstanceConfigPreservedState build() {
             return new RegionPerInstanceConfigPreservedState(disks, metadata);
         }

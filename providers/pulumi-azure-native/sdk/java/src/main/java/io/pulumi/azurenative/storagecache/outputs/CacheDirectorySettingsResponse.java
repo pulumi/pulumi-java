@@ -77,7 +77,6 @@ public final class CacheDirectorySettingsResponse {
             this.usernameDownload = usernameDownload;
             return this;
         }
-
         public CacheDirectorySettingsResponse build() {
             return new CacheDirectorySettingsResponse(activeDirectory, usernameDownload);
         }

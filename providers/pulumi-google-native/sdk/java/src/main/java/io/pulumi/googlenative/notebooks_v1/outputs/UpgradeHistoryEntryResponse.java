@@ -242,7 +242,6 @@ public final class UpgradeHistoryEntryResponse {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public UpgradeHistoryEntryResponse build() {
             return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }

@@ -25,7 +25,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bandwidthMHz", required=true)
-    private final Input<Double> bandwidthMHz;
+        private final Input<Double> bandwidthMHz;
 
     public Input<Double> getBandwidthMHz() {
         return this.bandwidthMHz;
@@ -36,7 +36,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="centerFrequencyMHz", required=true)
-    private final Input<Double> centerFrequencyMHz;
+        private final Input<Double> centerFrequencyMHz;
 
     public Input<Double> getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
@@ -47,7 +47,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="decodingConfiguration")
-    private final @Nullable Input<String> decodingConfiguration;
+        private final @Nullable Input<String> decodingConfiguration;
 
     public Input<String> getDecodingConfiguration() {
         return this.decodingConfiguration == null ? Input.empty() : this.decodingConfiguration;
@@ -58,7 +58,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="demodulationConfiguration")
-    private final @Nullable Input<String> demodulationConfiguration;
+        private final @Nullable Input<String> demodulationConfiguration;
 
     public Input<String> getDemodulationConfiguration() {
         return this.demodulationConfiguration == null ? Input.empty() : this.demodulationConfiguration;
@@ -69,7 +69,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="encodingConfiguration")
-    private final @Nullable Input<String> encodingConfiguration;
+        private final @Nullable Input<String> encodingConfiguration;
 
     public Input<String> getEncodingConfiguration() {
         return this.encodingConfiguration == null ? Input.empty() : this.encodingConfiguration;
@@ -80,7 +80,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endPoint", required=true)
-    private final Input<EndPointArgs> endPoint;
+        private final Input<EndPointArgs> endPoint;
 
     public Input<EndPointArgs> getEndPoint() {
         return this.endPoint;
@@ -91,7 +91,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="modulationConfiguration")
-    private final @Nullable Input<String> modulationConfiguration;
+        private final @Nullable Input<String> modulationConfiguration;
 
     public Input<String> getModulationConfiguration() {
         return this.modulationConfiguration == null ? Input.empty() : this.modulationConfiguration;
@@ -225,7 +225,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
             this.modulationConfiguration = Input.ofNullable(modulationConfiguration);
             return this;
         }
-
         public ContactProfileLinkChannelArgs build() {
             return new ContactProfileLinkChannelArgs(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
         }

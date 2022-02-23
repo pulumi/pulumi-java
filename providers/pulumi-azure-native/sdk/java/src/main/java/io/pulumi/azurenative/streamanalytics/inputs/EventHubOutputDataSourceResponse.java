@@ -23,7 +23,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable String eventHubName;
+        private final @Nullable String eventHubName;
 
     public Optional<String> getEventHubName() {
         return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
@@ -34,7 +34,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable String partitionKey;
+        private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
@@ -45,7 +45,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceBusNamespace")
-    private final @Nullable String serviceBusNamespace;
+        private final @Nullable String serviceBusNamespace;
 
     public Optional<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
@@ -56,7 +56,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable String sharedAccessPolicyKey;
+        private final @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
@@ -67,7 +67,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable String sharedAccessPolicyName;
+        private final @Nullable String sharedAccessPolicyName;
 
     public Optional<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
@@ -79,7 +79,7 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -168,7 +168,6 @@ public final class EventHubOutputDataSourceResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventHubOutputDataSourceResponse build() {
             return new EventHubOutputDataSourceResponse(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

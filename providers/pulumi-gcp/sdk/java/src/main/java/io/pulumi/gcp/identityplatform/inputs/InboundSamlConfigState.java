@@ -22,7 +22,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -45,7 +45,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="idpConfig")
-    private final @Nullable Input<InboundSamlConfigIdpConfigGetArgs> idpConfig;
+        private final @Nullable Input<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
     public Input<InboundSamlConfigIdpConfigGetArgs> getIdpConfig() {
         return this.idpConfig == null ? Input.empty() : this.idpConfig;
@@ -58,7 +58,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="spConfig")
-    private final @Nullable Input<InboundSamlConfigSpConfigGetArgs> spConfig;
+        private final @Nullable Input<InboundSamlConfigSpConfigGetArgs> spConfig;
 
     public Input<InboundSamlConfigSpConfigGetArgs> getSpConfig() {
         return this.spConfig == null ? Input.empty() : this.spConfig;
@@ -202,7 +202,6 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
             this.spConfig = Input.ofNullable(spConfig);
             return this;
         }
-
         public InboundSamlConfigState build() {
             return new InboundSamlConfigState(displayName, enabled, idpConfig, name, project, spConfig);
         }

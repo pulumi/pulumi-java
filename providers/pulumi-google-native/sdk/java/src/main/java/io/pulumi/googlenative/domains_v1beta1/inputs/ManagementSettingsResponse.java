@@ -21,7 +21,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="renewalMethod", required=true)
-    private final String renewalMethod;
+      private final String renewalMethod;
 
     public String getRenewalMethod() {
         return this.renewalMethod;
@@ -32,7 +32,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="transferLockState", required=true)
-    private final String transferLockState;
+      private final String transferLockState;
 
     public String getTransferLockState() {
         return this.transferLockState;
@@ -81,7 +81,6 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
             this.transferLockState = Objects.requireNonNull(transferLockState);
             return this;
         }
-
         public ManagementSettingsResponse build() {
             return new ManagementSettingsResponse(renewalMethod, transferLockState);
         }

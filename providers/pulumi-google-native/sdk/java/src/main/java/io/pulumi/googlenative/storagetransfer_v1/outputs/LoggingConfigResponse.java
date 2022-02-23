@@ -97,7 +97,6 @@ public final class LoggingConfigResponse {
             this.logActions = Objects.requireNonNull(logActions);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(enableOnpremGcsTransferLogs, logActionStates, logActions);
         }

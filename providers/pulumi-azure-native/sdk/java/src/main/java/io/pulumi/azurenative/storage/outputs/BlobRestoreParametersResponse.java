@@ -76,7 +76,6 @@ public final class BlobRestoreParametersResponse {
             this.timeToRestore = Objects.requireNonNull(timeToRestore);
             return this;
         }
-
         public BlobRestoreParametersResponse build() {
             return new BlobRestoreParametersResponse(blobRanges, timeToRestore);
         }

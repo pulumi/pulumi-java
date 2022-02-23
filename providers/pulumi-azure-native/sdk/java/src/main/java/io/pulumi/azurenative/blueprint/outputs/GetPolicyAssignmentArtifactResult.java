@@ -249,7 +249,6 @@ public final class GetPolicyAssignmentArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyAssignmentArtifactResult build() {
             return new GetPolicyAssignmentArtifactResult(dependsOn, description, displayName, id, kind, name, parameters, policyDefinitionId, resourceGroup, type);
         }

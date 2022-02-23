@@ -20,7 +20,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cors")
-    private final @Nullable Input<CorsRulesArgs> cors;
+        private final @Nullable Input<CorsRulesArgs> cors;
 
     public Input<CorsRulesArgs> getCors() {
         return this.cors == null ? Input.empty() : this.cors;
@@ -42,7 +42,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="queueServiceName")
-    private final @Nullable Input<String> queueServiceName;
+        private final @Nullable Input<String> queueServiceName;
 
     public Input<String> getQueueServiceName() {
         return this.queueServiceName == null ? Input.empty() : this.queueServiceName;
@@ -53,7 +53,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public QueueServicePropertiesArgs build() {
             return new QueueServicePropertiesArgs(accountName, cors, queueServiceName, resourceGroupName);
         }

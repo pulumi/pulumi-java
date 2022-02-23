@@ -97,7 +97,6 @@ public final class ManagedIdentityResponse {
             this.type = type;
             return this;
         }
-
         public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(principalId, tenantId, type);
         }

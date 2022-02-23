@@ -61,7 +61,6 @@ public final class WorkGroupResultConfiguration {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public WorkGroupResultConfiguration build() {
             return new WorkGroupResultConfiguration(encryptionConfiguration, outputLocation);
         }

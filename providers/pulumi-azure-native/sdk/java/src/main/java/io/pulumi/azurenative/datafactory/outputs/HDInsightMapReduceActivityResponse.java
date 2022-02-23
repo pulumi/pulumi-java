@@ -358,7 +358,6 @@ public final class HDInsightMapReduceActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightMapReduceActivityResponse build() {
             return new HDInsightMapReduceActivityResponse(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
         }

@@ -97,7 +97,6 @@ public final class TypeResponse {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, primitive);
         }

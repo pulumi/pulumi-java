@@ -46,7 +46,6 @@ public final class FrontEndConfigurationResponse {
             this.kind = kind;
             return this;
         }
-
         public FrontEndConfigurationResponse build() {
             return new FrontEndConfigurationResponse(kind);
         }

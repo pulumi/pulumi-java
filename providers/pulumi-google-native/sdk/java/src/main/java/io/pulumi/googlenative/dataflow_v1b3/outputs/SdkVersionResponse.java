@@ -95,7 +95,6 @@ public final class SdkVersionResponse {
             this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
             return this;
         }
-
         public SdkVersionResponse build() {
             return new SdkVersionResponse(sdkSupportStatus, version, versionDisplayName);
         }

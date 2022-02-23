@@ -17,7 +17,7 @@ public final class GetBucketPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+        private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -55,7 +55,6 @@ public final class GetBucketPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public GetBucketPolicyArgs build() {
             return new GetBucketPolicyArgs(bucket);
         }

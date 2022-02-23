@@ -140,7 +140,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(environment, jobName, parameters, transformNameMapping, update);
         }

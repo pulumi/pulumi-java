@@ -97,7 +97,6 @@ public final class BreakOutCategoryPoliciesResponse {
             this.optimize = optimize;
             return this;
         }
-
         public BreakOutCategoryPoliciesResponse build() {
             return new BreakOutCategoryPoliciesResponse(allow, $default, optimize);
         }

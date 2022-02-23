@@ -141,7 +141,6 @@ public final class GetPackageVersionResult {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }
-
         public GetPackageVersionResult build() {
             return new GetPackageVersionResult(isLatestPatch, markLatest, packageArn, packageName, registeredTime, status, statusDescription, updatedLatestPatchVersion);
         }

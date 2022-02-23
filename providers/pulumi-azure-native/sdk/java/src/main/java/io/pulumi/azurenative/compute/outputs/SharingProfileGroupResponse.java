@@ -77,7 +77,6 @@ public final class SharingProfileGroupResponse {
             this.type = type;
             return this;
         }
-
         public SharingProfileGroupResponse build() {
             return new SharingProfileGroupResponse(ids, type);
         }

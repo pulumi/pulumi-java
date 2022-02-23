@@ -22,7 +22,7 @@ public final class ClusterAutoscalingConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoscalingLimits", required=true)
-    private final AutoscalingLimitsResponse autoscalingLimits;
+      private final AutoscalingLimitsResponse autoscalingLimits;
 
     public AutoscalingLimitsResponse getAutoscalingLimits() {
         return this.autoscalingLimits;
@@ -33,7 +33,7 @@ public final class ClusterAutoscalingConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoscalingTargets", required=true)
-    private final AutoscalingTargetsResponse autoscalingTargets;
+      private final AutoscalingTargetsResponse autoscalingTargets;
 
     public AutoscalingTargetsResponse getAutoscalingTargets() {
         return this.autoscalingTargets;
@@ -82,7 +82,6 @@ public final class ClusterAutoscalingConfigResponse extends io.pulumi.resources.
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
         }
-
         public ClusterAutoscalingConfigResponse build() {
             return new ClusterAutoscalingConfigResponse(autoscalingLimits, autoscalingTargets);
         }

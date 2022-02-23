@@ -116,7 +116,6 @@ public final class GetTagByApiResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagByApiResult build() {
             return new GetTagByApiResult(displayName, id, name, type);
         }

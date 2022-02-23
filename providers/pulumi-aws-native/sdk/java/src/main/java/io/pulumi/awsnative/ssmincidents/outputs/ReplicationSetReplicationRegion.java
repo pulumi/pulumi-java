@@ -61,7 +61,6 @@ public final class ReplicationSetReplicationRegion {
             this.regionName = regionName;
             return this;
         }
-
         public ReplicationSetReplicationRegion build() {
             return new ReplicationSetReplicationRegion(regionConfiguration, regionName);
         }

@@ -74,7 +74,6 @@ public final class ExternalProtectionLevelOptionsResponse {
             this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
             return this;
         }
-
         public ExternalProtectionLevelOptionsResponse build() {
             return new ExternalProtectionLevelOptionsResponse(ekmConnectionKeyPath, externalKeyUri);
         }

@@ -17,7 +17,7 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="configName", required=true)
-    private final String configName;
+        private final String configName;
 
     public String getConfigName() {
         return this.configName;
@@ -28,7 +28,7 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetMigrationConfigArgs build() {
             return new GetMigrationConfigArgs(configName, namespaceName, resourceGroupName);
         }

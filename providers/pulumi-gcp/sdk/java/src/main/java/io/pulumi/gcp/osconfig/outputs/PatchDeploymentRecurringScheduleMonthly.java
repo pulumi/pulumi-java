@@ -83,7 +83,6 @@ public final class PatchDeploymentRecurringScheduleMonthly {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthly build() {
             return new PatchDeploymentRecurringScheduleMonthly(monthDay, weekDayOfMonth);
         }

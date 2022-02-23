@@ -77,7 +77,6 @@ public final class TerminateNotificationProfileResponse {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }
-
         public TerminateNotificationProfileResponse build() {
             return new TerminateNotificationProfileResponse(enable, notBeforeTimeout);
         }

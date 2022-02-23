@@ -21,7 +21,7 @@ public final class CloudSqlCredentialResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class CloudSqlCredentialResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -81,7 +81,6 @@ public final class CloudSqlCredentialResponse extends io.pulumi.resources.Invoke
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CloudSqlCredentialResponse build() {
             return new CloudSqlCredentialResponse(password, username);
         }

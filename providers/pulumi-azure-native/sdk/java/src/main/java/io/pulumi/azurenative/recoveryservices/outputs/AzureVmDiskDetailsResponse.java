@@ -223,7 +223,6 @@ public final class AzureVmDiskDetailsResponse {
             this.vhdType = vhdType;
             return this;
         }
-
         public AzureVmDiskDetailsResponse build() {
             return new AzureVmDiskDetailsResponse(diskEncryptionSetId, diskId, lunId, maxSizeMB, targetDiskLocation, targetDiskName, vhdId, vhdName, vhdType);
         }

@@ -270,7 +270,6 @@ public final class GetLocalUserResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLocalUserResult build() {
             return new GetLocalUserResult(hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, id, name, permissionScopes, sid, sshAuthorizedKeys, systemData, type);
         }

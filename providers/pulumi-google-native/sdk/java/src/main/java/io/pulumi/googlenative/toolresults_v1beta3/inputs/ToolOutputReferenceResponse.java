@@ -23,7 +23,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final TimestampResponse creationTime;
+      private final TimestampResponse creationTime;
 
     public TimestampResponse getCreationTime() {
         return this.creationTime;
@@ -34,7 +34,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="output", required=true)
-    private final FileReferenceResponse output;
+      private final FileReferenceResponse output;
 
     public FileReferenceResponse getOutput() {
         return this.output;
@@ -45,7 +45,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testCase", required=true)
-    private final TestCaseReferenceResponse testCase;
+      private final TestCaseReferenceResponse testCase;
 
     public TestCaseReferenceResponse getTestCase() {
         return this.testCase;
@@ -104,7 +104,6 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }
-
         public ToolOutputReferenceResponse build() {
             return new ToolOutputReferenceResponse(creationTime, output, testCase);
         }

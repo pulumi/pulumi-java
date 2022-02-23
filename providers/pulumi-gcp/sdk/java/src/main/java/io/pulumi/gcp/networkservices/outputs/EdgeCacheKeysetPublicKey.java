@@ -82,7 +82,6 @@ public final class EdgeCacheKeysetPublicKey {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EdgeCacheKeysetPublicKey build() {
             return new EdgeCacheKeysetPublicKey(id, value);
         }

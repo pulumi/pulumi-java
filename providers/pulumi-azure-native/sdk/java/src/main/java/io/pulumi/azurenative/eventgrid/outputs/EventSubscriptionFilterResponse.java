@@ -162,7 +162,6 @@ public final class EventSubscriptionFilterResponse {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public EventSubscriptionFilterResponse build() {
             return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }

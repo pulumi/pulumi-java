@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -144,7 +144,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(apt, goo, yum, zypper);
         }

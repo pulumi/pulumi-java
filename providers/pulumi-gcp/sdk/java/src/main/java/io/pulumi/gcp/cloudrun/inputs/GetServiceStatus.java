@@ -16,35 +16,35 @@ public final class GetServiceStatus extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceStatus Empty = new GetServiceStatus();
 
     @InputImport(name="conditions", required=true)
-    private final List<GetServiceStatusCondition> conditions;
+        private final List<GetServiceStatusCondition> conditions;
 
     public List<GetServiceStatusCondition> getConditions() {
         return this.conditions;
     }
 
     @InputImport(name="latestCreatedRevisionName", required=true)
-    private final String latestCreatedRevisionName;
+        private final String latestCreatedRevisionName;
 
     public String getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
 
     @InputImport(name="latestReadyRevisionName", required=true)
-    private final String latestReadyRevisionName;
+        private final String latestReadyRevisionName;
 
     public String getLatestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
 
     @InputImport(name="observedGeneration", required=true)
-    private final Integer observedGeneration;
+        private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
         return this.observedGeneration;
     }
 
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -123,7 +123,6 @@ public final class GetServiceStatus extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetServiceStatus build() {
             return new GetServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }

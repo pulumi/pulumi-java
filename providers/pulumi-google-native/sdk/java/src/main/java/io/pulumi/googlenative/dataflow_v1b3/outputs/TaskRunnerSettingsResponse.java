@@ -434,7 +434,6 @@ public final class TaskRunnerSettingsResponse {
             this.workflowFileName = Objects.requireNonNull(workflowFileName);
             return this;
         }
-
         public TaskRunnerSettingsResponse build() {
             return new TaskRunnerSettingsResponse(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
         }

@@ -161,7 +161,6 @@ public final class GetSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSiteResult build() {
             return new GetSiteResult(displayName, id, name, systemData, tags, type);
         }

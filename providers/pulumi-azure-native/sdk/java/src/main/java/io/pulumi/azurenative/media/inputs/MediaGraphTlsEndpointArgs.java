@@ -26,7 +26,7 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
+        private final @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
     public Input<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -38,7 +38,7 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -49,7 +49,7 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trustedCertificates")
-    private final @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates;
+        private final @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates;
 
     public Input<MediaGraphPemCertificateListArgs> getTrustedCertificates() {
         return this.trustedCertificates == null ? Input.empty() : this.trustedCertificates;
@@ -60,7 +60,7 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -71,7 +71,7 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validationOptions")
-    private final @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions;
+        private final @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions;
 
     public Input<MediaGraphTlsValidationOptionsArgs> getValidationOptions() {
         return this.validationOptions == null ? Input.empty() : this.validationOptions;
@@ -175,7 +175,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }
-
         public MediaGraphTlsEndpointArgs build() {
             return new MediaGraphTlsEndpointArgs(credentials, odataType, trustedCertificates, url, validationOptions);
         }

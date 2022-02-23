@@ -226,7 +226,6 @@ public final class PipelineResourcesResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public PipelineResourcesResponse build() {
             return new PipelineResourcesResponse(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
         }

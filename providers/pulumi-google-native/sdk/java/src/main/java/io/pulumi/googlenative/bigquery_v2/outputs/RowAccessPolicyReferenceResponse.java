@@ -116,7 +116,6 @@ public final class RowAccessPolicyReferenceResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public RowAccessPolicyReferenceResponse build() {
             return new RowAccessPolicyReferenceResponse(datasetId, policyId, project, tableId);
         }

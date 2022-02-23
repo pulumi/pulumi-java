@@ -140,7 +140,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public OpenShiftManagedClusterMasterPoolProfileResponse build() {
             return new OpenShiftManagedClusterMasterPoolProfileResponse(count, name, osType, subnetCidr, vmSize);
         }

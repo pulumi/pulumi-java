@@ -24,7 +24,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final Input<String> baseUrl;
+      private final Input<String> baseUrl;
 
     public Input<String> getBaseUrl() {
         return this.baseUrl;
@@ -35,7 +35,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -46,7 +46,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gpgKeys")
-    private final @Nullable Input<List<String>> gpgKeys;
+      private final @Nullable Input<List<String>> gpgKeys;
 
     public Input<List<String>> getGpgKeys() {
         return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
@@ -57,7 +57,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -146,7 +146,6 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public ZypperRepositoryArgs build() {
             return new ZypperRepositoryArgs(baseUrl, displayName, gpgKeys, id);
         }

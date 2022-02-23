@@ -52,7 +52,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt(name);
         }

@@ -17,7 +17,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dataSetName", required=true)
-    private final String dataSetName;
+        private final String dataSetName;
 
     public String getDataSetName() {
         return this.dataSetName;
@@ -39,7 +39,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+        private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -119,7 +119,6 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public GetSynapseWorkspaceSqlPoolTableDataSetArgs build() {
             return new GetSynapseWorkspaceSqlPoolTableDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }

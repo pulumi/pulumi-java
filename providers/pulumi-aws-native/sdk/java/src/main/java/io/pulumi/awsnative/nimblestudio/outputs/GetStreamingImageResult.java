@@ -167,7 +167,6 @@ public final class GetStreamingImageResult {
             this.streamingImageId = streamingImageId;
             return this;
         }
-
         public GetStreamingImageResult build() {
             return new GetStreamingImageResult(description, encryptionConfiguration, eulaIds, name, owner, platform, streamingImageId);
         }

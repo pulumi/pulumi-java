@@ -120,7 +120,6 @@ public final class PodSecurityPolicy {
             this.spec = spec;
             return this;
         }
-
         public PodSecurityPolicy build() {
             return new PodSecurityPolicy(apiVersion, kind, metadata, spec);
         }

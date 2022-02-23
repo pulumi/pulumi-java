@@ -13,7 +13,7 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @InputImport(name="ruleGroupArn", required=true)
-    private final String ruleGroupArn;
+        private final String ruleGroupArn;
 
     public String getRuleGroupArn() {
         return this.ruleGroupArn;
@@ -51,7 +51,6 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.ruleGroupArn = Objects.requireNonNull(ruleGroupArn);
             return this;
         }
-
         public GetRuleGroupArgs build() {
             return new GetRuleGroupArgs(ruleGroupArn);
         }

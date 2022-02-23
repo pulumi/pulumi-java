@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
+      private final @Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
     public Input<GoogleCloudDialogflowV2FulfillmentFeatureType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {
             return new GoogleCloudDialogflowV2FulfillmentFeatureArgs(type);
         }

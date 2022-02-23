@@ -290,7 +290,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, accountName, id, identity, location, mediaServices, name, provisioningState, systemData, tags, tenantId, type);
         }

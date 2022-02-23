@@ -18,7 +18,7 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+        private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -29,7 +29,7 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -88,7 +88,6 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentialsArgs exte
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public ConnectorProfileSnowflakeConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSnowflakeConnectorProfileCredentialsArgs(password, username);
         }

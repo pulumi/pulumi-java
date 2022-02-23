@@ -24,7 +24,7 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable List<String> keys;
+        private final @Nullable List<String> keys;
 
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
@@ -62,7 +62,6 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
             this.keys = keys;
             return this;
         }
-
         public MongoIndexKeysResponse build() {
             return new MongoIndexKeysResponse(keys);
         }

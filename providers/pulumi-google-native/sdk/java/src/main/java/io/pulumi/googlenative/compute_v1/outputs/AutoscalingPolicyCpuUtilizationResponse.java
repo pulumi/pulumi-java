@@ -75,7 +75,6 @@ public final class AutoscalingPolicyCpuUtilizationResponse {
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyCpuUtilizationResponse build() {
             return new AutoscalingPolicyCpuUtilizationResponse(predictiveMethod, utilizationTarget);
         }

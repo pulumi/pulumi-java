@@ -74,7 +74,6 @@ public final class VirtualClusterTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VirtualClusterTag build() {
             return new VirtualClusterTag(key, value);
         }

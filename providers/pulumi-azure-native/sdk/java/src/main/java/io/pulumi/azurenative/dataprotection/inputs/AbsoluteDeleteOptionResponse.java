@@ -21,7 +21,7 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+        private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -82,7 +82,6 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AbsoluteDeleteOptionResponse build() {
             return new AbsoluteDeleteOptionResponse(duration, objectType);
         }

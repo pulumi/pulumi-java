@@ -22,7 +22,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -33,7 +33,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mountPoint", required=true)
-    private final String mountPoint;
+      private final String mountPoint;
 
     public String getMountPoint() {
         return this.mountPoint;
@@ -44,7 +44,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeGb", required=true)
-    private final Integer sizeGb;
+      private final Integer sizeGb;
 
     public Integer getSizeGb() {
         return this.sizeGb;
@@ -103,7 +103,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(diskType, mountPoint, sizeGb);
         }

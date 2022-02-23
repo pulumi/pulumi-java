@@ -286,7 +286,6 @@ public final class GetCloudEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudEndpointResult build() {
             return new GetCloudEndpointResult(azureFileShareName, backupEnabled, friendlyName, id, lastOperationName, lastWorkflowId, name, partnershipId, provisioningState, storageAccountResourceId, storageAccountTenantId, type);
         }

@@ -108,7 +108,6 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
             this.celExpression = celExpression;
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraints build() {
             return new CaPoolIssuancePolicyIdentityConstraints(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

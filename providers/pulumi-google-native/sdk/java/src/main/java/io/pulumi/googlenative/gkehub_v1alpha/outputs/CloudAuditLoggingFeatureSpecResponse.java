@@ -53,7 +53,6 @@ public final class CloudAuditLoggingFeatureSpecResponse {
             this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
             return this;
         }
-
         public CloudAuditLoggingFeatureSpecResponse build() {
             return new CloudAuditLoggingFeatureSpecResponse(allowlistedServiceAccounts);
         }

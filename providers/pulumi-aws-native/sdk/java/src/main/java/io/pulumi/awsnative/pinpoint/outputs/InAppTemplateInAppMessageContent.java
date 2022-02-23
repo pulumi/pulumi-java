@@ -115,7 +115,6 @@ public final class InAppTemplateInAppMessageContent {
             this.secondaryBtn = secondaryBtn;
             return this;
         }
-
         public InAppTemplateInAppMessageContent build() {
             return new InAppTemplateInAppMessageContent(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }

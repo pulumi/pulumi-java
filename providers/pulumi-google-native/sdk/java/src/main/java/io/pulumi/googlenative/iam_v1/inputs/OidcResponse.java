@@ -22,7 +22,7 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedAudiences", required=true)
-    private final List<String> allowedAudiences;
+      private final List<String> allowedAudiences;
 
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;
@@ -33,7 +33,7 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issuerUri", required=true)
-    private final String issuerUri;
+      private final String issuerUri;
 
     public String getIssuerUri() {
         return this.issuerUri;
@@ -82,7 +82,6 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public OidcResponse build() {
             return new OidcResponse(allowedAudiences, issuerUri);
         }

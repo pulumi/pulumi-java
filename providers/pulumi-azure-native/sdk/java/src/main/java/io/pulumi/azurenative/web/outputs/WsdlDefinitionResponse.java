@@ -119,7 +119,6 @@ public final class WsdlDefinitionResponse {
             this.url = url;
             return this;
         }
-
         public WsdlDefinitionResponse build() {
             return new WsdlDefinitionResponse(content, importMethod, service, url);
         }

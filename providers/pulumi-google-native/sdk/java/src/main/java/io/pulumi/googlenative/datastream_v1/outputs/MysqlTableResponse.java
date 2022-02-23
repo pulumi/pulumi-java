@@ -76,7 +76,6 @@ public final class MysqlTableResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, table);
         }

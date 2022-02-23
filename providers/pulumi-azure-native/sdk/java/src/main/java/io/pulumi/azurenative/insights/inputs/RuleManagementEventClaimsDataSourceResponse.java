@@ -23,7 +23,7 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable String emailAddress;
+        private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
@@ -61,7 +61,6 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
             this.emailAddress = emailAddress;
             return this;
         }
-
         public RuleManagementEventClaimsDataSourceResponse build() {
             return new RuleManagementEventClaimsDataSourceResponse(emailAddress);
         }

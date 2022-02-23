@@ -24,7 +24,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -35,7 +35,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sampleRate")
-    private final @Nullable Input<Double> sampleRate;
+      private final @Nullable Input<Double> sampleRate;
 
     public Input<Double> getSampleRate() {
         return this.sampleRate == null ? Input.empty() : this.sampleRate;
@@ -94,7 +94,6 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
             this.sampleRate = Input.ofNullable(sampleRate);
             return this;
         }
-
         public BackendServiceLogConfigArgs build() {
             return new BackendServiceLogConfigArgs(enable, sampleRate);
         }

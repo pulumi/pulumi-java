@@ -263,7 +263,6 @@ public final class GetMediaServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMediaServiceResult build() {
             return new GetMediaServiceResult(encryption, id, identity, location, mediaServiceId, name, storageAccounts, storageAuthentication, systemData, tags, type);
         }

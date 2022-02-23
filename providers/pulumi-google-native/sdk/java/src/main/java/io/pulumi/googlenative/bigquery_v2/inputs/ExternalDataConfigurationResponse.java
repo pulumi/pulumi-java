@@ -27,7 +27,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="autodetect", required=true)
-    private final Boolean autodetect;
+      private final Boolean autodetect;
 
     public Boolean getAutodetect() {
         return this.autodetect;
@@ -38,7 +38,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="avroOptions", required=true)
-    private final AvroOptionsResponse avroOptions;
+      private final AvroOptionsResponse avroOptions;
 
     public AvroOptionsResponse getAvroOptions() {
         return this.avroOptions;
@@ -49,7 +49,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="bigtableOptions", required=true)
-    private final BigtableOptionsResponse bigtableOptions;
+      private final BigtableOptionsResponse bigtableOptions;
 
     public BigtableOptionsResponse getBigtableOptions() {
         return this.bigtableOptions;
@@ -60,7 +60,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="compression", required=true)
-    private final String compression;
+      private final String compression;
 
     public String getCompression() {
         return this.compression;
@@ -71,7 +71,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final String connectionId;
+      private final String connectionId;
 
     public String getConnectionId() {
         return this.connectionId;
@@ -82,7 +82,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="csvOptions", required=true)
-    private final CsvOptionsResponse csvOptions;
+      private final CsvOptionsResponse csvOptions;
 
     public CsvOptionsResponse getCsvOptions() {
         return this.csvOptions;
@@ -93,7 +93,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="decimalTargetTypes", required=true)
-    private final List<String> decimalTargetTypes;
+      private final List<String> decimalTargetTypes;
 
     public List<String> getDecimalTargetTypes() {
         return this.decimalTargetTypes;
@@ -104,7 +104,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="googleSheetsOptions", required=true)
-    private final GoogleSheetsOptionsResponse googleSheetsOptions;
+      private final GoogleSheetsOptionsResponse googleSheetsOptions;
 
     public GoogleSheetsOptionsResponse getGoogleSheetsOptions() {
         return this.googleSheetsOptions;
@@ -115,7 +115,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="hivePartitioningOptions", required=true)
-    private final HivePartitioningOptionsResponse hivePartitioningOptions;
+      private final HivePartitioningOptionsResponse hivePartitioningOptions;
 
     public HivePartitioningOptionsResponse getHivePartitioningOptions() {
         return this.hivePartitioningOptions;
@@ -126,7 +126,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ignoreUnknownValues", required=true)
-    private final Boolean ignoreUnknownValues;
+      private final Boolean ignoreUnknownValues;
 
     public Boolean getIgnoreUnknownValues() {
         return this.ignoreUnknownValues;
@@ -137,7 +137,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxBadRecords", required=true)
-    private final Integer maxBadRecords;
+      private final Integer maxBadRecords;
 
     public Integer getMaxBadRecords() {
         return this.maxBadRecords;
@@ -148,7 +148,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="parquetOptions", required=true)
-    private final ParquetOptionsResponse parquetOptions;
+      private final ParquetOptionsResponse parquetOptions;
 
     public ParquetOptionsResponse getParquetOptions() {
         return this.parquetOptions;
@@ -159,7 +159,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="schema", required=true)
-    private final TableSchemaResponse schema;
+      private final TableSchemaResponse schema;
 
     public TableSchemaResponse getSchema() {
         return this.schema;
@@ -170,7 +170,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceFormat", required=true)
-    private final String sourceFormat;
+      private final String sourceFormat;
 
     public String getSourceFormat() {
         return this.sourceFormat;
@@ -181,7 +181,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceUris", required=true)
-    private final List<String> sourceUris;
+      private final List<String> sourceUris;
 
     public List<String> getSourceUris() {
         return this.sourceUris;
@@ -360,7 +360,6 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public ExternalDataConfigurationResponse build() {
             return new ExternalDataConfigurationResponse(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }

@@ -78,7 +78,6 @@ public final class GetAggregationAuthorizationResult {
             this.tags = tags;
             return this;
         }
-
         public GetAggregationAuthorizationResult build() {
             return new GetAggregationAuthorizationResult(aggregationAuthorizationArn, tags);
         }

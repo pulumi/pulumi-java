@@ -44,7 +44,6 @@ public final class GetClusterNodeConfigGcfsConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterNodeConfigGcfsConfig build() {
             return new GetClusterNodeConfigGcfsConfig(enabled);
         }

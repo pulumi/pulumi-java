@@ -15,28 +15,28 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @InputImport(name="analysisId", required=true)
-    private final String analysisId;
+      private final String analysisId;
 
     public String getAnalysisId() {
         return this.analysisId;
     }
 
     @InputImport(name="conversationId", required=true)
-    private final String conversationId;
+      private final String conversationId;
 
     public String getConversationId() {
         return this.conversationId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetAnalysisArgs build() {
             return new GetAnalysisArgs(analysisId, conversationId, location, project);
         }

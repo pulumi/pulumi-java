@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<List<String>> properties;
+        private final @Nullable Input<List<String>> properties;
 
     public Input<List<String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
+        private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> getSource() {
         return this.source;
@@ -91,7 +91,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(properties, source);
         }

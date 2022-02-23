@@ -21,7 +21,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+        private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -32,7 +32,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<ConsentLinkParameterDefinition> parameters;
+        private final @Nullable List<ConsentLinkParameterDefinition> parameters;
 
     public List<ConsentLinkParameterDefinition> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -43,7 +43,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -123,7 +123,6 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public ListConnectionConsentLinksArgs build() {
             return new ListConnectionConsentLinksArgs(connectionName, parameters, resourceGroupName, subscriptionId);
         }

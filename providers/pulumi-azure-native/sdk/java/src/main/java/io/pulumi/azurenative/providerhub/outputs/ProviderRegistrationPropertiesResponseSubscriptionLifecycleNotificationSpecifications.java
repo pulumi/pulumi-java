@@ -62,7 +62,6 @@ public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNo
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-
         public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
             return new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(softDeleteTTL, subscriptionStateOverrideActions);
         }

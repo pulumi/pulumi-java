@@ -20,14 +20,14 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digest")
-    private final @Nullable Input<Map<String,String>> digest;
+      private final @Nullable Input<Map<String,String>> digest;
 
     public Input<Map<String,String>> getDigest() {
         return this.digest == null ? Input.empty() : this.digest;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SubjectArgs build() {
             return new SubjectArgs(digest, name);
         }

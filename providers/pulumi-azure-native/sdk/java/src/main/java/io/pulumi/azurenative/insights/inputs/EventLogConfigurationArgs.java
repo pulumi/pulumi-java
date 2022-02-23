@@ -15,14 +15,14 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
     public static final EventLogConfigurationArgs Empty = new EventLogConfigurationArgs();
 
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
     @InputImport(name="logName", required=true)
-    private final Input<String> logName;
+        private final Input<String> logName;
 
     public Input<String> getLogName() {
         return this.logName;
@@ -81,7 +81,6 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
             this.logName = Input.of(Objects.requireNonNull(logName));
             return this;
         }
-
         public EventLogConfigurationArgs build() {
             return new EventLogConfigurationArgs(filter, logName);
         }

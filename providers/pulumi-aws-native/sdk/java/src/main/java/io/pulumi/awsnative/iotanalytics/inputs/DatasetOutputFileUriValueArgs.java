@@ -14,7 +14,7 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
     public static final DatasetOutputFileUriValueArgs Empty = new DatasetOutputFileUriValueArgs();
 
     @InputImport(name="fileName", required=true)
-    private final Input<String> fileName;
+        private final Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName;
@@ -57,7 +57,6 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
             this.fileName = Input.of(Objects.requireNonNull(fileName));
             return this;
         }
-
         public DatasetOutputFileUriValueArgs build() {
             return new DatasetOutputFileUriValueArgs(fileName);
         }

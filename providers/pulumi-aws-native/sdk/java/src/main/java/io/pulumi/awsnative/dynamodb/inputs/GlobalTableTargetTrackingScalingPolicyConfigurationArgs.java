@@ -17,28 +17,28 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
     public static final GlobalTableTargetTrackingScalingPolicyConfigurationArgs Empty = new GlobalTableTargetTrackingScalingPolicyConfigurationArgs();
 
     @InputImport(name="disableScaleIn")
-    private final @Nullable Input<Boolean> disableScaleIn;
+        private final @Nullable Input<Boolean> disableScaleIn;
 
     public Input<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Input.empty() : this.disableScaleIn;
     }
 
     @InputImport(name="scaleInCooldown")
-    private final @Nullable Input<Integer> scaleInCooldown;
+        private final @Nullable Input<Integer> scaleInCooldown;
 
     public Input<Integer> getScaleInCooldown() {
         return this.scaleInCooldown == null ? Input.empty() : this.scaleInCooldown;
     }
 
     @InputImport(name="scaleOutCooldown")
-    private final @Nullable Input<Integer> scaleOutCooldown;
+        private final @Nullable Input<Integer> scaleOutCooldown;
 
     public Input<Integer> getScaleOutCooldown() {
         return this.scaleOutCooldown == null ? Input.empty() : this.scaleOutCooldown;
     }
 
     @InputImport(name="targetValue", required=true)
-    private final Input<Double> targetValue;
+        private final Input<Double> targetValue;
 
     public Input<Double> getTargetValue() {
         return this.targetValue;
@@ -127,7 +127,6 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
             this.targetValue = Input.of(Objects.requireNonNull(targetValue));
             return this;
         }
-
         public GlobalTableTargetTrackingScalingPolicyConfigurationArgs build() {
             return new GlobalTableTargetTrackingScalingPolicyConfigurationArgs(disableScaleIn, scaleInCooldown, scaleOutCooldown, targetValue);
         }

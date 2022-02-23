@@ -58,7 +58,6 @@ public final class EventTypeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventTypeTag build() {
             return new EventTypeTag(key, value);
         }

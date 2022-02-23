@@ -15,14 +15,14 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTopicArgs Empty = new GetTopicArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="topicId", required=true)
-    private final String topicId;
+      private final String topicId;
 
     public String getTopicId() {
         return this.topicId;
@@ -71,7 +71,6 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
-
         public GetTopicArgs build() {
             return new GetTopicArgs(project, topicId);
         }

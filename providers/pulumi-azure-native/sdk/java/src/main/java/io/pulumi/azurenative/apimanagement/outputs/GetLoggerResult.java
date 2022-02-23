@@ -206,7 +206,6 @@ public final class GetLoggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoggerResult build() {
             return new GetLoggerResult(credentials, description, id, isBuffered, loggerType, name, resourceId, type);
         }

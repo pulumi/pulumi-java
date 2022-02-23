@@ -197,7 +197,6 @@ public final class GetStaticSitePrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStaticSitePrivateEndpointConnectionResult build() {
             return new GetStaticSitePrivateEndpointConnectionResult(id, ipAddresses, kind, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

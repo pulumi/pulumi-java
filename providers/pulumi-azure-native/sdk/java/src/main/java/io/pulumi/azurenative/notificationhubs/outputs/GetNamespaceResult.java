@@ -436,7 +436,6 @@ public final class GetNamespaceResult {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, critical, dataCenter, enabled, id, location, metricId, name, namespaceType, provisioningState, region, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, type, updatedAt);
         }

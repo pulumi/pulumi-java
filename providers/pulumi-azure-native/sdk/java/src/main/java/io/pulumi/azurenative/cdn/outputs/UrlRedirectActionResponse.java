@@ -77,7 +77,6 @@ public final class UrlRedirectActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public UrlRedirectActionResponse build() {
             return new UrlRedirectActionResponse(name, parameters);
         }

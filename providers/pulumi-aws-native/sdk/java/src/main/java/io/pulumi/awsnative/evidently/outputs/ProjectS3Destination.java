@@ -60,7 +60,6 @@ public final class ProjectS3Destination {
             this.prefix = prefix;
             return this;
         }
-
         public ProjectS3Destination build() {
             return new ProjectS3Destination(bucketName, prefix);
         }

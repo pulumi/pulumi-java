@@ -58,7 +58,6 @@ public final class ScheduledQueryTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ScheduledQueryTag build() {
             return new ScheduledQueryTag(key, value);
         }

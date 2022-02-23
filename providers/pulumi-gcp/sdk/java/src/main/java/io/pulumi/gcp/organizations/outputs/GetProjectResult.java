@@ -182,7 +182,6 @@ public final class GetProjectResult {
             this.skipDelete = Objects.requireNonNull(skipDelete);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(autoCreateNetwork, billingAccount, folderId, id, labels, name, number, orgId, projectId, skipDelete);
         }

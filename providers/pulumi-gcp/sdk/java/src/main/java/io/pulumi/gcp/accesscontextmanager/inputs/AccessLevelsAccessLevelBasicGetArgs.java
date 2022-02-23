@@ -27,7 +27,7 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="combiningFunction")
-    private final @Nullable Input<String> combiningFunction;
+        private final @Nullable Input<String> combiningFunction;
 
     public Input<String> getCombiningFunction() {
         return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
@@ -39,7 +39,7 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final Input<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions;
+        private final Input<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions;
 
     public Input<List<AccessLevelsAccessLevelBasicConditionGetArgs>> getConditions() {
         return this.conditions;
@@ -98,7 +98,6 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends io.pulumi.resourc
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
-
         public AccessLevelsAccessLevelBasicGetArgs build() {
             return new AccessLevelsAccessLevelBasicGetArgs(combiningFunction, conditions);
         }

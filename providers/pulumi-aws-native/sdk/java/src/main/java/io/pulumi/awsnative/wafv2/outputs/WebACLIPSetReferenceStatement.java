@@ -61,7 +61,6 @@ public final class WebACLIPSetReferenceStatement {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
-
         public WebACLIPSetReferenceStatement build() {
             return new WebACLIPSetReferenceStatement(arn, iPSetForwardedIPConfig);
         }

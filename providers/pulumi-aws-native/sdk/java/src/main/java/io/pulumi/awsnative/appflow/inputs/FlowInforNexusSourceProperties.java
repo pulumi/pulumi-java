@@ -13,7 +13,7 @@ public final class FlowInforNexusSourceProperties extends io.pulumi.resources.In
     public static final FlowInforNexusSourceProperties Empty = new FlowInforNexusSourceProperties();
 
     @InputImport(name="object", required=true)
-    private final String object;
+        private final String object;
 
     public String getObject() {
         return this.object;
@@ -51,7 +51,6 @@ public final class FlowInforNexusSourceProperties extends io.pulumi.resources.In
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowInforNexusSourceProperties build() {
             return new FlowInforNexusSourceProperties(object);
         }

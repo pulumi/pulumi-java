@@ -120,7 +120,6 @@ public final class GCEPersistentDiskVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public GCEPersistentDiskVolumeSource build() {
             return new GCEPersistentDiskVolumeSource(fsType, partition, pdName, readOnly);
         }

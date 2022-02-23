@@ -81,7 +81,6 @@ public final class SecurityScanConfigAuthentication {
             this.googleAccount = googleAccount;
             return this;
         }
-
         public SecurityScanConfigAuthentication build() {
             return new SecurityScanConfigAuthentication(customAccount, googleAccount);
         }

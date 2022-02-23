@@ -116,7 +116,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(confidenceLevel, lowerBound, ratio, upperBound);
         }

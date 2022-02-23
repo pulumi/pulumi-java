@@ -78,7 +78,6 @@ public final class PrivilegeResponse {
             this.resource = resource;
             return this;
         }
-
         public PrivilegeResponse build() {
             return new PrivilegeResponse(actions, resource);
         }

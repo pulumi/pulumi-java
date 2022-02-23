@@ -267,7 +267,6 @@ public final class GetRemediationAtResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRemediationAtResourceResult build() {
             return new GetRemediationAtResourceResult(createdOn, deploymentStatus, filters, id, lastUpdatedOn, name, policyAssignmentId, policyDefinitionReferenceId, provisioningState, resourceDiscoveryMode, type);
         }

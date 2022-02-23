@@ -19,7 +19,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -31,7 +31,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -43,7 +43,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -54,7 +54,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="webBackendService")
-    private final @Nullable Input<String> webBackendService;
+        private final @Nullable Input<String> webBackendService;
 
     public Input<String> getWebBackendService() {
         return this.webBackendService == null ? Input.empty() : this.webBackendService;
@@ -143,7 +143,6 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
             this.webBackendService = Input.ofNullable(webBackendService);
             return this;
         }
-
         public WebBackendServiceIamPolicyState build() {
             return new WebBackendServiceIamPolicyState(etag, policyData, project, webBackendService);
         }

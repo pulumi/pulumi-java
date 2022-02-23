@@ -141,7 +141,6 @@ public final class ActivityPolicyResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ActivityPolicyResponse build() {
             return new ActivityPolicyResponse(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);
         }

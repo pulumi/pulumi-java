@@ -54,7 +54,6 @@ public final class ParameterValuesValueResponse {
             this.value = value;
             return this;
         }
-
         public ParameterValuesValueResponse build() {
             return new ParameterValuesValueResponse(value);
         }

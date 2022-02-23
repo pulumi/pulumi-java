@@ -23,7 +23,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageTtl", required=true)
-    private final Input<String> messageTtl;
+        private final Input<String> messageTtl;
 
     public Input<String> getMessageTtl() {
         return this.messageTtl;
@@ -34,7 +34,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+        private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -45,7 +45,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncWindow")
-    private final @Nullable Input<String> syncWindow;
+        private final @Nullable Input<String> syncWindow;
 
     public Input<String> getSyncWindow() {
         return this.syncWindow == null ? Input.empty() : this.syncWindow;
@@ -56,7 +56,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenId", required=true)
-    private final Input<String> tokenId;
+        private final Input<String> tokenId;
 
     public Input<String> getTokenId() {
         return this.tokenId;
@@ -145,7 +145,6 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.tokenId = Input.of(Objects.requireNonNull(tokenId));
             return this;
         }
-
         public SyncPropertiesArgs build() {
             return new SyncPropertiesArgs(messageTtl, schedule, syncWindow, tokenId);
         }

@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
     public static final CertificateCertificateDescriptionAuthorityKeyIdGetArgs Empty = new CertificateCertificateDescriptionAuthorityKeyIdGetArgs();
 
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+        private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -58,7 +58,6 @@ public final class CertificateCertificateDescriptionAuthorityKeyIdGetArgs extend
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
-
         public CertificateCertificateDescriptionAuthorityKeyIdGetArgs build() {
             return new CertificateCertificateDescriptionAuthorityKeyIdGetArgs(keyId);
         }

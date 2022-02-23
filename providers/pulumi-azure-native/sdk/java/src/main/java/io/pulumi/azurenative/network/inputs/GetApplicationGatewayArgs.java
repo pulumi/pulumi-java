@@ -17,7 +17,7 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="applicationGatewayName", required=true)
-    private final String applicationGatewayName;
+        private final String applicationGatewayName;
 
     public String getApplicationGatewayName() {
         return this.applicationGatewayName;
@@ -28,7 +28,7 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetApplicationGatewayArgs build() {
             return new GetApplicationGatewayArgs(applicationGatewayName, resourceGroupName);
         }

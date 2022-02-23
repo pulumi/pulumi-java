@@ -181,7 +181,6 @@ public final class SourceTriggerDescriptorResponse {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public SourceTriggerDescriptorResponse build() {
             return new SourceTriggerDescriptorResponse(branchName, commitId, eventType, id, providerType, pullRequestId, repositoryUrl);
         }

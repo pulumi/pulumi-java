@@ -95,7 +95,6 @@ public final class VirtualApplianceNicPropertiesResponse {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public VirtualApplianceNicPropertiesResponse build() {
             return new VirtualApplianceNicPropertiesResponse(name, privateIpAddress, publicIpAddress);
         }

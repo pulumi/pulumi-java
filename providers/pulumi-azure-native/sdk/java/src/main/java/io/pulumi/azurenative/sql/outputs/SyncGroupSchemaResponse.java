@@ -78,7 +78,6 @@ public final class SyncGroupSchemaResponse {
             this.tables = tables;
             return this;
         }
-
         public SyncGroupSchemaResponse build() {
             return new SyncGroupSchemaResponse(masterSyncMemberName, tables);
         }

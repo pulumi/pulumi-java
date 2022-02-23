@@ -23,7 +23,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="authority", required=true)
-    private final String authority;
+      private final String authority;
 
     public String getAuthority() {
         return this.authority;
@@ -34,7 +34,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+      private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -45,7 +45,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="payloadName", required=true)
-    private final String payloadName;
+      private final String payloadName;
 
     public String getPayloadName() {
         return this.payloadName;
@@ -56,7 +56,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="resendInterval", required=true)
-    private final DurationResponse resendInterval;
+      private final DurationResponse resendInterval;
 
     public DurationResponse getResendInterval() {
         return this.resendInterval;
@@ -67,7 +67,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="retryDurationSec", required=true)
-    private final Integer retryDurationSec;
+      private final Integer retryDurationSec;
 
     public Integer getRetryDurationSec() {
         return this.retryDurationSec;
@@ -146,7 +146,6 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
             this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
             return this;
         }
-
         public NotificationEndpointGrpcSettingsResponse build() {
             return new NotificationEndpointGrpcSettingsResponse(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }

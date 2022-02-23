@@ -138,7 +138,6 @@ public final class HubRouteResponse {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
-
         public HubRouteResponse build() {
             return new HubRouteResponse(destinationType, destinations, name, nextHop, nextHopType);
         }

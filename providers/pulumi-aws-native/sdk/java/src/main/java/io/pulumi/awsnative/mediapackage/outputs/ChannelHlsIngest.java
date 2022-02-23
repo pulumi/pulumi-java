@@ -54,7 +54,6 @@ public final class ChannelHlsIngest {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }
-
         public ChannelHlsIngest build() {
             return new ChannelHlsIngest(ingestEndpoints);
         }

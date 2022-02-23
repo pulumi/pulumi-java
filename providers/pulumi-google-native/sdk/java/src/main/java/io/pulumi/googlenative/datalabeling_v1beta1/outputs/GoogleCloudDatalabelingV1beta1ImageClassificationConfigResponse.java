@@ -96,7 +96,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
             this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }

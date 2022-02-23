@@ -52,7 +52,6 @@ public final class OAuthRequirementsResponse {
             this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
             return this;
         }
-
         public OAuthRequirementsResponse build() {
             return new OAuthRequirementsResponse(canonicalScopes);
         }

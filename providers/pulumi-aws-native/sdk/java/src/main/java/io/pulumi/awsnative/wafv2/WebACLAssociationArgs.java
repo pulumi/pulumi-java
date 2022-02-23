@@ -14,14 +14,14 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLAssociationArgs Empty = new WebACLAssociationArgs();
 
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+        private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;
     }
 
     @InputImport(name="webACLArn", required=true)
-    private final Input<String> webACLArn;
+        private final Input<String> webACLArn;
 
     public Input<String> getWebACLArn() {
         return this.webACLArn;
@@ -80,7 +80,6 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
             this.webACLArn = Input.of(Objects.requireNonNull(webACLArn));
             return this;
         }
-
         public WebACLAssociationArgs build() {
             return new WebACLAssociationArgs(resourceArn, webACLArn);
         }

@@ -18,7 +18,7 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -90,7 +90,6 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends io.pulumi
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public DatabaseInstanceSettingsDatabaseFlagGetArgs build() {
             return new DatabaseInstanceSettingsDatabaseFlagGetArgs(name, value);
         }

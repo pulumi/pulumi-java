@@ -112,7 +112,6 @@ public final class DataQualityJobDefinitionEndpointInput {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public DataQualityJobDefinitionEndpointInput build() {
             return new DataQualityJobDefinitionEndpointInput(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }

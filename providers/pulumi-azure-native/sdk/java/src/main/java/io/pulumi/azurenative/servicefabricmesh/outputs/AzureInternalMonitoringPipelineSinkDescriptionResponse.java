@@ -205,7 +205,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
             this.namespace = namespace;
             return this;
         }
-
         public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
             return new AzureInternalMonitoringPipelineSinkDescriptionResponse(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
         }

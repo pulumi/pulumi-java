@@ -95,7 +95,6 @@ public final class KeyDescriptionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyDescriptionResponse build() {
             return new KeyDescriptionResponse(name, rank, value);
         }

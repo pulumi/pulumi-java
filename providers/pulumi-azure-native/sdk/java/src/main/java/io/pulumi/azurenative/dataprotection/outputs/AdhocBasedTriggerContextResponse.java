@@ -77,7 +77,6 @@ public final class AdhocBasedTriggerContextResponse {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public AdhocBasedTriggerContextResponse build() {
             return new AdhocBasedTriggerContextResponse(objectType, taggingCriteria);
         }

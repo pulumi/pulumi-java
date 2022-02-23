@@ -76,7 +76,6 @@ public final class AKSServiceResponseResponseDataCollection {
             this.storageEnabled = storageEnabled;
             return this;
         }
-
         public AKSServiceResponseResponseDataCollection build() {
             return new AKSServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }

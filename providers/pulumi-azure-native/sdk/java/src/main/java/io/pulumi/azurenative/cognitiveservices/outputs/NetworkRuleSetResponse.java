@@ -100,7 +100,6 @@ public final class NetworkRuleSetResponse {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public NetworkRuleSetResponse build() {
             return new NetworkRuleSetResponse(defaultAction, ipRules, virtualNetworkRules);
         }

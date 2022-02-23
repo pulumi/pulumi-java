@@ -75,7 +75,6 @@ public final class RouterNatLogConfigResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RouterNatLogConfigResponse build() {
             return new RouterNatLogConfigResponse(enable, filter);
         }

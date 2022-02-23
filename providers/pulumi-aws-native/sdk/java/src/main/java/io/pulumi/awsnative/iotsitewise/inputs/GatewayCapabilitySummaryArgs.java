@@ -19,14 +19,14 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     public static final GatewayCapabilitySummaryArgs Empty = new GatewayCapabilitySummaryArgs();
 
     @InputImport(name="capabilityConfiguration")
-    private final @Nullable Input<String> capabilityConfiguration;
+        private final @Nullable Input<String> capabilityConfiguration;
 
     public Input<String> getCapabilityConfiguration() {
         return this.capabilityConfiguration == null ? Input.empty() : this.capabilityConfiguration;
     }
 
     @InputImport(name="capabilityNamespace", required=true)
-    private final Input<String> capabilityNamespace;
+        private final Input<String> capabilityNamespace;
 
     public Input<String> getCapabilityNamespace() {
         return this.capabilityNamespace;
@@ -85,7 +85,6 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
             this.capabilityNamespace = Input.of(Objects.requireNonNull(capabilityNamespace));
             return this;
         }
-
         public GatewayCapabilitySummaryArgs build() {
             return new GatewayCapabilitySummaryArgs(capabilityConfiguration, capabilityNamespace);
         }

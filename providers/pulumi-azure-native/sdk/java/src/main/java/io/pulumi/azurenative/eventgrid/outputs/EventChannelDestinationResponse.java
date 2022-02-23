@@ -101,7 +101,6 @@ public final class EventChannelDestinationResponse {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public EventChannelDestinationResponse build() {
             return new EventChannelDestinationResponse(azureSubscriptionId, partnerTopicName, resourceGroup);
         }

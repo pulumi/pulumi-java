@@ -60,7 +60,6 @@ public final class DomainNameMutualTlsAuthentication {
             this.truststoreVersion = truststoreVersion;
             return this;
         }
-
         public DomainNameMutualTlsAuthentication build() {
             return new DomainNameMutualTlsAuthentication(truststoreUri, truststoreVersion);
         }

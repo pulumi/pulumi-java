@@ -81,7 +81,6 @@ public final class AlertPolicyAlertStrategy {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }
-
         public AlertPolicyAlertStrategy build() {
             return new AlertPolicyAlertStrategy(autoClose, notificationRateLimit);
         }

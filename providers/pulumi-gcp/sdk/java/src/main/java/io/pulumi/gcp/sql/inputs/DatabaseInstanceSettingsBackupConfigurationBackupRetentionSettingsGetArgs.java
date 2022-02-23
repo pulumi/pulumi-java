@@ -21,7 +21,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retainedBackups", required=true)
-    private final Input<Integer> retainedBackups;
+        private final Input<Integer> retainedBackups;
 
     public Input<Integer> getRetainedBackups() {
         return this.retainedBackups;
@@ -32,7 +32,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retentionUnit")
-    private final @Nullable Input<String> retentionUnit;
+        private final @Nullable Input<String> retentionUnit;
 
     public Input<String> getRetentionUnit() {
         return this.retentionUnit == null ? Input.empty() : this.retentionUnit;
@@ -91,7 +91,6 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             this.retentionUnit = Input.ofNullable(retentionUnit);
             return this;
         }
-
         public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(retainedBackups, retentionUnit);
         }

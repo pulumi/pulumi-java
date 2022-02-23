@@ -96,7 +96,6 @@ public final class PageResponse {
             this.subpages = Objects.requireNonNull(subpages);
             return this;
         }
-
         public PageResponse build() {
             return new PageResponse(content, name, subpages);
         }

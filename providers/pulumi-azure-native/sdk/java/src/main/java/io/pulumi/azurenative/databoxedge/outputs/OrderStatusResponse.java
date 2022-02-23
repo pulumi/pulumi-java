@@ -143,7 +143,6 @@ public final class OrderStatusResponse {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
         }
-
         public OrderStatusResponse build() {
             return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
         }

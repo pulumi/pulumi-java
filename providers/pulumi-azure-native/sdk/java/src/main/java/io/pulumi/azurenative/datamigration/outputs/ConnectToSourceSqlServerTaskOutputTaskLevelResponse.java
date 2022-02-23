@@ -205,7 +205,6 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputTaskLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(agentJobs, databases, id, logins, resultType, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

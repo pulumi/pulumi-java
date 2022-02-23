@@ -95,7 +95,6 @@ public final class PredictionResponseMappings {
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public PredictionResponseMappings build() {
             return new PredictionResponseMappings(grade, reason, score);
         }

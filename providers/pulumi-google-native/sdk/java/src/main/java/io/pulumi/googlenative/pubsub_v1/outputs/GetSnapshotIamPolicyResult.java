@@ -98,7 +98,6 @@ public final class GetSnapshotIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSnapshotIamPolicyResult build() {
             return new GetSnapshotIamPolicyResult(bindings, etag, version);
         }

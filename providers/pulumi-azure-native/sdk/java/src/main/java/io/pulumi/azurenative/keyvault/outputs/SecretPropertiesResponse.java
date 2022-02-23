@@ -140,7 +140,6 @@ public final class SecretPropertiesResponse {
             this.value = value;
             return this;
         }
-
         public SecretPropertiesResponse build() {
             return new SecretPropertiesResponse(attributes, contentType, secretUri, secretUriWithVersion, value);
         }

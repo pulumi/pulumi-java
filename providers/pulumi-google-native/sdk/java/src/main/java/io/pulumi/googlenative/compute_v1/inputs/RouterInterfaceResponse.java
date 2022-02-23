@@ -17,7 +17,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipRange", required=true)
-    private final String ipRange;
+      private final String ipRange;
 
     public String getIpRange() {
         return this.ipRange;
@@ -28,7 +28,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="linkedInterconnectAttachment", required=true)
-    private final String linkedInterconnectAttachment;
+      private final String linkedInterconnectAttachment;
 
     public String getLinkedInterconnectAttachment() {
         return this.linkedInterconnectAttachment;
@@ -39,7 +39,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="linkedVpnTunnel", required=true)
-    private final String linkedVpnTunnel;
+      private final String linkedVpnTunnel;
 
     public String getLinkedVpnTunnel() {
         return this.linkedVpnTunnel;
@@ -50,7 +50,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="managementType", required=true)
-    private final String managementType;
+      private final String managementType;
 
     public String getManagementType() {
         return this.managementType;
@@ -61,7 +61,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -72,7 +72,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+      private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -83,7 +83,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="redundantInterface", required=true)
-    private final String redundantInterface;
+      private final String redundantInterface;
 
     public String getRedundantInterface() {
         return this.redundantInterface;
@@ -94,7 +94,7 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -203,7 +203,6 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public RouterInterfaceResponse build() {
             return new RouterInterfaceResponse(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, managementType, name, privateIpAddress, redundantInterface, subnetwork);
         }

@@ -60,7 +60,6 @@ public final class EncryptionConfigProperties {
             this.roleArn = roleArn;
             return this;
         }
-
         public EncryptionConfigProperties build() {
             return new EncryptionConfigProperties(kmsKeyArn, roleArn);
         }

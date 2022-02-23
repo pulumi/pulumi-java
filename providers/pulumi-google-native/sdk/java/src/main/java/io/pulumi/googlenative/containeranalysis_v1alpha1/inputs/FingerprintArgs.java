@@ -24,7 +24,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="v1Name")
-    private final @Nullable Input<String> v1Name;
+      private final @Nullable Input<String> v1Name;
 
     public Input<String> getV1Name() {
         return this.v1Name == null ? Input.empty() : this.v1Name;
@@ -35,7 +35,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="v2Blob")
-    private final @Nullable Input<List<String>> v2Blob;
+      private final @Nullable Input<List<String>> v2Blob;
 
     public Input<List<String>> getV2Blob() {
         return this.v2Blob == null ? Input.empty() : this.v2Blob;
@@ -94,7 +94,6 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
             this.v2Blob = Input.ofNullable(v2Blob);
             return this;
         }
-
         public FingerprintArgs build() {
             return new FingerprintArgs(v1Name, v2Blob);
         }

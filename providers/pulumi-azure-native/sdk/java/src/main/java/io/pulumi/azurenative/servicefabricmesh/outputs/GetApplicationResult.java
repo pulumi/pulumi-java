@@ -353,7 +353,6 @@ public final class GetApplicationResult {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(debugParams, description, diagnostics, healthState, id, location, name, provisioningState, serviceNames, services, status, statusDetails, tags, type, unhealthyEvaluation);
         }

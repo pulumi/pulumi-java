@@ -17,7 +17,7 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="statementName", required=true)
-    private final String statementName;
+        private final String statementName;
 
     public String getStatementName() {
         return this.statementName;
@@ -28,7 +28,7 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="workGroup", required=true)
-    private final String workGroup;
+        private final String workGroup;
 
     public String getWorkGroup() {
         return this.workGroup;
@@ -77,7 +77,6 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
             this.workGroup = Objects.requireNonNull(workGroup);
             return this;
         }
-
         public GetPreparedStatementArgs build() {
             return new GetPreparedStatementArgs(statementName, workGroup);
         }

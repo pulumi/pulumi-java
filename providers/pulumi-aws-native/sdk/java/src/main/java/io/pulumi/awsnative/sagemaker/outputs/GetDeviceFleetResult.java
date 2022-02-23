@@ -121,7 +121,6 @@ public final class GetDeviceFleetResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeviceFleetResult build() {
             return new GetDeviceFleetResult(description, outputConfig, roleArn, tags);
         }

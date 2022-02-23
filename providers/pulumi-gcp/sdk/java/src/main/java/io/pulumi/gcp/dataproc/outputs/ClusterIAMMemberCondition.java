@@ -73,7 +73,6 @@ public final class ClusterIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ClusterIAMMemberCondition build() {
             return new ClusterIAMMemberCondition(description, expression, title);
         }

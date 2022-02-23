@@ -22,7 +22,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ancestor", required=true)
-    private final Input<IndexAncestor> ancestor;
+      private final Input<IndexAncestor> ancestor;
 
     public Input<IndexAncestor> getAncestor() {
         return this.ancestor;
@@ -33,14 +33,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -51,7 +51,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
+      private final Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
     public Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {
         return this.properties;
@@ -140,7 +140,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public IndexArgs build() {
             return new IndexArgs(ancestor, kind, project, properties);
         }

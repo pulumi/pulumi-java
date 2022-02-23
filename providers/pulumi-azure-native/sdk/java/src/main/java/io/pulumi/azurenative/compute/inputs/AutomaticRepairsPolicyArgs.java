@@ -24,7 +24,7 @@ public final class AutomaticRepairsPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class AutomaticRepairsPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gracePeriod")
-    private final @Nullable Input<String> gracePeriod;
+        private final @Nullable Input<String> gracePeriod;
 
     public Input<String> getGracePeriod() {
         return this.gracePeriod == null ? Input.empty() : this.gracePeriod;
@@ -94,7 +94,6 @@ public final class AutomaticRepairsPolicyArgs extends io.pulumi.resources.Resour
             this.gracePeriod = Input.ofNullable(gracePeriod);
             return this;
         }
-
         public AutomaticRepairsPolicyArgs build() {
             return new AutomaticRepairsPolicyArgs(enabled, gracePeriod);
         }

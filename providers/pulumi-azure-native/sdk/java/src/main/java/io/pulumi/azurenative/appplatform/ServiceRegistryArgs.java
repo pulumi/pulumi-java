@@ -19,7 +19,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -30,7 +30,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -41,7 +41,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceRegistryName")
-    private final @Nullable Input<String> serviceRegistryName;
+        private final @Nullable Input<String> serviceRegistryName;
 
     public Input<String> getServiceRegistryName() {
         return this.serviceRegistryName == null ? Input.empty() : this.serviceRegistryName;
@@ -115,7 +115,6 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
             this.serviceRegistryName = Input.ofNullable(serviceRegistryName);
             return this;
         }
-
         public ServiceRegistryArgs build() {
             return new ServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);
         }

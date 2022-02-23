@@ -22,7 +22,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * 
      */
     @InputImport(name="basicSliPerformance")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> basicSliPerformance;
+        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> basicSliPerformance;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> getBasicSliPerformance() {
         return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
@@ -34,7 +34,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * 
      */
     @InputImport(name="performance")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance;
+        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> getPerformance() {
         return this.performance == null ? Input.empty() : this.performance;
@@ -47,7 +47,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+        private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -121,7 +121,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdArgs(basicSliPerformance, performance, threshold);
         }

@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse {
             this.trafficPercent = Objects.requireNonNull(trafficPercent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(displayName, minDuration, trafficPercent);
         }

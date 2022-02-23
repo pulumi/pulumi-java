@@ -76,7 +76,6 @@ public final class GalleryImageFeatureResponse {
             this.value = value;
             return this;
         }
-
         public GalleryImageFeatureResponse build() {
             return new GalleryImageFeatureResponse(name, value);
         }

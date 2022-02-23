@@ -24,7 +24,7 @@ public final class DeliveryRuleQueryStringConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleQueryStringConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<QueryStringMatchConditionParametersArgs> parameters;
+        private final Input<QueryStringMatchConditionParametersArgs> parameters;
 
     public Input<QueryStringMatchConditionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class DeliveryRuleQueryStringConditionArgs extends io.pulumi.resour
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public DeliveryRuleQueryStringConditionArgs build() {
             return new DeliveryRuleQueryStringConditionArgs(name, parameters);
         }

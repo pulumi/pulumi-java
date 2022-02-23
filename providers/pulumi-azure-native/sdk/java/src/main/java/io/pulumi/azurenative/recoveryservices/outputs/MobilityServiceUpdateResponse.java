@@ -97,7 +97,6 @@ public final class MobilityServiceUpdateResponse {
             this.version = version;
             return this;
         }
-
         public MobilityServiceUpdateResponse build() {
             return new MobilityServiceUpdateResponse(osType, rebootStatus, version);
         }

@@ -116,7 +116,6 @@ public final class ConnectorCollectionErrorInfoResponse {
             this.errorStartTime = Objects.requireNonNull(errorStartTime);
             return this;
         }
-
         public ConnectorCollectionErrorInfoResponse build() {
             return new ConnectorCollectionErrorInfoResponse(errorCode, errorInnerMessage, errorMessage, errorStartTime);
         }

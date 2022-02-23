@@ -561,7 +561,6 @@ public final class GetSnapshotResult {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, guestFlush, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, snapshotEncryptionKey, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, status, storageBytes, storageBytesStatus, storageLocations, userLicenses);
         }

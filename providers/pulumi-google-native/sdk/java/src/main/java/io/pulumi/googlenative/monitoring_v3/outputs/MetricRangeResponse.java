@@ -75,7 +75,6 @@ public final class MetricRangeResponse {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public MetricRangeResponse build() {
             return new MetricRangeResponse(range, timeSeries);
         }

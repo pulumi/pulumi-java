@@ -246,7 +246,6 @@ public final class GetModelResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(activeOperations, createTime, displayName, etag, modelHash, name, state, tags, tfliteModel, updateTime);
         }

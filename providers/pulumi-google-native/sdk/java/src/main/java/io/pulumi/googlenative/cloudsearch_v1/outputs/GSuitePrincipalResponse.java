@@ -96,7 +96,6 @@ public final class GSuitePrincipalResponse {
             this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
             return this;
         }
-
         public GSuitePrincipalResponse build() {
             return new GSuitePrincipalResponse(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
         }

@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
             return new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(requestedOptions, result);
         }

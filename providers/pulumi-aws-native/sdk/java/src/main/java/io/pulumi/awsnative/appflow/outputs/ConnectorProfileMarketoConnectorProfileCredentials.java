@@ -119,7 +119,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public ConnectorProfileMarketoConnectorProfileCredentials build() {
             return new ConnectorProfileMarketoConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }

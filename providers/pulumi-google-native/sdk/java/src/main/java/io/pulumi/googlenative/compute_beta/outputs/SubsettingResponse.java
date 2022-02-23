@@ -67,7 +67,6 @@ public final class SubsettingResponse {
             this.subsetSize = Objects.requireNonNull(subsetSize);
             return this;
         }
-
         public SubsettingResponse build() {
             return new SubsettingResponse(policy, subsetSize);
         }

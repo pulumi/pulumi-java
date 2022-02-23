@@ -74,7 +74,6 @@ public final class ScheduleResponse {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(frequencyInMinutes, timeWindowInMinutes);
         }

@@ -24,7 +24,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableCompression")
-    private final @Nullable Input<Object> enableCompression;
+        private final @Nullable Input<Object> enableCompression;
 
     public Input<Object> getEnableCompression() {
         return this.enableCompression == null ? Input.empty() : this.enableCompression;
@@ -35,7 +35,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -46,7 +46,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<Object> path;
+        private final @Nullable Input<Object> path;
 
     public Input<Object> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -120,7 +120,6 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public StagingSettingsArgs build() {
             return new StagingSettingsArgs(enableCompression, linkedServiceName, path);
         }

@@ -61,7 +61,6 @@ public final class OnlineStoreConfigProperties {
             this.securityConfig = securityConfig;
             return this;
         }
-
         public OnlineStoreConfigProperties build() {
             return new OnlineStoreConfigProperties(enableOnlineStore, securityConfig);
         }

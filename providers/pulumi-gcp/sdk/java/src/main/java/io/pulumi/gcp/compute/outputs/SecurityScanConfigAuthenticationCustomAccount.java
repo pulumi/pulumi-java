@@ -99,7 +99,6 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public SecurityScanConfigAuthenticationCustomAccount build() {
             return new SecurityScanConfigAuthenticationCustomAccount(loginUrl, password, username);
         }

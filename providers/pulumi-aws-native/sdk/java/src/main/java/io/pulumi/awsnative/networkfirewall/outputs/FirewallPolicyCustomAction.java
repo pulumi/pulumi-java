@@ -59,7 +59,6 @@ public final class FirewallPolicyCustomAction {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public FirewallPolicyCustomAction build() {
             return new FirewallPolicyCustomAction(actionDefinition, actionName);
         }

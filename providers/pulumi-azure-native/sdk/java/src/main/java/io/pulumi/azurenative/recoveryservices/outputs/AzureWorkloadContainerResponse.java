@@ -253,7 +253,6 @@ public final class AzureWorkloadContainerResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureWorkloadContainerResponse build() {
             return new AzureWorkloadContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }

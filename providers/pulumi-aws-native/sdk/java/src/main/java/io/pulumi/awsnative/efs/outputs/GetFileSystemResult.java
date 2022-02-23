@@ -144,7 +144,6 @@ public final class GetFileSystemResult {
             this.throughputMode = throughputMode;
             return this;
         }
-
         public GetFileSystemResult build() {
             return new GetFileSystemResult(arn, backupPolicy, fileSystemId, fileSystemPolicy, fileSystemTags, lifecyclePolicies, provisionedThroughputInMibps, throughputMode);
         }

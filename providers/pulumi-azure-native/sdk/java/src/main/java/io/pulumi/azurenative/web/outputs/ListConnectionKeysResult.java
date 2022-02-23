@@ -78,7 +78,6 @@ public final class ListConnectionKeysResult {
             this.parameterValues = parameterValues;
             return this;
         }
-
         public ListConnectionKeysResult build() {
             return new ListConnectionKeysResult(connectionKey, parameterValues);
         }

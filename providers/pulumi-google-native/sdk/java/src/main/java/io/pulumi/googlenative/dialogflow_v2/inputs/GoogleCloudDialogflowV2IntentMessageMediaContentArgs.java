@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaObjects", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
         return this.mediaObjects;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
     public Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {
         return this.mediaType == null ? Input.empty() : this.mediaType;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
             this.mediaType = Input.ofNullable(mediaType);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageMediaContentArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentArgs(mediaObjects, mediaType);
         }

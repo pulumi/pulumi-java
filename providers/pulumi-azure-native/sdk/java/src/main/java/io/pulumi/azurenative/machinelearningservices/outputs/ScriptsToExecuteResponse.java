@@ -76,7 +76,6 @@ public final class ScriptsToExecuteResponse {
             this.startupScript = startupScript;
             return this;
         }
-
         public ScriptsToExecuteResponse build() {
             return new ScriptsToExecuteResponse(creationScript, startupScript);
         }

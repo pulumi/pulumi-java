@@ -58,7 +58,6 @@ public final class DataCatalogTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DataCatalogTag build() {
             return new DataCatalogTag(key, value);
         }

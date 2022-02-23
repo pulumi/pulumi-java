@@ -76,7 +76,6 @@ public final class GetUserResult {
             this.status = status;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(arn, status);
         }

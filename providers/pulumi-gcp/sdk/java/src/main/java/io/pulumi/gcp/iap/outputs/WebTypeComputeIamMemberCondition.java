@@ -97,7 +97,6 @@ public final class WebTypeComputeIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebTypeComputeIamMemberCondition build() {
             return new WebTypeComputeIamMemberCondition(description, expression, title);
         }

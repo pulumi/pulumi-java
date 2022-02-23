@@ -231,7 +231,6 @@ public final class SquareObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SquareObjectDatasetResponse build() {
             return new SquareObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

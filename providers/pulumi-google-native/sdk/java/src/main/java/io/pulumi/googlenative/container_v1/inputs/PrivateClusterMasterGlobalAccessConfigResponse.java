@@ -21,7 +21,7 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pul
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pul
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public PrivateClusterMasterGlobalAccessConfigResponse build() {
             return new PrivateClusterMasterGlobalAccessConfigResponse(enabled);
         }

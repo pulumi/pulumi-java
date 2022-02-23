@@ -97,7 +97,6 @@ public final class PolicyAssignmentPropertiesResponseScope {
             this.type = type;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponseScope build() {
             return new PolicyAssignmentPropertiesResponseScope(displayName, id, type);
         }

@@ -23,7 +23,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<PlacementPolicyType> type;
+      private final @Nullable Input<PlacementPolicyType> type;
 
     public Input<PlacementPolicyType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public PlacementPolicyArgs build() {
             return new PlacementPolicyArgs(type);
         }

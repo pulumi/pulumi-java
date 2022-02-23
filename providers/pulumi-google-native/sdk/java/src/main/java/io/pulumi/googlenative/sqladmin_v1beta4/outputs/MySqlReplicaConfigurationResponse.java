@@ -265,7 +265,6 @@ public final class MySqlReplicaConfigurationResponse {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }
-
         public MySqlReplicaConfigurationResponse build() {
             return new MySqlReplicaConfigurationResponse(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

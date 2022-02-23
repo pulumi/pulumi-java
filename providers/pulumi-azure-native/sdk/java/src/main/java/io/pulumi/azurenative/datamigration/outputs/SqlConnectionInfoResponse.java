@@ -226,7 +226,6 @@ public final class SqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public SqlConnectionInfoResponse build() {
             return new SqlConnectionInfoResponse(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
         }

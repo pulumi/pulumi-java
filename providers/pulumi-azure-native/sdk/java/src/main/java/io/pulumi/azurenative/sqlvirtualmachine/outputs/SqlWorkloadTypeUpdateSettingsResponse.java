@@ -54,7 +54,6 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
-
         public SqlWorkloadTypeUpdateSettingsResponse build() {
             return new SqlWorkloadTypeUpdateSettingsResponse(sqlWorkloadType);
         }

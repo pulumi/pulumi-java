@@ -75,7 +75,6 @@ public final class MaintenancePolicyResponse {
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(resourceVersion, window);
         }

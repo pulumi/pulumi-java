@@ -266,7 +266,6 @@ public final class GetVpnGatewayResult {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-
         public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(creationTimestamp, description, kind, labelFingerprint, labels, name, network, region, selfLink, stackType, vpnInterfaces);
         }

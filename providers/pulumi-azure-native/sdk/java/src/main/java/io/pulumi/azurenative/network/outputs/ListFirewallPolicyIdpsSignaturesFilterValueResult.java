@@ -54,7 +54,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
             this.filterValues = filterValues;
             return this;
         }
-
         public ListFirewallPolicyIdpsSignaturesFilterValueResult build() {
             return new ListFirewallPolicyIdpsSignaturesFilterValueResult(filterValues);
         }

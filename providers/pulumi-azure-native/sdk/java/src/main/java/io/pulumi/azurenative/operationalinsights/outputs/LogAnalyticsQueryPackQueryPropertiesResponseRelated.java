@@ -97,7 +97,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
             this.solutions = solutions;
             return this;
         }
-
         public LogAnalyticsQueryPackQueryPropertiesResponseRelated build() {
             return new LogAnalyticsQueryPackQueryPropertiesResponseRelated(categories, resourceTypes, solutions);
         }

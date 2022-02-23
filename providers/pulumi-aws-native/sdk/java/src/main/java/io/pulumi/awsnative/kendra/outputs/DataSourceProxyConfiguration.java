@@ -74,7 +74,6 @@ public final class DataSourceProxyConfiguration {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceProxyConfiguration build() {
             return new DataSourceProxyConfiguration(credentials, host, port);
         }

@@ -464,7 +464,6 @@ public final class GetAzureFirewallResult {
             this.zones = zones;
             return this;
         }
-
         public GetAzureFirewallResult build() {
             return new GetAzureFirewallResult(additionalProperties, applicationRuleCollections, etag, firewallPolicy, hubIPAddresses, id, ipConfigurations, ipGroups, location, managementIpConfiguration, name, natRuleCollections, networkRuleCollections, provisioningState, sku, tags, threatIntelMode, type, virtualHub, zones);
         }

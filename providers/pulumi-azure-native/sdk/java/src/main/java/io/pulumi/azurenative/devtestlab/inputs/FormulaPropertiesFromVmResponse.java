@@ -23,7 +23,7 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="labVmId")
-    private final @Nullable String labVmId;
+        private final @Nullable String labVmId;
 
     public Optional<String> getLabVmId() {
         return this.labVmId == null ? Optional.empty() : Optional.ofNullable(this.labVmId);
@@ -61,7 +61,6 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
             this.labVmId = labVmId;
             return this;
         }
-
         public FormulaPropertiesFromVmResponse build() {
             return new FormulaPropertiesFromVmResponse(labVmId);
         }

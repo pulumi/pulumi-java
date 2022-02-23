@@ -22,7 +22,7 @@ public final class DurationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nanos", required=true)
-    private final Integer nanos;
+      private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
@@ -33,7 +33,7 @@ public final class DurationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final String seconds;
+      private final String seconds;
 
     public String getSeconds() {
         return this.seconds;
@@ -82,7 +82,6 @@ public final class DurationResponse extends io.pulumi.resources.InvokeArgs {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public DurationResponse build() {
             return new DurationResponse(nanos, seconds);
         }

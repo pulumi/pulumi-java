@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
      * 
      */
     @InputImport(name="followupIntentName", required=true)
-    private final String followupIntentName;
+      private final String followupIntentName;
 
     public String getFollowupIntentName() {
         return this.followupIntentName;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
      * 
      */
     @InputImport(name="parentFollowupIntentName", required=true)
-    private final String parentFollowupIntentName;
+      private final String parentFollowupIntentName;
 
     public String getParentFollowupIntentName() {
         return this.parentFollowupIntentName;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
             this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse build() {
             return new GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse(followupIntentName, parentFollowupIntentName);
         }

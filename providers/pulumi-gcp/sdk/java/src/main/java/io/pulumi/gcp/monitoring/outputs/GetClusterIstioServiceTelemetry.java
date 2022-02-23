@@ -44,7 +44,6 @@ public final class GetClusterIstioServiceTelemetry {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetClusterIstioServiceTelemetry build() {
             return new GetClusterIstioServiceTelemetry(resourceName);
         }

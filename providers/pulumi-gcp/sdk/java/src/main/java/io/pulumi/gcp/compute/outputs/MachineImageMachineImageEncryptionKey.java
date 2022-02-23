@@ -126,7 +126,6 @@ public final class MachineImageMachineImageEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public MachineImageMachineImageEncryptionKey build() {
             return new MachineImageMachineImageEncryptionKey(kmsKeyName, kmsKeyServiceAccount, rawKey, sha256);
         }

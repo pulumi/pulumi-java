@@ -225,7 +225,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(endedOn, exceptionsAndWarnings, id, loginName, message, resultType, stage, startedOn, state);
         }

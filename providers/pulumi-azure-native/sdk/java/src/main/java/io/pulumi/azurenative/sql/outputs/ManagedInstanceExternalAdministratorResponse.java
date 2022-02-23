@@ -161,7 +161,6 @@ public final class ManagedInstanceExternalAdministratorResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ManagedInstanceExternalAdministratorResponse build() {
             return new ManagedInstanceExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

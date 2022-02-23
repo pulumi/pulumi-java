@@ -76,7 +76,6 @@ public final class DocumentTag {
             this.value = value;
             return this;
         }
-
         public DocumentTag build() {
             return new DocumentTag(key, value);
         }

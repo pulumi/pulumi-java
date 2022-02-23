@@ -46,7 +46,6 @@ public final class RuntimeMetric {
             this.systemMetrics = systemMetrics;
             return this;
         }
-
         public RuntimeMetric build() {
             return new RuntimeMetric(systemMetrics);
         }

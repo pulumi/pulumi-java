@@ -222,7 +222,6 @@ public final class GetExecutionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
         }

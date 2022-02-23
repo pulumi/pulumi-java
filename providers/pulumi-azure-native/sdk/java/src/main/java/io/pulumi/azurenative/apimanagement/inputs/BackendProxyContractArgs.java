@@ -23,7 +23,7 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -34,7 +34,7 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -45,7 +45,7 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+        private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -119,7 +119,6 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public BackendProxyContractArgs build() {
             return new BackendProxyContractArgs(password, url, username);
         }

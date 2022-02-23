@@ -25,7 +25,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="denominator")
-    private final @Nullable Input<RatioPartArgs> denominator;
+      private final @Nullable Input<RatioPartArgs> denominator;
 
     public Input<RatioPartArgs> getDenominator() {
         return this.denominator == null ? Input.empty() : this.denominator;
@@ -36,7 +36,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="numerator")
-    private final @Nullable Input<RatioPartArgs> numerator;
+      private final @Nullable Input<RatioPartArgs> numerator;
 
     public Input<RatioPartArgs> getNumerator() {
         return this.numerator == null ? Input.empty() : this.numerator;
@@ -47,7 +47,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pickTimeSeriesFilter")
-    private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+      private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
     public Input<PickTimeSeriesFilterArgs> getPickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter == null ? Input.empty() : this.pickTimeSeriesFilter;
@@ -58,7 +58,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secondaryAggregation")
-    private final @Nullable Input<AggregationArgs> secondaryAggregation;
+      private final @Nullable Input<AggregationArgs> secondaryAggregation;
 
     public Input<AggregationArgs> getSecondaryAggregation() {
         return this.secondaryAggregation == null ? Input.empty() : this.secondaryAggregation;
@@ -147,7 +147,6 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
             this.secondaryAggregation = Input.ofNullable(secondaryAggregation);
             return this;
         }
-
         public TimeSeriesFilterRatioArgs build() {
             return new TimeSeriesFilterRatioArgs(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
         }

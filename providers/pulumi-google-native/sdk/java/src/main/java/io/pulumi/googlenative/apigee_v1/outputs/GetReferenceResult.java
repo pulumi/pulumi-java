@@ -116,7 +116,6 @@ public final class GetReferenceResult {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetReferenceResult build() {
             return new GetReferenceResult(description, name, refers, resourceType);
         }

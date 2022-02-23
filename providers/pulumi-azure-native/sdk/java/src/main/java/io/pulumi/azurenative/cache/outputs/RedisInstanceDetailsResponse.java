@@ -139,7 +139,6 @@ public final class RedisInstanceDetailsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public RedisInstanceDetailsResponse build() {
             return new RedisInstanceDetailsResponse(isMaster, nonSslPort, shardId, sslPort, zone);
         }

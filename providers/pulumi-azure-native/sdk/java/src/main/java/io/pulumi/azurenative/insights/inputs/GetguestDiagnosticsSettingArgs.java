@@ -17,7 +17,7 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="diagnosticSettingsName", required=true)
-    private final String diagnosticSettingsName;
+        private final String diagnosticSettingsName;
 
     public String getDiagnosticSettingsName() {
         return this.diagnosticSettingsName;
@@ -28,7 +28,7 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetguestDiagnosticsSettingArgs build() {
             return new GetguestDiagnosticsSettingArgs(diagnosticSettingsName, resourceGroupName);
         }

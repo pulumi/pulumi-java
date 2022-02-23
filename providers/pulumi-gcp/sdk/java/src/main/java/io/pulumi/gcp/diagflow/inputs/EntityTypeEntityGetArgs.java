@@ -22,7 +22,7 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final Input<List<String>> synonyms;
+        private final Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms;
@@ -38,7 +38,7 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -97,7 +97,6 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public EntityTypeEntityGetArgs build() {
             return new EntityTypeEntityGetArgs(synonyms, value);
         }

@@ -210,7 +210,6 @@ public final class ModelQualityJobDefinitionEndpointInput {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public ModelQualityJobDefinitionEndpointInput build() {
             return new ModelQualityJobDefinitionEndpointInput(endTimeOffset, endpointName, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }

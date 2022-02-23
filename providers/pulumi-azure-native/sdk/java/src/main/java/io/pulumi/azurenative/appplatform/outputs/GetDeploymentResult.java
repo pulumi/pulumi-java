@@ -141,7 +141,6 @@ public final class GetDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(id, name, properties, sku, type);
         }

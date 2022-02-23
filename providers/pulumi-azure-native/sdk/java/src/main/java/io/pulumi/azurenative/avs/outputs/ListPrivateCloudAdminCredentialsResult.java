@@ -116,7 +116,6 @@ public final class ListPrivateCloudAdminCredentialsResult {
             this.vcenterUsername = Objects.requireNonNull(vcenterUsername);
             return this;
         }
-
         public ListPrivateCloudAdminCredentialsResult build() {
             return new ListPrivateCloudAdminCredentialsResult(nsxtPassword, nsxtUsername, vcenterPassword, vcenterUsername);
         }

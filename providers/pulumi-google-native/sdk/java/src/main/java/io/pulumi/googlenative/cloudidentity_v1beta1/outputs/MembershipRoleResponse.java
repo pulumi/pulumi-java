@@ -97,7 +97,6 @@ public final class MembershipRoleResponse {
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
         }
-
         public MembershipRoleResponse build() {
             return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
         }

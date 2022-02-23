@@ -21,7 +21,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="allowlist", required=true)
-    private final MysqlRdbmsResponse allowlist;
+      private final MysqlRdbmsResponse allowlist;
 
     public MysqlRdbmsResponse getAllowlist() {
         return this.allowlist;
@@ -32,7 +32,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rejectlist", required=true)
-    private final MysqlRdbmsResponse rejectlist;
+      private final MysqlRdbmsResponse rejectlist;
 
     public MysqlRdbmsResponse getRejectlist() {
         return this.rejectlist;
@@ -81,7 +81,6 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }
-
         public MysqlSourceConfigResponse build() {
             return new MysqlSourceConfigResponse(allowlist, rejectlist);
         }

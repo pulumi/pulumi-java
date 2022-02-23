@@ -231,7 +231,6 @@ public final class MongoDbV2CollectionDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MongoDbV2CollectionDatasetResponse build() {
             return new MongoDbV2CollectionDatasetResponse(annotations, collection, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

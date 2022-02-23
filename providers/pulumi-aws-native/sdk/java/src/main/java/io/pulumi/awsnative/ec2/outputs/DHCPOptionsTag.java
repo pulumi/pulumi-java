@@ -58,7 +58,6 @@ public final class DHCPOptionsTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DHCPOptionsTag build() {
             return new DHCPOptionsTag(key, value);
         }

@@ -103,7 +103,6 @@ public final class ServiceTemplateSpecContainerEnvFrom {
             this.secretRef = secretRef;
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFrom build() {
             return new ServiceTemplateSpecContainerEnvFrom(configMapRef, prefix, secretRef);
         }

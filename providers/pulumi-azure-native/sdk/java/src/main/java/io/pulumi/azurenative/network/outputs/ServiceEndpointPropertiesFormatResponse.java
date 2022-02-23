@@ -98,7 +98,6 @@ public final class ServiceEndpointPropertiesFormatResponse {
             this.service = service;
             return this;
         }
-
         public ServiceEndpointPropertiesFormatResponse build() {
             return new ServiceEndpointPropertiesFormatResponse(locations, provisioningState, service);
         }

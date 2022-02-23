@@ -15,7 +15,7 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     public static final ConfigTrackingConfigArgs Empty = new ConfigTrackingConfigArgs();
 
     @InputImport(name="autotrack")
-    private final @Nullable Input<ConfigTrackingConfigAutotrack> autotrack;
+        private final @Nullable Input<ConfigTrackingConfigAutotrack> autotrack;
 
     public Input<ConfigTrackingConfigAutotrack> getAutotrack() {
         return this.autotrack == null ? Input.empty() : this.autotrack;
@@ -58,7 +58,6 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
             this.autotrack = Input.ofNullable(autotrack);
             return this;
         }
-
         public ConfigTrackingConfigArgs build() {
             return new ConfigTrackingConfigArgs(autotrack);
         }

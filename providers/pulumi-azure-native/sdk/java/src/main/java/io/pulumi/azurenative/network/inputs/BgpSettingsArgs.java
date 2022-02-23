@@ -27,7 +27,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-    private final @Nullable Input<Double> asn;
+        private final @Nullable Input<Double> asn;
 
     public Input<Double> getAsn() {
         return this.asn == null ? Input.empty() : this.asn;
@@ -38,7 +38,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-    private final @Nullable Input<String> bgpPeeringAddress;
+        private final @Nullable Input<String> bgpPeeringAddress;
 
     public Input<String> getBgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Input.empty() : this.bgpPeeringAddress;
@@ -49,7 +49,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpPeeringAddresses")
-    private final @Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
+        private final @Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
 
     public Input<List<IPConfigurationBgpPeeringAddressArgs>> getBgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? Input.empty() : this.bgpPeeringAddresses;
@@ -60,7 +60,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerWeight")
-    private final @Nullable Input<Integer> peerWeight;
+        private final @Nullable Input<Integer> peerWeight;
 
     public Input<Integer> getPeerWeight() {
         return this.peerWeight == null ? Input.empty() : this.peerWeight;
@@ -149,7 +149,6 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.peerWeight = Input.ofNullable(peerWeight);
             return this;
         }
-
         public BgpSettingsArgs build() {
             return new BgpSettingsArgs(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }

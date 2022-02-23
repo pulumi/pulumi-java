@@ -22,42 +22,42 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     public static final ValueArgs Empty = new ValueArgs();
 
     @InputImport(name="booleanValue")
-    private final @Nullable Input<Boolean> booleanValue;
+      private final @Nullable Input<Boolean> booleanValue;
 
     public Input<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
     }
 
     @InputImport(name="dateValue")
-    private final @Nullable Input<DateArgs> dateValue;
+      private final @Nullable Input<DateArgs> dateValue;
 
     public Input<DateArgs> getDateValue() {
         return this.dateValue == null ? Input.empty() : this.dateValue;
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
     @InputImport(name="integerValue")
-    private final @Nullable Input<String> integerValue;
+      private final @Nullable Input<String> integerValue;
 
     public Input<String> getIntegerValue() {
         return this.integerValue == null ? Input.empty() : this.integerValue;
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
     @InputImport(name="timestampValue")
-    private final @Nullable Input<String> timestampValue;
+      private final @Nullable Input<String> timestampValue;
 
     public Input<String> getTimestampValue() {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;
@@ -176,7 +176,6 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }
-
         public ValueArgs build() {
             return new ValueArgs(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
         }

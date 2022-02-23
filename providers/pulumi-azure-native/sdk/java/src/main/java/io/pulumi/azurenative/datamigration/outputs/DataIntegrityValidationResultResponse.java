@@ -76,7 +76,6 @@ public final class DataIntegrityValidationResultResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public DataIntegrityValidationResultResponse build() {
             return new DataIntegrityValidationResultResponse(failedObjects, validationErrors);
         }

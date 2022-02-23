@@ -98,7 +98,6 @@ public final class ApplicationGatewaySkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ApplicationGatewaySkuResponse build() {
             return new ApplicationGatewaySkuResponse(capacity, name, tier);
         }

@@ -76,7 +76,6 @@ public final class ConnectorProvisionedCapacity {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
-
         public ConnectorProvisionedCapacity build() {
             return new ConnectorProvisionedCapacity(mcuCount, workerCount);
         }

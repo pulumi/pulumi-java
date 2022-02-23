@@ -419,7 +419,6 @@ public final class GetNetworkVirtualApplianceResult {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public GetNetworkVirtualApplianceResult build() {
             return new GetNetworkVirtualApplianceResult(addressPrefix, bootStrapConfigurationBlobs, cloudInitConfiguration, cloudInitConfigurationBlobs, etag, id, identity, inboundSecurityRules, location, name, nvaSku, provisioningState, tags, type, virtualApplianceAsn, virtualApplianceNics, virtualApplianceSites, virtualHub);
         }

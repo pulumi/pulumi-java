@@ -290,7 +290,6 @@ public final class GetNetworkManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkManagerResult build() {
             return new GetNetworkManagerResult(description, displayName, etag, id, location, name, networkManagerScopeAccesses, networkManagerScopes, provisioningState, systemData, tags, type);
         }

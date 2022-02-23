@@ -23,7 +23,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dmtsClusterUri", required=true)
-    private final String dmtsClusterUri;
+        private final String dmtsClusterUri;
 
     public String getDmtsClusterUri() {
         return this.dmtsClusterUri;
@@ -34,7 +34,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gatewayObjectId", required=true)
-    private final String gatewayObjectId;
+        private final String gatewayObjectId;
 
     public String getGatewayObjectId() {
         return this.gatewayObjectId;
@@ -45,7 +45,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gatewayResourceId")
-    private final @Nullable String gatewayResourceId;
+        private final @Nullable String gatewayResourceId;
 
     public Optional<String> getGatewayResourceId() {
         return this.gatewayResourceId == null ? Optional.empty() : Optional.ofNullable(this.gatewayResourceId);
@@ -104,7 +104,6 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }
-
         public GatewayDetailsResponse build() {
             return new GatewayDetailsResponse(dmtsClusterUri, gatewayObjectId, gatewayResourceId);
         }

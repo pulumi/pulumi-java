@@ -98,7 +98,6 @@ public final class ServiceAccountTokenProjection {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public ServiceAccountTokenProjection build() {
             return new ServiceAccountTokenProjection(audience, expirationSeconds, path);
         }

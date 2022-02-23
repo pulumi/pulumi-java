@@ -457,7 +457,6 @@ public final class SecurityRuleResponse {
             this.type = type;
             return this;
         }
-
         public SecurityRuleResponse build() {
             return new SecurityRuleResponse(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, etag, id, name, priority, protocol, provisioningState, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }

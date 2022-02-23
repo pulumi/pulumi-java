@@ -180,7 +180,6 @@ public final class AssessmentDelegation {
             this.status = status;
             return this;
         }
-
         public AssessmentDelegation build() {
             return new AssessmentDelegation(assessmentId, assessmentName, comment, controlSetId, createdBy, creationTime, id, lastUpdated, roleArn, roleType, status);
         }

@@ -98,7 +98,6 @@ public final class MedianStoppingPolicyResponse {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public MedianStoppingPolicyResponse build() {
             return new MedianStoppingPolicyResponse(delayEvaluation, evaluationInterval, policyType);
         }

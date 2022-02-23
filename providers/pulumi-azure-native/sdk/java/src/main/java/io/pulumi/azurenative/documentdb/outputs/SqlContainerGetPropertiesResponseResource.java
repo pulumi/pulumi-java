@@ -250,7 +250,6 @@ public final class SqlContainerGetPropertiesResponseResource {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(analyticalStorageTtl, conflictResolutionPolicy, defaultTtl, etag, id, indexingPolicy, partitionKey, rid, ts, uniqueKeyPolicy);
         }

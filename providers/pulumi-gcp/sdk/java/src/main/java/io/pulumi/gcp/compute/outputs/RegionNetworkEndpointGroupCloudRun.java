@@ -117,7 +117,6 @@ public final class RegionNetworkEndpointGroupCloudRun {
             this.urlMask = urlMask;
             return this;
         }
-
         public RegionNetworkEndpointGroupCloudRun build() {
             return new RegionNetworkEndpointGroupCloudRun(service, tag, urlMask);
         }

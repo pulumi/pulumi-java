@@ -183,7 +183,6 @@ public final class GetRecoveryPointAccessTokenResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRecoveryPointAccessTokenResult build() {
             return new GetRecoveryPointAccessTokenResult(eTag, id, location, name, properties, tags, type);
         }

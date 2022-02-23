@@ -97,7 +97,6 @@ public final class KubernetesRoleComputeResponse {
             this.vmProfile = Objects.requireNonNull(vmProfile);
             return this;
         }
-
         public KubernetesRoleComputeResponse build() {
             return new KubernetesRoleComputeResponse(memoryInBytes, processorCount, vmProfile);
         }

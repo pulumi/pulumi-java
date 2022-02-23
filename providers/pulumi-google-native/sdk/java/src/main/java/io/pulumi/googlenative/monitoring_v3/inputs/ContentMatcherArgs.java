@@ -24,7 +24,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -35,7 +35,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matcher")
-    private final @Nullable Input<ContentMatcherMatcher> matcher;
+      private final @Nullable Input<ContentMatcherMatcher> matcher;
 
     public Input<ContentMatcherMatcher> getMatcher() {
         return this.matcher == null ? Input.empty() : this.matcher;
@@ -94,7 +94,6 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.matcher = Input.ofNullable(matcher);
             return this;
         }
-
         public ContentMatcherArgs build() {
             return new ContentMatcherArgs(content, matcher);
         }

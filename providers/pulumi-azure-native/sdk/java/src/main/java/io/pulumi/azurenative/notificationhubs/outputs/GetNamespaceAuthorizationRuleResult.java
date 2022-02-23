@@ -353,7 +353,6 @@ public final class GetNamespaceAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNamespaceAuthorizationRuleResult build() {
             return new GetNamespaceAuthorizationRuleResult(claimType, claimValue, createdTime, id, keyName, location, modifiedTime, name, primaryKey, revision, rights, secondaryKey, sku, tags, type);
         }

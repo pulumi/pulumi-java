@@ -23,7 +23,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadPool")
-    private final @Nullable Input<String> workloadPool;
+      private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;
@@ -66,7 +66,6 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(workloadPool);
         }

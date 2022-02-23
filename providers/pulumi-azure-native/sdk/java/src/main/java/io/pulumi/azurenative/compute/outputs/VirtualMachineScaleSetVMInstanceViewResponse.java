@@ -295,7 +295,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
         }
-
         public VirtualMachineScaleSetVMInstanceViewResponse build() {
             return new VirtualMachineScaleSetVMInstanceViewResponse(assignedHost, bootDiagnostics, disks, extensions, maintenanceRedeployStatus, placementGroupId, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
         }

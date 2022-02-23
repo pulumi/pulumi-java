@@ -95,7 +95,6 @@ public final class VoiceReceiverResponse {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public VoiceReceiverResponse build() {
             return new VoiceReceiverResponse(countryCode, name, phoneNumber);
         }

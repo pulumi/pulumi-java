@@ -76,7 +76,6 @@ public final class BucketTag {
             this.value = value;
             return this;
         }
-
         public BucketTag build() {
             return new BucketTag(key, value);
         }

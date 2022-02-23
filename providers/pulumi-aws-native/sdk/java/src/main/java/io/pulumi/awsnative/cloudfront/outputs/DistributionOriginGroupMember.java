@@ -44,7 +44,6 @@ public final class DistributionOriginGroupMember {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
-
         public DistributionOriginGroupMember build() {
             return new DistributionOriginGroupMember(originId);
         }

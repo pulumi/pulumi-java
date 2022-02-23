@@ -23,7 +23,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -66,7 +66,6 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
             this.backendService = Input.ofNullable(backendService);
             return this;
         }
-
         public RequestMirrorPolicyArgs build() {
             return new RequestMirrorPolicyArgs(backendService);
         }

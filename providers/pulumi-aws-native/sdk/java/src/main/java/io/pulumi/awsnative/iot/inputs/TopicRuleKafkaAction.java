@@ -16,35 +16,35 @@ public final class TopicRuleKafkaAction extends io.pulumi.resources.InvokeArgs {
     public static final TopicRuleKafkaAction Empty = new TopicRuleKafkaAction();
 
     @InputImport(name="clientProperties", required=true)
-    private final Object clientProperties;
+        private final Object clientProperties;
 
     public Object getClientProperties() {
         return this.clientProperties;
     }
 
     @InputImport(name="destinationArn", required=true)
-    private final String destinationArn;
+        private final String destinationArn;
 
     public String getDestinationArn() {
         return this.destinationArn;
     }
 
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="partition")
-    private final @Nullable String partition;
+        private final @Nullable String partition;
 
     public Optional<String> getPartition() {
         return this.partition == null ? Optional.empty() : Optional.ofNullable(this.partition);
     }
 
     @InputImport(name="topic", required=true)
-    private final String topic;
+        private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -123,7 +123,6 @@ public final class TopicRuleKafkaAction extends io.pulumi.resources.InvokeArgs {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TopicRuleKafkaAction build() {
             return new TopicRuleKafkaAction(clientProperties, destinationArn, key, partition, topic);
         }

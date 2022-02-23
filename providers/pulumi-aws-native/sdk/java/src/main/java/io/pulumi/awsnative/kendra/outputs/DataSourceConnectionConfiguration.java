@@ -98,7 +98,6 @@ public final class DataSourceConnectionConfiguration {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DataSourceConnectionConfiguration build() {
             return new DataSourceConnectionConfiguration(databaseHost, databaseName, databasePort, secretArn, tableName);
         }

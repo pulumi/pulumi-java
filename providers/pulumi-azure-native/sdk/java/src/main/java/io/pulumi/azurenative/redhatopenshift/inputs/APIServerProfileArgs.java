@@ -23,7 +23,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+        private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -34,7 +34,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -45,7 +45,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable Input<String> visibility;
+        private final @Nullable Input<String> visibility;
 
     public Input<String> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;
@@ -119,7 +119,6 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
             this.visibility = Input.ofNullable(visibility);
             return this;
         }
-
         public APIServerProfileArgs build() {
             return new APIServerProfileArgs(ip, url, visibility);
         }

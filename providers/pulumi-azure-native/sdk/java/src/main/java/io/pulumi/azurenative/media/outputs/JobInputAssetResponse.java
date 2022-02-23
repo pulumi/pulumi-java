@@ -191,7 +191,6 @@ public final class JobInputAssetResponse {
             this.start = start;
             return this;
         }
-
         public JobInputAssetResponse build() {
             return new JobInputAssetResponse(assetName, end, files, inputDefinitions, label, odataType, start);
         }

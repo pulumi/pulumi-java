@@ -17,7 +17,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final String policyId;
+      private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -39,7 +39,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -50,7 +50,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -119,7 +119,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public RowAccessPolicyReferenceResponse build() {
             return new RowAccessPolicyReferenceResponse(datasetId, policyId, project, tableId);
         }

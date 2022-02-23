@@ -52,7 +52,6 @@ public final class ClusterClusterConfigMetastoreConfig {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
-
         public ClusterClusterConfigMetastoreConfig build() {
             return new ClusterClusterConfigMetastoreConfig(dataprocMetastoreService);
         }

@@ -77,7 +77,6 @@ public final class CassandraTableGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public CassandraTableGetPropertiesResponseOptions build() {
             return new CassandraTableGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

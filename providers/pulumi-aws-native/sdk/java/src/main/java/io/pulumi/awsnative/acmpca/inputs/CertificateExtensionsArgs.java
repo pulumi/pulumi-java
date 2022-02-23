@@ -23,28 +23,28 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     public static final CertificateExtensionsArgs Empty = new CertificateExtensionsArgs();
 
     @InputImport(name="certificatePolicies")
-    private final @Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies;
+        private final @Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
     public Input<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
         return this.certificatePolicies == null ? Input.empty() : this.certificatePolicies;
     }
 
     @InputImport(name="extendedKeyUsage")
-    private final @Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
+        private final @Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
     public Input<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
         return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
     }
 
     @InputImport(name="keyUsage")
-    private final @Nullable Input<CertificateKeyUsageArgs> keyUsage;
+        private final @Nullable Input<CertificateKeyUsageArgs> keyUsage;
 
     public Input<CertificateKeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
+        private final @Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
     public Input<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -133,7 +133,6 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
             return this;
         }
-
         public CertificateExtensionsArgs build() {
             return new CertificateExtensionsArgs(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }

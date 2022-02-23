@@ -58,7 +58,6 @@ public final class GetClusterNodePoolManagement {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
-
         public GetClusterNodePoolManagement build() {
             return new GetClusterNodePoolManagement(autoRepair, autoUpgrade);
         }

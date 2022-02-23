@@ -13,7 +13,7 @@ public final class DeliveryStreamKMSEncryptionConfig extends io.pulumi.resources
     public static final DeliveryStreamKMSEncryptionConfig Empty = new DeliveryStreamKMSEncryptionConfig();
 
     @InputImport(name="aWSKMSKeyARN", required=true)
-    private final String aWSKMSKeyARN;
+        private final String aWSKMSKeyARN;
 
     public String getAWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
@@ -51,7 +51,6 @@ public final class DeliveryStreamKMSEncryptionConfig extends io.pulumi.resources
             this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
             return this;
         }
-
         public DeliveryStreamKMSEncryptionConfig build() {
             return new DeliveryStreamKMSEncryptionConfig(aWSKMSKeyARN);
         }

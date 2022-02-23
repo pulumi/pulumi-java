@@ -105,7 +105,6 @@ public final class GetClientResult {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GetClientResult build() {
             return new GetClientResult(brand, clientId, displayName, id, secret);
         }

@@ -181,7 +181,6 @@ public final class GetEndpointResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(address, createTime, metadata, name, network, port, updateTime);
         }

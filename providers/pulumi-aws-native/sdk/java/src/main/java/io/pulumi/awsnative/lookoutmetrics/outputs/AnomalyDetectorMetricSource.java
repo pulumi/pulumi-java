@@ -103,7 +103,6 @@ public final class AnomalyDetectorMetricSource {
             this.s3SourceConfig = s3SourceConfig;
             return this;
         }
-
         public AnomalyDetectorMetricSource build() {
             return new AnomalyDetectorMetricSource(appFlowConfig, cloudwatchConfig, rDSSourceConfig, redshiftSourceConfig, s3SourceConfig);
         }

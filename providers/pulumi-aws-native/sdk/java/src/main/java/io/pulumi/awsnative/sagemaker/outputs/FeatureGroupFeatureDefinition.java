@@ -59,7 +59,6 @@ public final class FeatureGroupFeatureDefinition {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }
-
         public FeatureGroupFeatureDefinition build() {
             return new FeatureGroupFeatureDefinition(featureName, featureType);
         }

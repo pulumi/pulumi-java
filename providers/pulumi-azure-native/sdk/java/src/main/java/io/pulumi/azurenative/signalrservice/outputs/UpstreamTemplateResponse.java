@@ -144,7 +144,6 @@ public final class UpstreamTemplateResponse {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public UpstreamTemplateResponse build() {
             return new UpstreamTemplateResponse(categoryPattern, eventPattern, hubPattern, urlTemplate);
         }

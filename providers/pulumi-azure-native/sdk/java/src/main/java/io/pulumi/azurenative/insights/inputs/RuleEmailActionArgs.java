@@ -25,7 +25,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customEmails")
-    private final @Nullable Input<List<String>> customEmails;
+        private final @Nullable Input<List<String>> customEmails;
 
     public Input<List<String>> getCustomEmails() {
         return this.customEmails == null ? Input.empty() : this.customEmails;
@@ -37,7 +37,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sendToServiceOwners")
-    private final @Nullable Input<Boolean> sendToServiceOwners;
+        private final @Nullable Input<Boolean> sendToServiceOwners;
 
     public Input<Boolean> getSendToServiceOwners() {
         return this.sendToServiceOwners == null ? Input.empty() : this.sendToServiceOwners;
@@ -122,7 +122,6 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
             this.sendToServiceOwners = Input.ofNullable(sendToServiceOwners);
             return this;
         }
-
         public RuleEmailActionArgs build() {
             return new RuleEmailActionArgs(customEmails, odataType, sendToServiceOwners);
         }

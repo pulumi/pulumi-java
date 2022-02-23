@@ -119,7 +119,6 @@ public final class PackageRepositoryResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PackageRepositoryResponse build() {
             return new PackageRepositoryResponse(apt, goo, yum, zypper);
         }

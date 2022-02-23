@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
      * 
      */
     @InputImport(name="enableTextToSpeech", required=true)
-    private final Boolean enableTextToSpeech;
+      private final Boolean enableTextToSpeech;
 
     public Boolean getEnableTextToSpeech() {
         return this.enableTextToSpeech;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
      * 
      */
     @InputImport(name="outputAudioEncoding", required=true)
-    private final String outputAudioEncoding;
+      private final String outputAudioEncoding;
 
     public String getOutputAudioEncoding() {
         return this.outputAudioEncoding;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
      * 
      */
     @InputImport(name="sampleRateHertz", required=true)
-    private final Integer sampleRateHertz;
+      private final Integer sampleRateHertz;
 
     public Integer getSampleRateHertz() {
         return this.sampleRateHertz;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
      * 
      */
     @InputImport(name="synthesizeSpeechConfigs", required=true)
-    private final Map<String,String> synthesizeSpeechConfigs;
+      private final Map<String,String> synthesizeSpeechConfigs;
 
     public Map<String,String> getSynthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
@@ -126,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse build() {
             return new GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }

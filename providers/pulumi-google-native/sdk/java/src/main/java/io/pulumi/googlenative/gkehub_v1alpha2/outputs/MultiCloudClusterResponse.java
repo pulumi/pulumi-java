@@ -75,7 +75,6 @@ public final class MultiCloudClusterResponse {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public MultiCloudClusterResponse build() {
             return new MultiCloudClusterResponse(clusterMissing, resourceLink);
         }

@@ -130,7 +130,6 @@ public final class PackageIssueResponse {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
-
         public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType, severityName);
         }

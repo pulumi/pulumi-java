@@ -95,7 +95,6 @@ public final class AccountPropertiesResponseEndpoints {
             this.scan = Objects.requireNonNull(scan);
             return this;
         }
-
         public AccountPropertiesResponseEndpoints build() {
             return new AccountPropertiesResponseEndpoints(catalog, guardian, scan);
         }

@@ -99,7 +99,6 @@ public final class AzureOperationalStoreParametersResponse {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public AzureOperationalStoreParametersResponse build() {
             return new AzureOperationalStoreParametersResponse(dataStoreType, objectType, resourceGroupId);
         }

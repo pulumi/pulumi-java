@@ -30,7 +30,6 @@ public final class AppDevExperienceFeatureSpecResponse {
         public Builder(AppDevExperienceFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppDevExperienceFeatureSpecResponse build() {
             return new AppDevExperienceFeatureSpecResponse();
         }

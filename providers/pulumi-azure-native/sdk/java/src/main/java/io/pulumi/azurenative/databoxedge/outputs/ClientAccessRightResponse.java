@@ -74,7 +74,6 @@ public final class ClientAccessRightResponse {
             this.client = Objects.requireNonNull(client);
             return this;
         }
-
         public ClientAccessRightResponse build() {
             return new ClientAccessRightResponse(accessPermission, client);
         }

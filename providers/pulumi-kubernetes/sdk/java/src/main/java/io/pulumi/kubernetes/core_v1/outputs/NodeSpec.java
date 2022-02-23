@@ -185,7 +185,6 @@ public final class NodeSpec {
             this.unschedulable = unschedulable;
             return this;
         }
-
         public NodeSpec build() {
             return new NodeSpec(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);
         }

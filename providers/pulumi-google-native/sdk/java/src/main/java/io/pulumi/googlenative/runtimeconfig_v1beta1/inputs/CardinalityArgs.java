@@ -24,7 +24,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Integer> number;
+      private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -35,7 +35,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -94,7 +94,6 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public CardinalityArgs build() {
             return new CardinalityArgs(number, path);
         }

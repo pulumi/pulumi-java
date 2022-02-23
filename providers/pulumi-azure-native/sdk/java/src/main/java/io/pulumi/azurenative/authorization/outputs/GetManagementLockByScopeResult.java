@@ -162,7 +162,6 @@ public final class GetManagementLockByScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementLockByScopeResult build() {
             return new GetManagementLockByScopeResult(id, level, name, notes, owners, type);
         }

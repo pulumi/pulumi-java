@@ -181,7 +181,6 @@ public final class GetEnvironmentResult {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(config, createTime, labels, name, state, updateTime, uuid);
         }

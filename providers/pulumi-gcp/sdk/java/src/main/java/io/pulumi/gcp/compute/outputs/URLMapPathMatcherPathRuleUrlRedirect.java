@@ -205,7 +205,6 @@ public final class URLMapPathMatcherPathRuleUrlRedirect {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public URLMapPathMatcherPathRuleUrlRedirect build() {
             return new URLMapPathMatcherPathRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

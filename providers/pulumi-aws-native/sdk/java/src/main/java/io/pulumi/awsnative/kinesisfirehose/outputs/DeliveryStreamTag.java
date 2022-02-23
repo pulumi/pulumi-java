@@ -60,7 +60,6 @@ public final class DeliveryStreamTag {
             this.value = value;
             return this;
         }
-
         public DeliveryStreamTag build() {
             return new DeliveryStreamTag(key, value);
         }

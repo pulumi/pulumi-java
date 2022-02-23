@@ -25,7 +25,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="automaticOSUpgradePolicy")
-    private final @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
+        private final @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
 
     public Optional<AutomaticOSUpgradePolicyResponse> getAutomaticOSUpgradePolicy() {
         return this.automaticOSUpgradePolicy == null ? Optional.empty() : Optional.ofNullable(this.automaticOSUpgradePolicy);
@@ -36,7 +36,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -47,7 +47,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rollingUpgradePolicy")
-    private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
+        private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
     public Optional<RollingUpgradePolicyResponse> getRollingUpgradePolicy() {
         return this.rollingUpgradePolicy == null ? Optional.empty() : Optional.ofNullable(this.rollingUpgradePolicy);
@@ -106,7 +106,6 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
-
         public UpgradePolicyResponse build() {
             return new UpgradePolicyResponse(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }

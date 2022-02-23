@@ -13,21 +13,21 @@ public final class GetTargetServerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTargetServerArgs Empty = new GetTargetServerArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="targetserverId", required=true)
-    private final String targetserverId;
+      private final String targetserverId;
 
     public String getTargetserverId() {
         return this.targetserverId;
@@ -86,7 +86,6 @@ public final class GetTargetServerArgs extends io.pulumi.resources.InvokeArgs {
             this.targetserverId = Objects.requireNonNull(targetserverId);
             return this;
         }
-
         public GetTargetServerArgs build() {
             return new GetTargetServerArgs(environmentId, organizationId, targetserverId);
         }

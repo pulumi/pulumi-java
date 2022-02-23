@@ -61,7 +61,6 @@ public final class DataSourceWebCrawlerUrls {
             this.siteMapsConfiguration = siteMapsConfiguration;
             return this;
         }
-
         public DataSourceWebCrawlerUrls build() {
             return new DataSourceWebCrawlerUrls(seedUrlConfiguration, siteMapsConfiguration);
         }

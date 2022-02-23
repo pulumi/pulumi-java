@@ -73,7 +73,6 @@ public final class GatewayIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GatewayIamMemberCondition build() {
             return new GatewayIamMemberCondition(description, expression, title);
         }

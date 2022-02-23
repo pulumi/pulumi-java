@@ -21,7 +21,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final String kmsKey;
+      private final String kmsKey;
 
     public String getKmsKey() {
         return this.kmsKey;
@@ -59,7 +59,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKey);
         }

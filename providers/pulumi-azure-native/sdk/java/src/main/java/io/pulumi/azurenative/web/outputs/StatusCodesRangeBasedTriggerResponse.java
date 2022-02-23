@@ -111,7 +111,6 @@ public final class StatusCodesRangeBasedTriggerResponse {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public StatusCodesRangeBasedTriggerResponse build() {
             return new StatusCodesRangeBasedTriggerResponse(count, path, statusCodes, timeInterval);
         }

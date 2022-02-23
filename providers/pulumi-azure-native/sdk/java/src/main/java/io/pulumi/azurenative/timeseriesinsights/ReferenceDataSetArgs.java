@@ -24,7 +24,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataStringComparisonBehavior")
-    private final @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
+        private final @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
     public Input<Either<String,DataStringComparisonBehavior>> getDataStringComparisonBehavior() {
         return this.dataStringComparisonBehavior == null ? Input.empty() : this.dataStringComparisonBehavior;
@@ -35,7 +35,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final Input<String> environmentName;
+        private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -46,7 +46,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyProperties", required=true)
-    private final Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
+        private final Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
     public Input<List<ReferenceDataSetKeyPropertyArgs>> getKeyProperties() {
         return this.keyProperties;
@@ -57,7 +57,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -68,7 +68,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceDataSetName")
-    private final @Nullable Input<String> referenceDataSetName;
+        private final @Nullable Input<String> referenceDataSetName;
 
     public Input<String> getReferenceDataSetName() {
         return this.referenceDataSetName == null ? Input.empty() : this.referenceDataSetName;
@@ -79,7 +79,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -224,7 +224,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ReferenceDataSetArgs build() {
             return new ReferenceDataSetArgs(dataStringComparisonBehavior, environmentName, keyProperties, location, referenceDataSetName, resourceGroupName, tags);
         }

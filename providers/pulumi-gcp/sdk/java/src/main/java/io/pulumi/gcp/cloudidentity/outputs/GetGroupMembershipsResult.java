@@ -89,7 +89,6 @@ public final class GetGroupMembershipsResult {
             this.memberships = Objects.requireNonNull(memberships);
             return this;
         }
-
         public GetGroupMembershipsResult build() {
             return new GetGroupMembershipsResult(group, id, memberships);
         }

@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(initialPromptFulfillment, repromptEventHandlers);
         }

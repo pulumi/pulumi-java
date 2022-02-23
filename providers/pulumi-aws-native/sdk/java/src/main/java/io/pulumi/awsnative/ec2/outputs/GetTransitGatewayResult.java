@@ -179,7 +179,6 @@ public final class GetTransitGatewayResult {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
-
         public GetTransitGatewayResult build() {
             return new GetTransitGatewayResult(associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, id, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }

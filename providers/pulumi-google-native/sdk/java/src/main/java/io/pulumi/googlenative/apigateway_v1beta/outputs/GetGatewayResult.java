@@ -201,7 +201,6 @@ public final class GetGatewayResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(apiConfig, createTime, defaultHostname, displayName, labels, name, state, updateTime);
         }

@@ -78,7 +78,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             this.includedPaths = includedPaths;
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties(all, includedPaths);
         }

@@ -202,7 +202,6 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentParameterResponse build() {
             return new GoogleCloudDialogflowV2IntentParameterResponse(defaultValue, displayName, entityTypeDisplayName, isList, mandatory, name, prompts, value);
         }

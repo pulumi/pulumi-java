@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * 
      */
     @InputImport(name="gcsPath")
-    private final @Nullable Input<String> gcsPath;
+      private final @Nullable Input<String> gcsPath;
 
     public Input<String> getGcsPath() {
         return this.gcsPath == null ? Input.empty() : this.gcsPath;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * 
      */
     @InputImport(name="launchParameters")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
 
     public Input<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> getLaunchParameters() {
         return this.launchParameters == null ? Input.empty() : this.launchParameters;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * 
      */
     @InputImport(name="validateOnly")
-    private final @Nullable Input<Boolean> validateOnly;
+      private final @Nullable Input<Boolean> validateOnly;
 
     public Input<Boolean> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -173,7 +173,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(gcsPath, launchParameters, location, project, validateOnly);
         }

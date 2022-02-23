@@ -24,7 +24,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -35,7 +35,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<SecretArgs> clientSecret;
+      private final @Nullable Input<SecretArgs> clientSecret;
 
     public Input<SecretArgs> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -94,7 +94,6 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
-
         public Oauth2ClientCredentialsArgs build() {
             return new Oauth2ClientCredentialsArgs(clientId, clientSecret);
         }

@@ -75,7 +75,6 @@ public final class DenoiseResponse {
             this.tune = Objects.requireNonNull(tune);
             return this;
         }
-
         public DenoiseResponse build() {
             return new DenoiseResponse(strength, tune);
         }

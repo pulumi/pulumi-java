@@ -137,7 +137,6 @@ public final class CapabilityPropertiesResponse {
             this.urn = Objects.requireNonNull(urn);
             return this;
         }
-
         public CapabilityPropertiesResponse build() {
             return new CapabilityPropertiesResponse(description, parametersSchema, publisher, targetType, urn);
         }

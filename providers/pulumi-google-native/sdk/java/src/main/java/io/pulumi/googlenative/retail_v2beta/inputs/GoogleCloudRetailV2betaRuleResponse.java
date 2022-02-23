@@ -29,7 +29,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="boostAction", required=true)
-    private final GoogleCloudRetailV2betaRuleBoostActionResponse boostAction;
+      private final GoogleCloudRetailV2betaRuleBoostActionResponse boostAction;
 
     public GoogleCloudRetailV2betaRuleBoostActionResponse getBoostAction() {
         return this.boostAction;
@@ -40,7 +40,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="condition", required=true)
-    private final GoogleCloudRetailV2betaConditionResponse condition;
+      private final GoogleCloudRetailV2betaConditionResponse condition;
 
     public GoogleCloudRetailV2betaConditionResponse getCondition() {
         return this.condition;
@@ -51,7 +51,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="doNotAssociateAction", required=true)
-    private final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction;
+      private final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
     public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
         return this.doNotAssociateAction;
@@ -62,7 +62,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filterAction", required=true)
-    private final GoogleCloudRetailV2betaRuleFilterActionResponse filterAction;
+      private final GoogleCloudRetailV2betaRuleFilterActionResponse filterAction;
 
     public GoogleCloudRetailV2betaRuleFilterActionResponse getFilterAction() {
         return this.filterAction;
@@ -73,7 +73,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ignoreAction", required=true)
-    private final GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction;
+      private final GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction;
 
     public GoogleCloudRetailV2betaRuleIgnoreActionResponse getIgnoreAction() {
         return this.ignoreAction;
@@ -84,7 +84,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="onewaySynonymsAction", required=true)
-    private final GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
+      private final GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
     public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
         return this.onewaySynonymsAction;
@@ -95,7 +95,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="redirectAction", required=true)
-    private final GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction;
+      private final GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction;
 
     public GoogleCloudRetailV2betaRuleRedirectActionResponse getRedirectAction() {
         return this.redirectAction;
@@ -106,7 +106,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="replacementAction", required=true)
-    private final GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction;
+      private final GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction;
 
     public GoogleCloudRetailV2betaRuleReplacementActionResponse getReplacementAction() {
         return this.replacementAction;
@@ -117,7 +117,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="twowaySynonymsAction", required=true)
-    private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
+      private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
     public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {
         return this.twowaySynonymsAction;
@@ -236,7 +236,6 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
             this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleResponse build() {
             return new GoogleCloudRetailV2betaRuleResponse(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
         }

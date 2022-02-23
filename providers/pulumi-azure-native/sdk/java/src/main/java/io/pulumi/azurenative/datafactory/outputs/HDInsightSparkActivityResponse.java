@@ -358,7 +358,6 @@ public final class HDInsightSparkActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightSparkActivityResponse build() {
             return new HDInsightSparkActivityResponse(arguments, className, dependsOn, description, entryFilePath, getDebugInfo, linkedServiceName, name, policy, proxyUser, rootPath, sparkConfig, sparkJobLinkedService, type, userProperties);
         }

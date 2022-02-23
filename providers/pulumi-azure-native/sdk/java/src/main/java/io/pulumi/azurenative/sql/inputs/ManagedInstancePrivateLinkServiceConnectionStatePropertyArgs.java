@@ -18,7 +18,7 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -29,7 +29,7 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+        private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -88,7 +88,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs build() {
             return new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(description, status);
         }

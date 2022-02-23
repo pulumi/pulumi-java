@@ -13,7 +13,7 @@ public final class GetWorkloadIdentityPoolProviderAw extends io.pulumi.resources
     public static final GetWorkloadIdentityPoolProviderAw Empty = new GetWorkloadIdentityPoolProviderAw();
 
     @InputImport(name="accountId", required=true)
-    private final String accountId;
+        private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
@@ -51,7 +51,6 @@ public final class GetWorkloadIdentityPoolProviderAw extends io.pulumi.resources
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderAw build() {
             return new GetWorkloadIdentityPoolProviderAw(accountId);
         }

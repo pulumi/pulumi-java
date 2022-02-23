@@ -99,7 +99,6 @@ public final class GetLocationEFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationEFSResult build() {
             return new GetLocationEFSResult(locationArn, locationUri, tags);
         }

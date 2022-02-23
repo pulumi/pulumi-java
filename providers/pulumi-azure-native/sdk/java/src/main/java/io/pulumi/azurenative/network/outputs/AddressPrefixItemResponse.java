@@ -76,7 +76,6 @@ public final class AddressPrefixItemResponse {
             this.addressPrefixType = addressPrefixType;
             return this;
         }
-
         public AddressPrefixItemResponse build() {
             return new AddressPrefixItemResponse(addressPrefix, addressPrefixType);
         }

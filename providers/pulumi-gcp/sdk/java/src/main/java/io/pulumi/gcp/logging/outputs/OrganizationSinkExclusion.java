@@ -121,7 +121,6 @@ public final class OrganizationSinkExclusion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OrganizationSinkExclusion build() {
             return new OrganizationSinkExclusion(description, disabled, filter, name);
         }

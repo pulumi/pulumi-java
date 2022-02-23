@@ -121,7 +121,6 @@ public final class DownwardAPIVolumeFile {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
-
         public DownwardAPIVolumeFile build() {
             return new DownwardAPIVolumeFile(fieldRef, mode, path, resourceFieldRef);
         }

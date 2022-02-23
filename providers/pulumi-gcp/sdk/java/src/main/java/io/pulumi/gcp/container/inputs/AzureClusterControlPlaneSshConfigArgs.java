@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneSshConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="authorizedKey", required=true)
-    private final Input<String> authorizedKey;
+        private final Input<String> authorizedKey;
 
     public Input<String> getAuthorizedKey() {
         return this.authorizedKey;
@@ -61,7 +61,6 @@ public final class AzureClusterControlPlaneSshConfigArgs extends io.pulumi.resou
             this.authorizedKey = Input.of(Objects.requireNonNull(authorizedKey));
             return this;
         }
-
         public AzureClusterControlPlaneSshConfigArgs build() {
             return new AzureClusterControlPlaneSshConfigArgs(authorizedKey);
         }

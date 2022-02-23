@@ -99,7 +99,6 @@ public final class SolutionDetailsResponse {
             this.groupCount = groupCount;
             return this;
         }
-
         public SolutionDetailsResponse build() {
             return new SolutionDetailsResponse(assessmentCount, extendedDetails, groupCount);
         }

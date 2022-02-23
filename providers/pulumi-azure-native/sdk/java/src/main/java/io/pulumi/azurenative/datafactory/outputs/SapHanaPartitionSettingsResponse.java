@@ -54,7 +54,6 @@ public final class SapHanaPartitionSettingsResponse {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public SapHanaPartitionSettingsResponse build() {
             return new SapHanaPartitionSettingsResponse(partitionColumnName);
         }

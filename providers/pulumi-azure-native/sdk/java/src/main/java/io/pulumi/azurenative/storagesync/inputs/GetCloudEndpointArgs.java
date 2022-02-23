@@ -17,7 +17,7 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudEndpointName", required=true)
-    private final String cloudEndpointName;
+        private final String cloudEndpointName;
 
     public String getCloudEndpointName() {
         return this.cloudEndpointName;
@@ -28,7 +28,7 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-    private final String storageSyncServiceName;
+        private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -50,7 +50,7 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final String syncGroupName;
+        private final String syncGroupName;
 
     public String getSyncGroupName() {
         return this.syncGroupName;
@@ -119,7 +119,6 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
-
         public GetCloudEndpointArgs build() {
             return new GetCloudEndpointArgs(cloudEndpointName, resourceGroupName, storageSyncServiceName, syncGroupName);
         }

@@ -267,7 +267,6 @@ public final class GetTaskResult {
             this.view = Objects.requireNonNull(view);
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(appEngineHttpRequest, createTime, dispatchCount, dispatchDeadline, firstAttempt, httpRequest, lastAttempt, name, responseCount, scheduleTime, view);
         }

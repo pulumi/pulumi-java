@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<Integer> duration;
+      private final @Nullable Input<Integer> duration;
 
     public Input<Integer> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="periodType")
-    private final @Nullable Input<GoogleCloudChannelV1PeriodPeriodType> periodType;
+      private final @Nullable Input<GoogleCloudChannelV1PeriodPeriodType> periodType;
 
     public Input<GoogleCloudChannelV1PeriodPeriodType> getPeriodType() {
         return this.periodType == null ? Input.empty() : this.periodType;
@@ -94,7 +94,6 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
             this.periodType = Input.ofNullable(periodType);
             return this;
         }
-
         public GoogleCloudChannelV1PeriodArgs build() {
             return new GoogleCloudChannelV1PeriodArgs(duration, periodType);
         }

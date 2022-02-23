@@ -267,7 +267,6 @@ public final class GetRemediationAtManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRemediationAtManagementGroupResult build() {
             return new GetRemediationAtManagementGroupResult(createdOn, deploymentStatus, filters, id, lastUpdatedOn, name, policyAssignmentId, policyDefinitionReferenceId, provisioningState, resourceDiscoveryMode, type);
         }

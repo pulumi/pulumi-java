@@ -52,7 +52,6 @@ public final class DetectorModelResetTimer {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public DetectorModelResetTimer build() {
             return new DetectorModelResetTimer(timerName);
         }

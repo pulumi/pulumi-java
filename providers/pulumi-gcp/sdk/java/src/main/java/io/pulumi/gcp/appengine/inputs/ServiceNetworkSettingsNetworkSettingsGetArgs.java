@@ -21,7 +21,7 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ingressTrafficAllowed")
-    private final @Nullable Input<String> ingressTrafficAllowed;
+        private final @Nullable Input<String> ingressTrafficAllowed;
 
     public Input<String> getIngressTrafficAllowed() {
         return this.ingressTrafficAllowed == null ? Input.empty() : this.ingressTrafficAllowed;
@@ -64,7 +64,6 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
             this.ingressTrafficAllowed = Input.ofNullable(ingressTrafficAllowed);
             return this;
         }
-
         public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
             return new ServiceNetworkSettingsNetworkSettingsGetArgs(ingressTrafficAllowed);
         }

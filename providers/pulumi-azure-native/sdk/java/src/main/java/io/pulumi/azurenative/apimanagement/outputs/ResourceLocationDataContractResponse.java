@@ -118,7 +118,6 @@ public final class ResourceLocationDataContractResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ResourceLocationDataContractResponse build() {
             return new ResourceLocationDataContractResponse(city, countryOrRegion, district, name);
         }

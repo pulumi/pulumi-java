@@ -135,7 +135,6 @@ public final class GetAppEngineServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetAppEngineServiceResult build() {
             return new GetAppEngineServiceResult(displayName, id, moduleId, name, project, serviceId, telemetries);
         }

@@ -20,7 +20,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Integer> day;
+        private final @Nullable Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
      * 
      */
     @InputImport(name="hour")
-    private final @Nullable Input<Integer> hour;
+        private final @Nullable Input<Integer> hour;
 
     public Input<Integer> getHour() {
         return this.hour == null ? Input.empty() : this.hour;
@@ -43,7 +43,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
      * 
      */
     @InputImport(name="updateTrack")
-    private final @Nullable Input<String> updateTrack;
+        private final @Nullable Input<String> updateTrack;
 
     public Input<String> getUpdateTrack() {
         return this.updateTrack == null ? Input.empty() : this.updateTrack;
@@ -117,7 +117,6 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
             this.updateTrack = Input.ofNullable(updateTrack);
             return this;
         }
-
         public DatabaseInstanceSettingsMaintenanceWindowGetArgs build() {
             return new DatabaseInstanceSettingsMaintenanceWindowGetArgs(day, hour, updateTrack);
         }

@@ -54,7 +54,6 @@ public final class CxPageEventHandlerTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxPageEventHandlerTriggerFulfillmentMessage build() {
             return new CxPageEventHandlerTriggerFulfillmentMessage(text);
         }

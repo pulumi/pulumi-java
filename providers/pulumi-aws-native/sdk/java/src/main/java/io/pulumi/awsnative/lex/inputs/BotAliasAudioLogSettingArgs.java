@@ -19,14 +19,14 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     public static final BotAliasAudioLogSettingArgs Empty = new BotAliasAudioLogSettingArgs();
 
     @InputImport(name="destination", required=true)
-    private final Input<BotAliasAudioLogDestinationArgs> destination;
+        private final Input<BotAliasAudioLogDestinationArgs> destination;
 
     public Input<BotAliasAudioLogDestinationArgs> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -85,7 +85,6 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public BotAliasAudioLogSettingArgs build() {
             return new BotAliasAudioLogSettingArgs(destination, enabled);
         }

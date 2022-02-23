@@ -18,14 +18,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     public static final CertificateArgs Empty = new CertificateArgs();
 
     @InputImport(name="caPoolId", required=true)
-    private final Input<String> caPoolId;
+      private final Input<String> caPoolId;
 
     public Input<String> getCaPoolId() {
         return this.caPoolId;
     }
 
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+      private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -36,7 +36,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateTemplate")
-    private final @Nullable Input<String> certificateTemplate;
+      private final @Nullable Input<String> certificateTemplate;
 
     public Input<String> getCertificateTemplate() {
         return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
@@ -47,14 +47,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<CertificateConfigArgs> config;
+      private final @Nullable Input<CertificateConfigArgs> config;
 
     public Input<CertificateConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
     }
 
     @InputImport(name="issuingCertificateAuthorityId")
-    private final @Nullable Input<String> issuingCertificateAuthorityId;
+      private final @Nullable Input<String> issuingCertificateAuthorityId;
 
     public Input<String> getIssuingCertificateAuthorityId() {
         return this.issuingCertificateAuthorityId == null ? Input.empty() : this.issuingCertificateAuthorityId;
@@ -65,7 +65,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -76,14 +76,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime", required=true)
-    private final Input<String> lifetime;
+      private final Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -94,21 +94,21 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCsr")
-    private final @Nullable Input<String> pemCsr;
+      private final @Nullable Input<String> pemCsr;
 
     public Input<String> getPemCsr() {
         return this.pemCsr == null ? Input.empty() : this.pemCsr;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -119,14 +119,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectMode")
-    private final @Nullable Input<CertificateSubjectMode> subjectMode;
+      private final @Nullable Input<CertificateSubjectMode> subjectMode;
 
     public Input<CertificateSubjectMode> getSubjectMode() {
         return this.subjectMode == null ? Input.empty() : this.subjectMode;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -350,7 +350,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(caPoolId, certificateId, certificateTemplate, config, issuingCertificateAuthorityId, labels, lifetime, location, pemCsr, project, requestId, subjectMode, validateOnly);
         }

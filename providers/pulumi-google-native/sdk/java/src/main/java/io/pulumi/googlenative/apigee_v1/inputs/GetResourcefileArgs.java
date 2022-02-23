@@ -13,28 +13,28 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetResourcefileArgs Empty = new GetResourcefileArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourcefileArgs build() {
             return new GetResourcefileArgs(environmentId, name, organizationId, type);
         }

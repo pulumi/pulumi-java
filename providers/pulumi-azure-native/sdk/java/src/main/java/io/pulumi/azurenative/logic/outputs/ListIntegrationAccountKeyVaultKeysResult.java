@@ -78,7 +78,6 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
             this.value = value;
             return this;
         }
-
         public ListIntegrationAccountKeyVaultKeysResult build() {
             return new ListIntegrationAccountKeyVaultKeysResult(skipToken, value);
         }

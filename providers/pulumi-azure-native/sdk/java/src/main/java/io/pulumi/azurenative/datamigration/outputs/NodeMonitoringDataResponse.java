@@ -225,7 +225,6 @@ public final class NodeMonitoringDataResponse {
             this.sentBytes = Objects.requireNonNull(sentBytes);
             return this;
         }
-
         public NodeMonitoringDataResponse build() {
             return new NodeMonitoringDataResponse(additionalProperties, availableMemoryInMB, concurrentJobsLimit, concurrentJobsRunning, cpuUtilization, maxConcurrentJobs, nodeName, receivedBytes, sentBytes);
         }

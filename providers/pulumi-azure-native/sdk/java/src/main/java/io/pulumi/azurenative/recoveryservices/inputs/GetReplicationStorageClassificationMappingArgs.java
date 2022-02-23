@@ -17,7 +17,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+        private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -50,7 +50,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * 
      */
     @InputImport(name="storageClassificationMappingName", required=true)
-    private final String storageClassificationMappingName;
+        private final String storageClassificationMappingName;
 
     public String getStorageClassificationMappingName() {
         return this.storageClassificationMappingName;
@@ -61,7 +61,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * 
      */
     @InputImport(name="storageClassificationName", required=true)
-    private final String storageClassificationName;
+        private final String storageClassificationName;
 
     public String getStorageClassificationName() {
         return this.storageClassificationName;
@@ -140,7 +140,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
             this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
             return this;
         }
-
         public GetReplicationStorageClassificationMappingArgs build() {
             return new GetReplicationStorageClassificationMappingArgs(fabricName, resourceGroupName, resourceName, storageClassificationMappingName, storageClassificationName);
         }

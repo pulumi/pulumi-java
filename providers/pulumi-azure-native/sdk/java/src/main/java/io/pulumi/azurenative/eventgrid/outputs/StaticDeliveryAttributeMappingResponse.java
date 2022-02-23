@@ -121,7 +121,6 @@ public final class StaticDeliveryAttributeMappingResponse {
             this.value = value;
             return this;
         }
-
         public StaticDeliveryAttributeMappingResponse build() {
             return new StaticDeliveryAttributeMappingResponse(isSecret, name, type, value);
         }

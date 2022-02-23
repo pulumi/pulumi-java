@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * 
      */
     @InputImport(name="header", required=true)
-    private final String header;
+      private final String header;
 
     public String getHeader() {
         return this.header;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * 
      */
     @InputImport(name="horizontalAlignment", required=true)
-    private final String horizontalAlignment;
+      private final String horizontalAlignment;
 
     public String getHorizontalAlignment() {
         return this.horizontalAlignment;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
             this.horizontalAlignment = Objects.requireNonNull(horizontalAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(header, horizontalAlignment);
         }

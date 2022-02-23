@@ -20,7 +20,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
     public Input<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
         return this.datastoreConfig == null ? Input.empty() : this.datastoreConfig;
@@ -31,14 +31,14 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -49,7 +49,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;
@@ -138,7 +138,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }
-
         public DatastoreArgs build() {
             return new DatastoreArgs(datastoreConfig, displayName, organizationId, targetType);
         }

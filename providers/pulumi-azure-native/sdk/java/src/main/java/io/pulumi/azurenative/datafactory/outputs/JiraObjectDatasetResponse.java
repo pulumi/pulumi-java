@@ -231,7 +231,6 @@ public final class JiraObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JiraObjectDatasetResponse build() {
             return new JiraObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

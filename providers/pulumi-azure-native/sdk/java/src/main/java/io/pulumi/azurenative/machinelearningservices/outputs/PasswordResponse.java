@@ -58,7 +58,6 @@ public final class PasswordResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PasswordResponse build() {
             return new PasswordResponse(name, value);
         }

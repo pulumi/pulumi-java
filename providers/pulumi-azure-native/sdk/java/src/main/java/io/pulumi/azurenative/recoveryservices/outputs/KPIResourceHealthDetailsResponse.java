@@ -78,7 +78,6 @@ public final class KPIResourceHealthDetailsResponse {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
-
         public KPIResourceHealthDetailsResponse build() {
             return new KPIResourceHealthDetailsResponse(resourceHealthDetails, resourceHealthStatus);
         }

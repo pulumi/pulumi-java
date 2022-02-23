@@ -22,7 +22,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<TunnelInstanceIAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<TunnelInstanceIAMBindingConditionGetArgs> condition;
 
     public Input<TunnelInstanceIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,14 +44,14 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -63,7 +63,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,14 +76,14 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -217,7 +217,6 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public TunnelInstanceIAMBindingState build() {
             return new TunnelInstanceIAMBindingState(condition, etag, instance, members, project, role, zone);
         }

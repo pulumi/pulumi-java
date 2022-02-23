@@ -60,7 +60,6 @@ public final class CertificateAuthorityAccessMethod {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
-
         public CertificateAuthorityAccessMethod build() {
             return new CertificateAuthorityAccessMethod(accessMethodType, customObjectIdentifier);
         }

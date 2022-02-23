@@ -86,7 +86,6 @@ public final class TopicSchemaSettings {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public TopicSchemaSettings build() {
             return new TopicSchemaSettings(encoding, schema);
         }

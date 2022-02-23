@@ -269,7 +269,6 @@ public final class ForEachActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ForEachActivityResponse build() {
             return new ForEachActivityResponse(activities, batchCount, dependsOn, description, isSequential, items, name, type, userProperties);
         }

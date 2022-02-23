@@ -96,7 +96,6 @@ public final class DiskConfigResponse {
             this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
             return this;
         }
-
         public DiskConfigResponse build() {
             return new DiskConfigResponse(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

@@ -310,7 +310,6 @@ public final class GetInstanceResult {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(createTime, description, etag, fileShares, kmsKeyName, labels, name, networks, satisfiesPzs, state, statusMessage, suspensionReasons, tier);
         }

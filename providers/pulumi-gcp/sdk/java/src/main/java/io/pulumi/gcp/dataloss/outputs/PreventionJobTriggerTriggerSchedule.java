@@ -60,7 +60,6 @@ public final class PreventionJobTriggerTriggerSchedule {
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
-
         public PreventionJobTriggerTriggerSchedule build() {
             return new PreventionJobTriggerTriggerSchedule(recurrencePeriodDuration);
         }

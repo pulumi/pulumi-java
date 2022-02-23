@@ -98,7 +98,6 @@ public final class GetRegionWorkflowTemplateIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionWorkflowTemplateIamPolicyResult build() {
             return new GetRegionWorkflowTemplateIamPolicyResult(bindings, etag, version);
         }

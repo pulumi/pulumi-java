@@ -243,7 +243,6 @@ public final class FlowSourceConnectorProperties {
             this.zendesk = zendesk;
             return this;
         }
-
         public FlowSourceConnectorProperties build() {
             return new FlowSourceConnectorProperties(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }

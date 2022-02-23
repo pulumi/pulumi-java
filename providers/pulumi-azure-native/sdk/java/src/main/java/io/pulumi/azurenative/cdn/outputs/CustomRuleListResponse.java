@@ -54,7 +54,6 @@ public final class CustomRuleListResponse {
             this.rules = rules;
             return this;
         }
-
         public CustomRuleListResponse build() {
             return new CustomRuleListResponse(rules);
         }

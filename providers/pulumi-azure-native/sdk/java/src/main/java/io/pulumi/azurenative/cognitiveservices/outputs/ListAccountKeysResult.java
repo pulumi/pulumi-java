@@ -76,7 +76,6 @@ public final class ListAccountKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(key1, key2);
         }

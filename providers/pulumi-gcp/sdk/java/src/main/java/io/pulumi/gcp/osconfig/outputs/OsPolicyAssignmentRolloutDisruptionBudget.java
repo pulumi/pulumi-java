@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentRolloutDisruptionBudget {
             this.percent = percent;
             return this;
         }
-
         public OsPolicyAssignmentRolloutDisruptionBudget build() {
             return new OsPolicyAssignmentRolloutDisruptionBudget(fixed, percent);
         }

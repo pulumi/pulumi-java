@@ -276,7 +276,6 @@ public final class AzureDataExplorerLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerLinkedServiceResponse build() {
             return new AzureDataExplorerLinkedServiceResponse(annotations, connectVia, credential, database, description, endpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

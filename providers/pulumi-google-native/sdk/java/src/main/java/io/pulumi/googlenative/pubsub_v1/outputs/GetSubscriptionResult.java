@@ -354,7 +354,6 @@ public final class GetSubscriptionResult {
             this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, pushConfig, retainAckedMessages, retryPolicy, state, topic, topicMessageRetentionDuration);
         }

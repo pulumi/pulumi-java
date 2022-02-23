@@ -14,7 +14,7 @@ public final class RuleGroupOrStatement extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupOrStatement Empty = new RuleGroupOrStatement();
 
     @InputImport(name="statements", required=true)
-    private final List<RuleGroupStatement> statements;
+        private final List<RuleGroupStatement> statements;
 
     public List<RuleGroupStatement> getStatements() {
         return this.statements;
@@ -52,7 +52,6 @@ public final class RuleGroupOrStatement extends io.pulumi.resources.InvokeArgs {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public RuleGroupOrStatement build() {
             return new RuleGroupOrStatement(statements);
         }

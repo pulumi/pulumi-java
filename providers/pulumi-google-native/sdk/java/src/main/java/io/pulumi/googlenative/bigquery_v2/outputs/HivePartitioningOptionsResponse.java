@@ -96,7 +96,6 @@ public final class HivePartitioningOptionsResponse {
             this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
             return this;
         }
-
         public HivePartitioningOptionsResponse build() {
             return new HivePartitioningOptionsResponse(mode, requirePartitionFilter, sourceUriPrefix);
         }

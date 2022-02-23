@@ -30,7 +30,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
+        private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
 
     public List<AccessPolicyEntryResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
@@ -41,7 +41,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enablePurgeProtection")
-    private final @Nullable Boolean enablePurgeProtection;
+        private final @Nullable Boolean enablePurgeProtection;
 
     public Optional<Boolean> getEnablePurgeProtection() {
         return this.enablePurgeProtection == null ? Optional.empty() : Optional.ofNullable(this.enablePurgeProtection);
@@ -52,7 +52,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enableRbacAuthorization")
-    private final @Nullable Boolean enableRbacAuthorization;
+        private final @Nullable Boolean enableRbacAuthorization;
 
     public Optional<Boolean> getEnableRbacAuthorization() {
         return this.enableRbacAuthorization == null ? Optional.empty() : Optional.ofNullable(this.enableRbacAuthorization);
@@ -63,7 +63,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enableSoftDelete")
-    private final @Nullable Boolean enableSoftDelete;
+        private final @Nullable Boolean enableSoftDelete;
 
     public Optional<Boolean> getEnableSoftDelete() {
         return this.enableSoftDelete == null ? Optional.empty() : Optional.ofNullable(this.enableSoftDelete);
@@ -74,7 +74,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabledForDeployment")
-    private final @Nullable Boolean enabledForDeployment;
+        private final @Nullable Boolean enabledForDeployment;
 
     public Optional<Boolean> getEnabledForDeployment() {
         return this.enabledForDeployment == null ? Optional.empty() : Optional.ofNullable(this.enabledForDeployment);
@@ -85,7 +85,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabledForDiskEncryption")
-    private final @Nullable Boolean enabledForDiskEncryption;
+        private final @Nullable Boolean enabledForDiskEncryption;
 
     public Optional<Boolean> getEnabledForDiskEncryption() {
         return this.enabledForDiskEncryption == null ? Optional.empty() : Optional.ofNullable(this.enabledForDiskEncryption);
@@ -96,7 +96,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabledForTemplateDeployment")
-    private final @Nullable Boolean enabledForTemplateDeployment;
+        private final @Nullable Boolean enabledForTemplateDeployment;
 
     public Optional<Boolean> getEnabledForTemplateDeployment() {
         return this.enabledForTemplateDeployment == null ? Optional.empty() : Optional.ofNullable(this.enabledForTemplateDeployment);
@@ -107,7 +107,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hsmPoolResourceId", required=true)
-    private final String hsmPoolResourceId;
+        private final String hsmPoolResourceId;
 
     public String getHsmPoolResourceId() {
         return this.hsmPoolResourceId;
@@ -118,7 +118,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="networkAcls")
-    private final @Nullable NetworkRuleSetResponse networkAcls;
+        private final @Nullable NetworkRuleSetResponse networkAcls;
 
     public Optional<NetworkRuleSetResponse> getNetworkAcls() {
         return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
@@ -129,7 +129,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateEndpointConnections", required=true)
-    private final List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
+        private final List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionItemResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -140,7 +140,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -151,7 +151,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sku", required=true)
-    private final SkuResponse sku;
+        private final SkuResponse sku;
 
     public SkuResponse getSku() {
         return this.sku;
@@ -162,7 +162,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="softDeleteRetentionInDays")
-    private final @Nullable Integer softDeleteRetentionInDays;
+        private final @Nullable Integer softDeleteRetentionInDays;
 
     public Optional<Integer> getSoftDeleteRetentionInDays() {
         return this.softDeleteRetentionInDays == null ? Optional.empty() : Optional.ofNullable(this.softDeleteRetentionInDays);
@@ -173,7 +173,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -184,7 +184,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vaultUri")
-    private final @Nullable String vaultUri;
+        private final @Nullable String vaultUri;
 
     public Optional<String> getVaultUri() {
         return this.vaultUri == null ? Optional.empty() : Optional.ofNullable(this.vaultUri);
@@ -363,7 +363,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.vaultUri = vaultUri;
             return this;
         }
-
         public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(accessPolicies, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, hsmPoolResourceId, networkAcls, privateEndpointConnections, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
         }

@@ -23,7 +23,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final String category;
+        private final String category;
 
     public String getCategory() {
         return this.category;
@@ -34,7 +34,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -45,7 +45,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details", required=true)
-    private final List<JobErrorDetailResponse> details;
+        private final List<JobErrorDetailResponse> details;
 
     public List<JobErrorDetailResponse> getDetails() {
         return this.details;
@@ -56,7 +56,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -67,7 +67,7 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retry", required=true)
-    private final String retry;
+        private final String retry;
 
     public String getRetry() {
         return this.retry;
@@ -146,7 +146,6 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public JobErrorResponse build() {
             return new JobErrorResponse(category, code, details, message, retry);
         }

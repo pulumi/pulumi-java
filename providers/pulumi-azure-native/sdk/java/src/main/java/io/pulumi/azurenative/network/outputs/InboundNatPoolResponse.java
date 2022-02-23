@@ -310,7 +310,6 @@ public final class InboundNatPoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPortRangeEnd, frontendPortRangeStart, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
         }

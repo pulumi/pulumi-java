@@ -96,7 +96,6 @@ public final class HPAScalingPolicy {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HPAScalingPolicy build() {
             return new HPAScalingPolicy(periodSeconds, type, value);
         }

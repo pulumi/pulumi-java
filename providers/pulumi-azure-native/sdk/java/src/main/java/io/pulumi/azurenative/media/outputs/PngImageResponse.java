@@ -227,7 +227,6 @@ public final class PngImageResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public PngImageResponse build() {
             return new PngImageResponse(keyFrameInterval, label, layers, odataType, range, start, step, stretchMode, syncMode);
         }

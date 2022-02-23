@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="builtInAlgorithmOutput")
-    private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
+      private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
     public Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput == null ? Input.empty() : this.builtInAlgorithmOutput;
@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="completedTrialCount")
-    private final @Nullable Input<String> completedTrialCount;
+      private final @Nullable Input<String> completedTrialCount;
 
     public Input<String> getCompletedTrialCount() {
         return this.completedTrialCount == null ? Input.empty() : this.completedTrialCount;
@@ -50,7 +50,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consumedMLUnits")
-    private final @Nullable Input<Double> consumedMLUnits;
+      private final @Nullable Input<Double> consumedMLUnits;
 
     public Input<Double> getConsumedMLUnits() {
         return this.consumedMLUnits == null ? Input.empty() : this.consumedMLUnits;
@@ -61,7 +61,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hyperparameterMetricTag")
-    private final @Nullable Input<String> hyperparameterMetricTag;
+      private final @Nullable Input<String> hyperparameterMetricTag;
 
     public Input<String> getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag == null ? Input.empty() : this.hyperparameterMetricTag;
@@ -72,7 +72,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isBuiltInAlgorithmJob")
-    private final @Nullable Input<Boolean> isBuiltInAlgorithmJob;
+      private final @Nullable Input<Boolean> isBuiltInAlgorithmJob;
 
     public Input<Boolean> getIsBuiltInAlgorithmJob() {
         return this.isBuiltInAlgorithmJob == null ? Input.empty() : this.isBuiltInAlgorithmJob;
@@ -83,7 +83,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isHyperparameterTuningJob")
-    private final @Nullable Input<Boolean> isHyperparameterTuningJob;
+      private final @Nullable Input<Boolean> isHyperparameterTuningJob;
 
     public Input<Boolean> getIsHyperparameterTuningJob() {
         return this.isHyperparameterTuningJob == null ? Input.empty() : this.isHyperparameterTuningJob;
@@ -94,7 +94,7 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="trials")
-    private final @Nullable Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials;
+      private final @Nullable Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials;
 
     public Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> getTrials() {
         return this.trials == null ? Input.empty() : this.trials;
@@ -228,7 +228,6 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
             this.trials = Input.ofNullable(trials);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingOutputArgs build() {
             return new GoogleCloudMlV1__TrainingOutputArgs(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials);
         }

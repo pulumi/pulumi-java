@@ -229,7 +229,6 @@ public final class GetClusterNodePool {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetClusterNodePool build() {
             return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, upgradeSettings, version);
         }

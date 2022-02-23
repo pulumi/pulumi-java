@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-    private final String privateEndpointConnectionName;
+        private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-    private final String storageSyncServiceName;
+        private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -98,7 +98,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public GetPrivateEndpointConnectionArgs build() {
             return new GetPrivateEndpointConnectionArgs(privateEndpointConnectionName, resourceGroupName, storageSyncServiceName);
         }

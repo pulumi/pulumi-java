@@ -60,7 +60,6 @@ public final class GameServerGroupInstanceDefinition {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public GameServerGroupInstanceDefinition build() {
             return new GameServerGroupInstanceDefinition(instanceType, weightedCapacity);
         }

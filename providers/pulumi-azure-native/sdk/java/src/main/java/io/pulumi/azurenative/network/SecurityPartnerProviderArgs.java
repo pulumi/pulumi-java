@@ -23,7 +23,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityPartnerProviderName")
-    private final @Nullable Input<String> securityPartnerProviderName;
+        private final @Nullable Input<String> securityPartnerProviderName;
 
     public Input<String> getSecurityPartnerProviderName() {
         return this.securityPartnerProviderName == null ? Input.empty() : this.securityPartnerProviderName;
@@ -67,7 +67,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityProviderName")
-    private final @Nullable Input<Either<String,SecurityProviderName>> securityProviderName;
+        private final @Nullable Input<Either<String,SecurityProviderName>> securityProviderName;
 
     public Input<Either<String,SecurityProviderName>> getSecurityProviderName() {
         return this.securityProviderName == null ? Input.empty() : this.securityProviderName;
@@ -78,7 +78,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualHub")
-    private final @Nullable Input<SubResourceArgs> virtualHub;
+        private final @Nullable Input<SubResourceArgs> virtualHub;
 
     public Input<SubResourceArgs> getVirtualHub() {
         return this.virtualHub == null ? Input.empty() : this.virtualHub;
@@ -223,7 +223,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
             this.virtualHub = Input.ofNullable(virtualHub);
             return this;
         }
-
         public SecurityPartnerProviderArgs build() {
             return new SecurityPartnerProviderArgs(id, location, resourceGroupName, securityPartnerProviderName, securityProviderName, tags, virtualHub);
         }

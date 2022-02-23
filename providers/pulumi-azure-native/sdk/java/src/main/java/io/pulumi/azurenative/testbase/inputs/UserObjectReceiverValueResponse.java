@@ -24,7 +24,7 @@ public final class UserObjectReceiverValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userObjectIds")
-    private final @Nullable List<String> userObjectIds;
+        private final @Nullable List<String> userObjectIds;
 
     public List<String> getUserObjectIds() {
         return this.userObjectIds == null ? List.of() : this.userObjectIds;
@@ -62,7 +62,6 @@ public final class UserObjectReceiverValueResponse extends io.pulumi.resources.I
             this.userObjectIds = userObjectIds;
             return this;
         }
-
         public UserObjectReceiverValueResponse build() {
             return new UserObjectReceiverValueResponse(userObjectIds);
         }

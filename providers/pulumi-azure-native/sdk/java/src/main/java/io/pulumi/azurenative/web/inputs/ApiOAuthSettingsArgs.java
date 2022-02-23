@@ -27,7 +27,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -38,7 +38,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -49,7 +49,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="customParameters")
-    private final @Nullable Input<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
+        private final @Nullable Input<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
     public Input<Map<String,ApiOAuthSettingsParameterArgs>> getCustomParameters() {
         return this.customParameters == null ? Input.empty() : this.customParameters;
@@ -60,7 +60,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identityProvider")
-    private final @Nullable Input<String> identityProvider;
+        private final @Nullable Input<String> identityProvider;
 
     public Input<String> getIdentityProvider() {
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
@@ -71,7 +71,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Object> properties;
+        private final @Nullable Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -82,7 +82,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redirectUrl")
-    private final @Nullable Input<String> redirectUrl;
+        private final @Nullable Input<String> redirectUrl;
 
     public Input<String> getRedirectUrl() {
         return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
@@ -93,7 +93,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+        private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -227,7 +227,6 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public ApiOAuthSettingsArgs build() {
             return new ApiOAuthSettingsArgs(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
         }

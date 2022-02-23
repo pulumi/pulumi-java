@@ -319,7 +319,6 @@ public final class DpmContainerResponse {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }
-
         public DpmContainerResponse build() {
             return new DpmContainerResponse(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }

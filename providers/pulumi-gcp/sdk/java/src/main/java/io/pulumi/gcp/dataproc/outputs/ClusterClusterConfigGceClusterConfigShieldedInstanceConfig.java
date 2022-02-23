@@ -97,7 +97,6 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfigShieldedInstanceConfig build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

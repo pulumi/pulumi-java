@@ -58,7 +58,6 @@ public final class TopicRuleHttpActionHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleHttpActionHeader build() {
             return new TopicRuleHttpActionHeader(key, value);
         }

@@ -60,7 +60,6 @@ public final class FilterPortRangeFilter {
             this.endInclusive = endInclusive;
             return this;
         }
-
         public FilterPortRangeFilter build() {
             return new FilterPortRangeFilter(beginInclusive, endInclusive);
         }

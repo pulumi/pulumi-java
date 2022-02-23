@@ -75,7 +75,6 @@ public final class PodsMetricStatus {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public PodsMetricStatus build() {
             return new PodsMetricStatus(current, metric);
         }

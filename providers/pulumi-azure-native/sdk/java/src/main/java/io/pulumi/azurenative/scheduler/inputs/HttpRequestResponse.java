@@ -24,7 +24,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Object authentication;
+        private final @Nullable Object authentication;
 
     public Object getAuthentication() {
         return this.authentication == null ? null : this.authentication;
@@ -35,7 +35,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable String body;
+        private final @Nullable String body;
 
     public Optional<String> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -46,7 +46,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Map<String,String> headers;
+        private final @Nullable Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
@@ -57,7 +57,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="method")
-    private final @Nullable String method;
+        private final @Nullable String method;
 
     public Optional<String> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -68,7 +68,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+        private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -147,7 +147,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = uri;
             return this;
         }
-
         public HttpRequestResponse build() {
             return new HttpRequestResponse(authentication, body, headers, method, uri);
         }

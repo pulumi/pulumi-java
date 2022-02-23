@@ -99,7 +99,6 @@ public final class NodeTemplateNodeTypeFlexibility {
             this.memory = memory;
             return this;
         }
-
         public NodeTemplateNodeTypeFlexibility build() {
             return new NodeTemplateNodeTypeFlexibility(cpus, localSsd, memory);
         }

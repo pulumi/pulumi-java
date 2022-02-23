@@ -76,7 +76,6 @@ public final class CompositePathResponse {
             this.path = path;
             return this;
         }
-
         public CompositePathResponse build() {
             return new CompositePathResponse(order, path);
         }

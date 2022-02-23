@@ -118,7 +118,6 @@ public final class TldLegalAgreementResponse {
             this.url = url;
             return this;
         }
-
         public TldLegalAgreementResponse build() {
             return new TldLegalAgreementResponse(agreementKey, content, title, url);
         }

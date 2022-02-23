@@ -25,7 +25,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidSettings")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
     public Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> getAndroidSettings() {
         return this.androidSettings == null ? Input.empty() : this.androidSettings;
@@ -36,7 +36,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -47,7 +47,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -58,7 +58,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosSettings")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
     public Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> getIosSettings() {
         return this.iosSettings == null ? Input.empty() : this.iosSettings;
@@ -69,7 +69,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -80,14 +80,14 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -98,7 +98,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testingOptions")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
     public Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> getTestingOptions() {
         return this.testingOptions == null ? Input.empty() : this.testingOptions;
@@ -109,7 +109,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wafSettings")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
     public Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> getWafSettings() {
         return this.wafSettings == null ? Input.empty() : this.wafSettings;
@@ -120,7 +120,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webSettings")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
     public Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> getWebSettings() {
         return this.webSettings == null ? Input.empty() : this.webSettings;
@@ -299,7 +299,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.webSettings = Input.ofNullable(webSettings);
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, wafSettings, webSettings);
         }

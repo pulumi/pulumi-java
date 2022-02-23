@@ -23,7 +23,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      * 
      */
     @InputImport(name="categories", required=true)
-    private final Input<List<String>> categories;
+      private final Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories;
@@ -66,7 +66,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Input.of(Objects.requireNonNull(categories));
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(categories);
         }

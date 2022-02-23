@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.wordList = wordList;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary(cloudStoragePath, wordList);
         }

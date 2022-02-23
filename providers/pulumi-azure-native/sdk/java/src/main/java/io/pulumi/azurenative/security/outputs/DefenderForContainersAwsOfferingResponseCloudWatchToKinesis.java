@@ -54,7 +54,6 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponseCloudWatchToKinesis build() {
             return new DefenderForContainersAwsOfferingResponseCloudWatchToKinesis(cloudRoleArn);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(ssml, text);
         }

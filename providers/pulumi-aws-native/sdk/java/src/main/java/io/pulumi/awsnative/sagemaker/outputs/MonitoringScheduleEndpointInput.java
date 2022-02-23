@@ -112,7 +112,6 @@ public final class MonitoringScheduleEndpointInput {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public MonitoringScheduleEndpointInput build() {
             return new MonitoringScheduleEndpointInput(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }

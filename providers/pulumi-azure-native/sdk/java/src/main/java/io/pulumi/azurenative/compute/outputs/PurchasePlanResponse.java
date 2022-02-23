@@ -118,7 +118,6 @@ public final class PurchasePlanResponse {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public PurchasePlanResponse build() {
             return new PurchasePlanResponse(name, product, promotionCode, publisher);
         }

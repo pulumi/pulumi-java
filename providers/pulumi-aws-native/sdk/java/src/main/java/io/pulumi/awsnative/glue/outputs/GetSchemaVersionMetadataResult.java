@@ -30,7 +30,6 @@ public final class GetSchemaVersionMetadataResult {
         public Builder(GetSchemaVersionMetadataResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetSchemaVersionMetadataResult build() {
             return new GetSchemaVersionMetadataResult();
         }

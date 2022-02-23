@@ -74,7 +74,6 @@ public final class DatabaseFlagsResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatabaseFlagsResponse build() {
             return new DatabaseFlagsResponse(name, value);
         }

@@ -54,7 +54,6 @@ public final class SecurityPolicyRuleMatchExpr {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public SecurityPolicyRuleMatchExpr build() {
             return new SecurityPolicyRuleMatchExpr(expression);
         }

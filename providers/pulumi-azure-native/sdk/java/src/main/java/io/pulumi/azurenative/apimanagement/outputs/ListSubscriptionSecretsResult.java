@@ -76,7 +76,6 @@ public final class ListSubscriptionSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListSubscriptionSecretsResult build() {
             return new ListSubscriptionSecretsResult(primaryKey, secondaryKey);
         }

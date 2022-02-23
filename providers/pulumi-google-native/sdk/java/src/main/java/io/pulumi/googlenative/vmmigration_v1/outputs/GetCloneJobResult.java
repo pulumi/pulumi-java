@@ -160,7 +160,6 @@ public final class GetCloneJobResult {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public GetCloneJobResult build() {
             return new GetCloneJobResult(computeEngineTargetDetails, createTime, error, name, state, stateTime);
         }

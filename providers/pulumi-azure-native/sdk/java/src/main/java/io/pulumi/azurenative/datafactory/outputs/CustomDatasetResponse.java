@@ -210,7 +210,6 @@ public final class CustomDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomDatasetResponse build() {
             return new CustomDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

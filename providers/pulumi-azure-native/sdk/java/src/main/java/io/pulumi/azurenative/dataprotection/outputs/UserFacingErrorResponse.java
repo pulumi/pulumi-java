@@ -219,7 +219,6 @@ public final class UserFacingErrorResponse {
             this.target = target;
             return this;
         }
-
         public UserFacingErrorResponse build() {
             return new UserFacingErrorResponse(code, details, innerError, isRetryable, isUserError, message, properties, recommendedAction, target);
         }

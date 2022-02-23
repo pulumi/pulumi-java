@@ -52,7 +52,6 @@ public final class FeatureSpecMulticlusteringress {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
-
         public FeatureSpecMulticlusteringress build() {
             return new FeatureSpecMulticlusteringress(configMembership);
         }

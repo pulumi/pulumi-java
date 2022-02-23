@@ -247,7 +247,6 @@ public final class AzureDataExplorerSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureDataExplorerSinkResponse build() {
             return new AzureDataExplorerSinkResponse(disableMetricsCollection, flushImmediately, ingestionMappingAsJson, ingestionMappingName, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

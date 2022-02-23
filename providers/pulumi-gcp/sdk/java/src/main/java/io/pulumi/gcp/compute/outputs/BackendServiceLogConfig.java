@@ -83,7 +83,6 @@ public final class BackendServiceLogConfig {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public BackendServiceLogConfig build() {
             return new BackendServiceLogConfig(enable, sampleRate);
         }

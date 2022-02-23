@@ -26,7 +26,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableAcceleratedNetworkingOnRecovery")
-    private final @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
+        private final @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
 
     public Optional<Boolean> getEnableAcceleratedNetworkingOnRecovery() {
         return this.enableAcceleratedNetworkingOnRecovery == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
@@ -37,7 +37,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableAcceleratedNetworkingOnTfo")
-    private final @Nullable Boolean enableAcceleratedNetworkingOnTfo;
+        private final @Nullable Boolean enableAcceleratedNetworkingOnTfo;
 
     public Optional<Boolean> getEnableAcceleratedNetworkingOnTfo() {
         return this.enableAcceleratedNetworkingOnTfo == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
@@ -48,7 +48,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-    private final @Nullable String ipAddressType;
+        private final @Nullable String ipAddressType;
 
     public Optional<String> getIpAddressType() {
         return this.ipAddressType == null ? Optional.empty() : Optional.ofNullable(this.ipAddressType);
@@ -59,7 +59,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nicId")
-    private final @Nullable String nicId;
+        private final @Nullable String nicId;
 
     public Optional<String> getNicId() {
         return this.nicId == null ? Optional.empty() : Optional.ofNullable(this.nicId);
@@ -70,7 +70,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primaryNicStaticIPAddress")
-    private final @Nullable String primaryNicStaticIPAddress;
+        private final @Nullable String primaryNicStaticIPAddress;
 
     public Optional<String> getPrimaryNicStaticIPAddress() {
         return this.primaryNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.primaryNicStaticIPAddress);
@@ -81,7 +81,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryLBBackendAddressPoolIds")
-    private final @Nullable List<String> recoveryLBBackendAddressPoolIds;
+        private final @Nullable List<String> recoveryLBBackendAddressPoolIds;
 
     public List<String> getRecoveryLBBackendAddressPoolIds() {
         return this.recoveryLBBackendAddressPoolIds == null ? List.of() : this.recoveryLBBackendAddressPoolIds;
@@ -92,7 +92,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryNetworkSecurityGroupId")
-    private final @Nullable String recoveryNetworkSecurityGroupId;
+        private final @Nullable String recoveryNetworkSecurityGroupId;
 
     public Optional<String> getRecoveryNetworkSecurityGroupId() {
         return this.recoveryNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
@@ -103,7 +103,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryNicIpAddressType")
-    private final @Nullable String recoveryNicIpAddressType;
+        private final @Nullable String recoveryNicIpAddressType;
 
     public Optional<String> getRecoveryNicIpAddressType() {
         return this.recoveryNicIpAddressType == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicIpAddressType);
@@ -114,7 +114,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryNicName")
-    private final @Nullable String recoveryNicName;
+        private final @Nullable String recoveryNicName;
 
     public Optional<String> getRecoveryNicName() {
         return this.recoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicName);
@@ -125,7 +125,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryNicResourceGroupName")
-    private final @Nullable String recoveryNicResourceGroupName;
+        private final @Nullable String recoveryNicResourceGroupName;
 
     public Optional<String> getRecoveryNicResourceGroupName() {
         return this.recoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicResourceGroupName);
@@ -136,7 +136,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryPublicIpAddressId")
-    private final @Nullable String recoveryPublicIpAddressId;
+        private final @Nullable String recoveryPublicIpAddressId;
 
     public Optional<String> getRecoveryPublicIpAddressId() {
         return this.recoveryPublicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPublicIpAddressId);
@@ -147,7 +147,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryVMNetworkId")
-    private final @Nullable String recoveryVMNetworkId;
+        private final @Nullable String recoveryVMNetworkId;
 
     public Optional<String> getRecoveryVMNetworkId() {
         return this.recoveryVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMNetworkId);
@@ -158,7 +158,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryVMSubnetName")
-    private final @Nullable String recoveryVMSubnetName;
+        private final @Nullable String recoveryVMSubnetName;
 
     public Optional<String> getRecoveryVMSubnetName() {
         return this.recoveryVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMSubnetName);
@@ -169,7 +169,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicaNicId")
-    private final @Nullable String replicaNicId;
+        private final @Nullable String replicaNicId;
 
     public Optional<String> getReplicaNicId() {
         return this.replicaNicId == null ? Optional.empty() : Optional.ofNullable(this.replicaNicId);
@@ -180,7 +180,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicaNicStaticIPAddress")
-    private final @Nullable String replicaNicStaticIPAddress;
+        private final @Nullable String replicaNicStaticIPAddress;
 
     public Optional<String> getReplicaNicStaticIPAddress() {
         return this.replicaNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.replicaNicStaticIPAddress);
@@ -191,7 +191,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reuseExistingNic")
-    private final @Nullable Boolean reuseExistingNic;
+        private final @Nullable Boolean reuseExistingNic;
 
     public Optional<Boolean> getReuseExistingNic() {
         return this.reuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.reuseExistingNic);
@@ -202,7 +202,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selectionType")
-    private final @Nullable String selectionType;
+        private final @Nullable String selectionType;
 
     public Optional<String> getSelectionType() {
         return this.selectionType == null ? Optional.empty() : Optional.ofNullable(this.selectionType);
@@ -213,7 +213,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceNicArmId")
-    private final @Nullable String sourceNicArmId;
+        private final @Nullable String sourceNicArmId;
 
     public Optional<String> getSourceNicArmId() {
         return this.sourceNicArmId == null ? Optional.empty() : Optional.ofNullable(this.sourceNicArmId);
@@ -224,7 +224,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoIPConfigs")
-    private final @Nullable List<IPConfigResponse> tfoIPConfigs;
+        private final @Nullable List<IPConfigResponse> tfoIPConfigs;
 
     public List<IPConfigResponse> getTfoIPConfigs() {
         return this.tfoIPConfigs == null ? List.of() : this.tfoIPConfigs;
@@ -235,7 +235,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoNetworkSecurityGroupId")
-    private final @Nullable String tfoNetworkSecurityGroupId;
+        private final @Nullable String tfoNetworkSecurityGroupId;
 
     public Optional<String> getTfoNetworkSecurityGroupId() {
         return this.tfoNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.tfoNetworkSecurityGroupId);
@@ -246,7 +246,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoRecoveryNicName")
-    private final @Nullable String tfoRecoveryNicName;
+        private final @Nullable String tfoRecoveryNicName;
 
     public Optional<String> getTfoRecoveryNicName() {
         return this.tfoRecoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicName);
@@ -257,7 +257,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoRecoveryNicResourceGroupName")
-    private final @Nullable String tfoRecoveryNicResourceGroupName;
+        private final @Nullable String tfoRecoveryNicResourceGroupName;
 
     public Optional<String> getTfoRecoveryNicResourceGroupName() {
         return this.tfoRecoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
@@ -268,7 +268,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoReuseExistingNic")
-    private final @Nullable Boolean tfoReuseExistingNic;
+        private final @Nullable Boolean tfoReuseExistingNic;
 
     public Optional<Boolean> getTfoReuseExistingNic() {
         return this.tfoReuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.tfoReuseExistingNic);
@@ -279,7 +279,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoVMNetworkId")
-    private final @Nullable String tfoVMNetworkId;
+        private final @Nullable String tfoVMNetworkId;
 
     public Optional<String> getTfoVMNetworkId() {
         return this.tfoVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.tfoVMNetworkId);
@@ -290,7 +290,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tfoVMSubnetName")
-    private final @Nullable String tfoVMSubnetName;
+        private final @Nullable String tfoVMSubnetName;
 
     public Optional<String> getTfoVMSubnetName() {
         return this.tfoVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.tfoVMSubnetName);
@@ -301,7 +301,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vMNetworkName")
-    private final @Nullable String vMNetworkName;
+        private final @Nullable String vMNetworkName;
 
     public Optional<String> getVMNetworkName() {
         return this.vMNetworkName == null ? Optional.empty() : Optional.ofNullable(this.vMNetworkName);
@@ -312,7 +312,7 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vMSubnetName")
-    private final @Nullable String vMSubnetName;
+        private final @Nullable String vMSubnetName;
 
     public Optional<String> getVMSubnetName() {
         return this.vMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.vMSubnetName);
@@ -611,7 +611,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.vMSubnetName = vMSubnetName;
             return this;
         }
-
         public VMNicDetailsResponse build() {
             return new VMNicDetailsResponse(enableAcceleratedNetworkingOnRecovery, enableAcceleratedNetworkingOnTfo, ipAddressType, nicId, primaryNicStaticIPAddress, recoveryLBBackendAddressPoolIds, recoveryNetworkSecurityGroupId, recoveryNicIpAddressType, recoveryNicName, recoveryNicResourceGroupName, recoveryPublicIpAddressId, recoveryVMNetworkId, recoveryVMSubnetName, replicaNicId, replicaNicStaticIPAddress, reuseExistingNic, selectionType, sourceNicArmId, tfoIPConfigs, tfoNetworkSecurityGroupId, tfoRecoveryNicName, tfoRecoveryNicResourceGroupName, tfoReuseExistingNic, tfoVMNetworkId, tfoVMSubnetName, vMNetworkName, vMSubnetName);
         }

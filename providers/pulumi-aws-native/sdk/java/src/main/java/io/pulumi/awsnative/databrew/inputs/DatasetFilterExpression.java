@@ -19,14 +19,14 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+        private final String expression;
 
     public String getExpression() {
         return this.expression;
     }
 
     @InputImport(name="valuesMap", required=true)
-    private final List<DatasetFilterValue> valuesMap;
+        private final List<DatasetFilterValue> valuesMap;
 
     public List<DatasetFilterValue> getValuesMap() {
         return this.valuesMap;
@@ -75,7 +75,6 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
-
         public DatasetFilterExpression build() {
             return new DatasetFilterExpression(expression, valuesMap);
         }

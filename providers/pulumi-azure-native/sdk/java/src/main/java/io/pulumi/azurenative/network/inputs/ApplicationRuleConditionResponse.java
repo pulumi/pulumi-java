@@ -25,7 +25,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -36,7 +36,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable List<String> destinationAddresses;
+        private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
@@ -47,7 +47,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fqdnTags")
-    private final @Nullable List<String> fqdnTags;
+        private final @Nullable List<String> fqdnTags;
 
     public List<String> getFqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
@@ -58,7 +58,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
+        private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
 
     public List<FirewallPolicyRuleConditionApplicationProtocolResponse> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
@@ -81,7 +81,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ruleConditionType", required=true)
-    private final String ruleConditionType;
+        private final String ruleConditionType;
 
     public String getRuleConditionType() {
         return this.ruleConditionType;
@@ -92,7 +92,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable List<String> sourceAddresses;
+        private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -103,7 +103,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable List<String> sourceIpGroups;
+        private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -114,7 +114,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetFqdns")
-    private final @Nullable List<String> targetFqdns;
+        private final @Nullable List<String> targetFqdns;
 
     public List<String> getTargetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
@@ -233,7 +233,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public ApplicationRuleConditionResponse build() {
             return new ApplicationRuleConditionResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleConditionType, sourceAddresses, sourceIpGroups, targetFqdns);
         }

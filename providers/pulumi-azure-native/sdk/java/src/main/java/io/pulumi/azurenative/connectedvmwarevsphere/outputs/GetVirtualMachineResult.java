@@ -699,7 +699,6 @@ public final class GetVirtualMachineResult {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(customResourceName, extendedLocation, firmwareType, folderPath, guestAgentProfile, hardwareProfile, id, identity, instanceUuid, inventoryItemId, kind, location, moName, moRefId, name, networkProfile, osProfile, placementProfile, powerState, provisioningState, resourcePoolId, smbiosUuid, statuses, storageProfile, systemData, tags, templateId, type, uuid, vCenterId, vmId);
         }

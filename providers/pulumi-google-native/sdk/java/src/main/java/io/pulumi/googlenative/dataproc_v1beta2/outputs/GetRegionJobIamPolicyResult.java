@@ -98,7 +98,6 @@ public final class GetRegionJobIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionJobIamPolicyResult build() {
             return new GetRegionJobIamPolicyResult(bindings, etag, version);
         }

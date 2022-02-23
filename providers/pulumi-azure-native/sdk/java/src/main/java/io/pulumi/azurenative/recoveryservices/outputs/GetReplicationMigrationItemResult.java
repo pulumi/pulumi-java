@@ -140,7 +140,6 @@ public final class GetReplicationMigrationItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationMigrationItemResult build() {
             return new GetReplicationMigrationItemResult(id, location, name, properties, type);
         }

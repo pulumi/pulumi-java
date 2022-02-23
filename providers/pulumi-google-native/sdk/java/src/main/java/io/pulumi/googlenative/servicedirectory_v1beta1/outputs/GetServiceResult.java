@@ -140,7 +140,6 @@ public final class GetServiceResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(createTime, endpoints, metadata, name, updateTime);
         }

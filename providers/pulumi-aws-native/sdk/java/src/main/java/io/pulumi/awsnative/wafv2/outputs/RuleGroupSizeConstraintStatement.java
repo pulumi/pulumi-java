@@ -88,7 +88,6 @@ public final class RuleGroupSizeConstraintStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupSizeConstraintStatement build() {
             return new RuleGroupSizeConstraintStatement(comparisonOperator, fieldToMatch, size, textTransformations);
         }

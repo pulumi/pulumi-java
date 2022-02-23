@@ -74,7 +74,6 @@ public final class AliasIpRangeResponse {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }
-
         public AliasIpRangeResponse build() {
             return new AliasIpRangeResponse(ipCidrRange, subnetworkRangeName);
         }

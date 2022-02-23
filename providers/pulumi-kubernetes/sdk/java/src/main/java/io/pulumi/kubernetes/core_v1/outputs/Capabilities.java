@@ -76,7 +76,6 @@ public final class Capabilities {
             this.drop = drop;
             return this;
         }
-
         public Capabilities build() {
             return new Capabilities(add, drop);
         }

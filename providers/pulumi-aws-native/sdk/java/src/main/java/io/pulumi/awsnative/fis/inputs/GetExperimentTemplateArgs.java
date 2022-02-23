@@ -13,7 +13,7 @@ public final class GetExperimentTemplateArgs extends io.pulumi.resources.InvokeA
     public static final GetExperimentTemplateArgs Empty = new GetExperimentTemplateArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetExperimentTemplateArgs extends io.pulumi.resources.InvokeA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetExperimentTemplateArgs build() {
             return new GetExperimentTemplateArgs(id);
         }

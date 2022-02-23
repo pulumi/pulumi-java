@@ -78,7 +78,6 @@ public final class ApplicationComponentConfiguration {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-
         public ApplicationComponentConfiguration build() {
             return new ApplicationComponentConfiguration(configurationDetails, subComponentTypeConfigurations);
         }

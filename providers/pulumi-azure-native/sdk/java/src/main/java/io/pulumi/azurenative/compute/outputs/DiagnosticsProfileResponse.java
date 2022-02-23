@@ -54,7 +54,6 @@ public final class DiagnosticsProfileResponse {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
-
         public DiagnosticsProfileResponse build() {
             return new DiagnosticsProfileResponse(bootDiagnostics);
         }

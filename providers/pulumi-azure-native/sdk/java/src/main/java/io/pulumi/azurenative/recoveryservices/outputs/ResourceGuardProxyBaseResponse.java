@@ -75,7 +75,6 @@ public final class ResourceGuardProxyBaseResponse {
             this.resourceGuardResourceId = resourceGuardResourceId;
             return this;
         }
-
         public ResourceGuardProxyBaseResponse build() {
             return new ResourceGuardProxyBaseResponse(lastUpdatedTime, resourceGuardOperationDetails, resourceGuardResourceId);
         }

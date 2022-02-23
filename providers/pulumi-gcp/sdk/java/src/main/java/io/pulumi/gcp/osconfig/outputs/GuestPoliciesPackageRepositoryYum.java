@@ -121,7 +121,6 @@ public final class GuestPoliciesPackageRepositoryYum {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryYum build() {
             return new GuestPoliciesPackageRepositoryYum(baseUrl, displayName, gpgKeys, id);
         }

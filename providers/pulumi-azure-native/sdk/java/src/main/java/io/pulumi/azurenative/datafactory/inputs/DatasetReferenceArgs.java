@@ -25,7 +25,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+        private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -36,7 +36,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final Input<String> referenceName;
+        private final Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName;
@@ -47,7 +47,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DatasetReferenceArgs build() {
             return new DatasetReferenceArgs(parameters, referenceName, type);
         }

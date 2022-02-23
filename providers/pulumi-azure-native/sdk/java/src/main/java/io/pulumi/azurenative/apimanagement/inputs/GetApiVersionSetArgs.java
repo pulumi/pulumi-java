@@ -17,7 +17,7 @@ public final class GetApiVersionSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetApiVersionSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class GetApiVersionSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionSetId", required=true)
-    private final String versionSetId;
+        private final String versionSetId;
 
     public String getVersionSetId() {
         return this.versionSetId;
@@ -98,7 +98,6 @@ public final class GetApiVersionSetArgs extends io.pulumi.resources.InvokeArgs {
             this.versionSetId = Objects.requireNonNull(versionSetId);
             return this;
         }
-
         public GetApiVersionSetArgs build() {
             return new GetApiVersionSetArgs(resourceGroupName, serviceName, versionSetId);
         }

@@ -77,7 +77,6 @@ public final class InstanceAdvancedMachineFeatures {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public InstanceAdvancedMachineFeatures build() {
             return new InstanceAdvancedMachineFeatures(enableNestedVirtualization, threadsPerCore);
         }

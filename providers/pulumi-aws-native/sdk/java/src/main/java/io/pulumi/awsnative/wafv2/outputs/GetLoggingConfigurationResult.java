@@ -122,7 +122,6 @@ public final class GetLoggingConfigurationResult {
             this.redactedFields = redactedFields;
             return this;
         }
-
         public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(logDestinationConfigs, loggingFilter, managedByFirewallManager, redactedFields);
         }

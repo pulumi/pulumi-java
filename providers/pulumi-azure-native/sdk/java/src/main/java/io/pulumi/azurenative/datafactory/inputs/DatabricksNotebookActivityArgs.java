@@ -30,7 +30,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="baseParameters")
-    private final @Nullable Input<Map<String,Object>> baseParameters;
+        private final @Nullable Input<Map<String,Object>> baseParameters;
 
     public Input<Map<String,Object>> getBaseParameters() {
         return this.baseParameters == null ? Input.empty() : this.baseParameters;
@@ -41,7 +41,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -52,7 +52,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -63,7 +63,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="libraries")
-    private final @Nullable Input<List<Map<String,Object>>> libraries;
+        private final @Nullable Input<List<Map<String,Object>>> libraries;
 
     public Input<List<Map<String,Object>>> getLibraries() {
         return this.libraries == null ? Input.empty() : this.libraries;
@@ -74,7 +74,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -85,7 +85,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notebookPath", required=true)
-    private final Input<Object> notebookPath;
+        private final Input<Object> notebookPath;
 
     public Input<Object> getNotebookPath() {
         return this.notebookPath;
@@ -107,7 +107,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -119,7 +119,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -130,7 +130,7 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -309,7 +309,6 @@ public final class DatabricksNotebookActivityArgs extends io.pulumi.resources.Re
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public DatabricksNotebookActivityArgs build() {
             return new DatabricksNotebookActivityArgs(baseParameters, dependsOn, description, libraries, linkedServiceName, name, notebookPath, policy, type, userProperties);
         }

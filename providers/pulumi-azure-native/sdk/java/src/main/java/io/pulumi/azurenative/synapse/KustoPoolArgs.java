@@ -23,7 +23,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType")
-    private final @Nullable Input<Either<String,EngineType>> engineType;
+        private final @Nullable Input<Either<String,EngineType>> engineType;
 
     public Input<Either<String,EngineType>> getEngineType() {
         return this.engineType == null ? Input.empty() : this.engineType;
@@ -34,7 +34,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kustoPoolName")
-    private final @Nullable Input<String> kustoPoolName;
+        private final @Nullable Input<String> kustoPoolName;
 
     public Input<String> getKustoPoolName() {
         return this.kustoPoolName == null ? Input.empty() : this.kustoPoolName;
@@ -45,7 +45,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<AzureSkuArgs> sku;
+        private final Input<AzureSkuArgs> sku;
 
     public Input<AzureSkuArgs> getSku() {
         return this.sku;
@@ -78,7 +78,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -100,7 +100,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceUid")
-    private final @Nullable Input<String> workspaceUid;
+        private final @Nullable Input<String> workspaceUid;
 
     public Input<String> getWorkspaceUid() {
         return this.workspaceUid == null ? Input.empty() : this.workspaceUid;
@@ -249,7 +249,6 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceUid = Input.ofNullable(workspaceUid);
             return this;
         }
-
         public KustoPoolArgs build() {
             return new KustoPoolArgs(engineType, kustoPoolName, location, resourceGroupName, sku, tags, workspaceName, workspaceUid);
         }

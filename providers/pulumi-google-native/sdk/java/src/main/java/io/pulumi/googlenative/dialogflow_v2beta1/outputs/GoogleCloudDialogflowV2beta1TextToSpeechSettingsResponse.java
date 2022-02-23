@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse {
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse build() {
             return new GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }

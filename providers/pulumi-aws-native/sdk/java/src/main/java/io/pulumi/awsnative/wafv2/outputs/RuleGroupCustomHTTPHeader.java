@@ -58,7 +58,6 @@ public final class RuleGroupCustomHTTPHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupCustomHTTPHeader build() {
             return new RuleGroupCustomHTTPHeader(name, value);
         }

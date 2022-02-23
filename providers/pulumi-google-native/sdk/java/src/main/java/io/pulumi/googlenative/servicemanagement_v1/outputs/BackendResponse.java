@@ -53,7 +53,6 @@ public final class BackendResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(rules);
         }

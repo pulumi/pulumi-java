@@ -23,7 +23,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitMbps")
-    private final @Nullable Input<String> limitMbps;
+      private final @Nullable Input<String> limitMbps;
 
     public Input<String> getLimitMbps() {
         return this.limitMbps == null ? Input.empty() : this.limitMbps;
@@ -66,7 +66,6 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.limitMbps = Input.ofNullable(limitMbps);
             return this;
         }
-
         public BandwidthLimitArgs build() {
             return new BandwidthLimitArgs(limitMbps);
         }

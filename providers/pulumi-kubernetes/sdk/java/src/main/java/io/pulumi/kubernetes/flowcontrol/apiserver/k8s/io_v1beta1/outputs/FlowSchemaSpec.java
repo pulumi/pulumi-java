@@ -122,7 +122,6 @@ public final class FlowSchemaSpec {
             this.rules = rules;
             return this;
         }
-
         public FlowSchemaSpec build() {
             return new FlowSchemaSpec(distinguisherMethod, matchingPrecedence, priorityLevelConfiguration, rules);
         }

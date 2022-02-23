@@ -95,7 +95,6 @@ public final class ShieldedInstanceConfigResponse {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

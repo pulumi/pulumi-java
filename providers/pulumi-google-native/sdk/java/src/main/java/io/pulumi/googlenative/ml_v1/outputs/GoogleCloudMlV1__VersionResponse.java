@@ -588,7 +588,6 @@ public final class GoogleCloudMlV1__VersionResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GoogleCloudMlV1__VersionResponse build() {
             return new GoogleCloudMlV1__VersionResponse(acceleratorConfig, autoScaling, container, createTime, deploymentUri, description, errorMessage, etag, explanationConfig, framework, isDefault, labels, lastMigrationModelId, lastMigrationTime, lastUseTime, machineType, manualScaling, name, packageUris, predictionClass, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount, state);
         }

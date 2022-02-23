@@ -24,7 +24,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+        private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -46,7 +46,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="hashes")
-    private final @Nullable Input<Map<String,String>> hashes;
+        private final @Nullable Input<Map<String,String>> hashes;
 
     public Input<Map<String,String>> getHashes() {
         return this.hashes == null ? Input.empty() : this.hashes;
@@ -57,7 +57,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sourceName")
-    private final @Nullable Input<String> sourceName;
+        private final @Nullable Input<String> sourceName;
 
     public Input<String> getSourceName() {
         return this.sourceName == null ? Input.empty() : this.sourceName;
@@ -68,7 +68,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -172,7 +172,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ThreatIntelligenceExternalReferenceArgs build() {
             return new ThreatIntelligenceExternalReferenceArgs(description, externalId, hashes, sourceName, url);
         }

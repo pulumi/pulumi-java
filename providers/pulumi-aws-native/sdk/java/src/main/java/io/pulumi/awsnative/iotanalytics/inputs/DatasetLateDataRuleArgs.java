@@ -16,14 +16,14 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     public static final DatasetLateDataRuleArgs Empty = new DatasetLateDataRuleArgs();
 
     @InputImport(name="ruleConfiguration", required=true)
-    private final Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
+        private final Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
     public Input<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -82,7 +82,6 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
-
         public DatasetLateDataRuleArgs build() {
             return new DatasetLateDataRuleArgs(ruleConfiguration, ruleName);
         }

@@ -242,7 +242,6 @@ public final class ProviderResourceTypeResponse {
             this.zoneMappings = zoneMappings;
             return this;
         }
-
         public ProviderResourceTypeResponse build() {
             return new ProviderResourceTypeResponse(aliases, apiProfiles, apiVersions, capabilities, defaultApiVersion, locationMappings, locations, properties, resourceType, zoneMappings);
         }

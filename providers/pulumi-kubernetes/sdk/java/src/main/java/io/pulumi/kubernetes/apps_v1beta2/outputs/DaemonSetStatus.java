@@ -246,7 +246,6 @@ public final class DaemonSetStatus {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }
-
         public DaemonSetStatus build() {
             return new DaemonSetStatus(collisionCount, conditions, currentNumberScheduled, desiredNumberScheduled, numberAvailable, numberMisscheduled, numberReady, numberUnavailable, observedGeneration, updatedNumberScheduled);
         }

@@ -23,7 +23,7 @@ public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -61,7 +61,6 @@ public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.enabled = enabled;
             return this;
         }
-
         public EnabledConfigResponse build() {
             return new EnabledConfigResponse(enabled);
         }

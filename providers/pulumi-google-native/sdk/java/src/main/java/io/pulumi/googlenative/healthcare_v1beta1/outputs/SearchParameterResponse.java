@@ -74,7 +74,6 @@ public final class SearchParameterResponse {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public SearchParameterResponse build() {
             return new SearchParameterResponse(canonicalUrl, parameter);
         }

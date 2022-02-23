@@ -231,7 +231,6 @@ public final class HBaseObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HBaseObjectDatasetResponse build() {
             return new HBaseObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

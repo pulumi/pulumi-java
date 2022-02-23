@@ -654,7 +654,6 @@ public final class GetVirtualNetworkGatewayConnectionResult {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }
-
         public GetVirtualNetworkGatewayConnectionResult build() {
             return new GetVirtualNetworkGatewayConnectionResult(authorizationKey, connectionMode, connectionProtocol, connectionStatus, connectionType, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, etag, expressRouteGatewayBypass, id, ingressBytesTransferred, ipsecPolicies, localNetworkGateway2, location, name, peer, provisioningState, resourceGuid, routingWeight, sharedKey, tags, trafficSelectorPolicies, tunnelConnectionStatus, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, virtualNetworkGateway1, virtualNetworkGateway2);
         }

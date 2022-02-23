@@ -205,7 +205,6 @@ public final class CVSSResponse {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
         }
-
         public CVSSResponse build() {
             return new CVSSResponse(attackComplexity, attackVector, authentication, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

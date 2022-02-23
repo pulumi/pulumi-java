@@ -77,7 +77,6 @@ public final class ContainerPortResponse {
             this.protocol = protocol;
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(port, protocol);
         }

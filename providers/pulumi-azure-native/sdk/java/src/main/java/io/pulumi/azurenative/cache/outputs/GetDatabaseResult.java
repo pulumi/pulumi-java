@@ -269,7 +269,6 @@ public final class GetDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(clientProtocol, clusteringPolicy, evictionPolicy, id, modules, name, persistence, port, provisioningState, resourceState, type);
         }

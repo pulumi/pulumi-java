@@ -58,7 +58,6 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock build() {
             return new GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }

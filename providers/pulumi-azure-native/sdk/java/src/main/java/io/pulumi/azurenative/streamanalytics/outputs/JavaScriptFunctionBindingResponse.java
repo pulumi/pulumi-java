@@ -78,7 +78,6 @@ public final class JavaScriptFunctionBindingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JavaScriptFunctionBindingResponse build() {
             return new JavaScriptFunctionBindingResponse(script, type);
         }

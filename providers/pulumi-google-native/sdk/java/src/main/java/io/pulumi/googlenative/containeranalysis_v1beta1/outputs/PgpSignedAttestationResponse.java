@@ -95,7 +95,6 @@ public final class PgpSignedAttestationResponse {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public PgpSignedAttestationResponse build() {
             return new PgpSignedAttestationResponse(contentType, pgpKeyId, signature);
         }

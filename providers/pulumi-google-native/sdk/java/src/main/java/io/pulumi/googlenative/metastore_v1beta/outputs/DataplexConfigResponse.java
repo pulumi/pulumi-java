@@ -53,7 +53,6 @@ public final class DataplexConfigResponse {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
         }
-
         public DataplexConfigResponse build() {
             return new DataplexConfigResponse(lakeResources);
         }

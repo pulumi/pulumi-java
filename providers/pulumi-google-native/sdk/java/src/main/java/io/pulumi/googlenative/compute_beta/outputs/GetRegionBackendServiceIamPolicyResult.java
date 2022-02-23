@@ -142,7 +142,6 @@ public final class GetRegionBackendServiceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionBackendServiceIamPolicyResult build() {
             return new GetRegionBackendServiceIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

@@ -98,7 +98,6 @@ public final class StorageAccountResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, identity, status);
         }

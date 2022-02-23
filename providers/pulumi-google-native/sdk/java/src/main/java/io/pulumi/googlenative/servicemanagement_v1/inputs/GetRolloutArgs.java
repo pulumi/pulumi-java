@@ -13,14 +13,14 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
     @InputImport(name="rolloutId", required=true)
-    private final String rolloutId;
+      private final String rolloutId;
 
     public String getRolloutId() {
         return this.rolloutId;
     }
 
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -69,7 +69,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetRolloutArgs build() {
             return new GetRolloutArgs(rolloutId, serviceName);
         }

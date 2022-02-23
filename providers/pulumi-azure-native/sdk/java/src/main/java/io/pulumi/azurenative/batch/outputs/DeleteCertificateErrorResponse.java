@@ -119,7 +119,6 @@ public final class DeleteCertificateErrorResponse {
             this.target = target;
             return this;
         }
-
         public DeleteCertificateErrorResponse build() {
             return new DeleteCertificateErrorResponse(code, details, message, target);
         }

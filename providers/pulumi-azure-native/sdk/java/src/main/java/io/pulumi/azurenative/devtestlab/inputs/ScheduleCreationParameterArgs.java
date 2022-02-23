@@ -30,7 +30,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dailyRecurrence")
-    private final @Nullable Input<DayDetailsArgs> dailyRecurrence;
+        private final @Nullable Input<DayDetailsArgs> dailyRecurrence;
 
     public Input<DayDetailsArgs> getDailyRecurrence() {
         return this.dailyRecurrence == null ? Input.empty() : this.dailyRecurrence;
@@ -41,7 +41,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hourlyRecurrence")
-    private final @Nullable Input<HourDetailsArgs> hourlyRecurrence;
+        private final @Nullable Input<HourDetailsArgs> hourlyRecurrence;
 
     public Input<HourDetailsArgs> getHourlyRecurrence() {
         return this.hourlyRecurrence == null ? Input.empty() : this.hourlyRecurrence;
@@ -52,7 +52,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="notificationSettings")
-    private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
+        private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
 
     public Input<NotificationSettingsArgs> getNotificationSettings() {
         return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
@@ -74,7 +74,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,EnableStatus>> status;
+        private final @Nullable Input<Either<String,EnableStatus>> status;
 
     public Input<Either<String,EnableStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -85,7 +85,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -96,7 +96,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetResourceId")
-    private final @Nullable Input<String> targetResourceId;
+        private final @Nullable Input<String> targetResourceId;
 
     public Input<String> getTargetResourceId() {
         return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
@@ -107,7 +107,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="taskType")
-    private final @Nullable Input<String> taskType;
+        private final @Nullable Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType == null ? Input.empty() : this.taskType;
@@ -118,7 +118,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeZoneId")
-    private final @Nullable Input<String> timeZoneId;
+        private final @Nullable Input<String> timeZoneId;
 
     public Input<String> getTimeZoneId() {
         return this.timeZoneId == null ? Input.empty() : this.timeZoneId;
@@ -129,7 +129,7 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="weeklyRecurrence")
-    private final @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
+        private final @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
 
     public Input<WeekDetailsArgs> getWeeklyRecurrence() {
         return this.weeklyRecurrence == null ? Input.empty() : this.weeklyRecurrence;
@@ -308,7 +308,6 @@ public final class ScheduleCreationParameterArgs extends io.pulumi.resources.Res
             this.weeklyRecurrence = Input.ofNullable(weeklyRecurrence);
             return this;
         }
-
         public ScheduleCreationParameterArgs build() {
             return new ScheduleCreationParameterArgs(dailyRecurrence, hourlyRecurrence, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
         }

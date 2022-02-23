@@ -183,7 +183,6 @@ public final class AzureResourceProtectionIntentResponse {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public AzureResourceProtectionIntentResponse build() {
             return new AzureResourceProtectionIntentResponse(backupManagementType, friendlyName, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }

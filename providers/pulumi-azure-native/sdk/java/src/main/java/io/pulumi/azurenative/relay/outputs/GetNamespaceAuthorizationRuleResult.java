@@ -117,7 +117,6 @@ public final class GetNamespaceAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNamespaceAuthorizationRuleResult build() {
             return new GetNamespaceAuthorizationRuleResult(id, name, rights, type);
         }

@@ -24,7 +24,7 @@ public final class RuleResultsPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="results")
-    private final @Nullable List<List<String>> results;
+        private final @Nullable List<List<String>> results;
 
     public List<List<String>> getResults() {
         return this.results == null ? List.of() : this.results;
@@ -62,7 +62,6 @@ public final class RuleResultsPropertiesResponse extends io.pulumi.resources.Inv
             this.results = results;
             return this;
         }
-
         public RuleResultsPropertiesResponse build() {
             return new RuleResultsPropertiesResponse(results);
         }

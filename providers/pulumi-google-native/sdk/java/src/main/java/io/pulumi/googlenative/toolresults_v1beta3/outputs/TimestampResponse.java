@@ -75,7 +75,6 @@ public final class TimestampResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TimestampResponse build() {
             return new TimestampResponse(nanos, seconds);
         }

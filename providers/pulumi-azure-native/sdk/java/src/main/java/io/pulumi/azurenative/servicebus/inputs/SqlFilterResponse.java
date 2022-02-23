@@ -25,7 +25,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compatibilityLevel")
-    private final @Nullable Integer compatibilityLevel;
+        private final @Nullable Integer compatibilityLevel;
 
     public Optional<Integer> getCompatibilityLevel() {
         return this.compatibilityLevel == null ? Optional.empty() : Optional.ofNullable(this.compatibilityLevel);
@@ -36,7 +36,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requiresPreprocessing")
-    private final @Nullable Boolean requiresPreprocessing;
+        private final @Nullable Boolean requiresPreprocessing;
 
     public Optional<Boolean> getRequiresPreprocessing() {
         return this.requiresPreprocessing == null ? Optional.empty() : Optional.ofNullable(this.requiresPreprocessing);
@@ -47,7 +47,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlExpression")
-    private final @Nullable String sqlExpression;
+        private final @Nullable String sqlExpression;
 
     public Optional<String> getSqlExpression() {
         return this.sqlExpression == null ? Optional.empty() : Optional.ofNullable(this.sqlExpression);
@@ -106,7 +106,6 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.sqlExpression = sqlExpression;
             return this;
         }
-
         public SqlFilterResponse build() {
             return new SqlFilterResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }

@@ -23,7 +23,7 @@ public final class HttpProxyConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="httpsProxy")
-    private final @Nullable String httpsProxy;
+        private final @Nullable String httpsProxy;
 
     public Optional<String> getHttpsProxy() {
         return this.httpsProxy == null ? Optional.empty() : Optional.ofNullable(this.httpsProxy);
@@ -61,7 +61,6 @@ public final class HttpProxyConfigurationResponse extends io.pulumi.resources.In
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public HttpProxyConfigurationResponse build() {
             return new HttpProxyConfigurationResponse(httpsProxy);
         }

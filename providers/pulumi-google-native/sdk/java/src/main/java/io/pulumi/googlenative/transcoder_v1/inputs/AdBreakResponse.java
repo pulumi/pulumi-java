@@ -21,7 +21,7 @@ public final class AdBreakResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTimeOffset", required=true)
-    private final String startTimeOffset;
+      private final String startTimeOffset;
 
     public String getStartTimeOffset() {
         return this.startTimeOffset;
@@ -59,7 +59,6 @@ public final class AdBreakResponse extends io.pulumi.resources.InvokeArgs {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public AdBreakResponse build() {
             return new AdBreakResponse(startTimeOffset);
         }

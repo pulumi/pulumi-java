@@ -21,7 +21,7 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="x", required=true)
-    private final Double x;
+      private final Double x;
 
     public Double getX() {
         return this.x;
@@ -32,7 +32,7 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="y", required=true)
-    private final Double y;
+      private final Double y;
 
     public Double getY() {
         return this.y;
@@ -81,7 +81,6 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public NormalizedVertexResponse build() {
             return new NormalizedVertexResponse(x, y);
         }

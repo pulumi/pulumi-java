@@ -77,7 +77,6 @@ public final class LogLocationSettingsResponse {
             this.path = path;
             return this;
         }
-
         public LogLocationSettingsResponse build() {
             return new LogLocationSettingsResponse(linkedServiceName, path);
         }

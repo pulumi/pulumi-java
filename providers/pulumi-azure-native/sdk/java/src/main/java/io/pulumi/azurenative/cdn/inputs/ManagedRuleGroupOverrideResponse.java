@@ -25,7 +25,7 @@ public final class ManagedRuleGroupOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-    private final String ruleGroupName;
+        private final String ruleGroupName;
 
     public String getRuleGroupName() {
         return this.ruleGroupName;
@@ -36,7 +36,7 @@ public final class ManagedRuleGroupOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable List<ManagedRuleOverrideResponse> rules;
+        private final @Nullable List<ManagedRuleOverrideResponse> rules;
 
     public List<ManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -85,7 +85,6 @@ public final class ManagedRuleGroupOverrideResponse extends io.pulumi.resources.
             this.rules = rules;
             return this;
         }
-
         public ManagedRuleGroupOverrideResponse build() {
             return new ManagedRuleGroupOverrideResponse(ruleGroupName, rules);
         }

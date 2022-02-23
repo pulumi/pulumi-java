@@ -74,7 +74,6 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupRegexPatternSetReferenceStatement build() {
             return new RuleGroupRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }

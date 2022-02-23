@@ -163,7 +163,6 @@ public final class GetDestinationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDestinationResult build() {
             return new GetDestinationResult(arn, description, expression, expressionType, roleArn, tags);
         }

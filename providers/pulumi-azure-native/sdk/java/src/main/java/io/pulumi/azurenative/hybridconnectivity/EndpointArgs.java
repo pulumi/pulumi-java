@@ -22,7 +22,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+        private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -33,7 +33,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<String> createdBy;
+        private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -44,7 +44,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-    private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+        private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
     public Input<Either<String,CreatedByType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -55,7 +55,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName")
-    private final @Nullable Input<String> endpointName;
+        private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -66,7 +66,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable Input<String> lastModifiedAt;
+        private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -77,7 +77,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-    private final @Nullable Input<String> lastModifiedBy;
+        private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -88,7 +88,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-    private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+        private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
     public Input<Either<String,CreatedByType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -99,7 +99,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -110,7 +110,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<String> resourceUri;
+        private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -121,7 +121,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,Type>> type;
+        private final Input<Either<String,Type>> type;
 
     public Input<Either<String,Type>> getType() {
         return this.type;
@@ -300,7 +300,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(createdAt, createdBy, createdByType, endpointName, lastModifiedAt, lastModifiedBy, lastModifiedByType, resourceId, resourceUri, type);
         }

@@ -247,7 +247,6 @@ public final class GetMessageResult {
             this.sendTime = Objects.requireNonNull(sendTime);
             return this;
         }
-
         public GetMessageResult build() {
             return new GetMessageResult(createTime, data, labels, messageType, name, parsedData, patientIds, schematizedData, sendFacility, sendTime);
         }

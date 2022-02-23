@@ -21,7 +21,7 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="forceDisableSupplementalResults", required=true)
-    private final Boolean forceDisableSupplementalResults;
+      private final Boolean forceDisableSupplementalResults;
 
     public Boolean getForceDisableSupplementalResults() {
         return this.forceDisableSupplementalResults;
@@ -32,7 +32,7 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="forceVerbatimMode", required=true)
-    private final Boolean forceVerbatimMode;
+      private final Boolean forceVerbatimMode;
 
     public Boolean getForceVerbatimMode() {
         return this.forceVerbatimMode;
@@ -81,7 +81,6 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
         }
-
         public QueryInterpretationConfigResponse build() {
             return new QueryInterpretationConfigResponse(forceDisableSupplementalResults, forceVerbatimMode);
         }

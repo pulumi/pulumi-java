@@ -60,7 +60,6 @@ public final class ServiceEndpoint {
             this.name = name;
             return this;
         }
-
         public ServiceEndpoint build() {
             return new ServiceEndpoint(address, name);
         }

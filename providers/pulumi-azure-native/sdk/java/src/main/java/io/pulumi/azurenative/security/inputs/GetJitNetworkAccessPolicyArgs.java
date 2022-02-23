@@ -17,7 +17,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="ascLocation", required=true)
-    private final String ascLocation;
+        private final String ascLocation;
 
     public String getAscLocation() {
         return this.ascLocation;
@@ -28,7 +28,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jitNetworkAccessPolicyName", required=true)
-    private final String jitNetworkAccessPolicyName;
+        private final String jitNetworkAccessPolicyName;
 
     public String getJitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName;
@@ -39,7 +39,7 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetJitNetworkAccessPolicyArgs build() {
             return new GetJitNetworkAccessPolicyArgs(ascLocation, jitNetworkAccessPolicyName, resourceGroupName);
         }

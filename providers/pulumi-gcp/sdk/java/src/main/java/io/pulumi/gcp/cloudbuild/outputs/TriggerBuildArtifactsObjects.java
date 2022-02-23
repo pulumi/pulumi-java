@@ -107,7 +107,6 @@ public final class TriggerBuildArtifactsObjects {
             this.timings = timings;
             return this;
         }
-
         public TriggerBuildArtifactsObjects build() {
             return new TriggerBuildArtifactsObjects(location, paths, timings);
         }

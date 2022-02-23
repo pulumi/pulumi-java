@@ -60,7 +60,6 @@ public final class TaskDefinitionEnvironmentFile {
             this.value = value;
             return this;
         }
-
         public TaskDefinitionEnvironmentFile build() {
             return new TaskDefinitionEnvironmentFile(type, value);
         }

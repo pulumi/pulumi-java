@@ -184,7 +184,6 @@ public final class GetBudgetResult {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }
-
         public GetBudgetResult build() {
             return new GetBudgetResult(allUpdatesRule, amount, budgetFilter, displayName, etag, name, thresholdRules);
         }

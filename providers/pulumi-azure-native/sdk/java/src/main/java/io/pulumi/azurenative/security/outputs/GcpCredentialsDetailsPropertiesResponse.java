@@ -329,7 +329,6 @@ public final class GcpCredentialsDetailsPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GcpCredentialsDetailsPropertiesResponse build() {
             return new GcpCredentialsDetailsPropertiesResponse(authProviderX509CertUrl, authUri, authenticationProvisioningState, authenticationType, clientEmail, clientId, clientX509CertUrl, grantedPermissions, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
         }

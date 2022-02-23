@@ -133,7 +133,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
             this.timespanConfig = Objects.requireNonNull(timespanConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2StorageConfigResponse build() {
             return new GooglePrivacyDlpV2StorageConfigResponse(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
         }

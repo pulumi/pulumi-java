@@ -22,7 +22,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterIpv4CidrBlock", required=true)
-    private final String clusterIpv4CidrBlock;
+      private final String clusterIpv4CidrBlock;
 
     public String getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
@@ -33,7 +33,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterSecondaryRangeName", required=true)
-    private final String clusterSecondaryRangeName;
+      private final String clusterSecondaryRangeName;
 
     public String getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
@@ -44,7 +44,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="createSubnetwork", required=true)
-    private final Boolean createSubnetwork;
+      private final Boolean createSubnetwork;
 
     public Boolean getCreateSubnetwork() {
         return this.createSubnetwork;
@@ -55,7 +55,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeIpv4CidrBlock", required=true)
-    private final String nodeIpv4CidrBlock;
+      private final String nodeIpv4CidrBlock;
 
     public String getNodeIpv4CidrBlock() {
         return this.nodeIpv4CidrBlock;
@@ -66,7 +66,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicesIpv4CidrBlock", required=true)
-    private final String servicesIpv4CidrBlock;
+      private final String servicesIpv4CidrBlock;
 
     public String getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
@@ -77,7 +77,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicesSecondaryRangeName", required=true)
-    private final String servicesSecondaryRangeName;
+      private final String servicesSecondaryRangeName;
 
     public String getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
@@ -88,7 +88,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="subnetworkName", required=true)
-    private final String subnetworkName;
+      private final String subnetworkName;
 
     public String getSubnetworkName() {
         return this.subnetworkName;
@@ -99,7 +99,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tpuIpv4CidrBlock", required=true)
-    private final String tpuIpv4CidrBlock;
+      private final String tpuIpv4CidrBlock;
 
     public String getTpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
@@ -110,7 +110,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="useIpAliases", required=true)
-    private final Boolean useIpAliases;
+      private final Boolean useIpAliases;
 
     public Boolean getUseIpAliases() {
         return this.useIpAliases;
@@ -121,7 +121,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="useRoutes", required=true)
-    private final Boolean useRoutes;
+      private final Boolean useRoutes;
 
     public Boolean getUseRoutes() {
         return this.useRoutes;
@@ -250,7 +250,6 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
         }
-
         public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
         }

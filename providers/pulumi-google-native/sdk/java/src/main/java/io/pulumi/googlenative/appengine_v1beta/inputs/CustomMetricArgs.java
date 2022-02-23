@@ -24,7 +24,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -35,7 +35,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-    private final @Nullable Input<String> metricName;
+      private final @Nullable Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName == null ? Input.empty() : this.metricName;
@@ -46,7 +46,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-    private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Input<Double> singleInstanceAssignment;
 
     public Input<Double> getSingleInstanceAssignment() {
         return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
@@ -57,7 +57,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;
@@ -68,7 +68,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetUtilization")
-    private final @Nullable Input<Double> targetUtilization;
+      private final @Nullable Input<Double> targetUtilization;
 
     public Input<Double> getTargetUtilization() {
         return this.targetUtilization == null ? Input.empty() : this.targetUtilization;
@@ -172,7 +172,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.targetUtilization = Input.ofNullable(targetUtilization);
             return this;
         }
-
         public CustomMetricArgs build() {
             return new CustomMetricArgs(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
         }

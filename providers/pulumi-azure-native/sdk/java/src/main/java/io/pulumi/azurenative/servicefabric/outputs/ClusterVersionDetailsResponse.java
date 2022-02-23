@@ -97,7 +97,6 @@ public final class ClusterVersionDetailsResponse {
             this.supportExpiryUtc = supportExpiryUtc;
             return this;
         }
-
         public ClusterVersionDetailsResponse build() {
             return new ClusterVersionDetailsResponse(codeVersion, environment, supportExpiryUtc);
         }

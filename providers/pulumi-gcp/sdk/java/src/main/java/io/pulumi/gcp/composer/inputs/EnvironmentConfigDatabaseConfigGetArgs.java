@@ -14,7 +14,7 @@ public final class EnvironmentConfigDatabaseConfigGetArgs extends io.pulumi.reso
     public static final EnvironmentConfigDatabaseConfigGetArgs Empty = new EnvironmentConfigDatabaseConfigGetArgs();
 
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+        private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -57,7 +57,6 @@ public final class EnvironmentConfigDatabaseConfigGetArgs extends io.pulumi.reso
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public EnvironmentConfigDatabaseConfigGetArgs build() {
             return new EnvironmentConfigDatabaseConfigGetArgs(machineType);
         }

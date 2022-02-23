@@ -18,7 +18,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     public static final ServicePerimeterArgs Empty = new ServicePerimeterArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-    private final Input<String> accessPolicyId;
+      private final Input<String> accessPolicyId;
 
     public Input<String> getAccessPolicyId() {
         return this.accessPolicyId;
@@ -29,7 +29,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -40,7 +40,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -51,7 +51,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="perimeterType")
-    private final @Nullable Input<ServicePerimeterPerimeterType> perimeterType;
+      private final @Nullable Input<ServicePerimeterPerimeterType> perimeterType;
 
     public Input<ServicePerimeterPerimeterType> getPerimeterType() {
         return this.perimeterType == null ? Input.empty() : this.perimeterType;
@@ -62,7 +62,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ServicePerimeterConfigArgs> spec;
+      private final @Nullable Input<ServicePerimeterConfigArgs> spec;
 
     public Input<ServicePerimeterConfigArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -73,7 +73,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ServicePerimeterConfigArgs> status;
+      private final @Nullable Input<ServicePerimeterConfigArgs> status;
 
     public Input<ServicePerimeterConfigArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -84,7 +84,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -95,7 +95,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useExplicitDryRunSpec")
-    private final @Nullable Input<Boolean> useExplicitDryRunSpec;
+      private final @Nullable Input<Boolean> useExplicitDryRunSpec;
 
     public Input<Boolean> getUseExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec == null ? Input.empty() : this.useExplicitDryRunSpec;
@@ -244,7 +244,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             this.useExplicitDryRunSpec = Input.ofNullable(useExplicitDryRunSpec);
             return this;
         }
-
         public ServicePerimeterArgs build() {
             return new ServicePerimeterArgs(accessPolicyId, description, name, perimeterType, spec, status, title, useExplicitDryRunSpec);
         }

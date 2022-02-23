@@ -23,7 +23,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="executableFile", required=true)
-    private final Input<String> executableFile;
+      private final Input<String> executableFile;
 
     public Input<String> getExecutableFile() {
         return this.executableFile;
@@ -34,7 +34,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="executionTimeout")
-    private final @Nullable Input<String> executionTimeout;
+      private final @Nullable Input<String> executionTimeout;
 
     public Input<String> getExecutionTimeout() {
         return this.executionTimeout == null ? Input.empty() : this.executionTimeout;
@@ -93,7 +93,6 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
             this.executionTimeout = Input.ofNullable(executionTimeout);
             return this;
         }
-
         public NodeInitializationActionArgs build() {
             return new NodeInitializationActionArgs(executableFile, executionTimeout);
         }

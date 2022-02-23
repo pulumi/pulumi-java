@@ -76,7 +76,6 @@ public final class ApiKeyResponse {
             this.value = value;
             return this;
         }
-
         public ApiKeyResponse build() {
             return new ApiKeyResponse(keyName, value);
         }

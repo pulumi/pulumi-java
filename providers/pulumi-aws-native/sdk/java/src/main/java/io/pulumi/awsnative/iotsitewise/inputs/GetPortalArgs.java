@@ -17,7 +17,7 @@ public final class GetPortalArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="portalId", required=true)
-    private final String portalId;
+        private final String portalId;
 
     public String getPortalId() {
         return this.portalId;
@@ -55,7 +55,6 @@ public final class GetPortalArgs extends io.pulumi.resources.InvokeArgs {
             this.portalId = Objects.requireNonNull(portalId);
             return this;
         }
-
         public GetPortalArgs build() {
             return new GetPortalArgs(portalId);
         }

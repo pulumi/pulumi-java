@@ -225,7 +225,6 @@ public final class GetRuntimeResult {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public GetRuntimeResult build() {
             return new GetRuntimeResult(accessConfig, createTime, healthState, metrics, name, softwareConfig, state, updateTime, virtualMachine);
         }

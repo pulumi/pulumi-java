@@ -94,7 +94,6 @@ public final class GetKMSKeyRingResult {
             this.project = project;
             return this;
         }
-
         public GetKMSKeyRingResult build() {
             return new GetKMSKeyRingResult(id, location, name, project);
         }

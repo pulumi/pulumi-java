@@ -138,7 +138,6 @@ public final class GetSynchronizationSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynchronizationSettingResult build() {
             return new GetSynchronizationSettingResult(id, kind, name, systemData, type);
         }

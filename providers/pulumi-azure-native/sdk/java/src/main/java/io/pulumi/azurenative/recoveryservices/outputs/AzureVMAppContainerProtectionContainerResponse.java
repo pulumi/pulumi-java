@@ -253,7 +253,6 @@ public final class AzureVMAppContainerProtectionContainerResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureVMAppContainerProtectionContainerResponse build() {
             return new AzureVMAppContainerProtectionContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }

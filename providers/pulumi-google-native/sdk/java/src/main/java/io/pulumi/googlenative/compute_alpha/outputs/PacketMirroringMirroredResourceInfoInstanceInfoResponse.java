@@ -74,7 +74,6 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoInstanceInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoInstanceInfoResponse(canonicalUrl, url);
         }

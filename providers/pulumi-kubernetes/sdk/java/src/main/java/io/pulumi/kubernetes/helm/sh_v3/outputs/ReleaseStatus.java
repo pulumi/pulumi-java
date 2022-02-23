@@ -182,7 +182,6 @@ public final class ReleaseStatus {
             this.version = version;
             return this;
         }
-
         public ReleaseStatus build() {
             return new ReleaseStatus(appVersion, chart, name, namespace, revision, status, version);
         }

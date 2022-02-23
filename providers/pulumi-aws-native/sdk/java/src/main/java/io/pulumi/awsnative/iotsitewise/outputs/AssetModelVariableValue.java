@@ -60,7 +60,6 @@ public final class AssetModelVariableValue {
             this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
             return this;
         }
-
         public AssetModelVariableValue build() {
             return new AssetModelVariableValue(hierarchyLogicalId, propertyLogicalId);
         }

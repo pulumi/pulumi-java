@@ -26,7 +26,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="linkedInfo")
-    private final @Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
+        private final @Nullable Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
     public Input<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> getLinkedInfo() {
         return this.linkedInfo == null ? Input.empty() : this.linkedInfo;
@@ -49,7 +49,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SelfHostedIntegrationRuntimeArgs build() {
             return new SelfHostedIntegrationRuntimeArgs(description, linkedInfo, type);
         }

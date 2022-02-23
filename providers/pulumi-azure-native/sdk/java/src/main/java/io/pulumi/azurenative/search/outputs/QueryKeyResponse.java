@@ -74,7 +74,6 @@ public final class QueryKeyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public QueryKeyResponse build() {
             return new QueryKeyResponse(key, name);
         }

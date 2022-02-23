@@ -33,7 +33,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable Input<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
+        private final @Nullable Input<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
     public Input<List<ServiceAccessPolicyEntryArgs>> getAccessPolicies() {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
@@ -44,7 +44,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acrConfiguration")
-    private final @Nullable Input<ServiceAcrConfigurationInfoArgs> acrConfiguration;
+        private final @Nullable Input<ServiceAcrConfigurationInfoArgs> acrConfiguration;
 
     public Input<ServiceAcrConfigurationInfoArgs> getAcrConfiguration() {
         return this.acrConfiguration == null ? Input.empty() : this.acrConfiguration;
@@ -55,7 +55,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authenticationConfiguration")
-    private final @Nullable Input<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
+        private final @Nullable Input<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
     public Input<ServiceAuthenticationConfigurationInfoArgs> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
@@ -66,7 +66,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="corsConfiguration")
-    private final @Nullable Input<ServiceCorsConfigurationInfoArgs> corsConfiguration;
+        private final @Nullable Input<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
     public Input<ServiceCorsConfigurationInfoArgs> getCorsConfiguration() {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
@@ -77,7 +77,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cosmosDbConfiguration")
-    private final @Nullable Input<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
+        private final @Nullable Input<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
     public Input<ServiceCosmosDbConfigurationInfoArgs> getCosmosDbConfiguration() {
         return this.cosmosDbConfiguration == null ? Input.empty() : this.cosmosDbConfiguration;
@@ -88,7 +88,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exportConfiguration")
-    private final @Nullable Input<ServiceExportConfigurationInfoArgs> exportConfiguration;
+        private final @Nullable Input<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
     public Input<ServiceExportConfigurationInfoArgs> getExportConfiguration() {
         return this.exportConfiguration == null ? Input.empty() : this.exportConfiguration;
@@ -99,7 +99,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
@@ -110,7 +110,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -259,7 +259,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public ServicesPropertiesArgs build() {
             return new ServicesPropertiesArgs(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, publicNetworkAccess);
         }

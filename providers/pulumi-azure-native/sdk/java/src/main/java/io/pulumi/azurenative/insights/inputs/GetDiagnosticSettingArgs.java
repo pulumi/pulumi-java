@@ -17,7 +17,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+        private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -77,7 +77,6 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GetDiagnosticSettingArgs build() {
             return new GetDiagnosticSettingArgs(name, resourceUri);
         }

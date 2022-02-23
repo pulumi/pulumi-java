@@ -26,14 +26,14 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customResponseBodyKey")
-    private final @Nullable Input<String> customResponseBodyKey;
+        private final @Nullable Input<String> customResponseBodyKey;
 
     public Input<String> getCustomResponseBodyKey() {
         return this.customResponseBodyKey == null ? Input.empty() : this.customResponseBodyKey;
     }
 
     @InputImport(name="responseCode", required=true)
-    private final Input<Integer> responseCode;
+        private final Input<Integer> responseCode;
 
     public Input<Integer> getResponseCode() {
         return this.responseCode;
@@ -44,7 +44,7 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="responseHeaders")
-    private final @Nullable Input<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders;
+        private final @Nullable Input<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders;
 
     public Input<List<RuleGroupCustomHTTPHeaderArgs>> getResponseHeaders() {
         return this.responseHeaders == null ? Input.empty() : this.responseHeaders;
@@ -118,7 +118,6 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }
-
         public RuleGroupCustomResponseArgs build() {
             return new RuleGroupCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }

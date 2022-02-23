@@ -25,7 +25,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<AuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -36,7 +36,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -95,7 +95,6 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public AuditConfigArgs build() {
             return new AuditConfigArgs(auditLogConfigs, service);
         }

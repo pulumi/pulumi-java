@@ -13,7 +13,7 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBackupVaultArgs Empty = new GetBackupVaultArgs();
 
     @InputImport(name="backupVaultName", required=true)
-    private final String backupVaultName;
+        private final String backupVaultName;
 
     public String getBackupVaultName() {
         return this.backupVaultName;
@@ -51,7 +51,6 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
-
         public GetBackupVaultArgs build() {
             return new GetBackupVaultArgs(backupVaultName);
         }

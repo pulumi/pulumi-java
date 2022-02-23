@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
      * 
      */
     @InputImport(name="sasToken", required=true)
-    private final Input<String> sasToken;
+        private final Input<String> sasToken;
 
     public Input<String> getSasToken() {
         return this.sasToken;
@@ -61,7 +61,6 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
             this.sasToken = Input.of(Objects.requireNonNull(sasToken));
             return this;
         }
-
         public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs(sasToken);
         }

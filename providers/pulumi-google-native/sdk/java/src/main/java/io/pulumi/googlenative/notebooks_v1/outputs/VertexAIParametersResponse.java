@@ -75,7 +75,6 @@ public final class VertexAIParametersResponse {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public VertexAIParametersResponse build() {
             return new VertexAIParametersResponse(env, network);
         }

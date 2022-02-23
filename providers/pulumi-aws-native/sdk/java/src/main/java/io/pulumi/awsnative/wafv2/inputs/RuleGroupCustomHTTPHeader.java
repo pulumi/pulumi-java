@@ -17,14 +17,14 @@ public final class RuleGroupCustomHTTPHeader extends io.pulumi.resources.InvokeA
     public static final RuleGroupCustomHTTPHeader Empty = new RuleGroupCustomHTTPHeader();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -73,7 +73,6 @@ public final class RuleGroupCustomHTTPHeader extends io.pulumi.resources.InvokeA
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupCustomHTTPHeader build() {
             return new RuleGroupCustomHTTPHeader(name, value);
         }

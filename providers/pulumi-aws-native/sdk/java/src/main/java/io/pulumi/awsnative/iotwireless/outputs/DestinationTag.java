@@ -60,7 +60,6 @@ public final class DestinationTag {
             this.value = value;
             return this;
         }
-
         public DestinationTag build() {
             return new DestinationTag(key, value);
         }

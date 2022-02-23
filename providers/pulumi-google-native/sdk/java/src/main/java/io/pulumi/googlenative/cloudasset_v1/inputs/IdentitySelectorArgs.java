@@ -22,7 +22,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity", required=true)
-    private final Input<String> identity;
+      private final Input<String> identity;
 
     public Input<String> getIdentity() {
         return this.identity;
@@ -65,7 +65,6 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public IdentitySelectorArgs build() {
             return new IdentitySelectorArgs(identity);
         }

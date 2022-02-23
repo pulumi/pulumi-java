@@ -54,7 +54,6 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
-
         public AdditionalFeaturesServerConfigurationsResponse build() {
             return new AdditionalFeaturesServerConfigurationsResponse(isRServicesEnabled);
         }

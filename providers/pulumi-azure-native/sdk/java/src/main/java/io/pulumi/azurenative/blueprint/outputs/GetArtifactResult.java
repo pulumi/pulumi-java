@@ -116,7 +116,6 @@ public final class GetArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetArtifactResult build() {
             return new GetArtifactResult(id, kind, name, type);
         }

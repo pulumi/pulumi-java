@@ -19,7 +19,7 @@ public final class BucketIAMBindingConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class BucketIAMBindingConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -41,7 +41,7 @@ public final class BucketIAMBindingConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -115,7 +115,6 @@ public final class BucketIAMBindingConditionArgs extends io.pulumi.resources.Res
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public BucketIAMBindingConditionArgs build() {
             return new BucketIAMBindingConditionArgs(description, expression, title);
         }

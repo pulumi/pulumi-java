@@ -21,7 +21,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alg", required=true)
-    private final String alg;
+        private final String alg;
 
     public String getAlg() {
         return this.alg;
@@ -32,7 +32,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kid", required=true)
-    private final String kid;
+        private final String kid;
 
     public String getKid() {
         return this.kid;
@@ -44,7 +44,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -55,7 +55,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="x", required=true)
-    private final String x;
+        private final String x;
 
     public String getX() {
         return this.x;
@@ -66,7 +66,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="y", required=true)
-    private final String y;
+        private final String y;
 
     public String getY() {
         return this.y;
@@ -145,7 +145,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public EccTokenKeyResponse build() {
             return new EccTokenKeyResponse(alg, kid, type, x, y);
         }

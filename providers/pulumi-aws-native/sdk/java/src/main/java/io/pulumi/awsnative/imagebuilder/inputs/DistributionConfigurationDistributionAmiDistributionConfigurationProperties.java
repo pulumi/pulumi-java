@@ -26,7 +26,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="amiTags")
-    private final @Nullable Object amiTags;
+        private final @Nullable Object amiTags;
 
     public Optional<Object> getAmiTags() {
         return this.amiTags == null ? Optional.empty() : Optional.ofNullable(this.amiTags);
@@ -37,7 +37,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable String kmsKeyId;
+        private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
@@ -59,7 +59,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="launchPermissionConfiguration")
-    private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
+        private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
 
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> getLaunchPermissionConfiguration() {
         return this.launchPermissionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.launchPermissionConfiguration);
@@ -70,7 +70,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="targetAccountIds")
-    private final @Nullable List<String> targetAccountIds;
+        private final @Nullable List<String> targetAccountIds;
 
     public List<String> getTargetAccountIds() {
         return this.targetAccountIds == null ? List.of() : this.targetAccountIds;
@@ -170,7 +170,6 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.targetAccountIds = targetAccountIds;
             return this;
         }
-
         public DistributionConfigurationDistributionAmiDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(amiTags, description, kmsKeyId, launchPermissionConfiguration, name, targetAccountIds);
         }

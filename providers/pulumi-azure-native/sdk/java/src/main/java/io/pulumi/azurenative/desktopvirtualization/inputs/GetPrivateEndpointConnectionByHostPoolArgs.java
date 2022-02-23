@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * 
      */
     @InputImport(name="hostPoolName", required=true)
-    private final String hostPoolName;
+        private final String hostPoolName;
 
     public String getHostPoolName() {
         return this.hostPoolName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-    private final String privateEndpointConnectionName;
+        private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrivateEndpointConnectionByHostPoolArgs build() {
             return new GetPrivateEndpointConnectionByHostPoolArgs(hostPoolName, privateEndpointConnectionName, resourceGroupName);
         }

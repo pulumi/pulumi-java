@@ -23,7 +23,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeName")
-    private final @Nullable Input<String> nodeName;
+        private final @Nullable Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName == null ? Input.empty() : this.nodeName;
@@ -35,7 +35,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -94,7 +94,6 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public DistributedNodesInfoArgs build() {
             return new DistributedNodesInfoArgs(nodeName, status);
         }

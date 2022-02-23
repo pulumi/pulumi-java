@@ -714,7 +714,6 @@ public final class GoogleCloudRetailV2betaProductResponse {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-
         public GoogleCloudRetailV2betaProductResponse build() {
             return new GoogleCloudRetailV2betaProductResponse(attributes, audience, availability, availableQuantity, availableTime, brands, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, images, languageCode, materials, name, patterns, priceInfo, primaryProductId, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri, variants);
         }

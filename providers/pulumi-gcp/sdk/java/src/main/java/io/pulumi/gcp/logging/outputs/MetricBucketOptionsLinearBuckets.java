@@ -98,7 +98,6 @@ public final class MetricBucketOptionsLinearBuckets {
             this.width = width;
             return this;
         }
-
         public MetricBucketOptionsLinearBuckets build() {
             return new MetricBucketOptionsLinearBuckets(numFiniteBuckets, offset, width);
         }

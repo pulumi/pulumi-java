@@ -88,7 +88,6 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
             this.port = port;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisLoadBalancerTarget build() {
             return new NetworkInsightsAnalysisAnalysisLoadBalancerTarget(address, availabilityZone, instance, port);
         }

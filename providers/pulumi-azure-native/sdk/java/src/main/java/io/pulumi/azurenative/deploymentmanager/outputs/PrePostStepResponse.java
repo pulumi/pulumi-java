@@ -52,7 +52,6 @@ public final class PrePostStepResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public PrePostStepResponse build() {
             return new PrePostStepResponse(stepId);
         }

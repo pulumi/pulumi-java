@@ -396,7 +396,6 @@ public final class GetMachineImageResult {
             this.totalStorageBytes = Objects.requireNonNull(totalStorageBytes);
             return this;
         }
-
         public GetMachineImageResult build() {
             return new GetMachineImageResult(creationTimestamp, description, guestFlush, instanceProperties, kind, machineImageEncryptionKey, name, satisfiesPzs, savedDisks, selfLink, selfLinkWithId, sourceDiskEncryptionKeys, sourceInstance, sourceInstanceProperties, status, storageLocations, totalStorageBytes);
         }

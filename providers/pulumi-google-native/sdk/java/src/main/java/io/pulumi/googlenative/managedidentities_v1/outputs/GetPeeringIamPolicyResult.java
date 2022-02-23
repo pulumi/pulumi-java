@@ -98,7 +98,6 @@ public final class GetPeeringIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetPeeringIamPolicyResult build() {
             return new GetPeeringIamPolicyResult(bindings, etag, version);
         }

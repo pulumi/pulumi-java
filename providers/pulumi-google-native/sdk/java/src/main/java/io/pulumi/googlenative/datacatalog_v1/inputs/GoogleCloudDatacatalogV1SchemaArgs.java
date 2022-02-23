@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
+      private final @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
 
     public Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -67,7 +67,6 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
             this.columns = Input.ofNullable(columns);
             return this;
         }
-
         public GoogleCloudDatacatalogV1SchemaArgs build() {
             return new GoogleCloudDatacatalogV1SchemaArgs(columns);
         }

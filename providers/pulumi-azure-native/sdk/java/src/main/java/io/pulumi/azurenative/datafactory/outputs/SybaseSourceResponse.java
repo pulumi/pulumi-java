@@ -205,7 +205,6 @@ public final class SybaseSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SybaseSourceResponse build() {
             return new SybaseSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

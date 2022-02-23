@@ -18,7 +18,7 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -61,7 +61,6 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public FirewallSubnetMappingArgs build() {
             return new FirewallSubnetMappingArgs(subnetId);
         }

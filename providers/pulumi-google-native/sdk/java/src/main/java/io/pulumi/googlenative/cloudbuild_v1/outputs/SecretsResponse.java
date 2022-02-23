@@ -76,7 +76,6 @@ public final class SecretsResponse {
             this.secretManager = Objects.requireNonNull(secretManager);
             return this;
         }
-
         public SecretsResponse build() {
             return new SecretsResponse(inline, secretManager);
         }

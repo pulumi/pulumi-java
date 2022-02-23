@@ -75,7 +75,6 @@ public final class MonitoredResourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(labels, type);
         }

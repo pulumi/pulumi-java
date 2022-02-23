@@ -23,7 +23,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<KeyVersionSpecAlgorithm> algorithm;
+      private final Input<KeyVersionSpecAlgorithm> algorithm;
 
     public Input<KeyVersionSpecAlgorithm> getAlgorithm() {
         return this.algorithm;
@@ -34,7 +34,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudKmsKeyVersion", required=true)
-    private final Input<String> cloudKmsKeyVersion;
+      private final Input<String> cloudKmsKeyVersion;
 
     public Input<String> getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
@@ -93,7 +93,6 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudKmsKeyVersion = Input.of(Objects.requireNonNull(cloudKmsKeyVersion));
             return this;
         }
-
         public KeyVersionSpecArgs build() {
             return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);
         }

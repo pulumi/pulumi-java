@@ -54,7 +54,6 @@ public final class LocalTimestampResponseTimeZoneOffset {
             this.propertyName = propertyName;
             return this;
         }
-
         public LocalTimestampResponseTimeZoneOffset build() {
             return new LocalTimestampResponseTimeZoneOffset(propertyName);
         }

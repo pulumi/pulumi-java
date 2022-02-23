@@ -54,7 +54,6 @@ public final class EncryptionPropertiesResponseIdentity {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public EncryptionPropertiesResponseIdentity build() {
             return new EncryptionPropertiesResponseIdentity(userAssignedIdentity);
         }

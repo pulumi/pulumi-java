@@ -20,7 +20,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<RegistrationAssignmentPropertiesArgs> properties;
+        private final @Nullable Input<RegistrationAssignmentPropertiesArgs> properties;
 
     public Input<RegistrationAssignmentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationAssignmentId")
-    private final @Nullable Input<String> registrationAssignmentId;
+        private final @Nullable Input<String> registrationAssignmentId;
 
     public Input<String> getRegistrationAssignmentId() {
         return this.registrationAssignmentId == null ? Input.empty() : this.registrationAssignmentId;
@@ -42,7 +42,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -116,7 +116,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public RegistrationAssignmentArgs build() {
             return new RegistrationAssignmentArgs(properties, registrationAssignmentId, scope);
         }

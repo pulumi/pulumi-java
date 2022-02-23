@@ -24,7 +24,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<ContextRuleArgs>> rules;
+      private final @Nullable Input<List<ContextRuleArgs>> rules;
 
     public Input<List<ContextRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,6 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ContextArgs build() {
             return new ContextArgs(rules);
         }

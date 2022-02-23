@@ -165,7 +165,6 @@ public final class WindowsConfigurationResponse {
             this.winRM = winRM;
             return this;
         }
-
         public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);
         }

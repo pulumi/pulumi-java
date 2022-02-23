@@ -54,7 +54,6 @@ public final class FunctionDeadLetterConfig {
             this.targetArn = targetArn;
             return this;
         }
-
         public FunctionDeadLetterConfig build() {
             return new FunctionDeadLetterConfig(targetArn);
         }

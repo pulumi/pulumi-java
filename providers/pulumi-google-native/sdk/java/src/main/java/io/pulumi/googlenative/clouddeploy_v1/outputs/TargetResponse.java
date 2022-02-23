@@ -311,7 +311,6 @@ public final class TargetResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(annotations, anthosCluster, createTime, description, etag, executionConfigs, gke, labels, name, requireApproval, targetId, uid, updateTime);
         }

@@ -22,7 +22,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="disableStreetAddressResolution", required=true)
-    private final Boolean disableStreetAddressResolution;
+      private final Boolean disableStreetAddressResolution;
 
     public Boolean getDisableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
@@ -33,7 +33,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="htmlSanitization", required=true)
-    private final String htmlSanitization;
+      private final String htmlSanitization;
 
     public String getHtmlSanitization() {
         return this.htmlSanitization;
@@ -82,7 +82,6 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
         }
-
         public ProcessingOptionsResponse build() {
             return new ProcessingOptionsResponse(disableStreetAddressResolution, htmlSanitization);
         }

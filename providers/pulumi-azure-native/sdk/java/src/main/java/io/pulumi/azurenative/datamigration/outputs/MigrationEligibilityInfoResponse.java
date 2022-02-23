@@ -76,7 +76,6 @@ public final class MigrationEligibilityInfoResponse {
             this.validationMessages = Objects.requireNonNull(validationMessages);
             return this;
         }
-
         public MigrationEligibilityInfoResponse build() {
             return new MigrationEligibilityInfoResponse(isEligibleForMigration, validationMessages);
         }

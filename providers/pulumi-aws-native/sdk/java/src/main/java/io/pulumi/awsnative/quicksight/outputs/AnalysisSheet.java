@@ -78,7 +78,6 @@ public final class AnalysisSheet {
             this.sheetId = sheetId;
             return this;
         }
-
         public AnalysisSheet build() {
             return new AnalysisSheet(name, sheetId);
         }

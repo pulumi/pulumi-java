@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @InputImport(name="max", required=true)
-    private final Double max;
+      private final Double max;
 
     public Double getMax() {
         return this.max;
@@ -32,7 +32,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @InputImport(name="min", required=true)
-    private final Double min;
+      private final Double min;
 
     public Double getMin() {
         return this.min;
@@ -81,7 +81,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(max, min);
         }

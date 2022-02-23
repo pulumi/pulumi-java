@@ -22,7 +22,7 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -60,7 +60,6 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse extends io.pulu
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyClearKeyConfigurationResponse build() {
             return new ContentKeyPolicyClearKeyConfigurationResponse(odataType);
         }

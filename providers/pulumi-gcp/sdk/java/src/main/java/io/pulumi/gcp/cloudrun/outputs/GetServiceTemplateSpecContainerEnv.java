@@ -81,7 +81,6 @@ public final class GetServiceTemplateSpecContainerEnv {
             this.valueFroms = Objects.requireNonNull(valueFroms);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnv build() {
             return new GetServiceTemplateSpecContainerEnv(name, value, valueFroms);
         }

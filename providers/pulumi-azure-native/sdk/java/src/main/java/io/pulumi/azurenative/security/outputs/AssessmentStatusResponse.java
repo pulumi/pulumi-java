@@ -97,7 +97,6 @@ public final class AssessmentStatusResponse {
             this.description = description;
             return this;
         }
-
         public AssessmentStatusResponse build() {
             return new AssessmentStatusResponse(cause, code, description);
         }

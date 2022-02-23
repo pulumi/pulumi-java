@@ -218,7 +218,6 @@ public final class GetAnalysisResult {
             this.themeArn = themeArn;
             return this;
         }
-
         public GetAnalysisResult build() {
             return new GetAnalysisResult(arn, createdTime, dataSetArns, errors, name, permissions, tags, themeArn);
         }

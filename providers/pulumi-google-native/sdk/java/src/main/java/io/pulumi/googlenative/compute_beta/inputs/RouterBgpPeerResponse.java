@@ -22,7 +22,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="advertiseMode", required=true)
-    private final String advertiseMode;
+      private final String advertiseMode;
 
     public String getAdvertiseMode() {
         return this.advertiseMode;
@@ -33,7 +33,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="advertisedGroups", required=true)
-    private final List<String> advertisedGroups;
+      private final List<String> advertisedGroups;
 
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups;
@@ -44,7 +44,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="advertisedIpRanges", required=true)
-    private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
+      private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
     public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
         return this.advertisedIpRanges;
@@ -55,7 +55,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="advertisedRoutePriority", required=true)
-    private final Integer advertisedRoutePriority;
+      private final Integer advertisedRoutePriority;
 
     public Integer getAdvertisedRoutePriority() {
         return this.advertisedRoutePriority;
@@ -66,7 +66,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="bfd", required=true)
-    private final RouterBgpPeerBfdResponse bfd;
+      private final RouterBgpPeerBfdResponse bfd;
 
     public RouterBgpPeerBfdResponse getBfd() {
         return this.bfd;
@@ -77,7 +77,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enable", required=true)
-    private final String enable;
+      private final String enable;
 
     public String getEnable() {
         return this.enable;
@@ -88,7 +88,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enableIpv6", required=true)
-    private final Boolean enableIpv6;
+      private final Boolean enableIpv6;
 
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
@@ -99,7 +99,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="interfaceName", required=true)
-    private final String interfaceName;
+      private final String interfaceName;
 
     public String getInterfaceName() {
         return this.interfaceName;
@@ -110,7 +110,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -121,7 +121,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ipv6NexthopAddress", required=true)
-    private final String ipv6NexthopAddress;
+      private final String ipv6NexthopAddress;
 
     public String getIpv6NexthopAddress() {
         return this.ipv6NexthopAddress;
@@ -132,7 +132,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="managementType", required=true)
-    private final String managementType;
+      private final String managementType;
 
     public String getManagementType() {
         return this.managementType;
@@ -143,7 +143,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -154,7 +154,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peerAsn", required=true)
-    private final Integer peerAsn;
+      private final Integer peerAsn;
 
     public Integer getPeerAsn() {
         return this.peerAsn;
@@ -165,7 +165,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peerIpAddress", required=true)
-    private final String peerIpAddress;
+      private final String peerIpAddress;
 
     public String getPeerIpAddress() {
         return this.peerIpAddress;
@@ -176,7 +176,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="peerIpv6NexthopAddress", required=true)
-    private final String peerIpv6NexthopAddress;
+      private final String peerIpv6NexthopAddress;
 
     public String getPeerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress;
@@ -187,7 +187,7 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routerApplianceInstance", required=true)
-    private final String routerApplianceInstance;
+      private final String routerApplianceInstance;
 
     public String getRouterApplianceInstance() {
         return this.routerApplianceInstance;
@@ -376,7 +376,6 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
         }
-
         public RouterBgpPeerResponse build() {
             return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }

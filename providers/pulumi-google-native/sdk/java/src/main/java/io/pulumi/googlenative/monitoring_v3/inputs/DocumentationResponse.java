@@ -21,7 +21,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -32,7 +32,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final String mimeType;
+      private final String mimeType;
 
     public String getMimeType() {
         return this.mimeType;
@@ -81,7 +81,6 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public DocumentationResponse build() {
             return new DocumentationResponse(content, mimeType);
         }

@@ -25,7 +25,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventCategories")
-    private final @Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories;
+        private final @Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
     public Input<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
         return this.eventCategories == null ? Input.empty() : this.eventCategories;
@@ -47,7 +47,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Input<EventSubscriptionSeverity> severity;
+        private final @Nullable Input<EventSubscriptionSeverity> severity;
 
     public Input<EventSubscriptionSeverity> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -58,7 +58,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsTopicArn")
-    private final @Nullable Input<String> snsTopicArn;
+        private final @Nullable Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
@@ -69,7 +69,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceIds")
-    private final @Nullable Input<List<String>> sourceIds;
+        private final @Nullable Input<List<String>> sourceIds;
 
     public Input<List<String>> getSourceIds() {
         return this.sourceIds == null ? Input.empty() : this.sourceIds;
@@ -80,7 +80,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<EventSubscriptionSourceType> sourceType;
+        private final @Nullable Input<EventSubscriptionSourceType> sourceType;
 
     public Input<EventSubscriptionSourceType> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;
@@ -91,7 +91,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-    private final Input<String> subscriptionName;
+        private final Input<String> subscriptionName;
 
     public Input<String> getSubscriptionName() {
         return this.subscriptionName;
@@ -102,7 +102,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<EventSubscriptionTagArgs>> tags;
+        private final @Nullable Input<List<EventSubscriptionTagArgs>> tags;
 
     public Input<List<EventSubscriptionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -251,7 +251,6 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public EventSubscriptionArgs build() {
             return new EventSubscriptionArgs(enabled, eventCategories, severity, snsTopicArn, sourceIds, sourceType, subscriptionName, tags);
         }

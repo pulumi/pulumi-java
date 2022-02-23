@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * 
      */
     @InputImport(name="intervalSec")
-    private final @Nullable Input<Integer> intervalSec;
+      private final @Nullable Input<Integer> intervalSec;
 
     public Input<Integer> getIntervalSec() {
         return this.intervalSec == null ? Input.empty() : this.intervalSec;
@@ -89,7 +89,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
             this.intervalSec = Input.ofNullable(intervalSec);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsThresholdArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdArgs(count, intervalSec);
         }

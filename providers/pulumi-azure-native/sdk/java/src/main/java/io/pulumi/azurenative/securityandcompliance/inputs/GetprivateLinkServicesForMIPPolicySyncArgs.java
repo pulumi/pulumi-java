@@ -17,7 +17,7 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -77,7 +77,6 @@ public final class GetprivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetprivateLinkServicesForMIPPolicySyncArgs build() {
             return new GetprivateLinkServicesForMIPPolicySyncArgs(resourceGroupName, resourceName);
         }

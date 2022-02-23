@@ -246,7 +246,6 @@ public final class GetSubnetworkResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetSubnetworkResult build() {
             return new GetSubnetworkResult(description, gatewayAddress, id, ipCidrRange, name, network, privateIpGoogleAccess, project, region, secondaryIpRanges, selfLink);
         }

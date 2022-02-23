@@ -19,7 +19,7 @@ public final class DicomStoreStreamConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+        private final Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
     public Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -62,7 +62,6 @@ public final class DicomStoreStreamConfigGetArgs extends io.pulumi.resources.Res
             this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
-
         public DicomStoreStreamConfigGetArgs build() {
             return new DicomStoreStreamConfigGetArgs(bigqueryDestination);
         }

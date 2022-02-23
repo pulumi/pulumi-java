@@ -22,7 +22,7 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,21 +33,21 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="noteId", required=true)
-    private final Input<String> noteId;
+      private final Input<String> noteId;
 
     public Input<String> getNoteId() {
         return this.noteId;
     }
 
     @InputImport(name="providerId", required=true)
-    private final Input<String> providerId;
+      private final Input<String> providerId;
 
     public Input<String> getProviderId() {
         return this.providerId;
@@ -58,7 +58,7 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -162,7 +162,6 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ProviderNoteIamPolicyArgs build() {
             return new ProviderNoteIamPolicyArgs(bindings, etag, noteId, providerId, version);
         }

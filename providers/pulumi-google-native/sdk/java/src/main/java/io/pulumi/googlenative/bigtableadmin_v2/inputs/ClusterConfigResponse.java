@@ -21,7 +21,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterAutoscalingConfig", required=true)
-    private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
+      private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
     public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
@@ -59,7 +59,6 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig);
             return this;
         }
-
         public ClusterConfigResponse build() {
             return new ClusterConfigResponse(clusterAutoscalingConfig);
         }

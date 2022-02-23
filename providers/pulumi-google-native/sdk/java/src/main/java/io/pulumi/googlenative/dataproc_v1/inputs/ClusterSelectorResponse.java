@@ -22,7 +22,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-    private final Map<String,String> clusterLabels;
+      private final Map<String,String> clusterLabels;
 
     public Map<String,String> getClusterLabels() {
         return this.clusterLabels;
@@ -33,7 +33,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -82,7 +82,6 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ClusterSelectorResponse build() {
             return new ClusterSelectorResponse(clusterLabels, zone);
         }

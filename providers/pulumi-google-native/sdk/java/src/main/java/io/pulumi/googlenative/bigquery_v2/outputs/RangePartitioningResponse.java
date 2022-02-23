@@ -75,7 +75,6 @@ public final class RangePartitioningResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RangePartitioningResponse build() {
             return new RangePartitioningResponse(field, range);
         }

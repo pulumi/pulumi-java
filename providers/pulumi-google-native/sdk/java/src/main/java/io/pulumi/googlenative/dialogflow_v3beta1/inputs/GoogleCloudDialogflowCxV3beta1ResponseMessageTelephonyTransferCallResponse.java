@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+      private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(phoneNumber);
         }

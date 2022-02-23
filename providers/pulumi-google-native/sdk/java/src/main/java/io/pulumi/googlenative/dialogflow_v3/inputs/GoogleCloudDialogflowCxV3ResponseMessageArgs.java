@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="conversationSuccess")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> conversationSuccess;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> conversationSuccess;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> getConversationSuccess() {
         return this.conversationSuccess == null ? Input.empty() : this.conversationSuccess;
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="liveAgentHandoff")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> getLiveAgentHandoff() {
         return this.liveAgentHandoff == null ? Input.empty() : this.liveAgentHandoff;
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="outputAudioText")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> outputAudioText;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> outputAudioText;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> getOutputAudioText() {
         return this.outputAudioText == null ? Input.empty() : this.outputAudioText;
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<Map<String,String>> payload;
+      private final @Nullable Input<Map<String,String>> payload;
 
     public Input<Map<String,String>> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="playAudio")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> playAudio;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> playAudio;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> getPlayAudio() {
         return this.playAudio == null ? Input.empty() : this.playAudio;
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="telephonyTransferCall")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
         return this.telephonyTransferCall == null ? Input.empty() : this.telephonyTransferCall;
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> text;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> text;
 
     public Input<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -230,7 +230,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageArgs(conversationSuccess, liveAgentHandoff, outputAudioText, payload, playAudio, telephonyTransferCall, text);
         }

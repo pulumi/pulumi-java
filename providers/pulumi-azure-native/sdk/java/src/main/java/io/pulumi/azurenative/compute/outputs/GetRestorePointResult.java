@@ -205,7 +205,6 @@ public final class GetRestorePointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRestorePointResult build() {
             return new GetRestorePointResult(consistencyMode, excludeDisks, id, name, provisioningState, sourceMetadata, timeCreated, type);
         }

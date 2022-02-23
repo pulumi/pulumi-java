@@ -252,7 +252,6 @@ public final class AzureDatabricksDeltaLakeDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeDatasetResponse build() {
             return new AzureDatabricksDeltaLakeDatasetResponse(annotations, database, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

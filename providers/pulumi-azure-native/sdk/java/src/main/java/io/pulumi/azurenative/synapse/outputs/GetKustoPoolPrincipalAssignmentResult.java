@@ -266,7 +266,6 @@ public final class GetKustoPoolPrincipalAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoPoolPrincipalAssignmentResult build() {
             return new GetKustoPoolPrincipalAssignmentResult(id, name, principalId, principalName, principalType, provisioningState, role, systemData, tenantId, tenantName, type);
         }

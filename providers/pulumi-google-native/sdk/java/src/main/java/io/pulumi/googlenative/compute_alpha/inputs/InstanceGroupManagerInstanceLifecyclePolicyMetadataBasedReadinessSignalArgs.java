@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(timeoutSec);
         }

@@ -23,7 +23,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudBuildId")
-    private final @Nullable Input<String> cloudBuildId;
+      private final @Nullable Input<String> cloudBuildId;
 
     public Input<String> getCloudBuildId() {
         return this.cloudBuildId == null ? Input.empty() : this.cloudBuildId;
@@ -66,7 +66,6 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudBuildId = Input.ofNullable(cloudBuildId);
             return this;
         }
-
         public BuildInfoArgs build() {
             return new BuildInfoArgs(cloudBuildId);
         }

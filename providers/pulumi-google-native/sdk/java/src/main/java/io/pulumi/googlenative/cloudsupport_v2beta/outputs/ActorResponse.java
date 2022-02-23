@@ -117,7 +117,6 @@ public final class ActorResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ActorResponse build() {
             return new ActorResponse(displayName, email, googleSupport, principalId);
         }

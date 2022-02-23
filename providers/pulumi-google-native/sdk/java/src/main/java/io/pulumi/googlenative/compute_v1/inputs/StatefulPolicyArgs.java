@@ -15,7 +15,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 
     @InputImport(name="preservedState")
-    private final @Nullable Input<StatefulPolicyPreservedStateArgs> preservedState;
+      private final @Nullable Input<StatefulPolicyPreservedStateArgs> preservedState;
 
     public Input<StatefulPolicyPreservedStateArgs> getPreservedState() {
         return this.preservedState == null ? Input.empty() : this.preservedState;
@@ -58,7 +58,6 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.preservedState = Input.ofNullable(preservedState);
             return this;
         }
-
         public StatefulPolicyArgs build() {
             return new StatefulPolicyArgs(preservedState);
         }

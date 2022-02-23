@@ -139,7 +139,6 @@ public final class GetFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallRuleResult build() {
             return new GetFirewallRuleResult(endIpAddress, id, name, startIpAddress, type);
         }

@@ -142,7 +142,6 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public LBFrontendIPConfigurationResourceSettingsResponse build() {
             return new LBFrontendIPConfigurationResourceSettingsResponse(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
         }

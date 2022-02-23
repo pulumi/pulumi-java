@@ -74,7 +74,6 @@ public final class AnalysisDataSetReference {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public AnalysisDataSetReference build() {
             return new AnalysisDataSetReference(dataSetArn, dataSetPlaceholder);
         }

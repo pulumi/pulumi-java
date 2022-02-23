@@ -183,7 +183,6 @@ public final class MoveResourceDependencyResponse {
             this.resolutionType = resolutionType;
             return this;
         }
-
         public MoveResourceDependencyResponse build() {
             return new MoveResourceDependencyResponse(automaticResolution, dependencyType, id, isOptional, manualResolution, resolutionStatus, resolutionType);
         }

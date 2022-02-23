@@ -24,7 +24,7 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceCount", required=true)
-    private final Integer instanceCount;
+        private final Integer instanceCount;
 
     public Integer getInstanceCount() {
         return this.instanceCount;
@@ -35,7 +35,7 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -46,7 +46,7 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="volumeKmsKeyId")
-    private final @Nullable String volumeKmsKeyId;
+        private final @Nullable String volumeKmsKeyId;
 
     public Optional<String> getVolumeKmsKeyId() {
         return this.volumeKmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.volumeKmsKeyId);
@@ -57,7 +57,7 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="volumeSizeInGB", required=true)
-    private final Integer volumeSizeInGB;
+        private final Integer volumeSizeInGB;
 
     public Integer getVolumeSizeInGB() {
         return this.volumeSizeInGB;
@@ -126,7 +126,6 @@ public final class MonitoringScheduleClusterConfig extends io.pulumi.resources.I
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public MonitoringScheduleClusterConfig build() {
             return new MonitoringScheduleClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

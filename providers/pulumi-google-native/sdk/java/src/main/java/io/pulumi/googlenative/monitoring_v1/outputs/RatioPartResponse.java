@@ -75,7 +75,6 @@ public final class RatioPartResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RatioPartResponse build() {
             return new RatioPartResponse(aggregation, filter);
         }

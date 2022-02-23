@@ -22,7 +22,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="archiveUris", required=true)
-    private final List<String> archiveUris;
+      private final List<String> archiveUris;
 
     public List<String> getArchiveUris() {
         return this.archiveUris;
@@ -33,7 +33,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -44,7 +44,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileUris", required=true)
-    private final List<String> fileUris;
+      private final List<String> fileUris;
 
     public List<String> getFileUris() {
         return this.fileUris;
@@ -55,7 +55,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -66,7 +66,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainClass", required=true)
-    private final String mainClass;
+      private final String mainClass;
 
     public String getMainClass() {
         return this.mainClass;
@@ -77,7 +77,7 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mainJarFileUri", required=true)
-    private final String mainJarFileUri;
+      private final String mainJarFileUri;
 
     public String getMainJarFileUri() {
         return this.mainJarFileUri;
@@ -166,7 +166,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
-
         public SparkBatchResponse build() {
             return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }

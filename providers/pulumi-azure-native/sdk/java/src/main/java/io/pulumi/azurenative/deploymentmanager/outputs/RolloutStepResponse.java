@@ -164,7 +164,6 @@ public final class RolloutStepResponse {
             this.stepGroup = stepGroup;
             return this;
         }
-
         public RolloutStepResponse build() {
             return new RolloutStepResponse(messages, name, operationInfo, resourceOperations, status, stepGroup);
         }

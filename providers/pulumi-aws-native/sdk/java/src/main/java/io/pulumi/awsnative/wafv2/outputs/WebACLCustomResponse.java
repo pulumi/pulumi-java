@@ -92,7 +92,6 @@ public final class WebACLCustomResponse {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public WebACLCustomResponse build() {
             return new WebACLCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }

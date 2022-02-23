@@ -232,7 +232,6 @@ public final class AzureStorageContainerResponse {
             this.storageAccountVersion = storageAccountVersion;
             return this;
         }
-
         public AzureStorageContainerResponse build() {
             return new AzureStorageContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
         }

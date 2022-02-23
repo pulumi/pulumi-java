@@ -252,7 +252,6 @@ public final class CassandraTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CassandraTableDatasetResponse build() {
             return new CassandraTableDatasetResponse(annotations, description, folder, keyspace, linkedServiceName, parameters, schema, structure, tableName, type);
         }

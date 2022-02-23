@@ -98,7 +98,6 @@ public final class AzureSqlProtectedItemExtendedInfoResponse {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureSqlProtectedItemExtendedInfoResponse build() {
             return new AzureSqlProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

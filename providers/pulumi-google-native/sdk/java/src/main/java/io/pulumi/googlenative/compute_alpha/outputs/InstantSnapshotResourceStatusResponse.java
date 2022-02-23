@@ -52,7 +52,6 @@ public final class InstantSnapshotResourceStatusResponse {
             this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes);
             return this;
         }
-
         public InstantSnapshotResourceStatusResponse build() {
             return new InstantSnapshotResourceStatusResponse(storageSizeBytes);
         }

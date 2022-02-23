@@ -23,7 +23,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primarybytesIn")
-    private final @Nullable Double primarybytesIn;
+        private final @Nullable Double primarybytesIn;
 
     public Optional<Double> getPrimarybytesIn() {
         return this.primarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.primarybytesIn);
@@ -34,7 +34,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primarybytesOut")
-    private final @Nullable Double primarybytesOut;
+        private final @Nullable Double primarybytesOut;
 
     public Optional<Double> getPrimarybytesOut() {
         return this.primarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.primarybytesOut);
@@ -45,7 +45,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondarybytesIn")
-    private final @Nullable Double secondarybytesIn;
+        private final @Nullable Double secondarybytesIn;
 
     public Optional<Double> getSecondarybytesIn() {
         return this.secondarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesIn);
@@ -56,7 +56,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondarybytesOut")
-    private final @Nullable Double secondarybytesOut;
+        private final @Nullable Double secondarybytesOut;
 
     public Optional<Double> getSecondarybytesOut() {
         return this.secondarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesOut);
@@ -125,7 +125,6 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
-
         public ExpressRouteCircuitStatsResponse build() {
             return new ExpressRouteCircuitStatsResponse(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
         }

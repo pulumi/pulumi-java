@@ -90,7 +90,6 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
             this.serviceName = serviceName;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation(methodSelectors, serviceName);
         }

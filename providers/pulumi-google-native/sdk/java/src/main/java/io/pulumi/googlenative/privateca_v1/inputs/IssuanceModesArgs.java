@@ -23,7 +23,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigBasedIssuance")
-    private final @Nullable Input<Boolean> allowConfigBasedIssuance;
+      private final @Nullable Input<Boolean> allowConfigBasedIssuance;
 
     public Input<Boolean> getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance == null ? Input.empty() : this.allowConfigBasedIssuance;
@@ -34,7 +34,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCsrBasedIssuance")
-    private final @Nullable Input<Boolean> allowCsrBasedIssuance;
+      private final @Nullable Input<Boolean> allowCsrBasedIssuance;
 
     public Input<Boolean> getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance == null ? Input.empty() : this.allowCsrBasedIssuance;
@@ -93,7 +93,6 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
             this.allowCsrBasedIssuance = Input.ofNullable(allowCsrBasedIssuance);
             return this;
         }
-
         public IssuanceModesArgs build() {
             return new IssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

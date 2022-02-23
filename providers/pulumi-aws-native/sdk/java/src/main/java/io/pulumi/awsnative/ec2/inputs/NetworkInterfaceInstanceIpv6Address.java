@@ -13,7 +13,7 @@ public final class NetworkInterfaceInstanceIpv6Address extends io.pulumi.resourc
     public static final NetworkInterfaceInstanceIpv6Address Empty = new NetworkInterfaceInstanceIpv6Address();
 
     @InputImport(name="ipv6Address", required=true)
-    private final String ipv6Address;
+        private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
@@ -51,7 +51,6 @@ public final class NetworkInterfaceInstanceIpv6Address extends io.pulumi.resourc
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public NetworkInterfaceInstanceIpv6Address build() {
             return new NetworkInterfaceInstanceIpv6Address(ipv6Address);
         }

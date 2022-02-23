@@ -76,7 +76,6 @@ public final class LoggingPropertiesResponse {
             this.logLevel = logLevel;
             return this;
         }
-
         public LoggingPropertiesResponse build() {
             return new LoggingPropertiesResponse(auditLogStatus, logLevel);
         }

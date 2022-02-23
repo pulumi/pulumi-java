@@ -348,7 +348,6 @@ public final class LookupActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public LookupActivityResponse build() {
             return new LookupActivityResponse(dataset, dependsOn, description, firstRowOnly, linkedServiceName, name, policy, source, type, userProperties);
         }

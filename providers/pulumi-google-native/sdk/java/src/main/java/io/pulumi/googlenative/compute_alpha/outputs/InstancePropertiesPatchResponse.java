@@ -75,7 +75,6 @@ public final class InstancePropertiesPatchResponse {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public InstancePropertiesPatchResponse build() {
             return new InstancePropertiesPatchResponse(labels, metadata);
         }

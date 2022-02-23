@@ -22,7 +22,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="detailStatus", required=true)
-    private final String detailStatus;
+        private final String detailStatus;
 
     public String getDetailStatus() {
         return this.detailStatus;
@@ -33,7 +33,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exitCode", required=true)
-    private final Integer exitCode;
+        private final Integer exitCode;
 
     public Integer getExitCode() {
         return this.exitCode;
@@ -44,7 +44,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="finishTime", required=true)
-    private final String finishTime;
+        private final String finishTime;
 
     public String getFinishTime() {
         return this.finishTime;
@@ -55,7 +55,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -66,7 +66,7 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -145,7 +145,6 @@ public final class ContainerStateResponse extends io.pulumi.resources.InvokeArgs
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ContainerStateResponse build() {
             return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
         }

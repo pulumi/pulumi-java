@@ -127,7 +127,6 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileProperties(applicationHostUrl, applicationServicePath, clientNumber, logonLanguage, oAuthProperties, portNumber, privateLinkServiceName);
         }

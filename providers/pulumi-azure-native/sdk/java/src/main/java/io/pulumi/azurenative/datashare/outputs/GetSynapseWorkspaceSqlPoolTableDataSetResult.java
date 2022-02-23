@@ -182,7 +182,6 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynapseWorkspaceSqlPoolTableDataSetResult build() {
             return new GetSynapseWorkspaceSqlPoolTableDataSetResult(dataSetId, id, kind, name, synapseWorkspaceSqlPoolTableResourceId, systemData, type);
         }

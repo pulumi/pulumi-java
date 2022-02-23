@@ -249,7 +249,6 @@ public final class GetActivityLogAlertResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActivityLogAlertResult build() {
             return new GetActivityLogAlertResult(actions, condition, description, enabled, id, location, name, scopes, tags, type);
         }

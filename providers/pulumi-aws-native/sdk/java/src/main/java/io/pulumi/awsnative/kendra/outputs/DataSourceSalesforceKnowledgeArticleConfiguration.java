@@ -76,7 +76,6 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration {
             this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
             return this;
         }
-
         public DataSourceSalesforceKnowledgeArticleConfiguration build() {
             return new DataSourceSalesforceKnowledgeArticleConfiguration(customKnowledgeArticleTypeConfigurations, includedStates, standardKnowledgeArticleTypeConfiguration);
         }

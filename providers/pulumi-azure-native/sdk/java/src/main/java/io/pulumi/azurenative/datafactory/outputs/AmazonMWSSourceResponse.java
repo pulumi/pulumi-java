@@ -205,7 +205,6 @@ public final class AmazonMWSSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonMWSSourceResponse build() {
             return new AmazonMWSSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

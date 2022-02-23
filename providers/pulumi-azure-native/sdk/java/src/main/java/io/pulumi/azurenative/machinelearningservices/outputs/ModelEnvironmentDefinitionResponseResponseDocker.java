@@ -98,7 +98,6 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
             this.baseImageRegistry = baseImageRegistry;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseDocker build() {
             return new ModelEnvironmentDefinitionResponseResponseDocker(baseDockerfile, baseImage, baseImageRegistry);
         }

@@ -138,7 +138,6 @@ public final class ForwardSshTunnelConnectivityResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ForwardSshTunnelConnectivityResponse build() {
             return new ForwardSshTunnelConnectivityResponse(hostname, password, port, privateKey, username);
         }

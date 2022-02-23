@@ -54,7 +54,6 @@ public final class ActorResponse {
             this.name = name;
             return this;
         }
-
         public ActorResponse build() {
             return new ActorResponse(name);
         }

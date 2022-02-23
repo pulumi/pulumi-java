@@ -23,7 +23,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipConfigName")
-    private final @Nullable Input<String> ipConfigName;
+        private final @Nullable Input<String> ipConfigName;
 
     public Input<String> getIpConfigName() {
         return this.ipConfigName == null ? Input.empty() : this.ipConfigName;
@@ -45,7 +45,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable Input<String> privateIPAddress;
+        private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -67,7 +67,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -78,7 +78,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
+        private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
 
     public Input<PublicIPAddressArgs> getPublicIPAddress() {
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
@@ -89,7 +89,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+        private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -111,7 +111,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final Input<String> virtualHubName;
+        private final Input<String> virtualHubName;
 
     public Input<String> getVirtualHubName() {
         return this.virtualHubName;
@@ -275,7 +275,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
-
         public VirtualHubIpConfigurationArgs build() {
             return new VirtualHubIpConfigurationArgs(id, ipConfigName, name, privateIPAddress, privateIPAllocationMethod, publicIPAddress, resourceGroupName, subnet, virtualHubName);
         }

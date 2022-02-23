@@ -45,7 +45,6 @@ public final class ResponseHeadersPolicyAccessControlAllowHeaders {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public ResponseHeadersPolicyAccessControlAllowHeaders build() {
             return new ResponseHeadersPolicyAccessControlAllowHeaders(items);
         }

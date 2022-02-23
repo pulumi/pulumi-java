@@ -24,7 +24,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inboundNatRules")
-    private final @Nullable Input<List<InboundNatRuleArgs>> inboundNatRules;
+        private final @Nullable Input<List<InboundNatRuleArgs>> inboundNatRules;
 
     public Input<List<InboundNatRuleArgs>> getInboundNatRules() {
         return this.inboundNatRules == null ? Input.empty() : this.inboundNatRules;
@@ -67,7 +67,6 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
             this.inboundNatRules = Input.ofNullable(inboundNatRules);
             return this;
         }
-
         public SharedPublicIpAddressConfigurationArgs build() {
             return new SharedPublicIpAddressConfigurationArgs(inboundNatRules);
         }

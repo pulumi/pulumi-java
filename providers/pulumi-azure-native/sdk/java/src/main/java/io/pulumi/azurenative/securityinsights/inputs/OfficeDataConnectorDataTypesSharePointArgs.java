@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesSharePointArgs extends io.pulumi.
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,DataTypeState>> state;
+        private final @Nullable Input<Either<String,DataTypeState>> state;
 
     public Input<Either<String,DataTypeState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -68,7 +68,6 @@ public final class OfficeDataConnectorDataTypesSharePointArgs extends io.pulumi.
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public OfficeDataConnectorDataTypesSharePointArgs build() {
             return new OfficeDataConnectorDataTypesSharePointArgs(state);
         }

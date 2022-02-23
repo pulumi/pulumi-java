@@ -54,7 +54,6 @@ public final class TopologySelectorTerm {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
-
         public TopologySelectorTerm build() {
             return new TopologySelectorTerm(matchLabelExpressions);
         }

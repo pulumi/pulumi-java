@@ -74,7 +74,6 @@ public final class Hl7V2NotificationConfigResponse {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Hl7V2NotificationConfigResponse build() {
             return new Hl7V2NotificationConfigResponse(filter, pubsubTopic);
         }

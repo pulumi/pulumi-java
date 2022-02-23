@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overview")
-    private final @Nullable Input<String> overview;
+      private final @Nullable Input<String> overview;
 
     public Input<String> getOverview() {
         return this.overview == null ? Input.empty() : this.overview;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
             this.overview = Input.ofNullable(overview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1EntryOverviewArgs build() {
             return new GoogleCloudDatacatalogV1EntryOverviewArgs(overview);
         }

@@ -376,7 +376,6 @@ public final class GetDscpConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscpConfigurationResult build() {
             return new GetDscpConfigurationResult(associatedNetworkInterfaces, destinationIpRanges, destinationPortRanges, etag, id, location, markings, name, protocol, provisioningState, qosCollectionId, resourceGuid, sourceIpRanges, sourcePortRanges, tags, type);
         }

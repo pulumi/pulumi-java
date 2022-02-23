@@ -420,7 +420,6 @@ public final class GetExtensionResult {
             this.version = version;
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(autoUpgradeMinorVersion, configurationProtectedSettings, configurationSettings, creationTime, errorInfo, extensionType, id, identity, installState, lastModifiedTime, lastStatusTime, name, releaseTrain, scope, statuses, systemData, type, version);
         }

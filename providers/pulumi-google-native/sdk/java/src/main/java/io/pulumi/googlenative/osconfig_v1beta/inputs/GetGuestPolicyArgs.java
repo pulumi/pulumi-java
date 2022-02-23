@@ -15,14 +15,14 @@ public final class GetGuestPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetGuestPolicyArgs Empty = new GetGuestPolicyArgs();
 
     @InputImport(name="guestPolicyId", required=true)
-    private final String guestPolicyId;
+      private final String guestPolicyId;
 
     public String getGuestPolicyId() {
         return this.guestPolicyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetGuestPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetGuestPolicyArgs build() {
             return new GetGuestPolicyArgs(guestPolicyId, project);
         }

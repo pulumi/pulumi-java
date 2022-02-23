@@ -118,7 +118,6 @@ public final class PermissionResponse {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public PermissionResponse build() {
             return new PermissionResponse(actions, dataActions, notActions, notDataActions);
         }

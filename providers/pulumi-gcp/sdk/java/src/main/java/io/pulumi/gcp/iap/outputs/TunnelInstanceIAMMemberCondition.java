@@ -97,7 +97,6 @@ public final class TunnelInstanceIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TunnelInstanceIAMMemberCondition build() {
             return new TunnelInstanceIAMMemberCondition(description, expression, title);
         }

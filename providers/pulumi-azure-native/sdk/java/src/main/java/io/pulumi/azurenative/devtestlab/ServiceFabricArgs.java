@@ -20,7 +20,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+        private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -31,7 +31,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalServiceFabricId")
-    private final @Nullable Input<String> externalServiceFabricId;
+        private final @Nullable Input<String> externalServiceFabricId;
 
     public Input<String> getExternalServiceFabricId() {
         return this.externalServiceFabricId == null ? Input.empty() : this.externalServiceFabricId;
@@ -42,7 +42,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -53,7 +53,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -97,7 +97,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+        private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;
@@ -246,7 +246,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public ServiceFabricArgs build() {
             return new ServiceFabricArgs(environmentId, externalServiceFabricId, labName, location, name, resourceGroupName, tags, userName);
         }

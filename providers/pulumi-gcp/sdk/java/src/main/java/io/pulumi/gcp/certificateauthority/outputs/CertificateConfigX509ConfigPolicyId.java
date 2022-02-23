@@ -53,7 +53,6 @@ public final class CertificateConfigX509ConfigPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateConfigX509ConfigPolicyId build() {
             return new CertificateConfigX509ConfigPolicyId(objectIdPaths);
         }

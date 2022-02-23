@@ -26,7 +26,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<Either<String,OsType>> osType;
+        private final Input<Either<String,OsType>> osType;
 
     public Input<Either<String,OsType>> getOsType() {
         return this.osType;
@@ -37,7 +37,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -48,7 +48,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -122,7 +122,6 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ConsoleCreatePropertiesArgs build() {
             return new ConsoleCreatePropertiesArgs(osType, provisioningState, uri);
         }

@@ -98,7 +98,6 @@ public final class TriggerGithubPush {
             this.tag = tag;
             return this;
         }
-
         public TriggerGithubPush build() {
             return new TriggerGithubPush(branch, invertRegex, tag);
         }

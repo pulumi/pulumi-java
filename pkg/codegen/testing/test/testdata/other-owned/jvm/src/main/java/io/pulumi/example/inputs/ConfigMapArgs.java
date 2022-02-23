@@ -15,7 +15,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 
     @InputImport(name="config")
-    private final @Nullable Input<String> config;
+      private final @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -58,7 +58,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             this.config = Input.ofNullable(config);
             return this;
         }
-
         public ConfigMapArgs build() {
             return new ConfigMapArgs(config);
         }

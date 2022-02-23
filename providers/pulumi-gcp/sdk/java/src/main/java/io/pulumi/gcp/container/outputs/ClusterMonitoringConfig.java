@@ -53,7 +53,6 @@ public final class ClusterMonitoringConfig {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public ClusterMonitoringConfig build() {
             return new ClusterMonitoringConfig(enableComponents);
         }

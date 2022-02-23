@@ -52,7 +52,6 @@ public final class ResourceStatusSchedulingResponse {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }
-
         public ResourceStatusSchedulingResponse build() {
             return new ResourceStatusSchedulingResponse(availabilityDomain);
         }

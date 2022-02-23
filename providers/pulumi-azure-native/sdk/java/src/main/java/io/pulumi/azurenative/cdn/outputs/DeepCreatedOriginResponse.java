@@ -288,7 +288,6 @@ public final class DeepCreatedOriginResponse {
             this.weight = weight;
             return this;
         }
-
         public DeepCreatedOriginResponse build() {
             return new DeepCreatedOriginResponse(enabled, hostName, httpPort, httpsPort, name, originHostHeader, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }

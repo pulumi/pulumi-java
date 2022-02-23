@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public GooglePrivacyDlpV2PublishToPubSubArgs build() {
             return new GooglePrivacyDlpV2PublishToPubSubArgs(topic);
         }

@@ -112,7 +112,6 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponsePython build() {
             return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }

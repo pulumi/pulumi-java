@@ -75,7 +75,6 @@ public final class EnvironmentConfigWorkloadsConfig {
             this.worker = worker;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfig build() {
             return new EnvironmentConfigWorkloadsConfig(scheduler, webServer, worker);
         }

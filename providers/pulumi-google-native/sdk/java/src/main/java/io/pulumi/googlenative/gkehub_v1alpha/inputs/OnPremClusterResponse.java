@@ -22,7 +22,7 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="adminCluster", required=true)
-    private final Boolean adminCluster;
+      private final Boolean adminCluster;
 
     public Boolean getAdminCluster() {
         return this.adminCluster;
@@ -33,7 +33,7 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterMissing", required=true)
-    private final Boolean clusterMissing;
+      private final Boolean clusterMissing;
 
     public Boolean getClusterMissing() {
         return this.clusterMissing;
@@ -44,7 +44,7 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceLink", required=true)
-    private final String resourceLink;
+      private final String resourceLink;
 
     public String getResourceLink() {
         return this.resourceLink;
@@ -103,7 +103,6 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public OnPremClusterResponse build() {
             return new OnPremClusterResponse(adminCluster, clusterMissing, resourceLink);
         }

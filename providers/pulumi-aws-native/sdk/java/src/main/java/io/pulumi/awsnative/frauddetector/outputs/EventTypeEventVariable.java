@@ -215,7 +215,6 @@ public final class EventTypeEventVariable {
             this.variableType = variableType;
             return this;
         }
-
         public EventTypeEventVariable build() {
             return new EventTypeEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

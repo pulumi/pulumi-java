@@ -161,7 +161,6 @@ public final class GetApiSchemaResult {
             this.value = value;
             return this;
         }
-
         public GetApiSchemaResult build() {
             return new GetApiSchemaResult(contentType, definitions, id, name, type, value);
         }

@@ -103,7 +103,6 @@ public final class InboundSamlConfigSpConfig {
             this.spEntityId = spEntityId;
             return this;
         }
-
         public InboundSamlConfigSpConfig build() {
             return new InboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }

@@ -44,7 +44,6 @@ public final class ScheduledQueryNotificationConfiguration {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }
-
         public ScheduledQueryNotificationConfiguration build() {
             return new ScheduledQueryNotificationConfiguration(snsConfiguration);
         }

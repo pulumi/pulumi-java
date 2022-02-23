@@ -75,7 +75,6 @@ public final class RetentionPolicyResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public RetentionPolicyResponse build() {
             return new RetentionPolicyResponse(days, enabled);
         }

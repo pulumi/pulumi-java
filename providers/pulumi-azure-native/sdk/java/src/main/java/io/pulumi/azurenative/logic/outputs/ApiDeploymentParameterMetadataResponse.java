@@ -140,7 +140,6 @@ public final class ApiDeploymentParameterMetadataResponse {
             this.visibility = visibility;
             return this;
         }
-
         public ApiDeploymentParameterMetadataResponse build() {
             return new ApiDeploymentParameterMetadataResponse(description, displayName, isRequired, type, visibility);
         }

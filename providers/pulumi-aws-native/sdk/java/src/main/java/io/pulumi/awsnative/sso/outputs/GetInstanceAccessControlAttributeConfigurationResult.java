@@ -70,7 +70,6 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
             this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }
-
         public GetInstanceAccessControlAttributeConfigurationResult build() {
             return new GetInstanceAccessControlAttributeConfigurationResult(accessControlAttributes, instanceAccessControlAttributeConfiguration);
         }

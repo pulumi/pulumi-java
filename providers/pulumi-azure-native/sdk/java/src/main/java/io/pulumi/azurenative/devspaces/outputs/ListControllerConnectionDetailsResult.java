@@ -54,7 +54,6 @@ public final class ListControllerConnectionDetailsResult {
             this.connectionDetailsList = connectionDetailsList;
             return this;
         }
-
         public ListControllerConnectionDetailsResult build() {
             return new ListControllerConnectionDetailsResult(connectionDetailsList);
         }

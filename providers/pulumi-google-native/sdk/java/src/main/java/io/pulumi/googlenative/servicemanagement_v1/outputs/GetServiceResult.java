@@ -74,7 +74,6 @@ public final class GetServiceResult {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(producerProjectId, serviceName);
         }

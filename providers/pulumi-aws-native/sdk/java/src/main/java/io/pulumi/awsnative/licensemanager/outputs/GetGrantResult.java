@@ -152,7 +152,6 @@ public final class GetGrantResult {
             this.version = version;
             return this;
         }
-
         public GetGrantResult build() {
             return new GetGrantResult(grantArn, grantName, homeRegion, licenseArn, status, version);
         }

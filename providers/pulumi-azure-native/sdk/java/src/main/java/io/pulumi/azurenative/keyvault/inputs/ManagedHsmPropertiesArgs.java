@@ -30,7 +30,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<CreateMode> createMode;
+        private final @Nullable Input<CreateMode> createMode;
 
     public Input<CreateMode> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -41,7 +41,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enablePurgeProtection")
-    private final @Nullable Input<Boolean> enablePurgeProtection;
+        private final @Nullable Input<Boolean> enablePurgeProtection;
 
     public Input<Boolean> getEnablePurgeProtection() {
         return this.enablePurgeProtection == null ? Input.empty() : this.enablePurgeProtection;
@@ -52,7 +52,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableSoftDelete")
-    private final @Nullable Input<Boolean> enableSoftDelete;
+        private final @Nullable Input<Boolean> enableSoftDelete;
 
     public Input<Boolean> getEnableSoftDelete() {
         return this.enableSoftDelete == null ? Input.empty() : this.enableSoftDelete;
@@ -63,7 +63,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="initialAdminObjectIds")
-    private final @Nullable Input<List<String>> initialAdminObjectIds;
+        private final @Nullable Input<List<String>> initialAdminObjectIds;
 
     public Input<List<String>> getInitialAdminObjectIds() {
         return this.initialAdminObjectIds == null ? Input.empty() : this.initialAdminObjectIds;
@@ -74,7 +74,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkAcls")
-    private final @Nullable Input<MHSMNetworkRuleSetArgs> networkAcls;
+        private final @Nullable Input<MHSMNetworkRuleSetArgs> networkAcls;
 
     public Input<MHSMNetworkRuleSetArgs> getNetworkAcls() {
         return this.networkAcls == null ? Input.empty() : this.networkAcls;
@@ -85,7 +85,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -96,7 +96,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="softDeleteRetentionInDays")
-    private final @Nullable Input<Integer> softDeleteRetentionInDays;
+        private final @Nullable Input<Integer> softDeleteRetentionInDays;
 
     public Input<Integer> getSoftDeleteRetentionInDays() {
         return this.softDeleteRetentionInDays == null ? Input.empty() : this.softDeleteRetentionInDays;
@@ -107,7 +107,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -256,7 +256,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ManagedHsmPropertiesArgs build() {
             return new ManagedHsmPropertiesArgs(createMode, enablePurgeProtection, enableSoftDelete, initialAdminObjectIds, networkAcls, publicNetworkAccess, softDeleteRetentionInDays, tenantId);
         }

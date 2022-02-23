@@ -54,7 +54,6 @@ public final class DefenderForServersAwsOfferingResponseDefenderForServers {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseDefenderForServers build() {
             return new DefenderForServersAwsOfferingResponseDefenderForServers(cloudRoleArn);
         }

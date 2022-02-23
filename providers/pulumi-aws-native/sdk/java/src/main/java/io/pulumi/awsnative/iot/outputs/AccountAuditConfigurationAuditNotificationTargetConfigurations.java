@@ -46,7 +46,6 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
             this.sns = sns;
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTargetConfigurations build() {
             return new AccountAuditConfigurationAuditNotificationTargetConfigurations(sns);
         }

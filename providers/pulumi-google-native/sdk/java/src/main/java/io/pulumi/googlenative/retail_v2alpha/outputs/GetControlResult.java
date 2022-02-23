@@ -161,7 +161,6 @@ public final class GetControlResult {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
         public GetControlResult build() {
             return new GetControlResult(associatedServingConfigIds, displayName, facetSpec, name, rule, solutionTypes);
         }

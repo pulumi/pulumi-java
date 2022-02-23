@@ -119,7 +119,6 @@ public final class LocationResponse {
             this.radiusMiles = Objects.requireNonNull(radiusMiles);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(latLng, locationType, postalAddress, radiusMiles);
         }

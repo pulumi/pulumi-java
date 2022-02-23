@@ -46,7 +46,6 @@ public final class BotAliasAudioLogDestination {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public BotAliasAudioLogDestination build() {
             return new BotAliasAudioLogDestination(s3Bucket);
         }

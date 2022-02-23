@@ -21,14 +21,14 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 
     @InputImport(name="signatures")
-    private final @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
+      private final @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
     public Input<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
         return this.signatures == null ? Input.empty() : this.signatures;
     }
 
     @InputImport(name="signed")
-    private final @Nullable Input<LinkArgs> signed;
+      private final @Nullable Input<LinkArgs> signed;
 
     public Input<LinkArgs> getSigned() {
         return this.signed == null ? Input.empty() : this.signed;
@@ -87,7 +87,6 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
             this.signed = Input.ofNullable(signed);
             return this;
         }
-
         public GrafeasV1beta1IntotoDetailsArgs build() {
             return new GrafeasV1beta1IntotoDetailsArgs(signatures, signed);
         }

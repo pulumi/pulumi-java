@@ -102,7 +102,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
             this.wafPolicy = wafPolicy;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallParametersResponse build() {
             return new SecurityPolicyWebApplicationFirewallParametersResponse(associations, type, wafPolicy);
         }

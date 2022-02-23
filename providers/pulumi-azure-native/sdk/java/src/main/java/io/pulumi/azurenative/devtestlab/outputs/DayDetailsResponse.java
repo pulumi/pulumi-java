@@ -54,7 +54,6 @@ public final class DayDetailsResponse {
             this.time = time;
             return this;
         }
-
         public DayDetailsResponse build() {
             return new DayDetailsResponse(time);
         }

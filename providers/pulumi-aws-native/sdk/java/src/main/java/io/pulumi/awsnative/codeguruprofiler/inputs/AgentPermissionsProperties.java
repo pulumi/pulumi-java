@@ -22,7 +22,7 @@ public final class AgentPermissionsProperties extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="principals", required=true)
-    private final List<String> principals;
+        private final List<String> principals;
 
     public List<String> getPrincipals() {
         return this.principals;
@@ -60,7 +60,6 @@ public final class AgentPermissionsProperties extends io.pulumi.resources.Invoke
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
         public AgentPermissionsProperties build() {
             return new AgentPermissionsProperties(principals);
         }

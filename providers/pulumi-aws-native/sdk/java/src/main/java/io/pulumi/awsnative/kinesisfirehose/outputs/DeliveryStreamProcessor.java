@@ -61,7 +61,6 @@ public final class DeliveryStreamProcessor {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DeliveryStreamProcessor build() {
             return new DeliveryStreamProcessor(parameters, type);
         }

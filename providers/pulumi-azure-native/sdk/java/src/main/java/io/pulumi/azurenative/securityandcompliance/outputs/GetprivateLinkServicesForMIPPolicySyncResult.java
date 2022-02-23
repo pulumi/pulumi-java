@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForMIPPolicySyncResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForMIPPolicySyncResult build() {
             return new GetprivateLinkServicesForMIPPolicySyncResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

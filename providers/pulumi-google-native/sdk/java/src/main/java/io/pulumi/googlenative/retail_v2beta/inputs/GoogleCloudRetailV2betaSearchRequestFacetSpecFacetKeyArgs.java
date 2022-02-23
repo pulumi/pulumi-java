@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="contains")
-    private final @Nullable Input<List<String>> contains;
+      private final @Nullable Input<List<String>> contains;
 
     public Input<List<String>> getContains() {
         return this.contains == null ? Input.empty() : this.contains;
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="intervals")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
 
     public Input<List<GoogleCloudRetailV2betaIntervalArgs>> getIntervals() {
         return this.intervals == null ? Input.empty() : this.intervals;
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="orderBy")
-    private final @Nullable Input<String> orderBy;
+      private final @Nullable Input<String> orderBy;
 
     public Input<String> getOrderBy() {
         return this.orderBy == null ? Input.empty() : this.orderBy;
@@ -69,7 +69,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="prefixes")
-    private final @Nullable Input<List<String>> prefixes;
+      private final @Nullable Input<List<String>> prefixes;
 
     public Input<List<String>> getPrefixes() {
         return this.prefixes == null ? Input.empty() : this.prefixes;
@@ -80,7 +80,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -91,7 +91,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="restrictedValues")
-    private final @Nullable Input<List<String>> restrictedValues;
+      private final @Nullable Input<List<String>> restrictedValues;
 
     public Input<List<String>> getRestrictedValues() {
         return this.restrictedValues == null ? Input.empty() : this.restrictedValues;
@@ -225,7 +225,6 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
             this.restrictedValues = Input.ofNullable(restrictedValues);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }

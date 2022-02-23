@@ -205,7 +205,6 @@ public final class GetIntegrationAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountResult build() {
             return new GetIntegrationAccountResult(id, integrationServiceEnvironment, location, name, sku, state, tags, type);
         }

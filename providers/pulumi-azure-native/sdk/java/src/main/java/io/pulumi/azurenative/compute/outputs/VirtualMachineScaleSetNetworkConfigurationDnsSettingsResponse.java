@@ -54,7 +54,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
             this.dnsServers = dnsServers;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse build() {
             return new VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(dnsServers);
         }

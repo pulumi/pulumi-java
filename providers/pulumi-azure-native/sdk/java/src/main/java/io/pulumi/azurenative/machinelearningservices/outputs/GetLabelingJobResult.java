@@ -139,7 +139,6 @@ public final class GetLabelingJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLabelingJobResult build() {
             return new GetLabelingJobResult(id, name, properties, systemData, type);
         }

@@ -27,7 +27,7 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final String backupManagementType;
+        private final String backupManagementType;
 
     public String getBackupManagementType() {
         return this.backupManagementType;
@@ -38,7 +38,7 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="fabricName")
-    private final @Nullable String fabricName;
+        private final @Nullable String fabricName;
 
     public Optional<String> getFabricName() {
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
@@ -49,7 +49,7 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Integer protectedItemsCount;
+        private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
@@ -60,7 +60,7 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subProtectionPolicy")
-    private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
+        private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
@@ -71,7 +71,7 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable String timeZone;
+        private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
@@ -150,7 +150,6 @@ public final class GenericProtectionPolicyResponse extends io.pulumi.resources.I
             this.timeZone = timeZone;
             return this;
         }
-
         public GenericProtectionPolicyResponse build() {
             return new GenericProtectionPolicyResponse(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
         }

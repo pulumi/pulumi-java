@@ -182,7 +182,6 @@ public final class GetMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMonitorResult build() {
             return new GetMonitorResult(id, identity, location, name, properties, systemData, tags, type);
         }

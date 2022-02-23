@@ -504,7 +504,6 @@ public final class GetStreamingEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingEndpointResult build() {
             return new GetStreamingEndpointResult(accessControl, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, created, crossSiteAccessPolicies, customHostNames, description, freeTrialEndTime, hostName, id, lastModified, location, maxCacheAge, name, provisioningState, resourceState, scaleUnits, systemData, tags, type);
         }

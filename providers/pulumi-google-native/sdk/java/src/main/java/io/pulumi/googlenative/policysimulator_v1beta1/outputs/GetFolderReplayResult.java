@@ -118,7 +118,6 @@ public final class GetFolderReplayResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetFolderReplayResult build() {
             return new GetFolderReplayResult(config, name, resultsSummary, state);
         }

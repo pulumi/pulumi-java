@@ -585,7 +585,6 @@ public final class GetWatchlistResult {
             this.watchlistType = watchlistType;
             return this;
         }
-
         public GetWatchlistResult build() {
             return new GetWatchlistResult(contentType, created, createdBy, defaultDuration, description, displayName, etag, id, isDeleted, itemsSearchKey, labels, name, numberOfLinesToSkip, provider, rawContent, source, systemData, tenantId, type, updated, updatedBy, uploadStatus, watchlistAlias, watchlistId, watchlistItemsCount, watchlistType);
         }

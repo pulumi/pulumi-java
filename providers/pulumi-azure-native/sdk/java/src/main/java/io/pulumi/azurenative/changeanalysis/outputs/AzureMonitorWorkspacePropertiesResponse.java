@@ -97,7 +97,6 @@ public final class AzureMonitorWorkspacePropertiesResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AzureMonitorWorkspacePropertiesResponse build() {
             return new AzureMonitorWorkspacePropertiesResponse(includeChangeDetails, workspaceId, workspaceResourceId);
         }

@@ -107,7 +107,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionary build() {
             return new PreventionStoredInfoTypeLargeCustomDictionary(bigQueryField, cloudStorageFileSet, outputPath);
         }

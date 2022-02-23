@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -90,7 +90,6 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends io.pulumi.res
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public RegionInstanceGroupManagerNamedPortArgs build() {
             return new RegionInstanceGroupManagerNamedPortArgs(name, port);
         }

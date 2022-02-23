@@ -74,7 +74,6 @@ public final class WorkloadKmsSettings {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public WorkloadKmsSettings build() {
             return new WorkloadKmsSettings(nextRotationTime, rotationPeriod);
         }

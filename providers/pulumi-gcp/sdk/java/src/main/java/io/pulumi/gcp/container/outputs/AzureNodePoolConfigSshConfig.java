@@ -52,7 +52,6 @@ public final class AzureNodePoolConfigSshConfig {
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }
-
         public AzureNodePoolConfigSshConfig build() {
             return new AzureNodePoolConfigSshConfig(authorizedKey);
         }

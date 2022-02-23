@@ -44,7 +44,6 @@ public final class GetRegionResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionResult build() {
             return new GetRegionResult(region);
         }

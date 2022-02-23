@@ -227,7 +227,6 @@ public final class GetVideoResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVideoResult build() {
             return new GetVideoResult(description, flags, id, mediaInfo, name, streaming, systemData, title, type);
         }

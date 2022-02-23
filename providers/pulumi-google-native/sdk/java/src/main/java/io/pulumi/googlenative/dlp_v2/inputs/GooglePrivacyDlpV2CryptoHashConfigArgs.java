@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="cryptoKey")
-    private final @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+      private final @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
     public Input<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
         return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoHashConfigArgs(cryptoKey);
         }

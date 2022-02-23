@@ -79,7 +79,6 @@ public final class SecretReplication {
             this.userManaged = userManaged;
             return this;
         }
-
         public SecretReplication build() {
             return new SecretReplication(automatic, userManaged);
         }

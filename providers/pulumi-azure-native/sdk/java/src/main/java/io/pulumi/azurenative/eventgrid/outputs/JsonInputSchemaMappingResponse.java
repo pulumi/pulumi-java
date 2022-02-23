@@ -185,7 +185,6 @@ public final class JsonInputSchemaMappingResponse {
             this.topic = topic;
             return this;
         }
-
         public JsonInputSchemaMappingResponse build() {
             return new JsonInputSchemaMappingResponse(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
         }

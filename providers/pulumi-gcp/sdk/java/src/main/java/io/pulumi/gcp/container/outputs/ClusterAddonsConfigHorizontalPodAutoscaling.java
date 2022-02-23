@@ -54,7 +54,6 @@ public final class ClusterAddonsConfigHorizontalPodAutoscaling {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public ClusterAddonsConfigHorizontalPodAutoscaling build() {
             return new ClusterAddonsConfigHorizontalPodAutoscaling(disabled);
         }

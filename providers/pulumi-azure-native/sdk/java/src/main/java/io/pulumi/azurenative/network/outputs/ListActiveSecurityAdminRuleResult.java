@@ -80,7 +80,6 @@ public final class ListActiveSecurityAdminRuleResult {
             this.value = value;
             return this;
         }
-
         public ListActiveSecurityAdminRuleResult build() {
             return new ListActiveSecurityAdminRuleResult(skipToken, value);
         }

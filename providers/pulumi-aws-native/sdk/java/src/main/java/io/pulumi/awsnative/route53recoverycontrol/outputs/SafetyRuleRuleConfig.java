@@ -89,7 +89,6 @@ public final class SafetyRuleRuleConfig {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SafetyRuleRuleConfig build() {
             return new SafetyRuleRuleConfig(inverted, threshold, type);
         }

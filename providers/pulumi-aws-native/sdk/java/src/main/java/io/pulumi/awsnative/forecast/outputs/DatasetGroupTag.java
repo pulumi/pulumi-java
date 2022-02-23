@@ -74,7 +74,6 @@ public final class DatasetGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatasetGroupTag build() {
             return new DatasetGroupTag(key, value);
         }

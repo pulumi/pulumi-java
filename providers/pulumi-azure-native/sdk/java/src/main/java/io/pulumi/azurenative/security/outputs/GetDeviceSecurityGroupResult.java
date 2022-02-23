@@ -185,7 +185,6 @@ public final class GetDeviceSecurityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceSecurityGroupResult build() {
             return new GetDeviceSecurityGroupResult(allowlistRules, denylistRules, id, name, thresholdRules, timeWindowRules, type);
         }

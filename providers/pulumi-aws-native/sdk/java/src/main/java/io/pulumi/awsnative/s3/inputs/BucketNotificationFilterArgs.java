@@ -18,7 +18,7 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
     public static final BucketNotificationFilterArgs Empty = new BucketNotificationFilterArgs();
 
     @InputImport(name="s3Key", required=true)
-    private final Input<BucketS3KeyFilterArgs> s3Key;
+        private final Input<BucketS3KeyFilterArgs> s3Key;
 
     public Input<BucketS3KeyFilterArgs> getS3Key() {
         return this.s3Key;
@@ -61,7 +61,6 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
             this.s3Key = Input.of(Objects.requireNonNull(s3Key));
             return this;
         }
-
         public BucketNotificationFilterArgs build() {
             return new BucketNotificationFilterArgs(s3Key);
         }

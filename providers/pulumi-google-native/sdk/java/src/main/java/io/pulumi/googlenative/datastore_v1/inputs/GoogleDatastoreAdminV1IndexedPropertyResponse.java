@@ -21,7 +21,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -32,7 +32,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
             return new GoogleDatastoreAdminV1IndexedPropertyResponse(direction, name);
         }

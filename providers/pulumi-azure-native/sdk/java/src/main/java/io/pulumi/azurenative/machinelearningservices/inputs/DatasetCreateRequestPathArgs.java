@@ -16,7 +16,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     public static final DatasetCreateRequestPathArgs Empty = new DatasetCreateRequestPathArgs();
 
     @InputImport(name="dataPath")
-    private final @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath;
+        private final @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath;
 
     public Input<DatasetCreateRequestDataPathArgs> getDataPath() {
         return this.dataPath == null ? Input.empty() : this.dataPath;
@@ -27,7 +27,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="httpUrl")
-    private final @Nullable Input<String> httpUrl;
+        private final @Nullable Input<String> httpUrl;
 
     public Input<String> getHttpUrl() {
         return this.httpUrl == null ? Input.empty() : this.httpUrl;
@@ -86,7 +86,6 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
             this.httpUrl = Input.ofNullable(httpUrl);
             return this;
         }
-
         public DatasetCreateRequestPathArgs build() {
             return new DatasetCreateRequestPathArgs(dataPath, httpUrl);
         }

@@ -74,7 +74,6 @@ public final class FrameworkTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FrameworkTag build() {
             return new FrameworkTag(key, value);
         }

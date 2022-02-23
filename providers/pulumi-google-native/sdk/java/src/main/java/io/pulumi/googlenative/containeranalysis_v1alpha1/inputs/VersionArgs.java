@@ -26,7 +26,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="epoch")
-    private final @Nullable Input<Integer> epoch;
+      private final @Nullable Input<Integer> epoch;
 
     public Input<Integer> getEpoch() {
         return this.epoch == null ? Input.empty() : this.epoch;
@@ -37,7 +37,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inclusive")
-    private final @Nullable Input<Boolean> inclusive;
+      private final @Nullable Input<Boolean> inclusive;
 
     public Input<Boolean> getInclusive() {
         return this.inclusive == null ? Input.empty() : this.inclusive;
@@ -48,7 +48,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<VersionKind> kind;
+      private final @Nullable Input<VersionKind> kind;
 
     public Input<VersionKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,7 +59,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -174,7 +174,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.revision = Input.ofNullable(revision);
             return this;
         }
-
         public VersionArgs build() {
             return new VersionArgs(epoch, inclusive, kind, name, revision);
         }

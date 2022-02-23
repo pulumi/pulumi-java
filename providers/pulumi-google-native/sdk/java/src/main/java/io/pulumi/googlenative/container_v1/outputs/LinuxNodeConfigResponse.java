@@ -53,7 +53,6 @@ public final class LinuxNodeConfigResponse {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public LinuxNodeConfigResponse build() {
             return new LinuxNodeConfigResponse(sysctls);
         }

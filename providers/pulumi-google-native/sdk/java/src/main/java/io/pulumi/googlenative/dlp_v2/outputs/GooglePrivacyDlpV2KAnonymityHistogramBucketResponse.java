@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
         }

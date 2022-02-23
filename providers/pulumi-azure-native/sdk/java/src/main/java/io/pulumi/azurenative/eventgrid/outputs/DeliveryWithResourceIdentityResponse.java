@@ -86,7 +86,6 @@ public final class DeliveryWithResourceIdentityResponse {
             this.identity = identity;
             return this;
         }
-
         public DeliveryWithResourceIdentityResponse build() {
             return new DeliveryWithResourceIdentityResponse(destination, identity);
         }

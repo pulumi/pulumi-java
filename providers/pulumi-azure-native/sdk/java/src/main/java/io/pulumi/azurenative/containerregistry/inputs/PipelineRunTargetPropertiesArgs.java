@@ -21,7 +21,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,PipelineRunTargetType>> type;
+        private final @Nullable Input<Either<String,PipelineRunTargetType>> type;
 
     public Input<Either<String,PipelineRunTargetType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -91,7 +91,6 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public PipelineRunTargetPropertiesArgs build() {
             return new PipelineRunTargetPropertiesArgs(name, type);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="noSmallTalk")
-    private final @Nullable Input<Boolean> noSmallTalk;
+      private final @Nullable Input<Boolean> noSmallTalk;
 
     public Input<Boolean> getNoSmallTalk() {
         return this.noSmallTalk == null ? Input.empty() : this.noSmallTalk;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="onlyEndUser")
-    private final @Nullable Input<Boolean> onlyEndUser;
+      private final @Nullable Input<Boolean> onlyEndUser;
 
     public Input<Boolean> getOnlyEndUser() {
         return this.onlyEndUser == null ? Input.empty() : this.onlyEndUser;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.onlyEndUser = Input.ofNullable(onlyEndUser);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(noSmallTalk, onlyEndUser);
         }

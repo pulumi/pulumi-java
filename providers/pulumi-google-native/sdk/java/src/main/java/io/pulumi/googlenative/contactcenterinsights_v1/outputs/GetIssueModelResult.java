@@ -181,7 +181,6 @@ public final class GetIssueModelResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetIssueModelResult build() {
             return new GetIssueModelResult(createTime, displayName, inputDataConfig, name, state, trainingStats, updateTime);
         }

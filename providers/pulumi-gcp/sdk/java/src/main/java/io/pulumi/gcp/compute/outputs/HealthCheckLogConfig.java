@@ -56,7 +56,6 @@ public final class HealthCheckLogConfig {
             this.enable = enable;
             return this;
         }
-
         public HealthCheckLogConfig build() {
             return new HealthCheckLogConfig(enable);
         }

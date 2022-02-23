@@ -207,7 +207,6 @@ public final class SsisPackageResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SsisPackageResponse build() {
             return new SsisPackageResponse(description, folderId, id, name, parameters, projectId, projectVersion, type);
         }

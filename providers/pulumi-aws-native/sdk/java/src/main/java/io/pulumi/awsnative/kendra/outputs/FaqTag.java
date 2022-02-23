@@ -74,7 +74,6 @@ public final class FaqTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FaqTag build() {
             return new FaqTag(key, value);
         }

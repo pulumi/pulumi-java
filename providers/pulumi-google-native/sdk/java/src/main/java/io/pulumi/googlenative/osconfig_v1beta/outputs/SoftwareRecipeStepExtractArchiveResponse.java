@@ -95,7 +95,6 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SoftwareRecipeStepExtractArchiveResponse build() {
             return new SoftwareRecipeStepExtractArchiveResponse(artifactId, destination, type);
         }

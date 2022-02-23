@@ -52,7 +52,6 @@ public final class MqttConfigResponse {
             this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
             return this;
         }
-
         public MqttConfigResponse build() {
             return new MqttConfigResponse(mqttEnabledState);
         }

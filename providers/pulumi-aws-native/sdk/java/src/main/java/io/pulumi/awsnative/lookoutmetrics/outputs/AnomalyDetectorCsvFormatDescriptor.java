@@ -115,7 +115,6 @@ public final class AnomalyDetectorCsvFormatDescriptor {
             this.quoteSymbol = quoteSymbol;
             return this;
         }
-
         public AnomalyDetectorCsvFormatDescriptor build() {
             return new AnomalyDetectorCsvFormatDescriptor(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);
         }

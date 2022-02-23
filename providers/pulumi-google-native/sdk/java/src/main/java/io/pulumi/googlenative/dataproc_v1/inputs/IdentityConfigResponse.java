@@ -22,7 +22,7 @@ public final class IdentityConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userServiceAccountMapping", required=true)
-    private final Map<String,String> userServiceAccountMapping;
+      private final Map<String,String> userServiceAccountMapping;
 
     public Map<String,String> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;
@@ -60,7 +60,6 @@ public final class IdentityConfigResponse extends io.pulumi.resources.InvokeArgs
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }
-
         public IdentityConfigResponse build() {
             return new IdentityConfigResponse(userServiceAccountMapping);
         }

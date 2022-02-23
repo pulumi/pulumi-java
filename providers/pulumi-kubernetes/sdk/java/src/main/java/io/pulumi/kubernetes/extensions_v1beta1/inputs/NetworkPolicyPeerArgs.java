@@ -24,7 +24,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipBlock")
-    private final @Nullable Input<IPBlockArgs> ipBlock;
+        private final @Nullable Input<IPBlockArgs> ipBlock;
 
     public Input<IPBlockArgs> getIpBlock() {
         return this.ipBlock == null ? Input.empty() : this.ipBlock;
@@ -37,7 +37,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespaceSelector")
-    private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+        private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
 
     public Input<LabelSelectorArgs> getNamespaceSelector() {
         return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
@@ -50,7 +50,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="podSelector")
-    private final @Nullable Input<LabelSelectorArgs> podSelector;
+        private final @Nullable Input<LabelSelectorArgs> podSelector;
 
     public Input<LabelSelectorArgs> getPodSelector() {
         return this.podSelector == null ? Input.empty() : this.podSelector;
@@ -124,7 +124,6 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
             this.podSelector = Input.ofNullable(podSelector);
             return this;
         }
-
         public NetworkPolicyPeerArgs build() {
             return new NetworkPolicyPeerArgs(ipBlock, namespaceSelector, podSelector);
         }

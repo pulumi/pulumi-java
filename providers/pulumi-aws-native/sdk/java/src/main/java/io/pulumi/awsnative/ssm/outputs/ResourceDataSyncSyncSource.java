@@ -89,7 +89,6 @@ public final class ResourceDataSyncSyncSource {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public ResourceDataSyncSyncSource build() {
             return new ResourceDataSyncSyncSource(awsOrganizationsSource, includeFutureRegions, sourceRegions, sourceType);
         }

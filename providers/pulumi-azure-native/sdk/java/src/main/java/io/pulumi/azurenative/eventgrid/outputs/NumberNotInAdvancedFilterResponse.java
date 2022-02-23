@@ -101,7 +101,6 @@ public final class NumberNotInAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public NumberNotInAdvancedFilterResponse build() {
             return new NumberNotInAdvancedFilterResponse(key, operatorType, values);
         }

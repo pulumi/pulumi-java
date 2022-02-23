@@ -13,14 +13,14 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetProviderNoteIamPolicyArgs Empty = new GetProviderNoteIamPolicyArgs();
 
     @InputImport(name="noteId", required=true)
-    private final String noteId;
+      private final String noteId;
 
     public String getNoteId() {
         return this.noteId;
     }
 
     @InputImport(name="providerId", required=true)
-    private final String providerId;
+      private final String providerId;
 
     public String getProviderId() {
         return this.providerId;
@@ -69,7 +69,6 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public GetProviderNoteIamPolicyArgs build() {
             return new GetProviderNoteIamPolicyArgs(noteId, providerId);
         }

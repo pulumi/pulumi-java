@@ -102,7 +102,6 @@ public final class GetBackupVaultResult {
             this.notifications = notifications;
             return this;
         }
-
         public GetBackupVaultResult build() {
             return new GetBackupVaultResult(accessPolicy, backupVaultArn, backupVaultTags, lockConfiguration, notifications);
         }

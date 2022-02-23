@@ -103,7 +103,6 @@ public final class WebPubSubFeatureResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WebPubSubFeatureResponse build() {
             return new WebPubSubFeatureResponse(flag, properties, value);
         }

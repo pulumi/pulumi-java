@@ -52,7 +52,6 @@ public final class ControlResponse {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public ControlResponse build() {
             return new ControlResponse(environment);
         }

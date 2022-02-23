@@ -23,7 +23,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultUrl")
-    private final @Nullable Input<String> keyVaultUrl;
+        private final @Nullable Input<String> keyVaultUrl;
 
     public Input<String> getKeyVaultUrl() {
         return this.keyVaultUrl == null ? Input.empty() : this.keyVaultUrl;
@@ -34,7 +34,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public WorkspaceKeyDetailsArgs build() {
             return new WorkspaceKeyDetailsArgs(keyVaultUrl, name);
         }

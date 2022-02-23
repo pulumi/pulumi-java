@@ -96,7 +96,6 @@ public final class ClusterJobResponse {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }
-
         public ClusterJobResponse build() {
             return new ClusterJobResponse(id, jobState, streamingUnits);
         }

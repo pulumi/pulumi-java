@@ -119,7 +119,6 @@ public final class ReferenceVmResponse {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }
-
         public ReferenceVmResponse build() {
             return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
         }

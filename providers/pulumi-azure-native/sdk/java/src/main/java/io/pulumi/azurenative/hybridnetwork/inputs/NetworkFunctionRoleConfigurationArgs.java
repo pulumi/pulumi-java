@@ -32,7 +32,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customProfile")
-    private final @Nullable Input<CustomProfileArgs> customProfile;
+        private final @Nullable Input<CustomProfileArgs> customProfile;
 
     public Input<CustomProfileArgs> getCustomProfile() {
         return this.customProfile == null ? Input.empty() : this.customProfile;
@@ -43,7 +43,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+        private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -54,7 +54,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable Input<OsProfileArgs> osProfile;
+        private final @Nullable Input<OsProfileArgs> osProfile;
 
     public Input<OsProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -65,7 +65,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+        private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -76,7 +76,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleType")
-    private final @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
+        private final @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
 
     public Input<Either<String,NetworkFunctionRoleConfigurationType>> getRoleType() {
         return this.roleType == null ? Input.empty() : this.roleType;
@@ -87,7 +87,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageProfile")
-    private final @Nullable Input<StorageProfileArgs> storageProfile;
+        private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -98,7 +98,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataParameters")
-    private final @Nullable Input<Object> userDataParameters;
+        private final @Nullable Input<Object> userDataParameters;
 
     public Input<Object> getUserDataParameters() {
         return this.userDataParameters == null ? Input.empty() : this.userDataParameters;
@@ -109,7 +109,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataTemplate")
-    private final @Nullable Input<Object> userDataTemplate;
+        private final @Nullable Input<Object> userDataTemplate;
 
     public Input<Object> getUserDataTemplate() {
         return this.userDataTemplate == null ? Input.empty() : this.userDataTemplate;
@@ -120,7 +120,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualMachineSize")
-    private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
+        private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 
     public Input<Either<String,VirtualMachineSizeTypes>> getVirtualMachineSize() {
         return this.virtualMachineSize == null ? Input.empty() : this.virtualMachineSize;
@@ -284,7 +284,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
             this.virtualMachineSize = Input.ofNullable(virtualMachineSize);
             return this;
         }
-
         public NetworkFunctionRoleConfigurationArgs build() {
             return new NetworkFunctionRoleConfigurationArgs(customProfile, networkInterfaces, osProfile, roleName, roleType, storageProfile, userDataParameters, userDataTemplate, virtualMachineSize);
         }

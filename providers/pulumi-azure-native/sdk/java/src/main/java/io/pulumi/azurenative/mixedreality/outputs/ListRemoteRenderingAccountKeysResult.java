@@ -74,7 +74,6 @@ public final class ListRemoteRenderingAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListRemoteRenderingAccountKeysResult build() {
             return new ListRemoteRenderingAccountKeysResult(primaryKey, secondaryKey);
         }

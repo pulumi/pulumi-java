@@ -22,7 +22,7 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final Input<String> sourceArmResourceId;
+        private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -65,7 +65,6 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
-
         public NsgReferenceArgs build() {
             return new NsgReferenceArgs(sourceArmResourceId);
         }

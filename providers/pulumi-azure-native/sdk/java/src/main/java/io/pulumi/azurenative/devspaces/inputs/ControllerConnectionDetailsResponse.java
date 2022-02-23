@@ -19,7 +19,7 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="orchestratorSpecificConnectionDetails")
-    private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
+        private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
         return this.orchestratorSpecificConnectionDetails == null ? Optional.empty() : Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
@@ -57,7 +57,6 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }
-
         public ControllerConnectionDetailsResponse build() {
             return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
         }

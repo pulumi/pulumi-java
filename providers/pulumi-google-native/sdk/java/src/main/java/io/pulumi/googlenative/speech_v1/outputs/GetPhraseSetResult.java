@@ -98,7 +98,6 @@ public final class GetPhraseSetResult {
             this.phrases = Objects.requireNonNull(phrases);
             return this;
         }
-
         public GetPhraseSetResult build() {
             return new GetPhraseSetResult(boost, name, phrases);
         }

@@ -23,7 +23,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishCaCert")
-    private final @Nullable Input<Boolean> publishCaCert;
+      private final @Nullable Input<Boolean> publishCaCert;
 
     public Input<Boolean> getPublishCaCert() {
         return this.publishCaCert == null ? Input.empty() : this.publishCaCert;
@@ -34,7 +34,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishCrl")
-    private final @Nullable Input<Boolean> publishCrl;
+      private final @Nullable Input<Boolean> publishCrl;
 
     public Input<Boolean> getPublishCrl() {
         return this.publishCrl == null ? Input.empty() : this.publishCrl;
@@ -93,7 +93,6 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
             this.publishCrl = Input.ofNullable(publishCrl);
             return this;
         }
-
         public PublishingOptionsArgs build() {
             return new PublishingOptionsArgs(publishCaCert, publishCrl);
         }

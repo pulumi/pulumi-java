@@ -96,7 +96,6 @@ public final class DataSourceMySqlParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceMySqlParameters build() {
             return new DataSourceMySqlParameters(database, host, port);
         }

@@ -206,7 +206,6 @@ public final class JobConfigurationResponse {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public JobConfigurationResponse build() {
             return new JobConfigurationResponse(copy, dryRun, extract, jobTimeoutMs, jobType, labels, load, query);
         }

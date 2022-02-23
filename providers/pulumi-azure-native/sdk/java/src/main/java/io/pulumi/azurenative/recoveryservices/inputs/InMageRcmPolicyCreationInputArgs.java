@@ -24,7 +24,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-    private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+        private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
     public Input<Integer> getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
@@ -35,7 +35,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes")
-    private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
+        private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
     public Input<Integer> getCrashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
@@ -46,7 +46,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableMultiVmSync")
-    private final @Nullable Input<String> enableMultiVmSync;
+        private final @Nullable Input<String> enableMultiVmSync;
 
     public Input<String> getEnableMultiVmSync() {
         return this.enableMultiVmSync == null ? Input.empty() : this.enableMultiVmSync;
@@ -58,7 +58,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -69,7 +69,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryPointHistoryInMinutes")
-    private final @Nullable Input<Integer> recoveryPointHistoryInMinutes;
+        private final @Nullable Input<Integer> recoveryPointHistoryInMinutes;
 
     public Input<Integer> getRecoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes == null ? Input.empty() : this.recoveryPointHistoryInMinutes;
@@ -173,7 +173,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
             this.recoveryPointHistoryInMinutes = Input.ofNullable(recoveryPointHistoryInMinutes);
             return this;
         }
-
         public InMageRcmPolicyCreationInputArgs build() {
             return new InMageRcmPolicyCreationInputArgs(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, enableMultiVmSync, instanceType, recoveryPointHistoryInMinutes);
         }

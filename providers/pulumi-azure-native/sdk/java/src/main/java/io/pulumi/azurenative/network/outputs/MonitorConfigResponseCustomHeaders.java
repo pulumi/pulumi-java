@@ -76,7 +76,6 @@ public final class MonitorConfigResponseCustomHeaders {
             this.value = value;
             return this;
         }
-
         public MonitorConfigResponseCustomHeaders build() {
             return new MonitorConfigResponseCustomHeaders(name, value);
         }

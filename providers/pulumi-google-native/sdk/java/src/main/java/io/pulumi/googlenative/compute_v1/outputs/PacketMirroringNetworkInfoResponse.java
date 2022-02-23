@@ -74,7 +74,6 @@ public final class PacketMirroringNetworkInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringNetworkInfoResponse build() {
             return new PacketMirroringNetworkInfoResponse(canonicalUrl, url);
         }

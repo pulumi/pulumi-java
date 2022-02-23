@@ -19,28 +19,28 @@ public final class GlobalTableGlobalSecondaryIndex extends io.pulumi.resources.I
     public static final GlobalTableGlobalSecondaryIndex Empty = new GlobalTableGlobalSecondaryIndex();
 
     @InputImport(name="indexName", required=true)
-    private final String indexName;
+        private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="keySchema", required=true)
-    private final List<GlobalTableKeySchema> keySchema;
+        private final List<GlobalTableKeySchema> keySchema;
 
     public List<GlobalTableKeySchema> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="projection", required=true)
-    private final GlobalTableProjection projection;
+        private final GlobalTableProjection projection;
 
     public GlobalTableProjection getProjection() {
         return this.projection;
     }
 
     @InputImport(name="writeProvisionedThroughputSettings")
-    private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
+        private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
     public Optional<GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.writeProvisionedThroughputSettings);
@@ -109,7 +109,6 @@ public final class GlobalTableGlobalSecondaryIndex extends io.pulumi.resources.I
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-
         public GlobalTableGlobalSecondaryIndex build() {
             return new GlobalTableGlobalSecondaryIndex(indexName, keySchema, projection, writeProvisionedThroughputSettings);
         }

@@ -75,7 +75,6 @@ public final class TestDetailsResponse {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }
-
         public TestDetailsResponse build() {
             return new TestDetailsResponse(errorMessage, progressMessages);
         }

@@ -25,7 +25,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientInfo")
-    private final @Nullable Input<ClientInfoArgs> clientInfo;
+      private final @Nullable Input<ClientInfoArgs> clientInfo;
 
     public Input<ClientInfoArgs> getClientInfo() {
         return this.clientInfo == null ? Input.empty() : this.clientInfo;
@@ -36,7 +36,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentMatrix", required=true)
-    private final Input<EnvironmentMatrixArgs> environmentMatrix;
+      private final Input<EnvironmentMatrixArgs> environmentMatrix;
 
     public Input<EnvironmentMatrixArgs> getEnvironmentMatrix() {
         return this.environmentMatrix;
@@ -47,7 +47,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failFast")
-    private final @Nullable Input<Boolean> failFast;
+      private final @Nullable Input<Boolean> failFast;
 
     public Input<Boolean> getFailFast() {
         return this.failFast == null ? Input.empty() : this.failFast;
@@ -58,7 +58,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flakyTestAttempts")
-    private final @Nullable Input<Integer> flakyTestAttempts;
+      private final @Nullable Input<Integer> flakyTestAttempts;
 
     public Input<Integer> getFlakyTestAttempts() {
         return this.flakyTestAttempts == null ? Input.empty() : this.flakyTestAttempts;
@@ -69,14 +69,14 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -87,7 +87,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resultStorage", required=true)
-    private final Input<ResultStorageArgs> resultStorage;
+      private final Input<ResultStorageArgs> resultStorage;
 
     public Input<ResultStorageArgs> getResultStorage() {
         return this.resultStorage;
@@ -98,7 +98,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testSpecification", required=true)
-    private final Input<TestSpecificationArgs> testSpecification;
+      private final Input<TestSpecificationArgs> testSpecification;
 
     public Input<TestSpecificationArgs> getTestSpecification() {
         return this.testSpecification;
@@ -247,7 +247,6 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             this.testSpecification = Input.of(Objects.requireNonNull(testSpecification));
             return this;
         }
-
         public TestMatrixArgs build() {
             return new TestMatrixArgs(clientInfo, environmentMatrix, failFast, flakyTestAttempts, project, requestId, resultStorage, testSpecification);
         }

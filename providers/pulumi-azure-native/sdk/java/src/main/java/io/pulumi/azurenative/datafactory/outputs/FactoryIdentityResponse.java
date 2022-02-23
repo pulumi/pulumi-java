@@ -119,7 +119,6 @@ public final class FactoryIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public FactoryIdentityResponse build() {
             return new FactoryIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

@@ -54,7 +54,6 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
             this.provider = provider;
             return this;
         }
-
         public AppliancePropertiesResponseInfrastructureConfig build() {
             return new AppliancePropertiesResponseInfrastructureConfig(provider);
         }

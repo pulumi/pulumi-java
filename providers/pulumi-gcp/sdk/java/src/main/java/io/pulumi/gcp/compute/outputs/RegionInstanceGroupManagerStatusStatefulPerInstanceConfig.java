@@ -54,7 +54,6 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
             this.allEffective = allEffective;
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStatefulPerInstanceConfig build() {
             return new RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(allEffective);
         }

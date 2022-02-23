@@ -52,7 +52,6 @@ public final class KeyIdResponse {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public KeyIdResponse build() {
             return new KeyIdResponse(keyId);
         }

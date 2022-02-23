@@ -14,14 +14,14 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final AccountIamPolicyArgs Empty = new AccountIamPolicyArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final Input<String> billingAccountId;
+        private final Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -80,7 +80,6 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public AccountIamPolicyArgs build() {
             return new AccountIamPolicyArgs(billingAccountId, policyData);
         }

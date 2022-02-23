@@ -54,7 +54,6 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             this.s3Configuration = s3Configuration;
             return this;
         }
-
         public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties build() {
             return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(s3Configuration);
         }

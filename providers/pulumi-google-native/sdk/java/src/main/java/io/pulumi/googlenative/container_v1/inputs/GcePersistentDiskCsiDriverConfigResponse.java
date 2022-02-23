@@ -21,7 +21,7 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends io.pulumi.re
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcePersistentDiskCsiDriverConfigResponse build() {
             return new GcePersistentDiskCsiDriverConfigResponse(enabled);
         }

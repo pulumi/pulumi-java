@@ -111,7 +111,6 @@ public final class GetHealthCheckSslHealthCheck {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckSslHealthCheck build() {
             return new GetHealthCheckSslHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

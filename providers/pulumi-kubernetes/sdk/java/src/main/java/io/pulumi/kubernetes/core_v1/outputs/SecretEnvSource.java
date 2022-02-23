@@ -77,7 +77,6 @@ public final class SecretEnvSource {
             this.optional = optional;
             return this;
         }
-
         public SecretEnvSource build() {
             return new SecretEnvSource(name, optional);
         }

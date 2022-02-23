@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="srcIpRanges")
-    private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
@@ -63,7 +63,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigArgs build() {
             return new SecurityPolicyRuleMatcherConfigArgs(srcIpRanges);
         }

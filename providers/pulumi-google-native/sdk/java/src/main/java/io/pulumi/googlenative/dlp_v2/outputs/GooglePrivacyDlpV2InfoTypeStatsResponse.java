@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeStatsResponse(count, infoType);
         }

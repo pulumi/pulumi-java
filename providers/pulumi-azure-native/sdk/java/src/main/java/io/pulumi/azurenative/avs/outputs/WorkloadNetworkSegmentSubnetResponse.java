@@ -77,7 +77,6 @@ public final class WorkloadNetworkSegmentSubnetResponse {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
-
         public WorkloadNetworkSegmentSubnetResponse build() {
             return new WorkloadNetworkSegmentSubnetResponse(dhcpRanges, gatewayAddress);
         }

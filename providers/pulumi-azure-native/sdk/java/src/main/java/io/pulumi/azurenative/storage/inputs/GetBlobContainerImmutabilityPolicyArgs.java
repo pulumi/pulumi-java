@@ -17,7 +17,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="immutabilityPolicyName", required=true)
-    private final String immutabilityPolicyName;
+        private final String immutabilityPolicyName;
 
     public String getImmutabilityPolicyName() {
         return this.immutabilityPolicyName;
@@ -50,7 +50,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetBlobContainerImmutabilityPolicyArgs build() {
             return new GetBlobContainerImmutabilityPolicyArgs(accountName, containerName, immutabilityPolicyName, resourceGroupName);
         }

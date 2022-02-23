@@ -179,7 +179,6 @@ public final class ForwardingRuleInfoResponse {
             this.vip = Objects.requireNonNull(vip);
             return this;
         }
-
         public ForwardingRuleInfoResponse build() {
             return new ForwardingRuleInfoResponse(displayName, matchedPortRange, matchedProtocol, networkUri, target, uri, vip);
         }

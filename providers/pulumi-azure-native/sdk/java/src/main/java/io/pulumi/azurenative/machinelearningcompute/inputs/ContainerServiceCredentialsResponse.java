@@ -22,7 +22,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="acsKubeConfig", required=true)
-    private final String acsKubeConfig;
+        private final String acsKubeConfig;
 
     public String getAcsKubeConfig() {
         return this.acsKubeConfig;
@@ -33,7 +33,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="imagePullSecretName", required=true)
-    private final String imagePullSecretName;
+        private final String imagePullSecretName;
 
     public String getImagePullSecretName() {
         return this.imagePullSecretName;
@@ -44,7 +44,7 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalConfiguration", required=true)
-    private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
+        private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
     public ServicePrincipalPropertiesResponse getServicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
@@ -103,7 +103,6 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
             this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
             return this;
         }
-
         public ContainerServiceCredentialsResponse build() {
             return new ContainerServiceCredentialsResponse(acsKubeConfig, imagePullSecretName, servicePrincipalConfiguration);
         }

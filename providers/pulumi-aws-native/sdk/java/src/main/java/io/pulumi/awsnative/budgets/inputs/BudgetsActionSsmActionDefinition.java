@@ -15,21 +15,21 @@ public final class BudgetsActionSsmActionDefinition extends io.pulumi.resources.
     public static final BudgetsActionSsmActionDefinition Empty = new BudgetsActionSsmActionDefinition();
 
     @InputImport(name="instanceIds", required=true)
-    private final List<String> instanceIds;
+        private final List<String> instanceIds;
 
     public List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="subtype", required=true)
-    private final BudgetsActionSsmActionDefinitionSubtype subtype;
+        private final BudgetsActionSsmActionDefinitionSubtype subtype;
 
     public BudgetsActionSsmActionDefinitionSubtype getSubtype() {
         return this.subtype;
@@ -88,7 +88,6 @@ public final class BudgetsActionSsmActionDefinition extends io.pulumi.resources.
             this.subtype = Objects.requireNonNull(subtype);
             return this;
         }
-
         public BudgetsActionSsmActionDefinition build() {
             return new BudgetsActionSsmActionDefinition(instanceIds, region, subtype);
         }

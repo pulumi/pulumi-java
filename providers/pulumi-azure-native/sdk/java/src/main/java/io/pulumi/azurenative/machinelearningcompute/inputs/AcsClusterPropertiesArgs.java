@@ -30,7 +30,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="agentCount")
-    private final @Nullable Input<Integer> agentCount;
+        private final @Nullable Input<Integer> agentCount;
 
     public Input<Integer> getAgentCount() {
         return this.agentCount == null ? Input.empty() : this.agentCount;
@@ -41,7 +41,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="agentVmSize")
-    private final @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize;
+        private final @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize;
 
     public Input<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
         return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
@@ -52,7 +52,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="masterCount")
-    private final @Nullable Input<Integer> masterCount;
+        private final @Nullable Input<Integer> masterCount;
 
     public Input<Integer> getMasterCount() {
         return this.masterCount == null ? Input.empty() : this.masterCount;
@@ -63,7 +63,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="orchestratorProperties")
-    private final @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties;
+        private final @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
     public Input<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
         return this.orchestratorProperties == null ? Input.empty() : this.orchestratorProperties;
@@ -74,7 +74,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="orchestratorType", required=true)
-    private final Input<Either<String,OrchestratorType>> orchestratorType;
+        private final Input<Either<String,OrchestratorType>> orchestratorType;
 
     public Input<Either<String,OrchestratorType>> getOrchestratorType() {
         return this.orchestratorType;
@@ -85,7 +85,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="systemServices")
-    private final @Nullable Input<List<SystemServiceArgs>> systemServices;
+        private final @Nullable Input<List<SystemServiceArgs>> systemServices;
 
     public Input<List<SystemServiceArgs>> getSystemServices() {
         return this.systemServices == null ? Input.empty() : this.systemServices;
@@ -204,7 +204,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             this.systemServices = Input.ofNullable(systemServices);
             return this;
         }
-
         public AcsClusterPropertiesArgs build() {
             return new AcsClusterPropertiesArgs(agentCount, agentVmSize, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }

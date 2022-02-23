@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="dictionary", required=true)
-    private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+      private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="excludeInfoTypes", required=true)
-    private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
+      private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
 
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
         return this.excludeInfoTypes;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="matchingType", required=true)
-    private final String matchingType;
+      private final String matchingType;
 
     public String getMatchingType() {
         return this.matchingType;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="regex", required=true)
-    private final GooglePrivacyDlpV2RegexResponse regex;
+      private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2ExclusionRuleResponse build() {
             return new GooglePrivacyDlpV2ExclusionRuleResponse(dictionary, excludeInfoTypes, matchingType, regex);
         }

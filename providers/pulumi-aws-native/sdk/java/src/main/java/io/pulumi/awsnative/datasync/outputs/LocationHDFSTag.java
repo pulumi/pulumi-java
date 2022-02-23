@@ -74,7 +74,6 @@ public final class LocationHDFSTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationHDFSTag build() {
             return new LocationHDFSTag(key, value);
         }

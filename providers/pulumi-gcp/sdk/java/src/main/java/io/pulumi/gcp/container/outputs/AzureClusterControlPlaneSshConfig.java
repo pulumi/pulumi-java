@@ -52,7 +52,6 @@ public final class AzureClusterControlPlaneSshConfig {
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }
-
         public AzureClusterControlPlaneSshConfig build() {
             return new AzureClusterControlPlaneSshConfig(authorizedKey);
         }

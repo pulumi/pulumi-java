@@ -52,7 +52,6 @@ public final class AppEngineHttpTargetResponse {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
-
         public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRoutingOverride);
         }

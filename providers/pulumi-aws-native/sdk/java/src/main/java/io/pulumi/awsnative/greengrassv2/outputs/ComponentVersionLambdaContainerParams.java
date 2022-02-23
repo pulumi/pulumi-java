@@ -90,7 +90,6 @@ public final class ComponentVersionLambdaContainerParams {
             this.volumes = volumes;
             return this;
         }
-
         public ComponentVersionLambdaContainerParams build() {
             return new ComponentVersionLambdaContainerParams(devices, memorySizeInKB, mountROSysfs, volumes);
         }

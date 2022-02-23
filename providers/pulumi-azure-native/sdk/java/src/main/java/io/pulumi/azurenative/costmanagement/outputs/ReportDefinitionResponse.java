@@ -120,7 +120,6 @@ public final class ReportDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReportDefinitionResponse build() {
             return new ReportDefinitionResponse(dataset, timePeriod, timeframe, type);
         }

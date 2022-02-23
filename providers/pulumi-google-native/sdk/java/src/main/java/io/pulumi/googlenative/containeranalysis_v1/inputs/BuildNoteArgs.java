@@ -22,7 +22,7 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="builderVersion", required=true)
-    private final Input<String> builderVersion;
+      private final Input<String> builderVersion;
 
     public Input<String> getBuilderVersion() {
         return this.builderVersion;
@@ -65,7 +65,6 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.builderVersion = Input.of(Objects.requireNonNull(builderVersion));
             return this;
         }
-
         public BuildNoteArgs build() {
             return new BuildNoteArgs(builderVersion);
         }

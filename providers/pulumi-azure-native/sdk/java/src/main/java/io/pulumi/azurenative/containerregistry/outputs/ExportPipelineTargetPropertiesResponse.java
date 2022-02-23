@@ -101,7 +101,6 @@ public final class ExportPipelineTargetPropertiesResponse {
             this.uri = uri;
             return this;
         }
-
         public ExportPipelineTargetPropertiesResponse build() {
             return new ExportPipelineTargetPropertiesResponse(keyVaultUri, type, uri);
         }

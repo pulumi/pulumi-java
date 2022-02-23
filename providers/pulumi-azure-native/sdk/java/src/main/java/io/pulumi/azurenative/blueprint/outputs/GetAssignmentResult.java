@@ -334,7 +334,6 @@ public final class GetAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult(blueprintId, description, displayName, id, identity, location, locks, name, parameters, provisioningState, resourceGroups, scope, status, type);
         }

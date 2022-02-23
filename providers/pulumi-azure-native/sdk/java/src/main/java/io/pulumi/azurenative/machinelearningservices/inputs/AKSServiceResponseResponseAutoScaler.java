@@ -24,7 +24,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * 
      */
     @InputImport(name="autoscaleEnabled")
-    private final @Nullable Boolean autoscaleEnabled;
+        private final @Nullable Boolean autoscaleEnabled;
 
     public Optional<Boolean> getAutoscaleEnabled() {
         return this.autoscaleEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoscaleEnabled);
@@ -35,7 +35,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxReplicas")
-    private final @Nullable Integer maxReplicas;
+        private final @Nullable Integer maxReplicas;
 
     public Optional<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
@@ -46,7 +46,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Integer minReplicas;
+        private final @Nullable Integer minReplicas;
 
     public Optional<Integer> getMinReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
@@ -57,7 +57,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * 
      */
     @InputImport(name="refreshPeriodInSeconds")
-    private final @Nullable Integer refreshPeriodInSeconds;
+        private final @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> getRefreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
@@ -68,7 +68,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetUtilization")
-    private final @Nullable Integer targetUtilization;
+        private final @Nullable Integer targetUtilization;
 
     public Optional<Integer> getTargetUtilization() {
         return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
@@ -147,7 +147,6 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AKSServiceResponseResponseAutoScaler build() {
             return new AKSServiceResponseResponseAutoScaler(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
         }

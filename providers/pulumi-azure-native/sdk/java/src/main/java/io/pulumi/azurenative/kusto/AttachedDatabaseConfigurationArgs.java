@@ -22,7 +22,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName")
-    private final @Nullable Input<String> attachedDatabaseConfigurationName;
+        private final @Nullable Input<String> attachedDatabaseConfigurationName;
 
     public Input<String> getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName == null ? Input.empty() : this.attachedDatabaseConfigurationName;
@@ -33,7 +33,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -44,7 +44,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterResourceId", required=true)
-    private final Input<String> clusterResourceId;
+        private final Input<String> clusterResourceId;
 
     public Input<String> getClusterResourceId() {
         return this.clusterResourceId;
@@ -55,7 +55,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -66,7 +66,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="defaultPrincipalsModificationKind", required=true)
-    private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+        private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Input<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
@@ -77,7 +77,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -88,7 +88,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tableLevelSharingProperties")
-    private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+        private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
     public Input<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
         return this.tableLevelSharingProperties == null ? Input.empty() : this.tableLevelSharingProperties;
@@ -248,7 +248,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
             this.tableLevelSharingProperties = Input.ofNullable(tableLevelSharingProperties);
             return this;
         }
-
         public AttachedDatabaseConfigurationArgs build() {
             return new AttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, clusterResourceId, databaseName, defaultPrincipalsModificationKind, location, resourceGroupName, tableLevelSharingProperties);
         }

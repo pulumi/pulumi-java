@@ -231,7 +231,6 @@ public final class ServicesPropertiesResponse {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public ServicesPropertiesResponse build() {
             return new ServicesPropertiesResponse(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, provisioningState, publicNetworkAccess);
         }

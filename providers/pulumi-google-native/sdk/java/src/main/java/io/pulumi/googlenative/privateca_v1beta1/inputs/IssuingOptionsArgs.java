@@ -22,7 +22,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeCaCertUrl", required=true)
-    private final Input<Boolean> includeCaCertUrl;
+      private final Input<Boolean> includeCaCertUrl;
 
     public Input<Boolean> getIncludeCaCertUrl() {
         return this.includeCaCertUrl;
@@ -33,7 +33,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeCrlAccessUrl", required=true)
-    private final Input<Boolean> includeCrlAccessUrl;
+      private final Input<Boolean> includeCrlAccessUrl;
 
     public Input<Boolean> getIncludeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
@@ -92,7 +92,6 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.includeCrlAccessUrl = Input.of(Objects.requireNonNull(includeCrlAccessUrl));
             return this;
         }
-
         public IssuingOptionsArgs build() {
             return new IssuingOptionsArgs(includeCaCertUrl, includeCrlAccessUrl);
         }

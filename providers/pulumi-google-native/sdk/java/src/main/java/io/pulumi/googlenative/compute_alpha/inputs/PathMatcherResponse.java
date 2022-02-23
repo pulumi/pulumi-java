@@ -27,7 +27,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultRouteAction", required=true)
-    private final HttpRouteActionResponse defaultRouteAction;
+      private final HttpRouteActionResponse defaultRouteAction;
 
     public HttpRouteActionResponse getDefaultRouteAction() {
         return this.defaultRouteAction;
@@ -38,7 +38,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultService", required=true)
-    private final String defaultService;
+      private final String defaultService;
 
     public String getDefaultService() {
         return this.defaultService;
@@ -49,7 +49,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect", required=true)
-    private final HttpRedirectActionResponse defaultUrlRedirect;
+      private final HttpRedirectActionResponse defaultUrlRedirect;
 
     public HttpRedirectActionResponse getDefaultUrlRedirect() {
         return this.defaultUrlRedirect;
@@ -60,7 +60,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -71,7 +71,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final HttpHeaderActionResponse headerAction;
+      private final HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse getHeaderAction() {
         return this.headerAction;
@@ -82,7 +82,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -93,7 +93,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pathRules", required=true)
-    private final List<PathRuleResponse> pathRules;
+      private final List<PathRuleResponse> pathRules;
 
     public List<PathRuleResponse> getPathRules() {
         return this.pathRules;
@@ -104,7 +104,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeRules", required=true)
-    private final List<HttpRouteRuleResponse> routeRules;
+      private final List<HttpRouteRuleResponse> routeRules;
 
     public List<HttpRouteRuleResponse> getRouteRules() {
         return this.routeRules;
@@ -213,7 +213,6 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-
         public PathMatcherResponse build() {
             return new PathMatcherResponse(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }

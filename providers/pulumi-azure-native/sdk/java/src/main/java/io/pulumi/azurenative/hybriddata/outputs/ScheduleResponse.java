@@ -77,7 +77,6 @@ public final class ScheduleResponse {
             this.policyList = policyList;
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(name, policyList);
         }

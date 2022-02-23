@@ -54,7 +54,6 @@ public final class NatGatewaySkuResponse {
             this.name = name;
             return this;
         }
-
         public NatGatewaySkuResponse build() {
             return new NatGatewaySkuResponse(name);
         }

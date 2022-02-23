@@ -76,7 +76,6 @@ public final class DiskSkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public DiskSkuResponse build() {
             return new DiskSkuResponse(name, tier);
         }

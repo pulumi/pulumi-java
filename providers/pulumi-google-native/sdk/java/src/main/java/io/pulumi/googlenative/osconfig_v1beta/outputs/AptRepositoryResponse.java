@@ -138,7 +138,6 @@ public final class AptRepositoryResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public AptRepositoryResponse build() {
             return new AptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }

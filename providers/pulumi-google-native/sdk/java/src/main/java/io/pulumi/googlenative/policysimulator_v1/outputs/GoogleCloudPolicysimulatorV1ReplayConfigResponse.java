@@ -75,7 +75,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigResponse {
             this.policyOverlay = Objects.requireNonNull(policyOverlay);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1ReplayConfigResponse build() {
             return new GoogleCloudPolicysimulatorV1ReplayConfigResponse(logSource, policyOverlay);
         }

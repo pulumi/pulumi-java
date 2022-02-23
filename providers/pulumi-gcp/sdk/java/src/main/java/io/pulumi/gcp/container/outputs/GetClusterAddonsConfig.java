@@ -172,7 +172,6 @@ public final class GetClusterAddonsConfig {
             this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
             return this;
         }
-
         public GetClusterAddonsConfig build() {
             return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
         }

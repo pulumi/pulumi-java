@@ -23,28 +23,28 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     public static final ThemeConfigurationArgs Empty = new ThemeConfigurationArgs();
 
     @InputImport(name="dataColorPalette")
-    private final @Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette;
+        private final @Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette;
 
     public Input<ThemeDataColorPaletteArgs> getDataColorPalette() {
         return this.dataColorPalette == null ? Input.empty() : this.dataColorPalette;
     }
 
     @InputImport(name="sheet")
-    private final @Nullable Input<ThemeSheetStyleArgs> sheet;
+        private final @Nullable Input<ThemeSheetStyleArgs> sheet;
 
     public Input<ThemeSheetStyleArgs> getSheet() {
         return this.sheet == null ? Input.empty() : this.sheet;
     }
 
     @InputImport(name="typography")
-    private final @Nullable Input<ThemeTypographyArgs> typography;
+        private final @Nullable Input<ThemeTypographyArgs> typography;
 
     public Input<ThemeTypographyArgs> getTypography() {
         return this.typography == null ? Input.empty() : this.typography;
     }
 
     @InputImport(name="uIColorPalette")
-    private final @Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette;
+        private final @Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette;
 
     public Input<ThemeUIColorPaletteArgs> getUIColorPalette() {
         return this.uIColorPalette == null ? Input.empty() : this.uIColorPalette;
@@ -133,7 +133,6 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.uIColorPalette = Input.ofNullable(uIColorPalette);
             return this;
         }
-
         public ThemeConfigurationArgs build() {
             return new ThemeConfigurationArgs(dataColorPalette, sheet, typography, uIColorPalette);
         }

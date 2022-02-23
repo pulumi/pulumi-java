@@ -74,7 +74,6 @@ public final class ScheduledQueryS3Configuration {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public ScheduledQueryS3Configuration build() {
             return new ScheduledQueryS3Configuration(bucketName, encryptionOption, objectKeyPrefix);
         }

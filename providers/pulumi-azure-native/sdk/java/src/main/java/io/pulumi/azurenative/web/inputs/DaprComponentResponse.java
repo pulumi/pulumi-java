@@ -25,7 +25,7 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable List<DaprMetadataResponse> metadata;
+        private final @Nullable List<DaprMetadataResponse> metadata;
 
     public List<DaprMetadataResponse> getMetadata() {
         return this.metadata == null ? List.of() : this.metadata;
@@ -36,7 +36,7 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -47,7 +47,7 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -58,7 +58,7 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -127,7 +127,6 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
             this.version = version;
             return this;
         }
-
         public DaprComponentResponse build() {
             return new DaprComponentResponse(metadata, name, type, version);
         }

@@ -139,7 +139,6 @@ public final class BackendServiceIAPResponse {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public BackendServiceIAPResponse build() {
             return new BackendServiceIAPResponse(enabled, oauth2ClientId, oauth2ClientInfo, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

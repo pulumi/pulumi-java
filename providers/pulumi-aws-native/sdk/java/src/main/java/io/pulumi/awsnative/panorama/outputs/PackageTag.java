@@ -58,7 +58,6 @@ public final class PackageTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PackageTag build() {
             return new PackageTag(key, value);
         }

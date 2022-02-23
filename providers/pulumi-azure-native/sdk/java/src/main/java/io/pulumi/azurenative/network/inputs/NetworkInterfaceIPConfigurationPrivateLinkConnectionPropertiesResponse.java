@@ -22,7 +22,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @InputImport(name="fqdns", required=true)
-    private final List<String> fqdns;
+        private final List<String> fqdns;
 
     public List<String> getFqdns() {
         return this.fqdns;
@@ -33,7 +33,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+        private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -44,7 +44,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @InputImport(name="requiredMemberName", required=true)
-    private final String requiredMemberName;
+        private final String requiredMemberName;
 
     public String getRequiredMemberName() {
         return this.requiredMemberName;
@@ -103,7 +103,6 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
             this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
             return this;
         }
-
         public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
             return new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(fqdns, groupId, requiredMemberName);
         }

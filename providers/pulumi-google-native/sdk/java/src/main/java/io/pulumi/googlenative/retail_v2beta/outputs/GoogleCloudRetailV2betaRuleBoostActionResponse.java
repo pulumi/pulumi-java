@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse {
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2betaRuleBoostActionResponse(boost, productsFilter);
         }

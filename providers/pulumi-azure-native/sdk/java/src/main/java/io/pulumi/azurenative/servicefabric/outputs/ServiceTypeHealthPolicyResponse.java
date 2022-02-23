@@ -54,7 +54,6 @@ public final class ServiceTypeHealthPolicyResponse {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-
         public ServiceTypeHealthPolicyResponse build() {
             return new ServiceTypeHealthPolicyResponse(maxPercentUnhealthyServices);
         }

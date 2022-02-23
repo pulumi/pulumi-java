@@ -21,7 +21,7 @@ public final class GooRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GooRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -81,7 +81,6 @@ public final class GooRepositoryResponse extends io.pulumi.resources.InvokeArgs 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GooRepositoryResponse build() {
             return new GooRepositoryResponse(name, url);
         }

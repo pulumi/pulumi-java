@@ -204,7 +204,6 @@ public final class GetPrivateEndpointConnectionProxyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionProxyResult build() {
             return new GetPrivateEndpointConnectionProxyResult(eTag, id, name, provisioningState, remotePrivateEndpoint, status, systemData, type);
         }

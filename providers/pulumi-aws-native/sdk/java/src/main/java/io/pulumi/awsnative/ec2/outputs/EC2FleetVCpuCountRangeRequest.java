@@ -60,7 +60,6 @@ public final class EC2FleetVCpuCountRangeRequest {
             this.min = min;
             return this;
         }
-
         public EC2FleetVCpuCountRangeRequest build() {
             return new EC2FleetVCpuCountRangeRequest(max, min);
         }

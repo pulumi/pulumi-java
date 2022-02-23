@@ -20,14 +20,14 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
     public static final ConnectorCapacityArgs Empty = new ConnectorCapacityArgs();
 
     @InputImport(name="autoScaling")
-    private final @Nullable Input<ConnectorAutoScalingArgs> autoScaling;
+        private final @Nullable Input<ConnectorAutoScalingArgs> autoScaling;
 
     public Input<ConnectorAutoScalingArgs> getAutoScaling() {
         return this.autoScaling == null ? Input.empty() : this.autoScaling;
     }
 
     @InputImport(name="provisionedCapacity")
-    private final @Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity;
+        private final @Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
     public Input<ConnectorProvisionedCapacityArgs> getProvisionedCapacity() {
         return this.provisionedCapacity == null ? Input.empty() : this.provisionedCapacity;
@@ -86,7 +86,6 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
             this.provisionedCapacity = Input.ofNullable(provisionedCapacity);
             return this;
         }
-
         public ConnectorCapacityArgs build() {
             return new ConnectorCapacityArgs(autoScaling, provisionedCapacity);
         }

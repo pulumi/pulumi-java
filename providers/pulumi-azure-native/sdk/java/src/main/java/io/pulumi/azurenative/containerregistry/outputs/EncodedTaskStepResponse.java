@@ -186,7 +186,6 @@ public final class EncodedTaskStepResponse {
             this.values = values;
             return this;
         }
-
         public EncodedTaskStepResponse build() {
             return new EncodedTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, encodedTaskContent, encodedValuesContent, type, values);
         }

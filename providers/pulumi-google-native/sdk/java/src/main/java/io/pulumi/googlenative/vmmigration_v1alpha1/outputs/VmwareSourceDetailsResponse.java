@@ -116,7 +116,6 @@ public final class VmwareSourceDetailsResponse {
             this.vcenterIp = Objects.requireNonNull(vcenterIp);
             return this;
         }
-
         public VmwareSourceDetailsResponse build() {
             return new VmwareSourceDetailsResponse(password, thumbprint, username, vcenterIp);
         }

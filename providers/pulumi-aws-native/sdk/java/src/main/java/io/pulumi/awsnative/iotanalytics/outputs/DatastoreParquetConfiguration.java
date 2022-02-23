@@ -46,7 +46,6 @@ public final class DatastoreParquetConfiguration {
             this.schemaDefinition = schemaDefinition;
             return this;
         }
-
         public DatastoreParquetConfiguration build() {
             return new DatastoreParquetConfiguration(schemaDefinition);
         }

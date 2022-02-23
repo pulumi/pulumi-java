@@ -170,7 +170,6 @@ public final class GetResponsePlanResult {
             this.tags = tags;
             return this;
         }
-
         public GetResponsePlanResult build() {
             return new GetResponsePlanResult(actions, arn, chatChannel, displayName, engagements, incidentTemplate, tags);
         }

@@ -79,7 +79,6 @@ public final class SecretReplicationUserManagedReplica {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public SecretReplicationUserManagedReplica build() {
             return new SecretReplicationUserManagedReplica(customerManagedEncryption, location);
         }

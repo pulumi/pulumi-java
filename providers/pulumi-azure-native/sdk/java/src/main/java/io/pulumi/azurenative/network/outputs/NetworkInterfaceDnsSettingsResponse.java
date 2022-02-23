@@ -140,7 +140,6 @@ public final class NetworkInterfaceDnsSettingsResponse {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
         }
-
         public NetworkInterfaceDnsSettingsResponse build() {
             return new NetworkInterfaceDnsSettingsResponse(appliedDnsServers, dnsServers, internalDnsNameLabel, internalDomainNameSuffix, internalFqdn);
         }

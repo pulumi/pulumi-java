@@ -74,7 +74,6 @@ public final class IDRange {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public IDRange build() {
             return new IDRange(max, min);
         }

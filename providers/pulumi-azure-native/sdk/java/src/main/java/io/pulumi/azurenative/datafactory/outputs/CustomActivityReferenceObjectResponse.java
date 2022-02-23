@@ -77,7 +77,6 @@ public final class CustomActivityReferenceObjectResponse {
             this.linkedServices = linkedServices;
             return this;
         }
-
         public CustomActivityReferenceObjectResponse build() {
             return new CustomActivityReferenceObjectResponse(datasets, linkedServices);
         }

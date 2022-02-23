@@ -25,7 +25,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
+        private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
 
     public List<KubernetesIPConfigurationResponse> getIpConfiguration() {
         return this.ipConfiguration == null ? List.of() : this.ipConfiguration;
@@ -36,7 +36,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -106,7 +106,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeInfoResponse build() {
             return new NodeInfoResponse(ipConfiguration, name, type);
         }

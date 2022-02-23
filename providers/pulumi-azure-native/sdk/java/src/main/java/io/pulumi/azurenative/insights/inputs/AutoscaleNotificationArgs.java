@@ -26,7 +26,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<EmailNotificationArgs> email;
+        private final @Nullable Input<EmailNotificationArgs> email;
 
     public Input<EmailNotificationArgs> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -37,7 +37,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="operation", required=true)
-    private final Input<OperationType> operation;
+        private final Input<OperationType> operation;
 
     public Input<OperationType> getOperation() {
         return this.operation;
@@ -48,7 +48,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="webhooks")
-    private final @Nullable Input<List<WebhookNotificationArgs>> webhooks;
+        private final @Nullable Input<List<WebhookNotificationArgs>> webhooks;
 
     public Input<List<WebhookNotificationArgs>> getWebhooks() {
         return this.webhooks == null ? Input.empty() : this.webhooks;
@@ -122,7 +122,6 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
             this.webhooks = Input.ofNullable(webhooks);
             return this;
         }
-
         public AutoscaleNotificationArgs build() {
             return new AutoscaleNotificationArgs(email, operation, webhooks);
         }

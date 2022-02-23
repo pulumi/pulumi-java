@@ -160,7 +160,6 @@ public final class OSDetailsResponse {
             this.productType = productType;
             return this;
         }
-
         public OSDetailsResponse build() {
             return new OSDetailsResponse(oSMajorVersion, oSMinorVersion, oSVersion, osEdition, osType, productType);
         }

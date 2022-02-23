@@ -223,7 +223,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

@@ -75,7 +75,6 @@ public final class LoginServerPropertiesResponse {
             this.tls = Objects.requireNonNull(tls);
             return this;
         }
-
         public LoginServerPropertiesResponse build() {
             return new LoginServerPropertiesResponse(host, tls);
         }

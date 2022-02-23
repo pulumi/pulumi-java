@@ -75,7 +75,6 @@ public final class TriggerResponse {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public TriggerResponse build() {
             return new TriggerResponse(count, percent);
         }

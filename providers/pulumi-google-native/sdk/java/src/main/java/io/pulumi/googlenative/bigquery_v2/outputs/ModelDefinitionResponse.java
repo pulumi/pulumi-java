@@ -76,7 +76,6 @@ public final class ModelDefinitionResponse {
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }
-
         public ModelDefinitionResponse build() {
             return new ModelDefinitionResponse(modelOptions, trainingRuns);
         }

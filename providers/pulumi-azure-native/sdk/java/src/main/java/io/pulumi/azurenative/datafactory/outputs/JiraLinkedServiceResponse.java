@@ -317,7 +317,6 @@ public final class JiraLinkedServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public JiraLinkedServiceResponse build() {
             return new JiraLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, port, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

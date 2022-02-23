@@ -52,7 +52,6 @@ public final class SecurityPolicyCloudArmorConfigResponse {
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }
-
         public SecurityPolicyCloudArmorConfigResponse build() {
             return new SecurityPolicyCloudArmorConfigResponse(enableMl);
         }

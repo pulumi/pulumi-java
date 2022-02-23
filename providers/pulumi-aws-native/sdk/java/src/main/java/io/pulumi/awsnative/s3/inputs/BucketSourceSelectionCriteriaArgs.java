@@ -24,7 +24,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="replicaModifications")
-    private final @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
+        private final @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
 
     public Input<BucketReplicaModificationsArgs> getReplicaModifications() {
         return this.replicaModifications == null ? Input.empty() : this.replicaModifications;
@@ -35,7 +35,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sseKmsEncryptedObjects")
-    private final @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private final @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
     public Input<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Input.empty() : this.sseKmsEncryptedObjects;
@@ -94,7 +94,6 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
             this.sseKmsEncryptedObjects = Input.ofNullable(sseKmsEncryptedObjects);
             return this;
         }
-
         public BucketSourceSelectionCriteriaArgs build() {
             return new BucketSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
         }

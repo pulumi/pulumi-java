@@ -100,7 +100,6 @@ public final class TriggerPropertiesResponse {
             this.timerTriggers = timerTriggers;
             return this;
         }
-
         public TriggerPropertiesResponse build() {
             return new TriggerPropertiesResponse(baseImageTrigger, sourceTriggers, timerTriggers);
         }

@@ -96,7 +96,6 @@ public final class HostRuleResponse {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public HostRuleResponse build() {
             return new HostRuleResponse(description, hosts, pathMatcher);
         }

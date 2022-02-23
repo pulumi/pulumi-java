@@ -120,7 +120,6 @@ public final class GetFeatureIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFeatureIamPolicyResult build() {
             return new GetFeatureIamPolicyResult(auditConfigs, bindings, etag, version);
         }

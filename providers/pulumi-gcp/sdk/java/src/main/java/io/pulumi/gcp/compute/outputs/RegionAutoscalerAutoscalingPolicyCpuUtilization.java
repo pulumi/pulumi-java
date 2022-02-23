@@ -85,7 +85,6 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilization {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyCpuUtilization build() {
             return new RegionAutoscalerAutoscalingPolicyCpuUtilization(predictiveMethod, target);
         }

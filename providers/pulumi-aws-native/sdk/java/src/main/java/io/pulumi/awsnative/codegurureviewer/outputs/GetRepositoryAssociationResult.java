@@ -54,7 +54,6 @@ public final class GetRepositoryAssociationResult {
             this.associationArn = associationArn;
             return this;
         }
-
         public GetRepositoryAssociationResult build() {
             return new GetRepositoryAssociationResult(associationArn);
         }

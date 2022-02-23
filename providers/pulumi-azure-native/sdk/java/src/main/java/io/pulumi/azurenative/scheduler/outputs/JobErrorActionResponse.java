@@ -165,7 +165,6 @@ public final class JobErrorActionResponse {
             this.type = type;
             return this;
         }
-
         public JobErrorActionResponse build() {
             return new JobErrorActionResponse(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }

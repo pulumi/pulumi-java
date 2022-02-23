@@ -100,7 +100,6 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public NetworkSecurityGroupResourceSettingsResponse build() {
             return new NetworkSecurityGroupResourceSettingsResponse(resourceType, securityRules, targetResourceName);
         }

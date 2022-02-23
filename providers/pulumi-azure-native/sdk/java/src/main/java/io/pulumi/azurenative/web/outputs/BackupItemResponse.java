@@ -396,7 +396,6 @@ public final class BackupItemResponse {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
         }
-
         public BackupItemResponse build() {
             return new BackupItemResponse(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
         }

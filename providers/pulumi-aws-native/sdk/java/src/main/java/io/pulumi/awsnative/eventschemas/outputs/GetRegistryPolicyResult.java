@@ -87,7 +87,6 @@ public final class GetRegistryPolicyResult {
             this.revisionId = revisionId;
             return this;
         }
-
         public GetRegistryPolicyResult build() {
             return new GetRegistryPolicyResult(id, policy, registryName, revisionId);
         }

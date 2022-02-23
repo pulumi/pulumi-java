@@ -160,7 +160,6 @@ public final class GetServiceResult {
             this.status = status;
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(healthCheckConfiguration, instanceConfiguration, serviceArn, serviceId, serviceUrl, sourceConfiguration, status);
         }

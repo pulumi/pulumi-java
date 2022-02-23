@@ -133,7 +133,6 @@ public final class RequestBodyMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RequestBodyMatchConditionParametersResponse build() {
             return new RequestBodyMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

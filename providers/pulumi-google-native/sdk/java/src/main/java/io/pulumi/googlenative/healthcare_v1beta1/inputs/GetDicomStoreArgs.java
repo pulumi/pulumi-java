@@ -15,28 +15,28 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDicomStoreArgs Empty = new GetDicomStoreArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="dicomStoreId", required=true)
-    private final String dicomStoreId;
+      private final String dicomStoreId;
 
     public String getDicomStoreId() {
         return this.dicomStoreId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDicomStoreArgs build() {
             return new GetDicomStoreArgs(datasetId, dicomStoreId, location, project);
         }

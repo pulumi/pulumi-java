@@ -121,7 +121,6 @@ public final class ApplicationJitAccessPolicyResponse {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }
-
         public ApplicationJitAccessPolicyResponse build() {
             return new ApplicationJitAccessPolicyResponse(jitAccessEnabled, jitApprovalMode, jitApprovers, maximumJitAccessDuration);
         }

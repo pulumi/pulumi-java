@@ -24,7 +24,7 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable ConfigurationInfoResponse configuration;
+        private final @Nullable ConfigurationInfoResponse configuration;
 
     public Optional<ConfigurationInfoResponse> getConfiguration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
@@ -35,7 +35,7 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -84,7 +84,6 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AssignmentInfoResponse build() {
             return new AssignmentInfoResponse(configuration, name);
         }

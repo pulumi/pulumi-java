@@ -162,7 +162,6 @@ public final class ReplicaSetStatus {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public ReplicaSetStatus build() {
             return new ReplicaSetStatus(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }

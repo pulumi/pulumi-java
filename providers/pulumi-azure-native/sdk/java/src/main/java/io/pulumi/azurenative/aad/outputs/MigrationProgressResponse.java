@@ -77,7 +77,6 @@ public final class MigrationProgressResponse {
             this.progressMessage = progressMessage;
             return this;
         }
-
         public MigrationProgressResponse build() {
             return new MigrationProgressResponse(completionPercentage, progressMessage);
         }

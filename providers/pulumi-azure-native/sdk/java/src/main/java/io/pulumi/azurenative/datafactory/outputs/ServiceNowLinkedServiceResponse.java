@@ -359,7 +359,6 @@ public final class ServiceNowLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public ServiceNowLinkedServiceResponse build() {
             return new ServiceNowLinkedServiceResponse(annotations, authenticationType, clientId, clientSecret, connectVia, description, encryptedCredential, endpoint, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

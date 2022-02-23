@@ -26,7 +26,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable Input<Either<String,KeySource>> keySource;
+        private final @Nullable Input<Either<String,KeySource>> keySource;
 
     public Input<Either<String,KeySource>> getKeySource() {
         return this.keySource == null ? Input.empty() : this.keySource;
@@ -37,7 +37,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -96,7 +96,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
-
         public EncryptionArgs build() {
             return new EncryptionArgs(keySource, keyVaultProperties);
         }

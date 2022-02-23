@@ -61,7 +61,6 @@ public final class DistributionOriginShield {
             this.originShieldRegion = originShieldRegion;
             return this;
         }
-
         public DistributionOriginShield build() {
             return new DistributionOriginShield(enabled, originShieldRegion);
         }

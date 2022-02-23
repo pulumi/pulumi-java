@@ -103,7 +103,6 @@ public final class AnalysisResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public AnalysisResourcePermission build() {
             return new AnalysisResourcePermission(actions, principal);
         }

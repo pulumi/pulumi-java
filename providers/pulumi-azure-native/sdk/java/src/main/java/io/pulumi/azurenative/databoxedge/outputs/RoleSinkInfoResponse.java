@@ -52,7 +52,6 @@ public final class RoleSinkInfoResponse {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public RoleSinkInfoResponse build() {
             return new RoleSinkInfoResponse(roleId);
         }

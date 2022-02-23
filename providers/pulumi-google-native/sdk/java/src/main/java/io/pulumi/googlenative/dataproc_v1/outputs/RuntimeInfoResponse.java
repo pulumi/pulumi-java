@@ -96,7 +96,6 @@ public final class RuntimeInfoResponse {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }
-
         public RuntimeInfoResponse build() {
             return new RuntimeInfoResponse(diagnosticOutputUri, endpoints, outputUri);
         }

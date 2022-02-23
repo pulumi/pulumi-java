@@ -226,7 +226,6 @@ public final class ClusterUpgradePolicyResponse {
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
         }
-
         public ClusterUpgradePolicyResponse build() {
             return new ClusterUpgradePolicyResponse(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
         }

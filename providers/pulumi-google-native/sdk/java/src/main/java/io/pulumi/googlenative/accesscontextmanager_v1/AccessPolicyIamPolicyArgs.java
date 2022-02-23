@@ -19,7 +19,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
     public static final AccessPolicyIamPolicyArgs Empty = new AccessPolicyIamPolicyArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-    private final Input<String> accessPolicyId;
+      private final Input<String> accessPolicyId;
 
     public Input<String> getAccessPolicyId() {
         return this.accessPolicyId;
@@ -30,7 +30,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -41,7 +41,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -52,7 +52,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -63,7 +63,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -74,7 +74,7 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -193,7 +193,6 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public AccessPolicyIamPolicyArgs build() {
             return new AccessPolicyIamPolicyArgs(accessPolicyId, auditConfigs, bindings, etag, updateMask, version);
         }

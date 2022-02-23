@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(headerName, headerValue);
         }

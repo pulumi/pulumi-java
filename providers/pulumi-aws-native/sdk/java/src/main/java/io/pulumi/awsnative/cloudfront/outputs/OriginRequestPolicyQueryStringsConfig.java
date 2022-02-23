@@ -60,7 +60,6 @@ public final class OriginRequestPolicyQueryStringsConfig {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public OriginRequestPolicyQueryStringsConfig build() {
             return new OriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }

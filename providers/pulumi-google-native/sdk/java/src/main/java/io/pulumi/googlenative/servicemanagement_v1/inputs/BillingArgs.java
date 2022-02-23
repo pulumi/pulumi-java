@@ -24,7 +24,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerDestinations")
-    private final @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
+      private final @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
 
     public Input<List<BillingDestinationArgs>> getConsumerDestinations() {
         return this.consumerDestinations == null ? Input.empty() : this.consumerDestinations;
@@ -67,7 +67,6 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
             this.consumerDestinations = Input.ofNullable(consumerDestinations);
             return this;
         }
-
         public BillingArgs build() {
             return new BillingArgs(consumerDestinations);
         }

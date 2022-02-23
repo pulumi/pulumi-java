@@ -52,7 +52,6 @@ public final class GetClientTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public GetClientTokenResult build() {
             return new GetClientTokenResult(token);
         }

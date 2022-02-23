@@ -24,7 +24,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<HealthAlertActionArgs>> actions;
+        private final @Nullable Input<List<HealthAlertActionArgs>> actions;
 
     public Input<List<HealthAlertActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criteria", required=true)
-    private final Input<HealthAlertCriteriaArgs> criteria;
+        private final Input<HealthAlertCriteriaArgs> criteria;
 
     public Input<HealthAlertCriteriaArgs> getCriteria() {
         return this.criteria;
@@ -46,7 +46,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -57,7 +57,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -68,7 +68,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -101,7 +101,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+        private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -112,7 +112,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -276,7 +276,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public HealthAlertArgs build() {
             return new HealthAlertArgs(actions, criteria, description, enabled, location, resourceGroupName, ruleName, scopes, tags);
         }

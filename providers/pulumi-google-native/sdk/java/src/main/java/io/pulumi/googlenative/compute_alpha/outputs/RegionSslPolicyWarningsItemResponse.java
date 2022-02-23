@@ -97,7 +97,6 @@ public final class RegionSslPolicyWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RegionSslPolicyWarningsItemResponse build() {
             return new RegionSslPolicyWarningsItemResponse(code, data, message);
         }

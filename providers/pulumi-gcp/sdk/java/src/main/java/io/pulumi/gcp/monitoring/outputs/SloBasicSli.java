@@ -176,7 +176,6 @@ public final class SloBasicSli {
             this.versions = versions;
             return this;
         }
-
         public SloBasicSli build() {
             return new SloBasicSli(availability, latency, locations, methods, versions);
         }

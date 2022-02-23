@@ -16,7 +16,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     public static final CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs();
 
     @InputImport(name="obectIds")
-    private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
+        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> getObectIds() {
         return this.obectIds == null ? Input.empty() : this.obectIds;
@@ -59,7 +59,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.obectIds = Input.ofNullable(obectIds);
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs(obectIds);
         }

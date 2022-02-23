@@ -308,7 +308,6 @@ public final class GetSslCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSslCertificateResult build() {
             return new GetSslCertificateResult(certificate, creationTimestamp, description, expireTime, kind, managed, name, privateKey, region, selfLink, selfManaged, subjectAlternativeNames, type);
         }

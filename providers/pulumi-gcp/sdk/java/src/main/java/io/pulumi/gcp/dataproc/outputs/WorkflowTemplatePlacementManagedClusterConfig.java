@@ -363,7 +363,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfig(autoscalingConfig, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }

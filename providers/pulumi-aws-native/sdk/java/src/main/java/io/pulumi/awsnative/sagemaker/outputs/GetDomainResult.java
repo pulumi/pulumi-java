@@ -161,7 +161,6 @@ public final class GetDomainResult {
             this.url = url;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(defaultUserSettings, domainArn, domainId, homeEfsFileSystemId, singleSignOnManagedApplicationInstanceId, url);
         }

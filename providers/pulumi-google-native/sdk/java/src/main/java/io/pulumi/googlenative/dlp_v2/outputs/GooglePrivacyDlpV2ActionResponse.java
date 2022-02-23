@@ -163,7 +163,6 @@ public final class GooglePrivacyDlpV2ActionResponse {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2ActionResponse build() {
             return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }

@@ -97,7 +97,6 @@ public final class HttpRouteMatchHeaderResponse {
             this.value = value;
             return this;
         }
-
         public HttpRouteMatchHeaderResponse build() {
             return new HttpRouteMatchHeaderResponse(name, type, value);
         }

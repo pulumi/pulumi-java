@@ -24,7 +24,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="body", required=true)
-    private final String body;
+      private final String body;
 
     public String getBody() {
         return this.body;
@@ -35,7 +35,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headers", required=true)
-    private final Map<String,String> headers;
+      private final Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers;
@@ -46,7 +46,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+      private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -57,7 +57,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oauthToken", required=true)
-    private final OAuthTokenResponse oauthToken;
+      private final OAuthTokenResponse oauthToken;
 
     public OAuthTokenResponse getOauthToken() {
         return this.oauthToken;
@@ -68,7 +68,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oidcToken", required=true)
-    private final OidcTokenResponse oidcToken;
+      private final OidcTokenResponse oidcToken;
 
     public OidcTokenResponse getOidcToken() {
         return this.oidcToken;
@@ -79,7 +79,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -168,7 +168,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpRequestResponse build() {
             return new HttpRequestResponse(body, headers, httpMethod, oauthToken, oidcToken, url);
         }

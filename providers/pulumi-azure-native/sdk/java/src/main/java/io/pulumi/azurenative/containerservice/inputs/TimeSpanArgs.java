@@ -23,7 +23,7 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+        private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -34,7 +34,7 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+        private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -93,7 +93,6 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public TimeSpanArgs build() {
             return new TimeSpanArgs(end, start);
         }

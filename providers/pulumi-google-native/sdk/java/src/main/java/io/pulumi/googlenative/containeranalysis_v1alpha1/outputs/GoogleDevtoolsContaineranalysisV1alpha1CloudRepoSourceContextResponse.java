@@ -97,7 +97,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

@@ -15,14 +15,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @InputImport(name="datasourceId", required=true)
-    private final String datasourceId;
+      private final String datasourceId;
 
     public String getDatasourceId() {
         return this.datasourceId;
     }
 
     @InputImport(name="debugOptionsEnableDebugging")
-    private final @Nullable String debugOptionsEnableDebugging;
+      private final @Nullable String debugOptionsEnableDebugging;
 
     public Optional<String> getDebugOptionsEnableDebugging() {
         return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
@@ -71,7 +71,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
         }
-
         public GetDataSourceArgs build() {
             return new GetDataSourceArgs(datasourceId, debugOptionsEnableDebugging);
         }

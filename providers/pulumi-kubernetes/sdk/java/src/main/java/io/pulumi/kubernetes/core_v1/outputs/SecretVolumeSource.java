@@ -122,7 +122,6 @@ public final class SecretVolumeSource {
             this.secretName = secretName;
             return this;
         }
-
         public SecretVolumeSource build() {
             return new SecretVolumeSource(defaultMode, items, optional, secretName);
         }

@@ -54,7 +54,6 @@ public final class ListKustoPoolLanguageExtensionsResult {
             this.value = value;
             return this;
         }
-
         public ListKustoPoolLanguageExtensionsResult build() {
             return new ListKustoPoolLanguageExtensionsResult(value);
         }

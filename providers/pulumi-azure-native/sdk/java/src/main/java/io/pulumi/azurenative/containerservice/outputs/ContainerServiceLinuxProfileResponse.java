@@ -75,7 +75,6 @@ public final class ContainerServiceLinuxProfileResponse {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }
-
         public ContainerServiceLinuxProfileResponse build() {
             return new ContainerServiceLinuxProfileResponse(adminUsername, ssh);
         }

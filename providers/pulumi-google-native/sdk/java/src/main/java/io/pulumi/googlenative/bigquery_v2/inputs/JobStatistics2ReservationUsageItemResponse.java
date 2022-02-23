@@ -17,7 +17,7 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
      * 
      */
     @InputImport(name="slotMs", required=true)
-    private final String slotMs;
+      private final String slotMs;
 
     public String getSlotMs() {
         return this.slotMs;
@@ -77,7 +77,6 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
-
         public JobStatistics2ReservationUsageItemResponse build() {
             return new JobStatistics2ReservationUsageItemResponse(name, slotMs);
         }

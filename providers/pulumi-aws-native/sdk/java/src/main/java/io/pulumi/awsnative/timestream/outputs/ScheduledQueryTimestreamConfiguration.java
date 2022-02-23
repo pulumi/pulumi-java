@@ -129,7 +129,6 @@ public final class ScheduledQueryTimestreamConfiguration {
             this.timeColumn = Objects.requireNonNull(timeColumn);
             return this;
         }
-
         public ScheduledQueryTimestreamConfiguration build() {
             return new ScheduledQueryTimestreamConfiguration(databaseName, dimensionMappings, measureNameColumn, mixedMeasureMappings, multiMeasureMappings, tableName, timeColumn);
         }

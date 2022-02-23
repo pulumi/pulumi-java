@@ -60,7 +60,6 @@ public final class ServiceKeyValuePair {
             this.value = value;
             return this;
         }
-
         public ServiceKeyValuePair build() {
             return new ServiceKeyValuePair(name, value);
         }

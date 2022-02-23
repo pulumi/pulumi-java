@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="cloudStoragePath", required=true)
-    private final GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
+      private final GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
 
     public GooglePrivacyDlpV2CloudStoragePathResponse getCloudStoragePath() {
         return this.cloudStoragePath;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="wordList", required=true)
-    private final GooglePrivacyDlpV2WordListResponse wordList;
+      private final GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse getWordList() {
         return this.wordList;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends io.pulumi.resour
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2DictionaryResponse build() {
             return new GooglePrivacyDlpV2DictionaryResponse(cloudStoragePath, wordList);
         }

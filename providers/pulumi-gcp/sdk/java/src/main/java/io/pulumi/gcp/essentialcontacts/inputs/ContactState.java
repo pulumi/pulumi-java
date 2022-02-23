@@ -20,7 +20,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -31,7 +31,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag")
-    private final @Nullable Input<String> languageTag;
+        private final @Nullable Input<String> languageTag;
 
     public Input<String> getLanguageTag() {
         return this.languageTag == null ? Input.empty() : this.languageTag;
@@ -42,7 +42,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions")
-    private final @Nullable Input<List<String>> notificationCategorySubscriptions;
+        private final @Nullable Input<List<String>> notificationCategorySubscriptions;
 
     public Input<List<String>> getNotificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
@@ -64,7 +64,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -168,7 +168,6 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             this.parent = Input.ofNullable(parent);
             return this;
         }
-
         public ContactState build() {
             return new ContactState(email, languageTag, name, notificationCategorySubscriptions, parent);
         }

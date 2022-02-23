@@ -97,7 +97,6 @@ public final class TlsCertificateContextResponse {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }
-
         public TlsCertificateContextResponse build() {
             return new TlsCertificateContextResponse(certificatePaths, certificateSource, sdsConfig);
         }

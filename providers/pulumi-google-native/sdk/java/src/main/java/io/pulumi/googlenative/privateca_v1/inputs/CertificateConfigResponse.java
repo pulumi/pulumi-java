@@ -23,7 +23,7 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final PublicKeyResponse publicKey;
+      private final PublicKeyResponse publicKey;
 
     public PublicKeyResponse getPublicKey() {
         return this.publicKey;
@@ -34,7 +34,7 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-    private final SubjectConfigResponse subjectConfig;
+      private final SubjectConfigResponse subjectConfig;
 
     public SubjectConfigResponse getSubjectConfig() {
         return this.subjectConfig;
@@ -45,7 +45,7 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="x509Config", required=true)
-    private final X509ParametersResponse x509Config;
+      private final X509ParametersResponse x509Config;
 
     public X509ParametersResponse getX509Config() {
         return this.x509Config;
@@ -104,7 +104,6 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public CertificateConfigResponse build() {
             return new CertificateConfigResponse(publicKey, subjectConfig, x509Config);
         }

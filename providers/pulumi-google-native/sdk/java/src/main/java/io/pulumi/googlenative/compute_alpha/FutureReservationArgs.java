@@ -22,14 +22,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -40,7 +40,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -51,21 +51,21 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -76,7 +76,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shareSettings")
-    private final @Nullable Input<ShareSettingsArgs> shareSettings;
+      private final @Nullable Input<ShareSettingsArgs> shareSettings;
 
     public Input<ShareSettingsArgs> getShareSettings() {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
@@ -87,7 +87,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="specificSkuProperties")
-    private final @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
+      private final @Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
     public Input<FutureReservationSpecificSKUPropertiesArgs> getSpecificSkuProperties() {
         return this.specificSkuProperties == null ? Input.empty() : this.specificSkuProperties;
@@ -98,14 +98,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeWindow")
-    private final @Nullable Input<FutureReservationTimeWindowArgs> timeWindow;
+      private final @Nullable Input<FutureReservationTimeWindowArgs> timeWindow;
 
     public Input<FutureReservationTimeWindowArgs> getTimeWindow() {
         return this.timeWindow == null ? Input.empty() : this.timeWindow;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -284,7 +284,6 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public FutureReservationArgs build() {
             return new FutureReservationArgs(description, kind, name, namePrefix, project, requestId, shareSettings, specificSkuProperties, timeWindow, zone);
         }

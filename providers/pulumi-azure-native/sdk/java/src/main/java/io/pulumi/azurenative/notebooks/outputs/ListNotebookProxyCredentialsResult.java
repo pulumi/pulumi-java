@@ -118,7 +118,6 @@ public final class ListNotebookProxyCredentialsResult {
             this.secondaryAccessKey = secondaryAccessKey;
             return this;
         }
-
         public ListNotebookProxyCredentialsResult build() {
             return new ListNotebookProxyCredentialsResult(hostname, primaryAccessKey, resourceId, secondaryAccessKey);
         }

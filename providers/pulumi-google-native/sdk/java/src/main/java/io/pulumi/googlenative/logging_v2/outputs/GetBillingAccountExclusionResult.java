@@ -159,7 +159,6 @@ public final class GetBillingAccountExclusionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetBillingAccountExclusionResult build() {
             return new GetBillingAccountExclusionResult(createTime, description, disabled, filter, name, updateTime);
         }

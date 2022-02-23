@@ -99,7 +99,6 @@ public final class EnvironmentVmImage {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public EnvironmentVmImage build() {
             return new EnvironmentVmImage(imageFamily, imageName, project);
         }

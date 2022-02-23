@@ -77,7 +77,6 @@ public final class BucketRedirectAllRequestsTo {
             this.protocol = protocol;
             return this;
         }
-
         public BucketRedirectAllRequestsTo build() {
             return new BucketRedirectAllRequestsTo(hostName, protocol);
         }

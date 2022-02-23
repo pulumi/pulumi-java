@@ -98,7 +98,6 @@ public final class GetTopicIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTopicIamPolicyResult build() {
             return new GetTopicIamPolicyResult(bindings, etag, version);
         }

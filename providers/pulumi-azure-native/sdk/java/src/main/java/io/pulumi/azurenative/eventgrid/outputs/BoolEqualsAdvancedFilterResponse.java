@@ -100,7 +100,6 @@ public final class BoolEqualsAdvancedFilterResponse {
             this.value = value;
             return this;
         }
-
         public BoolEqualsAdvancedFilterResponse build() {
             return new BoolEqualsAdvancedFilterResponse(key, operatorType, value);
         }

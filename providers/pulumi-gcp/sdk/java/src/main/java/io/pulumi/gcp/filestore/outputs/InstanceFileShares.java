@@ -103,7 +103,6 @@ public final class InstanceFileShares {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
-
         public InstanceFileShares build() {
             return new InstanceFileShares(capacityGb, name, nfsExportOptions);
         }

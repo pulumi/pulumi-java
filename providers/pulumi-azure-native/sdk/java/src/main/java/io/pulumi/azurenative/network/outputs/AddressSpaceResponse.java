@@ -54,7 +54,6 @@ public final class AddressSpaceResponse {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public AddressSpaceResponse build() {
             return new AddressSpaceResponse(addressPrefixes);
         }

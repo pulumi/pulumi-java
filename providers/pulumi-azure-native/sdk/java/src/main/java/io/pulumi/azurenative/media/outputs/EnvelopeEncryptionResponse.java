@@ -122,7 +122,6 @@ public final class EnvelopeEncryptionResponse {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public EnvelopeEncryptionResponse build() {
             return new EnvelopeEncryptionResponse(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
         }

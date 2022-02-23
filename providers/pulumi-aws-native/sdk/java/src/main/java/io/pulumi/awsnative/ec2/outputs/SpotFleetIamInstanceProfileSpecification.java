@@ -46,7 +46,6 @@ public final class SpotFleetIamInstanceProfileSpecification {
             this.arn = arn;
             return this;
         }
-
         public SpotFleetIamInstanceProfileSpecification build() {
             return new SpotFleetIamInstanceProfileSpecification(arn);
         }

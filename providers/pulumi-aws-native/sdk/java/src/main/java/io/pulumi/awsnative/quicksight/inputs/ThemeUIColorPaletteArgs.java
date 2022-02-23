@@ -27,7 +27,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accent")
-    private final @Nullable Input<String> accent;
+        private final @Nullable Input<String> accent;
 
     public Input<String> getAccent() {
         return this.accent == null ? Input.empty() : this.accent;
@@ -39,7 +39,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accentForeground")
-    private final @Nullable Input<String> accentForeground;
+        private final @Nullable Input<String> accentForeground;
 
     public Input<String> getAccentForeground() {
         return this.accentForeground == null ? Input.empty() : this.accentForeground;
@@ -50,7 +50,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="danger")
-    private final @Nullable Input<String> danger;
+        private final @Nullable Input<String> danger;
 
     public Input<String> getDanger() {
         return this.danger == null ? Input.empty() : this.danger;
@@ -62,7 +62,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dangerForeground")
-    private final @Nullable Input<String> dangerForeground;
+        private final @Nullable Input<String> dangerForeground;
 
     public Input<String> getDangerForeground() {
         return this.dangerForeground == null ? Input.empty() : this.dangerForeground;
@@ -74,7 +74,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dimension")
-    private final @Nullable Input<String> dimension;
+        private final @Nullable Input<String> dimension;
 
     public Input<String> getDimension() {
         return this.dimension == null ? Input.empty() : this.dimension;
@@ -86,7 +86,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dimensionForeground")
-    private final @Nullable Input<String> dimensionForeground;
+        private final @Nullable Input<String> dimensionForeground;
 
     public Input<String> getDimensionForeground() {
         return this.dimensionForeground == null ? Input.empty() : this.dimensionForeground;
@@ -97,7 +97,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="measure")
-    private final @Nullable Input<String> measure;
+        private final @Nullable Input<String> measure;
 
     public Input<String> getMeasure() {
         return this.measure == null ? Input.empty() : this.measure;
@@ -109,7 +109,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="measureForeground")
-    private final @Nullable Input<String> measureForeground;
+        private final @Nullable Input<String> measureForeground;
 
     public Input<String> getMeasureForeground() {
         return this.measureForeground == null ? Input.empty() : this.measureForeground;
@@ -120,7 +120,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="primaryBackground")
-    private final @Nullable Input<String> primaryBackground;
+        private final @Nullable Input<String> primaryBackground;
 
     public Input<String> getPrimaryBackground() {
         return this.primaryBackground == null ? Input.empty() : this.primaryBackground;
@@ -132,7 +132,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="primaryForeground")
-    private final @Nullable Input<String> primaryForeground;
+        private final @Nullable Input<String> primaryForeground;
 
     public Input<String> getPrimaryForeground() {
         return this.primaryForeground == null ? Input.empty() : this.primaryForeground;
@@ -143,7 +143,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secondaryBackground")
-    private final @Nullable Input<String> secondaryBackground;
+        private final @Nullable Input<String> secondaryBackground;
 
     public Input<String> getSecondaryBackground() {
         return this.secondaryBackground == null ? Input.empty() : this.secondaryBackground;
@@ -155,7 +155,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secondaryForeground")
-    private final @Nullable Input<String> secondaryForeground;
+        private final @Nullable Input<String> secondaryForeground;
 
     public Input<String> getSecondaryForeground() {
         return this.secondaryForeground == null ? Input.empty() : this.secondaryForeground;
@@ -167,7 +167,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="success")
-    private final @Nullable Input<String> success;
+        private final @Nullable Input<String> success;
 
     public Input<String> getSuccess() {
         return this.success == null ? Input.empty() : this.success;
@@ -179,7 +179,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="successForeground")
-    private final @Nullable Input<String> successForeground;
+        private final @Nullable Input<String> successForeground;
 
     public Input<String> getSuccessForeground() {
         return this.successForeground == null ? Input.empty() : this.successForeground;
@@ -190,7 +190,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="warning")
-    private final @Nullable Input<String> warning;
+        private final @Nullable Input<String> warning;
 
     public Input<String> getWarning() {
         return this.warning == null ? Input.empty() : this.warning;
@@ -202,7 +202,7 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="warningForeground")
-    private final @Nullable Input<String> warningForeground;
+        private final @Nullable Input<String> warningForeground;
 
     public Input<String> getWarningForeground() {
         return this.warningForeground == null ? Input.empty() : this.warningForeground;
@@ -471,7 +471,6 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
             this.warningForeground = Input.ofNullable(warningForeground);
             return this;
         }
-
         public ThemeUIColorPaletteArgs build() {
             return new ThemeUIColorPaletteArgs(accent, accentForeground, danger, dangerForeground, dimension, dimensionForeground, measure, measureForeground, primaryBackground, primaryForeground, secondaryBackground, secondaryForeground, success, successForeground, warning, warningForeground);
         }

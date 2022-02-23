@@ -246,7 +246,6 @@ public final class GetPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrefixResult build() {
             return new GetPrefixResult(errorMessage, events, id, learnedType, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

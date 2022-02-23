@@ -17,7 +17,7 @@ public final class GetIPAMScopeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipamScopeId", required=true)
-    private final String ipamScopeId;
+        private final String ipamScopeId;
 
     public String getIpamScopeId() {
         return this.ipamScopeId;
@@ -55,7 +55,6 @@ public final class GetIPAMScopeArgs extends io.pulumi.resources.InvokeArgs {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }
-
         public GetIPAMScopeArgs build() {
             return new GetIPAMScopeArgs(ipamScopeId);
         }

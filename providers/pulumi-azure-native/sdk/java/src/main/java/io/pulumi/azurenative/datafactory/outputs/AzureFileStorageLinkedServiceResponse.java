@@ -359,7 +359,6 @@ public final class AzureFileStorageLinkedServiceResponse {
             this.userId = userId;
             return this;
         }
-
         public AzureFileStorageLinkedServiceResponse build() {
             return new AzureFileStorageLinkedServiceResponse(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, fileShare, host, parameters, password, sasToken, sasUri, snapshot, type, userId);
         }

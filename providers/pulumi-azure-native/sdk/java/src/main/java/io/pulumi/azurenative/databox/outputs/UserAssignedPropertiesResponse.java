@@ -54,7 +54,6 @@ public final class UserAssignedPropertiesResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public UserAssignedPropertiesResponse build() {
             return new UserAssignedPropertiesResponse(resourceId);
         }

@@ -18,7 +18,7 @@ public final class TableFieldSchemaPolicyTagsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="names", required=true)
-    private final List<String> names;
+      private final List<String> names;
 
     public List<String> getNames() {
         return this.names;
@@ -56,7 +56,6 @@ public final class TableFieldSchemaPolicyTagsResponse extends io.pulumi.resource
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public TableFieldSchemaPolicyTagsResponse build() {
             return new TableFieldSchemaPolicyTagsResponse(names);
         }

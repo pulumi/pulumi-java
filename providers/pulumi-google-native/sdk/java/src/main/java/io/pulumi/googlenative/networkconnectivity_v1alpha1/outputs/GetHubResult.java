@@ -180,7 +180,6 @@ public final class GetHubResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(createTime, description, labels, name, state, uniqueId, updateTime);
         }

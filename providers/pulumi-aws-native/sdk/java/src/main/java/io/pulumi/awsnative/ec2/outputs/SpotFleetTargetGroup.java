@@ -44,7 +44,6 @@ public final class SpotFleetTargetGroup {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public SpotFleetTargetGroup build() {
             return new SpotFleetTargetGroup(arn);
         }

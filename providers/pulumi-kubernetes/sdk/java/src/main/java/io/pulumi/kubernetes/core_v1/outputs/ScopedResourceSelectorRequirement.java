@@ -125,7 +125,6 @@ public final class ScopedResourceSelectorRequirement {
             this.values = values;
             return this;
         }
-
         public ScopedResourceSelectorRequirement build() {
             return new ScopedResourceSelectorRequirement(operator, scopeName, values);
         }

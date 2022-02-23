@@ -17,7 +17,7 @@ public final class ListOpenShiftClusterAdminCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListOpenShiftClusterAdminCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -77,7 +77,6 @@ public final class ListOpenShiftClusterAdminCredentialsArgs extends io.pulumi.re
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public ListOpenShiftClusterAdminCredentialsArgs build() {
             return new ListOpenShiftClusterAdminCredentialsArgs(resourceGroupName, resourceName);
         }

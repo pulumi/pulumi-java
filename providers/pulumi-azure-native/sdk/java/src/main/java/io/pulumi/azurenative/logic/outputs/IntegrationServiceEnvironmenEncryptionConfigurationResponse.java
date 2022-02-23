@@ -54,7 +54,6 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
-
         public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
             return new IntegrationServiceEnvironmenEncryptionConfigurationResponse(encryptionKeyReference);
         }

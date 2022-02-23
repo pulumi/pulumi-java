@@ -21,7 +21,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -32,7 +32,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="repoType", required=true)
-    private final String repoType;
+      private final String repoType;
 
     public String getRepoType() {
         return this.repoType;
@@ -43,7 +43,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="revision", required=true)
-    private final String revision;
+      private final String revision;
 
     public String getRevision() {
         return this.revision;
@@ -54,7 +54,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -123,7 +123,6 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GitFileSourceResponse build() {
             return new GitFileSourceResponse(path, repoType, revision, uri);
         }

@@ -163,7 +163,6 @@ public final class PostgreSqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public PostgreSqlConnectionInfoResponse build() {
             return new PostgreSqlConnectionInfoResponse(databaseName, password, port, serverName, type, userName);
         }

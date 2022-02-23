@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sampler")
-    private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
+      private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
 
     public Input<GoogleCloudApigeeV1TraceSamplingConfigSampler> getSampler() {
         return this.sampler == null ? Input.empty() : this.sampler;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="samplingRate")
-    private final @Nullable Input<Double> samplingRate;
+      private final @Nullable Input<Double> samplingRate;
 
     public Input<Double> getSamplingRate() {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;
@@ -94,7 +94,6 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }
-
         public GoogleCloudApigeeV1TraceSamplingConfigArgs build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigArgs(sampler, samplingRate);
         }

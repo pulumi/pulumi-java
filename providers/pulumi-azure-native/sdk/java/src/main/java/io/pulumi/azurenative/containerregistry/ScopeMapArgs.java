@@ -22,7 +22,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+        private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
@@ -33,7 +33,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final Input<String> registryName;
+        private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -55,7 +55,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeMapName")
-    private final @Nullable Input<String> scopeMapName;
+        private final @Nullable Input<String> scopeMapName;
 
     public Input<String> getScopeMapName() {
         return this.scopeMapName == null ? Input.empty() : this.scopeMapName;
@@ -170,7 +170,6 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
             this.scopeMapName = Input.ofNullable(scopeMapName);
             return this;
         }
-
         public ScopeMapArgs build() {
             return new ScopeMapArgs(actions, description, registryName, resourceGroupName, scopeMapName);
         }

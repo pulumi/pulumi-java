@@ -18,7 +18,7 @@ public final class InstanceTemplateNetworkPerformanceConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="totalEgressBandwidthTier", required=true)
-    private final Input<String> totalEgressBandwidthTier;
+        private final Input<String> totalEgressBandwidthTier;
 
     public Input<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
@@ -61,7 +61,6 @@ public final class InstanceTemplateNetworkPerformanceConfigGetArgs extends io.pu
             this.totalEgressBandwidthTier = Input.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
         }
-
         public InstanceTemplateNetworkPerformanceConfigGetArgs build() {
             return new InstanceTemplateNetworkPerformanceConfigGetArgs(totalEgressBandwidthTier);
         }

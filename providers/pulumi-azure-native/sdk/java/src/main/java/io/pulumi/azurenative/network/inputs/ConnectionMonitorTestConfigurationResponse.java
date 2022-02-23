@@ -28,7 +28,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="httpConfiguration")
-    private final @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
+        private final @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
 
     public Optional<ConnectionMonitorHttpConfigurationResponse> getHttpConfiguration() {
         return this.httpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.httpConfiguration);
@@ -39,7 +39,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="icmpConfiguration")
-    private final @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
+        private final @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
 
     public Optional<ConnectionMonitorIcmpConfigurationResponse> getIcmpConfiguration() {
         return this.icmpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.icmpConfiguration);
@@ -50,7 +50,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="preferredIPVersion")
-    private final @Nullable String preferredIPVersion;
+        private final @Nullable String preferredIPVersion;
 
     public Optional<String> getPreferredIPVersion() {
         return this.preferredIPVersion == null ? Optional.empty() : Optional.ofNullable(this.preferredIPVersion);
@@ -72,7 +72,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -83,7 +83,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
+        private final @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
 
     public Optional<ConnectionMonitorSuccessThresholdResponse> getSuccessThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
@@ -94,7 +94,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="tcpConfiguration")
-    private final @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
+        private final @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
 
     public Optional<ConnectionMonitorTcpConfigurationResponse> getTcpConfiguration() {
         return this.tcpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.tcpConfiguration);
@@ -105,7 +105,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="testFrequencySec")
-    private final @Nullable Integer testFrequencySec;
+        private final @Nullable Integer testFrequencySec;
 
     public Optional<Integer> getTestFrequencySec() {
         return this.testFrequencySec == null ? Optional.empty() : Optional.ofNullable(this.testFrequencySec);
@@ -214,7 +214,6 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
             this.testFrequencySec = testFrequencySec;
             return this;
         }
-
         public ConnectionMonitorTestConfigurationResponse build() {
             return new ConnectionMonitorTestConfigurationResponse(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }

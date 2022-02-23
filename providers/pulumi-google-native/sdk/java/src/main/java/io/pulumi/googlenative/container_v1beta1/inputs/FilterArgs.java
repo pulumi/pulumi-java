@@ -24,7 +24,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType")
-    private final @Nullable Input<List<FilterEventTypeItem>> eventType;
+      private final @Nullable Input<List<FilterEventTypeItem>> eventType;
 
     public Input<List<FilterEventTypeItem>> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
@@ -67,7 +67,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.eventType = Input.ofNullable(eventType);
             return this;
         }
-
         public FilterArgs build() {
             return new FilterArgs(eventType);
         }

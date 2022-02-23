@@ -22,7 +22,7 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bootDiskSizeGb", required=true)
-    private final Integer bootDiskSizeGb;
+      private final Integer bootDiskSizeGb;
 
     public Integer getBootDiskSizeGb() {
         return this.bootDiskSizeGb;
@@ -33,7 +33,7 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bootDiskType", required=true)
-    private final String bootDiskType;
+      private final String bootDiskType;
 
     public String getBootDiskType() {
         return this.bootDiskType;
@@ -44,7 +44,7 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="localSsdInterface", required=true)
-    private final String localSsdInterface;
+      private final String localSsdInterface;
 
     public String getLocalSsdInterface() {
         return this.localSsdInterface;
@@ -55,7 +55,7 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numLocalSsds", required=true)
-    private final Integer numLocalSsds;
+      private final Integer numLocalSsds;
 
     public Integer getNumLocalSsds() {
         return this.numLocalSsds;
@@ -124,7 +124,6 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
             return this;
         }
-
         public DiskConfigResponse build() {
             return new DiskConfigResponse(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);
         }

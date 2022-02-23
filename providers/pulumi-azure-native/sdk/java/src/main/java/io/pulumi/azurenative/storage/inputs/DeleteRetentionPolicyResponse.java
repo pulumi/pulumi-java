@@ -24,7 +24,7 @@ public final class DeleteRetentionPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Integer days;
+        private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
@@ -35,7 +35,7 @@ public final class DeleteRetentionPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -84,7 +84,6 @@ public final class DeleteRetentionPolicyResponse extends io.pulumi.resources.Inv
             this.enabled = enabled;
             return this;
         }
-
         public DeleteRetentionPolicyResponse build() {
             return new DeleteRetentionPolicyResponse(days, enabled);
         }

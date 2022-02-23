@@ -21,7 +21,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logicOperator")
-    private final @Nullable Input<CompositeFilterLogicOperator> logicOperator;
+      private final @Nullable Input<CompositeFilterLogicOperator> logicOperator;
 
     public Input<CompositeFilterLogicOperator> getLogicOperator() {
         return this.logicOperator == null ? Input.empty() : this.logicOperator;
@@ -32,7 +32,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subFilters")
-    private final @Nullable Input<List<FilterArgs>> subFilters;
+      private final @Nullable Input<List<FilterArgs>> subFilters;
 
     public Input<List<FilterArgs>> getSubFilters() {
         return this.subFilters == null ? Input.empty() : this.subFilters;
@@ -91,7 +91,6 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
             this.subFilters = Input.ofNullable(subFilters);
             return this;
         }
-
         public CompositeFilterArgs build() {
             return new CompositeFilterArgs(logicOperator, subFilters);
         }

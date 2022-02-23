@@ -28,7 +28,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edges")
-    private final @Nullable Input<List<GraphEdgeArgs>> edges;
+        private final @Nullable Input<List<GraphEdgeArgs>> edges;
 
     public Input<List<GraphEdgeArgs>> getEdges() {
         return this.edges == null ? Input.empty() : this.edges;
@@ -39,7 +39,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphParameters")
-    private final @Nullable Input<Map<String,GraphParameterArgs>> graphParameters;
+        private final @Nullable Input<Map<String,GraphParameterArgs>> graphParameters;
 
     public Input<Map<String,GraphParameterArgs>> getGraphParameters() {
         return this.graphParameters == null ? Input.empty() : this.graphParameters;
@@ -50,7 +50,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodes")
-    private final @Nullable Input<Map<String,GraphNodeArgs>> nodes;
+        private final @Nullable Input<Map<String,GraphNodeArgs>> nodes;
 
     public Input<Map<String,GraphNodeArgs>> getNodes() {
         return this.nodes == null ? Input.empty() : this.nodes;
@@ -124,7 +124,6 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.nodes = Input.ofNullable(nodes);
             return this;
         }
-
         public GraphPackageArgs build() {
             return new GraphPackageArgs(edges, graphParameters, nodes);
         }

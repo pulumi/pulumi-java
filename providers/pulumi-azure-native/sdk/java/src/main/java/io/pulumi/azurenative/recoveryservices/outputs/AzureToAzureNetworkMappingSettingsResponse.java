@@ -99,7 +99,6 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
             this.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }
-
         public AzureToAzureNetworkMappingSettingsResponse build() {
             return new AzureToAzureNetworkMappingSettingsResponse(instanceType, primaryFabricLocation, recoveryFabricLocation);
         }

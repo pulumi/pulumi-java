@@ -14,14 +14,14 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends io.pulu
     public static final NetworkInterfacePrivateIpAddressSpecification Empty = new NetworkInterfacePrivateIpAddressSpecification();
 
     @InputImport(name="primary", required=true)
-    private final Boolean primary;
+        private final Boolean primary;
 
     public Boolean getPrimary() {
         return this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+        private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -70,7 +70,6 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends io.pulu
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public NetworkInterfacePrivateIpAddressSpecification build() {
             return new NetworkInterfacePrivateIpAddressSpecification(primary, privateIpAddress);
         }

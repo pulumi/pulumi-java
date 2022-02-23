@@ -15,21 +15,21 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
     public static final ChannelCustomerManagedS3Args Empty = new ChannelCustomerManagedS3Args();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="keyPrefix")
-    private final @Nullable Input<String> keyPrefix;
+        private final @Nullable Input<String> keyPrefix;
 
     public Input<String> getKeyPrefix() {
         return this.keyPrefix == null ? Input.empty() : this.keyPrefix;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -103,7 +103,6 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public ChannelCustomerManagedS3Args build() {
             return new ChannelCustomerManagedS3Args(bucket, keyPrefix, roleArn);
         }

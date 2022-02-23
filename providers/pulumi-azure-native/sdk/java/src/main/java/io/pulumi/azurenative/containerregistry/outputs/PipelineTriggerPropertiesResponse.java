@@ -54,7 +54,6 @@ public final class PipelineTriggerPropertiesResponse {
             this.sourceTrigger = sourceTrigger;
             return this;
         }
-
         public PipelineTriggerPropertiesResponse build() {
             return new PipelineTriggerPropertiesResponse(sourceTrigger);
         }

@@ -56,7 +56,6 @@ public final class FlexibleAppVersionManualScaling {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public FlexibleAppVersionManualScaling build() {
             return new FlexibleAppVersionManualScaling(instances);
         }

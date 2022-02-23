@@ -231,7 +231,6 @@ public final class SapCloudForCustomerResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapCloudForCustomerResourceDatasetResponse build() {
             return new SapCloudForCustomerResourceDatasetResponse(annotations, description, folder, linkedServiceName, parameters, path, schema, structure, type);
         }

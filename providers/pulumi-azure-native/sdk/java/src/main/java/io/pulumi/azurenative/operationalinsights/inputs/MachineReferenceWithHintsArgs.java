@@ -22,7 +22,7 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -93,7 +93,6 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public MachineReferenceWithHintsArgs build() {
             return new MachineReferenceWithHintsArgs(id, kind);
         }

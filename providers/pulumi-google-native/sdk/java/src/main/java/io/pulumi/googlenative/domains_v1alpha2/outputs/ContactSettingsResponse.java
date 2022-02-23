@@ -117,7 +117,6 @@ public final class ContactSettingsResponse {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
-
         public ContactSettingsResponse build() {
             return new ContactSettingsResponse(adminContact, privacy, registrantContact, technicalContact);
         }

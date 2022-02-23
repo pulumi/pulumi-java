@@ -15,21 +15,21 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="schemaId", required=true)
-    private final String schemaId;
+      private final String schemaId;
 
     public String getSchemaId() {
         return this.schemaId;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -88,7 +88,6 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
             this.view = view;
             return this;
         }
-
         public GetSchemaArgs build() {
             return new GetSchemaArgs(project, schemaId, view);
         }

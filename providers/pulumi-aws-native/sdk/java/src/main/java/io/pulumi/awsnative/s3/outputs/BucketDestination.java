@@ -119,7 +119,6 @@ public final class BucketDestination {
             this.prefix = prefix;
             return this;
         }
-
         public BucketDestination build() {
             return new BucketDestination(bucketAccountId, bucketArn, format, prefix);
         }

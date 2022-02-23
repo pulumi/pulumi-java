@@ -81,7 +81,6 @@ public final class JobStatusErrorResult {
             this.reason = reason;
             return this;
         }
-
         public JobStatusErrorResult build() {
             return new JobStatusErrorResult(location, message, reason);
         }

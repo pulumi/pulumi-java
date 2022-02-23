@@ -87,7 +87,6 @@ public final class ConnectionAliasAssociation {
             this.resourceId = resourceId;
             return this;
         }
-
         public ConnectionAliasAssociation build() {
             return new ConnectionAliasAssociation(associatedAccountId, associationStatus, connectionIdentifier, resourceId);
         }

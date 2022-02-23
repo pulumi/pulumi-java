@@ -74,7 +74,6 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public VirtualMachineIdentityResponseUserAssignedIdentities build() {
             return new VirtualMachineIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

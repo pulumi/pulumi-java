@@ -17,7 +17,7 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actionGroupName", required=true)
-    private final String actionGroupName;
+        private final String actionGroupName;
 
     public String getActionGroupName() {
         return this.actionGroupName;
@@ -28,7 +28,7 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetActionGroupArgs build() {
             return new GetActionGroupArgs(actionGroupName, resourceGroupName);
         }

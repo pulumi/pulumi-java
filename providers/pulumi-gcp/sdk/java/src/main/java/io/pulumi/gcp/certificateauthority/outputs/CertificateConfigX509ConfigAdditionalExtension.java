@@ -101,7 +101,6 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateConfigX509ConfigAdditionalExtension build() {
             return new CertificateConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }

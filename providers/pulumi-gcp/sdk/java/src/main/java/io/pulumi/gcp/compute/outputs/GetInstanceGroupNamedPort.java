@@ -67,7 +67,6 @@ public final class GetInstanceGroupNamedPort {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public GetInstanceGroupNamedPort build() {
             return new GetInstanceGroupNamedPort(name, port);
         }

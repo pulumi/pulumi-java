@@ -23,7 +23,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="binaryName")
-    private final @Nullable String binaryName;
+        private final @Nullable String binaryName;
 
     public Optional<String> getBinaryName() {
         return this.binaryName == null ? Optional.empty() : Optional.ofNullable(this.binaryName);
@@ -34,7 +34,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable String productName;
+        private final @Nullable String productName;
 
     public Optional<String> getProductName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
@@ -45,7 +45,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="publisherName")
-    private final @Nullable String publisherName;
+        private final @Nullable String publisherName;
 
     public Optional<String> getPublisherName() {
         return this.publisherName == null ? Optional.empty() : Optional.ofNullable(this.publisherName);
@@ -56,7 +56,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -125,7 +125,6 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.version = version;
             return this;
         }
-
         public PublisherInfoResponse build() {
             return new PublisherInfoResponse(binaryName, productName, publisherName, version);
         }

@@ -98,7 +98,6 @@ public final class ClusterNodeConfigGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClusterNodeConfigGuestAccelerator build() {
             return new ClusterNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }

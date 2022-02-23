@@ -54,7 +54,6 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
             this.subscriptions = subscriptions;
             return this;
         }
-
         public PrivateLinkServicePropertiesResponseAutoApproval build() {
             return new PrivateLinkServicePropertiesResponseAutoApproval(subscriptions);
         }

@@ -23,7 +23,7 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable String keyVaultId;
+        private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
@@ -34,7 +34,7 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable String keyVaultUri;
+        private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
@@ -83,7 +83,6 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public UserSecretStoreResponse build() {
             return new UserSecretStoreResponse(keyVaultId, keyVaultUri);
         }

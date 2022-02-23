@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs(bucket, generation, object);
         }

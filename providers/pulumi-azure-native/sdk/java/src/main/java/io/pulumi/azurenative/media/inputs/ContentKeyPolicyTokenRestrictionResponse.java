@@ -29,7 +29,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="alternateVerificationKeys")
-    private final @Nullable List<Object> alternateVerificationKeys;
+        private final @Nullable List<Object> alternateVerificationKeys;
 
     public List<Object> getAlternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
@@ -40,7 +40,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="audience", required=true)
-    private final String audience;
+        private final String audience;
 
     public String getAudience() {
         return this.audience;
@@ -51,7 +51,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+        private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -63,7 +63,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -74,7 +74,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="openIdConnectDiscoveryDocument")
-    private final @Nullable String openIdConnectDiscoveryDocument;
+        private final @Nullable String openIdConnectDiscoveryDocument;
 
     public Optional<String> getOpenIdConnectDiscoveryDocument() {
         return this.openIdConnectDiscoveryDocument == null ? Optional.empty() : Optional.ofNullable(this.openIdConnectDiscoveryDocument);
@@ -85,7 +85,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="primaryVerificationKey", required=true)
-    private final Object primaryVerificationKey;
+        private final Object primaryVerificationKey;
 
     public Object getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
@@ -96,7 +96,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="requiredClaims")
-    private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
+        private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
 
     public List<ContentKeyPolicyTokenClaimResponse> getRequiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
@@ -107,7 +107,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="restrictionTokenType", required=true)
-    private final String restrictionTokenType;
+        private final String restrictionTokenType;
 
     public String getRestrictionTokenType() {
         return this.restrictionTokenType;
@@ -216,7 +216,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
-
         public ContentKeyPolicyTokenRestrictionResponse build() {
             return new ContentKeyPolicyTokenRestrictionResponse(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }

@@ -58,7 +58,6 @@ public final class StateMachineTagsEntry {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StateMachineTagsEntry build() {
             return new StateMachineTagsEntry(key, value);
         }

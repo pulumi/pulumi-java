@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="contentUrl", required=true)
-    private final String contentUrl;
+      private final String contentUrl;
 
     public String getContentUrl() {
         return this.contentUrl;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="icon", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getIcon() {
         return this.icon;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="largeImage", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getLargeImage() {
         return this.largeImage;
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -145,7 +145,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(contentUrl, description, icon, largeImage, name);
         }

@@ -17,7 +17,7 @@ public final class GetTopicAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetTopicAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetTopicAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetTopicAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+        private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -119,7 +119,6 @@ public final class GetTopicAuthorizationRuleArgs extends io.pulumi.resources.Inv
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public GetTopicAuthorizationRuleArgs build() {
             return new GetTopicAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName, topicName);
         }

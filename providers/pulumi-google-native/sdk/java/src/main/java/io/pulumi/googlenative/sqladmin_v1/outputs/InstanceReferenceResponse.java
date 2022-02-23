@@ -95,7 +95,6 @@ public final class InstanceReferenceResponse {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(name, project, region);
         }

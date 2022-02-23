@@ -161,7 +161,6 @@ public final class GetChannelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(channelFunctions, channelType, credentials, id, name, type);
         }

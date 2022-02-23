@@ -150,7 +150,6 @@ public final class PatchDeploymentInstanceFilter {
             this.zones = zones;
             return this;
         }
-
         public PatchDeploymentInstanceFilter build() {
             return new PatchDeploymentInstanceFilter(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

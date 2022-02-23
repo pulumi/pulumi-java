@@ -15,21 +15,21 @@ public final class GetConnectionProfileArgs extends io.pulumi.resources.InvokeAr
     public static final GetConnectionProfileArgs Empty = new GetConnectionProfileArgs();
 
     @InputImport(name="connectionProfileId", required=true)
-    private final String connectionProfileId;
+      private final String connectionProfileId;
 
     public String getConnectionProfileId() {
         return this.connectionProfileId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetConnectionProfileArgs extends io.pulumi.resources.InvokeAr
             this.project = project;
             return this;
         }
-
         public GetConnectionProfileArgs build() {
             return new GetConnectionProfileArgs(connectionProfileId, location, project);
         }

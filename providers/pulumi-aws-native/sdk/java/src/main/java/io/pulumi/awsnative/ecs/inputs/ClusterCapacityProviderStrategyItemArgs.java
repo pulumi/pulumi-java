@@ -20,21 +20,21 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
     public static final ClusterCapacityProviderStrategyItemArgs Empty = new ClusterCapacityProviderStrategyItemArgs();
 
     @InputImport(name="base")
-    private final @Nullable Input<Integer> base;
+        private final @Nullable Input<Integer> base;
 
     public Input<Integer> getBase() {
         return this.base == null ? Input.empty() : this.base;
     }
 
     @InputImport(name="capacityProvider")
-    private final @Nullable Input<String> capacityProvider;
+        private final @Nullable Input<String> capacityProvider;
 
     public Input<String> getCapacityProvider() {
         return this.capacityProvider == null ? Input.empty() : this.capacityProvider;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -108,7 +108,6 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ClusterCapacityProviderStrategyItemArgs build() {
             return new ClusterCapacityProviderStrategyItemArgs(base, capacityProvider, weight);
         }

@@ -138,7 +138,6 @@ public final class JobStagesResponse {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
         }
-
         public JobStagesResponse build() {
             return new JobStagesResponse(displayName, jobStageDetails, stageName, stageStatus, stageTime);
         }

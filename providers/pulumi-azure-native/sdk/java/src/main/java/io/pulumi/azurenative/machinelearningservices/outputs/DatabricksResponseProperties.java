@@ -76,7 +76,6 @@ public final class DatabricksResponseProperties {
             this.workspaceUrl = workspaceUrl;
             return this;
         }
-
         public DatabricksResponseProperties build() {
             return new DatabricksResponseProperties(databricksAccessToken, workspaceUrl);
         }

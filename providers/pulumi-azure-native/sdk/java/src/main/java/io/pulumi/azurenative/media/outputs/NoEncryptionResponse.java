@@ -54,7 +54,6 @@ public final class NoEncryptionResponse {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public NoEncryptionResponse build() {
             return new NoEncryptionResponse(enabledProtocols);
         }

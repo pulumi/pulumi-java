@@ -97,7 +97,6 @@ public final class BuildApprovalResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public BuildApprovalResponse build() {
             return new BuildApprovalResponse(config, result, state);
         }

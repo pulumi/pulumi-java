@@ -360,7 +360,6 @@ public final class AzureBlobFSLinkedServiceResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AzureBlobFSLinkedServiceResponse build() {
             return new AzureBlobFSLinkedServiceResponse(accountKey, annotations, azureCloudType, connectVia, credential, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, servicePrincipalKey, tenant, type, url);
         }

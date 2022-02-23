@@ -16,28 +16,28 @@ public final class ConnectionAliasAssociation extends io.pulumi.resources.Invoke
     public static final ConnectionAliasAssociation Empty = new ConnectionAliasAssociation();
 
     @InputImport(name="associatedAccountId")
-    private final @Nullable String associatedAccountId;
+        private final @Nullable String associatedAccountId;
 
     public Optional<String> getAssociatedAccountId() {
         return this.associatedAccountId == null ? Optional.empty() : Optional.ofNullable(this.associatedAccountId);
     }
 
     @InputImport(name="associationStatus")
-    private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
+        private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
 
     public Optional<ConnectionAliasAssociationAssociationStatus> getAssociationStatus() {
         return this.associationStatus == null ? Optional.empty() : Optional.ofNullable(this.associationStatus);
     }
 
     @InputImport(name="connectionIdentifier")
-    private final @Nullable String connectionIdentifier;
+        private final @Nullable String connectionIdentifier;
 
     public Optional<String> getConnectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -106,7 +106,6 @@ public final class ConnectionAliasAssociation extends io.pulumi.resources.Invoke
             this.resourceId = resourceId;
             return this;
         }
-
         public ConnectionAliasAssociation build() {
             return new ConnectionAliasAssociation(associatedAccountId, associationStatus, connectionIdentifier, resourceId);
         }

@@ -76,7 +76,6 @@ public final class AzureResourceDetailsResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public AzureResourceDetailsResponse build() {
             return new AzureResourceDetailsResponse(id, source);
         }

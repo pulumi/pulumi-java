@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse build() {
             return new GoogleCloudDialogflowV2beta1SuggestionFeatureResponse(type);
         }

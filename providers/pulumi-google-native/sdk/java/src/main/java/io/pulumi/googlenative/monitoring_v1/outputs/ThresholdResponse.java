@@ -138,7 +138,6 @@ public final class ThresholdResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ThresholdResponse build() {
             return new ThresholdResponse(color, direction, label, targetAxis, value);
         }

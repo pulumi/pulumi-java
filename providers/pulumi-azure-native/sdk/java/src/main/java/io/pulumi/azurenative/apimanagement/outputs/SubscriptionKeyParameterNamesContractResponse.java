@@ -76,7 +76,6 @@ public final class SubscriptionKeyParameterNamesContractResponse {
             this.query = query;
             return this;
         }
-
         public SubscriptionKeyParameterNamesContractResponse build() {
             return new SubscriptionKeyParameterNamesContractResponse(header, query);
         }

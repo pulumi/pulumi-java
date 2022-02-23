@@ -184,7 +184,6 @@ public final class PigJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public PigJobResponse build() {
             return new PigJobResponse(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

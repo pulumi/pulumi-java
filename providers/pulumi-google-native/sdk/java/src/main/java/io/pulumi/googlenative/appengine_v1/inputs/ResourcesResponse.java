@@ -24,7 +24,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpu", required=true)
-    private final Double cpu;
+      private final Double cpu;
 
     public Double getCpu() {
         return this.cpu;
@@ -35,7 +35,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskGb", required=true)
-    private final Double diskGb;
+      private final Double diskGb;
 
     public Double getDiskGb() {
         return this.diskGb;
@@ -46,7 +46,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kmsKeyReference", required=true)
-    private final String kmsKeyReference;
+      private final String kmsKeyReference;
 
     public String getKmsKeyReference() {
         return this.kmsKeyReference;
@@ -57,7 +57,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memoryGb", required=true)
-    private final Double memoryGb;
+      private final Double memoryGb;
 
     public Double getMemoryGb() {
         return this.memoryGb;
@@ -68,7 +68,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumes", required=true)
-    private final List<VolumeResponse> volumes;
+      private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
         return this.volumes;
@@ -147,7 +147,6 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public ResourcesResponse build() {
             return new ResourcesResponse(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }

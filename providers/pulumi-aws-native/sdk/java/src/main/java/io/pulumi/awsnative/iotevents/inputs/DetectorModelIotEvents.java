@@ -24,14 +24,14 @@ public final class DetectorModelIotEvents extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputName", required=true)
-    private final String inputName;
+        private final String inputName;
 
     public String getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="payload")
-    private final @Nullable DetectorModelPayload payload;
+        private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
@@ -80,7 +80,6 @@ public final class DetectorModelIotEvents extends io.pulumi.resources.InvokeArgs
             this.payload = payload;
             return this;
         }
-
         public DetectorModelIotEvents build() {
             return new DetectorModelIotEvents(inputName, payload);
         }

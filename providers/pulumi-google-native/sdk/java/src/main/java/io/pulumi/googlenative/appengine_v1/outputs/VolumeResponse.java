@@ -96,7 +96,6 @@ public final class VolumeResponse {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(name, sizeGb, volumeType);
         }

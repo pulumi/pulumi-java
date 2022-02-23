@@ -66,7 +66,6 @@ public final class VideoStreamingResponse {
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
         }
-
         public VideoStreamingResponse build() {
             return new VideoStreamingResponse(archiveBaseUrl);
         }

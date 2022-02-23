@@ -54,7 +54,6 @@ public final class WebTestPropertiesResponseConfiguration {
             this.webTest = webTest;
             return this;
         }
-
         public WebTestPropertiesResponseConfiguration build() {
             return new WebTestPropertiesResponseConfiguration(webTest);
         }

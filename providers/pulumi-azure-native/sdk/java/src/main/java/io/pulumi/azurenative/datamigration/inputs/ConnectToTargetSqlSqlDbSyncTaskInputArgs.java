@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+        private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -92,7 +92,6 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends io.pulumi.re
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public ConnectToTargetSqlSqlDbSyncTaskInputArgs build() {
             return new ConnectToTargetSqlSqlDbSyncTaskInputArgs(sourceConnectionInfo, targetConnectionInfo);
         }

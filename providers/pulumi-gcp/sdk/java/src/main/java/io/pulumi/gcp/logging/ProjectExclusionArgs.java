@@ -20,7 +20,7 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -45,7 +45,7 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -56,7 +56,7 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -172,7 +172,6 @@ public final class ProjectExclusionArgs extends io.pulumi.resources.ResourceArgs
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ProjectExclusionArgs build() {
             return new ProjectExclusionArgs(description, disabled, filter, name, project);
         }

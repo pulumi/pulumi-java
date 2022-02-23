@@ -275,7 +275,6 @@ public final class CassandraLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public CassandraLinkedServiceResponse build() {
             return new CassandraLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, host, parameters, password, port, type, username);
         }

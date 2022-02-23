@@ -60,7 +60,6 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
             return new GetServiceTemplateSpecContainerEnvFromSecretRef(localObjectReferences, optional);
         }

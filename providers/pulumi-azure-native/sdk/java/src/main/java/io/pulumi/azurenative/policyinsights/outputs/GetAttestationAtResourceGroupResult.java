@@ -310,7 +310,6 @@ public final class GetAttestationAtResourceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttestationAtResourceGroupResult build() {
             return new GetAttestationAtResourceGroupResult(comments, complianceState, evidence, expiresOn, id, lastComplianceStateChangeAt, name, owner, policyAssignmentId, policyDefinitionReferenceId, provisioningState, systemData, type);
         }

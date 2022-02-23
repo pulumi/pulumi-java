@@ -248,7 +248,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

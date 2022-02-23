@@ -44,7 +44,6 @@ public final class ManagedZoneReverseLookupConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZoneReverseLookupConfigResponse build() {
             return new ManagedZoneReverseLookupConfigResponse(kind);
         }

@@ -351,7 +351,6 @@ public final class X12AcknowledgementSettingsResponse {
             this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
             return this;
         }
-
         public X12AcknowledgementSettingsResponse build() {
             return new X12AcknowledgementSettingsResponse(acknowledgementControlNumberLowerBound, acknowledgementControlNumberPrefix, acknowledgementControlNumberSuffix, acknowledgementControlNumberUpperBound, batchFunctionalAcknowledgements, batchImplementationAcknowledgements, batchTechnicalAcknowledgements, functionalAcknowledgementVersion, implementationAcknowledgementVersion, needFunctionalAcknowledgement, needImplementationAcknowledgement, needLoopForValidMessages, needTechnicalAcknowledgement, rolloverAcknowledgementControlNumber, sendSynchronousAcknowledgement);
         }

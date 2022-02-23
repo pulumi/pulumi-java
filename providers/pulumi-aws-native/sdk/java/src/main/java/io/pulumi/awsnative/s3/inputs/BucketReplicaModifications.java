@@ -17,7 +17,7 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status", required=true)
-    private final BucketReplicaModificationsStatus status;
+        private final BucketReplicaModificationsStatus status;
 
     public BucketReplicaModificationsStatus getStatus() {
         return this.status;
@@ -55,7 +55,6 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketReplicaModifications build() {
             return new BucketReplicaModifications(status);
         }

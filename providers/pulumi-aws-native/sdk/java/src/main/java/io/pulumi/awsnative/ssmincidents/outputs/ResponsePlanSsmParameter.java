@@ -59,7 +59,6 @@ public final class ResponsePlanSsmParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ResponsePlanSsmParameter build() {
             return new ResponsePlanSsmParameter(key, values);
         }

@@ -34,7 +34,6 @@ public final class EmptyArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(EmptyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public EmptyArgs build() {
             return new EmptyArgs();
         }

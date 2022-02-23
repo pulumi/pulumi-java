@@ -120,7 +120,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
             return new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

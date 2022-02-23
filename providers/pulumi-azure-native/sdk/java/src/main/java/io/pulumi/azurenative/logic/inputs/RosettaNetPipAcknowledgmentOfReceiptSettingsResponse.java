@@ -22,7 +22,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
      * 
      */
     @InputImport(name="isNonRepudiationRequired", required=true)
-    private final Boolean isNonRepudiationRequired;
+        private final Boolean isNonRepudiationRequired;
 
     public Boolean getIsNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
@@ -33,7 +33,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
      * 
      */
     @InputImport(name="timeToAcknowledgeInSeconds", required=true)
-    private final Integer timeToAcknowledgeInSeconds;
+        private final Integer timeToAcknowledgeInSeconds;
 
     public Integer getTimeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
@@ -82,7 +82,6 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
         }
-
         public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse build() {
             return new RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(isNonRepudiationRequired, timeToAcknowledgeInSeconds);
         }

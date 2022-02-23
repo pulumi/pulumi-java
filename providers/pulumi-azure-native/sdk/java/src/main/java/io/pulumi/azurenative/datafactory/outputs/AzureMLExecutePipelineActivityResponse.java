@@ -357,7 +357,6 @@ public final class AzureMLExecutePipelineActivityResponse {
             this.version = version;
             return this;
         }
-
         public AzureMLExecutePipelineActivityResponse build() {
             return new AzureMLExecutePipelineActivityResponse(continueOnStepFailure, dataPathAssignments, dependsOn, description, experimentName, linkedServiceName, mlParentRunId, mlPipelineEndpointId, mlPipelineId, mlPipelineParameters, name, policy, type, userProperties, version);
         }

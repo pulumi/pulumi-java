@@ -46,7 +46,6 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             this.obectIds = obectIds;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(obectIds);
         }

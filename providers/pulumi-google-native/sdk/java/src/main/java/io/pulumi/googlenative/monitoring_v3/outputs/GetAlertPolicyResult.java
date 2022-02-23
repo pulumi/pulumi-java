@@ -292,7 +292,6 @@ public final class GetAlertPolicyResult {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public GetAlertPolicyResult build() {
             return new GetAlertPolicyResult(alertStrategy, combiner, conditions, creationRecord, displayName, documentation, enabled, mutationRecord, name, notificationChannels, userLabels, validity);
         }

@@ -76,7 +76,6 @@ public final class UserSecretStoreResponse {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public UserSecretStoreResponse build() {
             return new UserSecretStoreResponse(keyVaultId, keyVaultUri);
         }

@@ -54,7 +54,6 @@ public final class CdnEndpointResponse {
             this.id = id;
             return this;
         }
-
         public CdnEndpointResponse build() {
             return new CdnEndpointResponse(id);
         }

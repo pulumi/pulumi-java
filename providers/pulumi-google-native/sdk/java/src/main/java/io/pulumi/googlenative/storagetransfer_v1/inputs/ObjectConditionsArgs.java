@@ -24,7 +24,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="excludePrefixes")
-    private final @Nullable Input<List<String>> excludePrefixes;
+      private final @Nullable Input<List<String>> excludePrefixes;
 
     public Input<List<String>> getExcludePrefixes() {
         return this.excludePrefixes == null ? Input.empty() : this.excludePrefixes;
@@ -35,7 +35,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="includePrefixes")
-    private final @Nullable Input<List<String>> includePrefixes;
+      private final @Nullable Input<List<String>> includePrefixes;
 
     public Input<List<String>> getIncludePrefixes() {
         return this.includePrefixes == null ? Input.empty() : this.includePrefixes;
@@ -46,7 +46,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastModifiedBefore")
-    private final @Nullable Input<String> lastModifiedBefore;
+      private final @Nullable Input<String> lastModifiedBefore;
 
     public Input<String> getLastModifiedBefore() {
         return this.lastModifiedBefore == null ? Input.empty() : this.lastModifiedBefore;
@@ -57,7 +57,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastModifiedSince")
-    private final @Nullable Input<String> lastModifiedSince;
+      private final @Nullable Input<String> lastModifiedSince;
 
     public Input<String> getLastModifiedSince() {
         return this.lastModifiedSince == null ? Input.empty() : this.lastModifiedSince;
@@ -68,7 +68,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxTimeElapsedSinceLastModification")
-    private final @Nullable Input<String> maxTimeElapsedSinceLastModification;
+      private final @Nullable Input<String> maxTimeElapsedSinceLastModification;
 
     public Input<String> getMaxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification == null ? Input.empty() : this.maxTimeElapsedSinceLastModification;
@@ -79,7 +79,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minTimeElapsedSinceLastModification")
-    private final @Nullable Input<String> minTimeElapsedSinceLastModification;
+      private final @Nullable Input<String> minTimeElapsedSinceLastModification;
 
     public Input<String> getMinTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification == null ? Input.empty() : this.minTimeElapsedSinceLastModification;
@@ -198,7 +198,6 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             this.minTimeElapsedSinceLastModification = Input.ofNullable(minTimeElapsedSinceLastModification);
             return this;
         }
-
         public ObjectConditionsArgs build() {
             return new ObjectConditionsArgs(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }

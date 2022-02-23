@@ -317,7 +317,6 @@ public final class TumblingWindowTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TumblingWindowTriggerResponse build() {
             return new TumblingWindowTriggerResponse(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, runtimeState, startTime, type);
         }

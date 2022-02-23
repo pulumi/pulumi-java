@@ -308,7 +308,6 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
             this.viaPartitionKey = viaPartitionKey;
             return this;
         }
-
         public ServiceBusBrokeredMessagePropertiesResponse build() {
             return new ServiceBusBrokeredMessagePropertiesResponse(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
         }

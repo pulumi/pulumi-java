@@ -74,7 +74,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo(name, url);
         }

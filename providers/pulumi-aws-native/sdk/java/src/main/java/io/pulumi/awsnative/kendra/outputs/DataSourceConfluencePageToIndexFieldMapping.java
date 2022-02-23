@@ -74,7 +74,6 @@ public final class DataSourceConfluencePageToIndexFieldMapping {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluencePageToIndexFieldMapping build() {
             return new DataSourceConfluencePageToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

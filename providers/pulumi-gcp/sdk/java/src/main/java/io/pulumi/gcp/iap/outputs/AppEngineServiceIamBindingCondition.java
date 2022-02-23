@@ -97,7 +97,6 @@ public final class AppEngineServiceIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AppEngineServiceIamBindingCondition build() {
             return new AppEngineServiceIamBindingCondition(description, expression, title);
         }

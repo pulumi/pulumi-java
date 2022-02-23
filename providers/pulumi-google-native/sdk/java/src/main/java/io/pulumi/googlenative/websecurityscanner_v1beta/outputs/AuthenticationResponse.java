@@ -97,7 +97,6 @@ public final class AuthenticationResponse {
             this.iapCredential = Objects.requireNonNull(iapCredential);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount, iapCredential);
         }

@@ -140,7 +140,6 @@ public final class GoogleCloudChannelV1ValueResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public GoogleCloudChannelV1ValueResponse build() {
             return new GoogleCloudChannelV1ValueResponse(boolValue, doubleValue, int64Value, protoValue, stringValue);
         }

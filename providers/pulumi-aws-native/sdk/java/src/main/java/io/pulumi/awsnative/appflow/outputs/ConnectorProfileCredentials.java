@@ -257,7 +257,6 @@ public final class ConnectorProfileCredentials {
             this.zendesk = zendesk;
             return this;
         }
-
         public ConnectorProfileCredentials build() {
             return new ConnectorProfileCredentials(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, singular, slack, snowflake, trendmicro, veeva, zendesk);
         }

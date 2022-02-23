@@ -97,7 +97,6 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MediaGraphUsernamePasswordCredentialsResponse build() {
             return new MediaGraphUsernamePasswordCredentialsResponse(odataType, password, username);
         }

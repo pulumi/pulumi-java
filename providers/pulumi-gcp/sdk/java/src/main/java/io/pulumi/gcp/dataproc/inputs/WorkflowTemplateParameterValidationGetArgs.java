@@ -20,7 +20,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
+        private final @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
     public Input<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -31,7 +31,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
+        private final @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
     public Input<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -90,7 +90,6 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public WorkflowTemplateParameterValidationGetArgs build() {
             return new WorkflowTemplateParameterValidationGetArgs(regex, values);
         }

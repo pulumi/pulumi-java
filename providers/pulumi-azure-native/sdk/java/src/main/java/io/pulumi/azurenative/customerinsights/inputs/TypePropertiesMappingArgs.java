@@ -24,7 +24,7 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="linkType")
-    private final @Nullable Input<LinkTypes> linkType;
+        private final @Nullable Input<LinkTypes> linkType;
 
     public Input<LinkTypes> getLinkType() {
         return this.linkType == null ? Input.empty() : this.linkType;
@@ -35,7 +35,7 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-    private final Input<String> sourcePropertyName;
+        private final Input<String> sourcePropertyName;
 
     public Input<String> getSourcePropertyName() {
         return this.sourcePropertyName;
@@ -46,7 +46,7 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-    private final Input<String> targetPropertyName;
+        private final Input<String> targetPropertyName;
 
     public Input<String> getTargetPropertyName() {
         return this.targetPropertyName;
@@ -120,7 +120,6 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
             this.targetPropertyName = Input.of(Objects.requireNonNull(targetPropertyName));
             return this;
         }
-
         public TypePropertiesMappingArgs build() {
             return new TypePropertiesMappingArgs(linkType, sourcePropertyName, targetPropertyName);
         }

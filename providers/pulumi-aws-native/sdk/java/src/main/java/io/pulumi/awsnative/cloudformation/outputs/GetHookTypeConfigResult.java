@@ -101,7 +101,6 @@ public final class GetHookTypeConfigResult {
             this.typeName = typeName;
             return this;
         }
-
         public GetHookTypeConfigResult build() {
             return new GetHookTypeConfigResult(configuration, configurationArn, typeName);
         }

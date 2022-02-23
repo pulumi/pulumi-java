@@ -54,7 +54,6 @@ public final class ListDelegationSettingSecretsResult {
             this.validationKey = validationKey;
             return this;
         }
-
         public ListDelegationSettingSecretsResult build() {
             return new ListDelegationSettingSecretsResult(validationKey);
         }

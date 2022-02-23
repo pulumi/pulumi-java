@@ -97,7 +97,6 @@ public final class TrackPropertyConditionResponse {
             this.value = value;
             return this;
         }
-
         public TrackPropertyConditionResponse build() {
             return new TrackPropertyConditionResponse(operation, property, value);
         }

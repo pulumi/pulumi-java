@@ -233,7 +233,6 @@ public final class DelimitedTextSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public DelimitedTextSinkResponse build() {
             return new DelimitedTextSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

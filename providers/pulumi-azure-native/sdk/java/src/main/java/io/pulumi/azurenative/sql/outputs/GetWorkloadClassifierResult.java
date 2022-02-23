@@ -223,7 +223,6 @@ public final class GetWorkloadClassifierResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadClassifierResult build() {
             return new GetWorkloadClassifierResult(context, endTime, id, importance, label, memberName, name, startTime, type);
         }

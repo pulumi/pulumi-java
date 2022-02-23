@@ -77,7 +77,6 @@ public final class FlowLogFormatParametersResponse {
             this.version = version;
             return this;
         }
-
         public FlowLogFormatParametersResponse build() {
             return new FlowLogFormatParametersResponse(type, version);
         }

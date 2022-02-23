@@ -233,7 +233,6 @@ public final class SqlServerStoredProcedureActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public SqlServerStoredProcedureActivityResponse build() {
             return new SqlServerStoredProcedureActivityResponse(dependsOn, description, linkedServiceName, name, policy, storedProcedureName, storedProcedureParameters, type, userProperties);
         }

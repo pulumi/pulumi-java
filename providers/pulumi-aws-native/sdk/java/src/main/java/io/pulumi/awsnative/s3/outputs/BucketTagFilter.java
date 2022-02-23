@@ -58,7 +58,6 @@ public final class BucketTagFilter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BucketTagFilter build() {
             return new BucketTagFilter(key, value);
         }

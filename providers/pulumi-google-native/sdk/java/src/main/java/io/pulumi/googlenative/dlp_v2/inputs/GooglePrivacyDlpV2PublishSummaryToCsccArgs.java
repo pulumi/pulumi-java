@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishSummaryToCsccArgs extends io.pulumi.
         public Builder(GooglePrivacyDlpV2PublishSummaryToCsccArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishSummaryToCsccArgs build() {
             return new GooglePrivacyDlpV2PublishSummaryToCsccArgs();
         }

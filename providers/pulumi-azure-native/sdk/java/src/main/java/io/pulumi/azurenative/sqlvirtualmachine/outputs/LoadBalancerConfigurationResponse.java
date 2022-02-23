@@ -142,7 +142,6 @@ public final class LoadBalancerConfigurationResponse {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
-
         public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(loadBalancerResourceId, privateIpAddress, probePort, publicIpAddressResourceId, sqlVirtualMachineInstances);
         }

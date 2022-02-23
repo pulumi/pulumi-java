@@ -60,7 +60,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespace build() {
             return new ManagedZoneServiceDirectoryConfigNamespace(namespaceUrl);
         }

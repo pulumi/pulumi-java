@@ -23,7 +23,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicKeyCertificate")
-    private final @Nullable Input<PublicKeyCertificateArgs> publicKeyCertificate;
+      private final @Nullable Input<PublicKeyCertificateArgs> publicKeyCertificate;
 
     public Input<PublicKeyCertificateArgs> getPublicKeyCertificate() {
         return this.publicKeyCertificate == null ? Input.empty() : this.publicKeyCertificate;
@@ -66,7 +66,6 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
             this.publicKeyCertificate = Input.ofNullable(publicKeyCertificate);
             return this;
         }
-
         public RegistryCredentialArgs build() {
             return new RegistryCredentialArgs(publicKeyCertificate);
         }

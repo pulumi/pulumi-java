@@ -74,7 +74,6 @@ public final class PipelineRemoveAttributes {
             this.next = next;
             return this;
         }
-
         public PipelineRemoveAttributes build() {
             return new PipelineRemoveAttributes(attributes, name, next);
         }

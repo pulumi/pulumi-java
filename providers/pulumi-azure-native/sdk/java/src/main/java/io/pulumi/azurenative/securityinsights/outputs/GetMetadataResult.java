@@ -398,7 +398,6 @@ public final class GetMetadataResult {
             this.version = version;
             return this;
         }
-
         public GetMetadataResult build() {
             return new GetMetadataResult(author, categories, contentId, dependencies, etag, firstPublishDate, id, kind, lastPublishDate, name, parentId, providers, source, support, systemData, type, version);
         }

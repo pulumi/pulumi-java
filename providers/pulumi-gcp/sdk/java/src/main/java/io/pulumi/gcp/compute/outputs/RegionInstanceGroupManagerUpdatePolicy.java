@@ -226,7 +226,6 @@ public final class RegionInstanceGroupManagerUpdatePolicy {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RegionInstanceGroupManagerUpdatePolicy build() {
             return new RegionInstanceGroupManagerUpdatePolicy(instanceRedistributionType, maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }

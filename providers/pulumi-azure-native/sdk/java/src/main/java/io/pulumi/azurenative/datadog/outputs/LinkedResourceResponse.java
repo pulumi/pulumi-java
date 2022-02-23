@@ -54,7 +54,6 @@ public final class LinkedResourceResponse {
             this.id = id;
             return this;
         }
-
         public LinkedResourceResponse build() {
             return new LinkedResourceResponse(id);
         }

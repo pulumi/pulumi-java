@@ -74,7 +74,6 @@ public final class EventSubscriptionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventSubscriptionTag build() {
             return new EventSubscriptionTag(key, value);
         }

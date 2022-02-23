@@ -97,7 +97,6 @@ public final class AdmCredentialResponse {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public AdmCredentialResponse build() {
             return new AdmCredentialResponse(authTokenUrl, clientId, clientSecret);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable Input<GoogleTypeDateArgs> endDate;
+      private final @Nullable Input<GoogleTypeDateArgs> endDate;
 
     public Input<GoogleTypeDateArgs> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -34,7 +34,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
      * 
      */
     @InputImport(name="startDate", required=true)
-    private final Input<GoogleTypeDateArgs> startDate;
+      private final Input<GoogleTypeDateArgs> startDate;
 
     public Input<GoogleTypeDateArgs> getStartDate() {
         return this.startDate;
@@ -93,7 +93,6 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
             this.startDate = Input.of(Objects.requireNonNull(startDate));
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1CustomPeriodArgs build() {
             return new GoogleCloudBillingBudgetsV1CustomPeriodArgs(endDate, startDate);
         }

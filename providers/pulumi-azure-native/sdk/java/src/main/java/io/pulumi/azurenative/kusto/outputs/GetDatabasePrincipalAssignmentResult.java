@@ -244,7 +244,6 @@ public final class GetDatabasePrincipalAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabasePrincipalAssignmentResult build() {
             return new GetDatabasePrincipalAssignmentResult(id, name, principalId, principalName, principalType, provisioningState, role, tenantId, tenantName, type);
         }

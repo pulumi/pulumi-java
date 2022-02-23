@@ -17,7 +17,7 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+        private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -28,7 +28,7 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetRemediationAtResourceGroupArgs build() {
             return new GetRemediationAtResourceGroupArgs(remediationName, resourceGroupName);
         }

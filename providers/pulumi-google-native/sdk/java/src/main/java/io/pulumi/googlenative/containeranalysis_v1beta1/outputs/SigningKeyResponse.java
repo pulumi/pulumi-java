@@ -116,7 +116,6 @@ public final class SigningKeyResponse {
             this.publicKeyValue = Objects.requireNonNull(publicKeyValue);
             return this;
         }
-
         public SigningKeyResponse build() {
             return new SigningKeyResponse(keyId, keyScheme, keyType, publicKeyValue);
         }

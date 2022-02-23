@@ -19,7 +19,7 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendorName")
-    private final @Nullable Input<String> vendorName;
+        private final @Nullable Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName == null ? Input.empty() : this.vendorName;
@@ -62,7 +62,6 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
             this.vendorName = Input.ofNullable(vendorName);
             return this;
         }
-
         public VendorArgs build() {
             return new VendorArgs(vendorName);
         }

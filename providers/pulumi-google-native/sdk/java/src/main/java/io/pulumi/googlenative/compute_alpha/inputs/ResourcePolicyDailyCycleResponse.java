@@ -22,7 +22,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="daysInCycle", required=true)
-    private final Integer daysInCycle;
+      private final Integer daysInCycle;
 
     public Integer getDaysInCycle() {
         return this.daysInCycle;
@@ -33,7 +33,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -44,7 +44,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyDailyCycleResponse build() {
             return new ResourcePolicyDailyCycleResponse(daysInCycle, duration, startTime);
         }

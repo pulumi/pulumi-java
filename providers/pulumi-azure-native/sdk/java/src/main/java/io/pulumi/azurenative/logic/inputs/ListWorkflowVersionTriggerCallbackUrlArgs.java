@@ -21,7 +21,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Either<String,KeyType> keyType;
+        private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
         return this.keyType == null ? null : this.keyType;
@@ -32,7 +32,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="notAfter")
-    private final @Nullable String notAfter;
+        private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
@@ -43,7 +43,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="triggerName", required=true)
-    private final String triggerName;
+        private final String triggerName;
 
     public String getTriggerName() {
         return this.triggerName;
@@ -65,7 +65,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+        private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -76,7 +76,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="workflowName", required=true)
-    private final String workflowName;
+        private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;
@@ -165,7 +165,6 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
-
         public ListWorkflowVersionTriggerCallbackUrlArgs build() {
             return new ListWorkflowVersionTriggerCallbackUrlArgs(keyType, notAfter, resourceGroupName, triggerName, versionId, workflowName);
         }

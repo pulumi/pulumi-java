@@ -77,7 +77,6 @@ public final class DayResponse {
             this.isLast = isLast;
             return this;
         }
-
         public DayResponse build() {
             return new DayResponse(date, isLast);
         }

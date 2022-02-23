@@ -224,7 +224,6 @@ public final class GetNetworkSecurityPerimeterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkSecurityPerimeterResult build() {
             return new GetNetworkSecurityPerimeterResult(description, displayName, etag, id, location, name, provisioningState, tags, type);
         }

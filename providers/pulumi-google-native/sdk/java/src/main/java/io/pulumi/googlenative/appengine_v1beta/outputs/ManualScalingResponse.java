@@ -52,7 +52,6 @@ public final class ManualScalingResponse {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public ManualScalingResponse build() {
             return new ManualScalingResponse(instances);
         }

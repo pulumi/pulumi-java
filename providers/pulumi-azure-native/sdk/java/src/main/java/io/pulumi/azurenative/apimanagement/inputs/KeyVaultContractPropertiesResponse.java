@@ -24,7 +24,7 @@ public final class KeyVaultContractPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="identityClientId")
-    private final @Nullable String identityClientId;
+        private final @Nullable String identityClientId;
 
     public Optional<String> getIdentityClientId() {
         return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
@@ -35,7 +35,7 @@ public final class KeyVaultContractPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="lastStatus")
-    private final @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
+        private final @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
 
     public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> getLastStatus() {
         return this.lastStatus == null ? Optional.empty() : Optional.ofNullable(this.lastStatus);
@@ -46,7 +46,7 @@ public final class KeyVaultContractPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="secretIdentifier")
-    private final @Nullable String secretIdentifier;
+        private final @Nullable String secretIdentifier;
 
     public Optional<String> getSecretIdentifier() {
         return this.secretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.secretIdentifier);
@@ -105,7 +105,6 @@ public final class KeyVaultContractPropertiesResponse extends io.pulumi.resource
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public KeyVaultContractPropertiesResponse build() {
             return new KeyVaultContractPropertiesResponse(identityClientId, lastStatus, secretIdentifier);
         }

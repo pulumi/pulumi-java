@@ -21,7 +21,7 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="brightness", required=true)
-    private final Double brightness;
+      private final Double brightness;
 
     public Double getBrightness() {
         return this.brightness;
@@ -32,7 +32,7 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contrast", required=true)
-    private final Double contrast;
+      private final Double contrast;
 
     public Double getContrast() {
         return this.contrast;
@@ -43,7 +43,7 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="saturation", required=true)
-    private final Double saturation;
+      private final Double saturation;
 
     public Double getSaturation() {
         return this.saturation;
@@ -102,7 +102,6 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
             this.saturation = Objects.requireNonNull(saturation);
             return this;
         }
-
         public ColorResponse build() {
             return new ColorResponse(brightness, contrast, saturation);
         }

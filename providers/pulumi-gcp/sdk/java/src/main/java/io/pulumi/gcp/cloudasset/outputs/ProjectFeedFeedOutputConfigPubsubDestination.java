@@ -52,7 +52,6 @@ public final class ProjectFeedFeedOutputConfigPubsubDestination {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public ProjectFeedFeedOutputConfigPubsubDestination build() {
             return new ProjectFeedFeedOutputConfigPubsubDestination(topic);
         }

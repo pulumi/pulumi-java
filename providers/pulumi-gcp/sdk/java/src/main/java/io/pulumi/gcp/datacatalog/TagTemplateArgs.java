@@ -22,7 +22,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -34,7 +34,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<List<TagTemplateFieldArgs>> fields;
+        private final Input<List<TagTemplateFieldArgs>> fields;
 
     public Input<List<TagTemplateFieldArgs>> getFields() {
         return this.fields;
@@ -45,7 +45,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+        private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
@@ -57,7 +57,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,7 +68,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -79,7 +79,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagTemplateId", required=true)
-    private final Input<String> tagTemplateId;
+        private final Input<String> tagTemplateId;
 
     public Input<String> getTagTemplateId() {
         return this.tagTemplateId;
@@ -198,7 +198,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.tagTemplateId = Input.of(Objects.requireNonNull(tagTemplateId));
             return this;
         }
-
         public TagTemplateArgs build() {
             return new TagTemplateArgs(displayName, fields, forceDelete, project, region, tagTemplateId);
         }

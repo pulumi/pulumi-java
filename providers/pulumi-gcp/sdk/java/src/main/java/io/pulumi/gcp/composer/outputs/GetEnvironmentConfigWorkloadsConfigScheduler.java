@@ -85,7 +85,6 @@ public final class GetEnvironmentConfigWorkloadsConfigScheduler {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public GetEnvironmentConfigWorkloadsConfigScheduler build() {
             return new GetEnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
         }

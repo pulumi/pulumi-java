@@ -22,7 +22,7 @@ public final class ContentKeyPolicyUnknownRestrictionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -60,7 +60,6 @@ public final class ContentKeyPolicyUnknownRestrictionResponse extends io.pulumi.
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyUnknownRestrictionResponse build() {
             return new ContentKeyPolicyUnknownRestrictionResponse(odataType);
         }

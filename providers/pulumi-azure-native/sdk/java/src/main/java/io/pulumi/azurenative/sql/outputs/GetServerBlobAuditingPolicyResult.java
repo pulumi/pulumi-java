@@ -441,7 +441,6 @@ public final class GetServerBlobAuditingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerBlobAuditingPolicyResult build() {
             return new GetServerBlobAuditingPolicyResult(auditActionsAndGroups, id, isAzureMonitorTargetEnabled, isDevopsAuditEnabled, isStorageSecondaryKeyInUse, name, queueDelayMs, retentionDays, state, storageAccountSubscriptionId, storageEndpoint, type);
         }

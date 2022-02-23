@@ -247,7 +247,6 @@ public final class DirectConnectionResponse {
             this.useForPeeringService = useForPeeringService;
             return this;
         }
-
         public DirectConnectionResponse build() {
             return new DirectConnectionResponse(bandwidthInMbps, bgpSession, connectionIdentifier, connectionState, errorMessage, microsoftTrackingId, peeringDBFacilityId, provisionedBandwidthInMbps, sessionAddressProvider, useForPeeringService);
         }

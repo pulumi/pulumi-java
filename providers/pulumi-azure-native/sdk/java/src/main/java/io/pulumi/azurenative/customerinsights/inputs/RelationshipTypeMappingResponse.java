@@ -22,7 +22,7 @@ public final class RelationshipTypeMappingResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="fieldMappings", required=true)
-    private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
+        private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
     public List<RelationshipTypeFieldMappingResponse> getFieldMappings() {
         return this.fieldMappings;
@@ -60,7 +60,6 @@ public final class RelationshipTypeMappingResponse extends io.pulumi.resources.I
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }
-
         public RelationshipTypeMappingResponse build() {
             return new RelationshipTypeMappingResponse(fieldMappings);
         }

@@ -25,21 +25,21 @@ public final class DetectorModelAssetPropertyValue extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="quality")
-    private final @Nullable String quality;
+        private final @Nullable String quality;
 
     public Optional<String> getQuality() {
         return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
     }
 
     @InputImport(name="timestamp")
-    private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
+        private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
 
     public Optional<DetectorModelAssetPropertyTimestamp> getTimestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
     }
 
     @InputImport(name="value", required=true)
-    private final DetectorModelAssetPropertyVariant value;
+        private final DetectorModelAssetPropertyVariant value;
 
     public DetectorModelAssetPropertyVariant getValue() {
         return this.value;
@@ -98,7 +98,6 @@ public final class DetectorModelAssetPropertyValue extends io.pulumi.resources.I
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DetectorModelAssetPropertyValue build() {
             return new DetectorModelAssetPropertyValue(quality, timestamp, value);
         }

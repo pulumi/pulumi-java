@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
             this.processedCount = Objects.requireNonNull(processedCount);
             return this;
         }
-
         public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
             return new GooglePrivacyDlpV2HybridInspectStatisticsResponse(abortedCount, pendingCount, processedCount);
         }

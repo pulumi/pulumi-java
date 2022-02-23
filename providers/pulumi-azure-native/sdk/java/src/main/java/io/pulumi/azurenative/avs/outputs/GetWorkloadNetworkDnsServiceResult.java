@@ -267,7 +267,6 @@ public final class GetWorkloadNetworkDnsServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDnsServiceResult build() {
             return new GetWorkloadNetworkDnsServiceResult(defaultDnsZone, displayName, dnsServiceIp, fqdnZones, id, logLevel, name, provisioningState, revision, status, type);
         }

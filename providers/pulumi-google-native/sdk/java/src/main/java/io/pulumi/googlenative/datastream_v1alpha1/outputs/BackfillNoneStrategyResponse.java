@@ -30,7 +30,6 @@ public final class BackfillNoneStrategyResponse {
         public Builder(BackfillNoneStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BackfillNoneStrategyResponse build() {
             return new BackfillNoneStrategyResponse();
         }

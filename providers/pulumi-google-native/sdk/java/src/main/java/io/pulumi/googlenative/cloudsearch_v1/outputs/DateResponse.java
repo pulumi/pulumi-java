@@ -95,7 +95,6 @@ public final class DateResponse {
             this.year = Objects.requireNonNull(year);
             return this;
         }
-
         public DateResponse build() {
             return new DateResponse(day, month, year);
         }

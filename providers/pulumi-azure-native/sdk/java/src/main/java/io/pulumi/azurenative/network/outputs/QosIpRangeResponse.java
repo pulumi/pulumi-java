@@ -76,7 +76,6 @@ public final class QosIpRangeResponse {
             this.startIP = startIP;
             return this;
         }
-
         public QosIpRangeResponse build() {
             return new QosIpRangeResponse(endIP, startIP);
         }

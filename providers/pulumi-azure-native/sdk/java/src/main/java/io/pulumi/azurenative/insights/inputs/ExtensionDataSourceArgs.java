@@ -28,7 +28,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="extensionName", required=true)
-    private final Input<String> extensionName;
+        private final Input<String> extensionName;
 
     public Input<String> getExtensionName() {
         return this.extensionName;
@@ -39,7 +39,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="extensionSettings")
-    private final @Nullable Input<Object> extensionSettings;
+        private final @Nullable Input<Object> extensionSettings;
 
     public Input<Object> getExtensionSettings() {
         return this.extensionSettings == null ? Input.empty() : this.extensionSettings;
@@ -50,7 +50,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inputDataSources")
-    private final @Nullable Input<List<String>> inputDataSources;
+        private final @Nullable Input<List<String>> inputDataSources;
 
     public Input<List<String>> getInputDataSources() {
         return this.inputDataSources == null ? Input.empty() : this.inputDataSources;
@@ -62,7 +62,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
+        private final @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
     public Input<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -178,7 +178,6 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             this.streams = Input.ofNullable(streams);
             return this;
         }
-
         public ExtensionDataSourceArgs build() {
             return new ExtensionDataSourceArgs(extensionName, extensionSettings, inputDataSources, name, streams);
         }

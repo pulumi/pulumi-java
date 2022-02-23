@@ -21,7 +21,7 @@ public final class ShieldedVmIntegrityPolicyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="updateAutoLearnPolicy", required=true)
-    private final Boolean updateAutoLearnPolicy;
+      private final Boolean updateAutoLearnPolicy;
 
     public Boolean getUpdateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
@@ -59,7 +59,6 @@ public final class ShieldedVmIntegrityPolicyResponse extends io.pulumi.resources
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedVmIntegrityPolicyResponse build() {
             return new ShieldedVmIntegrityPolicyResponse(updateAutoLearnPolicy);
         }

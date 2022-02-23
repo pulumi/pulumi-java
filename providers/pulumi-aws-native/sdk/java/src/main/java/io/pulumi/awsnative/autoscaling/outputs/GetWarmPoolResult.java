@@ -88,7 +88,6 @@ public final class GetWarmPoolResult {
             this.poolState = poolState;
             return this;
         }
-
         public GetWarmPoolResult build() {
             return new GetWarmPoolResult(instanceReusePolicy, maxGroupPreparedCapacity, minSize, poolState);
         }

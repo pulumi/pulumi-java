@@ -18,7 +18,7 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     public static final TimeoutConfigPropertiesArgs Empty = new TimeoutConfigPropertiesArgs();
 
     @InputImport(name="inProgressTimeoutInMinutes", required=true)
-    private final Input<Integer> inProgressTimeoutInMinutes;
+        private final Input<Integer> inProgressTimeoutInMinutes;
 
     public Input<Integer> getInProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
@@ -61,7 +61,6 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
             this.inProgressTimeoutInMinutes = Input.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
             return this;
         }
-
         public TimeoutConfigPropertiesArgs build() {
             return new TimeoutConfigPropertiesArgs(inProgressTimeoutInMinutes);
         }

@@ -115,7 +115,6 @@ public final class EC2FleetOnDemandOptionsRequest {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
-
         public EC2FleetOnDemandOptionsRequest build() {
             return new EC2FleetOnDemandOptionsRequest(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }

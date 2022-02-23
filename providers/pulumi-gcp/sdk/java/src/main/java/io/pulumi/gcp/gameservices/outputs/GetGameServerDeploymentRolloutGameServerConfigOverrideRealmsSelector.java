@@ -45,7 +45,6 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
             this.realms = Objects.requireNonNull(realms);
             return this;
         }
-
         public GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
             return new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(realms);
         }

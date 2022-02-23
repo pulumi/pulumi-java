@@ -73,7 +73,6 @@ public final class Hl7StoreIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Hl7StoreIamBindingCondition build() {
             return new Hl7StoreIamBindingCondition(description, expression, title);
         }

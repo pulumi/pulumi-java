@@ -60,7 +60,6 @@ public final class CapacityProviderTag {
             this.value = value;
             return this;
         }
-
         public CapacityProviderTag build() {
             return new CapacityProviderTag(key, value);
         }

@@ -204,7 +204,6 @@ public final class GetArtifactSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetArtifactSourceResult build() {
             return new GetArtifactSourceResult(artifactRoot, authentication, id, location, name, sourceType, tags, type);
         }

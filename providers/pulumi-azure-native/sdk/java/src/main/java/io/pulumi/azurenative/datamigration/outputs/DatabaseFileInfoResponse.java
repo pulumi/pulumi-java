@@ -182,7 +182,6 @@ public final class DatabaseFileInfoResponse {
             this.sizeMB = sizeMB;
             return this;
         }
-
         public DatabaseFileInfoResponse build() {
             return new DatabaseFileInfoResponse(databaseName, fileType, id, logicalName, physicalFullName, restoreFullName, sizeMB);
         }

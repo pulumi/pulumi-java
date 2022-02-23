@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
             this.wildcardMatch = Objects.requireNonNull(wildcardMatch);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoCommonNameResponse build() {
             return new GoogleCloudApigeeV1TlsInfoCommonNameResponse(value, wildcardMatch);
         }

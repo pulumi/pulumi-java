@@ -15,21 +15,21 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetForwardingRuleArgs Empty = new GetForwardingRuleArgs();
 
     @InputImport(name="forwardingRule", required=true)
-    private final String forwardingRule;
+      private final String forwardingRule;
 
     public String getForwardingRule() {
         return this.forwardingRule;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetForwardingRuleArgs build() {
             return new GetForwardingRuleArgs(forwardingRule, project, region);
         }

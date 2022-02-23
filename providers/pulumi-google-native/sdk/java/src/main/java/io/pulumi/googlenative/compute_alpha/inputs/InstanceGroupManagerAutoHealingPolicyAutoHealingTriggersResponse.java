@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
      * 
      */
     @InputImport(name="onHealthCheck", required=true)
-    private final String onHealthCheck;
+      private final String onHealthCheck;
 
     public String getOnHealthCheck() {
         return this.onHealthCheck;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
             this.onHealthCheck = Objects.requireNonNull(onHealthCheck);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(onHealthCheck);
         }

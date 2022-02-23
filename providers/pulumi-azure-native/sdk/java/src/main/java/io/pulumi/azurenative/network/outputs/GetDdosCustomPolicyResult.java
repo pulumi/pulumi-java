@@ -248,7 +248,6 @@ public final class GetDdosCustomPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDdosCustomPolicyResult build() {
             return new GetDdosCustomPolicyResult(etag, id, location, name, protocolCustomSettings, provisioningState, publicIPAddresses, resourceGuid, tags, type);
         }

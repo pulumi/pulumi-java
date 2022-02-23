@@ -60,7 +60,6 @@ public final class DatastorePartition {
             this.timestampPartition = timestampPartition;
             return this;
         }
-
         public DatastorePartition build() {
             return new DatastorePartition(partition, timestampPartition);
         }

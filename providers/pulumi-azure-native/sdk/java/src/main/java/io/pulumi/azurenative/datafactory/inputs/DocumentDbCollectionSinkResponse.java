@@ -24,7 +24,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -35,7 +35,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -46,7 +46,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nestingSeparator")
-    private final @Nullable Object nestingSeparator;
+        private final @Nullable Object nestingSeparator;
 
     public Optional<Object> getNestingSeparator() {
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
@@ -57,7 +57,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Object sinkRetryCount;
+        private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -68,7 +68,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Object sinkRetryWait;
+        private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -80,7 +80,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -91,7 +91,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Object writeBatchSize;
+        private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -102,7 +102,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Object writeBatchTimeout;
+        private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -113,7 +113,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeBehavior")
-    private final @Nullable Object writeBehavior;
+        private final @Nullable Object writeBehavior;
 
     public Optional<Object> getWriteBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
@@ -232,7 +232,6 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public DocumentDbCollectionSinkResponse build() {
             return new DocumentDbCollectionSinkResponse(disableMetricsCollection, maxConcurrentConnections, nestingSeparator, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

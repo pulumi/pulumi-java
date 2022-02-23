@@ -201,7 +201,6 @@ public final class VmUtilizationMetricsResponse {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }
-
         public VmUtilizationMetricsResponse build() {
             return new VmUtilizationMetricsResponse(cpuAveragePercent, cpuMaxPercent, diskIoRateAverageKbps, diskIoRateMaxKbps, memoryAveragePercent, memoryMaxPercent, networkThroughputAverageKbps, networkThroughputMaxKbps);
         }

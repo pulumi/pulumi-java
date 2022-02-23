@@ -75,7 +75,6 @@ public final class Oauth2JwtBearerResponse {
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
         }
-
         public Oauth2JwtBearerResponse build() {
             return new Oauth2JwtBearerResponse(clientKey, jwtClaims);
         }

@@ -76,7 +76,6 @@ public final class DeinterlaceResponse {
             this.parity = parity;
             return this;
         }
-
         public DeinterlaceResponse build() {
             return new DeinterlaceResponse(mode, parity);
         }

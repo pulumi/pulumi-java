@@ -69,7 +69,6 @@ public final class StudioEncryptionConfiguration {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public StudioEncryptionConfiguration build() {
             return new StudioEncryptionConfiguration(keyArn, keyType);
         }

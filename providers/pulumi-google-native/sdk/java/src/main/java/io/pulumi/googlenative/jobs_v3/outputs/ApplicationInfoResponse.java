@@ -96,7 +96,6 @@ public final class ApplicationInfoResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public ApplicationInfoResponse build() {
             return new ApplicationInfoResponse(emails, instruction, uris);
         }

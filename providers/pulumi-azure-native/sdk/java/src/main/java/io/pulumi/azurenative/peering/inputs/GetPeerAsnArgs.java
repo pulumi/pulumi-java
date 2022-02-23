@@ -17,7 +17,7 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peerAsnName", required=true)
-    private final String peerAsnName;
+        private final String peerAsnName;
 
     public String getPeerAsnName() {
         return this.peerAsnName;
@@ -55,7 +55,6 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
             this.peerAsnName = Objects.requireNonNull(peerAsnName);
             return this;
         }
-
         public GetPeerAsnArgs build() {
             return new GetPeerAsnArgs(peerAsnName);
         }

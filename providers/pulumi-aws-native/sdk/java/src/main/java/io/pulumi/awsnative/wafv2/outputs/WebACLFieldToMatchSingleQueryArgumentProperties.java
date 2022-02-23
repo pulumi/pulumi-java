@@ -44,7 +44,6 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLFieldToMatchSingleQueryArgumentProperties build() {
             return new WebACLFieldToMatchSingleQueryArgumentProperties(name);
         }

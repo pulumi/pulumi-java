@@ -58,7 +58,6 @@ public final class WorkGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkGroupTag build() {
             return new WorkGroupTag(key, value);
         }

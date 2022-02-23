@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends io.pul
      * 
      */
     @InputImport(name="groupedEntry", required=true)
-    private final String groupedEntry;
+      private final String groupedEntry;
 
     public String getGroupedEntry() {
         return this.groupedEntry;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends io.pul
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1TableSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1TableSpecResponse(groupedEntry);
         }

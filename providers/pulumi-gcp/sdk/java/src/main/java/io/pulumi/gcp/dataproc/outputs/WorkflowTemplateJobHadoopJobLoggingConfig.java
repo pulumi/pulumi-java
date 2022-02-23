@@ -54,7 +54,6 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfig {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public WorkflowTemplateJobHadoopJobLoggingConfig build() {
             return new WorkflowTemplateJobHadoopJobLoggingConfig(driverLogLevels);
         }

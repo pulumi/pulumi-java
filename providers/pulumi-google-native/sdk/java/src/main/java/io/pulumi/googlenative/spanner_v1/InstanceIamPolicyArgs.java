@@ -22,7 +22,7 @@ public final class InstanceIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,21 +33,21 @@ public final class InstanceIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class InstanceIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -162,7 +162,6 @@ public final class InstanceIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public InstanceIamPolicyArgs build() {
             return new InstanceIamPolicyArgs(bindings, etag, instanceId, project, version);
         }

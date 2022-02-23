@@ -22,7 +22,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -33,7 +33,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -44,7 +44,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recommendations", required=true)
-    private final List<String> recommendations;
+        private final List<String> recommendations;
 
     public List<String> getRecommendations() {
         return this.recommendations;
@@ -103,7 +103,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
             this.recommendations = Objects.requireNonNull(recommendations);
             return this;
         }
-
         public ErrorDetailResponse build() {
             return new ErrorDetailResponse(code, message, recommendations);
         }

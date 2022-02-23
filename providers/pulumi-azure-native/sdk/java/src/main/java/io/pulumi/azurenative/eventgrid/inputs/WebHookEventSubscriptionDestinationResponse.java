@@ -24,7 +24,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="azureActiveDirectoryApplicationIdOrUri")
-    private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
+        private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
 
     public Optional<String> getAzureActiveDirectoryApplicationIdOrUri() {
         return this.azureActiveDirectoryApplicationIdOrUri == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
@@ -35,7 +35,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="azureActiveDirectoryTenantId")
-    private final @Nullable String azureActiveDirectoryTenantId;
+        private final @Nullable String azureActiveDirectoryTenantId;
 
     public Optional<String> getAzureActiveDirectoryTenantId() {
         return this.azureActiveDirectoryTenantId == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryTenantId);
@@ -46,7 +46,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="endpointBaseUrl", required=true)
-    private final String endpointBaseUrl;
+        private final String endpointBaseUrl;
 
     public String getEndpointBaseUrl() {
         return this.endpointBaseUrl;
@@ -58,7 +58,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+        private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -69,7 +69,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="endpointUrl")
-    private final @Nullable String endpointUrl;
+        private final @Nullable String endpointUrl;
 
     public Optional<String> getEndpointUrl() {
         return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
@@ -80,7 +80,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="maxEventsPerBatch")
-    private final @Nullable Integer maxEventsPerBatch;
+        private final @Nullable Integer maxEventsPerBatch;
 
     public Optional<Integer> getMaxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
@@ -91,7 +91,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
      * 
      */
     @InputImport(name="preferredBatchSizeInKilobytes")
-    private final @Nullable Integer preferredBatchSizeInKilobytes;
+        private final @Nullable Integer preferredBatchSizeInKilobytes;
 
     public Optional<Integer> getPreferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
@@ -190,7 +190,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
-
         public WebHookEventSubscriptionDestinationResponse build() {
             return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
         }

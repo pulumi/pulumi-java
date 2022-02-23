@@ -162,7 +162,6 @@ public final class AzureWorkloadAutoProtectionIntentResponse {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public AzureWorkloadAutoProtectionIntentResponse build() {
             return new AzureWorkloadAutoProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }

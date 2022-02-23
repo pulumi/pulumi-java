@@ -54,7 +54,6 @@ public final class ScopeClusterResponse {
             this.releaseNamespace = releaseNamespace;
             return this;
         }
-
         public ScopeClusterResponse build() {
             return new ScopeClusterResponse(releaseNamespace);
         }

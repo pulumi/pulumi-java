@@ -163,7 +163,6 @@ public final class ContainerResponse {
             this.resources = resources;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(args, command, env, image, name, resources);
         }

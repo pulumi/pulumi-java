@@ -46,7 +46,6 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptions {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceRetryOptions build() {
             return new DeliveryStreamAmazonopensearchserviceRetryOptions(durationInSeconds);
         }

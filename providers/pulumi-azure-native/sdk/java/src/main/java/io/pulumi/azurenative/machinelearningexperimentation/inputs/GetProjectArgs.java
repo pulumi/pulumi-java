@@ -17,7 +17,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+        private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -39,7 +39,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetProjectArgs build() {
             return new GetProjectArgs(accountName, projectName, resourceGroupName, workspaceName);
         }

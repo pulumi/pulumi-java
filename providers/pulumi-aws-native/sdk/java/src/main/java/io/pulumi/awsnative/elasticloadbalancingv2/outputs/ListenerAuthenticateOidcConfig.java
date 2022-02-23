@@ -178,7 +178,6 @@ public final class ListenerAuthenticateOidcConfig {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
-
         public ListenerAuthenticateOidcConfig build() {
             return new ListenerAuthenticateOidcConfig(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
         }

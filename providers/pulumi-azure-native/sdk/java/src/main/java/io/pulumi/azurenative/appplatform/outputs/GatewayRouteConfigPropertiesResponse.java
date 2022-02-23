@@ -99,7 +99,6 @@ public final class GatewayRouteConfigPropertiesResponse {
             this.routes = routes;
             return this;
         }
-
         public GatewayRouteConfigPropertiesResponse build() {
             return new GatewayRouteConfigPropertiesResponse(appResourceId, provisioningState, routes);
         }

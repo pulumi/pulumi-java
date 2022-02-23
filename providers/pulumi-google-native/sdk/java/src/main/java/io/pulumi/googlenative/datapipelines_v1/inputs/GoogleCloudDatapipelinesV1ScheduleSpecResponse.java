@@ -21,7 +21,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
      * 
      */
     @InputImport(name="nextJobTime", required=true)
-    private final String nextJobTime;
+      private final String nextJobTime;
 
     public String getNextJobTime() {
         return this.nextJobTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final String schedule;
+      private final String schedule;
 
     public String getSchedule() {
         return this.schedule;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final String timeZone;
+      private final String timeZone;
 
     public String getTimeZone() {
         return this.timeZone;
@@ -102,7 +102,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends io.pul
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1ScheduleSpecResponse build() {
             return new GoogleCloudDatapipelinesV1ScheduleSpecResponse(nextJobTime, schedule, timeZone);
         }

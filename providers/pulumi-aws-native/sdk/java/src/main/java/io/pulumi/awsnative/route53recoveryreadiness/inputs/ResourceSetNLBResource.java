@@ -23,7 +23,7 @@ public final class ResourceSetNLBResource extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable String arn;
+        private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -61,7 +61,6 @@ public final class ResourceSetNLBResource extends io.pulumi.resources.InvokeArgs
             this.arn = arn;
             return this;
         }
-
         public ResourceSetNLBResource build() {
             return new ResourceSetNLBResource(arn);
         }

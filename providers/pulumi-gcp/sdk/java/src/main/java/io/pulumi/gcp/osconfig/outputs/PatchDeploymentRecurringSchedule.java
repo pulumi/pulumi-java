@@ -228,7 +228,6 @@ public final class PatchDeploymentRecurringSchedule {
             this.weekly = weekly;
             return this;
         }
-
         public PatchDeploymentRecurringSchedule build() {
             return new PatchDeploymentRecurringSchedule(endTime, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }

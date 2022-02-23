@@ -22,7 +22,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -44,7 +44,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final DurationResponse ttl;
+      private final DurationResponse ttl;
 
     public DurationResponse getTtl() {
         return this.ttl;
@@ -103,7 +103,6 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieResponse(name, path, ttl);
         }

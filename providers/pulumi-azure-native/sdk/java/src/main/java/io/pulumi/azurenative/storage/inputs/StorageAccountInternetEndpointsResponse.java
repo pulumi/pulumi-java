@@ -21,7 +21,7 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="blob", required=true)
-    private final String blob;
+        private final String blob;
 
     public String getBlob() {
         return this.blob;
@@ -32,7 +32,7 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="dfs", required=true)
-    private final String dfs;
+        private final String dfs;
 
     public String getDfs() {
         return this.dfs;
@@ -43,7 +43,7 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="file", required=true)
-    private final String file;
+        private final String file;
 
     public String getFile() {
         return this.file;
@@ -54,7 +54,7 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="web", required=true)
-    private final String web;
+        private final String web;
 
     public String getWeb() {
         return this.web;
@@ -123,7 +123,6 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountInternetEndpointsResponse build() {
             return new StorageAccountInternetEndpointsResponse(blob, dfs, file, web);
         }

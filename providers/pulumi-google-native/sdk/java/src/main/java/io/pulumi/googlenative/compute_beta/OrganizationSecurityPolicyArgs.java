@@ -23,14 +23,14 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     public static final OrganizationSecurityPolicyArgs Empty = new OrganizationSecurityPolicyArgs();
 
     @InputImport(name="adaptiveProtectionConfig")
-    private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
     }
 
     @InputImport(name="advancedOptionsConfig")
-    private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
+      private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
     public Input<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
         return this.advancedOptionsConfig == null ? Input.empty() : this.advancedOptionsConfig;
@@ -41,7 +41,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
+      private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
 
     public Input<List<SecurityPolicyAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
@@ -52,7 +52,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -74,7 +74,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -85,28 +85,28 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="parentId")
-    private final @Nullable Input<String> parentId;
+      private final @Nullable Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId == null ? Input.empty() : this.parentId;
     }
 
     @InputImport(name="recaptchaOptionsConfig")
-    private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
+      private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
     public Input<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
         return this.recaptchaOptionsConfig == null ? Input.empty() : this.recaptchaOptionsConfig;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -117,7 +117,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
 
     public Input<List<SecurityPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -128,7 +128,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<OrganizationSecurityPolicyType> type;
+      private final @Nullable Input<OrganizationSecurityPolicyType> type;
 
     public Input<OrganizationSecurityPolicyType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -337,7 +337,6 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OrganizationSecurityPolicyArgs build() {
             return new OrganizationSecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, description, displayName, labels, name, parentId, recaptchaOptionsConfig, requestId, rules, type);
         }

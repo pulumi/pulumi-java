@@ -23,7 +23,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="alertProductNames", required=true)
-    private final List<String> alertProductNames;
+        private final List<String> alertProductNames;
 
     public List<String> getAlertProductNames() {
         return this.alertProductNames;
@@ -34,7 +34,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="alertsCount", required=true)
-    private final Integer alertsCount;
+        private final Integer alertsCount;
 
     public Integer getAlertsCount() {
         return this.alertsCount;
@@ -45,7 +45,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bookmarksCount", required=true)
-    private final Integer bookmarksCount;
+        private final Integer bookmarksCount;
 
     public Integer getBookmarksCount() {
         return this.bookmarksCount;
@@ -56,7 +56,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="commentsCount", required=true)
-    private final Integer commentsCount;
+        private final Integer commentsCount;
 
     public Integer getCommentsCount() {
         return this.commentsCount;
@@ -67,7 +67,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tactics", required=true)
-    private final List<String> tactics;
+        private final List<String> tactics;
 
     public List<String> getTactics() {
         return this.tactics;
@@ -146,7 +146,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
             this.tactics = Objects.requireNonNull(tactics);
             return this;
         }
-
         public IncidentAdditionalDataResponse build() {
             return new IncidentAdditionalDataResponse(alertProductNames, alertsCount, bookmarksCount, commentsCount, tactics);
         }

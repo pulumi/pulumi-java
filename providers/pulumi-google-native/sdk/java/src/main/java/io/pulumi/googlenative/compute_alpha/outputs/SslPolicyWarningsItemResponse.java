@@ -97,7 +97,6 @@ public final class SslPolicyWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public SslPolicyWarningsItemResponse build() {
             return new SslPolicyWarningsItemResponse(code, data, message);
         }

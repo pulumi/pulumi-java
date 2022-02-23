@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Input<Boolean> allowCredentials;
+        private final @Nullable Input<Boolean> allowCredentials;
 
     public Input<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowHeaders")
-    private final @Nullable Input<List<String>> allowHeaders;
+        private final @Nullable Input<List<String>> allowHeaders;
 
     public Input<List<String>> getAllowHeaders() {
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowMethods")
-    private final @Nullable Input<List<String>> allowMethods;
+        private final @Nullable Input<List<String>> allowMethods;
 
     public Input<List<String>> getAllowMethods() {
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
@@ -56,7 +56,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowOrigins")
-    private final @Nullable Input<List<String>> allowOrigins;
+        private final @Nullable Input<List<String>> allowOrigins;
 
     public Input<List<String>> getAllowOrigins() {
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
@@ -67,7 +67,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -78,7 +78,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="exposeHeaders")
-    private final @Nullable Input<List<String>> exposeHeaders;
+        private final @Nullable Input<List<String>> exposeHeaders;
 
     public Input<List<String>> getExposeHeaders() {
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
@@ -93,7 +93,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="maxAge", required=true)
-    private final Input<String> maxAge;
+        private final Input<String> maxAge;
 
     public Input<String> getMaxAge() {
         return this.maxAge;
@@ -227,7 +227,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
             this.maxAge = Input.of(Objects.requireNonNull(maxAge));
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs(allowCredentials, allowHeaders, allowMethods, allowOrigins, disabled, exposeHeaders, maxAge);
         }

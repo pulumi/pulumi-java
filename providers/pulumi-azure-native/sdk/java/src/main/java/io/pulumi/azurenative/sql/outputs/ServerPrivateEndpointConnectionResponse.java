@@ -75,7 +75,6 @@ public final class ServerPrivateEndpointConnectionResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ServerPrivateEndpointConnectionResponse build() {
             return new ServerPrivateEndpointConnectionResponse(id, properties);
         }

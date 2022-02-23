@@ -96,7 +96,6 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceTemplateNetworkInterfaceIpv6AccessConfig build() {
             return new InstanceTemplateNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

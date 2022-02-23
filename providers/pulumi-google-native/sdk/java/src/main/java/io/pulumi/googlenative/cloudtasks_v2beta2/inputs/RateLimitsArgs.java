@@ -24,7 +24,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBurstSize")
-    private final @Nullable Input<Integer> maxBurstSize;
+      private final @Nullable Input<Integer> maxBurstSize;
 
     public Input<Integer> getMaxBurstSize() {
         return this.maxBurstSize == null ? Input.empty() : this.maxBurstSize;
@@ -35,7 +35,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentTasks")
-    private final @Nullable Input<Integer> maxConcurrentTasks;
+      private final @Nullable Input<Integer> maxConcurrentTasks;
 
     public Input<Integer> getMaxConcurrentTasks() {
         return this.maxConcurrentTasks == null ? Input.empty() : this.maxConcurrentTasks;
@@ -46,7 +46,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTasksDispatchedPerSecond")
-    private final @Nullable Input<Double> maxTasksDispatchedPerSecond;
+      private final @Nullable Input<Double> maxTasksDispatchedPerSecond;
 
     public Input<Double> getMaxTasksDispatchedPerSecond() {
         return this.maxTasksDispatchedPerSecond == null ? Input.empty() : this.maxTasksDispatchedPerSecond;
@@ -120,7 +120,6 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxTasksDispatchedPerSecond = Input.ofNullable(maxTasksDispatchedPerSecond);
             return this;
         }
-
         public RateLimitsArgs build() {
             return new RateLimitsArgs(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
         }

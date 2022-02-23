@@ -74,7 +74,6 @@ public final class AssetHierarchy {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
-
         public AssetHierarchy build() {
             return new AssetHierarchy(childAssetId, logicalId);
         }

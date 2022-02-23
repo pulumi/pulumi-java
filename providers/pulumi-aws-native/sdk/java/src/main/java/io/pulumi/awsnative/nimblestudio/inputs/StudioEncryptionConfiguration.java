@@ -24,14 +24,14 @@ public final class StudioEncryptionConfiguration extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyArn")
-    private final @Nullable String keyArn;
+        private final @Nullable String keyArn;
 
     public Optional<String> getKeyArn() {
         return this.keyArn == null ? Optional.empty() : Optional.ofNullable(this.keyArn);
     }
 
     @InputImport(name="keyType", required=true)
-    private final StudioEncryptionConfigurationKeyType keyType;
+        private final StudioEncryptionConfigurationKeyType keyType;
 
     public StudioEncryptionConfigurationKeyType getKeyType() {
         return this.keyType;
@@ -80,7 +80,6 @@ public final class StudioEncryptionConfiguration extends io.pulumi.resources.Inv
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public StudioEncryptionConfiguration build() {
             return new StudioEncryptionConfiguration(keyArn, keyType);
         }

@@ -73,7 +73,6 @@ public final class ChannelCustomerManagedS3 {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ChannelCustomerManagedS3 build() {
             return new ChannelCustomerManagedS3(bucket, keyPrefix, roleArn);
         }

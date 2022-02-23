@@ -139,7 +139,6 @@ public final class GetServiceRegistryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceRegistryResult build() {
             return new GetServiceRegistryResult(id, name, properties, systemData, type);
         }

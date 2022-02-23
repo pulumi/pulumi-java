@@ -116,7 +116,6 @@ public final class GetTrustedIdProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTrustedIdProviderResult build() {
             return new GetTrustedIdProviderResult(id, idProvider, name, type);
         }

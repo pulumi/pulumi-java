@@ -23,7 +23,7 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<List<String>> value;
+        private final Input<List<String>> value;
 
     public Input<List<String>> getValue() {
         return this.value;
@@ -93,7 +93,6 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ImageRecipeComponentParameterArgs build() {
             return new ImageRecipeComponentParameterArgs(name, value);
         }

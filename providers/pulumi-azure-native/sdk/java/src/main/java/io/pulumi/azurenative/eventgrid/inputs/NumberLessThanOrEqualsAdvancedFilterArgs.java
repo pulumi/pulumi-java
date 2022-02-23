@@ -24,7 +24,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -36,7 +36,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="operatorType", required=true)
-    private final Input<String> operatorType;
+        private final Input<String> operatorType;
 
     public Input<String> getOperatorType() {
         return this.operatorType;
@@ -47,7 +47,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Double> value;
+        private final @Nullable Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -121,7 +121,6 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public NumberLessThanOrEqualsAdvancedFilterArgs build() {
             return new NumberLessThanOrEqualsAdvancedFilterArgs(key, operatorType, value);
         }

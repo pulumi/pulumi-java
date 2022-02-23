@@ -161,7 +161,6 @@ public final class HostNameSslStateResponse {
             this.virtualIP = virtualIP;
             return this;
         }
-
         public HostNameSslStateResponse build() {
             return new HostNameSslStateResponse(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }

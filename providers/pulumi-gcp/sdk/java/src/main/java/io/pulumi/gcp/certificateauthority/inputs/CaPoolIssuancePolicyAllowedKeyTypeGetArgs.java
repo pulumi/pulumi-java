@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ellipticCurve")
-    private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
+        private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
 
     public Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> getEllipticCurve() {
         return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
@@ -33,7 +33,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="rsa")
-    private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
+        private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
 
     public Input<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> getRsa() {
         return this.rsa == null ? Input.empty() : this.rsa;
@@ -92,7 +92,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
             this.rsa = Input.ofNullable(rsa);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeGetArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeGetArgs(ellipticCurve, rsa);
         }

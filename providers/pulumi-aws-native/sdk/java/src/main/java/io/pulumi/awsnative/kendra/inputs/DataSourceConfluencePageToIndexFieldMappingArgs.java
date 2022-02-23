@@ -16,21 +16,21 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
     public static final DataSourceConfluencePageToIndexFieldMappingArgs Empty = new DataSourceConfluencePageToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final Input<DataSourceConfluencePageFieldName> dataSourceFieldName;
+        private final Input<DataSourceConfluencePageFieldName> dataSourceFieldName;
 
     public Input<DataSourceConfluencePageFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable Input<String> dateFieldFormat;
+        private final @Nullable Input<String> dateFieldFormat;
 
     public Input<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final Input<String> indexFieldName;
+        private final Input<String> indexFieldName;
 
     public Input<String> getIndexFieldName() {
         return this.indexFieldName;
@@ -104,7 +104,6 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
             this.indexFieldName = Input.of(Objects.requireNonNull(indexFieldName));
             return this;
         }
-
         public DataSourceConfluencePageToIndexFieldMappingArgs build() {
             return new DataSourceConfluencePageToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

@@ -118,7 +118,6 @@ public final class CacheConfigurationResponse {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public CacheConfigurationResponse build() {
             return new CacheConfigurationResponse(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
         }

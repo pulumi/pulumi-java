@@ -245,7 +245,6 @@ public final class GetSecurityUserConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityUserConfigurationResult build() {
             return new GetSecurityUserConfigurationResult(deleteExistingNSGs, description, displayName, etag, id, name, provisioningState, securityType, systemData, type);
         }

@@ -76,7 +76,6 @@ public final class DiskTag {
             this.value = value;
             return this;
         }
-
         public DiskTag build() {
             return new DiskTag(key, value);
         }

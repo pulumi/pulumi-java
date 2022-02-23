@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
+        private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
 
     public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -58,7 +58,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -80,7 +80,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -169,7 +169,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkConfigurationResponse(etag, id, ipConfigurations, name, provisioningState, type);
         }

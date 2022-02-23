@@ -21,7 +21,7 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expireTime", required=true)
-    private final String expireTime;
+      private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
@@ -59,7 +59,6 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public ExpiryDetailResponse build() {
             return new ExpiryDetailResponse(expireTime);
         }

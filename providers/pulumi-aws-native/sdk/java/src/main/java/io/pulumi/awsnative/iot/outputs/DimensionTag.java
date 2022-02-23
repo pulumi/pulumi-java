@@ -74,7 +74,6 @@ public final class DimensionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DimensionTag build() {
             return new DimensionTag(key, value);
         }

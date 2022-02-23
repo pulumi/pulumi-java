@@ -21,7 +21,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final String bundleId;
+      private final String bundleId;
 
     public String getBundleId() {
         return this.bundleId;
@@ -59,7 +59,6 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(bundleId);
         }

@@ -99,7 +99,6 @@ public final class ResourceDataSyncS3Destination {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }
-
         public ResourceDataSyncS3Destination build() {
             return new ResourceDataSyncS3Destination(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, syncFormat);
         }

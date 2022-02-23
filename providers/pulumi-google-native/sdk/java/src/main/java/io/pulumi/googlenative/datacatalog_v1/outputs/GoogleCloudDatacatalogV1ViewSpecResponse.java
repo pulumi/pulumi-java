@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse {
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ViewSpecResponse build() {
             return new GoogleCloudDatacatalogV1ViewSpecResponse(viewQuery);
         }

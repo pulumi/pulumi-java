@@ -99,7 +99,6 @@ public final class TrafficWeightResponse {
             this.weight = weight;
             return this;
         }
-
         public TrafficWeightResponse build() {
             return new TrafficWeightResponse(latestRevision, revisionName, weight);
         }

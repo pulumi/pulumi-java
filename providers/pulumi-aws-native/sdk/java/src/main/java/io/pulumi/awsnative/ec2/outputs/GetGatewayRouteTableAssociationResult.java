@@ -76,7 +76,6 @@ public final class GetGatewayRouteTableAssociationResult {
             this.routeTableId = routeTableId;
             return this;
         }
-
         public GetGatewayRouteTableAssociationResult build() {
             return new GetGatewayRouteTableAssociationResult(associationId, routeTableId);
         }

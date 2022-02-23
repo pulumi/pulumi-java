@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
      * 
      */
     @InputImport(name="azureAvailabilityZone", required=true)
-    private final Input<String> azureAvailabilityZone;
+        private final Input<String> azureAvailabilityZone;
 
     public Input<String> getAzureAvailabilityZone() {
         return this.azureAvailabilityZone;
@@ -29,7 +29,7 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -88,7 +88,6 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public AzureClusterControlPlaneReplicaPlacementGetArgs build() {
             return new AzureClusterControlPlaneReplicaPlacementGetArgs(azureAvailabilityZone, subnetId);
         }

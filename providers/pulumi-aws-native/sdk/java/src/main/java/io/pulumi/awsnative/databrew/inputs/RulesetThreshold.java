@@ -17,21 +17,21 @@ public final class RulesetThreshold extends io.pulumi.resources.InvokeArgs {
     public static final RulesetThreshold Empty = new RulesetThreshold();
 
     @InputImport(name="type")
-    private final @Nullable RulesetThresholdType type;
+        private final @Nullable RulesetThresholdType type;
 
     public Optional<RulesetThresholdType> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @InputImport(name="unit")
-    private final @Nullable RulesetThresholdUnit unit;
+        private final @Nullable RulesetThresholdUnit unit;
 
     public Optional<RulesetThresholdUnit> getUnit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
     }
 
     @InputImport(name="value", required=true)
-    private final Double value;
+        private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -90,7 +90,6 @@ public final class RulesetThreshold extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RulesetThreshold build() {
             return new RulesetThreshold(type, unit, value);
         }

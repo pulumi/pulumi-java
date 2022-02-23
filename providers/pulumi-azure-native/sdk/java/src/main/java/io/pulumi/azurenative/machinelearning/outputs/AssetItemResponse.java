@@ -208,7 +208,6 @@ public final class AssetItemResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetItemResponse build() {
             return new AssetItemResponse(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }

@@ -15,21 +15,21 @@ public final class GetConfigIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetConfigIamPolicyArgs Empty = new GetConfigIamPolicyArgs();
 
     @InputImport(name="configId", required=true)
-    private final String configId;
+      private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetConfigIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public GetConfigIamPolicyArgs build() {
             return new GetConfigIamPolicyArgs(configId, optionsRequestedPolicyVersion, project);
         }

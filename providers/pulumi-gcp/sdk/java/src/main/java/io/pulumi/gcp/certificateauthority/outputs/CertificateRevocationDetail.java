@@ -60,7 +60,6 @@ public final class CertificateRevocationDetail {
             this.revocationTime = revocationTime;
             return this;
         }
-
         public CertificateRevocationDetail build() {
             return new CertificateRevocationDetail(revocationState, revocationTime);
         }

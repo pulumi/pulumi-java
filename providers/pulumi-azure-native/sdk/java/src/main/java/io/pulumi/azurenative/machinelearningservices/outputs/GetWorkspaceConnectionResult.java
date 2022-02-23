@@ -202,7 +202,6 @@ public final class GetWorkspaceConnectionResult {
             this.valueFormat = valueFormat;
             return this;
         }
-
         public GetWorkspaceConnectionResult build() {
             return new GetWorkspaceConnectionResult(authType, category, id, name, target, type, value, valueFormat);
         }

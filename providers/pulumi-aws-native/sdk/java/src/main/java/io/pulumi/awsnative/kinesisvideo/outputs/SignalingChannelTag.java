@@ -74,7 +74,6 @@ public final class SignalingChannelTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SignalingChannelTag build() {
             return new SignalingChannelTag(key, value);
         }

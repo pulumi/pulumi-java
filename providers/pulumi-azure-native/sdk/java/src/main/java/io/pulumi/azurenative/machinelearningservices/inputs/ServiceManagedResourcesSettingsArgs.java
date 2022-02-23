@@ -19,7 +19,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cosmosDb")
-    private final @Nullable Input<CosmosDbSettingsArgs> cosmosDb;
+        private final @Nullable Input<CosmosDbSettingsArgs> cosmosDb;
 
     public Input<CosmosDbSettingsArgs> getCosmosDb() {
         return this.cosmosDb == null ? Input.empty() : this.cosmosDb;
@@ -62,7 +62,6 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
             this.cosmosDb = Input.ofNullable(cosmosDb);
             return this;
         }
-
         public ServiceManagedResourcesSettingsArgs build() {
             return new ServiceManagedResourcesSettingsArgs(cosmosDb);
         }

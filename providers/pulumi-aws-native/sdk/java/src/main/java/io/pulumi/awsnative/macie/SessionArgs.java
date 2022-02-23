@@ -20,7 +20,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-    private final @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency;
+        private final @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
     public Input<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
@@ -31,7 +31,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<SessionStatus> status;
+        private final @Nullable Input<SessionStatus> status;
 
     public Input<SessionStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -90,7 +90,6 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public SessionArgs build() {
             return new SessionArgs(findingPublishingFrequency, status);
         }

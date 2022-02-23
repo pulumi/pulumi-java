@@ -231,7 +231,6 @@ public final class ZohoObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ZohoObjectDatasetResponse build() {
             return new ZohoObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

@@ -75,7 +75,6 @@ public final class SourceDiskEncryptionKeyResponse {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public SourceDiskEncryptionKeyResponse build() {
             return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
         }

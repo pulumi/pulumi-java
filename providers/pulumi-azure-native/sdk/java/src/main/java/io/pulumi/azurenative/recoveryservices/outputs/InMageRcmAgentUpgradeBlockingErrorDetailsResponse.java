@@ -159,7 +159,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
         }
-
         public InMageRcmAgentUpgradeBlockingErrorDetailsResponse build() {
             return new InMageRcmAgentUpgradeBlockingErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
         }

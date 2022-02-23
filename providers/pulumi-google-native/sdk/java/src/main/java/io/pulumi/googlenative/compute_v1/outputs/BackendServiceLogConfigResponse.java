@@ -75,7 +75,6 @@ public final class BackendServiceLogConfigResponse {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }
-
         public BackendServiceLogConfigResponse build() {
             return new BackendServiceLogConfigResponse(enable, sampleRate);
         }

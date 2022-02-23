@@ -15,7 +15,7 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
     public static final BucketDeleteMarkerReplicationArgs Empty = new BucketDeleteMarkerReplicationArgs();
 
     @InputImport(name="status")
-    private final @Nullable Input<BucketDeleteMarkerReplicationStatus> status;
+        private final @Nullable Input<BucketDeleteMarkerReplicationStatus> status;
 
     public Input<BucketDeleteMarkerReplicationStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -58,7 +58,6 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public BucketDeleteMarkerReplicationArgs build() {
             return new BucketDeleteMarkerReplicationArgs(status);
         }

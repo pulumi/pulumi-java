@@ -23,7 +23,7 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="request")
-    private final @Nullable HttpMessageDiagnosticResponse request;
+        private final @Nullable HttpMessageDiagnosticResponse request;
 
     public Optional<HttpMessageDiagnosticResponse> getRequest() {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
@@ -34,7 +34,7 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="response")
-    private final @Nullable HttpMessageDiagnosticResponse response;
+        private final @Nullable HttpMessageDiagnosticResponse response;
 
     public Optional<HttpMessageDiagnosticResponse> getResponse() {
         return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
@@ -83,7 +83,6 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
             this.response = response;
             return this;
         }
-
         public PipelineDiagnosticSettingsResponse build() {
             return new PipelineDiagnosticSettingsResponse(request, response);
         }

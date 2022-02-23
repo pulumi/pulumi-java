@@ -25,7 +25,7 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceVault")
-    private final @Nullable SubResourceResponse sourceVault;
+        private final @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> getSourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
@@ -36,7 +36,7 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vaultCertificates")
-    private final @Nullable List<VaultCertificateResponse> vaultCertificates;
+        private final @Nullable List<VaultCertificateResponse> vaultCertificates;
 
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
@@ -85,7 +85,6 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-
         public VaultSecretGroupResponse build() {
             return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
         }

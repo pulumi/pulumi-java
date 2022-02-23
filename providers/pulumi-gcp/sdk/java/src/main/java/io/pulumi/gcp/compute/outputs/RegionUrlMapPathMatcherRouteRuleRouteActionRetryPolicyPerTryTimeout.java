@@ -83,7 +83,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout(nanos, seconds);
         }

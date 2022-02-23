@@ -26,7 +26,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectorProfileName")
-    private final @Nullable String connectorProfileName;
+        private final @Nullable String connectorProfileName;
 
     public Optional<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Optional.empty() : Optional.ofNullable(this.connectorProfileName);
@@ -37,7 +37,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final FlowConnectorType connectorType;
+        private final FlowConnectorType connectorType;
 
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
@@ -48,7 +48,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="incrementalPullConfig")
-    private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
+        private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
 
     public Optional<FlowIncrementalPullConfig> getIncrementalPullConfig() {
         return this.incrementalPullConfig == null ? Optional.empty() : Optional.ofNullable(this.incrementalPullConfig);
@@ -59,7 +59,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceConnectorProperties", required=true)
-    private final FlowSourceConnectorProperties sourceConnectorProperties;
+        private final FlowSourceConnectorProperties sourceConnectorProperties;
 
     public FlowSourceConnectorProperties getSourceConnectorProperties() {
         return this.sourceConnectorProperties;
@@ -128,7 +128,6 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public FlowSourceFlowConfig build() {
             return new FlowSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }

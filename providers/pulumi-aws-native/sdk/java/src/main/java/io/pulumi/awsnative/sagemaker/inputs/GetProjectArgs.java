@@ -13,7 +13,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @InputImport(name="projectArn", required=true)
-    private final String projectArn;
+        private final String projectArn;
 
     public String getProjectArn() {
         return this.projectArn;
@@ -51,7 +51,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
-
         public GetProjectArgs build() {
             return new GetProjectArgs(projectArn);
         }

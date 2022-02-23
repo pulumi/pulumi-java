@@ -95,7 +95,6 @@ public final class RoboDirectiveResponse {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public RoboDirectiveResponse build() {
             return new RoboDirectiveResponse(actionType, inputText, resourceName);
         }

@@ -76,7 +76,6 @@ public final class JobStatus {
             this.state = state;
             return this;
         }
-
         public JobStatus build() {
             return new JobStatus(errorResults, errors, state);
         }

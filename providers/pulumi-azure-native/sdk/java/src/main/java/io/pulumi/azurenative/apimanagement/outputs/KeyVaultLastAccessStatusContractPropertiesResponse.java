@@ -97,7 +97,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
             this.timeStampUtc = timeStampUtc;
             return this;
         }
-
         public KeyVaultLastAccessStatusContractPropertiesResponse build() {
             return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
         }

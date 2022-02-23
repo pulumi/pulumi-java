@@ -164,7 +164,6 @@ public final class HorizontalPodAutoscalerStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public HorizontalPodAutoscalerStatus build() {
             return new HorizontalPodAutoscalerStatus(conditions, currentMetrics, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }

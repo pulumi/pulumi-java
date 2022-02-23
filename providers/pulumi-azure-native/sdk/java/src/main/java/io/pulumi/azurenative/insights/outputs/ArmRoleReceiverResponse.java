@@ -98,7 +98,6 @@ public final class ArmRoleReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public ArmRoleReceiverResponse build() {
             return new ArmRoleReceiverResponse(name, roleId, useCommonAlertSchema);
         }

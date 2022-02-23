@@ -96,7 +96,6 @@ public final class BudgetComparisonExpressionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public BudgetComparisonExpressionResponse build() {
             return new BudgetComparisonExpressionResponse(name, operator, values);
         }

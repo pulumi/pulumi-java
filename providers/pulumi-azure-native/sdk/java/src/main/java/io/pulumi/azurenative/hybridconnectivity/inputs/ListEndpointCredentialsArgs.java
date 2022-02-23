@@ -20,7 +20,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -31,7 +31,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="expiresin")
-    private final @Nullable Integer expiresin;
+        private final @Nullable Integer expiresin;
 
     public Optional<Integer> getExpiresin() {
         return this.expiresin == null ? Optional.empty() : Optional.ofNullable(this.expiresin);
@@ -42,7 +42,7 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+        private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -101,7 +101,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public ListEndpointCredentialsArgs build() {
             return new ListEndpointCredentialsArgs(endpointName, expiresin, resourceUri);
         }

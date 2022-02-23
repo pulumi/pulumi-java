@@ -15,7 +15,7 @@ public final class DatasetLateDataRuleConfiguration extends io.pulumi.resources.
     public static final DatasetLateDataRuleConfiguration Empty = new DatasetLateDataRuleConfiguration();
 
     @InputImport(name="deltaTimeSessionWindowConfiguration")
-    private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
+        private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
 
     public Optional<DatasetDeltaTimeSessionWindowConfiguration> getDeltaTimeSessionWindowConfiguration() {
         return this.deltaTimeSessionWindowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.deltaTimeSessionWindowConfiguration);
@@ -53,7 +53,6 @@ public final class DatasetLateDataRuleConfiguration extends io.pulumi.resources.
             this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
             return this;
         }
-
         public DatasetLateDataRuleConfiguration build() {
             return new DatasetLateDataRuleConfiguration(deltaTimeSessionWindowConfiguration);
         }

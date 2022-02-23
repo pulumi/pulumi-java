@@ -97,7 +97,6 @@ public final class ComputeInstanceLastOperationResponse {
             this.operationTime = operationTime;
             return this;
         }
-
         public ComputeInstanceLastOperationResponse build() {
             return new ComputeInstanceLastOperationResponse(operationName, operationStatus, operationTime);
         }

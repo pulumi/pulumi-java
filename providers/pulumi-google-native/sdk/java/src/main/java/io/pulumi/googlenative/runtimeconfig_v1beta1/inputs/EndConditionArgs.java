@@ -23,7 +23,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-    private final @Nullable Input<CardinalityArgs> cardinality;
+      private final @Nullable Input<CardinalityArgs> cardinality;
 
     public Input<CardinalityArgs> getCardinality() {
         return this.cardinality == null ? Input.empty() : this.cardinality;
@@ -66,7 +66,6 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.cardinality = Input.ofNullable(cardinality);
             return this;
         }
-
         public EndConditionArgs build() {
             return new EndConditionArgs(cardinality);
         }

@@ -77,7 +77,6 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
             this.userDataOverride = userDataOverride;
             return this;
         }
-
         public ImageRecipeAdditionalInstanceConfiguration build() {
             return new ImageRecipeAdditionalInstanceConfiguration(systemsManagerAgent, userDataOverride);
         }

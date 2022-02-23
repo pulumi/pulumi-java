@@ -52,7 +52,6 @@ public final class BotInputContext {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BotInputContext build() {
             return new BotInputContext(name);
         }

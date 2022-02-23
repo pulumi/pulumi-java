@@ -22,7 +22,7 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -65,7 +65,6 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }
-
         public SoftwareRecipeStepInstallRpmArgs build() {
             return new SoftwareRecipeStepInstallRpmArgs(artifactId);
         }

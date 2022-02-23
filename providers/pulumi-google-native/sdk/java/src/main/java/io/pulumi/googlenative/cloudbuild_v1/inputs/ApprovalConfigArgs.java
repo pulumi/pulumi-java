@@ -23,7 +23,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRequired")
-    private final @Nullable Input<Boolean> approvalRequired;
+      private final @Nullable Input<Boolean> approvalRequired;
 
     public Input<Boolean> getApprovalRequired() {
         return this.approvalRequired == null ? Input.empty() : this.approvalRequired;
@@ -66,7 +66,6 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.approvalRequired = Input.ofNullable(approvalRequired);
             return this;
         }
-
         public ApprovalConfigArgs build() {
             return new ApprovalConfigArgs(approvalRequired);
         }

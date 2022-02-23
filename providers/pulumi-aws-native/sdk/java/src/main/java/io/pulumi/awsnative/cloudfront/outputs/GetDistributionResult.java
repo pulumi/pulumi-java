@@ -89,7 +89,6 @@ public final class GetDistributionResult {
             this.tags = tags;
             return this;
         }
-
         public GetDistributionResult build() {
             return new GetDistributionResult(distributionConfig, domainName, id, tags);
         }

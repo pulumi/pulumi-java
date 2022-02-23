@@ -24,14 +24,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final Input<String> creationTime;
+        private final Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime;
     }
 
     @InputImport(name="endpointName")
-    private final @Nullable Input<String> endpointName;
+        private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -42,7 +42,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="failureReason")
-    private final @Nullable Input<String> failureReason;
+        private final @Nullable Input<String> failureReason;
 
     public Input<String> getFailureReason() {
         return this.failureReason == null ? Input.empty() : this.failureReason;
@@ -53,7 +53,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="lastModifiedTime", required=true)
-    private final Input<String> lastModifiedTime;
+        private final Input<String> lastModifiedTime;
 
     public Input<String> getLastModifiedTime() {
         return this.lastModifiedTime;
@@ -64,14 +64,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="monitoringExecutionStatus", required=true)
-    private final Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
+        private final Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
     public Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @InputImport(name="monitoringScheduleName", required=true)
-    private final Input<String> monitoringScheduleName;
+        private final Input<String> monitoringScheduleName;
 
     public Input<String> getMonitoringScheduleName() {
         return this.monitoringScheduleName;
@@ -82,7 +82,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="processingJobArn")
-    private final @Nullable Input<String> processingJobArn;
+        private final @Nullable Input<String> processingJobArn;
 
     public Input<String> getProcessingJobArn() {
         return this.processingJobArn == null ? Input.empty() : this.processingJobArn;
@@ -93,7 +93,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="scheduledTime", required=true)
-    private final Input<String> scheduledTime;
+        private final Input<String> scheduledTime;
 
     public Input<String> getScheduledTime() {
         return this.scheduledTime;
@@ -242,7 +242,6 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
             this.scheduledTime = Input.of(Objects.requireNonNull(scheduledTime));
             return this;
         }
-
         public MonitoringScheduleMonitoringExecutionSummaryArgs build() {
             return new MonitoringScheduleMonitoringExecutionSummaryArgs(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }

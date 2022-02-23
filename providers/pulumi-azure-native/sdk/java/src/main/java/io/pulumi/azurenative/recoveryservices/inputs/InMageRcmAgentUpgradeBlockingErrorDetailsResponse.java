@@ -22,7 +22,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final String errorCode;
+        private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -33,7 +33,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+        private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -44,7 +44,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="errorMessageParameters", required=true)
-    private final Map<String,String> errorMessageParameters;
+        private final Map<String,String> errorMessageParameters;
 
     public Map<String,String> getErrorMessageParameters() {
         return this.errorMessageParameters;
@@ -55,7 +55,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="errorTags", required=true)
-    private final Map<String,String> errorTags;
+        private final Map<String,String> errorTags;
 
     public Map<String,String> getErrorTags() {
         return this.errorTags;
@@ -66,7 +66,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="possibleCauses", required=true)
-    private final String possibleCauses;
+        private final String possibleCauses;
 
     public String getPossibleCauses() {
         return this.possibleCauses;
@@ -77,7 +77,7 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
      * 
      */
     @InputImport(name="recommendedAction", required=true)
-    private final String recommendedAction;
+        private final String recommendedAction;
 
     public String getRecommendedAction() {
         return this.recommendedAction;
@@ -166,7 +166,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
         }
-
         public InMageRcmAgentUpgradeBlockingErrorDetailsResponse build() {
             return new InMageRcmAgentUpgradeBlockingErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
         }

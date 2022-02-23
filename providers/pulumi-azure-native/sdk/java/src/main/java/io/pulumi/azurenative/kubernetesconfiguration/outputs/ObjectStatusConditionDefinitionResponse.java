@@ -139,7 +139,6 @@ public final class ObjectStatusConditionDefinitionResponse {
             this.type = type;
             return this;
         }
-
         public ObjectStatusConditionDefinitionResponse build() {
             return new ObjectStatusConditionDefinitionResponse(lastTransitionTime, message, reason, status, type);
         }

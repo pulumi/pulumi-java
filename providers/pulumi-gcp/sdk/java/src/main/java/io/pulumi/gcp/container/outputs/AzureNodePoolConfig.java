@@ -121,7 +121,6 @@ public final class AzureNodePoolConfig {
             this.vmSize = vmSize;
             return this;
         }
-
         public AzureNodePoolConfig build() {
             return new AzureNodePoolConfig(rootVolume, sshConfig, tags, vmSize);
         }

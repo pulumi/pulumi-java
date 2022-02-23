@@ -21,7 +21,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends io.pulu
      * 
      */
     @InputImport(name="imageVersionId", required=true)
-    private final String imageVersionId;
+        private final String imageVersionId;
 
     public String getImageVersionId() {
         return this.imageVersionId;
@@ -33,7 +33,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends io.pulu
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends io.pulu
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageVersionSourceResponse build() {
             return new ImageTemplateSharedImageVersionSourceResponse(imageVersionId, type);
         }

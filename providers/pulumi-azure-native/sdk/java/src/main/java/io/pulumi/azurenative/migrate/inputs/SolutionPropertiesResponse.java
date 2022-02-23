@@ -27,7 +27,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cleanupState")
-    private final @Nullable String cleanupState;
+        private final @Nullable String cleanupState;
 
     public Optional<String> getCleanupState() {
         return this.cleanupState == null ? Optional.empty() : Optional.ofNullable(this.cleanupState);
@@ -38,7 +38,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="details")
-    private final @Nullable SolutionDetailsResponse details;
+        private final @Nullable SolutionDetailsResponse details;
 
     public Optional<SolutionDetailsResponse> getDetails() {
         return this.details == null ? Optional.empty() : Optional.ofNullable(this.details);
@@ -49,7 +49,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="goal")
-    private final @Nullable String goal;
+        private final @Nullable String goal;
 
     public Optional<String> getGoal() {
         return this.goal == null ? Optional.empty() : Optional.ofNullable(this.goal);
@@ -60,7 +60,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable String purpose;
+        private final @Nullable String purpose;
 
     public Optional<String> getPurpose() {
         return this.purpose == null ? Optional.empty() : Optional.ofNullable(this.purpose);
@@ -71,7 +71,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -82,7 +82,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="summary")
-    private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
+        private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
     public Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> getSummary() {
         return this.summary == null ? null : this.summary;
@@ -93,7 +93,7 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tool")
-    private final @Nullable String tool;
+        private final @Nullable String tool;
 
     public Optional<String> getTool() {
         return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
@@ -192,7 +192,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
             this.tool = tool;
             return this;
         }
-
         public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(cleanupState, details, goal, purpose, status, summary, tool);
         }

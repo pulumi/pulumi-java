@@ -97,7 +97,6 @@ public final class CloudRepoSourceContextResponse {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public CloudRepoSourceContextResponse build() {
             return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

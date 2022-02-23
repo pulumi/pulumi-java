@@ -54,7 +54,6 @@ public final class LocalObjectReference {
             this.name = name;
             return this;
         }
-
         public LocalObjectReference build() {
             return new LocalObjectReference(name);
         }

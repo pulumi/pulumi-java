@@ -77,7 +77,6 @@ public final class BatchPoolIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public BatchPoolIdentityResponse build() {
             return new BatchPoolIdentityResponse(type, userAssignedIdentities);
         }

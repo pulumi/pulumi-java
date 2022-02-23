@@ -22,7 +22,7 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pluginInstance", required=true)
-    private final Input<String> pluginInstance;
+      private final Input<String> pluginInstance;
 
     public Input<String> getPluginInstance() {
         return this.pluginInstance;
@@ -65,7 +65,6 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
             this.pluginInstance = Input.of(Objects.requireNonNull(pluginInstance));
             return this;
         }
-
         public CertificateProviderInstanceArgs build() {
             return new CertificateProviderInstanceArgs(pluginInstance);
         }

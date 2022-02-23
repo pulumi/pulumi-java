@@ -88,7 +88,6 @@ public final class GetNetworkInsightsPathResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInsightsPathResult build() {
             return new GetNetworkInsightsPathResult(createdDate, networkInsightsPathArn, networkInsightsPathId, tags);
         }

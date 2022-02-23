@@ -97,7 +97,6 @@ public final class CertificateConfigResponse {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public CertificateConfigResponse build() {
             return new CertificateConfigResponse(publicKey, reusableConfig, subjectConfig);
         }

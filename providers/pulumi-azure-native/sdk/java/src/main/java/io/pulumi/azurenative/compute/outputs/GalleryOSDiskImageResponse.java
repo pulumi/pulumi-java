@@ -99,7 +99,6 @@ public final class GalleryOSDiskImageResponse {
             this.source = source;
             return this;
         }
-
         public GalleryOSDiskImageResponse build() {
             return new GalleryOSDiskImageResponse(hostCaching, sizeInGB, source);
         }

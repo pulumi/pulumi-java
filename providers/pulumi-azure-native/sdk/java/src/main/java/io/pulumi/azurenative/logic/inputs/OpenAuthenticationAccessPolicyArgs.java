@@ -27,7 +27,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="claims")
-    private final @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims;
+        private final @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
     public Input<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
         return this.claims == null ? Input.empty() : this.claims;
@@ -38,7 +38,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,OpenAuthenticationProviderType>> type;
+        private final @Nullable Input<Either<String,OpenAuthenticationProviderType>> type;
 
     public Input<Either<String,OpenAuthenticationProviderType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -97,7 +97,6 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OpenAuthenticationAccessPolicyArgs build() {
             return new OpenAuthenticationAccessPolicyArgs(claims, type);
         }

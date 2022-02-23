@@ -24,7 +24,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4CidrBlock")
-    private final @Nullable Input<String> ipv4CidrBlock;
+      private final @Nullable Input<String> ipv4CidrBlock;
 
     public Input<String> getIpv4CidrBlock() {
         return this.ipv4CidrBlock == null ? Input.empty() : this.ipv4CidrBlock;
@@ -46,7 +46,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useServiceNetworking")
-    private final @Nullable Input<Boolean> useServiceNetworking;
+      private final @Nullable Input<Boolean> useServiceNetworking;
 
     public Input<Boolean> getUseServiceNetworking() {
         return this.useServiceNetworking == null ? Input.empty() : this.useServiceNetworking;
@@ -120,7 +120,6 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.useServiceNetworking = Input.ofNullable(useServiceNetworking);
             return this;
         }
-
         public TpuConfigArgs build() {
             return new TpuConfigArgs(enabled, ipv4CidrBlock, useServiceNetworking);
         }

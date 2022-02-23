@@ -120,7 +120,6 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskInputResponse build() {
             return new ConnectToSourceSqlServerTaskInputResponse(checkPermissionsGroup, collectAgentJobs, collectLogins, sourceConnectionInfo);
         }

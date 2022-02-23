@@ -25,7 +25,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizations", required=true)
-    private final Input<List<AuthorizationArgs>> authorizations;
+        private final Input<List<AuthorizationArgs>> authorizations;
 
     public Input<List<AuthorizationArgs>> getAuthorizations() {
         return this.authorizations;
@@ -36,7 +36,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="managedByTenantId", required=true)
-    private final Input<String> managedByTenantId;
+        private final Input<String> managedByTenantId;
 
     public Input<String> getManagedByTenantId() {
         return this.managedByTenantId;
@@ -58,7 +58,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="registrationDefinitionName")
-    private final @Nullable Input<String> registrationDefinitionName;
+        private final @Nullable Input<String> registrationDefinitionName;
 
     public Input<String> getRegistrationDefinitionName() {
         return this.registrationDefinitionName == null ? Input.empty() : this.registrationDefinitionName;
@@ -147,7 +147,6 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
             this.registrationDefinitionName = Input.ofNullable(registrationDefinitionName);
             return this;
         }
-
         public RegistrationDefinitionPropertiesArgs build() {
             return new RegistrationDefinitionPropertiesArgs(authorizations, description, managedByTenantId, registrationDefinitionName);
         }

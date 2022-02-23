@@ -44,7 +44,6 @@ public final class EndpointNetworkInterface {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public EndpointNetworkInterface build() {
             return new EndpointNetworkInterface(networkInterfaceId);
         }

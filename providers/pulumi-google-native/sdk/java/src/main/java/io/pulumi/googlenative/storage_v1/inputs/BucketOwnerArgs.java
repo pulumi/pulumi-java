@@ -23,7 +23,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entity")
-    private final @Nullable Input<String> entity;
+      private final @Nullable Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity == null ? Input.empty() : this.entity;
@@ -34,7 +34,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityId")
-    private final @Nullable Input<String> entityId;
+      private final @Nullable Input<String> entityId;
 
     public Input<String> getEntityId() {
         return this.entityId == null ? Input.empty() : this.entityId;
@@ -93,7 +93,6 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
-
         public BucketOwnerArgs build() {
             return new BucketOwnerArgs(entity, entityId);
         }

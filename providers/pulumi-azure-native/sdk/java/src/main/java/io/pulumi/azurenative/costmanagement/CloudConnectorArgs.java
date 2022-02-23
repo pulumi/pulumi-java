@@ -21,7 +21,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingModel")
-    private final @Nullable Input<Either<String,ConnectorBillingModel>> billingModel;
+        private final @Nullable Input<Either<String,ConnectorBillingModel>> billingModel;
 
     public Input<Either<String,ConnectorBillingModel>> getBillingModel() {
         return this.billingModel == null ? Input.empty() : this.billingModel;
@@ -32,7 +32,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-    private final @Nullable Input<String> connectorName;
+        private final @Nullable Input<String> connectorName;
 
     public Input<String> getConnectorName() {
         return this.connectorName == null ? Input.empty() : this.connectorName;
@@ -43,7 +43,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsKey")
-    private final @Nullable Input<String> credentialsKey;
+        private final @Nullable Input<String> credentialsKey;
 
     public Input<String> getCredentialsKey() {
         return this.credentialsKey == null ? Input.empty() : this.credentialsKey;
@@ -54,7 +54,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsSecret")
-    private final @Nullable Input<String> credentialsSecret;
+        private final @Nullable Input<String> credentialsSecret;
 
     public Input<String> getCredentialsSecret() {
         return this.credentialsSecret == null ? Input.empty() : this.credentialsSecret;
@@ -65,7 +65,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultManagementGroupId")
-    private final @Nullable Input<String> defaultManagementGroupId;
+        private final @Nullable Input<String> defaultManagementGroupId;
 
     public Input<String> getDefaultManagementGroupId() {
         return this.defaultManagementGroupId == null ? Input.empty() : this.defaultManagementGroupId;
@@ -76,7 +76,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -87,7 +87,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -98,7 +98,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportId")
-    private final @Nullable Input<String> reportId;
+        private final @Nullable Input<String> reportId;
 
     public Input<String> getReportId() {
         return this.reportId == null ? Input.empty() : this.reportId;
@@ -109,7 +109,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -273,7 +273,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
-
         public CloudConnectorArgs build() {
             return new CloudConnectorArgs(billingModel, connectorName, credentialsKey, credentialsSecret, defaultManagementGroupId, displayName, kind, reportId, subscriptionId);
         }

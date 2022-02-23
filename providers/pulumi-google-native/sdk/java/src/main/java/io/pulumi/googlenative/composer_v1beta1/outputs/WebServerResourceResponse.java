@@ -95,7 +95,6 @@ public final class WebServerResourceResponse {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public WebServerResourceResponse build() {
             return new WebServerResourceResponse(cpu, memoryGb, storageGb);
         }

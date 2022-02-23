@@ -13,14 +13,14 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
     public static final GetGcpUserAccessBindingArgs Empty = new GetGcpUserAccessBindingArgs();
 
     @InputImport(name="gcpUserAccessBindingId", required=true)
-    private final String gcpUserAccessBindingId;
+      private final String gcpUserAccessBindingId;
 
     public String getGcpUserAccessBindingId() {
         return this.gcpUserAccessBindingId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetGcpUserAccessBindingArgs build() {
             return new GetGcpUserAccessBindingArgs(gcpUserAccessBindingId, organizationId);
         }

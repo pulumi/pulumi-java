@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="secretKeyRef")
-    private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
     public Input<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
         return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;
@@ -66,7 +66,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
             this.secretKeyRef = Input.ofNullable(secretKeyRef);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarSourceArgs build() {
             return new GoogleCloudRunOpV2EnvVarSourceArgs(secretKeyRef);
         }

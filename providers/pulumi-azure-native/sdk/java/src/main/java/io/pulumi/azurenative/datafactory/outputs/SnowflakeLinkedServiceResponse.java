@@ -210,7 +210,6 @@ public final class SnowflakeLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeLinkedServiceResponse build() {
             return new SnowflakeLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

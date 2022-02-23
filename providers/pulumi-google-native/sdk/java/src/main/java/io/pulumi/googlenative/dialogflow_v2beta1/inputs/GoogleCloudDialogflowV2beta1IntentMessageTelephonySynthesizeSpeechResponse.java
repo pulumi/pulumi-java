@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @InputImport(name="ssml", required=true)
-    private final String ssml;
+      private final String ssml;
 
     public String getSsml() {
         return this.ssml;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(ssml, text);
         }

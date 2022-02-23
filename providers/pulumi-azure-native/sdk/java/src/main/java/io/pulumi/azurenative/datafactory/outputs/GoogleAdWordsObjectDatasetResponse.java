@@ -231,7 +231,6 @@ public final class GoogleAdWordsObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleAdWordsObjectDatasetResponse build() {
             return new GoogleAdWordsObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

@@ -267,7 +267,6 @@ public final class GetServiceResult {
             this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(etag, id, kind, location, name, provisioningState, publicKey, sku, tags, type, virtualSubnetId);
         }

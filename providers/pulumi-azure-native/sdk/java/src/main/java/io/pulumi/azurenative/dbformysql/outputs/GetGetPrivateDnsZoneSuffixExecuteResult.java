@@ -54,7 +54,6 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
             this.privateDnsZoneSuffix = privateDnsZoneSuffix;
             return this;
         }
-
         public GetGetPrivateDnsZoneSuffixExecuteResult build() {
             return new GetGetPrivateDnsZoneSuffixExecuteResult(privateDnsZoneSuffix);
         }

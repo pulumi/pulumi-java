@@ -78,7 +78,6 @@ public final class AudioTrackDescriptorResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public AudioTrackDescriptorResponse build() {
             return new AudioTrackDescriptorResponse(channelMapping, odataType);
         }

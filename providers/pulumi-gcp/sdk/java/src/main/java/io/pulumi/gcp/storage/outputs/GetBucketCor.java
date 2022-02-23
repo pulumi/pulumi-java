@@ -86,7 +86,6 @@ public final class GetBucketCor {
             this.responseHeaders = Objects.requireNonNull(responseHeaders);
             return this;
         }
-
         public GetBucketCor build() {
             return new GetBucketCor(maxAgeSeconds, methods, origins, responseHeaders);
         }

@@ -142,7 +142,6 @@ public final class ReplicationController {
             this.status = status;
             return this;
         }
-
         public ReplicationController build() {
             return new ReplicationController(apiVersion, kind, metadata, spec, status);
         }

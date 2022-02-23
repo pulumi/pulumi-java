@@ -21,7 +21,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -43,7 +43,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -102,7 +102,6 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConnectionStatusResponse build() {
             return new ConnectionStatusResponse(description, state, status);
         }

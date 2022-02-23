@@ -21,7 +21,7 @@ public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scriptPath", required=true)
-    private final String scriptPath;
+      private final String scriptPath;
 
     public String getScriptPath() {
         return this.scriptPath;
@@ -59,7 +59,6 @@ public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs 
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public ScriptHandlerResponse build() {
             return new ScriptHandlerResponse(scriptPath);
         }

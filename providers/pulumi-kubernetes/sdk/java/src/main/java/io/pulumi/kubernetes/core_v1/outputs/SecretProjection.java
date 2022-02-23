@@ -100,7 +100,6 @@ public final class SecretProjection {
             this.optional = optional;
             return this;
         }
-
         public SecretProjection build() {
             return new SecretProjection(items, name, optional);
         }

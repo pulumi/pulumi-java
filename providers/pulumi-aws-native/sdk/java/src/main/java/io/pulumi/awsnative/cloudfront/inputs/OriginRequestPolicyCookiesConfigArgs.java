@@ -16,14 +16,14 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     public static final OriginRequestPolicyCookiesConfigArgs Empty = new OriginRequestPolicyCookiesConfigArgs();
 
     @InputImport(name="cookieBehavior", required=true)
-    private final Input<String> cookieBehavior;
+        private final Input<String> cookieBehavior;
 
     public Input<String> getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-    private final @Nullable Input<List<String>> cookies;
+        private final @Nullable Input<List<String>> cookies;
 
     public Input<List<String>> getCookies() {
         return this.cookies == null ? Input.empty() : this.cookies;
@@ -82,7 +82,6 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
             this.cookies = Input.ofNullable(cookies);
             return this;
         }
-
         public OriginRequestPolicyCookiesConfigArgs build() {
             return new OriginRequestPolicyCookiesConfigArgs(cookieBehavior, cookies);
         }

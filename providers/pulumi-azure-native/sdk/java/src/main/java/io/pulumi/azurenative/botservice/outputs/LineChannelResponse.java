@@ -142,7 +142,6 @@ public final class LineChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LineChannelResponse build() {
             return new LineChannelResponse(channelName, etag, location, properties, provisioningState);
         }

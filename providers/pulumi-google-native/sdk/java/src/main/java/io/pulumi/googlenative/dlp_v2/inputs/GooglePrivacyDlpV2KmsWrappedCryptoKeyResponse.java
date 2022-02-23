@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
      * 
      */
     @InputImport(name="cryptoKeyName", required=true)
-    private final String cryptoKeyName;
+      private final String cryptoKeyName;
 
     public String getCryptoKeyName() {
         return this.cryptoKeyName;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
      * 
      */
     @InputImport(name="wrappedKey", required=true)
-    private final String wrappedKey;
+      private final String wrappedKey;
 
     public String getWrappedKey() {
         return this.wrappedKey;
@@ -81,7 +81,6 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }
-
         public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(cryptoKeyName, wrappedKey);
         }

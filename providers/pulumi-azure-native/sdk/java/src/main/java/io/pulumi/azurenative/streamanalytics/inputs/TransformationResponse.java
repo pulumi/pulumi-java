@@ -24,7 +24,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -46,7 +46,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="query")
-    private final @Nullable String query;
+        private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -68,7 +68,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="streamingUnits")
-    private final @Nullable Integer streamingUnits;
+        private final @Nullable Integer streamingUnits;
 
     public Optional<Integer> getStreamingUnits() {
         return this.streamingUnits == null ? Optional.empty() : Optional.ofNullable(this.streamingUnits);
@@ -79,7 +79,7 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -168,7 +168,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TransformationResponse build() {
             return new TransformationResponse(etag, id, name, query, streamingUnits, type);
         }

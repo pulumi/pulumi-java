@@ -22,7 +22,7 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<Object> value;
+        private final Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value;
@@ -65,7 +65,6 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public SSISExecutionParameterArgs build() {
             return new SSISExecutionParameterArgs(value);
         }

@@ -87,7 +87,6 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
             this.identityType = identityType;
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom(identities, identityType);
         }

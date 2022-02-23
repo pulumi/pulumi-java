@@ -142,7 +142,6 @@ public final class GetDomainResult {
             this.tags = tags;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(arn, name, owner, permissionsPolicyDocument, tags);
         }

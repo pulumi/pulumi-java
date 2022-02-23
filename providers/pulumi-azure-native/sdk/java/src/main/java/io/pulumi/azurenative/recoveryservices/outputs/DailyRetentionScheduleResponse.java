@@ -78,7 +78,6 @@ public final class DailyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public DailyRetentionScheduleResponse build() {
             return new DailyRetentionScheduleResponse(retentionDuration, retentionTimes);
         }

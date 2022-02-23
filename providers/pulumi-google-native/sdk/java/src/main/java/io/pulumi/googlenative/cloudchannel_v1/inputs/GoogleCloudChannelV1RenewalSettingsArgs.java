@@ -25,7 +25,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="enableRenewal")
-    private final @Nullable Input<Boolean> enableRenewal;
+      private final @Nullable Input<Boolean> enableRenewal;
 
     public Input<Boolean> getEnableRenewal() {
         return this.enableRenewal == null ? Input.empty() : this.enableRenewal;
@@ -36,7 +36,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="paymentCycle")
-    private final @Nullable Input<GoogleCloudChannelV1PeriodArgs> paymentCycle;
+      private final @Nullable Input<GoogleCloudChannelV1PeriodArgs> paymentCycle;
 
     public Input<GoogleCloudChannelV1PeriodArgs> getPaymentCycle() {
         return this.paymentCycle == null ? Input.empty() : this.paymentCycle;
@@ -47,7 +47,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="paymentPlan")
-    private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
+      private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
 
     public Input<GoogleCloudChannelV1RenewalSettingsPaymentPlan> getPaymentPlan() {
         return this.paymentPlan == null ? Input.empty() : this.paymentPlan;
@@ -58,7 +58,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resizeUnitCount")
-    private final @Nullable Input<Boolean> resizeUnitCount;
+      private final @Nullable Input<Boolean> resizeUnitCount;
 
     public Input<Boolean> getResizeUnitCount() {
         return this.resizeUnitCount == null ? Input.empty() : this.resizeUnitCount;
@@ -147,7 +147,6 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
             this.resizeUnitCount = Input.ofNullable(resizeUnitCount);
             return this;
         }
-
         public GoogleCloudChannelV1RenewalSettingsArgs build() {
             return new GoogleCloudChannelV1RenewalSettingsArgs(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
         }

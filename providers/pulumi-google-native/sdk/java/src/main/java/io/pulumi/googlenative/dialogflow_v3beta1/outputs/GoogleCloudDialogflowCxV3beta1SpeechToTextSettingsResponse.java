@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
             this.enableSpeechAdaptation = Objects.requireNonNull(enableSpeechAdaptation);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse(enableSpeechAdaptation);
         }

@@ -160,7 +160,6 @@ public final class GetGuestDiagnosticsSettingsAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGuestDiagnosticsSettingsAssociationResult build() {
             return new GetGuestDiagnosticsSettingsAssociationResult(guestDiagnosticSettingsName, id, location, name, tags, type);
         }

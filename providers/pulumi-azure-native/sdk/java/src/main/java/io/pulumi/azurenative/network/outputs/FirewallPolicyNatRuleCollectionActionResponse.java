@@ -54,7 +54,6 @@ public final class FirewallPolicyNatRuleCollectionActionResponse {
             this.type = type;
             return this;
         }
-
         public FirewallPolicyNatRuleCollectionActionResponse build() {
             return new FirewallPolicyNatRuleCollectionActionResponse(type);
         }

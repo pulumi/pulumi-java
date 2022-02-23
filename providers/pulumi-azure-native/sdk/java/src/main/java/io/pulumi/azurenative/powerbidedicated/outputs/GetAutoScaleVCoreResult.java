@@ -248,7 +248,6 @@ public final class GetAutoScaleVCoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoScaleVCoreResult build() {
             return new GetAutoScaleVCoreResult(capacityLimit, capacityObjectId, id, location, name, provisioningState, sku, systemData, tags, type);
         }

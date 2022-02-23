@@ -98,7 +98,6 @@ public final class ClusterKubernetesNetworkConfig {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }
-
         public ClusterKubernetesNetworkConfig build() {
             return new ClusterKubernetesNetworkConfig(ipFamily, serviceIpv4Cidr, serviceIpv6Cidr);
         }

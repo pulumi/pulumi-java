@@ -119,7 +119,6 @@ public final class ModelBiasJobDefinitionClusterConfig {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public ModelBiasJobDefinitionClusterConfig build() {
             return new ModelBiasJobDefinitionClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

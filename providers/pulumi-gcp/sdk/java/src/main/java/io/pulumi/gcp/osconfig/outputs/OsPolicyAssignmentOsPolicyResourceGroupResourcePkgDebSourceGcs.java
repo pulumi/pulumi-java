@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs(bucket, generation, object);
         }

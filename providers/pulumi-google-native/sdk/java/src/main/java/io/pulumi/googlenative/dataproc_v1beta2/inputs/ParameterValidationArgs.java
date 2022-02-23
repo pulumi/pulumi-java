@@ -24,7 +24,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<RegexValidationArgs> regex;
+      private final @Nullable Input<RegexValidationArgs> regex;
 
     public Input<RegexValidationArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -35,7 +35,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<ValueValidationArgs> values;
+      private final @Nullable Input<ValueValidationArgs> values;
 
     public Input<ValueValidationArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -94,7 +94,6 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ParameterValidationArgs build() {
             return new ParameterValidationArgs(regex, values);
         }

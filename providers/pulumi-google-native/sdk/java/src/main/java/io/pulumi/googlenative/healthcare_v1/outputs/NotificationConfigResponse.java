@@ -52,7 +52,6 @@ public final class NotificationConfigResponse {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsubTopic);
         }

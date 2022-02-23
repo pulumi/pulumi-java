@@ -98,7 +98,6 @@ public final class EnumValueResponse {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public EnumValueResponse build() {
             return new EnumValueResponse(name, number, options);
         }

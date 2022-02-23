@@ -14,7 +14,7 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
     public static final SpotFleetArgs Empty = new SpotFleetArgs();
 
     @InputImport(name="spotFleetRequestConfigData", required=true)
-    private final Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
+        private final Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
     public Input<SpotFleetRequestConfigDataArgs> getSpotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
@@ -57,7 +57,6 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
             this.spotFleetRequestConfigData = Input.of(Objects.requireNonNull(spotFleetRequestConfigData));
             return this;
         }
-
         public SpotFleetArgs build() {
             return new SpotFleetArgs(spotFleetRequestConfigData);
         }

@@ -74,7 +74,6 @@ public final class IPAMScopeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IPAMScopeTag build() {
             return new IPAMScopeTag(key, value);
         }

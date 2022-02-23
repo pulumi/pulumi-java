@@ -76,7 +76,6 @@ public final class NonComplianceMessageResponse {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public NonComplianceMessageResponse build() {
             return new NonComplianceMessageResponse(message, policyDefinitionReferenceId);
         }

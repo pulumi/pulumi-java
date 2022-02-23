@@ -53,7 +53,6 @@ public final class AlertRuleAllOfConditionResponse {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public AlertRuleAllOfConditionResponse build() {
             return new AlertRuleAllOfConditionResponse(allOf);
         }

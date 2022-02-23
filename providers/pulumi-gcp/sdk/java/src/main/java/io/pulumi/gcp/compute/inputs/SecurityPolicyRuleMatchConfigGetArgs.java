@@ -21,7 +21,7 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-    private final Input<List<String>> srcIpRanges;
+        private final Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges;
@@ -64,7 +64,6 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
             this.srcIpRanges = Input.of(Objects.requireNonNull(srcIpRanges));
             return this;
         }
-
         public SecurityPolicyRuleMatchConfigGetArgs build() {
             return new SecurityPolicyRuleMatchConfigGetArgs(srcIpRanges);
         }

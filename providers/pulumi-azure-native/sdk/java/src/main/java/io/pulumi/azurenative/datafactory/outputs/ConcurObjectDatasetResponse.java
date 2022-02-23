@@ -231,7 +231,6 @@ public final class ConcurObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConcurObjectDatasetResponse build() {
             return new ConcurObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

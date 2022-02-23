@@ -24,7 +24,7 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -35,7 +35,7 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable EncryptionResponse value;
+        private final @Nullable EncryptionResponse value;
 
     public Optional<EncryptionResponse> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -84,7 +84,6 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
             this.value = value;
             return this;
         }
-
         public WorkspaceEncryptionParameterResponse build() {
             return new WorkspaceEncryptionParameterResponse(type, value);
         }

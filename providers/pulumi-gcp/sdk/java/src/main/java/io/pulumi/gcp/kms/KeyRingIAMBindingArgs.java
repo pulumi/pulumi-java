@@ -22,7 +22,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<KeyRingIAMBindingConditionArgs> condition;
+        private final @Nullable Input<KeyRingIAMBindingConditionArgs> condition;
 
     public Input<KeyRingIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -36,14 +36,14 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+        private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -56,7 +56,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -145,7 +145,6 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public KeyRingIAMBindingArgs build() {
             return new KeyRingIAMBindingArgs(condition, keyRingId, members, role);
         }

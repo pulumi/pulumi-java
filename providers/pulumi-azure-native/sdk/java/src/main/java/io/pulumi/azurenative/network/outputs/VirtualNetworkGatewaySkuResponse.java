@@ -98,7 +98,6 @@ public final class VirtualNetworkGatewaySkuResponse {
             this.tier = tier;
             return this;
         }
-
         public VirtualNetworkGatewaySkuResponse build() {
             return new VirtualNetworkGatewaySkuResponse(capacity, name, tier);
         }

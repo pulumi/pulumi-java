@@ -120,7 +120,6 @@ public final class ImageOccurrenceResponse {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }
-
         public ImageOccurrenceResponse build() {
             return new ImageOccurrenceResponse(baseResourceUrl, distance, fingerprint, layerInfo);
         }

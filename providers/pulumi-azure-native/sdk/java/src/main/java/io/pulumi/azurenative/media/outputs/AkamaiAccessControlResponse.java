@@ -54,7 +54,6 @@ public final class AkamaiAccessControlResponse {
             this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
-
         public AkamaiAccessControlResponse build() {
             return new AkamaiAccessControlResponse(akamaiSignatureHeaderAuthenticationKeyList);
         }

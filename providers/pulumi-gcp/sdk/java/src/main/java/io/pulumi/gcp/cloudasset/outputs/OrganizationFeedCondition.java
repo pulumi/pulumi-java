@@ -124,7 +124,6 @@ public final class OrganizationFeedCondition {
             this.title = title;
             return this;
         }
-
         public OrganizationFeedCondition build() {
             return new OrganizationFeedCondition(description, expression, location, title);
         }

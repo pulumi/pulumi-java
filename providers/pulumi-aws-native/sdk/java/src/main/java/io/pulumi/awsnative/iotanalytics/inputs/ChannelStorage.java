@@ -16,14 +16,14 @@ public final class ChannelStorage extends io.pulumi.resources.InvokeArgs {
     public static final ChannelStorage Empty = new ChannelStorage();
 
     @InputImport(name="customerManagedS3")
-    private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
+        private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
 
     public Optional<ChannelCustomerManagedS3> getCustomerManagedS3() {
         return this.customerManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3);
     }
 
     @InputImport(name="serviceManagedS3")
-    private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
+        private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
 
     public Optional<ChannelServiceManagedS3> getServiceManagedS3() {
         return this.serviceManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.serviceManagedS3);
@@ -72,7 +72,6 @@ public final class ChannelStorage extends io.pulumi.resources.InvokeArgs {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public ChannelStorage build() {
             return new ChannelStorage(customerManagedS3, serviceManagedS3);
         }

@@ -76,7 +76,6 @@ public final class AccessReviewReviewerResponse {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AccessReviewReviewerResponse build() {
             return new AccessReviewReviewerResponse(principalId, principalType);
         }

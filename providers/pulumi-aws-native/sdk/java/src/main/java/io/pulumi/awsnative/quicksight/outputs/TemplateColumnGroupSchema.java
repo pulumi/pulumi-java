@@ -78,7 +78,6 @@ public final class TemplateColumnGroupSchema {
             this.name = name;
             return this;
         }
-
         public TemplateColumnGroupSchema build() {
             return new TemplateColumnGroupSchema(columnGroupColumnSchemaList, name);
         }

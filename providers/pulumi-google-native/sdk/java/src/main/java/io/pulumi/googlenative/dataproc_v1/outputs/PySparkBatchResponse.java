@@ -159,7 +159,6 @@ public final class PySparkBatchResponse {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }
-
         public PySparkBatchResponse build() {
             return new PySparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainPythonFileUri, pythonFileUris);
         }

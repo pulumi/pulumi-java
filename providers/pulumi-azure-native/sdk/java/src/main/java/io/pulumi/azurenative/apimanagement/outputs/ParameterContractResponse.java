@@ -162,7 +162,6 @@ public final class ParameterContractResponse {
             this.values = values;
             return this;
         }
-
         public ParameterContractResponse build() {
             return new ParameterContractResponse(defaultValue, description, name, required, type, values);
         }

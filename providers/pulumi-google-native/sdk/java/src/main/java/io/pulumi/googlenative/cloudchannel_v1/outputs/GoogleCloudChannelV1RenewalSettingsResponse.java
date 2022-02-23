@@ -118,7 +118,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
         }
-
         public GoogleCloudChannelV1RenewalSettingsResponse build() {
             return new GoogleCloudChannelV1RenewalSettingsResponse(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
         }

@@ -22,7 +22,7 @@ public final class SourceInstanceParamsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="diskConfigs", required=true)
-    private final List<DiskInstantiationConfigResponse> diskConfigs;
+      private final List<DiskInstantiationConfigResponse> diskConfigs;
 
     public List<DiskInstantiationConfigResponse> getDiskConfigs() {
         return this.diskConfigs;
@@ -60,7 +60,6 @@ public final class SourceInstanceParamsResponse extends io.pulumi.resources.Invo
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }
-
         public SourceInstanceParamsResponse build() {
             return new SourceInstanceParamsResponse(diskConfigs);
         }

@@ -74,7 +74,6 @@ public final class DatasetReferenceResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(datasetId, project);
         }

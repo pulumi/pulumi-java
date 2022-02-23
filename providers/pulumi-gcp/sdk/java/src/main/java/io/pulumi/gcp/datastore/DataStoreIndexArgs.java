@@ -23,7 +23,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ancestor")
-    private final @Nullable Input<String> ancestor;
+        private final @Nullable Input<String> ancestor;
 
     public Input<String> getAncestor() {
         return this.ancestor == null ? Input.empty() : this.ancestor;
@@ -34,7 +34,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -46,7 +46,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<List<DataStoreIndexPropertyArgs>> properties;
+        private final @Nullable Input<List<DataStoreIndexPropertyArgs>> properties;
 
     public Input<List<DataStoreIndexPropertyArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -147,7 +147,6 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public DataStoreIndexArgs build() {
             return new DataStoreIndexArgs(ancestor, kind, project, properties);
         }

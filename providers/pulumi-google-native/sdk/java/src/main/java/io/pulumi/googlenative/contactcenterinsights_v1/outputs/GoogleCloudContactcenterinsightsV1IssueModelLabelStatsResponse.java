@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
             this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(analyzedConversationsCount, issueStats, unclassifiedConversationsCount);
         }

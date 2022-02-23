@@ -99,7 +99,6 @@ public final class JobExtractSourceTable {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public JobExtractSourceTable build() {
             return new JobExtractSourceTable(datasetId, projectId, tableId);
         }

@@ -27,7 +27,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedSuccessCodes")
-    private final @Nullable Input<List<Integer>> allowedSuccessCodes;
+      private final @Nullable Input<List<Integer>> allowedSuccessCodes;
 
     public Input<List<Integer>> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? Input.empty() : this.allowedSuccessCodes;
@@ -38,7 +38,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsObject")
-    private final @Nullable Input<GcsObjectArgs> gcsObject;
+      private final @Nullable Input<GcsObjectArgs> gcsObject;
 
     public Input<GcsObjectArgs> getGcsObject() {
         return this.gcsObject == null ? Input.empty() : this.gcsObject;
@@ -49,7 +49,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interpreter")
-    private final @Nullable Input<ExecStepConfigInterpreter> interpreter;
+      private final @Nullable Input<ExecStepConfigInterpreter> interpreter;
 
     public Input<ExecStepConfigInterpreter> getInterpreter() {
         return this.interpreter == null ? Input.empty() : this.interpreter;
@@ -60,7 +60,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+      private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -149,7 +149,6 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
-
         public ExecStepConfigArgs build() {
             return new ExecStepConfigArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

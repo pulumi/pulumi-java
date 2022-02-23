@@ -24,7 +24,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="allocation")
-    private final @Nullable String allocation;
+        private final @Nullable String allocation;
 
     public Optional<String> getAllocation() {
         return this.allocation == null ? Optional.empty() : Optional.ofNullable(this.allocation);
@@ -35,7 +35,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+        private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -46,7 +46,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="gateway")
-    private final @Nullable List<String> gateway;
+        private final @Nullable List<String> gateway;
 
     public List<String> getGateway() {
         return this.gateway == null ? List.of() : this.gateway;
@@ -57,7 +57,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -68,7 +68,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="mask")
-    private final @Nullable String mask;
+        private final @Nullable String mask;
 
     public Optional<String> getMask() {
         return this.mask == null ? Optional.empty() : Optional.ofNullable(this.mask);
@@ -79,7 +79,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="primaryWinsServer")
-    private final @Nullable String primaryWinsServer;
+        private final @Nullable String primaryWinsServer;
 
     public Optional<String> getPrimaryWinsServer() {
         return this.primaryWinsServer == null ? Optional.empty() : Optional.ofNullable(this.primaryWinsServer);
@@ -90,7 +90,7 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="secondaryWinsServer")
-    private final @Nullable String secondaryWinsServer;
+        private final @Nullable String secondaryWinsServer;
 
     public Optional<String> getSecondaryWinsServer() {
         return this.secondaryWinsServer == null ? Optional.empty() : Optional.ofNullable(this.secondaryWinsServer);
@@ -189,7 +189,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
             this.secondaryWinsServer = secondaryWinsServer;
             return this;
         }
-
         public GuestOSNICCustomizationResponse build() {
             return new GuestOSNICCustomizationResponse(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);
         }

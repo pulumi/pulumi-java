@@ -74,7 +74,6 @@ public final class FeatureTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FeatureTag build() {
             return new FeatureTag(key, value);
         }

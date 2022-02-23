@@ -121,7 +121,6 @@ public final class ServerConfigurationsManagementSettingsResponse {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
-
         public ServerConfigurationsManagementSettingsResponse build() {
             return new ServerConfigurationsManagementSettingsResponse(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
         }

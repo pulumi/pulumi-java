@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
             this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, valueFrequencyLowerBound, valueFrequencyUpperBound);
         }

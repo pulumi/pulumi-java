@@ -19,7 +19,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,7 +31,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -42,7 +42,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectNumber")
-    private final @Nullable Input<String> projectNumber;
+        private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
@@ -116,7 +116,6 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }
-
         public ProjectState build() {
             return new ProjectState(displayName, project, projectNumber);
         }

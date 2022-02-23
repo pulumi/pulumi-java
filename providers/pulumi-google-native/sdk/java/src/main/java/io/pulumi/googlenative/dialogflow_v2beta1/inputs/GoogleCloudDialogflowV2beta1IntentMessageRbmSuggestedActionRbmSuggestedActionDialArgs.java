@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final Input<String> phoneNumber;
+      private final Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(phoneNumber);
         }

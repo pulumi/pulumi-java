@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
      * 
      */
     @InputImport(name="enableInsightsExport", required=true)
-    private final Boolean enableInsightsExport;
+      private final Boolean enableInsightsExport;
 
     public Boolean getEnableInsightsExport() {
         return this.enableInsightsExport;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
         }

@@ -75,7 +75,6 @@ public final class ModelBiasJobDefinitionVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ModelBiasJobDefinitionVpcConfig build() {
             return new ModelBiasJobDefinitionVpcConfig(securityGroupIds, subnets);
         }

@@ -231,7 +231,6 @@ public final class PaypalObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PaypalObjectDatasetResponse build() {
             return new PaypalObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

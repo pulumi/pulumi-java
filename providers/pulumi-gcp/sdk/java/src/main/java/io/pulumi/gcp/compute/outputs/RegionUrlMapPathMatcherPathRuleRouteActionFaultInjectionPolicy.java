@@ -85,7 +85,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
             this.delay = delay;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy(abort, delay);
         }

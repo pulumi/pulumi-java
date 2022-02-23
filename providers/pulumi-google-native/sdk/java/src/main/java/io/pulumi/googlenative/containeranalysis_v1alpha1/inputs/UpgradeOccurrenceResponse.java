@@ -23,7 +23,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final UpgradeDistributionResponse distribution;
+      private final UpgradeDistributionResponse distribution;
 
     public UpgradeDistributionResponse getDistribution() {
         return this.distribution;
@@ -34,7 +34,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="package", required=true)
-    private final String $package;
+      private final String $package;
 
     public String get$package() {
         return this.$package;
@@ -45,7 +45,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parsedVersion", required=true)
-    private final VersionResponse parsedVersion;
+      private final VersionResponse parsedVersion;
 
     public VersionResponse getParsedVersion() {
         return this.parsedVersion;
@@ -104,7 +104,6 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
             this.parsedVersion = Objects.requireNonNull(parsedVersion);
             return this;
         }
-
         public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion);
         }

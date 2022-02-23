@@ -23,7 +23,7 @@ public final class DependsOnDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kustomizationName")
-    private final @Nullable String kustomizationName;
+        private final @Nullable String kustomizationName;
 
     public Optional<String> getKustomizationName() {
         return this.kustomizationName == null ? Optional.empty() : Optional.ofNullable(this.kustomizationName);
@@ -61,7 +61,6 @@ public final class DependsOnDefinitionResponse extends io.pulumi.resources.Invok
             this.kustomizationName = kustomizationName;
             return this;
         }
-
         public DependsOnDefinitionResponse build() {
             return new DependsOnDefinitionResponse(kustomizationName);
         }

@@ -26,7 +26,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+        private final @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
     public Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -69,7 +69,6 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ScaleInPolicyArgs build() {
             return new ScaleInPolicyArgs(rules);
         }

@@ -22,21 +22,21 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     public static final AzureRetentionRuleArgs Empty = new AzureRetentionRuleArgs();
 
     @InputImport(name="isDefault")
-    private final @Nullable Input<Boolean> isDefault;
+        private final @Nullable Input<Boolean> isDefault;
 
     public Input<Boolean> getIsDefault() {
         return this.isDefault == null ? Input.empty() : this.isDefault;
     }
 
     @InputImport(name="lifecycles", required=true)
-    private final Input<List<SourceLifeCycleArgs>> lifecycles;
+        private final Input<List<SourceLifeCycleArgs>> lifecycles;
 
     public Input<List<SourceLifeCycleArgs>> getLifecycles() {
         return this.lifecycles;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -136,7 +136,6 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public AzureRetentionRuleArgs build() {
             return new AzureRetentionRuleArgs(isDefault, lifecycles, name, objectType);
         }

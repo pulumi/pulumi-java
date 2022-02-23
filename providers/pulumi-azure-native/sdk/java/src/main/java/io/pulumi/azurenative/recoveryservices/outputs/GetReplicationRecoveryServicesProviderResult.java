@@ -140,7 +140,6 @@ public final class GetReplicationRecoveryServicesProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationRecoveryServicesProviderResult build() {
             return new GetReplicationRecoveryServicesProviderResult(id, location, name, properties, type);
         }

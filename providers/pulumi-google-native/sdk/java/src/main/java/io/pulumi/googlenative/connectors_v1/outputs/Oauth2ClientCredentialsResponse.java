@@ -75,7 +75,6 @@ public final class Oauth2ClientCredentialsResponse {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Oauth2ClientCredentialsResponse build() {
             return new Oauth2ClientCredentialsResponse(clientId, clientSecret);
         }

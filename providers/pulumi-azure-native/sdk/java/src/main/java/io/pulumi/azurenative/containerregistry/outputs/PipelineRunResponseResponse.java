@@ -249,7 +249,6 @@ public final class PipelineRunResponseResponse {
             this.trigger = trigger;
             return this;
         }
-
         public PipelineRunResponseResponse build() {
             return new PipelineRunResponseResponse(catalogDigest, finishTime, importedArtifacts, pipelineRunErrorMessage, progress, source, startTime, status, target, trigger);
         }

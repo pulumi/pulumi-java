@@ -135,7 +135,6 @@ public final class ExpressionRootResponse {
             this.value = value;
             return this;
         }
-
         public ExpressionRootResponse build() {
             return new ExpressionRootResponse(error, path, subexpressions, text, value);
         }

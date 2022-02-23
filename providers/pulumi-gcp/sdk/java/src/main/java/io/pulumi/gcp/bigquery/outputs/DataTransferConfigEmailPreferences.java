@@ -52,7 +52,6 @@ public final class DataTransferConfigEmailPreferences {
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
         }
-
         public DataTransferConfigEmailPreferences build() {
             return new DataTransferConfigEmailPreferences(enableFailureEmail);
         }

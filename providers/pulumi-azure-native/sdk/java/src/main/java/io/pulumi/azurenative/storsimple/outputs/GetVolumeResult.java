@@ -309,7 +309,6 @@ public final class GetVolumeResult {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public GetVolumeResult build() {
             return new GetVolumeResult(accessControlRecordIds, backupPolicyIds, backupStatus, id, kind, monitoringStatus, name, operationStatus, sizeInBytes, type, volumeContainerId, volumeStatus, volumeType);
         }

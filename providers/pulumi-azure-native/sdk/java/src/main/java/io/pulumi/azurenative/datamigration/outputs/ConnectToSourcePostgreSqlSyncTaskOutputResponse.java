@@ -139,7 +139,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToSourcePostgreSqlSyncTaskOutputResponse(databases, id, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

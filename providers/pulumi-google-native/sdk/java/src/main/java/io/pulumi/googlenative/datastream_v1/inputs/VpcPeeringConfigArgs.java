@@ -22,7 +22,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final Input<String> subnet;
+      private final Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet;
@@ -33,7 +33,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpc", required=true)
-    private final Input<String> vpc;
+      private final Input<String> vpc;
 
     public Input<String> getVpc() {
         return this.vpc;
@@ -92,7 +92,6 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.vpc = Input.of(Objects.requireNonNull(vpc));
             return this;
         }
-
         public VpcPeeringConfigArgs build() {
             return new VpcPeeringConfigArgs(subnet, vpc);
         }

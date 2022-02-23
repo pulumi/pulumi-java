@@ -75,7 +75,6 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public LoadBalancerFrontendIPConfigurationResponse build() {
             return new LoadBalancerFrontendIPConfigurationResponse(name, properties);
         }

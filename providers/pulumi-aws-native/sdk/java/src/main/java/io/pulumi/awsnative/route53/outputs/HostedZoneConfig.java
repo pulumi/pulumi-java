@@ -54,7 +54,6 @@ public final class HostedZoneConfig {
             this.comment = comment;
             return this;
         }
-
         public HostedZoneConfig build() {
             return new HostedZoneConfig(comment);
         }

@@ -24,7 +24,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authorizedNetworks", required=true)
-    private final List<SqlAclEntryResponse> authorizedNetworks;
+      private final List<SqlAclEntryResponse> authorizedNetworks;
 
     public List<SqlAclEntryResponse> getAuthorizedNetworks() {
         return this.authorizedNetworks;
@@ -35,7 +35,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableIpv4", required=true)
-    private final Boolean enableIpv4;
+      private final Boolean enableIpv4;
 
     public Boolean getEnableIpv4() {
         return this.enableIpv4;
@@ -46,7 +46,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateNetwork", required=true)
-    private final String privateNetwork;
+      private final String privateNetwork;
 
     public String getPrivateNetwork() {
         return this.privateNetwork;
@@ -57,7 +57,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireSsl", required=true)
-    private final Boolean requireSsl;
+      private final Boolean requireSsl;
 
     public Boolean getRequireSsl() {
         return this.requireSsl;
@@ -126,7 +126,6 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public SqlIpConfigResponse build() {
             return new SqlIpConfigResponse(authorizedNetworks, enableIpv4, privateNetwork, requireSsl);
         }

@@ -58,7 +58,6 @@ public final class AppTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppTag build() {
             return new AppTag(key, value);
         }

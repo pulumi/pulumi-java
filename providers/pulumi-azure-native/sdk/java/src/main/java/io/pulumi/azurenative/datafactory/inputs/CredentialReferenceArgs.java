@@ -22,7 +22,7 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final Input<String> referenceName;
+        private final Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName;
@@ -33,7 +33,7 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -92,7 +92,6 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CredentialReferenceArgs build() {
             return new CredentialReferenceArgs(referenceName, type);
         }

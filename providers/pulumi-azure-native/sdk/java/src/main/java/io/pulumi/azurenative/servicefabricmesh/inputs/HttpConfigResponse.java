@@ -24,7 +24,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final List<HttpHostConfigResponse> hosts;
+        private final List<HttpHostConfigResponse> hosts;
 
     public List<HttpHostConfigResponse> getHosts() {
         return this.hosts;
@@ -35,7 +35,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -105,7 +105,6 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(hosts, name, port);
         }

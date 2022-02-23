@@ -21,7 +21,7 @@ public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -59,7 +59,6 @@ public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MembershipRoleRestrictionEvaluationResponse build() {
             return new MembershipRoleRestrictionEvaluationResponse(state);
         }

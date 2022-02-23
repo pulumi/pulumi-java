@@ -202,7 +202,6 @@ public final class HttpHeaderMatchResponse {
             this.suffixMatch = Objects.requireNonNull(suffixMatch);
             return this;
         }
-
         public HttpHeaderMatchResponse build() {
             return new HttpHeaderMatchResponse(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

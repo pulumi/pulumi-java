@@ -54,7 +54,6 @@ public final class AccessPolicyIamUser {
             this.arn = arn;
             return this;
         }
-
         public AccessPolicyIamUser build() {
             return new AccessPolicyIamUser(arn);
         }

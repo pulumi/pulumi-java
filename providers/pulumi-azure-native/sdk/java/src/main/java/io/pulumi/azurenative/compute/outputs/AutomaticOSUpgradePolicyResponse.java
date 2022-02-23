@@ -76,7 +76,6 @@ public final class AutomaticOSUpgradePolicyResponse {
             this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
         }
-
         public AutomaticOSUpgradePolicyResponse build() {
             return new AutomaticOSUpgradePolicyResponse(disableAutomaticRollback, enableAutomaticOSUpgrade);
         }

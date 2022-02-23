@@ -97,7 +97,6 @@ public final class GetInsightsErrorResponse {
             this.queryId = queryId;
             return this;
         }
-
         public GetInsightsErrorResponse build() {
             return new GetInsightsErrorResponse(errorMessage, kind, queryId);
         }

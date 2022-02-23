@@ -140,7 +140,6 @@ public final class GetServiceResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(apiVersion, kind, metadata, spec, status);
         }

@@ -97,7 +97,6 @@ public final class ContainerAccountResponse {
             this.spn = spn;
             return this;
         }
-
         public ContainerAccountResponse build() {
             return new ContainerAccountResponse(accountName, password, spn);
         }

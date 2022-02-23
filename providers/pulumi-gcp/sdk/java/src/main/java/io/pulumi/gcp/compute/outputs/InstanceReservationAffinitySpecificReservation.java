@@ -75,7 +75,6 @@ public final class InstanceReservationAffinitySpecificReservation {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceReservationAffinitySpecificReservation build() {
             return new InstanceReservationAffinitySpecificReservation(key, values);
         }

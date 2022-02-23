@@ -61,7 +61,6 @@ public final class ConfigUplinkSpectrumConfig {
             this.polarization = polarization;
             return this;
         }
-
         public ConfigUplinkSpectrumConfig build() {
             return new ConfigUplinkSpectrumConfig(centerFrequency, polarization);
         }

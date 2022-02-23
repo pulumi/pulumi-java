@@ -95,7 +95,6 @@ public final class RetentionTagResponse {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RetentionTagResponse build() {
             return new RetentionTagResponse(eTag, id, tagName);
         }

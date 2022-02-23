@@ -333,7 +333,6 @@ public final class GetWorkloadResult {
             this.saaEnrollmentResponse = Objects.requireNonNull(saaEnrollmentResponse);
             return this;
         }
-
         public GetWorkloadResult build() {
             return new GetWorkloadResult(billingAccount, complianceRegime, createTime, displayName, enableSovereignControls, etag, kajEnrollmentState, kmsSettings, labels, name, provisionedResourcesParent, resourceSettings, resources, saaEnrollmentResponse);
         }

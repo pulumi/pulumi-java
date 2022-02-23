@@ -186,7 +186,6 @@ public final class ScheduleBasedBackupCriteriaResponse {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public ScheduleBasedBackupCriteriaResponse build() {
             return new ScheduleBasedBackupCriteriaResponse(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
         }

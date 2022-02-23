@@ -58,7 +58,6 @@ public final class ScheduleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ScheduleTag build() {
             return new ScheduleTag(key, value);
         }

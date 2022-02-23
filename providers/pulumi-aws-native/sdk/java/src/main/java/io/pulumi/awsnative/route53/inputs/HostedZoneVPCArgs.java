@@ -22,7 +22,7 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCId", required=true)
-    private final Input<String> vPCId;
+        private final Input<String> vPCId;
 
     public Input<String> getVPCId() {
         return this.vPCId;
@@ -33,7 +33,7 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCRegion", required=true)
-    private final Input<String> vPCRegion;
+        private final Input<String> vPCRegion;
 
     public Input<String> getVPCRegion() {
         return this.vPCRegion;
@@ -92,7 +92,6 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
             this.vPCRegion = Input.of(Objects.requireNonNull(vPCRegion));
             return this;
         }
-
         public HostedZoneVPCArgs build() {
             return new HostedZoneVPCArgs(vPCId, vPCRegion);
         }

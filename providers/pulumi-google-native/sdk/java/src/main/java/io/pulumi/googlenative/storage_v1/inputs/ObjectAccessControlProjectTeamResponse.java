@@ -21,7 +21,7 @@ public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="projectNumber", required=true)
-    private final String projectNumber;
+      private final String projectNumber;
 
     public String getProjectNumber() {
         return this.projectNumber;
@@ -32,7 +32,7 @@ public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="team", required=true)
-    private final String team;
+      private final String team;
 
     public String getTeam() {
         return this.team;
@@ -81,7 +81,6 @@ public final class ObjectAccessControlProjectTeamResponse extends io.pulumi.reso
             this.team = Objects.requireNonNull(team);
             return this;
         }
-
         public ObjectAccessControlProjectTeamResponse build() {
             return new ObjectAccessControlProjectTeamResponse(projectNumber, team);
         }

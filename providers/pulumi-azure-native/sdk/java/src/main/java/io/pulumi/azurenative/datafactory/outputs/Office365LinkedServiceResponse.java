@@ -254,7 +254,6 @@ public final class Office365LinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Office365LinkedServiceResponse build() {
             return new Office365LinkedServiceResponse(annotations, connectVia, description, encryptedCredential, office365TenantId, parameters, servicePrincipalId, servicePrincipalKey, servicePrincipalTenantId, type);
         }

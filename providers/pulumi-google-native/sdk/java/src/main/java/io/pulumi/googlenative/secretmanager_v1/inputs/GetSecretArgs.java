@@ -15,14 +15,14 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="secretId", required=true)
-    private final String secretId;
+      private final String secretId;
 
     public String getSecretId() {
         return this.secretId;
@@ -71,7 +71,6 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public GetSecretArgs build() {
             return new GetSecretArgs(project, secretId);
         }

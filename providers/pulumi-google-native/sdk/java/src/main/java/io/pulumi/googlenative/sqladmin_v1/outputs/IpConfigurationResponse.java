@@ -140,7 +140,6 @@ public final class IpConfigurationResponse {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public IpConfigurationResponse build() {
             return new IpConfigurationResponse(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

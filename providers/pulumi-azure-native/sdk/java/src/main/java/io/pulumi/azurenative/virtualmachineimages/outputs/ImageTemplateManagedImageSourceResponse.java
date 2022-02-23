@@ -76,7 +76,6 @@ public final class ImageTemplateManagedImageSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateManagedImageSourceResponse build() {
             return new ImageTemplateManagedImageSourceResponse(imageId, type);
         }

@@ -23,7 +23,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -34,7 +34,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -93,7 +93,6 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public OidcTokenArgs build() {
             return new OidcTokenArgs(audience, serviceAccountEmail);
         }

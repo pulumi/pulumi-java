@@ -116,7 +116,6 @@ public final class GetTagByProductResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagByProductResult build() {
             return new GetTagByProductResult(displayName, id, name, type);
         }

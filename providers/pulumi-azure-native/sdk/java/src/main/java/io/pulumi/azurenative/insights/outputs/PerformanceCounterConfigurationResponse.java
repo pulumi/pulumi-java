@@ -73,7 +73,6 @@ public final class PerformanceCounterConfigurationResponse {
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
         }
-
         public PerformanceCounterConfigurationResponse build() {
             return new PerformanceCounterConfigurationResponse(instance, name, samplingPeriod);
         }

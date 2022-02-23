@@ -160,7 +160,6 @@ public final class GetSuppressionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSuppressionResult build() {
             return new GetSuppressionResult(expirationTimeStamp, id, name, suppressionId, ttl, type);
         }

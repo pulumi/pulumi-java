@@ -23,7 +23,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+      private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -34,7 +34,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-    private final String serializedPayload;
+      private final String serializedPayload;
 
     public String getSerializedPayload() {
         return this.serializedPayload;
@@ -45,7 +45,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="signatures", required=true)
-    private final List<SignatureResponse> signatures;
+      private final List<SignatureResponse> signatures;
 
     public List<SignatureResponse> getSignatures() {
         return this.signatures;
@@ -104,7 +104,6 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public GenericSignedAttestationResponse build() {
             return new GenericSignedAttestationResponse(contentType, serializedPayload, signatures);
         }

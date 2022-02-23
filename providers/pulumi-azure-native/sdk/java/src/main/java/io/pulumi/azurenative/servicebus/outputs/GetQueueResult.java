@@ -542,7 +542,6 @@ public final class GetQueueResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, id, lockDuration, maxDeliveryCount, maxSizeInMegabytes, messageCount, name, requiresDuplicateDetection, requiresSession, sizeInBytes, status, type, updatedAt);
         }

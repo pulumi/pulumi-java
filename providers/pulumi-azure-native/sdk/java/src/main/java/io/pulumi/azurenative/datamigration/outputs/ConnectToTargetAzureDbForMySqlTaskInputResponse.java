@@ -74,7 +74,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetAzureDbForMySqlTaskInputResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }

@@ -74,7 +74,6 @@ public final class ImageInformationResponse {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ImageInformationResponse build() {
             return new ImageInformationResponse(imageType, imageUrl);
         }

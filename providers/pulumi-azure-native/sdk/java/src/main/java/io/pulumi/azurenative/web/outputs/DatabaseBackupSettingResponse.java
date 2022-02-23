@@ -112,7 +112,6 @@ public final class DatabaseBackupSettingResponse {
             this.name = name;
             return this;
         }
-
         public DatabaseBackupSettingResponse build() {
             return new DatabaseBackupSettingResponse(connectionString, connectionStringName, databaseType, name);
         }

@@ -141,7 +141,6 @@ public final class ImageTemplateManagedImageDistributorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateManagedImageDistributorResponse build() {
             return new ImageTemplateManagedImageDistributorResponse(artifactTags, imageId, location, runOutputName, type);
         }

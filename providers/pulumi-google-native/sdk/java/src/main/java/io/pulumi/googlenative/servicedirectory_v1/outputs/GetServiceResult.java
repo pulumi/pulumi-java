@@ -98,7 +98,6 @@ public final class GetServiceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(annotations, endpoints, name);
         }

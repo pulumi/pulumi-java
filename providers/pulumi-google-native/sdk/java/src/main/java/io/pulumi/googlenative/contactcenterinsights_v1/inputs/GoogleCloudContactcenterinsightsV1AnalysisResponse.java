@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * 
      */
     @InputImport(name="analysisResult", required=true)
-    private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
+      private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
 
     public GoogleCloudContactcenterinsightsV1AnalysisResultResponse getAnalysisResult() {
         return this.analysisResult;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * 
      */
     @InputImport(name="requestTime", required=true)
-    private final String requestTime;
+      private final String requestTime;
 
     public String getRequestTime() {
         return this.requestTime;
@@ -124,7 +124,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResponse(analysisResult, createTime, name, requestTime);
         }

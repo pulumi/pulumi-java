@@ -28,7 +28,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notificationEmailList")
-    private final @Nullable Input<List<String>> notificationEmailList;
+        private final @Nullable Input<List<String>> notificationEmailList;
 
     public Input<List<String>> getNotificationEmailList() {
         return this.notificationEmailList == null ? Input.empty() : this.notificationEmailList;
@@ -39,7 +39,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="orderItemType", required=true)
-    private final Input<Either<String,OrderItemType>> orderItemType;
+        private final Input<Either<String,OrderItemType>> orderItemType;
 
     public Input<Either<String,OrderItemType>> getOrderItemType() {
         return this.orderItemType;
@@ -50,7 +50,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferences")
-    private final @Nullable Input<PreferencesArgs> preferences;
+        private final @Nullable Input<PreferencesArgs> preferences;
 
     public Input<PreferencesArgs> getPreferences() {
         return this.preferences == null ? Input.empty() : this.preferences;
@@ -61,7 +61,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="productDetails", required=true)
-    private final Input<ProductDetailsArgs> productDetails;
+        private final Input<ProductDetailsArgs> productDetails;
 
     public Input<ProductDetailsArgs> getProductDetails() {
         return this.productDetails;
@@ -150,7 +150,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
             this.productDetails = Input.of(Objects.requireNonNull(productDetails));
             return this;
         }
-
         public OrderItemDetailsArgs build() {
             return new OrderItemDetailsArgs(notificationEmailList, orderItemType, preferences, productDetails);
         }

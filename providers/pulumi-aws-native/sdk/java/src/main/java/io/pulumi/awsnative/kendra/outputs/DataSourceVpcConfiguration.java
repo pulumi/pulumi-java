@@ -59,7 +59,6 @@ public final class DataSourceVpcConfiguration {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public DataSourceVpcConfiguration build() {
             return new DataSourceVpcConfiguration(securityGroupIds, subnetIds);
         }

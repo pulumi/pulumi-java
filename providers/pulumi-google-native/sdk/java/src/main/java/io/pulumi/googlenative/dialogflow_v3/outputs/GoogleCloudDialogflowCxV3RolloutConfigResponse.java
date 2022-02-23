@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3RolloutConfigResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutConfigResponse(failureCondition, rolloutCondition, rolloutSteps);
         }

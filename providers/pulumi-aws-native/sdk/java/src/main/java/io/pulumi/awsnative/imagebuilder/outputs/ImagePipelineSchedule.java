@@ -77,7 +77,6 @@ public final class ImagePipelineSchedule {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public ImagePipelineSchedule build() {
             return new ImagePipelineSchedule(pipelineExecutionStartCondition, scheduleExpression);
         }

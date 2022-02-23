@@ -74,7 +74,6 @@ public final class SecretVersionResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretVersionResponse build() {
             return new SecretVersionResponse(path, version);
         }

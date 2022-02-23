@@ -756,7 +756,6 @@ public final class GetInstanceResult {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, createTime, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, disks, installGpuDriver, instanceOwners, kmsKey, labels, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, proxyUri, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, state, subnet, tags, updateTime, upgradeHistory, vmImage);
         }

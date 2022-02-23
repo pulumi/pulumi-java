@@ -72,7 +72,6 @@ public final class ClusterClusterConfigEndpointConfig {
             this.httpPorts = httpPorts;
             return this;
         }
-
         public ClusterClusterConfigEndpointConfig build() {
             return new ClusterClusterConfigEndpointConfig(enableHttpPortAccess, httpPorts);
         }

@@ -56,7 +56,6 @@ public final class RegionHealthCheckLogConfig {
             this.enable = enable;
             return this;
         }
-
         public RegionHealthCheckLogConfig build() {
             return new RegionHealthCheckLogConfig(enable);
         }

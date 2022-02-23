@@ -117,7 +117,6 @@ public final class FutureReservationStatusResponse {
             this.procurementStatus = Objects.requireNonNull(procurementStatus);
             return this;
         }
-
         public FutureReservationStatusResponse build() {
             return new FutureReservationStatusResponse(autoCreatedReservations, fulfilledCount, lockTime, procurementStatus);
         }

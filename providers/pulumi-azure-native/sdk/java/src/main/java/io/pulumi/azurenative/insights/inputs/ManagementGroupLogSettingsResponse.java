@@ -22,7 +22,7 @@ public final class ManagementGroupLogSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="category", required=true)
-    private final String category;
+        private final String category;
 
     public String getCategory() {
         return this.category;
@@ -33,7 +33,7 @@ public final class ManagementGroupLogSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -82,7 +82,6 @@ public final class ManagementGroupLogSettingsResponse extends io.pulumi.resource
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ManagementGroupLogSettingsResponse build() {
             return new ManagementGroupLogSettingsResponse(category, enabled);
         }

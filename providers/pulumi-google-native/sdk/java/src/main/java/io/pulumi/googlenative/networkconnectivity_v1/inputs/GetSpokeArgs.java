@@ -15,21 +15,21 @@ public final class GetSpokeArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSpokeArgs Empty = new GetSpokeArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="spokeId", required=true)
-    private final String spokeId;
+      private final String spokeId;
 
     public String getSpokeId() {
         return this.spokeId;
@@ -88,7 +88,6 @@ public final class GetSpokeArgs extends io.pulumi.resources.InvokeArgs {
             this.spokeId = Objects.requireNonNull(spokeId);
             return this;
         }
-
         public GetSpokeArgs build() {
             return new GetSpokeArgs(location, project, spokeId);
         }

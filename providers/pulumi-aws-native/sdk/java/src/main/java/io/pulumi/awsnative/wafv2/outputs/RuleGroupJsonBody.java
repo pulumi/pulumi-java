@@ -75,7 +75,6 @@ public final class RuleGroupJsonBody {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public RuleGroupJsonBody build() {
             return new RuleGroupJsonBody(invalidFallbackBehavior, matchPattern, matchScope);
         }

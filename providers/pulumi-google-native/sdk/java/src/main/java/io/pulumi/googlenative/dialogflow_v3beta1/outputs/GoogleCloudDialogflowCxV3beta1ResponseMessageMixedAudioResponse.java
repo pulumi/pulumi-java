@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(segments);
         }

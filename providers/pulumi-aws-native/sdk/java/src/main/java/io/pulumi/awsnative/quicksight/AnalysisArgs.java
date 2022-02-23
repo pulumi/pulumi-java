@@ -21,14 +21,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
     @InputImport(name="analysisId", required=true)
-    private final Input<String> analysisId;
+        private final Input<String> analysisId;
 
     public Input<String> getAnalysisId() {
         return this.analysisId;
     }
 
     @InputImport(name="awsAccountId", required=true)
-    private final Input<String> awsAccountId;
+        private final Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId;
@@ -39,7 +39,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable Input<List<AnalysisErrorArgs>> errors;
+        private final @Nullable Input<List<AnalysisErrorArgs>> errors;
 
     public Input<List<AnalysisErrorArgs>> getErrors() {
         return this.errors == null ? Input.empty() : this.errors;
@@ -50,14 +50,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="parameters")
-    private final @Nullable Input<AnalysisParametersArgs> parameters;
+        private final @Nullable Input<AnalysisParametersArgs> parameters;
 
     public Input<AnalysisParametersArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -73,14 +73,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions;
+        private final @Nullable Input<List<AnalysisResourcePermissionArgs>> permissions;
 
     public Input<List<AnalysisResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-    private final Input<AnalysisSourceEntityArgs> sourceEntity;
+        private final Input<AnalysisSourceEntityArgs> sourceEntity;
 
     public Input<AnalysisSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
@@ -92,7 +92,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AnalysisTagArgs>> tags;
+        private final @Nullable Input<List<AnalysisTagArgs>> tags;
 
     public Input<List<AnalysisTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -103,7 +103,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="themeArn")
-    private final @Nullable Input<String> themeArn;
+        private final @Nullable Input<String> themeArn;
 
     public Input<String> getThemeArn() {
         return this.themeArn == null ? Input.empty() : this.themeArn;
@@ -267,7 +267,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             this.themeArn = Input.ofNullable(themeArn);
             return this;
         }
-
         public AnalysisArgs build() {
             return new AnalysisArgs(analysisId, awsAccountId, errors, name, parameters, permissions, sourceEntity, tags, themeArn);
         }

@@ -20,35 +20,35 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final FHIRDatastoreArgs Empty = new FHIRDatastoreArgs();
 
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
     @InputImport(name="datastoreTypeVersion", required=true)
-    private final Input<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
+        private final Input<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
 
     public Input<FHIRDatastoreDatastoreTypeVersion> getDatastoreTypeVersion() {
         return this.datastoreTypeVersion;
     }
 
     @InputImport(name="preloadDataConfig")
-    private final @Nullable Input<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
+        private final @Nullable Input<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
 
     public Input<FHIRDatastorePreloadDataConfigArgs> getPreloadDataConfig() {
         return this.preloadDataConfig == null ? Input.empty() : this.preloadDataConfig;
     }
 
     @InputImport(name="sseConfiguration")
-    private final @Nullable Input<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
+        private final @Nullable Input<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
 
     public Input<FHIRDatastoreSseConfigurationArgs> getSseConfiguration() {
         return this.sseConfiguration == null ? Input.empty() : this.sseConfiguration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<FHIRDatastoreTagArgs>> tags;
+        private final @Nullable Input<List<FHIRDatastoreTagArgs>> tags;
 
     public Input<List<FHIRDatastoreTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -152,7 +152,6 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FHIRDatastoreArgs build() {
             return new FHIRDatastoreArgs(datastoreName, datastoreTypeVersion, preloadDataConfig, sseConfiguration, tags);
         }

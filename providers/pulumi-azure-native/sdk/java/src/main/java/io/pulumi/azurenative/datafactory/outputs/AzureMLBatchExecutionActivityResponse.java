@@ -254,7 +254,6 @@ public final class AzureMLBatchExecutionActivityResponse {
             this.webServiceOutputs = webServiceOutputs;
             return this;
         }
-
         public AzureMLBatchExecutionActivityResponse build() {
             return new AzureMLBatchExecutionActivityResponse(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
         }

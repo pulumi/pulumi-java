@@ -163,7 +163,6 @@ public final class TargetPortalGroupResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public TargetPortalGroupResponse build() {
             return new TargetPortalGroupResponse(acls, attributes, endpoints, luns, port, tag);
         }

@@ -119,7 +119,6 @@ public final class SubjectAccessReviewStatus {
             this.reason = reason;
             return this;
         }
-
         public SubjectAccessReviewStatus build() {
             return new SubjectAccessReviewStatus(allowed, denied, evaluationError, reason);
         }

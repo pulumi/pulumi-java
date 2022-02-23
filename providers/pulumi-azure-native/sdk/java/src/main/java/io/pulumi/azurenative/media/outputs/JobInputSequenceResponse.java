@@ -79,7 +79,6 @@ public final class JobInputSequenceResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JobInputSequenceResponse build() {
             return new JobInputSequenceResponse(inputs, odataType);
         }

@@ -71,7 +71,6 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public GetEnvironmentConfigWorkloadsConfigWebServer build() {
             return new GetEnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
         }

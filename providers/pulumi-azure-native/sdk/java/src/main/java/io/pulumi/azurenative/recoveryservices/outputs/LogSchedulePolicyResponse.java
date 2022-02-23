@@ -79,7 +79,6 @@ public final class LogSchedulePolicyResponse {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
-
         public LogSchedulePolicyResponse build() {
             return new LogSchedulePolicyResponse(scheduleFrequencyInMins, schedulePolicyType);
         }

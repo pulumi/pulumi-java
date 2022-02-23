@@ -23,7 +23,7 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancer")
-    private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
+        private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
 
     public Input<LoadBalancerStatusArgs> getLoadBalancer() {
         return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
@@ -66,7 +66,6 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.loadBalancer = Input.ofNullable(loadBalancer);
             return this;
         }
-
         public IngressStatusArgs build() {
             return new IngressStatusArgs(loadBalancer);
         }

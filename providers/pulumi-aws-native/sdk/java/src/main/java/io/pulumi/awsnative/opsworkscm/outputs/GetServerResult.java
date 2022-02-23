@@ -142,7 +142,6 @@ public final class GetServerResult {
             this.tags = tags;
             return this;
         }
-
         public GetServerResult build() {
             return new GetServerResult(arn, backupRetentionCount, disableAutomatedBackup, endpoint, id, preferredBackupWindow, preferredMaintenanceWindow, tags);
         }

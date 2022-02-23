@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionResponse extends io.pu
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2betaRuleFilterActionResponse extends io.pu
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleFilterActionResponse build() {
             return new GoogleCloudRetailV2betaRuleFilterActionResponse(filter);
         }

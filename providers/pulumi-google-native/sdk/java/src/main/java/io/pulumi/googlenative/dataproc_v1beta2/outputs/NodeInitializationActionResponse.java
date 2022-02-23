@@ -74,7 +74,6 @@ public final class NodeInitializationActionResponse {
             this.executionTimeout = Objects.requireNonNull(executionTimeout);
             return this;
         }
-
         public NodeInitializationActionResponse build() {
             return new NodeInitializationActionResponse(executableFile, executionTimeout);
         }

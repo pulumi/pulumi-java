@@ -204,7 +204,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(id, isEnabled, jobCategory, jobOwner, lastExecutedOn, migrationEligibility, name, resultType);
         }

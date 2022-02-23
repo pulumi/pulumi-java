@@ -299,7 +299,6 @@ public final class MabContainerResponse {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public MabContainerResponse build() {
             return new MabContainerResponse(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
         }

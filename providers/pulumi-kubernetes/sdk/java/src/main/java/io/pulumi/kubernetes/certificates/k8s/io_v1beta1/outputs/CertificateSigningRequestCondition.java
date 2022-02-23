@@ -160,7 +160,6 @@ public final class CertificateSigningRequestCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CertificateSigningRequestCondition build() {
             return new CertificateSigningRequestCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }

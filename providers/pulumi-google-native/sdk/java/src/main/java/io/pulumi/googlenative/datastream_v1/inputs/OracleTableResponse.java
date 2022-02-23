@@ -23,7 +23,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleColumns", required=true)
-    private final List<OracleColumnResponse> oracleColumns;
+      private final List<OracleColumnResponse> oracleColumns;
 
     public List<OracleColumnResponse> getOracleColumns() {
         return this.oracleColumns;
@@ -34,7 +34,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="table", required=true)
-    private final String table;
+      private final String table;
 
     public String getTable() {
         return this.table;
@@ -83,7 +83,6 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public OracleTableResponse build() {
             return new OracleTableResponse(oracleColumns, table);
         }

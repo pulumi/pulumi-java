@@ -24,7 +24,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+        private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -35,7 +35,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service;
+        private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service;
 
     public Input<DistributionConfigurationTargetContainerRepositoryService> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -94,7 +94,6 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public DistributionConfigurationTargetContainerRepositoryArgs build() {
             return new DistributionConfigurationTargetContainerRepositoryArgs(repositoryName, service);
         }

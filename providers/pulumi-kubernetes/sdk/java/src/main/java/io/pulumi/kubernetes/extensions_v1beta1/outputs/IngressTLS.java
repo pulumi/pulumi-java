@@ -77,7 +77,6 @@ public final class IngressTLS {
             this.secretName = secretName;
             return this;
         }
-
         public IngressTLS build() {
             return new IngressTLS(hosts, secretName);
         }

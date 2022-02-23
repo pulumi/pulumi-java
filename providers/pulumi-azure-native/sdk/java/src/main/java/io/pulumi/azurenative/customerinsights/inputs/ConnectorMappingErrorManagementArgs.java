@@ -24,7 +24,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorLimit")
-    private final @Nullable Input<Integer> errorLimit;
+        private final @Nullable Input<Integer> errorLimit;
 
     public Input<Integer> getErrorLimit() {
         return this.errorLimit == null ? Input.empty() : this.errorLimit;
@@ -35,7 +35,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorManagementType", required=true)
-    private final Input<ErrorManagementTypes> errorManagementType;
+        private final Input<ErrorManagementTypes> errorManagementType;
 
     public Input<ErrorManagementTypes> getErrorManagementType() {
         return this.errorManagementType;
@@ -94,7 +94,6 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
             this.errorManagementType = Input.of(Objects.requireNonNull(errorManagementType));
             return this;
         }
-
         public ConnectorMappingErrorManagementArgs build() {
             return new ConnectorMappingErrorManagementArgs(errorLimit, errorManagementType);
         }

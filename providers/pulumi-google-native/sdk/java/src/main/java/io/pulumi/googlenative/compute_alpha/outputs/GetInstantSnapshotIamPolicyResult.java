@@ -142,7 +142,6 @@ public final class GetInstantSnapshotIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstantSnapshotIamPolicyResult build() {
             return new GetInstantSnapshotIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

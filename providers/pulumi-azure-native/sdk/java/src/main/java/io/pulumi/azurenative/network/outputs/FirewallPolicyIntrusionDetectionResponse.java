@@ -77,7 +77,6 @@ public final class FirewallPolicyIntrusionDetectionResponse {
             this.mode = mode;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionResponse build() {
             return new FirewallPolicyIntrusionDetectionResponse(configuration, mode);
         }

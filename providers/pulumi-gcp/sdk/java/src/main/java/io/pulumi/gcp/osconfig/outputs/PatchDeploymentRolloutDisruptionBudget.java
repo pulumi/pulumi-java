@@ -76,7 +76,6 @@ public final class PatchDeploymentRolloutDisruptionBudget {
             this.percentage = percentage;
             return this;
         }
-
         public PatchDeploymentRolloutDisruptionBudget build() {
             return new PatchDeploymentRolloutDisruptionBudget(fixed, percentage);
         }

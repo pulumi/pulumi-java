@@ -74,7 +74,6 @@ public final class ThrottlingMetricResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ThrottlingMetricResponse build() {
             return new ThrottlingMetricResponse(interval, limit, type);
         }

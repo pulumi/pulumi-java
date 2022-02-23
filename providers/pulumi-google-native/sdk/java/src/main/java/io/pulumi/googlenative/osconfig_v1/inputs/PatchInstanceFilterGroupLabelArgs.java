@@ -24,7 +24,7 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,6 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public PatchInstanceFilterGroupLabelArgs build() {
             return new PatchInstanceFilterGroupLabelArgs(labels);
         }

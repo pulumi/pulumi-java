@@ -140,7 +140,6 @@ public final class CorsPolicyResponse {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }

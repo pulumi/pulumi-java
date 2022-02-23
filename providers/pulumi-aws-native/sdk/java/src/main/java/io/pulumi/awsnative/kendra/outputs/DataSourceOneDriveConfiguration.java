@@ -129,7 +129,6 @@ public final class DataSourceOneDriveConfiguration {
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
         }
-
         public DataSourceOneDriveConfiguration build() {
             return new DataSourceOneDriveConfiguration(disableLocalGroups, exclusionPatterns, fieldMappings, inclusionPatterns, oneDriveUsers, secretArn, tenantDomain);
         }

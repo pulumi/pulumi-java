@@ -268,7 +268,6 @@ public final class HyperVReplicaBasePolicyDetailsResponse {
             this.replicationPort = replicationPort;
             return this;
         }
-
         public HyperVReplicaBasePolicyDetailsResponse build() {
             return new HyperVReplicaBasePolicyDetailsResponse(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletionOption, replicationPort);
         }

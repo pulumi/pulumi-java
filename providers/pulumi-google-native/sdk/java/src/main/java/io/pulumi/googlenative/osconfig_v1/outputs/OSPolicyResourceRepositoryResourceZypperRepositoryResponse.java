@@ -96,7 +96,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

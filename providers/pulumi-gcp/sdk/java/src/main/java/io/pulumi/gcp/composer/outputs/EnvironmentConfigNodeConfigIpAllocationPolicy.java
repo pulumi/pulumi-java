@@ -100,7 +100,6 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
             this.useIpAliases = useIpAliases;
             return this;
         }
-
         public EnvironmentConfigNodeConfigIpAllocationPolicy build() {
             return new EnvironmentConfigNodeConfigIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

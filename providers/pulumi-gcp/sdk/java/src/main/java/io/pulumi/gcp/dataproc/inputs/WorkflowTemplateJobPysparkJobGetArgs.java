@@ -22,7 +22,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+        private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -33,7 +33,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -44,7 +44,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+        private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -55,7 +55,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+        private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -66,7 +66,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
+        private final @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
 
     public Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -77,7 +77,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mainPythonFileUri", required=true)
-    private final Input<String> mainPythonFileUri;
+        private final Input<String> mainPythonFileUri;
 
     public Input<String> getMainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -88,7 +88,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -99,7 +99,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pythonFileUris")
-    private final @Nullable Input<List<String>> pythonFileUris;
+        private final @Nullable Input<List<String>> pythonFileUris;
 
     public Input<List<String>> getPythonFileUris() {
         return this.pythonFileUris == null ? Input.empty() : this.pythonFileUris;
@@ -248,7 +248,6 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
             this.pythonFileUris = Input.ofNullable(pythonFileUris);
             return this;
         }
-
         public WorkflowTemplateJobPysparkJobGetArgs build() {
             return new WorkflowTemplateJobPysparkJobGetArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

@@ -24,7 +24,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availability", required=true)
-    private final AvailabilityCriteriaResponse availability;
+      private final AvailabilityCriteriaResponse availability;
 
     public AvailabilityCriteriaResponse getAvailability() {
         return this.availability;
@@ -35,7 +35,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latency", required=true)
-    private final LatencyCriteriaResponse latency;
+      private final LatencyCriteriaResponse latency;
 
     public LatencyCriteriaResponse getLatency() {
         return this.latency;
@@ -46,7 +46,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final List<String> location;
+      private final List<String> location;
 
     public List<String> getLocation() {
         return this.location;
@@ -57,7 +57,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="method", required=true)
-    private final List<String> method;
+      private final List<String> method;
 
     public List<String> getMethod() {
         return this.method;
@@ -68,7 +68,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final List<String> version;
+      private final List<String> version;
 
     public List<String> getVersion() {
         return this.version;
@@ -147,7 +147,6 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public BasicSliResponse build() {
             return new BasicSliResponse(availability, latency, location, method, version);
         }

@@ -231,7 +231,6 @@ public final class XeroObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public XeroObjectDatasetResponse build() {
             return new XeroObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

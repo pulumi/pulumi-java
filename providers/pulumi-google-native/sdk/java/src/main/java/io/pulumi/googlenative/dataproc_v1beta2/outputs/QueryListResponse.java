@@ -53,7 +53,6 @@ public final class QueryListResponse {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-
         public QueryListResponse build() {
             return new QueryListResponse(queries);
         }

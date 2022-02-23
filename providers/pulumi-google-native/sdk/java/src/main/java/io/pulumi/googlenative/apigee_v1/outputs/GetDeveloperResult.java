@@ -328,7 +328,6 @@ public final class GetDeveloperResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetDeveloperResult build() {
             return new GetDeveloperResult(accessType, appFamily, apps, attributes, companies, createdAt, developerId, email, firstName, lastModifiedAt, lastName, organizationName, status, userName);
         }

@@ -15,14 +15,14 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends io.pulumi.re
     public static final NetworkInsightsAnalysisAlternatePathHint Empty = new NetworkInsightsAnalysisAlternatePathHint();
 
     @InputImport(name="componentArn")
-    private final @Nullable String componentArn;
+        private final @Nullable String componentArn;
 
     public Optional<String> getComponentArn() {
         return this.componentArn == null ? Optional.empty() : Optional.ofNullable(this.componentArn);
     }
 
     @InputImport(name="componentId")
-    private final @Nullable String componentId;
+        private final @Nullable String componentId;
 
     public Optional<String> getComponentId() {
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
@@ -71,7 +71,6 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends io.pulumi.re
             this.componentId = componentId;
             return this;
         }
-
         public NetworkInsightsAnalysisAlternatePathHint build() {
             return new NetworkInsightsAnalysisAlternatePathHint(componentArn, componentId);
         }

@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
             return new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(jobConfig);
         }

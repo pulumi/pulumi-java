@@ -74,7 +74,6 @@ public final class BotTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotTag build() {
             return new BotTag(key, value);
         }

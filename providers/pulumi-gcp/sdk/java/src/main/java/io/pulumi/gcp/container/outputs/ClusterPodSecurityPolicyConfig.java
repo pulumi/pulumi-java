@@ -54,7 +54,6 @@ public final class ClusterPodSecurityPolicyConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ClusterPodSecurityPolicyConfig build() {
             return new ClusterPodSecurityPolicyConfig(enabled);
         }

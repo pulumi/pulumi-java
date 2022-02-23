@@ -27,7 +27,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-    private final @Nullable Input<String> advertiseMode;
+        private final @Nullable Input<String> advertiseMode;
 
     public Input<String> getAdvertiseMode() {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
@@ -42,7 +42,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-    private final @Nullable Input<List<String>> advertisedGroups;
+        private final @Nullable Input<List<String>> advertisedGroups;
 
     public Input<List<String>> getAdvertisedGroups() {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
@@ -58,7 +58,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-    private final @Nullable Input<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges;
+        private final @Nullable Input<List<RouterPeerAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Input<List<RouterPeerAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
@@ -71,7 +71,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedRoutePriority")
-    private final @Nullable Input<Integer> advertisedRoutePriority;
+        private final @Nullable Input<Integer> advertisedRoutePriority;
 
     public Input<Integer> getAdvertisedRoutePriority() {
         return this.advertisedRoutePriority == null ? Input.empty() : this.advertisedRoutePriority;
@@ -83,7 +83,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bfd")
-    private final @Nullable Input<RouterPeerBfdArgs> bfd;
+        private final @Nullable Input<RouterPeerBfdArgs> bfd;
 
     public Input<RouterPeerBfdArgs> getBfd() {
         return this.bfd == null ? Input.empty() : this.bfd;
@@ -97,7 +97,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+        private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -108,7 +108,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interface", required=true)
-    private final Input<String> $interface;
+        private final Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface;
@@ -120,7 +120,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -136,7 +136,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerAsn", required=true)
-    private final Input<Integer> peerAsn;
+        private final Input<Integer> peerAsn;
 
     public Input<Integer> getPeerAsn() {
         return this.peerAsn;
@@ -160,7 +160,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIpAddress", required=true)
-    private final Input<String> peerIpAddress;
+        private final Input<String> peerIpAddress;
 
     public Input<String> getPeerIpAddress() {
         return this.peerIpAddress;
@@ -172,7 +172,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -184,7 +184,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -195,7 +195,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="router", required=true)
-    private final Input<String> router;
+        private final Input<String> router;
 
     public Input<String> getRouter() {
         return this.router;
@@ -434,7 +434,6 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
             this.router = Input.of(Objects.requireNonNull(router));
             return this;
         }
-
         public RouterPeerArgs build() {
             return new RouterPeerArgs(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, $interface, ipAddress, name, peerAsn, peerIpAddress, project, region, router);
         }

@@ -372,7 +372,6 @@ public final class GetDiskResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(createdDate, diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, id, leasedByLabVmId, location, managedDiskId, name, provisioningState, storageAccountId, tags, type, uniqueIdentifier);
         }

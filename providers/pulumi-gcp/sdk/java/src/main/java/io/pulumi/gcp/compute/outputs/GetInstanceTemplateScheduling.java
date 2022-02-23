@@ -151,7 +151,6 @@ public final class GetInstanceTemplateScheduling {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public GetInstanceTemplateScheduling build() {
             return new GetInstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

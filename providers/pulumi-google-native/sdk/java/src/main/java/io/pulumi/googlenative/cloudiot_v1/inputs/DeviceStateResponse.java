@@ -21,7 +21,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="binaryData", required=true)
-    private final String binaryData;
+      private final String binaryData;
 
     public String getBinaryData() {
         return this.binaryData;
@@ -32,7 +32,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -81,7 +81,6 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public DeviceStateResponse build() {
             return new DeviceStateResponse(binaryData, updateTime);
         }

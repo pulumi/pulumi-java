@@ -297,7 +297,6 @@ public final class FileTaskRunRequestResponse {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
-
         public FileTaskRunRequestResponse build() {
             return new FileTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, isArchiveEnabled, logTemplate, platform, sourceLocation, taskFilePath, timeout, type, values, valuesFilePath);
         }

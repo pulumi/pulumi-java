@@ -340,7 +340,6 @@ public final class DatastoreResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public DatastoreResponse build() {
             return new DatastoreResponse(azureDataLakeSection, azureMySqlSection, azurePostgreSqlSection, azureSqlDatabaseSection, azureStorageSection, createdBy, createdTime, dataStoreType, description, glusterFsSection, hasBeenValidated, linkedInfo, modifiedBy, modifiedTime, name, tags);
         }

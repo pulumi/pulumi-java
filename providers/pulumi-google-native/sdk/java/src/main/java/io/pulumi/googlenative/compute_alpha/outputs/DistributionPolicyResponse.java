@@ -76,7 +76,6 @@ public final class DistributionPolicyResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public DistributionPolicyResponse build() {
             return new DistributionPolicyResponse(targetShape, zones);
         }

@@ -160,7 +160,6 @@ public final class EventTypeEntityType {
             this.tags = tags;
             return this;
         }
-
         public EventTypeEntityType build() {
             return new EventTypeEntityType(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

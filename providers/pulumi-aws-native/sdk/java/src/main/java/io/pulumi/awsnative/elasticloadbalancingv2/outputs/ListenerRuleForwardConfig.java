@@ -62,7 +62,6 @@ public final class ListenerRuleForwardConfig {
             this.targetGroups = targetGroups;
             return this;
         }
-
         public ListenerRuleForwardConfig build() {
             return new ListenerRuleForwardConfig(targetGroupStickinessConfig, targetGroups);
         }

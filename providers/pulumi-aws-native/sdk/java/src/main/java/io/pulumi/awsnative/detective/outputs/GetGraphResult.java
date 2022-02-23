@@ -70,7 +70,6 @@ public final class GetGraphResult {
             this.tags = tags;
             return this;
         }
-
         public GetGraphResult build() {
             return new GetGraphResult(arn, tags);
         }

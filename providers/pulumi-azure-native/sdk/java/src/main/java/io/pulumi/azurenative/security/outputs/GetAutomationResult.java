@@ -295,7 +295,6 @@ public final class GetAutomationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationResult build() {
             return new GetAutomationResult(actions, description, etag, id, isEnabled, kind, location, name, scopes, sources, tags, type);
         }

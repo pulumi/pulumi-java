@@ -77,7 +77,6 @@ public final class EnterpriseSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public EnterpriseSkuResponse build() {
             return new EnterpriseSkuResponse(capacity, name);
         }

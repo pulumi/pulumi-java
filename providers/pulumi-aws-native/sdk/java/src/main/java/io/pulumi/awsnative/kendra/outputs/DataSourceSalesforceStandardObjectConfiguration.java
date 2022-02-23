@@ -89,7 +89,6 @@ public final class DataSourceSalesforceStandardObjectConfiguration {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataSourceSalesforceStandardObjectConfiguration build() {
             return new DataSourceSalesforceStandardObjectConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }

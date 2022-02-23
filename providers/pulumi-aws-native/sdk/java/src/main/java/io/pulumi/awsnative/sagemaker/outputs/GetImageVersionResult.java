@@ -87,7 +87,6 @@ public final class GetImageVersionResult {
             this.version = version;
             return this;
         }
-
         public GetImageVersionResult build() {
             return new GetImageVersionResult(containerImage, imageArn, imageVersionArn, version);
         }

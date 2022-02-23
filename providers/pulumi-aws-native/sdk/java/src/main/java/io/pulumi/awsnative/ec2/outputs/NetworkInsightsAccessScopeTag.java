@@ -60,7 +60,6 @@ public final class NetworkInsightsAccessScopeTag {
             this.value = value;
             return this;
         }
-
         public NetworkInsightsAccessScopeTag build() {
             return new NetworkInsightsAccessScopeTag(key, value);
         }

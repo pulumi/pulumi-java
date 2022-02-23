@@ -24,14 +24,14 @@ public final class BucketRoutingRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="redirectRule", required=true)
-    private final BucketRedirectRule redirectRule;
+        private final BucketRedirectRule redirectRule;
 
     public BucketRedirectRule getRedirectRule() {
         return this.redirectRule;
     }
 
     @InputImport(name="routingRuleCondition")
-    private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
+        private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
     public Optional<BucketRoutingRuleCondition> getRoutingRuleCondition() {
         return this.routingRuleCondition == null ? Optional.empty() : Optional.ofNullable(this.routingRuleCondition);
@@ -80,7 +80,6 @@ public final class BucketRoutingRule extends io.pulumi.resources.InvokeArgs {
             this.routingRuleCondition = routingRuleCondition;
             return this;
         }
-
         public BucketRoutingRule build() {
             return new BucketRoutingRule(redirectRule, routingRuleCondition);
         }

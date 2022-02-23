@@ -549,7 +549,6 @@ public final class AzureDatabricksLinkedServiceResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AzureDatabricksLinkedServiceResponse build() {
             return new AzureDatabricksLinkedServiceResponse(accessToken, annotations, authentication, connectVia, credential, description, domain, encryptedCredential, existingClusterId, instancePoolId, newClusterCustomTags, newClusterDriverNodeType, newClusterEnableElasticDisk, newClusterInitScripts, newClusterLogDestination, newClusterNodeType, newClusterNumOfWorker, newClusterSparkConf, newClusterSparkEnvVars, newClusterVersion, parameters, policyId, type, workspaceResourceId);
         }

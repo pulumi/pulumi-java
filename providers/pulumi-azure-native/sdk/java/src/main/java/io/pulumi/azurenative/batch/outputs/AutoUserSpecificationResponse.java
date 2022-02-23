@@ -76,7 +76,6 @@ public final class AutoUserSpecificationResponse {
             this.scope = scope;
             return this;
         }
-
         public AutoUserSpecificationResponse build() {
             return new AutoUserSpecificationResponse(elevationLevel, scope);
         }

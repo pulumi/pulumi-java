@@ -121,7 +121,6 @@ public final class GetDistributionConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDistributionConfigurationResult build() {
             return new GetDistributionConfigurationResult(arn, description, distributions, tags);
         }

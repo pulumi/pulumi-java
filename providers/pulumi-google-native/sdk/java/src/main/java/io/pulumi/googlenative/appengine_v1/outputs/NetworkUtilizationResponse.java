@@ -116,7 +116,6 @@ public final class NetworkUtilizationResponse {
             this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
             return this;
         }
-
         public NetworkUtilizationResponse build() {
             return new NetworkUtilizationResponse(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

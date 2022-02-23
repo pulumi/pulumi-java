@@ -19,7 +19,7 @@ public final class WebACLAllowAction extends io.pulumi.resources.InvokeArgs {
     public static final WebACLAllowAction Empty = new WebACLAllowAction();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+        private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
@@ -57,7 +57,6 @@ public final class WebACLAllowAction extends io.pulumi.resources.InvokeArgs {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLAllowAction build() {
             return new WebACLAllowAction(customRequestHandling);
         }

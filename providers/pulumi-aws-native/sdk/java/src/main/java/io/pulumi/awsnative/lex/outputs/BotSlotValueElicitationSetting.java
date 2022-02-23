@@ -144,7 +144,6 @@ public final class BotSlotValueElicitationSetting {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
-
         public BotSlotValueElicitationSetting build() {
             return new BotSlotValueElicitationSetting(defaultValueSpecification, promptSpecification, sampleUtterances, slotConstraint, waitAndContinueSpecification);
         }

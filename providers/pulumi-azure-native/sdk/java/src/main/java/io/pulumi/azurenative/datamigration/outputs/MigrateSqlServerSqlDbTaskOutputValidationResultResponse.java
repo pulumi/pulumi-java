@@ -142,7 +142,6 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
             this.summaryResults = summaryResults;
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputValidationResultResponse(id, migrationId, resultType, status, summaryResults);
         }

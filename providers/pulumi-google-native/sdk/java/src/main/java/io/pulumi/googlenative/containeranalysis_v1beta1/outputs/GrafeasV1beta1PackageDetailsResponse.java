@@ -52,7 +52,6 @@ public final class GrafeasV1beta1PackageDetailsResponse {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
-
         public GrafeasV1beta1PackageDetailsResponse build() {
             return new GrafeasV1beta1PackageDetailsResponse(installation);
         }

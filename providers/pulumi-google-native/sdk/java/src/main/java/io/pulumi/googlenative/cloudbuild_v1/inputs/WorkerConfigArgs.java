@@ -23,7 +23,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -34,7 +34,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -93,7 +93,6 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
-
         public WorkerConfigArgs build() {
             return new WorkerConfigArgs(diskSizeGb, machineType);
         }

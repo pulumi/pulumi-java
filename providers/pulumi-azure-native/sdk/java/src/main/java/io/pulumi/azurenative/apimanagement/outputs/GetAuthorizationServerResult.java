@@ -436,7 +436,6 @@ public final class GetAuthorizationServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAuthorizationServerResult build() {
             return new GetAuthorizationServerResult(authorizationEndpoint, authorizationMethods, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, id, name, resourceOwnerPassword, resourceOwnerUsername, supportState, tokenBodyParameters, tokenEndpoint, type);
         }

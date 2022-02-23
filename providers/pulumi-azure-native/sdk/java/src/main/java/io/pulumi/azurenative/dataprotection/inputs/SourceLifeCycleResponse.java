@@ -26,7 +26,7 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deleteAfter", required=true)
-    private final AbsoluteDeleteOptionResponse deleteAfter;
+        private final AbsoluteDeleteOptionResponse deleteAfter;
 
     public AbsoluteDeleteOptionResponse getDeleteAfter() {
         return this.deleteAfter;
@@ -37,14 +37,14 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceDataStore", required=true)
-    private final DataStoreInfoBaseResponse sourceDataStore;
+        private final DataStoreInfoBaseResponse sourceDataStore;
 
     public DataStoreInfoBaseResponse getSourceDataStore() {
         return this.sourceDataStore;
     }
 
     @InputImport(name="targetDataStoreCopySettings")
-    private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
+        private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
     public List<TargetCopySettingResponse> getTargetDataStoreCopySettings() {
         return this.targetDataStoreCopySettings == null ? List.of() : this.targetDataStoreCopySettings;
@@ -103,7 +103,6 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-
         public SourceLifeCycleResponse build() {
             return new SourceLifeCycleResponse(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }

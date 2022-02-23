@@ -75,7 +75,6 @@ public final class AnalysisStringParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisStringParameter build() {
             return new AnalysisStringParameter(name, values);
         }

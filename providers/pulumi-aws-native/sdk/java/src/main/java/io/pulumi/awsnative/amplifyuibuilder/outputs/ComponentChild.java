@@ -87,7 +87,6 @@ public final class ComponentChild {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ComponentChild build() {
             return new ComponentChild(children, componentType, name, properties);
         }

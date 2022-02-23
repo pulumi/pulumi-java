@@ -120,7 +120,6 @@ public final class ClusterResourcePropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ClusterResourcePropertiesResponse build() {
             return new ClusterResourcePropertiesResponse(networkProfile, provisioningState, serviceId, version);
         }

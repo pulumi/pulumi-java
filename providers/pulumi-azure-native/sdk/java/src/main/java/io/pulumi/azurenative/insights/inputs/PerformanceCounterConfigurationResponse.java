@@ -15,21 +15,21 @@ public final class PerformanceCounterConfigurationResponse extends io.pulumi.res
     public static final PerformanceCounterConfigurationResponse Empty = new PerformanceCounterConfigurationResponse();
 
     @InputImport(name="instance")
-    private final @Nullable String instance;
+        private final @Nullable String instance;
 
     public Optional<String> getInstance() {
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="samplingPeriod", required=true)
-    private final String samplingPeriod;
+        private final String samplingPeriod;
 
     public String getSamplingPeriod() {
         return this.samplingPeriod;
@@ -88,7 +88,6 @@ public final class PerformanceCounterConfigurationResponse extends io.pulumi.res
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
         }
-
         public PerformanceCounterConfigurationResponse build() {
             return new PerformanceCounterConfigurationResponse(instance, name, samplingPeriod);
         }

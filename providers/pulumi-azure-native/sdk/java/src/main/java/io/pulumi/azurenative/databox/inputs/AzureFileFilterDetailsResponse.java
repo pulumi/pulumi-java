@@ -24,7 +24,7 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="filePathList")
-    private final @Nullable List<String> filePathList;
+        private final @Nullable List<String> filePathList;
 
     public List<String> getFilePathList() {
         return this.filePathList == null ? List.of() : this.filePathList;
@@ -35,7 +35,7 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="filePrefixList")
-    private final @Nullable List<String> filePrefixList;
+        private final @Nullable List<String> filePrefixList;
 
     public List<String> getFilePrefixList() {
         return this.filePrefixList == null ? List.of() : this.filePrefixList;
@@ -46,7 +46,7 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="fileShareList")
-    private final @Nullable List<String> fileShareList;
+        private final @Nullable List<String> fileShareList;
 
     public List<String> getFileShareList() {
         return this.fileShareList == null ? List.of() : this.fileShareList;
@@ -105,7 +105,6 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
             this.fileShareList = fileShareList;
             return this;
         }
-
         public AzureFileFilterDetailsResponse build() {
             return new AzureFileFilterDetailsResponse(filePathList, filePrefixList, fileShareList);
         }

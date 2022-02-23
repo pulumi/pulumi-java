@@ -246,7 +246,6 @@ public final class GetTransactionNodeResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetTransactionNodeResult build() {
             return new GetTransactionNodeResult(dns, firewallRules, id, location, name, password, provisioningState, publicKey, type, userName);
         }

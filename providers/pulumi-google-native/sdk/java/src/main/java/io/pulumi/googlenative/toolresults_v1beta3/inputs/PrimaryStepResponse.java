@@ -23,7 +23,7 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="individualOutcome", required=true)
-    private final List<IndividualOutcomeResponse> individualOutcome;
+      private final List<IndividualOutcomeResponse> individualOutcome;
 
     public List<IndividualOutcomeResponse> getIndividualOutcome() {
         return this.individualOutcome;
@@ -34,7 +34,7 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rollUp", required=true)
-    private final String rollUp;
+      private final String rollUp;
 
     public String getRollUp() {
         return this.rollUp;
@@ -83,7 +83,6 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
         }
-
         public PrimaryStepResponse build() {
             return new PrimaryStepResponse(individualOutcome, rollUp);
         }

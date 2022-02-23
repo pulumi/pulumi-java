@@ -246,7 +246,6 @@ public final class GetClusterResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(createdAt, id, location, metricId, name, sku, status, tags, type, updatedAt);
         }

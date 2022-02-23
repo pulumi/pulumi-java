@@ -27,7 +27,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-    private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+        private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
@@ -38,7 +38,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -49,7 +49,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userInfo")
-    private final @Nullable Input<UserInfoArgs> userInfo;
+        private final @Nullable Input<UserInfoArgs> userInfo;
 
     public Input<UserInfoArgs> getUserInfo() {
         return this.userInfo == null ? Input.empty() : this.userInfo;
@@ -123,7 +123,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.userInfo = Input.ofNullable(userInfo);
             return this;
         }
-
         public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(monitoringStatus, provisioningState, userInfo);
         }

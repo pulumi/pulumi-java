@@ -20,7 +20,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="guestConfigurationAssignmentName")
-    private final @Nullable Input<String> guestConfigurationAssignmentName;
+        private final @Nullable Input<String> guestConfigurationAssignmentName;
 
     public Input<String> getGuestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName == null ? Input.empty() : this.guestConfigurationAssignmentName;
@@ -31,7 +31,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,7 +42,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="machineName", required=true)
-    private final Input<String> machineName;
+        private final Input<String> machineName;
 
     public Input<String> getMachineName() {
         return this.machineName;
@@ -53,7 +53,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,7 +64,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
+        private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
 
     public Input<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -75,7 +75,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,6 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public GuestConfigurationHCRPAssignmentArgs build() {
             return new GuestConfigurationHCRPAssignmentArgs(guestConfigurationAssignmentName, location, machineName, name, properties, resourceGroupName);
         }

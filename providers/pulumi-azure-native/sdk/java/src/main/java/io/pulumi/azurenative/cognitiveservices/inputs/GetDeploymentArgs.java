@@ -17,7 +17,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -39,7 +39,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDeploymentArgs build() {
             return new GetDeploymentArgs(accountName, deploymentName, resourceGroupName);
         }

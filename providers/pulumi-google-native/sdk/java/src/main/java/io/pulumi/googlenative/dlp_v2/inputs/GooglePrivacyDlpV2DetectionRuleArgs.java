@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hotwordRule")
-    private final @Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
+      private final @Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
     public Input<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
         return this.hotwordRule == null ? Input.empty() : this.hotwordRule;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }
-
         public GooglePrivacyDlpV2DetectionRuleArgs build() {
             return new GooglePrivacyDlpV2DetectionRuleArgs(hotwordRule);
         }

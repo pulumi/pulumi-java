@@ -60,7 +60,6 @@ public final class DataSetColumnLevelPermissionRule {
             this.principals = principals;
             return this;
         }
-
         public DataSetColumnLevelPermissionRule build() {
             return new DataSetColumnLevelPermissionRule(columnNames, principals);
         }

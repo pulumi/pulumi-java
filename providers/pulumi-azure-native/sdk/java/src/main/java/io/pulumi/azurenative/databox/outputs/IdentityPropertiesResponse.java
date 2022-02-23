@@ -77,7 +77,6 @@ public final class IdentityPropertiesResponse {
             this.userAssigned = userAssigned;
             return this;
         }
-
         public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(type, userAssigned);
         }

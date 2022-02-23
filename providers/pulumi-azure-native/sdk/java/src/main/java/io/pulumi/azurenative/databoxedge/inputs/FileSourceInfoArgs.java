@@ -22,7 +22,7 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareId", required=true)
-    private final Input<String> shareId;
+        private final Input<String> shareId;
 
     public Input<String> getShareId() {
         return this.shareId;
@@ -65,7 +65,6 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.shareId = Input.of(Objects.requireNonNull(shareId));
             return this;
         }
-
         public FileSourceInfoArgs build() {
             return new FileSourceInfoArgs(shareId);
         }

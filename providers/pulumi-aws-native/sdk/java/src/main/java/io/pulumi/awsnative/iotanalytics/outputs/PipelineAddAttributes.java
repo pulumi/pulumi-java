@@ -74,7 +74,6 @@ public final class PipelineAddAttributes {
             this.next = next;
             return this;
         }
-
         public PipelineAddAttributes build() {
             return new PipelineAddAttributes(attributes, name, next);
         }

@@ -22,7 +22,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -44,7 +44,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isLiveMigration")
-    private final @Nullable Input<Boolean> isLiveMigration;
+      private final @Nullable Input<Boolean> isLiveMigration;
 
     public Input<Boolean> getIsLiveMigration() {
         return this.isLiveMigration == null ? Input.empty() : this.isLiveMigration;
@@ -55,7 +55,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,14 +66,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parentPrefix")
-    private final @Nullable Input<String> parentPrefix;
+      private final @Nullable Input<String> parentPrefix;
 
     public Input<String> getParentPrefix() {
         return this.parentPrefix == null ? Input.empty() : this.parentPrefix;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -84,14 +84,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="publicDelegatedSubPrefixs")
-    private final @Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
+      private final @Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
     public Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> getPublicDelegatedSubPrefixs() {
         return this.publicDelegatedSubPrefixs == null ? Input.empty() : this.publicDelegatedSubPrefixs;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -240,7 +240,6 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public GlobalPublicDelegatedPrefixArgs build() {
             return new GlobalPublicDelegatedPrefixArgs(description, ipCidrRange, isLiveMigration, name, parentPrefix, project, publicDelegatedSubPrefixs, requestId);
         }

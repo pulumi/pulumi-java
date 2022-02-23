@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse(enableEntityExtraction, enableSentimentAnalysis);
         }

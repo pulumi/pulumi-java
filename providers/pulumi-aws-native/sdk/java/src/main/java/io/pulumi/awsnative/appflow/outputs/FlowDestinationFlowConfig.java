@@ -99,7 +99,6 @@ public final class FlowDestinationFlowConfig {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
-
         public FlowDestinationFlowConfig build() {
             return new FlowDestinationFlowConfig(connectorProfileName, connectorType, destinationConnectorProperties);
         }

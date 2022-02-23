@@ -97,7 +97,6 @@ public final class SourceConfigResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public SourceConfigResponse build() {
             return new SourceConfigResponse(crowdingConfig, scoringConfig, source);
         }

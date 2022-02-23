@@ -74,7 +74,6 @@ public final class DeliveryStreamOpenXJsonSerDe {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
-
         public DeliveryStreamOpenXJsonSerDe build() {
             return new DeliveryStreamOpenXJsonSerDe(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }

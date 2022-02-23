@@ -17,7 +17,7 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pipelineJobName", required=true)
-    private final String pipelineJobName;
+        private final String pipelineJobName;
 
     public String getPipelineJobName() {
         return this.pipelineJobName;
@@ -39,7 +39,7 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPipelineJobArgs build() {
             return new GetPipelineJobArgs(accountName, pipelineJobName, resourceGroupName);
         }

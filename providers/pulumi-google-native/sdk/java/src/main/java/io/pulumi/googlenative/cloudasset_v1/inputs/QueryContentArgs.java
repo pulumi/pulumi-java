@@ -23,7 +23,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamPolicyAnalysisQuery")
-    private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
+      private final @Nullable Input<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
     public Input<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery == null ? Input.empty() : this.iamPolicyAnalysisQuery;
@@ -66,7 +66,6 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
             this.iamPolicyAnalysisQuery = Input.ofNullable(iamPolicyAnalysisQuery);
             return this;
         }
-
         public QueryContentArgs build() {
             return new QueryContentArgs(iamPolicyAnalysisQuery);
         }

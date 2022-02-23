@@ -19,7 +19,7 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsSuffix", required=true)
-    private final Input<String> dnsSuffix;
+        private final Input<String> dnsSuffix;
 
     public Input<String> getDnsSuffix() {
         return this.dnsSuffix;
@@ -30,7 +30,7 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -52,7 +52,7 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,7 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -167,7 +167,6 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public PeeredDnsDomainArgs build() {
             return new PeeredDnsDomainArgs(dnsSuffix, name, network, project, service);
         }

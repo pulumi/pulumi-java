@@ -76,7 +76,6 @@ public final class ConnectionCloudSqlCredential {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectionCloudSqlCredential build() {
             return new ConnectionCloudSqlCredential(password, username);
         }

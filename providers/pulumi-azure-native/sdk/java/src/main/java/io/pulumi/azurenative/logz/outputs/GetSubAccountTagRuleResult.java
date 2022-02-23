@@ -139,7 +139,6 @@ public final class GetSubAccountTagRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubAccountTagRuleResult build() {
             return new GetSubAccountTagRuleResult(id, name, properties, systemData, type);
         }

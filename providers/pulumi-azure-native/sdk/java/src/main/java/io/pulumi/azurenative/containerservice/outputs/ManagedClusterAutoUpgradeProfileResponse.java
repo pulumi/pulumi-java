@@ -54,7 +54,6 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
             this.upgradeChannel = upgradeChannel;
             return this;
         }
-
         public ManagedClusterAutoUpgradeProfileResponse build() {
             return new ManagedClusterAutoUpgradeProfileResponse(upgradeChannel);
         }

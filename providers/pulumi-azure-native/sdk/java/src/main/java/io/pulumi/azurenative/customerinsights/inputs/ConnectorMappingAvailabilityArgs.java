@@ -24,7 +24,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable Input<FrequencyTypes> frequency;
+        private final @Nullable Input<FrequencyTypes> frequency;
 
     public Input<FrequencyTypes> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -35,7 +35,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+        private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -94,7 +94,6 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public ConnectorMappingAvailabilityArgs build() {
             return new ConnectorMappingAvailabilityArgs(frequency, interval);
         }

@@ -30,7 +30,6 @@ public final class GetTransitGatewayRegistrationResult {
         public Builder(GetTransitGatewayRegistrationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetTransitGatewayRegistrationResult build() {
             return new GetTransitGatewayRegistrationResult();
         }

@@ -20,7 +20,7 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateGetArgs extends i
      * 
      */
     @InputImport(name="x509Certificate")
-    private final @Nullable Input<String> x509Certificate;
+        private final @Nullable Input<String> x509Certificate;
 
     public Input<String> getX509Certificate() {
         return this.x509Certificate == null ? Input.empty() : this.x509Certificate;
@@ -63,7 +63,6 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateGetArgs extends i
             this.x509Certificate = Input.ofNullable(x509Certificate);
             return this;
         }
-
         public TenantInboundSamlConfigSpConfigSpCertificateGetArgs build() {
             return new TenantInboundSamlConfigSpConfigSpCertificateGetArgs(x509Certificate);
         }

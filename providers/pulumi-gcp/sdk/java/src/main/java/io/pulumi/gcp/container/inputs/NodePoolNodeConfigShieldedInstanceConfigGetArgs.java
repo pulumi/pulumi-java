@@ -15,14 +15,14 @@ public final class NodePoolNodeConfigShieldedInstanceConfigGetArgs extends io.pu
     public static final NodePoolNodeConfigShieldedInstanceConfigGetArgs Empty = new NodePoolNodeConfigShieldedInstanceConfigGetArgs();
 
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+        private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+        private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
@@ -81,7 +81,6 @@ public final class NodePoolNodeConfigShieldedInstanceConfigGetArgs extends io.pu
             this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
             return this;
         }
-
         public NodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
             return new NodePoolNodeConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot);
         }

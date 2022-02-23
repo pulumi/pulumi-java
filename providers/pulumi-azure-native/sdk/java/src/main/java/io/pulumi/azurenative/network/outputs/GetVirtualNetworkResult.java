@@ -422,7 +422,6 @@ public final class GetVirtualNetworkResult {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, etag, extendedLocation, id, ipAllocations, location, name, provisioningState, resourceGuid, subnets, tags, type, virtualNetworkPeerings);
         }

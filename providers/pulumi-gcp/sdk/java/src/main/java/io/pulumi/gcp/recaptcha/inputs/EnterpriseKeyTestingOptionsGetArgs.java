@@ -20,7 +20,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="testingChallenge")
-    private final @Nullable Input<String> testingChallenge;
+        private final @Nullable Input<String> testingChallenge;
 
     public Input<String> getTestingChallenge() {
         return this.testingChallenge == null ? Input.empty() : this.testingChallenge;
@@ -31,7 +31,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="testingScore")
-    private final @Nullable Input<Double> testingScore;
+        private final @Nullable Input<Double> testingScore;
 
     public Input<Double> getTestingScore() {
         return this.testingScore == null ? Input.empty() : this.testingScore;
@@ -90,7 +90,6 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
             this.testingScore = Input.ofNullable(testingScore);
             return this;
         }
-
         public EnterpriseKeyTestingOptionsGetArgs build() {
             return new EnterpriseKeyTestingOptionsGetArgs(testingChallenge, testingScore);
         }

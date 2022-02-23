@@ -119,7 +119,6 @@ public final class ServiceMeshAnalysisMessageResponse {
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }
-
         public ServiceMeshAnalysisMessageResponse build() {
             return new ServiceMeshAnalysisMessageResponse(args, description, messageBase, resourcePaths);
         }

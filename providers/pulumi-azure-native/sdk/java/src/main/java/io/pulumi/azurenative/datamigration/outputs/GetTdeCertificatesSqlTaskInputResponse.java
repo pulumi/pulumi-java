@@ -98,7 +98,6 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskInputResponse build() {
             return new GetTdeCertificatesSqlTaskInputResponse(backupFileShare, connectionInfo, selectedCertificates);
         }

@@ -61,7 +61,6 @@ public final class GroupResourceQuery {
             this.type = type;
             return this;
         }
-
         public GroupResourceQuery build() {
             return new GroupResourceQuery(query, type);
         }

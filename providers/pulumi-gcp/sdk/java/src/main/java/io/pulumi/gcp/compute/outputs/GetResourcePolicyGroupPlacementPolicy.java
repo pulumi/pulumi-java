@@ -72,7 +72,6 @@ public final class GetResourcePolicyGroupPlacementPolicy {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public GetResourcePolicyGroupPlacementPolicy build() {
             return new GetResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }

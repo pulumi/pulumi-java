@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse extends io.pulumi.
      * 
      */
     @InputImport(name="sensitiveValueFrequencyHistogramBuckets", required=true)
-    private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
+      private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
     public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> getSensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse extends io.pulumi.
             this.sensitiveValueFrequencyHistogramBuckets = Objects.requireNonNull(sensitiveValueFrequencyHistogramBuckets);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityResultResponse build() {
             return new GooglePrivacyDlpV2LDiversityResultResponse(sensitiveValueFrequencyHistogramBuckets);
         }

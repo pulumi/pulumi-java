@@ -140,7 +140,6 @@ public final class GetReplicationProtectedItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationProtectedItemResult build() {
             return new GetReplicationProtectedItemResult(id, location, name, properties, type);
         }

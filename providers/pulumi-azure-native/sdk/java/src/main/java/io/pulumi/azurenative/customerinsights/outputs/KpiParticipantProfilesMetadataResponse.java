@@ -52,7 +52,6 @@ public final class KpiParticipantProfilesMetadataResponse {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public KpiParticipantProfilesMetadataResponse build() {
             return new KpiParticipantProfilesMetadataResponse(typeName);
         }

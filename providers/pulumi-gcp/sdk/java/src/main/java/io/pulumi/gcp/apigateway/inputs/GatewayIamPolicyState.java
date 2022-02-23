@@ -19,14 +19,14 @@ public final class GatewayIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="gateway")
-    private final @Nullable Input<String> gateway;
+        private final @Nullable Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway == null ? Input.empty() : this.gateway;
@@ -38,7 +38,7 @@ public final class GatewayIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -50,7 +50,7 @@ public final class GatewayIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class GatewayIamPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -168,7 +168,6 @@ public final class GatewayIamPolicyState extends io.pulumi.resources.ResourceArg
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public GatewayIamPolicyState build() {
             return new GatewayIamPolicyState(etag, gateway, policyData, project, region);
         }

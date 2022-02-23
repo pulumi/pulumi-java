@@ -74,7 +74,6 @@ public final class GetPublicKeyResult {
             this.publicKeyConfig = publicKeyConfig;
             return this;
         }
-
         public GetPublicKeyResult build() {
             return new GetPublicKeyResult(createdTime, id, publicKeyConfig);
         }

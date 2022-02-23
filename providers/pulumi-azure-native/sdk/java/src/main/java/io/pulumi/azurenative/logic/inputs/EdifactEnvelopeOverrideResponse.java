@@ -23,7 +23,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="applicationPassword")
-    private final @Nullable String applicationPassword;
+        private final @Nullable String applicationPassword;
 
     public Optional<String> getApplicationPassword() {
         return this.applicationPassword == null ? Optional.empty() : Optional.ofNullable(this.applicationPassword);
@@ -34,7 +34,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="associationAssignedCode")
-    private final @Nullable String associationAssignedCode;
+        private final @Nullable String associationAssignedCode;
 
     public Optional<String> getAssociationAssignedCode() {
         return this.associationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.associationAssignedCode);
@@ -45,7 +45,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="controllingAgencyCode")
-    private final @Nullable String controllingAgencyCode;
+        private final @Nullable String controllingAgencyCode;
 
     public Optional<String> getControllingAgencyCode() {
         return this.controllingAgencyCode == null ? Optional.empty() : Optional.ofNullable(this.controllingAgencyCode);
@@ -56,7 +56,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="functionalGroupId")
-    private final @Nullable String functionalGroupId;
+        private final @Nullable String functionalGroupId;
 
     public Optional<String> getFunctionalGroupId() {
         return this.functionalGroupId == null ? Optional.empty() : Optional.ofNullable(this.functionalGroupId);
@@ -67,7 +67,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupHeaderMessageRelease")
-    private final @Nullable String groupHeaderMessageRelease;
+        private final @Nullable String groupHeaderMessageRelease;
 
     public Optional<String> getGroupHeaderMessageRelease() {
         return this.groupHeaderMessageRelease == null ? Optional.empty() : Optional.ofNullable(this.groupHeaderMessageRelease);
@@ -78,7 +78,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupHeaderMessageVersion")
-    private final @Nullable String groupHeaderMessageVersion;
+        private final @Nullable String groupHeaderMessageVersion;
 
     public Optional<String> getGroupHeaderMessageVersion() {
         return this.groupHeaderMessageVersion == null ? Optional.empty() : Optional.ofNullable(this.groupHeaderMessageVersion);
@@ -89,7 +89,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageAssociationAssignedCode")
-    private final @Nullable String messageAssociationAssignedCode;
+        private final @Nullable String messageAssociationAssignedCode;
 
     public Optional<String> getMessageAssociationAssignedCode() {
         return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
@@ -100,7 +100,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable String messageId;
+        private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
@@ -111,7 +111,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageRelease")
-    private final @Nullable String messageRelease;
+        private final @Nullable String messageRelease;
 
     public Optional<String> getMessageRelease() {
         return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
@@ -122,7 +122,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageVersion")
-    private final @Nullable String messageVersion;
+        private final @Nullable String messageVersion;
 
     public Optional<String> getMessageVersion() {
         return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
@@ -133,7 +133,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="receiverApplicationId")
-    private final @Nullable String receiverApplicationId;
+        private final @Nullable String receiverApplicationId;
 
     public Optional<String> getReceiverApplicationId() {
         return this.receiverApplicationId == null ? Optional.empty() : Optional.ofNullable(this.receiverApplicationId);
@@ -144,7 +144,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="receiverApplicationQualifier")
-    private final @Nullable String receiverApplicationQualifier;
+        private final @Nullable String receiverApplicationQualifier;
 
     public Optional<String> getReceiverApplicationQualifier() {
         return this.receiverApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.receiverApplicationQualifier);
@@ -155,7 +155,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="senderApplicationId")
-    private final @Nullable String senderApplicationId;
+        private final @Nullable String senderApplicationId;
 
     public Optional<String> getSenderApplicationId() {
         return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
@@ -166,7 +166,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="senderApplicationQualifier")
-    private final @Nullable String senderApplicationQualifier;
+        private final @Nullable String senderApplicationQualifier;
 
     public Optional<String> getSenderApplicationQualifier() {
         return this.senderApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationQualifier);
@@ -177,7 +177,7 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="targetNamespace")
-    private final @Nullable String targetNamespace;
+        private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
@@ -356,7 +356,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public EdifactEnvelopeOverrideResponse build() {
             return new EdifactEnvelopeOverrideResponse(applicationPassword, associationAssignedCode, controllingAgencyCode, functionalGroupId, groupHeaderMessageRelease, groupHeaderMessageVersion, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, receiverApplicationId, receiverApplicationQualifier, senderApplicationId, senderApplicationQualifier, targetNamespace);
         }

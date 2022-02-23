@@ -715,7 +715,6 @@ public final class GetProductResult {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-
         public GetProductResult build() {
             return new GetProductResult(attributes, audience, availability, availableQuantity, availableTime, brands, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, images, languageCode, materials, name, patterns, priceInfo, primaryProductId, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri, variants);
         }

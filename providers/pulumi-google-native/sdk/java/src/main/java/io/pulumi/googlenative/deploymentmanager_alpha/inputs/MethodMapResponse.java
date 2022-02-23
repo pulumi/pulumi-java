@@ -21,7 +21,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="create", required=true)
-    private final String create;
+      private final String create;
 
     public String getCreate() {
         return this.create;
@@ -32,7 +32,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="delete", required=true)
-    private final String delete;
+      private final String delete;
 
     public String getDelete() {
         return this.delete;
@@ -43,7 +43,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="get", required=true)
-    private final String get;
+      private final String get;
 
     public String getGet() {
         return this.get;
@@ -54,7 +54,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="setIamPolicy", required=true)
-    private final String setIamPolicy;
+      private final String setIamPolicy;
 
     public String getSetIamPolicy() {
         return this.setIamPolicy;
@@ -65,7 +65,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="update", required=true)
-    private final String update;
+      private final String update;
 
     public String getUpdate() {
         return this.update;
@@ -144,7 +144,6 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public MethodMapResponse build() {
             return new MethodMapResponse(create, delete, get, setIamPolicy, update);
         }

@@ -75,7 +75,6 @@ public final class MavenRepositoryConfigResponse {
             this.versionPolicy = Objects.requireNonNull(versionPolicy);
             return this;
         }
-
         public MavenRepositoryConfigResponse build() {
             return new MavenRepositoryConfigResponse(allowSnapshotOverwrites, versionPolicy);
         }

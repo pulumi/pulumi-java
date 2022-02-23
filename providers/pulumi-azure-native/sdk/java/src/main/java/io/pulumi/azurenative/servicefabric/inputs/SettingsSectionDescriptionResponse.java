@@ -23,7 +23,7 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<SettingsParameterDescriptionResponse> parameters;
+        private final List<SettingsParameterDescriptionResponse> parameters;
 
     public List<SettingsParameterDescriptionResponse> getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public SettingsSectionDescriptionResponse build() {
             return new SettingsSectionDescriptionResponse(name, parameters);
         }

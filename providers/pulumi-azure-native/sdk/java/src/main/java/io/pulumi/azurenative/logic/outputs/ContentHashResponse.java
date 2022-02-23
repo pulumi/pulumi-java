@@ -76,7 +76,6 @@ public final class ContentHashResponse {
             this.value = value;
             return this;
         }
-
         public ContentHashResponse build() {
             return new ContentHashResponse(algorithm, value);
         }

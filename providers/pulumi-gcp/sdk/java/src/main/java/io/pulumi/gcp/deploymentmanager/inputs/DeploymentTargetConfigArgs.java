@@ -18,7 +18,7 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+        private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -61,7 +61,6 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
-
         public DeploymentTargetConfigArgs build() {
             return new DeploymentTargetConfigArgs(content);
         }

@@ -266,7 +266,6 @@ public final class ClientCredentialsResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public ClientCredentialsResponse build() {
             return new ClientCredentialsResponse(authorityUrl, certificate, clientId, clientSecret, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint);
         }

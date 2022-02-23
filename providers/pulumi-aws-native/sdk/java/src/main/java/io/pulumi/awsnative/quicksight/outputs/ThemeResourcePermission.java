@@ -103,7 +103,6 @@ public final class ThemeResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public ThemeResourcePermission build() {
             return new ThemeResourcePermission(actions, principal);
         }

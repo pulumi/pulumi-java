@@ -76,7 +76,6 @@ public final class SystemParameterRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public SystemParameterRuleResponse build() {
             return new SystemParameterRuleResponse(parameters, selector);
         }

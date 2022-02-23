@@ -349,7 +349,6 @@ public final class EdifactEnvelopeOverrideResponse {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public EdifactEnvelopeOverrideResponse build() {
             return new EdifactEnvelopeOverrideResponse(applicationPassword, associationAssignedCode, controllingAgencyCode, functionalGroupId, groupHeaderMessageRelease, groupHeaderMessageVersion, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, receiverApplicationId, receiverApplicationQualifier, senderApplicationId, senderApplicationQualifier, targetNamespace);
         }

@@ -78,7 +78,6 @@ public final class ListFirewallPolicyIdpsSignatureResult {
             this.signatures = signatures;
             return this;
         }
-
         public ListFirewallPolicyIdpsSignatureResult build() {
             return new ListFirewallPolicyIdpsSignatureResult(matchingRecordsCount, signatures);
         }

@@ -75,7 +75,6 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
             this.testingScore = Objects.requireNonNull(testingScore);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(testingChallenge, testingScore);
         }

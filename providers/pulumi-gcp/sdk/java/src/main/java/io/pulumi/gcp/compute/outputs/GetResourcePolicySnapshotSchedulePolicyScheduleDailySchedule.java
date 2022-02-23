@@ -59,7 +59,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(daysInCycle, startTime);
         }

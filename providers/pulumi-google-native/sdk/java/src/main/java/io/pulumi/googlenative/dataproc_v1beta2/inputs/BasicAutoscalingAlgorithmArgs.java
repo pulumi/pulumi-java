@@ -24,7 +24,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cooldownPeriod")
-    private final @Nullable Input<String> cooldownPeriod;
+      private final @Nullable Input<String> cooldownPeriod;
 
     public Input<String> getCooldownPeriod() {
         return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
@@ -35,7 +35,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="yarnConfig")
-    private final @Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig;
+      private final @Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
     public Input<BasicYarnAutoscalingConfigArgs> getYarnConfig() {
         return this.yarnConfig == null ? Input.empty() : this.yarnConfig;
@@ -94,7 +94,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
             this.yarnConfig = Input.ofNullable(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmArgs build() {
             return new BasicAutoscalingAlgorithmArgs(cooldownPeriod, yarnConfig);
         }

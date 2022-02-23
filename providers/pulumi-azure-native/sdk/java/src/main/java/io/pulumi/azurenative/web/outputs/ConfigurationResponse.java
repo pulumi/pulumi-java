@@ -124,7 +124,6 @@ public final class ConfigurationResponse {
             this.secrets = secrets;
             return this;
         }
-
         public ConfigurationResponse build() {
             return new ConfigurationResponse(activeRevisionsMode, ingress, registries, secrets);
         }

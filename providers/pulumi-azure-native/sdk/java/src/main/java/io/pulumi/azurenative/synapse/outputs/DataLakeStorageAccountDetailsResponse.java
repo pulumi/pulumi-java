@@ -76,7 +76,6 @@ public final class DataLakeStorageAccountDetailsResponse {
             this.filesystem = filesystem;
             return this;
         }
-
         public DataLakeStorageAccountDetailsResponse build() {
             return new DataLakeStorageAccountDetailsResponse(accountUrl, filesystem);
         }

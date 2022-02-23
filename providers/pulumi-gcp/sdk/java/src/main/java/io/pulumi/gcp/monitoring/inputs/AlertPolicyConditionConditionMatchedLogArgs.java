@@ -20,7 +20,7 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -37,7 +37,7 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
      * 
      */
     @InputImport(name="labelExtractors")
-    private final @Nullable Input<Map<String,String>> labelExtractors;
+        private final @Nullable Input<Map<String,String>> labelExtractors;
 
     public Input<Map<String,String>> getLabelExtractors() {
         return this.labelExtractors == null ? Input.empty() : this.labelExtractors;
@@ -96,7 +96,6 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
             this.labelExtractors = Input.ofNullable(labelExtractors);
             return this;
         }
-
         public AlertPolicyConditionConditionMatchedLogArgs build() {
             return new AlertPolicyConditionConditionMatchedLogArgs(filter, labelExtractors);
         }

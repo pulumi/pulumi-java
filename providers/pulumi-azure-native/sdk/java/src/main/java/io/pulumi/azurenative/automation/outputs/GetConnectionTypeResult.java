@@ -205,7 +205,6 @@ public final class GetConnectionTypeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionTypeResult build() {
             return new GetConnectionTypeResult(creationTime, description, fieldDefinitions, id, isGlobal, lastModifiedTime, name, type);
         }

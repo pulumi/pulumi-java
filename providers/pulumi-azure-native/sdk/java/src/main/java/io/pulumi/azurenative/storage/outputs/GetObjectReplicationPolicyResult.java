@@ -203,7 +203,6 @@ public final class GetObjectReplicationPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetObjectReplicationPolicyResult build() {
             return new GetObjectReplicationPolicyResult(destinationAccount, enabledTime, id, name, policyId, rules, sourceAccount, type);
         }

@@ -22,7 +22,7 @@ public final class ContentKeyPolicyOpenRestrictionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -60,7 +60,6 @@ public final class ContentKeyPolicyOpenRestrictionResponse extends io.pulumi.res
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyOpenRestrictionResponse build() {
             return new ContentKeyPolicyOpenRestrictionResponse(odataType);
         }

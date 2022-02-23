@@ -118,7 +118,6 @@ public final class MongoDbCursorMethodsPropertiesResponse {
             this.sort = sort;
             return this;
         }
-
         public MongoDbCursorMethodsPropertiesResponse build() {
             return new MongoDbCursorMethodsPropertiesResponse(limit, project, skip, sort);
         }

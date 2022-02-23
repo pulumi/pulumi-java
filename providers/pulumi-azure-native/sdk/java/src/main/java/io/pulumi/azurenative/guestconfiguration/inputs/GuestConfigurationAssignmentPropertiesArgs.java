@@ -24,7 +24,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<String> context;
+        private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -35,7 +35,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="guestConfiguration")
-    private final @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration;
+        private final @Nullable Input<GuestConfigurationNavigationArgs> guestConfiguration;
 
     public Input<GuestConfigurationNavigationArgs> getGuestConfiguration() {
         return this.guestConfiguration == null ? Input.empty() : this.guestConfiguration;
@@ -94,7 +94,6 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
             this.guestConfiguration = Input.ofNullable(guestConfiguration);
             return this;
         }
-
         public GuestConfigurationAssignmentPropertiesArgs build() {
             return new GuestConfigurationAssignmentPropertiesArgs(context, guestConfiguration);
         }

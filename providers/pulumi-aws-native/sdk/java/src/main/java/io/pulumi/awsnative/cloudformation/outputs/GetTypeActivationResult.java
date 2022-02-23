@@ -120,7 +120,6 @@ public final class GetTypeActivationResult {
             this.versionBump = versionBump;
             return this;
         }
-
         public GetTypeActivationResult build() {
             return new GetTypeActivationResult(arn, autoUpdate, majorVersion, versionBump);
         }

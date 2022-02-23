@@ -268,7 +268,6 @@ public final class GetSystemTopicResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSystemTopicResult build() {
             return new GetSystemTopicResult(id, identity, location, metricResourceId, name, provisioningState, source, systemData, tags, topicType, type);
         }

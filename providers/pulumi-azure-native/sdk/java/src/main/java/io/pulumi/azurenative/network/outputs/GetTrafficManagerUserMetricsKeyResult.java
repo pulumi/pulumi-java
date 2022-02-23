@@ -118,7 +118,6 @@ public final class GetTrafficManagerUserMetricsKeyResult {
             this.type = type;
             return this;
         }
-
         public GetTrafficManagerUserMetricsKeyResult build() {
             return new GetTrafficManagerUserMetricsKeyResult(id, key, name, type);
         }

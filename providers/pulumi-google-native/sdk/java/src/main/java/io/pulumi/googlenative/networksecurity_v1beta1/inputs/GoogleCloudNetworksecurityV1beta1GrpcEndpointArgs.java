@@ -22,7 +22,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
      * 
      */
     @InputImport(name="targetUri", required=true)
-    private final Input<String> targetUri;
+      private final Input<String> targetUri;
 
     public Input<String> getTargetUri() {
         return this.targetUri;
@@ -65,7 +65,6 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
             this.targetUri = Input.of(Objects.requireNonNull(targetUri));
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {
             return new GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(targetUri);
         }

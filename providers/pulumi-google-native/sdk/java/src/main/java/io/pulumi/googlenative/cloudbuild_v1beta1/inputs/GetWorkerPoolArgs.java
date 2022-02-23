@@ -15,21 +15,21 @@ public final class GetWorkerPoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetWorkerPoolArgs Empty = new GetWorkerPoolArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="workerPoolId", required=true)
-    private final String workerPoolId;
+      private final String workerPoolId;
 
     public String getWorkerPoolId() {
         return this.workerPoolId;
@@ -88,7 +88,6 @@ public final class GetWorkerPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
-
         public GetWorkerPoolArgs build() {
             return new GetWorkerPoolArgs(location, project, workerPoolId);
         }

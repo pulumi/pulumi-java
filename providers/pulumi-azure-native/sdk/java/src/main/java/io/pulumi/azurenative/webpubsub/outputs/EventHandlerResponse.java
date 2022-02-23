@@ -130,7 +130,6 @@ public final class EventHandlerResponse {
             this.userEventPattern = userEventPattern;
             return this;
         }
-
         public EventHandlerResponse build() {
             return new EventHandlerResponse(auth, systemEvents, urlTemplate, userEventPattern);
         }

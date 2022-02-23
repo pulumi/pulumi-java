@@ -15,21 +15,21 @@ public final class GetResponsePolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetResponsePolicyArgs Empty = new GetResponsePolicyArgs();
 
     @InputImport(name="clientOperationId")
-    private final @Nullable String clientOperationId;
+      private final @Nullable String clientOperationId;
 
     public Optional<String> getClientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="responsePolicy", required=true)
-    private final String responsePolicy;
+      private final String responsePolicy;
 
     public String getResponsePolicy() {
         return this.responsePolicy;
@@ -88,7 +88,6 @@ public final class GetResponsePolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }
-
         public GetResponsePolicyArgs build() {
             return new GetResponsePolicyArgs(clientOperationId, project, responsePolicy);
         }

@@ -114,7 +114,6 @@ public final class MetricsTagRulesPropertiesResponse {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MetricsTagRulesPropertiesResponse build() {
             return new MetricsTagRulesPropertiesResponse(metricRules, provisioningState, sendMetrics, systemData);
         }

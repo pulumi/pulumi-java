@@ -315,7 +315,6 @@ public final class SourceInstancePropertiesResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public SourceInstancePropertiesResponse build() {
             return new SourceInstancePropertiesResponse(canIpForward, deletionProtection, description, disks, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, scheduling, serviceAccounts, tags);
         }

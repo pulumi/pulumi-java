@@ -15,7 +15,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     public static final IdentityAwareProxyClientArgs Empty = new IdentityAwareProxyClientArgs();
 
     @InputImport(name="brandId", required=true)
-    private final Input<String> brandId;
+      private final Input<String> brandId;
 
     public Input<String> getBrandId() {
         return this.brandId;
@@ -26,14 +26,14 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -107,7 +107,6 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public IdentityAwareProxyClientArgs build() {
             return new IdentityAwareProxyClientArgs(brandId, displayName, project);
         }

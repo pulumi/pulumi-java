@@ -23,7 +23,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -45,7 +45,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<BucketIntelligentTieringConfigurationStatus> status;
+        private final Input<BucketIntelligentTieringConfigurationStatus> status;
 
     public Input<BucketIntelligentTieringConfigurationStatus> getStatus() {
         return this.status;
@@ -56,7 +56,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tagFilters")
-    private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+        private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
 
     public Input<List<BucketTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;
@@ -67,7 +67,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tierings", required=true)
-    private final Input<List<BucketTieringArgs>> tierings;
+        private final Input<List<BucketTieringArgs>> tierings;
 
     public Input<List<BucketTieringArgs>> getTierings() {
         return this.tierings;
@@ -171,7 +171,6 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             this.tierings = Input.of(Objects.requireNonNull(tierings));
             return this;
         }
-
         public BucketIntelligentTieringConfigurationArgs build() {
             return new BucketIntelligentTieringConfigurationArgs(id, prefix, status, tagFilters, tierings);
         }

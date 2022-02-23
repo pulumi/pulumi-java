@@ -22,7 +22,7 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testTargets", required=true)
-    private final List<String> testTargets;
+      private final List<String> testTargets;
 
     public List<String> getTestTargets() {
         return this.testTargets;
@@ -60,7 +60,6 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public TestTargetsForShardResponse build() {
             return new TestTargetsForShardResponse(testTargets);
         }

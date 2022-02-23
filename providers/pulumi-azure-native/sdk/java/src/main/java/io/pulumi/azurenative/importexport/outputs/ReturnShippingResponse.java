@@ -74,7 +74,6 @@ public final class ReturnShippingResponse {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public ReturnShippingResponse build() {
             return new ReturnShippingResponse(carrierAccountNumber, carrierName);
         }

@@ -341,7 +341,6 @@ public final class TriggerBuildStep {
             this.waitFors = waitFors;
             return this;
         }
-
         public TriggerBuildStep build() {
             return new TriggerBuildStep(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<GoogleCloudMlV1__MetricSpecName> name;
+      private final @Nullable Input<GoogleCloudMlV1__MetricSpecName> name;
 
     public Input<GoogleCloudMlV1__MetricSpecName> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<Integer> target;
+      private final @Nullable Input<Integer> target;
 
     public Input<Integer> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -94,7 +94,6 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
             this.target = Input.ofNullable(target);
             return this;
         }
-
         public GoogleCloudMlV1__MetricSpecArgs build() {
             return new GoogleCloudMlV1__MetricSpecArgs(name, target);
         }

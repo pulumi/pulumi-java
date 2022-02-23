@@ -291,7 +291,6 @@ public final class ClusterAddonsConfig {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
-
         public ClusterAddonsConfig build() {
             return new ClusterAddonsConfig(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
         }

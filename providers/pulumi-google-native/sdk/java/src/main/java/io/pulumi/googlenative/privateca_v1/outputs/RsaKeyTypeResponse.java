@@ -74,7 +74,6 @@ public final class RsaKeyTypeResponse {
             this.minModulusSize = Objects.requireNonNull(minModulusSize);
             return this;
         }
-
         public RsaKeyTypeResponse build() {
             return new RsaKeyTypeResponse(maxModulusSize, minModulusSize);
         }

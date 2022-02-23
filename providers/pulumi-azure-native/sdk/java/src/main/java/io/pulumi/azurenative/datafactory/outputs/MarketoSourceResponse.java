@@ -205,7 +205,6 @@ public final class MarketoSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MarketoSourceResponse build() {
             return new MarketoSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

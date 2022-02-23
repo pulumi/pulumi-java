@@ -27,7 +27,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+        private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -38,7 +38,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -49,7 +49,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ManagedServiceIdentityType>> type;
+        private final Input<Either<String,ManagedServiceIdentityType>> type;
 
     public Input<Either<String,ManagedServiceIdentityType>> getType() {
         return this.type;
@@ -60,7 +60,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
     public Input<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -149,7 +149,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public ManagedServiceIdentityArgs build() {
             return new ManagedServiceIdentityArgs(principalId, tenantId, type, userAssignedIdentities);
         }

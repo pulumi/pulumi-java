@@ -117,7 +117,6 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public GoogleCloudMlV1_Trial_ParameterResponse build() {
             return new GoogleCloudMlV1_Trial_ParameterResponse(floatValue, intValue, parameter, stringValue);
         }

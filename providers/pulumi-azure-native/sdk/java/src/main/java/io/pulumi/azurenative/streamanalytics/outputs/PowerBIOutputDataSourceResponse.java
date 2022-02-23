@@ -204,7 +204,6 @@ public final class PowerBIOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PowerBIOutputDataSourceResponse build() {
             return new PowerBIOutputDataSourceResponse(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

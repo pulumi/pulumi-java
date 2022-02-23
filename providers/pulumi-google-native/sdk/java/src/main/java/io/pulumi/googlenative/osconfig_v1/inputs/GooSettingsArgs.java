@@ -34,7 +34,6 @@ public final class GooSettingsArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(GooSettingsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooSettingsArgs build() {
             return new GooSettingsArgs();
         }

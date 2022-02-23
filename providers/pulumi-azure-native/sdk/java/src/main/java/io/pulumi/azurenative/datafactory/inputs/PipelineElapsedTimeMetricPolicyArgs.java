@@ -23,7 +23,7 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<Object> duration;
+        private final @Nullable Input<Object> duration;
 
     public Input<Object> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -66,7 +66,6 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
             this.duration = Input.ofNullable(duration);
             return this;
         }
-
         public PipelineElapsedTimeMetricPolicyArgs build() {
             return new PipelineElapsedTimeMetricPolicyArgs(duration);
         }

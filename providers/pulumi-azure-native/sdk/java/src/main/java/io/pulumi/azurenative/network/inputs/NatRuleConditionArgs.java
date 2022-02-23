@@ -26,7 +26,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destinationAddresses")
-    private final @Nullable Input<List<String>> destinationAddresses;
+        private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
@@ -48,7 +48,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destinationPorts")
-    private final @Nullable Input<List<String>> destinationPorts;
+        private final @Nullable Input<List<String>> destinationPorts;
 
     public Input<List<String>> getDestinationPorts() {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
@@ -59,7 +59,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipProtocols")
-    private final @Nullable Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
+        private final @Nullable Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
 
     public Input<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> getIpProtocols() {
         return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
@@ -70,7 +70,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleConditionType", required=true)
-    private final Input<String> ruleConditionType;
+        private final Input<String> ruleConditionType;
 
     public Input<String> getRuleConditionType() {
         return this.ruleConditionType;
@@ -93,7 +93,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceAddresses")
-    private final @Nullable Input<List<String>> sourceAddresses;
+        private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
@@ -104,7 +104,7 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceIpGroups")
-    private final @Nullable Input<List<String>> sourceIpGroups;
+        private final @Nullable Input<List<String>> sourceIpGroups;
 
     public Input<List<String>> getSourceIpGroups() {
         return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
@@ -253,7 +253,6 @@ public final class NatRuleConditionArgs extends io.pulumi.resources.ResourceArgs
             this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
             return this;
         }
-
         public NatRuleConditionArgs build() {
             return new NatRuleConditionArgs(description, destinationAddresses, destinationPorts, ipProtocols, name, ruleConditionType, sourceAddresses, sourceIpGroups);
         }

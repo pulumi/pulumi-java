@@ -179,7 +179,6 @@ public final class ListNamespaceKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListNamespaceKeysResult build() {
             return new ListNamespaceKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

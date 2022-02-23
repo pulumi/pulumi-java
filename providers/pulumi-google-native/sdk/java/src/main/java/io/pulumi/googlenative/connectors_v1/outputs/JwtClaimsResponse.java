@@ -95,7 +95,6 @@ public final class JwtClaimsResponse {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public JwtClaimsResponse build() {
             return new JwtClaimsResponse(audience, issuer, subject);
         }

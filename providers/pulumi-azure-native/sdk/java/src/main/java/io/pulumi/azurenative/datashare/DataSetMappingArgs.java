@@ -21,7 +21,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSetMappingName")
-    private final @Nullable Input<String> dataSetMappingName;
+        private final @Nullable Input<String> dataSetMappingName;
 
     public Input<String> getDataSetMappingName() {
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
@@ -43,7 +43,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,DataSetMappingKind>> kind;
+        private final Input<Either<String,DataSetMappingKind>> kind;
 
     public Input<Either<String,DataSetMappingKind>> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+        private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -169,7 +169,6 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public DataSetMappingArgs build() {
             return new DataSetMappingArgs(accountName, dataSetMappingName, kind, resourceGroupName, shareSubscriptionName);
         }

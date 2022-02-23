@@ -46,7 +46,6 @@ public final class WebACLCaptchaAction {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLCaptchaAction build() {
             return new WebACLCaptchaAction(customRequestHandling);
         }

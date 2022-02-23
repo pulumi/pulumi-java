@@ -161,7 +161,6 @@ public final class DiskEncryptionPropertiesResponse {
             this.vaultUri = vaultUri;
             return this;
         }
-
         public DiskEncryptionPropertiesResponse build() {
             return new DiskEncryptionPropertiesResponse(encryptionAlgorithm, encryptionAtHost, keyName, keyVersion, msiResourceId, vaultUri);
         }

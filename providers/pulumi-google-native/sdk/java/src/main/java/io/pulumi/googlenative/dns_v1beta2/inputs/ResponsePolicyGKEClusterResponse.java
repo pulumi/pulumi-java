@@ -17,14 +17,14 @@ public final class ResponsePolicyGKEClusterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gkeClusterName", required=true)
-    private final String gkeClusterName;
+      private final String gkeClusterName;
 
     public String getGkeClusterName() {
         return this.gkeClusterName;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -73,7 +73,6 @@ public final class ResponsePolicyGKEClusterResponse extends io.pulumi.resources.
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ResponsePolicyGKEClusterResponse build() {
             return new ResponsePolicyGKEClusterResponse(gkeClusterName, kind);
         }

@@ -22,7 +22,7 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -33,7 +33,7 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final Input<String> roleDefinitionId;
+        private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -92,7 +92,6 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
-
         public WorkspaceProviderAuthorizationArgs build() {
             return new WorkspaceProviderAuthorizationArgs(principalId, roleDefinitionId);
         }

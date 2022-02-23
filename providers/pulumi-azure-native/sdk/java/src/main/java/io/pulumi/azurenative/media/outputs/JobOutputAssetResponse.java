@@ -206,7 +206,6 @@ public final class JobOutputAssetResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public JobOutputAssetResponse build() {
             return new JobOutputAssetResponse(assetName, endTime, error, label, odataType, progress, startTime, state);
         }

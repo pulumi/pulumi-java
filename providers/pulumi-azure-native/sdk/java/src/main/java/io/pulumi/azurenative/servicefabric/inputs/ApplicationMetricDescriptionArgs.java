@@ -28,7 +28,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maximumCapacity")
-    private final @Nullable Input<Double> maximumCapacity;
+        private final @Nullable Input<Double> maximumCapacity;
 
     public Input<Double> getMaximumCapacity() {
         return this.maximumCapacity == null ? Input.empty() : this.maximumCapacity;
@@ -39,7 +39,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reservationCapacity")
-    private final @Nullable Input<Double> reservationCapacity;
+        private final @Nullable Input<Double> reservationCapacity;
 
     public Input<Double> getReservationCapacity() {
         return this.reservationCapacity == null ? Input.empty() : this.reservationCapacity;
@@ -67,7 +67,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="totalApplicationCapacity")
-    private final @Nullable Input<Double> totalApplicationCapacity;
+        private final @Nullable Input<Double> totalApplicationCapacity;
 
     public Input<Double> getTotalApplicationCapacity() {
         return this.totalApplicationCapacity == null ? Input.empty() : this.totalApplicationCapacity;
@@ -156,7 +156,6 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             this.totalApplicationCapacity = Input.ofNullable(totalApplicationCapacity);
             return this;
         }
-
         public ApplicationMetricDescriptionArgs build() {
             return new ApplicationMetricDescriptionArgs(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }

@@ -182,7 +182,6 @@ public final class RosettaNetPipRoleSettingsResponse {
             this.serviceClassification = Objects.requireNonNull(serviceClassification);
             return this;
         }
-
         public RosettaNetPipRoleSettingsResponse build() {
             return new RosettaNetPipRoleSettingsResponse(action, businessDocument, description, role, roleType, service, serviceClassification);
         }

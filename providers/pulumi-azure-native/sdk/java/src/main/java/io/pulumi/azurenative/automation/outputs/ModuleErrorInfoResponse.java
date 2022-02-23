@@ -76,7 +76,6 @@ public final class ModuleErrorInfoResponse {
             this.message = message;
             return this;
         }
-
         public ModuleErrorInfoResponse build() {
             return new ModuleErrorInfoResponse(code, message);
         }

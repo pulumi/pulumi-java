@@ -22,7 +22,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final Input<String> factoryName;
+        private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -33,7 +33,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="integrationRuntimeName")
-    private final @Nullable Input<String> integrationRuntimeName;
+        private final @Nullable Input<String> integrationRuntimeName;
 
     public Input<String> getIntegrationRuntimeName() {
         return this.integrationRuntimeName == null ? Input.empty() : this.integrationRuntimeName;
@@ -44,7 +44,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+        private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
         return this.properties;
@@ -55,7 +55,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public IntegrationRuntimeArgs build() {
             return new IntegrationRuntimeArgs(factoryName, integrationRuntimeName, properties, resourceGroupName);
         }

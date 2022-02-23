@@ -184,7 +184,6 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMongoDBResourceMongoRoleDefinitionResult build() {
             return new GetMongoDBResourceMongoRoleDefinitionResult(databaseName, id, name, privileges, roleName, roles, type);
         }

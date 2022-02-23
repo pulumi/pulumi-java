@@ -119,7 +119,6 @@ public final class AddRemoveReplicaScalingMechanismResponse {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }
-
         public AddRemoveReplicaScalingMechanismResponse build() {
             return new AddRemoveReplicaScalingMechanismResponse(kind, maxCount, minCount, scaleIncrement);
         }

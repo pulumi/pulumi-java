@@ -22,7 +22,7 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -33,7 +33,7 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientSecret", required=true)
-    private final SecretResponse clientSecret;
+      private final SecretResponse clientSecret;
 
     public SecretResponse getClientSecret() {
         return this.clientSecret;
@@ -82,7 +82,6 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Oauth2ClientCredentialsResponse build() {
             return new Oauth2ClientCredentialsResponse(clientId, clientSecret);
         }

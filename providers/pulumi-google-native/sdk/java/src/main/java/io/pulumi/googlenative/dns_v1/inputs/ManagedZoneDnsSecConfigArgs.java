@@ -23,14 +23,14 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultKeySpecs")
-    private final @Nullable Input<List<DnsKeySpecArgs>> defaultKeySpecs;
+      private final @Nullable Input<List<DnsKeySpecArgs>> defaultKeySpecs;
 
     public Input<List<DnsKeySpecArgs>> getDefaultKeySpecs() {
         return this.defaultKeySpecs == null ? Input.empty() : this.defaultKeySpecs;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -41,7 +41,7 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonExistence")
-    private final @Nullable Input<ManagedZoneDnsSecConfigNonExistence> nonExistence;
+      private final @Nullable Input<ManagedZoneDnsSecConfigNonExistence> nonExistence;
 
     public Input<ManagedZoneDnsSecConfigNonExistence> getNonExistence() {
         return this.nonExistence == null ? Input.empty() : this.nonExistence;
@@ -52,7 +52,7 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ManagedZoneDnsSecConfigState> state;
+      private final @Nullable Input<ManagedZoneDnsSecConfigState> state;
 
     public Input<ManagedZoneDnsSecConfigState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -141,7 +141,6 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public ManagedZoneDnsSecConfigArgs build() {
             return new ManagedZoneDnsSecConfigArgs(defaultKeySpecs, kind, nonExistence, state);
         }

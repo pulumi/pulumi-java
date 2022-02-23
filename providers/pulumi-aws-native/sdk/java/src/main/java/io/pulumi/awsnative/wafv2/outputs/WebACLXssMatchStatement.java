@@ -60,7 +60,6 @@ public final class WebACLXssMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLXssMatchStatement build() {
             return new WebACLXssMatchStatement(fieldToMatch, textTransformations);
         }

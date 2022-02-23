@@ -24,7 +24,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<String> dataType;
+        private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -35,7 +35,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isConfigurationParameter")
-    private final @Nullable Input<Boolean> isConfigurationParameter;
+        private final @Nullable Input<Boolean> isConfigurationParameter;
 
     public Input<Boolean> getIsConfigurationParameter() {
         return this.isConfigurationParameter == null ? Input.empty() : this.isConfigurationParameter;
@@ -94,7 +94,6 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
             this.isConfigurationParameter = Input.ofNullable(isConfigurationParameter);
             return this;
         }
-
         public FunctionInputArgs build() {
             return new FunctionInputArgs(dataType, isConfigurationParameter);
         }

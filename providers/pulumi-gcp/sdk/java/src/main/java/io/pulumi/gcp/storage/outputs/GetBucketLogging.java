@@ -58,7 +58,6 @@ public final class GetBucketLogging {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }
-
         public GetBucketLogging build() {
             return new GetBucketLogging(logBucket, logObjectPrefix);
         }

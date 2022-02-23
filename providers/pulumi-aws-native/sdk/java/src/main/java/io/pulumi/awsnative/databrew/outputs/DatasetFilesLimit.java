@@ -99,7 +99,6 @@ public final class DatasetFilesLimit {
             this.orderedBy = orderedBy;
             return this;
         }
-
         public DatasetFilesLimit build() {
             return new DatasetFilesLimit(maxFiles, order, orderedBy);
         }

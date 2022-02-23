@@ -140,7 +140,6 @@ public final class GetGuestConfigurationHCRPAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGuestConfigurationHCRPAssignmentResult build() {
             return new GetGuestConfigurationHCRPAssignmentResult(id, location, name, properties, type);
         }

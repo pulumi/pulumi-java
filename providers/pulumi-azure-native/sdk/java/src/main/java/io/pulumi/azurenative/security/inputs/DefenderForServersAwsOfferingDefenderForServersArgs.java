@@ -23,7 +23,7 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends i
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable Input<String> cloudRoleArn;
+        private final @Nullable Input<String> cloudRoleArn;
 
     public Input<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Input.empty() : this.cloudRoleArn;
@@ -66,7 +66,6 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends i
             this.cloudRoleArn = Input.ofNullable(cloudRoleArn);
             return this;
         }
-
         public DefenderForServersAwsOfferingDefenderForServersArgs build() {
             return new DefenderForServersAwsOfferingDefenderForServersArgs(cloudRoleArn);
         }

@@ -24,7 +24,7 @@ public final class CustomDomainResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class CustomDomainResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="useSubDomainName")
-    private final @Nullable Boolean useSubDomainName;
+        private final @Nullable Boolean useSubDomainName;
 
     public Optional<Boolean> getUseSubDomainName() {
         return this.useSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.useSubDomainName);
@@ -84,7 +84,6 @@ public final class CustomDomainResponse extends io.pulumi.resources.InvokeArgs {
             this.useSubDomainName = useSubDomainName;
             return this;
         }
-
         public CustomDomainResponse build() {
             return new CustomDomainResponse(name, useSubDomainName);
         }

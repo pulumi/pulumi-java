@@ -399,7 +399,6 @@ public final class DeploymentPropertiesExtendedResponse {
             this.validatedResources = Objects.requireNonNull(validatedResources);
             return this;
         }
-
         public DeploymentPropertiesExtendedResponse build() {
             return new DeploymentPropertiesExtendedResponse(correlationId, debugSetting, dependencies, duration, error, mode, onErrorDeployment, outputResources, outputs, parameters, parametersLink, providers, provisioningState, templateHash, templateLink, timestamp, validatedResources);
         }

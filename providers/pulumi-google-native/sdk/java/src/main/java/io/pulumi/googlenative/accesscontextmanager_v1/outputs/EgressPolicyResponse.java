@@ -75,7 +75,6 @@ public final class EgressPolicyResponse {
             this.egressTo = Objects.requireNonNull(egressTo);
             return this;
         }
-
         public EgressPolicyResponse build() {
             return new EgressPolicyResponse(egressFrom, egressTo);
         }

@@ -56,7 +56,6 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization build() {
             return new RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization(target);
         }

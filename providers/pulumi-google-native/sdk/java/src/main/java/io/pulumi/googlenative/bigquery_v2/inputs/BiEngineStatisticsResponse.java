@@ -19,7 +19,7 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="biEngineMode", required=true)
-    private final String biEngineMode;
+      private final String biEngineMode;
 
     public String getBiEngineMode() {
         return this.biEngineMode;
@@ -30,7 +30,7 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="biEngineReasons", required=true)
-    private final List<BiEngineReasonResponse> biEngineReasons;
+      private final List<BiEngineReasonResponse> biEngineReasons;
 
     public List<BiEngineReasonResponse> getBiEngineReasons() {
         return this.biEngineReasons;
@@ -79,7 +79,6 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }
-
         public BiEngineStatisticsResponse build() {
             return new BiEngineStatisticsResponse(biEngineMode, biEngineReasons);
         }

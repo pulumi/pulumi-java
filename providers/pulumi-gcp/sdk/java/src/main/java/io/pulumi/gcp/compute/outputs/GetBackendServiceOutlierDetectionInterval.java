@@ -58,7 +58,6 @@ public final class GetBackendServiceOutlierDetectionInterval {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetBackendServiceOutlierDetectionInterval build() {
             return new GetBackendServiceOutlierDetectionInterval(nanos, seconds);
         }

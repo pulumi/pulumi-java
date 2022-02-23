@@ -28,7 +28,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="admissionReviewVersions", required=true)
-    private final Input<List<String>> admissionReviewVersions;
+        private final Input<List<String>> admissionReviewVersions;
 
     public Input<List<String>> getAdmissionReviewVersions() {
         return this.admissionReviewVersions;
@@ -39,7 +39,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientConfig", required=true)
-    private final Input<WebhookClientConfigArgs> clientConfig;
+        private final Input<WebhookClientConfigArgs> clientConfig;
 
     public Input<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig;
@@ -50,7 +50,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="failurePolicy")
-    private final @Nullable Input<String> failurePolicy;
+        private final @Nullable Input<String> failurePolicy;
 
     public Input<String> getFailurePolicy() {
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
@@ -67,7 +67,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="matchPolicy")
-    private final @Nullable Input<String> matchPolicy;
+        private final @Nullable Input<String> matchPolicy;
 
     public Input<String> getMatchPolicy() {
         return this.matchPolicy == null ? Input.empty() : this.matchPolicy;
@@ -78,7 +78,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceSelector")
-    private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+        private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
 
     public Input<LabelSelectorArgs> getNamespaceSelector() {
         return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
@@ -130,7 +130,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectSelector")
-    private final @Nullable Input<LabelSelectorArgs> objectSelector;
+        private final @Nullable Input<LabelSelectorArgs> objectSelector;
 
     public Input<LabelSelectorArgs> getObjectSelector() {
         return this.objectSelector == null ? Input.empty() : this.objectSelector;
@@ -147,7 +147,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="reinvocationPolicy")
-    private final @Nullable Input<String> reinvocationPolicy;
+        private final @Nullable Input<String> reinvocationPolicy;
 
     public Input<String> getReinvocationPolicy() {
         return this.reinvocationPolicy == null ? Input.empty() : this.reinvocationPolicy;
@@ -158,7 +158,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
+        private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
 
     public Input<List<RuleWithOperationsArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -169,7 +169,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sideEffects", required=true)
-    private final Input<String> sideEffects;
+        private final Input<String> sideEffects;
 
     public Input<String> getSideEffects() {
         return this.sideEffects;
@@ -180,7 +180,7 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+        private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -374,7 +374,6 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public MutatingWebhookArgs build() {
             return new MutatingWebhookArgs(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, reinvocationPolicy, rules, sideEffects, timeoutSeconds);
         }

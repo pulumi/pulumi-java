@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -62,7 +62,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs(headerName);
         }

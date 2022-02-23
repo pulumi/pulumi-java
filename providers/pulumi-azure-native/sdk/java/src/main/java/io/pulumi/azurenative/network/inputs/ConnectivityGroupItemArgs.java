@@ -23,7 +23,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="groupConnectivity")
-    private final @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity;
+        private final @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity;
 
     public Input<Either<String,GroupConnectivity>> getGroupConnectivity() {
         return this.groupConnectivity == null ? Input.empty() : this.groupConnectivity;
@@ -34,7 +34,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isGlobal")
-    private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
+        private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
 
     public Input<Either<String,IsGlobal>> getIsGlobal() {
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
@@ -45,7 +45,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="networkGroupId")
-    private final @Nullable Input<String> networkGroupId;
+        private final @Nullable Input<String> networkGroupId;
 
     public Input<String> getNetworkGroupId() {
         return this.networkGroupId == null ? Input.empty() : this.networkGroupId;
@@ -56,7 +56,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="useHubGateway")
-    private final @Nullable Input<Either<String,UseHubGateway>> useHubGateway;
+        private final @Nullable Input<Either<String,UseHubGateway>> useHubGateway;
 
     public Input<Either<String,UseHubGateway>> getUseHubGateway() {
         return this.useHubGateway == null ? Input.empty() : this.useHubGateway;
@@ -145,7 +145,6 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             this.useHubGateway = Input.ofNullable(useHubGateway);
             return this;
         }
-
         public ConnectivityGroupItemArgs build() {
             return new ConnectivityGroupItemArgs(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
         }

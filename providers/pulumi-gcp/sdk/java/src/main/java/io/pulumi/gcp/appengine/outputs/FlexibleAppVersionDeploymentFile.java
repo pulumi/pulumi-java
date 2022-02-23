@@ -97,7 +97,6 @@ public final class FlexibleAppVersionDeploymentFile {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public FlexibleAppVersionDeploymentFile build() {
             return new FlexibleAppVersionDeploymentFile(name, sha1Sum, sourceUrl);
         }

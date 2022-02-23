@@ -25,7 +25,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable String condition;
+        private final @Nullable String condition;
 
     public Optional<String> getCondition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
@@ -36,7 +36,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="endpointNames", required=true)
-    private final List<String> endpointNames;
+        private final List<String> endpointNames;
 
     public List<String> getEndpointNames() {
         return this.endpointNames;
@@ -47,7 +47,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -58,7 +58,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -69,7 +69,7 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+        private final String source;
 
     public String getSource() {
         return this.source;
@@ -148,7 +148,6 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public RoutePropertiesResponse build() {
             return new RoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }

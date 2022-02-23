@@ -17,7 +17,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="graphArn", required=true)
-    private final String graphArn;
+        private final String graphArn;
 
     public String getGraphArn() {
         return this.graphArn;
@@ -28,7 +28,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="memberId", required=true)
-    private final String memberId;
+        private final String memberId;
 
     public String getMemberId() {
         return this.memberId;
@@ -77,7 +77,6 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
             this.memberId = Objects.requireNonNull(memberId);
             return this;
         }
-
         public GetMemberInvitationArgs build() {
             return new GetMemberInvitationArgs(graphArn, memberId);
         }

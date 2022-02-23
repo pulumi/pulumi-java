@@ -98,7 +98,6 @@ public final class RadiusServerResponse {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
-
         public RadiusServerResponse build() {
             return new RadiusServerResponse(radiusServerAddress, radiusServerScore, radiusServerSecret);
         }

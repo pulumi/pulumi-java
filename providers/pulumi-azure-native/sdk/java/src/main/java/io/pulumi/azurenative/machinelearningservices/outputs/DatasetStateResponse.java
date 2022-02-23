@@ -98,7 +98,6 @@ public final class DatasetStateResponse {
             this.state = state;
             return this;
         }
-
         public DatasetStateResponse build() {
             return new DatasetStateResponse(deprecatedBy, etag, state);
         }

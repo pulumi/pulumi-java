@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @InputImport(name="nodeGroup", required=true)
-    private final Input<String> nodeGroup;
+        private final Input<String> nodeGroup;
 
     public Input<String> getNodeGroup() {
         return this.nodeGroup;
@@ -61,7 +61,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.nodeGroup = Input.of(Objects.requireNonNull(nodeGroup));
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs(nodeGroup);
         }

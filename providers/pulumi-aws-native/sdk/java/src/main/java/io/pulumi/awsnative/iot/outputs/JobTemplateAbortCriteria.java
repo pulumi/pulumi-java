@@ -119,7 +119,6 @@ public final class JobTemplateAbortCriteria {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
         }
-
         public JobTemplateAbortCriteria build() {
             return new JobTemplateAbortCriteria(action, failureType, minNumberOfExecutedThings, thresholdPercentage);
         }

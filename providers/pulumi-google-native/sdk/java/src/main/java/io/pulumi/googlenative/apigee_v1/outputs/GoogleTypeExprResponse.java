@@ -116,7 +116,6 @@ public final class GoogleTypeExprResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleTypeExprResponse build() {
             return new GoogleTypeExprResponse(description, expression, location, title);
         }

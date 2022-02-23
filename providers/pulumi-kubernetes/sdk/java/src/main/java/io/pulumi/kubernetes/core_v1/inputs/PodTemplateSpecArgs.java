@@ -24,7 +24,7 @@ public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -35,7 +35,7 @@ public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<PodSpecArgs> spec;
+        private final @Nullable Input<PodSpecArgs> spec;
 
     public Input<PodSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -94,7 +94,6 @@ public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public PodTemplateSpecArgs build() {
             return new PodTemplateSpecArgs(metadata, spec);
         }

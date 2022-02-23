@@ -74,7 +74,6 @@ public final class SpecificationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SpecificationResponse build() {
             return new SpecificationResponse(name, value);
         }

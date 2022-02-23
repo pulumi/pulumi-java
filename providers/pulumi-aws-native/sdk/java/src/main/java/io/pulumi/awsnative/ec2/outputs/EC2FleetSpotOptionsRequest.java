@@ -143,7 +143,6 @@ public final class EC2FleetSpotOptionsRequest {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
-
         public EC2FleetSpotOptionsRequest build() {
             return new EC2FleetSpotOptionsRequest(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }

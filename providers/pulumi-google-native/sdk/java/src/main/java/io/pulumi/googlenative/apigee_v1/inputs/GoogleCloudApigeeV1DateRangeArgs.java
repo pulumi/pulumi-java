@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="end", required=true)
-    private final Input<String> end;
+      private final Input<String> end;
 
     public Input<String> getEnd() {
         return this.end;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<String> start;
+      private final Input<String> start;
 
     public Input<String> getStart() {
         return this.start;
@@ -92,7 +92,6 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }
-
         public GoogleCloudApigeeV1DateRangeArgs build() {
             return new GoogleCloudApigeeV1DateRangeArgs(end, start);
         }

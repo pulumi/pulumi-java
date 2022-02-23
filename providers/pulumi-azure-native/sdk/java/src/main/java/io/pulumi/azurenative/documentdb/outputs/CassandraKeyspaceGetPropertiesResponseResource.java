@@ -117,7 +117,6 @@ public final class CassandraKeyspaceGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public CassandraKeyspaceGetPropertiesResponseResource build() {
             return new CassandraKeyspaceGetPropertiesResponseResource(etag, id, rid, ts);
         }

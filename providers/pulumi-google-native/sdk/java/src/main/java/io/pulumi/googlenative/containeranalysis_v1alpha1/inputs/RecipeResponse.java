@@ -23,7 +23,7 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arguments", required=true)
-    private final List<Map<String,String>> arguments;
+      private final List<Map<String,String>> arguments;
 
     public List<Map<String,String>> getArguments() {
         return this.arguments;
@@ -34,7 +34,7 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="definedInMaterial", required=true)
-    private final String definedInMaterial;
+      private final String definedInMaterial;
 
     public String getDefinedInMaterial() {
         return this.definedInMaterial;
@@ -45,7 +45,7 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="entryPoint", required=true)
-    private final String entryPoint;
+      private final String entryPoint;
 
     public String getEntryPoint() {
         return this.entryPoint;
@@ -56,7 +56,7 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-    private final List<Map<String,String>> environment;
+      private final List<Map<String,String>> environment;
 
     public List<Map<String,String>> getEnvironment() {
         return this.environment;
@@ -67,7 +67,7 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -146,7 +146,6 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RecipeResponse build() {
             return new RecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
         }

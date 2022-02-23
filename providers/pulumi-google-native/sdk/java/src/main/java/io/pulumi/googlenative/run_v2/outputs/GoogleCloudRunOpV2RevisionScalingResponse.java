@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
             this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionScalingResponse build() {
             return new GoogleCloudRunOpV2RevisionScalingResponse(maxInstanceCount, minInstanceCount);
         }

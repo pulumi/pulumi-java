@@ -16,21 +16,21 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate extends io.pulu
     public static final TaskDefinitionUpdateWirelessGatewayTaskCreate Empty = new TaskDefinitionUpdateWirelessGatewayTaskCreate();
 
     @InputImport(name="loRaWAN")
-    private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
+        private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
 
     public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskCreate> getLoRaWAN() {
         return this.loRaWAN == null ? Optional.empty() : Optional.ofNullable(this.loRaWAN);
     }
 
     @InputImport(name="updateDataRole")
-    private final @Nullable String updateDataRole;
+        private final @Nullable String updateDataRole;
 
     public Optional<String> getUpdateDataRole() {
         return this.updateDataRole == null ? Optional.empty() : Optional.ofNullable(this.updateDataRole);
     }
 
     @InputImport(name="updateDataSource")
-    private final @Nullable String updateDataSource;
+        private final @Nullable String updateDataSource;
 
     public Optional<String> getUpdateDataSource() {
         return this.updateDataSource == null ? Optional.empty() : Optional.ofNullable(this.updateDataSource);
@@ -89,7 +89,6 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate extends io.pulu
             this.updateDataSource = updateDataSource;
             return this;
         }
-
         public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreate(loRaWAN, updateDataRole, updateDataSource);
         }

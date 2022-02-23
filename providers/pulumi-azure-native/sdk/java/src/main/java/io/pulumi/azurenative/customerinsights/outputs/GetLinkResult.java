@@ -375,7 +375,6 @@ public final class GetLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkResult build() {
             return new GetLinkResult(description, displayName, id, linkName, mappings, name, operationType, participantPropertyReferences, provisioningState, referenceOnly, sourceEntityType, sourceEntityTypeName, targetEntityType, targetEntityTypeName, tenantId, type);
         }

@@ -82,7 +82,6 @@ public final class SnapshotSourceDiskEncryptionKey {
             this.rawKey = rawKey;
             return this;
         }
-
         public SnapshotSourceDiskEncryptionKey build() {
             return new SnapshotSourceDiskEncryptionKey(kmsKeyServiceAccount, rawKey);
         }

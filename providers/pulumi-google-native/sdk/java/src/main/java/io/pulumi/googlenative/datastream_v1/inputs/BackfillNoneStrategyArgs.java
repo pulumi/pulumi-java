@@ -34,7 +34,6 @@ public final class BackfillNoneStrategyArgs extends io.pulumi.resources.Resource
         public Builder(BackfillNoneStrategyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BackfillNoneStrategyArgs build() {
             return new BackfillNoneStrategyArgs();
         }

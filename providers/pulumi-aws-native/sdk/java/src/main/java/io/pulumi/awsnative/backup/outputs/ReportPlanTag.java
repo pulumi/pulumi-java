@@ -76,7 +76,6 @@ public final class ReportPlanTag {
             this.value = value;
             return this;
         }
-
         public ReportPlanTag build() {
             return new ReportPlanTag(key, value);
         }

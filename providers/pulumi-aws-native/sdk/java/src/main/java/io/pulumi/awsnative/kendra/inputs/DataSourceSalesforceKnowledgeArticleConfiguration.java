@@ -18,21 +18,21 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration extends io.
     public static final DataSourceSalesforceKnowledgeArticleConfiguration Empty = new DataSourceSalesforceKnowledgeArticleConfiguration();
 
     @InputImport(name="customKnowledgeArticleTypeConfigurations")
-    private final @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
+        private final @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
 
     public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> getCustomKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? List.of() : this.customKnowledgeArticleTypeConfigurations;
     }
 
     @InputImport(name="includedStates", required=true)
-    private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
+        private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
 
     public List<DataSourceSalesforceKnowledgeArticleState> getIncludedStates() {
         return this.includedStates;
     }
 
     @InputImport(name="standardKnowledgeArticleTypeConfiguration")
-    private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
+        private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
 
     public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> getStandardKnowledgeArticleTypeConfiguration() {
         return this.standardKnowledgeArticleTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.standardKnowledgeArticleTypeConfiguration);
@@ -91,7 +91,6 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration extends io.
             this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
             return this;
         }
-
         public DataSourceSalesforceKnowledgeArticleConfiguration build() {
             return new DataSourceSalesforceKnowledgeArticleConfiguration(customKnowledgeArticleTypeConfigurations, includedStates, standardKnowledgeArticleTypeConfiguration);
         }

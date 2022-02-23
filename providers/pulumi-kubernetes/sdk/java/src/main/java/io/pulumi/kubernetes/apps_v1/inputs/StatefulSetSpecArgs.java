@@ -30,7 +30,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minReadySeconds")
-    private final @Nullable Input<Integer> minReadySeconds;
+        private final @Nullable Input<Integer> minReadySeconds;
 
     public Input<Integer> getMinReadySeconds() {
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
@@ -41,7 +41,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="persistentVolumeClaimRetentionPolicy")
-    private final @Nullable Input<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy;
+        private final @Nullable Input<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy;
 
     public Input<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> getPersistentVolumeClaimRetentionPolicy() {
         return this.persistentVolumeClaimRetentionPolicy == null ? Input.empty() : this.persistentVolumeClaimRetentionPolicy;
@@ -56,7 +56,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="podManagementPolicy")
-    private final @Nullable Input<String> podManagementPolicy;
+        private final @Nullable Input<String> podManagementPolicy;
 
     public Input<String> getPodManagementPolicy() {
         return this.podManagementPolicy == null ? Input.empty() : this.podManagementPolicy;
@@ -67,7 +67,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<Integer> replicas;
+        private final @Nullable Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -78,7 +78,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="revisionHistoryLimit")
-    private final @Nullable Input<Integer> revisionHistoryLimit;
+        private final @Nullable Input<Integer> revisionHistoryLimit;
 
     public Input<Integer> getRevisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
@@ -89,7 +89,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selector", required=true)
-    private final Input<LabelSelectorArgs> selector;
+        private final Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector;
@@ -100,7 +100,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -111,7 +111,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<PodTemplateSpecArgs> template;
+        private final Input<PodTemplateSpecArgs> template;
 
     public Input<PodTemplateSpecArgs> getTemplate() {
         return this.template;
@@ -122,7 +122,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateStrategy")
-    private final @Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy;
+        private final @Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy;
 
     public Input<StatefulSetUpdateStrategyArgs> getUpdateStrategy() {
         return this.updateStrategy == null ? Input.empty() : this.updateStrategy;
@@ -133,7 +133,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumeClaimTemplates")
-    private final @Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
+        private final @Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
     public Input<List<PersistentVolumeClaimArgs>> getVolumeClaimTemplates() {
         return this.volumeClaimTemplates == null ? Input.empty() : this.volumeClaimTemplates;
@@ -312,7 +312,6 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.volumeClaimTemplates = Input.ofNullable(volumeClaimTemplates);
             return this;
         }
-
         public StatefulSetSpecArgs build() {
             return new StatefulSetSpecArgs(minReadySeconds, persistentVolumeClaimRetentionPolicy, podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
         }

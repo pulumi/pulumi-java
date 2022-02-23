@@ -116,7 +116,6 @@ public final class DiskUtilizationResponse {
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
         }
-
         public DiskUtilizationResponse build() {
             return new DiskUtilizationResponse(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }

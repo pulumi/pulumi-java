@@ -27,7 +27,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionConfigurationArgs> encryption;
+        private final @Nullable Input<EncryptionConfigurationArgs> encryption;
 
     public Input<EncryptionConfigurationArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -38,7 +38,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName")
-    private final @Nullable Input<String> factoryName;
+        private final @Nullable Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName == null ? Input.empty() : this.factoryName;
@@ -49,7 +49,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalParameters")
-    private final @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
+        private final @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
     public Input<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
         return this.globalParameters == null ? Input.empty() : this.globalParameters;
@@ -60,7 +60,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<FactoryIdentityArgs> identity;
+        private final @Nullable Input<FactoryIdentityArgs> identity;
 
     public Input<FactoryIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -71,7 +71,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -93,7 +93,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoConfiguration")
-    private final @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
+        private final @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
     public Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
         return this.repoConfiguration == null ? Input.empty() : this.repoConfiguration;
@@ -104,7 +104,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +115,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -279,7 +279,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FactoryArgs build() {
             return new FactoryArgs(encryption, factoryName, globalParameters, identity, location, publicNetworkAccess, repoConfiguration, resourceGroupName, tags);
         }

@@ -20,7 +20,7 @@ public final class FolderFeedConditionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class FolderFeedConditionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -43,7 +43,7 @@ public final class FolderFeedConditionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class FolderFeedConditionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -144,7 +144,6 @@ public final class FolderFeedConditionGetArgs extends io.pulumi.resources.Resour
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public FolderFeedConditionGetArgs build() {
             return new FolderFeedConditionGetArgs(description, expression, location, title);
         }

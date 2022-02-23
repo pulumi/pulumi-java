@@ -24,7 +24,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable Input<List<String>> allowedValues;
+      private final @Nullable Input<List<String>> allowedValues;
 
     public Input<List<String>> getAllowedValues() {
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
@@ -35,7 +35,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
      * 
      */
     @InputImport(name="deniedValues")
-    private final @Nullable Input<List<String>> deniedValues;
+      private final @Nullable Input<List<String>> deniedValues;
 
     public Input<List<String>> getDeniedValues() {
         return this.deniedValues == null ? Input.empty() : this.deniedValues;
@@ -94,7 +94,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
             this.deniedValues = Input.ofNullable(deniedValues);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(allowedValues, deniedValues);
         }

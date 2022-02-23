@@ -140,7 +140,6 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentials {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public ConnectorProfileGoogleAnalyticsConnectorProfileCredentials build() {
             return new ConnectorProfileGoogleAnalyticsConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);
         }

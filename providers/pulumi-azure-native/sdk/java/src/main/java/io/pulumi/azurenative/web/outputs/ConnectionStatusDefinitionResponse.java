@@ -98,7 +98,6 @@ public final class ConnectionStatusDefinitionResponse {
             this.target = target;
             return this;
         }
-
         public ConnectionStatusDefinitionResponse build() {
             return new ConnectionStatusDefinitionResponse(error, status, target);
         }

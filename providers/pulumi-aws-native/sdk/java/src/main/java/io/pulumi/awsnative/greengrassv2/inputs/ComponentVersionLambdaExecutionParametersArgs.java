@@ -22,77 +22,77 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     public static final ComponentVersionLambdaExecutionParametersArgs Empty = new ComponentVersionLambdaExecutionParametersArgs();
 
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Object> environmentVariables;
+        private final @Nullable Input<Object> environmentVariables;
 
     public Input<Object> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
     @InputImport(name="eventSources")
-    private final @Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
+        private final @Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
 
     public Input<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
         return this.eventSources == null ? Input.empty() : this.eventSources;
     }
 
     @InputImport(name="execArgs")
-    private final @Nullable Input<List<String>> execArgs;
+        private final @Nullable Input<List<String>> execArgs;
 
     public Input<List<String>> getExecArgs() {
         return this.execArgs == null ? Input.empty() : this.execArgs;
     }
 
     @InputImport(name="inputPayloadEncodingType")
-    private final @Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
+        private final @Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
 
     public Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
         return this.inputPayloadEncodingType == null ? Input.empty() : this.inputPayloadEncodingType;
     }
 
     @InputImport(name="linuxProcessParams")
-    private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
+        private final @Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
 
     public Input<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
         return this.linuxProcessParams == null ? Input.empty() : this.linuxProcessParams;
     }
 
     @InputImport(name="maxIdleTimeInSeconds")
-    private final @Nullable Input<Integer> maxIdleTimeInSeconds;
+        private final @Nullable Input<Integer> maxIdleTimeInSeconds;
 
     public Input<Integer> getMaxIdleTimeInSeconds() {
         return this.maxIdleTimeInSeconds == null ? Input.empty() : this.maxIdleTimeInSeconds;
     }
 
     @InputImport(name="maxInstancesCount")
-    private final @Nullable Input<Integer> maxInstancesCount;
+        private final @Nullable Input<Integer> maxInstancesCount;
 
     public Input<Integer> getMaxInstancesCount() {
         return this.maxInstancesCount == null ? Input.empty() : this.maxInstancesCount;
     }
 
     @InputImport(name="maxQueueSize")
-    private final @Nullable Input<Integer> maxQueueSize;
+        private final @Nullable Input<Integer> maxQueueSize;
 
     public Input<Integer> getMaxQueueSize() {
         return this.maxQueueSize == null ? Input.empty() : this.maxQueueSize;
     }
 
     @InputImport(name="pinned")
-    private final @Nullable Input<Boolean> pinned;
+        private final @Nullable Input<Boolean> pinned;
 
     public Input<Boolean> getPinned() {
         return this.pinned == null ? Input.empty() : this.pinned;
     }
 
     @InputImport(name="statusTimeoutInSeconds")
-    private final @Nullable Input<Integer> statusTimeoutInSeconds;
+        private final @Nullable Input<Integer> statusTimeoutInSeconds;
 
     public Input<Integer> getStatusTimeoutInSeconds() {
         return this.statusTimeoutInSeconds == null ? Input.empty() : this.statusTimeoutInSeconds;
     }
 
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+        private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -286,7 +286,6 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public ComponentVersionLambdaExecutionParametersArgs build() {
             return new ComponentVersionLambdaExecutionParametersArgs(environmentVariables, eventSources, execArgs, inputPayloadEncodingType, linuxProcessParams, maxIdleTimeInSeconds, maxInstancesCount, maxQueueSize, pinned, statusTimeoutInSeconds, timeoutInSeconds);
         }

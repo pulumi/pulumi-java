@@ -77,7 +77,6 @@ public final class ConnectorMappingAvailabilityResponse {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public ConnectorMappingAvailabilityResponse build() {
             return new ConnectorMappingAvailabilityResponse(frequency, interval);
         }

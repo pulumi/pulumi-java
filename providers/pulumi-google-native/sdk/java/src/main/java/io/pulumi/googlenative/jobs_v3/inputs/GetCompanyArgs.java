@@ -15,14 +15,14 @@ public final class GetCompanyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCompanyArgs Empty = new GetCompanyArgs();
 
     @InputImport(name="companyId", required=true)
-    private final String companyId;
+      private final String companyId;
 
     public String getCompanyId() {
         return this.companyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetCompanyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCompanyArgs build() {
             return new GetCompanyArgs(companyId, project);
         }

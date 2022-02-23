@@ -172,7 +172,6 @@ public final class StartTaskResponse {
             this.waitForSuccess = waitForSuccess;
             return this;
         }
-
         public StartTaskResponse build() {
             return new StartTaskResponse(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
         }

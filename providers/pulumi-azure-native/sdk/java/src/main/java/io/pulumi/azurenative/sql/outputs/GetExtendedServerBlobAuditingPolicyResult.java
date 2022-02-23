@@ -462,7 +462,6 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExtendedServerBlobAuditingPolicyResult build() {
             return new GetExtendedServerBlobAuditingPolicyResult(auditActionsAndGroups, id, isAzureMonitorTargetEnabled, isDevopsAuditEnabled, isStorageSecondaryKeyInUse, name, predicateExpression, queueDelayMs, retentionDays, state, storageAccountSubscriptionId, storageEndpoint, type);
         }

@@ -24,7 +24,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+        private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -94,7 +94,6 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public MetricIdentifierArgs build() {
             return new MetricIdentifierArgs(name, selector);
         }

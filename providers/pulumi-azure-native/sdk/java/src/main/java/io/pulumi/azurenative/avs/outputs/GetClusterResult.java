@@ -203,7 +203,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterId, clusterSize, hosts, id, name, provisioningState, sku, type);
         }

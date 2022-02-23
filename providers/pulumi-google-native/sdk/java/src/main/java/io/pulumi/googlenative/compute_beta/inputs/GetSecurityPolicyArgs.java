@@ -15,14 +15,14 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetSecurityPolicyArgs Empty = new GetSecurityPolicyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="securityPolicy", required=true)
-    private final String securityPolicy;
+      private final String securityPolicy;
 
     public String getSecurityPolicy() {
         return this.securityPolicy;
@@ -71,7 +71,6 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
-
         public GetSecurityPolicyArgs build() {
             return new GetSecurityPolicyArgs(project, securityPolicy);
         }

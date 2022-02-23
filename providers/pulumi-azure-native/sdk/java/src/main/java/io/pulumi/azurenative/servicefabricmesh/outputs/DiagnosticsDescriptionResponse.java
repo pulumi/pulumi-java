@@ -100,7 +100,6 @@ public final class DiagnosticsDescriptionResponse {
             this.sinks = sinks;
             return this;
         }
-
         public DiagnosticsDescriptionResponse build() {
             return new DiagnosticsDescriptionResponse(defaultSinkRefs, enabled, sinks);
         }

@@ -20,7 +20,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="managedNetworkName", required=true)
-    private final Input<String> managedNetworkName;
+        private final Input<String> managedNetworkName;
 
     public Input<String> getManagedNetworkName() {
         return this.managedNetworkName;
@@ -42,7 +42,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="managedNetworkPeeringPolicyName")
-    private final @Nullable Input<String> managedNetworkPeeringPolicyName;
+        private final @Nullable Input<String> managedNetworkPeeringPolicyName;
 
     public Input<String> getManagedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName == null ? Input.empty() : this.managedNetworkPeeringPolicyName;
@@ -53,7 +53,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
+        private final @Nullable Input<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
     public Input<ManagedNetworkPeeringPolicyPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -64,7 +64,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagedNetworkPeeringPolicyArgs build() {
             return new ManagedNetworkPeeringPolicyArgs(location, managedNetworkName, managedNetworkPeeringPolicyName, properties, resourceGroupName);
         }

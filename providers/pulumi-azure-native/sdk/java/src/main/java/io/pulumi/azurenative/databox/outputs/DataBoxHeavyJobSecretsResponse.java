@@ -122,7 +122,6 @@ public final class DataBoxHeavyJobSecretsResponse {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public DataBoxHeavyJobSecretsResponse build() {
             return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
         }

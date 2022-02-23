@@ -116,7 +116,6 @@ public final class GetTagResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagResult build() {
             return new GetTagResult(displayName, id, name, type);
         }

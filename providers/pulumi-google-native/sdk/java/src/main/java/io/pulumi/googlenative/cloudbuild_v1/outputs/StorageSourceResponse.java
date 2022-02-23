@@ -95,7 +95,6 @@ public final class StorageSourceResponse {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public StorageSourceResponse build() {
             return new StorageSourceResponse(bucket, generation, object);
         }

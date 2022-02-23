@@ -21,7 +21,7 @@ public final class HorizontalPodAutoscalingResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -59,7 +59,6 @@ public final class HorizontalPodAutoscalingResponse extends io.pulumi.resources.
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HorizontalPodAutoscalingResponse build() {
             return new HorizontalPodAutoscalingResponse(disabled);
         }

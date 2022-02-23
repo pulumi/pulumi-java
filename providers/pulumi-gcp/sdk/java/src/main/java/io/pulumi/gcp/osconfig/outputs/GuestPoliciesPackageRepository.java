@@ -129,7 +129,6 @@ public final class GuestPoliciesPackageRepository {
             this.zypper = zypper;
             return this;
         }
-
         public GuestPoliciesPackageRepository build() {
             return new GuestPoliciesPackageRepository(apt, goo, yum, zypper);
         }

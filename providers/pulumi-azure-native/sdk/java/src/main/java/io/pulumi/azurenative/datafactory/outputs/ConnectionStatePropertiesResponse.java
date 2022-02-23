@@ -95,7 +95,6 @@ public final class ConnectionStatePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ConnectionStatePropertiesResponse build() {
             return new ConnectionStatePropertiesResponse(actionsRequired, description, status);
         }

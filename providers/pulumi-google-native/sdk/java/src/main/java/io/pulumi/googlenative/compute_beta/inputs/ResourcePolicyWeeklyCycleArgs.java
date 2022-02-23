@@ -24,7 +24,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dayOfWeeks")
-    private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+      private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
     public Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
         return this.dayOfWeeks == null ? Input.empty() : this.dayOfWeeks;
@@ -67,7 +67,6 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
             this.dayOfWeeks = Input.ofNullable(dayOfWeeks);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleArgs build() {
             return new ResourcePolicyWeeklyCycleArgs(dayOfWeeks);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
      * 
      */
     @InputImport(name="intentUniqueId", required=true)
-    private final String intentUniqueId;
+      private final String intentUniqueId;
 
     public String getIntentUniqueId() {
         return this.intentUniqueId;
@@ -59,7 +59,6 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
             this.intentUniqueId = Objects.requireNonNull(intentUniqueId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(intentUniqueId);
         }

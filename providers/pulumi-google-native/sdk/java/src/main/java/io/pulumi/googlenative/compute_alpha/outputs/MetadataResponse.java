@@ -97,7 +97,6 @@ public final class MetadataResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(fingerprint, items, kind);
         }

@@ -95,7 +95,6 @@ public final class BitbucketServerSecretsResponse {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
-
         public BitbucketServerSecretsResponse build() {
             return new BitbucketServerSecretsResponse(adminAccessTokenVersionName, readAccessTokenVersionName, webhookSecretVersionName);
         }

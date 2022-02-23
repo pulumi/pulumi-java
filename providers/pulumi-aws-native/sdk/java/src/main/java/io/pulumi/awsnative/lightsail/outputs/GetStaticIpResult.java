@@ -111,7 +111,6 @@ public final class GetStaticIpResult {
             this.staticIpArn = staticIpArn;
             return this;
         }
-
         public GetStaticIpResult build() {
             return new GetStaticIpResult(attachedTo, ipAddress, isAttached, staticIpArn);
         }

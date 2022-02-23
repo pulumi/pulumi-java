@@ -204,7 +204,6 @@ public final class IPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public IPConfigurationResponse build() {
             return new IPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet);
         }

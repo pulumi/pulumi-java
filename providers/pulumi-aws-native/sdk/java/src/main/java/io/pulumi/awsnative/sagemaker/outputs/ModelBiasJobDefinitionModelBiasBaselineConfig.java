@@ -61,7 +61,6 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfig {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public ModelBiasJobDefinitionModelBiasBaselineConfig build() {
             return new ModelBiasJobDefinitionModelBiasBaselineConfig(baseliningJobName, constraintsResource);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
      * 
      */
     @InputImport(name="bigqueryDestination")
-    private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
     public Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
@@ -66,7 +66,6 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
             this.bigqueryDestination = Input.ofNullable(bigqueryDestination);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(bigqueryDestination);
         }

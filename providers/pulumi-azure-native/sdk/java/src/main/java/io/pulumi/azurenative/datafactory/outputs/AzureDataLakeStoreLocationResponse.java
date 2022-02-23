@@ -100,7 +100,6 @@ public final class AzureDataLakeStoreLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreLocationResponse build() {
             return new AzureDataLakeStoreLocationResponse(fileName, folderPath, type);
         }

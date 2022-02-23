@@ -104,7 +104,6 @@ public final class IndexRelevance {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
-
         public IndexRelevance build() {
             return new IndexRelevance(duration, freshness, importance, rankOrder, valueImportanceItems);
         }

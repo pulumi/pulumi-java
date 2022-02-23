@@ -23,7 +23,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="interconnectAttachment")
-    private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Input<String> interconnectAttachment;
 
     public Input<String> getInterconnectAttachment() {
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
@@ -66,7 +66,6 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
             this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
             return this;
         }
-
         public VpnGatewayVpnGatewayInterfaceArgs build() {
             return new VpnGatewayVpnGatewayInterfaceArgs(interconnectAttachment);
         }

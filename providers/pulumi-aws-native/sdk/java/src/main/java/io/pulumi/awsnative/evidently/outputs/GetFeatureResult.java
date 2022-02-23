@@ -138,7 +138,6 @@ public final class GetFeatureResult {
             this.variations = variations;
             return this;
         }
-
         public GetFeatureResult build() {
             return new GetFeatureResult(arn, defaultVariation, description, entityOverrides, evaluationStrategy, tags, variations);
         }

@@ -52,7 +52,6 @@ public final class DSSEAttestationNoteResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public DSSEAttestationNoteResponse build() {
             return new DSSEAttestationNoteResponse(hint);
         }

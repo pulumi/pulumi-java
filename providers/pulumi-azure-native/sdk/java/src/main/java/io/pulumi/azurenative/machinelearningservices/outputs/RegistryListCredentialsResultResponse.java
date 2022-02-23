@@ -74,7 +74,6 @@ public final class RegistryListCredentialsResultResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public RegistryListCredentialsResultResponse build() {
             return new RegistryListCredentialsResultResponse(location, passwords, username);
         }

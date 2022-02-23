@@ -98,7 +98,6 @@ public final class PersistentDiskResponse {
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
         }
-
         public PersistentDiskResponse build() {
             return new PersistentDiskResponse(mountPath, sizeInGB, usedInGB);
         }

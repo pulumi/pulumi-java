@@ -128,7 +128,6 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapDefaultRouteActionWeightedBackendServiceHeaderAction build() {
             return new URLMapDefaultRouteActionWeightedBackendServiceHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

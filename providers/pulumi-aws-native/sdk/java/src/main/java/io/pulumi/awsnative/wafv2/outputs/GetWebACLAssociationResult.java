@@ -30,7 +30,6 @@ public final class GetWebACLAssociationResult {
         public Builder(GetWebACLAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetWebACLAssociationResult build() {
             return new GetWebACLAssociationResult();
         }

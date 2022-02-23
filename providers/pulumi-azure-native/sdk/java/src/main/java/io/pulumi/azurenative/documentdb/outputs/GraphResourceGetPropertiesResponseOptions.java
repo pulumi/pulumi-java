@@ -77,7 +77,6 @@ public final class GraphResourceGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public GraphResourceGetPropertiesResponseOptions build() {
             return new GraphResourceGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

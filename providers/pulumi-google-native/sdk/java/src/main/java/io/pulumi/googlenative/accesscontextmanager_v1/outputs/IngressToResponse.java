@@ -76,7 +76,6 @@ public final class IngressToResponse {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public IngressToResponse build() {
             return new IngressToResponse(operations, resources);
         }

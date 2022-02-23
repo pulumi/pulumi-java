@@ -76,7 +76,6 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
             this.version = version;
             return this;
         }
-
         public PatchDeploymentRecurringScheduleTimeZone build() {
             return new PatchDeploymentRecurringScheduleTimeZone(id, version);
         }

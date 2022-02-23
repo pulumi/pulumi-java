@@ -162,7 +162,6 @@ public final class LocationResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(documentEndpoint, failoverPriority, id, isZoneRedundant, locationName, provisioningState);
         }

@@ -21,7 +21,7 @@ public final class AS2AgreementContentResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-    private final AS2OneWayAgreementResponse receiveAgreement;
+        private final AS2OneWayAgreementResponse receiveAgreement;
 
     public AS2OneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
@@ -32,7 +32,7 @@ public final class AS2AgreementContentResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-    private final AS2OneWayAgreementResponse sendAgreement;
+        private final AS2OneWayAgreementResponse sendAgreement;
 
     public AS2OneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;
@@ -81,7 +81,6 @@ public final class AS2AgreementContentResponse extends io.pulumi.resources.Invok
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public AS2AgreementContentResponse build() {
             return new AS2AgreementContentResponse(receiveAgreement, sendAgreement);
         }

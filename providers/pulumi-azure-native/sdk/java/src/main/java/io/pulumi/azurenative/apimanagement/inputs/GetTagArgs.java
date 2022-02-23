@@ -17,7 +17,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagId", required=true)
-    private final String tagId;
+        private final String tagId;
 
     public String getTagId() {
         return this.tagId;
@@ -98,7 +98,6 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
             this.tagId = Objects.requireNonNull(tagId);
             return this;
         }
-
         public GetTagArgs build() {
             return new GetTagArgs(resourceGroupName, serviceName, tagId);
         }

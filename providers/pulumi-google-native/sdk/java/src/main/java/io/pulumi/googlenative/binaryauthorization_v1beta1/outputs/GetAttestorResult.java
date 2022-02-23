@@ -117,7 +117,6 @@ public final class GetAttestorResult {
             this.userOwnedDrydockNote = Objects.requireNonNull(userOwnedDrydockNote);
             return this;
         }
-
         public GetAttestorResult build() {
             return new GetAttestorResult(description, name, updateTime, userOwnedDrydockNote);
         }

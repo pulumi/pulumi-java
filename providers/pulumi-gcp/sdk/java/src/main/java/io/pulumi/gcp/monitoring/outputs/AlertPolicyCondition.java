@@ -198,7 +198,6 @@ public final class AlertPolicyCondition {
             this.name = name;
             return this;
         }
-
         public AlertPolicyCondition build() {
             return new AlertPolicyCondition(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

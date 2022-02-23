@@ -138,7 +138,6 @@ public final class NfsExportOptionsResponse {
             this.squashMode = Objects.requireNonNull(squashMode);
             return this;
         }
-
         public NfsExportOptionsResponse build() {
             return new NfsExportOptionsResponse(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

@@ -117,7 +117,6 @@ public final class DestinationTablePropertiesResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public DestinationTablePropertiesResponse build() {
             return new DestinationTablePropertiesResponse(description, expirationTime, friendlyName, labels);
         }

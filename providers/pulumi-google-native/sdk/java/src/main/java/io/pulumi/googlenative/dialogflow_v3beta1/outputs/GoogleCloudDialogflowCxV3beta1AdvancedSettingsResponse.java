@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
             this.loggingSettings = Objects.requireNonNull(loggingSettings);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(loggingSettings);
         }

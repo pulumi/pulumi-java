@@ -61,7 +61,6 @@ public final class ApplicationApiGatewayProxyInput {
             this.stageName = stageName;
             return this;
         }
-
         public ApplicationApiGatewayProxyInput build() {
             return new ApplicationApiGatewayProxyInput(endpointType, stageName);
         }

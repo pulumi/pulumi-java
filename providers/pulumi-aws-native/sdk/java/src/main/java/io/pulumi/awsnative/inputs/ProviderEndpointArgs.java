@@ -23,7 +23,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessanalyzer")
-    private final @Nullable Input<String> accessanalyzer;
+        private final @Nullable Input<String> accessanalyzer;
 
     public Input<String> getAccessanalyzer() {
         return this.accessanalyzer == null ? Input.empty() : this.accessanalyzer;
@@ -34,7 +34,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="acm")
-    private final @Nullable Input<String> acm;
+        private final @Nullable Input<String> acm;
 
     public Input<String> getAcm() {
         return this.acm == null ? Input.empty() : this.acm;
@@ -45,7 +45,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="acmpca")
-    private final @Nullable Input<String> acmpca;
+        private final @Nullable Input<String> acmpca;
 
     public Input<String> getAcmpca() {
         return this.acmpca == null ? Input.empty() : this.acmpca;
@@ -56,7 +56,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="amplify")
-    private final @Nullable Input<String> amplify;
+        private final @Nullable Input<String> amplify;
 
     public Input<String> getAmplify() {
         return this.amplify == null ? Input.empty() : this.amplify;
@@ -67,7 +67,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appconfig")
-    private final @Nullable Input<String> appconfig;
+        private final @Nullable Input<String> appconfig;
 
     public Input<String> getAppconfig() {
         return this.appconfig == null ? Input.empty() : this.appconfig;
@@ -78,7 +78,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationautoscaling")
-    private final @Nullable Input<String> applicationautoscaling;
+        private final @Nullable Input<String> applicationautoscaling;
 
     public Input<String> getApplicationautoscaling() {
         return this.applicationautoscaling == null ? Input.empty() : this.applicationautoscaling;
@@ -89,7 +89,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationinsights")
-    private final @Nullable Input<String> applicationinsights;
+        private final @Nullable Input<String> applicationinsights;
 
     public Input<String> getApplicationinsights() {
         return this.applicationinsights == null ? Input.empty() : this.applicationinsights;
@@ -100,7 +100,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appmesh")
-    private final @Nullable Input<String> appmesh;
+        private final @Nullable Input<String> appmesh;
 
     public Input<String> getAppmesh() {
         return this.appmesh == null ? Input.empty() : this.appmesh;
@@ -111,7 +111,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apprunner")
-    private final @Nullable Input<String> apprunner;
+        private final @Nullable Input<String> apprunner;
 
     public Input<String> getApprunner() {
         return this.apprunner == null ? Input.empty() : this.apprunner;
@@ -122,7 +122,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appstream")
-    private final @Nullable Input<String> appstream;
+        private final @Nullable Input<String> appstream;
 
     public Input<String> getAppstream() {
         return this.appstream == null ? Input.empty() : this.appstream;
@@ -133,7 +133,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appsync")
-    private final @Nullable Input<String> appsync;
+        private final @Nullable Input<String> appsync;
 
     public Input<String> getAppsync() {
         return this.appsync == null ? Input.empty() : this.appsync;
@@ -144,7 +144,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="athena")
-    private final @Nullable Input<String> athena;
+        private final @Nullable Input<String> athena;
 
     public Input<String> getAthena() {
         return this.athena == null ? Input.empty() : this.athena;
@@ -155,7 +155,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="auditmanager")
-    private final @Nullable Input<String> auditmanager;
+        private final @Nullable Input<String> auditmanager;
 
     public Input<String> getAuditmanager() {
         return this.auditmanager == null ? Input.empty() : this.auditmanager;
@@ -166,7 +166,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscaling")
-    private final @Nullable Input<String> autoscaling;
+        private final @Nullable Input<String> autoscaling;
 
     public Input<String> getAutoscaling() {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
@@ -177,7 +177,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backup")
-    private final @Nullable Input<String> backup;
+        private final @Nullable Input<String> backup;
 
     public Input<String> getBackup() {
         return this.backup == null ? Input.empty() : this.backup;
@@ -188,7 +188,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="batch")
-    private final @Nullable Input<String> batch;
+        private final @Nullable Input<String> batch;
 
     public Input<String> getBatch() {
         return this.batch == null ? Input.empty() : this.batch;
@@ -199,7 +199,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="budgets")
-    private final @Nullable Input<String> budgets;
+        private final @Nullable Input<String> budgets;
 
     public Input<String> getBudgets() {
         return this.budgets == null ? Input.empty() : this.budgets;
@@ -210,7 +210,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="chime")
-    private final @Nullable Input<String> chime;
+        private final @Nullable Input<String> chime;
 
     public Input<String> getChime() {
         return this.chime == null ? Input.empty() : this.chime;
@@ -221,7 +221,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloud9")
-    private final @Nullable Input<String> cloud9;
+        private final @Nullable Input<String> cloud9;
 
     public Input<String> getCloud9() {
         return this.cloud9 == null ? Input.empty() : this.cloud9;
@@ -232,7 +232,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudformation")
-    private final @Nullable Input<String> cloudformation;
+        private final @Nullable Input<String> cloudformation;
 
     public Input<String> getCloudformation() {
         return this.cloudformation == null ? Input.empty() : this.cloudformation;
@@ -243,7 +243,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudfront")
-    private final @Nullable Input<String> cloudfront;
+        private final @Nullable Input<String> cloudfront;
 
     public Input<String> getCloudfront() {
         return this.cloudfront == null ? Input.empty() : this.cloudfront;
@@ -254,7 +254,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudhsm")
-    private final @Nullable Input<String> cloudhsm;
+        private final @Nullable Input<String> cloudhsm;
 
     public Input<String> getCloudhsm() {
         return this.cloudhsm == null ? Input.empty() : this.cloudhsm;
@@ -265,7 +265,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudsearch")
-    private final @Nullable Input<String> cloudsearch;
+        private final @Nullable Input<String> cloudsearch;
 
     public Input<String> getCloudsearch() {
         return this.cloudsearch == null ? Input.empty() : this.cloudsearch;
@@ -276,7 +276,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudtrail")
-    private final @Nullable Input<String> cloudtrail;
+        private final @Nullable Input<String> cloudtrail;
 
     public Input<String> getCloudtrail() {
         return this.cloudtrail == null ? Input.empty() : this.cloudtrail;
@@ -287,7 +287,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatch")
-    private final @Nullable Input<String> cloudwatch;
+        private final @Nullable Input<String> cloudwatch;
 
     public Input<String> getCloudwatch() {
         return this.cloudwatch == null ? Input.empty() : this.cloudwatch;
@@ -298,7 +298,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatchevents")
-    private final @Nullable Input<String> cloudwatchevents;
+        private final @Nullable Input<String> cloudwatchevents;
 
     public Input<String> getCloudwatchevents() {
         return this.cloudwatchevents == null ? Input.empty() : this.cloudwatchevents;
@@ -309,7 +309,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatchlogs")
-    private final @Nullable Input<String> cloudwatchlogs;
+        private final @Nullable Input<String> cloudwatchlogs;
 
     public Input<String> getCloudwatchlogs() {
         return this.cloudwatchlogs == null ? Input.empty() : this.cloudwatchlogs;
@@ -320,7 +320,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codeartifact")
-    private final @Nullable Input<String> codeartifact;
+        private final @Nullable Input<String> codeartifact;
 
     public Input<String> getCodeartifact() {
         return this.codeartifact == null ? Input.empty() : this.codeartifact;
@@ -331,7 +331,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codebuild")
-    private final @Nullable Input<String> codebuild;
+        private final @Nullable Input<String> codebuild;
 
     public Input<String> getCodebuild() {
         return this.codebuild == null ? Input.empty() : this.codebuild;
@@ -342,7 +342,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codecommit")
-    private final @Nullable Input<String> codecommit;
+        private final @Nullable Input<String> codecommit;
 
     public Input<String> getCodecommit() {
         return this.codecommit == null ? Input.empty() : this.codecommit;
@@ -353,7 +353,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codedeploy")
-    private final @Nullable Input<String> codedeploy;
+        private final @Nullable Input<String> codedeploy;
 
     public Input<String> getCodedeploy() {
         return this.codedeploy == null ? Input.empty() : this.codedeploy;
@@ -364,7 +364,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codepipeline")
-    private final @Nullable Input<String> codepipeline;
+        private final @Nullable Input<String> codepipeline;
 
     public Input<String> getCodepipeline() {
         return this.codepipeline == null ? Input.empty() : this.codepipeline;
@@ -375,7 +375,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codestarconnections")
-    private final @Nullable Input<String> codestarconnections;
+        private final @Nullable Input<String> codestarconnections;
 
     public Input<String> getCodestarconnections() {
         return this.codestarconnections == null ? Input.empty() : this.codestarconnections;
@@ -386,7 +386,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cognitoidentity")
-    private final @Nullable Input<String> cognitoidentity;
+        private final @Nullable Input<String> cognitoidentity;
 
     public Input<String> getCognitoidentity() {
         return this.cognitoidentity == null ? Input.empty() : this.cognitoidentity;
@@ -397,7 +397,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configservice")
-    private final @Nullable Input<String> configservice;
+        private final @Nullable Input<String> configservice;
 
     public Input<String> getConfigservice() {
         return this.configservice == null ? Input.empty() : this.configservice;
@@ -408,7 +408,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connect")
-    private final @Nullable Input<String> connect;
+        private final @Nullable Input<String> connect;
 
     public Input<String> getConnect() {
         return this.connect == null ? Input.empty() : this.connect;
@@ -419,7 +419,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cur")
-    private final @Nullable Input<String> cur;
+        private final @Nullable Input<String> cur;
 
     public Input<String> getCur() {
         return this.cur == null ? Input.empty() : this.cur;
@@ -430,7 +430,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataexchange")
-    private final @Nullable Input<String> dataexchange;
+        private final @Nullable Input<String> dataexchange;
 
     public Input<String> getDataexchange() {
         return this.dataexchange == null ? Input.empty() : this.dataexchange;
@@ -441,7 +441,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datapipeline")
-    private final @Nullable Input<String> datapipeline;
+        private final @Nullable Input<String> datapipeline;
 
     public Input<String> getDatapipeline() {
         return this.datapipeline == null ? Input.empty() : this.datapipeline;
@@ -452,7 +452,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasync")
-    private final @Nullable Input<String> datasync;
+        private final @Nullable Input<String> datasync;
 
     public Input<String> getDatasync() {
         return this.datasync == null ? Input.empty() : this.datasync;
@@ -463,7 +463,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dax")
-    private final @Nullable Input<String> dax;
+        private final @Nullable Input<String> dax;
 
     public Input<String> getDax() {
         return this.dax == null ? Input.empty() : this.dax;
@@ -474,7 +474,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="detective")
-    private final @Nullable Input<String> detective;
+        private final @Nullable Input<String> detective;
 
     public Input<String> getDetective() {
         return this.detective == null ? Input.empty() : this.detective;
@@ -485,7 +485,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="devicefarm")
-    private final @Nullable Input<String> devicefarm;
+        private final @Nullable Input<String> devicefarm;
 
     public Input<String> getDevicefarm() {
         return this.devicefarm == null ? Input.empty() : this.devicefarm;
@@ -496,7 +496,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directconnect")
-    private final @Nullable Input<String> directconnect;
+        private final @Nullable Input<String> directconnect;
 
     public Input<String> getDirectconnect() {
         return this.directconnect == null ? Input.empty() : this.directconnect;
@@ -507,7 +507,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dlm")
-    private final @Nullable Input<String> dlm;
+        private final @Nullable Input<String> dlm;
 
     public Input<String> getDlm() {
         return this.dlm == null ? Input.empty() : this.dlm;
@@ -518,7 +518,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dms")
-    private final @Nullable Input<String> dms;
+        private final @Nullable Input<String> dms;
 
     public Input<String> getDms() {
         return this.dms == null ? Input.empty() : this.dms;
@@ -529,7 +529,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="docdb")
-    private final @Nullable Input<String> docdb;
+        private final @Nullable Input<String> docdb;
 
     public Input<String> getDocdb() {
         return this.docdb == null ? Input.empty() : this.docdb;
@@ -540,7 +540,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ds")
-    private final @Nullable Input<String> ds;
+        private final @Nullable Input<String> ds;
 
     public Input<String> getDs() {
         return this.ds == null ? Input.empty() : this.ds;
@@ -551,7 +551,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dynamodb")
-    private final @Nullable Input<String> dynamodb;
+        private final @Nullable Input<String> dynamodb;
 
     public Input<String> getDynamodb() {
         return this.dynamodb == null ? Input.empty() : this.dynamodb;
@@ -562,7 +562,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ec2")
-    private final @Nullable Input<String> ec2;
+        private final @Nullable Input<String> ec2;
 
     public Input<String> getEc2() {
         return this.ec2 == null ? Input.empty() : this.ec2;
@@ -573,7 +573,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecr")
-    private final @Nullable Input<String> ecr;
+        private final @Nullable Input<String> ecr;
 
     public Input<String> getEcr() {
         return this.ecr == null ? Input.empty() : this.ecr;
@@ -584,7 +584,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecrpublic")
-    private final @Nullable Input<String> ecrpublic;
+        private final @Nullable Input<String> ecrpublic;
 
     public Input<String> getEcrpublic() {
         return this.ecrpublic == null ? Input.empty() : this.ecrpublic;
@@ -595,7 +595,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecs")
-    private final @Nullable Input<String> ecs;
+        private final @Nullable Input<String> ecs;
 
     public Input<String> getEcs() {
         return this.ecs == null ? Input.empty() : this.ecs;
@@ -606,7 +606,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="efs")
-    private final @Nullable Input<String> efs;
+        private final @Nullable Input<String> efs;
 
     public Input<String> getEfs() {
         return this.efs == null ? Input.empty() : this.efs;
@@ -617,7 +617,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eks")
-    private final @Nullable Input<String> eks;
+        private final @Nullable Input<String> eks;
 
     public Input<String> getEks() {
         return this.eks == null ? Input.empty() : this.eks;
@@ -628,7 +628,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elasticache")
-    private final @Nullable Input<String> elasticache;
+        private final @Nullable Input<String> elasticache;
 
     public Input<String> getElasticache() {
         return this.elasticache == null ? Input.empty() : this.elasticache;
@@ -639,7 +639,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elasticbeanstalk")
-    private final @Nullable Input<String> elasticbeanstalk;
+        private final @Nullable Input<String> elasticbeanstalk;
 
     public Input<String> getElasticbeanstalk() {
         return this.elasticbeanstalk == null ? Input.empty() : this.elasticbeanstalk;
@@ -650,7 +650,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elastictranscoder")
-    private final @Nullable Input<String> elastictranscoder;
+        private final @Nullable Input<String> elastictranscoder;
 
     public Input<String> getElastictranscoder() {
         return this.elastictranscoder == null ? Input.empty() : this.elastictranscoder;
@@ -661,7 +661,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elb")
-    private final @Nullable Input<String> elb;
+        private final @Nullable Input<String> elb;
 
     public Input<String> getElb() {
         return this.elb == null ? Input.empty() : this.elb;
@@ -672,7 +672,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elbv2")
-    private final @Nullable Input<String> elbv2;
+        private final @Nullable Input<String> elbv2;
 
     public Input<String> getElbv2() {
         return this.elbv2 == null ? Input.empty() : this.elbv2;
@@ -683,7 +683,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="emr")
-    private final @Nullable Input<String> emr;
+        private final @Nullable Input<String> emr;
 
     public Input<String> getEmr() {
         return this.emr == null ? Input.empty() : this.emr;
@@ -694,7 +694,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="emrcontainers")
-    private final @Nullable Input<String> emrcontainers;
+        private final @Nullable Input<String> emrcontainers;
 
     public Input<String> getEmrcontainers() {
         return this.emrcontainers == null ? Input.empty() : this.emrcontainers;
@@ -705,7 +705,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="es")
-    private final @Nullable Input<String> es;
+        private final @Nullable Input<String> es;
 
     public Input<String> getEs() {
         return this.es == null ? Input.empty() : this.es;
@@ -716,7 +716,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="firehose")
-    private final @Nullable Input<String> firehose;
+        private final @Nullable Input<String> firehose;
 
     public Input<String> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
@@ -727,7 +727,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fms")
-    private final @Nullable Input<String> fms;
+        private final @Nullable Input<String> fms;
 
     public Input<String> getFms() {
         return this.fms == null ? Input.empty() : this.fms;
@@ -738,7 +738,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forecast")
-    private final @Nullable Input<String> forecast;
+        private final @Nullable Input<String> forecast;
 
     public Input<String> getForecast() {
         return this.forecast == null ? Input.empty() : this.forecast;
@@ -749,7 +749,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fsx")
-    private final @Nullable Input<String> fsx;
+        private final @Nullable Input<String> fsx;
 
     public Input<String> getFsx() {
         return this.fsx == null ? Input.empty() : this.fsx;
@@ -760,7 +760,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gamelift")
-    private final @Nullable Input<String> gamelift;
+        private final @Nullable Input<String> gamelift;
 
     public Input<String> getGamelift() {
         return this.gamelift == null ? Input.empty() : this.gamelift;
@@ -771,7 +771,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="glacier")
-    private final @Nullable Input<String> glacier;
+        private final @Nullable Input<String> glacier;
 
     public Input<String> getGlacier() {
         return this.glacier == null ? Input.empty() : this.glacier;
@@ -782,7 +782,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="globalaccelerator")
-    private final @Nullable Input<String> globalaccelerator;
+        private final @Nullable Input<String> globalaccelerator;
 
     public Input<String> getGlobalaccelerator() {
         return this.globalaccelerator == null ? Input.empty() : this.globalaccelerator;
@@ -793,7 +793,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="glue")
-    private final @Nullable Input<String> glue;
+        private final @Nullable Input<String> glue;
 
     public Input<String> getGlue() {
         return this.glue == null ? Input.empty() : this.glue;
@@ -804,7 +804,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="greengrass")
-    private final @Nullable Input<String> greengrass;
+        private final @Nullable Input<String> greengrass;
 
     public Input<String> getGreengrass() {
         return this.greengrass == null ? Input.empty() : this.greengrass;
@@ -815,7 +815,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="guardduty")
-    private final @Nullable Input<String> guardduty;
+        private final @Nullable Input<String> guardduty;
 
     public Input<String> getGuardduty() {
         return this.guardduty == null ? Input.empty() : this.guardduty;
@@ -826,7 +826,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iam")
-    private final @Nullable Input<String> iam;
+        private final @Nullable Input<String> iam;
 
     public Input<String> getIam() {
         return this.iam == null ? Input.empty() : this.iam;
@@ -837,7 +837,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identitystore")
-    private final @Nullable Input<String> identitystore;
+        private final @Nullable Input<String> identitystore;
 
     public Input<String> getIdentitystore() {
         return this.identitystore == null ? Input.empty() : this.identitystore;
@@ -848,7 +848,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imagebuilder")
-    private final @Nullable Input<String> imagebuilder;
+        private final @Nullable Input<String> imagebuilder;
 
     public Input<String> getImagebuilder() {
         return this.imagebuilder == null ? Input.empty() : this.imagebuilder;
@@ -859,7 +859,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inspector")
-    private final @Nullable Input<String> inspector;
+        private final @Nullable Input<String> inspector;
 
     public Input<String> getInspector() {
         return this.inspector == null ? Input.empty() : this.inspector;
@@ -870,7 +870,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iot")
-    private final @Nullable Input<String> iot;
+        private final @Nullable Input<String> iot;
 
     public Input<String> getIot() {
         return this.iot == null ? Input.empty() : this.iot;
@@ -881,7 +881,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iotanalytics")
-    private final @Nullable Input<String> iotanalytics;
+        private final @Nullable Input<String> iotanalytics;
 
     public Input<String> getIotanalytics() {
         return this.iotanalytics == null ? Input.empty() : this.iotanalytics;
@@ -892,7 +892,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iotevents")
-    private final @Nullable Input<String> iotevents;
+        private final @Nullable Input<String> iotevents;
 
     public Input<String> getIotevents() {
         return this.iotevents == null ? Input.empty() : this.iotevents;
@@ -903,7 +903,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kafka")
-    private final @Nullable Input<String> kafka;
+        private final @Nullable Input<String> kafka;
 
     public Input<String> getKafka() {
         return this.kafka == null ? Input.empty() : this.kafka;
@@ -914,7 +914,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesis")
-    private final @Nullable Input<String> kinesis;
+        private final @Nullable Input<String> kinesis;
 
     public Input<String> getKinesis() {
         return this.kinesis == null ? Input.empty() : this.kinesis;
@@ -925,7 +925,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisanalytics")
-    private final @Nullable Input<String> kinesisanalytics;
+        private final @Nullable Input<String> kinesisanalytics;
 
     public Input<String> getKinesisanalytics() {
         return this.kinesisanalytics == null ? Input.empty() : this.kinesisanalytics;
@@ -936,7 +936,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisanalyticsv2")
-    private final @Nullable Input<String> kinesisanalyticsv2;
+        private final @Nullable Input<String> kinesisanalyticsv2;
 
     public Input<String> getKinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Input.empty() : this.kinesisanalyticsv2;
@@ -947,7 +947,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisvideo")
-    private final @Nullable Input<String> kinesisvideo;
+        private final @Nullable Input<String> kinesisvideo;
 
     public Input<String> getKinesisvideo() {
         return this.kinesisvideo == null ? Input.empty() : this.kinesisvideo;
@@ -958,7 +958,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kms")
-    private final @Nullable Input<String> kms;
+        private final @Nullable Input<String> kms;
 
     public Input<String> getKms() {
         return this.kms == null ? Input.empty() : this.kms;
@@ -969,7 +969,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lakeformation")
-    private final @Nullable Input<String> lakeformation;
+        private final @Nullable Input<String> lakeformation;
 
     public Input<String> getLakeformation() {
         return this.lakeformation == null ? Input.empty() : this.lakeformation;
@@ -980,7 +980,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lambda")
-    private final @Nullable Input<String> lambda;
+        private final @Nullable Input<String> lambda;
 
     public Input<String> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
@@ -991,7 +991,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lexmodels")
-    private final @Nullable Input<String> lexmodels;
+        private final @Nullable Input<String> lexmodels;
 
     public Input<String> getLexmodels() {
         return this.lexmodels == null ? Input.empty() : this.lexmodels;
@@ -1002,7 +1002,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="licensemanager")
-    private final @Nullable Input<String> licensemanager;
+        private final @Nullable Input<String> licensemanager;
 
     public Input<String> getLicensemanager() {
         return this.licensemanager == null ? Input.empty() : this.licensemanager;
@@ -1013,7 +1013,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lightsail")
-    private final @Nullable Input<String> lightsail;
+        private final @Nullable Input<String> lightsail;
 
     public Input<String> getLightsail() {
         return this.lightsail == null ? Input.empty() : this.lightsail;
@@ -1024,7 +1024,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -1035,7 +1035,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macie")
-    private final @Nullable Input<String> macie;
+        private final @Nullable Input<String> macie;
 
     public Input<String> getMacie() {
         return this.macie == null ? Input.empty() : this.macie;
@@ -1046,7 +1046,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macie2")
-    private final @Nullable Input<String> macie2;
+        private final @Nullable Input<String> macie2;
 
     public Input<String> getMacie2() {
         return this.macie2 == null ? Input.empty() : this.macie2;
@@ -1057,7 +1057,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managedblockchain")
-    private final @Nullable Input<String> managedblockchain;
+        private final @Nullable Input<String> managedblockchain;
 
     public Input<String> getManagedblockchain() {
         return this.managedblockchain == null ? Input.empty() : this.managedblockchain;
@@ -1068,7 +1068,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="marketplacecatalog")
-    private final @Nullable Input<String> marketplacecatalog;
+        private final @Nullable Input<String> marketplacecatalog;
 
     public Input<String> getMarketplacecatalog() {
         return this.marketplacecatalog == null ? Input.empty() : this.marketplacecatalog;
@@ -1079,7 +1079,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediaconnect")
-    private final @Nullable Input<String> mediaconnect;
+        private final @Nullable Input<String> mediaconnect;
 
     public Input<String> getMediaconnect() {
         return this.mediaconnect == null ? Input.empty() : this.mediaconnect;
@@ -1090,7 +1090,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediaconvert")
-    private final @Nullable Input<String> mediaconvert;
+        private final @Nullable Input<String> mediaconvert;
 
     public Input<String> getMediaconvert() {
         return this.mediaconvert == null ? Input.empty() : this.mediaconvert;
@@ -1101,7 +1101,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="medialive")
-    private final @Nullable Input<String> medialive;
+        private final @Nullable Input<String> medialive;
 
     public Input<String> getMedialive() {
         return this.medialive == null ? Input.empty() : this.medialive;
@@ -1112,7 +1112,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediapackage")
-    private final @Nullable Input<String> mediapackage;
+        private final @Nullable Input<String> mediapackage;
 
     public Input<String> getMediapackage() {
         return this.mediapackage == null ? Input.empty() : this.mediapackage;
@@ -1123,7 +1123,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediastore")
-    private final @Nullable Input<String> mediastore;
+        private final @Nullable Input<String> mediastore;
 
     public Input<String> getMediastore() {
         return this.mediastore == null ? Input.empty() : this.mediastore;
@@ -1134,7 +1134,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediastoredata")
-    private final @Nullable Input<String> mediastoredata;
+        private final @Nullable Input<String> mediastoredata;
 
     public Input<String> getMediastoredata() {
         return this.mediastoredata == null ? Input.empty() : this.mediastoredata;
@@ -1145,7 +1145,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memorydb")
-    private final @Nullable Input<String> memorydb;
+        private final @Nullable Input<String> memorydb;
 
     public Input<String> getMemorydb() {
         return this.memorydb == null ? Input.empty() : this.memorydb;
@@ -1156,7 +1156,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mq")
-    private final @Nullable Input<String> mq;
+        private final @Nullable Input<String> mq;
 
     public Input<String> getMq() {
         return this.mq == null ? Input.empty() : this.mq;
@@ -1167,7 +1167,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mwaa")
-    private final @Nullable Input<String> mwaa;
+        private final @Nullable Input<String> mwaa;
 
     public Input<String> getMwaa() {
         return this.mwaa == null ? Input.empty() : this.mwaa;
@@ -1178,7 +1178,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="neptune")
-    private final @Nullable Input<String> neptune;
+        private final @Nullable Input<String> neptune;
 
     public Input<String> getNeptune() {
         return this.neptune == null ? Input.empty() : this.neptune;
@@ -1189,7 +1189,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkfirewall")
-    private final @Nullable Input<String> networkfirewall;
+        private final @Nullable Input<String> networkfirewall;
 
     public Input<String> getNetworkfirewall() {
         return this.networkfirewall == null ? Input.empty() : this.networkfirewall;
@@ -1200,7 +1200,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkmanager")
-    private final @Nullable Input<String> networkmanager;
+        private final @Nullable Input<String> networkmanager;
 
     public Input<String> getNetworkmanager() {
         return this.networkmanager == null ? Input.empty() : this.networkmanager;
@@ -1211,7 +1211,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="opsworks")
-    private final @Nullable Input<String> opsworks;
+        private final @Nullable Input<String> opsworks;
 
     public Input<String> getOpsworks() {
         return this.opsworks == null ? Input.empty() : this.opsworks;
@@ -1222,7 +1222,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="organizations")
-    private final @Nullable Input<String> organizations;
+        private final @Nullable Input<String> organizations;
 
     public Input<String> getOrganizations() {
         return this.organizations == null ? Input.empty() : this.organizations;
@@ -1233,7 +1233,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outposts")
-    private final @Nullable Input<String> outposts;
+        private final @Nullable Input<String> outposts;
 
     public Input<String> getOutposts() {
         return this.outposts == null ? Input.empty() : this.outposts;
@@ -1244,7 +1244,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="personalize")
-    private final @Nullable Input<String> personalize;
+        private final @Nullable Input<String> personalize;
 
     public Input<String> getPersonalize() {
         return this.personalize == null ? Input.empty() : this.personalize;
@@ -1255,7 +1255,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pinpoint")
-    private final @Nullable Input<String> pinpoint;
+        private final @Nullable Input<String> pinpoint;
 
     public Input<String> getPinpoint() {
         return this.pinpoint == null ? Input.empty() : this.pinpoint;
@@ -1266,7 +1266,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pricing")
-    private final @Nullable Input<String> pricing;
+        private final @Nullable Input<String> pricing;
 
     public Input<String> getPricing() {
         return this.pricing == null ? Input.empty() : this.pricing;
@@ -1277,7 +1277,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="qldb")
-    private final @Nullable Input<String> qldb;
+        private final @Nullable Input<String> qldb;
 
     public Input<String> getQldb() {
         return this.qldb == null ? Input.empty() : this.qldb;
@@ -1288,7 +1288,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="quicksight")
-    private final @Nullable Input<String> quicksight;
+        private final @Nullable Input<String> quicksight;
 
     public Input<String> getQuicksight() {
         return this.quicksight == null ? Input.empty() : this.quicksight;
@@ -1299,7 +1299,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ram")
-    private final @Nullable Input<String> ram;
+        private final @Nullable Input<String> ram;
 
     public Input<String> getRam() {
         return this.ram == null ? Input.empty() : this.ram;
@@ -1310,7 +1310,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rds")
-    private final @Nullable Input<String> rds;
+        private final @Nullable Input<String> rds;
 
     public Input<String> getRds() {
         return this.rds == null ? Input.empty() : this.rds;
@@ -1321,7 +1321,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redshift")
-    private final @Nullable Input<String> redshift;
+        private final @Nullable Input<String> redshift;
 
     public Input<String> getRedshift() {
         return this.redshift == null ? Input.empty() : this.redshift;
@@ -1332,7 +1332,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcegroups")
-    private final @Nullable Input<String> resourcegroups;
+        private final @Nullable Input<String> resourcegroups;
 
     public Input<String> getResourcegroups() {
         return this.resourcegroups == null ? Input.empty() : this.resourcegroups;
@@ -1343,7 +1343,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcegroupstaggingapi")
-    private final @Nullable Input<String> resourcegroupstaggingapi;
+        private final @Nullable Input<String> resourcegroupstaggingapi;
 
     public Input<String> getResourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Input.empty() : this.resourcegroupstaggingapi;
@@ -1354,7 +1354,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53")
-    private final @Nullable Input<String> route53;
+        private final @Nullable Input<String> route53;
 
     public Input<String> getRoute53() {
         return this.route53 == null ? Input.empty() : this.route53;
@@ -1365,7 +1365,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53domains")
-    private final @Nullable Input<String> route53domains;
+        private final @Nullable Input<String> route53domains;
 
     public Input<String> getRoute53domains() {
         return this.route53domains == null ? Input.empty() : this.route53domains;
@@ -1376,7 +1376,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53recoverycontrolconfig")
-    private final @Nullable Input<String> route53recoverycontrolconfig;
+        private final @Nullable Input<String> route53recoverycontrolconfig;
 
     public Input<String> getRoute53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Input.empty() : this.route53recoverycontrolconfig;
@@ -1387,7 +1387,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53recoveryreadiness")
-    private final @Nullable Input<String> route53recoveryreadiness;
+        private final @Nullable Input<String> route53recoveryreadiness;
 
     public Input<String> getRoute53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Input.empty() : this.route53recoveryreadiness;
@@ -1398,7 +1398,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53resolver")
-    private final @Nullable Input<String> route53resolver;
+        private final @Nullable Input<String> route53resolver;
 
     public Input<String> getRoute53resolver() {
         return this.route53resolver == null ? Input.empty() : this.route53resolver;
@@ -1409,7 +1409,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3")
-    private final @Nullable Input<String> s3;
+        private final @Nullable Input<String> s3;
 
     public Input<String> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
@@ -1420,7 +1420,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3control")
-    private final @Nullable Input<String> s3control;
+        private final @Nullable Input<String> s3control;
 
     public Input<String> getS3control() {
         return this.s3control == null ? Input.empty() : this.s3control;
@@ -1431,7 +1431,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3outposts")
-    private final @Nullable Input<String> s3outposts;
+        private final @Nullable Input<String> s3outposts;
 
     public Input<String> getS3outposts() {
         return this.s3outposts == null ? Input.empty() : this.s3outposts;
@@ -1442,7 +1442,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sagemaker")
-    private final @Nullable Input<String> sagemaker;
+        private final @Nullable Input<String> sagemaker;
 
     public Input<String> getSagemaker() {
         return this.sagemaker == null ? Input.empty() : this.sagemaker;
@@ -1453,7 +1453,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable Input<String> schemas;
+        private final @Nullable Input<String> schemas;
 
     public Input<String> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
@@ -1464,7 +1464,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sdb")
-    private final @Nullable Input<String> sdb;
+        private final @Nullable Input<String> sdb;
 
     public Input<String> getSdb() {
         return this.sdb == null ? Input.empty() : this.sdb;
@@ -1475,7 +1475,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secretsmanager")
-    private final @Nullable Input<String> secretsmanager;
+        private final @Nullable Input<String> secretsmanager;
 
     public Input<String> getSecretsmanager() {
         return this.secretsmanager == null ? Input.empty() : this.secretsmanager;
@@ -1486,7 +1486,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityhub")
-    private final @Nullable Input<String> securityhub;
+        private final @Nullable Input<String> securityhub;
 
     public Input<String> getSecurityhub() {
         return this.securityhub == null ? Input.empty() : this.securityhub;
@@ -1497,7 +1497,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverlessrepo")
-    private final @Nullable Input<String> serverlessrepo;
+        private final @Nullable Input<String> serverlessrepo;
 
     public Input<String> getServerlessrepo() {
         return this.serverlessrepo == null ? Input.empty() : this.serverlessrepo;
@@ -1508,7 +1508,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicecatalog")
-    private final @Nullable Input<String> servicecatalog;
+        private final @Nullable Input<String> servicecatalog;
 
     public Input<String> getServicecatalog() {
         return this.servicecatalog == null ? Input.empty() : this.servicecatalog;
@@ -1519,7 +1519,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicediscovery")
-    private final @Nullable Input<String> servicediscovery;
+        private final @Nullable Input<String> servicediscovery;
 
     public Input<String> getServicediscovery() {
         return this.servicediscovery == null ? Input.empty() : this.servicediscovery;
@@ -1530,7 +1530,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicequotas")
-    private final @Nullable Input<String> servicequotas;
+        private final @Nullable Input<String> servicequotas;
 
     public Input<String> getServicequotas() {
         return this.servicequotas == null ? Input.empty() : this.servicequotas;
@@ -1541,7 +1541,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ses")
-    private final @Nullable Input<String> ses;
+        private final @Nullable Input<String> ses;
 
     public Input<String> getSes() {
         return this.ses == null ? Input.empty() : this.ses;
@@ -1552,7 +1552,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shield")
-    private final @Nullable Input<String> shield;
+        private final @Nullable Input<String> shield;
 
     public Input<String> getShield() {
         return this.shield == null ? Input.empty() : this.shield;
@@ -1563,7 +1563,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signer")
-    private final @Nullable Input<String> signer;
+        private final @Nullable Input<String> signer;
 
     public Input<String> getSigner() {
         return this.signer == null ? Input.empty() : this.signer;
@@ -1574,7 +1574,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sns")
-    private final @Nullable Input<String> sns;
+        private final @Nullable Input<String> sns;
 
     public Input<String> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
@@ -1585,7 +1585,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sqs")
-    private final @Nullable Input<String> sqs;
+        private final @Nullable Input<String> sqs;
 
     public Input<String> getSqs() {
         return this.sqs == null ? Input.empty() : this.sqs;
@@ -1596,7 +1596,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ssm")
-    private final @Nullable Input<String> ssm;
+        private final @Nullable Input<String> ssm;
 
     public Input<String> getSsm() {
         return this.ssm == null ? Input.empty() : this.ssm;
@@ -1607,7 +1607,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ssoadmin")
-    private final @Nullable Input<String> ssoadmin;
+        private final @Nullable Input<String> ssoadmin;
 
     public Input<String> getSsoadmin() {
         return this.ssoadmin == null ? Input.empty() : this.ssoadmin;
@@ -1618,7 +1618,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stepfunctions")
-    private final @Nullable Input<String> stepfunctions;
+        private final @Nullable Input<String> stepfunctions;
 
     public Input<String> getStepfunctions() {
         return this.stepfunctions == null ? Input.empty() : this.stepfunctions;
@@ -1629,7 +1629,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storagegateway")
-    private final @Nullable Input<String> storagegateway;
+        private final @Nullable Input<String> storagegateway;
 
     public Input<String> getStoragegateway() {
         return this.storagegateway == null ? Input.empty() : this.storagegateway;
@@ -1640,7 +1640,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sts")
-    private final @Nullable Input<String> sts;
+        private final @Nullable Input<String> sts;
 
     public Input<String> getSts() {
         return this.sts == null ? Input.empty() : this.sts;
@@ -1651,7 +1651,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="swf")
-    private final @Nullable Input<String> swf;
+        private final @Nullable Input<String> swf;
 
     public Input<String> getSwf() {
         return this.swf == null ? Input.empty() : this.swf;
@@ -1662,7 +1662,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synthetics")
-    private final @Nullable Input<String> synthetics;
+        private final @Nullable Input<String> synthetics;
 
     public Input<String> getSynthetics() {
         return this.synthetics == null ? Input.empty() : this.synthetics;
@@ -1673,7 +1673,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timestreamwrite")
-    private final @Nullable Input<String> timestreamwrite;
+        private final @Nullable Input<String> timestreamwrite;
 
     public Input<String> getTimestreamwrite() {
         return this.timestreamwrite == null ? Input.empty() : this.timestreamwrite;
@@ -1684,7 +1684,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="transfer")
-    private final @Nullable Input<String> transfer;
+        private final @Nullable Input<String> transfer;
 
     public Input<String> getTransfer() {
         return this.transfer == null ? Input.empty() : this.transfer;
@@ -1695,7 +1695,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="waf")
-    private final @Nullable Input<String> waf;
+        private final @Nullable Input<String> waf;
 
     public Input<String> getWaf() {
         return this.waf == null ? Input.empty() : this.waf;
@@ -1706,7 +1706,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wafregional")
-    private final @Nullable Input<String> wafregional;
+        private final @Nullable Input<String> wafregional;
 
     public Input<String> getWafregional() {
         return this.wafregional == null ? Input.empty() : this.wafregional;
@@ -1717,7 +1717,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wafv2")
-    private final @Nullable Input<String> wafv2;
+        private final @Nullable Input<String> wafv2;
 
     public Input<String> getWafv2() {
         return this.wafv2 == null ? Input.empty() : this.wafv2;
@@ -1728,7 +1728,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="worklink")
-    private final @Nullable Input<String> worklink;
+        private final @Nullable Input<String> worklink;
 
     public Input<String> getWorklink() {
         return this.worklink == null ? Input.empty() : this.worklink;
@@ -1739,7 +1739,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workmail")
-    private final @Nullable Input<String> workmail;
+        private final @Nullable Input<String> workmail;
 
     public Input<String> getWorkmail() {
         return this.workmail == null ? Input.empty() : this.workmail;
@@ -1750,7 +1750,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaces")
-    private final @Nullable Input<String> workspaces;
+        private final @Nullable Input<String> workspaces;
 
     public Input<String> getWorkspaces() {
         return this.workspaces == null ? Input.empty() : this.workspaces;
@@ -1761,7 +1761,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="xray")
-    private final @Nullable Input<String> xray;
+        private final @Nullable Input<String> xray;
 
     public Input<String> getXray() {
         return this.xray == null ? Input.empty() : this.xray;
@@ -4175,7 +4175,6 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             this.xray = Input.ofNullable(xray);
             return this;
         }
-
         public ProviderEndpointArgs build() {
             return new ProviderEndpointArgs(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);
         }

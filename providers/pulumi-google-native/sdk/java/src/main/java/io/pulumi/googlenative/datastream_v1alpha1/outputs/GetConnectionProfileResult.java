@@ -292,7 +292,6 @@ public final class GetConnectionProfileResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionProfileResult build() {
             return new GetConnectionProfileResult(createTime, displayName, forwardSshConnectivity, gcsProfile, labels, mysqlProfile, name, noConnectivity, oracleProfile, privateConnectivity, staticServiceIpConnectivity, updateTime);
         }

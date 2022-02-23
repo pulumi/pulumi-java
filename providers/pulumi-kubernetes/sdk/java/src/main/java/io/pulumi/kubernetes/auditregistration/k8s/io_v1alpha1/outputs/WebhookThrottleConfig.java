@@ -76,7 +76,6 @@ public final class WebhookThrottleConfig {
             this.qps = qps;
             return this;
         }
-
         public WebhookThrottleConfig build() {
             return new WebhookThrottleConfig(burst, qps);
         }

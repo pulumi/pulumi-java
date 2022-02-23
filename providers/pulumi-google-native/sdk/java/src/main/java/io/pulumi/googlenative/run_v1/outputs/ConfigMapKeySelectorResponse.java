@@ -118,7 +118,6 @@ public final class ConfigMapKeySelectorResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapKeySelectorResponse build() {
             return new ConfigMapKeySelectorResponse(key, localObjectReference, name, optional);
         }

@@ -16,14 +16,14 @@ public final class TableBillingMode extends io.pulumi.resources.InvokeArgs {
     public static final TableBillingMode Empty = new TableBillingMode();
 
     @InputImport(name="mode", required=true)
-    private final TableMode mode;
+        private final TableMode mode;
 
     public TableMode getMode() {
         return this.mode;
     }
 
     @InputImport(name="provisionedThroughput")
-    private final @Nullable TableProvisionedThroughput provisionedThroughput;
+        private final @Nullable TableProvisionedThroughput provisionedThroughput;
 
     public Optional<TableProvisionedThroughput> getProvisionedThroughput() {
         return this.provisionedThroughput == null ? Optional.empty() : Optional.ofNullable(this.provisionedThroughput);
@@ -72,7 +72,6 @@ public final class TableBillingMode extends io.pulumi.resources.InvokeArgs {
             this.provisionedThroughput = provisionedThroughput;
             return this;
         }
-
         public TableBillingMode build() {
             return new TableBillingMode(mode, provisionedThroughput);
         }

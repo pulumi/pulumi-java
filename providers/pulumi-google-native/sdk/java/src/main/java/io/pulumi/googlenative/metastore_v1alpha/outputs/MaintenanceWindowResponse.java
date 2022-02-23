@@ -75,7 +75,6 @@ public final class MaintenanceWindowResponse {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dayOfWeek, hourOfDay);
         }

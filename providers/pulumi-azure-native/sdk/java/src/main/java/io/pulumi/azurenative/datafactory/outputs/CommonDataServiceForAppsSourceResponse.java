@@ -184,7 +184,6 @@ public final class CommonDataServiceForAppsSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CommonDataServiceForAppsSourceResponse build() {
             return new CommonDataServiceForAppsSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

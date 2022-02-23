@@ -76,7 +76,6 @@ public final class DeploymentLabel {
             this.value = value;
             return this;
         }
-
         public DeploymentLabel build() {
             return new DeploymentLabel(key, value);
         }

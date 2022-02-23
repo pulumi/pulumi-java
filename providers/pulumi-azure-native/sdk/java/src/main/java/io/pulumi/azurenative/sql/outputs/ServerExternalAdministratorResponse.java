@@ -161,7 +161,6 @@ public final class ServerExternalAdministratorResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ServerExternalAdministratorResponse build() {
             return new ServerExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

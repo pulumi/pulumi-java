@@ -116,7 +116,6 @@ public final class AppEngineRoutingResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public AppEngineRoutingResponse build() {
             return new AppEngineRoutingResponse(host, instance, service, version);
         }

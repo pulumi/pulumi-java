@@ -23,14 +23,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -41,7 +41,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+      private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -52,7 +52,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -63,14 +63,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -81,7 +81,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -92,7 +92,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<TargetServerProtocol> protocol;
+      private final @Nullable Input<TargetServerProtocol> protocol;
 
     public Input<TargetServerProtocol> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -103,7 +103,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sSLInfo")
-    private final @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
+      private final @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
     public Input<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {
         return this.sSLInfo == null ? Input.empty() : this.sSLInfo;
@@ -267,7 +267,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             this.sSLInfo = Input.ofNullable(sSLInfo);
             return this;
         }
-
         public TargetServerArgs build() {
             return new TargetServerArgs(description, environmentId, host, isEnabled, name, organizationId, port, protocol, sSLInfo);
         }

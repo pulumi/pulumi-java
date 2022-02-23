@@ -287,7 +287,6 @@ public final class BackendResponse {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

@@ -14,21 +14,21 @@ public final class GetClusterClusterAutoscalingResourceLimit extends io.pulumi.r
     public static final GetClusterClusterAutoscalingResourceLimit Empty = new GetClusterClusterAutoscalingResourceLimit();
 
     @InputImport(name="maximum", required=true)
-    private final Integer maximum;
+        private final Integer maximum;
 
     public Integer getMaximum() {
         return this.maximum;
     }
 
     @InputImport(name="minimum", required=true)
-    private final Integer minimum;
+        private final Integer minimum;
 
     public Integer getMinimum() {
         return this.minimum;
     }
 
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -87,7 +87,6 @@ public final class GetClusterClusterAutoscalingResourceLimit extends io.pulumi.r
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetClusterClusterAutoscalingResourceLimit build() {
             return new GetClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
         }

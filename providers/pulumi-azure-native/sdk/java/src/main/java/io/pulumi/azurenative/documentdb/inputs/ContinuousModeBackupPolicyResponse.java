@@ -22,7 +22,7 @@ public final class ContinuousModeBackupPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -60,7 +60,6 @@ public final class ContinuousModeBackupPolicyResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContinuousModeBackupPolicyResponse build() {
             return new ContinuousModeBackupPolicyResponse(type);
         }

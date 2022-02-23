@@ -20,7 +20,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="creationInfo")
-    private final @Nullable Input<AccessPointCreationInfoArgs> creationInfo;
+        private final @Nullable Input<AccessPointCreationInfoArgs> creationInfo;
 
     public Input<AccessPointCreationInfoArgs> getCreationInfo() {
         return this.creationInfo == null ? Input.empty() : this.creationInfo;
@@ -31,7 +31,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -90,7 +90,6 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public AccessPointRootDirectoryArgs build() {
             return new AccessPointRootDirectoryArgs(creationInfo, path);
         }

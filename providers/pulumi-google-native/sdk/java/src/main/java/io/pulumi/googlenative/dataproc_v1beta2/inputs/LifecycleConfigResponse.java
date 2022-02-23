@@ -21,7 +21,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="autoDeleteTime", required=true)
-    private final String autoDeleteTime;
+      private final String autoDeleteTime;
 
     public String getAutoDeleteTime() {
         return this.autoDeleteTime;
@@ -32,7 +32,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="autoDeleteTtl", required=true)
-    private final String autoDeleteTtl;
+      private final String autoDeleteTtl;
 
     public String getAutoDeleteTtl() {
         return this.autoDeleteTtl;
@@ -43,7 +43,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="idleDeleteTtl", required=true)
-    private final String idleDeleteTtl;
+      private final String idleDeleteTtl;
 
     public String getIdleDeleteTtl() {
         return this.idleDeleteTtl;
@@ -54,7 +54,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="idleStartTime", required=true)
-    private final String idleStartTime;
+      private final String idleStartTime;
 
     public String getIdleStartTime() {
         return this.idleStartTime;
@@ -123,7 +123,6 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
             this.idleStartTime = Objects.requireNonNull(idleStartTime);
             return this;
         }
-
         public LifecycleConfigResponse build() {
             return new LifecycleConfigResponse(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @InputImport(name="index", required=true)
-    private final Integer index;
+      private final Integer index;
 
     public Integer getIndex() {
         return this.index;
@@ -103,7 +103,6 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AnnotationSpecResponse build() {
             return new GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(description, displayName, index);
         }

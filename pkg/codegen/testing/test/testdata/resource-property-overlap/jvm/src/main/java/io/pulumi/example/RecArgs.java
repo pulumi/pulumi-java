@@ -30,7 +30,6 @@ public final class RecArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(RecArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RecArgs build() {
             return new RecArgs();
         }

@@ -261,7 +261,6 @@ public final class GetChannelResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

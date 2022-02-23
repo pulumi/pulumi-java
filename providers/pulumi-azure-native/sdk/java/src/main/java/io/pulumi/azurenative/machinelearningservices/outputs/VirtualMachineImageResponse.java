@@ -52,7 +52,6 @@ public final class VirtualMachineImageResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public VirtualMachineImageResponse build() {
             return new VirtualMachineImageResponse(id);
         }

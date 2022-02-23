@@ -76,7 +76,6 @@ public final class HttpHostConfigResponse {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public HttpHostConfigResponse build() {
             return new HttpHostConfigResponse(name, routes);
         }

@@ -80,7 +80,6 @@ public final class RegionInstanceGroupManagerVersionTargetSize {
             this.percent = percent;
             return this;
         }
-
         public RegionInstanceGroupManagerVersionTargetSize build() {
             return new RegionInstanceGroupManagerVersionTargetSize(fixed, percent);
         }

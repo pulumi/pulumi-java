@@ -23,7 +23,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -66,7 +66,6 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
             this.duration = Input.ofNullable(duration);
             return this;
         }
-
         public ThrottlingInformationArgs build() {
             return new ThrottlingInformationArgs(duration);
         }

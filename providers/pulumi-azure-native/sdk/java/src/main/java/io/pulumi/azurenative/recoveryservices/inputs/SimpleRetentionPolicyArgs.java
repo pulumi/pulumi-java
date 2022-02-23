@@ -24,7 +24,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionDuration")
-    private final @Nullable Input<RetentionDurationArgs> retentionDuration;
+        private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
     public Input<RetentionDurationArgs> getRetentionDuration() {
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
@@ -36,7 +36,7 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPolicyType", required=true)
-    private final Input<String> retentionPolicyType;
+        private final Input<String> retentionPolicyType;
 
     public Input<String> getRetentionPolicyType() {
         return this.retentionPolicyType;
@@ -95,7 +95,6 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
             this.retentionPolicyType = Input.of(Objects.requireNonNull(retentionPolicyType));
             return this;
         }
-
         public SimpleRetentionPolicyArgs build() {
             return new SimpleRetentionPolicyArgs(retentionDuration, retentionPolicyType);
         }

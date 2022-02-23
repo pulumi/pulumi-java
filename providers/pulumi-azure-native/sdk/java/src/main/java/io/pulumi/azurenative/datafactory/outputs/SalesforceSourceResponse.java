@@ -226,7 +226,6 @@ public final class SalesforceSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceSourceResponse build() {
             return new SalesforceSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, readBehavior, sourceRetryCount, sourceRetryWait, type);
         }

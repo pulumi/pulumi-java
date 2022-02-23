@@ -271,7 +271,6 @@ public final class DataSourceParameters {
             this.teradataParameters = teradataParameters;
             return this;
         }
-
         public DataSourceParameters build() {
             return new DataSourceParameters(amazonElasticsearchParameters, amazonOpenSearchParameters, athenaParameters, auroraParameters, auroraPostgreSqlParameters, mariaDbParameters, mySqlParameters, oracleParameters, postgreSqlParameters, prestoParameters, rdsParameters, redshiftParameters, s3Parameters, snowflakeParameters, sparkParameters, sqlServerParameters, teradataParameters);
         }

@@ -139,7 +139,6 @@ public final class SubjectAltNamesResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public SubjectAltNamesResponse build() {
             return new SubjectAltNamesResponse(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

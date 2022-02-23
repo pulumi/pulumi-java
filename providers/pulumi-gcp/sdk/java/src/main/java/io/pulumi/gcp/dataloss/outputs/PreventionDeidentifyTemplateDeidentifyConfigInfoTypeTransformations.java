@@ -55,7 +55,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations(transformations);
         }

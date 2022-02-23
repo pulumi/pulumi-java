@@ -118,7 +118,6 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfileProperties build() {
             return new ConnectorProfileRedshiftConnectorProfileProperties(bucketName, bucketPrefix, databaseUrl, roleArn);
         }

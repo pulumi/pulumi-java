@@ -54,7 +54,6 @@ public final class SshPublicKeyResponse {
             this.certificateData = certificateData;
             return this;
         }
-
         public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(certificateData);
         }

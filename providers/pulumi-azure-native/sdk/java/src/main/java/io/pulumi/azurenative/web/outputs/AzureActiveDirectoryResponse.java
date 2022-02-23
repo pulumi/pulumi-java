@@ -146,7 +146,6 @@ public final class AzureActiveDirectoryResponse {
             this.validation = validation;
             return this;
         }
-
         public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(enabled, isAutoProvisioned, login, registration, validation);
         }

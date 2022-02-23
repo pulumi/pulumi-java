@@ -109,7 +109,6 @@ public final class GetNotificationRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNotificationRegistrationResult build() {
             return new GetNotificationRegistrationResult(id, name, properties, type);
         }

@@ -170,7 +170,6 @@ public final class JobCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobCondition build() {
             return new JobCondition(lastProbeTime, lastTransitionTime, message, reason, status, type);
         }

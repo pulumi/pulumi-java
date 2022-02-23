@@ -54,7 +54,6 @@ public final class NetworkManagerSecurityGroupItemResponse {
             this.networkGroupId = networkGroupId;
             return this;
         }
-
         public NetworkManagerSecurityGroupItemResponse build() {
             return new NetworkManagerSecurityGroupItemResponse(networkGroupId);
         }

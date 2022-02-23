@@ -58,7 +58,6 @@ public final class RecipeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecipeTag build() {
             return new RecipeTag(key, value);
         }

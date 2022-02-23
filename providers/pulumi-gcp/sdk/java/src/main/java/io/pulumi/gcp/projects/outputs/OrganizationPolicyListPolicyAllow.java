@@ -78,7 +78,6 @@ public final class OrganizationPolicyListPolicyAllow {
             this.values = values;
             return this;
         }
-
         public OrganizationPolicyListPolicyAllow build() {
             return new OrganizationPolicyListPolicyAllow(all, values);
         }

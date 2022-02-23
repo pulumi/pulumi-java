@@ -271,7 +271,6 @@ public final class RoutingRuleResponse {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public RoutingRuleResponse build() {
             return new RoutingRuleResponse(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, resourceState, routeConfiguration, rulesEngine, type, webApplicationFirewallPolicyLink);
         }

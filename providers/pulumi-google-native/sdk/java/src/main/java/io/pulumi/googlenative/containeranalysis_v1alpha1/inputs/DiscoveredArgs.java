@@ -26,7 +26,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisStatus")
-    private final @Nullable Input<DiscoveredAnalysisStatus> analysisStatus;
+      private final @Nullable Input<DiscoveredAnalysisStatus> analysisStatus;
 
     public Input<DiscoveredAnalysisStatus> getAnalysisStatus() {
         return this.analysisStatus == null ? Input.empty() : this.analysisStatus;
@@ -37,7 +37,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisStatusError")
-    private final @Nullable Input<StatusArgs> analysisStatusError;
+      private final @Nullable Input<StatusArgs> analysisStatusError;
 
     public Input<StatusArgs> getAnalysisStatusError() {
         return this.analysisStatusError == null ? Input.empty() : this.analysisStatusError;
@@ -48,7 +48,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="continuousAnalysis")
-    private final @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis;
+      private final @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis;
 
     public Input<DiscoveredContinuousAnalysis> getContinuousAnalysis() {
         return this.continuousAnalysis == null ? Input.empty() : this.continuousAnalysis;
@@ -59,7 +59,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpe")
-    private final @Nullable Input<String> cpe;
+      private final @Nullable Input<String> cpe;
 
     public Input<String> getCpe() {
         return this.cpe == null ? Input.empty() : this.cpe;
@@ -148,7 +148,6 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
             this.cpe = Input.ofNullable(cpe);
             return this;
         }
-
         public DiscoveredArgs build() {
             return new DiscoveredArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }

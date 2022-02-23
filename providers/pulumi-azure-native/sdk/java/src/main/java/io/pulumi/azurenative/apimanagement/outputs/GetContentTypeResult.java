@@ -161,7 +161,6 @@ public final class GetContentTypeResult {
             this.version = version;
             return this;
         }
-
         public GetContentTypeResult build() {
             return new GetContentTypeResult(description, id, name, schema, type, version);
         }

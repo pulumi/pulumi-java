@@ -140,7 +140,6 @@ public final class GetAssessmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(eTag, id, name, properties, type);
         }

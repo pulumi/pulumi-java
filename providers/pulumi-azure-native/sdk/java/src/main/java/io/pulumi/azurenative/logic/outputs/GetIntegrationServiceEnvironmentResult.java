@@ -206,7 +206,6 @@ public final class GetIntegrationServiceEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationServiceEnvironmentResult build() {
             return new GetIntegrationServiceEnvironmentResult(id, identity, location, name, properties, sku, tags, type);
         }

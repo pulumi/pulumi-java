@@ -74,7 +74,6 @@ public final class DataSourceManifestFileLocation {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public DataSourceManifestFileLocation build() {
             return new DataSourceManifestFileLocation(bucket, key);
         }

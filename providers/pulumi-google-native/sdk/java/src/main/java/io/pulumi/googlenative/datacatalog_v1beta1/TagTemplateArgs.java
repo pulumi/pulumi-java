@@ -20,7 +20,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,14 +31,14 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<Map<String,String>> fields;
+      private final Input<Map<String,String>> fields;
 
     public Input<Map<String,String>> getFields() {
         return this.fields;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -49,21 +49,21 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="tagTemplateId", required=true)
-    private final Input<String> tagTemplateId;
+      private final Input<String> tagTemplateId;
 
     public Input<String> getTagTemplateId() {
         return this.tagTemplateId;
@@ -182,7 +182,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.tagTemplateId = Input.of(Objects.requireNonNull(tagTemplateId));
             return this;
         }
-
         public TagTemplateArgs build() {
             return new TagTemplateArgs(displayName, fields, location, name, project, tagTemplateId);
         }

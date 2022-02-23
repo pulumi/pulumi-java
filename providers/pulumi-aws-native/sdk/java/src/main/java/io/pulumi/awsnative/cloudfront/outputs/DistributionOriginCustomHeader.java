@@ -58,7 +58,6 @@ public final class DistributionOriginCustomHeader {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public DistributionOriginCustomHeader build() {
             return new DistributionOriginCustomHeader(headerName, headerValue);
         }

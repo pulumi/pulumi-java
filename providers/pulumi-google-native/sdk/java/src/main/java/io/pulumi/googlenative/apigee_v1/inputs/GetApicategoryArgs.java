@@ -13,21 +13,21 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetApicategoryArgs Empty = new GetApicategoryArgs();
 
     @InputImport(name="apicategoryId", required=true)
-    private final String apicategoryId;
+      private final String apicategoryId;
 
     public String getApicategoryId() {
         return this.apicategoryId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+      private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -86,7 +86,6 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public GetApicategoryArgs build() {
             return new GetApicategoryArgs(apicategoryId, organizationId, siteId);
         }

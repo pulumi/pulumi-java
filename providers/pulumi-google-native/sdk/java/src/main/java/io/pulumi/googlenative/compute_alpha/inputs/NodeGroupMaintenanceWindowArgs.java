@@ -23,7 +23,7 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -66,7 +66,6 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public NodeGroupMaintenanceWindowArgs build() {
             return new NodeGroupMaintenanceWindowArgs(startTime);
         }

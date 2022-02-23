@@ -184,7 +184,6 @@ public final class GetMDATPDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMDATPDataConnectorResult build() {
             return new GetMDATPDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }

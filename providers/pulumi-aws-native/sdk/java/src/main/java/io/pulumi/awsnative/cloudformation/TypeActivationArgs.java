@@ -23,7 +23,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpdate")
-    private final @Nullable Input<Boolean> autoUpdate;
+        private final @Nullable Input<Boolean> autoUpdate;
 
     public Input<Boolean> getAutoUpdate() {
         return this.autoUpdate == null ? Input.empty() : this.autoUpdate;
@@ -34,7 +34,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+        private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -45,7 +45,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig;
+        private final @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig;
 
     public Input<TypeActivationLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -56,7 +56,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="majorVersion")
-    private final @Nullable Input<String> majorVersion;
+        private final @Nullable Input<String> majorVersion;
 
     public Input<String> getMajorVersion() {
         return this.majorVersion == null ? Input.empty() : this.majorVersion;
@@ -67,7 +67,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicTypeArn")
-    private final @Nullable Input<String> publicTypeArn;
+        private final @Nullable Input<String> publicTypeArn;
 
     public Input<String> getPublicTypeArn() {
         return this.publicTypeArn == null ? Input.empty() : this.publicTypeArn;
@@ -78,7 +78,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisherId")
-    private final @Nullable Input<String> publisherId;
+        private final @Nullable Input<String> publisherId;
 
     public Input<String> getPublisherId() {
         return this.publisherId == null ? Input.empty() : this.publisherId;
@@ -89,7 +89,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<TypeActivationType> type;
+        private final @Nullable Input<TypeActivationType> type;
 
     public Input<TypeActivationType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -102,7 +102,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -113,7 +113,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeNameAlias")
-    private final @Nullable Input<String> typeNameAlias;
+        private final @Nullable Input<String> typeNameAlias;
 
     public Input<String> getTypeNameAlias() {
         return this.typeNameAlias == null ? Input.empty() : this.typeNameAlias;
@@ -124,7 +124,7 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionBump")
-    private final @Nullable Input<TypeActivationVersionBump> versionBump;
+        private final @Nullable Input<TypeActivationVersionBump> versionBump;
 
     public Input<TypeActivationVersionBump> getVersionBump() {
         return this.versionBump == null ? Input.empty() : this.versionBump;
@@ -303,7 +303,6 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
             this.versionBump = Input.ofNullable(versionBump);
             return this;
         }
-
         public TypeActivationArgs build() {
             return new TypeActivationArgs(autoUpdate, executionRoleArn, loggingConfig, majorVersion, publicTypeArn, publisherId, type, typeName, typeNameAlias, versionBump);
         }

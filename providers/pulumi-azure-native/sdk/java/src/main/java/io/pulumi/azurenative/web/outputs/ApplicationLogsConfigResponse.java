@@ -99,7 +99,6 @@ public final class ApplicationLogsConfigResponse {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public ApplicationLogsConfigResponse build() {
             return new ApplicationLogsConfigResponse(azureBlobStorage, azureTableStorage, fileSystem);
         }

@@ -17,7 +17,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metricsSourceName", required=true)
-    private final String metricsSourceName;
+        private final String metricsSourceName;
 
     public String getMetricsSourceName() {
         return this.metricsSourceName;
@@ -28,7 +28,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final String monitorName;
+        private final String monitorName;
 
     public String getMonitorName() {
         return this.monitorName;
@@ -39,7 +39,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetMetricsSourceArgs build() {
             return new GetMetricsSourceArgs(metricsSourceName, monitorName, resourceGroupName);
         }

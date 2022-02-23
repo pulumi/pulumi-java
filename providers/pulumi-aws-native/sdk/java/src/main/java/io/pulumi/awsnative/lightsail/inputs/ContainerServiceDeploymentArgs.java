@@ -25,7 +25,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ContainerArgs>> containers;
+        private final @Nullable Input<List<ContainerArgs>> containers;
 
     public Input<List<ContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -36,7 +36,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publicEndpoint")
-    private final @Nullable Input<ContainerPublicEndpointArgs> publicEndpoint;
+        private final @Nullable Input<ContainerPublicEndpointArgs> publicEndpoint;
 
     public Input<ContainerPublicEndpointArgs> getPublicEndpoint() {
         return this.publicEndpoint == null ? Input.empty() : this.publicEndpoint;
@@ -95,7 +95,6 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
             this.publicEndpoint = Input.ofNullable(publicEndpoint);
             return this;
         }
-
         public ContainerServiceDeploymentArgs build() {
             return new ContainerServiceDeploymentArgs(containers, publicEndpoint);
         }

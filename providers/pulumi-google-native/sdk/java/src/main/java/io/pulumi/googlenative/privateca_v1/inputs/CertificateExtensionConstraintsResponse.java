@@ -23,7 +23,7 @@ public final class CertificateExtensionConstraintsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="additionalExtensions", required=true)
-    private final List<ObjectIdResponse> additionalExtensions;
+      private final List<ObjectIdResponse> additionalExtensions;
 
     public List<ObjectIdResponse> getAdditionalExtensions() {
         return this.additionalExtensions;
@@ -34,7 +34,7 @@ public final class CertificateExtensionConstraintsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="knownExtensions", required=true)
-    private final List<String> knownExtensions;
+      private final List<String> knownExtensions;
 
     public List<String> getKnownExtensions() {
         return this.knownExtensions;
@@ -83,7 +83,6 @@ public final class CertificateExtensionConstraintsResponse extends io.pulumi.res
             this.knownExtensions = Objects.requireNonNull(knownExtensions);
             return this;
         }
-
         public CertificateExtensionConstraintsResponse build() {
             return new CertificateExtensionConstraintsResponse(additionalExtensions, knownExtensions);
         }

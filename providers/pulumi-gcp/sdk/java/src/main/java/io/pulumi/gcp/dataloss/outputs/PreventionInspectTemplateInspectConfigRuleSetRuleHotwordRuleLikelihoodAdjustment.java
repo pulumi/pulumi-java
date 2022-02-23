@@ -89,7 +89,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
             this.relativeLikelihood = relativeLikelihood;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment(fixedLikelihood, relativeLikelihood);
         }

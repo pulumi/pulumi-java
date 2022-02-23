@@ -24,7 +24,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -37,7 +37,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -65,7 +65,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="weeklyMaintenanceWindows")
-    private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
+        private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
 
     public Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? Input.empty() : this.weeklyMaintenanceWindows;
@@ -154,7 +154,6 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
             this.weeklyMaintenanceWindows = Input.ofNullable(weeklyMaintenanceWindows);
             return this;
         }
-
         public InstanceMaintenancePolicyArgs build() {
             return new InstanceMaintenancePolicyArgs(createTime, description, updateTime, weeklyMaintenanceWindows);
         }

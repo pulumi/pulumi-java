@@ -96,7 +96,6 @@ public final class YumRepositoryResponse {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public YumRepositoryResponse build() {
             return new YumRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -43,7 +43,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -102,7 +102,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(displayName, resourceId, resourceType);
         }

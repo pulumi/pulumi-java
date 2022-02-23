@@ -78,7 +78,6 @@ public final class CronJobStatus {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }
-
         public CronJobStatus build() {
             return new CronJobStatus(active, lastScheduleTime);
         }

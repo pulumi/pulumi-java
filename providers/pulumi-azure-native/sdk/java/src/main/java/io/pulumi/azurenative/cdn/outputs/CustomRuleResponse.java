@@ -142,7 +142,6 @@ public final class CustomRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority);
         }

@@ -122,7 +122,6 @@ public final class GetHookDefaultVersionResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetHookDefaultVersionResult build() {
             return new GetHookDefaultVersionResult(arn, typeName, typeVersionArn, versionId);
         }

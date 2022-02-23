@@ -185,7 +185,6 @@ public final class TestSetupResponse {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }
-
         public TestSetupResponse build() {
             return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }

@@ -76,7 +76,6 @@ public final class AppInsightsCredentialsResponse {
             this.instrumentationKey = instrumentationKey;
             return this;
         }
-
         public AppInsightsCredentialsResponse build() {
             return new AppInsightsCredentialsResponse(appId, instrumentationKey);
         }

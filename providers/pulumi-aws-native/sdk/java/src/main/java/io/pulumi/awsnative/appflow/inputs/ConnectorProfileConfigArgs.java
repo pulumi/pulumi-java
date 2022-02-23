@@ -20,14 +20,14 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
     public static final ConnectorProfileConfigArgs Empty = new ConnectorProfileConfigArgs();
 
     @InputImport(name="connectorProfileCredentials", required=true)
-    private final Input<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
+        private final Input<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
 
     public Input<ConnectorProfileCredentialsArgs> getConnectorProfileCredentials() {
         return this.connectorProfileCredentials;
     }
 
     @InputImport(name="connectorProfileProperties")
-    private final @Nullable Input<ConnectorProfilePropertiesArgs> connectorProfileProperties;
+        private final @Nullable Input<ConnectorProfilePropertiesArgs> connectorProfileProperties;
 
     public Input<ConnectorProfilePropertiesArgs> getConnectorProfileProperties() {
         return this.connectorProfileProperties == null ? Input.empty() : this.connectorProfileProperties;
@@ -86,7 +86,6 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
             this.connectorProfileProperties = Input.ofNullable(connectorProfileProperties);
             return this;
         }
-
         public ConnectorProfileConfigArgs build() {
             return new ConnectorProfileConfigArgs(connectorProfileCredentials, connectorProfileProperties);
         }

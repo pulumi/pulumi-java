@@ -54,7 +54,6 @@ public final class StudioComponentLicenseServiceConfiguration {
             this.endpoint = endpoint;
             return this;
         }
-
         public StudioComponentLicenseServiceConfiguration build() {
             return new StudioComponentLicenseServiceConfiguration(endpoint);
         }

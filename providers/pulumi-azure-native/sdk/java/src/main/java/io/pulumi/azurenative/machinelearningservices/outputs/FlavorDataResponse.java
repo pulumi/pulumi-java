@@ -54,7 +54,6 @@ public final class FlavorDataResponse {
             this.data = data;
             return this;
         }
-
         public FlavorDataResponse build() {
             return new FlavorDataResponse(data);
         }

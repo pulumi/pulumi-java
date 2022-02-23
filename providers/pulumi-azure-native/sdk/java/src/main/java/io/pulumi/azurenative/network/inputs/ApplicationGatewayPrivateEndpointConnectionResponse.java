@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="linkIdentifier", required=true)
-    private final String linkIdentifier;
+        private final String linkIdentifier;
 
     public String getLinkIdentifier() {
         return this.linkIdentifier;
@@ -58,7 +58,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="privateEndpoint", required=true)
-    private final PrivateEndpointResponse privateEndpoint;
+        private final PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
@@ -80,7 +80,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -91,7 +91,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -102,7 +102,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -211,7 +211,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateEndpointConnectionResponse build() {
             return new ApplicationGatewayPrivateEndpointConnectionResponse(etag, id, linkIdentifier, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

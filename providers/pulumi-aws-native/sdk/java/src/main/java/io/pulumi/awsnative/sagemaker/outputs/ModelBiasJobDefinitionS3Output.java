@@ -98,7 +98,6 @@ public final class ModelBiasJobDefinitionS3Output {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public ModelBiasJobDefinitionS3Output build() {
             return new ModelBiasJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }

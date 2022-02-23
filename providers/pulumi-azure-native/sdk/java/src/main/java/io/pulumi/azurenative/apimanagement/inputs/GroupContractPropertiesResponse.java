@@ -24,7 +24,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="builtIn", required=true)
-    private final Boolean builtIn;
+        private final Boolean builtIn;
 
     public Boolean getBuiltIn() {
         return this.builtIn;
@@ -35,7 +35,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -46,7 +46,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable String externalId;
+        private final @Nullable String externalId;
 
     public Optional<String> getExternalId() {
         return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
@@ -68,7 +68,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -147,7 +147,6 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
             this.type = type;
             return this;
         }
-
         public GroupContractPropertiesResponse build() {
             return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
         }

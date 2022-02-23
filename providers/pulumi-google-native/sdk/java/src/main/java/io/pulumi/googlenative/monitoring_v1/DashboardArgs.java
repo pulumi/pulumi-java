@@ -24,7 +24,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnLayout")
-    private final @Nullable Input<ColumnLayoutArgs> columnLayout;
+      private final @Nullable Input<ColumnLayoutArgs> columnLayout;
 
     public Input<ColumnLayoutArgs> getColumnLayout() {
         return this.columnLayout == null ? Input.empty() : this.columnLayout;
@@ -35,7 +35,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -57,7 +57,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gridLayout")
-    private final @Nullable Input<GridLayoutArgs> gridLayout;
+      private final @Nullable Input<GridLayoutArgs> gridLayout;
 
     public Input<GridLayoutArgs> getGridLayout() {
         return this.gridLayout == null ? Input.empty() : this.gridLayout;
@@ -68,7 +68,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -79,7 +79,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mosaicLayout")
-    private final @Nullable Input<MosaicLayoutArgs> mosaicLayout;
+      private final @Nullable Input<MosaicLayoutArgs> mosaicLayout;
 
     public Input<MosaicLayoutArgs> getMosaicLayout() {
         return this.mosaicLayout == null ? Input.empty() : this.mosaicLayout;
@@ -90,14 +90,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,14 +108,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowLayout")
-    private final @Nullable Input<RowLayoutArgs> rowLayout;
+      private final @Nullable Input<RowLayoutArgs> rowLayout;
 
     public Input<RowLayoutArgs> getRowLayout() {
         return this.rowLayout == null ? Input.empty() : this.rowLayout;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -294,7 +294,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public DashboardArgs build() {
             return new DashboardArgs(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, project, rowLayout, validateOnly);
         }

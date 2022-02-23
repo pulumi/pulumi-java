@@ -202,7 +202,6 @@ public final class ActivityTimelineItemResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ActivityTimelineItemResponse build() {
             return new ActivityTimelineItemResponse(bucketEndTimeUTC, bucketStartTimeUTC, content, firstActivityTimeUTC, kind, lastActivityTimeUTC, queryId, title);
         }

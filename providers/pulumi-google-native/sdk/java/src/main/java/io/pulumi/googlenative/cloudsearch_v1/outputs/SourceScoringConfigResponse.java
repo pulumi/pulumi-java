@@ -52,7 +52,6 @@ public final class SourceScoringConfigResponse {
             this.sourceImportance = Objects.requireNonNull(sourceImportance);
             return this;
         }
-
         public SourceScoringConfigResponse build() {
             return new SourceScoringConfigResponse(sourceImportance);
         }

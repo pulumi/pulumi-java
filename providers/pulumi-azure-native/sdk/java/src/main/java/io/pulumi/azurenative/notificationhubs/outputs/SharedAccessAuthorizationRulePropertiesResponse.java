@@ -224,7 +224,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public SharedAccessAuthorizationRulePropertiesResponse build() {
             return new SharedAccessAuthorizationRulePropertiesResponse(claimType, claimValue, createdTime, keyName, modifiedTime, primaryKey, revision, rights, secondaryKey);
         }

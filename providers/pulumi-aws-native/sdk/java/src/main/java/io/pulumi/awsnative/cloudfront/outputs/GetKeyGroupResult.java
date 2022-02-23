@@ -74,7 +74,6 @@ public final class GetKeyGroupResult {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public GetKeyGroupResult build() {
             return new GetKeyGroupResult(id, keyGroupConfig, lastModifiedTime);
         }

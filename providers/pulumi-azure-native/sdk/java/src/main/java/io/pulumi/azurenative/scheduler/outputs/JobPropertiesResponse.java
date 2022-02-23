@@ -142,7 +142,6 @@ public final class JobPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public JobPropertiesResponse build() {
             return new JobPropertiesResponse(action, recurrence, startTime, state, status);
         }

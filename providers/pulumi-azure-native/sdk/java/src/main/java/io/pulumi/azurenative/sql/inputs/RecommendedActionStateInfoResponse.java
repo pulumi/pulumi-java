@@ -21,7 +21,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="actionInitiatedBy", required=true)
-    private final String actionInitiatedBy;
+        private final String actionInitiatedBy;
 
     public String getActionInitiatedBy() {
         return this.actionInitiatedBy;
@@ -32,7 +32,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="currentValue", required=true)
-    private final String currentValue;
+        private final String currentValue;
 
     public String getCurrentValue() {
         return this.currentValue;
@@ -43,7 +43,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="lastModified", required=true)
-    private final String lastModified;
+        private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -102,7 +102,6 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public RecommendedActionStateInfoResponse build() {
             return new RecommendedActionStateInfoResponse(actionInitiatedBy, currentValue, lastModified);
         }

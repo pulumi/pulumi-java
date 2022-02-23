@@ -54,7 +54,6 @@ public final class ClusterAddonsConfigDnsCacheConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ClusterAddonsConfigDnsCacheConfig build() {
             return new ClusterAddonsConfigDnsCacheConfig(enabled);
         }

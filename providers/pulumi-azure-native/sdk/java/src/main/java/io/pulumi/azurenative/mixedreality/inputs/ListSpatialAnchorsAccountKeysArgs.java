@@ -17,7 +17,7 @@ public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListSpatialAnchorsAccountKeysArgs build() {
             return new ListSpatialAnchorsAccountKeysArgs(accountName, resourceGroupName);
         }

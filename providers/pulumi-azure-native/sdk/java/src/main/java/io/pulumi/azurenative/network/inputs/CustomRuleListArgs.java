@@ -24,7 +24,7 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<CustomRuleArgs>> rules;
+        private final @Nullable Input<List<CustomRuleArgs>> rules;
 
     public Input<List<CustomRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,6 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public CustomRuleListArgs build() {
             return new CustomRuleListArgs(rules);
         }

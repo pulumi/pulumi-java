@@ -45,7 +45,6 @@ public final class ResponseHeadersPolicyAccessControlExposeHeaders {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public ResponseHeadersPolicyAccessControlExposeHeaders build() {
             return new ResponseHeadersPolicyAccessControlExposeHeaders(items);
         }

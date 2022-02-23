@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,DataTypeState>> state;
+        private final @Nullable Input<Either<String,DataTypeState>> state;
 
     public Input<Either<String,DataTypeState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -68,7 +68,6 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public OfficeDataConnectorDataTypesExchangeArgs build() {
             return new OfficeDataConnectorDataTypesExchangeArgs(state);
         }

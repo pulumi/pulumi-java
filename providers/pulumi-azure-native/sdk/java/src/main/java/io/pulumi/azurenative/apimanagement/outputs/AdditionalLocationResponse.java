@@ -206,7 +206,6 @@ public final class AdditionalLocationResponse {
             this.zones = zones;
             return this;
         }
-
         public AdditionalLocationResponse build() {
             return new AdditionalLocationResponse(disableGateway, gatewayRegionalUrl, location, privateIPAddresses, publicIPAddresses, sku, virtualNetworkConfiguration, zones);
         }

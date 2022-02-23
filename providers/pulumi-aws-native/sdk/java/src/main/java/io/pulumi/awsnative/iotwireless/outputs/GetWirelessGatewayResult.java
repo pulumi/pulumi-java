@@ -226,7 +226,6 @@ public final class GetWirelessGatewayResult {
             this.thingName = thingName;
             return this;
         }
-
         public GetWirelessGatewayResult build() {
             return new GetWirelessGatewayResult(arn, description, id, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, thingName);
         }

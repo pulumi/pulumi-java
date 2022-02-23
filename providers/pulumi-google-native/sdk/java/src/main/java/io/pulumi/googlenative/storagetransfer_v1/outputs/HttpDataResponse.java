@@ -52,7 +52,6 @@ public final class HttpDataResponse {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public HttpDataResponse build() {
             return new HttpDataResponse(listUrl);
         }

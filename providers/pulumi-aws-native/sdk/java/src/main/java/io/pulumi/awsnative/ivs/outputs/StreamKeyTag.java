@@ -58,7 +58,6 @@ public final class StreamKeyTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StreamKeyTag build() {
             return new StreamKeyTag(key, value);
         }

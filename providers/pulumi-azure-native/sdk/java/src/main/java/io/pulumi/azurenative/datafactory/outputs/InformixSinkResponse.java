@@ -205,7 +205,6 @@ public final class InformixSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public InformixSinkResponse build() {
             return new InformixSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

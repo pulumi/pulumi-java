@@ -76,7 +76,6 @@ public final class NameValuePairResponse {
             this.value = value;
             return this;
         }
-
         public NameValuePairResponse build() {
             return new NameValuePairResponse(name, value);
         }

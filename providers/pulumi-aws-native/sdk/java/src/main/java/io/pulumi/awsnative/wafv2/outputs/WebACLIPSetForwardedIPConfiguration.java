@@ -73,7 +73,6 @@ public final class WebACLIPSetForwardedIPConfiguration {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public WebACLIPSetForwardedIPConfiguration build() {
             return new WebACLIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
         }

@@ -24,7 +24,7 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final String dayOfWeek;
+        private final String dayOfWeek;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
@@ -35,7 +35,7 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable String maintenanceWindow;
+        private final @Nullable String maintenanceWindow;
 
     public Optional<String> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindow);
@@ -46,7 +46,7 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="startHourUtc", required=true)
-    private final Integer startHourUtc;
+        private final Integer startHourUtc;
 
     public Integer getStartHourUtc() {
         return this.startHourUtc;
@@ -105,7 +105,6 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }
-
         public ScheduleEntryResponse build() {
             return new ScheduleEntryResponse(dayOfWeek, maintenanceWindow, startHourUtc);
         }

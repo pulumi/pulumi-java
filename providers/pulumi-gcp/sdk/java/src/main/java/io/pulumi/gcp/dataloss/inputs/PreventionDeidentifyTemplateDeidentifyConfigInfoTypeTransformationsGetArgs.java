@@ -20,7 +20,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="transformations", required=true)
-    private final Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations;
+        private final Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations;
 
     public Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> getTransformations() {
         return this.transformations;
@@ -63,7 +63,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.transformations = Input.of(Objects.requireNonNull(transformations));
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs(transformations);
         }

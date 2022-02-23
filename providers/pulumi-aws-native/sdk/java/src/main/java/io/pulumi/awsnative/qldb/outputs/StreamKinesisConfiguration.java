@@ -61,7 +61,6 @@ public final class StreamKinesisConfiguration {
             this.streamArn = streamArn;
             return this;
         }
-
         public StreamKinesisConfiguration build() {
             return new StreamKinesisConfiguration(aggregationEnabled, streamArn);
         }

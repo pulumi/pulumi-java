@@ -17,49 +17,49 @@ public final class FunctionIamBindingState extends io.pulumi.resources.ResourceA
     public static final FunctionIamBindingState Empty = new FunctionIamBindingState();
 
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<String> cloudFunction;
+        private final @Nullable Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<FunctionIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<FunctionIamBindingConditionGetArgs> condition;
 
     public Input<FunctionIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -193,7 +193,6 @@ public final class FunctionIamBindingState extends io.pulumi.resources.ResourceA
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public FunctionIamBindingState build() {
             return new FunctionIamBindingState(cloudFunction, condition, etag, members, project, region, role);
         }

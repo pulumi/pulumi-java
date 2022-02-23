@@ -77,7 +77,6 @@ public final class SubscriptionLogSettingsResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public SubscriptionLogSettingsResponse build() {
             return new SubscriptionLogSettingsResponse(category, enabled);
         }

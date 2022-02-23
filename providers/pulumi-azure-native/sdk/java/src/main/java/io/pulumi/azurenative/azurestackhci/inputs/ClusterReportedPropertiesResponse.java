@@ -23,7 +23,7 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+        private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -45,7 +45,7 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterVersion", required=true)
-    private final String clusterVersion;
+        private final String clusterVersion;
 
     public String getClusterVersion() {
         return this.clusterVersion;
@@ -56,7 +56,7 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastUpdated", required=true)
-    private final String lastUpdated;
+        private final String lastUpdated;
 
     public String getLastUpdated() {
         return this.lastUpdated;
@@ -67,7 +67,7 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="nodes", required=true)
-    private final List<ClusterNodeResponse> nodes;
+        private final List<ClusterNodeResponse> nodes;
 
     public List<ClusterNodeResponse> getNodes() {
         return this.nodes;
@@ -146,7 +146,6 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ClusterReportedPropertiesResponse build() {
             return new ClusterReportedPropertiesResponse(clusterId, clusterName, clusterVersion, lastUpdated, nodes);
         }

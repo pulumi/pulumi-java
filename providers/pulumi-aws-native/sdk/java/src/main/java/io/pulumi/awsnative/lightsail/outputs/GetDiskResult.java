@@ -276,7 +276,6 @@ public final class GetDiskResult {
             this.tags = tags;
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(addOns, attachedTo, attachmentState, diskArn, iops, isAttached, location, path, resourceType, state, supportCode, tags);
         }

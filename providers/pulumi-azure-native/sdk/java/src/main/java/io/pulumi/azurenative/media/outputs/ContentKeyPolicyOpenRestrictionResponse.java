@@ -54,7 +54,6 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyOpenRestrictionResponse build() {
             return new ContentKeyPolicyOpenRestrictionResponse(odataType);
         }

@@ -15,7 +15,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final IamPolicyArgs Empty = new IamPolicyArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -27,7 +27,7 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -39,14 +39,14 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="tableId", required=true)
-    private final Input<String> tableId;
+        private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;
@@ -135,7 +135,6 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public IamPolicyArgs build() {
             return new IamPolicyArgs(datasetId, policyData, project, tableId);
         }

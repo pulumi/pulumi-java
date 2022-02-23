@@ -52,7 +52,6 @@ public final class GcfsConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcfsConfigResponse build() {
             return new GcfsConfigResponse(enabled);
         }

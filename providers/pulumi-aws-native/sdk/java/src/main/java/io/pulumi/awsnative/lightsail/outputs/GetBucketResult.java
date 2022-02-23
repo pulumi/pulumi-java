@@ -211,7 +211,6 @@ public final class GetBucketResult {
             this.url = url;
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(ableToUpdateBundle, accessRules, bucketArn, bundleId, objectVersioning, readOnlyAccessAccounts, resourcesReceivingAccess, tags, url);
         }

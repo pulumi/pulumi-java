@@ -46,7 +46,6 @@ public final class LogAnalyticsConfigurationResponse {
             this.customerId = customerId;
             return this;
         }
-
         public LogAnalyticsConfigurationResponse build() {
             return new LogAnalyticsConfigurationResponse(customerId);
         }

@@ -180,7 +180,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(delegateeProject, description, ipCidrRange, isAddress, name, region, status);
         }

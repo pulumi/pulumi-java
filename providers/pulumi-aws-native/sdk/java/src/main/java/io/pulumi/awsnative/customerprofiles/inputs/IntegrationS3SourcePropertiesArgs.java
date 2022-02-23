@@ -15,14 +15,14 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
     public static final IntegrationS3SourcePropertiesArgs Empty = new IntegrationS3SourcePropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+        private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
@@ -81,7 +81,6 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
-
         public IntegrationS3SourcePropertiesArgs build() {
             return new IntegrationS3SourcePropertiesArgs(bucketName, bucketPrefix);
         }

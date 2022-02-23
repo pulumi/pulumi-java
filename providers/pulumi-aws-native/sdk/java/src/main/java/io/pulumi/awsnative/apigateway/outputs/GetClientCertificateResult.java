@@ -99,7 +99,6 @@ public final class GetClientCertificateResult {
             this.tags = tags;
             return this;
         }
-
         public GetClientCertificateResult build() {
             return new GetClientCertificateResult(clientCertificateId, description, tags);
         }

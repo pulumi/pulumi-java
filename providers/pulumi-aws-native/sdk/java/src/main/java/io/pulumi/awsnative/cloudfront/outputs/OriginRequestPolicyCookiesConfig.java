@@ -60,7 +60,6 @@ public final class OriginRequestPolicyCookiesConfig {
             this.cookies = cookies;
             return this;
         }
-
         public OriginRequestPolicyCookiesConfig build() {
             return new OriginRequestPolicyCookiesConfig(cookieBehavior, cookies);
         }

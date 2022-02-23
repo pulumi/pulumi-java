@@ -74,7 +74,6 @@ public final class AttributesResponse {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
-
         public AttributesResponse build() {
             return new AttributesResponse(authentication, prodModeWriteProtect);
         }

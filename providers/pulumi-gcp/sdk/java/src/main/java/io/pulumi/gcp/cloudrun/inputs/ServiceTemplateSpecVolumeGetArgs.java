@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<ServiceTemplateSpecVolumeSecretGetArgs> secret;
+        private final Input<ServiceTemplateSpecVolumeSecretGetArgs> secret;
 
     public Input<ServiceTemplateSpecVolumeSecretGetArgs> getSecret() {
         return this.secret;
@@ -92,7 +92,6 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public ServiceTemplateSpecVolumeGetArgs build() {
             return new ServiceTemplateSpecVolumeGetArgs(name, secret);
         }

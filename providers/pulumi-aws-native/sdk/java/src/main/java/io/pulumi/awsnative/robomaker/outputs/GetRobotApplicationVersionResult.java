@@ -60,7 +60,6 @@ public final class GetRobotApplicationVersionResult {
             this.arn = arn;
             return this;
         }
-
         public GetRobotApplicationVersionResult build() {
             return new GetRobotApplicationVersionResult(applicationVersion, arn);
         }

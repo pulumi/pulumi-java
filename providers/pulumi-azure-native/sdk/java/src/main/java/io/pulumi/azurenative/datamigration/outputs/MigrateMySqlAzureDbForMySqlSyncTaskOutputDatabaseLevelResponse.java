@@ -393,7 +393,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse(appliedChanges, cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, databaseName, endedOn, fullLoadCompletedTables, fullLoadErroredTables, fullLoadLoadingTables, fullLoadQueuedTables, id, incomingChanges, initializationCompleted, latency, migrationState, resultType, startedOn);
         }

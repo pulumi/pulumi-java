@@ -228,7 +228,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(activeDirectories, encryption, id, location, name, provisioningState, systemData, tags, type);
         }

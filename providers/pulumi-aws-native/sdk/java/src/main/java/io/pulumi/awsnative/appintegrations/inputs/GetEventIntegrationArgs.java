@@ -17,7 +17,7 @@ public final class GetEventIntegrationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class GetEventIntegrationArgs extends io.pulumi.resources.InvokeArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEventIntegrationArgs build() {
             return new GetEventIntegrationArgs(name);
         }

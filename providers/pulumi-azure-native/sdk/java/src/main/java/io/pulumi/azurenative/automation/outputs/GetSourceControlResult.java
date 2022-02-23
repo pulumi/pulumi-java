@@ -287,7 +287,6 @@ public final class GetSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlResult build() {
             return new GetSourceControlResult(autoSync, branch, creationTime, description, folderPath, id, lastModifiedTime, name, publishRunbook, repoUrl, sourceType, type);
         }

@@ -24,7 +24,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="fqdns")
-    private final @Nullable Input<List<String>> fqdns;
+        private final @Nullable Input<List<String>> fqdns;
 
     public Input<List<String>> getFqdns() {
         return this.fqdns == null ? Input.empty() : this.fqdns;
@@ -35,7 +35,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+        private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -94,7 +94,6 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
-
         public FirewallPolicyThreatIntelWhitelistArgs build() {
             return new FirewallPolicyThreatIntelWhitelistArgs(fqdns, ipAddresses);
         }

@@ -143,7 +143,6 @@ public final class GetStateMachineResult {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
-
         public GetStateMachineResult build() {
             return new GetStateMachineResult(arn, definitionString, loggingConfiguration, name, roleArn, stateMachineType, tags, tracingConfiguration);
         }

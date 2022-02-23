@@ -17,7 +17,7 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="commitmentPlanName", required=true)
-    private final String commitmentPlanName;
+        private final String commitmentPlanName;
 
     public String getCommitmentPlanName() {
         return this.commitmentPlanName;
@@ -28,7 +28,7 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetCommitmentPlanArgs build() {
             return new GetCommitmentPlanArgs(commitmentPlanName, resourceGroupName);
         }

@@ -291,7 +291,6 @@ public final class GetWorkspaceResult {
             this.usable = Objects.requireNonNull(usable);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(endpointUri, id, identity, location, name, providers, provisioningState, storageAccount, systemData, tags, type, usable);
         }

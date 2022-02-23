@@ -87,7 +87,6 @@ public final class DomainCognitoOptions {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public DomainCognitoOptions build() {
             return new DomainCognitoOptions(enabled, identityPoolId, roleArn, userPoolId);
         }

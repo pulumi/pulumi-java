@@ -74,7 +74,6 @@ public final class SecurityProfileTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SecurityProfileTag build() {
             return new SecurityProfileTag(key, value);
         }

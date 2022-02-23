@@ -303,7 +303,6 @@ public final class CloudServicePropertiesResponse {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public CloudServicePropertiesResponse build() {
             return new CloudServicePropertiesResponse(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, provisioningState, roleProfile, startCloudService, uniqueId, upgradeMode);
         }

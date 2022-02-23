@@ -46,7 +46,6 @@ public final class BotAliasTextLogDestination {
             this.cloudWatch = cloudWatch;
             return this;
         }
-
         public BotAliasTextLogDestination build() {
             return new BotAliasTextLogDestination(cloudWatch);
         }

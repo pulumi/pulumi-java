@@ -95,7 +95,6 @@ public final class HealthMonitorResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public HealthMonitorResponse build() {
             return new HealthMonitorResponse(details, id, name);
         }

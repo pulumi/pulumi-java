@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -44,7 +44,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="valueSource", required=true)
-    private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
+      private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
     public GoogleCloudRunOpV2EnvVarSourceResponse getValueSource() {
         return this.valueSource;
@@ -103,7 +103,6 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarResponse build() {
             return new GoogleCloudRunOpV2EnvVarResponse(name, value, valueSource);
         }

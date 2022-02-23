@@ -22,28 +22,28 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessConfig")
-    private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
+      private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
 
     public Input<RuntimeAccessConfigArgs> getAccessConfig() {
         return this.accessConfig == null ? Input.empty() : this.accessConfig;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="runtimeId", required=true)
-    private final Input<String> runtimeId;
+      private final Input<String> runtimeId;
 
     public Input<String> getRuntimeId() {
         return this.runtimeId;
@@ -54,7 +54,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
+      private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
 
     public Input<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -65,7 +65,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachine")
-    private final @Nullable Input<VirtualMachineArgs> virtualMachine;
+      private final @Nullable Input<VirtualMachineArgs> virtualMachine;
 
     public Input<VirtualMachineArgs> getVirtualMachine() {
         return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
@@ -184,7 +184,6 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }
-
         public RuntimeArgs build() {
             return new RuntimeArgs(accessConfig, location, project, runtimeId, softwareConfig, virtualMachine);
         }

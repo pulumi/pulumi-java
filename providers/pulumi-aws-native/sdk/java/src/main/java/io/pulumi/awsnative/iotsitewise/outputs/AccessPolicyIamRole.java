@@ -54,7 +54,6 @@ public final class AccessPolicyIamRole {
             this.arn = arn;
             return this;
         }
-
         public AccessPolicyIamRole build() {
             return new AccessPolicyIamRole(arn);
         }

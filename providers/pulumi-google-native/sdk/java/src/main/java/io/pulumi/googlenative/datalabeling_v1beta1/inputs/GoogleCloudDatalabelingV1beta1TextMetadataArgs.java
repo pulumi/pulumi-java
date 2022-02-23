@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1TextMetadataArgs(languageCode);
         }

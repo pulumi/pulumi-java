@@ -100,7 +100,6 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
             this.nodesList = nodesList;
             return this;
         }
-
         public AzureWorkloadContainerExtendedInfoResponse build() {
             return new AzureWorkloadContainerExtendedInfoResponse(hostServerName, inquiryInfo, nodesList);
         }

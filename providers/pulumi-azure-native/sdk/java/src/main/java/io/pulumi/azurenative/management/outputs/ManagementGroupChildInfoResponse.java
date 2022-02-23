@@ -140,7 +140,6 @@ public final class ManagementGroupChildInfoResponse {
             this.type = type;
             return this;
         }
-
         public ManagementGroupChildInfoResponse build() {
             return new ManagementGroupChildInfoResponse(children, displayName, id, name, type);
         }

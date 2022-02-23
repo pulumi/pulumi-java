@@ -80,7 +80,6 @@ public final class SecretRotation {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
-
         public SecretRotation build() {
             return new SecretRotation(nextRotationTime, rotationPeriod);
         }

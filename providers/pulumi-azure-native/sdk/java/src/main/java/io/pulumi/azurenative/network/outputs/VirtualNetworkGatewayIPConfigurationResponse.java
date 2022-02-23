@@ -203,7 +203,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualNetworkGatewayIPConfigurationResponse build() {
             return new VirtualNetworkGatewayIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet);
         }

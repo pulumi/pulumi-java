@@ -98,7 +98,6 @@ public final class AliasRoutingStrategy {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AliasRoutingStrategy build() {
             return new AliasRoutingStrategy(fleetId, message, type);
         }

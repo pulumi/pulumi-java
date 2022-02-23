@@ -155,7 +155,6 @@ public final class GetEndpointResult {
             this.status = status;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(arn, cidrBlock, creationTime, id, networkInterfaces, status);
         }

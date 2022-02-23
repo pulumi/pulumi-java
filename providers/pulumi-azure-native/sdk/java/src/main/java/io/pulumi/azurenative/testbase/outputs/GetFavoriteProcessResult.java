@@ -138,7 +138,6 @@ public final class GetFavoriteProcessResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFavoriteProcessResult build() {
             return new GetFavoriteProcessResult(actualProcessName, id, name, systemData, type);
         }

@@ -14,7 +14,7 @@ public final class InstanceFromMachineImageConfidentialInstanceConfigGetArgs ext
     public static final InstanceFromMachineImageConfidentialInstanceConfigGetArgs Empty = new InstanceFromMachineImageConfidentialInstanceConfigGetArgs();
 
     @InputImport(name="enableConfidentialCompute", required=true)
-    private final Input<Boolean> enableConfidentialCompute;
+        private final Input<Boolean> enableConfidentialCompute;
 
     public Input<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
@@ -57,7 +57,6 @@ public final class InstanceFromMachineImageConfidentialInstanceConfigGetArgs ext
             this.enableConfidentialCompute = Input.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
         }
-
         public InstanceFromMachineImageConfidentialInstanceConfigGetArgs build() {
             return new InstanceFromMachineImageConfidentialInstanceConfigGetArgs(enableConfidentialCompute);
         }

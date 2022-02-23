@@ -181,7 +181,6 @@ public final class ExpressRouteCircuitAuthorizationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExpressRouteCircuitAuthorizationResponse build() {
             return new ExpressRouteCircuitAuthorizationResponse(authorizationKey, authorizationUseStatus, etag, id, name, provisioningState, type);
         }

@@ -19,7 +19,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerProjectId")
-    private final @Nullable Input<String> producerProjectId;
+      private final @Nullable Input<String> producerProjectId;
 
     public Input<String> getProducerProjectId() {
         return this.producerProjectId == null ? Input.empty() : this.producerProjectId;
@@ -30,7 +30,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -89,7 +89,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(producerProjectId, serviceName);
         }

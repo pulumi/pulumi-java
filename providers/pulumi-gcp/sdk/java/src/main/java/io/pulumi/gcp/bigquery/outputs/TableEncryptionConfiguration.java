@@ -84,7 +84,6 @@ public final class TableEncryptionConfiguration {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public TableEncryptionConfiguration build() {
             return new TableEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }

@@ -183,7 +183,6 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSwiftVirtualNetworkConnectionSlotResult build() {
             return new GetWebAppSwiftVirtualNetworkConnectionSlotResult(id, kind, name, subnetResourceId, swiftSupported, systemData, type);
         }

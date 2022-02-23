@@ -14,14 +14,14 @@ public final class WebACLLabelMatchStatement extends io.pulumi.resources.InvokeA
     public static final WebACLLabelMatchStatement Empty = new WebACLLabelMatchStatement();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="scope", required=true)
-    private final WebACLLabelMatchScope scope;
+        private final WebACLLabelMatchScope scope;
 
     public WebACLLabelMatchScope getScope() {
         return this.scope;
@@ -70,7 +70,6 @@ public final class WebACLLabelMatchStatement extends io.pulumi.resources.InvokeA
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public WebACLLabelMatchStatement build() {
             return new WebACLLabelMatchStatement(key, scope);
         }

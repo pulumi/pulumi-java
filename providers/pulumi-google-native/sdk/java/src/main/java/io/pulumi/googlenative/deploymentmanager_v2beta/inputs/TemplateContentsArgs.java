@@ -26,7 +26,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imports")
-    private final @Nullable Input<List<ImportFileArgs>> imports;
+      private final @Nullable Input<List<ImportFileArgs>> imports;
 
     public Input<List<ImportFileArgs>> getImports() {
         return this.imports == null ? Input.empty() : this.imports;
@@ -37,7 +37,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interpreter")
-    private final @Nullable Input<TemplateContentsInterpreter> interpreter;
+      private final @Nullable Input<TemplateContentsInterpreter> interpreter;
 
     public Input<TemplateContentsInterpreter> getInterpreter() {
         return this.interpreter == null ? Input.empty() : this.interpreter;
@@ -48,7 +48,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mainTemplate")
-    private final @Nullable Input<String> mainTemplate;
+      private final @Nullable Input<String> mainTemplate;
 
     public Input<String> getMainTemplate() {
         return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
@@ -59,7 +59,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -70,7 +70,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<String> template;
+      private final @Nullable Input<String> template;
 
     public Input<String> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -174,7 +174,6 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             this.template = Input.ofNullable(template);
             return this;
         }
-
         public TemplateContentsArgs build() {
             return new TemplateContentsArgs(imports, interpreter, mainTemplate, schema, template);
         }

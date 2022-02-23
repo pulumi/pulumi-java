@@ -21,7 +21,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="interfaces")
-    private final @Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
+        private final @Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
     public Input<List<ExternalVpnGatewayInterfaceArgs>> getInterfaces() {
         return this.interfaces == null ? Input.empty() : this.interfaces;
@@ -50,7 +50,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -74,7 +74,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redundancyType")
-    private final @Nullable Input<String> redundancyType;
+        private final @Nullable Input<String> redundancyType;
 
     public Input<String> getRedundancyType() {
         return this.redundancyType == null ? Input.empty() : this.redundancyType;
@@ -178,7 +178,6 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
             this.redundancyType = Input.ofNullable(redundancyType);
             return this;
         }
-
         public ExternalVpnGatewayArgs build() {
             return new ExternalVpnGatewayArgs(description, interfaces, name, project, redundancyType);
         }

@@ -24,7 +24,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoProvisioningDefaults")
-    private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
+        private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
     public Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
         return this.autoProvisioningDefaults == null ? Input.empty() : this.autoProvisioningDefaults;
@@ -38,7 +38,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoscalingProfile")
-    private final @Nullable Input<String> autoscalingProfile;
+        private final @Nullable Input<String> autoscalingProfile;
 
     public Input<String> getAutoscalingProfile() {
         return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
@@ -50,7 +50,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -64,7 +64,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceLimits")
-    private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
+        private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
     public Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {
         return this.resourceLimits == null ? Input.empty() : this.resourceLimits;
@@ -153,7 +153,6 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
             this.resourceLimits = Input.ofNullable(resourceLimits);
             return this;
         }
-
         public ClusterClusterAutoscalingGetArgs build() {
             return new ClusterClusterAutoscalingGetArgs(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

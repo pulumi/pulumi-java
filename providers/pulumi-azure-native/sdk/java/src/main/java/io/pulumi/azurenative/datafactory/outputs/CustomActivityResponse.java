@@ -338,7 +338,6 @@ public final class CustomActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public CustomActivityResponse build() {
             return new CustomActivityResponse(autoUserSpecification, command, dependsOn, description, extendedProperties, folderPath, linkedServiceName, name, policy, referenceObjects, resourceLinkedService, retentionTimeInDays, type, userProperties);
         }

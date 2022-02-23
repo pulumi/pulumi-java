@@ -17,7 +17,7 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scriptName", required=true)
-    private final String scriptName;
+        private final String scriptName;
 
     public String getScriptName() {
         return this.scriptName;
@@ -77,7 +77,6 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
             this.scriptName = Objects.requireNonNull(scriptName);
             return this;
         }
-
         public GetAzureCliScriptArgs build() {
             return new GetAzureCliScriptArgs(resourceGroupName, scriptName);
         }

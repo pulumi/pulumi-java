@@ -160,7 +160,6 @@ public final class SystemMetadataResponse {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public SystemMetadataResponse build() {
             return new SystemMetadataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

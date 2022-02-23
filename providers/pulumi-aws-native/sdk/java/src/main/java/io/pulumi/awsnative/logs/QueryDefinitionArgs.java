@@ -20,7 +20,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logGroupNames")
-    private final @Nullable Input<List<String>> logGroupNames;
+        private final @Nullable Input<List<String>> logGroupNames;
 
     public Input<List<String>> getLogGroupNames() {
         return this.logGroupNames == null ? Input.empty() : this.logGroupNames;
@@ -31,7 +31,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queryString", required=true)
-    private final Input<String> queryString;
+        private final Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString;
@@ -116,7 +116,6 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.queryString = Input.of(Objects.requireNonNull(queryString));
             return this;
         }
-
         public QueryDefinitionArgs build() {
             return new QueryDefinitionArgs(logGroupNames, name, queryString);
         }

@@ -140,7 +140,6 @@ public final class ManagedNetworkPeeringPolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedNetworkPeeringPolicyResponse build() {
             return new ManagedNetworkPeeringPolicyResponse(id, location, name, properties, type);
         }

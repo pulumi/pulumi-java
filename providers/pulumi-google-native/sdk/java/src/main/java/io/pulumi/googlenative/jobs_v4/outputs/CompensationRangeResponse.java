@@ -74,7 +74,6 @@ public final class CompensationRangeResponse {
             this.minCompensation = Objects.requireNonNull(minCompensation);
             return this;
         }
-
         public CompensationRangeResponse build() {
             return new CompensationRangeResponse(maxCompensation, minCompensation);
         }

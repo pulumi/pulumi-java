@@ -205,7 +205,6 @@ public final class OracleSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public OracleSinkResponse build() {
             return new OracleSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

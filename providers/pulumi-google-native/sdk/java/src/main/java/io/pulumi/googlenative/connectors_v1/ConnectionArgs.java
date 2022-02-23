@@ -25,7 +25,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authConfig")
-    private final @Nullable Input<AuthConfigArgs> authConfig;
+      private final @Nullable Input<AuthConfigArgs> authConfig;
 
     public Input<AuthConfigArgs> getAuthConfig() {
         return this.authConfig == null ? Input.empty() : this.authConfig;
@@ -36,14 +36,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configVariables")
-    private final @Nullable Input<List<ConfigVariableArgs>> configVariables;
+      private final @Nullable Input<List<ConfigVariableArgs>> configVariables;
 
     public Input<List<ConfigVariableArgs>> getConfigVariables() {
         return this.configVariables == null ? Input.empty() : this.configVariables;
     }
 
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+      private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -54,7 +54,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorVersion", required=true)
-    private final Input<String> connectorVersion;
+      private final Input<String> connectorVersion;
 
     public Input<String> getConnectorVersion() {
         return this.connectorVersion;
@@ -65,7 +65,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,14 +76,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -94,14 +94,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lockConfig")
-    private final @Nullable Input<LockConfigArgs> lockConfig;
+      private final @Nullable Input<LockConfigArgs> lockConfig;
 
     public Input<LockConfigArgs> getLockConfig() {
         return this.lockConfig == null ? Input.empty() : this.lockConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,7 +112,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -123,7 +123,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspended")
-    private final @Nullable Input<Boolean> suspended;
+      private final @Nullable Input<Boolean> suspended;
 
     public Input<Boolean> getSuspended() {
         return this.suspended == null ? Input.empty() : this.suspended;
@@ -317,7 +317,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.suspended = Input.ofNullable(suspended);
             return this;
         }
-
         public ConnectionArgs build() {
             return new ConnectionArgs(authConfig, configVariables, connectionId, connectorVersion, description, labels, location, lockConfig, project, serviceAccount, suspended);
         }

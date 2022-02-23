@@ -75,7 +75,6 @@ public final class NetworkPolicyResponse {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public NetworkPolicyResponse build() {
             return new NetworkPolicyResponse(enabled, provider);
         }

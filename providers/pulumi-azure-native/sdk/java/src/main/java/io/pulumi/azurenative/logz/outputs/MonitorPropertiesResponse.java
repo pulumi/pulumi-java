@@ -174,7 +174,6 @@ public final class MonitorPropertiesResponse {
             this.userInfo = userInfo;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(liftrResourceCategory, liftrResourcePreference, logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, provisioningState, userInfo);
         }

@@ -413,7 +413,6 @@ public final class GetConnectorMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorMappingResult build() {
             return new GetConnectorMappingResult(connectorMappingName, connectorName, connectorType, created, dataFormatId, description, displayName, entityType, entityTypeName, id, lastModified, mappingProperties, name, nextRunTime, runId, state, tenantId, type);
         }

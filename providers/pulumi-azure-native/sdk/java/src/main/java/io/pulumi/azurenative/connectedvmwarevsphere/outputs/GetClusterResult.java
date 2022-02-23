@@ -417,7 +417,6 @@ public final class GetClusterResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(customResourceName, datastoreIds, extendedLocation, id, inventoryItemId, kind, location, moName, moRefId, name, networkIds, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

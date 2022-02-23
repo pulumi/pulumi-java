@@ -266,7 +266,6 @@ public final class LastPatchInstallationSummaryResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public LastPatchInstallationSummaryResponse build() {
             return new LastPatchInstallationSummaryResponse(error, excludedPatchCount, failedPatchCount, installationActivityId, installedPatchCount, lastModifiedTime, maintenanceWindowExceeded, notSelectedPatchCount, pendingPatchCount, startTime, status);
         }

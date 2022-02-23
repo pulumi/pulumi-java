@@ -23,7 +23,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="addressLines", required=true)
-    private final List<String> addressLines;
+      private final List<String> addressLines;
 
     public List<String> getAddressLines() {
         return this.addressLines;
@@ -34,7 +34,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="administrativeArea", required=true)
-    private final String administrativeArea;
+      private final String administrativeArea;
 
     public String getAdministrativeArea() {
         return this.administrativeArea;
@@ -45,7 +45,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final String languageCode;
+      private final String languageCode;
 
     public String getLanguageCode() {
         return this.languageCode;
@@ -56,7 +56,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="locality", required=true)
-    private final String locality;
+      private final String locality;
 
     public String getLocality() {
         return this.locality;
@@ -67,7 +67,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="organization", required=true)
-    private final String organization;
+      private final String organization;
 
     public String getOrganization() {
         return this.organization;
@@ -78,7 +78,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="postalCode", required=true)
-    private final String postalCode;
+      private final String postalCode;
 
     public String getPostalCode() {
         return this.postalCode;
@@ -89,7 +89,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="recipients", required=true)
-    private final List<String> recipients;
+      private final List<String> recipients;
 
     public List<String> getRecipients() {
         return this.recipients;
@@ -100,7 +100,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="regionCode", required=true)
-    private final String regionCode;
+      private final String regionCode;
 
     public String getRegionCode() {
         return this.regionCode;
@@ -111,7 +111,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="revision", required=true)
-    private final Integer revision;
+      private final Integer revision;
 
     public Integer getRevision() {
         return this.revision;
@@ -122,7 +122,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sortingCode", required=true)
-    private final String sortingCode;
+      private final String sortingCode;
 
     public String getSortingCode() {
         return this.sortingCode;
@@ -133,7 +133,7 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sublocality", required=true)
-    private final String sublocality;
+      private final String sublocality;
 
     public String getSublocality() {
         return this.sublocality;
@@ -272,7 +272,6 @@ public final class GoogleTypePostalAddressResponse extends io.pulumi.resources.I
             this.sublocality = Objects.requireNonNull(sublocality);
             return this;
         }
-
         public GoogleTypePostalAddressResponse build() {
             return new GoogleTypePostalAddressResponse(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
         }

@@ -92,7 +92,6 @@ public final class AccessLevelsAccessLevelBasic {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public AccessLevelsAccessLevelBasic build() {
             return new AccessLevelsAccessLevelBasic(combiningFunction, conditions);
         }

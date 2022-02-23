@@ -60,7 +60,6 @@ public final class TaskDefinitionContainerDependency {
             this.containerName = containerName;
             return this;
         }
-
         public TaskDefinitionContainerDependency build() {
             return new TaskDefinitionContainerDependency(condition, containerName);
         }

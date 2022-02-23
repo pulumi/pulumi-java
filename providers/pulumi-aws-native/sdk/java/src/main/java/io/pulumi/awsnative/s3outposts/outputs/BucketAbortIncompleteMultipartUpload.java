@@ -52,7 +52,6 @@ public final class BucketAbortIncompleteMultipartUpload {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
         }
-
         public BucketAbortIncompleteMultipartUpload build() {
             return new BucketAbortIncompleteMultipartUpload(daysAfterInitiation);
         }

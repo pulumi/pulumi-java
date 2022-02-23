@@ -21,7 +21,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableIntegrityMonitoring", required=true)
-    private final Boolean enableIntegrityMonitoring;
+      private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
@@ -32,7 +32,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableSecureBoot", required=true)
-    private final Boolean enableSecureBoot;
+      private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
@@ -43,7 +43,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableVtpm", required=true)
-    private final Boolean enableVtpm;
+      private final Boolean enableVtpm;
 
     public Boolean getEnableVtpm() {
         return this.enableVtpm;
@@ -102,7 +102,6 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedVmConfigResponse build() {
             return new ShieldedVmConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

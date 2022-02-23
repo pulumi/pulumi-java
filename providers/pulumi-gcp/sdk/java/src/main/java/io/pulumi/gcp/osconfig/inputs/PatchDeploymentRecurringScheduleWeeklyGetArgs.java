@@ -19,7 +19,7 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<String> dayOfWeek;
+        private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;
@@ -62,7 +62,6 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
-
         public PatchDeploymentRecurringScheduleWeeklyGetArgs build() {
             return new PatchDeploymentRecurringScheduleWeeklyGetArgs(dayOfWeek);
         }

@@ -77,7 +77,6 @@ public final class HttpLogsConfigResponse {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public HttpLogsConfigResponse build() {
             return new HttpLogsConfigResponse(azureBlobStorage, fileSystem);
         }

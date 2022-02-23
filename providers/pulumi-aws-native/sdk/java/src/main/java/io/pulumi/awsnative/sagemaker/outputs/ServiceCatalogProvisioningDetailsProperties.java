@@ -96,7 +96,6 @@ public final class ServiceCatalogProvisioningDetailsProperties {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public ServiceCatalogProvisioningDetailsProperties build() {
             return new ServiceCatalogProvisioningDetailsProperties(pathId, productId, provisioningArtifactId, provisioningParameters);
         }

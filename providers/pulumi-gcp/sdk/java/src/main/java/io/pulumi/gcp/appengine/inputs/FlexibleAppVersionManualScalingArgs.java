@@ -20,7 +20,7 @@ public final class FlexibleAppVersionManualScalingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instances", required=true)
-    private final Input<Integer> instances;
+        private final Input<Integer> instances;
 
     public Input<Integer> getInstances() {
         return this.instances;
@@ -63,7 +63,6 @@ public final class FlexibleAppVersionManualScalingArgs extends io.pulumi.resourc
             this.instances = Input.of(Objects.requireNonNull(instances));
             return this;
         }
-
         public FlexibleAppVersionManualScalingArgs build() {
             return new FlexibleAppVersionManualScalingArgs(instances);
         }

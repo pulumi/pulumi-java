@@ -23,7 +23,7 @@ public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -66,7 +66,6 @@ public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ContinuousModeBackupPolicyArgs build() {
             return new ContinuousModeBackupPolicyArgs(type);
         }

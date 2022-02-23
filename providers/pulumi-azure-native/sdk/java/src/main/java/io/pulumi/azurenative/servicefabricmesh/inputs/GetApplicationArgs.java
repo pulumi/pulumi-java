@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationResourceName", required=true)
-    private final String applicationResourceName;
+        private final String applicationResourceName;
 
     public String getApplicationResourceName() {
         return this.applicationResourceName;
@@ -28,7 +28,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationResourceName, resourceGroupName);
         }

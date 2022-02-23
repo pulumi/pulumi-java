@@ -60,7 +60,6 @@ public final class JobTemplateRateIncreaseCriteria {
             this.numberOfSucceededThings = numberOfSucceededThings;
             return this;
         }
-
         public JobTemplateRateIncreaseCriteria build() {
             return new JobTemplateRateIncreaseCriteria(numberOfNotifiedThings, numberOfSucceededThings);
         }

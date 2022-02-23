@@ -139,7 +139,6 @@ public final class ReplicationControllerCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReplicationControllerCondition build() {
             return new ReplicationControllerCondition(lastTransitionTime, message, reason, status, type);
         }

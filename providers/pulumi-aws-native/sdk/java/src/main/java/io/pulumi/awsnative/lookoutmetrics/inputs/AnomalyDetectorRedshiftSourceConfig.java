@@ -15,56 +15,56 @@ public final class AnomalyDetectorRedshiftSourceConfig extends io.pulumi.resourc
     public static final AnomalyDetectorRedshiftSourceConfig Empty = new AnomalyDetectorRedshiftSourceConfig();
 
     @InputImport(name="clusterIdentifier", required=true)
-    private final String clusterIdentifier;
+        private final String clusterIdentifier;
 
     public String getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @InputImport(name="databaseHost", required=true)
-    private final String databaseHost;
+        private final String databaseHost;
 
     public String getDatabaseHost() {
         return this.databaseHost;
     }
 
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databasePort", required=true)
-    private final Integer databasePort;
+        private final Integer databasePort;
 
     public Integer getDatabasePort() {
         return this.databasePort;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="secretManagerArn", required=true)
-    private final String secretManagerArn;
+        private final String secretManagerArn;
 
     public String getSecretManagerArn() {
         return this.secretManagerArn;
     }
 
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="vpcConfiguration", required=true)
-    private final AnomalyDetectorVpcConfiguration vpcConfiguration;
+        private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
     public AnomalyDetectorVpcConfiguration getVpcConfiguration() {
         return this.vpcConfiguration;
@@ -173,7 +173,6 @@ public final class AnomalyDetectorRedshiftSourceConfig extends io.pulumi.resourc
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
-
         public AnomalyDetectorRedshiftSourceConfig build() {
             return new AnomalyDetectorRedshiftSourceConfig(clusterIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }

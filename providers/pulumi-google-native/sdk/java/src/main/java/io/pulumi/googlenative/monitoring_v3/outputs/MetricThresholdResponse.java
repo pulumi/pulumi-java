@@ -204,7 +204,6 @@ public final class MetricThresholdResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricThresholdResponse build() {
             return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

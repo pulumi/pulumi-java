@@ -119,7 +119,6 @@ public final class GetAliasResult {
             this.routingStrategy = routingStrategy;
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(aliasId, description, name, routingStrategy);
         }

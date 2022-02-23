@@ -75,7 +75,6 @@ public final class ApplicationGatewayConnectionDrainingResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ApplicationGatewayConnectionDrainingResponse build() {
             return new ApplicationGatewayConnectionDrainingResponse(drainTimeoutInSec, enabled);
         }

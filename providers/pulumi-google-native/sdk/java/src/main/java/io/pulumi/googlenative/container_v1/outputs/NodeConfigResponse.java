@@ -572,7 +572,6 @@ public final class NodeConfigResponse {
             this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, tags, taints, workloadMetadataConfig);
         }

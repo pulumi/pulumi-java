@@ -120,7 +120,6 @@ public final class DependencyResponse {
             this.resourceType = resourceType;
             return this;
         }
-
         public DependencyResponse build() {
             return new DependencyResponse(dependsOn, id, resourceName, resourceType);
         }

@@ -75,7 +75,6 @@ public final class ForecastSpendResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public ForecastSpendResponse build() {
             return new ForecastSpendResponse(amount, unit);
         }

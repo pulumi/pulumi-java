@@ -418,7 +418,6 @@ public final class GetBucketObjectResult {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
-
         public GetBucketObjectResult build() {
             return new GetBucketObjectResult(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customerEncryptions, detectMd5hash, eventBasedHold, id, kmsKeyName, md5hash, mediaLink, metadata, name, outputName, selfLink, source, storageClass, temporaryHold);
         }

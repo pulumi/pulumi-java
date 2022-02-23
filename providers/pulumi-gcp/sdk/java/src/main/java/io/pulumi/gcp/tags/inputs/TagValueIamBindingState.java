@@ -17,7 +17,7 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
     public static final TagValueIamBindingState Empty = new TagValueIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TagValueIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<TagValueIamBindingConditionGetArgs> condition;
 
     public Input<TagValueIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -48,7 +48,7 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -59,7 +59,7 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable Input<String> tagValue;
+        private final @Nullable Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;
@@ -163,7 +163,6 @@ public final class TagValueIamBindingState extends io.pulumi.resources.ResourceA
             this.tagValue = Input.ofNullable(tagValue);
             return this;
         }
-
         public TagValueIamBindingState build() {
             return new TagValueIamBindingState(condition, etag, members, role, tagValue);
         }

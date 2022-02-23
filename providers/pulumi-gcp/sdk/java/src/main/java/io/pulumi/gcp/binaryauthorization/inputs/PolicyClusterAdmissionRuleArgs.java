@@ -20,7 +20,7 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+        private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -32,7 +32,7 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enforcementMode", required=true)
-    private final Input<String> enforcementMode;
+        private final Input<String> enforcementMode;
 
     public Input<String> getEnforcementMode() {
         return this.enforcementMode;
@@ -44,7 +44,7 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="evaluationMode", required=true)
-    private final Input<String> evaluationMode;
+        private final Input<String> evaluationMode;
 
     public Input<String> getEvaluationMode() {
         return this.evaluationMode;
@@ -62,7 +62,7 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requireAttestationsBies")
-    private final @Nullable Input<List<String>> requireAttestationsBies;
+        private final @Nullable Input<List<String>> requireAttestationsBies;
 
     public Input<List<String>> getRequireAttestationsBies() {
         return this.requireAttestationsBies == null ? Input.empty() : this.requireAttestationsBies;
@@ -151,7 +151,6 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
             this.requireAttestationsBies = Input.ofNullable(requireAttestationsBies);
             return this;
         }
-
         public PolicyClusterAdmissionRuleArgs build() {
             return new PolicyClusterAdmissionRuleArgs(cluster, enforcementMode, evaluationMode, requireAttestationsBies);
         }

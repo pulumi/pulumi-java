@@ -77,7 +77,6 @@ public final class ListSpacecraftAvailableContactsResult {
             this.value = value;
             return this;
         }
-
         public ListSpacecraftAvailableContactsResult build() {
             return new ListSpacecraftAvailableContactsResult(nextLink, value);
         }

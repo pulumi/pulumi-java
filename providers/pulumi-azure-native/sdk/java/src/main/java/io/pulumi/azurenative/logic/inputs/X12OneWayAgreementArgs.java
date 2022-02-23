@@ -23,7 +23,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-    private final Input<X12ProtocolSettingsArgs> protocolSettings;
+        private final Input<X12ProtocolSettingsArgs> protocolSettings;
 
     public Input<X12ProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings;
@@ -34,7 +34,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-    private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
+        private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -45,7 +45,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-    private final Input<BusinessIdentityArgs> senderBusinessIdentity;
+        private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
@@ -119,7 +119,6 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
             this.senderBusinessIdentity = Input.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
         }
-
         public X12OneWayAgreementArgs build() {
             return new X12OneWayAgreementArgs(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

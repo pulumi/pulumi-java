@@ -60,7 +60,6 @@ public final class ServiceCatalogProvisionedProductDetailsProperties {
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
         }
-
         public ServiceCatalogProvisionedProductDetailsProperties build() {
             return new ServiceCatalogProvisionedProductDetailsProperties(provisionedProductId, provisionedProductStatusMessage);
         }

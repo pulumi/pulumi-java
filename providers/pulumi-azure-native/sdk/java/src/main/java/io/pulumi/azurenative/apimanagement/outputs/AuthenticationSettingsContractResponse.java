@@ -77,7 +77,6 @@ public final class AuthenticationSettingsContractResponse {
             this.openid = openid;
             return this;
         }
-
         public AuthenticationSettingsContractResponse build() {
             return new AuthenticationSettingsContractResponse(oAuth2, openid);
         }

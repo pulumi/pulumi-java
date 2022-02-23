@@ -146,7 +146,6 @@ public final class GetDatasetResult {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(actions, contentDeliveryRules, id, lateDataRules, retentionPeriod, tags, triggers, versioningConfiguration);
         }

@@ -19,7 +19,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable String filter;
+        private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -41,7 +41,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="orderby")
-    private final @Nullable String orderby;
+        private final @Nullable String orderby;
 
     public Optional<String> getOrderby() {
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
@@ -52,7 +52,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final String shareSubscriptionName;
+        private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -74,7 +74,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -163,7 +163,6 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
             this.skipToken = skipToken;
             return this;
         }
-
         public ListShareSubscriptionSynchronizationsArgs build() {
             return new ListShareSubscriptionSynchronizationsArgs(accountName, filter, orderby, resourceGroupName, shareSubscriptionName, skipToken);
         }

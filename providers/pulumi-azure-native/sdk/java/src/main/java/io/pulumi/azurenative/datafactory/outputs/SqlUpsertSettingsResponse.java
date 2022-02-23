@@ -97,7 +97,6 @@ public final class SqlUpsertSettingsResponse {
             this.useTempDB = useTempDB;
             return this;
         }
-
         public SqlUpsertSettingsResponse build() {
             return new SqlUpsertSettingsResponse(interimSchemaName, keys, useTempDB);
         }

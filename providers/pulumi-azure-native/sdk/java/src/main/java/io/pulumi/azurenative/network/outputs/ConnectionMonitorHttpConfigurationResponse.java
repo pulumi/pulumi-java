@@ -164,7 +164,6 @@ public final class ConnectionMonitorHttpConfigurationResponse {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
-
         public ConnectionMonitorHttpConfigurationResponse build() {
             return new ConnectionMonitorHttpConfigurationResponse(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }

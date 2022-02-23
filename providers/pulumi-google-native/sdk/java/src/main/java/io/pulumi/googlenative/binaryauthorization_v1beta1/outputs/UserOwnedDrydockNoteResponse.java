@@ -97,7 +97,6 @@ public final class UserOwnedDrydockNoteResponse {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public UserOwnedDrydockNoteResponse build() {
             return new UserOwnedDrydockNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }

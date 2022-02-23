@@ -17,7 +17,7 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="canonicalUrl", required=true)
-    private final String canonicalUrl;
+      private final String canonicalUrl;
 
     public String getCanonicalUrl() {
         return this.canonicalUrl;
@@ -28,7 +28,7 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -77,7 +77,6 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringForwardingRuleInfoResponse build() {
             return new PacketMirroringForwardingRuleInfoResponse(canonicalUrl, url);
         }

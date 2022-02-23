@@ -77,7 +77,6 @@ public final class LegalHoldPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public LegalHoldPropertiesResponse build() {
             return new LegalHoldPropertiesResponse(hasLegalHold, tags);
         }

@@ -313,7 +313,6 @@ public final class AzureSqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSqlSourceResponse build() {
             return new AzureSqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

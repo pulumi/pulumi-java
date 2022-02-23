@@ -22,7 +22,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentHash", required=true)
-    private final HashResponse contentHash;
+      private final HashResponse contentHash;
 
     public HashResponse getContentHash() {
         return this.contentHash;
@@ -33,7 +33,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -103,7 +103,6 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ResourceResponse build() {
             return new ResourceResponse(contentHash, name, uri);
         }

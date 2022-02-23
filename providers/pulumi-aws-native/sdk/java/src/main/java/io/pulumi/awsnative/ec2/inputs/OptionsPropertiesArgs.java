@@ -23,7 +23,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applianceModeSupport")
-    private final @Nullable Input<String> applianceModeSupport;
+        private final @Nullable Input<String> applianceModeSupport;
 
     public Input<String> getApplianceModeSupport() {
         return this.applianceModeSupport == null ? Input.empty() : this.applianceModeSupport;
@@ -34,7 +34,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dnsSupport")
-    private final @Nullable Input<String> dnsSupport;
+        private final @Nullable Input<String> dnsSupport;
 
     public Input<String> getDnsSupport() {
         return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
@@ -45,7 +45,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6Support")
-    private final @Nullable Input<String> ipv6Support;
+        private final @Nullable Input<String> ipv6Support;
 
     public Input<String> getIpv6Support() {
         return this.ipv6Support == null ? Input.empty() : this.ipv6Support;
@@ -119,7 +119,6 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.ipv6Support = Input.ofNullable(ipv6Support);
             return this;
         }
-
         public OptionsPropertiesArgs build() {
             return new OptionsPropertiesArgs(applianceModeSupport, dnsSupport, ipv6Support);
         }

@@ -117,7 +117,6 @@ public final class ManagedIntegrationRuntimeErrorResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public ManagedIntegrationRuntimeErrorResponse build() {
             return new ManagedIntegrationRuntimeErrorResponse(code, message, parameters, time);
         }

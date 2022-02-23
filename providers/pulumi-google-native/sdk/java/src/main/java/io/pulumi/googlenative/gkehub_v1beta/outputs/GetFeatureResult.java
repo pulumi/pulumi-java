@@ -246,7 +246,6 @@ public final class GetFeatureResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFeatureResult build() {
             return new GetFeatureResult(createTime, deleteTime, labels, membershipSpecs, membershipStates, name, resourceState, spec, state, updateTime);
         }

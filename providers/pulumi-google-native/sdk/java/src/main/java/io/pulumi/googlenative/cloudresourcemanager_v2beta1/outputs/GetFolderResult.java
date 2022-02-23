@@ -137,7 +137,6 @@ public final class GetFolderResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetFolderResult build() {
             return new GetFolderResult(createTime, displayName, lifecycleState, name, parent);
         }

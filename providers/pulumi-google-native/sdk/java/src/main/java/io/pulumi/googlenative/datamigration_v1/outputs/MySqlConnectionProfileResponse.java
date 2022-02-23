@@ -182,7 +182,6 @@ public final class MySqlConnectionProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MySqlConnectionProfileResponse build() {
             return new MySqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
         }

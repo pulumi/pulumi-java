@@ -69,7 +69,6 @@ public final class DetectorModelDynamoDBv2 {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DetectorModelDynamoDBv2 build() {
             return new DetectorModelDynamoDBv2(payload, tableName);
         }

@@ -20,7 +20,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretResourceName", required=true)
-    private final Input<String> secretResourceName;
+        private final Input<String> secretResourceName;
 
     public Input<String> getSecretResourceName() {
         return this.secretResourceName;
@@ -53,7 +53,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretValueResourceName")
-    private final @Nullable Input<String> secretValueResourceName;
+        private final @Nullable Input<String> secretValueResourceName;
 
     public Input<String> getSecretValueResourceName() {
         return this.secretValueResourceName == null ? Input.empty() : this.secretValueResourceName;
@@ -64,7 +64,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -75,7 +75,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -194,7 +194,6 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public SecretValueArgs build() {
             return new SecretValueArgs(location, resourceGroupName, secretResourceName, secretValueResourceName, tags, value);
         }

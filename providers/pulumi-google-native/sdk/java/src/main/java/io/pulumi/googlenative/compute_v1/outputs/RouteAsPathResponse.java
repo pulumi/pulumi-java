@@ -76,7 +76,6 @@ public final class RouteAsPathResponse {
             this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
             return this;
         }
-
         public RouteAsPathResponse build() {
             return new RouteAsPathResponse(asLists, pathSegmentType);
         }

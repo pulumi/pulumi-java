@@ -161,7 +161,6 @@ public final class ReportConfigFilterResponse {
             this.tags = tags;
             return this;
         }
-
         public ReportConfigFilterResponse build() {
             return new ReportConfigFilterResponse(and, dimensions, or, tagKey, tagValue, tags);
         }

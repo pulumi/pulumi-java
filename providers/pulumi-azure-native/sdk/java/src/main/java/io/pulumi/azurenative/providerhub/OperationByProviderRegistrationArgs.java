@@ -16,7 +16,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     public static final OperationByProviderRegistrationArgs Empty = new OperationByProviderRegistrationArgs();
 
     @InputImport(name="contents", required=true)
-    private final Input<List<OperationsDefinitionArgs>> contents;
+        private final Input<List<OperationsDefinitionArgs>> contents;
 
     public Input<List<OperationsDefinitionArgs>> getContents() {
         return this.contents;
@@ -27,7 +27,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+        private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -86,7 +86,6 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
-
         public OperationByProviderRegistrationArgs build() {
             return new OperationByProviderRegistrationArgs(contents, providerNamespace);
         }

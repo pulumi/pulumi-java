@@ -121,7 +121,6 @@ public final class ContainerInstanceViewResponse {
             this.restartCount = restartCount;
             return this;
         }
-
         public ContainerInstanceViewResponse build() {
             return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
         }

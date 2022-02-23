@@ -75,7 +75,6 @@ public final class PrivatePoolV1ConfigResponse {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public PrivatePoolV1ConfigResponse build() {
             return new PrivatePoolV1ConfigResponse(networkConfig, workerConfig);
         }

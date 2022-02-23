@@ -30,7 +30,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="agentConfiguration")
-    private final @Nullable AgentPropertiesResponse agentConfiguration;
+        private final @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
@@ -41,7 +41,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable String agentPoolName;
+        private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
@@ -52,7 +52,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable CredentialsResponse credentials;
+        private final @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -63,7 +63,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="encodedTaskContent", required=true)
-    private final String encodedTaskContent;
+        private final String encodedTaskContent;
 
     public String getEncodedTaskContent() {
         return this.encodedTaskContent;
@@ -74,7 +74,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="encodedValuesContent")
-    private final @Nullable String encodedValuesContent;
+        private final @Nullable String encodedValuesContent;
 
     public Optional<String> getEncodedValuesContent() {
         return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
@@ -85,7 +85,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Boolean isArchiveEnabled;
+        private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
@@ -96,7 +96,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable String logTemplate;
+        private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
@@ -107,7 +107,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="platform", required=true)
-    private final PlatformPropertiesResponse platform;
+        private final PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse getPlatform() {
         return this.platform;
@@ -119,7 +119,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sourceLocation")
-    private final @Nullable String sourceLocation;
+        private final @Nullable String sourceLocation;
 
     public Optional<String> getSourceLocation() {
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
@@ -130,7 +130,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Integer timeout;
+        private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -142,7 +142,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -153,7 +153,7 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<SetValueResponse> values;
+        private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -302,7 +302,6 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
             this.values = values;
             return this;
         }
-
         public EncodedTaskRunRequestResponse build() {
             return new EncodedTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }

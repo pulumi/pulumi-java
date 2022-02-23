@@ -17,7 +17,7 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scopeName", required=true)
-    private final String scopeName;
+        private final String scopeName;
 
     public String getScopeName() {
         return this.scopeName;
@@ -98,7 +98,6 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
-
         public GetPrivateLinkScopedResourceArgs build() {
             return new GetPrivateLinkScopedResourceArgs(name, resourceGroupName, scopeName);
         }

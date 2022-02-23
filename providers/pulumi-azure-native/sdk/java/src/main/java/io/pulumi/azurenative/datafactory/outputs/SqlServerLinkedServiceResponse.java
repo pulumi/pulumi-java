@@ -255,7 +255,6 @@ public final class SqlServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SqlServerLinkedServiceResponse build() {
             return new SqlServerLinkedServiceResponse(alwaysEncryptedSettings, annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type, userName);
         }

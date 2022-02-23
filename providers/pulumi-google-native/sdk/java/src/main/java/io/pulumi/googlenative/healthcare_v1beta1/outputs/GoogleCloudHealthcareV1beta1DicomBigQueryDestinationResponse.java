@@ -96,7 +96,6 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(force, tableUri, writeDisposition);
         }

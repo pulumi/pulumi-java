@@ -24,7 +24,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminCluster")
-    private final @Nullable Input<Boolean> adminCluster;
+      private final @Nullable Input<Boolean> adminCluster;
 
     public Input<Boolean> getAdminCluster() {
         return this.adminCluster == null ? Input.empty() : this.adminCluster;
@@ -35,7 +35,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLink")
-    private final @Nullable Input<String> resourceLink;
+      private final @Nullable Input<String> resourceLink;
 
     public Input<String> getResourceLink() {
         return this.resourceLink == null ? Input.empty() : this.resourceLink;
@@ -94,7 +94,6 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceLink = Input.ofNullable(resourceLink);
             return this;
         }
-
         public OnPremClusterArgs build() {
             return new OnPremClusterArgs(adminCluster, resourceLink);
         }

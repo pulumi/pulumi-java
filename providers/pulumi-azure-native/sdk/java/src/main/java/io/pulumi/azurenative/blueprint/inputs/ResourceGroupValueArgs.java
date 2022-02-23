@@ -23,7 +23,7 @@ public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceAr
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ResourceGroupValueArgs build() {
             return new ResourceGroupValueArgs(location, name);
         }

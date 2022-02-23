@@ -117,7 +117,6 @@ public final class PipelineParameterResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PipelineParameterResponse build() {
             return new PipelineParameterResponse(defaultValue, description, localCopy, name);
         }

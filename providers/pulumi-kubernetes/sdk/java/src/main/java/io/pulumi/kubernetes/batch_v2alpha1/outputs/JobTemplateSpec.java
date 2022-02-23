@@ -77,7 +77,6 @@ public final class JobTemplateSpec {
             this.spec = spec;
             return this;
         }
-
         public JobTemplateSpec build() {
             return new JobTemplateSpec(metadata, spec);
         }

@@ -20,7 +20,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+        private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -31,7 +31,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -42,7 +42,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="peerAsn")
-    private final @Nullable Input<Double> peerAsn;
+        private final @Nullable Input<Double> peerAsn;
 
     public Input<Double> getPeerAsn() {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
@@ -64,7 +64,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="peerIp")
-    private final @Nullable Input<String> peerIp;
+        private final @Nullable Input<String> peerIp;
 
     public Input<String> getPeerIp() {
         return this.peerIp == null ? Input.empty() : this.peerIp;
@@ -75,7 +75,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final Input<String> virtualHubName;
+        private final Input<String> virtualHubName;
 
     public Input<String> getVirtualHubName() {
         return this.virtualHubName;
@@ -220,7 +220,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
-
         public VirtualHubBgpConnectionArgs build() {
             return new VirtualHubBgpConnectionArgs(connectionName, id, name, peerAsn, peerIp, resourceGroupName, virtualHubName);
         }

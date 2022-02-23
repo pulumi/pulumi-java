@@ -242,7 +242,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

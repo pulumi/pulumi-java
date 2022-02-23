@@ -204,7 +204,6 @@ public final class GetHybridIdentityMetadatumResult {
             this.vmId = vmId;
             return this;
         }
-
         public GetHybridIdentityMetadatumResult build() {
             return new GetHybridIdentityMetadatumResult(id, identity, name, provisioningState, publicKey, systemData, type, vmId);
         }

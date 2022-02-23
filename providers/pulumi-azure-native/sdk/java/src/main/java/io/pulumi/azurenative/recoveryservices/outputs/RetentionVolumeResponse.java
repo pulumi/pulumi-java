@@ -120,7 +120,6 @@ public final class RetentionVolumeResponse {
             this.volumeName = volumeName;
             return this;
         }
-
         public RetentionVolumeResponse build() {
             return new RetentionVolumeResponse(capacityInBytes, freeSpaceInBytes, thresholdPercentage, volumeName);
         }

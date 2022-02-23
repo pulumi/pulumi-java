@@ -142,7 +142,6 @@ public final class Service {
             this.status = status;
             return this;
         }
-
         public Service build() {
             return new Service(apiVersion, kind, metadata, spec, status);
         }

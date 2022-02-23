@@ -18,7 +18,7 @@ public final class PacketMirroringCollectorIlbArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -61,7 +61,6 @@ public final class PacketMirroringCollectorIlbArgs extends io.pulumi.resources.R
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public PacketMirroringCollectorIlbArgs build() {
             return new PacketMirroringCollectorIlbArgs(url);
         }

@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse(items, subtitle, title);
         }

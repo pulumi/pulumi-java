@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * 
      */
     @InputImport(name="postback")
-    private final @Nullable Input<String> postback;
+      private final @Nullable Input<String> postback;
 
     public Input<String> getPostback() {
         return this.postback == null ? Input.empty() : this.postback;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(postback, text);
         }

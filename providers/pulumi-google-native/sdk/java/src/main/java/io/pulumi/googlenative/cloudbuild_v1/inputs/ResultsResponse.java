@@ -24,7 +24,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifactManifest", required=true)
-    private final String artifactManifest;
+      private final String artifactManifest;
 
     public String getArtifactManifest() {
         return this.artifactManifest;
@@ -35,7 +35,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifactTiming", required=true)
-    private final TimeSpanResponse artifactTiming;
+      private final TimeSpanResponse artifactTiming;
 
     public TimeSpanResponse getArtifactTiming() {
         return this.artifactTiming;
@@ -46,7 +46,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="buildStepImages", required=true)
-    private final List<String> buildStepImages;
+      private final List<String> buildStepImages;
 
     public List<String> getBuildStepImages() {
         return this.buildStepImages;
@@ -57,7 +57,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="buildStepOutputs", required=true)
-    private final List<String> buildStepOutputs;
+      private final List<String> buildStepOutputs;
 
     public List<String> getBuildStepOutputs() {
         return this.buildStepOutputs;
@@ -68,7 +68,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="images", required=true)
-    private final List<BuiltImageResponse> images;
+      private final List<BuiltImageResponse> images;
 
     public List<BuiltImageResponse> getImages() {
         return this.images;
@@ -79,7 +79,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numArtifacts", required=true)
-    private final String numArtifacts;
+      private final String numArtifacts;
 
     public String getNumArtifacts() {
         return this.numArtifacts;
@@ -168,7 +168,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
             this.numArtifacts = Objects.requireNonNull(numArtifacts);
             return this;
         }
-
         public ResultsResponse build() {
             return new ResultsResponse(artifactManifest, artifactTiming, buildStepImages, buildStepOutputs, images, numArtifacts);
         }

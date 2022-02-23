@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      * 
      */
     @InputImport(name="isMultiLabel", required=true)
-    private final Boolean isMultiLabel;
+      private final Boolean isMultiLabel;
 
     public Boolean getIsMultiLabel() {
         return this.isMultiLabel;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
             this.isMultiLabel = Objects.requireNonNull(isMultiLabel);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse build() {
             return new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(isMultiLabel);
         }

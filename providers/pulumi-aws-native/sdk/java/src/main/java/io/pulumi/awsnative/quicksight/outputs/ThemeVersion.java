@@ -193,7 +193,6 @@ public final class ThemeVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public ThemeVersion build() {
             return new ThemeVersion(arn, baseThemeId, configuration, createdTime, description, errors, status, versionNumber);
         }

@@ -25,7 +25,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="predicateType", required=true)
-    private final String predicateType;
+      private final String predicateType;
 
     public String getPredicateType() {
         return this.predicateType;
@@ -36,7 +36,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provenance", required=true)
-    private final InTotoProvenanceResponse provenance;
+      private final InTotoProvenanceResponse provenance;
 
     public InTotoProvenanceResponse getProvenance() {
         return this.provenance;
@@ -47,7 +47,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="slsaProvenance", required=true)
-    private final SlsaProvenanceResponse slsaProvenance;
+      private final SlsaProvenanceResponse slsaProvenance;
 
     public SlsaProvenanceResponse getSlsaProvenance() {
         return this.slsaProvenance;
@@ -58,7 +58,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subject", required=true)
-    private final List<SubjectResponse> subject;
+      private final List<SubjectResponse> subject;
 
     public List<SubjectResponse> getSubject() {
         return this.subject;
@@ -69,7 +69,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InTotoStatementResponse build() {
             return new InTotoStatementResponse(predicateType, provenance, slsaProvenance, subject, type);
         }

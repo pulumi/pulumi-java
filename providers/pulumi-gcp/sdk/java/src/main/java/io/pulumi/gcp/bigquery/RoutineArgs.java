@@ -22,7 +22,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<List<RoutineArgumentArgs>> arguments;
+        private final @Nullable Input<List<RoutineArgumentArgs>> arguments;
 
     public Input<List<RoutineArgumentArgs>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -33,7 +33,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -45,7 +45,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definitionBody", required=true)
-    private final Input<String> definitionBody;
+        private final Input<String> definitionBody;
 
     public Input<String> getDefinitionBody() {
         return this.definitionBody;
@@ -56,7 +56,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="determinismLevel")
-    private final @Nullable Input<String> determinismLevel;
+        private final @Nullable Input<String> determinismLevel;
 
     public Input<String> getDeterminismLevel() {
         return this.determinismLevel == null ? Input.empty() : this.determinismLevel;
@@ -80,7 +80,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importedLibraries")
-    private final @Nullable Input<List<String>> importedLibraries;
+        private final @Nullable Input<List<String>> importedLibraries;
 
     public Input<List<String>> getImportedLibraries() {
         return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
@@ -92,7 +92,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="language")
-    private final @Nullable Input<String> language;
+        private final @Nullable Input<String> language;
 
     public Input<String> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -104,7 +104,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -118,7 +118,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnTableType")
-    private final @Nullable Input<String> returnTableType;
+        private final @Nullable Input<String> returnTableType;
 
     public Input<String> getReturnTableType() {
         return this.returnTableType == null ? Input.empty() : this.returnTableType;
@@ -137,7 +137,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnType")
-    private final @Nullable Input<String> returnType;
+        private final @Nullable Input<String> returnType;
 
     public Input<String> getReturnType() {
         return this.returnType == null ? Input.empty() : this.returnType;
@@ -148,7 +148,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routineId", required=true)
-    private final Input<String> routineId;
+        private final Input<String> routineId;
 
     public Input<String> getRoutineId() {
         return this.routineId;
@@ -160,7 +160,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routineType")
-    private final @Nullable Input<String> routineType;
+        private final @Nullable Input<String> routineType;
 
     public Input<String> getRoutineType() {
         return this.routineType == null ? Input.empty() : this.routineType;
@@ -369,7 +369,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             this.routineType = Input.ofNullable(routineType);
             return this;
         }
-
         public RoutineArgs build() {
             return new RoutineArgs(arguments, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, project, returnTableType, returnType, routineId, routineType);
         }

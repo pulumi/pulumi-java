@@ -23,7 +23,7 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="collection")
-    private final @Nullable String collection;
+        private final @Nullable String collection;
 
     public Optional<String> getCollection() {
         return this.collection == null ? Optional.empty() : Optional.ofNullable(this.collection);
@@ -34,7 +34,7 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="db")
-    private final @Nullable String db;
+        private final @Nullable String db;
 
     public Optional<String> getDb() {
         return this.db == null ? Optional.empty() : Optional.ofNullable(this.db);
@@ -83,7 +83,6 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
             this.db = db;
             return this;
         }
-
         public PrivilegeResponseResource build() {
             return new PrivilegeResponseResource(collection, db);
         }

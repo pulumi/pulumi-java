@@ -77,7 +77,6 @@ public final class LabelClassResponse {
             this.subclasses = subclasses;
             return this;
         }
-
         public LabelClassResponse build() {
             return new LabelClassResponse(displayName, subclasses);
         }

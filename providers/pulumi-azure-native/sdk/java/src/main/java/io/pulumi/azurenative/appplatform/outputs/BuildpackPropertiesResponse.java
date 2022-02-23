@@ -54,7 +54,6 @@ public final class BuildpackPropertiesResponse {
             this.id = id;
             return this;
         }
-
         public BuildpackPropertiesResponse build() {
             return new BuildpackPropertiesResponse(id);
         }

@@ -274,7 +274,6 @@ public final class GetPipelineTopologyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineTopologyResult build() {
             return new GetPipelineTopologyResult(description, id, kind, name, parameters, processors, sinks, sku, sources, systemData, type);
         }

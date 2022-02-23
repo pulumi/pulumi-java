@@ -378,7 +378,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(associatedWorkspaces, billingType, capacityReservationProperties, clusterId, createdDate, id, identity, isAvailabilityZonesEnabled, keyVaultProperties, lastModifiedDate, location, name, provisioningState, sku, tags, type);
         }

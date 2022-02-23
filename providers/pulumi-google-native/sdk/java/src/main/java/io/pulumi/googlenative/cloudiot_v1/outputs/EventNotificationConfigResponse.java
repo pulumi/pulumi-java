@@ -74,7 +74,6 @@ public final class EventNotificationConfigResponse {
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
         }
-
         public EventNotificationConfigResponse build() {
             return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
         }

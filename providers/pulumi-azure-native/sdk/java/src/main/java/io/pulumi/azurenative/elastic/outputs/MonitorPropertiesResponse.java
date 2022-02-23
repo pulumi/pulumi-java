@@ -133,7 +133,6 @@ public final class MonitorPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(elasticProperties, liftrResourceCategory, liftrResourcePreference, monitoringStatus, provisioningState);
         }

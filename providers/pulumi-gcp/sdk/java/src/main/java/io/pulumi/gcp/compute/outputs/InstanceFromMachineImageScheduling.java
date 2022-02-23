@@ -103,7 +103,6 @@ public final class InstanceFromMachineImageScheduling {
             this.preemptible = preemptible;
             return this;
         }
-
         public InstanceFromMachineImageScheduling build() {
             return new InstanceFromMachineImageScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

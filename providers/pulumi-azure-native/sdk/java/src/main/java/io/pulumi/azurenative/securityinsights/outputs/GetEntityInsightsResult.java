@@ -78,7 +78,6 @@ public final class GetEntityInsightsResult {
             this.value = value;
             return this;
         }
-
         public GetEntityInsightsResult build() {
             return new GetEntityInsightsResult(metaData, value);
         }

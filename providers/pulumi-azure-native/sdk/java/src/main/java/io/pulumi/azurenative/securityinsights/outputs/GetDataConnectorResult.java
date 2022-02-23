@@ -139,7 +139,6 @@ public final class GetDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataConnectorResult build() {
             return new GetDataConnectorResult(etag, id, kind, name, type);
         }

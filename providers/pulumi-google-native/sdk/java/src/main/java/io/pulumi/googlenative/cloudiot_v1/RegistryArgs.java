@@ -26,7 +26,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<List<RegistryCredentialArgs>> credentials;
+      private final @Nullable Input<List<RegistryCredentialArgs>> credentials;
 
     public Input<List<RegistryCredentialArgs>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -37,7 +37,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventNotificationConfigs")
-    private final @Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs;
+      private final @Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs;
 
     public Input<List<EventNotificationConfigArgs>> getEventNotificationConfigs() {
         return this.eventNotificationConfigs == null ? Input.empty() : this.eventNotificationConfigs;
@@ -48,7 +48,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpConfig")
-    private final @Nullable Input<HttpConfigArgs> httpConfig;
+      private final @Nullable Input<HttpConfigArgs> httpConfig;
 
     public Input<HttpConfigArgs> getHttpConfig() {
         return this.httpConfig == null ? Input.empty() : this.httpConfig;
@@ -59,14 +59,14 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<RegistryLogLevel> logLevel;
+      private final @Nullable Input<RegistryLogLevel> logLevel;
 
     public Input<RegistryLogLevel> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -88,7 +88,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mqttConfig")
-    private final @Nullable Input<MqttConfigArgs> mqttConfig;
+      private final @Nullable Input<MqttConfigArgs> mqttConfig;
 
     public Input<MqttConfigArgs> getMqttConfig() {
         return this.mqttConfig == null ? Input.empty() : this.mqttConfig;
@@ -99,14 +99,14 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateNotificationConfig")
-    private final @Nullable Input<StateNotificationConfigArgs> stateNotificationConfig;
+      private final @Nullable Input<StateNotificationConfigArgs> stateNotificationConfig;
 
     public Input<StateNotificationConfigArgs> getStateNotificationConfig() {
         return this.stateNotificationConfig == null ? Input.empty() : this.stateNotificationConfig;
@@ -296,7 +296,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.stateNotificationConfig = Input.ofNullable(stateNotificationConfig);
             return this;
         }
-
         public RegistryArgs build() {
             return new RegistryArgs(credentials, eventNotificationConfigs, httpConfig, id, location, logLevel, mqttConfig, name, project, stateNotificationConfig);
         }

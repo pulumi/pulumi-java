@@ -129,7 +129,6 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
             this.timespanConfig = timespanConfig;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfig build() {
             return new PreventionJobTriggerInspectJobStorageConfig(bigQueryOptions, cloudStorageOptions, datastoreOptions, timespanConfig);
         }

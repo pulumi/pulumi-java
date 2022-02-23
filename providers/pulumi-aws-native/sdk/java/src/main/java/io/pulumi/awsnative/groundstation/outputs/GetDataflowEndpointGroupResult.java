@@ -89,7 +89,6 @@ public final class GetDataflowEndpointGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetDataflowEndpointGroupResult build() {
             return new GetDataflowEndpointGroupResult(arn, endpointDetails, id, tags);
         }

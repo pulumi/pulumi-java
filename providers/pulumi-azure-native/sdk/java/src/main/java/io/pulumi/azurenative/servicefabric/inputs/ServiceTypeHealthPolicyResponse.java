@@ -23,7 +23,7 @@ public final class ServiceTypeHealthPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-    private final @Nullable Integer maxPercentUnhealthyServices;
+        private final @Nullable Integer maxPercentUnhealthyServices;
 
     public Optional<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyServices);
@@ -61,7 +61,6 @@ public final class ServiceTypeHealthPolicyResponse extends io.pulumi.resources.I
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-
         public ServiceTypeHealthPolicyResponse build() {
             return new ServiceTypeHealthPolicyResponse(maxPercentUnhealthyServices);
         }

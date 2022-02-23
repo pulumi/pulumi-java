@@ -76,7 +76,6 @@ public final class MetadataItemResponse {
             this.value = value;
             return this;
         }
-
         public MetadataItemResponse build() {
             return new MetadataItemResponse(name, value);
         }

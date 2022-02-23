@@ -206,7 +206,6 @@ public final class CertificateDescriptionResponse {
             this.x509Description = Objects.requireNonNull(x509Description);
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId, x509Description);
         }

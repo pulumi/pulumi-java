@@ -22,7 +22,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiGroup", required=true)
-    private final Input<String> apiGroup;
+        private final Input<String> apiGroup;
 
     public Input<String> getApiGroup() {
         return this.apiGroup;
@@ -33,7 +33,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -44,7 +44,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -118,7 +118,6 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public RoleRefArgs build() {
             return new RoleRefArgs(apiGroup, kind, name);
         }

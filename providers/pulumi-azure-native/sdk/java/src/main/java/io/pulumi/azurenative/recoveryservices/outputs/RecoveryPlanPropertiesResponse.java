@@ -374,7 +374,6 @@ public final class RecoveryPlanPropertiesResponse {
             this.replicationProviders = replicationProviders;
             return this;
         }
-
         public RecoveryPlanPropertiesResponse build() {
             return new RecoveryPlanPropertiesResponse(allowedOperations, currentScenario, currentScenarioStatus, currentScenarioStatusDescription, failoverDeploymentModel, friendlyName, groups, lastPlannedFailoverTime, lastTestFailoverTime, lastUnplannedFailoverTime, primaryFabricFriendlyName, primaryFabricId, providerSpecificDetails, recoveryFabricFriendlyName, recoveryFabricId, replicationProviders);
         }

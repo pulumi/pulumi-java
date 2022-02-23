@@ -20,7 +20,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptTermsAndConditions", required=true)
-    private final Input<Boolean> acceptTermsAndConditions;
+        private final Input<Boolean> acceptTermsAndConditions;
 
     public Input<Boolean> getAcceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
@@ -31,7 +31,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionArn")
-    private final @Nullable Input<String> connectionArn;
+        private final @Nullable Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn == null ? Input.empty() : this.connectionArn;
@@ -90,7 +90,6 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }
-
         public PublisherArgs build() {
             return new PublisherArgs(acceptTermsAndConditions, connectionArn);
         }

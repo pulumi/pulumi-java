@@ -22,7 +22,7 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasName", required=true)
-    private final Input<String> aliasName;
+        private final Input<String> aliasName;
 
     public Input<String> getAliasName() {
         return this.aliasName;
@@ -33,7 +33,7 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -92,7 +92,6 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public KpiAliasArgs build() {
             return new KpiAliasArgs(aliasName, expression);
         }

@@ -77,7 +77,6 @@ public final class TemporaryDiskResponse {
             this.sizeInGB = sizeInGB;
             return this;
         }
-
         public TemporaryDiskResponse build() {
             return new TemporaryDiskResponse(mountPath, sizeInGB);
         }

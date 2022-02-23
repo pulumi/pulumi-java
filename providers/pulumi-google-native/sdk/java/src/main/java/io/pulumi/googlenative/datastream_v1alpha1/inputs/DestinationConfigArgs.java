@@ -24,7 +24,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationConnectionProfileName", required=true)
-    private final Input<String> destinationConnectionProfileName;
+      private final Input<String> destinationConnectionProfileName;
 
     public Input<String> getDestinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
@@ -35,7 +35,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gcsDestinationConfig")
-    private final @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig;
+      private final @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig;
 
     public Input<GcsDestinationConfigArgs> getGcsDestinationConfig() {
         return this.gcsDestinationConfig == null ? Input.empty() : this.gcsDestinationConfig;
@@ -94,7 +94,6 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
             this.gcsDestinationConfig = Input.ofNullable(gcsDestinationConfig);
             return this;
         }
-
         public DestinationConfigArgs build() {
             return new DestinationConfigArgs(destinationConnectionProfileName, gcsDestinationConfig);
         }

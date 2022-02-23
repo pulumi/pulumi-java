@@ -52,7 +52,6 @@ public final class NetworkRoutingConfigResponse {
             this.routingMode = Objects.requireNonNull(routingMode);
             return this;
         }
-
         public NetworkRoutingConfigResponse build() {
             return new NetworkRoutingConfigResponse(routingMode);
         }

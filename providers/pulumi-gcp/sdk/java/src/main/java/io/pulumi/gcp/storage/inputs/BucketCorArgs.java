@@ -21,7 +21,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAgeSeconds")
-    private final @Nullable Input<Integer> maxAgeSeconds;
+        private final @Nullable Input<Integer> maxAgeSeconds;
 
     public Input<Integer> getMaxAgeSeconds() {
         return this.maxAgeSeconds == null ? Input.empty() : this.maxAgeSeconds;
@@ -32,7 +32,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+        private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -43,7 +43,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins")
-    private final @Nullable Input<List<String>> origins;
+        private final @Nullable Input<List<String>> origins;
 
     public Input<List<String>> getOrigins() {
         return this.origins == null ? Input.empty() : this.origins;
@@ -54,7 +54,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseHeaders")
-    private final @Nullable Input<List<String>> responseHeaders;
+        private final @Nullable Input<List<String>> responseHeaders;
 
     public Input<List<String>> getResponseHeaders() {
         return this.responseHeaders == null ? Input.empty() : this.responseHeaders;
@@ -143,7 +143,6 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }
-
         public BucketCorArgs build() {
             return new BucketCorArgs(maxAgeSeconds, methods, origins, responseHeaders);
         }

@@ -52,7 +52,6 @@ public final class AllowedCSIDriver {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AllowedCSIDriver build() {
             return new AllowedCSIDriver(name);
         }

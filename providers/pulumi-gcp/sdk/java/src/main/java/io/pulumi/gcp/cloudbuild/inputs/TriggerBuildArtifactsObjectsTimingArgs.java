@@ -21,7 +21,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -34,7 +34,7 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -93,7 +93,6 @@ public final class TriggerBuildArtifactsObjectsTimingArgs extends io.pulumi.reso
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public TriggerBuildArtifactsObjectsTimingArgs build() {
             return new TriggerBuildArtifactsObjectsTimingArgs(endTime, startTime);
         }

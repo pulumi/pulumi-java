@@ -119,7 +119,6 @@ public final class LinuxPropertiesResponse {
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public LinuxPropertiesResponse build() {
             return new LinuxPropertiesResponse(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
         }

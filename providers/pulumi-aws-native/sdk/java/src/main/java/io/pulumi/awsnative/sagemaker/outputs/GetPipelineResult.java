@@ -140,7 +140,6 @@ public final class GetPipelineResult {
             this.tags = tags;
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(parallelismConfiguration, pipelineDefinition, pipelineDescription, pipelineDisplayName, roleArn, tags);
         }

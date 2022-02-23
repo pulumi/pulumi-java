@@ -54,7 +54,6 @@ public final class LiteTopicReservationConfig {
             this.throughputReservation = throughputReservation;
             return this;
         }
-
         public LiteTopicReservationConfig build() {
             return new LiteTopicReservationConfig(throughputReservation);
         }

@@ -75,7 +75,6 @@ public final class DatasetFormatOptions {
             this.json = json;
             return this;
         }
-
         public DatasetFormatOptions build() {
             return new DatasetFormatOptions(csv, excel, json);
         }

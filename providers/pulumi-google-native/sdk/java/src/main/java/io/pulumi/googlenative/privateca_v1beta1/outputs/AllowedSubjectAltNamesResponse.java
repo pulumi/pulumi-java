@@ -160,7 +160,6 @@ public final class AllowedSubjectAltNamesResponse {
             this.allowedUris = Objects.requireNonNull(allowedUris);
             return this;
         }
-
         public AllowedSubjectAltNamesResponse build() {
             return new AllowedSubjectAltNamesResponse(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
         }

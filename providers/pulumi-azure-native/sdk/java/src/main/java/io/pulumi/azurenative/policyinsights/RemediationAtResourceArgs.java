@@ -22,7 +22,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<RemediationFiltersArgs> filters;
+        private final @Nullable Input<RemediationFiltersArgs> filters;
 
     public Input<RemediationFiltersArgs> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -33,7 +33,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyAssignmentId")
-    private final @Nullable Input<String> policyAssignmentId;
+        private final @Nullable Input<String> policyAssignmentId;
 
     public Input<String> getPolicyAssignmentId() {
         return this.policyAssignmentId == null ? Input.empty() : this.policyAssignmentId;
@@ -44,7 +44,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-    private final @Nullable Input<String> policyDefinitionReferenceId;
+        private final @Nullable Input<String> policyDefinitionReferenceId;
 
     public Input<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
@@ -55,7 +55,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remediationName")
-    private final @Nullable Input<String> remediationName;
+        private final @Nullable Input<String> remediationName;
 
     public Input<String> getRemediationName() {
         return this.remediationName == null ? Input.empty() : this.remediationName;
@@ -66,7 +66,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceDiscoveryMode")
-    private final @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+        private final @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
     public Input<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
         return this.resourceDiscoveryMode == null ? Input.empty() : this.resourceDiscoveryMode;
@@ -77,7 +77,7 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -196,7 +196,6 @@ public final class RemediationAtResourceArgs extends io.pulumi.resources.Resourc
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public RemediationAtResourceArgs build() {
             return new RemediationAtResourceArgs(filters, policyAssignmentId, policyDefinitionReferenceId, remediationName, resourceDiscoveryMode, resourceId);
         }

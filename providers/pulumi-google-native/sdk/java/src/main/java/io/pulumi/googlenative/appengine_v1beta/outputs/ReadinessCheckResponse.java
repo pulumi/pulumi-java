@@ -180,7 +180,6 @@ public final class ReadinessCheckResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public ReadinessCheckResponse build() {
             return new ReadinessCheckResponse(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }

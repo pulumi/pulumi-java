@@ -76,7 +76,6 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public LoadBalancerBackendAddressPoolReferenceResponse build() {
             return new LoadBalancerBackendAddressPoolReferenceResponse(name, sourceArmResourceId);
         }

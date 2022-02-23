@@ -21,14 +21,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<IngressRuleAction> action;
+      private final @Nullable Input<IngressRuleAction> action;
 
     public Input<IngressRuleAction> getAction() {
         return this.action == null ? Input.empty() : this.action;
     }
 
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -39,7 +39,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -61,7 +61,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRange")
-    private final @Nullable Input<String> sourceRange;
+      private final @Nullable Input<String> sourceRange;
 
     public Input<String> getSourceRange() {
         return this.sourceRange == null ? Input.empty() : this.sourceRange;
@@ -165,7 +165,6 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceRange = Input.ofNullable(sourceRange);
             return this;
         }
-
         public IngressRuleArgs build() {
             return new IngressRuleArgs(action, appId, description, priority, sourceRange);
         }

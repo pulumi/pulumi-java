@@ -76,7 +76,6 @@ public final class ServicePrincipalPropertiesResponse {
             this.secret = secret;
             return this;
         }
-
         public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(applicationId, secret);
         }

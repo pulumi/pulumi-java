@@ -46,7 +46,6 @@ public final class RuleGroupRuleActionCountProperties {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionCountProperties build() {
             return new RuleGroupRuleActionCountProperties(customRequestHandling);
         }

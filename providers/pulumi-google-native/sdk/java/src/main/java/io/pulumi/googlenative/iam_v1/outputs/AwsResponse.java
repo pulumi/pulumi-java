@@ -52,7 +52,6 @@ public final class AwsResponse {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public AwsResponse build() {
             return new AwsResponse(accountId);
         }

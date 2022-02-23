@@ -172,7 +172,6 @@ public final class ServicePort {
             this.targetPort = targetPort;
             return this;
         }
-
         public ServicePort build() {
             return new ServicePort(appProtocol, name, nodePort, port, protocol, targetPort);
         }

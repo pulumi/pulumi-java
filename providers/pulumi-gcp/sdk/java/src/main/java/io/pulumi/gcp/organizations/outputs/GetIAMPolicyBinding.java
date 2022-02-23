@@ -117,7 +117,6 @@ public final class GetIAMPolicyBinding {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetIAMPolicyBinding build() {
             return new GetIAMPolicyBinding(condition, members, role);
         }

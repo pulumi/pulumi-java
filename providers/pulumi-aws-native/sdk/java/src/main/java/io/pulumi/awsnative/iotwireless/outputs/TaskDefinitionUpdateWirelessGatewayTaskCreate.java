@@ -74,7 +74,6 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
             this.updateDataSource = updateDataSource;
             return this;
         }
-
         public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
             return new TaskDefinitionUpdateWirelessGatewayTaskCreate(loRaWAN, updateDataRole, updateDataSource);
         }

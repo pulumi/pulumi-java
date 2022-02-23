@@ -327,7 +327,6 @@ public final class EC2FleetInstanceRequirementsRequest {
             this.vCpuCount = vCpuCount;
             return this;
         }
-
         public EC2FleetInstanceRequirementsRequest build() {
             return new EC2FleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }

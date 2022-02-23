@@ -61,7 +61,6 @@ public final class DefaultRolloutSpecificationResponseLowTraffic {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseLowTraffic build() {
             return new DefaultRolloutSpecificationResponseLowTraffic(regions, waitDuration);
         }

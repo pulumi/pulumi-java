@@ -98,7 +98,6 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
-
         public GetEnvironmentConfigNodeConfigIpAllocationPolicy build() {
             return new GetEnvironmentConfigNodeConfigIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

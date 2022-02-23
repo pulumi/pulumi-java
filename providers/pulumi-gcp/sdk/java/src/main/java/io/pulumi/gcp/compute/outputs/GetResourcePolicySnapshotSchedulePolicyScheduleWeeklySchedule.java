@@ -45,7 +45,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(dayOfWeeks);
         }

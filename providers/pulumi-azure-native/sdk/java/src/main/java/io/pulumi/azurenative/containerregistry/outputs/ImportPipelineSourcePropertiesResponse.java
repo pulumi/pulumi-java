@@ -101,7 +101,6 @@ public final class ImportPipelineSourcePropertiesResponse {
             this.uri = uri;
             return this;
         }
-
         public ImportPipelineSourcePropertiesResponse build() {
             return new ImportPipelineSourcePropertiesResponse(keyVaultUri, type, uri);
         }

@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,SkuName>> name;
+        private final @Nullable Input<Either<String,SkuName>> name;
 
     public Input<Either<String,SkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(name);
         }

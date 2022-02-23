@@ -154,7 +154,6 @@ public final class WebACLRule {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public WebACLRule build() {
             return new WebACLRule(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }

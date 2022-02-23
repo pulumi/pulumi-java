@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @InputImport(name="ssml")
-    private final @Nullable Input<String> ssml;
+      private final @Nullable Input<String> ssml;
 
     public Input<String> getSsml() {
         return this.ssml == null ? Input.empty() : this.ssml;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(ssml, text);
         }

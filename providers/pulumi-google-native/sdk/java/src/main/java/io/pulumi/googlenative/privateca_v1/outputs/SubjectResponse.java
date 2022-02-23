@@ -200,7 +200,6 @@ public final class SubjectResponse {
             this.streetAddress = Objects.requireNonNull(streetAddress);
             return this;
         }
-
         public SubjectResponse build() {
             return new SubjectResponse(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

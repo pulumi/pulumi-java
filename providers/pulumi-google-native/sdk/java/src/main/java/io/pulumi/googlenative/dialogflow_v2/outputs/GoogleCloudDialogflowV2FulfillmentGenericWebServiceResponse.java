@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse(isCloudFunction, password, requestHeaders, uri, username);
         }

@@ -25,7 +25,7 @@ public final class SourceRegistryCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="loginMode")
-    private final @Nullable String loginMode;
+        private final @Nullable String loginMode;
 
     public Optional<String> getLoginMode() {
         return this.loginMode == null ? Optional.empty() : Optional.ofNullable(this.loginMode);
@@ -63,7 +63,6 @@ public final class SourceRegistryCredentialsResponse extends io.pulumi.resources
             this.loginMode = loginMode;
             return this;
         }
-
         public SourceRegistryCredentialsResponse build() {
             return new SourceRegistryCredentialsResponse(loginMode);
         }

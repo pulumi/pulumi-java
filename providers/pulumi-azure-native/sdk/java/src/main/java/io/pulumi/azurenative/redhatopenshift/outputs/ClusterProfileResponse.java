@@ -118,7 +118,6 @@ public final class ClusterProfileResponse {
             this.version = version;
             return this;
         }
-
         public ClusterProfileResponse build() {
             return new ClusterProfileResponse(domain, pullSecret, resourceGroupId, version);
         }

@@ -138,7 +138,6 @@ public final class GetManagementPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementPolicyResult build() {
             return new GetManagementPolicyResult(id, lastModifiedTime, name, policy, type);
         }

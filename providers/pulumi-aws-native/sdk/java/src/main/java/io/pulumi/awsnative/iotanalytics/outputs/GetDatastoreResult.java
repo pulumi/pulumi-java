@@ -118,7 +118,6 @@ public final class GetDatastoreResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(datastorePartitions, datastoreStorage, fileFormatConfiguration, id, retentionPeriod, tags);
         }

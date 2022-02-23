@@ -22,7 +22,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final SecretResponse password;
+      private final SecretResponse password;
 
     public SecretResponse getPassword() {
         return this.password;
@@ -33,7 +33,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -82,7 +82,6 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UserPasswordResponse build() {
             return new UserPasswordResponse(password, username);
         }

@@ -195,7 +195,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy(allowCredentials, allowHeaders, allowMethods, allowOrigins, disabled, exposeHeaders, maxAge);
         }

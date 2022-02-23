@@ -205,7 +205,6 @@ public final class GreenplumSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GreenplumSourceResponse build() {
             return new GreenplumSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

@@ -74,7 +74,6 @@ public final class GetKMSCryptoKeyVersionPublicKey {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }
-
         public GetKMSCryptoKeyVersionPublicKey build() {
             return new GetKMSCryptoKeyVersionPublicKey(algorithm, pem);
         }

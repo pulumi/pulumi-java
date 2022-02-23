@@ -54,7 +54,6 @@ public final class BillingProfileResponse {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public BillingProfileResponse build() {
             return new BillingProfileResponse(maxPrice);
         }

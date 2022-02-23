@@ -74,7 +74,6 @@ public final class LocationFSxWindowsTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationFSxWindowsTag build() {
             return new LocationFSxWindowsTag(key, value);
         }

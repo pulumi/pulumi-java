@@ -19,7 +19,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
      * 
      */
     @InputImport(name="enableHierarchicalResourceQuota")
-    private final @Nullable Input<Boolean> enableHierarchicalResourceQuota;
+        private final @Nullable Input<Boolean> enableHierarchicalResourceQuota;
 
     public Input<Boolean> getEnableHierarchicalResourceQuota() {
         return this.enableHierarchicalResourceQuota == null ? Input.empty() : this.enableHierarchicalResourceQuota;
@@ -30,7 +30,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
      * 
      */
     @InputImport(name="enablePodTreeLabels")
-    private final @Nullable Input<Boolean> enablePodTreeLabels;
+        private final @Nullable Input<Boolean> enablePodTreeLabels;
 
     public Input<Boolean> getEnablePodTreeLabels() {
         return this.enablePodTreeLabels == null ? Input.empty() : this.enablePodTreeLabels;
@@ -41,7 +41,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -115,7 +115,6 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public FeatureMembershipConfigmanagementHierarchyControllerGetArgs build() {
             return new FeatureMembershipConfigmanagementHierarchyControllerGetArgs(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);
         }

@@ -209,7 +209,6 @@ public final class GetLinkerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkerResult build() {
             return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, systemData, targetId, type);
         }

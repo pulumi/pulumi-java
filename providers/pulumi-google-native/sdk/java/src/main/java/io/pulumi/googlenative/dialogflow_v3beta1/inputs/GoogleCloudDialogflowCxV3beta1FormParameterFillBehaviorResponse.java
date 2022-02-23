@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
      * 
      */
     @InputImport(name="initialPromptFulfillment", required=true)
-    private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment;
+      private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment;
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getInitialPromptFulfillment() {
         return this.initialPromptFulfillment;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
      * 
      */
     @InputImport(name="repromptEventHandlers", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
+      private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
 
     public List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> getRepromptEventHandlers() {
         return this.repromptEventHandlers;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(initialPromptFulfillment, repromptEventHandlers);
         }

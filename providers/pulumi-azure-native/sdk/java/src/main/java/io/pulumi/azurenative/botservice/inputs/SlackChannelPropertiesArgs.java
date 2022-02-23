@@ -24,7 +24,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -35,7 +35,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -46,7 +46,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="landingPageUrl")
-    private final @Nullable Input<String> landingPageUrl;
+        private final @Nullable Input<String> landingPageUrl;
 
     public Input<String> getLandingPageUrl() {
         return this.landingPageUrl == null ? Input.empty() : this.landingPageUrl;
@@ -68,7 +68,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="signingSecret")
-    private final @Nullable Input<String> signingSecret;
+        private final @Nullable Input<String> signingSecret;
 
     public Input<String> getSigningSecret() {
         return this.signingSecret == null ? Input.empty() : this.signingSecret;
@@ -79,7 +79,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="verificationToken")
-    private final @Nullable Input<String> verificationToken;
+        private final @Nullable Input<String> verificationToken;
 
     public Input<String> getVerificationToken() {
         return this.verificationToken == null ? Input.empty() : this.verificationToken;
@@ -198,7 +198,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             this.verificationToken = Input.ofNullable(verificationToken);
             return this;
         }
-
         public SlackChannelPropertiesArgs build() {
             return new SlackChannelPropertiesArgs(clientId, clientSecret, isEnabled, landingPageUrl, signingSecret, verificationToken);
         }

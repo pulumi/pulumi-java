@@ -76,7 +76,6 @@ public final class FlockerVolumeSource {
             this.datasetUUID = datasetUUID;
             return this;
         }
-
         public FlockerVolumeSource build() {
             return new FlockerVolumeSource(datasetName, datasetUUID);
         }

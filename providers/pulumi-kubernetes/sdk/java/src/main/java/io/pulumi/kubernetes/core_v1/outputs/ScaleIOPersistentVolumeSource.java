@@ -246,7 +246,6 @@ public final class ScaleIOPersistentVolumeSource {
             this.volumeName = volumeName;
             return this;
         }
-
         public ScaleIOPersistentVolumeSource build() {
             return new ScaleIOPersistentVolumeSource(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);
         }

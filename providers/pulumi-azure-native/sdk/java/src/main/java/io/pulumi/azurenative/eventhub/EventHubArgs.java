@@ -22,7 +22,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="captureDescription")
-    private final @Nullable Input<CaptureDescriptionArgs> captureDescription;
+        private final @Nullable Input<CaptureDescriptionArgs> captureDescription;
 
     public Input<CaptureDescriptionArgs> getCaptureDescription() {
         return this.captureDescription == null ? Input.empty() : this.captureDescription;
@@ -33,7 +33,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+        private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -44,7 +44,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionInDays")
-    private final @Nullable Input<Double> messageRetentionInDays;
+        private final @Nullable Input<Double> messageRetentionInDays;
 
     public Input<Double> getMessageRetentionInDays() {
         return this.messageRetentionInDays == null ? Input.empty() : this.messageRetentionInDays;
@@ -55,7 +55,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -66,7 +66,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionCount")
-    private final @Nullable Input<Double> partitionCount;
+        private final @Nullable Input<Double> partitionCount;
 
     public Input<Double> getPartitionCount() {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
@@ -77,7 +77,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<EntityStatus> status;
+        private final @Nullable Input<EntityStatus> status;
 
     public Input<EntityStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -222,7 +222,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public EventHubArgs build() {
             return new EventHubArgs(captureDescription, eventHubName, messageRetentionInDays, namespaceName, partitionCount, resourceGroupName, status);
         }

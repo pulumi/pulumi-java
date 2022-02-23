@@ -52,7 +52,6 @@ public final class StreamModeDetails {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
-
         public StreamModeDetails build() {
             return new StreamModeDetails(streamMode);
         }

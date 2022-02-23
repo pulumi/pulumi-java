@@ -74,7 +74,6 @@ public final class ClusterCapacityProviderStrategyItem {
             this.weight = weight;
             return this;
         }
-
         public ClusterCapacityProviderStrategyItem build() {
             return new ClusterCapacityProviderStrategyItem(base, capacityProvider, weight);
         }

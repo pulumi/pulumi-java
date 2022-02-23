@@ -76,7 +76,6 @@ public final class DashboardIntegerParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardIntegerParameter build() {
             return new DashboardIntegerParameter(name, values);
         }

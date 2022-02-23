@@ -74,7 +74,6 @@ public final class HealthCheckTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HealthCheckTag build() {
             return new HealthCheckTag(key, value);
         }

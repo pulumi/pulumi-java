@@ -139,7 +139,6 @@ public final class GetPrivateLinkScopedResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateLinkScopedResourceResult build() {
             return new GetPrivateLinkScopedResourceResult(id, linkedResourceId, name, provisioningState, type);
         }

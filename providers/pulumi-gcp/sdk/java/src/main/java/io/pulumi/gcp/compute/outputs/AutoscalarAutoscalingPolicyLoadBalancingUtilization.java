@@ -56,7 +56,6 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public AutoscalarAutoscalingPolicyLoadBalancingUtilization build() {
             return new AutoscalarAutoscalingPolicyLoadBalancingUtilization(target);
         }

@@ -338,7 +338,6 @@ public final class Db2LinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public Db2LinkedServiceResponse build() {
             return new Db2LinkedServiceResponse(annotations, authenticationType, certificateCommonName, connectVia, connectionString, database, description, encryptedCredential, packageCollection, parameters, password, server, type, username);
         }

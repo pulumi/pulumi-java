@@ -20,7 +20,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -31,7 +31,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CreatePolicyInputPropertiesArgs> properties;
+        private final @Nullable Input<CreatePolicyInputPropertiesArgs> properties;
 
     public Input<CreatePolicyInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -142,7 +142,6 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ReplicationPolicyArgs build() {
             return new ReplicationPolicyArgs(policyName, properties, resourceGroupName, resourceName);
         }

@@ -208,7 +208,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaBlueReplicationDetailsResponse build() {
             return new HyperVReplicaBlueReplicationDetailsResponse(initialReplicationDetails, instanceType, lastReplicatedTime, vMDiskDetails, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

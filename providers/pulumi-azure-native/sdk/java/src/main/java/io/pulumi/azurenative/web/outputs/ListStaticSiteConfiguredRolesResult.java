@@ -140,7 +140,6 @@ public final class ListStaticSiteConfiguredRolesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListStaticSiteConfiguredRolesResult build() {
             return new ListStaticSiteConfiguredRolesResult(id, kind, name, properties, type);
         }

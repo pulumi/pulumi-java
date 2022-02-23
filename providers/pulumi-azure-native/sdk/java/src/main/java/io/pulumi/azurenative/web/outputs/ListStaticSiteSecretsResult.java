@@ -140,7 +140,6 @@ public final class ListStaticSiteSecretsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListStaticSiteSecretsResult build() {
             return new ListStaticSiteSecretsResult(id, kind, name, properties, type);
         }

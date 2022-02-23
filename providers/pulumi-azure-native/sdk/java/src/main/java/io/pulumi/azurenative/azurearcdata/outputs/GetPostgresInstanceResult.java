@@ -228,7 +228,6 @@ public final class GetPostgresInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPostgresInstanceResult build() {
             return new GetPostgresInstanceResult(extendedLocation, id, location, name, properties, sku, systemData, tags, type);
         }

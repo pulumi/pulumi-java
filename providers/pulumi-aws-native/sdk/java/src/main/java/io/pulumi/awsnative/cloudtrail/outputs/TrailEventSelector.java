@@ -114,7 +114,6 @@ public final class TrailEventSelector {
             this.readWriteType = readWriteType;
             return this;
         }
-
         public TrailEventSelector build() {
             return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }

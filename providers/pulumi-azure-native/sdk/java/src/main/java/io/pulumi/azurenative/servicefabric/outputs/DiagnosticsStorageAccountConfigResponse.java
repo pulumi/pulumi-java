@@ -160,7 +160,6 @@ public final class DiagnosticsStorageAccountConfigResponse {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
         }
-
         public DiagnosticsStorageAccountConfigResponse build() {
             return new DiagnosticsStorageAccountConfigResponse(blobEndpoint, protectedAccountKeyName, protectedAccountKeyName2, queueEndpoint, storageAccountName, tableEndpoint);
         }

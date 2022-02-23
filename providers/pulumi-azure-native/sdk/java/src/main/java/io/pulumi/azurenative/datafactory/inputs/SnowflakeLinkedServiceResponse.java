@@ -29,7 +29,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -51,7 +51,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final Object connectionString;
+        private final Object connectionString;
 
     public Object getConnectionString() {
         return this.connectionString;
@@ -62,7 +62,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -73,7 +73,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -84,7 +84,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -95,7 +95,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="password")
-    private final @Nullable AzureKeyVaultSecretReferenceResponse password;
+        private final @Nullable AzureKeyVaultSecretReferenceResponse password;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -107,7 +107,7 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -216,7 +216,6 @@ public final class SnowflakeLinkedServiceResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeLinkedServiceResponse build() {
             return new SnowflakeLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

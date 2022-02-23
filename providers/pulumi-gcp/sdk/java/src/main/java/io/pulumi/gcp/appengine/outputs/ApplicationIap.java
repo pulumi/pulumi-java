@@ -123,7 +123,6 @@ public final class ApplicationIap {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public ApplicationIap build() {
             return new ApplicationIap(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

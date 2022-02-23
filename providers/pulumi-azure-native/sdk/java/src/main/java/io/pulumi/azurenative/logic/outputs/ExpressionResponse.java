@@ -113,7 +113,6 @@ public final class ExpressionResponse {
             this.value = value;
             return this;
         }
-
         public ExpressionResponse build() {
             return new ExpressionResponse(error, subexpressions, text, value);
         }

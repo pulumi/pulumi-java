@@ -20,7 +20,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -31,7 +31,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryAttempt")
-    private final @Nullable Integer retryAttempt;
+        private final @Nullable Integer retryAttempt;
 
     public Optional<Integer> getRetryAttempt() {
         return this.retryAttempt == null ? Optional.empty() : Optional.ofNullable(this.retryAttempt);
@@ -42,7 +42,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rolloutName", required=true)
-    private final String rolloutName;
+        private final String rolloutName;
 
     public String getRolloutName() {
         return this.rolloutName;
@@ -101,7 +101,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.rolloutName = Objects.requireNonNull(rolloutName);
             return this;
         }
-
         public GetRolloutArgs build() {
             return new GetRolloutArgs(resourceGroupName, retryAttempt, rolloutName);
         }

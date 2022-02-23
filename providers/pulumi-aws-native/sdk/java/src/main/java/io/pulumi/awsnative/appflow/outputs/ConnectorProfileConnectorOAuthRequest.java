@@ -78,7 +78,6 @@ public final class ConnectorProfileConnectorOAuthRequest {
             this.redirectUri = redirectUri;
             return this;
         }
-
         public ConnectorProfileConnectorOAuthRequest build() {
             return new ConnectorProfileConnectorOAuthRequest(authCode, redirectUri);
         }

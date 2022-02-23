@@ -311,7 +311,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(activeBackupSets, containerName, endedOn, errorPrefix, exceptionsAndWarnings, fullBackupSetInfo, id, isFullBackupRestored, lastRestoredBackupSetInfo, migrationState, resultType, sourceDatabaseName, startedOn);
         }

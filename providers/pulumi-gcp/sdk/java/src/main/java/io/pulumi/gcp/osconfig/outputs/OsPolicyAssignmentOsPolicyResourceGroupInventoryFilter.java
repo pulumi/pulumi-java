@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
             this.osVersion = osVersion;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(osShortName, osVersion);
         }

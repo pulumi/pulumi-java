@@ -60,7 +60,6 @@ public final class EC2FleetAcceleratorCountRequest {
             this.min = min;
             return this;
         }
-
         public EC2FleetAcceleratorCountRequest build() {
             return new EC2FleetAcceleratorCountRequest(max, min);
         }

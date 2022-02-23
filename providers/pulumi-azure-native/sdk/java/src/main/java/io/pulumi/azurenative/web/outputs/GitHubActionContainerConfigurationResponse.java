@@ -118,7 +118,6 @@ public final class GitHubActionContainerConfigurationResponse {
             this.username = username;
             return this;
         }
-
         public GitHubActionContainerConfigurationResponse build() {
             return new GitHubActionContainerConfigurationResponse(imageName, password, serverUrl, username);
         }

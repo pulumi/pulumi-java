@@ -74,7 +74,6 @@ public final class CanaryTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CanaryTag build() {
             return new CanaryTag(key, value);
         }

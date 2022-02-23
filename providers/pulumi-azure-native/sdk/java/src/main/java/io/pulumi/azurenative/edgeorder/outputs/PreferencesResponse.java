@@ -122,7 +122,6 @@ public final class PreferencesResponse {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }

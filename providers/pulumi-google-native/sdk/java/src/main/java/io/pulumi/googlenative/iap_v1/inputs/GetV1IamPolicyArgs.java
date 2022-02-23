@@ -13,7 +13,7 @@ public final class GetV1IamPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetV1IamPolicyArgs Empty = new GetV1IamPolicyArgs();
 
     @InputImport(name="v1Id", required=true)
-    private final String v1Id;
+      private final String v1Id;
 
     public String getV1Id() {
         return this.v1Id;
@@ -51,7 +51,6 @@ public final class GetV1IamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
-
         public GetV1IamPolicyArgs build() {
             return new GetV1IamPolicyArgs(v1Id);
         }

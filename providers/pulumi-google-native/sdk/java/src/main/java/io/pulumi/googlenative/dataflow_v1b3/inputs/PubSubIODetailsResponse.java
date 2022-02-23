@@ -21,7 +21,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subscription", required=true)
-    private final String subscription;
+      private final String subscription;
 
     public String getSubscription() {
         return this.subscription;
@@ -32,7 +32,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -81,7 +81,6 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubIODetailsResponse build() {
             return new PubSubIODetailsResponse(subscription, topic);
         }

@@ -162,7 +162,6 @@ public final class RollingUpgradePolicyResponse {
             this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
         }
-
         public RollingUpgradePolicyResponse build() {
             return new RollingUpgradePolicyResponse(enableCrossZoneUpgrade, maxBatchInstancePercent, maxUnhealthyInstancePercent, maxUnhealthyUpgradedInstancePercent, pauseTimeBetweenBatches, prioritizeUnhealthyInstances);
         }

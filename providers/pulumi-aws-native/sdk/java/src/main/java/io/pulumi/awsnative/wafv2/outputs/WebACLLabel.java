@@ -44,7 +44,6 @@ public final class WebACLLabel {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLLabel build() {
             return new WebACLLabel(name);
         }

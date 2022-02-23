@@ -225,7 +225,6 @@ public final class X12DelimiterOverridesResponse {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public X12DelimiterOverridesResponse build() {
             return new X12DelimiterOverridesResponse(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }

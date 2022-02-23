@@ -77,7 +77,6 @@ public final class LoggingConfigurationCondition {
             this.labelNameCondition = labelNameCondition;
             return this;
         }
-
         public LoggingConfigurationCondition build() {
             return new LoggingConfigurationCondition(actionCondition, labelNameCondition);
         }

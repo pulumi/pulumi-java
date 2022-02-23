@@ -61,7 +61,6 @@ public final class RuleGroupIPSetReferenceStatement {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
-
         public RuleGroupIPSetReferenceStatement build() {
             return new RuleGroupIPSetReferenceStatement(arn, iPSetForwardedIPConfig);
         }

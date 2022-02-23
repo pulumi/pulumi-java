@@ -97,7 +97,6 @@ public final class PipelineReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PipelineReferenceResponse build() {
             return new PipelineReferenceResponse(name, referenceName, type);
         }

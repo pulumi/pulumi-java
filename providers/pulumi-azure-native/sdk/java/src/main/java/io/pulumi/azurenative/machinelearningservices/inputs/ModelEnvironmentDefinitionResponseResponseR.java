@@ -27,7 +27,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="bioConductorPackages")
-    private final @Nullable List<String> bioConductorPackages;
+        private final @Nullable List<String> bioConductorPackages;
 
     public List<String> getBioConductorPackages() {
         return this.bioConductorPackages == null ? List.of() : this.bioConductorPackages;
@@ -38,7 +38,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="cranPackages")
-    private final @Nullable List<RCranPackageResponse> cranPackages;
+        private final @Nullable List<RCranPackageResponse> cranPackages;
 
     public List<RCranPackageResponse> getCranPackages() {
         return this.cranPackages == null ? List.of() : this.cranPackages;
@@ -49,7 +49,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="customUrlPackages")
-    private final @Nullable List<String> customUrlPackages;
+        private final @Nullable List<String> customUrlPackages;
 
     public List<String> getCustomUrlPackages() {
         return this.customUrlPackages == null ? List.of() : this.customUrlPackages;
@@ -60,7 +60,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="gitHubPackages")
-    private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
+        private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
 
     public List<RGitHubPackageResponseResponse> getGitHubPackages() {
         return this.gitHubPackages == null ? List.of() : this.gitHubPackages;
@@ -71,7 +71,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="rVersion")
-    private final @Nullable String rVersion;
+        private final @Nullable String rVersion;
 
     public Optional<String> getRVersion() {
         return this.rVersion == null ? Optional.empty() : Optional.ofNullable(this.rVersion);
@@ -83,7 +83,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="rscriptPath")
-    private final @Nullable String rscriptPath;
+        private final @Nullable String rscriptPath;
 
     public Optional<String> getRscriptPath() {
         return this.rscriptPath == null ? Optional.empty() : Optional.ofNullable(this.rscriptPath);
@@ -94,7 +94,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="snapshotDate")
-    private final @Nullable String snapshotDate;
+        private final @Nullable String snapshotDate;
 
     public Optional<String> getSnapshotDate() {
         return this.snapshotDate == null ? Optional.empty() : Optional.ofNullable(this.snapshotDate);
@@ -105,7 +105,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
      * 
      */
     @InputImport(name="userManaged")
-    private final @Nullable Boolean userManaged;
+        private final @Nullable Boolean userManaged;
 
     public Optional<Boolean> getUserManaged() {
         return this.userManaged == null ? Optional.empty() : Optional.ofNullable(this.userManaged);
@@ -214,7 +214,6 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends io.pulumi
             this.userManaged = userManaged;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseR build() {
             return new ModelEnvironmentDefinitionResponseResponseR(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
         }

@@ -62,7 +62,6 @@ public final class SpotFleetLaunchTemplateConfig {
             this.overrides = overrides;
             return this;
         }
-
         public SpotFleetLaunchTemplateConfig build() {
             return new SpotFleetLaunchTemplateConfig(launchTemplateSpecification, overrides);
         }

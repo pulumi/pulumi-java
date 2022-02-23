@@ -53,7 +53,6 @@ public final class ResponsePolicyRuleLocalDataResponse {
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }
-
         public ResponsePolicyRuleLocalDataResponse build() {
             return new ResponsePolicyRuleLocalDataResponse(localDatas);
         }

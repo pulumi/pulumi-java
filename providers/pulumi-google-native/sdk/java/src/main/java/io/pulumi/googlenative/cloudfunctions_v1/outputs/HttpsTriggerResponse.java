@@ -74,7 +74,6 @@ public final class HttpsTriggerResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpsTriggerResponse build() {
             return new HttpsTriggerResponse(securityLevel, url);
         }

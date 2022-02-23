@@ -46,7 +46,6 @@ public final class AiMetadataStoreState {
             this.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }
-
         public AiMetadataStoreState build() {
             return new AiMetadataStoreState(diskUtilizationBytes);
         }

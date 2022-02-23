@@ -56,7 +56,6 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-
         public GetPartnerTopicEventSubscriptionDeliveryAttributesResult build() {
             return new GetPartnerTopicEventSubscriptionDeliveryAttributesResult(value);
         }

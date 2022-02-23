@@ -32,7 +32,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Input<RuntimeAcceleratorConfigArgs> acceleratorConfig;
 
     public Input<RuntimeAcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -43,7 +43,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="containerImages")
-    private final @Nullable Input<List<ContainerImageArgs>> containerImages;
+      private final @Nullable Input<List<ContainerImageArgs>> containerImages;
 
     public Input<List<ContainerImageArgs>> getContainerImages() {
         return this.containerImages == null ? Input.empty() : this.containerImages;
@@ -54,7 +54,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataDisk", required=true)
-    private final Input<LocalDiskArgs> dataDisk;
+      private final Input<LocalDiskArgs> dataDisk;
 
     public Input<LocalDiskArgs> getDataDisk() {
         return this.dataDisk;
@@ -65,7 +65,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -76,7 +76,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="internalIpOnly")
-    private final @Nullable Input<Boolean> internalIpOnly;
+      private final @Nullable Input<Boolean> internalIpOnly;
 
     public Input<Boolean> getInternalIpOnly() {
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
@@ -87,7 +87,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -98,7 +98,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -109,7 +109,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -120,7 +120,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -131,7 +131,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nicType")
-    private final @Nullable Input<VirtualMachineConfigNicType> nicType;
+      private final @Nullable Input<VirtualMachineConfigNicType> nicType;
 
     public Input<VirtualMachineConfigNicType> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -142,7 +142,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<RuntimeShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -153,7 +153,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<String> subnet;
+      private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -164,7 +164,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -388,7 +388,6 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public VirtualMachineConfigArgs build() {
             return new VirtualMachineConfigArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags);
         }

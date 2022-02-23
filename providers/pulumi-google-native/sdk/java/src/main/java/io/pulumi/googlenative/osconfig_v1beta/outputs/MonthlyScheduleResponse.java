@@ -75,7 +75,6 @@ public final class MonthlyScheduleResponse {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
         }
-
         public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(monthDay, weekDayOfMonth);
         }

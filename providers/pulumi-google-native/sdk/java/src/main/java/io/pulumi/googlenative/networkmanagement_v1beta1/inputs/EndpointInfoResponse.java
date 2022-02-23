@@ -22,7 +22,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationIp", required=true)
-    private final String destinationIp;
+      private final String destinationIp;
 
     public String getDestinationIp() {
         return this.destinationIp;
@@ -33,7 +33,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationNetworkUri", required=true)
-    private final String destinationNetworkUri;
+      private final String destinationNetworkUri;
 
     public String getDestinationNetworkUri() {
         return this.destinationNetworkUri;
@@ -44,7 +44,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationPort", required=true)
-    private final Integer destinationPort;
+      private final Integer destinationPort;
 
     public Integer getDestinationPort() {
         return this.destinationPort;
@@ -55,7 +55,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -66,7 +66,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceAgentUri", required=true)
-    private final String sourceAgentUri;
+      private final String sourceAgentUri;
 
     public String getSourceAgentUri() {
         return this.sourceAgentUri;
@@ -77,7 +77,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceIp", required=true)
-    private final String sourceIp;
+      private final String sourceIp;
 
     public String getSourceIp() {
         return this.sourceIp;
@@ -88,7 +88,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceNetworkUri", required=true)
-    private final String sourceNetworkUri;
+      private final String sourceNetworkUri;
 
     public String getSourceNetworkUri() {
         return this.sourceNetworkUri;
@@ -99,7 +99,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourcePort", required=true)
-    private final Integer sourcePort;
+      private final Integer sourcePort;
 
     public Integer getSourcePort() {
         return this.sourcePort;
@@ -208,7 +208,6 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public EndpointInfoResponse build() {
             return new EndpointInfoResponse(destinationIp, destinationNetworkUri, destinationPort, protocol, sourceAgentUri, sourceIp, sourceNetworkUri, sourcePort);
         }

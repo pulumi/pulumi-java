@@ -121,7 +121,6 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TumblingWindowTriggerDependencyReferenceResponse build() {
             return new TumblingWindowTriggerDependencyReferenceResponse(offset, referenceTrigger, size, type);
         }

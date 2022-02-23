@@ -25,7 +25,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="basicSliPerformance")
-    private final @Nullable Input<BasicSliArgs> basicSliPerformance;
+      private final @Nullable Input<BasicSliArgs> basicSliPerformance;
 
     public Input<BasicSliArgs> getBasicSliPerformance() {
         return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
@@ -36,7 +36,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="performance")
-    private final @Nullable Input<RequestBasedSliArgs> performance;
+      private final @Nullable Input<RequestBasedSliArgs> performance;
 
     public Input<RequestBasedSliArgs> getPerformance() {
         return this.performance == null ? Input.empty() : this.performance;
@@ -47,7 +47,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+      private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -121,7 +121,6 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public PerformanceThresholdArgs build() {
             return new PerformanceThresholdArgs(basicSliPerformance, performance, threshold);
         }

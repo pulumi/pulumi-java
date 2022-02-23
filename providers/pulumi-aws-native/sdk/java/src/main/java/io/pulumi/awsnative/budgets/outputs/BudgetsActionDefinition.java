@@ -75,7 +75,6 @@ public final class BudgetsActionDefinition {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
-
         public BudgetsActionDefinition build() {
             return new BudgetsActionDefinition(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }

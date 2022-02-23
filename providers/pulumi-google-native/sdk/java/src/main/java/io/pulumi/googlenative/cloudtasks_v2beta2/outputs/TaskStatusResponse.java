@@ -117,7 +117,6 @@ public final class TaskStatusResponse {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
         }
-
         public TaskStatusResponse build() {
             return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
         }

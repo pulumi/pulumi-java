@@ -16,14 +16,14 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
     public static final ChannelRetentionPeriodArgs Empty = new ChannelRetentionPeriodArgs();
 
     @InputImport(name="numberOfDays")
-    private final @Nullable Input<Integer> numberOfDays;
+        private final @Nullable Input<Integer> numberOfDays;
 
     public Input<Integer> getNumberOfDays() {
         return this.numberOfDays == null ? Input.empty() : this.numberOfDays;
     }
 
     @InputImport(name="unlimited")
-    private final @Nullable Input<Boolean> unlimited;
+        private final @Nullable Input<Boolean> unlimited;
 
     public Input<Boolean> getUnlimited() {
         return this.unlimited == null ? Input.empty() : this.unlimited;
@@ -82,7 +82,6 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
             this.unlimited = Input.ofNullable(unlimited);
             return this;
         }
-
         public ChannelRetentionPeriodArgs build() {
             return new ChannelRetentionPeriodArgs(numberOfDays, unlimited);
         }

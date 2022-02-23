@@ -161,7 +161,6 @@ public final class ApplicationGatewayFrontendPortResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayFrontendPortResponse build() {
             return new ApplicationGatewayFrontendPortResponse(etag, id, name, port, provisioningState, type);
         }

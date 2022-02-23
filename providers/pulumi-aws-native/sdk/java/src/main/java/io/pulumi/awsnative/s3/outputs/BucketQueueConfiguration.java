@@ -98,7 +98,6 @@ public final class BucketQueueConfiguration {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
-
         public BucketQueueConfiguration build() {
             return new BucketQueueConfiguration(event, filter, queue);
         }

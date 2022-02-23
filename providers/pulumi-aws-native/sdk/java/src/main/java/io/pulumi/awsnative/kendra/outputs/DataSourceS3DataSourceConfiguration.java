@@ -115,7 +115,6 @@ public final class DataSourceS3DataSourceConfiguration {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }
-
         public DataSourceS3DataSourceConfiguration build() {
             return new DataSourceS3DataSourceConfiguration(accessControlListConfiguration, bucketName, documentsMetadataConfiguration, exclusionPatterns, inclusionPatterns, inclusionPrefixes);
         }

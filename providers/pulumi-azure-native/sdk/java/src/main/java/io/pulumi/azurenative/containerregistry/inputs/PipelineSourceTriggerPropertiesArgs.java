@@ -20,7 +20,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,TriggerStatus>> status;
+        private final Input<Either<String,TriggerStatus>> status;
 
     public Input<Either<String,TriggerStatus>> getStatus() {
         return this.status;
@@ -63,7 +63,6 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public PipelineSourceTriggerPropertiesArgs build() {
             return new PipelineSourceTriggerPropertiesArgs(status);
         }

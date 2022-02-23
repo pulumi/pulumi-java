@@ -25,7 +25,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="content")
-    private final @Nullable EventContentResponse content;
+        private final @Nullable EventContentResponse content;
 
     public Optional<EventContentResponse> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -36,7 +36,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Map<String,String> headers;
+        private final @Nullable Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
@@ -47,7 +47,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="method")
-    private final @Nullable String method;
+        private final @Nullable String method;
 
     public Optional<String> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -58,7 +58,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="requestUri")
-    private final @Nullable String requestUri;
+        private final @Nullable String requestUri;
 
     public Optional<String> getRequestUri() {
         return this.requestUri == null ? Optional.empty() : Optional.ofNullable(this.requestUri);
@@ -69,7 +69,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -148,7 +148,6 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
             this.version = version;
             return this;
         }
-
         public EventRequestMessageResponse build() {
             return new EventRequestMessageResponse(content, headers, method, requestUri, version);
         }

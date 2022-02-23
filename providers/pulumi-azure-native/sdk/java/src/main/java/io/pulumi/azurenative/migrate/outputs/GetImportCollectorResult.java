@@ -100,7 +100,6 @@ public final class GetImportCollectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImportCollectorResult build() {
             return new GetImportCollectorResult(eTag, id, name, properties, type);
         }

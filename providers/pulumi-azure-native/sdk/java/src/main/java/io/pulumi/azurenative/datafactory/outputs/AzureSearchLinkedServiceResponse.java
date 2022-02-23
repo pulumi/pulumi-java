@@ -212,7 +212,6 @@ public final class AzureSearchLinkedServiceResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AzureSearchLinkedServiceResponse build() {
             return new AzureSearchLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, key, parameters, type, url);
         }

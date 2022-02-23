@@ -21,7 +21,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSpec")
-    private final @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec;
+        private final @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
     public Input<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
@@ -44,7 +44,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -55,7 +55,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataSchemaUri", required=true)
-    private final Input<String> metadataSchemaUri;
+        private final Input<String> metadataSchemaUri;
 
     public Input<String> getMetadataSchemaUri() {
         return this.metadataSchemaUri;
@@ -67,7 +67,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -78,7 +78,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -197,7 +197,6 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public AiDatasetArgs build() {
             return new AiDatasetArgs(displayName, encryptionSpec, labels, metadataSchemaUri, project, region);
         }

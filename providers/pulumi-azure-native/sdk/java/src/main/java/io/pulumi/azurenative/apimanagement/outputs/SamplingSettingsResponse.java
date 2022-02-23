@@ -77,7 +77,6 @@ public final class SamplingSettingsResponse {
             this.samplingType = samplingType;
             return this;
         }
-
         public SamplingSettingsResponse build() {
             return new SamplingSettingsResponse(percentage, samplingType);
         }

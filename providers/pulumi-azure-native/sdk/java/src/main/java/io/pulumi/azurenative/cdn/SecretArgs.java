@@ -23,7 +23,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Object> parameters;
+        private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -34,7 +34,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -45,7 +45,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-    private final @Nullable Input<String> secretName;
+        private final @Nullable Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName == null ? Input.empty() : this.secretName;
@@ -145,7 +145,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.secretName = Input.ofNullable(secretName);
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(parameters, profileName, resourceGroupName, secretName);
         }

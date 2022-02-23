@@ -116,7 +116,6 @@ public final class BotSlotType {
             this.valueSelectionSetting = valueSelectionSetting;
             return this;
         }
-
         public BotSlotType build() {
             return new BotSlotType(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);
         }

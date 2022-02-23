@@ -28,7 +28,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="aggregations")
-    private final @Nullable Input<List<AggregationArgs>> aggregations;
+      private final @Nullable Input<List<AggregationArgs>> aggregations;
 
     public Input<List<AggregationArgs>> getAggregations() {
         return this.aggregations == null ? Input.empty() : this.aggregations;
@@ -39,7 +39,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="comparison")
-    private final @Nullable Input<MetricThresholdComparison> comparison;
+      private final @Nullable Input<MetricThresholdComparison> comparison;
 
     public Input<MetricThresholdComparison> getComparison() {
         return this.comparison == null ? Input.empty() : this.comparison;
@@ -50,7 +50,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="denominatorAggregations")
-    private final @Nullable Input<List<AggregationArgs>> denominatorAggregations;
+      private final @Nullable Input<List<AggregationArgs>> denominatorAggregations;
 
     public Input<List<AggregationArgs>> getDenominatorAggregations() {
         return this.denominatorAggregations == null ? Input.empty() : this.denominatorAggregations;
@@ -61,7 +61,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="denominatorFilter")
-    private final @Nullable Input<String> denominatorFilter;
+      private final @Nullable Input<String> denominatorFilter;
 
     public Input<String> getDenominatorFilter() {
         return this.denominatorFilter == null ? Input.empty() : this.denominatorFilter;
@@ -72,7 +72,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -83,7 +83,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -94,7 +94,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="thresholdValue")
-    private final @Nullable Input<Double> thresholdValue;
+      private final @Nullable Input<Double> thresholdValue;
 
     public Input<Double> getThresholdValue() {
         return this.thresholdValue == null ? Input.empty() : this.thresholdValue;
@@ -105,7 +105,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<TriggerArgs> trigger;
+      private final @Nullable Input<TriggerArgs> trigger;
 
     public Input<TriggerArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -254,7 +254,6 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public MetricThresholdArgs build() {
             return new MetricThresholdArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

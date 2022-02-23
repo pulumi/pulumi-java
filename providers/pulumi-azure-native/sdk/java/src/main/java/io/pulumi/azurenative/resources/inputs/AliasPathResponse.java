@@ -26,7 +26,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiVersions")
-    private final @Nullable List<String> apiVersions;
+        private final @Nullable List<String> apiVersions;
 
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
@@ -37,7 +37,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final AliasPathMetadataResponse metadata;
+        private final AliasPathMetadataResponse metadata;
 
     public AliasPathMetadataResponse getMetadata() {
         return this.metadata;
@@ -48,7 +48,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -59,7 +59,7 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable AliasPatternResponse pattern;
+        private final @Nullable AliasPatternResponse pattern;
 
     public Optional<AliasPatternResponse> getPattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
@@ -128,7 +128,6 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
             this.pattern = pattern;
             return this;
         }
-
         public AliasPathResponse build() {
             return new AliasPathResponse(apiVersions, metadata, path, pattern);
         }

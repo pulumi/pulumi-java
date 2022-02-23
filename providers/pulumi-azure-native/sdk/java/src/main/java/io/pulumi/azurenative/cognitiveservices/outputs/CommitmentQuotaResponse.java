@@ -77,7 +77,6 @@ public final class CommitmentQuotaResponse {
             this.unit = unit;
             return this;
         }
-
         public CommitmentQuotaResponse build() {
             return new CommitmentQuotaResponse(quantity, unit);
         }

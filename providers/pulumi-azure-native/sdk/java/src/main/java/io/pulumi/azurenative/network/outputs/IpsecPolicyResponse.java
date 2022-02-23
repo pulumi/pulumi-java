@@ -201,7 +201,6 @@ public final class IpsecPolicyResponse {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
-
         public IpsecPolicyResponse build() {
             return new IpsecPolicyResponse(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
         }

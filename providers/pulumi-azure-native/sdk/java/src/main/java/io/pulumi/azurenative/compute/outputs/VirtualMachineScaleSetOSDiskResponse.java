@@ -250,7 +250,6 @@ public final class VirtualMachineScaleSetOSDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public VirtualMachineScaleSetOSDiskResponse build() {
             return new VirtualMachineScaleSetOSDiskResponse(caching, createOption, diffDiskSettings, diskSizeGB, image, managedDisk, name, osType, vhdContainers, writeAcceleratorEnabled);
         }

@@ -74,7 +74,6 @@ public final class GetProjectKeysResult {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
-
         public GetProjectKeysResult build() {
             return new GetProjectKeysResult(workspaceId, workspaceKey);
         }

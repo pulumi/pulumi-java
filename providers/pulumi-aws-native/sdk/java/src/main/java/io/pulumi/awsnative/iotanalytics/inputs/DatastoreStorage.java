@@ -17,21 +17,21 @@ public final class DatastoreStorage extends io.pulumi.resources.InvokeArgs {
     public static final DatastoreStorage Empty = new DatastoreStorage();
 
     @InputImport(name="customerManagedS3")
-    private final @Nullable DatastoreCustomerManagedS3 customerManagedS3;
+        private final @Nullable DatastoreCustomerManagedS3 customerManagedS3;
 
     public Optional<DatastoreCustomerManagedS3> getCustomerManagedS3() {
         return this.customerManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3);
     }
 
     @InputImport(name="iotSiteWiseMultiLayerStorage")
-    private final @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
+        private final @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
 
     public Optional<DatastoreIotSiteWiseMultiLayerStorage> getIotSiteWiseMultiLayerStorage() {
         return this.iotSiteWiseMultiLayerStorage == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWiseMultiLayerStorage);
     }
 
     @InputImport(name="serviceManagedS3")
-    private final @Nullable DatastoreServiceManagedS3 serviceManagedS3;
+        private final @Nullable DatastoreServiceManagedS3 serviceManagedS3;
 
     public Optional<DatastoreServiceManagedS3> getServiceManagedS3() {
         return this.serviceManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.serviceManagedS3);
@@ -90,7 +90,6 @@ public final class DatastoreStorage extends io.pulumi.resources.InvokeArgs {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public DatastoreStorage build() {
             return new DatastoreStorage(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);
         }

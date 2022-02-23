@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
         }

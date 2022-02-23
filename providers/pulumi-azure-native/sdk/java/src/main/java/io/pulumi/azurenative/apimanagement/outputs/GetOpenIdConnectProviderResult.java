@@ -202,7 +202,6 @@ public final class GetOpenIdConnectProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOpenIdConnectProviderResult build() {
             return new GetOpenIdConnectProviderResult(clientId, clientSecret, description, displayName, id, metadataEndpoint, name, type);
         }

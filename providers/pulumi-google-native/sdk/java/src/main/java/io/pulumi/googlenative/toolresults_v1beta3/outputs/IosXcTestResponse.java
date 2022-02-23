@@ -74,7 +74,6 @@ public final class IosXcTestResponse {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
-
         public IosXcTestResponse build() {
             return new IosXcTestResponse(bundleId, xcodeVersion);
         }

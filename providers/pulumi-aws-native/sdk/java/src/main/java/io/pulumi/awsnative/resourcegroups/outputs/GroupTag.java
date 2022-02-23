@@ -60,7 +60,6 @@ public final class GroupTag {
             this.value = value;
             return this;
         }
-
         public GroupTag build() {
             return new GroupTag(key, value);
         }

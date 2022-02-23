@@ -116,7 +116,6 @@ public final class GetTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(id, name, tableName, type);
         }

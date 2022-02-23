@@ -29,7 +29,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-    private final @Nullable Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
+        private final @Nullable Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
 
     public Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
@@ -40,7 +40,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="loadBalancerNatRules")
-    private final @Nullable Input<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
+        private final @Nullable Input<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
 
     public Input<List<LoadBalancerNatRuleReferenceArgs>> getLoadBalancerNatRules() {
         return this.loadBalancerNatRules == null ? Input.empty() : this.loadBalancerNatRules;
@@ -51,7 +51,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Input<Boolean> primary;
+        private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -73,7 +73,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+        private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -84,7 +84,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="privateIpAllocationMethod")
-    private final @Nullable Input<String> privateIpAllocationMethod;
+        private final @Nullable Input<String> privateIpAllocationMethod;
 
     public Input<String> getPrivateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Input.empty() : this.privateIpAllocationMethod;
@@ -95,7 +95,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<PublicIpReferenceArgs> publicIp;
+        private final @Nullable Input<PublicIpReferenceArgs> publicIp;
 
     public Input<PublicIpReferenceArgs> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;
@@ -106,7 +106,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetReferenceArgs> subnet;
+        private final @Nullable Input<SubnetReferenceArgs> subnet;
 
     public Input<SubnetReferenceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -255,7 +255,6 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public NicIpConfigurationResourceSettingsArgs build() {
             return new NicIpConfigurationResourceSettingsArgs(loadBalancerBackendAddressPools, loadBalancerNatRules, name, primary, privateIpAddress, privateIpAllocationMethod, publicIp, subnet);
         }

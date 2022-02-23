@@ -96,7 +96,6 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
             this.quantileValues = Objects.requireNonNull(quantileValues);
             return this;
         }
-
         public GooglePrivacyDlpV2NumericalStatsResultResponse build() {
             return new GooglePrivacyDlpV2NumericalStatsResultResponse(maxValue, minValue, quantileValues);
         }

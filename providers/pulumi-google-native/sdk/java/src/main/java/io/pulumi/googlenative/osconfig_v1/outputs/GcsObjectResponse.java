@@ -95,7 +95,6 @@ public final class GcsObjectResponse {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public GcsObjectResponse build() {
             return new GcsObjectResponse(bucket, generationNumber, object);
         }

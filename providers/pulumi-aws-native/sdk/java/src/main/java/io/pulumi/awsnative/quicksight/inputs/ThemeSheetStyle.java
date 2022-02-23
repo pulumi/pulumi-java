@@ -20,14 +20,14 @@ public final class ThemeSheetStyle extends io.pulumi.resources.InvokeArgs {
     public static final ThemeSheetStyle Empty = new ThemeSheetStyle();
 
     @InputImport(name="tile")
-    private final @Nullable ThemeTileStyle tile;
+        private final @Nullable ThemeTileStyle tile;
 
     public Optional<ThemeTileStyle> getTile() {
         return this.tile == null ? Optional.empty() : Optional.ofNullable(this.tile);
     }
 
     @InputImport(name="tileLayout")
-    private final @Nullable ThemeTileLayoutStyle tileLayout;
+        private final @Nullable ThemeTileLayoutStyle tileLayout;
 
     public Optional<ThemeTileLayoutStyle> getTileLayout() {
         return this.tileLayout == null ? Optional.empty() : Optional.ofNullable(this.tileLayout);
@@ -76,7 +76,6 @@ public final class ThemeSheetStyle extends io.pulumi.resources.InvokeArgs {
             this.tileLayout = tileLayout;
             return this;
         }
-
         public ThemeSheetStyle build() {
             return new ThemeSheetStyle(tile, tileLayout);
         }

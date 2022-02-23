@@ -28,7 +28,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastSummaryRefreshedTime", required=true)
-    private final String lastSummaryRefreshedTime;
+        private final String lastSummaryRefreshedTime;
 
     public String getLastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
@@ -39,7 +39,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -50,7 +50,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="refreshSummaryState", required=true)
-    private final String refreshSummaryState;
+        private final String refreshSummaryState;
 
     public String getRefreshSummaryState() {
         return this.refreshSummaryState;
@@ -61,7 +61,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="registeredTools")
-    private final @Nullable List<String> registeredTools;
+        private final @Nullable List<String> registeredTools;
 
     public List<String> getRegisteredTools() {
         return this.registeredTools == null ? List.of() : this.registeredTools;
@@ -72,7 +72,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="summary", required=true)
-    private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
+        private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> getSummary() {
         return this.summary;
@@ -151,7 +151,6 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public MigrateProjectPropertiesResponse build() {
             return new MigrateProjectPropertiesResponse(lastSummaryRefreshedTime, provisioningState, refreshSummaryState, registeredTools, summary);
         }

@@ -26,7 +26,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="areAssessmentsRunning", required=true)
-    private final Boolean areAssessmentsRunning;
+        private final Boolean areAssessmentsRunning;
 
     public Boolean getAreAssessmentsRunning() {
         return this.areAssessmentsRunning;
@@ -37,7 +37,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="assessments", required=true)
-    private final List<String> assessments;
+        private final List<String> assessments;
 
     public List<String> getAssessments() {
         return this.assessments;
@@ -48,7 +48,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="createdTimestamp", required=true)
-    private final String createdTimestamp;
+        private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
@@ -59,7 +59,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupStatus", required=true)
-    private final String groupStatus;
+        private final String groupStatus;
 
     public String getGroupStatus() {
         return this.groupStatus;
@@ -70,7 +70,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupType")
-    private final @Nullable String groupType;
+        private final @Nullable String groupType;
 
     public Optional<String> getGroupType() {
         return this.groupType == null ? Optional.empty() : Optional.ofNullable(this.groupType);
@@ -81,7 +81,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="machineCount", required=true)
-    private final Integer machineCount;
+        private final Integer machineCount;
 
     public Integer getMachineCount() {
         return this.machineCount;
@@ -92,7 +92,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="updatedTimestamp", required=true)
-    private final String updatedTimestamp;
+        private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
@@ -191,7 +191,6 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public GroupPropertiesResponse build() {
             return new GroupPropertiesResponse(areAssessmentsRunning, assessments, createdTimestamp, groupStatus, groupType, machineCount, updatedTimestamp);
         }

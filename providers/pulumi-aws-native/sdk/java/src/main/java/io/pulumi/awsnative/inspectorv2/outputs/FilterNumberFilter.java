@@ -60,7 +60,6 @@ public final class FilterNumberFilter {
             this.upperInclusive = upperInclusive;
             return this;
         }
-
         public FilterNumberFilter build() {
             return new FilterNumberFilter(lowerInclusive, upperInclusive);
         }

@@ -99,7 +99,6 @@ public final class GetUserTablesSqlTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetUserTablesSqlTaskOutputResponse build() {
             return new GetUserTablesSqlTaskOutputResponse(databasesToTables, id, validationErrors);
         }

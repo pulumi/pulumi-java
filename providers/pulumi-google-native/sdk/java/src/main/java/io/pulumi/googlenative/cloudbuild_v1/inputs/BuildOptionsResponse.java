@@ -25,7 +25,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -36,7 +36,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dynamicSubstitutions", required=true)
-    private final Boolean dynamicSubstitutions;
+      private final Boolean dynamicSubstitutions;
 
     public Boolean getDynamicSubstitutions() {
         return this.dynamicSubstitutions;
@@ -47,7 +47,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="env", required=true)
-    private final List<String> env;
+      private final List<String> env;
 
     public List<String> getEnv() {
         return this.env;
@@ -58,7 +58,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logStreamingOption", required=true)
-    private final String logStreamingOption;
+      private final String logStreamingOption;
 
     public String getLogStreamingOption() {
         return this.logStreamingOption;
@@ -69,7 +69,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logging", required=true)
-    private final String logging;
+      private final String logging;
 
     public String getLogging() {
         return this.logging;
@@ -80,7 +80,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -91,7 +91,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pool", required=true)
-    private final PoolOptionResponse pool;
+      private final PoolOptionResponse pool;
 
     public PoolOptionResponse getPool() {
         return this.pool;
@@ -102,7 +102,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestedVerifyOption", required=true)
-    private final String requestedVerifyOption;
+      private final String requestedVerifyOption;
 
     public String getRequestedVerifyOption() {
         return this.requestedVerifyOption;
@@ -113,7 +113,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretEnv", required=true)
-    private final List<String> secretEnv;
+      private final List<String> secretEnv;
 
     public List<String> getSecretEnv() {
         return this.secretEnv;
@@ -124,7 +124,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceProvenanceHash", required=true)
-    private final List<String> sourceProvenanceHash;
+      private final List<String> sourceProvenanceHash;
 
     public List<String> getSourceProvenanceHash() {
         return this.sourceProvenanceHash;
@@ -135,7 +135,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="substitutionOption", required=true)
-    private final String substitutionOption;
+      private final String substitutionOption;
 
     public String getSubstitutionOption() {
         return this.substitutionOption;
@@ -146,7 +146,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumes", required=true)
-    private final List<VolumeResponse> volumes;
+      private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
         return this.volumes;
@@ -157,7 +157,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workerPool", required=true)
-    private final String workerPool;
+      private final String workerPool;
 
     public String getWorkerPool() {
         return this.workerPool;
@@ -316,7 +316,6 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public BuildOptionsResponse build() {
             return new BuildOptionsResponse(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }

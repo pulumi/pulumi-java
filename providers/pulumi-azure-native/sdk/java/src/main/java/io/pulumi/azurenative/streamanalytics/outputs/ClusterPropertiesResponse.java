@@ -138,7 +138,6 @@ public final class ClusterPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ClusterPropertiesResponse build() {
             return new ClusterPropertiesResponse(capacityAllocated, capacityAssigned, clusterId, createdDate, provisioningState);
         }

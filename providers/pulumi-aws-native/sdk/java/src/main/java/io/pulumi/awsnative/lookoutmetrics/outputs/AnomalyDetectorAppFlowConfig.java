@@ -58,7 +58,6 @@ public final class AnomalyDetectorAppFlowConfig {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AnomalyDetectorAppFlowConfig build() {
             return new AnomalyDetectorAppFlowConfig(flowName, roleArn);
         }

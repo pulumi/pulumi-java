@@ -95,7 +95,6 @@ public final class UrlDispatchRuleResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public UrlDispatchRuleResponse build() {
             return new UrlDispatchRuleResponse(domain, path, service);
         }

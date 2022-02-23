@@ -97,7 +97,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskOutputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskOutputResponse(id, name, validationErrors);
         }

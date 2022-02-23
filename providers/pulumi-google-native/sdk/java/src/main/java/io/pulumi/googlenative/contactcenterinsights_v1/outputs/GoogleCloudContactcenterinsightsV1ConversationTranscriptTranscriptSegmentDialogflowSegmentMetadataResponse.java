@@ -52,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(smartReplyAllowlistCovered);
         }

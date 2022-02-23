@@ -29,7 +29,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionIdentity")
-    private final @Nullable Input<EncryptionIdentityArgs> encryptionIdentity;
+        private final @Nullable Input<EncryptionIdentityArgs> encryptionIdentity;
 
     public Input<EncryptionIdentityArgs> getEncryptionIdentity() {
         return this.encryptionIdentity == null ? Input.empty() : this.encryptionIdentity;
@@ -40,7 +40,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySource", required=true)
-    private final Input<Either<String,KeySource>> keySource;
+        private final Input<Either<String,KeySource>> keySource;
 
     public Input<Either<String,KeySource>> getKeySource() {
         return this.keySource;
@@ -51,7 +51,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -62,7 +62,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireInfrastructureEncryption")
-    private final @Nullable Input<Boolean> requireInfrastructureEncryption;
+        private final @Nullable Input<Boolean> requireInfrastructureEncryption;
 
     public Input<Boolean> getRequireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Input.empty() : this.requireInfrastructureEncryption;
@@ -73,7 +73,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="services")
-    private final @Nullable Input<EncryptionServicesArgs> services;
+        private final @Nullable Input<EncryptionServicesArgs> services;
 
     public Input<EncryptionServicesArgs> getServices() {
         return this.services == null ? Input.empty() : this.services;
@@ -177,7 +177,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.services = Input.ofNullable(services);
             return this;
         }
-
         public EncryptionArgs build() {
             return new EncryptionArgs(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }

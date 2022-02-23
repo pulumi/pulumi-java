@@ -25,7 +25,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<Either<String,TablePlanEnum>> plan;
+        private final @Nullable Input<Either<String,TablePlanEnum>> plan;
 
     public Input<Either<String,TablePlanEnum>> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -36,7 +36,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -47,7 +47,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoredLogs")
-    private final @Nullable Input<RestoredLogsArgs> restoredLogs;
+        private final @Nullable Input<RestoredLogsArgs> restoredLogs;
 
     public Input<RestoredLogsArgs> getRestoredLogs() {
         return this.restoredLogs == null ? Input.empty() : this.restoredLogs;
@@ -58,7 +58,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -69,7 +69,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<SchemaArgs> schema;
+        private final @Nullable Input<SchemaArgs> schema;
 
     public Input<SchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -80,7 +80,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchResults")
-    private final @Nullable Input<SearchResultsArgs> searchResults;
+        private final @Nullable Input<SearchResultsArgs> searchResults;
 
     public Input<SearchResultsArgs> getSearchResults() {
         return this.searchResults == null ? Input.empty() : this.searchResults;
@@ -91,7 +91,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+        private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -102,7 +102,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalRetentionInDays")
-    private final @Nullable Input<Integer> totalRetentionInDays;
+        private final @Nullable Input<Integer> totalRetentionInDays;
 
     public Input<Integer> getTotalRetentionInDays() {
         return this.totalRetentionInDays == null ? Input.empty() : this.totalRetentionInDays;
@@ -113,7 +113,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -277,7 +277,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public TableArgs build() {
             return new TableArgs(plan, resourceGroupName, restoredLogs, retentionInDays, schema, searchResults, tableName, totalRetentionInDays, workspaceName);
         }

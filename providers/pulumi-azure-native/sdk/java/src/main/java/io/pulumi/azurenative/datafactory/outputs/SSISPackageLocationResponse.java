@@ -251,7 +251,6 @@ public final class SSISPackageLocationResponse {
             this.type = type;
             return this;
         }
-
         public SSISPackageLocationResponse build() {
             return new SSISPackageLocationResponse(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
         }

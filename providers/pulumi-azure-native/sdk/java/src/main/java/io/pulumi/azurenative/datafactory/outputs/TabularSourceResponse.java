@@ -184,7 +184,6 @@ public final class TabularSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TabularSourceResponse build() {
             return new TabularSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

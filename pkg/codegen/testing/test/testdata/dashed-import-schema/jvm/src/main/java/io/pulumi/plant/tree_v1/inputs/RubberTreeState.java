@@ -17,7 +17,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     public static final RubberTreeState Empty = new RubberTreeState();
 
     @InputImport(name="farm")
-    private final @Nullable Input<Either<Farm,String>> farm;
+      private final @Nullable Input<Either<Farm,String>> farm;
 
     public Input<Either<Farm,String>> getFarm() {
         return this.farm == null ? Input.empty() : this.farm;
@@ -60,7 +60,6 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
             this.farm = Input.ofNullable(farm);
             return this;
         }
-
         public RubberTreeState build() {
             return new RubberTreeState(farm);
         }

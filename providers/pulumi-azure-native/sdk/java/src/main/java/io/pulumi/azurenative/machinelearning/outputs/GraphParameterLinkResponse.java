@@ -74,7 +74,6 @@ public final class GraphParameterLinkResponse {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
-
         public GraphParameterLinkResponse build() {
             return new GraphParameterLinkResponse(nodeId, parameterKey);
         }

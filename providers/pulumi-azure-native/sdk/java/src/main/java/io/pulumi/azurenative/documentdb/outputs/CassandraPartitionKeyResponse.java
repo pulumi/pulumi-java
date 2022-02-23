@@ -54,7 +54,6 @@ public final class CassandraPartitionKeyResponse {
             this.name = name;
             return this;
         }
-
         public CassandraPartitionKeyResponse build() {
             return new CassandraPartitionKeyResponse(name);
         }

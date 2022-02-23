@@ -23,7 +23,7 @@ public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -66,7 +66,6 @@ public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public ScopeElementArgs build() {
             return new ScopeElementArgs(field);
         }

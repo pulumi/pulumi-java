@@ -208,7 +208,6 @@ public final class BudgetBudgetFilter {
             this.subaccounts = subaccounts;
             return this;
         }
-
         public BudgetBudgetFilter build() {
             return new BudgetBudgetFilter(creditTypes, creditTypesTreatment, labels, projects, services, subaccounts);
         }

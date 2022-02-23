@@ -20,21 +20,21 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
+      private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
     public Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="folderId", required=true)
-    private final Input<String> folderId;
+      private final Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -108,7 +108,6 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public FolderReplayArgs build() {
             return new FolderReplayArgs(config, folderId, location);
         }

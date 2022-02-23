@@ -56,7 +56,6 @@ public final class GetEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-
         public GetEventSubscriptionDeliveryAttributesResult build() {
             return new GetEventSubscriptionDeliveryAttributesResult(value);
         }

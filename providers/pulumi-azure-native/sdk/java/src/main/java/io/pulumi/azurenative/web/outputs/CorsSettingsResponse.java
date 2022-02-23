@@ -84,7 +84,6 @@ public final class CorsSettingsResponse {
             this.supportCredentials = supportCredentials;
             return this;
         }
-
         public CorsSettingsResponse build() {
             return new CorsSettingsResponse(allowedOrigins, supportCredentials);
         }

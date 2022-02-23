@@ -150,7 +150,6 @@ public final class InstanceCluster {
             this.zone = zone;
             return this;
         }
-
         public InstanceCluster build() {
             return new InstanceCluster(clusterId, kmsKeyName, numNodes, storageType, zone);
         }

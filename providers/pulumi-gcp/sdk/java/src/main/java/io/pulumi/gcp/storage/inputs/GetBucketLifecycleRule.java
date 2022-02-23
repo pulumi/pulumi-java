@@ -15,14 +15,14 @@ public final class GetBucketLifecycleRule extends io.pulumi.resources.InvokeArgs
     public static final GetBucketLifecycleRule Empty = new GetBucketLifecycleRule();
 
     @InputImport(name="actions", required=true)
-    private final List<GetBucketLifecycleRuleAction> actions;
+        private final List<GetBucketLifecycleRuleAction> actions;
 
     public List<GetBucketLifecycleRuleAction> getActions() {
         return this.actions;
     }
 
     @InputImport(name="conditions", required=true)
-    private final List<GetBucketLifecycleRuleCondition> conditions;
+        private final List<GetBucketLifecycleRuleCondition> conditions;
 
     public List<GetBucketLifecycleRuleCondition> getConditions() {
         return this.conditions;
@@ -71,7 +71,6 @@ public final class GetBucketLifecycleRule extends io.pulumi.resources.InvokeArgs
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public GetBucketLifecycleRule build() {
             return new GetBucketLifecycleRule(actions, conditions);
         }

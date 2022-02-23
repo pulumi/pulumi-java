@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
             return new GooglePrivacyDlpV2DatastoreOptionsResponse(kind, partitionId);
         }

@@ -247,7 +247,6 @@ public final class GetDeviceResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(description, deviceArn, deviceId, location, model, serialNumber, siteId, tags, type, vendor);
         }

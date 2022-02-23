@@ -222,7 +222,6 @@ public final class GetRegionTargetHttpProxyResult {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetRegionTargetHttpProxyResult build() {
             return new GetRegionTargetHttpProxyResult(creationTimestamp, description, fingerprint, kind, name, proxyBind, region, selfLink, urlMap);
         }

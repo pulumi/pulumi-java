@@ -99,7 +99,6 @@ public final class EndpointGroupEndpointConfiguration {
             this.weight = weight;
             return this;
         }
-
         public EndpointGroupEndpointConfiguration build() {
             return new EndpointGroupEndpointConfiguration(clientIPPreservationEnabled, endpointId, weight);
         }

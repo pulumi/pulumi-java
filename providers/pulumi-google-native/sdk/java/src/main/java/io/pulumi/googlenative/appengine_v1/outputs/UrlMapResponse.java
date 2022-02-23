@@ -203,7 +203,6 @@ public final class UrlMapResponse {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
         }
-
         public UrlMapResponse build() {
             return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

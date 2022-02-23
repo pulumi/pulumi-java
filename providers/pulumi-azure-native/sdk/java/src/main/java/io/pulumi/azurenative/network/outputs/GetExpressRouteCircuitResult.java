@@ -485,7 +485,6 @@ public final class GetExpressRouteCircuitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitResult build() {
             return new GetExpressRouteCircuitResult(allowClassicOperations, authorizations, bandwidthInGbps, circuitProvisioningState, etag, expressRoutePort, gatewayManagerEtag, globalReachEnabled, id, location, name, peerings, provisioningState, serviceKey, serviceProviderNotes, serviceProviderProperties, serviceProviderProvisioningState, sku, stag, tags, type);
         }

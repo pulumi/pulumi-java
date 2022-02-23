@@ -97,7 +97,6 @@ public final class TimelineErrorResponse {
             this.queryId = queryId;
             return this;
         }
-
         public TimelineErrorResponse build() {
             return new TimelineErrorResponse(errorMessage, kind, queryId);
         }

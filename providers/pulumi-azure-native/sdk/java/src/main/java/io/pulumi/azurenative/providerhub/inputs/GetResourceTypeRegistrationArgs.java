@@ -17,7 +17,7 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+        private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -28,7 +28,7 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -77,7 +77,6 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetResourceTypeRegistrationArgs build() {
             return new GetResourceTypeRegistrationArgs(providerNamespace, resourceType);
         }

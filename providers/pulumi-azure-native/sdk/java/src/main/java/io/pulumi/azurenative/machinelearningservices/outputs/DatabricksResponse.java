@@ -200,7 +200,6 @@ public final class DatabricksResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public DatabricksResponse build() {
             return new DatabricksResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

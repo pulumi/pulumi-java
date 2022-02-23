@@ -19,7 +19,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentId")
-    private final @Nullable Input<String> attachmentId;
+      private final @Nullable Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
@@ -30,7 +30,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,6 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SecurityPolicyAssociationArgs build() {
             return new SecurityPolicyAssociationArgs(attachmentId, name);
         }

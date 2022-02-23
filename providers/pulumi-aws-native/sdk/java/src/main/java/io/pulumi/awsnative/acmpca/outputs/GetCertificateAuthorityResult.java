@@ -113,7 +113,6 @@ public final class GetCertificateAuthorityResult {
             this.tags = tags;
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(arn, certificateSigningRequest, revocationConfiguration, tags);
         }

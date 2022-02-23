@@ -205,7 +205,6 @@ public final class QuickBooksSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public QuickBooksSourceResponse build() {
             return new QuickBooksSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

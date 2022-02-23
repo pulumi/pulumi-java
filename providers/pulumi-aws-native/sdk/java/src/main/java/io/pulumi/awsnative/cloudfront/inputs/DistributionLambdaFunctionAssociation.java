@@ -16,21 +16,21 @@ public final class DistributionLambdaFunctionAssociation extends io.pulumi.resou
     public static final DistributionLambdaFunctionAssociation Empty = new DistributionLambdaFunctionAssociation();
 
     @InputImport(name="eventType")
-    private final @Nullable String eventType;
+        private final @Nullable String eventType;
 
     public Optional<String> getEventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
     @InputImport(name="includeBody")
-    private final @Nullable Boolean includeBody;
+        private final @Nullable Boolean includeBody;
 
     public Optional<Boolean> getIncludeBody() {
         return this.includeBody == null ? Optional.empty() : Optional.ofNullable(this.includeBody);
     }
 
     @InputImport(name="lambdaFunctionARN")
-    private final @Nullable String lambdaFunctionARN;
+        private final @Nullable String lambdaFunctionARN;
 
     public Optional<String> getLambdaFunctionARN() {
         return this.lambdaFunctionARN == null ? Optional.empty() : Optional.ofNullable(this.lambdaFunctionARN);
@@ -89,7 +89,6 @@ public final class DistributionLambdaFunctionAssociation extends io.pulumi.resou
             this.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }
-
         public DistributionLambdaFunctionAssociation build() {
             return new DistributionLambdaFunctionAssociation(eventType, includeBody, lambdaFunctionARN);
         }

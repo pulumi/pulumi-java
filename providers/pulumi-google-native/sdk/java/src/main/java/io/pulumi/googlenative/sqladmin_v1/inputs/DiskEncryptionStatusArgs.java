@@ -23,7 +23,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -34,7 +34,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kmsKeyVersionName")
-    private final @Nullable Input<String> kmsKeyVersionName;
+      private final @Nullable Input<String> kmsKeyVersionName;
 
     public Input<String> getKmsKeyVersionName() {
         return this.kmsKeyVersionName == null ? Input.empty() : this.kmsKeyVersionName;
@@ -93,7 +93,6 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
             this.kmsKeyVersionName = Input.ofNullable(kmsKeyVersionName);
             return this;
         }
-
         public DiskEncryptionStatusArgs build() {
             return new DiskEncryptionStatusArgs(kind, kmsKeyVersionName);
         }

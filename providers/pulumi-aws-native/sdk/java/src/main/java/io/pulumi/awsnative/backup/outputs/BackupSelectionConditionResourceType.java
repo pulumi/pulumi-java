@@ -71,7 +71,6 @@ public final class BackupSelectionConditionResourceType {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }
-
         public BackupSelectionConditionResourceType build() {
             return new BackupSelectionConditionResourceType(conditionKey, conditionType, conditionValue);
         }

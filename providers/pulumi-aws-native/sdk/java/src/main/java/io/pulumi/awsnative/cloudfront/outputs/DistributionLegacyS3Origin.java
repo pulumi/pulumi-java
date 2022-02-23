@@ -60,7 +60,6 @@ public final class DistributionLegacyS3Origin {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
-
         public DistributionLegacyS3Origin build() {
             return new DistributionLegacyS3Origin(dNSName, originAccessIdentity);
         }

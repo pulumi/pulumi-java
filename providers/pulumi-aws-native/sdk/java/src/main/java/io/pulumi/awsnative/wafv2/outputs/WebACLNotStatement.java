@@ -44,7 +44,6 @@ public final class WebACLNotStatement {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public WebACLNotStatement build() {
             return new WebACLNotStatement(statement);
         }

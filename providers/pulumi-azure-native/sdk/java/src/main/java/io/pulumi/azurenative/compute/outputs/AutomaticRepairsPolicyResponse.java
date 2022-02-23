@@ -77,7 +77,6 @@ public final class AutomaticRepairsPolicyResponse {
             this.gracePeriod = gracePeriod;
             return this;
         }
-
         public AutomaticRepairsPolicyResponse build() {
             return new AutomaticRepairsPolicyResponse(enabled, gracePeriod);
         }

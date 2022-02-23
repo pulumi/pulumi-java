@@ -125,7 +125,6 @@ public final class RulesetRule {
             this.threshold = threshold;
             return this;
         }
-
         public RulesetRule build() {
             return new RulesetRule(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);
         }

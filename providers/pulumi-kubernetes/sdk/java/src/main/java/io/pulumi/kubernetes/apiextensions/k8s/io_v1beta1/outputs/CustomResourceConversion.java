@@ -101,7 +101,6 @@ public final class CustomResourceConversion {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }
-
         public CustomResourceConversion build() {
             return new CustomResourceConversion(conversionReviewVersions, strategy, webhookClientConfig);
         }

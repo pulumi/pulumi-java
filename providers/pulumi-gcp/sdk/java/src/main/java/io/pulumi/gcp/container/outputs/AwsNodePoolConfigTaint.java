@@ -95,7 +95,6 @@ public final class AwsNodePoolConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AwsNodePoolConfigTaint build() {
             return new AwsNodePoolConfigTaint(effect, key, value);
         }

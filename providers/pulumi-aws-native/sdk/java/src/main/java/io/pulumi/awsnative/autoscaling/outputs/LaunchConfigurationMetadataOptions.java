@@ -98,7 +98,6 @@ public final class LaunchConfigurationMetadataOptions {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public LaunchConfigurationMetadataOptions build() {
             return new LaunchConfigurationMetadataOptions(httpEndpoint, httpPutResponseHopLimit, httpTokens);
         }

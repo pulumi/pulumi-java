@@ -162,7 +162,6 @@ public final class GetManagementLockAtResourceLevelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementLockAtResourceLevelResult build() {
             return new GetManagementLockAtResourceLevelResult(id, level, name, notes, owners, type);
         }

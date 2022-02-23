@@ -74,7 +74,6 @@ public final class BucketDefaultRetention {
             this.years = years;
             return this;
         }
-
         public BucketDefaultRetention build() {
             return new BucketDefaultRetention(days, mode, years);
         }

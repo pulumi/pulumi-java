@@ -141,7 +141,6 @@ public final class CacheNetworkSettingsResponse {
             this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
             return this;
         }
-
         public CacheNetworkSettingsResponse build() {
             return new CacheNetworkSettingsResponse(dnsSearchDomain, dnsServers, mtu, ntpServer, utilityAddresses);
         }

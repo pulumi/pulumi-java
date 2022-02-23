@@ -116,7 +116,6 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public ConnectorProfileInforNexusConnectorProfileCredentials build() {
             return new ConnectorProfileInforNexusConnectorProfileCredentials(accessKeyId, datakey, secretAccessKey, userId);
         }

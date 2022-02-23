@@ -85,7 +85,6 @@ public final class LimitedPriorityLevelConfiguration {
             this.limitResponse = limitResponse;
             return this;
         }
-
         public LimitedPriorityLevelConfiguration build() {
             return new LimitedPriorityLevelConfiguration(assuredConcurrencyShares, limitResponse);
         }

@@ -74,7 +74,6 @@ public final class HostedZoneTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HostedZoneTag build() {
             return new HostedZoneTag(key, value);
         }

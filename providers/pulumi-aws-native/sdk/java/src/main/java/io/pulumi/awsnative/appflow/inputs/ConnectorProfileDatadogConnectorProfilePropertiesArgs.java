@@ -18,7 +18,7 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
      * 
      */
     @InputImport(name="instanceUrl", required=true)
-    private final Input<String> instanceUrl;
+        private final Input<String> instanceUrl;
 
     public Input<String> getInstanceUrl() {
         return this.instanceUrl;
@@ -61,7 +61,6 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
             this.instanceUrl = Input.of(Objects.requireNonNull(instanceUrl));
             return this;
         }
-
         public ConnectorProfileDatadogConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileDatadogConnectorProfilePropertiesArgs(instanceUrl);
         }

@@ -74,7 +74,6 @@ public final class HostPortRange {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public HostPortRange build() {
             return new HostPortRange(max, min);
         }

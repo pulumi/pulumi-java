@@ -203,7 +203,6 @@ public final class ApplicationSecurityGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationSecurityGroupResponse build() {
             return new ApplicationSecurityGroupResponse(etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }

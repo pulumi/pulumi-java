@@ -26,7 +26,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+        private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
@@ -40,7 +40,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="boot")
-    private final @Nullable Input<Boolean> boot;
+        private final @Nullable Input<Boolean> boot;
 
     public Input<Boolean> getBoot() {
         return this.boot == null ? Input.empty() : this.boot;
@@ -60,7 +60,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+        private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -76,7 +76,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="guestOsFeatures")
-    private final @Nullable Input<List<String>> guestOsFeatures;
+        private final @Nullable Input<List<String>> guestOsFeatures;
 
     public Input<List<String>> getGuestOsFeatures() {
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
@@ -90,7 +90,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="index")
-    private final @Nullable Input<Integer> index;
+        private final @Nullable Input<Integer> index;
 
     public Input<Integer> getIndex() {
         return this.index == null ? Input.empty() : this.index;
@@ -107,7 +107,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="initializeParams")
-    private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams;
+        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
@@ -123,7 +123,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<String> $interface;
+        private final @Nullable Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -136,7 +136,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -148,7 +148,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="licenses")
-    private final @Nullable Input<List<String>> licenses;
+        private final @Nullable Input<List<String>> licenses;
 
     public Input<List<String>> getLicenses() {
         return this.licenses == null ? Input.empty() : this.licenses;
@@ -161,7 +161,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -173,7 +173,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+        private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -186,7 +186,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -395,7 +395,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

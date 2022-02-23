@@ -24,7 +24,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="isPrivate")
-    private final @Nullable Boolean isPrivate;
+        private final @Nullable Boolean isPrivate;
 
     public Optional<Boolean> getIsPrivate() {
         return this.isPrivate == null ? Optional.empty() : Optional.ofNullable(this.isPrivate);
@@ -46,7 +46,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable String owner;
+        private final @Nullable String owner;
 
     public Optional<String> getOwner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
@@ -57,7 +57,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable String repositoryName;
+        private final @Nullable String repositoryName;
 
     public Optional<String> getRepositoryName() {
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
@@ -68,7 +68,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="templateRepositoryUrl")
-    private final @Nullable String templateRepositoryUrl;
+        private final @Nullable String templateRepositoryUrl;
 
     public Optional<String> getTemplateRepositoryUrl() {
         return this.templateRepositoryUrl == null ? Optional.empty() : Optional.ofNullable(this.templateRepositoryUrl);
@@ -147,7 +147,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
-
         public StaticSiteTemplateOptionsResponse build() {
             return new StaticSiteTemplateOptionsResponse(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
         }

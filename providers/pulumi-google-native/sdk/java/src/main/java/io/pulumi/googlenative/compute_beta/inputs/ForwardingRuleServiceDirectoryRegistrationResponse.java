@@ -21,7 +21,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -32,7 +32,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -43,7 +43,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
      * 
      */
     @InputImport(name="serviceDirectoryRegion", required=true)
-    private final String serviceDirectoryRegion;
+      private final String serviceDirectoryRegion;
 
     public String getServiceDirectoryRegion() {
         return this.serviceDirectoryRegion;
@@ -102,7 +102,6 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
             this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
             return this;
         }
-
         public ForwardingRuleServiceDirectoryRegistrationResponse build() {
             return new ForwardingRuleServiceDirectoryRegistrationResponse(namespace, service, serviceDirectoryRegion);
         }

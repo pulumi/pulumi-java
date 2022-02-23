@@ -19,7 +19,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="range", required=true)
-    private final Input<String> range;
+        private final Input<String> range;
 
     public Input<String> getRange() {
         return this.range;
@@ -90,7 +90,6 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
-
         public RouterPeerAdvertisedIpRangeArgs build() {
             return new RouterPeerAdvertisedIpRangeArgs(description, range);
         }

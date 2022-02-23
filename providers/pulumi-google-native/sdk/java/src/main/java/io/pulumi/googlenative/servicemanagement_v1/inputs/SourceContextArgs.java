@@ -23,7 +23,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<String> fileName;
+      private final @Nullable Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -66,7 +66,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
-
         public SourceContextArgs build() {
             return new SourceContextArgs(fileName);
         }

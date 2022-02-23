@@ -223,7 +223,6 @@ public final class WorkspaceRepositoryConfigurationResponse {
             this.type = type;
             return this;
         }
-
         public WorkspaceRepositoryConfigurationResponse build() {
             return new WorkspaceRepositoryConfigurationResponse(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

@@ -29,7 +29,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="account")
-    private final @Nullable Input<AccountArgs> account;
+      private final @Nullable Input<AccountArgs> account;
 
     public Input<AccountArgs> getAccount() {
         return this.account == null ? Input.empty() : this.account;
@@ -40,7 +40,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalApks")
-    private final @Nullable Input<List<ApkArgs>> additionalApks;
+      private final @Nullable Input<List<ApkArgs>> additionalApks;
 
     public Input<List<ApkArgs>> getAdditionalApks() {
         return this.additionalApks == null ? Input.empty() : this.additionalApks;
@@ -51,7 +51,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoriesToPull")
-    private final @Nullable Input<List<String>> directoriesToPull;
+      private final @Nullable Input<List<String>> directoriesToPull;
 
     public Input<List<String>> getDirectoriesToPull() {
         return this.directoriesToPull == null ? Input.empty() : this.directoriesToPull;
@@ -62,7 +62,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dontAutograntPermissions")
-    private final @Nullable Input<Boolean> dontAutograntPermissions;
+      private final @Nullable Input<Boolean> dontAutograntPermissions;
 
     public Input<Boolean> getDontAutograntPermissions() {
         return this.dontAutograntPermissions == null ? Input.empty() : this.dontAutograntPermissions;
@@ -73,7 +73,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -84,7 +84,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filesToPush")
-    private final @Nullable Input<List<DeviceFileArgs>> filesToPush;
+      private final @Nullable Input<List<DeviceFileArgs>> filesToPush;
 
     public Input<List<DeviceFileArgs>> getFilesToPush() {
         return this.filesToPush == null ? Input.empty() : this.filesToPush;
@@ -95,7 +95,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<String> networkProfile;
+      private final @Nullable Input<String> networkProfile;
 
     public Input<String> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -229,7 +229,6 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
-
         public TestSetupArgs build() {
             return new TestSetupArgs(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }

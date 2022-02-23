@@ -118,7 +118,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(launchParameter, location, project, validateOnly);
         }

@@ -19,7 +19,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends io
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text;
+        private final @Nullable Input<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 
     public Input<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -62,7 +62,6 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends io
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillmentMessageArgs build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessageArgs(text);
         }

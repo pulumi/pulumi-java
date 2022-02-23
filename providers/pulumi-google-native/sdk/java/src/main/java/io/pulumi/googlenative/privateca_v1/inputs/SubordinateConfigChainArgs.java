@@ -23,7 +23,7 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="pemCertificates", required=true)
-    private final Input<List<String>> pemCertificates;
+      private final Input<List<String>> pemCertificates;
 
     public Input<List<String>> getPemCertificates() {
         return this.pemCertificates;
@@ -66,7 +66,6 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
             this.pemCertificates = Input.of(Objects.requireNonNull(pemCertificates));
             return this;
         }
-
         public SubordinateConfigChainArgs build() {
             return new SubordinateConfigChainArgs(pemCertificates);
         }

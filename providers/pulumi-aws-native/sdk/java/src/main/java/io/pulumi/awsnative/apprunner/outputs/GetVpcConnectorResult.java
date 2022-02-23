@@ -77,7 +77,6 @@ public final class GetVpcConnectorResult {
             this.vpcConnectorRevision = vpcConnectorRevision;
             return this;
         }
-
         public GetVpcConnectorResult build() {
             return new GetVpcConnectorResult(vpcConnectorArn, vpcConnectorRevision);
         }

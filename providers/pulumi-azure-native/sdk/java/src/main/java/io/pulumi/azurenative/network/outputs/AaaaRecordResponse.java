@@ -54,7 +54,6 @@ public final class AaaaRecordResponse {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public AaaaRecordResponse build() {
             return new AaaaRecordResponse(ipv6Address);
         }

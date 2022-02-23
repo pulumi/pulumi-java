@@ -21,7 +21,7 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sha256Checksum", required=true)
-    private final String sha256Checksum;
+      private final String sha256Checksum;
 
     public String getSha256Checksum() {
         return this.sha256Checksum;
@@ -32,7 +32,7 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -81,7 +81,6 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceFileRemoteResponse build() {
             return new OSPolicyResourceFileRemoteResponse(sha256Checksum, uri);
         }

@@ -74,7 +74,6 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedIssuanceModes build() {
             return new CaPoolIssuancePolicyAllowedIssuanceModes(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

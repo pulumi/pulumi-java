@@ -52,7 +52,6 @@ public final class LogAnalyticsOutputResponse {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public LogAnalyticsOutputResponse build() {
             return new LogAnalyticsOutputResponse(output);
         }

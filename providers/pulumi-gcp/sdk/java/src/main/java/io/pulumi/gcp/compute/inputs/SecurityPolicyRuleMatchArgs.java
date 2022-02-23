@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<SecurityPolicyRuleMatchConfigArgs> config;
+        private final @Nullable Input<SecurityPolicyRuleMatchConfigArgs> config;
 
     public Input<SecurityPolicyRuleMatchConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -36,7 +36,7 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="expr")
-    private final @Nullable Input<SecurityPolicyRuleMatchExprArgs> expr;
+        private final @Nullable Input<SecurityPolicyRuleMatchExprArgs> expr;
 
     public Input<SecurityPolicyRuleMatchExprArgs> getExpr() {
         return this.expr == null ? Input.empty() : this.expr;
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="versionedExpr")
-    private final @Nullable Input<String> versionedExpr;
+        private final @Nullable Input<String> versionedExpr;
 
     public Input<String> getVersionedExpr() {
         return this.versionedExpr == null ? Input.empty() : this.versionedExpr;
@@ -123,7 +123,6 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
             this.versionedExpr = Input.ofNullable(versionedExpr);
             return this;
         }
-
         public SecurityPolicyRuleMatchArgs build() {
             return new SecurityPolicyRuleMatchArgs(config, expr, versionedExpr);
         }

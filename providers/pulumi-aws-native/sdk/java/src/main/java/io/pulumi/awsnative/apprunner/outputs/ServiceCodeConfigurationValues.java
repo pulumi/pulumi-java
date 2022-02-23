@@ -134,7 +134,6 @@ public final class ServiceCodeConfigurationValues {
             this.startCommand = startCommand;
             return this;
         }
-
         public ServiceCodeConfigurationValues build() {
             return new ServiceCodeConfigurationValues(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }

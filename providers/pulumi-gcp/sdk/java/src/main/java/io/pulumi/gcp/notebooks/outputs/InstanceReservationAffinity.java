@@ -100,7 +100,6 @@ public final class InstanceReservationAffinity {
             this.values = values;
             return this;
         }
-
         public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(consumeReservationType, key, values);
         }

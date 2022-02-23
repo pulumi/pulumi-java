@@ -58,7 +58,6 @@ public final class StepDimensionValueEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StepDimensionValueEntryResponse build() {
             return new StepDimensionValueEntryResponse(key, value);
         }

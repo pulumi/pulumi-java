@@ -23,7 +23,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptPath")
-    private final @Nullable Input<String> scriptPath;
+      private final @Nullable Input<String> scriptPath;
 
     public Input<String> getScriptPath() {
         return this.scriptPath == null ? Input.empty() : this.scriptPath;
@@ -66,7 +66,6 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
             this.scriptPath = Input.ofNullable(scriptPath);
             return this;
         }
-
         public ScriptHandlerArgs build() {
             return new ScriptHandlerArgs(scriptPath);
         }

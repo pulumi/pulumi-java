@@ -119,7 +119,6 @@ public final class PersistenceResponse {
             this.rdbFrequency = rdbFrequency;
             return this;
         }
-
         public PersistenceResponse build() {
             return new PersistenceResponse(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
         }

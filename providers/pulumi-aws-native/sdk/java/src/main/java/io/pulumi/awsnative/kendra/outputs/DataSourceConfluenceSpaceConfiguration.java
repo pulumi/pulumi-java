@@ -102,7 +102,6 @@ public final class DataSourceConfluenceSpaceConfiguration {
             this.spaceFieldMappings = spaceFieldMappings;
             return this;
         }
-
         public DataSourceConfluenceSpaceConfiguration build() {
             return new DataSourceConfluenceSpaceConfiguration(crawlArchivedSpaces, crawlPersonalSpaces, excludeSpaces, includeSpaces, spaceFieldMappings);
         }

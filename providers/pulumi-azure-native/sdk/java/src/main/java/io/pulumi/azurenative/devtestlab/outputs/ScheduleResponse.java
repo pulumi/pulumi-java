@@ -375,7 +375,6 @@ public final class ScheduleResponse {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }

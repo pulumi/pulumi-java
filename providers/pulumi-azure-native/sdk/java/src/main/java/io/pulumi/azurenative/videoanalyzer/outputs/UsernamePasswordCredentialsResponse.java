@@ -97,7 +97,6 @@ public final class UsernamePasswordCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UsernamePasswordCredentialsResponse build() {
             return new UsernamePasswordCredentialsResponse(password, type, username);
         }

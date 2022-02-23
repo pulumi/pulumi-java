@@ -45,7 +45,6 @@ public final class AbortConfigProperties {
             this.criteriaList = Objects.requireNonNull(criteriaList);
             return this;
         }
-
         public AbortConfigProperties build() {
             return new AbortConfigProperties(criteriaList);
         }

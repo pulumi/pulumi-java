@@ -23,7 +23,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -66,7 +66,6 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public StorageAccountPropertiesArgs build() {
             return new StorageAccountPropertiesArgs(resourceId);
         }

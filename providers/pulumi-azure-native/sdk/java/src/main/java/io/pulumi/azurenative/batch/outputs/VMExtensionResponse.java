@@ -165,7 +165,6 @@ public final class VMExtensionResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VMExtensionResponse build() {
             return new VMExtensionResponse(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }

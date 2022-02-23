@@ -22,7 +22,7 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="allowedIps", required=true)
-    private final List<String> allowedIps;
+      private final List<String> allowedIps;
 
     public List<String> getAllowedIps() {
         return this.allowedIps;
@@ -60,7 +60,6 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
-
         public V2ServerKeyRestrictionsResponse build() {
             return new V2ServerKeyRestrictionsResponse(allowedIps);
         }

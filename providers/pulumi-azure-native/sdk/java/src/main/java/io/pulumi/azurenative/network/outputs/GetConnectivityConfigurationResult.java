@@ -311,7 +311,6 @@ public final class GetConnectivityConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectivityConfigurationResult build() {
             return new GetConnectivityConfigurationResult(appliesToGroups, connectivityTopology, deleteExistingPeering, description, displayName, etag, hubs, id, isGlobal, name, provisioningState, systemData, type);
         }

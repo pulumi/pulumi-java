@@ -163,7 +163,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
             this.sentiments = Objects.requireNonNull(sentiments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(annotations, entities, intents, issueModelResult, phraseMatchers, sentiments);
         }

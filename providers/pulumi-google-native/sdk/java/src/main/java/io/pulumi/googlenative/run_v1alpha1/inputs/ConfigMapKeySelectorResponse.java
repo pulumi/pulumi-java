@@ -23,7 +23,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -34,7 +34,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="localObjectReference", required=true)
-    private final LocalObjectReferenceResponse localObjectReference;
+      private final LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
@@ -45,7 +45,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+      private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -125,7 +125,6 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapKeySelectorResponse build() {
             return new ConfigMapKeySelectorResponse(key, localObjectReference, name, optional);
         }

@@ -128,7 +128,6 @@ public final class WorkGroupConfigurationUpdates {
             this.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
         }
-
         public WorkGroupConfigurationUpdates build() {
             return new WorkGroupConfigurationUpdates(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, removeBytesScannedCutoffPerQuery, requesterPaysEnabled, resultConfigurationUpdates);
         }

@@ -75,7 +75,6 @@ public final class FilterablePropertyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FilterablePropertyResponse build() {
             return new FilterablePropertyResponse(supportedValues, type);
         }

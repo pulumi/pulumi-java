@@ -20,14 +20,14 @@ public final class RecipeParametersInputPropertiesArgs extends io.pulumi.resourc
     public static final RecipeParametersInputPropertiesArgs Empty = new RecipeParametersInputPropertiesArgs();
 
     @InputImport(name="dataCatalogInputDefinition")
-    private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+        private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Input<RecipeDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Input.empty() : this.dataCatalogInputDefinition;
     }
 
     @InputImport(name="s3InputDefinition")
-    private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
+        private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
 
     public Input<RecipeS3LocationArgs> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Input.empty() : this.s3InputDefinition;
@@ -86,7 +86,6 @@ public final class RecipeParametersInputPropertiesArgs extends io.pulumi.resourc
             this.s3InputDefinition = Input.ofNullable(s3InputDefinition);
             return this;
         }
-
         public RecipeParametersInputPropertiesArgs build() {
             return new RecipeParametersInputPropertiesArgs(dataCatalogInputDefinition, s3InputDefinition);
         }

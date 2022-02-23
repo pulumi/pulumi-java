@@ -76,7 +76,6 @@ public final class HubResponse {
             this.resourceType = resourceType;
             return this;
         }
-
         public HubResponse build() {
             return new HubResponse(resourceId, resourceType);
         }

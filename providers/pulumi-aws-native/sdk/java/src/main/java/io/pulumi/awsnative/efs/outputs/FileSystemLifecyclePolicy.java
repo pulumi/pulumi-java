@@ -60,7 +60,6 @@ public final class FileSystemLifecyclePolicy {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }
-
         public FileSystemLifecyclePolicy build() {
             return new FileSystemLifecyclePolicy(transitionToIA, transitionToPrimaryStorageClass);
         }

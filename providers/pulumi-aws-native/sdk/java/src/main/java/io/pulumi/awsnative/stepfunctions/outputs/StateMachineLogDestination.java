@@ -46,7 +46,6 @@ public final class StateMachineLogDestination {
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
-
         public StateMachineLogDestination build() {
             return new StateMachineLogDestination(cloudWatchLogsLogGroup);
         }

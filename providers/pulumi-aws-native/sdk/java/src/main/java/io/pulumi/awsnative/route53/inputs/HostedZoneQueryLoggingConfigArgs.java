@@ -22,7 +22,7 @@ public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudWatchLogsLogGroupArn", required=true)
-    private final Input<String> cloudWatchLogsLogGroupArn;
+        private final Input<String> cloudWatchLogsLogGroupArn;
 
     public Input<String> getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
@@ -65,7 +65,6 @@ public final class HostedZoneQueryLoggingConfigArgs extends io.pulumi.resources.
             this.cloudWatchLogsLogGroupArn = Input.of(Objects.requireNonNull(cloudWatchLogsLogGroupArn));
             return this;
         }
-
         public HostedZoneQueryLoggingConfigArgs build() {
             return new HostedZoneQueryLoggingConfigArgs(cloudWatchLogsLogGroupArn);
         }

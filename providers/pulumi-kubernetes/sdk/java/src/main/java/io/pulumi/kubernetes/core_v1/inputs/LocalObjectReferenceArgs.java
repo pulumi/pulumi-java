@@ -23,7 +23,7 @@ public final class LocalObjectReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,6 @@ public final class LocalObjectReferenceArgs extends io.pulumi.resources.Resource
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public LocalObjectReferenceArgs build() {
             return new LocalObjectReferenceArgs(name);
         }

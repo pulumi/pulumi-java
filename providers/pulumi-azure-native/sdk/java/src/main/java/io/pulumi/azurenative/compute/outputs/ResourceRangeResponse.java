@@ -76,7 +76,6 @@ public final class ResourceRangeResponse {
             this.min = min;
             return this;
         }
-
         public ResourceRangeResponse build() {
             return new ResourceRangeResponse(max, min);
         }

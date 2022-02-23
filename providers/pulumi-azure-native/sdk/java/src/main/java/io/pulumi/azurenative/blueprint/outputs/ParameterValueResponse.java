@@ -77,7 +77,6 @@ public final class ParameterValueResponse {
             this.value = value;
             return this;
         }
-
         public ParameterValueResponse build() {
             return new ParameterValueResponse(reference, value);
         }

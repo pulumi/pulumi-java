@@ -76,7 +76,6 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicy {
             this.whenScaled = whenScaled;
             return this;
         }
-
         public StatefulSetPersistentVolumeClaimRetentionPolicy build() {
             return new StatefulSetPersistentVolumeClaimRetentionPolicy(whenDeleted, whenScaled);
         }

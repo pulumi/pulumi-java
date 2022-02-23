@@ -54,7 +54,6 @@ public final class ClusterNodePoolNodeConfigSandboxConfig {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public ClusterNodePoolNodeConfigSandboxConfig build() {
             return new ClusterNodePoolNodeConfigSandboxConfig(sandboxType);
         }

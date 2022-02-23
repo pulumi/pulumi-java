@@ -26,7 +26,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availability")
-    private final @Nullable Input<AvailabilityCriteriaArgs> availability;
+      private final @Nullable Input<AvailabilityCriteriaArgs> availability;
 
     public Input<AvailabilityCriteriaArgs> getAvailability() {
         return this.availability == null ? Input.empty() : this.availability;
@@ -37,7 +37,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latency")
-    private final @Nullable Input<LatencyCriteriaArgs> latency;
+      private final @Nullable Input<LatencyCriteriaArgs> latency;
 
     public Input<LatencyCriteriaArgs> getLatency() {
         return this.latency == null ? Input.empty() : this.latency;
@@ -48,7 +48,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<List<String>> location;
+      private final @Nullable Input<List<String>> location;
 
     public Input<List<String>> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<List<String>> method;
+      private final @Nullable Input<List<String>> method;
 
     public Input<List<String>> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -70,7 +70,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<List<String>> version;
+      private final @Nullable Input<List<String>> version;
 
     public Input<List<String>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -174,7 +174,6 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public BasicSliArgs build() {
             return new BasicSliArgs(availability, latency, location, method, version);
         }

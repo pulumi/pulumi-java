@@ -25,7 +25,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -36,7 +36,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disableTraceSampling")
-    private final @Nullable Input<Boolean> disableTraceSampling;
+      private final @Nullable Input<Boolean> disableTraceSampling;
 
     public Input<Boolean> getDisableTraceSampling() {
         return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
@@ -47,7 +47,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloutStrategy")
-    private final @Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
+      private final @Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
     public Input<EndpointsApiServiceRolloutStrategy> getRolloutStrategy() {
         return this.rolloutStrategy == null ? Input.empty() : this.rolloutStrategy;
@@ -147,7 +147,6 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
             this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
             return this;
         }
-
         public EndpointsApiServiceArgs build() {
             return new EndpointsApiServiceArgs(configId, disableTraceSampling, name, rolloutStrategy);
         }

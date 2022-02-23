@@ -336,7 +336,6 @@ public final class GetAssessmentMetadataInSubscriptionResult {
             this.userImpact = userImpact;
             return this;
         }
-
         public GetAssessmentMetadataInSubscriptionResult build() {
             return new GetAssessmentMetadataInSubscriptionResult(assessmentType, categories, description, displayName, id, implementationEffort, name, partnerData, policyDefinitionId, preview, remediationDescription, severity, threats, type, userImpact);
         }

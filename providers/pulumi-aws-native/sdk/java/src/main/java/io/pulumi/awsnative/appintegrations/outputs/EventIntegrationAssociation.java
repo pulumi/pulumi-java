@@ -141,7 +141,6 @@ public final class EventIntegrationAssociation {
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
         }
-
         public EventIntegrationAssociation build() {
             return new EventIntegrationAssociation(clientAssociationMetadata, clientId, eventBridgeRuleName, eventIntegrationAssociationArn, eventIntegrationAssociationId);
         }

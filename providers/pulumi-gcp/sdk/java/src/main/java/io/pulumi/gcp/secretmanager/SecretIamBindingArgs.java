@@ -17,14 +17,14 @@ public final class SecretIamBindingArgs extends io.pulumi.resources.ResourceArgs
     public static final SecretIamBindingArgs Empty = new SecretIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<SecretIamBindingConditionArgs> condition;
+        private final @Nullable Input<SecretIamBindingConditionArgs> condition;
 
     public Input<SecretIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -36,7 +36,7 @@ public final class SecretIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -49,14 +49,14 @@ public final class SecretIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+        private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
@@ -160,7 +160,6 @@ public final class SecretIamBindingArgs extends io.pulumi.resources.ResourceArgs
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public SecretIamBindingArgs build() {
             return new SecretIamBindingArgs(condition, members, project, role, secretId);
         }

@@ -24,7 +24,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-    private final @Nullable Input<Double> expires;
+        private final @Nullable Input<Double> expires;
 
     public Input<Double> getExpires() {
         return this.expires == null ? Input.empty() : this.expires;
@@ -46,7 +46,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notBefore")
-    private final @Nullable Input<Double> notBefore;
+        private final @Nullable Input<Double> notBefore;
 
     public Input<Double> getNotBefore() {
         return this.notBefore == null ? Input.empty() : this.notBefore;
@@ -120,7 +120,6 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }
-
         public KeyAttributesArgs build() {
             return new KeyAttributesArgs(enabled, expires, notBefore);
         }

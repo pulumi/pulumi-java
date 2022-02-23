@@ -26,7 +26,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="legendTemplate")
-    private final @Nullable Input<String> legendTemplate;
+      private final @Nullable Input<String> legendTemplate;
 
     public Input<String> getLegendTemplate() {
         return this.legendTemplate == null ? Input.empty() : this.legendTemplate;
@@ -37,7 +37,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod")
-    private final @Nullable Input<String> minAlignmentPeriod;
+      private final @Nullable Input<String> minAlignmentPeriod;
 
     public Input<String> getMinAlignmentPeriod() {
         return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
@@ -48,7 +48,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plotType")
-    private final @Nullable Input<DataSetPlotType> plotType;
+      private final @Nullable Input<DataSetPlotType> plotType;
 
     public Input<DataSetPlotType> getPlotType() {
         return this.plotType == null ? Input.empty() : this.plotType;
@@ -59,7 +59,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAxis")
-    private final @Nullable Input<DataSetTargetAxis> targetAxis;
+      private final @Nullable Input<DataSetTargetAxis> targetAxis;
 
     public Input<DataSetTargetAxis> getTargetAxis() {
         return this.targetAxis == null ? Input.empty() : this.targetAxis;
@@ -70,7 +70,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-    private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
+      private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Input<TimeSeriesQueryArgs> getTimeSeriesQuery() {
         return this.timeSeriesQuery;
@@ -174,7 +174,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }
-
         public DataSetArgs build() {
             return new DataSetArgs(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
         }

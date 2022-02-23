@@ -97,7 +97,6 @@ public final class SchemaVersionSchema {
             this.schemaName = schemaName;
             return this;
         }
-
         public SchemaVersionSchema build() {
             return new SchemaVersionSchema(registryName, schemaArn, schemaName);
         }

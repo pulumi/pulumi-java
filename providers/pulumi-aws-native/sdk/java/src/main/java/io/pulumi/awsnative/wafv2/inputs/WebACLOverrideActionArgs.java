@@ -23,7 +23,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Object> count;
+        private final @Nullable Input<Object> count;
 
     public Input<Object> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -34,7 +34,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="none")
-    private final @Nullable Input<Object> none;
+        private final @Nullable Input<Object> none;
 
     public Input<Object> getNone() {
         return this.none == null ? Input.empty() : this.none;
@@ -93,7 +93,6 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
             this.none = Input.ofNullable(none);
             return this;
         }
-
         public WebACLOverrideActionArgs build() {
             return new WebACLOverrideActionArgs(count, none);
         }

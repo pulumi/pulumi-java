@@ -27,7 +27,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="apiKey")
-    private final @Nullable Input<String> apiKey;
+        private final @Nullable Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey == null ? Input.empty() : this.apiKey;
@@ -38,7 +38,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="batchSize")
-    private final @Nullable Input<Integer> batchSize;
+        private final @Nullable Input<Integer> batchSize;
 
     public Input<Integer> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
@@ -49,7 +49,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+        private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -60,7 +60,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs;
+        private final @Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs;
 
     public Input<AzureMachineLearningWebServiceInputsArgs> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -71,7 +71,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
+        private final @Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
 
     public Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -83,7 +83,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -202,7 +202,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureMachineLearningWebServiceFunctionBindingArgs build() {
             return new AzureMachineLearningWebServiceFunctionBindingArgs(apiKey, batchSize, endpoint, inputs, outputs, type);
         }

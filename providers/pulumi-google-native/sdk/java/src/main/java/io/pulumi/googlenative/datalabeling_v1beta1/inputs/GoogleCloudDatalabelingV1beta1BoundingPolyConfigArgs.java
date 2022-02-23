@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final Input<String> annotationSpecSet;
+      private final Input<String> annotationSpecSet;
 
     public Input<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @InputImport(name="instructionMessage")
-    private final @Nullable Input<String> instructionMessage;
+      private final @Nullable Input<String> instructionMessage;
 
     public Input<String> getInstructionMessage() {
         return this.instructionMessage == null ? Input.empty() : this.instructionMessage;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
             this.instructionMessage = Input.ofNullable(instructionMessage);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(annotationSpecSet, instructionMessage);
         }

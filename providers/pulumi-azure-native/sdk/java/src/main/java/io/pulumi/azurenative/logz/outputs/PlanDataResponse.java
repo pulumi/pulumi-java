@@ -118,7 +118,6 @@ public final class PlanDataResponse {
             this.usageType = usageType;
             return this;
         }
-
         public PlanDataResponse build() {
             return new PlanDataResponse(billingCycle, effectiveDate, planDetails, usageType);
         }

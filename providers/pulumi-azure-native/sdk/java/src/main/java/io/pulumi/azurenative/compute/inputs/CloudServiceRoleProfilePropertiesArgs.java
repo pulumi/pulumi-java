@@ -24,7 +24,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<CloudServiceRoleSkuArgs> sku;
+        private final @Nullable Input<CloudServiceRoleSkuArgs> sku;
 
     public Input<CloudServiceRoleSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -94,7 +94,6 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public CloudServiceRoleProfilePropertiesArgs build() {
             return new CloudServiceRoleProfilePropertiesArgs(name, sku);
         }

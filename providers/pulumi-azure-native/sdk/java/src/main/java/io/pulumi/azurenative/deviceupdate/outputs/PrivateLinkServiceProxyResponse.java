@@ -122,7 +122,6 @@ public final class PrivateLinkServiceProxyResponse {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
-
         public PrivateLinkServiceProxyResponse build() {
             return new PrivateLinkServiceProxyResponse(groupConnectivityInformation, id, remotePrivateEndpointConnection, remotePrivateLinkServiceConnectionState);
         }

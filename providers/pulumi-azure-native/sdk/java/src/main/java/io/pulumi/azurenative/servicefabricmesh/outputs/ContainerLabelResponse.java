@@ -74,7 +74,6 @@ public final class ContainerLabelResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ContainerLabelResponse build() {
             return new ContainerLabelResponse(name, value);
         }

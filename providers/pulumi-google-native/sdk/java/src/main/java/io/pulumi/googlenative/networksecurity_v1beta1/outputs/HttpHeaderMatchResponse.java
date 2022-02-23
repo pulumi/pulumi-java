@@ -74,7 +74,6 @@ public final class HttpHeaderMatchResponse {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public HttpHeaderMatchResponse build() {
             return new HttpHeaderMatchResponse(headerName, regexMatch);
         }

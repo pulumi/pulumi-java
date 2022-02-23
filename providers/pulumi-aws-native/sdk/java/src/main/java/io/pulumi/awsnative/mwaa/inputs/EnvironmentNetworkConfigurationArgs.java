@@ -24,7 +24,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+        private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -35,7 +35,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+        private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -94,7 +94,6 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
-
         public EnvironmentNetworkConfigurationArgs build() {
             return new EnvironmentNetworkConfigurationArgs(securityGroupIds, subnetIds);
         }

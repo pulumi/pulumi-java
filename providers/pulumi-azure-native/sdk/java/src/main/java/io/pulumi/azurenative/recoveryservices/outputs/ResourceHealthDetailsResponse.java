@@ -118,7 +118,6 @@ public final class ResourceHealthDetailsResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ResourceHealthDetailsResponse build() {
             return new ResourceHealthDetailsResponse(code, message, recommendations, title);
         }

@@ -23,7 +23,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -34,7 +34,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sha1Fingerprint")
-    private final @Nullable Input<String> sha1Fingerprint;
+      private final @Nullable Input<String> sha1Fingerprint;
 
     public Input<String> getSha1Fingerprint() {
         return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
@@ -93,7 +93,6 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }
-
         public V2AndroidApplicationArgs build() {
             return new V2AndroidApplicationArgs(packageName, sha1Fingerprint);
         }

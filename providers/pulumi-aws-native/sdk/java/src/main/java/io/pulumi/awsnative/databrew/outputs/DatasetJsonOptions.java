@@ -46,7 +46,6 @@ public final class DatasetJsonOptions {
             this.multiLine = multiLine;
             return this;
         }
-
         public DatasetJsonOptions build() {
             return new DatasetJsonOptions(multiLine);
         }

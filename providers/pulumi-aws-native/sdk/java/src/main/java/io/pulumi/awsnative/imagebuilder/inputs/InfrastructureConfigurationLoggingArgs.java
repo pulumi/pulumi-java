@@ -19,7 +19,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     public static final InfrastructureConfigurationLoggingArgs Empty = new InfrastructureConfigurationLoggingArgs();
 
     @InputImport(name="s3Logs")
-    private final @Nullable Input<InfrastructureConfigurationS3LogsArgs> s3Logs;
+        private final @Nullable Input<InfrastructureConfigurationS3LogsArgs> s3Logs;
 
     public Input<InfrastructureConfigurationS3LogsArgs> getS3Logs() {
         return this.s3Logs == null ? Input.empty() : this.s3Logs;
@@ -62,7 +62,6 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
             this.s3Logs = Input.ofNullable(s3Logs);
             return this;
         }
-
         public InfrastructureConfigurationLoggingArgs build() {
             return new InfrastructureConfigurationLoggingArgs(s3Logs);
         }

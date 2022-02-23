@@ -54,7 +54,6 @@ public final class LBBackendAddressPoolResourceSettingsResponse {
             this.name = name;
             return this;
         }
-
         public LBBackendAddressPoolResourceSettingsResponse build() {
             return new LBBackendAddressPoolResourceSettingsResponse(name);
         }

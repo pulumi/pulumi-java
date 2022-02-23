@@ -58,7 +58,6 @@ public final class SpotFleetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SpotFleetTag build() {
             return new SpotFleetTag(key, value);
         }

@@ -22,7 +22,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="containerType")
-    private final @Nullable Either<String,ContainerType> containerType;
+        private final @Nullable Either<String,ContainerType> containerType;
 
     public Either<String,ContainerType> getContainerType() {
         return this.containerType == null ? null : this.containerType;
@@ -33,7 +33,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -44,7 +44,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -55,7 +55,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tail")
-    private final @Nullable Integer tail;
+        private final @Nullable Integer tail;
 
     public Optional<Integer> getTail() {
         return this.tail == null ? Optional.empty() : Optional.ofNullable(this.tail);
@@ -77,7 +77,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -166,7 +166,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetOnlineDeploymentLogsArgs build() {
             return new GetOnlineDeploymentLogsArgs(containerType, deploymentName, endpointName, resourceGroupName, tail, workspaceName);
         }

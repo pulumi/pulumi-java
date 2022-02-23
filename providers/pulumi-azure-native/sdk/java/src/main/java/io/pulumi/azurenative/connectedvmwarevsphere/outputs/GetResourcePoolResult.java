@@ -514,7 +514,6 @@ public final class GetResourcePoolResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetResourcePoolResult build() {
             return new GetResourcePoolResult(cpuLimitMHz, cpuReservationMHz, cpuSharesLevel, customResourceName, extendedLocation, id, inventoryItemId, kind, location, memLimitMB, memReservationMB, memSharesLevel, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

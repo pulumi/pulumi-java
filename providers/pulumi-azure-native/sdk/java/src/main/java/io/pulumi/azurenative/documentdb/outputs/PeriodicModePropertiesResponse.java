@@ -76,7 +76,6 @@ public final class PeriodicModePropertiesResponse {
             this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
         }
-
         public PeriodicModePropertiesResponse build() {
             return new PeriodicModePropertiesResponse(backupIntervalInMinutes, backupRetentionIntervalInHours);
         }

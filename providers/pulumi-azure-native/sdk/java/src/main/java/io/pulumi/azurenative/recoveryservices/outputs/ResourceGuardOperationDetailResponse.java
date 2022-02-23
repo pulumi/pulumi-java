@@ -60,7 +60,6 @@ public final class ResourceGuardOperationDetailResponse {
             this.vaultCriticalOperation = vaultCriticalOperation;
             return this;
         }
-
         public ResourceGuardOperationDetailResponse build() {
             return new ResourceGuardOperationDetailResponse(defaultResourceRequest, vaultCriticalOperation);
         }

@@ -180,7 +180,6 @@ public final class LivenessCheckResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public LivenessCheckResponse build() {
             return new LivenessCheckResponse(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

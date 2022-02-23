@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * 
      */
     @InputImport(name="endUserSuggestionConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * 
      */
     @InputImport(name="humanAgentSuggestionConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * 
      */
     @InputImport(name="messageAnalysisConfig", required=true)
-    private final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
+      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
         return this.messageAnalysisConfig;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * 
      */
     @InputImport(name="notificationConfig", required=true)
-    private final GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig;
+      private final GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig;
 
     public GoogleCloudDialogflowV2NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
         }

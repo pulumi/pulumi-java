@@ -23,7 +23,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -66,7 +66,6 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
-
         public IosTestLoopArgs build() {
             return new IosTestLoopArgs(bundleId);
         }

@@ -15,21 +15,21 @@ public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRegionDiskArgs Empty = new GetRegionDiskArgs();
 
     @InputImport(name="disk", required=true)
-    private final String disk;
+      private final String disk;
 
     public String getDisk() {
         return this.disk;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionDiskArgs build() {
             return new GetRegionDiskArgs(disk, project, region);
         }

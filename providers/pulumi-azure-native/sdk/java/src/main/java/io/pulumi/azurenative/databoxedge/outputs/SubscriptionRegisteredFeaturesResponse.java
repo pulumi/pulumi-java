@@ -60,7 +60,6 @@ public final class SubscriptionRegisteredFeaturesResponse {
             this.state = state;
             return this;
         }
-
         public SubscriptionRegisteredFeaturesResponse build() {
             return new SubscriptionRegisteredFeaturesResponse(name, state);
         }

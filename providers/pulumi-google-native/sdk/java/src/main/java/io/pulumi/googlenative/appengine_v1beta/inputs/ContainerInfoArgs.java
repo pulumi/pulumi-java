@@ -23,7 +23,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -66,7 +66,6 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.image = Input.ofNullable(image);
             return this;
         }
-
         public ContainerInfoArgs build() {
             return new ContainerInfoArgs(image);
         }

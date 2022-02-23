@@ -137,7 +137,6 @@ public final class PeeringServicePrefixEventResponse {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public PeeringServicePrefixEventResponse build() {
             return new PeeringServicePrefixEventResponse(eventDescription, eventLevel, eventSummary, eventTimestamp, eventType);
         }

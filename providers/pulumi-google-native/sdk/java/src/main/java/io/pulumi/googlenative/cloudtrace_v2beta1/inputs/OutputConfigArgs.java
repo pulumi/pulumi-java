@@ -23,7 +23,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -66,7 +66,6 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Input.ofNullable(destination);
             return this;
         }
-
         public OutputConfigArgs build() {
             return new OutputConfigArgs(destination);
         }

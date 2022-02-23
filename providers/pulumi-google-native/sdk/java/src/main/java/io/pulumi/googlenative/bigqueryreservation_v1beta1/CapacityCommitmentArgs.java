@@ -17,21 +17,21 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
     @InputImport(name="capacityCommitmentId")
-    private final @Nullable Input<String> capacityCommitmentId;
+      private final @Nullable Input<String> capacityCommitmentId;
 
     public Input<String> getCapacityCommitmentId() {
         return this.capacityCommitmentId == null ? Input.empty() : this.capacityCommitmentId;
     }
 
     @InputImport(name="enforceSingleAdminProjectPerOrg")
-    private final @Nullable Input<String> enforceSingleAdminProjectPerOrg;
+      private final @Nullable Input<String> enforceSingleAdminProjectPerOrg;
 
     public Input<String> getEnforceSingleAdminProjectPerOrg() {
         return this.enforceSingleAdminProjectPerOrg == null ? Input.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -42,14 +42,14 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<CapacityCommitmentPlan> plan;
+      private final @Nullable Input<CapacityCommitmentPlan> plan;
 
     public Input<CapacityCommitmentPlan> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="renewalPlan")
-    private final @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan;
+      private final @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan;
 
     public Input<CapacityCommitmentRenewalPlan> getRenewalPlan() {
         return this.renewalPlan == null ? Input.empty() : this.renewalPlan;
@@ -71,7 +71,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="slotCount")
-    private final @Nullable Input<String> slotCount;
+      private final @Nullable Input<String> slotCount;
 
     public Input<String> getSlotCount() {
         return this.slotCount == null ? Input.empty() : this.slotCount;
@@ -205,7 +205,6 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             this.slotCount = Input.ofNullable(slotCount);
             return this;
         }
-
         public CapacityCommitmentArgs build() {
             return new CapacityCommitmentArgs(capacityCommitmentId, enforceSingleAdminProjectPerOrg, location, plan, project, renewalPlan, slotCount);
         }

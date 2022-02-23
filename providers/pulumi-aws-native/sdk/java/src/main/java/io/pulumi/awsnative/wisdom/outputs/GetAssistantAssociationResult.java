@@ -73,7 +73,6 @@ public final class GetAssistantAssociationResult {
             this.assistantAssociationId = assistantAssociationId;
             return this;
         }
-
         public GetAssistantAssociationResult build() {
             return new GetAssistantAssociationResult(assistantArn, assistantAssociationArn, assistantAssociationId);
         }

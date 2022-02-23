@@ -58,7 +58,6 @@ public final class ServerTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ServerTag build() {
             return new ServerTag(key, value);
         }

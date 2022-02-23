@@ -60,7 +60,6 @@ public final class InstanceFromMachineImageNetworkInterfaceAliasIpRange {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-
         public InstanceFromMachineImageNetworkInterfaceAliasIpRange build() {
             return new InstanceFromMachineImageNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

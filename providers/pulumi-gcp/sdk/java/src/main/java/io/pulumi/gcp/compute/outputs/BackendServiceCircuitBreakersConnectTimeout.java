@@ -82,7 +82,6 @@ public final class BackendServiceCircuitBreakersConnectTimeout {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public BackendServiceCircuitBreakersConnectTimeout build() {
             return new BackendServiceCircuitBreakersConnectTimeout(nanos, seconds);
         }

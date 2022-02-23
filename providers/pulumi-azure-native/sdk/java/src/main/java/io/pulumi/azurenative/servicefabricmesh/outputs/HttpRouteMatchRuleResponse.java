@@ -77,7 +77,6 @@ public final class HttpRouteMatchRuleResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public HttpRouteMatchRuleResponse build() {
             return new HttpRouteMatchRuleResponse(headers, path);
         }

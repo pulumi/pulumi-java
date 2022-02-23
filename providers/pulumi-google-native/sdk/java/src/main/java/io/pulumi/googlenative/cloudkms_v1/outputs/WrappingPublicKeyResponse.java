@@ -52,7 +52,6 @@ public final class WrappingPublicKeyResponse {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }
-
         public WrappingPublicKeyResponse build() {
             return new WrappingPublicKeyResponse(pem);
         }

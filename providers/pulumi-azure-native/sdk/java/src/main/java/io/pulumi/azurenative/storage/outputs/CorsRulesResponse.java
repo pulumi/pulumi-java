@@ -54,7 +54,6 @@ public final class CorsRulesResponse {
             this.corsRules = corsRules;
             return this;
         }
-
         public CorsRulesResponse build() {
             return new CorsRulesResponse(corsRules);
         }

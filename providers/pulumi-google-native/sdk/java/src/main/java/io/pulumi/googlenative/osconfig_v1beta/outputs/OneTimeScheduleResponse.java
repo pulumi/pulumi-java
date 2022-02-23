@@ -52,7 +52,6 @@ public final class OneTimeScheduleResponse {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
-
         public OneTimeScheduleResponse build() {
             return new OneTimeScheduleResponse(executeTime);
         }

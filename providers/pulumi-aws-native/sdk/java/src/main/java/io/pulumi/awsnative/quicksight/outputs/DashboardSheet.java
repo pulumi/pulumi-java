@@ -78,7 +78,6 @@ public final class DashboardSheet {
             this.sheetId = sheetId;
             return this;
         }
-
         public DashboardSheet build() {
             return new DashboardSheet(name, sheetId);
         }

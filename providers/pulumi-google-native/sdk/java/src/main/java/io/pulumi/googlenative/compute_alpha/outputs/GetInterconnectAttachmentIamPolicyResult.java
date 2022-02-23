@@ -142,7 +142,6 @@ public final class GetInterconnectAttachmentIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInterconnectAttachmentIamPolicyResult build() {
             return new GetInterconnectAttachmentIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

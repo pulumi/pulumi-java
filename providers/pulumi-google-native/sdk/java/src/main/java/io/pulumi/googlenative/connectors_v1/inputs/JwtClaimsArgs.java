@@ -23,7 +23,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -34,7 +34,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -45,7 +45,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject")
-    private final @Nullable Input<String> subject;
+      private final @Nullable Input<String> subject;
 
     public Input<String> getSubject() {
         return this.subject == null ? Input.empty() : this.subject;
@@ -119,7 +119,6 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
             this.subject = Input.ofNullable(subject);
             return this;
         }
-
         public JwtClaimsArgs build() {
             return new JwtClaimsArgs(audience, issuer, subject);
         }

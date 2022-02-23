@@ -200,7 +200,6 @@ public final class HDInsightResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public HDInsightResponse build() {
             return new HDInsightResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

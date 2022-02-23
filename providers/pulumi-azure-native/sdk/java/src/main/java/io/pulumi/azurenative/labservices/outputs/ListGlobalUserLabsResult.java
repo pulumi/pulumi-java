@@ -54,7 +54,6 @@ public final class ListGlobalUserLabsResult {
             this.labs = labs;
             return this;
         }
-
         public ListGlobalUserLabsResult build() {
             return new ListGlobalUserLabsResult(labs);
         }

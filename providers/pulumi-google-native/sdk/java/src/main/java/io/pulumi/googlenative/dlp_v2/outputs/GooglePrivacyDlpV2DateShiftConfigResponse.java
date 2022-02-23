@@ -118,7 +118,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
-
         public GooglePrivacyDlpV2DateShiftConfigResponse build() {
             return new GooglePrivacyDlpV2DateShiftConfigResponse(context, cryptoKey, lowerBoundDays, upperBoundDays);
         }

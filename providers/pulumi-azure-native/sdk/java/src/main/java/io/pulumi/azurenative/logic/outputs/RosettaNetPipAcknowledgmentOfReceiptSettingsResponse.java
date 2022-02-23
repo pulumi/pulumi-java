@@ -75,7 +75,6 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
         }
-
         public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse build() {
             return new RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(isNonRepudiationRequired, timeToAcknowledgeInSeconds);
         }

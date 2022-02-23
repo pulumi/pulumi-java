@@ -46,7 +46,6 @@ public final class TaskDefinitionRepositoryCredentials {
             this.credentialsParameter = credentialsParameter;
             return this;
         }
-
         public TaskDefinitionRepositoryCredentials build() {
             return new TaskDefinitionRepositoryCredentials(credentialsParameter);
         }

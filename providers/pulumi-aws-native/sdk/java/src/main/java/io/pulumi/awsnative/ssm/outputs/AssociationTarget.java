@@ -59,7 +59,6 @@ public final class AssociationTarget {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AssociationTarget build() {
             return new AssociationTarget(key, values);
         }

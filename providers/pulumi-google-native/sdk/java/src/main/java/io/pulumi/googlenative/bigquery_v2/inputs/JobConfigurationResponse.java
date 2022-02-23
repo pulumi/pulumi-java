@@ -23,7 +23,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="copy", required=true)
-    private final JobConfigurationTableCopyResponse copy;
+      private final JobConfigurationTableCopyResponse copy;
 
     public JobConfigurationTableCopyResponse getCopy() {
         return this.copy;
@@ -34,7 +34,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dryRun", required=true)
-    private final Boolean dryRun;
+      private final Boolean dryRun;
 
     public Boolean getDryRun() {
         return this.dryRun;
@@ -45,7 +45,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="extract", required=true)
-    private final JobConfigurationExtractResponse extract;
+      private final JobConfigurationExtractResponse extract;
 
     public JobConfigurationExtractResponse getExtract() {
         return this.extract;
@@ -56,7 +56,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="jobTimeoutMs", required=true)
-    private final String jobTimeoutMs;
+      private final String jobTimeoutMs;
 
     public String getJobTimeoutMs() {
         return this.jobTimeoutMs;
@@ -67,7 +67,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="jobType", required=true)
-    private final String jobType;
+      private final String jobType;
 
     public String getJobType() {
         return this.jobType;
@@ -78,7 +78,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -89,7 +89,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="load", required=true)
-    private final JobConfigurationLoadResponse load;
+      private final JobConfigurationLoadResponse load;
 
     public JobConfigurationLoadResponse getLoad() {
         return this.load;
@@ -100,7 +100,7 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="query", required=true)
-    private final JobConfigurationQueryResponse query;
+      private final JobConfigurationQueryResponse query;
 
     public JobConfigurationQueryResponse getQuery() {
         return this.query;
@@ -209,7 +209,6 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public JobConfigurationResponse build() {
             return new JobConfigurationResponse(copy, dryRun, extract, jobTimeoutMs, jobType, labels, load, query);
         }

@@ -141,7 +141,6 @@ public final class SuppressionScheduleResponse {
             this.startTime = startTime;
             return this;
         }
-
         public SuppressionScheduleResponse build() {
             return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
         }

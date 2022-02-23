@@ -180,7 +180,6 @@ public final class ShareSubscriptionSynchronizationResponse {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }
-
         public ShareSubscriptionSynchronizationResponse build() {
             return new ShareSubscriptionSynchronizationResponse(durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }

@@ -170,7 +170,6 @@ public final class StandardAppVersionAutomaticScaling {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
-
         public StandardAppVersionAutomaticScaling build() {
             return new StandardAppVersionAutomaticScaling(maxConcurrentRequests, maxIdleInstances, maxPendingLatency, minIdleInstances, minPendingLatency, standardSchedulerSettings);
         }

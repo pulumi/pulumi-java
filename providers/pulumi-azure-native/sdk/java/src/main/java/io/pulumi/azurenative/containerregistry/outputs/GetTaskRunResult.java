@@ -252,7 +252,6 @@ public final class GetTaskRunResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTaskRunResult build() {
             return new GetTaskRunResult(forceUpdateTag, id, identity, location, name, provisioningState, runRequest, runResult, systemData, type);
         }

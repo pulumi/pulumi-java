@@ -120,7 +120,6 @@ public final class GetKeyRingIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetKeyRingIamPolicyResult build() {
             return new GetKeyRingIamPolicyResult(auditConfigs, bindings, etag, version);
         }

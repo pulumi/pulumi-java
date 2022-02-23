@@ -23,7 +23,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPercentUnhealthyPartitionsPerService")
-    private final @Nullable Integer maxPercentUnhealthyPartitionsPerService;
+        private final @Nullable Integer maxPercentUnhealthyPartitionsPerService;
 
     public Optional<Integer> getMaxPercentUnhealthyPartitionsPerService() {
         return this.maxPercentUnhealthyPartitionsPerService == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
@@ -34,7 +34,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPercentUnhealthyReplicasPerPartition")
-    private final @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
+        private final @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
 
     public Optional<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
         return this.maxPercentUnhealthyReplicasPerPartition == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
@@ -45,7 +45,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-    private final @Nullable Integer maxPercentUnhealthyServices;
+        private final @Nullable Integer maxPercentUnhealthyServices;
 
     public Optional<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyServices);
@@ -104,7 +104,6 @@ public final class ArmServiceTypeHealthPolicyResponse extends io.pulumi.resource
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-
         public ArmServiceTypeHealthPolicyResponse build() {
             return new ArmServiceTypeHealthPolicyResponse(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);
         }

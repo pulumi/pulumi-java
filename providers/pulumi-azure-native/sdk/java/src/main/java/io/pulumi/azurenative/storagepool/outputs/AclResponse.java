@@ -117,7 +117,6 @@ public final class AclResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public AclResponse build() {
             return new AclResponse(initiatorIqn, mappedLuns, password, username);
         }

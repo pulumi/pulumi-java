@@ -20,7 +20,7 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allocations", required=true)
-    private final Input<Map<String,String>> allocations;
+        private final Input<Map<String,String>> allocations;
 
     public Input<Map<String,String>> getAllocations() {
         return this.allocations;
@@ -32,7 +32,7 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="shardBy")
-    private final @Nullable Input<String> shardBy;
+        private final @Nullable Input<String> shardBy;
 
     public Input<String> getShardBy() {
         return this.shardBy == null ? Input.empty() : this.shardBy;
@@ -91,7 +91,6 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
             this.shardBy = Input.ofNullable(shardBy);
             return this;
         }
-
         public EngineSplitTrafficSplitGetArgs build() {
             return new EngineSplitTrafficSplitGetArgs(allocations, shardBy);
         }

@@ -97,7 +97,6 @@ public final class PeriodicTimerSourceInfoResponse {
             this.topic = topic;
             return this;
         }
-
         public PeriodicTimerSourceInfoResponse build() {
             return new PeriodicTimerSourceInfoResponse(schedule, startTime, topic);
         }

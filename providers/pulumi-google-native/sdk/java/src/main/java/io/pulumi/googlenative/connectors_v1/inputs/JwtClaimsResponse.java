@@ -21,7 +21,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="audience", required=true)
-    private final String audience;
+      private final String audience;
 
     public String getAudience() {
         return this.audience;
@@ -32,7 +32,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -43,7 +43,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -102,7 +102,6 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public JwtClaimsResponse build() {
             return new JwtClaimsResponse(audience, issuer, subject);
         }

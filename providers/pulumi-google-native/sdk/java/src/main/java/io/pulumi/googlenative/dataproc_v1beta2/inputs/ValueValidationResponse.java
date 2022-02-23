@@ -22,7 +22,7 @@ public final class ValueValidationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -60,7 +60,6 @@ public final class ValueValidationResponse extends io.pulumi.resources.InvokeArg
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ValueValidationResponse build() {
             return new ValueValidationResponse(values);
         }

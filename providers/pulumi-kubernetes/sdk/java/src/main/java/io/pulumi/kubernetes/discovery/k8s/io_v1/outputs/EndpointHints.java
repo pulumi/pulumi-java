@@ -54,7 +54,6 @@ public final class EndpointHints {
             this.forZones = forZones;
             return this;
         }
-
         public EndpointHints build() {
             return new EndpointHints(forZones);
         }

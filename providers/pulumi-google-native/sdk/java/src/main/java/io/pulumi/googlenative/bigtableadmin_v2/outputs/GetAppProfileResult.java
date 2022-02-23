@@ -139,7 +139,6 @@ public final class GetAppProfileResult {
             this.singleClusterRouting = Objects.requireNonNull(singleClusterRouting);
             return this;
         }
-
         public GetAppProfileResult build() {
             return new GetAppProfileResult(description, etag, multiClusterRoutingUseAny, name, singleClusterRouting);
         }

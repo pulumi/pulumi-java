@@ -15,14 +15,14 @@ public final class EC2FleetAcceleratorTotalMemoryMiBRequestArgs extends io.pulum
     public static final EC2FleetAcceleratorTotalMemoryMiBRequestArgs Empty = new EC2FleetAcceleratorTotalMemoryMiBRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Integer> max;
+        private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Integer> min;
+        private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class EC2FleetAcceleratorTotalMemoryMiBRequestArgs extends io.pulum
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public EC2FleetAcceleratorTotalMemoryMiBRequestArgs build() {
             return new EC2FleetAcceleratorTotalMemoryMiBRequestArgs(max, min);
         }

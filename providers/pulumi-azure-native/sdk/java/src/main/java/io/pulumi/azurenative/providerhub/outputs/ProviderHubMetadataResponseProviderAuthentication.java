@@ -45,7 +45,6 @@ public final class ProviderHubMetadataResponseProviderAuthentication {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
         public ProviderHubMetadataResponseProviderAuthentication build() {
             return new ProviderHubMetadataResponseProviderAuthentication(allowedAudiences);
         }

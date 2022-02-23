@@ -25,7 +25,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="matchValue", required=true)
-    private final List<String> matchValue;
+        private final List<String> matchValue;
 
     public List<String> getMatchValue() {
         return this.matchValue;
@@ -36,7 +36,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="matchVariable", required=true)
-    private final String matchVariable;
+        private final String matchVariable;
 
     public String getMatchVariable() {
         return this.matchVariable;
@@ -47,7 +47,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Boolean negateCondition;
+        private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
@@ -58,7 +58,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -69,7 +69,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable String selector;
+        private final @Nullable String selector;
 
     public Optional<String> getSelector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
@@ -80,7 +80,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable List<String> transforms;
+        private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
@@ -169,7 +169,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
             this.transforms = transforms;
             return this;
         }
-
         public FrontDoorMatchConditionResponse build() {
             return new FrontDoorMatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }

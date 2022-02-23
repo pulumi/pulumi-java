@@ -138,7 +138,6 @@ public final class GetStudyResult {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }
-
         public GetStudyResult build() {
             return new GetStudyResult(createTime, inactiveReason, name, state, studyConfig);
         }

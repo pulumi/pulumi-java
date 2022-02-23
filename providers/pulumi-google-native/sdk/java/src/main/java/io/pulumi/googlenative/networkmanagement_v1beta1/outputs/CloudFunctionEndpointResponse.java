@@ -52,7 +52,6 @@ public final class CloudFunctionEndpointResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public CloudFunctionEndpointResponse build() {
             return new CloudFunctionEndpointResponse(uri);
         }

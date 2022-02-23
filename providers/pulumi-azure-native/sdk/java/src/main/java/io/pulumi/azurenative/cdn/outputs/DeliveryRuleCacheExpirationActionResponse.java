@@ -77,7 +77,6 @@ public final class DeliveryRuleCacheExpirationActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCacheExpirationActionResponse build() {
             return new DeliveryRuleCacheExpirationActionResponse(name, parameters);
         }

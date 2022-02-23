@@ -222,7 +222,6 @@ public final class CertificateAttributesResponse {
             this.validityStartTime = Objects.requireNonNull(validityStartTime);
             return this;
         }
-
         public CertificateAttributesResponse build() {
             return new CertificateAttributesResponse(certificateTemplate, fingerprint, issuer, serialNumber, subject, thumbprint, validationState, validityExpirationTime, validityStartTime);
         }

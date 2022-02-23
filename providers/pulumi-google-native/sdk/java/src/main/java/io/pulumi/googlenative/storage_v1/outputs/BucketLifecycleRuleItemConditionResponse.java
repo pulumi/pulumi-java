@@ -245,7 +245,6 @@ public final class BucketLifecycleRuleItemConditionResponse {
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
         }
-
         public BucketLifecycleRuleItemConditionResponse build() {
             return new BucketLifecycleRuleItemConditionResponse(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, isLive, matchesPattern, matchesStorageClass, noncurrentTimeBefore, numNewerVersions);
         }

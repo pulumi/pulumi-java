@@ -17,7 +17,7 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupName", required=true)
-    private final String backupName;
+        private final String backupName;
 
     public String getBackupName() {
         return this.backupName;
@@ -39,7 +39,7 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-    private final String poolName;
+        private final String poolName;
 
     public String getPoolName() {
         return this.poolName;
@@ -50,7 +50,7 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeName", required=true)
-    private final String volumeName;
+        private final String volumeName;
 
     public String getVolumeName() {
         return this.volumeName;
@@ -140,7 +140,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GetBackupArgs build() {
             return new GetBackupArgs(accountName, backupName, poolName, resourceGroupName, volumeName);
         }

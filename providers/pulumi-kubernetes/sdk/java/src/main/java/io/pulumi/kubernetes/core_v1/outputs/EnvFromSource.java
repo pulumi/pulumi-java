@@ -99,7 +99,6 @@ public final class EnvFromSource {
             this.secretRef = secretRef;
             return this;
         }
-
         public EnvFromSource build() {
             return new EnvFromSource(configMapRef, prefix, secretRef);
         }

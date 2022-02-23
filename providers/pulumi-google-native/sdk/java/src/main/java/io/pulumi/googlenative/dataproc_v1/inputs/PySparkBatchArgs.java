@@ -24,7 +24,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -35,7 +35,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -46,7 +46,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -57,7 +57,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jarFileUris")
-    private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
@@ -68,7 +68,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainPythonFileUri", required=true)
-    private final Input<String> mainPythonFileUri;
+      private final Input<String> mainPythonFileUri;
 
     public Input<String> getMainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -79,7 +79,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonFileUris")
-    private final @Nullable Input<List<String>> pythonFileUris;
+      private final @Nullable Input<List<String>> pythonFileUris;
 
     public Input<List<String>> getPythonFileUris() {
         return this.pythonFileUris == null ? Input.empty() : this.pythonFileUris;
@@ -198,7 +198,6 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             this.pythonFileUris = Input.ofNullable(pythonFileUris);
             return this;
         }
-
         public PySparkBatchArgs build() {
             return new PySparkBatchArgs(archiveUris, args, fileUris, jarFileUris, mainPythonFileUri, pythonFileUris);
         }

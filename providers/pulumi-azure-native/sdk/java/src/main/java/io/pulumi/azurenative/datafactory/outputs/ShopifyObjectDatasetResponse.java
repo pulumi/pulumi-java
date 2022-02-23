@@ -231,7 +231,6 @@ public final class ShopifyObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ShopifyObjectDatasetResponse build() {
             return new ShopifyObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

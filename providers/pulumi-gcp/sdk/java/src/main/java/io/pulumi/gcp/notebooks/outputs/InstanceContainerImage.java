@@ -78,7 +78,6 @@ public final class InstanceContainerImage {
             this.tag = tag;
             return this;
         }
-
         public InstanceContainerImage build() {
             return new InstanceContainerImage(repository, tag);
         }

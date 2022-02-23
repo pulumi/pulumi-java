@@ -77,7 +77,6 @@ public final class AutomationRulePropertyValuesConditionResponse {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public AutomationRulePropertyValuesConditionResponse build() {
             return new AutomationRulePropertyValuesConditionResponse(conditionProperties, conditionType);
         }

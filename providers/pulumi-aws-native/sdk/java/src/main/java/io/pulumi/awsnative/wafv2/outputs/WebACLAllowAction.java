@@ -46,7 +46,6 @@ public final class WebACLAllowAction {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public WebACLAllowAction build() {
             return new WebACLAllowAction(customRequestHandling);
         }

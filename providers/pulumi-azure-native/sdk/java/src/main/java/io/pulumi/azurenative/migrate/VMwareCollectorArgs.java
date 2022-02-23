@@ -16,7 +16,7 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     public static final VMwareCollectorArgs Empty = new VMwareCollectorArgs();
 
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -27,14 +27,14 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+        private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<CollectorPropertiesArgs> properties;
+        private final @Nullable Input<CollectorPropertiesArgs> properties;
 
     public Input<CollectorPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -45,7 +45,7 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmWareCollectorName")
-    private final @Nullable Input<String> vmWareCollectorName;
+        private final @Nullable Input<String> vmWareCollectorName;
 
     public Input<String> getVmWareCollectorName() {
         return this.vmWareCollectorName == null ? Input.empty() : this.vmWareCollectorName;
@@ -160,7 +160,6 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
             this.vmWareCollectorName = Input.ofNullable(vmWareCollectorName);
             return this;
         }
-
         public VMwareCollectorArgs build() {
             return new VMwareCollectorArgs(eTag, projectName, properties, resourceGroupName, vmWareCollectorName);
         }

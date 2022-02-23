@@ -95,7 +95,6 @@ public final class HttpFilterConfigResponse {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public HttpFilterConfigResponse build() {
             return new HttpFilterConfigResponse(config, configTypeUrl, filterName);
         }

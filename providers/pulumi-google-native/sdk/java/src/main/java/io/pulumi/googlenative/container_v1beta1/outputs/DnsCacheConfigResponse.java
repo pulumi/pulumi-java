@@ -52,7 +52,6 @@ public final class DnsCacheConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public DnsCacheConfigResponse build() {
             return new DnsCacheConfigResponse(enabled);
         }

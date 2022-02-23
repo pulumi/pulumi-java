@@ -397,7 +397,6 @@ public final class GetModuleResult {
             this.version = version;
             return this;
         }
-
         public GetModuleResult build() {
             return new GetModuleResult(activityCount, contentLink, creationTime, description, error, etag, id, isComposite, isGlobal, lastModifiedTime, location, name, provisioningState, sizeInBytes, tags, type, version);
         }

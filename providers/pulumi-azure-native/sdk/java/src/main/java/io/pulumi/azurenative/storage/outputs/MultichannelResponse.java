@@ -54,7 +54,6 @@ public final class MultichannelResponse {
             this.enabled = enabled;
             return this;
         }
-
         public MultichannelResponse build() {
             return new MultichannelResponse(enabled);
         }

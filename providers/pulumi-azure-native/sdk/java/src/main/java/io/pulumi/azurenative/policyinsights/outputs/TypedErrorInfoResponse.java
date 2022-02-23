@@ -75,7 +75,6 @@ public final class TypedErrorInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TypedErrorInfoResponse build() {
             return new TypedErrorInfoResponse(info, type);
         }

@@ -69,7 +69,6 @@ public final class GetRegistryPolicyResult {
             this.registryId = registryId;
             return this;
         }
-
         public GetRegistryPolicyResult build() {
             return new GetRegistryPolicyResult(policyText, registryId);
         }

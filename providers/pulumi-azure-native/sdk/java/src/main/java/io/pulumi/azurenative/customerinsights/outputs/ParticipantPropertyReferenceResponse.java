@@ -74,7 +74,6 @@ public final class ParticipantPropertyReferenceResponse {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public ParticipantPropertyReferenceResponse build() {
             return new ParticipantPropertyReferenceResponse(sourcePropertyName, targetPropertyName);
         }

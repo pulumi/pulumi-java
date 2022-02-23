@@ -140,7 +140,6 @@ public final class PatchInstanceFilterResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public PatchInstanceFilterResponse build() {
             return new PatchInstanceFilterResponse(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

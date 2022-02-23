@@ -23,7 +23,7 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable String namespace;
+        private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -83,7 +83,6 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
             this.namespace = namespace;
             return this;
         }
-
         public ObjectReferenceDefinitionResponse build() {
             return new ObjectReferenceDefinitionResponse(name, namespace);
         }

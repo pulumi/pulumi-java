@@ -329,7 +329,6 @@ public final class CryptoKeyVersionResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CryptoKeyVersionResponse build() {
             return new CryptoKeyVersionResponse(algorithm, attestation, createTime, destroyEventTime, destroyTime, externalProtectionLevelOptions, generateTime, importFailureReason, importJob, importTime, name, protectionLevel, reimportEligible, state);
         }

@@ -14,14 +14,14 @@ public final class GetBackendServiceLogConfig extends io.pulumi.resources.Invoke
     public static final GetBackendServiceLogConfig Empty = new GetBackendServiceLogConfig();
 
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+        private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
     }
 
     @InputImport(name="sampleRate", required=true)
-    private final Double sampleRate;
+        private final Double sampleRate;
 
     public Double getSampleRate() {
         return this.sampleRate;
@@ -70,7 +70,6 @@ public final class GetBackendServiceLogConfig extends io.pulumi.resources.Invoke
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }
-
         public GetBackendServiceLogConfig build() {
             return new GetBackendServiceLogConfig(enable, sampleRate);
         }

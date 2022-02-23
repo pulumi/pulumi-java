@@ -26,7 +26,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="buildOptions", required=true)
-    private final Map<String,String> buildOptions;
+      private final Map<String,String> buildOptions;
 
     public Map<String,String> getBuildOptions() {
         return this.buildOptions;
@@ -37,7 +37,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="builderVersion", required=true)
-    private final String builderVersion;
+      private final String builderVersion;
 
     public String getBuilderVersion() {
         return this.builderVersion;
@@ -48,7 +48,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="builtArtifacts", required=true)
-    private final List<ArtifactResponse> builtArtifacts;
+      private final List<ArtifactResponse> builtArtifacts;
 
     public List<ArtifactResponse> getBuiltArtifacts() {
         return this.builtArtifacts;
@@ -59,7 +59,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="commands", required=true)
-    private final List<CommandResponse> commands;
+      private final List<CommandResponse> commands;
 
     public List<CommandResponse> getCommands() {
         return this.commands;
@@ -70,7 +70,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -81,7 +81,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="creator", required=true)
-    private final String creator;
+      private final String creator;
 
     public String getCreator() {
         return this.creator;
@@ -92,7 +92,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -103,7 +103,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="logsUri", required=true)
-    private final String logsUri;
+      private final String logsUri;
 
     public String getLogsUri() {
         return this.logsUri;
@@ -114,7 +114,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -125,7 +125,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceProvenance", required=true)
-    private final SourceResponse sourceProvenance;
+      private final SourceResponse sourceProvenance;
 
     public SourceResponse getSourceProvenance() {
         return this.sourceProvenance;
@@ -136,7 +136,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -147,7 +147,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="triggerId", required=true)
-    private final String triggerId;
+      private final String triggerId;
 
     public String getTriggerId() {
         return this.triggerId;
@@ -296,7 +296,6 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public BuildProvenanceResponse build() {
             return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, endTime, logsUri, project, sourceProvenance, startTime, triggerId);
         }

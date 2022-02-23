@@ -52,7 +52,6 @@ public final class AdBreakResponse {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public AdBreakResponse build() {
             return new AdBreakResponse(startTimeOffset);
         }

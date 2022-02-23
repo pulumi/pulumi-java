@@ -97,7 +97,6 @@ public final class DistcpSettingsResponse {
             this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
             return this;
         }
-
         public DistcpSettingsResponse build() {
             return new DistcpSettingsResponse(distcpOptions, resourceManagerEndpoint, tempScriptPath);
         }

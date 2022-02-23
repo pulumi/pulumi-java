@@ -246,7 +246,6 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AzureDataExplorerConnectionPropertiesResponse build() {
             return new AzureDataExplorerConnectionPropertiesResponse(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId, provisioningState);
         }

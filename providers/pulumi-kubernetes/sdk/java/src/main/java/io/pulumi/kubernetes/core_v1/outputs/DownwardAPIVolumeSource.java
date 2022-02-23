@@ -78,7 +78,6 @@ public final class DownwardAPIVolumeSource {
             this.items = items;
             return this;
         }
-
         public DownwardAPIVolumeSource build() {
             return new DownwardAPIVolumeSource(defaultMode, items);
         }

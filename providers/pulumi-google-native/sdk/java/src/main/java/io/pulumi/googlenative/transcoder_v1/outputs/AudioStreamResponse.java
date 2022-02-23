@@ -161,7 +161,6 @@ public final class AudioStreamResponse {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public AudioStreamResponse build() {
             return new AudioStreamResponse(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }

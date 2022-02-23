@@ -549,7 +549,6 @@ public final class NetworkInterfaceResponse {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableIPForwarding, etag, extendedLocation, hostedWorkloads, id, ipConfigurations, location, macAddress, migrationPhase, name, networkSecurityGroup, nicType, primary, privateEndpoint, privateLinkService, provisioningState, resourceGuid, tags, tapConfigurations, type, virtualMachine);
         }

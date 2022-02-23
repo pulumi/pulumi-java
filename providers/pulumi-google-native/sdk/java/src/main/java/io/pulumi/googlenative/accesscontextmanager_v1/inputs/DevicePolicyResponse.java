@@ -24,7 +24,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedDeviceManagementLevels", required=true)
-    private final List<String> allowedDeviceManagementLevels;
+      private final List<String> allowedDeviceManagementLevels;
 
     public List<String> getAllowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels;
@@ -35,7 +35,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedEncryptionStatuses", required=true)
-    private final List<String> allowedEncryptionStatuses;
+      private final List<String> allowedEncryptionStatuses;
 
     public List<String> getAllowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses;
@@ -46,7 +46,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osConstraints", required=true)
-    private final List<OsConstraintResponse> osConstraints;
+      private final List<OsConstraintResponse> osConstraints;
 
     public List<OsConstraintResponse> getOsConstraints() {
         return this.osConstraints;
@@ -57,7 +57,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireAdminApproval", required=true)
-    private final Boolean requireAdminApproval;
+      private final Boolean requireAdminApproval;
 
     public Boolean getRequireAdminApproval() {
         return this.requireAdminApproval;
@@ -68,7 +68,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireCorpOwned", required=true)
-    private final Boolean requireCorpOwned;
+      private final Boolean requireCorpOwned;
 
     public Boolean getRequireCorpOwned() {
         return this.requireCorpOwned;
@@ -79,7 +79,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireScreenlock", required=true)
-    private final Boolean requireScreenlock;
+      private final Boolean requireScreenlock;
 
     public Boolean getRequireScreenlock() {
         return this.requireScreenlock;
@@ -168,7 +168,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
             return this;
         }
-
         public DevicePolicyResponse build() {
             return new DevicePolicyResponse(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
         }

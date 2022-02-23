@@ -52,7 +52,6 @@ public final class OutputConfigResponse {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public OutputConfigResponse build() {
             return new OutputConfigResponse(destination);
         }

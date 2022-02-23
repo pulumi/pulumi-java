@@ -117,7 +117,6 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse {
             this.userDefined = Objects.requireNonNull(userDefined);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(alias, entityType, text, userDefined);
         }

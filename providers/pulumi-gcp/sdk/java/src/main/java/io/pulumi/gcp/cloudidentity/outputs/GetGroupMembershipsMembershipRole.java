@@ -52,7 +52,6 @@ public final class GetGroupMembershipsMembershipRole {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetGroupMembershipsMembershipRole build() {
             return new GetGroupMembershipsMembershipRole(name);
         }

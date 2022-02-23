@@ -52,7 +52,6 @@ public final class PacketMirroringCollectorIlb {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringCollectorIlb build() {
             return new PacketMirroringCollectorIlb(url);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * 
      */
     @InputImport(name="phoneNumber")
-    private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
             this.phoneNumber = Input.ofNullable(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(phoneNumber);
         }

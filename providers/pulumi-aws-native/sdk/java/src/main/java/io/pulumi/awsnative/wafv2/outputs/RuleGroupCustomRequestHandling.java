@@ -53,7 +53,6 @@ public final class RuleGroupCustomRequestHandling {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public RuleGroupCustomRequestHandling build() {
             return new RuleGroupCustomRequestHandling(insertHeaders);
         }

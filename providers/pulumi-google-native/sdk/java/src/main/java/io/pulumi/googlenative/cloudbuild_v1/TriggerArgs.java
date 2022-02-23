@@ -32,7 +32,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalConfig")
-    private final @Nullable Input<ApprovalConfigArgs> approvalConfig;
+      private final @Nullable Input<ApprovalConfigArgs> approvalConfig;
 
     public Input<ApprovalConfigArgs> getApprovalConfig() {
         return this.approvalConfig == null ? Input.empty() : this.approvalConfig;
@@ -43,7 +43,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autodetect")
-    private final @Nullable Input<Boolean> autodetect;
+      private final @Nullable Input<Boolean> autodetect;
 
     public Input<Boolean> getAutodetect() {
         return this.autodetect == null ? Input.empty() : this.autodetect;
@@ -54,7 +54,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitbucketServerTriggerConfig")
-    private final @Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
+      private final @Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
 
     public Input<BitbucketServerTriggerConfigArgs> getBitbucketServerTriggerConfig() {
         return this.bitbucketServerTriggerConfig == null ? Input.empty() : this.bitbucketServerTriggerConfig;
@@ -65,7 +65,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-    private final @Nullable Input<BuildArgs> build;
+      private final @Nullable Input<BuildArgs> build;
 
     public Input<BuildArgs> getBuild() {
         return this.build == null ? Input.empty() : this.build;
@@ -76,7 +76,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -98,7 +98,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType")
-    private final @Nullable Input<TriggerEventType> eventType;
+      private final @Nullable Input<TriggerEventType> eventType;
 
     public Input<TriggerEventType> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
@@ -109,7 +109,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -120,7 +120,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -131,7 +131,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitFileSource")
-    private final @Nullable Input<GitFileSourceArgs> gitFileSource;
+      private final @Nullable Input<GitFileSourceArgs> gitFileSource;
 
     public Input<GitFileSourceArgs> getGitFileSource() {
         return this.gitFileSource == null ? Input.empty() : this.gitFileSource;
@@ -142,7 +142,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="github")
-    private final @Nullable Input<GitHubEventsConfigArgs> github;
+      private final @Nullable Input<GitHubEventsConfigArgs> github;
 
     public Input<GitHubEventsConfigArgs> getGithub() {
         return this.github == null ? Input.empty() : this.github;
@@ -153,7 +153,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoredFiles")
-    private final @Nullable Input<List<String>> ignoredFiles;
+      private final @Nullable Input<List<String>> ignoredFiles;
 
     public Input<List<String>> getIgnoredFiles() {
         return this.ignoredFiles == null ? Input.empty() : this.ignoredFiles;
@@ -164,14 +164,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedFiles")
-    private final @Nullable Input<List<String>> includedFiles;
+      private final @Nullable Input<List<String>> includedFiles;
 
     public Input<List<String>> getIncludedFiles() {
         return this.includedFiles == null ? Input.empty() : this.includedFiles;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -182,21 +182,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+      private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -207,7 +207,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfig")
-    private final @Nullable Input<PubsubConfigArgs> pubsubConfig;
+      private final @Nullable Input<PubsubConfigArgs> pubsubConfig;
 
     public Input<PubsubConfigArgs> getPubsubConfig() {
         return this.pubsubConfig == null ? Input.empty() : this.pubsubConfig;
@@ -218,7 +218,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -229,7 +229,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -240,7 +240,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceToBuild")
-    private final @Nullable Input<GitRepoSourceArgs> sourceToBuild;
+      private final @Nullable Input<GitRepoSourceArgs> sourceToBuild;
 
     public Input<GitRepoSourceArgs> getSourceToBuild() {
         return this.sourceToBuild == null ? Input.empty() : this.sourceToBuild;
@@ -251,7 +251,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutions")
-    private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Input<Map<String,String>> substitutions;
 
     public Input<Map<String,String>> getSubstitutions() {
         return this.substitutions == null ? Input.empty() : this.substitutions;
@@ -262,7 +262,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -273,7 +273,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerTemplate")
-    private final @Nullable Input<RepoSourceArgs> triggerTemplate;
+      private final @Nullable Input<RepoSourceArgs> triggerTemplate;
 
     public Input<RepoSourceArgs> getTriggerTemplate() {
         return this.triggerTemplate == null ? Input.empty() : this.triggerTemplate;
@@ -284,7 +284,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookConfig")
-    private final @Nullable Input<WebhookConfigArgs> webhookConfig;
+      private final @Nullable Input<WebhookConfigArgs> webhookConfig;
 
     public Input<WebhookConfigArgs> getWebhookConfig() {
         return this.webhookConfig == null ? Input.empty() : this.webhookConfig;
@@ -688,7 +688,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.webhookConfig = Input.ofNullable(webhookConfig);
             return this;
         }
-
         public TriggerArgs build() {
             return new TriggerArgs(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, location, name, project, projectId, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
         }

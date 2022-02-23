@@ -77,7 +77,6 @@ public final class FlowTriggerConfig {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
-
         public FlowTriggerConfig build() {
             return new FlowTriggerConfig(triggerProperties, triggerType);
         }

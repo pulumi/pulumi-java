@@ -398,7 +398,6 @@ public final class GetCustomImageResult {
             this.vm = vm;
             return this;
         }
-
         public GetCustomImageResult build() {
             return new GetCustomImageResult(author, creationDate, customImagePlan, dataDiskStorageInfo, description, id, isPlanAuthorized, location, managedImageId, managedSnapshotId, name, provisioningState, tags, type, uniqueIdentifier, vhd, vm);
         }

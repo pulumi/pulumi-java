@@ -21,7 +21,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
+        private final Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> getConfig() {
         return this.config;
@@ -43,7 +43,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -117,7 +117,6 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterGetArgs(clusterName, config, labels);
         }

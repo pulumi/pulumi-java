@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigDnsCacheConfig extends io.pulumi.resour
     public static final GetClusterAddonsConfigDnsCacheConfig Empty = new GetClusterAddonsConfigDnsCacheConfig();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterAddonsConfigDnsCacheConfig extends io.pulumi.resour
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterAddonsConfigDnsCacheConfig build() {
             return new GetClusterAddonsConfigDnsCacheConfig(enabled);
         }

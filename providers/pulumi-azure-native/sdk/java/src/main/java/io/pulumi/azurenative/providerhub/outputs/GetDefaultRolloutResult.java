@@ -117,7 +117,6 @@ public final class GetDefaultRolloutResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDefaultRolloutResult build() {
             return new GetDefaultRolloutResult(id, name, properties, type);
         }

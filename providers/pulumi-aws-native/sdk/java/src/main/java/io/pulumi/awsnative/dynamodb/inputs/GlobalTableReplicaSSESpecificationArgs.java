@@ -14,7 +14,7 @@ public final class GlobalTableReplicaSSESpecificationArgs extends io.pulumi.reso
     public static final GlobalTableReplicaSSESpecificationArgs Empty = new GlobalTableReplicaSSESpecificationArgs();
 
     @InputImport(name="kMSMasterKeyId", required=true)
-    private final Input<String> kMSMasterKeyId;
+        private final Input<String> kMSMasterKeyId;
 
     public Input<String> getKMSMasterKeyId() {
         return this.kMSMasterKeyId;
@@ -57,7 +57,6 @@ public final class GlobalTableReplicaSSESpecificationArgs extends io.pulumi.reso
             this.kMSMasterKeyId = Input.of(Objects.requireNonNull(kMSMasterKeyId));
             return this;
         }
-
         public GlobalTableReplicaSSESpecificationArgs build() {
             return new GlobalTableReplicaSSESpecificationArgs(kMSMasterKeyId);
         }

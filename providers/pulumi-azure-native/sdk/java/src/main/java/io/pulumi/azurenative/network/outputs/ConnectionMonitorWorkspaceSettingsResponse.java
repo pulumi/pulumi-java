@@ -54,7 +54,6 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public ConnectionMonitorWorkspaceSettingsResponse build() {
             return new ConnectionMonitorWorkspaceSettingsResponse(workspaceResourceId);
         }

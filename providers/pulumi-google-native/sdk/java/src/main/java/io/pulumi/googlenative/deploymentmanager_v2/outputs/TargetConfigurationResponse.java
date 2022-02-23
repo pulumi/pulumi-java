@@ -76,7 +76,6 @@ public final class TargetConfigurationResponse {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-
         public TargetConfigurationResponse build() {
             return new TargetConfigurationResponse(config, imports);
         }

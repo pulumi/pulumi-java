@@ -21,7 +21,7 @@ public final class BucketEncryptionConfiguration extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="replicaKmsKeyID", required=true)
-    private final String replicaKmsKeyID;
+        private final String replicaKmsKeyID;
 
     public String getReplicaKmsKeyID() {
         return this.replicaKmsKeyID;
@@ -59,7 +59,6 @@ public final class BucketEncryptionConfiguration extends io.pulumi.resources.Inv
             this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
             return this;
         }
-
         public BucketEncryptionConfiguration build() {
             return new BucketEncryptionConfiguration(replicaKmsKeyID);
         }

@@ -23,7 +23,7 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateAuthority", required=true)
-    private final Input<String> certificateAuthority;
+      private final Input<String> certificateAuthority;
 
     public Input<String> getCertificateAuthority() {
         return this.certificateAuthority;
@@ -34,7 +34,7 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pemIssuerChain", required=true)
-    private final Input<SubordinateConfigChainArgs> pemIssuerChain;
+      private final Input<SubordinateConfigChainArgs> pemIssuerChain;
 
     public Input<SubordinateConfigChainArgs> getPemIssuerChain() {
         return this.pemIssuerChain;
@@ -93,7 +93,6 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
             this.pemIssuerChain = Input.of(Objects.requireNonNull(pemIssuerChain));
             return this;
         }
-
         public SubordinateConfigArgs build() {
             return new SubordinateConfigArgs(certificateAuthority, pemIssuerChain);
         }

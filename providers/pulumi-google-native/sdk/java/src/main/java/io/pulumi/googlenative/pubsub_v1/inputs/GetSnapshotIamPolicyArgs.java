@@ -15,21 +15,21 @@ public final class GetSnapshotIamPolicyArgs extends io.pulumi.resources.InvokeAr
     public static final GetSnapshotIamPolicyArgs Empty = new GetSnapshotIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="snapshotId", required=true)
-    private final String snapshotId;
+      private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
@@ -88,7 +88,6 @@ public final class GetSnapshotIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public GetSnapshotIamPolicyArgs build() {
             return new GetSnapshotIamPolicyArgs(optionsRequestedPolicyVersion, project, snapshotId);
         }

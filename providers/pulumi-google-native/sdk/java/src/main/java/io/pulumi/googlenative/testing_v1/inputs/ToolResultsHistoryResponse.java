@@ -21,7 +21,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="historyId", required=true)
-    private final String historyId;
+      private final String historyId;
 
     public String getHistoryId() {
         return this.historyId;
@@ -32,7 +32,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -81,7 +81,6 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ToolResultsHistoryResponse build() {
             return new ToolResultsHistoryResponse(historyId, project);
         }

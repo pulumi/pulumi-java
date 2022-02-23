@@ -205,7 +205,6 @@ public final class MongoDbV2SinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public MongoDbV2SinkResponse build() {
             return new MongoDbV2SinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

@@ -18,7 +18,7 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="number", required=true)
-    private final Input<Integer> number;
+        private final Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number;
@@ -61,7 +61,6 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
             this.number = Input.of(Objects.requireNonNull(number));
             return this;
         }
-
         public GCPolicyMaxVersionGetArgs build() {
             return new GCPolicyMaxVersionGetArgs(number);
         }

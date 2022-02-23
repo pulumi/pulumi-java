@@ -16,21 +16,21 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
     public static final ThrottlingMetricResponse Empty = new ThrottlingMetricResponse();
 
     @InputImport(name="interval")
-    private final @Nullable String interval;
+        private final @Nullable String interval;
 
     public Optional<String> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
     @InputImport(name="limit", required=true)
-    private final Double limit;
+        private final Double limit;
 
     public Double getLimit() {
         return this.limit;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -89,7 +89,6 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ThrottlingMetricResponse build() {
             return new ThrottlingMetricResponse(interval, limit, type);
         }

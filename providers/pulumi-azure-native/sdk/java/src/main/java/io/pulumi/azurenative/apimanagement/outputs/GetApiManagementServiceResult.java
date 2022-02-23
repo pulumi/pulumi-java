@@ -737,7 +737,6 @@ public final class GetApiManagementServiceResult {
             this.zones = zones;
             return this;
         }
-
         public GetApiManagementServiceResult build() {
             return new GetApiManagementServiceResult(additionalLocations, apiVersionConstraint, certificates, createdAtUtc, customProperties, developerPortalUrl, disableGateway, enableClientCertificate, etag, gatewayRegionalUrl, gatewayUrl, hostnameConfigurations, id, identity, location, managementApiUrl, name, notificationSenderEmail, portalUrl, privateIPAddresses, provisioningState, publicIPAddresses, publisherEmail, publisherName, restore, scmUrl, sku, tags, targetProvisioningState, type, virtualNetworkConfiguration, virtualNetworkType, zones);
         }

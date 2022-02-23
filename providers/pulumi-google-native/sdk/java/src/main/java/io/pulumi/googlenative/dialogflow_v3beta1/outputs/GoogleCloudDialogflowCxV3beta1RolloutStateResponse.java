@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse {
             this.stepIndex = Objects.requireNonNull(stepIndex);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutStateResponse build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutStateResponse(startTime, step, stepIndex);
         }

@@ -100,7 +100,6 @@ public final class RegionInstanceGroupManagerStatus {
             this.versionTargets = versionTargets;
             return this;
         }
-
         public RegionInstanceGroupManagerStatus build() {
             return new RegionInstanceGroupManagerStatus(isStable, statefuls, versionTargets);
         }

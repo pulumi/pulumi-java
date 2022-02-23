@@ -22,7 +22,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="backendPort", required=true)
-    private final Integer backendPort;
+        private final Integer backendPort;
 
     public Integer getBackendPort() {
         return this.backendPort;
@@ -33,7 +33,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="frontendPortRangeEnd", required=true)
-    private final Integer frontendPortRangeEnd;
+        private final Integer frontendPortRangeEnd;
 
     public Integer getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
@@ -44,7 +44,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="frontendPortRangeStart", required=true)
-    private final Integer frontendPortRangeStart;
+        private final Integer frontendPortRangeStart;
 
     public Integer getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
@@ -55,7 +55,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -66,14 +66,14 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkSecurityGroupRules")
-    private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
+        private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
 
     public List<NetworkSecurityGroupRuleResponse> getNetworkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? List.of() : this.networkSecurityGroupRules;
     }
 
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -162,7 +162,6 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
         }

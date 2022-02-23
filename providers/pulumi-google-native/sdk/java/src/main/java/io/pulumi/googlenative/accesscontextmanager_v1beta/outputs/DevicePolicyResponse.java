@@ -161,7 +161,6 @@ public final class DevicePolicyResponse {
             this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
             return this;
         }
-
         public DevicePolicyResponse build() {
             return new DevicePolicyResponse(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
         }

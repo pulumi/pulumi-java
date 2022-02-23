@@ -97,7 +97,6 @@ public final class GitRepoVolumeResponse {
             this.revision = revision;
             return this;
         }
-
         public GitRepoVolumeResponse build() {
             return new GitRepoVolumeResponse(directory, repository, revision);
         }

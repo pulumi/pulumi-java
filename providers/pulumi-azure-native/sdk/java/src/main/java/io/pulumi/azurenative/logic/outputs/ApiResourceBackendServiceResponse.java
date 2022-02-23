@@ -54,7 +54,6 @@ public final class ApiResourceBackendServiceResponse {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public ApiResourceBackendServiceResponse build() {
             return new ApiResourceBackendServiceResponse(serviceUrl);
         }

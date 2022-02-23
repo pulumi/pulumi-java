@@ -139,7 +139,6 @@ public final class IterationResultResponse {
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }
-
         public IterationResultResponse build() {
             return new IterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

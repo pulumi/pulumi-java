@@ -52,7 +52,6 @@ public final class StackdriverLoggingConfigResponse {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
-
         public StackdriverLoggingConfigResponse build() {
             return new StackdriverLoggingConfigResponse(samplingRatio);
         }

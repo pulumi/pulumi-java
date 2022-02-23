@@ -289,7 +289,6 @@ public final class GetLocalNetworkGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLocalNetworkGatewayResult build() {
             return new GetLocalNetworkGatewayResult(bgpSettings, etag, fqdn, gatewayIpAddress, id, localNetworkAddressSpace, location, name, provisioningState, resourceGuid, tags, type);
         }

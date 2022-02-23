@@ -371,7 +371,6 @@ public final class ExcelDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExcelDatasetResponse build() {
             return new ExcelDatasetResponse(annotations, compression, description, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, range, schema, sheetIndex, sheetName, structure, type);
         }

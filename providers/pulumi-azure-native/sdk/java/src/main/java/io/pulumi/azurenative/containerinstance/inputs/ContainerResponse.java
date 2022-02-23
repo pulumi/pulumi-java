@@ -30,7 +30,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable List<String> command;
+        private final @Nullable List<String> command;
 
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
@@ -41,7 +41,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
+        private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
@@ -52,7 +52,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image", required=true)
-    private final String image;
+        private final String image;
 
     public String getImage() {
         return this.image;
@@ -63,7 +63,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceView", required=true)
-    private final ContainerPropertiesResponseInstanceView instanceView;
+        private final ContainerPropertiesResponseInstanceView instanceView;
 
     public ContainerPropertiesResponseInstanceView getInstanceView() {
         return this.instanceView;
@@ -74,7 +74,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable ContainerProbeResponse livenessProbe;
+        private final @Nullable ContainerProbeResponse livenessProbe;
 
     public Optional<ContainerProbeResponse> getLivenessProbe() {
         return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
@@ -85,7 +85,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable List<ContainerPortResponse> ports;
+        private final @Nullable List<ContainerPortResponse> ports;
 
     public List<ContainerPortResponse> getPorts() {
         return this.ports == null ? List.of() : this.ports;
@@ -107,7 +107,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="readinessProbe")
-    private final @Nullable ContainerProbeResponse readinessProbe;
+        private final @Nullable ContainerProbeResponse readinessProbe;
 
     public Optional<ContainerProbeResponse> getReadinessProbe() {
         return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
@@ -118,7 +118,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final ResourceRequirementsResponse resources;
+        private final ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse getResources() {
         return this.resources;
@@ -129,7 +129,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable List<VolumeMountResponse> volumeMounts;
+        private final @Nullable List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
@@ -258,7 +258,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(command, environmentVariables, image, instanceView, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }

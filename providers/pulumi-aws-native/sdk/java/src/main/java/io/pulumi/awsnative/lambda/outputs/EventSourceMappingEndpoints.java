@@ -54,7 +54,6 @@ public final class EventSourceMappingEndpoints {
             this.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
-
         public EventSourceMappingEndpoints build() {
             return new EventSourceMappingEndpoints(kafkaBootstrapServers);
         }

@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse extends io.pulumi.
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse extends io.pulumi.
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStoragePathResponse build() {
             return new GooglePrivacyDlpV2CloudStoragePathResponse(path);
         }

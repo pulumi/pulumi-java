@@ -21,7 +21,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="offer", required=true)
-    private final String offer;
+        private final String offer;
 
     public String getOffer() {
         return this.offer;
@@ -32,7 +32,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publisher", required=true)
-    private final String publisher;
+        private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
@@ -43,7 +43,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sku", required=true)
-    private final String sku;
+        private final String sku;
 
     public String getSku() {
         return this.sku;
@@ -102,7 +102,6 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GalleryImageIdentifierResponse build() {
             return new GalleryImageIdentifierResponse(offer, publisher, sku);
         }

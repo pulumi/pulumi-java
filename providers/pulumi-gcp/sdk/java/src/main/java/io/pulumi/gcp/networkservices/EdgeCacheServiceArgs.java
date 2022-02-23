@@ -24,7 +24,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableQuic")
-    private final @Nullable Input<Boolean> disableQuic;
+        private final @Nullable Input<Boolean> disableQuic;
 
     public Input<Boolean> getDisableQuic() {
         return this.disableQuic == null ? Input.empty() : this.disableQuic;
@@ -46,7 +46,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="edgeSecurityPolicy")
-    private final @Nullable Input<String> edgeSecurityPolicy;
+        private final @Nullable Input<String> edgeSecurityPolicy;
 
     public Input<String> getEdgeSecurityPolicy() {
         return this.edgeSecurityPolicy == null ? Input.empty() : this.edgeSecurityPolicy;
@@ -58,7 +58,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="edgeSslCertificates")
-    private final @Nullable Input<List<String>> edgeSslCertificates;
+        private final @Nullable Input<List<String>> edgeSslCertificates;
 
     public Input<List<String>> getEdgeSslCertificates() {
         return this.edgeSslCertificates == null ? Input.empty() : this.edgeSslCertificates;
@@ -69,7 +69,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -81,7 +81,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<EdgeCacheServiceLogConfigArgs> logConfig;
+        private final @Nullable Input<EdgeCacheServiceLogConfigArgs> logConfig;
 
     public Input<EdgeCacheServiceLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -92,7 +92,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requireTls")
-    private final @Nullable Input<Boolean> requireTls;
+        private final @Nullable Input<Boolean> requireTls;
 
     public Input<Boolean> getRequireTls() {
         return this.requireTls == null ? Input.empty() : this.requireTls;
@@ -129,7 +129,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="routing", required=true)
-    private final Input<EdgeCacheServiceRoutingArgs> routing;
+        private final Input<EdgeCacheServiceRoutingArgs> routing;
 
     public Input<EdgeCacheServiceRoutingArgs> getRouting() {
         return this.routing;
@@ -141,7 +141,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+        private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -335,7 +335,6 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
-
         public EdgeCacheServiceArgs build() {
             return new EdgeCacheServiceArgs(description, disableQuic, edgeSecurityPolicy, edgeSslCertificates, labels, logConfig, name, project, requireTls, routing, sslPolicy);
         }

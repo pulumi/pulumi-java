@@ -74,7 +74,6 @@ public final class UserIdentityPropertiesResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserIdentityPropertiesResponse build() {
             return new UserIdentityPropertiesResponse(clientId, principalId);
         }

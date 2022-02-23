@@ -117,7 +117,6 @@ public final class VolumeMountResponse {
             this.subPath = Objects.requireNonNull(subPath);
             return this;
         }
-
         public VolumeMountResponse build() {
             return new VolumeMountResponse(mountPath, name, readOnly, subPath);
         }

@@ -21,7 +21,7 @@ public final class BuildSignatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -32,7 +32,7 @@ public final class BuildSignatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final String keyType;
+      private final String keyType;
 
     public String getKeyType() {
         return this.keyType;
@@ -43,7 +43,7 @@ public final class BuildSignatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final String publicKey;
+      private final String publicKey;
 
     public String getPublicKey() {
         return this.publicKey;
@@ -54,7 +54,7 @@ public final class BuildSignatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="signature", required=true)
-    private final String signature;
+      private final String signature;
 
     public String getSignature() {
         return this.signature;
@@ -123,7 +123,6 @@ public final class BuildSignatureResponse extends io.pulumi.resources.InvokeArgs
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildSignatureResponse build() {
             return new BuildSignatureResponse(keyId, keyType, publicKey, signature);
         }

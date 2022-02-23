@@ -86,7 +86,6 @@ public final class GetRouteCalculatorResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetRouteCalculatorResult build() {
             return new GetRouteCalculatorResult(arn, calculatorArn, createTime, updateTime);
         }

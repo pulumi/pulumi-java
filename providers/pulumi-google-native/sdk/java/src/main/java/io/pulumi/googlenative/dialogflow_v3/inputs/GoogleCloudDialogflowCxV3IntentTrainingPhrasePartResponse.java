@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
      * 
      */
     @InputImport(name="parameterId", required=true)
-    private final String parameterId;
+      private final String parameterId;
 
     public String getParameterId() {
         return this.parameterId;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(parameterId, text);
         }

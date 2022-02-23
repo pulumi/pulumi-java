@@ -21,14 +21,14 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="caPool", required=true)
-    private final Input<String> caPool;
+        private final Input<String> caPool;
 
     public Input<String> getCaPool() {
         return this.caPool;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<CaPoolIamBindingConditionArgs> condition;
+        private final @Nullable Input<CaPoolIamBindingConditionArgs> condition;
 
     public Input<CaPoolIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -41,14 +41,14 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -60,7 +60,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -73,7 +73,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -192,7 +192,6 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public CaPoolIamBindingArgs build() {
             return new CaPoolIamBindingArgs(caPool, condition, location, members, project, role);
         }

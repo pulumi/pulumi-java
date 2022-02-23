@@ -247,7 +247,6 @@ public final class VMSSExtensionResponse {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public VMSSExtensionResponse build() {
             return new VMSSExtensionResponse(autoUpgradeMinorVersion, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

@@ -100,7 +100,6 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse {
             this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
         }
-
         public ResponseBasedOriginErrorDetectionParametersResponse build() {
             return new ResponseBasedOriginErrorDetectionParametersResponse(httpErrorRanges, responseBasedDetectedErrorTypes, responseBasedFailoverThresholdPercentage);
         }

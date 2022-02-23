@@ -21,7 +21,7 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="requestResourceType", required=true)
-    private final String requestResourceType;
+        private final String requestResourceType;
 
     public String getRequestResourceType() {
         return this.requestResourceType;
@@ -32,7 +32,7 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vaultCriticalOperation", required=true)
-    private final String vaultCriticalOperation;
+        private final String vaultCriticalOperation;
 
     public String getVaultCriticalOperation() {
         return this.vaultCriticalOperation;
@@ -81,7 +81,6 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
             this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
             return this;
         }
-
         public ResourceGuardOperationResponse build() {
             return new ResourceGuardOperationResponse(requestResourceType, vaultCriticalOperation);
         }

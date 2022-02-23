@@ -52,7 +52,6 @@ public final class RedisLinkedServerResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public RedisLinkedServerResponse build() {
             return new RedisLinkedServerResponse(id);
         }

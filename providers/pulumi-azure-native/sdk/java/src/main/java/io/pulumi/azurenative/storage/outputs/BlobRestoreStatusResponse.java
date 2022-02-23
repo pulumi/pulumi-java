@@ -117,7 +117,6 @@ public final class BlobRestoreStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BlobRestoreStatusResponse build() {
             return new BlobRestoreStatusResponse(failureReason, parameters, restoreId, status);
         }

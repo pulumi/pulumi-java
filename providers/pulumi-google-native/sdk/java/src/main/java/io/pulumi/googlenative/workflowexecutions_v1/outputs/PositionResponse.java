@@ -95,7 +95,6 @@ public final class PositionResponse {
             this.line = Objects.requireNonNull(line);
             return this;
         }
-
         public PositionResponse build() {
             return new PositionResponse(column, length, line);
         }

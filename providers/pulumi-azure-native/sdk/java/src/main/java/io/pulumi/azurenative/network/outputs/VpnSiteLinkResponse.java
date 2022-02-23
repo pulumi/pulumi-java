@@ -225,7 +225,6 @@ public final class VpnSiteLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VpnSiteLinkResponse build() {
             return new VpnSiteLinkResponse(bgpProperties, etag, fqdn, id, ipAddress, linkProperties, name, provisioningState, type);
         }

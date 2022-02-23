@@ -19,7 +19,7 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="document", required=true)
-    private final Input<ApiConfigOpenapiDocumentDocumentArgs> document;
+        private final Input<ApiConfigOpenapiDocumentDocumentArgs> document;
 
     public Input<ApiConfigOpenapiDocumentDocumentArgs> getDocument() {
         return this.document;
@@ -62,7 +62,6 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
             this.document = Input.of(Objects.requireNonNull(document));
             return this;
         }
-
         public ApiConfigOpenapiDocumentArgs build() {
             return new ApiConfigOpenapiDocumentArgs(document);
         }

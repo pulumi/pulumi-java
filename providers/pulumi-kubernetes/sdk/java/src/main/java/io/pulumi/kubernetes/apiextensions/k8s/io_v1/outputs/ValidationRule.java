@@ -124,7 +124,6 @@ public final class ValidationRule {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public ValidationRule build() {
             return new ValidationRule(message, rule);
         }

@@ -75,7 +75,6 @@ public final class InlineSecretResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public InlineSecretResponse build() {
             return new InlineSecretResponse(envMap, kmsKeyName);
         }

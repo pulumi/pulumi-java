@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs exte
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs exte
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<String> seconds;
+        private final Input<String> seconds;
 
     public Input<String> getSeconds() {
         return this.seconds;
@@ -93,7 +93,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs exte
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs(nanos, seconds);
         }

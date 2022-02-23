@@ -76,7 +76,6 @@ public final class VirtualDirectoryResponse {
             this.virtualPath = virtualPath;
             return this;
         }
-
         public VirtualDirectoryResponse build() {
             return new VirtualDirectoryResponse(physicalPath, virtualPath);
         }

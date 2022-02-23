@@ -267,7 +267,6 @@ public final class ClusterClusterConfigGceClusterConfig {
             this.zone = zone;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfig build() {
             return new ClusterClusterConfigGceClusterConfig(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);
         }

@@ -350,7 +350,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
         }

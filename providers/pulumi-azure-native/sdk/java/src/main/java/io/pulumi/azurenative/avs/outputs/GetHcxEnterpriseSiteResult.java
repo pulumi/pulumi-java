@@ -137,7 +137,6 @@ public final class GetHcxEnterpriseSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHcxEnterpriseSiteResult build() {
             return new GetHcxEnterpriseSiteResult(activationKey, id, name, status, type);
         }

@@ -29,7 +29,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable List<String> artifacts;
+        private final @Nullable List<String> artifacts;
 
     public List<String> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
@@ -40,7 +40,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="catalogDigest")
-    private final @Nullable String catalogDigest;
+        private final @Nullable String catalogDigest;
 
     public Optional<String> getCatalogDigest() {
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
@@ -51,7 +51,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pipelineResourceId")
-    private final @Nullable String pipelineResourceId;
+        private final @Nullable String pipelineResourceId;
 
     public Optional<String> getPipelineResourceId() {
         return this.pipelineResourceId == null ? Optional.empty() : Optional.ofNullable(this.pipelineResourceId);
@@ -62,7 +62,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="source")
-    private final @Nullable PipelineRunSourcePropertiesResponse source;
+        private final @Nullable PipelineRunSourcePropertiesResponse source;
 
     public Optional<PipelineRunSourcePropertiesResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -73,7 +73,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="target")
-    private final @Nullable PipelineRunTargetPropertiesResponse target;
+        private final @Nullable PipelineRunTargetPropertiesResponse target;
 
     public Optional<PipelineRunTargetPropertiesResponse> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -152,7 +152,6 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
             this.target = target;
             return this;
         }
-
         public PipelineRunRequestResponse build() {
             return new PipelineRunRequestResponse(artifacts, catalogDigest, pipelineResourceId, source, target);
         }

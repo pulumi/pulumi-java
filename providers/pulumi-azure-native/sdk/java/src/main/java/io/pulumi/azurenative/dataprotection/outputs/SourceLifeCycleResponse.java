@@ -91,7 +91,6 @@ public final class SourceLifeCycleResponse {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-
         public SourceLifeCycleResponse build() {
             return new SourceLifeCycleResponse(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }

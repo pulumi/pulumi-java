@@ -550,7 +550,6 @@ public final class GetPublicIPAddressResult {
             this.zones = zones;
             return this;
         }
-
         public GetPublicIPAddressResult build() {
             return new GetPublicIPAddressResult(ddosSettings, dnsSettings, etag, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipConfiguration, ipTags, linkedPublicIPAddress, location, migrationPhase, name, natGateway, provisioningState, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, resourceGuid, servicePublicIPAddress, sku, tags, type, zones);
         }

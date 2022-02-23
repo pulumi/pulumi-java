@@ -89,7 +89,6 @@ public final class InstanceFromTemplateBootDiskInitializeParams {
             this.type = type;
             return this;
         }
-
         public InstanceFromTemplateBootDiskInitializeParams build() {
             return new InstanceFromTemplateBootDiskInitializeParams(image, labels, size, type);
         }

@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="customTag", required=true)
-    private final String customTag;
+      private final String customTag;
 
     public String getCustomTag() {
         return this.customTag;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="field", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse field;
+      private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdFieldResponse(customTag, field);
         }

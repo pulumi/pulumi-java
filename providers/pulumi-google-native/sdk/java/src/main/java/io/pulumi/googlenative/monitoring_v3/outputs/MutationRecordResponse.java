@@ -74,7 +74,6 @@ public final class MutationRecordResponse {
             this.mutatedBy = Objects.requireNonNull(mutatedBy);
             return this;
         }
-
         public MutationRecordResponse build() {
             return new MutationRecordResponse(mutateTime, mutatedBy);
         }

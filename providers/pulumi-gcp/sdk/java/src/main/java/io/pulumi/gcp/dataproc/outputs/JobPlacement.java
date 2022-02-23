@@ -60,7 +60,6 @@ public final class JobPlacement {
             this.clusterUuid = clusterUuid;
             return this;
         }
-
         public JobPlacement build() {
             return new JobPlacement(clusterName, clusterUuid);
         }

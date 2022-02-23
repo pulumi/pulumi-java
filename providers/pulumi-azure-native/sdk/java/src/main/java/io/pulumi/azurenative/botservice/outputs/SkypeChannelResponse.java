@@ -142,7 +142,6 @@ public final class SkypeChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public SkypeChannelResponse build() {
             return new SkypeChannelResponse(channelName, etag, location, properties, provisioningState);
         }

@@ -314,7 +314,6 @@ public final class GetP2sVpnServerConfigurationResult {
             this.vpnProtocols = vpnProtocols;
             return this;
         }
-
         public GetP2sVpnServerConfigurationResult build() {
             return new GetP2sVpnServerConfigurationResult(etag, id, name, p2SVpnGateways, p2SVpnServerConfigRadiusClientRootCertificates, p2SVpnServerConfigRadiusServerRootCertificates, p2SVpnServerConfigVpnClientRevokedCertificates, p2SVpnServerConfigVpnClientRootCertificates, provisioningState, radiusServerAddress, radiusServerSecret, vpnClientIpsecPolicies, vpnProtocols);
         }

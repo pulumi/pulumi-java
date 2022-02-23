@@ -121,7 +121,6 @@ public final class AvailabilitySetResourceSettingsResponse {
             this.updateDomain = updateDomain;
             return this;
         }
-
         public AvailabilitySetResourceSettingsResponse build() {
             return new AvailabilitySetResourceSettingsResponse(faultDomain, resourceType, targetResourceName, updateDomain);
         }

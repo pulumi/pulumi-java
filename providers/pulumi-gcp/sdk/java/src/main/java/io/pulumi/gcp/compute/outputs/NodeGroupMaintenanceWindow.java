@@ -52,7 +52,6 @@ public final class NodeGroupMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public NodeGroupMaintenanceWindow build() {
             return new NodeGroupMaintenanceWindow(startTime);
         }

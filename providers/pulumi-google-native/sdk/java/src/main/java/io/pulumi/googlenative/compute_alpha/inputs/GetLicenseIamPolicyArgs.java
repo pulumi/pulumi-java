@@ -15,21 +15,21 @@ public final class GetLicenseIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetLicenseIamPolicyArgs Empty = new GetLicenseIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -88,7 +88,6 @@ public final class GetLicenseIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetLicenseIamPolicyArgs build() {
             return new GetLicenseIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }

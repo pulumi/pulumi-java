@@ -15,14 +15,14 @@ public final class GetSecretReplication extends io.pulumi.resources.InvokeArgs {
     public static final GetSecretReplication Empty = new GetSecretReplication();
 
     @InputImport(name="automatic", required=true)
-    private final Boolean automatic;
+        private final Boolean automatic;
 
     public Boolean getAutomatic() {
         return this.automatic;
     }
 
     @InputImport(name="userManageds", required=true)
-    private final List<GetSecretReplicationUserManaged> userManageds;
+        private final List<GetSecretReplicationUserManaged> userManageds;
 
     public List<GetSecretReplicationUserManaged> getUserManageds() {
         return this.userManageds;
@@ -71,7 +71,6 @@ public final class GetSecretReplication extends io.pulumi.resources.InvokeArgs {
             this.userManageds = Objects.requireNonNull(userManageds);
             return this;
         }
-
         public GetSecretReplication build() {
             return new GetSecretReplication(automatic, userManageds);
         }

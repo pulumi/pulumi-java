@@ -22,7 +22,7 @@ public final class TableMaterializedViewArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableRefresh")
-    private final @Nullable Input<Boolean> enableRefresh;
+        private final @Nullable Input<Boolean> enableRefresh;
 
     public Input<Boolean> getEnableRefresh() {
         return this.enableRefresh == null ? Input.empty() : this.enableRefresh;
@@ -33,7 +33,7 @@ public final class TableMaterializedViewArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -45,7 +45,7 @@ public final class TableMaterializedViewArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="refreshIntervalMs")
-    private final @Nullable Input<Integer> refreshIntervalMs;
+        private final @Nullable Input<Integer> refreshIntervalMs;
 
     public Input<Integer> getRefreshIntervalMs() {
         return this.refreshIntervalMs == null ? Input.empty() : this.refreshIntervalMs;
@@ -119,7 +119,6 @@ public final class TableMaterializedViewArgs extends io.pulumi.resources.Resourc
             this.refreshIntervalMs = Input.ofNullable(refreshIntervalMs);
             return this;
         }
-
         public TableMaterializedViewArgs build() {
             return new TableMaterializedViewArgs(enableRefresh, query, refreshIntervalMs);
         }

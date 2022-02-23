@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageFileSetArgs build() {
             return new GooglePrivacyDlpV2CloudStorageFileSetArgs(url);
         }

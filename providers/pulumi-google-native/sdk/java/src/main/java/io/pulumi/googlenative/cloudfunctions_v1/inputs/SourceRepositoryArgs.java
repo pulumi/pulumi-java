@@ -23,7 +23,7 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -66,7 +66,6 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public SourceRepositoryArgs build() {
             return new SourceRepositoryArgs(url);
         }

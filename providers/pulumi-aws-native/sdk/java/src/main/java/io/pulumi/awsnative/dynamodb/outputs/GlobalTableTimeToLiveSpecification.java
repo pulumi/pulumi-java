@@ -61,7 +61,6 @@ public final class GlobalTableTimeToLiveSpecification {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GlobalTableTimeToLiveSpecification build() {
             return new GlobalTableTimeToLiveSpecification(attributeName, enabled);
         }

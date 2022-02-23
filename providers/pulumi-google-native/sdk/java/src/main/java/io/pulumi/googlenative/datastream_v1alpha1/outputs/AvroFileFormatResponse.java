@@ -30,7 +30,6 @@ public final class AvroFileFormatResponse {
         public Builder(AvroFileFormatResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AvroFileFormatResponse build() {
             return new AvroFileFormatResponse();
         }

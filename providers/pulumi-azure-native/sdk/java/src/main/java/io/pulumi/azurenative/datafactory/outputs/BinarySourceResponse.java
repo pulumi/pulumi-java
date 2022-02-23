@@ -198,7 +198,6 @@ public final class BinarySourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinarySourceResponse build() {
             return new BinarySourceResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

@@ -286,7 +286,6 @@ public final class GetBackupResult {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(capacityGb, createTime, description, downloadBytes, labels, name, satisfiesPzs, sourceFileShare, sourceInstance, sourceInstanceTier, state, storageBytes);
         }

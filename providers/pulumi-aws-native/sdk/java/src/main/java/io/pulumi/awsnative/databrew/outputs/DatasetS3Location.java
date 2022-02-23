@@ -60,7 +60,6 @@ public final class DatasetS3Location {
             this.key = key;
             return this;
         }
-
         public DatasetS3Location build() {
             return new DatasetS3Location(bucket, key);
         }

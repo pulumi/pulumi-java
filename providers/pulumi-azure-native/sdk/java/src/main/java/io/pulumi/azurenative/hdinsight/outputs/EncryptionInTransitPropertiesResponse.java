@@ -54,7 +54,6 @@ public final class EncryptionInTransitPropertiesResponse {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }
-
         public EncryptionInTransitPropertiesResponse build() {
             return new EncryptionInTransitPropertiesResponse(isEncryptionInTransitEnabled);
         }

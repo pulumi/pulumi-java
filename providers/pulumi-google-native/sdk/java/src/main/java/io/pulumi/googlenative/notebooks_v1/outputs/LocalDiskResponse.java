@@ -289,7 +289,6 @@ public final class LocalDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LocalDiskResponse build() {
             return new LocalDiskResponse(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

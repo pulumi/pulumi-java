@@ -265,7 +265,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudApigeeV1CertInfoResponse build() {
             return new GoogleCloudApigeeV1CertInfoResponse(basicConstraints, expiryDate, isValid, issuer, publicKey, serialNumber, sigAlgName, subject, subjectAlternativeNames, validFrom, version);
         }

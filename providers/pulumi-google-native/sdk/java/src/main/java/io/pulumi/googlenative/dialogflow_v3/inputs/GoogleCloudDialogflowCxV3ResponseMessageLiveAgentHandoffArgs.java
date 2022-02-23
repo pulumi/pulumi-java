@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs(metadata);
         }

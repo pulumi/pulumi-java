@@ -54,7 +54,6 @@ public final class PatchDeploymentOneTimeSchedule {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
-
         public PatchDeploymentOneTimeSchedule build() {
             return new PatchDeploymentOneTimeSchedule(executeTime);
         }

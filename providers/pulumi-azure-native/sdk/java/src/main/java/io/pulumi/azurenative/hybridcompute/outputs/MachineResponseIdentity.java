@@ -97,7 +97,6 @@ public final class MachineResponseIdentity {
             this.type = type;
             return this;
         }
-
         public MachineResponseIdentity build() {
             return new MachineResponseIdentity(principalId, tenantId, type);
         }

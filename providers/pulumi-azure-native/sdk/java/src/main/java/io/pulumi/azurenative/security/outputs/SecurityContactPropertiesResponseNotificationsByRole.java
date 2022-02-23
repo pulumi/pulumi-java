@@ -77,7 +77,6 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
             this.state = state;
             return this;
         }
-
         public SecurityContactPropertiesResponseNotificationsByRole build() {
             return new SecurityContactPropertiesResponseNotificationsByRole(roles, state);
         }

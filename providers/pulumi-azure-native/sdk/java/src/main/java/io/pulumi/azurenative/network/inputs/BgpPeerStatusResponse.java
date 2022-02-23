@@ -22,7 +22,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="asn", required=true)
-    private final Double asn;
+        private final Double asn;
 
     public Double getAsn() {
         return this.asn;
@@ -33,7 +33,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="connectedDuration", required=true)
-    private final String connectedDuration;
+        private final String connectedDuration;
 
     public String getConnectedDuration() {
         return this.connectedDuration;
@@ -44,7 +44,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="localAddress", required=true)
-    private final String localAddress;
+        private final String localAddress;
 
     public String getLocalAddress() {
         return this.localAddress;
@@ -55,7 +55,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="messagesReceived", required=true)
-    private final Double messagesReceived;
+        private final Double messagesReceived;
 
     public Double getMessagesReceived() {
         return this.messagesReceived;
@@ -66,7 +66,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="messagesSent", required=true)
-    private final Double messagesSent;
+        private final Double messagesSent;
 
     public Double getMessagesSent() {
         return this.messagesSent;
@@ -77,7 +77,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="neighbor", required=true)
-    private final String neighbor;
+        private final String neighbor;
 
     public String getNeighbor() {
         return this.neighbor;
@@ -88,7 +88,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routesReceived", required=true)
-    private final Double routesReceived;
+        private final Double routesReceived;
 
     public Double getRoutesReceived() {
         return this.routesReceived;
@@ -99,7 +99,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -208,7 +208,6 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public BgpPeerStatusResponse build() {
             return new BgpPeerStatusResponse(asn, connectedDuration, localAddress, messagesReceived, messagesSent, neighbor, routesReceived, state);
         }

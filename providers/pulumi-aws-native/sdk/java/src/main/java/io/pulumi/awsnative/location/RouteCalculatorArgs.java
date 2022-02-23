@@ -16,28 +16,28 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     public static final RouteCalculatorArgs Empty = new RouteCalculatorArgs();
 
     @InputImport(name="calculatorName", required=true)
-    private final Input<String> calculatorName;
+        private final Input<String> calculatorName;
 
     public Input<String> getCalculatorName() {
         return this.calculatorName;
     }
 
     @InputImport(name="dataSource", required=true)
-    private final Input<String> dataSource;
+        private final Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="pricingPlan")
-    private final @Nullable Input<RouteCalculatorPricingPlan> pricingPlan;
+        private final @Nullable Input<RouteCalculatorPricingPlan> pricingPlan;
 
     public Input<RouteCalculatorPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
@@ -126,7 +126,6 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
-
         public RouteCalculatorArgs build() {
             return new RouteCalculatorArgs(calculatorName, dataSource, description, pricingPlan);
         }

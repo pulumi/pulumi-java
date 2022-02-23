@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }

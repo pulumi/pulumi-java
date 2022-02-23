@@ -314,7 +314,6 @@ public final class GetEventSubscriptionResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventSubscriptionResult build() {
             return new GetEventSubscriptionResult(custSubscriptionId, customerAwsId, enabled, eventCategories, eventCategoriesList, severity, snsTopicArn, sourceIds, sourceIdsList, sourceType, status, subscriptionCreationTime, tags);
         }

@@ -162,7 +162,6 @@ public final class HybridComputeSettingsPropertiesResponse {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public HybridComputeSettingsPropertiesResponse build() {
             return new HybridComputeSettingsPropertiesResponse(autoProvision, hybridComputeProvisioningState, proxyServer, region, resourceGroupName, servicePrincipal);
         }

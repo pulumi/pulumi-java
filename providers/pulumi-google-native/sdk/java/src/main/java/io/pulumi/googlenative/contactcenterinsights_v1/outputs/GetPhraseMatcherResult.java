@@ -266,7 +266,6 @@ public final class GetPhraseMatcherResult {
             this.versionTag = Objects.requireNonNull(versionTag);
             return this;
         }
-
         public GetPhraseMatcherResult build() {
             return new GetPhraseMatcherResult(activationUpdateTime, active, displayName, name, phraseMatchRuleGroups, revisionCreateTime, revisionId, roleMatch, type, updateTime, versionTag);
         }

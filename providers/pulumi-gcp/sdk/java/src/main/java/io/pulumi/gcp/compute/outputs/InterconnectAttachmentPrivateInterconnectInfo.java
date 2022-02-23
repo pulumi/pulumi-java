@@ -46,7 +46,6 @@ public final class InterconnectAttachmentPrivateInterconnectInfo {
             this.tag8021q = tag8021q;
             return this;
         }
-
         public InterconnectAttachmentPrivateInterconnectInfo build() {
             return new InterconnectAttachmentPrivateInterconnectInfo(tag8021q);
         }

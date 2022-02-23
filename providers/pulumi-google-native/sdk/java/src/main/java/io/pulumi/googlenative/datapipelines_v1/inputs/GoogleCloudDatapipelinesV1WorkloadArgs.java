@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataflowFlexTemplateRequest")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
 
     public Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> getDataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest == null ? Input.empty() : this.dataflowFlexTemplateRequest;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataflowLaunchTemplateRequest")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
     public Input<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> getDataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest == null ? Input.empty() : this.dataflowLaunchTemplateRequest;
@@ -94,7 +94,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
             this.dataflowLaunchTemplateRequest = Input.ofNullable(dataflowLaunchTemplateRequest);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1WorkloadArgs build() {
             return new GoogleCloudDatapipelinesV1WorkloadArgs(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }

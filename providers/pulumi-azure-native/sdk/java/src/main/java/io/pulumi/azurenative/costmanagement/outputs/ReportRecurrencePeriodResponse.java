@@ -76,7 +76,6 @@ public final class ReportRecurrencePeriodResponse {
             this.to = to;
             return this;
         }
-
         public ReportRecurrencePeriodResponse build() {
             return new ReportRecurrencePeriodResponse(from, to);
         }

@@ -21,7 +21,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arcSettingName")
-    private final @Nullable Input<String> arcSettingName;
+        private final @Nullable Input<String> arcSettingName;
 
     public Input<String> getArcSettingName() {
         return this.arcSettingName == null ? Input.empty() : this.arcSettingName;
@@ -32,7 +32,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -43,7 +43,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+        private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -54,7 +54,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<String> createdBy;
+        private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -65,7 +65,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-    private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+        private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
     public Input<Either<String,CreatedByType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -76,7 +76,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable Input<String> lastModifiedAt;
+        private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -87,7 +87,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-    private final @Nullable Input<String> lastModifiedBy;
+        private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -98,7 +98,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-    private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+        private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
     public Input<Either<String,CreatedByType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -109,7 +109,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -273,7 +273,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ArcSettingArgs build() {
             return new ArcSettingArgs(arcSettingName, clusterName, createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType, resourceGroupName);
         }

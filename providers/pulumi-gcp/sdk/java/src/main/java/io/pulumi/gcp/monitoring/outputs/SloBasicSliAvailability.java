@@ -54,7 +54,6 @@ public final class SloBasicSliAvailability {
             this.enabled = enabled;
             return this;
         }
-
         public SloBasicSliAvailability build() {
             return new SloBasicSliAvailability(enabled);
         }

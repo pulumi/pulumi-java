@@ -60,7 +60,6 @@ public final class DomainVPCOptions {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public DomainVPCOptions build() {
             return new DomainVPCOptions(securityGroupIds, subnetIds);
         }

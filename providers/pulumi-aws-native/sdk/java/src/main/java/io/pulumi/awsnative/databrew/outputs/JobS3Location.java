@@ -73,7 +73,6 @@ public final class JobS3Location {
             this.key = key;
             return this;
         }
-
         public JobS3Location build() {
             return new JobS3Location(bucket, bucketOwner, key);
         }

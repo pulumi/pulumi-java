@@ -17,7 +17,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="buildName", required=true)
-    private final String buildName;
+        private final String buildName;
 
     public String getBuildName() {
         return this.buildName;
@@ -28,7 +28,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="buildResultName", required=true)
-    private final String buildResultName;
+        private final String buildResultName;
 
     public String getBuildResultName() {
         return this.buildResultName;
@@ -39,7 +39,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-    private final String buildServiceName;
+        private final String buildServiceName;
 
     public String getBuildServiceName() {
         return this.buildServiceName;
@@ -50,7 +50,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -140,7 +140,6 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetBuildServiceBuildResultLogArgs build() {
             return new GetBuildServiceBuildResultLogArgs(buildName, buildResultName, buildServiceName, resourceGroupName, serviceName);
         }

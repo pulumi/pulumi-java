@@ -118,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardResponse(buttons, imageUri, subtitle, title);
         }

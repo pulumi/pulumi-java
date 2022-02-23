@@ -58,7 +58,6 @@ public final class PackagingConfigurationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PackagingConfigurationTag build() {
             return new PackagingConfigurationTag(key, value);
         }

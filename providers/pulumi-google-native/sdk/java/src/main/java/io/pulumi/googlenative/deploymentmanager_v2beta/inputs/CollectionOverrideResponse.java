@@ -22,7 +22,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="collection", required=true)
-    private final String collection;
+      private final String collection;
 
     public String getCollection() {
         return this.collection;
@@ -33,7 +33,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="options", required=true)
-    private final OptionsResponse options;
+      private final OptionsResponse options;
 
     public OptionsResponse getOptions() {
         return this.options;
@@ -82,7 +82,6 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public CollectionOverrideResponse build() {
             return new CollectionOverrideResponse(collection, options);
         }

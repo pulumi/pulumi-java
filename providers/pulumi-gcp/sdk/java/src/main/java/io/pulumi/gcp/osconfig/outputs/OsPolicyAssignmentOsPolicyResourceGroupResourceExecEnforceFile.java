@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile(allowInsecure, gcs, localPath, remote);
         }

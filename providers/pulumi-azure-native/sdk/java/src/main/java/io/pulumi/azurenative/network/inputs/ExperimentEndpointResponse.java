@@ -23,7 +23,7 @@ public final class ExperimentEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+        private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -34,7 +34,7 @@ public final class ExperimentEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -83,7 +83,6 @@ public final class ExperimentEndpointResponse extends io.pulumi.resources.Invoke
             this.name = name;
             return this;
         }
-
         public ExperimentEndpointResponse build() {
             return new ExperimentEndpointResponse(endpoint, name);
         }

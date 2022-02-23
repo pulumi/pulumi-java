@@ -138,7 +138,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EventHandlerResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EventHandlerResponse(event, name, targetFlow, targetPage, triggerFulfillment);
         }

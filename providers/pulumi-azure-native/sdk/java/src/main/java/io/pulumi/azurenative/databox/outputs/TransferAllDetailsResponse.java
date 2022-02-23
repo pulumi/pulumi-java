@@ -98,7 +98,6 @@ public final class TransferAllDetailsResponse {
             this.transferAllFiles = transferAllFiles;
             return this;
         }
-
         public TransferAllDetailsResponse build() {
             return new TransferAllDetailsResponse(dataAccountType, transferAllBlobs, transferAllFiles);
         }

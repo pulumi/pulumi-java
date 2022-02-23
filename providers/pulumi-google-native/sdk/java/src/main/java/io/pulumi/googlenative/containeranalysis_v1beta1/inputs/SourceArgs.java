@@ -26,7 +26,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalContexts")
-    private final @Nullable Input<List<SourceContextArgs>> additionalContexts;
+      private final @Nullable Input<List<SourceContextArgs>> additionalContexts;
 
     public Input<List<SourceContextArgs>> getAdditionalContexts() {
         return this.additionalContexts == null ? Input.empty() : this.additionalContexts;
@@ -37,7 +37,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStorageSourceUri")
-    private final @Nullable Input<String> artifactStorageSourceUri;
+      private final @Nullable Input<String> artifactStorageSourceUri;
 
     public Input<String> getArtifactStorageSourceUri() {
         return this.artifactStorageSourceUri == null ? Input.empty() : this.artifactStorageSourceUri;
@@ -48,7 +48,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<SourceContextArgs> context;
+      private final @Nullable Input<SourceContextArgs> context;
 
     public Input<SourceContextArgs> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -59,7 +59,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileHashes")
-    private final @Nullable Input<Map<String,String>> fileHashes;
+      private final @Nullable Input<Map<String,String>> fileHashes;
 
     public Input<Map<String,String>> getFileHashes() {
         return this.fileHashes == null ? Input.empty() : this.fileHashes;
@@ -148,7 +148,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.fileHashes = Input.ofNullable(fileHashes);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(additionalContexts, artifactStorageSourceUri, context, fileHashes);
         }

@@ -118,7 +118,6 @@ public final class RepositoryRefDefinitionResponse {
             this.tag = tag;
             return this;
         }
-
         public RepositoryRefDefinitionResponse build() {
             return new RepositoryRefDefinitionResponse(branch, commit, semver, tag);
         }

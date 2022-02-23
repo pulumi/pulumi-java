@@ -119,7 +119,6 @@ public final class BillingMeterDetailsResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BillingMeterDetailsResponse build() {
             return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
         }

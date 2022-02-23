@@ -98,7 +98,6 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }
-
         public DistributionConfigurationLaunchTemplateConfiguration build() {
             return new DistributionConfigurationLaunchTemplateConfiguration(accountId, launchTemplateId, setDefaultVersion);
         }

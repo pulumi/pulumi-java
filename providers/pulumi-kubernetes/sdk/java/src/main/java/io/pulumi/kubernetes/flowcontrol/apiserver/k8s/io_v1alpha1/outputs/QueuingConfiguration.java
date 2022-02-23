@@ -97,7 +97,6 @@ public final class QueuingConfiguration {
             this.queues = queues;
             return this;
         }
-
         public QueuingConfiguration build() {
             return new QueuingConfiguration(handSize, queueLengthLimit, queues);
         }

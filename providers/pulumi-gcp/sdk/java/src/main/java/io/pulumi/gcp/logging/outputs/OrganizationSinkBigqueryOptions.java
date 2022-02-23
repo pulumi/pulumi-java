@@ -58,7 +58,6 @@ public final class OrganizationSinkBigqueryOptions {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public OrganizationSinkBigqueryOptions build() {
             return new OrganizationSinkBigqueryOptions(usePartitionedTables);
         }

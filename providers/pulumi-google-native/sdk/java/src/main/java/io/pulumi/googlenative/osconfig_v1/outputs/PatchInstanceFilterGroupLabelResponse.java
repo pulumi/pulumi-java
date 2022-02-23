@@ -53,7 +53,6 @@ public final class PatchInstanceFilterGroupLabelResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public PatchInstanceFilterGroupLabelResponse build() {
             return new PatchInstanceFilterGroupLabelResponse(labels);
         }

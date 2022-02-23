@@ -74,7 +74,6 @@ public final class CertificateTemplateResponse {
             this.minorVersion = Objects.requireNonNull(minorVersion);
             return this;
         }
-
         public CertificateTemplateResponse build() {
             return new CertificateTemplateResponse(majorVersion, minorVersion);
         }

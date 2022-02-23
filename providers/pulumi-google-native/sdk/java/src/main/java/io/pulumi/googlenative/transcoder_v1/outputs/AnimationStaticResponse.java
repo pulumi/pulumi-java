@@ -75,7 +75,6 @@ public final class AnimationStaticResponse {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationStaticResponse build() {
             return new AnimationStaticResponse(startTimeOffset, xy);
         }

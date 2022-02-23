@@ -96,7 +96,6 @@ public final class PushFilterResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public PushFilterResponse build() {
             return new PushFilterResponse(branch, invertRegex, tag);
         }

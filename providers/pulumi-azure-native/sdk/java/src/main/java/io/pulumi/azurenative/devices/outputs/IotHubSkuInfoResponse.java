@@ -98,7 +98,6 @@ public final class IotHubSkuInfoResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public IotHubSkuInfoResponse build() {
             return new IotHubSkuInfoResponse(capacity, name, tier);
         }

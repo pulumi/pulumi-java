@@ -18,7 +18,7 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configMembership", required=true)
-    private final Input<String> configMembership;
+        private final Input<String> configMembership;
 
     public Input<String> getConfigMembership() {
         return this.configMembership;
@@ -61,7 +61,6 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
             this.configMembership = Input.of(Objects.requireNonNull(configMembership));
             return this;
         }
-
         public FeatureSpecMulticlusteringressArgs build() {
             return new FeatureSpecMulticlusteringressArgs(configMembership);
         }

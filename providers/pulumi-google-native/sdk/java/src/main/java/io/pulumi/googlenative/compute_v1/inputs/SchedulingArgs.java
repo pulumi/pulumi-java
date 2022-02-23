@@ -30,7 +30,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticRestart")
-    private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Input<Boolean> automaticRestart;
 
     public Input<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
@@ -41,7 +41,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTerminationAction")
-    private final @Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction;
+      private final @Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
     public Input<SchedulingInstanceTerminationAction> getInstanceTerminationAction() {
         return this.instanceTerminationAction == null ? Input.empty() : this.instanceTerminationAction;
@@ -52,7 +52,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-    private final @Nullable Input<String> locationHint;
+      private final @Nullable Input<String> locationHint;
 
     public Input<String> getLocationHint() {
         return this.locationHint == null ? Input.empty() : this.locationHint;
@@ -63,7 +63,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minNodeCpus")
-    private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Input<Integer> minNodeCpus;
 
     public Input<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
@@ -74,7 +74,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinities")
-    private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+      private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Input<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
@@ -85,7 +85,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onHostMaintenance")
-    private final @Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance;
+      private final @Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance;
 
     public Input<SchedulingOnHostMaintenance> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
@@ -96,7 +96,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptible")
-    private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;
@@ -107,7 +107,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningModel")
-    private final @Nullable Input<SchedulingProvisioningModel> provisioningModel;
+      private final @Nullable Input<SchedulingProvisioningModel> provisioningModel;
 
     public Input<SchedulingProvisioningModel> getProvisioningModel() {
         return this.provisioningModel == null ? Input.empty() : this.provisioningModel;
@@ -256,7 +256,6 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             this.provisioningModel = Input.ofNullable(provisioningModel);
             return this;
         }
-
         public SchedulingArgs build() {
             return new SchedulingArgs(automaticRestart, instanceTerminationAction, locationHint, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }

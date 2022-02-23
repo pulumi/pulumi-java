@@ -23,7 +23,7 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleId")
-    private final @Nullable Input<String> moduleId;
+      private final @Nullable Input<String> moduleId;
 
     public Input<String> getModuleId() {
         return this.moduleId == null ? Input.empty() : this.moduleId;
@@ -66,7 +66,6 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
             this.moduleId = Input.ofNullable(moduleId);
             return this;
         }
-
         public AppEngineArgs build() {
             return new AppEngineArgs(moduleId);
         }

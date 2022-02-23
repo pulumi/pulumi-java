@@ -101,7 +101,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotProperties build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotProperties(guestFlush, labels, storageLocations);
         }

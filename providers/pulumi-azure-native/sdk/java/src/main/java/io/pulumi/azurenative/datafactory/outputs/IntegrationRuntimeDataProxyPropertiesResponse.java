@@ -98,7 +98,6 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
-
         public IntegrationRuntimeDataProxyPropertiesResponse build() {
             return new IntegrationRuntimeDataProxyPropertiesResponse(connectVia, path, stagingLinkedService);
         }

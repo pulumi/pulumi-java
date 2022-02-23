@@ -120,7 +120,6 @@ public final class GetFolderIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFolderIamPolicyResult build() {
             return new GetFolderIamPolicyResult(auditConfigs, bindings, etag, version);
         }

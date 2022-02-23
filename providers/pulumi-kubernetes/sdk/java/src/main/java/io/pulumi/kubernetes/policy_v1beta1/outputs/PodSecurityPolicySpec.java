@@ -558,7 +558,6 @@ public final class PodSecurityPolicySpec {
             this.volumes = volumes;
             return this;
         }
-
         public PodSecurityPolicySpec build() {
             return new PodSecurityPolicySpec(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
         }

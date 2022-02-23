@@ -138,7 +138,6 @@ public final class AS2EnvelopeSettingsResponse {
             this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
             return this;
         }
-
         public AS2EnvelopeSettingsResponse build() {
             return new AS2EnvelopeSettingsResponse(autogenerateFileName, fileNameTemplate, messageContentType, suspendMessageOnFileNameGenerationError, transmitFileNameInMimeHeader);
         }

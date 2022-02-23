@@ -129,7 +129,6 @@ public final class DataDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(caching, diskSizeGB, lun, storageAccountType);
         }

@@ -205,7 +205,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(etag, id, location, name, properties, sku, tags, type);
         }

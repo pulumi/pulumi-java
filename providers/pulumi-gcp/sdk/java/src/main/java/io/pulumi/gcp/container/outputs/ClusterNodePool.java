@@ -291,7 +291,6 @@ public final class ClusterNodePool {
             this.version = version;
             return this;
         }
-
         public ClusterNodePool build() {
             return new ClusterNodePool(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
         }

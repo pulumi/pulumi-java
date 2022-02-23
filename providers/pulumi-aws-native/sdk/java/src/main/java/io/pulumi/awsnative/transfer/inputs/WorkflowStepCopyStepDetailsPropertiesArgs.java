@@ -21,7 +21,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     public static final WorkflowStepCopyStepDetailsPropertiesArgs Empty = new WorkflowStepCopyStepDetailsPropertiesArgs();
 
     @InputImport(name="destinationFileLocation")
-    private final @Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation;
+        private final @Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation;
 
     public Input<WorkflowInputFileLocationArgs> getDestinationFileLocation() {
         return this.destinationFileLocation == null ? Input.empty() : this.destinationFileLocation;
@@ -32,7 +32,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overwriteExisting")
-    private final @Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
+        private final @Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
     public Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
         return this.overwriteExisting == null ? Input.empty() : this.overwriteExisting;
@@ -117,7 +117,6 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
             this.overwriteExisting = Input.ofNullable(overwriteExisting);
             return this;
         }
-
         public WorkflowStepCopyStepDetailsPropertiesArgs build() {
             return new WorkflowStepCopyStepDetailsPropertiesArgs(destinationFileLocation, name, overwriteExisting);
         }

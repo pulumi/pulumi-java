@@ -44,7 +44,6 @@ public final class GetSsmParameterStringResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetSsmParameterStringResult build() {
             return new GetSsmParameterStringResult(value);
         }

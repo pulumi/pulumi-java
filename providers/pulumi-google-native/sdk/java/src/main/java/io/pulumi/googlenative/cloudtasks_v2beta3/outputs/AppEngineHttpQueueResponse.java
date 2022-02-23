@@ -52,7 +52,6 @@ public final class AppEngineHttpQueueResponse {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
-
         public AppEngineHttpQueueResponse build() {
             return new AppEngineHttpQueueResponse(appEngineRoutingOverride);
         }

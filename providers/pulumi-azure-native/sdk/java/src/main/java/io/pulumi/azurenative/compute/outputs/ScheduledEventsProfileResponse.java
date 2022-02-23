@@ -54,7 +54,6 @@ public final class ScheduledEventsProfileResponse {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
         }
-
         public ScheduledEventsProfileResponse build() {
             return new ScheduledEventsProfileResponse(terminateNotificationProfile);
         }

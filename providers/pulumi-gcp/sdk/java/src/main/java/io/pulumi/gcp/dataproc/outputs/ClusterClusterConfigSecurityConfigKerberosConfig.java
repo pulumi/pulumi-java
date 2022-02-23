@@ -383,7 +383,6 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfig {
             this.truststoreUri = truststoreUri;
             return this;
         }
-
         public ClusterClusterConfigSecurityConfigKerberosConfig build() {
             return new ClusterClusterConfigSecurityConfigKerberosConfig(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
         }

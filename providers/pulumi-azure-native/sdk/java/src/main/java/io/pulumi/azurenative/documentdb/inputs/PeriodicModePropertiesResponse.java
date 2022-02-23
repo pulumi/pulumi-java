@@ -23,7 +23,7 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupIntervalInMinutes")
-    private final @Nullable Integer backupIntervalInMinutes;
+        private final @Nullable Integer backupIntervalInMinutes;
 
     public Optional<Integer> getBackupIntervalInMinutes() {
         return this.backupIntervalInMinutes == null ? Optional.empty() : Optional.ofNullable(this.backupIntervalInMinutes);
@@ -34,7 +34,7 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupRetentionIntervalInHours")
-    private final @Nullable Integer backupRetentionIntervalInHours;
+        private final @Nullable Integer backupRetentionIntervalInHours;
 
     public Optional<Integer> getBackupRetentionIntervalInHours() {
         return this.backupRetentionIntervalInHours == null ? Optional.empty() : Optional.ofNullable(this.backupRetentionIntervalInHours);
@@ -83,7 +83,6 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
             this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
         }
-
         public PeriodicModePropertiesResponse build() {
             return new PeriodicModePropertiesResponse(backupIntervalInMinutes, backupRetentionIntervalInHours);
         }

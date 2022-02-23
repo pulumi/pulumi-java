@@ -27,7 +27,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blocked")
-    private final @Nullable Input<Boolean> blocked;
+        private final @Nullable Input<Boolean> blocked;
 
     public Input<Boolean> getBlocked() {
         return this.blocked == null ? Input.empty() : this.blocked;
@@ -38,7 +38,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configs")
-    private final @Nullable Input<List<DeviceConfigGetArgs>> configs;
+        private final @Nullable Input<List<DeviceConfigGetArgs>> configs;
 
     public Input<List<DeviceConfigGetArgs>> getConfigs() {
         return this.configs == null ? Input.empty() : this.configs;
@@ -50,7 +50,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<List<DeviceCredentialGetArgs>> credentials;
+        private final @Nullable Input<List<DeviceCredentialGetArgs>> credentials;
 
     public Input<List<DeviceCredentialGetArgs>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -62,7 +62,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-    private final @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig;
+        private final @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig;
 
     public Input<DeviceGatewayConfigGetArgs> getGatewayConfig() {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
@@ -73,7 +73,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastConfigAckTime")
-    private final @Nullable Input<String> lastConfigAckTime;
+        private final @Nullable Input<String> lastConfigAckTime;
 
     public Input<String> getLastConfigAckTime() {
         return this.lastConfigAckTime == null ? Input.empty() : this.lastConfigAckTime;
@@ -84,7 +84,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastConfigSendTime")
-    private final @Nullable Input<String> lastConfigSendTime;
+        private final @Nullable Input<String> lastConfigSendTime;
 
     public Input<String> getLastConfigSendTime() {
         return this.lastConfigSendTime == null ? Input.empty() : this.lastConfigSendTime;
@@ -95,7 +95,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastErrorStatuses")
-    private final @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
+        private final @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
     public Input<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
         return this.lastErrorStatuses == null ? Input.empty() : this.lastErrorStatuses;
@@ -106,7 +106,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastErrorTime")
-    private final @Nullable Input<String> lastErrorTime;
+        private final @Nullable Input<String> lastErrorTime;
 
     public Input<String> getLastErrorTime() {
         return this.lastErrorTime == null ? Input.empty() : this.lastErrorTime;
@@ -117,7 +117,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastEventTime")
-    private final @Nullable Input<String> lastEventTime;
+        private final @Nullable Input<String> lastEventTime;
 
     public Input<String> getLastEventTime() {
         return this.lastEventTime == null ? Input.empty() : this.lastEventTime;
@@ -128,7 +128,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastHeartbeatTime")
-    private final @Nullable Input<String> lastHeartbeatTime;
+        private final @Nullable Input<String> lastHeartbeatTime;
 
     public Input<String> getLastHeartbeatTime() {
         return this.lastHeartbeatTime == null ? Input.empty() : this.lastHeartbeatTime;
@@ -139,7 +139,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastStateTime")
-    private final @Nullable Input<String> lastStateTime;
+        private final @Nullable Input<String> lastStateTime;
 
     public Input<String> getLastStateTime() {
         return this.lastStateTime == null ? Input.empty() : this.lastStateTime;
@@ -151,7 +151,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<String> logLevel;
+        private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -162,7 +162,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -173,7 +173,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -185,7 +185,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numId")
-    private final @Nullable Input<String> numId;
+        private final @Nullable Input<String> numId;
 
     public Input<String> getNumId() {
         return this.numId == null ? Input.empty() : this.numId;
@@ -196,7 +196,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registry")
-    private final @Nullable Input<String> registry;
+        private final @Nullable Input<String> registry;
 
     public Input<String> getRegistry() {
         return this.registry == null ? Input.empty() : this.registry;
@@ -207,7 +207,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="states")
-    private final @Nullable Input<List<DeviceStateGetArgs>> states;
+        private final @Nullable Input<List<DeviceStateGetArgs>> states;
 
     public Input<List<DeviceStateGetArgs>> getStates() {
         return this.states == null ? Input.empty() : this.states;
@@ -491,7 +491,6 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             this.states = Input.ofNullable(states);
             return this;
         }
-
         public DeviceState build() {
             return new DeviceState(blocked, configs, credentials, gatewayConfig, lastConfigAckTime, lastConfigSendTime, lastErrorStatuses, lastErrorTime, lastEventTime, lastHeartbeatTime, lastStateTime, logLevel, metadata, name, numId, registry, states);
         }

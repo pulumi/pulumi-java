@@ -169,7 +169,6 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskPropertiesResponse build() {
             return new ConnectToTargetSqlMISyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

@@ -76,7 +76,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
             this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(allowAllPackageNames, allowedPackageNames);
         }

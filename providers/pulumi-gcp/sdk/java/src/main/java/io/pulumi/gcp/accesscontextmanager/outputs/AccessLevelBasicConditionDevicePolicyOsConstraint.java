@@ -104,7 +104,6 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }
-
         public AccessLevelBasicConditionDevicePolicyOsConstraint build() {
             return new AccessLevelBasicConditionDevicePolicyOsConstraint(minimumVersion, osType, requireVerifiedChromeOs);
         }

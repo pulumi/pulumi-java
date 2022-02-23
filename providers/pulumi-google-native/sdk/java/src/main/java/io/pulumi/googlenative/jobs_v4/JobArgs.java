@@ -30,7 +30,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses")
-    private final @Nullable Input<List<String>> addresses;
+      private final @Nullable Input<List<String>> addresses;
 
     public Input<List<String>> getAddresses() {
         return this.addresses == null ? Input.empty() : this.addresses;
@@ -41,7 +41,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationInfo")
-    private final @Nullable Input<ApplicationInfoArgs> applicationInfo;
+      private final @Nullable Input<ApplicationInfoArgs> applicationInfo;
 
     public Input<ApplicationInfoArgs> getApplicationInfo() {
         return this.applicationInfo == null ? Input.empty() : this.applicationInfo;
@@ -52,7 +52,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="company", required=true)
-    private final Input<String> company;
+      private final Input<String> company;
 
     public Input<String> getCompany() {
         return this.company;
@@ -63,7 +63,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compensationInfo")
-    private final @Nullable Input<CompensationInfoArgs> compensationInfo;
+      private final @Nullable Input<CompensationInfoArgs> compensationInfo;
 
     public Input<CompensationInfoArgs> getCompensationInfo() {
         return this.compensationInfo == null ? Input.empty() : this.compensationInfo;
@@ -74,7 +74,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-    private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Input<Map<String,String>> customAttributes;
 
     public Input<Map<String,String>> getCustomAttributes() {
         return this.customAttributes == null ? Input.empty() : this.customAttributes;
@@ -85,7 +85,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="degreeTypes")
-    private final @Nullable Input<List<JobDegreeTypesItem>> degreeTypes;
+      private final @Nullable Input<List<JobDegreeTypesItem>> degreeTypes;
 
     public Input<List<JobDegreeTypesItem>> getDegreeTypes() {
         return this.degreeTypes == null ? Input.empty() : this.degreeTypes;
@@ -96,7 +96,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="department")
-    private final @Nullable Input<String> department;
+      private final @Nullable Input<String> department;
 
     public Input<String> getDepartment() {
         return this.department == null ? Input.empty() : this.department;
@@ -107,7 +107,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -118,7 +118,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="employmentTypes")
-    private final @Nullable Input<List<JobEmploymentTypesItem>> employmentTypes;
+      private final @Nullable Input<List<JobEmploymentTypesItem>> employmentTypes;
 
     public Input<List<JobEmploymentTypesItem>> getEmploymentTypes() {
         return this.employmentTypes == null ? Input.empty() : this.employmentTypes;
@@ -129,7 +129,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incentives")
-    private final @Nullable Input<String> incentives;
+      private final @Nullable Input<String> incentives;
 
     public Input<String> getIncentives() {
         return this.incentives == null ? Input.empty() : this.incentives;
@@ -140,7 +140,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobBenefits")
-    private final @Nullable Input<List<JobJobBenefitsItem>> jobBenefits;
+      private final @Nullable Input<List<JobJobBenefitsItem>> jobBenefits;
 
     public Input<List<JobJobBenefitsItem>> getJobBenefits() {
         return this.jobBenefits == null ? Input.empty() : this.jobBenefits;
@@ -151,7 +151,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobEndTime")
-    private final @Nullable Input<String> jobEndTime;
+      private final @Nullable Input<String> jobEndTime;
 
     public Input<String> getJobEndTime() {
         return this.jobEndTime == null ? Input.empty() : this.jobEndTime;
@@ -162,7 +162,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobLevel")
-    private final @Nullable Input<JobJobLevel> jobLevel;
+      private final @Nullable Input<JobJobLevel> jobLevel;
 
     public Input<JobJobLevel> getJobLevel() {
         return this.jobLevel == null ? Input.empty() : this.jobLevel;
@@ -173,7 +173,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobStartTime")
-    private final @Nullable Input<String> jobStartTime;
+      private final @Nullable Input<String> jobStartTime;
 
     public Input<String> getJobStartTime() {
         return this.jobStartTime == null ? Input.empty() : this.jobStartTime;
@@ -184,7 +184,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -195,7 +195,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -206,7 +206,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingExpireTime")
-    private final @Nullable Input<String> postingExpireTime;
+      private final @Nullable Input<String> postingExpireTime;
 
     public Input<String> getPostingExpireTime() {
         return this.postingExpireTime == null ? Input.empty() : this.postingExpireTime;
@@ -217,7 +217,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingPublishTime")
-    private final @Nullable Input<String> postingPublishTime;
+      private final @Nullable Input<String> postingPublishTime;
 
     public Input<String> getPostingPublishTime() {
         return this.postingPublishTime == null ? Input.empty() : this.postingPublishTime;
@@ -228,7 +228,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingRegion")
-    private final @Nullable Input<JobPostingRegion> postingRegion;
+      private final @Nullable Input<JobPostingRegion> postingRegion;
 
     public Input<JobPostingRegion> getPostingRegion() {
         return this.postingRegion == null ? Input.empty() : this.postingRegion;
@@ -239,14 +239,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processingOptions")
-    private final @Nullable Input<ProcessingOptionsArgs> processingOptions;
+      private final @Nullable Input<ProcessingOptionsArgs> processingOptions;
 
     public Input<ProcessingOptionsArgs> getProcessingOptions() {
         return this.processingOptions == null ? Input.empty() : this.processingOptions;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -257,7 +257,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotionValue")
-    private final @Nullable Input<Integer> promotionValue;
+      private final @Nullable Input<Integer> promotionValue;
 
     public Input<Integer> getPromotionValue() {
         return this.promotionValue == null ? Input.empty() : this.promotionValue;
@@ -268,7 +268,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifications")
-    private final @Nullable Input<String> qualifications;
+      private final @Nullable Input<String> qualifications;
 
     public Input<String> getQualifications() {
         return this.qualifications == null ? Input.empty() : this.qualifications;
@@ -279,7 +279,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requisitionId", required=true)
-    private final Input<String> requisitionId;
+      private final Input<String> requisitionId;
 
     public Input<String> getRequisitionId() {
         return this.requisitionId;
@@ -290,14 +290,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responsibilities")
-    private final @Nullable Input<String> responsibilities;
+      private final @Nullable Input<String> responsibilities;
 
     public Input<String> getResponsibilities() {
         return this.responsibilities == null ? Input.empty() : this.responsibilities;
     }
 
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+      private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -308,7 +308,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -742,7 +742,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(addresses, applicationInfo, company, compensationInfo, customAttributes, degreeTypes, department, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingExpireTime, postingPublishTime, postingRegion, processingOptions, project, promotionValue, qualifications, requisitionId, responsibilities, tenantId, title);
         }

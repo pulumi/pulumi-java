@@ -134,7 +134,6 @@ public final class TopologySpreadConstraint {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }
-
         public TopologySpreadConstraint build() {
             return new TopologySpreadConstraint(labelSelector, maxSkew, topologyKey, whenUnsatisfiable);
         }

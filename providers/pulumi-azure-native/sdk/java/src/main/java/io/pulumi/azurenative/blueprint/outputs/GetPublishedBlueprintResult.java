@@ -269,7 +269,6 @@ public final class GetPublishedBlueprintResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPublishedBlueprintResult build() {
             return new GetPublishedBlueprintResult(blueprintName, changeNotes, description, displayName, id, name, parameters, resourceGroups, status, targetScope, type);
         }

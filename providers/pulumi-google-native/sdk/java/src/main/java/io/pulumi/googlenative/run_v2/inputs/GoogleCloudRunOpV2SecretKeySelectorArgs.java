@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -93,7 +93,6 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
             return new GoogleCloudRunOpV2SecretKeySelectorArgs(secret, version);
         }

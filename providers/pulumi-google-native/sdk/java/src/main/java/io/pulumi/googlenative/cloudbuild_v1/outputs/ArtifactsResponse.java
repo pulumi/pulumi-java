@@ -76,7 +76,6 @@ public final class ArtifactsResponse {
             this.objects = Objects.requireNonNull(objects);
             return this;
         }
-
         public ArtifactsResponse build() {
             return new ArtifactsResponse(images, objects);
         }

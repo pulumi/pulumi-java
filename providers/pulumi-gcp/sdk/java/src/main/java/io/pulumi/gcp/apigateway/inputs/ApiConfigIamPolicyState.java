@@ -20,14 +20,14 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="api")
-    private final @Nullable Input<String> api;
+        private final @Nullable Input<String> api;
 
     public Input<String> getApi() {
         return this.api == null ? Input.empty() : this.api;
     }
 
     @InputImport(name="apiConfig")
-    private final @Nullable Input<String> apiConfig;
+        private final @Nullable Input<String> apiConfig;
 
     public Input<String> getApiConfig() {
         return this.apiConfig == null ? Input.empty() : this.apiConfig;
@@ -38,7 +38,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -50,7 +50,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -62,7 +62,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -166,7 +166,6 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ApiConfigIamPolicyState build() {
             return new ApiConfigIamPolicyState(api, apiConfig, etag, policyData, project);
         }

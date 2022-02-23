@@ -61,7 +61,6 @@ public final class TaskDefinitionAuthorizationConfig {
             this.iAM = iAM;
             return this;
         }
-
         public TaskDefinitionAuthorizationConfig build() {
             return new TaskDefinitionAuthorizationConfig(accessPointId, iAM);
         }

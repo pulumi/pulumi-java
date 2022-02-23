@@ -119,7 +119,6 @@ public final class SSISChildPackageResponse {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
-
         public SSISChildPackageResponse build() {
             return new SSISChildPackageResponse(packageContent, packageLastModifiedDate, packageName, packagePath);
         }

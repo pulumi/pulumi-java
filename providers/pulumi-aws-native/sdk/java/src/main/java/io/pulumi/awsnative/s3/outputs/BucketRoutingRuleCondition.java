@@ -76,7 +76,6 @@ public final class BucketRoutingRuleCondition {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
-
         public BucketRoutingRuleCondition build() {
             return new BucketRoutingRuleCondition(httpErrorCodeReturnedEquals, keyPrefixEquals);
         }

@@ -74,7 +74,6 @@ public final class TokenRequestStatus {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public TokenRequestStatus build() {
             return new TokenRequestStatus(expirationTimestamp, token);
         }

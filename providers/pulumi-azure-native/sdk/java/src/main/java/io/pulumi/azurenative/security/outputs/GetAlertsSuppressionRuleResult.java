@@ -245,7 +245,6 @@ public final class GetAlertsSuppressionRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertsSuppressionRuleResult build() {
             return new GetAlertsSuppressionRuleResult(alertType, comment, expirationDateUtc, id, lastModifiedUtc, name, reason, state, suppressionAlertsScope, type);
         }

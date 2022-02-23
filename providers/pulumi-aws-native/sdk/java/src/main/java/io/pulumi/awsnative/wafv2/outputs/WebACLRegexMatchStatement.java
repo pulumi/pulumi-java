@@ -74,7 +74,6 @@ public final class WebACLRegexMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLRegexMatchStatement build() {
             return new WebACLRegexMatchStatement(fieldToMatch, regexString, textTransformations);
         }

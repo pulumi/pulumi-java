@@ -118,7 +118,6 @@ public final class SslConfigurationResponse {
             this.status = status;
             return this;
         }
-
         public SslConfigurationResponse build() {
             return new SslConfigurationResponse(cert, cname, key, status);
         }

@@ -89,7 +89,6 @@ public final class GetDefaultServiceAccountResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(email, id, project);
         }

@@ -22,7 +22,7 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="clusterScoped", required=true)
-    private final Boolean clusterScoped;
+      private final Boolean clusterScoped;
 
     public Boolean getClusterScoped() {
         return this.clusterScoped;
@@ -33,7 +33,7 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="manifest", required=true)
-    private final String manifest;
+      private final String manifest;
 
     public String getManifest() {
         return this.manifest;
@@ -82,7 +82,6 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public ResourceManifestResponse build() {
             return new ResourceManifestResponse(clusterScoped, manifest);
         }

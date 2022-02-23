@@ -119,7 +119,6 @@ public final class PolybaseSettingsResponse {
             this.useTypeDefault = useTypeDefault;
             return this;
         }
-
         public PolybaseSettingsResponse build() {
             return new PolybaseSettingsResponse(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
         }

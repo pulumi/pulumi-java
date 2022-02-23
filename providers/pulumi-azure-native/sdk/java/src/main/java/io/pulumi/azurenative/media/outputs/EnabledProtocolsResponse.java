@@ -116,7 +116,6 @@ public final class EnabledProtocolsResponse {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }
-
         public EnabledProtocolsResponse build() {
             return new EnabledProtocolsResponse(dash, download, hls, smoothStreaming);
         }

@@ -21,7 +21,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="agonesVersionInstalled", required=true)
-    private final String agonesVersionInstalled;
+      private final String agonesVersionInstalled;
 
     public String getAgonesVersionInstalled() {
         return this.agonesVersionInstalled;
@@ -32,7 +32,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="agonesVersionTargeted", required=true)
-    private final String agonesVersionTargeted;
+      private final String agonesVersionTargeted;
 
     public String getAgonesVersionTargeted() {
         return this.agonesVersionTargeted;
@@ -43,7 +43,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="installationState", required=true)
-    private final String installationState;
+      private final String installationState;
 
     public String getInstallationState() {
         return this.installationState;
@@ -54,7 +54,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="kubernetesVersionInstalled", required=true)
-    private final String kubernetesVersionInstalled;
+      private final String kubernetesVersionInstalled;
 
     public String getKubernetesVersionInstalled() {
         return this.kubernetesVersionInstalled;
@@ -65,7 +65,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provider", required=true)
-    private final String provider;
+      private final String provider;
 
     public String getProvider() {
         return this.provider;
@@ -76,7 +76,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="versionInstalledErrorMessage", required=true)
-    private final String versionInstalledErrorMessage;
+      private final String versionInstalledErrorMessage;
 
     public String getVersionInstalledErrorMessage() {
         return this.versionInstalledErrorMessage;
@@ -165,7 +165,6 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
             this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage);
             return this;
         }
-
         public KubernetesClusterStateResponse build() {
             return new KubernetesClusterStateResponse(agonesVersionInstalled, agonesVersionTargeted, installationState, kubernetesVersionInstalled, provider, versionInstalledErrorMessage);
         }

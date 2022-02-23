@@ -54,7 +54,6 @@ public final class DatabaseEncryptionConfig {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public DatabaseEncryptionConfig build() {
             return new DatabaseEncryptionConfig(kmsKeyName);
         }

@@ -119,7 +119,6 @@ public final class DetectorModelTransitionEvent {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }
-
         public DetectorModelTransitionEvent build() {
             return new DetectorModelTransitionEvent(actions, condition, eventName, nextState);
         }

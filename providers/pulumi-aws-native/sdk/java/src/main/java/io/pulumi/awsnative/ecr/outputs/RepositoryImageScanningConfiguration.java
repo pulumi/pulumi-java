@@ -46,7 +46,6 @@ public final class RepositoryImageScanningConfiguration {
             this.scanOnPush = scanOnPush;
             return this;
         }
-
         public RepositoryImageScanningConfiguration build() {
             return new RepositoryImageScanningConfiguration(scanOnPush);
         }

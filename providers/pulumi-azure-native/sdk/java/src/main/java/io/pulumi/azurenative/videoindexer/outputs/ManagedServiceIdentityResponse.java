@@ -119,7 +119,6 @@ public final class ManagedServiceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ManagedServiceIdentityResponse build() {
             return new ManagedServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

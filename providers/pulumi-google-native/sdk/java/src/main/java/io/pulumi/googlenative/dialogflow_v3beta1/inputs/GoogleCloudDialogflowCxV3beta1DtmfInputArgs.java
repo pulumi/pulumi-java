@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="digits")
-    private final @Nullable Input<String> digits;
+      private final @Nullable Input<String> digits;
 
     public Input<String> getDigits() {
         return this.digits == null ? Input.empty() : this.digits;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi
      * 
      */
     @InputImport(name="finishDigit")
-    private final @Nullable Input<String> finishDigit;
+      private final @Nullable Input<String> finishDigit;
 
     public Input<String> getFinishDigit() {
         return this.finishDigit == null ? Input.empty() : this.finishDigit;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi
             this.finishDigit = Input.ofNullable(finishDigit);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1DtmfInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1DtmfInputArgs(digits, finishDigit);
         }

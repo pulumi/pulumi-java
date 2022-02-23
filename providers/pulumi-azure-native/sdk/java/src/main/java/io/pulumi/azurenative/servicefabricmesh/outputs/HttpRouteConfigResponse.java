@@ -97,7 +97,6 @@ public final class HttpRouteConfigResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public HttpRouteConfigResponse build() {
             return new HttpRouteConfigResponse(destination, match, name);
         }

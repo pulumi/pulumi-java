@@ -202,7 +202,6 @@ public final class GetRepositoryResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, mavenConfig, name, updateTime);
         }

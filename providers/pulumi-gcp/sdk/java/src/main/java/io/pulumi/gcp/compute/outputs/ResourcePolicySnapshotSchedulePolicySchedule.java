@@ -105,7 +105,6 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySchedule build() {
             return new ResourcePolicySnapshotSchedulePolicySchedule(dailySchedule, hourlySchedule, weeklySchedule);
         }

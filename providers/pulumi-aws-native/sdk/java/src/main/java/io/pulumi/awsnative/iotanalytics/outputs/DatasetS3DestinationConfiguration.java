@@ -87,7 +87,6 @@ public final class DatasetS3DestinationConfiguration {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public DatasetS3DestinationConfiguration build() {
             return new DatasetS3DestinationConfiguration(bucket, glueConfiguration, key, roleArn);
         }

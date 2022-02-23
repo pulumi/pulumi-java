@@ -82,7 +82,6 @@ public final class HorizontalPodAutoscalerBehavior {
             this.scaleUp = scaleUp;
             return this;
         }
-
         public HorizontalPodAutoscalerBehavior build() {
             return new HorizontalPodAutoscalerBehavior(scaleDown, scaleUp);
         }

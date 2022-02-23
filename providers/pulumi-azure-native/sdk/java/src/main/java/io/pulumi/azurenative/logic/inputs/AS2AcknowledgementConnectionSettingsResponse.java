@@ -21,7 +21,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="ignoreCertificateNameMismatch", required=true)
-    private final Boolean ignoreCertificateNameMismatch;
+        private final Boolean ignoreCertificateNameMismatch;
 
     public Boolean getIgnoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
@@ -32,7 +32,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="keepHttpConnectionAlive", required=true)
-    private final Boolean keepHttpConnectionAlive;
+        private final Boolean keepHttpConnectionAlive;
 
     public Boolean getKeepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
@@ -43,7 +43,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="supportHttpStatusCodeContinue", required=true)
-    private final Boolean supportHttpStatusCodeContinue;
+        private final Boolean supportHttpStatusCodeContinue;
 
     public Boolean getSupportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
@@ -54,7 +54,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="unfoldHttpHeaders", required=true)
-    private final Boolean unfoldHttpHeaders;
+        private final Boolean unfoldHttpHeaders;
 
     public Boolean getUnfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
@@ -123,7 +123,6 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
-
         public AS2AcknowledgementConnectionSettingsResponse build() {
             return new AS2AcknowledgementConnectionSettingsResponse(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
         }

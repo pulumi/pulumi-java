@@ -73,7 +73,6 @@ public final class ApiIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ApiIamBindingCondition build() {
             return new ApiIamBindingCondition(description, expression, title);
         }

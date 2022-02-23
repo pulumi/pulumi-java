@@ -99,7 +99,6 @@ public final class InstanceVmImage {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public InstanceVmImage build() {
             return new InstanceVmImage(imageFamily, imageName, project);
         }

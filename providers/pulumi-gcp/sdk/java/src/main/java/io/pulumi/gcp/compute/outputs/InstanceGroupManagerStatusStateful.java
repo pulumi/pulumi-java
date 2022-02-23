@@ -78,7 +78,6 @@ public final class InstanceGroupManagerStatusStateful {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-
         public InstanceGroupManagerStatusStateful build() {
             return new InstanceGroupManagerStatusStateful(hasStatefulConfig, perInstanceConfigs);
         }

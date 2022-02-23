@@ -98,7 +98,6 @@ public final class StagingSettingsResponse {
             this.path = path;
             return this;
         }
-
         public StagingSettingsResponse build() {
             return new StagingSettingsResponse(enableCompression, linkedServiceName, path);
         }

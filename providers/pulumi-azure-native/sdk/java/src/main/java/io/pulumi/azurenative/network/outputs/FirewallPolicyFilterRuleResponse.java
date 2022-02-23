@@ -148,7 +148,6 @@ public final class FirewallPolicyFilterRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public FirewallPolicyFilterRuleResponse build() {
             return new FirewallPolicyFilterRuleResponse(action, name, priority, ruleConditions, ruleType);
         }

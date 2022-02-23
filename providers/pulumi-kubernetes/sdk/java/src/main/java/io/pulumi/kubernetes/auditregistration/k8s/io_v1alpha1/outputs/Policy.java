@@ -76,7 +76,6 @@ public final class Policy {
             this.stages = stages;
             return this;
         }
-
         public Policy build() {
             return new Policy(level, stages);
         }

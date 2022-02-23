@@ -75,7 +75,6 @@ public final class GkeClusterResponse {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public GkeClusterResponse build() {
             return new GkeClusterResponse(clusterMissing, resourceLink);
         }

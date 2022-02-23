@@ -333,7 +333,6 @@ public final class GetInvitationResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetInvitationResult build() {
             return new GetInvitationResult(expirationDate, id, invitationId, invitationStatus, name, respondedAt, sentAt, systemData, targetActiveDirectoryId, targetEmail, targetObjectId, type, userEmail, userName);
         }

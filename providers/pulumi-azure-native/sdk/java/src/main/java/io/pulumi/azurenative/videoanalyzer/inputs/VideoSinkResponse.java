@@ -27,7 +27,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputs", required=true)
-    private final List<NodeInputResponse> inputs;
+        private final List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> getInputs() {
         return this.inputs;
@@ -38,7 +38,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -61,7 +61,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="videoCreationProperties")
-    private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
+        private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
 
     public Optional<VideoCreationPropertiesResponse> getVideoCreationProperties() {
         return this.videoCreationProperties == null ? Optional.empty() : Optional.ofNullable(this.videoCreationProperties);
@@ -72,7 +72,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="videoName", required=true)
-    private final String videoName;
+        private final String videoName;
 
     public String getVideoName() {
         return this.videoName;
@@ -83,7 +83,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="videoPublishingOptions")
-    private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
+        private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
     public Optional<VideoPublishingOptionsResponse> getVideoPublishingOptions() {
         return this.videoPublishingOptions == null ? Optional.empty() : Optional.ofNullable(this.videoPublishingOptions);
@@ -172,7 +172,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }
-
         public VideoSinkResponse build() {
             return new VideoSinkResponse(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }

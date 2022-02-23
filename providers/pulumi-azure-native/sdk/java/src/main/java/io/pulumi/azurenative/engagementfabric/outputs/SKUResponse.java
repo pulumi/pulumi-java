@@ -76,7 +76,6 @@ public final class SKUResponse {
             this.tier = tier;
             return this;
         }
-
         public SKUResponse build() {
             return new SKUResponse(name, tier);
         }

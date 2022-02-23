@@ -119,7 +119,6 @@ public final class MonitoringScheduleClusterConfig {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public MonitoringScheduleClusterConfig build() {
             return new MonitoringScheduleClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

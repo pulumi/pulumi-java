@@ -52,7 +52,6 @@ public final class ModelBiasJobDefinitionStoppingCondition {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public ModelBiasJobDefinitionStoppingCondition build() {
             return new ModelBiasJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }

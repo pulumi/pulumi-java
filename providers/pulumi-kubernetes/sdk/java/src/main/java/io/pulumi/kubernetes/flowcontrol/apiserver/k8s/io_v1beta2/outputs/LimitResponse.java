@@ -77,7 +77,6 @@ public final class LimitResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LimitResponse build() {
             return new LimitResponse(queuing, type);
         }

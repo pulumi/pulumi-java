@@ -26,7 +26,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,SkuName>> name;
+        private final @Nullable Input<Either<String,SkuName>> name;
 
     public Input<Either<String,SkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,SkuTier>> tier;
+        private final @Nullable Input<Either<String,SkuTier>> tier;
 
     public Input<Either<String,SkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -96,7 +96,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(name, tier);
         }

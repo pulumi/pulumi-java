@@ -191,7 +191,6 @@ public final class VnetRouteResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(endAddress, id, kind, name, routeType, startAddress, type);
         }

@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2KindExpressionResponse build() {
             return new GooglePrivacyDlpV2KindExpressionResponse(name);
         }

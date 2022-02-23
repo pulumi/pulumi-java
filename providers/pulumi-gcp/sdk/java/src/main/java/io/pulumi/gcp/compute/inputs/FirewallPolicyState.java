@@ -20,7 +20,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -31,7 +31,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+        private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -53,7 +53,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="firewallPolicyId")
-    private final @Nullable Input<String> firewallPolicyId;
+        private final @Nullable Input<String> firewallPolicyId;
 
     public Input<String> getFirewallPolicyId() {
         return this.firewallPolicyId == null ? Input.empty() : this.firewallPolicyId;
@@ -64,7 +64,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -86,7 +86,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleTupleCount")
-    private final @Nullable Input<Integer> ruleTupleCount;
+        private final @Nullable Input<Integer> ruleTupleCount;
 
     public Input<Integer> getRuleTupleCount() {
         return this.ruleTupleCount == null ? Input.empty() : this.ruleTupleCount;
@@ -97,7 +97,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -108,7 +108,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLinkWithId")
-    private final @Nullable Input<String> selfLinkWithId;
+        private final @Nullable Input<String> selfLinkWithId;
 
     public Input<String> getSelfLinkWithId() {
         return this.selfLinkWithId == null ? Input.empty() : this.selfLinkWithId;
@@ -119,7 +119,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+        private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -298,7 +298,6 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
-
         public FirewallPolicyState build() {
             return new FirewallPolicyState(creationTimestamp, description, fingerprint, firewallPolicyId, name, parent, ruleTupleCount, selfLink, selfLinkWithId, shortName);
         }

@@ -26,7 +26,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureQueue")
-    private final @Nullable Input<QueueScaleRuleArgs> azureQueue;
+        private final @Nullable Input<QueueScaleRuleArgs> azureQueue;
 
     public Input<QueueScaleRuleArgs> getAzureQueue() {
         return this.azureQueue == null ? Input.empty() : this.azureQueue;
@@ -37,7 +37,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-    private final @Nullable Input<CustomScaleRuleArgs> custom;
+        private final @Nullable Input<CustomScaleRuleArgs> custom;
 
     public Input<CustomScaleRuleArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -48,7 +48,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http")
-    private final @Nullable Input<HttpScaleRuleArgs> http;
+        private final @Nullable Input<HttpScaleRuleArgs> http;
 
     public Input<HttpScaleRuleArgs> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -59,7 +59,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ScaleRuleArgs build() {
             return new ScaleRuleArgs(azureQueue, custom, http, name);
         }

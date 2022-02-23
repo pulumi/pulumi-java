@@ -223,7 +223,6 @@ public final class AccessConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessConfigResponse build() {
             return new AccessConfigResponse(externalIpv6, externalIpv6PrefixLength, kind, name, natIP, networkTier, publicPtrDomainName, setPublicPtr, type);
         }

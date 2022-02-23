@@ -180,7 +180,6 @@ public final class GetRealmResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRealmResult build() {
             return new GetRealmResult(createTime, description, etag, labels, name, timeZone, updateTime);
         }

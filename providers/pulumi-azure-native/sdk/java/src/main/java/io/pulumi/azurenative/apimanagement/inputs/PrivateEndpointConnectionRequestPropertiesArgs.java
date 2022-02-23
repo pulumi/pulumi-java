@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -66,7 +66,6 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public PrivateEndpointConnectionRequestPropertiesArgs build() {
             return new PrivateEndpointConnectionRequestPropertiesArgs(privateLinkServiceConnectionState);
         }

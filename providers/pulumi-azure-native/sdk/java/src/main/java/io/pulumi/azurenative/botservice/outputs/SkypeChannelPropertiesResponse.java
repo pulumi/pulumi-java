@@ -245,7 +245,6 @@ public final class SkypeChannelPropertiesResponse {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public SkypeChannelPropertiesResponse build() {
             return new SkypeChannelPropertiesResponse(callingWebHook, enableCalling, enableGroups, enableMediaCards, enableMessaging, enableScreenSharing, enableVideo, groupsMode, incomingCallRoute, isEnabled);
         }

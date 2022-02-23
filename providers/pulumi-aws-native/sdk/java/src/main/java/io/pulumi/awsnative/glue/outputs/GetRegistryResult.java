@@ -99,7 +99,6 @@ public final class GetRegistryResult {
             this.tags = tags;
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(arn, description, tags);
         }

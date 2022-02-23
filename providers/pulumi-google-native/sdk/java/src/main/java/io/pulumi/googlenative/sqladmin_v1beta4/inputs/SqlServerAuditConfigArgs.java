@@ -23,7 +23,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -34,7 +34,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -93,7 +93,6 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public SqlServerAuditConfigArgs build() {
             return new SqlServerAuditConfigArgs(bucket, kind);
         }

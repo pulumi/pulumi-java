@@ -22,7 +22,7 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Input<Integer> hours;
+        private final Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours;
@@ -33,7 +33,7 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Input<Integer> minutes;
+        private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;
@@ -92,7 +92,6 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
             this.minutes = Input.of(Objects.requireNonNull(minutes));
             return this;
         }
-
         public HoursOfOperationTimeSliceArgs build() {
             return new HoursOfOperationTimeSliceArgs(hours, minutes);
         }

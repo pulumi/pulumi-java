@@ -58,7 +58,6 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
             return new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(description, value);
         }

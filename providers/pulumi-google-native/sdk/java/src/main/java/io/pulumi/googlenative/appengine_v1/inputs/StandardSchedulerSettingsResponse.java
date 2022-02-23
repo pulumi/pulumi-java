@@ -22,7 +22,7 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxInstances", required=true)
-    private final Integer maxInstances;
+      private final Integer maxInstances;
 
     public Integer getMaxInstances() {
         return this.maxInstances;
@@ -33,7 +33,7 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="minInstances", required=true)
-    private final Integer minInstances;
+      private final Integer minInstances;
 
     public Integer getMinInstances() {
         return this.minInstances;
@@ -44,7 +44,7 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetCpuUtilization", required=true)
-    private final Double targetCpuUtilization;
+      private final Double targetCpuUtilization;
 
     public Double getTargetCpuUtilization() {
         return this.targetCpuUtilization;
@@ -55,7 +55,7 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetThroughputUtilization", required=true)
-    private final Double targetThroughputUtilization;
+      private final Double targetThroughputUtilization;
 
     public Double getTargetThroughputUtilization() {
         return this.targetThroughputUtilization;
@@ -124,7 +124,6 @@ public final class StandardSchedulerSettingsResponse extends io.pulumi.resources
             this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
             return this;
         }
-
         public StandardSchedulerSettingsResponse build() {
             return new StandardSchedulerSettingsResponse(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }

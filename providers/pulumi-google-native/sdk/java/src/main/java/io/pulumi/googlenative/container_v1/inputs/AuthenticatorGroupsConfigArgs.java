@@ -24,7 +24,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityGroup")
-    private final @Nullable Input<String> securityGroup;
+      private final @Nullable Input<String> securityGroup;
 
     public Input<String> getSecurityGroup() {
         return this.securityGroup == null ? Input.empty() : this.securityGroup;
@@ -94,7 +94,6 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
             this.securityGroup = Input.ofNullable(securityGroup);
             return this;
         }
-
         public AuthenticatorGroupsConfigArgs build() {
             return new AuthenticatorGroupsConfigArgs(enabled, securityGroup);
         }

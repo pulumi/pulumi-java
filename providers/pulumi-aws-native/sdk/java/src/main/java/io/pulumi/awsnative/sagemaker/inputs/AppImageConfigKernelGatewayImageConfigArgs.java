@@ -25,7 +25,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fileSystemConfig")
-    private final @Nullable Input<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
+        private final @Nullable Input<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
 
     public Input<AppImageConfigFileSystemConfigArgs> getFileSystemConfig() {
         return this.fileSystemConfig == null ? Input.empty() : this.fileSystemConfig;
@@ -36,7 +36,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kernelSpecs", required=true)
-    private final Input<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
+        private final Input<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
 
     public Input<List<AppImageConfigKernelSpecArgs>> getKernelSpecs() {
         return this.kernelSpecs;
@@ -95,7 +95,6 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
             this.kernelSpecs = Input.of(Objects.requireNonNull(kernelSpecs));
             return this;
         }
-
         public AppImageConfigKernelGatewayImageConfigArgs build() {
             return new AppImageConfigKernelGatewayImageConfigArgs(fileSystemConfig, kernelSpecs);
         }

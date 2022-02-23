@@ -25,7 +25,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testPackageId")
-    private final @Nullable Input<String> testPackageId;
+      private final @Nullable Input<String> testPackageId;
 
     public Input<String> getTestPackageId() {
         return this.testPackageId == null ? Input.empty() : this.testPackageId;
@@ -36,7 +36,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testRunnerClass")
-    private final @Nullable Input<String> testRunnerClass;
+      private final @Nullable Input<String> testRunnerClass;
 
     public Input<String> getTestRunnerClass() {
         return this.testRunnerClass == null ? Input.empty() : this.testRunnerClass;
@@ -47,7 +47,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testTargets")
-    private final @Nullable Input<List<String>> testTargets;
+      private final @Nullable Input<List<String>> testTargets;
 
     public Input<List<String>> getTestTargets() {
         return this.testTargets == null ? Input.empty() : this.testTargets;
@@ -58,7 +58,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="useOrchestrator")
-    private final @Nullable Input<Boolean> useOrchestrator;
+      private final @Nullable Input<Boolean> useOrchestrator;
 
     public Input<Boolean> getUseOrchestrator() {
         return this.useOrchestrator == null ? Input.empty() : this.useOrchestrator;
@@ -147,7 +147,6 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             this.useOrchestrator = Input.ofNullable(useOrchestrator);
             return this;
         }
-
         public AndroidInstrumentationTestArgs build() {
             return new AndroidInstrumentationTestArgs(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }

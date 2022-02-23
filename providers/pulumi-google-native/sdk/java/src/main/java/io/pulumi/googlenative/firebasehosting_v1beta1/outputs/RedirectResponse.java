@@ -117,7 +117,6 @@ public final class RedirectResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public RedirectResponse build() {
             return new RedirectResponse(glob, location, regex, statusCode);
         }

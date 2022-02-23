@@ -76,7 +76,6 @@ public final class FunctionTag {
             this.value = value;
             return this;
         }
-
         public FunctionTag build() {
             return new FunctionTag(key, value);
         }

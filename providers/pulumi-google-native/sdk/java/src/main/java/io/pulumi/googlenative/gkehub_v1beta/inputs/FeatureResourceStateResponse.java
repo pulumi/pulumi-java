@@ -21,7 +21,7 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -59,7 +59,6 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FeatureResourceStateResponse build() {
             return new FeatureResourceStateResponse(state);
         }

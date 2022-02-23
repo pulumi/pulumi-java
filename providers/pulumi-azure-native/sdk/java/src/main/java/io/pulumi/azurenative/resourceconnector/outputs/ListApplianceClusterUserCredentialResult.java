@@ -76,7 +76,6 @@ public final class ListApplianceClusterUserCredentialResult {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-
         public ListApplianceClusterUserCredentialResult build() {
             return new ListApplianceClusterUserCredentialResult(hybridConnectionConfig, kubeconfigs);
         }

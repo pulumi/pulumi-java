@@ -14,7 +14,7 @@ public final class RuleGroupImmunityTimePropertyArgs extends io.pulumi.resources
     public static final RuleGroupImmunityTimePropertyArgs Empty = new RuleGroupImmunityTimePropertyArgs();
 
     @InputImport(name="immunityTime", required=true)
-    private final Input<Integer> immunityTime;
+        private final Input<Integer> immunityTime;
 
     public Input<Integer> getImmunityTime() {
         return this.immunityTime;
@@ -57,7 +57,6 @@ public final class RuleGroupImmunityTimePropertyArgs extends io.pulumi.resources
             this.immunityTime = Input.of(Objects.requireNonNull(immunityTime));
             return this;
         }
-
         public RuleGroupImmunityTimePropertyArgs build() {
             return new RuleGroupImmunityTimePropertyArgs(immunityTime);
         }

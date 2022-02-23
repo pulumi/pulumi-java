@@ -76,7 +76,6 @@ public final class SettingResponse {
             this.value = value;
             return this;
         }
-
         public SettingResponse build() {
             return new SettingResponse(name, value);
         }

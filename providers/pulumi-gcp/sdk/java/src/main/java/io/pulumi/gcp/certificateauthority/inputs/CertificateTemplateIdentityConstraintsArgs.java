@@ -20,7 +20,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-    private final Input<Boolean> allowSubjectAltNamesPassthrough;
+        private final Input<Boolean> allowSubjectAltNamesPassthrough;
 
     public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -31,7 +31,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-    private final Input<Boolean> allowSubjectPassthrough;
+        private final Input<Boolean> allowSubjectPassthrough;
 
     public Input<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -42,7 +42,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="celExpression")
-    private final @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
+        private final @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
     public Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {
         return this.celExpression == null ? Input.empty() : this.celExpression;
@@ -116,7 +116,6 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
             this.celExpression = Input.ofNullable(celExpression);
             return this;
         }
-
         public CertificateTemplateIdentityConstraintsArgs build() {
             return new CertificateTemplateIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

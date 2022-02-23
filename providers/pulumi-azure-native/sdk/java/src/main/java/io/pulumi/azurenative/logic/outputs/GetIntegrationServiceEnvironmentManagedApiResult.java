@@ -422,7 +422,6 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationServiceEnvironmentManagedApiResult build() {
             return new GetIntegrationServiceEnvironmentManagedApiResult(apiDefinitionUrl, apiDefinitions, backendService, capabilities, category, connectionParameters, deploymentParameters, generalInformation, id, integrationServiceEnvironment, location, metadata, name, policies, provisioningState, runtimeUrls, tags, type);
         }

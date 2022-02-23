@@ -19,7 +19,7 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -30,7 +30,7 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -89,7 +89,6 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public JobQueryDefaultDatasetGetArgs build() {
             return new JobQueryDefaultDatasetGetArgs(datasetId, projectId);
         }

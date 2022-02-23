@@ -15,28 +15,28 @@ public final class GetServiceAttachmentIamPolicyArgs extends io.pulumi.resources
     public static final GetServiceAttachmentIamPolicyArgs Empty = new GetServiceAttachmentIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -105,7 +105,6 @@ public final class GetServiceAttachmentIamPolicyArgs extends io.pulumi.resources
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetServiceAttachmentIamPolicyArgs build() {
             return new GetServiceAttachmentIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }

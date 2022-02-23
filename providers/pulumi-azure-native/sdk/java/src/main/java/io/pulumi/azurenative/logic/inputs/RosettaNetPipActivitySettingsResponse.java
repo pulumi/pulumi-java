@@ -23,7 +23,7 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="acknowledgmentOfReceiptSettings", required=true)
-    private final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
+        private final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
 
     public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse getAcknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
@@ -34,7 +34,7 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="activityBehavior", required=true)
-    private final RosettaNetPipActivityBehaviorResponse activityBehavior;
+        private final RosettaNetPipActivityBehaviorResponse activityBehavior;
 
     public RosettaNetPipActivityBehaviorResponse getActivityBehavior() {
         return this.activityBehavior;
@@ -45,7 +45,7 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="activityType", required=true)
-    private final String activityType;
+        private final String activityType;
 
     public String getActivityType() {
         return this.activityType;
@@ -104,7 +104,6 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }
-
         public RosettaNetPipActivitySettingsResponse build() {
             return new RosettaNetPipActivitySettingsResponse(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }

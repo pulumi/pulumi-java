@@ -309,7 +309,6 @@ public final class GetDomainResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(auditLogsEnabled, authorizedNetworks, createTime, fqdn, labels, locations, managedIdentitiesAdminName, name, reservedIpRange, state, statusMessage, trusts, updateTime);
         }

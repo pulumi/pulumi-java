@@ -141,7 +141,6 @@ public final class AndroidTestLoopResponse {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }

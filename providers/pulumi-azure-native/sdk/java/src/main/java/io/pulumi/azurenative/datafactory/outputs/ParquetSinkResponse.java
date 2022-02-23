@@ -233,7 +233,6 @@ public final class ParquetSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public ParquetSinkResponse build() {
             return new ParquetSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

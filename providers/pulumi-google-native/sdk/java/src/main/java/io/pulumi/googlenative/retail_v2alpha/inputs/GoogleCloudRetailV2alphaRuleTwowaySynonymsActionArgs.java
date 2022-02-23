@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
      * 
      */
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -67,7 +67,6 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(synonyms);
         }

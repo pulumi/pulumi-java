@@ -98,7 +98,6 @@ public final class GetRegionClusterIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionClusterIamPolicyResult build() {
             return new GetRegionClusterIamPolicyResult(bindings, etag, version);
         }

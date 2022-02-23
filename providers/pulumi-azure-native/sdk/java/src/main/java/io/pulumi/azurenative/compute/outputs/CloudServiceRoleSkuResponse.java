@@ -98,7 +98,6 @@ public final class CloudServiceRoleSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public CloudServiceRoleSkuResponse build() {
             return new CloudServiceRoleSkuResponse(capacity, name, tier);
         }

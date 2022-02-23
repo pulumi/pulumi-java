@@ -175,7 +175,6 @@ public final class GetEnergyServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnergyServiceResult build() {
             return new GetEnergyServiceResult(id, location, name, properties, systemData, tags, type);
         }

@@ -296,7 +296,6 @@ public final class SalesforceMarketingCloudLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public SalesforceMarketingCloudLinkedServiceResponse build() {
             return new SalesforceMarketingCloudLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, connectionProperties, description, encryptedCredential, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

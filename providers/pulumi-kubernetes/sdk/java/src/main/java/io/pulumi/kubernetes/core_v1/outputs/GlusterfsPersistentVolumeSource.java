@@ -119,7 +119,6 @@ public final class GlusterfsPersistentVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public GlusterfsPersistentVolumeSource build() {
             return new GlusterfsPersistentVolumeSource(endpoints, endpointsNamespace, path, readOnly);
         }

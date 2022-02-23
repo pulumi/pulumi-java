@@ -25,7 +25,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalCopyOptions")
-    private final @Nullable Map<String,Object> additionalCopyOptions;
+        private final @Nullable Map<String,Object> additionalCopyOptions;
 
     public Map<String,Object> getAdditionalCopyOptions() {
         return this.additionalCopyOptions == null ? Map.of() : this.additionalCopyOptions;
@@ -36,7 +36,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalFormatOptions")
-    private final @Nullable Map<String,Object> additionalFormatOptions;
+        private final @Nullable Map<String,Object> additionalFormatOptions;
 
     public Map<String,Object> getAdditionalFormatOptions() {
         return this.additionalFormatOptions == null ? Map.of() : this.additionalFormatOptions;
@@ -48,7 +48,7 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -107,7 +107,6 @@ public final class SnowflakeExportCopyCommandResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeExportCopyCommandResponse build() {
             return new SnowflakeExportCopyCommandResponse(additionalCopyOptions, additionalFormatOptions, type);
         }

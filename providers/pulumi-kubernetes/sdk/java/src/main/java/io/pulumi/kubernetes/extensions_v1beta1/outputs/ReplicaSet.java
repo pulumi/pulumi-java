@@ -142,7 +142,6 @@ public final class ReplicaSet {
             this.status = status;
             return this;
         }
-
         public ReplicaSet build() {
             return new ReplicaSet(apiVersion, kind, metadata, spec, status);
         }

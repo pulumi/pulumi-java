@@ -117,7 +117,6 @@ public final class IdentityAwareProxyResponse {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public IdentityAwareProxyResponse build() {
             return new IdentityAwareProxyResponse(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

@@ -125,7 +125,6 @@ public final class GetServiceMetadata {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetServiceMetadata build() {
             return new GetServiceMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

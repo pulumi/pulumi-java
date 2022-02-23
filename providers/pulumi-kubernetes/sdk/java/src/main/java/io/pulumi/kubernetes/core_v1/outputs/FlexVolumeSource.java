@@ -142,7 +142,6 @@ public final class FlexVolumeSource {
             this.secretRef = secretRef;
             return this;
         }
-
         public FlexVolumeSource build() {
             return new FlexVolumeSource(driver, fsType, options, readOnly, secretRef);
         }

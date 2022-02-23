@@ -16,21 +16,21 @@ public final class GetClusterMaintenancePolicy extends io.pulumi.resources.Invok
     public static final GetClusterMaintenancePolicy Empty = new GetClusterMaintenancePolicy();
 
     @InputImport(name="dailyMaintenanceWindows", required=true)
-    private final List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
+        private final List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
 
     public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindows() {
         return this.dailyMaintenanceWindows;
     }
 
     @InputImport(name="maintenanceExclusions", required=true)
-    private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
+        private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
 
     public List<GetClusterMaintenancePolicyMaintenanceExclusion> getMaintenanceExclusions() {
         return this.maintenanceExclusions;
     }
 
     @InputImport(name="recurringWindows", required=true)
-    private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
+        private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
 
     public List<GetClusterMaintenancePolicyRecurringWindow> getRecurringWindows() {
         return this.recurringWindows;
@@ -89,7 +89,6 @@ public final class GetClusterMaintenancePolicy extends io.pulumi.resources.Invok
             this.recurringWindows = Objects.requireNonNull(recurringWindows);
             return this;
         }
-
         public GetClusterMaintenancePolicy build() {
             return new GetClusterMaintenancePolicy(dailyMaintenanceWindows, maintenanceExclusions, recurringWindows);
         }

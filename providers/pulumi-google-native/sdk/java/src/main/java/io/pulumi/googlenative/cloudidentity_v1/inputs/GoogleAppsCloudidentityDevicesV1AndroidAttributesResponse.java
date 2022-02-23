@@ -22,7 +22,7 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
      * 
      */
     @InputImport(name="enabledUnknownSources", required=true)
-    private final Boolean enabledUnknownSources;
+      private final Boolean enabledUnknownSources;
 
     public Boolean getEnabledUnknownSources() {
         return this.enabledUnknownSources;
@@ -33,7 +33,7 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
      * 
      */
     @InputImport(name="ownerProfileAccount", required=true)
-    private final Boolean ownerProfileAccount;
+      private final Boolean ownerProfileAccount;
 
     public Boolean getOwnerProfileAccount() {
         return this.ownerProfileAccount;
@@ -44,7 +44,7 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
      * 
      */
     @InputImport(name="ownershipPrivilege", required=true)
-    private final String ownershipPrivilege;
+      private final String ownershipPrivilege;
 
     public String getOwnershipPrivilege() {
         return this.ownershipPrivilege;
@@ -55,7 +55,7 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
      * 
      */
     @InputImport(name="supportsWorkProfile", required=true)
-    private final Boolean supportsWorkProfile;
+      private final Boolean supportsWorkProfile;
 
     public Boolean getSupportsWorkProfile() {
         return this.supportsWorkProfile;
@@ -124,7 +124,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }
-
         public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse build() {
             return new GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }

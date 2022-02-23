@@ -60,7 +60,6 @@ public final class TaskDefinitionHostEntry {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public TaskDefinitionHostEntry build() {
             return new TaskDefinitionHostEntry(hostname, ipAddress);
         }

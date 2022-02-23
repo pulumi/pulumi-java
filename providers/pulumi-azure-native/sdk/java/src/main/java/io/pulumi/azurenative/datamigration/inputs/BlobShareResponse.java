@@ -21,7 +21,7 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sasUri", required=true)
-    private final String sasUri;
+        private final String sasUri;
 
     public String getSasUri() {
         return this.sasUri;
@@ -59,7 +59,6 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
-
         public BlobShareResponse build() {
             return new BlobShareResponse(sasUri);
         }

@@ -87,7 +87,6 @@ public final class NonResourcePolicyRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public NonResourcePolicyRule build() {
             return new NonResourcePolicyRule(nonResourceURLs, verbs);
         }

@@ -15,14 +15,14 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef extends io
     public static final GetServiceTemplateSpecContainerEnvFromConfigMapRef Empty = new GetServiceTemplateSpecContainerEnvFromConfigMapRef();
 
     @InputImport(name="localObjectReferences", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
+        private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
 
     public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> getLocalObjectReferences() {
         return this.localObjectReferences;
     }
 
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+        private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -71,7 +71,6 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef extends io
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromConfigMapRef build() {
             return new GetServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReferences, optional);
         }

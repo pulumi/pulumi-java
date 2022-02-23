@@ -118,7 +118,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
             this.reply = Objects.requireNonNull(reply);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(confidenceScore, metadata, queryRecord, reply);
         }

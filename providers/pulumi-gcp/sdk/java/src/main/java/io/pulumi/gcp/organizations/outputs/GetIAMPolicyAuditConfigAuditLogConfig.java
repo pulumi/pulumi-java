@@ -76,7 +76,6 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GetIAMPolicyAuditConfigAuditLogConfig build() {
             return new GetIAMPolicyAuditConfigAuditLogConfig(exemptedMembers, logType);
         }

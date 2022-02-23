@@ -158,7 +158,6 @@ public final class StorageAccountMicrosoftEndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountMicrosoftEndpointsResponse build() {
             return new StorageAccountMicrosoftEndpointsResponse(blob, dfs, file, queue, table, web);
         }

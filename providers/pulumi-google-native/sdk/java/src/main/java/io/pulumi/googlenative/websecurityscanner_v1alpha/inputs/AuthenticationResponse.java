@@ -22,7 +22,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="customAccount", required=true)
-    private final CustomAccountResponse customAccount;
+      private final CustomAccountResponse customAccount;
 
     public CustomAccountResponse getCustomAccount() {
         return this.customAccount;
@@ -33,7 +33,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="googleAccount", required=true)
-    private final GoogleAccountResponse googleAccount;
+      private final GoogleAccountResponse googleAccount;
 
     public GoogleAccountResponse getGoogleAccount() {
         return this.googleAccount;
@@ -82,7 +82,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount);
         }

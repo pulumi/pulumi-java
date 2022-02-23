@@ -87,7 +87,6 @@ public final class TopicRuleS3Action {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleS3Action build() {
             return new TopicRuleS3Action(bucketName, cannedAcl, key, roleArn);
         }

@@ -159,7 +159,6 @@ public final class GetPerfSampleSeriesResult {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public GetPerfSampleSeriesResult build() {
             return new GetPerfSampleSeriesResult(basicPerfSampleSeries, executionId, historyId, project, sampleSeriesId, stepId);
         }

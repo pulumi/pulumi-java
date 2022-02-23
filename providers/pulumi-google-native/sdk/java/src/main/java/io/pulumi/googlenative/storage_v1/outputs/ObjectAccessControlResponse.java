@@ -307,7 +307,6 @@ public final class ObjectAccessControlResponse {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public ObjectAccessControlResponse build() {
             return new ObjectAccessControlResponse(bucket, domain, email, entity, entityId, etag, generation, kind, object, projectTeam, role, selfLink);
         }

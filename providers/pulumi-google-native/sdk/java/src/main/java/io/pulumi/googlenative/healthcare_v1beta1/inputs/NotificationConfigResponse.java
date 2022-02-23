@@ -22,7 +22,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final String pubsubTopic;
+      private final String pubsubTopic;
 
     public String getPubsubTopic() {
         return this.pubsubTopic;
@@ -33,7 +33,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sendForBulkImport", required=true)
-    private final Boolean sendForBulkImport;
+      private final Boolean sendForBulkImport;
 
     public Boolean getSendForBulkImport() {
         return this.sendForBulkImport;
@@ -82,7 +82,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
             this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsubTopic, sendForBulkImport);
         }

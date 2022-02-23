@@ -120,7 +120,6 @@ public final class GraphNodeResponse {
             this.parameters = parameters;
             return this;
         }
-
         public GraphNodeResponse build() {
             return new GraphNodeResponse(assetId, inputId, outputId, parameters);
         }

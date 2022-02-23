@@ -74,7 +74,6 @@ public final class JobErrorDetailResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public JobErrorDetailResponse build() {
             return new JobErrorDetailResponse(code, message);
         }

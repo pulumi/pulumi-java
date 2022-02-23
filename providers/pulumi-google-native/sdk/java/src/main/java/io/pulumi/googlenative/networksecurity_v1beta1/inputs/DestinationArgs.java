@@ -26,7 +26,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final Input<List<String>> hosts;
+      private final Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts;
@@ -37,7 +37,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpHeaderMatch")
-    private final @Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch;
+      private final @Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch;
 
     public Input<HttpHeaderMatchArgs> getHttpHeaderMatch() {
         return this.httpHeaderMatch == null ? Input.empty() : this.httpHeaderMatch;
@@ -48,7 +48,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -59,7 +59,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-    private final Input<List<Integer>> ports;
+      private final Input<List<Integer>> ports;
 
     public Input<List<Integer>> getPorts() {
         return this.ports;
@@ -148,7 +148,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.ports = Input.of(Objects.requireNonNull(ports));
             return this;
         }
-
         public DestinationArgs build() {
             return new DestinationArgs(hosts, httpHeaderMatch, methods, ports);
         }

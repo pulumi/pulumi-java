@@ -23,7 +23,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="partitionColumnName")
-    private final @Nullable Object partitionColumnName;
+        private final @Nullable Object partitionColumnName;
 
     public Optional<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
@@ -34,7 +34,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="partitionLowerBound")
-    private final @Nullable Object partitionLowerBound;
+        private final @Nullable Object partitionLowerBound;
 
     public Optional<Object> getPartitionLowerBound() {
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
@@ -45,7 +45,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="partitionUpperBound")
-    private final @Nullable Object partitionUpperBound;
+        private final @Nullable Object partitionUpperBound;
 
     public Optional<Object> getPartitionUpperBound() {
         return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
@@ -104,7 +104,6 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SqlPartitionSettingsResponse build() {
             return new SqlPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

@@ -151,7 +151,6 @@ public final class GetRuleSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRuleSetResult build() {
             return new GetRuleSetResult(deploymentStatus, id, name, provisioningState, systemData, type);
         }

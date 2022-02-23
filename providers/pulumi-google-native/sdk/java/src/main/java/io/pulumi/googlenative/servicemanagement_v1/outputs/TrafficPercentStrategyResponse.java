@@ -53,7 +53,6 @@ public final class TrafficPercentStrategyResponse {
             this.percentages = Objects.requireNonNull(percentages);
             return this;
         }
-
         public TrafficPercentStrategyResponse build() {
             return new TrafficPercentStrategyResponse(percentages);
         }

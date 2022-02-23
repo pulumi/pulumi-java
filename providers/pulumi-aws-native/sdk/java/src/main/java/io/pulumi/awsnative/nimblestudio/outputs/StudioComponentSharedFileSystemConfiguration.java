@@ -139,7 +139,6 @@ public final class StudioComponentSharedFileSystemConfiguration {
             this.windowsMountDrive = windowsMountDrive;
             return this;
         }
-
         public StudioComponentSharedFileSystemConfiguration build() {
             return new StudioComponentSharedFileSystemConfiguration(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);
         }

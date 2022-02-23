@@ -19,7 +19,7 @@ public final class GroupInsightsConfiguration extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="insightsEnabled")
-    private final @Nullable Boolean insightsEnabled;
+        private final @Nullable Boolean insightsEnabled;
 
     public Optional<Boolean> getInsightsEnabled() {
         return this.insightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.insightsEnabled);
@@ -30,7 +30,7 @@ public final class GroupInsightsConfiguration extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notificationsEnabled")
-    private final @Nullable Boolean notificationsEnabled;
+        private final @Nullable Boolean notificationsEnabled;
 
     public Optional<Boolean> getNotificationsEnabled() {
         return this.notificationsEnabled == null ? Optional.empty() : Optional.ofNullable(this.notificationsEnabled);
@@ -79,7 +79,6 @@ public final class GroupInsightsConfiguration extends io.pulumi.resources.Invoke
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
-
         public GroupInsightsConfiguration build() {
             return new GroupInsightsConfiguration(insightsEnabled, notificationsEnabled);
         }

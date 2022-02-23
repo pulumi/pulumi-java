@@ -133,7 +133,6 @@ public final class IsDeviceMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public IsDeviceMatchConditionParametersResponse build() {
             return new IsDeviceMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

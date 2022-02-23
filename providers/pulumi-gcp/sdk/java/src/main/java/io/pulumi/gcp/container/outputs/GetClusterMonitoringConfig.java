@@ -45,7 +45,6 @@ public final class GetClusterMonitoringConfig {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public GetClusterMonitoringConfig build() {
             return new GetClusterMonitoringConfig(enableComponents);
         }

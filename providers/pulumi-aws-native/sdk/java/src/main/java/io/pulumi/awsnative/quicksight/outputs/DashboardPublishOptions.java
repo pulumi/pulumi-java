@@ -75,7 +75,6 @@ public final class DashboardPublishOptions {
             this.sheetControlsOption = sheetControlsOption;
             return this;
         }
-
         public DashboardPublishOptions build() {
             return new DashboardPublishOptions(adHocFilteringOption, exportToCSVOption, sheetControlsOption);
         }

@@ -99,7 +99,6 @@ public final class Affinity {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
-
         public Affinity build() {
             return new Affinity(nodeAffinity, podAffinity, podAntiAffinity);
         }

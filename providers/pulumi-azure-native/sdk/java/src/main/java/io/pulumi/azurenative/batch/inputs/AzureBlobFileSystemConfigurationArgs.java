@@ -19,14 +19,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<String> accountKey;
+        private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
     }
 
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -37,14 +37,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="blobfuseOptions")
-    private final @Nullable Input<String> blobfuseOptions;
+        private final @Nullable Input<String> blobfuseOptions;
 
     public Input<String> getBlobfuseOptions() {
         return this.blobfuseOptions == null ? Input.empty() : this.blobfuseOptions;
     }
 
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -55,7 +55,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final Input<String> relativeMountPath;
+        private final Input<String> relativeMountPath;
 
     public Input<String> getRelativeMountPath() {
         return this.relativeMountPath;
@@ -66,7 +66,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sasKey")
-    private final @Nullable Input<String> sasKey;
+        private final @Nullable Input<String> sasKey;
 
     public Input<String> getSasKey() {
         return this.sasKey == null ? Input.empty() : this.sasKey;
@@ -185,7 +185,6 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
             this.sasKey = Input.ofNullable(sasKey);
             return this;
         }
-
         public AzureBlobFileSystemConfigurationArgs build() {
             return new AzureBlobFileSystemConfigurationArgs(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
         }

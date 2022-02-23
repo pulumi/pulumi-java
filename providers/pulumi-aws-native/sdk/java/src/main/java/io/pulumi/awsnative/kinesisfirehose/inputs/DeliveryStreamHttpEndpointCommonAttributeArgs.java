@@ -14,14 +14,14 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     public static final DeliveryStreamHttpEndpointCommonAttributeArgs Empty = new DeliveryStreamHttpEndpointCommonAttributeArgs();
 
     @InputImport(name="attributeName", required=true)
-    private final Input<String> attributeName;
+        private final Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeValue", required=true)
-    private final Input<String> attributeValue;
+        private final Input<String> attributeValue;
 
     public Input<String> getAttributeValue() {
         return this.attributeValue;
@@ -80,7 +80,6 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
             this.attributeValue = Input.of(Objects.requireNonNull(attributeValue));
             return this;
         }
-
         public DeliveryStreamHttpEndpointCommonAttributeArgs build() {
             return new DeliveryStreamHttpEndpointCommonAttributeArgs(attributeName, attributeValue);
         }

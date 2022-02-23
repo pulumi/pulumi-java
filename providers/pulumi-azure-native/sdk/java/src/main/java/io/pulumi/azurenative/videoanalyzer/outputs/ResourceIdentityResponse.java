@@ -52,7 +52,6 @@ public final class ResourceIdentityResponse {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(userAssignedIdentity);
         }

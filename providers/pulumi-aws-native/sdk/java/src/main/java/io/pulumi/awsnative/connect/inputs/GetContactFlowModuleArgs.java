@@ -17,7 +17,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="contactFlowModuleArn", required=true)
-    private final String contactFlowModuleArn;
+        private final String contactFlowModuleArn;
 
     public String getContactFlowModuleArn() {
         return this.contactFlowModuleArn;
@@ -55,7 +55,6 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
             this.contactFlowModuleArn = Objects.requireNonNull(contactFlowModuleArn);
             return this;
         }
-
         public GetContactFlowModuleArgs build() {
             return new GetContactFlowModuleArgs(contactFlowModuleArn);
         }

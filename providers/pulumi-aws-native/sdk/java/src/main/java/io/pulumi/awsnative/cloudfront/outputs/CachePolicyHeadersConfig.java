@@ -60,7 +60,6 @@ public final class CachePolicyHeadersConfig {
             this.headers = headers;
             return this;
         }
-
         public CachePolicyHeadersConfig build() {
             return new CachePolicyHeadersConfig(headerBehavior, headers);
         }

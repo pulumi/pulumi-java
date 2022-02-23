@@ -22,14 +22,14 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
      * 
      */
     @InputImport(name="diskConfig")
-    private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
+        private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
 
     public Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
     }
 
     @InputImport(name="instanceNames")
-    private final @Nullable Input<List<String>> instanceNames;
+        private final @Nullable Input<List<String>> instanceNames;
 
     public Input<List<String>> getInstanceNames() {
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
      * 
      */
     @InputImport(name="numInstances")
-    private final @Nullable Input<Integer> numInstances;
+        private final @Nullable Input<Integer> numInstances;
 
     public Input<Integer> getNumInstances() {
         return this.numInstances == null ? Input.empty() : this.numInstances;
@@ -115,7 +115,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigArgs(diskConfig, instanceNames, numInstances);
         }

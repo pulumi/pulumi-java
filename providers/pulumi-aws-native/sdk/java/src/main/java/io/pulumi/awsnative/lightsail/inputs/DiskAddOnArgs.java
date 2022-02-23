@@ -25,14 +25,14 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOnType", required=true)
-    private final Input<String> addOnType;
+        private final Input<String> addOnType;
 
     public Input<String> getAddOnType() {
         return this.addOnType;
     }
 
     @InputImport(name="autoSnapshotAddOnRequest")
-    private final @Nullable Input<DiskAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
+        private final @Nullable Input<DiskAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
     public Input<DiskAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Input.empty() : this.autoSnapshotAddOnRequest;
@@ -43,7 +43,7 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<DiskAddOnStatus> status;
+        private final @Nullable Input<DiskAddOnStatus> status;
 
     public Input<DiskAddOnStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -117,7 +117,6 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public DiskAddOnArgs build() {
             return new DiskAddOnArgs(addOnType, autoSnapshotAddOnRequest, status);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs(title);
         }

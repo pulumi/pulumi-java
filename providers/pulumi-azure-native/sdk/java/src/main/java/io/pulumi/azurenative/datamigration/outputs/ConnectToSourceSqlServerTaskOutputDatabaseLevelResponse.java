@@ -184,7 +184,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(compatibilityLevel, databaseFiles, databaseState, id, name, resultType, sizeMB);
         }

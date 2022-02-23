@@ -46,7 +46,6 @@ public final class TaskDefinitionHostVolumeProperties {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public TaskDefinitionHostVolumeProperties build() {
             return new TaskDefinitionHostVolumeProperties(sourcePath);
         }

@@ -74,7 +74,6 @@ public final class RulesetSubstitutionValue {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }
-
         public RulesetSubstitutionValue build() {
             return new RulesetSubstitutionValue(value, valueReference);
         }

@@ -54,7 +54,6 @@ public final class AuthenticationResponse {
             this.symmetricKey = symmetricKey;
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(symmetricKey);
         }

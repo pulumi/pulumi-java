@@ -267,7 +267,6 @@ public final class GetUtilizationReportResult {
             this.vmsCount = Objects.requireNonNull(vmsCount);
             return this;
         }
-
         public GetUtilizationReportResult build() {
             return new GetUtilizationReportResult(createTime, displayName, error, frameEndTime, name, state, stateTime, timeFrame, vmCount, vms, vmsCount);
         }

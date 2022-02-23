@@ -22,7 +22,7 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="detectSentiment", required=true)
-    private final Input<Boolean> detectSentiment;
+        private final Input<Boolean> detectSentiment;
 
     public Input<Boolean> getDetectSentiment() {
         return this.detectSentiment;
@@ -65,7 +65,6 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
             this.detectSentiment = Input.of(Objects.requireNonNull(detectSentiment));
             return this;
         }
-
         public SentimentAnalysisSettingsPropertiesArgs build() {
             return new SentimentAnalysisSettingsPropertiesArgs(detectSentiment);
         }

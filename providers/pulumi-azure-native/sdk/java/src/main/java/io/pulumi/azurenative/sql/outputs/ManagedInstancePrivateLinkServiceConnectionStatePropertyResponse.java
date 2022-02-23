@@ -95,7 +95,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse build() {
             return new ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
         }

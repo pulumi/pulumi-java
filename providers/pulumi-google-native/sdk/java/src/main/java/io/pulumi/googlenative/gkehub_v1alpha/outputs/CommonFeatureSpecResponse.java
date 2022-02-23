@@ -97,7 +97,6 @@ public final class CommonFeatureSpecResponse {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }
-
         public CommonFeatureSpecResponse build() {
             return new CommonFeatureSpecResponse(appdevexperience, cloudauditlogging, multiclusteringress);
         }

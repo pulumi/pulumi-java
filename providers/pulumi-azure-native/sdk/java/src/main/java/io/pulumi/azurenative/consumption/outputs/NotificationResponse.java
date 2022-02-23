@@ -205,7 +205,6 @@ public final class NotificationResponse {
             this.thresholdType = thresholdType;
             return this;
         }
-
         public NotificationResponse build() {
             return new NotificationResponse(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
         }

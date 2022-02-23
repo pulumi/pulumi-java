@@ -134,7 +134,6 @@ public final class GetAccessPointResult {
             this.policyStatus = policyStatus;
             return this;
         }
-
         public GetAccessPointResult build() {
             return new GetAccessPointResult(alias, arn, networkOrigin, policy, policyStatus);
         }

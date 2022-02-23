@@ -69,7 +69,6 @@ public final class ServiceCodeConfiguration {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
-
         public ServiceCodeConfiguration build() {
             return new ServiceCodeConfiguration(codeConfigurationValues, configurationSource);
         }

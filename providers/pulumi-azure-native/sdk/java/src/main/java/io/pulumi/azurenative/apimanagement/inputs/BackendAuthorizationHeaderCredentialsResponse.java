@@ -21,7 +21,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final String parameter;
+        private final String parameter;
 
     public String getParameter() {
         return this.parameter;
@@ -32,7 +32,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
      * 
      */
     @InputImport(name="scheme", required=true)
-    private final String scheme;
+        private final String scheme;
 
     public String getScheme() {
         return this.scheme;
@@ -81,7 +81,6 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public BackendAuthorizationHeaderCredentialsResponse build() {
             return new BackendAuthorizationHeaderCredentialsResponse(parameter, scheme);
         }

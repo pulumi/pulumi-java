@@ -21,7 +21,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveWindowLength", required=true)
-    private final Input<String> archiveWindowLength;
+        private final Input<String> archiveWindowLength;
 
     public Input<String> getArchiveWindowLength() {
         return this.archiveWindowLength;
@@ -43,7 +43,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+        private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -54,7 +54,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hls")
-    private final @Nullable Input<HlsArgs> hls;
+        private final @Nullable Input<HlsArgs> hls;
 
     public Input<HlsArgs> getHls() {
         return this.hls == null ? Input.empty() : this.hls;
@@ -76,7 +76,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveEventName", required=true)
-    private final Input<String> liveEventName;
+        private final Input<String> liveEventName;
 
     public Input<String> getLiveEventName() {
         return this.liveEventName;
@@ -87,7 +87,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveOutputName")
-    private final @Nullable Input<String> liveOutputName;
+        private final @Nullable Input<String> liveOutputName;
 
     public Input<String> getLiveOutputName() {
         return this.liveOutputName == null ? Input.empty() : this.liveOutputName;
@@ -98,7 +98,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestName")
-    private final @Nullable Input<String> manifestName;
+        private final @Nullable Input<String> manifestName;
 
     public Input<String> getManifestName() {
         return this.manifestName == null ? Input.empty() : this.manifestName;
@@ -109,7 +109,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputSnapTime")
-    private final @Nullable Input<Double> outputSnapTime;
+        private final @Nullable Input<Double> outputSnapTime;
 
     public Input<Double> getOutputSnapTime() {
         return this.outputSnapTime == null ? Input.empty() : this.outputSnapTime;
@@ -120,7 +120,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -299,7 +299,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public LiveOutputArgs build() {
             return new LiveOutputArgs(accountName, archiveWindowLength, assetName, description, hls, liveEventName, liveOutputName, manifestName, outputSnapTime, resourceGroupName);
         }

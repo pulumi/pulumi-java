@@ -142,7 +142,6 @@ public final class ReusableConfigValuesResponse {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }
-
         public ReusableConfigValuesResponse build() {
             return new ReusableConfigValuesResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

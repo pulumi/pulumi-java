@@ -88,7 +88,6 @@ public final class GetCapacityReservationFleetResult {
             this.totalTargetCapacity = totalTargetCapacity;
             return this;
         }
-
         public GetCapacityReservationFleetResult build() {
             return new GetCapacityReservationFleetResult(capacityReservationFleetId, noRemoveEndDate, removeEndDate, totalTargetCapacity);
         }

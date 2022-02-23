@@ -23,7 +23,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="createdOn", required=true)
-    private final String createdOn;
+        private final String createdOn;
 
     public String getCreatedOn() {
         return this.createdOn;
@@ -34,7 +34,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="functionAppRegion")
-    private final @Nullable String functionAppRegion;
+        private final @Nullable String functionAppRegion;
 
     public Optional<String> getFunctionAppRegion() {
         return this.functionAppRegion == null ? Optional.empty() : Optional.ofNullable(this.functionAppRegion);
@@ -45,7 +45,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="functionAppResourceId")
-    private final @Nullable String functionAppResourceId;
+        private final @Nullable String functionAppResourceId;
 
     public Optional<String> getFunctionAppResourceId() {
         return this.functionAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.functionAppResourceId);
@@ -56,7 +56,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -67,7 +67,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -78,7 +78,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -188,7 +188,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StaticSiteUserProvidedFunctionAppResponse build() {
             return new StaticSiteUserProvidedFunctionAppResponse(createdOn, functionAppRegion, functionAppResourceId, id, kind, name, type);
         }

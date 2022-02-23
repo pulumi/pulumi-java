@@ -203,7 +203,6 @@ public final class StaticSiteBuildPropertiesResponse {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
-
         public StaticSiteBuildPropertiesResponse build() {
             return new StaticSiteBuildPropertiesResponse(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }

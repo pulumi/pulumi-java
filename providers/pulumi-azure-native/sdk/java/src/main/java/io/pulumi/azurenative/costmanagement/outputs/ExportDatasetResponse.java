@@ -77,7 +77,6 @@ public final class ExportDatasetResponse {
             this.granularity = granularity;
             return this;
         }
-
         public ExportDatasetResponse build() {
             return new ExportDatasetResponse(configuration, granularity);
         }

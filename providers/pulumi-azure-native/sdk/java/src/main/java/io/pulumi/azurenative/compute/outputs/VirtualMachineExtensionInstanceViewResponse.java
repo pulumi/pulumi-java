@@ -141,7 +141,6 @@ public final class VirtualMachineExtensionInstanceViewResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VirtualMachineExtensionInstanceViewResponse build() {
             return new VirtualMachineExtensionInstanceViewResponse(name, statuses, substatuses, type, typeHandlerVersion);
         }

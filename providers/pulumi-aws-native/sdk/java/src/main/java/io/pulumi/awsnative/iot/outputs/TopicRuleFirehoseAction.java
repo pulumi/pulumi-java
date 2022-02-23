@@ -87,7 +87,6 @@ public final class TopicRuleFirehoseAction {
             this.separator = separator;
             return this;
         }
-
         public TopicRuleFirehoseAction build() {
             return new TopicRuleFirehoseAction(batchMode, deliveryStreamName, roleArn, separator);
         }

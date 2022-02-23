@@ -15,7 +15,7 @@ public final class SomeOtherObjectArgs extends io.pulumi.resources.ResourceArgs 
     public static final SomeOtherObjectArgs Empty = new SomeOtherObjectArgs();
 
     @InputImport(name="baz")
-    private final @Nullable Input<String> baz;
+      private final @Nullable Input<String> baz;
 
     public Input<String> getBaz() {
         return this.baz == null ? Input.empty() : this.baz;
@@ -58,7 +58,6 @@ public final class SomeOtherObjectArgs extends io.pulumi.resources.ResourceArgs 
             this.baz = Input.ofNullable(baz);
             return this;
         }
-
         public SomeOtherObjectArgs build() {
             return new SomeOtherObjectArgs(baz);
         }

@@ -76,7 +76,6 @@ public final class AppImageConfigKernelSpec {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AppImageConfigKernelSpec build() {
             return new AppImageConfigKernelSpec(displayName, name);
         }

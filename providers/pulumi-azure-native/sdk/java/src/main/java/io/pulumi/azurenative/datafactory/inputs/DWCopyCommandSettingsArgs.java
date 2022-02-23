@@ -26,7 +26,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="additionalOptions")
-    private final @Nullable Input<Map<String,String>> additionalOptions;
+        private final @Nullable Input<Map<String,String>> additionalOptions;
 
     public Input<Map<String,String>> getAdditionalOptions() {
         return this.additionalOptions == null ? Input.empty() : this.additionalOptions;
@@ -37,7 +37,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultValues")
-    private final @Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues;
+        private final @Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
     public Input<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {
         return this.defaultValues == null ? Input.empty() : this.defaultValues;
@@ -96,7 +96,6 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
             this.defaultValues = Input.ofNullable(defaultValues);
             return this;
         }
-
         public DWCopyCommandSettingsArgs build() {
             return new DWCopyCommandSettingsArgs(additionalOptions, defaultValues);
         }

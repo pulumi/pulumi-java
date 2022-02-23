@@ -78,7 +78,6 @@ public final class WebhookConversion {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }
-
         public WebhookConversion build() {
             return new WebhookConversion(clientConfig, conversionReviewVersions);
         }

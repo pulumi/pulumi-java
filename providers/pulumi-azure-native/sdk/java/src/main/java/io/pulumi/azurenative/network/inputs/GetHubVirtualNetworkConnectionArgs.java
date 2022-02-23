@@ -17,7 +17,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+        private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final String virtualHubName;
+        private final String virtualHubName;
 
     public String getVirtualHubName() {
         return this.virtualHubName;
@@ -98,7 +98,6 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public GetHubVirtualNetworkConnectionArgs build() {
             return new GetHubVirtualNetworkConnectionArgs(connectionName, resourceGroupName, virtualHubName);
         }

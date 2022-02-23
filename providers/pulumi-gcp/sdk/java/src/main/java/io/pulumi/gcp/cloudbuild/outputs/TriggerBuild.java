@@ -328,7 +328,6 @@ public final class TriggerBuild {
             this.timeout = timeout;
             return this;
         }
-
         public TriggerBuild build() {
             return new TriggerBuild(artifacts, availableSecrets, images, logsBucket, options, queueTtl, secrets, source, steps, substitutions, tags, timeout);
         }

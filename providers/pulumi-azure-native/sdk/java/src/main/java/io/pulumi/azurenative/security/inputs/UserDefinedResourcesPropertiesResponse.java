@@ -22,7 +22,7 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+        private final String query;
 
     public String getQuery() {
         return this.query;
@@ -33,7 +33,7 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="querySubscriptions", required=true)
-    private final List<String> querySubscriptions;
+        private final List<String> querySubscriptions;
 
     public List<String> getQuerySubscriptions() {
         return this.querySubscriptions;
@@ -82,7 +82,6 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
-
         public UserDefinedResourcesPropertiesResponse build() {
             return new UserDefinedResourcesPropertiesResponse(query, querySubscriptions);
         }

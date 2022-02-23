@@ -58,7 +58,6 @@ public final class GetClusterNodePoolAutoscaling {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public GetClusterNodePoolAutoscaling build() {
             return new GetClusterNodePoolAutoscaling(maxNodeCount, minNodeCount);
         }

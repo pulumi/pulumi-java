@@ -309,7 +309,6 @@ public final class ExecutionTemplateResponse {
             this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
             return this;
         }
-
         public ExecutionTemplateResponse build() {
             return new ExecutionTemplateResponse(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
         }

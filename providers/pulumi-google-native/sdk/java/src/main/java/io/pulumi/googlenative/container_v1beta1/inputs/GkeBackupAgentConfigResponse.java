@@ -21,7 +21,7 @@ public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.Invo
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GkeBackupAgentConfigResponse build() {
             return new GkeBackupAgentConfigResponse(enabled);
         }

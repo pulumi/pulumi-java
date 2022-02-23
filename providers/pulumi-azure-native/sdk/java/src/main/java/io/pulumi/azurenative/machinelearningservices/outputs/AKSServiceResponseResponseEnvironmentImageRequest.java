@@ -165,7 +165,6 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest {
             this.models = models;
             return this;
         }
-
         public AKSServiceResponseResponseEnvironmentImageRequest build() {
             return new AKSServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
         }

@@ -97,7 +97,6 @@ public final class DeploymentModelResponse {
             this.version = version;
             return this;
         }
-
         public DeploymentModelResponse build() {
             return new DeploymentModelResponse(format, name, version);
         }

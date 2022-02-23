@@ -27,7 +27,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowWithoutCredential")
-    private final @Nullable Input<Boolean> allowWithoutCredential;
+      private final @Nullable Input<Boolean> allowWithoutCredential;
 
     public Input<Boolean> getAllowWithoutCredential() {
         return this.allowWithoutCredential == null ? Input.empty() : this.allowWithoutCredential;
@@ -38,7 +38,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauth")
-    private final @Nullable Input<OAuthRequirementsArgs> oauth;
+      private final @Nullable Input<OAuthRequirementsArgs> oauth;
 
     public Input<OAuthRequirementsArgs> getOauth() {
         return this.oauth == null ? Input.empty() : this.oauth;
@@ -49,7 +49,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="requirements")
-    private final @Nullable Input<List<AuthRequirementArgs>> requirements;
+      private final @Nullable Input<List<AuthRequirementArgs>> requirements;
 
     public Input<List<AuthRequirementArgs>> getRequirements() {
         return this.requirements == null ? Input.empty() : this.requirements;
@@ -60,7 +60,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -149,7 +149,6 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public AuthenticationRuleArgs build() {
             return new AuthenticationRuleArgs(allowWithoutCredential, oauth, requirements, selector);
         }

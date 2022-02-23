@@ -96,7 +96,6 @@ public final class GetEnvironmentResult {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(arn, environmentIdentifier, tags, transitGatewayId);
         }

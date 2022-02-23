@@ -119,7 +119,6 @@ public final class ManagementPolicyBaseBlobResponse {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public ManagementPolicyBaseBlobResponse build() {
             return new ManagementPolicyBaseBlobResponse(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
         }

@@ -23,7 +23,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable String availabilityZone;
+        private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
@@ -34,7 +34,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regionName")
-    private final @Nullable String regionName;
+        private final @Nullable String regionName;
 
     public Optional<String> getRegionName() {
         return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);
@@ -83,7 +83,6 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
             this.regionName = regionName;
             return this;
         }
-
         public DiskLocation build() {
             return new DiskLocation(availabilityZone, regionName);
         }

@@ -209,7 +209,6 @@ public final class BlobTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobTriggerResponse build() {
             return new BlobTriggerResponse(annotations, description, folderPath, linkedService, maxConcurrency, pipelines, runtimeState, type);
         }

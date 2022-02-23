@@ -77,7 +77,6 @@ public final class ObjectReplicationPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public ObjectReplicationPolicyFilterResponse build() {
             return new ObjectReplicationPolicyFilterResponse(minCreationTime, prefixMatch);
         }

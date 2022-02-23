@@ -20,7 +20,7 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -103,7 +103,6 @@ public final class GetKMSKeyRingArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetKMSKeyRingArgs build() {
             return new GetKMSKeyRingArgs(location, name, project);
         }

@@ -137,7 +137,6 @@ public final class FirewallPolicyAssociationResponse {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public FirewallPolicyAssociationResponse build() {
             return new FirewallPolicyAssociationResponse(attachmentTarget, displayName, firewallPolicyId, name, shortName);
         }

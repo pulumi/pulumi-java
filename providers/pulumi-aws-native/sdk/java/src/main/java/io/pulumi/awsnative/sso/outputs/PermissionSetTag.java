@@ -58,7 +58,6 @@ public final class PermissionSetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PermissionSetTag build() {
             return new PermissionSetTag(key, value);
         }

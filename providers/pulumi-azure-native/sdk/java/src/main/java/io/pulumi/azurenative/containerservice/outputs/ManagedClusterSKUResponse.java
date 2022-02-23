@@ -76,7 +76,6 @@ public final class ManagedClusterSKUResponse {
             this.tier = tier;
             return this;
         }
-
         public ManagedClusterSKUResponse build() {
             return new ManagedClusterSKUResponse(name, tier);
         }

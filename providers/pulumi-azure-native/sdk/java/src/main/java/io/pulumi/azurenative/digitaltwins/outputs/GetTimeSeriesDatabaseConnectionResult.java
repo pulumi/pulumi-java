@@ -139,7 +139,6 @@ public final class GetTimeSeriesDatabaseConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTimeSeriesDatabaseConnectionResult build() {
             return new GetTimeSeriesDatabaseConnectionResult(id, name, properties, systemData, type);
         }

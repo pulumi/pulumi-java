@@ -77,7 +77,6 @@ public final class FailoverSetEligibilityResultResponse {
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
         }
-
         public FailoverSetEligibilityResultResponse build() {
             return new FailoverSetEligibilityResultResponse(errorMessage, isEligibleForFailover);
         }

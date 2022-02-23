@@ -21,7 +21,7 @@ public final class AttestationAuthorityHintResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final String humanReadableName;
+      private final String humanReadableName;
 
     public String getHumanReadableName() {
         return this.humanReadableName;
@@ -59,7 +59,6 @@ public final class AttestationAuthorityHintResponse extends io.pulumi.resources.
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public AttestationAuthorityHintResponse build() {
             return new AttestationAuthorityHintResponse(humanReadableName);
         }

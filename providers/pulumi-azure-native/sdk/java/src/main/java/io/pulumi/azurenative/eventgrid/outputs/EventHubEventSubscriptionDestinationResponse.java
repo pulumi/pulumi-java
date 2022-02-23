@@ -78,7 +78,6 @@ public final class EventHubEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public EventHubEventSubscriptionDestinationResponse build() {
             return new EventHubEventSubscriptionDestinationResponse(endpointType, resourceId);
         }

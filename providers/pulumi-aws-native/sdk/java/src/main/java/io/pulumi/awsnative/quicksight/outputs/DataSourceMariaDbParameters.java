@@ -96,7 +96,6 @@ public final class DataSourceMariaDbParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceMariaDbParameters build() {
             return new DataSourceMariaDbParameters(database, host, port);
         }

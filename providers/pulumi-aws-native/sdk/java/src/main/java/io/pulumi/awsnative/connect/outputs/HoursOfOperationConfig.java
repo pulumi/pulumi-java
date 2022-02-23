@@ -96,7 +96,6 @@ public final class HoursOfOperationConfig {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public HoursOfOperationConfig build() {
             return new HoursOfOperationConfig(day, endTime, startTime);
         }

@@ -22,7 +22,7 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxServeNodes", required=true)
-    private final Input<Integer> maxServeNodes;
+      private final Input<Integer> maxServeNodes;
 
     public Input<Integer> getMaxServeNodes() {
         return this.maxServeNodes;
@@ -33,7 +33,7 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minServeNodes", required=true)
-    private final Input<Integer> minServeNodes;
+      private final Input<Integer> minServeNodes;
 
     public Input<Integer> getMinServeNodes() {
         return this.minServeNodes;
@@ -92,7 +92,6 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
             this.minServeNodes = Input.of(Objects.requireNonNull(minServeNodes));
             return this;
         }
-
         public AutoscalingLimitsArgs build() {
             return new AutoscalingLimitsArgs(maxServeNodes, minServeNodes);
         }

@@ -24,7 +24,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inverted", required=true)
-    private final Input<Boolean> inverted;
+        private final Input<Boolean> inverted;
 
     public Input<Boolean> getInverted() {
         return this.inverted;
@@ -35,14 +35,14 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Integer> threshold;
+        private final Input<Integer> threshold;
 
     public Input<Integer> getThreshold() {
         return this.threshold;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<SafetyRuleRuleType> type;
+        private final Input<SafetyRuleRuleType> type;
 
     public Input<SafetyRuleRuleType> getType() {
         return this.type;
@@ -116,7 +116,6 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SafetyRuleRuleConfigArgs build() {
             return new SafetyRuleRuleConfigArgs(inverted, threshold, type);
         }

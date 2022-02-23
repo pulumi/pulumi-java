@@ -186,7 +186,6 @@ public final class WorkflowTemplateJobPrestoJob {
             this.queryList = queryList;
             return this;
         }
-
         public WorkflowTemplateJobPrestoJob build() {
             return new WorkflowTemplateJobPrestoJob(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }

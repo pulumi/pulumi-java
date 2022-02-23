@@ -23,7 +23,7 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -66,7 +66,6 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public SelfSubjectRulesReviewSpecArgs build() {
             return new SelfSubjectRulesReviewSpecArgs(namespace);
         }

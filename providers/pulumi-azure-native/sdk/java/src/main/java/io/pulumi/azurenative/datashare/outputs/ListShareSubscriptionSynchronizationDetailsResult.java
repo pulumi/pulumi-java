@@ -78,7 +78,6 @@ public final class ListShareSubscriptionSynchronizationDetailsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListShareSubscriptionSynchronizationDetailsResult build() {
             return new ListShareSubscriptionSynchronizationDetailsResult(nextLink, value);
         }

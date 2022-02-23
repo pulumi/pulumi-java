@@ -20,7 +20,7 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreCoordinates")
-    private final @Nullable Input<List<String>> ignoreCoordinates;
+        private final @Nullable Input<List<String>> ignoreCoordinates;
 
     public Input<List<String>> getIgnoreCoordinates() {
         return this.ignoreCoordinates == null ? Input.empty() : this.ignoreCoordinates;
@@ -31,7 +31,7 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="screenshotName", required=true)
-    private final Input<String> screenshotName;
+        private final Input<String> screenshotName;
 
     public Input<String> getScreenshotName() {
         return this.screenshotName;
@@ -90,7 +90,6 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
             this.screenshotName = Input.of(Objects.requireNonNull(screenshotName));
             return this;
         }
-
         public CanaryBaseScreenshotArgs build() {
             return new CanaryBaseScreenshotArgs(ignoreCoordinates, screenshotName);
         }

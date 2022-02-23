@@ -16,14 +16,14 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     public static final ObjectWithNodeOptionalInputsArgs Empty = new ObjectWithNodeOptionalInputsArgs();
 
     @InputImport(name="bar")
-    private final @Nullable Input<Integer> bar;
+      private final @Nullable Input<Integer> bar;
 
     public Input<Integer> getBar() {
         return this.bar == null ? Input.empty() : this.bar;
     }
 
     @InputImport(name="foo", required=true)
-    private final Input<String> foo;
+      private final Input<String> foo;
 
     public Input<String> getFoo() {
         return this.foo;
@@ -82,7 +82,6 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
             this.foo = Input.of(Objects.requireNonNull(foo));
             return this;
         }
-
         public ObjectWithNodeOptionalInputsArgs build() {
             return new ObjectWithNodeOptionalInputsArgs(bar, foo);
         }

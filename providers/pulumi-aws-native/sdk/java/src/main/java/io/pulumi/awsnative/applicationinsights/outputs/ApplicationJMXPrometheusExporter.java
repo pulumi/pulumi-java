@@ -97,7 +97,6 @@ public final class ApplicationJMXPrometheusExporter {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationJMXPrometheusExporter build() {
             return new ApplicationJMXPrometheusExporter(hostPort, jMXURL, prometheusPort);
         }

@@ -76,7 +76,6 @@ public final class LaunchProfileStreamingSessionStorageRoot {
             this.windows = windows;
             return this;
         }
-
         public LaunchProfileStreamingSessionStorageRoot build() {
             return new LaunchProfileStreamingSessionStorageRoot(linux, windows);
         }

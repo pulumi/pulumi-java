@@ -125,7 +125,6 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskInputResponse build() {
             return new MigrateSqlServerSqlDbTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }

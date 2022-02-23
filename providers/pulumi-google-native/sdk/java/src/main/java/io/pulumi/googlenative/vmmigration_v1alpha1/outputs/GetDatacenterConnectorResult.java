@@ -243,7 +243,6 @@ public final class GetDatacenterConnectorResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatacenterConnectorResult build() {
             return new GetDatacenterConnectorResult(bucket, createTime, error, name, registrationId, serviceAccount, state, stateTime, updateTime, version);
         }

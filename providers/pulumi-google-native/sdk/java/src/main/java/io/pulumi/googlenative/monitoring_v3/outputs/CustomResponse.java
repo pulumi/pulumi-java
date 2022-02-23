@@ -30,7 +30,6 @@ public final class CustomResponse {
         public Builder(CustomResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public CustomResponse build() {
             return new CustomResponse();
         }

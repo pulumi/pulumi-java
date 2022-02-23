@@ -122,7 +122,6 @@ public final class UnsecuredEndpointResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public UnsecuredEndpointResponse build() {
             return new UnsecuredEndpointResponse(credentials, tunnel, type, url);
         }

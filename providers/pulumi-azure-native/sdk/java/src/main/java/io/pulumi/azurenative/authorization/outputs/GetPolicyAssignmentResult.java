@@ -334,7 +334,6 @@ public final class GetPolicyAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyAssignmentResult build() {
             return new GetPolicyAssignmentResult(description, displayName, enforcementMode, id, identity, location, metadata, name, nonComplianceMessages, notScopes, parameters, policyDefinitionId, scope, type);
         }

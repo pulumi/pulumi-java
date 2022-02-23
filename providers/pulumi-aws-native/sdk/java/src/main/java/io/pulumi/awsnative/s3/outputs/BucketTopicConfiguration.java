@@ -98,7 +98,6 @@ public final class BucketTopicConfiguration {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public BucketTopicConfiguration build() {
             return new BucketTopicConfiguration(event, filter, topic);
         }

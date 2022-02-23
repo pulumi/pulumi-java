@@ -130,7 +130,6 @@ public final class FirewallPolicy {
             this.statelessRuleGroupReferences = statelessRuleGroupReferences;
             return this;
         }
-
         public FirewallPolicy build() {
             return new FirewallPolicy(statefulDefaultActions, statefulEngineOptions, statefulRuleGroupReferences, statelessCustomActions, statelessDefaultActions, statelessFragmentDefaultActions, statelessRuleGroupReferences);
         }

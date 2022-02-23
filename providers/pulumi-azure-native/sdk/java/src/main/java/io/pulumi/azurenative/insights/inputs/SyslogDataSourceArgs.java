@@ -29,7 +29,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="facilityNames")
-    private final @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
+        private final @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
     public Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
         return this.facilityNames == null ? Input.empty() : this.facilityNames;
@@ -40,7 +40,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logLevels")
-    private final @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
+        private final @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
     public Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
         return this.logLevels == null ? Input.empty() : this.logLevels;
@@ -52,7 +52,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,7 +64,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
+        private final @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
     public Input<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -153,7 +153,6 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             this.streams = Input.ofNullable(streams);
             return this;
         }
-
         public SyslogDataSourceArgs build() {
             return new SyslogDataSourceArgs(facilityNames, logLevels, name, streams);
         }

@@ -250,7 +250,6 @@ public final class GetPolicySetDefinitionAtManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicySetDefinitionAtManagementGroupResult build() {
             return new GetPolicySetDefinitionAtManagementGroupResult(description, displayName, id, metadata, name, parameters, policyDefinitionGroups, policyDefinitions, policyType, type);
         }

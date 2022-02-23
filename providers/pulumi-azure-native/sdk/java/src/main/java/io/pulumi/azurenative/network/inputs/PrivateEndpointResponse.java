@@ -30,7 +30,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="customDnsConfigs")
-    private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
+        private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
 
     public List<CustomDnsConfigPropertiesFormatResponse> getCustomDnsConfigs() {
         return this.customDnsConfigs == null ? List.of() : this.customDnsConfigs;
@@ -41,7 +41,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -52,7 +52,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable ExtendedLocationResponse extendedLocation;
+        private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
@@ -63,7 +63,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -74,7 +74,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -85,7 +85,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-    private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+        private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
@@ -96,7 +96,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -107,7 +107,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+        private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -118,7 +118,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateLinkServiceConnections")
-    private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
+        private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
@@ -129,7 +129,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -140,7 +140,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubnetResponse subnet;
+        private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -151,7 +151,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -162,7 +162,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -321,7 +321,6 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(customDnsConfigs, etag, extendedLocation, id, location, manualPrivateLinkServiceConnections, name, networkInterfaces, privateLinkServiceConnections, provisioningState, subnet, tags, type);
         }

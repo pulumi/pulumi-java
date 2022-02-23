@@ -225,7 +225,6 @@ public final class DomainMappingMetadata {
             this.uid = uid;
             return this;
         }
-
         public DomainMappingMetadata build() {
             return new DomainMappingMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

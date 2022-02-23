@@ -74,7 +74,6 @@ public final class DataSetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DataSetTag build() {
             return new DataSetTag(key, value);
         }

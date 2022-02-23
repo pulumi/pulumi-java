@@ -218,7 +218,6 @@ public final class DeviceProfileLoRaWANDeviceProfile {
             this.supportsJoin = supportsJoin;
             return this;
         }
-
         public DeviceProfileLoRaWANDeviceProfile build() {
             return new DeviceProfileLoRaWANDeviceProfile(classBTimeout, classCTimeout, macVersion, maxDutyCycle, maxEirp, pingSlotDr, pingSlotFreq, pingSlotPeriod, regParamsRevision, rfRegion, supports32BitFCnt, supportsClassB, supportsClassC, supportsJoin);
         }

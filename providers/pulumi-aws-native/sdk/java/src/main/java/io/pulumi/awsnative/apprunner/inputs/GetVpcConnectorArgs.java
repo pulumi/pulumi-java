@@ -17,7 +17,7 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcConnectorArn", required=true)
-    private final String vpcConnectorArn;
+        private final String vpcConnectorArn;
 
     public String getVpcConnectorArn() {
         return this.vpcConnectorArn;
@@ -55,7 +55,6 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.vpcConnectorArn = Objects.requireNonNull(vpcConnectorArn);
             return this;
         }
-
         public GetVpcConnectorArgs build() {
             return new GetVpcConnectorArgs(vpcConnectorArn);
         }

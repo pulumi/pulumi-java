@@ -81,7 +81,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
             this.percentage = percentage;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }

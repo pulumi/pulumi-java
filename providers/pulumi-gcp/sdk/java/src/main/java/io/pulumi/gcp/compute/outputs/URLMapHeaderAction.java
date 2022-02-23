@@ -128,7 +128,6 @@ public final class URLMapHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapHeaderAction build() {
             return new URLMapHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

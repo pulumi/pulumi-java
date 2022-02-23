@@ -22,7 +22,7 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
      * 
      */
     @InputImport(name="topicArn", required=true)
-    private final Input<String> topicArn;
+        private final Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn;
@@ -65,7 +65,6 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }
-
         public MitigationActionPublishFindingToSnsParamsArgs build() {
             return new MitigationActionPublishFindingToSnsParamsArgs(topicArn);
         }

@@ -74,7 +74,6 @@ public final class DiskEncryptionConfigurationResponse {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(kind, kmsKeyName);
         }

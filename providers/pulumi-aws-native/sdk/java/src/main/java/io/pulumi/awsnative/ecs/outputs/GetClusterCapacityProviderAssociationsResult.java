@@ -61,7 +61,6 @@ public final class GetClusterCapacityProviderAssociationsResult {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
-
         public GetClusterCapacityProviderAssociationsResult build() {
             return new GetClusterCapacityProviderAssociationsResult(capacityProviders, defaultCapacityProviderStrategy);
         }

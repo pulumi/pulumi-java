@@ -90,7 +90,6 @@ public final class DomainMappingStatus {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public DomainMappingStatus build() {
             return new DomainMappingStatus(conditions, mappedRouteName, observedGeneration, resourceRecords);
         }

@@ -24,7 +24,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authType", required=true)
-    private final Input<String> authType;
+        private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;
@@ -35,7 +35,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+        private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -120,7 +120,6 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public SecretAuthInfoArgs build() {
             return new SecretAuthInfoArgs(authType, name, secret);
         }

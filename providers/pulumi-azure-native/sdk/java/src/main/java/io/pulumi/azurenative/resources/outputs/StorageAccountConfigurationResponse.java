@@ -76,7 +76,6 @@ public final class StorageAccountConfigurationResponse {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public StorageAccountConfigurationResponse build() {
             return new StorageAccountConfigurationResponse(storageAccountKey, storageAccountName);
         }

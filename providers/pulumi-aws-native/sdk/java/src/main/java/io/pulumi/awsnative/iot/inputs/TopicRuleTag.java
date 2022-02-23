@@ -13,14 +13,14 @@ public final class TopicRuleTag extends io.pulumi.resources.InvokeArgs {
     public static final TopicRuleTag Empty = new TopicRuleTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class TopicRuleTag extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTag build() {
             return new TopicRuleTag(key, value);
         }

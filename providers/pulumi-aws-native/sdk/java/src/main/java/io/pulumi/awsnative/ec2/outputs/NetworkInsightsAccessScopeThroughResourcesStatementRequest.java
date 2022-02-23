@@ -46,7 +46,6 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
             this.resourceStatement = resourceStatement;
             return this;
         }
-
         public NetworkInsightsAccessScopeThroughResourcesStatementRequest build() {
             return new NetworkInsightsAccessScopeThroughResourcesStatementRequest(resourceStatement);
         }

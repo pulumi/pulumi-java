@@ -96,7 +96,6 @@ public final class WeeklyMaintenanceWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public WeeklyMaintenanceWindowResponse build() {
             return new WeeklyMaintenanceWindowResponse(day, duration, startTime);
         }

@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(allowPlaybackInterruption, ssml, text);
         }

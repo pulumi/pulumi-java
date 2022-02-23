@@ -75,7 +75,6 @@ public final class CallCredentialsResponse {
             this.fromPlugin = Objects.requireNonNull(fromPlugin);
             return this;
         }
-
         public CallCredentialsResponse build() {
             return new CallCredentialsResponse(callCredentialType, fromPlugin);
         }

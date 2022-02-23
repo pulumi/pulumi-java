@@ -77,7 +77,6 @@ public final class PersistentVolumeClaimVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public PersistentVolumeClaimVolumeSource build() {
             return new PersistentVolumeClaimVolumeSource(claimName, readOnly);
         }

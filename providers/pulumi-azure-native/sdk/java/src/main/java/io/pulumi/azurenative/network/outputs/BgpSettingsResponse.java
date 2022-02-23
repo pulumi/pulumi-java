@@ -122,7 +122,6 @@ public final class BgpSettingsResponse {
             this.peerWeight = peerWeight;
             return this;
         }
-
         public BgpSettingsResponse build() {
             return new BgpSettingsResponse(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }

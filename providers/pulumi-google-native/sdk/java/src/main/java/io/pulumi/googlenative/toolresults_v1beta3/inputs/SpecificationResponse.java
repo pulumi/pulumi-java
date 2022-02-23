@@ -22,7 +22,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="androidTest", required=true)
-    private final AndroidTestResponse androidTest;
+      private final AndroidTestResponse androidTest;
 
     public AndroidTestResponse getAndroidTest() {
         return this.androidTest;
@@ -33,7 +33,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="iosTest", required=true)
-    private final IosTestResponse iosTest;
+      private final IosTestResponse iosTest;
 
     public IosTestResponse getIosTest() {
         return this.iosTest;
@@ -82,7 +82,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
             this.iosTest = Objects.requireNonNull(iosTest);
             return this;
         }
-
         public SpecificationResponse build() {
             return new SpecificationResponse(androidTest, iosTest);
         }

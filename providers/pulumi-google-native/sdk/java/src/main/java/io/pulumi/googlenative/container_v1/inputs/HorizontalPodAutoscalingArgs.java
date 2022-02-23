@@ -23,7 +23,7 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -66,7 +66,6 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
-
         public HorizontalPodAutoscalingArgs build() {
             return new HorizontalPodAutoscalingArgs(disabled);
         }

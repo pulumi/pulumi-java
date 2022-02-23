@@ -87,7 +87,6 @@ public final class PatchDeploymentRollout {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public PatchDeploymentRollout build() {
             return new PatchDeploymentRollout(disruptionBudget, mode);
         }

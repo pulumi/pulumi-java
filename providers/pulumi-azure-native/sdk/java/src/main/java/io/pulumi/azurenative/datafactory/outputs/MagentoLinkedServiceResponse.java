@@ -275,7 +275,6 @@ public final class MagentoLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public MagentoLinkedServiceResponse build() {
             return new MagentoLinkedServiceResponse(accessToken, annotations, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

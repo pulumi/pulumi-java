@@ -83,7 +83,6 @@ public final class DatadogHostMetadataResponse {
             this.logsAgent = logsAgent;
             return this;
         }
-
         public DatadogHostMetadataResponse build() {
             return new DatadogHostMetadataResponse(agentVersion, installMethod, logsAgent);
         }

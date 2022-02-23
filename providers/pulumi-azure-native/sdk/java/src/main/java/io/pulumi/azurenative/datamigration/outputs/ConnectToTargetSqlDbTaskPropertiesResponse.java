@@ -169,7 +169,6 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetSqlDbTaskPropertiesResponse build() {
             return new ConnectToTargetSqlDbTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

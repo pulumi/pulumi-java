@@ -119,7 +119,6 @@ public final class OraclePartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public OraclePartitionSettingsResponse build() {
             return new OraclePartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
         }

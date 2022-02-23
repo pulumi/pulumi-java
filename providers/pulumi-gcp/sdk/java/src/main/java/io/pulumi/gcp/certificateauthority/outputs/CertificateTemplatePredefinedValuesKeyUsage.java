@@ -100,7 +100,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

@@ -15,21 +15,21 @@ public final class TopicRuleKinesisAction extends io.pulumi.resources.InvokeArgs
     public static final TopicRuleKinesisAction Empty = new TopicRuleKinesisAction();
 
     @InputImport(name="partitionKey")
-    private final @Nullable String partitionKey;
+        private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamName", required=true)
-    private final String streamName;
+        private final String streamName;
 
     public String getStreamName() {
         return this.streamName;
@@ -88,7 +88,6 @@ public final class TopicRuleKinesisAction extends io.pulumi.resources.InvokeArgs
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }
-
         public TopicRuleKinesisAction build() {
             return new TopicRuleKinesisAction(partitionKey, roleArn, streamName);
         }

@@ -116,7 +116,6 @@ public final class TimeOfDayResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public TimeOfDayResponse build() {
             return new TimeOfDayResponse(hours, minutes, nanos, seconds);
         }

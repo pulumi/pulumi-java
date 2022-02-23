@@ -90,7 +90,6 @@ public final class CertificateExtensions {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public CertificateExtensions build() {
             return new CertificateExtensions(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }

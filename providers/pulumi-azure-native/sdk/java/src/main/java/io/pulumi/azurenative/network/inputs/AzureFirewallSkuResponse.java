@@ -23,7 +23,7 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -83,7 +83,6 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
             this.tier = tier;
             return this;
         }
-
         public AzureFirewallSkuResponse build() {
             return new AzureFirewallSkuResponse(name, tier);
         }

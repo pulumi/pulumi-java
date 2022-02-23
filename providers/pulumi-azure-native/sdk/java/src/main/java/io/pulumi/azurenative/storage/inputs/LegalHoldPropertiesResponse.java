@@ -25,7 +25,7 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hasLegalHold", required=true)
-    private final Boolean hasLegalHold;
+        private final Boolean hasLegalHold;
 
     public Boolean getHasLegalHold() {
         return this.hasLegalHold;
@@ -36,7 +36,7 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable List<TagPropertyResponse> tags;
+        private final @Nullable List<TagPropertyResponse> tags;
 
     public List<TagPropertyResponse> getTags() {
         return this.tags == null ? List.of() : this.tags;
@@ -85,7 +85,6 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
             this.tags = tags;
             return this;
         }
-
         public LegalHoldPropertiesResponse build() {
             return new LegalHoldPropertiesResponse(hasLegalHold, tags);
         }

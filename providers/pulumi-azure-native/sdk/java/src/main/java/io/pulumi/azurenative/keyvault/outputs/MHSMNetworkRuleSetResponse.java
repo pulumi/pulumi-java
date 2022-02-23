@@ -121,7 +121,6 @@ public final class MHSMNetworkRuleSetResponse {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public MHSMNetworkRuleSetResponse build() {
             return new MHSMNetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
         }

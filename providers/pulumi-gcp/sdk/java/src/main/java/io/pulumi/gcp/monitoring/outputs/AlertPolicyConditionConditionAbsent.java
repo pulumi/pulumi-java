@@ -191,7 +191,6 @@ public final class AlertPolicyConditionConditionAbsent {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionAbsent build() {
             return new AlertPolicyConditionConditionAbsent(aggregations, duration, filter, trigger);
         }

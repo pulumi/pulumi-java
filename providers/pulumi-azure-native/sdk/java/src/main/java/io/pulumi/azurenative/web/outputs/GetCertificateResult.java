@@ -584,7 +584,6 @@ public final class GetCertificateResult {
             this.valid = Objects.requireNonNull(valid);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(canonicalName, cerBlob, domainValidationMethod, expirationDate, friendlyName, hostNames, hostingEnvironmentProfile, id, issueDate, issuer, keyVaultId, keyVaultSecretName, keyVaultSecretStatus, kind, location, name, pfxBlob, publicKeyHash, selfLink, serverFarmId, siteName, subjectName, tags, thumbprint, type, valid);
         }

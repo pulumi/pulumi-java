@@ -74,7 +74,6 @@ public final class ResourceGuardOperationResponse {
             this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
             return this;
         }
-
         public ResourceGuardOperationResponse build() {
             return new ResourceGuardOperationResponse(requestResourceType, vaultCriticalOperation);
         }

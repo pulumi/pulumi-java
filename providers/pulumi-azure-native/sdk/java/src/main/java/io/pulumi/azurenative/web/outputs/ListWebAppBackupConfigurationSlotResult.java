@@ -227,7 +227,6 @@ public final class ListWebAppBackupConfigurationSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppBackupConfigurationSlotResult build() {
             return new ListWebAppBackupConfigurationSlotResult(backupName, backupSchedule, databases, enabled, id, kind, name, storageAccountUrl, type);
         }

@@ -140,7 +140,6 @@ public final class MonitoredResourceResponse {
             this.sendingMetrics = sendingMetrics;
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics);
         }

@@ -61,7 +61,6 @@ public final class TaskDefinitionVolumeFrom {
             this.sourceContainer = sourceContainer;
             return this;
         }
-
         public TaskDefinitionVolumeFrom build() {
             return new TaskDefinitionVolumeFrom(readOnly, sourceContainer);
         }

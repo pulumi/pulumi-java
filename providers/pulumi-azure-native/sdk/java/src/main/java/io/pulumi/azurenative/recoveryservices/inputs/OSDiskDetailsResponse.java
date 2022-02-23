@@ -23,7 +23,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+        private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -34,7 +34,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="osVhdId")
-    private final @Nullable String osVhdId;
+        private final @Nullable String osVhdId;
 
     public Optional<String> getOsVhdId() {
         return this.osVhdId == null ? Optional.empty() : Optional.ofNullable(this.osVhdId);
@@ -45,7 +45,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vhdName")
-    private final @Nullable String vhdName;
+        private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
@@ -104,7 +104,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
             this.vhdName = vhdName;
             return this;
         }
-
         public OSDiskDetailsResponse build() {
             return new OSDiskDetailsResponse(osType, osVhdId, vhdName);
         }

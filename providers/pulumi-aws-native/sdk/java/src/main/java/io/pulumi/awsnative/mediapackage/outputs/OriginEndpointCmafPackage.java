@@ -128,7 +128,6 @@ public final class OriginEndpointCmafPackage {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public OriginEndpointCmafPackage build() {
             return new OriginEndpointCmafPackage(encryption, hlsManifests, segmentDurationSeconds, segmentPrefix, streamSelection);
         }

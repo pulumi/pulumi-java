@@ -174,7 +174,6 @@ public final class GetResourceRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceRecordSetResult build() {
             return new GetResourceRecordSetResult(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }

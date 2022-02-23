@@ -77,7 +77,6 @@ public final class ComputeIsolationPropertiesResponse {
             this.hostSku = hostSku;
             return this;
         }
-
         public ComputeIsolationPropertiesResponse build() {
             return new ComputeIsolationPropertiesResponse(enableComputeIsolation, hostSku);
         }

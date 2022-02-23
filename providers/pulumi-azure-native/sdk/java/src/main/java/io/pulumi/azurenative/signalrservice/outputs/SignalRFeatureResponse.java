@@ -101,7 +101,6 @@ public final class SignalRFeatureResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SignalRFeatureResponse build() {
             return new SignalRFeatureResponse(flag, properties, value);
         }

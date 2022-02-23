@@ -46,7 +46,6 @@ public final class DomainNodeToNodeEncryptionOptions {
             this.enabled = enabled;
             return this;
         }
-
         public DomainNodeToNodeEncryptionOptions build() {
             return new DomainNodeToNodeEncryptionOptions(enabled);
         }

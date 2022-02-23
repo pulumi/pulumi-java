@@ -24,7 +24,7 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expiresIn")
-    private final @Nullable Integer expiresIn;
+        private final @Nullable Integer expiresIn;
 
     public Optional<Integer> getExpiresIn() {
         return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
@@ -35,7 +35,7 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable String refreshToken;
+        private final @Nullable String refreshToken;
 
     public Optional<String> getRefreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
@@ -46,7 +46,7 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable String scope;
+        private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -57,7 +57,7 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="token", required=true)
-    private final String token;
+        private final String token;
 
     public String getToken() {
         return this.token;
@@ -68,7 +68,7 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tokenType")
-    private final @Nullable String tokenType;
+        private final @Nullable String tokenType;
 
     public Optional<String> getTokenType() {
         return this.tokenType == null ? Optional.empty() : Optional.ofNullable(this.tokenType);
@@ -147,7 +147,6 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
             this.tokenType = tokenType;
             return this;
         }
-
         public SourceControlAuthInfoResponse build() {
             return new SourceControlAuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }

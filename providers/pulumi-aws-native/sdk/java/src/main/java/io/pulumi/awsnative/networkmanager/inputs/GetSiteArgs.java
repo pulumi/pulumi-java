@@ -17,7 +17,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final String globalNetworkId;
+        private final String globalNetworkId;
 
     public String getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -28,7 +28,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+        private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -77,7 +77,6 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public GetSiteArgs build() {
             return new GetSiteArgs(globalNetworkId, siteId);
         }

@@ -24,7 +24,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="actionConfiguration", required=true)
-    private final Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
+        private final Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
     public Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> getActionConfiguration() {
         return this.actionConfiguration;
@@ -36,7 +36,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final Input<String> actionType;
+        private final Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType;
@@ -47,7 +47,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="order", required=true)
-    private final Input<Integer> order;
+        private final Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order;
@@ -121,7 +121,6 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
             this.order = Input.of(Objects.requireNonNull(order));
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionArgs build() {
             return new AutomationRuleModifyPropertiesActionArgs(actionConfiguration, actionType, order);
         }

@@ -268,7 +268,6 @@ public final class ProbeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ProbeResponse build() {
             return new ProbeResponse(etag, id, intervalInSeconds, loadBalancingRules, name, numberOfProbes, port, protocol, provisioningState, requestPath, type);
         }

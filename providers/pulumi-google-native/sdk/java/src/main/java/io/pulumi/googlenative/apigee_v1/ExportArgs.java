@@ -20,7 +20,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csvDelimiter")
-    private final @Nullable Input<String> csvDelimiter;
+      private final @Nullable Input<String> csvDelimiter;
 
     public Input<String> getCsvDelimiter() {
         return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
@@ -31,7 +31,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreName", required=true)
-    private final Input<String> datastoreName;
+      private final Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName;
@@ -42,7 +42,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateRange", required=true)
-    private final Input<GoogleCloudApigeeV1DateRangeArgs> dateRange;
+      private final Input<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
     public Input<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
         return this.dateRange;
@@ -53,14 +53,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -71,14 +71,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -89,7 +89,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+      private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -238,7 +238,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
-
         public ExportArgs build() {
             return new ExportArgs(csvDelimiter, datastoreName, dateRange, description, environmentId, name, organizationId, outputFormat);
         }

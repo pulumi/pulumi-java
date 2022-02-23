@@ -120,7 +120,6 @@ public final class DiscreteActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiscreteActionResponse build() {
             return new DiscreteActionResponse(name, parameters, selectorId, type);
         }

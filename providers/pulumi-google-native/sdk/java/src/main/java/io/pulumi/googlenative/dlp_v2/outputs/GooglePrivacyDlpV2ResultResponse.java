@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2ResultResponse {
             this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
             return this;
         }
-
         public GooglePrivacyDlpV2ResultResponse build() {
             return new GooglePrivacyDlpV2ResultResponse(hybridStats, infoTypeStats, processedBytes, totalEstimatedBytes);
         }

@@ -137,7 +137,6 @@ public final class VMSSVMInfoResponse {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
-
         public VMSSVMInfoResponse build() {
             return new VMSSVMInfoResponse(complianceStatus, lastComplianceChecked, latestReportId, vmId, vmResourceId);
         }

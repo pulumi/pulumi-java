@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="adminConsoleUri", required=true)
-    private final String adminConsoleUri;
+      private final String adminConsoleUri;
 
     public String getAdminConsoleUri() {
         return this.adminConsoleUri;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="alternateEmail", required=true)
-    private final String alternateEmail;
+      private final String alternateEmail;
 
     public String getAlternateEmail() {
         return this.alternateEmail;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="customerType", required=true)
-    private final String customerType;
+      private final String customerType;
 
     public String getCustomerType() {
         return this.customerType;
@@ -56,7 +56,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="eduData", required=true)
-    private final GoogleCloudChannelV1EduDataResponse eduData;
+      private final GoogleCloudChannelV1EduDataResponse eduData;
 
     public GoogleCloudChannelV1EduDataResponse getEduData() {
         return this.eduData;
@@ -67,7 +67,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="isDomainVerified", required=true)
-    private final Boolean isDomainVerified;
+      private final Boolean isDomainVerified;
 
     public Boolean getIsDomainVerified() {
         return this.isDomainVerified;
@@ -78,7 +78,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final String languageCode;
+      private final String languageCode;
 
     public String getLanguageCode() {
         return this.languageCode;
@@ -89,7 +89,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+      private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -100,7 +100,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="primaryDomain", required=true)
-    private final String primaryDomain;
+      private final String primaryDomain;
 
     public String getPrimaryDomain() {
         return this.primaryDomain;
@@ -209,7 +209,6 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
             this.primaryDomain = Objects.requireNonNull(primaryDomain);
             return this;
         }
-
         public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
             return new GoogleCloudChannelV1CloudIdentityInfoResponse(adminConsoleUri, alternateEmail, customerType, eduData, isDomainVerified, languageCode, phoneNumber, primaryDomain);
         }

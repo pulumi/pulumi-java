@@ -121,7 +121,6 @@ public final class RoutingEndpointsResponse {
             this.storageContainers = storageContainers;
             return this;
         }
-
         public RoutingEndpointsResponse build() {
             return new RoutingEndpointsResponse(eventHubs, serviceBusQueues, serviceBusTopics, storageContainers);
         }

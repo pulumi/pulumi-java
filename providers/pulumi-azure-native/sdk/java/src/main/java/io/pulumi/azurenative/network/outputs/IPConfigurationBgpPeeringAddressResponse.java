@@ -119,7 +119,6 @@ public final class IPConfigurationBgpPeeringAddressResponse {
             this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
             return this;
         }
-
         public IPConfigurationBgpPeeringAddressResponse build() {
             return new IPConfigurationBgpPeeringAddressResponse(customBgpIpAddresses, defaultBgpIpAddresses, ipconfigurationId, tunnelIpAddresses);
         }

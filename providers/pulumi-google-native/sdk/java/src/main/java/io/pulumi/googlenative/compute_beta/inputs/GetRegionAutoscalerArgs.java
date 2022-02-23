@@ -15,21 +15,21 @@ public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArg
     public static final GetRegionAutoscalerArgs Empty = new GetRegionAutoscalerArgs();
 
     @InputImport(name="autoscaler", required=true)
-    private final String autoscaler;
+      private final String autoscaler;
 
     public String getAutoscaler() {
         return this.autoscaler;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArg
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionAutoscalerArgs build() {
             return new GetRegionAutoscalerArgs(autoscaler, project, region);
         }

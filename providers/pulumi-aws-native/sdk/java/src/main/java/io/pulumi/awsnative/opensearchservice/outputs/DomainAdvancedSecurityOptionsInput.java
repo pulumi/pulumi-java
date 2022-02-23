@@ -74,7 +74,6 @@ public final class DomainAdvancedSecurityOptionsInput {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
-
         public DomainAdvancedSecurityOptionsInput build() {
             return new DomainAdvancedSecurityOptionsInput(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }

@@ -17,7 +17,7 @@ public final class ListSourceControlRepositoriesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final String operationalInsightsResourceProvider;
+        private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class ListSourceControlRepositoriesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListSourceControlRepositoriesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class ListSourceControlRepositoriesArgs extends io.pulumi.resources
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public ListSourceControlRepositoriesArgs build() {
             return new ListSourceControlRepositoriesArgs(operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }

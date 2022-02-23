@@ -54,7 +54,6 @@ public final class ClusterEncryptionConfigProviderProperties {
             this.keyArn = keyArn;
             return this;
         }
-
         public ClusterEncryptionConfigProviderProperties build() {
             return new ClusterEncryptionConfigProviderProperties(keyArn);
         }

@@ -76,7 +76,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
             this.mode = mode;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
             return new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(id, mode);
         }

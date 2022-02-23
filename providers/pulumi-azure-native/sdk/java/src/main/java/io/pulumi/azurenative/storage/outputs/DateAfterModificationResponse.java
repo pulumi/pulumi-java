@@ -76,7 +76,6 @@ public final class DateAfterModificationResponse {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
-
         public DateAfterModificationResponse build() {
             return new DateAfterModificationResponse(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
         }

@@ -60,7 +60,6 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
             this.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }
-
         public LoggingRuleResponseHiddenPropertyPaths build() {
             return new LoggingRuleResponseHiddenPropertyPaths(hiddenPathsOnRequest, hiddenPathsOnResponse);
         }

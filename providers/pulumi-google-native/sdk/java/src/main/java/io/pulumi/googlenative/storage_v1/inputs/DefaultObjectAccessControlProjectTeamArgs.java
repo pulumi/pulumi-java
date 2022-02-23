@@ -23,7 +23,7 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="projectNumber")
-    private final @Nullable Input<String> projectNumber;
+      private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
@@ -34,7 +34,7 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="team")
-    private final @Nullable Input<String> team;
+      private final @Nullable Input<String> team;
 
     public Input<String> getTeam() {
         return this.team == null ? Input.empty() : this.team;
@@ -93,7 +93,6 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
             this.team = Input.ofNullable(team);
             return this;
         }
-
         public DefaultObjectAccessControlProjectTeamArgs build() {
             return new DefaultObjectAccessControlProjectTeamArgs(projectNumber, team);
         }

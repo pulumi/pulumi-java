@@ -164,7 +164,6 @@ public final class AliasResponse {
             this.type = type;
             return this;
         }
-
         public AliasResponse build() {
             return new AliasResponse(defaultMetadata, defaultPath, defaultPattern, name, paths, type);
         }

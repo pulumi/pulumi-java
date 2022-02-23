@@ -25,7 +25,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="devPortalUrl", required=true)
-    private final String devPortalUrl;
+        private final String devPortalUrl;
 
     public String getDevPortalUrl() {
         return this.devPortalUrl;
@@ -36,7 +36,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -47,7 +47,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="iconUrl", required=true)
-    private final String iconUrl;
+        private final String iconUrl;
 
     public String getIconUrl() {
         return this.iconUrl;
@@ -58,7 +58,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -69,7 +69,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<ServiceProviderParameterResponse> parameters;
+        private final @Nullable List<ServiceProviderParameterResponse> parameters;
 
     public List<ServiceProviderParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -80,7 +80,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceProviderName", required=true)
-    private final String serviceProviderName;
+        private final String serviceProviderName;
 
     public String getServiceProviderName() {
         return this.serviceProviderName;
@@ -169,7 +169,6 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
             this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
             return this;
         }
-
         public ServiceProviderPropertiesResponse build() {
             return new ServiceProviderPropertiesResponse(devPortalUrl, displayName, iconUrl, id, parameters, serviceProviderName);
         }

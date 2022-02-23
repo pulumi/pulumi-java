@@ -226,7 +226,6 @@ public final class GetGuestPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGuestPolicyResult build() {
             return new GetGuestPolicyResult(assignment, createTime, description, etag, name, packageRepositories, packages, recipes, updateTime);
         }

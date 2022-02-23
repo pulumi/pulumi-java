@@ -140,7 +140,6 @@ public final class GetApiResult {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(labels, latestRevisionId, metaData, name, revision);
         }

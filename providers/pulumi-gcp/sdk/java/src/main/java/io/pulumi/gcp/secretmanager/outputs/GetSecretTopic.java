@@ -44,7 +44,6 @@ public final class GetSecretTopic {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSecretTopic build() {
             return new GetSecretTopic(name);
         }

@@ -44,7 +44,6 @@ public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseFeaturesRule build() {
             return new ResourceTypeRegistrationPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
         }

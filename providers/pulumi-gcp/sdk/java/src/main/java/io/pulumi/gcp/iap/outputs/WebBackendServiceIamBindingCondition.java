@@ -97,7 +97,6 @@ public final class WebBackendServiceIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebBackendServiceIamBindingCondition build() {
             return new WebBackendServiceIamBindingCondition(description, expression, title);
         }

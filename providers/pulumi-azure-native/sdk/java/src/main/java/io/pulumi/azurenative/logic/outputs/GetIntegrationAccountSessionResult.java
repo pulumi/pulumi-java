@@ -204,7 +204,6 @@ public final class GetIntegrationAccountSessionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountSessionResult build() {
             return new GetIntegrationAccountSessionResult(changedTime, content, createdTime, id, location, name, tags, type);
         }

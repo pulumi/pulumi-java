@@ -96,7 +96,6 @@ public final class ManifestResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManifestResponse build() {
             return new ManifestResponse(fileName, muxStreams, type);
         }

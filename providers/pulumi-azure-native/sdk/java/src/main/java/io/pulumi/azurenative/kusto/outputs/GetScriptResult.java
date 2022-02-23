@@ -204,7 +204,6 @@ public final class GetScriptResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScriptResult build() {
             return new GetScriptResult(continueOnErrors, forceUpdateTag, id, name, provisioningState, scriptUrl, systemData, type);
         }

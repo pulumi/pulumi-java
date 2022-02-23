@@ -97,7 +97,6 @@ public final class TargetsPresentConditionResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TargetsPresentConditionResponse build() {
             return new TargetsPresentConditionResponse(missingTargets, status, updateTime);
         }

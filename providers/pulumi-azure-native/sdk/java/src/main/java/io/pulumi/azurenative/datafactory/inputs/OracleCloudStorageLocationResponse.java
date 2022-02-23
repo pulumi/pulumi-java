@@ -24,7 +24,7 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Object bucketName;
+        private final @Nullable Object bucketName;
 
     public Optional<Object> getBucketName() {
         return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
@@ -35,7 +35,7 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Object fileName;
+        private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
@@ -46,7 +46,7 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Object folderPath;
+        private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -58,7 +58,7 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -69,7 +69,7 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Object version;
+        private final @Nullable Object version;
 
     public Optional<Object> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -148,7 +148,6 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
             this.version = version;
             return this;
         }
-
         public OracleCloudStorageLocationResponse build() {
             return new OracleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }

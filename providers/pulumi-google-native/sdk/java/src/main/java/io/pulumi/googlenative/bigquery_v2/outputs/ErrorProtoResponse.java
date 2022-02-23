@@ -116,7 +116,6 @@ public final class ErrorProtoResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public ErrorProtoResponse build() {
             return new ErrorProtoResponse(debugInfo, location, message, reason);
         }

@@ -13,7 +13,7 @@ public final class GetEnvironmentConfigEncryptionConfig extends io.pulumi.resour
     public static final GetEnvironmentConfigEncryptionConfig Empty = new GetEnvironmentConfigEncryptionConfig();
 
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+        private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -51,7 +51,6 @@ public final class GetEnvironmentConfigEncryptionConfig extends io.pulumi.resour
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public GetEnvironmentConfigEncryptionConfig build() {
             return new GetEnvironmentConfigEncryptionConfig(kmsKeyName);
         }

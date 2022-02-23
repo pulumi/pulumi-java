@@ -250,7 +250,6 @@ public final class GetServiceResult {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(appEngine, cloudEndpoints, clusterIstio, custom, displayName, istioCanonicalService, meshIstio, name, telemetry, userLabels);
         }

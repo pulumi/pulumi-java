@@ -22,7 +22,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * 
      */
     @InputImport(name="distributionFilter", required=true)
-    private final Input<String> distributionFilter;
+        private final Input<String> distributionFilter;
 
     public Input<String> getDistributionFilter() {
         return this.distributionFilter;
@@ -39,7 +39,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * 
      */
     @InputImport(name="range", required=true)
-    private final Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
+        private final Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> getRange() {
         return this.range;
@@ -98,7 +98,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs(distributionFilter, range);
         }

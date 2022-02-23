@@ -22,7 +22,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
      * 
      */
     @InputImport(name="fileDescriptorSet", required=true)
-    private final ApigatewayApiConfigFileResponse fileDescriptorSet;
+      private final ApigatewayApiConfigFileResponse fileDescriptorSet;
 
     public ApigatewayApiConfigFileResponse getFileDescriptorSet() {
         return this.fileDescriptorSet;
@@ -33,7 +33,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
      * 
      */
     @InputImport(name="source", required=true)
-    private final List<ApigatewayApiConfigFileResponse> source;
+      private final List<ApigatewayApiConfigFileResponse> source;
 
     public List<ApigatewayApiConfigFileResponse> getSource() {
         return this.source;
@@ -82,7 +82,6 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
         }

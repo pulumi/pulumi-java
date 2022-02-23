@@ -202,7 +202,6 @@ public final class GetInstanceTemplateResult {
             this.sourceInstanceParams = Objects.requireNonNull(sourceInstanceParams);
             return this;
         }
-
         public GetInstanceTemplateResult build() {
             return new GetInstanceTemplateResult(creationTimestamp, description, kind, name, properties, selfLink, sourceInstance, sourceInstanceParams);
         }

@@ -615,7 +615,6 @@ public final class GetPoolResult {
             this.vmSize = vmSize;
             return this;
         }
-
         public GetPoolResult build() {
             return new GetPoolResult(allocationState, allocationStateTransitionTime, applicationLicenses, applicationPackages, autoScaleRun, certificates, creationTime, currentDedicatedNodes, currentLowPriorityNodes, deploymentConfiguration, displayName, etag, id, identity, interNodeCommunication, lastModified, metadata, mountConfiguration, name, networkConfiguration, provisioningState, provisioningStateTransitionTime, resizeOperationStatus, scaleSettings, startTask, taskSchedulingPolicy, taskSlotsPerNode, type, userAccounts, vmSize);
         }

@@ -19,7 +19,7 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowedConfigValues", required=true)
-    private final Input<List<ReusableConfigWrapperArgs>> allowedConfigValues;
+      private final Input<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
     public Input<List<ReusableConfigWrapperArgs>> getAllowedConfigValues() {
         return this.allowedConfigValues;
@@ -62,7 +62,6 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
             this.allowedConfigValues = Input.of(Objects.requireNonNull(allowedConfigValues));
             return this;
         }
-
         public AllowedConfigListArgs build() {
             return new AllowedConfigListArgs(allowedConfigValues);
         }

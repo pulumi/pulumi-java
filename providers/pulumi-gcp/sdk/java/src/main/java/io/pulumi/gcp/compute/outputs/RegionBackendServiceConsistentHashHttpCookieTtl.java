@@ -82,7 +82,6 @@ public final class RegionBackendServiceConsistentHashHttpCookieTtl {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionBackendServiceConsistentHashHttpCookieTtl build() {
             return new RegionBackendServiceConsistentHashHttpCookieTtl(nanos, seconds);
         }

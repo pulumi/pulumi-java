@@ -54,7 +54,6 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
             this.token = token;
             return this;
         }
-
         public GetDiagnosticServiceTokenReadOnlyResult build() {
             return new GetDiagnosticServiceTokenReadOnlyResult(token);
         }

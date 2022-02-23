@@ -289,7 +289,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationArn, applicationCreationDate, applicationDescription, applicationId, applicationLastUpdateDate, applicationName, applicationState, applicationUrl, errorMessage, roleArn, ssoClientId, tags);
         }

@@ -518,7 +518,6 @@ public final class GetVpnTunnelResult {
             this.vpnGatewayInterface = Objects.requireNonNull(vpnGatewayInterface);
             return this;
         }
-
         public GetVpnTunnelResult build() {
             return new GetVpnTunnelResult(creationTimestamp, description, detailedStatus, ikeVersion, kind, labelFingerprint, labels, localTrafficSelector, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, region, remoteTrafficSelector, router, selfLink, sharedSecret, sharedSecretHash, status, targetVpnGateway, vpnGateway, vpnGatewayInterface);
         }

@@ -99,7 +99,6 @@ public final class PrivateDnsZoneConfigResponse {
             this.recordSets = Objects.requireNonNull(recordSets);
             return this;
         }
-
         public PrivateDnsZoneConfigResponse build() {
             return new PrivateDnsZoneConfigResponse(name, privateDnsZoneId, recordSets);
         }

@@ -13,7 +13,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSubnetArgs Empty = new GetSubnetArgs();
 
     @InputImport(name="subnetId", required=true)
-    private final String subnetId;
+        private final String subnetId;
 
     public String getSubnetId() {
         return this.subnetId;
@@ -51,7 +51,6 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public GetSubnetArgs build() {
             return new GetSubnetArgs(subnetId);
         }

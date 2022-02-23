@@ -46,7 +46,6 @@ public final class ListenerRulePathPatternConfig {
             this.values = values;
             return this;
         }
-
         public ListenerRulePathPatternConfig build() {
             return new ListenerRulePathPatternConfig(values);
         }

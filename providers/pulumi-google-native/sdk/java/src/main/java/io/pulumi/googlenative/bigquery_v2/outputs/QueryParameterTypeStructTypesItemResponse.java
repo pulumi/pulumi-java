@@ -96,7 +96,6 @@ public final class QueryParameterTypeStructTypesItemResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public QueryParameterTypeStructTypesItemResponse build() {
             return new QueryParameterTypeStructTypesItemResponse(description, name, type);
         }

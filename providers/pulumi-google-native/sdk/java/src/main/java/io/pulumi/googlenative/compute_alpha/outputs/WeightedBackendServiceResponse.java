@@ -97,7 +97,6 @@ public final class WeightedBackendServiceResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public WeightedBackendServiceResponse build() {
             return new WeightedBackendServiceResponse(backendService, headerAction, weight);
         }

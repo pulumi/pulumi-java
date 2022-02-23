@@ -95,7 +95,6 @@ public final class LicenseResourceCommitmentResponse {
             this.license = Objects.requireNonNull(license);
             return this;
         }
-
         public LicenseResourceCommitmentResponse build() {
             return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
         }

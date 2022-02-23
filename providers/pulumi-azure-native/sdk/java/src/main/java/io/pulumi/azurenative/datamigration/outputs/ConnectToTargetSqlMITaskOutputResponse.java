@@ -160,7 +160,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetSqlMITaskOutputResponse build() {
             return new ConnectToTargetSqlMITaskOutputResponse(agentJobs, id, logins, targetServerBrandVersion, targetServerVersion, validationErrors);
         }

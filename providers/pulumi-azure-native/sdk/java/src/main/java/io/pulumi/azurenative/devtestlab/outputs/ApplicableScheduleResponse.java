@@ -183,7 +183,6 @@ public final class ApplicableScheduleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicableScheduleResponse build() {
             return new ApplicableScheduleResponse(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }

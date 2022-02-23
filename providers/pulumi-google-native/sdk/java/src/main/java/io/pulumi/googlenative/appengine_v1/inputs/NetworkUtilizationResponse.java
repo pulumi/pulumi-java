@@ -21,7 +21,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetReceivedBytesPerSecond", required=true)
-    private final Integer targetReceivedBytesPerSecond;
+      private final Integer targetReceivedBytesPerSecond;
 
     public Integer getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
@@ -32,7 +32,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetReceivedPacketsPerSecond", required=true)
-    private final Integer targetReceivedPacketsPerSecond;
+      private final Integer targetReceivedPacketsPerSecond;
 
     public Integer getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
@@ -43,7 +43,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetSentBytesPerSecond", required=true)
-    private final Integer targetSentBytesPerSecond;
+      private final Integer targetSentBytesPerSecond;
 
     public Integer getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
@@ -54,7 +54,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetSentPacketsPerSecond", required=true)
-    private final Integer targetSentPacketsPerSecond;
+      private final Integer targetSentPacketsPerSecond;
 
     public Integer getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
@@ -123,7 +123,6 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
             this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
             return this;
         }
-
         public NetworkUtilizationResponse build() {
             return new NetworkUtilizationResponse(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

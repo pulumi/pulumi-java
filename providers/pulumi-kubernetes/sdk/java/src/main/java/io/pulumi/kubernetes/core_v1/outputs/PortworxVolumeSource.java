@@ -98,7 +98,6 @@ public final class PortworxVolumeSource {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public PortworxVolumeSource build() {
             return new PortworxVolumeSource(fsType, readOnly, volumeID);
         }

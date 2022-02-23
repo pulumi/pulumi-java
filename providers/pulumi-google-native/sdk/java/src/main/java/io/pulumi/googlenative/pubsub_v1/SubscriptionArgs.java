@@ -26,7 +26,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ackDeadlineSeconds")
-    private final @Nullable Input<Integer> ackDeadlineSeconds;
+      private final @Nullable Input<Integer> ackDeadlineSeconds;
 
     public Input<Integer> getAckDeadlineSeconds() {
         return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
@@ -37,7 +37,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterPolicy")
-    private final @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy;
+      private final @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy;
 
     public Input<DeadLetterPolicyArgs> getDeadLetterPolicy() {
         return this.deadLetterPolicy == null ? Input.empty() : this.deadLetterPolicy;
@@ -48,7 +48,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detached")
-    private final @Nullable Input<Boolean> detached;
+      private final @Nullable Input<Boolean> detached;
 
     public Input<Boolean> getDetached() {
         return this.detached == null ? Input.empty() : this.detached;
@@ -59,7 +59,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableMessageOrdering")
-    private final @Nullable Input<Boolean> enableMessageOrdering;
+      private final @Nullable Input<Boolean> enableMessageOrdering;
 
     public Input<Boolean> getEnableMessageOrdering() {
         return this.enableMessageOrdering == null ? Input.empty() : this.enableMessageOrdering;
@@ -70,7 +70,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationPolicy")
-    private final @Nullable Input<ExpirationPolicyArgs> expirationPolicy;
+      private final @Nullable Input<ExpirationPolicyArgs> expirationPolicy;
 
     public Input<ExpirationPolicyArgs> getExpirationPolicy() {
         return this.expirationPolicy == null ? Input.empty() : this.expirationPolicy;
@@ -81,7 +81,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -92,7 +92,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -103,7 +103,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-    private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Input<String> messageRetentionDuration;
 
     public Input<String> getMessageRetentionDuration() {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
@@ -114,14 +114,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -132,7 +132,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushConfig")
-    private final @Nullable Input<PushConfigArgs> pushConfig;
+      private final @Nullable Input<PushConfigArgs> pushConfig;
 
     public Input<PushConfigArgs> getPushConfig() {
         return this.pushConfig == null ? Input.empty() : this.pushConfig;
@@ -143,7 +143,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainAckedMessages")
-    private final @Nullable Input<Boolean> retainAckedMessages;
+      private final @Nullable Input<Boolean> retainAckedMessages;
 
     public Input<Boolean> getRetainAckedMessages() {
         return this.retainAckedMessages == null ? Input.empty() : this.retainAckedMessages;
@@ -154,14 +154,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+      private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -172,7 +172,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -426,7 +426,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, project, pushConfig, retainAckedMessages, retryPolicy, subscriptionId, topic);
         }

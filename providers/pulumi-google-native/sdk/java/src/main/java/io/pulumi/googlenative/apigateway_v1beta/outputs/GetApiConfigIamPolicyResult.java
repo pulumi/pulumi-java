@@ -120,7 +120,6 @@ public final class GetApiConfigIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetApiConfigIamPolicyResult build() {
             return new GetApiConfigIamPolicyResult(auditConfigs, bindings, etag, version);
         }

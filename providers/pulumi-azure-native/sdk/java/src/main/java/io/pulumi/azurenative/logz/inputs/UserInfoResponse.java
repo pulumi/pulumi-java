@@ -19,7 +19,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable String emailAddress;
+        private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
@@ -30,7 +30,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firstName")
-    private final @Nullable String firstName;
+        private final @Nullable String firstName;
 
     public Optional<String> getFirstName() {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
@@ -41,7 +41,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastName")
-    private final @Nullable String lastName;
+        private final @Nullable String lastName;
 
     public Optional<String> getLastName() {
         return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
@@ -52,7 +52,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="phoneNumber")
-    private final @Nullable String phoneNumber;
+        private final @Nullable String phoneNumber;
 
     public Optional<String> getPhoneNumber() {
         return this.phoneNumber == null ? Optional.empty() : Optional.ofNullable(this.phoneNumber);
@@ -121,7 +121,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(emailAddress, firstName, lastName, phoneNumber);
         }

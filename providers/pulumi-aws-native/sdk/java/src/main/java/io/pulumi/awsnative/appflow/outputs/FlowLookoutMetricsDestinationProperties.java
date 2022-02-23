@@ -46,7 +46,6 @@ public final class FlowLookoutMetricsDestinationProperties {
             this.object = object;
             return this;
         }
-
         public FlowLookoutMetricsDestinationProperties build() {
             return new FlowLookoutMetricsDestinationProperties(object);
         }

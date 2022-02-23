@@ -209,7 +209,6 @@ public final class PushSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PushSettingsResponse build() {
             return new PushSettingsResponse(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

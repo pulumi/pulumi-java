@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(database, instanceId, type);
         }

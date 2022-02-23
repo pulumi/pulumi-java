@@ -14,7 +14,7 @@ public final class RuleGroupFieldToMatchSingleHeaderPropertiesArgs extends io.pu
     public static final RuleGroupFieldToMatchSingleHeaderPropertiesArgs Empty = new RuleGroupFieldToMatchSingleHeaderPropertiesArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -57,7 +57,6 @@ public final class RuleGroupFieldToMatchSingleHeaderPropertiesArgs extends io.pu
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public RuleGroupFieldToMatchSingleHeaderPropertiesArgs build() {
             return new RuleGroupFieldToMatchSingleHeaderPropertiesArgs(name);
         }

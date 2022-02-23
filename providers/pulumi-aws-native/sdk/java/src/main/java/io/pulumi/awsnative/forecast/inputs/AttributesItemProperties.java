@@ -20,7 +20,7 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="attributeName")
-    private final @Nullable String attributeName;
+        private final @Nullable String attributeName;
 
     public Optional<String> getAttributeName() {
         return this.attributeName == null ? Optional.empty() : Optional.ofNullable(this.attributeName);
@@ -31,7 +31,7 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="attributeType")
-    private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
+        private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
     public Optional<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return this.attributeType == null ? Optional.empty() : Optional.ofNullable(this.attributeType);
@@ -80,7 +80,6 @@ public final class AttributesItemProperties extends io.pulumi.resources.InvokeAr
             this.attributeType = attributeType;
             return this;
         }
-
         public AttributesItemProperties build() {
             return new AttributesItemProperties(attributeName, attributeType);
         }

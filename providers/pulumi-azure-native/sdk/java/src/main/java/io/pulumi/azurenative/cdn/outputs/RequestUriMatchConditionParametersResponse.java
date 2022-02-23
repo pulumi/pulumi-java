@@ -133,7 +133,6 @@ public final class RequestUriMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RequestUriMatchConditionParametersResponse build() {
             return new RequestUriMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

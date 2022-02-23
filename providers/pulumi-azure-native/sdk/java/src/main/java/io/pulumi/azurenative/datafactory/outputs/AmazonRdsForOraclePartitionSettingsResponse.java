@@ -119,7 +119,6 @@ public final class AmazonRdsForOraclePartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public AmazonRdsForOraclePartitionSettingsResponse build() {
             return new AmazonRdsForOraclePartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
         }

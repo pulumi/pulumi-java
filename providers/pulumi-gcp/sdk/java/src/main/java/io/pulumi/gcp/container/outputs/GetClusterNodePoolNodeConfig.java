@@ -357,7 +357,6 @@ public final class GetClusterNodePoolNodeConfig {
             this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
             return this;
         }
-
         public GetClusterNodePoolNodeConfig build() {
             return new GetClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
         }

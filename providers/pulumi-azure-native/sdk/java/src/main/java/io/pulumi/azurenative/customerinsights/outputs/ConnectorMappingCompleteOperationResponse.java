@@ -76,7 +76,6 @@ public final class ConnectorMappingCompleteOperationResponse {
             this.destinationFolder = destinationFolder;
             return this;
         }
-
         public ConnectorMappingCompleteOperationResponse build() {
             return new ConnectorMappingCompleteOperationResponse(completionOperationType, destinationFolder);
         }

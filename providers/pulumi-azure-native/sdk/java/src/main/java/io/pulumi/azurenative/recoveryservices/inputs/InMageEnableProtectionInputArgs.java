@@ -25,7 +25,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -36,7 +36,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskExclusionInput")
-    private final @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput;
+        private final @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput;
 
     public Input<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
         return this.diskExclusionInput == null ? Input.empty() : this.diskExclusionInput;
@@ -47,7 +47,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disksToInclude")
-    private final @Nullable Input<List<String>> disksToInclude;
+        private final @Nullable Input<List<String>> disksToInclude;
 
     public Input<List<String>> getDisksToInclude() {
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
@@ -59,7 +59,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -70,7 +70,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="masterTargetId", required=true)
-    private final Input<String> masterTargetId;
+        private final Input<String> masterTargetId;
 
     public Input<String> getMasterTargetId() {
         return this.masterTargetId;
@@ -81,7 +81,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="multiVmGroupId", required=true)
-    private final Input<String> multiVmGroupId;
+        private final Input<String> multiVmGroupId;
 
     public Input<String> getMultiVmGroupId() {
         return this.multiVmGroupId;
@@ -92,7 +92,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="multiVmGroupName", required=true)
-    private final Input<String> multiVmGroupName;
+        private final Input<String> multiVmGroupName;
 
     public Input<String> getMultiVmGroupName() {
         return this.multiVmGroupName;
@@ -103,7 +103,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="processServerId", required=true)
-    private final Input<String> processServerId;
+        private final Input<String> processServerId;
 
     public Input<String> getProcessServerId() {
         return this.processServerId;
@@ -114,7 +114,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="retentionDrive", required=true)
-    private final Input<String> retentionDrive;
+        private final Input<String> retentionDrive;
 
     public Input<String> getRetentionDrive() {
         return this.retentionDrive;
@@ -125,7 +125,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runAsAccountId")
-    private final @Nullable Input<String> runAsAccountId;
+        private final @Nullable Input<String> runAsAccountId;
 
     public Input<String> getRunAsAccountId() {
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
@@ -136,7 +136,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmFriendlyName")
-    private final @Nullable Input<String> vmFriendlyName;
+        private final @Nullable Input<String> vmFriendlyName;
 
     public Input<String> getVmFriendlyName() {
         return this.vmFriendlyName == null ? Input.empty() : this.vmFriendlyName;
@@ -330,7 +330,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             this.vmFriendlyName = Input.ofNullable(vmFriendlyName);
             return this;
         }
-
         public InMageEnableProtectionInputArgs build() {
             return new InMageEnableProtectionInputArgs(datastoreName, diskExclusionInput, disksToInclude, instanceType, masterTargetId, multiVmGroupId, multiVmGroupName, processServerId, retentionDrive, runAsAccountId, vmFriendlyName);
         }

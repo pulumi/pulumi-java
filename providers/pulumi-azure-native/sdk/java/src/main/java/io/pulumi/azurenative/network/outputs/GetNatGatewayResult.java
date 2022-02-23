@@ -333,7 +333,6 @@ public final class GetNatGatewayResult {
             this.zones = zones;
             return this;
         }
-
         public GetNatGatewayResult build() {
             return new GetNatGatewayResult(etag, id, idleTimeoutInMinutes, location, name, provisioningState, publicIpAddresses, publicIpPrefixes, resourceGuid, sku, subnets, tags, type, zones);
         }

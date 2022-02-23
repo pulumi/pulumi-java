@@ -123,7 +123,6 @@ public final class SyslogDataSourceResponse {
             this.streams = streams;
             return this;
         }
-
         public SyslogDataSourceResponse build() {
             return new SyslogDataSourceResponse(facilityNames, logLevels, name, streams);
         }

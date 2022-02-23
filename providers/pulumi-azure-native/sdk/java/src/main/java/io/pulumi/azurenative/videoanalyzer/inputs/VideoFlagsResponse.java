@@ -21,7 +21,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="canStream", required=true)
-    private final Boolean canStream;
+        private final Boolean canStream;
 
     public Boolean getCanStream() {
         return this.canStream;
@@ -32,7 +32,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hasData", required=true)
-    private final Boolean hasData;
+        private final Boolean hasData;
 
     public Boolean getHasData() {
         return this.hasData;
@@ -43,7 +43,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isRecording", required=true)
-    private final Boolean isRecording;
+        private final Boolean isRecording;
 
     public Boolean getIsRecording() {
         return this.isRecording;
@@ -102,7 +102,6 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
             this.isRecording = Objects.requireNonNull(isRecording);
             return this;
         }
-
         public VideoFlagsResponse build() {
             return new VideoFlagsResponse(canStream, hasData, isRecording);
         }

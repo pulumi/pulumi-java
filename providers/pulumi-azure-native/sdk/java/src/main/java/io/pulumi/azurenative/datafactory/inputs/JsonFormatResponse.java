@@ -24,7 +24,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deserializer")
-    private final @Nullable Object deserializer;
+        private final @Nullable Object deserializer;
 
     public Optional<Object> getDeserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
@@ -35,7 +35,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encodingName")
-    private final @Nullable Object encodingName;
+        private final @Nullable Object encodingName;
 
     public Optional<Object> getEncodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
@@ -46,7 +46,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filePattern")
-    private final @Nullable Object filePattern;
+        private final @Nullable Object filePattern;
 
     public Optional<Object> getFilePattern() {
         return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
@@ -57,7 +57,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jsonNodeReference")
-    private final @Nullable Object jsonNodeReference;
+        private final @Nullable Object jsonNodeReference;
 
     public Optional<Object> getJsonNodeReference() {
         return this.jsonNodeReference == null ? Optional.empty() : Optional.ofNullable(this.jsonNodeReference);
@@ -68,7 +68,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jsonPathDefinition")
-    private final @Nullable Object jsonPathDefinition;
+        private final @Nullable Object jsonPathDefinition;
 
     public Optional<Object> getJsonPathDefinition() {
         return this.jsonPathDefinition == null ? Optional.empty() : Optional.ofNullable(this.jsonPathDefinition);
@@ -79,7 +79,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nestingSeparator")
-    private final @Nullable Object nestingSeparator;
+        private final @Nullable Object nestingSeparator;
 
     public Optional<Object> getNestingSeparator() {
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
@@ -90,7 +90,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serializer")
-    private final @Nullable Object serializer;
+        private final @Nullable Object serializer;
 
     public Optional<Object> getSerializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
@@ -102,7 +102,7 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -211,7 +211,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonFormatResponse build() {
             return new JsonFormatResponse(deserializer, encodingName, filePattern, jsonNodeReference, jsonPathDefinition, nestingSeparator, serializer, type);
         }

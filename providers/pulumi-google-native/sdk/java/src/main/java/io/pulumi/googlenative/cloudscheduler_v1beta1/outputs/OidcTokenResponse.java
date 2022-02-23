@@ -74,7 +74,6 @@ public final class OidcTokenResponse {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public OidcTokenResponse build() {
             return new OidcTokenResponse(audience, serviceAccountEmail);
         }

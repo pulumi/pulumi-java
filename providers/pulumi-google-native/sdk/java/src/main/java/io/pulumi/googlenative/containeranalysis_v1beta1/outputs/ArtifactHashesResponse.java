@@ -44,7 +44,6 @@ public final class ArtifactHashesResponse {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }
-
         public ArtifactHashesResponse build() {
             return new ArtifactHashesResponse(sha256);
         }

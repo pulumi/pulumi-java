@@ -25,7 +25,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditionAbsent", required=true)
-    private final MetricAbsenceResponse conditionAbsent;
+      private final MetricAbsenceResponse conditionAbsent;
 
     public MetricAbsenceResponse getConditionAbsent() {
         return this.conditionAbsent;
@@ -36,7 +36,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditionMatchedLog", required=true)
-    private final LogMatchResponse conditionMatchedLog;
+      private final LogMatchResponse conditionMatchedLog;
 
     public LogMatchResponse getConditionMatchedLog() {
         return this.conditionMatchedLog;
@@ -47,7 +47,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditionMonitoringQueryLanguage", required=true)
-    private final MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
+      private final MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
 
     public MonitoringQueryLanguageConditionResponse getConditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage;
@@ -58,7 +58,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditionThreshold", required=true)
-    private final MetricThresholdResponse conditionThreshold;
+      private final MetricThresholdResponse conditionThreshold;
 
     public MetricThresholdResponse getConditionThreshold() {
         return this.conditionThreshold;
@@ -69,7 +69,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -80,7 +80,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -169,7 +169,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

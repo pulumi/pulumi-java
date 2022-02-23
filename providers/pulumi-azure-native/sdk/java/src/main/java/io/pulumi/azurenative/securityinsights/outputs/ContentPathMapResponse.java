@@ -76,7 +76,6 @@ public final class ContentPathMapResponse {
             this.path = path;
             return this;
         }
-
         public ContentPathMapResponse build() {
             return new ContentPathMapResponse(contentType, path);
         }

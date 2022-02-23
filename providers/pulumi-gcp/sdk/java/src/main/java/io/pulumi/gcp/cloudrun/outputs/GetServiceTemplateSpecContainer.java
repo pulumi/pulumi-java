@@ -155,7 +155,6 @@ public final class GetServiceTemplateSpecContainer {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }
-
         public GetServiceTemplateSpecContainer build() {
             return new GetServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }

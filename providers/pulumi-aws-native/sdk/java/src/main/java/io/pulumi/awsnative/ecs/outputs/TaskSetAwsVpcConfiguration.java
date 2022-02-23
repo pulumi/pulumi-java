@@ -99,7 +99,6 @@ public final class TaskSetAwsVpcConfiguration {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public TaskSetAwsVpcConfiguration build() {
             return new TaskSetAwsVpcConfiguration(assignPublicIp, securityGroups, subnets);
         }

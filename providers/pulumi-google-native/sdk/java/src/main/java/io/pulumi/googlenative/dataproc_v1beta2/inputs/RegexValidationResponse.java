@@ -22,7 +22,7 @@ public final class RegexValidationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="regexes", required=true)
-    private final List<String> regexes;
+      private final List<String> regexes;
 
     public List<String> getRegexes() {
         return this.regexes;
@@ -60,7 +60,6 @@ public final class RegexValidationResponse extends io.pulumi.resources.InvokeArg
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public RegexValidationResponse build() {
             return new RegexValidationResponse(regexes);
         }

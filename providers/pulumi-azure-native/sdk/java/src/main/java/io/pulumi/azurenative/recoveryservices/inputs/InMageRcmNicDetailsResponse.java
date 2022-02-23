@@ -21,7 +21,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="isPrimaryNic", required=true)
-    private final String isPrimaryNic;
+        private final String isPrimaryNic;
 
     public String getIsPrimaryNic() {
         return this.isPrimaryNic;
@@ -32,7 +32,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="isSelectedForFailover", required=true)
-    private final String isSelectedForFailover;
+        private final String isSelectedForFailover;
 
     public String getIsSelectedForFailover() {
         return this.isSelectedForFailover;
@@ -43,7 +43,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="nicId", required=true)
-    private final String nicId;
+        private final String nicId;
 
     public String getNicId() {
         return this.nicId;
@@ -54,7 +54,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceIPAddress", required=true)
-    private final String sourceIPAddress;
+        private final String sourceIPAddress;
 
     public String getSourceIPAddress() {
         return this.sourceIPAddress;
@@ -65,7 +65,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceIPAddressType", required=true)
-    private final String sourceIPAddressType;
+        private final String sourceIPAddressType;
 
     public String getSourceIPAddressType() {
         return this.sourceIPAddressType;
@@ -76,7 +76,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceNetworkId", required=true)
-    private final String sourceNetworkId;
+        private final String sourceNetworkId;
 
     public String getSourceNetworkId() {
         return this.sourceNetworkId;
@@ -87,7 +87,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceSubnetName", required=true)
-    private final String sourceSubnetName;
+        private final String sourceSubnetName;
 
     public String getSourceSubnetName() {
         return this.sourceSubnetName;
@@ -98,7 +98,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetIPAddress", required=true)
-    private final String targetIPAddress;
+        private final String targetIPAddress;
 
     public String getTargetIPAddress() {
         return this.targetIPAddress;
@@ -109,7 +109,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetIPAddressType", required=true)
-    private final String targetIPAddressType;
+        private final String targetIPAddressType;
 
     public String getTargetIPAddressType() {
         return this.targetIPAddressType;
@@ -120,7 +120,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetSubnetName", required=true)
-    private final String targetSubnetName;
+        private final String targetSubnetName;
 
     public String getTargetSubnetName() {
         return this.targetSubnetName;
@@ -131,7 +131,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testIPAddress", required=true)
-    private final String testIPAddress;
+        private final String testIPAddress;
 
     public String getTestIPAddress() {
         return this.testIPAddress;
@@ -142,7 +142,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testIPAddressType", required=true)
-    private final String testIPAddressType;
+        private final String testIPAddressType;
 
     public String getTestIPAddressType() {
         return this.testIPAddressType;
@@ -153,7 +153,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testSubnetName", required=true)
-    private final String testSubnetName;
+        private final String testSubnetName;
 
     public String getTestSubnetName() {
         return this.testSubnetName;
@@ -312,7 +312,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
             this.testSubnetName = Objects.requireNonNull(testSubnetName);
             return this;
         }
-
         public InMageRcmNicDetailsResponse build() {
             return new InMageRcmNicDetailsResponse(isPrimaryNic, isSelectedForFailover, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, sourceSubnetName, targetIPAddress, targetIPAddressType, targetSubnetName, testIPAddress, testIPAddressType, testSubnetName);
         }

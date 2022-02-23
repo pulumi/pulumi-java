@@ -34,7 +34,6 @@ public final class CustomResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(CustomResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public CustomResponse build() {
             return new CustomResponse();
         }

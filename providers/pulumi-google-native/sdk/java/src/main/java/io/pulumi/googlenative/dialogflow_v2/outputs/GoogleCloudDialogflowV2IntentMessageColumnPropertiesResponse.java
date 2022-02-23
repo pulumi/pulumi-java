@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
             this.horizontalAlignment = Objects.requireNonNull(horizontalAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(header, horizontalAlignment);
         }

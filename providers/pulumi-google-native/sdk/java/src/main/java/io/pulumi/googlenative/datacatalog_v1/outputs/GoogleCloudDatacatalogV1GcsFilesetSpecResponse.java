@@ -76,7 +76,6 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecResponse {
             this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs);
             return this;
         }
-
         public GoogleCloudDatacatalogV1GcsFilesetSpecResponse build() {
             return new GoogleCloudDatacatalogV1GcsFilesetSpecResponse(filePatterns, sampleGcsFileSpecs);
         }

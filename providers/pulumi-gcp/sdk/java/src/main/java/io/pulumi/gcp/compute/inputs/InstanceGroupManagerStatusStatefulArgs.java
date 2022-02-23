@@ -21,7 +21,7 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hasStatefulConfig")
-    private final @Nullable Input<Boolean> hasStatefulConfig;
+        private final @Nullable Input<Boolean> hasStatefulConfig;
 
     public Input<Boolean> getHasStatefulConfig() {
         return this.hasStatefulConfig == null ? Input.empty() : this.hasStatefulConfig;
@@ -32,7 +32,7 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="perInstanceConfigs")
-    private final @Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
+        private final @Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
     public Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
         return this.perInstanceConfigs == null ? Input.empty() : this.perInstanceConfigs;
@@ -91,7 +91,6 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
             this.perInstanceConfigs = Input.ofNullable(perInstanceConfigs);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulArgs build() {
             return new InstanceGroupManagerStatusStatefulArgs(hasStatefulConfig, perInstanceConfigs);
         }

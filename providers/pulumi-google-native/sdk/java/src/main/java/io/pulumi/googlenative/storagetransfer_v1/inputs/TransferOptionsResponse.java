@@ -22,7 +22,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer", required=true)
-    private final Boolean deleteObjectsFromSourceAfterTransfer;
+      private final Boolean deleteObjectsFromSourceAfterTransfer;
 
     public Boolean getDeleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer;
@@ -33,7 +33,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deleteObjectsUniqueInSink", required=true)
-    private final Boolean deleteObjectsUniqueInSink;
+      private final Boolean deleteObjectsUniqueInSink;
 
     public Boolean getDeleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink;
@@ -44,7 +44,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metadataOptions", required=true)
-    private final MetadataOptionsResponse metadataOptions;
+      private final MetadataOptionsResponse metadataOptions;
 
     public MetadataOptionsResponse getMetadataOptions() {
         return this.metadataOptions;
@@ -55,7 +55,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink", required=true)
-    private final Boolean overwriteObjectsAlreadyExistingInSink;
+      private final Boolean overwriteObjectsAlreadyExistingInSink;
 
     public Boolean getOverwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
@@ -124,7 +124,6 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
         }
-
         public TransferOptionsResponse build() {
             return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
         }

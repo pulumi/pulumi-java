@@ -52,7 +52,6 @@ public final class GkeClusterReferenceResponse {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GkeClusterReferenceResponse build() {
             return new GkeClusterReferenceResponse(cluster);
         }

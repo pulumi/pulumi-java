@@ -21,7 +21,7 @@ public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="root", required=true)
-    private final String root;
+      private final String root;
 
     public String getRoot() {
         return this.root;
@@ -59,7 +59,6 @@ public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.root = Objects.requireNonNull(root);
             return this;
         }
-
         public I18nConfigResponse build() {
             return new I18nConfigResponse(root);
         }

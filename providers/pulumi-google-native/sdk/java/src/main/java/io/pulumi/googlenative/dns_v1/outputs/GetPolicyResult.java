@@ -175,7 +175,6 @@ public final class GetPolicyResult {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, kind, name, networks);
         }

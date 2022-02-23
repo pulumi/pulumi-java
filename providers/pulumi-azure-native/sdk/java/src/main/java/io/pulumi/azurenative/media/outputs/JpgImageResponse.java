@@ -249,7 +249,6 @@ public final class JpgImageResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public JpgImageResponse build() {
             return new JpgImageResponse(keyFrameInterval, label, layers, odataType, range, spriteColumn, start, step, stretchMode, syncMode);
         }

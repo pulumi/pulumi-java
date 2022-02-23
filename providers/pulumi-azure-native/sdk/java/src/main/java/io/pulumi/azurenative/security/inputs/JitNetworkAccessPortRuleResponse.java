@@ -21,7 +21,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedSourceAddressPrefix")
-    private final @Nullable String allowedSourceAddressPrefix;
+        private final @Nullable String allowedSourceAddressPrefix;
 
     public Optional<String> getAllowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
@@ -32,7 +32,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedSourceAddressPrefixes")
-    private final @Nullable List<String> allowedSourceAddressPrefixes;
+        private final @Nullable List<String> allowedSourceAddressPrefixes;
 
     public List<String> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
@@ -43,21 +43,21 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxRequestAccessDuration", required=true)
-    private final String maxRequestAccessDuration;
+        private final String maxRequestAccessDuration;
 
     public String getMaxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
     @InputImport(name="number", required=true)
-    private final Integer number;
+        private final Integer number;
 
     public Integer getNumber() {
         return this.number;
     }
 
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -136,7 +136,6 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public JitNetworkAccessPortRuleResponse build() {
             return new JitNetworkAccessPortRuleResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
         }

@@ -95,7 +95,6 @@ public final class GatewayDestinationResponse {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GatewayDestinationResponse build() {
             return new GatewayDestinationResponse(applicationName, endpointName, serviceName);
         }

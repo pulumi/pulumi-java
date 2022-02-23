@@ -58,7 +58,6 @@ public final class DatasetGlueConfiguration {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DatasetGlueConfiguration build() {
             return new DatasetGlueConfiguration(databaseName, tableName);
         }

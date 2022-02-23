@@ -24,7 +24,7 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualSharding")
-    private final @Nullable Input<ManualShardingArgs> manualSharding;
+      private final @Nullable Input<ManualShardingArgs> manualSharding;
 
     public Input<ManualShardingArgs> getManualSharding() {
         return this.manualSharding == null ? Input.empty() : this.manualSharding;
@@ -35,7 +35,7 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniformSharding")
-    private final @Nullable Input<UniformShardingArgs> uniformSharding;
+      private final @Nullable Input<UniformShardingArgs> uniformSharding;
 
     public Input<UniformShardingArgs> getUniformSharding() {
         return this.uniformSharding == null ? Input.empty() : this.uniformSharding;
@@ -94,7 +94,6 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
             this.uniformSharding = Input.ofNullable(uniformSharding);
             return this;
         }
-
         public ShardingOptionArgs build() {
             return new ShardingOptionArgs(manualSharding, uniformSharding);
         }

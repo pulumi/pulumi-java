@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigGetArgs extends io.pu
     public static final NodePoolNodeConfigWorkloadMetadataConfigGetArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigGetArgs();
 
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+        private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -57,7 +57,6 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigGetArgs extends io.pu
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public NodePoolNodeConfigWorkloadMetadataConfigGetArgs build() {
             return new NodePoolNodeConfigWorkloadMetadataConfigGetArgs(mode);
         }

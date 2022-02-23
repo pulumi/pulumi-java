@@ -17,7 +17,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
     public static final JitSchedulingPolicyResponse Empty = new JitSchedulingPolicyResponse();
 
     @InputImport(name="duration", required=true)
-    private final String duration;
+        private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -28,7 +28,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -39,7 +39,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -98,7 +98,6 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JitSchedulingPolicyResponse build() {
             return new JitSchedulingPolicyResponse(duration, startTime, type);
         }

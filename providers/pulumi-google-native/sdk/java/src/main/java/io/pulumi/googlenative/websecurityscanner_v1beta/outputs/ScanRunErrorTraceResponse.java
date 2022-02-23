@@ -97,7 +97,6 @@ public final class ScanRunErrorTraceResponse {
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
         }
-
         public ScanRunErrorTraceResponse build() {
             return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
         }

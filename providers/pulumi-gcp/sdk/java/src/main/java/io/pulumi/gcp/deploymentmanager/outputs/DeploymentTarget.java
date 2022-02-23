@@ -85,7 +85,6 @@ public final class DeploymentTarget {
             this.imports = imports;
             return this;
         }
-
         public DeploymentTarget build() {
             return new DeploymentTarget(config, imports);
         }

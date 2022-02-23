@@ -144,7 +144,6 @@ public final class ClusterIpAllocationPolicy {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public ClusterIpAllocationPolicy build() {
             return new ClusterIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }

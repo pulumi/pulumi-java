@@ -270,7 +270,6 @@ public final class GetBlueprintResult {
             this.versions = versions;
             return this;
         }
-
         public GetBlueprintResult build() {
             return new GetBlueprintResult(description, displayName, id, layout, name, parameters, resourceGroups, status, targetScope, type, versions);
         }

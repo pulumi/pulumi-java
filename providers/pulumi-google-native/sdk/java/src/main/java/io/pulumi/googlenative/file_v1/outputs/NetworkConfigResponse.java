@@ -138,7 +138,6 @@ public final class NetworkConfigResponse {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

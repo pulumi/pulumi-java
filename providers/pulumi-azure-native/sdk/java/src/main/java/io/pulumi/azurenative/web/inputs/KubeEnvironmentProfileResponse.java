@@ -23,7 +23,7 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -104,7 +104,6 @@ public final class KubeEnvironmentProfileResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubeEnvironmentProfileResponse build() {
             return new KubeEnvironmentProfileResponse(id, name, type);
         }

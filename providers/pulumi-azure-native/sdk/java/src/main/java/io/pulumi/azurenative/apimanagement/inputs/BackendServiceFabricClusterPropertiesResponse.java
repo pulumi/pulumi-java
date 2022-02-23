@@ -26,7 +26,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="clientCertificateId")
-    private final @Nullable String clientCertificateId;
+        private final @Nullable String clientCertificateId;
 
     public Optional<String> getClientCertificateId() {
         return this.clientCertificateId == null ? Optional.empty() : Optional.ofNullable(this.clientCertificateId);
@@ -37,7 +37,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="clientCertificatethumbprint")
-    private final @Nullable String clientCertificatethumbprint;
+        private final @Nullable String clientCertificatethumbprint;
 
     public Optional<String> getClientCertificatethumbprint() {
         return this.clientCertificatethumbprint == null ? Optional.empty() : Optional.ofNullable(this.clientCertificatethumbprint);
@@ -48,7 +48,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="managementEndpoints", required=true)
-    private final List<String> managementEndpoints;
+        private final List<String> managementEndpoints;
 
     public List<String> getManagementEndpoints() {
         return this.managementEndpoints;
@@ -59,7 +59,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="maxPartitionResolutionRetries")
-    private final @Nullable Integer maxPartitionResolutionRetries;
+        private final @Nullable Integer maxPartitionResolutionRetries;
 
     public Optional<Integer> getMaxPartitionResolutionRetries() {
         return this.maxPartitionResolutionRetries == null ? Optional.empty() : Optional.ofNullable(this.maxPartitionResolutionRetries);
@@ -70,7 +70,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="serverCertificateThumbprints")
-    private final @Nullable List<String> serverCertificateThumbprints;
+        private final @Nullable List<String> serverCertificateThumbprints;
 
     public List<String> getServerCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
@@ -81,7 +81,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="serverX509Names")
-    private final @Nullable List<X509CertificateNameResponse> serverX509Names;
+        private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
     public List<X509CertificateNameResponse> getServerX509Names() {
         return this.serverX509Names == null ? List.of() : this.serverX509Names;
@@ -170,7 +170,6 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
             this.serverX509Names = serverX509Names;
             return this;
         }
-
         public BackendServiceFabricClusterPropertiesResponse build() {
             return new BackendServiceFabricClusterPropertiesResponse(clientCertificateId, clientCertificatethumbprint, managementEndpoints, maxPartitionResolutionRetries, serverCertificateThumbprints, serverX509Names);
         }

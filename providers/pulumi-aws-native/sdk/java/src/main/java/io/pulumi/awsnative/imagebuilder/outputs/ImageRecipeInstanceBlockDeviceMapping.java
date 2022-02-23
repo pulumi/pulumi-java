@@ -119,7 +119,6 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public ImageRecipeInstanceBlockDeviceMapping build() {
             return new ImageRecipeInstanceBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

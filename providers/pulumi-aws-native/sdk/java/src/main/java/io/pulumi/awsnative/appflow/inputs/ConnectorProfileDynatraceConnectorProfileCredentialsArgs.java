@@ -18,7 +18,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="apiToken", required=true)
-    private final Input<String> apiToken;
+        private final Input<String> apiToken;
 
     public Input<String> getApiToken() {
         return this.apiToken;
@@ -61,7 +61,6 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
             this.apiToken = Input.of(Objects.requireNonNull(apiToken));
             return this;
         }
-
         public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileDynatraceConnectorProfileCredentialsArgs(apiToken);
         }

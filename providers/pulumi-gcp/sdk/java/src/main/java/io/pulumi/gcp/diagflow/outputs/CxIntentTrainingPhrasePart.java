@@ -76,7 +76,6 @@ public final class CxIntentTrainingPhrasePart {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public CxIntentTrainingPhrasePart build() {
             return new CxIntentTrainingPhrasePart(parameterId, text);
         }

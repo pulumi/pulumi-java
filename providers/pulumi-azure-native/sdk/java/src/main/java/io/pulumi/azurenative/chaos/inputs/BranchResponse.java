@@ -26,7 +26,7 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<Object> actions;
+        private final List<Object> actions;
 
     public List<Object> getActions() {
         return this.actions;
@@ -37,7 +37,7 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -86,7 +86,6 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BranchResponse build() {
             return new BranchResponse(actions, name);
         }

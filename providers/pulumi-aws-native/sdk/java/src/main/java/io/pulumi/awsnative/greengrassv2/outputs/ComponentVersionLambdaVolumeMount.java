@@ -88,7 +88,6 @@ public final class ComponentVersionLambdaVolumeMount {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public ComponentVersionLambdaVolumeMount build() {
             return new ComponentVersionLambdaVolumeMount(addGroupOwner, destinationPath, permission, sourcePath);
         }

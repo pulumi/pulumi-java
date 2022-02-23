@@ -118,7 +118,6 @@ public final class ImageDescriptorResponse {
             this.tag = tag;
             return this;
         }
-
         public ImageDescriptorResponse build() {
             return new ImageDescriptorResponse(digest, registry, repository, tag);
         }

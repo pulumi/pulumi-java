@@ -76,7 +76,6 @@ public final class BudgetFilterPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterPropertiesResponse build() {
             return new BudgetFilterPropertiesResponse(dimensions, tags);
         }

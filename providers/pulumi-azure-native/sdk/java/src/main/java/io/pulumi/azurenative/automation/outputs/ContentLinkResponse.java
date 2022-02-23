@@ -98,7 +98,6 @@ public final class ContentLinkResponse {
             this.version = version;
             return this;
         }
-
         public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, uri, version);
         }

@@ -117,7 +117,6 @@ public final class MaintenanceWindowResponse {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(day, hour, kind, updateTrack);
         }

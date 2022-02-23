@@ -23,7 +23,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultValueList", required=true)
-    private final Input<List<BotSlotDefaultValueArgs>> defaultValueList;
+        private final Input<List<BotSlotDefaultValueArgs>> defaultValueList;
 
     public Input<List<BotSlotDefaultValueArgs>> getDefaultValueList() {
         return this.defaultValueList;
@@ -66,7 +66,6 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
             this.defaultValueList = Input.of(Objects.requireNonNull(defaultValueList));
             return this;
         }
-
         public BotSlotDefaultValueSpecificationArgs build() {
             return new BotSlotDefaultValueSpecificationArgs(defaultValueList);
         }

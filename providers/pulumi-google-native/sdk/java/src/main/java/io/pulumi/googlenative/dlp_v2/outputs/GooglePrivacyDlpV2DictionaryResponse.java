@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2DictionaryResponse build() {
             return new GooglePrivacyDlpV2DictionaryResponse(cloudStoragePath, wordList);
         }

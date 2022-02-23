@@ -75,7 +75,6 @@ public final class EnvironmentConfigResponse {
             this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
             return this;
         }
-
         public EnvironmentConfigResponse build() {
             return new EnvironmentConfigResponse(executionConfig, peripheralsConfig);
         }

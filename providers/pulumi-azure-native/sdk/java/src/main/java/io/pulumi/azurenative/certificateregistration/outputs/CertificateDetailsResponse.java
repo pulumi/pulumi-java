@@ -222,7 +222,6 @@ public final class CertificateDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CertificateDetailsResponse build() {
             return new CertificateDetailsResponse(issuer, notAfter, notBefore, rawData, serialNumber, signatureAlgorithm, subject, thumbprint, version);
         }

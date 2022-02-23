@@ -189,7 +189,6 @@ public final class AzureKeyVaultLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureKeyVaultLinkedServiceResponse build() {
             return new AzureKeyVaultLinkedServiceResponse(annotations, baseUrl, connectVia, credential, description, parameters, type);
         }

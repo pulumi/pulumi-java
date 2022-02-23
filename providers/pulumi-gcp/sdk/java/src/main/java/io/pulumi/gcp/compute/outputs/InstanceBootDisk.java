@@ -220,7 +220,6 @@ public final class InstanceBootDisk {
             this.source = source;
             return this;
         }
-
         public InstanceBootDisk build() {
             return new InstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

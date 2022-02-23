@@ -98,7 +98,6 @@ public final class AppResourceSpec {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public AppResourceSpec build() {
             return new AppResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

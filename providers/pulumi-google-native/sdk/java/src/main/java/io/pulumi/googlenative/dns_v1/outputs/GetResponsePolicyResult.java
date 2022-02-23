@@ -110,7 +110,6 @@ public final class GetResponsePolicyResult {
             this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
             return this;
         }
-
         public GetResponsePolicyResult build() {
             return new GetResponsePolicyResult(description, kind, networks, responsePolicyName);
         }

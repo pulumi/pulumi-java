@@ -191,7 +191,6 @@ public final class JobInputHttpResponse {
             this.start = start;
             return this;
         }
-
         public JobInputHttpResponse build() {
             return new JobInputHttpResponse(baseUri, end, files, inputDefinitions, label, odataType, start);
         }

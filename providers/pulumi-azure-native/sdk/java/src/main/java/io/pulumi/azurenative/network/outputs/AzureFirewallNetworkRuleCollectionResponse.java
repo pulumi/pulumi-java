@@ -185,7 +185,6 @@ public final class AzureFirewallNetworkRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public AzureFirewallNetworkRuleCollectionResponse build() {
             return new AzureFirewallNetworkRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
         }

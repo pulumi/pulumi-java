@@ -99,7 +99,6 @@ public final class TriggerConditionResponse {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
         }
-
         public TriggerConditionResponse build() {
             return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
         }

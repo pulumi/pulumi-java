@@ -128,7 +128,6 @@ public final class PerfCounterDataSourceResponse {
             this.streams = streams;
             return this;
         }
-
         public PerfCounterDataSourceResponse build() {
             return new PerfCounterDataSourceResponse(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
         }

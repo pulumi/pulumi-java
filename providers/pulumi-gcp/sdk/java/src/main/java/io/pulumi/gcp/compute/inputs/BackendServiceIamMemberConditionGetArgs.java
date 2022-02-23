@@ -15,21 +15,21 @@ public final class BackendServiceIamMemberConditionGetArgs extends io.pulumi.res
     public static final BackendServiceIamMemberConditionGetArgs Empty = new BackendServiceIamMemberConditionGetArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
     }
 
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -103,7 +103,6 @@ public final class BackendServiceIamMemberConditionGetArgs extends io.pulumi.res
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public BackendServiceIamMemberConditionGetArgs build() {
             return new BackendServiceIamMemberConditionGetArgs(description, expression, title);
         }

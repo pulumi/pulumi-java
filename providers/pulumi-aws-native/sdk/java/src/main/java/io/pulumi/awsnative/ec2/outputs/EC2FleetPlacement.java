@@ -139,7 +139,6 @@ public final class EC2FleetPlacement {
             this.tenancy = tenancy;
             return this;
         }
-
         public EC2FleetPlacement build() {
             return new EC2FleetPlacement(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);
         }

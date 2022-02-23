@@ -18,7 +18,7 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="baseTableReference", required=true)
-    private final TableReferenceResponse baseTableReference;
+      private final TableReferenceResponse baseTableReference;
 
     public TableReferenceResponse getBaseTableReference() {
         return this.baseTableReference;
@@ -29,7 +29,7 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="snapshotTime", required=true)
-    private final String snapshotTime;
+      private final String snapshotTime;
 
     public String getSnapshotTime() {
         return this.snapshotTime;
@@ -78,7 +78,6 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }
-
         public SnapshotDefinitionResponse build() {
             return new SnapshotDefinitionResponse(baseTableReference, snapshotTime);
         }

@@ -89,7 +89,6 @@ public final class GetProjectResult {
             this.tags = tags;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(arn, defaultJobTimeoutMinutes, name, tags);
         }

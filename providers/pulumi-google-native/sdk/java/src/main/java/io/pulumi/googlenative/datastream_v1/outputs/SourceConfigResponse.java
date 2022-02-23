@@ -97,7 +97,6 @@ public final class SourceConfigResponse {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }
-
         public SourceConfigResponse build() {
             return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfile);
         }

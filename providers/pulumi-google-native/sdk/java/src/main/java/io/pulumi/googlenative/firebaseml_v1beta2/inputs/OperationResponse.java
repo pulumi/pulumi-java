@@ -24,7 +24,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="done", required=true)
-    private final Boolean done;
+      private final Boolean done;
 
     public Boolean getDone() {
         return this.done;
@@ -35,7 +35,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="error", required=true)
-    private final StatusResponse error;
+      private final StatusResponse error;
 
     public StatusResponse getError() {
         return this.error;
@@ -46,7 +46,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -57,7 +57,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -68,7 +68,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="response", required=true)
-    private final Map<String,String> response;
+      private final Map<String,String> response;
 
     public Map<String,String> getResponse() {
         return this.response;
@@ -147,7 +147,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(done, error, metadata, name, response);
         }

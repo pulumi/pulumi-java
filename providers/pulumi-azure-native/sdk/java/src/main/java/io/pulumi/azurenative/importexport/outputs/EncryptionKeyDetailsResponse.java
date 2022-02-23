@@ -97,7 +97,6 @@ public final class EncryptionKeyDetailsResponse {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
-
         public EncryptionKeyDetailsResponse build() {
             return new EncryptionKeyDetailsResponse(kekType, kekUrl, kekVaultResourceID);
         }

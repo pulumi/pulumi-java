@@ -187,7 +187,6 @@ public final class GetWorkGroupResult {
             this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }
-
         public GetWorkGroupResult build() {
             return new GetWorkGroupResult(creationTime, description, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
         }

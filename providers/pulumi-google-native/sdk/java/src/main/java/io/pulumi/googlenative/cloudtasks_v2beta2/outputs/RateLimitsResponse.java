@@ -96,7 +96,6 @@ public final class RateLimitsResponse {
             this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond);
             return this;
         }
-
         public RateLimitsResponse build() {
             return new RateLimitsResponse(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
         }

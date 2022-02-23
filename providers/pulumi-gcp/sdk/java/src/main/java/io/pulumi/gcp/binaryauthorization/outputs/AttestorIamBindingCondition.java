@@ -73,7 +73,6 @@ public final class AttestorIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AttestorIamBindingCondition build() {
             return new AttestorIamBindingCondition(description, expression, title);
         }

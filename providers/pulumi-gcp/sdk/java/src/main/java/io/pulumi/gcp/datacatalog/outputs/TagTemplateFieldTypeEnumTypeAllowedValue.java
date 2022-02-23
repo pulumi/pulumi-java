@@ -52,7 +52,6 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public TagTemplateFieldTypeEnumTypeAllowedValue build() {
             return new TagTemplateFieldTypeEnumTypeAllowedValue(displayName);
         }

@@ -106,7 +106,6 @@ public final class NetworkPolicyPeer {
             this.podSelector = podSelector;
             return this;
         }
-
         public NetworkPolicyPeer build() {
             return new NetworkPolicyPeer(ipBlock, namespaceSelector, podSelector);
         }

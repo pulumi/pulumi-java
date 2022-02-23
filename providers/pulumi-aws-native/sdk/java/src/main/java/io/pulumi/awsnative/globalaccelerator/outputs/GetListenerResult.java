@@ -114,7 +114,6 @@ public final class GetListenerResult {
             this.protocol = protocol;
             return this;
         }
-
         public GetListenerResult build() {
             return new GetListenerResult(clientAffinity, listenerArn, portRanges, protocol);
         }

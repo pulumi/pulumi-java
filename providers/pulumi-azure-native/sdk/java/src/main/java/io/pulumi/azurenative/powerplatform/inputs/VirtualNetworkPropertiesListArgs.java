@@ -25,7 +25,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nextLink")
-    private final @Nullable Input<String> nextLink;
+        private final @Nullable Input<String> nextLink;
 
     public Input<String> getNextLink() {
         return this.nextLink == null ? Input.empty() : this.nextLink;
@@ -36,7 +36,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<List<VirtualNetworkPropertiesArgs>> value;
+        private final @Nullable Input<List<VirtualNetworkPropertiesArgs>> value;
 
     public Input<List<VirtualNetworkPropertiesArgs>> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -95,7 +95,6 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public VirtualNetworkPropertiesListArgs build() {
             return new VirtualNetworkPropertiesListArgs(nextLink, value);
         }

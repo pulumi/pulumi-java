@@ -58,7 +58,6 @@ public final class AppEnvironmentVariable {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppEnvironmentVariable build() {
             return new AppEnvironmentVariable(name, value);
         }

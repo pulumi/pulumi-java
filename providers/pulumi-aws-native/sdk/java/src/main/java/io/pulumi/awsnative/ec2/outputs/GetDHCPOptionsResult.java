@@ -70,7 +70,6 @@ public final class GetDHCPOptionsResult {
             this.tags = tags;
             return this;
         }
-
         public GetDHCPOptionsResult build() {
             return new GetDHCPOptionsResult(dhcpOptionsId, tags);
         }

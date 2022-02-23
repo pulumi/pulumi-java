@@ -54,7 +54,6 @@ public final class QuotaInfoResponse {
             this.coresUsed = coresUsed;
             return this;
         }
-
         public QuotaInfoResponse build() {
             return new QuotaInfoResponse(coresUsed);
         }

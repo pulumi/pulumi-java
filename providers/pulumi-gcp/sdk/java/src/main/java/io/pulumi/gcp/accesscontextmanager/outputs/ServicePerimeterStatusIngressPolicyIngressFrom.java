@@ -111,7 +111,6 @@ public final class ServicePerimeterStatusIngressPolicyIngressFrom {
             this.sources = sources;
             return this;
         }
-
         public ServicePerimeterStatusIngressPolicyIngressFrom build() {
             return new ServicePerimeterStatusIngressPolicyIngressFrom(identities, identityType, sources);
         }

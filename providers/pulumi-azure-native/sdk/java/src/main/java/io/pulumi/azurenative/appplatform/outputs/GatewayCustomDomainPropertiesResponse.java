@@ -54,7 +54,6 @@ public final class GatewayCustomDomainPropertiesResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public GatewayCustomDomainPropertiesResponse build() {
             return new GatewayCustomDomainPropertiesResponse(thumbprint);
         }

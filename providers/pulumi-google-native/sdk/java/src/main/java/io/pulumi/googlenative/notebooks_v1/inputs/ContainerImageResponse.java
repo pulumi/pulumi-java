@@ -21,7 +21,7 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="repository", required=true)
-    private final String repository;
+      private final String repository;
 
     public String getRepository() {
         return this.repository;
@@ -32,7 +32,7 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -81,7 +81,6 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public ContainerImageResponse build() {
             return new ContainerImageResponse(repository, tag);
         }

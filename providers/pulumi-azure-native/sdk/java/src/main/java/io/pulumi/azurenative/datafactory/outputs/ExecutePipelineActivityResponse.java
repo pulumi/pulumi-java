@@ -211,7 +211,6 @@ public final class ExecutePipelineActivityResponse {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }
-
         public ExecutePipelineActivityResponse build() {
             return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);
         }

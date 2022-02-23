@@ -20,7 +20,7 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();
 
     @InputImport(name="rules")
-    private final @Nullable Input<List<AutomationTriggeringRuleArgs>> rules;
+        private final @Nullable Input<List<AutomationTriggeringRuleArgs>> rules;
 
     public Input<List<AutomationTriggeringRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -63,7 +63,6 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public AutomationRuleSetArgs build() {
             return new AutomationRuleSetArgs(rules);
         }

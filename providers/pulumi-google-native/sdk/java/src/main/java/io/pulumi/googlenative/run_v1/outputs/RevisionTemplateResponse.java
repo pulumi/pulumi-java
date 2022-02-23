@@ -75,7 +75,6 @@ public final class RevisionTemplateResponse {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public RevisionTemplateResponse build() {
             return new RevisionTemplateResponse(metadata, spec);
         }

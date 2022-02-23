@@ -44,7 +44,6 @@ public final class VirtualClusterContainerInfo {
             this.eksInfo = Objects.requireNonNull(eksInfo);
             return this;
         }
-
         public VirtualClusterContainerInfo build() {
             return new VirtualClusterContainerInfo(eksInfo);
         }

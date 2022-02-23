@@ -77,7 +77,6 @@ public final class ListEASubscriptionListMigrationDatePostResult {
             this.optedInDate = optedInDate;
             return this;
         }
-
         public ListEASubscriptionListMigrationDatePostResult build() {
             return new ListEASubscriptionListMigrationDatePostResult(isGrandFatherableSubscription, optedInDate);
         }

@@ -24,7 +24,7 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="function", required=true)
-    private final Input<Either<String,FunctionType>> function;
+        private final Input<Either<String,FunctionType>> function;
 
     public Input<Either<String,FunctionType>> getFunction() {
         return this.function;
@@ -35,7 +35,7 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -94,7 +94,6 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ReportAggregationArgs build() {
             return new ReportAggregationArgs(function, name);
         }

@@ -97,7 +97,6 @@ public final class RouteWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RouteWarningsItemResponse build() {
             return new RouteWarningsItemResponse(code, data, message);
         }

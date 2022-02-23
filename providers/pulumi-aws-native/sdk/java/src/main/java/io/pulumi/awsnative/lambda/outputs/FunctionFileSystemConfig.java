@@ -74,7 +74,6 @@ public final class FunctionFileSystemConfig {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
-
         public FunctionFileSystemConfig build() {
             return new FunctionFileSystemConfig(arn, localMountPath);
         }

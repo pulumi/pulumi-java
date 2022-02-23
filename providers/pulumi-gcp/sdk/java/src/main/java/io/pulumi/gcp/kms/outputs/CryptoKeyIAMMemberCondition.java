@@ -97,7 +97,6 @@ public final class CryptoKeyIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public CryptoKeyIAMMemberCondition build() {
             return new CryptoKeyIAMMemberCondition(description, expression, title);
         }

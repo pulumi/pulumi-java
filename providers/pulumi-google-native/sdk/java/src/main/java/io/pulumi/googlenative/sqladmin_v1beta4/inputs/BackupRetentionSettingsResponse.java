@@ -22,7 +22,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retainedBackups", required=true)
-    private final Integer retainedBackups;
+      private final Integer retainedBackups;
 
     public Integer getRetainedBackups() {
         return this.retainedBackups;
@@ -33,7 +33,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionUnit", required=true)
-    private final String retentionUnit;
+      private final String retentionUnit;
 
     public String getRetentionUnit() {
         return this.retentionUnit;
@@ -82,7 +82,6 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }
-
         public BackupRetentionSettingsResponse build() {
             return new BackupRetentionSettingsResponse(retainedBackups, retentionUnit);
         }

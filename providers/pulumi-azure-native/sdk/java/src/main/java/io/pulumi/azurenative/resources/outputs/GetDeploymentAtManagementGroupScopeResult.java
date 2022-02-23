@@ -162,7 +162,6 @@ public final class GetDeploymentAtManagementGroupScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentAtManagementGroupScopeResult build() {
             return new GetDeploymentAtManagementGroupScopeResult(id, location, name, properties, tags, type);
         }

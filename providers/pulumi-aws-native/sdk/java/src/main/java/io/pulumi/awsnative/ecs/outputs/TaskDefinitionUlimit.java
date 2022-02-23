@@ -72,7 +72,6 @@ public final class TaskDefinitionUlimit {
             this.softLimit = Objects.requireNonNull(softLimit);
             return this;
         }
-
         public TaskDefinitionUlimit build() {
             return new TaskDefinitionUlimit(hardLimit, name, softLimit);
         }

@@ -141,7 +141,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public GetContentKeyPolicyPropertiesWithSecretsResult build() {
             return new GetContentKeyPolicyPropertiesWithSecretsResult(created, description, lastModified, options, policyId);
         }

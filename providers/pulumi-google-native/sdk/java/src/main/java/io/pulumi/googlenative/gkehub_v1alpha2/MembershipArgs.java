@@ -23,7 +23,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable Input<AuthorityArgs> authority;
+      private final @Nullable Input<AuthorityArgs> authority;
 
     public Input<AuthorityArgs> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -34,7 +34,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<MembershipEndpointArgs> endpoint;
+      private final @Nullable Input<MembershipEndpointArgs> endpoint;
 
     public Input<MembershipEndpointArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -45,7 +45,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+      private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -56,7 +56,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureType")
-    private final @Nullable Input<MembershipInfrastructureType> infrastructureType;
+      private final @Nullable Input<MembershipInfrastructureType> infrastructureType;
 
     public Input<MembershipInfrastructureType> getInfrastructureType() {
         return this.infrastructureType == null ? Input.empty() : this.infrastructureType;
@@ -67,28 +67,28 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="membershipId", required=true)
-    private final Input<String> membershipId;
+      private final Input<String> membershipId;
 
     public Input<String> getMembershipId() {
         return this.membershipId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -237,7 +237,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public MembershipArgs build() {
             return new MembershipArgs(authority, endpoint, externalId, infrastructureType, labels, location, membershipId, project);
         }

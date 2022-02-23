@@ -76,7 +76,6 @@ public final class PartnerRegionInfoResponse {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public PartnerRegionInfoResponse build() {
             return new PartnerRegionInfoResponse(location, replicationRole);
         }

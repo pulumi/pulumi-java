@@ -54,7 +54,6 @@ public final class VMResourcesResponse {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public VMResourcesResponse build() {
             return new VMResourcesResponse(vmResourceId);
         }

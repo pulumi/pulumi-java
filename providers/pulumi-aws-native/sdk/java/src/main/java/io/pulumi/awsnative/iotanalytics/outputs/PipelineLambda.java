@@ -87,7 +87,6 @@ public final class PipelineLambda {
             this.next = next;
             return this;
         }
-
         public PipelineLambda build() {
             return new PipelineLambda(batchSize, lambdaName, name, next);
         }

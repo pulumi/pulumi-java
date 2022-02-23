@@ -54,7 +54,6 @@ public final class BlobStorageTokenStoreResponse {
             this.sasUrlSettingName = sasUrlSettingName;
             return this;
         }
-
         public BlobStorageTokenStoreResponse build() {
             return new BlobStorageTokenStoreResponse(sasUrlSettingName);
         }

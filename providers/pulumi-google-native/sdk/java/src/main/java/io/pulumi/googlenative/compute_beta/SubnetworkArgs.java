@@ -28,7 +28,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSubnetCidrRoutesOverlap")
-    private final @Nullable Input<Boolean> allowSubnetCidrRoutesOverlap;
+      private final @Nullable Input<Boolean> allowSubnetCidrRoutesOverlap;
 
     public Input<Boolean> getAllowSubnetCidrRoutesOverlap() {
         return this.allowSubnetCidrRoutesOverlap == null ? Input.empty() : this.allowSubnetCidrRoutesOverlap;
@@ -39,7 +39,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFlowLogs")
-    private final @Nullable Input<Boolean> enableFlowLogs;
+      private final @Nullable Input<Boolean> enableFlowLogs;
 
     public Input<Boolean> getEnableFlowLogs() {
         return this.enableFlowLogs == null ? Input.empty() : this.enableFlowLogs;
@@ -61,7 +61,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -72,7 +72,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AccessType")
-    private final @Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType;
+      private final @Nullable Input<SubnetworkIpv6AccessType> ipv6AccessType;
 
     public Input<SubnetworkIpv6AccessType> getIpv6AccessType() {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
@@ -83,7 +83,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
+      private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
 
     public Input<SubnetworkLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -94,7 +94,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -116,7 +116,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpGoogleAccess")
-    private final @Nullable Input<Boolean> privateIpGoogleAccess;
+      private final @Nullable Input<Boolean> privateIpGoogleAccess;
 
     public Input<Boolean> getPrivateIpGoogleAccess() {
         return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
@@ -127,14 +127,14 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-    private final @Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Input<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Input<SubnetworkPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable Input<SubnetworkPurpose> purpose;
+      private final @Nullable Input<SubnetworkPurpose> purpose;
 
     public Input<SubnetworkPurpose> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -156,14 +156,14 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -174,7 +174,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<SubnetworkRole> role;
+      private final @Nullable Input<SubnetworkRole> role;
 
     public Input<SubnetworkRole> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -185,7 +185,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRanges")
-    private final @Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
+      private final @Nullable Input<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
 
     public Input<List<SubnetworkSecondaryRangeArgs>> getSecondaryIpRanges() {
         return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
@@ -196,7 +196,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-    private final @Nullable Input<SubnetworkStackType> stackType;
+      private final @Nullable Input<SubnetworkStackType> stackType;
 
     public Input<SubnetworkStackType> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -480,7 +480,6 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
-
         public SubnetworkArgs build() {
             return new SubnetworkArgs(allowSubnetCidrRoutesOverlap, description, enableFlowLogs, ipCidrRange, ipv6AccessType, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, requestId, role, secondaryIpRanges, stackType);
         }

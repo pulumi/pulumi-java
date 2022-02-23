@@ -208,7 +208,6 @@ public final class ProductLineResponse {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public ProductLineResponse build() {
             return new ProductLineResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, products);
         }

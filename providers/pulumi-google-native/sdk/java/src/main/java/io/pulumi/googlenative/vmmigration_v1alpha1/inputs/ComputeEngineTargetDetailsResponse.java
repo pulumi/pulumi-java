@@ -27,7 +27,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalLicenses", required=true)
-    private final List<String> additionalLicenses;
+      private final List<String> additionalLicenses;
 
     public List<String> getAdditionalLicenses() {
         return this.additionalLicenses;
@@ -38,7 +38,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="appliedLicense", required=true)
-    private final AppliedLicenseResponse appliedLicense;
+      private final AppliedLicenseResponse appliedLicense;
 
     public AppliedLicenseResponse getAppliedLicense() {
         return this.appliedLicense;
@@ -49,7 +49,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="bootOption", required=true)
-    private final String bootOption;
+      private final String bootOption;
 
     public String getBootOption() {
         return this.bootOption;
@@ -60,7 +60,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="computeScheduling", required=true)
-    private final ComputeSchedulingResponse computeScheduling;
+      private final ComputeSchedulingResponse computeScheduling;
 
     public ComputeSchedulingResponse getComputeScheduling() {
         return this.computeScheduling;
@@ -71,7 +71,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -82,7 +82,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -93,7 +93,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="licenseType", required=true)
-    private final String licenseType;
+      private final String licenseType;
 
     public String getLicenseType() {
         return this.licenseType;
@@ -104,7 +104,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -115,7 +115,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="machineTypeSeries", required=true)
-    private final String machineTypeSeries;
+      private final String machineTypeSeries;
 
     public String getMachineTypeSeries() {
         return this.machineTypeSeries;
@@ -126,7 +126,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -137,7 +137,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+      private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -148,7 +148,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkTags", required=true)
-    private final List<String> networkTags;
+      private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
         return this.networkTags;
@@ -159,7 +159,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -170,7 +170,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="secureBoot", required=true)
-    private final Boolean secureBoot;
+      private final Boolean secureBoot;
 
     public Boolean getSecureBoot() {
         return this.secureBoot;
@@ -181,7 +181,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -192,7 +192,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+      private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -203,7 +203,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -402,7 +402,6 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ComputeEngineTargetDetailsResponse build() {
             return new ComputeEngineTargetDetailsResponse(additionalLicenses, appliedLicense, bootOption, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, project, secureBoot, serviceAccount, vmName, zone);
         }

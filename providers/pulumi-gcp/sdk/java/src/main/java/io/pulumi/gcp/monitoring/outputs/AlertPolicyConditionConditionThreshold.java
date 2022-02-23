@@ -355,7 +355,6 @@ public final class AlertPolicyConditionConditionThreshold {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionThreshold build() {
             return new AlertPolicyConditionConditionThreshold(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

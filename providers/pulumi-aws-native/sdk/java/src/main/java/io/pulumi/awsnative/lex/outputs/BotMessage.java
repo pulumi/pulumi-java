@@ -89,7 +89,6 @@ public final class BotMessage {
             this.sSMLMessage = sSMLMessage;
             return this;
         }
-
         public BotMessage build() {
             return new BotMessage(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
         }

@@ -118,7 +118,6 @@ public final class GetConsentStoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConsentStoreResult build() {
             return new GetConsentStoreResult(defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @InputImport(name="clicked", required=true)
-    private final Boolean clicked;
+      private final Boolean clicked;
 
     public Boolean getClicked() {
         return this.clicked;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @InputImport(name="correctnessLevel", required=true)
-    private final String correctnessLevel;
+      private final String correctnessLevel;
 
     public String getCorrectnessLevel() {
         return this.correctnessLevel;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @InputImport(name="displayed", required=true)
-    private final Boolean displayed;
+      private final Boolean displayed;
 
     public Boolean getDisplayed() {
         return this.displayed;
@@ -103,7 +103,6 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
             this.displayed = Objects.requireNonNull(displayed);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(clicked, correctnessLevel, displayed);
         }

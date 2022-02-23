@@ -53,7 +53,6 @@ public final class MetricBucketOptionsExplicitBuckets {
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }
-
         public MetricBucketOptionsExplicitBuckets build() {
             return new MetricBucketOptionsExplicitBuckets(bounds);
         }

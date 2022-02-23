@@ -23,7 +23,7 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<Map<String,String>> labels;
+      private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -34,7 +34,7 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -93,7 +93,6 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public MonitoredResourceArgs build() {
             return new MonitoredResourceArgs(labels, type);
         }

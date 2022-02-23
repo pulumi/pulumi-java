@@ -116,7 +116,6 @@ public final class NetworkInterfaceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(privateIpAddress, rdpAuthority, sshAuthority, username);
         }

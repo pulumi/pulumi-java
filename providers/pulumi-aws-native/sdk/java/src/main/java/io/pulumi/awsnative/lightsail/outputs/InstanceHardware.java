@@ -99,7 +99,6 @@ public final class InstanceHardware {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
-
         public InstanceHardware build() {
             return new InstanceHardware(cpuCount, disks, ramSizeInGb);
         }

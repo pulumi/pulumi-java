@@ -78,7 +78,6 @@ public final class FSGroupStrategyOptions {
             this.rule = rule;
             return this;
         }
-
         public FSGroupStrategyOptions build() {
             return new FSGroupStrategyOptions(ranges, rule);
         }

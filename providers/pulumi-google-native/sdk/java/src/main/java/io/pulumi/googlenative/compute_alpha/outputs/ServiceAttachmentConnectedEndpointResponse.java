@@ -95,7 +95,6 @@ public final class ServiceAttachmentConnectedEndpointResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServiceAttachmentConnectedEndpointResponse build() {
             return new ServiceAttachmentConnectedEndpointResponse(endpoint, pscConnectionId, status);
         }

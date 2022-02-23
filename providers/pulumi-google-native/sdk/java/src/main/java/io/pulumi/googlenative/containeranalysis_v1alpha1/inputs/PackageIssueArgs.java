@@ -24,7 +24,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedLocation")
-    private final @Nullable Input<VulnerabilityLocationArgs> affectedLocation;
+      private final @Nullable Input<VulnerabilityLocationArgs> affectedLocation;
 
     public Input<VulnerabilityLocationArgs> getAffectedLocation() {
         return this.affectedLocation == null ? Input.empty() : this.affectedLocation;
@@ -35,7 +35,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedLocation")
-    private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
+      private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
 
     public Input<VulnerabilityLocationArgs> getFixedLocation() {
         return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
@@ -46,14 +46,14 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<String> packageType;
+      private final @Nullable Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
     }
 
     @InputImport(name="severityName")
-    private final @Nullable Input<String> severityName;
+      private final @Nullable Input<String> severityName;
 
     public Input<String> getSeverityName() {
         return this.severityName == null ? Input.empty() : this.severityName;
@@ -142,7 +142,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             this.severityName = Input.ofNullable(severityName);
             return this;
         }
-
         public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedLocation, fixedLocation, packageType, severityName);
         }

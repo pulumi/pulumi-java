@@ -58,7 +58,6 @@ public final class ConnectionAliasTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnectionAliasTag build() {
             return new ConnectionAliasTag(key, value);
         }

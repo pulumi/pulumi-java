@@ -15,14 +15,14 @@ public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeAr
     public static final GetUptimeCheckConfigArgs Empty = new GetUptimeCheckConfigArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="uptimeCheckConfigId", required=true)
-    private final String uptimeCheckConfigId;
+      private final String uptimeCheckConfigId;
 
     public String getUptimeCheckConfigId() {
         return this.uptimeCheckConfigId;
@@ -71,7 +71,6 @@ public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeAr
             this.uptimeCheckConfigId = Objects.requireNonNull(uptimeCheckConfigId);
             return this;
         }
-
         public GetUptimeCheckConfigArgs build() {
             return new GetUptimeCheckConfigArgs(project, uptimeCheckConfigId);
         }

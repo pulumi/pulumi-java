@@ -58,7 +58,6 @@ public final class RulesetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RulesetTag build() {
             return new RulesetTag(key, value);
         }

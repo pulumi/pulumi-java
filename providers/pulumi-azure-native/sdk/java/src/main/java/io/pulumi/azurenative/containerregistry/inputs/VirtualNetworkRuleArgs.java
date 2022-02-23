@@ -25,7 +25,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,Action>> action;
+        private final @Nullable Input<Either<String,Action>> action;
 
     public Input<Either<String,Action>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -36,7 +36,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkResourceId", required=true)
-    private final Input<String> virtualNetworkResourceId;
+        private final Input<String> virtualNetworkResourceId;
 
     public Input<String> getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
@@ -95,7 +95,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             this.virtualNetworkResourceId = Input.of(Objects.requireNonNull(virtualNetworkResourceId));
             return this;
         }
-
         public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(action, virtualNetworkResourceId);
         }

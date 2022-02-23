@@ -24,7 +24,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<List<LocationArgs>> location;
+      private final @Nullable Input<List<LocationArgs>> location;
 
     public Input<List<LocationArgs>> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,6 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public InstallationArgs build() {
             return new InstallationArgs(location);
         }

@@ -74,7 +74,6 @@ public final class LocationS3Tag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationS3Tag build() {
             return new LocationS3Tag(key, value);
         }

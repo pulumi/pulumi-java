@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(openUriAction, title);
         }

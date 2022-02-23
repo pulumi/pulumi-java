@@ -29,7 +29,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheName")
-    private final @Nullable Input<String> cacheName;
+        private final @Nullable Input<String> cacheName;
 
     public Input<String> getCacheName() {
         return this.cacheName == null ? Input.empty() : this.cacheName;
@@ -40,7 +40,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheSizeGB")
-    private final @Nullable Input<Integer> cacheSizeGB;
+        private final @Nullable Input<Integer> cacheSizeGB;
 
     public Input<Integer> getCacheSizeGB() {
         return this.cacheSizeGB == null ? Input.empty() : this.cacheSizeGB;
@@ -51,7 +51,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryServicesSettings")
-    private final @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings;
+        private final @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings;
 
     public Input<CacheDirectorySettingsArgs> getDirectoryServicesSettings() {
         return this.directoryServicesSettings == null ? Input.empty() : this.directoryServicesSettings;
@@ -62,7 +62,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettings")
-    private final @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings;
+        private final @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings;
 
     public Input<CacheEncryptionSettingsArgs> getEncryptionSettings() {
         return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
@@ -73,7 +73,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<CacheIdentityArgs> identity;
+        private final @Nullable Input<CacheIdentityArgs> identity;
 
     public Input<CacheIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -84,7 +84,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -95,7 +95,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkSettings")
-    private final @Nullable Input<CacheNetworkSettingsArgs> networkSettings;
+        private final @Nullable Input<CacheNetworkSettingsArgs> networkSettings;
 
     public Input<CacheNetworkSettingsArgs> getNetworkSettings() {
         return this.networkSettings == null ? Input.empty() : this.networkSettings;
@@ -106,7 +106,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
 
     public Input<Either<String,ProvisioningStateType>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -117,7 +117,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -128,7 +128,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securitySettings")
-    private final @Nullable Input<CacheSecuritySettingsArgs> securitySettings;
+        private final @Nullable Input<CacheSecuritySettingsArgs> securitySettings;
 
     public Input<CacheSecuritySettingsArgs> getSecuritySettings() {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
@@ -139,7 +139,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<CacheSkuArgs> sku;
+        private final @Nullable Input<CacheSkuArgs> sku;
 
     public Input<CacheSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -150,7 +150,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<String> subnet;
+        private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -161,7 +161,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -385,7 +385,6 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CacheArgs build() {
             return new CacheArgs(cacheName, cacheSizeGB, directoryServicesSettings, encryptionSettings, identity, location, networkSettings, provisioningState, resourceGroupName, securitySettings, sku, subnet, tags);
         }

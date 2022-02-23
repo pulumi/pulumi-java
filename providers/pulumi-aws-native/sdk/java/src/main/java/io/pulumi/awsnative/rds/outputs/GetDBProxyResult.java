@@ -228,7 +228,6 @@ public final class GetDBProxyResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetDBProxyResult build() {
             return new GetDBProxyResult(auth, dBProxyArn, debugLogging, endpoint, idleClientTimeout, requireTLS, roleArn, tags, vpcSecurityGroupIds);
         }

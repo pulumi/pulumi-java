@@ -201,7 +201,6 @@ public final class GetPeeringResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetPeeringResult build() {
             return new GetPeeringResult(authorizedNetwork, createTime, domainResource, labels, name, state, statusMessage, updateTime);
         }

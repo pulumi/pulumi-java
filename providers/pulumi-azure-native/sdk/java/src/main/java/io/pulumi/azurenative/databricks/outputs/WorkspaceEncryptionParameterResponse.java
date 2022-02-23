@@ -77,7 +77,6 @@ public final class WorkspaceEncryptionParameterResponse {
             this.value = value;
             return this;
         }
-
         public WorkspaceEncryptionParameterResponse build() {
             return new WorkspaceEncryptionParameterResponse(type, value);
         }

@@ -24,7 +24,7 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+        private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -67,7 +67,6 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
-
         public DhcpOptionsArgs build() {
             return new DhcpOptionsArgs(dnsServers);
         }

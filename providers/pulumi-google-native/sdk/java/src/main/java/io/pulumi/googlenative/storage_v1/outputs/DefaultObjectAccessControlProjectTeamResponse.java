@@ -74,7 +74,6 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
             this.team = Objects.requireNonNull(team);
             return this;
         }
-
         public DefaultObjectAccessControlProjectTeamResponse build() {
             return new DefaultObjectAccessControlProjectTeamResponse(projectNumber, team);
         }

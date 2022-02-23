@@ -24,7 +24,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="distributionGroups")
-    private final @Nullable Input<List<String>> distributionGroups;
+        private final @Nullable Input<List<String>> distributionGroups;
 
     public Input<List<String>> getDistributionGroups() {
         return this.distributionGroups == null ? Input.empty() : this.distributionGroups;
@@ -67,7 +67,6 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
             this.distributionGroups = Input.ofNullable(distributionGroups);
             return this;
         }
-
         public DistributionGroupListReceiverValueArgs build() {
             return new DistributionGroupListReceiverValueArgs(distributionGroups);
         }

@@ -184,7 +184,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayBackendAddressPoolResponse build() {
             return new ApplicationGatewayBackendAddressPoolResponse(backendAddresses, backendIPConfigurations, etag, id, name, provisioningState, type);
         }

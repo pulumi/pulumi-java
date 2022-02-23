@@ -250,7 +250,6 @@ public final class GetMethodResult {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
-
         public GetMethodResult build() {
             return new GetMethodResult(apiKeyRequired, authorizationScopes, authorizationType, authorizerId, integration, methodResponses, operationName, requestModels, requestParameters, requestValidatorId);
         }

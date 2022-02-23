@@ -162,7 +162,6 @@ public final class ApplicationComponentMonitoringSetting {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public ApplicationComponentMonitoringSetting build() {
             return new ApplicationComponentMonitoringSetting(componentARN, componentConfigurationMode, componentName, customComponentConfiguration, defaultOverwriteComponentConfiguration, tier);
         }

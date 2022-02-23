@@ -14,14 +14,14 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
     public static final WirelessDeviceOtaaV10xArgs Empty = new WirelessDeviceOtaaV10xArgs();
 
     @InputImport(name="appEui", required=true)
-    private final Input<String> appEui;
+        private final Input<String> appEui;
 
     public Input<String> getAppEui() {
         return this.appEui;
     }
 
     @InputImport(name="appKey", required=true)
-    private final Input<String> appKey;
+        private final Input<String> appKey;
 
     public Input<String> getAppKey() {
         return this.appKey;
@@ -80,7 +80,6 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
             this.appKey = Input.of(Objects.requireNonNull(appKey));
             return this;
         }
-
         public WirelessDeviceOtaaV10xArgs build() {
             return new WirelessDeviceOtaaV10xArgs(appEui, appKey);
         }

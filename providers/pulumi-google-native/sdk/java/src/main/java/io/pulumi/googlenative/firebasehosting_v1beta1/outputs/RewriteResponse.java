@@ -160,7 +160,6 @@ public final class RewriteResponse {
             this.run = Objects.requireNonNull(run);
             return this;
         }
-
         public RewriteResponse build() {
             return new RewriteResponse(dynamicLinks, function, glob, path, regex, run);
         }

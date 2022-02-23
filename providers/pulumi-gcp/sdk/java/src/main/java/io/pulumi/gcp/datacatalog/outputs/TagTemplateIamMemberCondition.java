@@ -73,7 +73,6 @@ public final class TagTemplateIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TagTemplateIamMemberCondition build() {
             return new TagTemplateIamMemberCondition(description, expression, title);
         }

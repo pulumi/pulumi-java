@@ -340,7 +340,6 @@ public final class AzureSqlMILinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSqlMILinkedServiceResponse build() {
             return new AzureSqlMILinkedServiceResponse(alwaysEncryptedSettings, annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

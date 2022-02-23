@@ -77,7 +77,6 @@ public final class SuppressionConfigResponse {
             this.schedule = schedule;
             return this;
         }
-
         public SuppressionConfigResponse build() {
             return new SuppressionConfigResponse(recurrenceType, schedule);
         }

@@ -30,7 +30,6 @@ public final class GoogleCloudContactcenterinsightsV1InterruptionDataResponse {
         public Builder(GoogleCloudContactcenterinsightsV1InterruptionDataResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudContactcenterinsightsV1InterruptionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1InterruptionDataResponse();
         }

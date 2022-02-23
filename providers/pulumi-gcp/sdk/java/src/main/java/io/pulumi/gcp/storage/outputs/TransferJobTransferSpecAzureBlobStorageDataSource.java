@@ -119,7 +119,6 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public TransferJobTransferSpecAzureBlobStorageDataSource build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSource(azureCredentials, container, path, storageAccount);
         }

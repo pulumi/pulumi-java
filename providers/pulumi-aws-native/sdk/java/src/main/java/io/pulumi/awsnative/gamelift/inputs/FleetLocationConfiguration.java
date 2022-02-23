@@ -20,14 +20,14 @@ public final class FleetLocationConfiguration extends io.pulumi.resources.Invoke
     public static final FleetLocationConfiguration Empty = new FleetLocationConfiguration();
 
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="locationCapacity")
-    private final @Nullable FleetLocationCapacity locationCapacity;
+        private final @Nullable FleetLocationCapacity locationCapacity;
 
     public Optional<FleetLocationCapacity> getLocationCapacity() {
         return this.locationCapacity == null ? Optional.empty() : Optional.ofNullable(this.locationCapacity);
@@ -76,7 +76,6 @@ public final class FleetLocationConfiguration extends io.pulumi.resources.Invoke
             this.locationCapacity = locationCapacity;
             return this;
         }
-
         public FleetLocationConfiguration build() {
             return new FleetLocationConfiguration(location, locationCapacity);
         }

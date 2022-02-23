@@ -27,7 +27,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -38,7 +38,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="details")
-    private final @Nullable List<UserFacingErrorResponse> details;
+        private final @Nullable List<UserFacingErrorResponse> details;
 
     public List<UserFacingErrorResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -49,7 +49,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="innerError")
-    private final @Nullable InnerErrorResponse innerError;
+        private final @Nullable InnerErrorResponse innerError;
 
     public Optional<InnerErrorResponse> getInnerError() {
         return this.innerError == null ? Optional.empty() : Optional.ofNullable(this.innerError);
@@ -60,7 +60,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isRetryable")
-    private final @Nullable Boolean isRetryable;
+        private final @Nullable Boolean isRetryable;
 
     public Optional<Boolean> getIsRetryable() {
         return this.isRetryable == null ? Optional.empty() : Optional.ofNullable(this.isRetryable);
@@ -71,14 +71,14 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isUserError")
-    private final @Nullable Boolean isUserError;
+        private final @Nullable Boolean isUserError;
 
     public Optional<Boolean> getIsUserError() {
         return this.isUserError == null ? Optional.empty() : Optional.ofNullable(this.isUserError);
     }
 
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -89,7 +89,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -100,7 +100,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="recommendedAction")
-    private final @Nullable List<String> recommendedAction;
+        private final @Nullable List<String> recommendedAction;
 
     public List<String> getRecommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
@@ -111,7 +111,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -230,7 +230,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
             this.target = target;
             return this;
         }
-
         public UserFacingErrorResponse build() {
             return new UserFacingErrorResponse(code, details, innerError, isRetryable, isUserError, message, properties, recommendedAction, target);
         }

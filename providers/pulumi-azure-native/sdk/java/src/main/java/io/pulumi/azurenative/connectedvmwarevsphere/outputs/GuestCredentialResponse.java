@@ -54,7 +54,6 @@ public final class GuestCredentialResponse {
             this.username = username;
             return this;
         }
-
         public GuestCredentialResponse build() {
             return new GuestCredentialResponse(username);
         }

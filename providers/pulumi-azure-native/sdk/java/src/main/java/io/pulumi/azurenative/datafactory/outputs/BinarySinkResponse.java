@@ -211,7 +211,6 @@ public final class BinarySinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public BinarySinkResponse build() {
             return new BinarySinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

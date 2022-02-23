@@ -77,7 +77,6 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NWRuleSetVirtualNetworkRulesResponse build() {
             return new NWRuleSetVirtualNetworkRulesResponse(ignoreMissingVnetServiceEndpoint, subnet);
         }

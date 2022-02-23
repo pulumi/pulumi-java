@@ -25,7 +25,7 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="admin")
-    private final @Nullable String admin;
+        private final @Nullable String admin;
 
     public Optional<String> getAdmin() {
         return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
@@ -36,7 +36,7 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="basicLoginInformation")
-    private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+        private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
@@ -47,7 +47,7 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataControllerId")
-    private final @Nullable String dataControllerId;
+        private final @Nullable String dataControllerId;
 
     public Optional<String> getDataControllerId() {
         return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
@@ -58,7 +58,7 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="k8sRaw")
-    private final @Nullable Object k8sRaw;
+        private final @Nullable Object k8sRaw;
 
     public Optional<Object> getK8sRaw() {
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
@@ -69,14 +69,14 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="lastUploadedDate")
-    private final @Nullable String lastUploadedDate;
+        private final @Nullable String lastUploadedDate;
 
     public Optional<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -165,7 +165,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PostgresInstancePropertiesResponse build() {
             return new PostgresInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate, provisioningState);
         }

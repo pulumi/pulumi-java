@@ -17,7 +17,7 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="multipleActivationKeyName", required=true)
-    private final String multipleActivationKeyName;
+        private final String multipleActivationKeyName;
 
     public String getMultipleActivationKeyName() {
         return this.multipleActivationKeyName;
@@ -28,7 +28,7 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetMultipleActivationKeyArgs build() {
             return new GetMultipleActivationKeyArgs(multipleActivationKeyName, resourceGroupName);
         }

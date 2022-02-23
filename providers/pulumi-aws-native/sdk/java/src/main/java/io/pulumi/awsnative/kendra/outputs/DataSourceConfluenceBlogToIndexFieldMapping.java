@@ -74,7 +74,6 @@ public final class DataSourceConfluenceBlogToIndexFieldMapping {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluenceBlogToIndexFieldMapping build() {
             return new DataSourceConfluenceBlogToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

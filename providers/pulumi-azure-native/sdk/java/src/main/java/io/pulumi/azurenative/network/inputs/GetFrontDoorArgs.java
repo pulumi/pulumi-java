@@ -17,7 +17,7 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frontDoorName", required=true)
-    private final String frontDoorName;
+        private final String frontDoorName;
 
     public String getFrontDoorName() {
         return this.frontDoorName;
@@ -28,7 +28,7 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetFrontDoorArgs build() {
             return new GetFrontDoorArgs(frontDoorName, resourceGroupName);
         }

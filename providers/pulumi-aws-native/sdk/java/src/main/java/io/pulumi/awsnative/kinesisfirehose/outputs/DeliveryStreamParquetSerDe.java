@@ -114,7 +114,6 @@ public final class DeliveryStreamParquetSerDe {
             this.writerVersion = writerVersion;
             return this;
         }
-
         public DeliveryStreamParquetSerDe build() {
             return new DeliveryStreamParquetSerDe(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);
         }

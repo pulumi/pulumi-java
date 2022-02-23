@@ -375,7 +375,6 @@ public final class PropertyDefinitionResponse {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
-
         public PropertyDefinitionResponse build() {
             return new PropertyDefinitionResponse(arrayValueSeparator, dataSourcePrecedenceRules, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }

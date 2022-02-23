@@ -29,7 +29,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasetConfiguration", required=true)
-    private final Input<LabelingDatasetConfigurationArgs> datasetConfiguration;
+        private final Input<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
     public Input<LabelingDatasetConfigurationArgs> getDatasetConfiguration() {
         return this.datasetConfiguration;
@@ -40,7 +40,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="jobInstructions", required=true)
-    private final Input<LabelingJobInstructionsArgs> jobInstructions;
+        private final Input<LabelingJobInstructionsArgs> jobInstructions;
 
     public Input<LabelingJobInstructionsArgs> getJobInstructions() {
         return this.jobInstructions;
@@ -51,7 +51,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labelCategories", required=true)
-    private final Input<Map<String,LabelCategoryArgs>> labelCategories;
+        private final Input<Map<String,LabelCategoryArgs>> labelCategories;
 
     public Input<Map<String,LabelCategoryArgs>> getLabelCategories() {
         return this.labelCategories;
@@ -62,7 +62,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labelingJobMediaProperties", required=true)
-    private final Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
+        private final Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
     public Input<LabelingJobImagePropertiesArgs> getLabelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
@@ -73,7 +73,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mlAssistConfiguration")
-    private final @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration;
+        private final @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration;
 
     public Input<MLAssistConfigurationArgs> getMlAssistConfiguration() {
         return this.mlAssistConfiguration == null ? Input.empty() : this.mlAssistConfiguration;
@@ -84,7 +84,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -95,7 +95,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -229,7 +229,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LabelingJobPropertiesArgs build() {
             return new LabelingJobPropertiesArgs(datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, properties, tags);
         }

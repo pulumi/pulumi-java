@@ -297,7 +297,6 @@ public final class WorkflowTemplateJob {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public WorkflowTemplateJob build() {
             return new WorkflowTemplateJob(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

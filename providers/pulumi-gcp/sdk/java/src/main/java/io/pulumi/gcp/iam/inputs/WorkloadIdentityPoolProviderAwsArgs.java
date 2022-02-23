@@ -18,7 +18,7 @@ public final class WorkloadIdentityPoolProviderAwsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+        private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -61,7 +61,6 @@ public final class WorkloadIdentityPoolProviderAwsArgs extends io.pulumi.resourc
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public WorkloadIdentityPoolProviderAwsArgs build() {
             return new WorkloadIdentityPoolProviderAwsArgs(accountId);
         }

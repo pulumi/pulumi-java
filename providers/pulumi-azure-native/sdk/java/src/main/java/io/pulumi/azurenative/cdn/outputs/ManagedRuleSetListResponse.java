@@ -54,7 +54,6 @@ public final class ManagedRuleSetListResponse {
             this.managedRuleSets = managedRuleSets;
             return this;
         }
-
         public ManagedRuleSetListResponse build() {
             return new ManagedRuleSetListResponse(managedRuleSets);
         }

@@ -296,7 +296,6 @@ public final class AzureMLServiceLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMLServiceLinkedServiceResponse build() {
             return new AzureMLServiceLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, mlWorkspaceName, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }

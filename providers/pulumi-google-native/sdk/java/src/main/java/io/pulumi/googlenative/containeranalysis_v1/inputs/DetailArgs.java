@@ -25,7 +25,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-    private final Input<String> affectedCpeUri;
+      private final Input<String> affectedCpeUri;
 
     public Input<String> getAffectedCpeUri() {
         return this.affectedCpeUri;
@@ -36,7 +36,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-    private final Input<String> affectedPackage;
+      private final Input<String> affectedPackage;
 
     public Input<String> getAffectedPackage() {
         return this.affectedPackage;
@@ -47,7 +47,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersionEnd")
-    private final @Nullable Input<VersionArgs> affectedVersionEnd;
+      private final @Nullable Input<VersionArgs> affectedVersionEnd;
 
     public Input<VersionArgs> getAffectedVersionEnd() {
         return this.affectedVersionEnd == null ? Input.empty() : this.affectedVersionEnd;
@@ -58,7 +58,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersionStart")
-    private final @Nullable Input<VersionArgs> affectedVersionStart;
+      private final @Nullable Input<VersionArgs> affectedVersionStart;
 
     public Input<VersionArgs> getAffectedVersionStart() {
         return this.affectedVersionStart == null ? Input.empty() : this.affectedVersionStart;
@@ -69,7 +69,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedCpeUri")
-    private final @Nullable Input<String> fixedCpeUri;
+      private final @Nullable Input<String> fixedCpeUri;
 
     public Input<String> getFixedCpeUri() {
         return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
@@ -91,7 +91,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedPackage")
-    private final @Nullable Input<String> fixedPackage;
+      private final @Nullable Input<String> fixedPackage;
 
     public Input<String> getFixedPackage() {
         return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
@@ -102,7 +102,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedVersion")
-    private final @Nullable Input<VersionArgs> fixedVersion;
+      private final @Nullable Input<VersionArgs> fixedVersion;
 
     public Input<VersionArgs> getFixedVersion() {
         return this.fixedVersion == null ? Input.empty() : this.fixedVersion;
@@ -113,7 +113,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isObsolete")
-    private final @Nullable Input<Boolean> isObsolete;
+      private final @Nullable Input<Boolean> isObsolete;
 
     public Input<Boolean> getIsObsolete() {
         return this.isObsolete == null ? Input.empty() : this.isObsolete;
@@ -124,7 +124,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<String> packageType;
+      private final @Nullable Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
@@ -135,7 +135,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severityName")
-    private final @Nullable Input<String> severityName;
+      private final @Nullable Input<String> severityName;
 
     public Input<String> getSeverityName() {
         return this.severityName == null ? Input.empty() : this.severityName;
@@ -146,7 +146,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -157,7 +157,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUpdateTime")
-    private final @Nullable Input<String> sourceUpdateTime;
+      private final @Nullable Input<String> sourceUpdateTime;
 
     public Input<String> getSourceUpdateTime() {
         return this.sourceUpdateTime == null ? Input.empty() : this.sourceUpdateTime;
@@ -168,7 +168,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendor")
-    private final @Nullable Input<String> vendor;
+      private final @Nullable Input<String> vendor;
 
     public Input<String> getVendor() {
         return this.vendor == null ? Input.empty() : this.vendor;
@@ -407,7 +407,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }
-
         public DetailArgs build() {
             return new DetailArgs(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }

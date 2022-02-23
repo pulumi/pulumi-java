@@ -26,7 +26,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="all")
-    private final @Nullable Input<Boolean> all;
+      private final @Nullable Input<Boolean> all;
 
     public Input<Boolean> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -37,7 +37,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupLabels")
-    private final @Nullable Input<List<PatchInstanceFilterGroupLabelArgs>> groupLabels;
+      private final @Nullable Input<List<PatchInstanceFilterGroupLabelArgs>> groupLabels;
 
     public Input<List<PatchInstanceFilterGroupLabelArgs>> getGroupLabels() {
         return this.groupLabels == null ? Input.empty() : this.groupLabels;
@@ -48,7 +48,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceNamePrefixes")
-    private final @Nullable Input<List<String>> instanceNamePrefixes;
+      private final @Nullable Input<List<String>> instanceNamePrefixes;
 
     public Input<List<String>> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
@@ -59,7 +59,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -70,7 +70,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -174,7 +174,6 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public PatchInstanceFilterArgs build() {
             return new PatchInstanceFilterArgs(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

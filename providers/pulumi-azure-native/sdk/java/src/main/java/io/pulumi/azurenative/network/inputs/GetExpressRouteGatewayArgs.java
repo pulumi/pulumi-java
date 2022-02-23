@@ -17,7 +17,7 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="expressRouteGatewayName", required=true)
-    private final String expressRouteGatewayName;
+        private final String expressRouteGatewayName;
 
     public String getExpressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExpressRouteGatewayArgs build() {
             return new GetExpressRouteGatewayArgs(expressRouteGatewayName, resourceGroupName);
         }

@@ -22,7 +22,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceName", required=true)
-    private final Input<String> sourceName;
+        private final Input<String> sourceName;
 
     public Input<String> getSourceName() {
         return this.sourceName;
@@ -33,7 +33,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceType", required=true)
-    private final Input<String> sourceType;
+        private final Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType;
@@ -92,7 +92,6 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceType = Input.of(Objects.requireNonNull(sourceType));
             return this;
         }
-
         public MetricDimensionArgs build() {
             return new MetricDimensionArgs(sourceName, sourceType);
         }

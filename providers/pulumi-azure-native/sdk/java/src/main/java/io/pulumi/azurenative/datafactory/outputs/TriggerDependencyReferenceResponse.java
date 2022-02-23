@@ -77,7 +77,6 @@ public final class TriggerDependencyReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TriggerDependencyReferenceResponse build() {
             return new TriggerDependencyReferenceResponse(referenceTrigger, type);
         }

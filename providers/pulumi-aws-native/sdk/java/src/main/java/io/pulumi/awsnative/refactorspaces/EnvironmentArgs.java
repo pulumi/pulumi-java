@@ -18,21 +18,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="networkFabricType")
-    private final @Nullable Input<EnvironmentNetworkFabricType> networkFabricType;
+        private final @Nullable Input<EnvironmentNetworkFabricType> networkFabricType;
 
     public Input<EnvironmentNetworkFabricType> getNetworkFabricType() {
         return this.networkFabricType == null ? Input.empty() : this.networkFabricType;
@@ -43,7 +43,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<EnvironmentTagArgs>> tags;
+        private final @Nullable Input<List<EnvironmentTagArgs>> tags;
 
     public Input<List<EnvironmentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(description, name, networkFabricType, tags);
         }

@@ -58,7 +58,6 @@ public final class FirewallPolicyTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FirewallPolicyTag build() {
             return new FirewallPolicyTag(key, value);
         }

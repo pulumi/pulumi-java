@@ -138,7 +138,6 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetStatusResponse(percent, revision, tag, type, uri);
         }

@@ -77,7 +77,6 @@ public final class TaskFilterRule {
             this.value = value;
             return this;
         }
-
         public TaskFilterRule build() {
             return new TaskFilterRule(filterType, value);
         }

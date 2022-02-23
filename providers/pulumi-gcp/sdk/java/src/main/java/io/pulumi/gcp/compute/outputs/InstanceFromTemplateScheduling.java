@@ -103,7 +103,6 @@ public final class InstanceFromTemplateScheduling {
             this.preemptible = preemptible;
             return this;
         }
-
         public InstanceFromTemplateScheduling build() {
             return new InstanceFromTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

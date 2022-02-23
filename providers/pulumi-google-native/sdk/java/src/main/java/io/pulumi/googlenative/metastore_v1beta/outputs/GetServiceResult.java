@@ -460,7 +460,6 @@ public final class GetServiceResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(artifactGcsUri, createTime, databaseType, encryptionConfig, endpointUri, hiveMetastoreConfig, labels, maintenanceWindow, metadataIntegration, metadataManagementActivity, name, network, networkConfig, port, releaseChannel, state, stateMessage, tier, uid, updateTime);
         }

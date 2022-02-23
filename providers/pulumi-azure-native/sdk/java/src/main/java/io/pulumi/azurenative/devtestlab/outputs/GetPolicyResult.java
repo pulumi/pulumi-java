@@ -329,7 +329,6 @@ public final class GetPolicyResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(createdDate, description, evaluatorType, factData, factName, id, location, name, provisioningState, status, tags, threshold, type, uniqueIdentifier);
         }

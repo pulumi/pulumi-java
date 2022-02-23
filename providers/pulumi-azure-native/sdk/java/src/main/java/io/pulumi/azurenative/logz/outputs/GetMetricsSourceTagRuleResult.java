@@ -139,7 +139,6 @@ public final class GetMetricsSourceTagRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMetricsSourceTagRuleResult build() {
             return new GetMetricsSourceTagRuleResult(id, name, properties, systemData, type);
         }

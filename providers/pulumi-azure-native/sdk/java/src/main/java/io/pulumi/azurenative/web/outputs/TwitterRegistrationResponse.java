@@ -82,7 +82,6 @@ public final class TwitterRegistrationResponse {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
-
         public TwitterRegistrationResponse build() {
             return new TwitterRegistrationResponse(consumerKey, consumerSecretSettingName);
         }

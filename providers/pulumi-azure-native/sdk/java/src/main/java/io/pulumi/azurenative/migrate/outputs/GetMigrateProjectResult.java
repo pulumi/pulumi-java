@@ -183,7 +183,6 @@ public final class GetMigrateProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMigrateProjectResult build() {
             return new GetMigrateProjectResult(eTag, id, location, name, properties, tags, type);
         }

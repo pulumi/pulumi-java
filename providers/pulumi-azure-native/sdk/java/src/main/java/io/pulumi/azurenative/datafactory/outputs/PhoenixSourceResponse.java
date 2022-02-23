@@ -205,7 +205,6 @@ public final class PhoenixSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PhoenixSourceResponse build() {
             return new PhoenixSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

@@ -21,7 +21,7 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="end", required=true)
-    private final String end;
+      private final String end;
 
     public String getEnd() {
         return this.end;
@@ -32,7 +32,7 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="interval", required=true)
-    private final String interval;
+      private final String interval;
 
     public String getInterval() {
         return this.interval;
@@ -43,7 +43,7 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="start", required=true)
-    private final String start;
+      private final String start;
 
     public String getStart() {
         return this.start;
@@ -102,7 +102,6 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public RangePartitioningRangeResponse build() {
             return new RangePartitioningRangeResponse(end, interval, start);
         }

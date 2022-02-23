@@ -24,7 +24,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Integer $default;
+        private final @Nullable Integer $default;
 
     public Optional<Integer> get$default() {
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
@@ -35,7 +35,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elasticMaximum")
-    private final @Nullable Integer elasticMaximum;
+        private final @Nullable Integer elasticMaximum;
 
     public Optional<Integer> getElasticMaximum() {
         return this.elasticMaximum == null ? Optional.empty() : Optional.ofNullable(this.elasticMaximum);
@@ -46,7 +46,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maximum")
-    private final @Nullable Integer maximum;
+        private final @Nullable Integer maximum;
 
     public Optional<Integer> getMaximum() {
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
@@ -57,7 +57,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minimum")
-    private final @Nullable Integer minimum;
+        private final @Nullable Integer minimum;
 
     public Optional<Integer> getMinimum() {
         return this.minimum == null ? Optional.empty() : Optional.ofNullable(this.minimum);
@@ -68,7 +68,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scaleType")
-    private final @Nullable String scaleType;
+        private final @Nullable String scaleType;
 
     public Optional<String> getScaleType() {
         return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
@@ -147,7 +147,6 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
             this.scaleType = scaleType;
             return this;
         }
-
         public SkuCapacityResponse build() {
             return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
         }

@@ -54,7 +54,6 @@ public final class FhirServiceExportConfigurationResponse {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public FhirServiceExportConfigurationResponse build() {
             return new FhirServiceExportConfigurationResponse(storageAccountName);
         }

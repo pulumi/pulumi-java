@@ -15,14 +15,14 @@ public final class GetHttpsHealthCheckArgs extends io.pulumi.resources.InvokeArg
     public static final GetHttpsHealthCheckArgs Empty = new GetHttpsHealthCheckArgs();
 
     @InputImport(name="httpsHealthCheck", required=true)
-    private final String httpsHealthCheck;
+      private final String httpsHealthCheck;
 
     public String getHttpsHealthCheck() {
         return this.httpsHealthCheck;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetHttpsHealthCheckArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetHttpsHealthCheckArgs build() {
             return new GetHttpsHealthCheckArgs(httpsHealthCheck, project);
         }

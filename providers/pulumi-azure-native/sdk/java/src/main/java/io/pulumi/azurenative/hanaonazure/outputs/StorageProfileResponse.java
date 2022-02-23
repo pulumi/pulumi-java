@@ -99,7 +99,6 @@ public final class StorageProfileResponse {
             this.osDisks = osDisks;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(hanaSids, nfsIpAddress, osDisks);
         }

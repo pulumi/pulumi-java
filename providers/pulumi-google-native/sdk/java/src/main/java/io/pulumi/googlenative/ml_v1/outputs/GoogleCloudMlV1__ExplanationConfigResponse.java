@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
         }
-
         public GoogleCloudMlV1__ExplanationConfigResponse build() {
             return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }

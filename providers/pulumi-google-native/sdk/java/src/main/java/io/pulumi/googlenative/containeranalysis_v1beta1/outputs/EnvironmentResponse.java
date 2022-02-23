@@ -45,7 +45,6 @@ public final class EnvironmentResponse {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(customValues);
         }

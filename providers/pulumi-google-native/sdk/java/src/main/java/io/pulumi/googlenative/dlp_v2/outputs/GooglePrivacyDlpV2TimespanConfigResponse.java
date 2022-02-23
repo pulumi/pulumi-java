@@ -118,7 +118,6 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }
-
         public GooglePrivacyDlpV2TimespanConfigResponse build() {
             return new GooglePrivacyDlpV2TimespanConfigResponse(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }

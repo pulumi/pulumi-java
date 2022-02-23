@@ -97,7 +97,6 @@ public final class ParentGroupInfoResponse {
             this.name = name;
             return this;
         }
-
         public ParentGroupInfoResponse build() {
             return new ParentGroupInfoResponse(displayName, id, name);
         }

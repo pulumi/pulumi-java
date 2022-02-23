@@ -20,7 +20,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automatic")
-    private final @Nullable Input<Boolean> automatic;
+        private final @Nullable Input<Boolean> automatic;
 
     public Input<Boolean> getAutomatic() {
         return this.automatic == null ? Input.empty() : this.automatic;
@@ -32,7 +32,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userManaged")
-    private final @Nullable Input<SecretReplicationUserManagedArgs> userManaged;
+        private final @Nullable Input<SecretReplicationUserManagedArgs> userManaged;
 
     public Input<SecretReplicationUserManagedArgs> getUserManaged() {
         return this.userManaged == null ? Input.empty() : this.userManaged;
@@ -91,7 +91,6 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }
-
         public SecretReplicationArgs build() {
             return new SecretReplicationArgs(automatic, userManaged);
         }

@@ -204,7 +204,6 @@ public final class GetEntityTypeResult {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
-
         public GetEntityTypeResult build() {
             return new GetEntityTypeResult(autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, name, redact);
         }

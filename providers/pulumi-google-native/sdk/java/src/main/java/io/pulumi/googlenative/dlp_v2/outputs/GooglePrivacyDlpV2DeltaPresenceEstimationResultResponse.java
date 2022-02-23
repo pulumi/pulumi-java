@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse {
             this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(deltaPresenceEstimationHistogram);
         }

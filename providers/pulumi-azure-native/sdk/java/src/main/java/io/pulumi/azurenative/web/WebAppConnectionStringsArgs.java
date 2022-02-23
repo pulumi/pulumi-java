@@ -21,7 +21,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -32,7 +32,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties;
+        private final @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties;
 
     public Input<Map<String,ConnStringValueTypePairArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -143,7 +143,6 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public WebAppConnectionStringsArgs build() {
             return new WebAppConnectionStringsArgs(kind, name, properties, resourceGroupName);
         }

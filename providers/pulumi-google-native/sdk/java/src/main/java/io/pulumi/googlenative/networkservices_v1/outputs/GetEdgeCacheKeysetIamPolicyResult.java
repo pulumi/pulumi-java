@@ -120,7 +120,6 @@ public final class GetEdgeCacheKeysetIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetEdgeCacheKeysetIamPolicyResult build() {
             return new GetEdgeCacheKeysetIamPolicyResult(auditConfigs, bindings, etag, version);
         }

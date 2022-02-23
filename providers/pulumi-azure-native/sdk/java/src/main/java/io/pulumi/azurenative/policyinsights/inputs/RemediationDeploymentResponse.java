@@ -22,7 +22,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createdOn", required=true)
-    private final String createdOn;
+        private final String createdOn;
 
     public String getCreatedOn() {
         return this.createdOn;
@@ -33,7 +33,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="deploymentId", required=true)
-    private final String deploymentId;
+        private final String deploymentId;
 
     public String getDeploymentId() {
         return this.deploymentId;
@@ -44,7 +44,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="error", required=true)
-    private final ErrorDefinitionResponse error;
+        private final ErrorDefinitionResponse error;
 
     public ErrorDefinitionResponse getError() {
         return this.error;
@@ -55,7 +55,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastUpdatedOn", required=true)
-    private final String lastUpdatedOn;
+        private final String lastUpdatedOn;
 
     public String getLastUpdatedOn() {
         return this.lastUpdatedOn;
@@ -66,7 +66,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="remediatedResourceId", required=true)
-    private final String remediatedResourceId;
+        private final String remediatedResourceId;
 
     public String getRemediatedResourceId() {
         return this.remediatedResourceId;
@@ -77,7 +77,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceLocation", required=true)
-    private final String resourceLocation;
+        private final String resourceLocation;
 
     public String getResourceLocation() {
         return this.resourceLocation;
@@ -88,7 +88,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -187,7 +187,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RemediationDeploymentResponse build() {
             return new RemediationDeploymentResponse(createdOn, deploymentId, error, lastUpdatedOn, remediatedResourceId, resourceLocation, status);
         }

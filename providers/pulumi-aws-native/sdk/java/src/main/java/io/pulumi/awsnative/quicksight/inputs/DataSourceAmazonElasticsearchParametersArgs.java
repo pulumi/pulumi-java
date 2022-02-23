@@ -22,7 +22,7 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends io.pulumi
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+        private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -65,7 +65,6 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends io.pulumi
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public DataSourceAmazonElasticsearchParametersArgs build() {
             return new DataSourceAmazonElasticsearchParametersArgs(domain);
         }

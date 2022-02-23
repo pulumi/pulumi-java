@@ -127,7 +127,6 @@ public final class GetModelPackageGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetModelPackageGroupResult build() {
             return new GetModelPackageGroupResult(creationTime, modelPackageGroupArn, modelPackageGroupPolicy, modelPackageGroupStatus, tags);
         }

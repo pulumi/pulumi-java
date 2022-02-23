@@ -24,7 +24,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryInsightsEnabled")
-    private final @Nullable Input<Boolean> queryInsightsEnabled;
+      private final @Nullable Input<Boolean> queryInsightsEnabled;
 
     public Input<Boolean> getQueryInsightsEnabled() {
         return this.queryInsightsEnabled == null ? Input.empty() : this.queryInsightsEnabled;
@@ -35,7 +35,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryPlansPerMinute")
-    private final @Nullable Input<Integer> queryPlansPerMinute;
+      private final @Nullable Input<Integer> queryPlansPerMinute;
 
     public Input<Integer> getQueryPlansPerMinute() {
         return this.queryPlansPerMinute == null ? Input.empty() : this.queryPlansPerMinute;
@@ -46,7 +46,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringLength")
-    private final @Nullable Input<Integer> queryStringLength;
+      private final @Nullable Input<Integer> queryStringLength;
 
     public Input<Integer> getQueryStringLength() {
         return this.queryStringLength == null ? Input.empty() : this.queryStringLength;
@@ -57,7 +57,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordApplicationTags")
-    private final @Nullable Input<Boolean> recordApplicationTags;
+      private final @Nullable Input<Boolean> recordApplicationTags;
 
     public Input<Boolean> getRecordApplicationTags() {
         return this.recordApplicationTags == null ? Input.empty() : this.recordApplicationTags;
@@ -68,7 +68,7 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordClientAddress")
-    private final @Nullable Input<Boolean> recordClientAddress;
+      private final @Nullable Input<Boolean> recordClientAddress;
 
     public Input<Boolean> getRecordClientAddress() {
         return this.recordClientAddress == null ? Input.empty() : this.recordClientAddress;
@@ -172,7 +172,6 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.recordClientAddress = Input.ofNullable(recordClientAddress);
             return this;
         }
-
         public InsightsConfigArgs build() {
             return new InsightsConfigArgs(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
         }

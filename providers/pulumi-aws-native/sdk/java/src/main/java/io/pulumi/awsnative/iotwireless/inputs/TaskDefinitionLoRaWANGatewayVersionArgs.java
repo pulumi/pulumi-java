@@ -15,21 +15,21 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
     public static final TaskDefinitionLoRaWANGatewayVersionArgs Empty = new TaskDefinitionLoRaWANGatewayVersionArgs();
 
     @InputImport(name="model")
-    private final @Nullable Input<String> model;
+        private final @Nullable Input<String> model;
 
     public Input<String> getModel() {
         return this.model == null ? Input.empty() : this.model;
     }
 
     @InputImport(name="packageVersion")
-    private final @Nullable Input<String> packageVersion;
+        private final @Nullable Input<String> packageVersion;
 
     public Input<String> getPackageVersion() {
         return this.packageVersion == null ? Input.empty() : this.packageVersion;
     }
 
     @InputImport(name="station")
-    private final @Nullable Input<String> station;
+        private final @Nullable Input<String> station;
 
     public Input<String> getStation() {
         return this.station == null ? Input.empty() : this.station;
@@ -103,7 +103,6 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
             this.station = Input.ofNullable(station);
             return this;
         }
-
         public TaskDefinitionLoRaWANGatewayVersionArgs build() {
             return new TaskDefinitionLoRaWANGatewayVersionArgs(model, packageVersion, station);
         }

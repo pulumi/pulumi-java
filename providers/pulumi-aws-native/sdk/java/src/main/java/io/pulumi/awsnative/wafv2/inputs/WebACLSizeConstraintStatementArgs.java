@@ -22,28 +22,28 @@ public final class WebACLSizeConstraintStatementArgs extends io.pulumi.resources
     public static final WebACLSizeConstraintStatementArgs Empty = new WebACLSizeConstraintStatementArgs();
 
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator;
+        private final Input<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator;
 
     public Input<WebACLSizeConstraintStatementComparisonOperator> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+        private final Input<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="size", required=true)
-    private final Input<Double> size;
+        private final Input<Double> size;
 
     public Input<Double> getSize() {
         return this.size;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+        private final Input<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -132,7 +132,6 @@ public final class WebACLSizeConstraintStatementArgs extends io.pulumi.resources
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public WebACLSizeConstraintStatementArgs build() {
             return new WebACLSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
         }

@@ -74,7 +74,6 @@ public final class ModelExplainabilityJobDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionTag build() {
             return new ModelExplainabilityJobDefinitionTag(key, value);
         }

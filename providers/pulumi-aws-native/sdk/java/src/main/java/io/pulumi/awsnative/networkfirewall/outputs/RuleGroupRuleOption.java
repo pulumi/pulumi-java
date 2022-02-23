@@ -60,7 +60,6 @@ public final class RuleGroupRuleOption {
             this.settings = settings;
             return this;
         }
-
         public RuleGroupRuleOption build() {
             return new RuleGroupRuleOption(keyword, settings);
         }

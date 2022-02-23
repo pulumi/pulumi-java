@@ -21,7 +21,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automlModel", required=true)
-    private final String automlModel;
+      private final String automlModel;
 
     public String getAutomlModel() {
         return this.automlModel;
@@ -32,7 +32,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcsTfliteUri", required=true)
-    private final String gcsTfliteUri;
+      private final String gcsTfliteUri;
 
     public String getGcsTfliteUri() {
         return this.gcsTfliteUri;
@@ -43,7 +43,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeBytes", required=true)
-    private final String sizeBytes;
+      private final String sizeBytes;
 
     public String getSizeBytes() {
         return this.sizeBytes;
@@ -102,7 +102,6 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public TfLiteModelResponse build() {
             return new TfLiteModelResponse(automlModel, gcsTfliteUri, sizeBytes);
         }

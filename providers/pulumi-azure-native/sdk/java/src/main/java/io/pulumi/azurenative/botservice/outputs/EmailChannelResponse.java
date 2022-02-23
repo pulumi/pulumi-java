@@ -142,7 +142,6 @@ public final class EmailChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EmailChannelResponse build() {
             return new EmailChannelResponse(channelName, etag, location, properties, provisioningState);
         }

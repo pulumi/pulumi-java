@@ -96,7 +96,6 @@ public final class OsConstraintResponse {
             this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
             return this;
         }
-
         public OsConstraintResponse build() {
             return new OsConstraintResponse(minimumVersion, osType, requireVerifiedChromeOs);
         }

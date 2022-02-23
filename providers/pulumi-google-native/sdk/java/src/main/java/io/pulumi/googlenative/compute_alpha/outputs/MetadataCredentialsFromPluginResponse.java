@@ -74,7 +74,6 @@ public final class MetadataCredentialsFromPluginResponse {
             this.structConfig = Objects.requireNonNull(structConfig);
             return this;
         }
-
         public MetadataCredentialsFromPluginResponse build() {
             return new MetadataCredentialsFromPluginResponse(name, structConfig);
         }

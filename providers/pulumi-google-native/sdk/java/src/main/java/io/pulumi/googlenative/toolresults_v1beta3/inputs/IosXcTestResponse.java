@@ -21,7 +21,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final String bundleId;
+      private final String bundleId;
 
     public String getBundleId() {
         return this.bundleId;
@@ -32,7 +32,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xcodeVersion", required=true)
-    private final String xcodeVersion;
+      private final String xcodeVersion;
 
     public String getXcodeVersion() {
         return this.xcodeVersion;
@@ -81,7 +81,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
-
         public IosXcTestResponse build() {
             return new IosXcTestResponse(bundleId, xcodeVersion);
         }

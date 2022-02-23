@@ -26,7 +26,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable DatasetReferenceResponse dataset;
+        private final @Nullable DatasetReferenceResponse dataset;
 
     public Optional<DatasetReferenceResponse> getDataset() {
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
@@ -37,7 +37,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="flowlet")
-    private final @Nullable DataFlowReferenceResponse flowlet;
+        private final @Nullable DataFlowReferenceResponse flowlet;
 
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return this.flowlet == null ? Optional.empty() : Optional.ofNullable(this.flowlet);
@@ -59,7 +59,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="linkedService")
-    private final @Nullable LinkedServiceReferenceResponse linkedService;
+        private final @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
@@ -70,7 +70,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="schemaLinkedService")
-    private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
+        private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
         return this.schemaLinkedService == null ? Optional.empty() : Optional.ofNullable(this.schemaLinkedService);
@@ -92,7 +92,7 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="script")
-    private final @Nullable String script;
+        private final @Nullable String script;
 
     public Optional<String> getScript() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
@@ -191,7 +191,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
             this.script = script;
             return this;
         }
-
         public PowerQuerySourceResponse build() {
             return new PowerQuerySourceResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService, script);
         }

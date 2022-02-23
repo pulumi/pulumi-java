@@ -117,7 +117,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

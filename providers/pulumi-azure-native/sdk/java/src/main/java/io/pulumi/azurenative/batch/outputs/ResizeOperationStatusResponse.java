@@ -139,7 +139,6 @@ public final class ResizeOperationStatusResponse {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
-
         public ResizeOperationStatusResponse build() {
             return new ResizeOperationStatusResponse(errors, nodeDeallocationOption, resizeTimeout, startTime, targetDedicatedNodes, targetLowPriorityNodes);
         }

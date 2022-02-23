@@ -21,7 +21,7 @@ public final class LocalObjectReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,6 @@ public final class LocalObjectReferenceResponse extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LocalObjectReferenceResponse build() {
             return new LocalObjectReferenceResponse(name);
         }

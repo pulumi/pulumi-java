@@ -54,7 +54,6 @@ public final class CacheSecuritySettingsResponse {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public CacheSecuritySettingsResponse build() {
             return new CacheSecuritySettingsResponse(accessPolicies);
         }

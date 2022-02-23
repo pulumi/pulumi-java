@@ -54,7 +54,6 @@ public final class PersonalComputeInstanceSettingsResponse {
             this.assignedUser = assignedUser;
             return this;
         }
-
         public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }

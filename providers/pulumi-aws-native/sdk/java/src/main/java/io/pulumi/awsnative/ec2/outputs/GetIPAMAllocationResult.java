@@ -54,7 +54,6 @@ public final class GetIPAMAllocationResult {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
-
         public GetIPAMAllocationResult build() {
             return new GetIPAMAllocationResult(ipamPoolAllocationId);
         }

@@ -19,7 +19,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -30,7 +30,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -41,7 +41,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncAgentName")
-    private final @Nullable Input<String> syncAgentName;
+        private final @Nullable Input<String> syncAgentName;
 
     public Input<String> getSyncAgentName() {
         return this.syncAgentName == null ? Input.empty() : this.syncAgentName;
@@ -52,7 +52,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncDatabaseId")
-    private final @Nullable Input<String> syncDatabaseId;
+        private final @Nullable Input<String> syncDatabaseId;
 
     public Input<String> getSyncDatabaseId() {
         return this.syncDatabaseId == null ? Input.empty() : this.syncDatabaseId;
@@ -141,7 +141,6 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
             this.syncDatabaseId = Input.ofNullable(syncDatabaseId);
             return this;
         }
-
         public SyncAgentArgs build() {
             return new SyncAgentArgs(resourceGroupName, serverName, syncAgentName, syncDatabaseId);
         }

@@ -22,7 +22,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -33,7 +33,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideStrategy")
-    private final @Nullable Input<String> overrideStrategy;
+        private final @Nullable Input<String> overrideStrategy;
 
     public Input<String> getOverrideStrategy() {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
@@ -59,7 +59,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,7 +71,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceRecords")
-    private final @Nullable Input<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
+        private final @Nullable Input<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
 
     public Input<List<DomainMappingResourceRecordGetArgs>> getResourceRecords() {
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
@@ -83,7 +83,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslSettings")
-    private final @Nullable Input<DomainMappingSslSettingsGetArgs> sslSettings;
+        private final @Nullable Input<DomainMappingSslSettingsGetArgs> sslSettings;
 
     public Input<DomainMappingSslSettingsGetArgs> getSslSettings() {
         return this.sslSettings == null ? Input.empty() : this.sslSettings;
@@ -202,7 +202,6 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             this.sslSettings = Input.ofNullable(sslSettings);
             return this;
         }
-
         public DomainMappingState build() {
             return new DomainMappingState(domainName, name, overrideStrategy, project, resourceRecords, sslSettings);
         }

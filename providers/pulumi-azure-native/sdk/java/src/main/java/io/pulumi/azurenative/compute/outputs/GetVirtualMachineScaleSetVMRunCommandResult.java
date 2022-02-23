@@ -377,7 +377,6 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualMachineScaleSetVMRunCommandResult build() {
             return new GetVirtualMachineScaleSetVMRunCommandResult(asyncExecution, errorBlobUri, id, instanceView, location, name, outputBlobUri, parameters, protectedParameters, provisioningState, runAsPassword, runAsUser, source, tags, timeoutInSeconds, type);
         }

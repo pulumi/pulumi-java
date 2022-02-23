@@ -23,7 +23,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectIdPath", required=true)
-    private final Input<List<Integer>> objectIdPath;
+      private final Input<List<Integer>> objectIdPath;
 
     public Input<List<Integer>> getObjectIdPath() {
         return this.objectIdPath;
@@ -66,7 +66,6 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
             this.objectIdPath = Input.of(Objects.requireNonNull(objectIdPath));
             return this;
         }
-
         public ObjectIdArgs build() {
             return new ObjectIdArgs(objectIdPath);
         }

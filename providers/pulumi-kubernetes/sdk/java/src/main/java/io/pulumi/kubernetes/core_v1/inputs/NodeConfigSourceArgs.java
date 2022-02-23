@@ -23,7 +23,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configMap")
-    private final @Nullable Input<ConfigMapNodeConfigSourceArgs> configMap;
+        private final @Nullable Input<ConfigMapNodeConfigSourceArgs> configMap;
 
     public Input<ConfigMapNodeConfigSourceArgs> getConfigMap() {
         return this.configMap == null ? Input.empty() : this.configMap;
@@ -66,7 +66,6 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
             this.configMap = Input.ofNullable(configMap);
             return this;
         }
-
         public NodeConfigSourceArgs build() {
             return new NodeConfigSourceArgs(configMap);
         }

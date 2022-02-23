@@ -289,7 +289,6 @@ public final class GetVirtualMachineScaleSetVMExtensionResult {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public GetVirtualMachineScaleSetVMExtensionResult build() {
             return new GetVirtualMachineScaleSetVMExtensionResult(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, id, instanceView, name, protectedSettings, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

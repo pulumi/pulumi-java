@@ -15,7 +15,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     public static final DataSourceAccessControlListConfigurationArgs Empty = new DataSourceAccessControlListConfigurationArgs();
 
     @InputImport(name="keyPath")
-    private final @Nullable Input<String> keyPath;
+        private final @Nullable Input<String> keyPath;
 
     public Input<String> getKeyPath() {
         return this.keyPath == null ? Input.empty() : this.keyPath;
@@ -58,7 +58,6 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
             this.keyPath = Input.ofNullable(keyPath);
             return this;
         }
-
         public DataSourceAccessControlListConfigurationArgs build() {
             return new DataSourceAccessControlListConfigurationArgs(keyPath);
         }

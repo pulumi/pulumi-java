@@ -78,7 +78,6 @@ public final class StreamingPolicyContentKeysResponse {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
-
         public StreamingPolicyContentKeysResponse build() {
             return new StreamingPolicyContentKeysResponse(defaultKey, keyToTrackMappings);
         }

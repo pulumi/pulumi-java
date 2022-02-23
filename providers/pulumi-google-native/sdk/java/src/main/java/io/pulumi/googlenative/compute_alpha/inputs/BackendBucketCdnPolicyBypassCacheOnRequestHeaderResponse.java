@@ -21,7 +21,7 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+      private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -59,7 +59,6 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse build() {
             return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(headerName);
         }

@@ -18,42 +18,42 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     public static final InAppTemplateInAppMessageContentArgs Empty = new InAppTemplateInAppMessageContentArgs();
 
     @InputImport(name="backgroundColor")
-    private final @Nullable Input<String> backgroundColor;
+        private final @Nullable Input<String> backgroundColor;
 
     public Input<String> getBackgroundColor() {
         return this.backgroundColor == null ? Input.empty() : this.backgroundColor;
     }
 
     @InputImport(name="bodyConfig")
-    private final @Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig;
+        private final @Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig;
 
     public Input<InAppTemplateBodyConfigArgs> getBodyConfig() {
         return this.bodyConfig == null ? Input.empty() : this.bodyConfig;
     }
 
     @InputImport(name="headerConfig")
-    private final @Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig;
+        private final @Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig;
 
     public Input<InAppTemplateHeaderConfigArgs> getHeaderConfig() {
         return this.headerConfig == null ? Input.empty() : this.headerConfig;
     }
 
     @InputImport(name="imageUrl")
-    private final @Nullable Input<String> imageUrl;
+        private final @Nullable Input<String> imageUrl;
 
     public Input<String> getImageUrl() {
         return this.imageUrl == null ? Input.empty() : this.imageUrl;
     }
 
     @InputImport(name="primaryBtn")
-    private final @Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn;
+        private final @Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn;
 
     public Input<InAppTemplateButtonConfigArgs> getPrimaryBtn() {
         return this.primaryBtn == null ? Input.empty() : this.primaryBtn;
     }
 
     @InputImport(name="secondaryBtn")
-    private final @Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn;
+        private final @Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn;
 
     public Input<InAppTemplateButtonConfigArgs> getSecondaryBtn() {
         return this.secondaryBtn == null ? Input.empty() : this.secondaryBtn;
@@ -172,7 +172,6 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
             this.secondaryBtn = Input.ofNullable(secondaryBtn);
             return this;
         }
-
         public InAppTemplateInAppMessageContentArgs build() {
             return new InAppTemplateInAppMessageContentArgs(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }

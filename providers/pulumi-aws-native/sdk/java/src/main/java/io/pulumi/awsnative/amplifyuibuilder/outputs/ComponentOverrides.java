@@ -30,7 +30,6 @@ public final class ComponentOverrides {
         public Builder(ComponentOverrides defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentOverrides build() {
             return new ComponentOverrides();
         }

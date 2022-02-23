@@ -54,7 +54,6 @@ public final class ThrottlingInformationResponse {
             this.duration = duration;
             return this;
         }
-
         public ThrottlingInformationResponse build() {
             return new ThrottlingInformationResponse(duration);
         }

@@ -34,7 +34,6 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(AutomaticArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AutomaticArgs build() {
             return new AutomaticArgs();
         }

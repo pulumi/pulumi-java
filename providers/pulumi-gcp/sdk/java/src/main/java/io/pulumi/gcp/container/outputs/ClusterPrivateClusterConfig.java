@@ -211,7 +211,6 @@ public final class ClusterPrivateClusterConfig {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
-
         public ClusterPrivateClusterConfig build() {
             return new ClusterPrivateClusterConfig(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

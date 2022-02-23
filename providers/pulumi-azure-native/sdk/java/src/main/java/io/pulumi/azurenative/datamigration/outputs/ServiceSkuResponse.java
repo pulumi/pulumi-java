@@ -140,7 +140,6 @@ public final class ServiceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ServiceSkuResponse build() {
             return new ServiceSkuResponse(capacity, family, name, size, tier);
         }

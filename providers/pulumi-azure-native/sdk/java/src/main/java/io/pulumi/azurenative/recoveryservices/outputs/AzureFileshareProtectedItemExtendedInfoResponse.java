@@ -140,7 +140,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
             this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
             return this;
         }
-
         public AzureFileshareProtectedItemExtendedInfoResponse build() {
             return new AzureFileshareProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount, resourceState, resourceStateSyncTime);
         }

@@ -98,7 +98,6 @@ public final class AutoScalePropertiesResponse {
             this.minNodeCount = minNodeCount;
             return this;
         }
-
         public AutoScalePropertiesResponse build() {
             return new AutoScalePropertiesResponse(enabled, maxNodeCount, minNodeCount);
         }

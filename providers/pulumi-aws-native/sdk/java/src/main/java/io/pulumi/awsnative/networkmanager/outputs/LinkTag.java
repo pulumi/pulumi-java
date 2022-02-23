@@ -60,7 +60,6 @@ public final class LinkTag {
             this.value = value;
             return this;
         }
-
         public LinkTag build() {
             return new LinkTag(key, value);
         }

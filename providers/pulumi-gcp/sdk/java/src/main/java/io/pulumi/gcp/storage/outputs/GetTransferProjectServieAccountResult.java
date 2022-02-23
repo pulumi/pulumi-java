@@ -87,7 +87,6 @@ public final class GetTransferProjectServieAccountResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetTransferProjectServieAccountResult build() {
             return new GetTransferProjectServieAccountResult(email, id, project);
         }

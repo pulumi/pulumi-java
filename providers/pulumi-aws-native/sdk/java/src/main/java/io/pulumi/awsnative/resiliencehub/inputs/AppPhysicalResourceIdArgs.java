@@ -15,28 +15,28 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     public static final AppPhysicalResourceIdArgs Empty = new AppPhysicalResourceIdArgs();
 
     @InputImport(name="awsAccountId")
-    private final @Nullable Input<String> awsAccountId;
+        private final @Nullable Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
     }
 
     @InputImport(name="awsRegion")
-    private final @Nullable Input<String> awsRegion;
+        private final @Nullable Input<String> awsRegion;
 
     public Input<String> getAwsRegion() {
         return this.awsRegion == null ? Input.empty() : this.awsRegion;
     }
 
     @InputImport(name="identifier", required=true)
-    private final Input<String> identifier;
+        private final Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -125,7 +125,6 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AppPhysicalResourceIdArgs build() {
             return new AppPhysicalResourceIdArgs(awsAccountId, awsRegion, identifier, type);
         }

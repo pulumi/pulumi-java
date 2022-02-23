@@ -22,14 +22,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionId")
-    private final @Nullable Input<String> collectionId;
+      private final @Nullable Input<String> collectionId;
 
     public Input<String> getCollectionId() {
         return this.collectionId == null ? Input.empty() : this.collectionId;
     }
 
     @InputImport(name="databaseId", required=true)
-    private final Input<String> databaseId;
+      private final Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId;
@@ -40,7 +40,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
+      private final @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
     public Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -51,14 +51,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,7 +69,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<IndexState> state;
+      private final @Nullable Input<IndexState> state;
 
     public Input<IndexState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -188,7 +188,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public IndexArgs build() {
             return new IndexArgs(collectionId, databaseId, fields, name, project, state);
         }

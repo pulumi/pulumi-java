@@ -16,14 +16,14 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
     public static final TaskDefinitionKernelCapabilitiesArgs Empty = new TaskDefinitionKernelCapabilitiesArgs();
 
     @InputImport(name="add")
-    private final @Nullable Input<List<String>> add;
+        private final @Nullable Input<List<String>> add;
 
     public Input<List<String>> getAdd() {
         return this.add == null ? Input.empty() : this.add;
     }
 
     @InputImport(name="drop")
-    private final @Nullable Input<List<String>> drop;
+        private final @Nullable Input<List<String>> drop;
 
     public Input<List<String>> getDrop() {
         return this.drop == null ? Input.empty() : this.drop;
@@ -82,7 +82,6 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
             this.drop = Input.ofNullable(drop);
             return this;
         }
-
         public TaskDefinitionKernelCapabilitiesArgs build() {
             return new TaskDefinitionKernelCapabilitiesArgs(add, drop);
         }

@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="excludedFields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> excludedFields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> excludedFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getExcludedFields() {
         return this.excludedFields;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="identifyingFields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="includedFields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> includedFields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> includedFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getIncludedFields() {
         return this.includedFields;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="rowsLimit", required=true)
-    private final String rowsLimit;
+      private final String rowsLimit;
 
     public String getRowsLimit() {
         return this.rowsLimit;
@@ -69,14 +69,14 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="rowsLimitPercent", required=true)
-    private final Integer rowsLimitPercent;
+      private final Integer rowsLimitPercent;
 
     public Integer getRowsLimitPercent() {
         return this.rowsLimitPercent;
     }
 
     @InputImport(name="sampleMethod", required=true)
-    private final String sampleMethod;
+      private final String sampleMethod;
 
     public String getSampleMethod() {
         return this.sampleMethod;
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="tableReference", required=true)
-    private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
+      private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTableReference() {
         return this.tableReference;
@@ -186,7 +186,6 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryOptionsResponse build() {
             return new GooglePrivacyDlpV2BigQueryOptionsResponse(excludedFields, identifyingFields, includedFields, rowsLimit, rowsLimitPercent, sampleMethod, tableReference);
         }

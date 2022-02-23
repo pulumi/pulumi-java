@@ -22,7 +22,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPolicy", required=true)
-    private final Input<Either<String,DataPolicy>> dataPolicy;
+        private final Input<Either<String,DataPolicy>> dataPolicy;
 
     public Input<Either<String,DataPolicy>> getDataPolicy() {
         return this.dataPolicy;
@@ -33,7 +33,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -55,7 +55,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountCredentialId")
-    private final @Nullable Input<String> storageAccountCredentialId;
+        private final @Nullable Input<String> storageAccountCredentialId;
 
     public Input<String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId == null ? Input.empty() : this.storageAccountCredentialId;
@@ -77,7 +77,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName")
-    private final @Nullable Input<String> storageAccountName;
+        private final @Nullable Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -88,7 +88,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountStatus")
-    private final @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus;
+        private final @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus;
 
     public Input<Either<String,StorageAccountStatus>> getStorageAccountStatus() {
         return this.storageAccountStatus == null ? Input.empty() : this.storageAccountStatus;
@@ -222,7 +222,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountStatus = Input.ofNullable(storageAccountStatus);
             return this;
         }
-
         public StorageAccountArgs build() {
             return new StorageAccountArgs(dataPolicy, description, deviceName, resourceGroupName, storageAccountCredentialId, storageAccountName, storageAccountStatus);
         }

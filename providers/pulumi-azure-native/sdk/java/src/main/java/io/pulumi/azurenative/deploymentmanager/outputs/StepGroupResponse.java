@@ -140,7 +140,6 @@ public final class StepGroupResponse {
             this.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
-
         public StepGroupResponse build() {
             return new StepGroupResponse(dependsOnStepGroups, deploymentTargetId, name, postDeploymentSteps, preDeploymentSteps);
         }

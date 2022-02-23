@@ -21,7 +21,7 @@ public final class ContainerGroupNetworkProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,6 @@ public final class ContainerGroupNetworkProfileResponse extends io.pulumi.resour
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ContainerGroupNetworkProfileResponse build() {
             return new ContainerGroupNetworkProfileResponse(id);
         }

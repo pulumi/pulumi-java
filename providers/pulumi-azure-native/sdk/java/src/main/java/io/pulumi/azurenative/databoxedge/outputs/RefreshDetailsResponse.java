@@ -118,7 +118,6 @@ public final class RefreshDetailsResponse {
             this.lastJob = lastJob;
             return this;
         }
-
         public RefreshDetailsResponse build() {
             return new RefreshDetailsResponse(errorManifestFile, inProgressRefreshJobId, lastCompletedRefreshJobTimeInUTC, lastJob);
         }

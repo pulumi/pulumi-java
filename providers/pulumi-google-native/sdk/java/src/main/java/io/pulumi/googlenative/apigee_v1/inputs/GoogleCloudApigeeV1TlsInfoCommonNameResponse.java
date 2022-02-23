@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
      * 
      */
     @InputImport(name="wildcardMatch", required=true)
-    private final Boolean wildcardMatch;
+      private final Boolean wildcardMatch;
 
     public Boolean getWildcardMatch() {
         return this.wildcardMatch;
@@ -78,7 +78,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
             this.wildcardMatch = Objects.requireNonNull(wildcardMatch);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoCommonNameResponse build() {
             return new GoogleCloudApigeeV1TlsInfoCommonNameResponse(value, wildcardMatch);
         }

@@ -23,7 +23,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+        private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -66,7 +66,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
-
         public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(privateIpAddress);
         }

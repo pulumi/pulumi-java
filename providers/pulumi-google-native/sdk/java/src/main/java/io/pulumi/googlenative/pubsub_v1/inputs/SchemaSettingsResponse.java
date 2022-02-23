@@ -21,7 +21,7 @@ public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -32,7 +32,7 @@ public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="schema", required=true)
-    private final String schema;
+      private final String schema;
 
     public String getSchema() {
         return this.schema;
@@ -81,7 +81,6 @@ public final class SchemaSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public SchemaSettingsResponse build() {
             return new SchemaSettingsResponse(encoding, schema);
         }

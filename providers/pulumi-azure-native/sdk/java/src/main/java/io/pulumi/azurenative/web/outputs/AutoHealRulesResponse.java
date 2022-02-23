@@ -77,7 +77,6 @@ public final class AutoHealRulesResponse {
             this.triggers = triggers;
             return this;
         }
-
         public AutoHealRulesResponse build() {
             return new AutoHealRulesResponse(actions, triggers);
         }

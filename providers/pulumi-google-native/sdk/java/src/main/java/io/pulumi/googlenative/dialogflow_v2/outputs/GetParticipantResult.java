@@ -117,7 +117,6 @@ public final class GetParticipantResult {
             this.sipRecordingMediaLabel = Objects.requireNonNull(sipRecordingMediaLabel);
             return this;
         }
-
         public GetParticipantResult build() {
             return new GetParticipantResult(documentsMetadataFilters, name, role, sipRecordingMediaLabel);
         }

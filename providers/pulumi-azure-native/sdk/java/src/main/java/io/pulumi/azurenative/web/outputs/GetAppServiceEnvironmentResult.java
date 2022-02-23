@@ -483,7 +483,6 @@ public final class GetAppServiceEnvironmentResult {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public GetAppServiceEnvironmentResult build() {
             return new GetAppServiceEnvironmentResult(clusterSettings, dedicatedHostCount, dnsSuffix, frontEndScaleFactor, hasLinuxWorkers, id, internalLoadBalancingMode, ipsslAddressCount, kind, location, maximumNumberOfMachines, multiRoleCount, multiSize, name, provisioningState, status, suspended, tags, type, userWhitelistedIpRanges, virtualNetwork);
         }

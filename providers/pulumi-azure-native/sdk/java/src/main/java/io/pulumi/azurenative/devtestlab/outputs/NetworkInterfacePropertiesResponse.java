@@ -224,7 +224,6 @@ public final class NetworkInterfacePropertiesResponse {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public NetworkInterfacePropertiesResponse build() {
             return new NetworkInterfacePropertiesResponse(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
         }

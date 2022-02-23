@@ -95,7 +95,6 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1ScheduleSpecResponse build() {
             return new GoogleCloudDatapipelinesV1ScheduleSpecResponse(nextJobTime, schedule, timeZone);
         }

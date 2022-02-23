@@ -75,7 +75,6 @@ public final class IngressPolicyResponse {
             this.ingressTo = Objects.requireNonNull(ingressTo);
             return this;
         }
-
         public IngressPolicyResponse build() {
             return new IngressPolicyResponse(ingressFrom, ingressTo);
         }

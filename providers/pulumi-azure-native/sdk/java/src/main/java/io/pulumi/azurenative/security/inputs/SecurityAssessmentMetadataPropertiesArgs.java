@@ -33,14 +33,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="assessmentType", required=true)
-    private final Input<Either<String,AssessmentType>> assessmentType;
+        private final Input<Either<String,AssessmentType>> assessmentType;
 
     public Input<Either<String,AssessmentType>> getAssessmentType() {
         return this.assessmentType;
     }
 
     @InputImport(name="categories")
-    private final @Nullable Input<List<Either<String,Categories>>> categories;
+        private final @Nullable Input<List<Either<String,Categories>>> categories;
 
     public Input<List<Either<String,Categories>>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -51,7 +51,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -62,7 +62,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -73,7 +73,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="implementationEffort")
-    private final @Nullable Input<Either<String,ImplementationEffort>> implementationEffort;
+        private final @Nullable Input<Either<String,ImplementationEffort>> implementationEffort;
 
     public Input<Either<String,ImplementationEffort>> getImplementationEffort() {
         return this.implementationEffort == null ? Input.empty() : this.implementationEffort;
@@ -84,7 +84,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="partnerData")
-    private final @Nullable Input<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
+        private final @Nullable Input<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
     public Input<SecurityAssessmentMetadataPartnerDataArgs> getPartnerData() {
         return this.partnerData == null ? Input.empty() : this.partnerData;
@@ -95,7 +95,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+        private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -106,7 +106,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="remediationDescription")
-    private final @Nullable Input<String> remediationDescription;
+        private final @Nullable Input<String> remediationDescription;
 
     public Input<String> getRemediationDescription() {
         return this.remediationDescription == null ? Input.empty() : this.remediationDescription;
@@ -117,14 +117,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Either<String,Severity>> severity;
+        private final Input<Either<String,Severity>> severity;
 
     public Input<Either<String,Severity>> getSeverity() {
         return this.severity;
     }
 
     @InputImport(name="threats")
-    private final @Nullable Input<List<Either<String,Threats>>> threats;
+        private final @Nullable Input<List<Either<String,Threats>>> threats;
 
     public Input<List<Either<String,Threats>>> getThreats() {
         return this.threats == null ? Input.empty() : this.threats;
@@ -135,7 +135,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="userImpact")
-    private final @Nullable Input<Either<String,UserImpact>> userImpact;
+        private final @Nullable Input<Either<String,UserImpact>> userImpact;
 
     public Input<Either<String,UserImpact>> getUserImpact() {
         return this.userImpact == null ? Input.empty() : this.userImpact;
@@ -329,7 +329,6 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             this.userImpact = Input.ofNullable(userImpact);
             return this;
         }
-
         public SecurityAssessmentMetadataPropertiesArgs build() {
             return new SecurityAssessmentMetadataPropertiesArgs(assessmentType, categories, description, displayName, implementationEffort, partnerData, preview, remediationDescription, severity, threats, userImpact);
         }

@@ -374,7 +374,6 @@ public final class SapTableSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapTableSourceResponse build() {
             return new SapTableSourceResponse(additionalColumns, batchSize, customRfcReadTableFunctionModule, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, rfcTableFields, rfcTableOptions, rowCount, rowSkips, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }

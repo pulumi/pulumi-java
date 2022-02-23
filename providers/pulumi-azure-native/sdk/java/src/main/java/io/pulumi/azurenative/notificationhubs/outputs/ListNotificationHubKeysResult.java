@@ -139,7 +139,6 @@ public final class ListNotificationHubKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListNotificationHubKeysResult build() {
             return new ListNotificationHubKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

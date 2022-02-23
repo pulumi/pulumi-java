@@ -137,7 +137,6 @@ public final class GetViewResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetViewResult build() {
             return new GetViewResult(createTime, displayName, name, updateTime, value);
         }

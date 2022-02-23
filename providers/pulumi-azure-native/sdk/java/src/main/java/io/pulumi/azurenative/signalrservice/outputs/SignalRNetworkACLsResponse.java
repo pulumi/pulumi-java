@@ -100,7 +100,6 @@ public final class SignalRNetworkACLsResponse {
             this.publicNetwork = publicNetwork;
             return this;
         }
-
         public SignalRNetworkACLsResponse build() {
             return new SignalRNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
         }

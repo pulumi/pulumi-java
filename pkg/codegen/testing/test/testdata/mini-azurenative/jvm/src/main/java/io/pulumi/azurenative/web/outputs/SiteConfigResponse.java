@@ -54,7 +54,6 @@ public final class SiteConfigResponse {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
-
         public SiteConfigResponse build() {
             return new SiteConfigResponse(netFrameworkVersion);
         }

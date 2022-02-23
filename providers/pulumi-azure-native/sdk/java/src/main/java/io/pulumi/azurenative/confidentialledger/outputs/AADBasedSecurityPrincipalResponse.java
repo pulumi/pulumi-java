@@ -97,7 +97,6 @@ public final class AADBasedSecurityPrincipalResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public AADBasedSecurityPrincipalResponse build() {
             return new AADBasedSecurityPrincipalResponse(ledgerRoleName, principalId, tenantId);
         }

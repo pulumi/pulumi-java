@@ -76,7 +76,6 @@ public final class MasterProfileResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public MasterProfileResponse build() {
             return new MasterProfileResponse(subnetId, vmSize);
         }

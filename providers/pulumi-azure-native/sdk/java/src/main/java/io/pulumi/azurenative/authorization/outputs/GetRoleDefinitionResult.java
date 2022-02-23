@@ -204,7 +204,6 @@ public final class GetRoleDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleDefinitionResult build() {
             return new GetRoleDefinitionResult(assignableScopes, description, id, name, permissions, roleName, roleType, type);
         }

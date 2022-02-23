@@ -97,7 +97,6 @@ public final class OptionsProperties {
             this.ipv6Support = ipv6Support;
             return this;
         }
-
         public OptionsProperties build() {
             return new OptionsProperties(applianceModeSupport, dnsSupport, ipv6Support);
         }

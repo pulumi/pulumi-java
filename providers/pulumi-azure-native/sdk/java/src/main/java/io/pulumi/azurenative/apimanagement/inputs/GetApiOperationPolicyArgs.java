@@ -19,7 +19,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+        private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+        private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -41,7 +41,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final String operationId;
+        private final String operationId;
 
     public String getOperationId() {
         return this.operationId;
@@ -52,7 +52,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final String policyId;
+        private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -63,7 +63,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -163,7 +163,6 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetApiOperationPolicyArgs build() {
             return new GetApiOperationPolicyArgs(apiId, format, operationId, policyId, resourceGroupName, serviceName);
         }

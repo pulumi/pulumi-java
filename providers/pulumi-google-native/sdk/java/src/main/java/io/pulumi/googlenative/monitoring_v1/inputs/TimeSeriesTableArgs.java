@@ -23,7 +23,7 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataSets", required=true)
-    private final Input<List<TableDataSetArgs>> dataSets;
+      private final Input<List<TableDataSetArgs>> dataSets;
 
     public Input<List<TableDataSetArgs>> getDataSets() {
         return this.dataSets;
@@ -66,7 +66,6 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
             this.dataSets = Input.of(Objects.requireNonNull(dataSets));
             return this;
         }
-
         public TimeSeriesTableArgs build() {
             return new TimeSeriesTableArgs(dataSets);
         }

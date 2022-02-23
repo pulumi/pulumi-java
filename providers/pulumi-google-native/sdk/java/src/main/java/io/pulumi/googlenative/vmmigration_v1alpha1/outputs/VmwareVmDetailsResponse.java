@@ -306,7 +306,6 @@ public final class VmwareVmDetailsResponse {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public VmwareVmDetailsResponse build() {
             return new VmwareVmDetailsResponse(bootOption, committedStorage, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }

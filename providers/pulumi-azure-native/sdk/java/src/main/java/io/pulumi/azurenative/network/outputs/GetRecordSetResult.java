@@ -447,7 +447,6 @@ public final class GetRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRecordSetResult build() {
             return new GetRecordSetResult(aRecords, aaaaRecords, caaRecords, cnameRecord, etag, fqdn, id, metadata, mxRecords, name, nsRecords, provisioningState, ptrRecords, soaRecord, srvRecords, targetResource, ttl, txtRecords, type);
         }

@@ -22,14 +22,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boostControlIds")
-    private final @Nullable Input<List<String>> boostControlIds;
+      private final @Nullable Input<List<String>> boostControlIds;
 
     public Input<List<String>> getBoostControlIds() {
         return this.boostControlIds == null ? Input.empty() : this.boostControlIds;
     }
 
     @InputImport(name="catalogId", required=true)
-    private final Input<String> catalogId;
+      private final Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId;
@@ -40,7 +40,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -51,7 +51,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diversityLevel")
-    private final @Nullable Input<String> diversityLevel;
+      private final @Nullable Input<String> diversityLevel;
 
     public Input<String> getDiversityLevel() {
         return this.diversityLevel == null ? Input.empty() : this.diversityLevel;
@@ -62,7 +62,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="doNotAssociateControlIds")
-    private final @Nullable Input<List<String>> doNotAssociateControlIds;
+      private final @Nullable Input<List<String>> doNotAssociateControlIds;
 
     public Input<List<String>> getDoNotAssociateControlIds() {
         return this.doNotAssociateControlIds == null ? Input.empty() : this.doNotAssociateControlIds;
@@ -73,7 +73,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamicFacetSpec")
-    private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec;
+      private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec;
 
     public Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> getDynamicFacetSpec() {
         return this.dynamicFacetSpec == null ? Input.empty() : this.dynamicFacetSpec;
@@ -84,7 +84,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCategoryFilterLevel")
-    private final @Nullable Input<String> enableCategoryFilterLevel;
+      private final @Nullable Input<String> enableCategoryFilterLevel;
 
     public Input<String> getEnableCategoryFilterLevel() {
         return this.enableCategoryFilterLevel == null ? Input.empty() : this.enableCategoryFilterLevel;
@@ -95,7 +95,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="facetControlIds")
-    private final @Nullable Input<List<String>> facetControlIds;
+      private final @Nullable Input<List<String>> facetControlIds;
 
     public Input<List<String>> getFacetControlIds() {
         return this.facetControlIds == null ? Input.empty() : this.facetControlIds;
@@ -106,7 +106,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterControlIds")
-    private final @Nullable Input<List<String>> filterControlIds;
+      private final @Nullable Input<List<String>> filterControlIds;
 
     public Input<List<String>> getFilterControlIds() {
         return this.filterControlIds == null ? Input.empty() : this.filterControlIds;
@@ -117,14 +117,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreControlIds")
-    private final @Nullable Input<List<String>> ignoreControlIds;
+      private final @Nullable Input<List<String>> ignoreControlIds;
 
     public Input<List<String>> getIgnoreControlIds() {
         return this.ignoreControlIds == null ? Input.empty() : this.ignoreControlIds;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -135,7 +135,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelId")
-    private final @Nullable Input<String> modelId;
+      private final @Nullable Input<String> modelId;
 
     public Input<String> getModelId() {
         return this.modelId == null ? Input.empty() : this.modelId;
@@ -146,7 +146,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -157,7 +157,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onewaySynonymsControlIds")
-    private final @Nullable Input<List<String>> onewaySynonymsControlIds;
+      private final @Nullable Input<List<String>> onewaySynonymsControlIds;
 
     public Input<List<String>> getOnewaySynonymsControlIds() {
         return this.onewaySynonymsControlIds == null ? Input.empty() : this.onewaySynonymsControlIds;
@@ -168,14 +168,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priceRerankingLevel")
-    private final @Nullable Input<String> priceRerankingLevel;
+      private final @Nullable Input<String> priceRerankingLevel;
 
     public Input<String> getPriceRerankingLevel() {
         return this.priceRerankingLevel == null ? Input.empty() : this.priceRerankingLevel;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -186,7 +186,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectControlIds")
-    private final @Nullable Input<List<String>> redirectControlIds;
+      private final @Nullable Input<List<String>> redirectControlIds;
 
     public Input<List<String>> getRedirectControlIds() {
         return this.redirectControlIds == null ? Input.empty() : this.redirectControlIds;
@@ -197,14 +197,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replacementControlIds")
-    private final @Nullable Input<List<String>> replacementControlIds;
+      private final @Nullable Input<List<String>> replacementControlIds;
 
     public Input<List<String>> getReplacementControlIds() {
         return this.replacementControlIds == null ? Input.empty() : this.replacementControlIds;
     }
 
     @InputImport(name="servingConfigId", required=true)
-    private final Input<String> servingConfigId;
+      private final Input<String> servingConfigId;
 
     public Input<String> getServingConfigId() {
         return this.servingConfigId;
@@ -215,7 +215,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionTypes", required=true)
-    private final Input<List<ServingConfigSolutionTypesItem>> solutionTypes;
+      private final Input<List<ServingConfigSolutionTypesItem>> solutionTypes;
 
     public Input<List<ServingConfigSolutionTypesItem>> getSolutionTypes() {
         return this.solutionTypes;
@@ -226,7 +226,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="twowaySynonymsControlIds")
-    private final @Nullable Input<List<String>> twowaySynonymsControlIds;
+      private final @Nullable Input<List<String>> twowaySynonymsControlIds;
 
     public Input<List<String>> getTwowaySynonymsControlIds() {
         return this.twowaySynonymsControlIds == null ? Input.empty() : this.twowaySynonymsControlIds;
@@ -570,7 +570,6 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.twowaySynonymsControlIds = Input.ofNullable(twowaySynonymsControlIds);
             return this;
         }
-
         public ServingConfigArgs build() {
             return new ServingConfigArgs(boostControlIds, catalogId, displayName, diversityLevel, doNotAssociateControlIds, dynamicFacetSpec, enableCategoryFilterLevel, facetControlIds, filterControlIds, ignoreControlIds, location, modelId, name, onewaySynonymsControlIds, priceRerankingLevel, project, redirectControlIds, replacementControlIds, servingConfigId, solutionTypes, twowaySynonymsControlIds);
         }

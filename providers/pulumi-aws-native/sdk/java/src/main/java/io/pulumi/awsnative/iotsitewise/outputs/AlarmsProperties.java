@@ -76,7 +76,6 @@ public final class AlarmsProperties {
             this.notificationLambdaArn = notificationLambdaArn;
             return this;
         }
-
         public AlarmsProperties build() {
             return new AlarmsProperties(alarmRoleArn, notificationLambdaArn);
         }

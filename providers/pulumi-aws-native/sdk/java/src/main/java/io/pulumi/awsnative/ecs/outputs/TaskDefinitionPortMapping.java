@@ -74,7 +74,6 @@ public final class TaskDefinitionPortMapping {
             this.protocol = protocol;
             return this;
         }
-
         public TaskDefinitionPortMapping build() {
             return new TaskDefinitionPortMapping(containerPort, hostPort, protocol);
         }

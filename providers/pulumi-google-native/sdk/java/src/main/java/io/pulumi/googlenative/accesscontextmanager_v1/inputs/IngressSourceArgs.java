@@ -23,7 +23,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLevel")
-    private final @Nullable Input<String> accessLevel;
+      private final @Nullable Input<String> accessLevel;
 
     public Input<String> getAccessLevel() {
         return this.accessLevel == null ? Input.empty() : this.accessLevel;
@@ -34,7 +34,7 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -93,7 +93,6 @@ public final class IngressSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.resource = Input.ofNullable(resource);
             return this;
         }
-
         public IngressSourceArgs build() {
             return new IngressSourceArgs(accessLevel, resource);
         }

@@ -141,7 +141,6 @@ public final class FallbackRoutePropertiesResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public FallbackRoutePropertiesResponse build() {
             return new FallbackRoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
         }

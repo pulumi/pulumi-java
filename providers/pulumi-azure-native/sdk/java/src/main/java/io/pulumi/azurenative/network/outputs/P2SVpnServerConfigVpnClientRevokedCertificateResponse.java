@@ -139,7 +139,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
             return new P2SVpnServerConfigVpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }

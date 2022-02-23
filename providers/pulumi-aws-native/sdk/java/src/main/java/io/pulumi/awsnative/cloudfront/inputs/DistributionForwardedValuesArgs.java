@@ -18,28 +18,28 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
     public static final DistributionForwardedValuesArgs Empty = new DistributionForwardedValuesArgs();
 
     @InputImport(name="cookies")
-    private final @Nullable Input<DistributionCookiesArgs> cookies;
+        private final @Nullable Input<DistributionCookiesArgs> cookies;
 
     public Input<DistributionCookiesArgs> getCookies() {
         return this.cookies == null ? Input.empty() : this.cookies;
     }
 
     @InputImport(name="headers")
-    private final @Nullable Input<List<String>> headers;
+        private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
     @InputImport(name="queryString", required=true)
-    private final Input<Boolean> queryString;
+        private final Input<Boolean> queryString;
 
     public Input<Boolean> getQueryString() {
         return this.queryString;
     }
 
     @InputImport(name="queryStringCacheKeys")
-    private final @Nullable Input<List<String>> queryStringCacheKeys;
+        private final @Nullable Input<List<String>> queryStringCacheKeys;
 
     public Input<List<String>> getQueryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? Input.empty() : this.queryStringCacheKeys;
@@ -128,7 +128,6 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
             this.queryStringCacheKeys = Input.ofNullable(queryStringCacheKeys);
             return this;
         }
-
         public DistributionForwardedValuesArgs build() {
             return new DistributionForwardedValuesArgs(cookies, headers, queryString, queryStringCacheKeys);
         }

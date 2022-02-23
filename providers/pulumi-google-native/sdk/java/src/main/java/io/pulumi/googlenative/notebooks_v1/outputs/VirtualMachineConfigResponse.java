@@ -355,7 +355,6 @@ public final class VirtualMachineConfigResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public VirtualMachineConfigResponse build() {
             return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }

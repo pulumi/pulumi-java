@@ -34,7 +34,6 @@ public final class PostProcessingStepResponse extends io.pulumi.resources.Invoke
         public Builder(PostProcessingStepResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PostProcessingStepResponse build() {
             return new PostProcessingStepResponse();
         }

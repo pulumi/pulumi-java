@@ -30,7 +30,6 @@ public final class ResiliencyPolicyPolicyMapArgs extends io.pulumi.resources.Res
         public Builder(ResiliencyPolicyPolicyMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ResiliencyPolicyPolicyMapArgs build() {
             return new ResiliencyPolicyPolicyMapArgs();
         }

@@ -27,7 +27,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="artifactStorage")
-    private final @Nullable Input<String> artifactStorage;
+      private final @Nullable Input<String> artifactStorage;
 
     public Input<String> getArtifactStorage() {
         return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
@@ -38,7 +38,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultPool")
-    private final @Nullable Input<DefaultPoolArgs> defaultPool;
+      private final @Nullable Input<DefaultPoolArgs> defaultPool;
 
     public Input<DefaultPoolArgs> getDefaultPool() {
         return this.defaultPool == null ? Input.empty() : this.defaultPool;
@@ -49,7 +49,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privatePool")
-    private final @Nullable Input<PrivatePoolArgs> privatePool;
+      private final @Nullable Input<PrivatePoolArgs> privatePool;
 
     public Input<PrivatePoolArgs> getPrivatePool() {
         return this.privatePool == null ? Input.empty() : this.privatePool;
@@ -60,7 +60,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -71,7 +71,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usages", required=true)
-    private final Input<List<ExecutionConfigUsagesItem>> usages;
+      private final Input<List<ExecutionConfigUsagesItem>> usages;
 
     public Input<List<ExecutionConfigUsagesItem>> getUsages() {
         return this.usages;
@@ -82,7 +82,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workerPool")
-    private final @Nullable Input<String> workerPool;
+      private final @Nullable Input<String> workerPool;
 
     public Input<String> getWorkerPool() {
         return this.workerPool == null ? Input.empty() : this.workerPool;
@@ -201,7 +201,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.workerPool = Input.ofNullable(workerPool);
             return this;
         }
-
         public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
         }

@@ -160,7 +160,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage {
             this.timeStamping = timeStamping;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

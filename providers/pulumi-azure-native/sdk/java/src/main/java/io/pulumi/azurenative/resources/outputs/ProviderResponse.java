@@ -141,7 +141,6 @@ public final class ProviderResponse {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(id, namespace, registrationPolicy, registrationState, resourceTypes);
         }

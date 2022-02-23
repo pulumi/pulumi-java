@@ -74,7 +74,6 @@ public final class AppBasicAuthConfig {
             this.username = username;
             return this;
         }
-
         public AppBasicAuthConfig build() {
             return new AppBasicAuthConfig(enableBasicAuth, password, username);
         }

@@ -26,7 +26,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyInterval", required=true)
-    private final Input<Integer> frequencyInterval;
+        private final Input<Integer> frequencyInterval;
 
     public Input<Integer> getFrequencyInterval() {
         return this.frequencyInterval;
@@ -37,7 +37,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyUnit", required=true)
-    private final Input<FrequencyUnit> frequencyUnit;
+        private final Input<FrequencyUnit> frequencyUnit;
 
     public Input<FrequencyUnit> getFrequencyUnit() {
         return this.frequencyUnit;
@@ -48,7 +48,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepAtLeastOneBackup", required=true)
-    private final Input<Boolean> keepAtLeastOneBackup;
+        private final Input<Boolean> keepAtLeastOneBackup;
 
     public Input<Boolean> getKeepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
@@ -59,7 +59,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriodInDays", required=true)
-    private final Input<Integer> retentionPeriodInDays;
+        private final Input<Integer> retentionPeriodInDays;
 
     public Input<Integer> getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
@@ -70,7 +70,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -174,7 +174,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public BackupScheduleArgs build() {
             return new BackupScheduleArgs(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);
         }

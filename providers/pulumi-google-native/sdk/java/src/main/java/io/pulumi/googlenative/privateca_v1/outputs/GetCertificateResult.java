@@ -331,7 +331,6 @@ public final class GetCertificateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(certificateDescription, certificateTemplate, config, createTime, issuerCertificateAuthority, labels, lifetime, name, pemCertificate, pemCertificateChain, pemCsr, revocationDetails, subjectMode, updateTime);
         }

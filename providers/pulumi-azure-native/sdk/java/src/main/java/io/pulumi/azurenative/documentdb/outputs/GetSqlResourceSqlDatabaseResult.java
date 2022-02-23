@@ -168,7 +168,6 @@ public final class GetSqlResourceSqlDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlDatabaseResult build() {
             return new GetSqlResourceSqlDatabaseResult(id, location, name, options, resource, tags, type);
         }

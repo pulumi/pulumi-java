@@ -162,7 +162,6 @@ public final class CommitmentPlanPropertiesResponse {
             this.planType = planType;
             return this;
         }
-
         public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
         }

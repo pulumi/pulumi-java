@@ -46,7 +46,6 @@ public final class DashboardExportToCSVOption {
             this.availabilityStatus = availabilityStatus;
             return this;
         }
-
         public DashboardExportToCSVOption build() {
             return new DashboardExportToCSVOption(availabilityStatus);
         }

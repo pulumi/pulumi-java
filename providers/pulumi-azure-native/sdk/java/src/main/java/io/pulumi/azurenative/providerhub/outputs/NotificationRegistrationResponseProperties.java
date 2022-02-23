@@ -101,7 +101,6 @@ public final class NotificationRegistrationResponseProperties {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public NotificationRegistrationResponseProperties build() {
             return new NotificationRegistrationResponseProperties(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);
         }

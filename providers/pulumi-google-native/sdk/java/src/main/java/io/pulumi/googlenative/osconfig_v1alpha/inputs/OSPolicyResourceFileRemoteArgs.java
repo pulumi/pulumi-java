@@ -23,7 +23,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sha256Checksum")
-    private final @Nullable Input<String> sha256Checksum;
+      private final @Nullable Input<String> sha256Checksum;
 
     public Input<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -93,7 +93,6 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public OSPolicyResourceFileRemoteArgs build() {
             return new OSPolicyResourceFileRemoteArgs(sha256Checksum, uri);
         }

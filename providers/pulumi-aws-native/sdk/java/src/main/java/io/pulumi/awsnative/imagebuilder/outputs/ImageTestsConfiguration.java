@@ -77,7 +77,6 @@ public final class ImageTestsConfiguration {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
-
         public ImageTestsConfiguration build() {
             return new ImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }

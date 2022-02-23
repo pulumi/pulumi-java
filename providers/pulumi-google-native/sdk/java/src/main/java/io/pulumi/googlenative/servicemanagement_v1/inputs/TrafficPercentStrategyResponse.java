@@ -22,7 +22,7 @@ public final class TrafficPercentStrategyResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="percentages", required=true)
-    private final Map<String,String> percentages;
+      private final Map<String,String> percentages;
 
     public Map<String,String> getPercentages() {
         return this.percentages;
@@ -60,7 +60,6 @@ public final class TrafficPercentStrategyResponse extends io.pulumi.resources.In
             this.percentages = Objects.requireNonNull(percentages);
             return this;
         }
-
         public TrafficPercentStrategyResponse build() {
             return new TrafficPercentStrategyResponse(percentages);
         }

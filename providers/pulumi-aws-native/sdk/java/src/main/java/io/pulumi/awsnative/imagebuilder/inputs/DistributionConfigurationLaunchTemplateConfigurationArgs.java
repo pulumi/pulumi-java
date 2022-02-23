@@ -24,7 +24,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+        private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -35,7 +35,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="launchTemplateId")
-    private final @Nullable Input<String> launchTemplateId;
+        private final @Nullable Input<String> launchTemplateId;
 
     public Input<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
@@ -46,7 +46,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @InputImport(name="setDefaultVersion")
-    private final @Nullable Input<Boolean> setDefaultVersion;
+        private final @Nullable Input<Boolean> setDefaultVersion;
 
     public Input<Boolean> getSetDefaultVersion() {
         return this.setDefaultVersion == null ? Input.empty() : this.setDefaultVersion;
@@ -120,7 +120,6 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             this.setDefaultVersion = Input.ofNullable(setDefaultVersion);
             return this;
         }
-
         public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
             return new DistributionConfigurationLaunchTemplateConfigurationArgs(accountId, launchTemplateId, setDefaultVersion);
         }

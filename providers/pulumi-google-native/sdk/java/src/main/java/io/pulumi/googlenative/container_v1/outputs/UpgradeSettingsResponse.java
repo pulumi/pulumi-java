@@ -74,7 +74,6 @@ public final class UpgradeSettingsResponse {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public UpgradeSettingsResponse build() {
             return new UpgradeSettingsResponse(maxSurge, maxUnavailable);
         }

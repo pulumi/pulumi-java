@@ -74,7 +74,6 @@ public final class SparkChartViewResponse {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
         }
-
         public SparkChartViewResponse build() {
             return new SparkChartViewResponse(minAlignmentPeriod, sparkChartType);
         }

@@ -202,7 +202,6 @@ public final class InstanceStatusResponse {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }
-
         public InstanceStatusResponse build() {
             return new InstanceStatusResponse(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
         }

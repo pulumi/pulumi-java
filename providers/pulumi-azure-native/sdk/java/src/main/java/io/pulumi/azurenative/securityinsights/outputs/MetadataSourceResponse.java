@@ -97,7 +97,6 @@ public final class MetadataSourceResponse {
             this.sourceId = sourceId;
             return this;
         }
-
         public MetadataSourceResponse build() {
             return new MetadataSourceResponse(kind, name, sourceId);
         }

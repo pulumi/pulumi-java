@@ -83,7 +83,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             this.percentage = percentage;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }

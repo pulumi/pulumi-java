@@ -287,7 +287,6 @@ public final class ReservationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ReservationResponse build() {
             return new ReservationResponse(commitment, creationTimestamp, description, kind, name, satisfiesPzs, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
         }

@@ -96,7 +96,6 @@ public final class AdvancedMachineFeaturesResponse {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
         }

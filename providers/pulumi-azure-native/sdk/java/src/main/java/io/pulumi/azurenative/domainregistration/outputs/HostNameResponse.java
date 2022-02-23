@@ -161,7 +161,6 @@ public final class HostNameResponse {
             this.siteNames = siteNames;
             return this;
         }
-
         public HostNameResponse build() {
             return new HostNameResponse(azureResourceName, azureResourceType, customHostNameDnsRecordType, hostNameType, name, siteNames);
         }

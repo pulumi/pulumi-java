@@ -98,7 +98,6 @@ public final class RoutingPreferenceResponse {
             this.routingChoice = routingChoice;
             return this;
         }
-
         public RoutingPreferenceResponse build() {
             return new RoutingPreferenceResponse(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
         }

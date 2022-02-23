@@ -90,7 +90,6 @@ public final class ContainerConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerImageNames, containerRegistries, type);
         }

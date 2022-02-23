@@ -246,7 +246,6 @@ public final class PrivateLinkServiceIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateLinkServiceIpConfigurationResponse build() {
             return new PrivateLinkServiceIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, provisioningState, subnet, type);
         }

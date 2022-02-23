@@ -187,7 +187,6 @@ public final class GetProtectionIntentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionIntentResult build() {
             return new GetProtectionIntentResult(eTag, id, location, name, properties, tags, type);
         }

@@ -25,7 +25,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final Input<FingerprintArgs> fingerprint;
+      private final Input<FingerprintArgs> fingerprint;
 
     public Input<FingerprintArgs> getFingerprint() {
         return this.fingerprint;
@@ -36,7 +36,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layerInfo")
-    private final @Nullable Input<List<LayerArgs>> layerInfo;
+      private final @Nullable Input<List<LayerArgs>> layerInfo;
 
     public Input<List<LayerArgs>> getLayerInfo() {
         return this.layerInfo == null ? Input.empty() : this.layerInfo;
@@ -95,7 +95,6 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
             this.layerInfo = Input.ofNullable(layerInfo);
             return this;
         }
-
         public DerivedArgs build() {
             return new DerivedArgs(fingerprint, layerInfo);
         }

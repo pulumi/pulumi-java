@@ -54,7 +54,6 @@ public final class DiskEncryptionConfigurationResponse {
             this.targets = targets;
             return this;
         }
-
         public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(targets);
         }

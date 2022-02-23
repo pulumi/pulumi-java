@@ -99,7 +99,6 @@ public final class SqlElasticPoolResourceSettingsResponse {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public SqlElasticPoolResourceSettingsResponse build() {
             return new SqlElasticPoolResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
         }

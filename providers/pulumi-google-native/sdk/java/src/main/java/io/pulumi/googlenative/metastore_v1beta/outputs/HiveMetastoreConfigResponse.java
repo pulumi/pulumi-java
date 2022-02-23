@@ -139,7 +139,6 @@ public final class HiveMetastoreConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public HiveMetastoreConfigResponse build() {
             return new HiveMetastoreConfigResponse(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }

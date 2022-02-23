@@ -24,7 +24,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionOverrides")
-    private final @Nullable Input<List<CollectionOverrideArgs>> collectionOverrides;
+      private final @Nullable Input<List<CollectionOverrideArgs>> collectionOverrides;
 
     public Input<List<CollectionOverrideArgs>> getCollectionOverrides() {
         return this.collectionOverrides == null ? Input.empty() : this.collectionOverrides;
@@ -35,7 +35,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialArgs> credential;
+      private final @Nullable Input<CredentialArgs> credential;
 
     public Input<CredentialArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -46,7 +46,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customCertificateAuthorityRoots")
-    private final @Nullable Input<List<String>> customCertificateAuthorityRoots;
+      private final @Nullable Input<List<String>> customCertificateAuthorityRoots;
 
     public Input<List<String>> getCustomCertificateAuthorityRoots() {
         return this.customCertificateAuthorityRoots == null ? Input.empty() : this.customCertificateAuthorityRoots;
@@ -57,7 +57,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="descriptorUrl")
-    private final @Nullable Input<String> descriptorUrl;
+      private final @Nullable Input<String> descriptorUrl;
 
     public Input<String> getDescriptorUrl() {
         return this.descriptorUrl == null ? Input.empty() : this.descriptorUrl;
@@ -79,7 +79,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<TypeProviderLabelEntryArgs>> labels;
+      private final @Nullable Input<List<TypeProviderLabelEntryArgs>> labels;
 
     public Input<List<TypeProviderLabelEntryArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -90,7 +90,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,14 +101,14 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Input<OptionsArgs> options;
 
     public Input<OptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -272,7 +272,6 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TypeProviderArgs build() {
             return new TypeProviderArgs(collectionOverrides, credential, customCertificateAuthorityRoots, description, descriptorUrl, labels, name, options, project);
         }

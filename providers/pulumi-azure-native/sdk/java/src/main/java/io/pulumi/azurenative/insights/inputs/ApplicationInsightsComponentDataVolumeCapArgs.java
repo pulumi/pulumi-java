@@ -25,7 +25,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="cap")
-    private final @Nullable Input<Double> cap;
+        private final @Nullable Input<Double> cap;
 
     public Input<Double> getCap() {
         return this.cap == null ? Input.empty() : this.cap;
@@ -36,7 +36,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitCap")
-    private final @Nullable Input<Boolean> stopSendNotificationWhenHitCap;
+        private final @Nullable Input<Boolean> stopSendNotificationWhenHitCap;
 
     public Input<Boolean> getStopSendNotificationWhenHitCap() {
         return this.stopSendNotificationWhenHitCap == null ? Input.empty() : this.stopSendNotificationWhenHitCap;
@@ -47,7 +47,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="stopSendNotificationWhenHitThreshold")
-    private final @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold;
+        private final @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold;
 
     public Input<Boolean> getStopSendNotificationWhenHitThreshold() {
         return this.stopSendNotificationWhenHitThreshold == null ? Input.empty() : this.stopSendNotificationWhenHitThreshold;
@@ -58,7 +58,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
      * 
      */
     @InputImport(name="warningThreshold")
-    private final @Nullable Input<Integer> warningThreshold;
+        private final @Nullable Input<Integer> warningThreshold;
 
     public Input<Integer> getWarningThreshold() {
         return this.warningThreshold == null ? Input.empty() : this.warningThreshold;
@@ -147,7 +147,6 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
             this.warningThreshold = Input.ofNullable(warningThreshold);
             return this;
         }
-
         public ApplicationInsightsComponentDataVolumeCapArgs build() {
             return new ApplicationInsightsComponentDataVolumeCapArgs(cap, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
         }

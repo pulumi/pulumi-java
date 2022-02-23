@@ -76,7 +76,6 @@ public final class IPBlock {
             this.except = except;
             return this;
         }
-
         public IPBlock build() {
             return new IPBlock(cidr, except);
         }

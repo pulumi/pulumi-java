@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable String cloudRoleArn;
+        private final @Nullable String cloudRoleArn;
 
     public Optional<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
@@ -61,7 +61,6 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponseKubernetesScubaReader build() {
             return new DefenderForContainersAwsOfferingResponseKubernetesScubaReader(cloudRoleArn);
         }

@@ -447,7 +447,6 @@ public final class StepResponse {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(abort, causesDrop, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpnGateway, vpnTunnel);
         }

@@ -74,7 +74,6 @@ public final class WarningResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public WarningResponse build() {
             return new WarningResponse(priority, text);
         }

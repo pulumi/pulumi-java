@@ -52,7 +52,6 @@ public final class DatabaseConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public DatabaseConfigResponse build() {
             return new DatabaseConfigResponse(machineType);
         }

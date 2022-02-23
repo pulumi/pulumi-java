@@ -61,7 +61,6 @@ public final class SpotFleetSpotCapacityRebalance {
             this.terminationDelay = terminationDelay;
             return this;
         }
-
         public SpotFleetSpotCapacityRebalance build() {
             return new SpotFleetSpotCapacityRebalance(replacementStrategy, terminationDelay);
         }

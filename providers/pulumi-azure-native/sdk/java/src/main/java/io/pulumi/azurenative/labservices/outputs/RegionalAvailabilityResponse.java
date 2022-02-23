@@ -78,7 +78,6 @@ public final class RegionalAvailabilityResponse {
             this.sizeAvailabilities = sizeAvailabilities;
             return this;
         }
-
         public RegionalAvailabilityResponse build() {
             return new RegionalAvailabilityResponse(region, sizeAvailabilities);
         }

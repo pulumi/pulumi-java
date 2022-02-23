@@ -58,7 +58,6 @@ public final class FrameworkControlInputParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public FrameworkControlInputParameter build() {
             return new FrameworkControlInputParameter(parameterName, parameterValue);
         }

@@ -25,7 +25,7 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="siteToSiteDataTransfer")
-    private final @Nullable Input<Boolean> siteToSiteDataTransfer;
+      private final @Nullable Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
@@ -36,7 +36,7 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+      private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -95,7 +95,6 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public LinkedInterconnectAttachmentsArgs build() {
             return new LinkedInterconnectAttachmentsArgs(siteToSiteDataTransfer, uris);
         }

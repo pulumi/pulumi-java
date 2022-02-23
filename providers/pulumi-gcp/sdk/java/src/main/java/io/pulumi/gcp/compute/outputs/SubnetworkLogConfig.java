@@ -173,7 +173,6 @@ public final class SubnetworkLogConfig {
             this.metadataFields = metadataFields;
             return this;
         }
-
         public SubnetworkLogConfig build() {
             return new SubnetworkLogConfig(aggregationInterval, filterExpr, flowSampling, metadata, metadataFields);
         }

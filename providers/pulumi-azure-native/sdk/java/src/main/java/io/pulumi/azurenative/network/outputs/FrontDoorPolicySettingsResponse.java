@@ -161,7 +161,6 @@ public final class FrontDoorPolicySettingsResponse {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public FrontDoorPolicySettingsResponse build() {
             return new FrontDoorPolicySettingsResponse(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
         }

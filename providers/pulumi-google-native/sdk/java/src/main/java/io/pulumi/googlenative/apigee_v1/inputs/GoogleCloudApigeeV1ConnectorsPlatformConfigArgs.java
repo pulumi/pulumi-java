@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends io.pu
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigArgs extends io.pu
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public GoogleCloudApigeeV1ConnectorsPlatformConfigArgs build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigArgs(enabled);
         }

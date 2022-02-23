@@ -20,14 +20,14 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     public static final WorkGroupEncryptionConfigurationArgs Empty = new WorkGroupEncryptionConfigurationArgs();
 
     @InputImport(name="encryptionOption", required=true)
-    private final Input<WorkGroupEncryptionOption> encryptionOption;
+        private final Input<WorkGroupEncryptionOption> encryptionOption;
 
     public Input<WorkGroupEncryptionOption> getEncryptionOption() {
         return this.encryptionOption;
     }
 
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+        private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -86,7 +86,6 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
-
         public WorkGroupEncryptionConfigurationArgs build() {
             return new WorkGroupEncryptionConfigurationArgs(encryptionOption, kmsKey);
         }

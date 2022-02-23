@@ -24,7 +24,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<DataPoolEncryptionArgs> encryption;
+        private final @Nullable Input<DataPoolEncryptionArgs> encryption;
 
     public Input<DataPoolEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -35,7 +35,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -94,7 +94,6 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public DataPoolLocationArgs build() {
             return new DataPoolLocationArgs(encryption, name);
         }

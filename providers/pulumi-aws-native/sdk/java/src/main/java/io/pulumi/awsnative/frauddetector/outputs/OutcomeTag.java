@@ -58,7 +58,6 @@ public final class OutcomeTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OutcomeTag build() {
             return new OutcomeTag(key, value);
         }

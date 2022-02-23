@@ -102,7 +102,6 @@ public final class IndividualOutcomeResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public IndividualOutcomeResponse build() {
             return new IndividualOutcomeResponse(multistepNumber, outcomeSummary, runDuration, stepId);
         }

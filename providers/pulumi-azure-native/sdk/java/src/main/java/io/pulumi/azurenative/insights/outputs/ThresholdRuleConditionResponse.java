@@ -166,7 +166,6 @@ public final class ThresholdRuleConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public ThresholdRuleConditionResponse build() {
             return new ThresholdRuleConditionResponse(dataSource, odataType, operator, threshold, timeAggregation, windowSize);
         }

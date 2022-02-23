@@ -29,7 +29,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
+        private final @Nullable Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
 
     public Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -40,7 +40,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
+        private final @Nullable Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
 
     public Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -51,7 +51,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<Object> condition;
+        private final Input<Object> condition;
 
     public Input<Object> getCondition() {
         return this.condition;
@@ -62,7 +62,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -84,7 +84,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -95,7 +95,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -106,7 +106,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -117,7 +117,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -128,7 +128,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -139,7 +139,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -333,7 +333,6 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AlertRuleArgs build() {
             return new AlertRuleArgs(action, actions, condition, description, isEnabled, location, name, provisioningState, resourceGroupName, ruleName, tags);
         }

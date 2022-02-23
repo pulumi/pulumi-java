@@ -22,7 +22,7 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -33,7 +33,7 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+      private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -44,7 +44,7 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -55,7 +55,7 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -66,7 +66,7 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -145,7 +145,6 @@ public final class LocalDiskInitializeParamsResponse extends io.pulumi.resources
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public LocalDiskInitializeParamsResponse build() {
             return new LocalDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels);
         }

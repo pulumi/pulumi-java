@@ -107,7 +107,6 @@ public final class SubscriptionDeadLetterPolicy {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
-
         public SubscriptionDeadLetterPolicy build() {
             return new SubscriptionDeadLetterPolicy(deadLetterTopic, maxDeliveryAttempts);
         }

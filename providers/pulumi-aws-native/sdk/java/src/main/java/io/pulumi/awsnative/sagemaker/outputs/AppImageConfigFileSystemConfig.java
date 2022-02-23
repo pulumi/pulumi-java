@@ -98,7 +98,6 @@ public final class AppImageConfigFileSystemConfig {
             this.mountPath = mountPath;
             return this;
         }
-
         public AppImageConfigFileSystemConfig build() {
             return new AppImageConfigFileSystemConfig(defaultGid, defaultUid, mountPath);
         }

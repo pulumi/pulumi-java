@@ -289,7 +289,6 @@ public final class GetVolumeContainerResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetVolumeContainerResult build() {
             return new GetVolumeContainerResult(bandWidthRateInMbps, bandwidthSettingId, encryptionKey, encryptionStatus, id, kind, name, ownerShipStatus, storageAccountCredentialId, totalCloudStorageUsageInBytes, type, volumeCount);
         }

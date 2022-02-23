@@ -202,7 +202,6 @@ public final class GetRegisteredPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredPrefixResult build() {
             return new GetRegisteredPrefixResult(errorMessage, id, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

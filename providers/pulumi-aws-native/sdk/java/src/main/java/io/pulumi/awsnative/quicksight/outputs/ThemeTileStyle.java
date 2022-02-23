@@ -46,7 +46,6 @@ public final class ThemeTileStyle {
             this.border = border;
             return this;
         }
-
         public ThemeTileStyle build() {
             return new ThemeTileStyle(border);
         }

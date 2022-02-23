@@ -99,7 +99,6 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ServerPrivateEndpointConnectionPropertiesResponse build() {
             return new ServerPrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -121,7 +121,6 @@ public final class TaggingCriteriaResponse {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
-
         public TaggingCriteriaResponse build() {
             return new TaggingCriteriaResponse(criteria, isDefault, tagInfo, taggingPriority);
         }

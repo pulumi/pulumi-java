@@ -419,7 +419,6 @@ public final class GetVCenterResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetVCenterResult build() {
             return new GetVCenterResult(connectionStatus, credentials, customResourceName, extendedLocation, fqdn, id, instanceUuid, kind, location, name, port, provisioningState, statuses, systemData, tags, type, uuid, version);
         }

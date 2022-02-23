@@ -54,7 +54,6 @@ public final class GetNamedQueryResult {
             this.namedQueryId = namedQueryId;
             return this;
         }
-
         public GetNamedQueryResult build() {
             return new GetNamedQueryResult(namedQueryId);
         }

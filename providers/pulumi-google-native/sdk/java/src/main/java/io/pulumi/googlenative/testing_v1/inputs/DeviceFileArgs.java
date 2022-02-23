@@ -24,7 +24,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obbFile")
-    private final @Nullable Input<ObbFileArgs> obbFile;
+      private final @Nullable Input<ObbFileArgs> obbFile;
 
     public Input<ObbFileArgs> getObbFile() {
         return this.obbFile == null ? Input.empty() : this.obbFile;
@@ -35,7 +35,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regularFile")
-    private final @Nullable Input<RegularFileArgs> regularFile;
+      private final @Nullable Input<RegularFileArgs> regularFile;
 
     public Input<RegularFileArgs> getRegularFile() {
         return this.regularFile == null ? Input.empty() : this.regularFile;
@@ -94,7 +94,6 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             this.regularFile = Input.ofNullable(regularFile);
             return this;
         }
-
         public DeviceFileArgs build() {
             return new DeviceFileArgs(obbFile, regularFile);
         }

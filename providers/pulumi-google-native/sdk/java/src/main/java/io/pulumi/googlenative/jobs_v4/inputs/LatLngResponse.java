@@ -21,7 +21,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latitude", required=true)
-    private final Double latitude;
+      private final Double latitude;
 
     public Double getLatitude() {
         return this.latitude;
@@ -32,7 +32,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="longitude", required=true)
-    private final Double longitude;
+      private final Double longitude;
 
     public Double getLongitude() {
         return this.longitude;
@@ -81,7 +81,6 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
             this.longitude = Objects.requireNonNull(longitude);
             return this;
         }
-
         public LatLngResponse build() {
             return new LatLngResponse(latitude, longitude);
         }

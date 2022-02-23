@@ -23,7 +23,7 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<List<String>> labels;
+        private final Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels;
@@ -66,7 +66,6 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public OutputFileArgs build() {
             return new OutputFileArgs(labels);
         }

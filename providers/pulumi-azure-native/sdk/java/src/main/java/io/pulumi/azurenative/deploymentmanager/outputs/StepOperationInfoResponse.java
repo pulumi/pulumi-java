@@ -161,7 +161,6 @@ public final class StepOperationInfoResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public StepOperationInfoResponse build() {
             return new StepOperationInfoResponse(correlationId, deploymentName, endTime, error, lastUpdatedTime, startTime);
         }

@@ -205,7 +205,6 @@ public final class InstanceFromMachineImageNetworkInterface {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
-
         public InstanceFromMachineImageNetworkInterface build() {
             return new InstanceFromMachineImageNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

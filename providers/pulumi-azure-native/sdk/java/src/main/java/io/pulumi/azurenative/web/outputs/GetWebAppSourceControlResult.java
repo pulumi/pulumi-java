@@ -267,7 +267,6 @@ public final class GetWebAppSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSourceControlResult build() {
             return new GetWebAppSourceControlResult(branch, deploymentRollbackEnabled, gitHubActionConfiguration, id, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, type);
         }

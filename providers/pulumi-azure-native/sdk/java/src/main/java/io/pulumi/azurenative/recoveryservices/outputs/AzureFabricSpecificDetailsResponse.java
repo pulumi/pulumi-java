@@ -100,7 +100,6 @@ public final class AzureFabricSpecificDetailsResponse {
             this.location = location;
             return this;
         }
-
         public AzureFabricSpecificDetailsResponse build() {
             return new AzureFabricSpecificDetailsResponse(containerIds, instanceType, location);
         }

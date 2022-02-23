@@ -157,7 +157,6 @@ public final class DataSourceSalesforceConfiguration {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }
-
         public DataSourceSalesforceConfiguration build() {
             return new DataSourceSalesforceConfiguration(chatterFeedConfiguration, crawlAttachments, excludeAttachmentFilePatterns, includeAttachmentFilePatterns, knowledgeArticleConfiguration, secretArn, serverUrl, standardObjectAttachmentConfiguration, standardObjectConfigurations);
         }

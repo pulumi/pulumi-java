@@ -52,7 +52,6 @@ public final class LoggingConfigResponse {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(componentConfig);
         }

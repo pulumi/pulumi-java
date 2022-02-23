@@ -226,7 +226,6 @@ public final class GetFluidRelayServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFluidRelayServerResult build() {
             return new GetFluidRelayServerResult(fluidRelayEndpoints, frsTenantId, id, location, name, provisioningState, systemData, tags, type);
         }

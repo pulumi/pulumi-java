@@ -97,7 +97,6 @@ public final class GitRepoVolumeSource {
             this.revision = revision;
             return this;
         }
-
         public GitRepoVolumeSource build() {
             return new GitRepoVolumeSource(directory, repository, revision);
         }

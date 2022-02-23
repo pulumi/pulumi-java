@@ -19,14 +19,14 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
     public static final ComplianceOccurrenceResponse Empty = new ComplianceOccurrenceResponse();
 
     @InputImport(name="nonComplianceReason", required=true)
-    private final String nonComplianceReason;
+      private final String nonComplianceReason;
 
     public String getNonComplianceReason() {
         return this.nonComplianceReason;
     }
 
     @InputImport(name="nonCompliantFiles", required=true)
-    private final List<NonCompliantFileResponse> nonCompliantFiles;
+      private final List<NonCompliantFileResponse> nonCompliantFiles;
 
     public List<NonCompliantFileResponse> getNonCompliantFiles() {
         return this.nonCompliantFiles;
@@ -75,7 +75,6 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }
-
         public ComplianceOccurrenceResponse build() {
             return new ComplianceOccurrenceResponse(nonComplianceReason, nonCompliantFiles);
         }

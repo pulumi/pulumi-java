@@ -137,7 +137,6 @@ public final class QueryTimelineSampleResponse {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
-
         public QueryTimelineSampleResponse build() {
             return new QueryTimelineSampleResponse(activeUnits, completedUnits, elapsedMs, pendingUnits, totalSlotMs);
         }

@@ -13,14 +13,14 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
     @InputImport(name="sshPublicKeyId", required=true)
-    private final String sshPublicKeyId;
+      private final String sshPublicKeyId;
 
     public String getSshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -69,7 +69,6 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetSshPublicKeyArgs build() {
             return new GetSshPublicKeyArgs(sshPublicKeyId, userId);
         }

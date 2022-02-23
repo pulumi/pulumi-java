@@ -103,7 +103,6 @@ public final class GuestPoliciesRecipeUpdateStepScriptRun {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepScriptRun build() {
             return new GuestPoliciesRecipeUpdateStepScriptRun(allowedExitCodes, interpreter, script);
         }

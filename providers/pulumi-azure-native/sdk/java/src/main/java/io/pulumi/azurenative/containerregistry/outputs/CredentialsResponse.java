@@ -83,7 +83,6 @@ public final class CredentialsResponse {
             this.sourceRegistry = sourceRegistry;
             return this;
         }
-
         public CredentialsResponse build() {
             return new CredentialsResponse(customRegistries, sourceRegistry);
         }

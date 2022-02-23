@@ -54,7 +54,6 @@ public final class GetContainerRecipeResult {
             this.arn = arn;
             return this;
         }
-
         public GetContainerRecipeResult build() {
             return new GetContainerRecipeResult(arn);
         }

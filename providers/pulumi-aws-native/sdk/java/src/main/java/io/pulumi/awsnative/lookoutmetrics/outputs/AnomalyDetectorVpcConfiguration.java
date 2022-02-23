@@ -59,7 +59,6 @@ public final class AnomalyDetectorVpcConfiguration {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }
-
         public AnomalyDetectorVpcConfiguration build() {
             return new AnomalyDetectorVpcConfiguration(securityGroupIdList, subnetIdList);
         }

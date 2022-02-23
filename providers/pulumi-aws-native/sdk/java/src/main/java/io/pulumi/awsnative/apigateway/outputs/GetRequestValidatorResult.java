@@ -98,7 +98,6 @@ public final class GetRequestValidatorResult {
             this.validateRequestParameters = validateRequestParameters;
             return this;
         }
-
         public GetRequestValidatorResult build() {
             return new GetRequestValidatorResult(requestValidatorId, validateRequestBody, validateRequestParameters);
         }

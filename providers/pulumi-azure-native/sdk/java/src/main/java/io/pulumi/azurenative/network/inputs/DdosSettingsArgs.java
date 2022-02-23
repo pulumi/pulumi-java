@@ -27,7 +27,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ddosCustomPolicy")
-    private final @Nullable Input<SubResourceArgs> ddosCustomPolicy;
+        private final @Nullable Input<SubResourceArgs> ddosCustomPolicy;
 
     public Input<SubResourceArgs> getDdosCustomPolicy() {
         return this.ddosCustomPolicy == null ? Input.empty() : this.ddosCustomPolicy;
@@ -38,7 +38,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedIP")
-    private final @Nullable Input<Boolean> protectedIP;
+        private final @Nullable Input<Boolean> protectedIP;
 
     public Input<Boolean> getProtectedIP() {
         return this.protectedIP == null ? Input.empty() : this.protectedIP;
@@ -49,7 +49,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectionCoverage")
-    private final @Nullable Input<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
+        private final @Nullable Input<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
 
     public Input<Either<String,DdosSettingsProtectionCoverage>> getProtectionCoverage() {
         return this.protectionCoverage == null ? Input.empty() : this.protectionCoverage;
@@ -123,7 +123,6 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.protectionCoverage = Input.ofNullable(protectionCoverage);
             return this;
         }
-
         public DdosSettingsArgs build() {
             return new DdosSettingsArgs(ddosCustomPolicy, protectedIP, protectionCoverage);
         }

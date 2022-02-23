@@ -100,7 +100,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
             this.replace = replace;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd(headerName, headerValue, replace);
         }

@@ -54,7 +54,6 @@ public final class FeatureMembershipConfigmanagementBinauthz {
             this.enabled = enabled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementBinauthz build() {
             return new FeatureMembershipConfigmanagementBinauthz(enabled);
         }

@@ -161,7 +161,6 @@ public final class MsTeamsChannelPropertiesResponse {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public MsTeamsChannelPropertiesResponse build() {
             return new MsTeamsChannelPropertiesResponse(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }

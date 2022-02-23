@@ -24,7 +24,7 @@ public final class DistributionGroupListReceiverValueResponse extends io.pulumi.
      * 
      */
     @InputImport(name="distributionGroups")
-    private final @Nullable List<String> distributionGroups;
+        private final @Nullable List<String> distributionGroups;
 
     public List<String> getDistributionGroups() {
         return this.distributionGroups == null ? List.of() : this.distributionGroups;
@@ -62,7 +62,6 @@ public final class DistributionGroupListReceiverValueResponse extends io.pulumi.
             this.distributionGroups = distributionGroups;
             return this;
         }
-
         public DistributionGroupListReceiverValueResponse build() {
             return new DistributionGroupListReceiverValueResponse(distributionGroups);
         }

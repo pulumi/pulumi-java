@@ -75,7 +75,6 @@ public final class SimulationApplicationRenderingEngine {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SimulationApplicationRenderingEngine build() {
             return new SimulationApplicationRenderingEngine(name, version);
         }

@@ -21,7 +21,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="auditIntervalSeconds")
-    private final @Nullable Input<String> auditIntervalSeconds;
+        private final @Nullable Input<String> auditIntervalSeconds;
 
     public Input<String> getAuditIntervalSeconds() {
         return this.auditIntervalSeconds == null ? Input.empty() : this.auditIntervalSeconds;
@@ -32,7 +32,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -43,7 +43,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="exemptableNamespaces")
-    private final @Nullable Input<List<String>> exemptableNamespaces;
+        private final @Nullable Input<List<String>> exemptableNamespaces;
 
     public Input<List<String>> getExemptableNamespaces() {
         return this.exemptableNamespaces == null ? Input.empty() : this.exemptableNamespaces;
@@ -54,7 +54,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="logDeniesEnabled")
-    private final @Nullable Input<Boolean> logDeniesEnabled;
+        private final @Nullable Input<Boolean> logDeniesEnabled;
 
     public Input<Boolean> getLogDeniesEnabled() {
         return this.logDeniesEnabled == null ? Input.empty() : this.logDeniesEnabled;
@@ -65,7 +65,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="referentialRulesEnabled")
-    private final @Nullable Input<Boolean> referentialRulesEnabled;
+        private final @Nullable Input<Boolean> referentialRulesEnabled;
 
     public Input<Boolean> getReferentialRulesEnabled() {
         return this.referentialRulesEnabled == null ? Input.empty() : this.referentialRulesEnabled;
@@ -76,7 +76,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
      * 
      */
     @InputImport(name="templateLibraryInstalled")
-    private final @Nullable Input<Boolean> templateLibraryInstalled;
+        private final @Nullable Input<Boolean> templateLibraryInstalled;
 
     public Input<Boolean> getTemplateLibraryInstalled() {
         return this.templateLibraryInstalled == null ? Input.empty() : this.templateLibraryInstalled;
@@ -195,7 +195,6 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             this.templateLibraryInstalled = Input.ofNullable(templateLibraryInstalled);
             return this;
         }
-
         public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
             return new FeatureMembershipConfigmanagementPolicyControllerArgs(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }

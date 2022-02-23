@@ -123,7 +123,6 @@ public final class NetworkInterfaceResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public NetworkInterfaceResourceSettingsResponse build() {
             return new NetworkInterfaceResourceSettingsResponse(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
         }

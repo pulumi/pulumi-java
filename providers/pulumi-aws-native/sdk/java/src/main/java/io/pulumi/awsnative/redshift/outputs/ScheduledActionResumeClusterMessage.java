@@ -44,7 +44,6 @@ public final class ScheduledActionResumeClusterMessage {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public ScheduledActionResumeClusterMessage build() {
             return new ScheduledActionResumeClusterMessage(clusterIdentifier);
         }

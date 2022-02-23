@@ -95,7 +95,6 @@ public final class EncryptionIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(principalId, tenantId, type);
         }

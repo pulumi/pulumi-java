@@ -97,7 +97,6 @@ public final class ResourceReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceReferenceResponse build() {
             return new ResourceReferenceResponse(id, name, type);
         }

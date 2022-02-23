@@ -76,7 +76,6 @@ public final class AnalysisSourceTemplate {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-
         public AnalysisSourceTemplate build() {
             return new AnalysisSourceTemplate(arn, dataSetReferences);
         }

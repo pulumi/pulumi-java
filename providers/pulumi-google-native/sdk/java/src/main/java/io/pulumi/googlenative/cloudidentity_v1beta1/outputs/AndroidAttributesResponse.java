@@ -117,7 +117,6 @@ public final class AndroidAttributesResponse {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }
-
         public AndroidAttributesResponse build() {
             return new AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }

@@ -162,7 +162,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkConfigurationResponse(etag, id, ipConfigurations, name, provisioningState, type);
         }

@@ -19,7 +19,7 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -30,7 +30,7 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * 
      */
     @InputImport(name="virtualMachine")
-    private final @Nullable Input<String> virtualMachine;
+        private final @Nullable Input<String> virtualMachine;
 
     public Input<String> getVirtualMachine() {
         return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
@@ -89,7 +89,6 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstancesInstanceGetArgs build() {
             return new SpokeLinkedRouterApplianceInstancesInstanceGetArgs(ipAddress, virtualMachine);
         }

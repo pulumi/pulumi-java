@@ -21,7 +21,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<SystemAssignedServiceIdentityArgs> identity;
+        private final @Nullable Input<SystemAssignedServiceIdentityArgs> identity;
 
     public Input<SystemAssignedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -43,7 +43,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadTestName")
-    private final @Nullable Input<String> loadTestName;
+        private final @Nullable Input<String> loadTestName;
 
     public Input<String> getLoadTestName() {
         return this.loadTestName == null ? Input.empty() : this.loadTestName;
@@ -54,7 +54,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LoadTestArgs build() {
             return new LoadTestArgs(description, identity, loadTestName, location, resourceGroupName, tags);
         }

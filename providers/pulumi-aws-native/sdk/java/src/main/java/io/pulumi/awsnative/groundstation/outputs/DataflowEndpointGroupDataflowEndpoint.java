@@ -75,7 +75,6 @@ public final class DataflowEndpointGroupDataflowEndpoint {
             this.name = name;
             return this;
         }
-
         public DataflowEndpointGroupDataflowEndpoint build() {
             return new DataflowEndpointGroupDataflowEndpoint(address, mtu, name);
         }

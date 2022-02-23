@@ -75,7 +75,6 @@ public final class RecurringTimeWindowResponse {
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public RecurringTimeWindowResponse build() {
             return new RecurringTimeWindowResponse(recurrence, window);
         }

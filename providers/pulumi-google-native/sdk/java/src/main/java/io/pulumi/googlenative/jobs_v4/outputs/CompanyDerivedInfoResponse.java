@@ -52,7 +52,6 @@ public final class CompanyDerivedInfoResponse {
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }
-
         public CompanyDerivedInfoResponse build() {
             return new CompanyDerivedInfoResponse(headquartersLocation);
         }

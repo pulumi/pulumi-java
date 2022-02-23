@@ -54,7 +54,6 @@ public final class IpAddressOrRangeResponse {
             this.ipAddressOrRange = ipAddressOrRange;
             return this;
         }
-
         public IpAddressOrRangeResponse build() {
             return new IpAddressOrRangeResponse(ipAddressOrRange);
         }

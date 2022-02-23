@@ -19,7 +19,7 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataId")
-    private final @Nullable String dataId;
+        private final @Nullable String dataId;
 
     public Optional<String> getDataId() {
         return this.dataId == null ? Optional.empty() : Optional.ofNullable(this.dataId);
@@ -30,7 +30,7 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -41,7 +41,7 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pathOnCompute")
-    private final @Nullable String pathOnCompute;
+        private final @Nullable String pathOnCompute;
 
     public Optional<String> getPathOnCompute() {
         return this.pathOnCompute == null ? Optional.empty() : Optional.ofNullable(this.pathOnCompute);
@@ -100,7 +100,6 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
             this.pathOnCompute = pathOnCompute;
             return this;
         }
-
         public InputDataBindingResponse build() {
             return new InputDataBindingResponse(dataId, mode, pathOnCompute);
         }

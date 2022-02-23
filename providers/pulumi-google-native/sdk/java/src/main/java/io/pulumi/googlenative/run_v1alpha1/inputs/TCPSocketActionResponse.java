@@ -22,7 +22,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -33,7 +33,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -82,7 +82,6 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TCPSocketActionResponse build() {
             return new TCPSocketActionResponse(host, port);
         }

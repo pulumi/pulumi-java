@@ -58,7 +58,6 @@ public final class GetBucketLifecycleRuleAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBucketLifecycleRuleAction build() {
             return new GetBucketLifecycleRuleAction(storageClass, type);
         }

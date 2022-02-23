@@ -19,7 +19,7 @@ public final class FeatureMembershipConfigmanagementBinauthzArgs extends io.pulu
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -62,7 +62,6 @@ public final class FeatureMembershipConfigmanagementBinauthzArgs extends io.pulu
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public FeatureMembershipConfigmanagementBinauthzArgs build() {
             return new FeatureMembershipConfigmanagementBinauthzArgs(enabled);
         }

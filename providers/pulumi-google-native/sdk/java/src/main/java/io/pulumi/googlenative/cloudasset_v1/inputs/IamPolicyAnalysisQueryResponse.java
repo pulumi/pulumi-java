@@ -26,7 +26,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="accessSelector", required=true)
-    private final AccessSelectorResponse accessSelector;
+      private final AccessSelectorResponse accessSelector;
 
     public AccessSelectorResponse getAccessSelector() {
         return this.accessSelector;
@@ -37,7 +37,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="conditionContext", required=true)
-    private final ConditionContextResponse conditionContext;
+      private final ConditionContextResponse conditionContext;
 
     public ConditionContextResponse getConditionContext() {
         return this.conditionContext;
@@ -48,7 +48,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="identitySelector", required=true)
-    private final IdentitySelectorResponse identitySelector;
+      private final IdentitySelectorResponse identitySelector;
 
     public IdentitySelectorResponse getIdentitySelector() {
         return this.identitySelector;
@@ -59,7 +59,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="options", required=true)
-    private final OptionsResponse options;
+      private final OptionsResponse options;
 
     public OptionsResponse getOptions() {
         return this.options;
@@ -70,7 +70,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceSelector", required=true)
-    private final ResourceSelectorResponse resourceSelector;
+      private final ResourceSelectorResponse resourceSelector;
 
     public ResourceSelectorResponse getResourceSelector() {
         return this.resourceSelector;
@@ -81,7 +81,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -170,7 +170,6 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public IamPolicyAnalysisQueryResponse build() {
             return new IamPolicyAnalysisQueryResponse(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }

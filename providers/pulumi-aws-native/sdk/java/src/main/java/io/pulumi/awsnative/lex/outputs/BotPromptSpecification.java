@@ -84,7 +84,6 @@ public final class BotPromptSpecification {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
         public BotPromptSpecification build() {
             return new BotPromptSpecification(allowInterrupt, maxRetries, messageGroupsList);
         }

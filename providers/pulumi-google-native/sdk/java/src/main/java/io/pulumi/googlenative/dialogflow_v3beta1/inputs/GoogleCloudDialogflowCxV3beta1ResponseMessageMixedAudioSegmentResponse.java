@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @InputImport(name="allowPlaybackInterruption", required=true)
-    private final Boolean allowPlaybackInterruption;
+      private final Boolean allowPlaybackInterruption;
 
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @InputImport(name="audio", required=true)
-    private final String audio;
+      private final String audio;
 
     public String getAudio() {
         return this.audio;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(allowPlaybackInterruption, audio, uri);
         }

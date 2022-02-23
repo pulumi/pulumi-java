@@ -141,7 +141,6 @@ public final class StorageOSVolumeSource {
             this.volumeNamespace = volumeNamespace;
             return this;
         }
-
         public StorageOSVolumeSource build() {
             return new StorageOSVolumeSource(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }

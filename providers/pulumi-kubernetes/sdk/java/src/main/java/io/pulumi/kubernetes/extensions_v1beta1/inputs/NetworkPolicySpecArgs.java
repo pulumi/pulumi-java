@@ -27,7 +27,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<NetworkPolicyEgressRuleArgs>> egress;
+        private final @Nullable Input<List<NetworkPolicyEgressRuleArgs>> egress;
 
     public Input<List<NetworkPolicyEgressRuleArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -38,7 +38,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<NetworkPolicyIngressRuleArgs>> ingress;
+        private final @Nullable Input<List<NetworkPolicyIngressRuleArgs>> ingress;
 
     public Input<List<NetworkPolicyIngressRuleArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -49,7 +49,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="podSelector", required=true)
-    private final Input<LabelSelectorArgs> podSelector;
+        private final Input<LabelSelectorArgs> podSelector;
 
     public Input<LabelSelectorArgs> getPodSelector() {
         return this.podSelector;
@@ -60,7 +60,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyTypes")
-    private final @Nullable Input<List<String>> policyTypes;
+        private final @Nullable Input<List<String>> policyTypes;
 
     public Input<List<String>> getPolicyTypes() {
         return this.policyTypes == null ? Input.empty() : this.policyTypes;
@@ -149,7 +149,6 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
             this.policyTypes = Input.ofNullable(policyTypes);
             return this;
         }
-
         public NetworkPolicySpecArgs build() {
             return new NetworkPolicySpecArgs(egress, ingress, podSelector, policyTypes);
         }

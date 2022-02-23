@@ -141,7 +141,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce {
             this.script = script;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce(args, file, interpreter, outputFilePath, script);
         }

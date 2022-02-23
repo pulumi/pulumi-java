@@ -98,7 +98,6 @@ public final class JobCollectionQuotaResponse {
             this.maxRecurrence = maxRecurrence;
             return this;
         }
-
         public JobCollectionQuotaResponse build() {
             return new JobCollectionQuotaResponse(maxJobCount, maxJobOccurrence, maxRecurrence);
         }

@@ -25,7 +25,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable Input<String> agentPoolName;
+        private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -36,7 +36,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Input<Boolean> isArchiveEnabled;
+        private final @Nullable Input<Boolean> isArchiveEnabled;
 
     public Input<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
@@ -47,7 +47,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable Input<String> logTemplate;
+        private final @Nullable Input<String> logTemplate;
 
     public Input<String> getLogTemplate() {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
@@ -58,7 +58,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideTaskStepProperties")
-    private final @Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
+        private final @Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
 
     public Input<OverrideTaskStepPropertiesArgs> getOverrideTaskStepProperties() {
         return this.overrideTaskStepProperties == null ? Input.empty() : this.overrideTaskStepProperties;
@@ -69,7 +69,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskId", required=true)
-    private final Input<String> taskId;
+        private final Input<String> taskId;
 
     public Input<String> getTaskId() {
         return this.taskId;
@@ -81,7 +81,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -200,7 +200,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TaskRunRequestArgs build() {
             return new TaskRunRequestArgs(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }

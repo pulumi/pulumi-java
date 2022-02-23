@@ -115,7 +115,6 @@ public final class BotSlot {
             this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
             return this;
         }
-
         public BotSlot build() {
             return new BotSlot(description, multipleValuesSetting, name, obfuscationSetting, slotTypeName, valueElicitationSetting);
         }

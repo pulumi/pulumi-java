@@ -230,7 +230,6 @@ public final class AssemblyPropertiesResponse {
             this.metadata = metadata;
             return this;
         }
-
         public AssemblyPropertiesResponse build() {
             return new AssemblyPropertiesResponse(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }

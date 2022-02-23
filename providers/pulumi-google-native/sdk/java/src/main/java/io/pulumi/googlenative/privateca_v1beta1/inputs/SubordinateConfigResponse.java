@@ -22,7 +22,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="certificateAuthority", required=true)
-    private final String certificateAuthority;
+      private final String certificateAuthority;
 
     public String getCertificateAuthority() {
         return this.certificateAuthority;
@@ -33,7 +33,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="pemIssuerChain", required=true)
-    private final SubordinateConfigChainResponse pemIssuerChain;
+      private final SubordinateConfigChainResponse pemIssuerChain;
 
     public SubordinateConfigChainResponse getPemIssuerChain() {
         return this.pemIssuerChain;
@@ -82,7 +82,6 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }
-
         public SubordinateConfigResponse build() {
             return new SubordinateConfigResponse(certificateAuthority, pemIssuerChain);
         }

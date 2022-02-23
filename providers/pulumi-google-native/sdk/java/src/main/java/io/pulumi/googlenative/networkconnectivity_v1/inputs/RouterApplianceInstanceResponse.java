@@ -21,7 +21,7 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -32,7 +32,7 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="virtualMachine", required=true)
-    private final String virtualMachine;
+      private final String virtualMachine;
 
     public String getVirtualMachine() {
         return this.virtualMachine;
@@ -81,7 +81,6 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, virtualMachine);
         }

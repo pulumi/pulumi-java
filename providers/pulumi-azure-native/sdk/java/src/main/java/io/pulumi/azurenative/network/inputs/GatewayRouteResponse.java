@@ -22,7 +22,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="asPath", required=true)
-    private final String asPath;
+        private final String asPath;
 
     public String getAsPath() {
         return this.asPath;
@@ -33,7 +33,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="localAddress", required=true)
-    private final String localAddress;
+        private final String localAddress;
 
     public String getLocalAddress() {
         return this.localAddress;
@@ -44,7 +44,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+        private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -55,7 +55,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-    private final String nextHop;
+        private final String nextHop;
 
     public String getNextHop() {
         return this.nextHop;
@@ -66,7 +66,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="origin", required=true)
-    private final String origin;
+        private final String origin;
 
     public String getOrigin() {
         return this.origin;
@@ -77,7 +77,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourcePeer", required=true)
-    private final String sourcePeer;
+        private final String sourcePeer;
 
     public String getSourcePeer() {
         return this.sourcePeer;
@@ -88,7 +88,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Integer weight;
+        private final Integer weight;
 
     public Integer getWeight() {
         return this.weight;
@@ -187,7 +187,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public GatewayRouteResponse build() {
             return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
         }

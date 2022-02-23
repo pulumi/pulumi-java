@@ -309,7 +309,6 @@ public final class ExportExecutionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExportExecutionResponse build() {
             return new ExportExecutionResponse(eTag, error, executionType, fileName, id, name, processingEndTime, processingStartTime, runSettings, status, submittedBy, submittedTime, type);
         }

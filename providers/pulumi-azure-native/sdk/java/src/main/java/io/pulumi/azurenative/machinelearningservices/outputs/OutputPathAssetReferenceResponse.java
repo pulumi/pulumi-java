@@ -99,7 +99,6 @@ public final class OutputPathAssetReferenceResponse {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
-
         public OutputPathAssetReferenceResponse build() {
             return new OutputPathAssetReferenceResponse(jobId, path, referenceType);
         }

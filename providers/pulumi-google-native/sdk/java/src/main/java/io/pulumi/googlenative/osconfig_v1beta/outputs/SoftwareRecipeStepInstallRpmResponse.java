@@ -52,7 +52,6 @@ public final class SoftwareRecipeStepInstallRpmResponse {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public SoftwareRecipeStepInstallRpmResponse build() {
             return new SoftwareRecipeStepInstallRpmResponse(artifactId);
         }

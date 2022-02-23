@@ -60,7 +60,6 @@ public final class CanarySchedule {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public CanarySchedule build() {
             return new CanarySchedule(durationInSeconds, expression);
         }

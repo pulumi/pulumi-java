@@ -18,7 +18,7 @@ public final class AwsClusterAuthorizationAdminUserArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -61,7 +61,6 @@ public final class AwsClusterAuthorizationAdminUserArgs extends io.pulumi.resour
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public AwsClusterAuthorizationAdminUserArgs build() {
             return new AwsClusterAuthorizationAdminUserArgs(username);
         }

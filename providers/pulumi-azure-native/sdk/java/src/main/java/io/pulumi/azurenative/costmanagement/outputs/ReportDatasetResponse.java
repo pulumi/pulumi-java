@@ -145,7 +145,6 @@ public final class ReportDatasetResponse {
             this.grouping = grouping;
             return this;
         }
-
         public ReportDatasetResponse build() {
             return new ReportDatasetResponse(aggregation, configuration, filter, granularity, grouping);
         }

@@ -15,35 +15,35 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
     public static final GetGithubEnterpriseConfigArgs Empty = new GetGithubEnterpriseConfigArgs();
 
     @InputImport(name="configId")
-    private final @Nullable String configId;
+      private final @Nullable String configId;
 
     public Optional<String> getConfigId() {
         return this.configId == null ? Optional.empty() : Optional.ofNullable(this.configId);
     }
 
     @InputImport(name="githubEnterpriseConfigId", required=true)
-    private final String githubEnterpriseConfigId;
+      private final String githubEnterpriseConfigId;
 
     public String getGithubEnterpriseConfigId() {
         return this.githubEnterpriseConfigId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="projectId")
-    private final @Nullable String projectId;
+      private final @Nullable String projectId;
 
     public Optional<String> getProjectId() {
         return this.projectId == null ? Optional.empty() : Optional.ofNullable(this.projectId);
@@ -122,7 +122,6 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
             this.projectId = projectId;
             return this;
         }
-
         public GetGithubEnterpriseConfigArgs build() {
             return new GetGithubEnterpriseConfigArgs(configId, githubEnterpriseConfigId, location, project, projectId);
         }

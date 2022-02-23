@@ -73,7 +73,6 @@ public final class TopicRuleKinesisAction {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }
-
         public TopicRuleKinesisAction build() {
             return new TopicRuleKinesisAction(partitionKey, roleArn, streamName);
         }

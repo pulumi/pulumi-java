@@ -20,7 +20,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -31,7 +31,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName")
-    private final @Nullable Input<String> fieldName;
+      private final @Nullable Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName == null ? Input.empty() : this.fieldName;
@@ -42,7 +42,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlyReadLatest")
-    private final @Nullable Input<Boolean> onlyReadLatest;
+      private final @Nullable Input<Boolean> onlyReadLatest;
 
     public Input<Boolean> getOnlyReadLatest() {
         return this.onlyReadLatest == null ? Input.empty() : this.onlyReadLatest;
@@ -53,14 +53,14 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifierEncoded")
-    private final @Nullable Input<String> qualifierEncoded;
+      private final @Nullable Input<String> qualifierEncoded;
 
     public Input<String> getQualifierEncoded() {
         return this.qualifierEncoded == null ? Input.empty() : this.qualifierEncoded;
     }
 
     @InputImport(name="qualifierString")
-    private final @Nullable Input<String> qualifierString;
+      private final @Nullable Input<String> qualifierString;
 
     public Input<String> getQualifierString() {
         return this.qualifierString == null ? Input.empty() : this.qualifierString;
@@ -71,7 +71,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -190,7 +190,6 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public BigtableColumnArgs build() {
             return new BigtableColumnArgs(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
         }

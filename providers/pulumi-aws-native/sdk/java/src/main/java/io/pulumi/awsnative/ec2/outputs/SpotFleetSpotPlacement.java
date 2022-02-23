@@ -74,7 +74,6 @@ public final class SpotFleetSpotPlacement {
             this.tenancy = tenancy;
             return this;
         }
-
         public SpotFleetSpotPlacement build() {
             return new SpotFleetSpotPlacement(availabilityZone, groupName, tenancy);
         }

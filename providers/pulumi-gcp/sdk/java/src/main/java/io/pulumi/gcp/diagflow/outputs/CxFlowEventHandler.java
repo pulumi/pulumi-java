@@ -148,7 +148,6 @@ public final class CxFlowEventHandler {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public CxFlowEventHandler build() {
             return new CxFlowEventHandler(event, name, targetFlow, targetPage, triggerFulfillment);
         }

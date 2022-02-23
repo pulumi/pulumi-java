@@ -74,7 +74,6 @@ public final class GetClusterMaintenancePolicy {
             this.recurringWindows = Objects.requireNonNull(recurringWindows);
             return this;
         }
-
         public GetClusterMaintenancePolicy build() {
             return new GetClusterMaintenancePolicy(dailyMaintenanceWindows, maintenanceExclusions, recurringWindows);
         }

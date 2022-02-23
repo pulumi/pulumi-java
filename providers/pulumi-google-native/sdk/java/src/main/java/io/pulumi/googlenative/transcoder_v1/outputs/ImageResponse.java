@@ -97,7 +97,6 @@ public final class ImageResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(alpha, resolution, uri);
         }

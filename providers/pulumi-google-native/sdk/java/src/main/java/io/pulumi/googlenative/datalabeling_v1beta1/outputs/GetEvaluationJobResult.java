@@ -246,7 +246,6 @@ public final class GetEvaluationJobResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEvaluationJobResult build() {
             return new GetEvaluationJobResult(annotationSpecSet, attempts, createTime, description, evaluationJobConfig, labelMissingGroundTruth, modelVersion, name, schedule, state);
         }

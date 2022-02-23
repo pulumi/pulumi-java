@@ -53,7 +53,6 @@ public final class SerialPipelineResponse {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-
         public SerialPipelineResponse build() {
             return new SerialPipelineResponse(stages);
         }

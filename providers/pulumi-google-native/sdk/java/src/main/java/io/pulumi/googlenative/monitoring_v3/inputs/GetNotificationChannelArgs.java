@@ -15,14 +15,14 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @InputImport(name="notificationChannelId", required=true)
-    private final String notificationChannelId;
+      private final String notificationChannelId;
 
     public String getNotificationChannelId() {
         return this.notificationChannelId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
             this.project = project;
             return this;
         }
-
         public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(notificationChannelId, project);
         }

@@ -130,7 +130,6 @@ public final class GetRuleResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetRuleResult build() {
             return new GetRuleResult(id, includedPermissions, name, stage, title);
         }

@@ -20,28 +20,28 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -52,7 +52,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions")
-    private final @Nullable Input<V2RestrictionsArgs> restrictions;
+      private final @Nullable Input<V2RestrictionsArgs> restrictions;
 
     public Input<V2RestrictionsArgs> getRestrictions() {
         return this.restrictions == null ? Input.empty() : this.restrictions;
@@ -156,7 +156,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(displayName, keyId, location, project, restrictions);
         }

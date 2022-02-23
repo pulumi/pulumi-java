@@ -118,7 +118,6 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingNetworkUtilization build() {
             return new FlexibleAppVersionAutomaticScalingNetworkUtilization(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

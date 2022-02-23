@@ -97,7 +97,6 @@ public final class DetectorModelState {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }
-
         public DetectorModelState build() {
             return new DetectorModelState(onEnter, onExit, onInput, stateName);
         }

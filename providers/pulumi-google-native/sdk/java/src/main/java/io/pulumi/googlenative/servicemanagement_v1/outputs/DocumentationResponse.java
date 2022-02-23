@@ -161,7 +161,6 @@ public final class DocumentationResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public DocumentationResponse build() {
             return new DocumentationResponse(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
         }

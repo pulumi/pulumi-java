@@ -99,7 +99,6 @@ public final class LogAnalyticsDestinationResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsDestinationResponse build() {
             return new LogAnalyticsDestinationResponse(name, workspaceId, workspaceResourceId);
         }

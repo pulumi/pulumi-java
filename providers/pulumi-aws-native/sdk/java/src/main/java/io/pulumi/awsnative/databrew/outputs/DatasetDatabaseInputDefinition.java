@@ -111,7 +111,6 @@ public final class DatasetDatabaseInputDefinition {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public DatasetDatabaseInputDefinition build() {
             return new DatasetDatabaseInputDefinition(databaseTableName, glueConnectionName, queryString, tempDirectory);
         }

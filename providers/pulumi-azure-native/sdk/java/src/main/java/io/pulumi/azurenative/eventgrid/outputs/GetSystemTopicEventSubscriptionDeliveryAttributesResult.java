@@ -56,7 +56,6 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-
         public GetSystemTopicEventSubscriptionDeliveryAttributesResult build() {
             return new GetSystemTopicEventSubscriptionDeliveryAttributesResult(value);
         }

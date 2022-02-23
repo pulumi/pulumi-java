@@ -940,7 +940,6 @@ public final class GetDiskResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(architecture, creationTimestamp, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, locked, multiWriter, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, satisfiesPzs, selfLink, selfLinkWithId, sizeGb, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceInstantSnapshot, sourceInstantSnapshotId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, type, userLicenses, users, zone);
         }

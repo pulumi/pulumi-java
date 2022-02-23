@@ -29,7 +29,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="activationPolicy")
-    private final @Nullable Input<CloudSqlSettingsActivationPolicy> activationPolicy;
+      private final @Nullable Input<CloudSqlSettingsActivationPolicy> activationPolicy;
 
     public Input<CloudSqlSettingsActivationPolicy> getActivationPolicy() {
         return this.activationPolicy == null ? Input.empty() : this.activationPolicy;
@@ -40,7 +40,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoStorageIncrease")
-    private final @Nullable Input<Boolean> autoStorageIncrease;
+      private final @Nullable Input<Boolean> autoStorageIncrease;
 
     public Input<Boolean> getAutoStorageIncrease() {
         return this.autoStorageIncrease == null ? Input.empty() : this.autoStorageIncrease;
@@ -51,7 +51,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cmekKeyName")
-    private final @Nullable Input<String> cmekKeyName;
+      private final @Nullable Input<String> cmekKeyName;
 
     public Input<String> getCmekKeyName() {
         return this.cmekKeyName == null ? Input.empty() : this.cmekKeyName;
@@ -62,7 +62,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -73,7 +73,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataDiskSizeGb")
-    private final @Nullable Input<String> dataDiskSizeGb;
+      private final @Nullable Input<String> dataDiskSizeGb;
 
     public Input<String> getDataDiskSizeGb() {
         return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
@@ -84,7 +84,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataDiskType")
-    private final @Nullable Input<CloudSqlSettingsDataDiskType> dataDiskType;
+      private final @Nullable Input<CloudSqlSettingsDataDiskType> dataDiskType;
 
     public Input<CloudSqlSettingsDataDiskType> getDataDiskType() {
         return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
@@ -95,7 +95,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseFlags")
-    private final @Nullable Input<Map<String,String>> databaseFlags;
+      private final @Nullable Input<Map<String,String>> databaseFlags;
 
     public Input<Map<String,String>> getDatabaseFlags() {
         return this.databaseFlags == null ? Input.empty() : this.databaseFlags;
@@ -106,7 +106,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseVersion")
-    private final @Nullable Input<CloudSqlSettingsDatabaseVersion> databaseVersion;
+      private final @Nullable Input<CloudSqlSettingsDatabaseVersion> databaseVersion;
 
     public Input<CloudSqlSettingsDatabaseVersion> getDatabaseVersion() {
         return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
@@ -117,7 +117,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipConfig")
-    private final @Nullable Input<SqlIpConfigArgs> ipConfig;
+      private final @Nullable Input<SqlIpConfigArgs> ipConfig;
 
     public Input<SqlIpConfigArgs> getIpConfig() {
         return this.ipConfig == null ? Input.empty() : this.ipConfig;
@@ -128,7 +128,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rootPassword")
-    private final @Nullable Input<String> rootPassword;
+      private final @Nullable Input<String> rootPassword;
 
     public Input<String> getRootPassword() {
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
@@ -139,7 +139,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceId")
-    private final @Nullable Input<String> sourceId;
+      private final @Nullable Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId == null ? Input.empty() : this.sourceId;
@@ -150,7 +150,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageAutoResizeLimit")
-    private final @Nullable Input<String> storageAutoResizeLimit;
+      private final @Nullable Input<String> storageAutoResizeLimit;
 
     public Input<String> getStorageAutoResizeLimit() {
         return this.storageAutoResizeLimit == null ? Input.empty() : this.storageAutoResizeLimit;
@@ -161,7 +161,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -172,7 +172,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -183,7 +183,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -437,7 +437,6 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public CloudSqlSettingsArgs build() {
             return new CloudSqlSettingsArgs(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }

@@ -117,7 +117,6 @@ public final class TableGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public TableGetPropertiesResponseResource build() {
             return new TableGetPropertiesResponseResource(etag, id, rid, ts);
         }

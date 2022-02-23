@@ -267,7 +267,6 @@ public final class ApplicationGatewayPathRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPathRuleResponse build() {
             return new ApplicationGatewayPathRuleResponse(backendAddressPool, backendHttpSettings, etag, firewallPolicy, id, name, paths, provisioningState, redirectConfiguration, rewriteRuleSet, type);
         }

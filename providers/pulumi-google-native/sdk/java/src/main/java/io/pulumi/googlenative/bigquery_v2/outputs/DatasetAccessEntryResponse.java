@@ -68,7 +68,6 @@ public final class DatasetAccessEntryResponse {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-
         public DatasetAccessEntryResponse build() {
             return new DatasetAccessEntryResponse(dataset, targetTypes);
         }

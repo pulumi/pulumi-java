@@ -97,7 +97,6 @@ public final class SecureIotDeviceRemoteTunnelResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecureIotDeviceRemoteTunnelResponse build() {
             return new SecureIotDeviceRemoteTunnelResponse(deviceId, iotHubName, type);
         }

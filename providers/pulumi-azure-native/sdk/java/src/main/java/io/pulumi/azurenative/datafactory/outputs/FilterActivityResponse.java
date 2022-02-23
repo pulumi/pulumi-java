@@ -187,7 +187,6 @@ public final class FilterActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public FilterActivityResponse build() {
             return new FilterActivityResponse(condition, dependsOn, description, items, name, type, userProperties);
         }

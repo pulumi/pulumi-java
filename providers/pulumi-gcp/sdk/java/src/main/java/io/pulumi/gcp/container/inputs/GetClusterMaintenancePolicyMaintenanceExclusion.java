@@ -13,21 +13,21 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion extends io.pu
     public static final GetClusterMaintenancePolicyMaintenanceExclusion Empty = new GetClusterMaintenancePolicyMaintenanceExclusion();
 
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+        private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="exclusionName", required=true)
-    private final String exclusionName;
+        private final String exclusionName;
 
     public String getExclusionName() {
         return this.exclusionName;
     }
 
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -86,7 +86,6 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion extends io.pu
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetClusterMaintenancePolicyMaintenanceExclusion build() {
             return new GetClusterMaintenancePolicyMaintenanceExclusion(endTime, exclusionName, startTime);
         }

@@ -267,7 +267,6 @@ public final class VCenterPropertiesResponse {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
-
         public VCenterPropertiesResponse build() {
             return new VCenterPropertiesResponse(discoveryStatus, fabricArmResourceName, friendlyName, healthErrors, infrastructureId, internalId, ipAddress, lastHeartbeat, port, processServerId, runAsAccountId);
         }

@@ -26,7 +26,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable Input<String> adminPassword;
+        private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -37,7 +37,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsername", required=true)
-    private final Input<String> adminUsername;
+        private final Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername;
@@ -48,7 +48,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableCSIProxy")
-    private final @Nullable Input<Boolean> enableCSIProxy;
+        private final @Nullable Input<Boolean> enableCSIProxy;
 
     public Input<Boolean> getEnableCSIProxy() {
         return this.enableCSIProxy == null ? Input.empty() : this.enableCSIProxy;
@@ -59,7 +59,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<Either<String,LicenseType>> licenseType;
+        private final @Nullable Input<Either<String,LicenseType>> licenseType;
 
     public Input<Either<String,LicenseType>> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -148,7 +148,6 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
-
         public ManagedClusterWindowsProfileArgs build() {
             return new ManagedClusterWindowsProfileArgs(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }

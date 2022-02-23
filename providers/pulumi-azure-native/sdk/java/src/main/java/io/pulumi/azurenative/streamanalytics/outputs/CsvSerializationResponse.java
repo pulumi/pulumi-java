@@ -99,7 +99,6 @@ public final class CsvSerializationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CsvSerializationResponse build() {
             return new CsvSerializationResponse(encoding, fieldDelimiter, type);
         }

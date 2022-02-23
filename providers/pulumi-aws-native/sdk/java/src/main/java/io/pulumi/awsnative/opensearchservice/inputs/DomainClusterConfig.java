@@ -18,70 +18,70 @@ public final class DomainClusterConfig extends io.pulumi.resources.InvokeArgs {
     public static final DomainClusterConfig Empty = new DomainClusterConfig();
 
     @InputImport(name="dedicatedMasterCount")
-    private final @Nullable Integer dedicatedMasterCount;
+        private final @Nullable Integer dedicatedMasterCount;
 
     public Optional<Integer> getDedicatedMasterCount() {
         return this.dedicatedMasterCount == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterCount);
     }
 
     @InputImport(name="dedicatedMasterEnabled")
-    private final @Nullable Boolean dedicatedMasterEnabled;
+        private final @Nullable Boolean dedicatedMasterEnabled;
 
     public Optional<Boolean> getDedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterEnabled);
     }
 
     @InputImport(name="dedicatedMasterType")
-    private final @Nullable String dedicatedMasterType;
+        private final @Nullable String dedicatedMasterType;
 
     public Optional<String> getDedicatedMasterType() {
         return this.dedicatedMasterType == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterType);
     }
 
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+        private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
     @InputImport(name="instanceType")
-    private final @Nullable String instanceType;
+        private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
     @InputImport(name="warmCount")
-    private final @Nullable Integer warmCount;
+        private final @Nullable Integer warmCount;
 
     public Optional<Integer> getWarmCount() {
         return this.warmCount == null ? Optional.empty() : Optional.ofNullable(this.warmCount);
     }
 
     @InputImport(name="warmEnabled")
-    private final @Nullable Boolean warmEnabled;
+        private final @Nullable Boolean warmEnabled;
 
     public Optional<Boolean> getWarmEnabled() {
         return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
     }
 
     @InputImport(name="warmType")
-    private final @Nullable String warmType;
+        private final @Nullable String warmType;
 
     public Optional<String> getWarmType() {
         return this.warmType == null ? Optional.empty() : Optional.ofNullable(this.warmType);
     }
 
     @InputImport(name="zoneAwarenessConfig")
-    private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
+        private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
 
     public Optional<DomainZoneAwarenessConfig> getZoneAwarenessConfig() {
         return this.zoneAwarenessConfig == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessConfig);
     }
 
     @InputImport(name="zoneAwarenessEnabled")
-    private final @Nullable Boolean zoneAwarenessEnabled;
+        private final @Nullable Boolean zoneAwarenessEnabled;
 
     public Optional<Boolean> getZoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessEnabled);
@@ -210,7 +210,6 @@ public final class DomainClusterConfig extends io.pulumi.resources.InvokeArgs {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
-
         public DomainClusterConfig build() {
             return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }

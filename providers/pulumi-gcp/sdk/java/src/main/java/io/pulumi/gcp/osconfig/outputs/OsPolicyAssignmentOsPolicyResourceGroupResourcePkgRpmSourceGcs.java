@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGc
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs(bucket, generation, object);
         }

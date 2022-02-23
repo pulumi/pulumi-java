@@ -17,7 +17,7 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appName", required=true)
-    private final String appName;
+        private final String appName;
 
     public String getAppName() {
         return this.appName;
@@ -28,7 +28,7 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+        private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -39,7 +39,7 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -119,7 +119,6 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetCustomDomainArgs build() {
             return new GetCustomDomainArgs(appName, domainName, resourceGroupName, serviceName);
         }

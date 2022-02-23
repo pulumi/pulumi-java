@@ -54,7 +54,6 @@ public final class NetworkFunctionTemplateResponse {
             this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
-
         public NetworkFunctionTemplateResponse build() {
             return new NetworkFunctionTemplateResponse(networkFunctionRoleConfigurations);
         }

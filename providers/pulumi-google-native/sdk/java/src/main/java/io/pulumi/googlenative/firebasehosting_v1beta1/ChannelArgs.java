@@ -17,7 +17,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @InputImport(name="channelId", required=true)
-    private final Input<String> channelId;
+      private final Input<String> channelId;
 
     public Input<String> getChannelId() {
         return this.channelId;
@@ -28,7 +28,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -39,7 +39,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -50,14 +50,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,14 +68,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainedReleaseCount")
-    private final @Nullable Input<Integer> retainedReleaseCount;
+      private final @Nullable Input<Integer> retainedReleaseCount;
 
     public Input<Integer> getRetainedReleaseCount() {
         return this.retainedReleaseCount == null ? Input.empty() : this.retainedReleaseCount;
     }
 
     @InputImport(name="siteId", required=true)
-    private final Input<String> siteId;
+      private final Input<String> siteId;
 
     public Input<String> getSiteId() {
         return this.siteId;
@@ -86,7 +86,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -235,7 +235,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public ChannelArgs build() {
             return new ChannelArgs(channelId, expireTime, labels, name, project, retainedReleaseCount, siteId, ttl);
         }

@@ -44,7 +44,6 @@ public final class DatasetContentVersionValue {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public DatasetContentVersionValue build() {
             return new DatasetContentVersionValue(datasetName);
         }

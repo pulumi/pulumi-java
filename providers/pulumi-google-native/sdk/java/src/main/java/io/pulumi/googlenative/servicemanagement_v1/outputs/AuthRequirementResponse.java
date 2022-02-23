@@ -74,7 +74,6 @@ public final class AuthRequirementResponse {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public AuthRequirementResponse build() {
             return new AuthRequirementResponse(audiences, providerId);
         }

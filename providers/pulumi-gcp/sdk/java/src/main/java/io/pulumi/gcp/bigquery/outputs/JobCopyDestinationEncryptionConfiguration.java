@@ -80,7 +80,6 @@ public final class JobCopyDestinationEncryptionConfiguration {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public JobCopyDestinationEncryptionConfiguration build() {
             return new JobCopyDestinationEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }

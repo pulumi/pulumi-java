@@ -97,7 +97,6 @@ public final class EnvironmentMatrixResponse {
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
         }
-
         public EnvironmentMatrixResponse build() {
             return new EnvironmentMatrixResponse(androidDeviceList, androidMatrix, iosDeviceList);
         }

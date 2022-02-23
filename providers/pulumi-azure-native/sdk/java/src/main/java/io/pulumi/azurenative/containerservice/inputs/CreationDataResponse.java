@@ -23,7 +23,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable String sourceResourceId;
+        private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -61,7 +61,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public CreationDataResponse build() {
             return new CreationDataResponse(sourceResourceId);
         }

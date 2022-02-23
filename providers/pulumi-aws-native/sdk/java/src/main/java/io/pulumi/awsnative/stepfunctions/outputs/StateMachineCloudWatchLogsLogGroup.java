@@ -46,7 +46,6 @@ public final class StateMachineCloudWatchLogsLogGroup {
             this.logGroupArn = logGroupArn;
             return this;
         }
-
         public StateMachineCloudWatchLogsLogGroup build() {
             return new StateMachineCloudWatchLogsLogGroup(logGroupArn);
         }

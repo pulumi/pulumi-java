@@ -226,7 +226,6 @@ public final class GetMediaGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMediaGraphResult build() {
             return new GetMediaGraphResult(created, description, id, lastModified, name, sinks, sources, state, type);
         }

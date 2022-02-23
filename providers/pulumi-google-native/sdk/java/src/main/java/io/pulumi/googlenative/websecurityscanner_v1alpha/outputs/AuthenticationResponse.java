@@ -75,7 +75,6 @@ public final class AuthenticationResponse {
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount);
         }

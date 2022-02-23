@@ -77,7 +77,6 @@ public final class GetTaskSetResult {
             this.scale = scale;
             return this;
         }
-
         public GetTaskSetResult build() {
             return new GetTaskSetResult(id, scale);
         }

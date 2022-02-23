@@ -30,7 +30,6 @@ public final class GooSettingsResponse {
         public Builder(GooSettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooSettingsResponse build() {
             return new GooSettingsResponse();
         }

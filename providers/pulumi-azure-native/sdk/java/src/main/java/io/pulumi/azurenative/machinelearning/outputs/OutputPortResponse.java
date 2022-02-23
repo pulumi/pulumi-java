@@ -54,7 +54,6 @@ public final class OutputPortResponse {
             this.type = type;
             return this;
         }
-
         public OutputPortResponse build() {
             return new OutputPortResponse(type);
         }

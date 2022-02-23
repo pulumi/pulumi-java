@@ -115,7 +115,6 @@ public final class RegionNetworkEndpointGroupAppEngine {
             this.version = version;
             return this;
         }
-
         public RegionNetworkEndpointGroupAppEngine build() {
             return new RegionNetworkEndpointGroupAppEngine(service, urlMask, version);
         }

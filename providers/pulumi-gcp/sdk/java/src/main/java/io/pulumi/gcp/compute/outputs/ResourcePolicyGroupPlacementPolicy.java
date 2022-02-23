@@ -108,7 +108,6 @@ public final class ResourcePolicyGroupPlacementPolicy {
             this.vmCount = vmCount;
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicy build() {
             return new ResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }

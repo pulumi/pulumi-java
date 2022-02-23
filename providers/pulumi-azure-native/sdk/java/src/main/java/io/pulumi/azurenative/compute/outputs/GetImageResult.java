@@ -248,7 +248,6 @@ public final class GetImageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(extendedLocation, hyperVGeneration, id, location, name, provisioningState, sourceVirtualMachine, storageProfile, tags, type);
         }

@@ -60,7 +60,6 @@ public final class ProvisioningTemplateProvisioningHook {
             this.targetArn = targetArn;
             return this;
         }
-
         public ProvisioningTemplateProvisioningHook build() {
             return new ProvisioningTemplateProvisioningHook(payloadVersion, targetArn);
         }

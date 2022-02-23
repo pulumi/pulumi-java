@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="cloudStoragePath")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> cloudStoragePath;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> cloudStoragePath;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> getCloudStoragePath() {
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> wordList;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> wordList;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs(cloudStoragePath, wordList);
         }

@@ -331,7 +331,6 @@ public final class GetFlowSourceResult {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public GetFlowSourceResult build() {
             return new GetFlowSourceResult(decryption, description, entitlementArn, flowArn, ingestIp, ingestPort, maxBitrate, maxLatency, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }

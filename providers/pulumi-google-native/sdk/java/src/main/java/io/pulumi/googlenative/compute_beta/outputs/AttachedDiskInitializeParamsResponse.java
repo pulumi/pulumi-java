@@ -352,7 +352,6 @@ public final class AttachedDiskInitializeParamsResponse {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public AttachedDiskInitializeParamsResponse build() {
             return new AttachedDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenses, multiWriter, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
         }

@@ -13,14 +13,14 @@ public final class GetEnvgroupArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEnvgroupArgs Empty = new GetEnvgroupArgs();
 
     @InputImport(name="envgroupId", required=true)
-    private final String envgroupId;
+      private final String envgroupId;
 
     public String getEnvgroupId() {
         return this.envgroupId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetEnvgroupArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetEnvgroupArgs build() {
             return new GetEnvgroupArgs(envgroupId, organizationId);
         }

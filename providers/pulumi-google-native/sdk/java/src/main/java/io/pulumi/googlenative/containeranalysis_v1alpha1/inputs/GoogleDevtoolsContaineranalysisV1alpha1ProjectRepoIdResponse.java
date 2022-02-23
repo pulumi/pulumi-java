@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
      * 
      */
     @InputImport(name="repoName", required=true)
-    private final String repoName;
+      private final String repoName;
 
     public String getRepoName() {
         return this.repoName;
@@ -81,7 +81,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse(project, repoName);
         }

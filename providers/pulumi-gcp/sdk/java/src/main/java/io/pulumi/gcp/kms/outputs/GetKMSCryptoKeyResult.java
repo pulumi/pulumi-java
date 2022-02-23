@@ -194,7 +194,6 @@ public final class GetKMSCryptoKeyResult {
             this.versionTemplates = Objects.requireNonNull(versionTemplates);
             return this;
         }
-
         public GetKMSCryptoKeyResult build() {
             return new GetKMSCryptoKeyResult(destroyScheduledDuration, id, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplates);
         }

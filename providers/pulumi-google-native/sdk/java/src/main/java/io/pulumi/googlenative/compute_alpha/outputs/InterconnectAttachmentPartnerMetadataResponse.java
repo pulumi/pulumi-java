@@ -95,7 +95,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }
-
         public InterconnectAttachmentPartnerMetadataResponse build() {
             return new InterconnectAttachmentPartnerMetadataResponse(interconnectName, partnerName, portalUrl);
         }

@@ -32,7 +32,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiDefinitions")
-    private final @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions;
+        private final @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions;
 
     public Input<ApiResourceDefinitionsArgs> getApiDefinitions() {
         return this.apiDefinitions == null ? Input.empty() : this.apiDefinitions;
@@ -43,7 +43,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiType")
-    private final @Nullable Input<Either<String,ApiType>> apiType;
+        private final @Nullable Input<Either<String,ApiType>> apiType;
 
     public Input<Either<String,ApiType>> getApiType() {
         return this.apiType == null ? Input.empty() : this.apiType;
@@ -54,7 +54,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<ApiResourceBackendServiceArgs> backendService;
+        private final @Nullable Input<ApiResourceBackendServiceArgs> backendService;
 
     public Input<ApiResourceBackendServiceArgs> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -65,7 +65,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="brandColor")
-    private final @Nullable Input<String> brandColor;
+        private final @Nullable Input<String> brandColor;
 
     public Input<String> getBrandColor() {
         return this.brandColor == null ? Input.empty() : this.brandColor;
@@ -76,7 +76,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<String>> capabilities;
+        private final @Nullable Input<List<String>> capabilities;
 
     public Input<List<String>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
@@ -87,7 +87,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionParameters")
-    private final @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters;
+        private final @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters;
 
     public Input<Map<String,ConnectionParameterArgs>> getConnectionParameters() {
         return this.connectionParameters == null ? Input.empty() : this.connectionParameters;
@@ -98,7 +98,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -109,7 +109,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -120,7 +120,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="iconUri")
-    private final @Nullable Input<String> iconUri;
+        private final @Nullable Input<String> iconUri;
 
     public Input<String> getIconUri() {
         return this.iconUri == null ? Input.empty() : this.iconUri;
@@ -131,7 +131,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeUrls")
-    private final @Nullable Input<List<String>> runtimeUrls;
+        private final @Nullable Input<List<String>> runtimeUrls;
 
     public Input<List<String>> getRuntimeUrls() {
         return this.runtimeUrls == null ? Input.empty() : this.runtimeUrls;
@@ -142,7 +142,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="swagger")
-    private final @Nullable Input<Object> swagger;
+        private final @Nullable Input<Object> swagger;
 
     public Input<Object> getSwagger() {
         return this.swagger == null ? Input.empty() : this.swagger;
@@ -153,7 +153,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="wsdlDefinition")
-    private final @Nullable Input<WsdlDefinitionArgs> wsdlDefinition;
+        private final @Nullable Input<WsdlDefinitionArgs> wsdlDefinition;
 
     public Input<WsdlDefinitionArgs> getWsdlDefinition() {
         return this.wsdlDefinition == null ? Input.empty() : this.wsdlDefinition;
@@ -362,7 +362,6 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             this.wsdlDefinition = Input.ofNullable(wsdlDefinition);
             return this;
         }
-
         public CustomApiPropertiesDefinitionArgs build() {
             return new CustomApiPropertiesDefinitionArgs(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }

@@ -52,7 +52,6 @@ public final class ForZone {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ForZone build() {
             return new ForZone(name);
         }

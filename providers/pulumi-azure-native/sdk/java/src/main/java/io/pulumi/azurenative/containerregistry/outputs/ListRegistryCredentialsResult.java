@@ -78,7 +78,6 @@ public final class ListRegistryCredentialsResult {
             this.username = username;
             return this;
         }
-
         public ListRegistryCredentialsResult build() {
             return new ListRegistryCredentialsResult(passwords, username);
         }

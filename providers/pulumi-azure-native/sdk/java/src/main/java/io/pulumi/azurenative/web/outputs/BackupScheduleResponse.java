@@ -162,7 +162,6 @@ public final class BackupScheduleResponse {
             this.startTime = startTime;
             return this;
         }
-
         public BackupScheduleResponse build() {
             return new BackupScheduleResponse(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, lastExecutionTime, retentionPeriodInDays, startTime);
         }

@@ -78,7 +78,6 @@ public final class GetAssetEncryptionKeyResult {
             this.key = key;
             return this;
         }
-
         public GetAssetEncryptionKeyResult build() {
             return new GetAssetEncryptionKeyResult(assetFileEncryptionMetadata, key);
         }

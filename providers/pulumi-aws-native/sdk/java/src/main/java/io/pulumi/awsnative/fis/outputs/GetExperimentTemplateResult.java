@@ -116,7 +116,6 @@ public final class GetExperimentTemplateResult {
             this.targets = targets;
             return this;
         }
-
         public GetExperimentTemplateResult build() {
             return new GetExperimentTemplateResult(actions, description, id, roleArn, stopConditions, targets);
         }

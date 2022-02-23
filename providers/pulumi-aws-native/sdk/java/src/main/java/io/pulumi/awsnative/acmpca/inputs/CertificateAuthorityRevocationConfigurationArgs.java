@@ -20,14 +20,14 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     public static final CertificateAuthorityRevocationConfigurationArgs Empty = new CertificateAuthorityRevocationConfigurationArgs();
 
     @InputImport(name="crlConfiguration")
-    private final @Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
+        private final @Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
 
     public Input<CertificateAuthorityCrlConfigurationArgs> getCrlConfiguration() {
         return this.crlConfiguration == null ? Input.empty() : this.crlConfiguration;
     }
 
     @InputImport(name="ocspConfiguration")
-    private final @Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
+        private final @Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
 
     public Input<CertificateAuthorityOcspConfigurationArgs> getOcspConfiguration() {
         return this.ocspConfiguration == null ? Input.empty() : this.ocspConfiguration;
@@ -86,7 +86,6 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
             this.ocspConfiguration = Input.ofNullable(ocspConfiguration);
             return this;
         }
-
         public CertificateAuthorityRevocationConfigurationArgs build() {
             return new CertificateAuthorityRevocationConfigurationArgs(crlConfiguration, ocspConfiguration);
         }

@@ -225,7 +225,6 @@ public final class GetWebhookResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebhookResult build() {
             return new GetWebhookResult(actions, id, location, name, provisioningState, scope, status, tags, type);
         }

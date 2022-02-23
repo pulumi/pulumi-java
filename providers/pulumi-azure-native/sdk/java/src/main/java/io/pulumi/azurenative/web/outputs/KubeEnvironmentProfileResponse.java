@@ -97,7 +97,6 @@ public final class KubeEnvironmentProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubeEnvironmentProfileResponse build() {
             return new KubeEnvironmentProfileResponse(id, name, type);
         }

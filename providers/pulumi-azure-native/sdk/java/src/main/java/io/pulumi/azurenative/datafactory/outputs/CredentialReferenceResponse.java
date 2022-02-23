@@ -74,7 +74,6 @@ public final class CredentialReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CredentialReferenceResponse build() {
             return new CredentialReferenceResponse(referenceName, type);
         }

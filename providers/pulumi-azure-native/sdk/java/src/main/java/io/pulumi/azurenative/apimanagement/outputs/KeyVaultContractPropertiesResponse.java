@@ -98,7 +98,6 @@ public final class KeyVaultContractPropertiesResponse {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public KeyVaultContractPropertiesResponse build() {
             return new KeyVaultContractPropertiesResponse(identityClientId, lastStatus, secretIdentifier);
         }

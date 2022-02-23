@@ -44,7 +44,6 @@ public final class FlowGoogleAnalyticsSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowGoogleAnalyticsSourceProperties build() {
             return new FlowGoogleAnalyticsSourceProperties(object);
         }

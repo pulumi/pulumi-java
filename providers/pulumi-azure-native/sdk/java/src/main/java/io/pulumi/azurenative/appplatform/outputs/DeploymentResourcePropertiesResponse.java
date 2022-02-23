@@ -207,7 +207,6 @@ public final class DeploymentResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DeploymentResourcePropertiesResponse build() {
             return new DeploymentResourcePropertiesResponse(active, appName, createdTime, deploymentSettings, instances, provisioningState, source, status);
         }

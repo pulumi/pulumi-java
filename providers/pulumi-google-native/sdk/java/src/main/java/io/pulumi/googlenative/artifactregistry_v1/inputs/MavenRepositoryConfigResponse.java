@@ -22,7 +22,7 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowSnapshotOverwrites", required=true)
-    private final Boolean allowSnapshotOverwrites;
+      private final Boolean allowSnapshotOverwrites;
 
     public Boolean getAllowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites;
@@ -33,7 +33,7 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="versionPolicy", required=true)
-    private final String versionPolicy;
+      private final String versionPolicy;
 
     public String getVersionPolicy() {
         return this.versionPolicy;
@@ -82,7 +82,6 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
             this.versionPolicy = Objects.requireNonNull(versionPolicy);
             return this;
         }
-
         public MavenRepositoryConfigResponse build() {
             return new MavenRepositoryConfigResponse(allowSnapshotOverwrites, versionPolicy);
         }

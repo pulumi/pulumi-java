@@ -247,7 +247,6 @@ public final class GetVendorSkusResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVendorSkusResult build() {
             return new GetVendorSkusResult(deploymentMode, id, managedApplicationParameters, managedApplicationTemplate, name, networkFunctionTemplate, preview, provisioningState, skuType, type);
         }

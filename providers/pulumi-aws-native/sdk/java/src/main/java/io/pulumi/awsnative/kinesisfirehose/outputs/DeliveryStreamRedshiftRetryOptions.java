@@ -46,7 +46,6 @@ public final class DeliveryStreamRedshiftRetryOptions {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamRedshiftRetryOptions build() {
             return new DeliveryStreamRedshiftRetryOptions(durationInSeconds);
         }

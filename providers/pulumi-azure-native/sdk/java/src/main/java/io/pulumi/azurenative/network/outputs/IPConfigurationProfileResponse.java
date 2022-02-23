@@ -161,7 +161,6 @@ public final class IPConfigurationProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IPConfigurationProfileResponse build() {
             return new IPConfigurationProfileResponse(etag, id, name, provisioningState, subnet, type);
         }

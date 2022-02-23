@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * 
      */
     @InputImport(name="confidence", required=true)
-    private final Double confidence;
+      private final Double confidence;
 
     public Double getConfidence() {
         return this.confidence;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * 
      */
     @InputImport(name="dialogflowIntentId", required=true)
-    private final String dialogflowIntentId;
+      private final String dialogflowIntentId;
 
     public String getDialogflowIntentId() {
         return this.dialogflowIntentId;
@@ -82,7 +82,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(confidence, dialogflowIntentId);
         }

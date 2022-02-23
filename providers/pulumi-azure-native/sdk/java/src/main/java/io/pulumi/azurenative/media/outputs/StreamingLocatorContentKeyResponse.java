@@ -162,7 +162,6 @@ public final class StreamingLocatorContentKeyResponse {
             this.value = value;
             return this;
         }
-
         public StreamingLocatorContentKeyResponse build() {
             return new StreamingLocatorContentKeyResponse(id, labelReferenceInStreamingPolicy, policyName, tracks, type, value);
         }

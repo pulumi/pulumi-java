@@ -59,7 +59,6 @@ public final class RuleGroupTextTransformation {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuleGroupTextTransformation build() {
             return new RuleGroupTextTransformation(priority, type);
         }

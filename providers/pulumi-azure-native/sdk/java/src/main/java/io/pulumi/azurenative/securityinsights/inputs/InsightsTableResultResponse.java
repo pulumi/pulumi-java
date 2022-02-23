@@ -25,7 +25,7 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable List<InsightsTableResultResponseColumns> columns;
+        private final @Nullable List<InsightsTableResultResponseColumns> columns;
 
     public List<InsightsTableResultResponseColumns> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -36,7 +36,7 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="rows")
-    private final @Nullable List<List<String>> rows;
+        private final @Nullable List<List<String>> rows;
 
     public List<List<String>> getRows() {
         return this.rows == null ? List.of() : this.rows;
@@ -85,7 +85,6 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
             this.rows = rows;
             return this;
         }
-
         public InsightsTableResultResponse build() {
             return new InsightsTableResultResponse(columns, rows);
         }

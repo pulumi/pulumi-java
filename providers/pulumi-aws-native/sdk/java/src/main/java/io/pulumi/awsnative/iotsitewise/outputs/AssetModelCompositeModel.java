@@ -120,7 +120,6 @@ public final class AssetModelCompositeModel {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetModelCompositeModel build() {
             return new AssetModelCompositeModel(compositeModelProperties, description, name, type);
         }

@@ -206,7 +206,6 @@ public final class GetIntentResult {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-
         public GetIntentResult build() {
             return new GetIntentResult(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }

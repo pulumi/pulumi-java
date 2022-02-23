@@ -78,7 +78,6 @@ public final class ListMonitorHostsResult {
             this.value = value;
             return this;
         }
-
         public ListMonitorHostsResult build() {
             return new ListMonitorHostsResult(nextLink, value);
         }

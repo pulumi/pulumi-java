@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2LoggingConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-    private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Input<Boolean> enableStackdriverLogging;
 
     public Input<Boolean> getEnableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2LoggingConfigArgs extends io.pulumi.re
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowV2LoggingConfigArgs build() {
             return new GoogleCloudDialogflowV2LoggingConfigArgs(enableStackdriverLogging);
         }

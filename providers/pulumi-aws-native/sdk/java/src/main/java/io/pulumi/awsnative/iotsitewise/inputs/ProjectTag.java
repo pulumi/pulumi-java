@@ -17,14 +17,14 @@ public final class ProjectTag extends io.pulumi.resources.InvokeArgs {
     public static final ProjectTag Empty = new ProjectTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -73,7 +73,6 @@ public final class ProjectTag extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ProjectTag build() {
             return new ProjectTag(key, value);
         }

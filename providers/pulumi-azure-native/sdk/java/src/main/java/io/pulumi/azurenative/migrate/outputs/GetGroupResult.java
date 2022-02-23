@@ -140,7 +140,6 @@ public final class GetGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(eTag, id, name, properties, type);
         }

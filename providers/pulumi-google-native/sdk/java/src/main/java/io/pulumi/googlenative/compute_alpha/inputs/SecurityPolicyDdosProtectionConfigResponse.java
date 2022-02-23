@@ -13,7 +13,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
     public static final SecurityPolicyDdosProtectionConfigResponse Empty = new SecurityPolicyDdosProtectionConfigResponse();
 
     @InputImport(name="ddosProtection", required=true)
-    private final String ddosProtection;
+      private final String ddosProtection;
 
     public String getDdosProtection() {
         return this.ddosProtection;
@@ -51,7 +51,6 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }
-
         public SecurityPolicyDdosProtectionConfigResponse build() {
             return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
         }

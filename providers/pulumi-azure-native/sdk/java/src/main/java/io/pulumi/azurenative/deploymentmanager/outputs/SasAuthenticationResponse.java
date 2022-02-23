@@ -76,7 +76,6 @@ public final class SasAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SasAuthenticationResponse build() {
             return new SasAuthenticationResponse(sasUri, type);
         }

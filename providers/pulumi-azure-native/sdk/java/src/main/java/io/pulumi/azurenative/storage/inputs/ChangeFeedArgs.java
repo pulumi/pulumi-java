@@ -24,7 +24,7 @@ public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -94,7 +94,6 @@ public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
-
         public ChangeFeedArgs build() {
             return new ChangeFeedArgs(enabled, retentionInDays);
         }

@@ -22,7 +22,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="filters", required=true)
-    private final Input<BlobInventoryPolicyFilterArgs> filters;
+        private final Input<BlobInventoryPolicyFilterArgs> filters;
 
     public Input<BlobInventoryPolicyFilterArgs> getFilters() {
         return this.filters;
@@ -65,7 +65,6 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }
-
         public BlobInventoryPolicyDefinitionArgs build() {
             return new BlobInventoryPolicyDefinitionArgs(filters);
         }

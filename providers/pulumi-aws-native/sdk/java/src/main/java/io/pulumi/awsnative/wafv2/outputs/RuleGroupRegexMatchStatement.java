@@ -74,7 +74,6 @@ public final class RuleGroupRegexMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupRegexMatchStatement build() {
             return new RuleGroupRegexMatchStatement(fieldToMatch, regexString, textTransformations);
         }

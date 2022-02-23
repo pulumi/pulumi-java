@@ -30,7 +30,6 @@ public final class ApplicationTags extends io.pulumi.resources.InvokeArgs {
         public Builder(ApplicationTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ApplicationTags build() {
             return new ApplicationTags();
         }

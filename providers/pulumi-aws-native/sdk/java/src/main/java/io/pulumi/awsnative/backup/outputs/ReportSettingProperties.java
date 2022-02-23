@@ -76,7 +76,6 @@ public final class ReportSettingProperties {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }
-
         public ReportSettingProperties build() {
             return new ReportSettingProperties(frameworkArns, reportTemplate);
         }

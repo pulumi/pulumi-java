@@ -142,7 +142,6 @@ public final class FaceDetectorPresetResponse {
             this.resolution = resolution;
             return this;
         }
-
         public FaceDetectorPresetResponse build() {
             return new FaceDetectorPresetResponse(blurType, experimentalOptions, mode, odataType, resolution);
         }

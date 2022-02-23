@@ -24,7 +24,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<List<String>> resourceUri;
+      private final @Nullable Input<List<String>> resourceUri;
 
     public Input<List<String>> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -67,7 +67,6 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public DeployableArgs build() {
             return new DeployableArgs(resourceUri);
         }

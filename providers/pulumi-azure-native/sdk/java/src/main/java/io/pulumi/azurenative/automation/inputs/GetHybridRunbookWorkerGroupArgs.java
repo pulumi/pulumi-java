@@ -17,7 +17,7 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final String automationAccountName;
+        private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="hybridRunbookWorkerGroupName", required=true)
-    private final String hybridRunbookWorkerGroupName;
+        private final String hybridRunbookWorkerGroupName;
 
     public String getHybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
@@ -39,7 +39,7 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetHybridRunbookWorkerGroupArgs build() {
             return new GetHybridRunbookWorkerGroupArgs(automationAccountName, hybridRunbookWorkerGroupName, resourceGroupName);
         }

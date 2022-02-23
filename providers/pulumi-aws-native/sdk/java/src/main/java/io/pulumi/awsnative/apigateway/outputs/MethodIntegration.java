@@ -336,7 +336,6 @@ public final class MethodIntegration {
             this.uri = uri;
             return this;
         }
-
         public MethodIntegration build() {
             return new MethodIntegration(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
         }

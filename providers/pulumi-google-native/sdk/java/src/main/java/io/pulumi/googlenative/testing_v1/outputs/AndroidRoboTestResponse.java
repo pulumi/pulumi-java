@@ -205,7 +205,6 @@ public final class AndroidRoboTestResponse {
             this.startingIntents = Objects.requireNonNull(startingIntents);
             return this;
         }
-
         public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
         }

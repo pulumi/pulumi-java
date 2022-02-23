@@ -17,7 +17,7 @@ public final class GetDetectorModelArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="detectorModelName", required=true)
-    private final String detectorModelName;
+        private final String detectorModelName;
 
     public String getDetectorModelName() {
         return this.detectorModelName;
@@ -55,7 +55,6 @@ public final class GetDetectorModelArgs extends io.pulumi.resources.InvokeArgs {
             this.detectorModelName = Objects.requireNonNull(detectorModelName);
             return this;
         }
-
         public GetDetectorModelArgs build() {
             return new GetDetectorModelArgs(detectorModelName);
         }

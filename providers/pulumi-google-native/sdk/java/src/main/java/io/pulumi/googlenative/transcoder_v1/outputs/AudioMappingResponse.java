@@ -160,7 +160,6 @@ public final class AudioMappingResponse {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
-
         public AudioMappingResponse build() {
             return new AudioMappingResponse(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }

@@ -289,7 +289,6 @@ public final class RestSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestSourceResponse build() {
             return new RestSourceResponse(additionalColumns, additionalHeaders, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, paginationRules, requestBody, requestInterval, requestMethod, sourceRetryCount, sourceRetryWait, type);
         }

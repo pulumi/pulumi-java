@@ -201,7 +201,6 @@ public final class HTTPHealthCheckResponse {
             this.weightReportMode = Objects.requireNonNull(weightReportMode);
             return this;
         }
-
         public HTTPHealthCheckResponse build() {
             return new HTTPHealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response, weightReportMode);
         }

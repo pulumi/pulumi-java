@@ -24,7 +24,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
      * 
      */
     @InputImport(name="authorizationType", required=true)
-    private final Input<String> authorizationType;
+        private final Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType;
@@ -35,7 +35,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<SecureStringArgs> key;
+        private final Input<SecureStringArgs> key;
 
     public Input<SecureStringArgs> getKey() {
         return this.key;
@@ -94,7 +94,6 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public LinkedIntegrationRuntimeKeyAuthorizationArgs build() {
             return new LinkedIntegrationRuntimeKeyAuthorizationArgs(authorizationType, key);
         }

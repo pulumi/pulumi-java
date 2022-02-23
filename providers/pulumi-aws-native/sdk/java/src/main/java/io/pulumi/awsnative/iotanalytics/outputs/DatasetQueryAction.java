@@ -61,7 +61,6 @@ public final class DatasetQueryAction {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
-
         public DatasetQueryAction build() {
             return new DatasetQueryAction(filters, sqlQuery);
         }

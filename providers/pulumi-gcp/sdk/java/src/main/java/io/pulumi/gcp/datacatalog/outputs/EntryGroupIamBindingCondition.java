@@ -73,7 +73,6 @@ public final class EntryGroupIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public EntryGroupIamBindingCondition build() {
             return new EntryGroupIamBindingCondition(description, expression, title);
         }

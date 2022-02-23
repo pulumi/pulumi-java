@@ -99,7 +99,6 @@ public final class VpcEndpointProperties {
             this.vpcId = vpcId;
             return this;
         }
-
         public VpcEndpointProperties build() {
             return new VpcEndpointProperties(networkInterfaces, vpcEndpointId, vpcId);
         }

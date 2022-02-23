@@ -23,7 +23,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultGameServerConfig", required=true)
-    private final Input<String> defaultGameServerConfig;
+        private final Input<String> defaultGameServerConfig;
 
     public Input<String> getDefaultGameServerConfig() {
         return this.defaultGameServerConfig;
@@ -34,7 +34,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deploymentId", required=true)
-    private final Input<String> deploymentId;
+        private final Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId;
@@ -49,7 +49,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gameServerConfigOverrides")
-    private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
+        private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
     public Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> getGameServerConfigOverrides() {
         return this.gameServerConfigOverrides == null ? Input.empty() : this.gameServerConfigOverrides;
@@ -61,7 +61,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -150,7 +150,6 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public GameServerDeploymentRolloutArgs build() {
             return new GameServerDeploymentRolloutArgs(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, project);
         }

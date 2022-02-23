@@ -95,7 +95,6 @@ public final class GetClusterGatewaySettingsResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetClusterGatewaySettingsResult build() {
             return new GetClusterGatewaySettingsResult(isCredentialEnabled, password, userName);
         }

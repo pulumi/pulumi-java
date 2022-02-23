@@ -228,7 +228,6 @@ public final class AzureBlobFSSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureBlobFSSinkResponse build() {
             return new AzureBlobFSSinkResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, metadata, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

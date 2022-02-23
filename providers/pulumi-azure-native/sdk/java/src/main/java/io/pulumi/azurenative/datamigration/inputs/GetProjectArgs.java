@@ -17,7 +17,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+        private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
@@ -28,7 +28,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+        private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -39,7 +39,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -98,7 +98,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetProjectArgs build() {
             return new GetProjectArgs(groupName, projectName, serviceName);
         }

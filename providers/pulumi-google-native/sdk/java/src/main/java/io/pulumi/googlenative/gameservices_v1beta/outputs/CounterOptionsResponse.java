@@ -97,7 +97,6 @@ public final class CounterOptionsResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public CounterOptionsResponse build() {
             return new CounterOptionsResponse(customFields, field, metric);
         }

@@ -77,7 +77,6 @@ public final class PersistentVolumeClaimTemplate {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public PersistentVolumeClaimTemplate build() {
             return new PersistentVolumeClaimTemplate(metadata, spec);
         }

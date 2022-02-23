@@ -210,7 +210,6 @@ public final class MySqlLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MySqlLinkedServiceResponse build() {
             return new MySqlLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

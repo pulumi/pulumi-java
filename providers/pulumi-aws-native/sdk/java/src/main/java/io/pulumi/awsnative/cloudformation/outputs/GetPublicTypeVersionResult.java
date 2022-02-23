@@ -97,7 +97,6 @@ public final class GetPublicTypeVersionResult {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
-
         public GetPublicTypeVersionResult build() {
             return new GetPublicTypeVersionResult(publicTypeArn, publisherId, typeVersionArn);
         }

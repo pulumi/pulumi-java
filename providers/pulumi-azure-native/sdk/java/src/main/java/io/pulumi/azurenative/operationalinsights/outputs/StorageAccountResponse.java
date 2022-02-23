@@ -74,7 +74,6 @@ public final class StorageAccountResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, key);
         }

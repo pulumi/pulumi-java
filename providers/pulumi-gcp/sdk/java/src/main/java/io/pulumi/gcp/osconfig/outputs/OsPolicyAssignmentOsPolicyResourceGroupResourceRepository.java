@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
             this.zypper = zypper;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepository build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepository(apt, goo, yum, zypper);
         }

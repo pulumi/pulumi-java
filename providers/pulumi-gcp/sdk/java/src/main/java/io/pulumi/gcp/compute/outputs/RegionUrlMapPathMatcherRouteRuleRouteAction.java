@@ -244,7 +244,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteAction build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

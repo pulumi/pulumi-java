@@ -54,7 +54,6 @@ public final class ApplicationBillingDetailsDefinitionResponse {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ApplicationBillingDetailsDefinitionResponse build() {
             return new ApplicationBillingDetailsDefinitionResponse(resourceUsageId);
         }

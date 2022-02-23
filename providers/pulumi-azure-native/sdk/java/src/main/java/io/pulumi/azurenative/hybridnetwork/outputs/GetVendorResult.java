@@ -139,7 +139,6 @@ public final class GetVendorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVendorResult build() {
             return new GetVendorResult(id, name, provisioningState, skus, type);
         }

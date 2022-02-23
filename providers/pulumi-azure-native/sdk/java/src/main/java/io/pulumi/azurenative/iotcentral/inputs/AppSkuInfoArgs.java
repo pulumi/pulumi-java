@@ -24,7 +24,7 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,AppSku>> name;
+        private final Input<Either<String,AppSku>> name;
 
     public Input<Either<String,AppSku>> getName() {
         return this.name;
@@ -67,7 +67,6 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AppSkuInfoArgs build() {
             return new AppSkuInfoArgs(name);
         }

@@ -52,7 +52,6 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchSingleHeaderProperties build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderProperties(name);
         }

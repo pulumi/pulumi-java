@@ -97,7 +97,6 @@ public final class BasicAutoscalingAlgorithmResponse {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmResponse build() {
             return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
         }

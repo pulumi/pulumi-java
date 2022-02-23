@@ -27,7 +27,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosAppInfo")
-    private final @Nullable Input<IosAppInfoArgs> iosAppInfo;
+      private final @Nullable Input<IosAppInfoArgs> iosAppInfo;
 
     public Input<IosAppInfoArgs> getIosAppInfo() {
         return this.iosAppInfo == null ? Input.empty() : this.iosAppInfo;
@@ -38,7 +38,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosRoboTest")
-    private final @Nullable Input<IosRoboTestArgs> iosRoboTest;
+      private final @Nullable Input<IosRoboTestArgs> iosRoboTest;
 
     public Input<IosRoboTestArgs> getIosRoboTest() {
         return this.iosRoboTest == null ? Input.empty() : this.iosRoboTest;
@@ -49,7 +49,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosTestLoop")
-    private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
+      private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
 
     public Input<IosTestLoopArgs> getIosTestLoop() {
         return this.iosTestLoop == null ? Input.empty() : this.iosTestLoop;
@@ -60,7 +60,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosXcTest")
-    private final @Nullable Input<IosXcTestArgs> iosXcTest;
+      private final @Nullable Input<IosXcTestArgs> iosXcTest;
 
     public Input<IosXcTestArgs> getIosXcTest() {
         return this.iosXcTest == null ? Input.empty() : this.iosXcTest;
@@ -71,7 +71,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testTimeout")
-    private final @Nullable Input<DurationArgs> testTimeout;
+      private final @Nullable Input<DurationArgs> testTimeout;
 
     public Input<DurationArgs> getTestTimeout() {
         return this.testTimeout == null ? Input.empty() : this.testTimeout;
@@ -175,7 +175,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }
-
         public IosTestArgs build() {
             return new IosTestArgs(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }

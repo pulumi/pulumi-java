@@ -100,7 +100,6 @@ public final class GetDatabaseInstanceSettingIpConfiguration {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfiguration build() {
             return new GetDatabaseInstanceSettingIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

@@ -17,7 +17,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datastoreName", required=true)
-    private final String datastoreName;
+        private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
@@ -39,7 +39,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+        private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -50,7 +50,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDatastoreArgs build() {
             return new GetDatastoreArgs(clusterName, datastoreName, privateCloudName, resourceGroupName);
         }

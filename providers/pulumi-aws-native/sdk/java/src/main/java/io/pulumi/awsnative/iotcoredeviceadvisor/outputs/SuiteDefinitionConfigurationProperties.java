@@ -102,7 +102,6 @@ public final class SuiteDefinitionConfigurationProperties {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
-
         public SuiteDefinitionConfigurationProperties build() {
             return new SuiteDefinitionConfigurationProperties(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
         }

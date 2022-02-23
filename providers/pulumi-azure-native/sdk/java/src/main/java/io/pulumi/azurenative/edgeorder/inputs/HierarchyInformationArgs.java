@@ -23,7 +23,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable Input<String> configurationName;
+        private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -34,7 +34,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productFamilyName")
-    private final @Nullable Input<String> productFamilyName;
+        private final @Nullable Input<String> productFamilyName;
 
     public Input<String> getProductFamilyName() {
         return this.productFamilyName == null ? Input.empty() : this.productFamilyName;
@@ -45,7 +45,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productLineName")
-    private final @Nullable Input<String> productLineName;
+        private final @Nullable Input<String> productLineName;
 
     public Input<String> getProductLineName() {
         return this.productLineName == null ? Input.empty() : this.productLineName;
@@ -56,7 +56,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable Input<String> productName;
+        private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
@@ -145,7 +145,6 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             this.productName = Input.ofNullable(productName);
             return this;
         }
-
         public HierarchyInformationArgs build() {
             return new HierarchyInformationArgs(configurationName, productFamilyName, productLineName, productName);
         }

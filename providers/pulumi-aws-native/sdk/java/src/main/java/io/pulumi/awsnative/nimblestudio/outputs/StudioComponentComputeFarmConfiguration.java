@@ -76,7 +76,6 @@ public final class StudioComponentComputeFarmConfiguration {
             this.endpoint = endpoint;
             return this;
         }
-
         public StudioComponentComputeFarmConfiguration build() {
             return new StudioComponentComputeFarmConfiguration(activeDirectoryUser, endpoint);
         }

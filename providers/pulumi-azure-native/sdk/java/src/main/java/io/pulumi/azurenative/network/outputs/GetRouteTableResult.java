@@ -270,7 +270,6 @@ public final class GetRouteTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRouteTableResult build() {
             return new GetRouteTableResult(disableBgpRoutePropagation, etag, id, location, name, provisioningState, resourceGuid, routes, subnets, tags, type);
         }

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outputConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
     public Input<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
         return this.outputConfig == null ? Input.empty() : this.outputConfig;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
             this.outputConfig = Input.ofNullable(outputConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2SaveFindingsArgs build() {
             return new GooglePrivacyDlpV2SaveFindingsArgs(outputConfig);
         }

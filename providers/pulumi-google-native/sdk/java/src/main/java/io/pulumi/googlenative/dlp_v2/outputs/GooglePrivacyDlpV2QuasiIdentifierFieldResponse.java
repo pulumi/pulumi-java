@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdentifierFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdentifierFieldResponse(customTag, field);
         }

@@ -30,7 +30,6 @@ public final class GetPermissionResult {
         public Builder(GetPermissionResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetPermissionResult build() {
             return new GetPermissionResult();
         }

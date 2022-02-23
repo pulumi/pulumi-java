@@ -54,7 +54,6 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
             this.dnsResourceReferences = dnsResourceReferences;
             return this;
         }
-
         public GetDnsResourceReferenceByTarResourcesResult build() {
             return new GetDnsResourceReferenceByTarResourcesResult(dnsResourceReferences);
         }

@@ -24,7 +24,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<ObjectTypeFieldContentType> contentType;
+        private final @Nullable Input<ObjectTypeFieldContentType> contentType;
 
     public Input<ObjectTypeFieldContentType> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -35,7 +35,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+        private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -46,7 +46,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+        private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -120,7 +120,6 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
             this.target = Input.ofNullable(target);
             return this;
         }
-
         public ObjectTypeFieldArgs build() {
             return new ObjectTypeFieldArgs(contentType, source, target);
         }

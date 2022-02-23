@@ -77,7 +77,6 @@ public final class CanaryVisualReference {
             this.baseScreenshots = baseScreenshots;
             return this;
         }
-
         public CanaryVisualReference build() {
             return new CanaryVisualReference(baseCanaryRunId, baseScreenshots);
         }

@@ -120,7 +120,6 @@ public final class ScorecardResponse {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public ScorecardResponse build() {
             return new ScorecardResponse(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
         }

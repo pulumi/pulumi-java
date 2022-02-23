@@ -98,7 +98,6 @@ public final class WorkspaceSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WorkspaceSkuResponse build() {
             return new WorkspaceSkuResponse(capacityReservationLevel, lastSkuUpdate, name);
         }

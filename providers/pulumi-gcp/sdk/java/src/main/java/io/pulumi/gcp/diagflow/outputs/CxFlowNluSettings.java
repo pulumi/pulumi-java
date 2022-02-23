@@ -112,7 +112,6 @@ public final class CxFlowNluSettings {
             this.modelType = modelType;
             return this;
         }
-
         public CxFlowNluSettings build() {
             return new CxFlowNluSettings(classificationThreshold, modelTrainingMode, modelType);
         }

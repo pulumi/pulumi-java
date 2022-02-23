@@ -137,7 +137,6 @@ public final class FirewallRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, id, name, startIpAddress, type);
         }

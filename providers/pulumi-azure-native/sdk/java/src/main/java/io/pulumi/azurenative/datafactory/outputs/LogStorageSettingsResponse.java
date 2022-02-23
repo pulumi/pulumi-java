@@ -119,7 +119,6 @@ public final class LogStorageSettingsResponse {
             this.path = path;
             return this;
         }
-
         public LogStorageSettingsResponse build() {
             return new LogStorageSettingsResponse(enableReliableLogging, linkedServiceName, logLevel, path);
         }

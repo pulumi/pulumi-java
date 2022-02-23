@@ -289,7 +289,6 @@ public final class GetFleetResult {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-
         public GetFleetResult build() {
             return new GetFleetResult(description, desiredEC2Instances, eC2InboundPermissions, fleetId, locations, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, resourceCreationLimitPolicy, runtimeConfiguration);
         }

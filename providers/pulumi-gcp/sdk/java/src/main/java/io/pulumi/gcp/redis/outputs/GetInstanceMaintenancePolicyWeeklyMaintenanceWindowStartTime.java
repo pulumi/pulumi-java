@@ -84,7 +84,6 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
             return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
         }

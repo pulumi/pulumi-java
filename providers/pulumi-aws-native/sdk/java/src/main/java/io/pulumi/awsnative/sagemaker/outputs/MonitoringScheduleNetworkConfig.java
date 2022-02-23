@@ -90,7 +90,6 @@ public final class MonitoringScheduleNetworkConfig {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public MonitoringScheduleNetworkConfig build() {
             return new MonitoringScheduleNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

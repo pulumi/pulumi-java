@@ -78,7 +78,6 @@ public final class ListVMHostResult {
             this.value = value;
             return this;
         }
-
         public ListVMHostResult build() {
             return new ListVMHostResult(nextLink, value);
         }

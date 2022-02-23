@@ -23,7 +23,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -34,7 +34,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -93,7 +93,6 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public ContainerImageArgs build() {
             return new ContainerImageArgs(repository, tag);
         }

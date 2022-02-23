@@ -74,7 +74,6 @@ public final class ListObjectAnchorsAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListObjectAnchorsAccountKeysResult build() {
             return new ListObjectAnchorsAccountKeysResult(primaryKey, secondaryKey);
         }

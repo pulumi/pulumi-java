@@ -52,7 +52,6 @@ public final class GetDeploymentLogFileUrlResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetDeploymentLogFileUrlResult build() {
             return new GetDeploymentLogFileUrlResult(url);
         }

@@ -227,7 +227,6 @@ public final class TemplateVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public TemplateVersion build() {
             return new TemplateVersion(createdTime, dataSetConfigurations, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }

@@ -66,7 +66,6 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerVolumeMount build() {
             return new GetServiceTemplateSpecContainerVolumeMount(mountPath, name);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse extends io.
      * 
      */
     @InputImport(name="enableStackdriverLogging", required=true)
-    private final Boolean enableStackdriverLogging;
+      private final Boolean enableStackdriverLogging;
 
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse extends io.
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1LoggingConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1LoggingConfigResponse(enableStackdriverLogging);
         }

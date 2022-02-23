@@ -98,7 +98,6 @@ public final class IPRangeResponse {
             this.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
-
         public IPRangeResponse build() {
             return new IPRangeResponse(address, name, subnetPrefixLength);
         }

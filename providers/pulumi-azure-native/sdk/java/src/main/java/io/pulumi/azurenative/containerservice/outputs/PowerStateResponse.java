@@ -54,7 +54,6 @@ public final class PowerStateResponse {
             this.code = code;
             return this;
         }
-
         public PowerStateResponse build() {
             return new PowerStateResponse(code);
         }

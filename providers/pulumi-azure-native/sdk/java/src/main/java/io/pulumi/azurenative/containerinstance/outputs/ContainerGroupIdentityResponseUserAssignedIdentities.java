@@ -74,7 +74,6 @@ public final class ContainerGroupIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ContainerGroupIdentityResponseUserAssignedIdentities build() {
             return new ContainerGroupIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

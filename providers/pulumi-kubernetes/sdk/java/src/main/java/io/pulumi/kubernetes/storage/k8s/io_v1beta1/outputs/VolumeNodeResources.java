@@ -54,7 +54,6 @@ public final class VolumeNodeResources {
             this.count = count;
             return this;
         }
-
         public VolumeNodeResources build() {
             return new VolumeNodeResources(count);
         }

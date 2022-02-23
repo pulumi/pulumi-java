@@ -44,7 +44,6 @@ public final class GetAccountIdResult {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public GetAccountIdResult build() {
             return new GetAccountIdResult(accountId);
         }

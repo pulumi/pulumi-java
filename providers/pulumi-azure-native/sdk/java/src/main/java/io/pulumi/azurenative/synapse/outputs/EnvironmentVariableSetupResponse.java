@@ -97,7 +97,6 @@ public final class EnvironmentVariableSetupResponse {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }
-
         public EnvironmentVariableSetupResponse build() {
             return new EnvironmentVariableSetupResponse(type, variableName, variableValue);
         }

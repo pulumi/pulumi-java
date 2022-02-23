@@ -17,7 +17,7 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appId", required=true)
-    private final String appId;
+        private final String appId;
 
     public String getAppId() {
         return this.appId;
@@ -55,7 +55,6 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public GetWebAppArgs build() {
             return new GetWebAppArgs(appId);
         }

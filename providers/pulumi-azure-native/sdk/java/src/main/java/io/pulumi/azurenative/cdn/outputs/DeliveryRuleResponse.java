@@ -143,7 +143,6 @@ public final class DeliveryRuleResponse {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public DeliveryRuleResponse build() {
             return new DeliveryRuleResponse(actions, conditions, name, order);
         }

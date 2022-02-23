@@ -118,7 +118,6 @@ public final class VirtualNetworkProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, name, subnet, type);
         }

@@ -204,7 +204,6 @@ public final class GetDiskAccessResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskAccessResult build() {
             return new GetDiskAccessResult(id, location, name, privateEndpointConnections, provisioningState, tags, timeCreated, type);
         }

@@ -17,7 +17,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @InputImport(name="timeoutSec", required=true)
-    private final Integer timeoutSec;
+      private final Integer timeoutSec;
 
     public Integer getTimeoutSec() {
         return this.timeoutSec;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(timeoutSec);
         }

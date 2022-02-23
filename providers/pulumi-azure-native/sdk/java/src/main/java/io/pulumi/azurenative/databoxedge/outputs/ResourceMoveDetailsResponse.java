@@ -76,7 +76,6 @@ public final class ResourceMoveDetailsResponse {
             this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;
         }
-
         public ResourceMoveDetailsResponse build() {
             return new ResourceMoveDetailsResponse(operationInProgress, operationInProgressLockTimeoutInUTC);
         }

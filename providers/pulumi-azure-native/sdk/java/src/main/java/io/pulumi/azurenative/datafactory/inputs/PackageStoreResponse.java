@@ -22,7 +22,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageStoreLinkedService", required=true)
-    private final EntityReferenceResponse packageStoreLinkedService;
+        private final EntityReferenceResponse packageStoreLinkedService;
 
     public EntityReferenceResponse getPackageStoreLinkedService() {
         return this.packageStoreLinkedService;
@@ -82,7 +82,6 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
         }
-
         public PackageStoreResponse build() {
             return new PackageStoreResponse(name, packageStoreLinkedService);
         }

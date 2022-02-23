@@ -119,7 +119,6 @@ public final class AwsNodePoolConfigRootVolume {
             this.volumeType = volumeType;
             return this;
         }
-
         public AwsNodePoolConfigRootVolume build() {
             return new AwsNodePoolConfigRootVolume(iops, kmsKeyArn, sizeGib, volumeType);
         }

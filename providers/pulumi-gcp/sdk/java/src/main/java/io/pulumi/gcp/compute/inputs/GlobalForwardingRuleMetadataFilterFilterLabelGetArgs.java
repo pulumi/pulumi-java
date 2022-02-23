@@ -19,7 +19,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelGetArgs extends 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelGetArgs extends 
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -90,7 +90,6 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelGetArgs extends 
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public GlobalForwardingRuleMetadataFilterFilterLabelGetArgs build() {
             return new GlobalForwardingRuleMetadataFilterFilterLabelGetArgs(name, value);
         }

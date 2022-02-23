@@ -17,7 +17,7 @@ public final class ListWebAppConnectionStringsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListWebAppConnectionStringsArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListWebAppConnectionStringsArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListWebAppConnectionStringsArgs build() {
             return new ListWebAppConnectionStringsArgs(name, resourceGroupName);
         }

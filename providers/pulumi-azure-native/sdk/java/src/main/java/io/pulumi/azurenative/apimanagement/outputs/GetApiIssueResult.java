@@ -223,7 +223,6 @@ public final class GetApiIssueResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetApiIssueResult build() {
             return new GetApiIssueResult(apiId, createdDate, description, id, name, state, title, type, userId);
         }

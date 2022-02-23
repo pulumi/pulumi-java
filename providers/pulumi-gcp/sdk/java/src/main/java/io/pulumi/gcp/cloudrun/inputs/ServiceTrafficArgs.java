@@ -24,7 +24,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Boolean> latestRevision;
+        private final @Nullable Input<Boolean> latestRevision;
 
     public Input<Boolean> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -35,7 +35,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Input<Integer> percent;
+        private final Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent;
@@ -46,7 +46,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionName")
-    private final @Nullable Input<String> revisionName;
+        private final @Nullable Input<String> revisionName;
 
     public Input<String> getRevisionName() {
         return this.revisionName == null ? Input.empty() : this.revisionName;
@@ -120,7 +120,6 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
             this.revisionName = Input.ofNullable(revisionName);
             return this;
         }
-
         public ServiceTrafficArgs build() {
             return new ServiceTrafficArgs(latestRevision, percent, revisionName);
         }

@@ -394,7 +394,6 @@ public final class GetRegionNetworkEndpointGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetRegionNetworkEndpointGroupResult build() {
             return new GetRegionNetworkEndpointGroupResult(annotations, appEngine, cloudFunction, cloudRun, creationTimestamp, defaultPort, description, kind, name, network, networkEndpointType, pscTargetService, region, selfLink, size, subnetwork, zone);
         }

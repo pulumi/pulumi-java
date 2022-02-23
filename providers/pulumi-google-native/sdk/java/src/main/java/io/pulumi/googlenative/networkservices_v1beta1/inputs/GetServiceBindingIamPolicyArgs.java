@@ -15,28 +15,28 @@ public final class GetServiceBindingIamPolicyArgs extends io.pulumi.resources.In
     public static final GetServiceBindingIamPolicyArgs Empty = new GetServiceBindingIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceBindingId", required=true)
-    private final String serviceBindingId;
+      private final String serviceBindingId;
 
     public String getServiceBindingId() {
         return this.serviceBindingId;
@@ -105,7 +105,6 @@ public final class GetServiceBindingIamPolicyArgs extends io.pulumi.resources.In
             this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
             return this;
         }
-
         public GetServiceBindingIamPolicyArgs build() {
             return new GetServiceBindingIamPolicyArgs(location, optionsRequestedPolicyVersion, project, serviceBindingId);
         }

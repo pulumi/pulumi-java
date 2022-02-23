@@ -25,28 +25,28 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalingConfigurationArn")
-    private final @Nullable Input<String> autoScalingConfigurationArn;
+        private final @Nullable Input<String> autoScalingConfigurationArn;
 
     public Input<String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn == null ? Input.empty() : this.autoScalingConfigurationArn;
     }
 
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
+        private final @Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="healthCheckConfiguration")
-    private final @Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
+        private final @Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
     public Input<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
         return this.healthCheckConfiguration == null ? Input.empty() : this.healthCheckConfiguration;
     }
 
     @InputImport(name="instanceConfiguration")
-    private final @Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration;
+        private final @Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
     public Input<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
         return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
@@ -57,21 +57,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+        private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
     @InputImport(name="sourceConfiguration", required=true)
-    private final Input<ServiceSourceConfigurationArgs> sourceConfiguration;
+        private final Input<ServiceSourceConfigurationArgs> sourceConfiguration;
 
     public Input<ServiceSourceConfigurationArgs> getSourceConfiguration() {
         return this.sourceConfiguration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ServiceTagArgs>> tags;
+        private final @Nullable Input<List<ServiceTagArgs>> tags;
 
     public Input<List<ServiceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -205,7 +205,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(autoScalingConfigurationArn, encryptionConfiguration, healthCheckConfiguration, instanceConfiguration, serviceName, sourceConfiguration, tags);
         }

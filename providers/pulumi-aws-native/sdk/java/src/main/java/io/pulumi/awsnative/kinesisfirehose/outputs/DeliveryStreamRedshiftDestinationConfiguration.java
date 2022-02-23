@@ -183,7 +183,6 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public DeliveryStreamRedshiftDestinationConfiguration build() {
             return new DeliveryStreamRedshiftDestinationConfiguration(cloudWatchLoggingOptions, clusterJDBCURL, copyCommand, password, processingConfiguration, retryOptions, roleARN, s3BackupConfiguration, s3BackupMode, s3Configuration, username);
         }

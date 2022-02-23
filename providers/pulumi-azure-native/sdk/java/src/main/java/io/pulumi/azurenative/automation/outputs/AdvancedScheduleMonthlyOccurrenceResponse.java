@@ -77,7 +77,6 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public AdvancedScheduleMonthlyOccurrenceResponse build() {
             return new AdvancedScheduleMonthlyOccurrenceResponse(day, occurrence);
         }

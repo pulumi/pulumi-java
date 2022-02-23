@@ -99,7 +99,6 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
-
         public ManagedClusterAPIServerAccessProfileResponse build() {
             return new ManagedClusterAPIServerAccessProfileResponse(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
         }

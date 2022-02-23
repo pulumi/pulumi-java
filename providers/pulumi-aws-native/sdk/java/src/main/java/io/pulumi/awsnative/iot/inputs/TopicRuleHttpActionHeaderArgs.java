@@ -14,14 +14,14 @@ public final class TopicRuleHttpActionHeaderArgs extends io.pulumi.resources.Res
     public static final TopicRuleHttpActionHeaderArgs Empty = new TopicRuleHttpActionHeaderArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class TopicRuleHttpActionHeaderArgs extends io.pulumi.resources.Res
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public TopicRuleHttpActionHeaderArgs build() {
             return new TopicRuleHttpActionHeaderArgs(key, value);
         }

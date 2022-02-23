@@ -117,7 +117,6 @@ public final class YarnApplicationResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public YarnApplicationResponse build() {
             return new YarnApplicationResponse(name, progress, state, trackingUrl);
         }

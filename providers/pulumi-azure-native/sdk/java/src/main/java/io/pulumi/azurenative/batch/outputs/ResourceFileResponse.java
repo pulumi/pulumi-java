@@ -160,7 +160,6 @@ public final class ResourceFileResponse {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }
-
         public ResourceFileResponse build() {
             return new ResourceFileResponse(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);
         }

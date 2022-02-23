@@ -119,7 +119,6 @@ public final class AzureFilePersistentVolumeSource {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public AzureFilePersistentVolumeSource build() {
             return new AzureFilePersistentVolumeSource(readOnly, secretName, secretNamespace, shareName);
         }

@@ -95,7 +95,6 @@ public final class WorkloadIdentityConfigResponse {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigResponse build() {
             return new WorkloadIdentityConfigResponse(identityNamespace, identityProvider, workloadPool);
         }

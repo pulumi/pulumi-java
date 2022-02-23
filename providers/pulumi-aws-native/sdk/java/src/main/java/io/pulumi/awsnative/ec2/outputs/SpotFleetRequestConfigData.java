@@ -332,7 +332,6 @@ public final class SpotFleetRequestConfigData {
             this.validUntil = validUntil;
             return this;
         }
-
         public SpotFleetRequestConfigData build() {
             return new SpotFleetRequestConfigData(allocationStrategy, context, excessCapacityTerminationPolicy, iamFleetRole, instanceInterruptionBehavior, instancePoolsToUseCount, launchSpecifications, launchTemplateConfigs, loadBalancersConfig, onDemandAllocationStrategy, onDemandMaxTotalPrice, onDemandTargetCapacity, replaceUnhealthyInstances, spotMaintenanceStrategies, spotMaxTotalPrice, spotPrice, targetCapacity, targetCapacityUnitType, terminateInstancesWithExpiration, type, validFrom, validUntil);
         }

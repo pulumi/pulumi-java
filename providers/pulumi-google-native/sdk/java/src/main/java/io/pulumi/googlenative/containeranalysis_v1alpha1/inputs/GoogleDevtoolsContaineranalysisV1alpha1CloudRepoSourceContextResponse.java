@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="aliasContext", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
+      private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse getAliasContext() {
         return this.aliasContext;
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="repoId", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
+      private final GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
 
     public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse getRepoId() {
         return this.repoId;
@@ -45,7 +45,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @InputImport(name="revisionId", required=true)
-    private final String revisionId;
+      private final String revisionId;
 
     public String getRevisionId() {
         return this.revisionId;
@@ -104,7 +104,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

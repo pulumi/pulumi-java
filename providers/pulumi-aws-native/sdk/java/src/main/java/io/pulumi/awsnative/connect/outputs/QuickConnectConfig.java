@@ -89,7 +89,6 @@ public final class QuickConnectConfig {
             this.userConfig = userConfig;
             return this;
         }
-
         public QuickConnectConfig build() {
             return new QuickConnectConfig(phoneConfig, queueConfig, quickConnectType, userConfig);
         }

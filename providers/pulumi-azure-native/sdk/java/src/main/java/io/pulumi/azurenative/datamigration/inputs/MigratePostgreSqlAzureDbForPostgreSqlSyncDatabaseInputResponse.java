@@ -24,7 +24,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @InputImport(name="migrationSetting")
-    private final @Nullable Map<String,String> migrationSetting;
+        private final @Nullable Map<String,String> migrationSetting;
 
     public Map<String,String> getMigrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
@@ -35,7 +35,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @InputImport(name="sourceSetting")
-    private final @Nullable Map<String,String> sourceSetting;
+        private final @Nullable Map<String,String> sourceSetting;
 
     public Map<String,String> getSourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
@@ -57,7 +57,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @InputImport(name="targetDatabaseName")
-    private final @Nullable String targetDatabaseName;
+        private final @Nullable String targetDatabaseName;
 
     public Optional<String> getTargetDatabaseName() {
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
@@ -68,7 +68,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * 
      */
     @InputImport(name="targetSetting")
-    private final @Nullable Map<String,String> targetSetting;
+        private final @Nullable Map<String,String> targetSetting;
 
     public Map<String,String> getTargetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
@@ -147,7 +147,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
             this.targetSetting = targetSetting;
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }

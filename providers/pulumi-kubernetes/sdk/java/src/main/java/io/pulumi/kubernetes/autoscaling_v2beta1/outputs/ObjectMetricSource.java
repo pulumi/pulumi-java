@@ -141,7 +141,6 @@ public final class ObjectMetricSource {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public ObjectMetricSource build() {
             return new ObjectMetricSource(averageValue, metricName, selector, target, targetValue);
         }

@@ -202,7 +202,6 @@ public final class GetIndexResult {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(arn, capacityUnits, description, documentMetadataConfigurations, id, name, roleArn, tags, userContextPolicy, userTokenConfigurations);
         }

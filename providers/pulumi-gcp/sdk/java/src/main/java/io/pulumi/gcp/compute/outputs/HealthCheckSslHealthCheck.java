@@ -203,7 +203,6 @@ public final class HealthCheckSslHealthCheck {
             this.response = response;
             return this;
         }
-
         public HealthCheckSslHealthCheck build() {
             return new HealthCheckSslHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

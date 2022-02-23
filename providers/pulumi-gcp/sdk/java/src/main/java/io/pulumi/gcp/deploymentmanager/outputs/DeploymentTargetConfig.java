@@ -52,7 +52,6 @@ public final class DeploymentTargetConfig {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public DeploymentTargetConfig build() {
             return new DeploymentTargetConfig(content);
         }

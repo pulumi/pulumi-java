@@ -183,7 +183,6 @@ public final class LaunchConfigurationBlockDevice {
             this.volumeType = volumeType;
             return this;
         }
-
         public LaunchConfigurationBlockDevice build() {
             return new LaunchConfigurationBlockDevice(deleteOnTermination, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
         }

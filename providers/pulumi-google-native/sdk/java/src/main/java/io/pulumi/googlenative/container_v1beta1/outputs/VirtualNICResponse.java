@@ -52,7 +52,6 @@ public final class VirtualNICResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public VirtualNICResponse build() {
             return new VirtualNICResponse(enabled);
         }

@@ -27,7 +27,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="predicateType")
-    private final @Nullable Input<String> predicateType;
+      private final @Nullable Input<String> predicateType;
 
     public Input<String> getPredicateType() {
         return this.predicateType == null ? Input.empty() : this.predicateType;
@@ -38,7 +38,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="provenance")
-    private final @Nullable Input<InTotoProvenanceArgs> provenance;
+      private final @Nullable Input<InTotoProvenanceArgs> provenance;
 
     public Input<InTotoProvenanceArgs> getProvenance() {
         return this.provenance == null ? Input.empty() : this.provenance;
@@ -49,7 +49,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="slsaProvenance")
-    private final @Nullable Input<SlsaProvenanceArgs> slsaProvenance;
+      private final @Nullable Input<SlsaProvenanceArgs> slsaProvenance;
 
     public Input<SlsaProvenanceArgs> getSlsaProvenance() {
         return this.slsaProvenance == null ? Input.empty() : this.slsaProvenance;
@@ -60,7 +60,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subject")
-    private final @Nullable Input<List<SubjectArgs>> subject;
+      private final @Nullable Input<List<SubjectArgs>> subject;
 
     public Input<List<SubjectArgs>> getSubject() {
         return this.subject == null ? Input.empty() : this.subject;
@@ -71,7 +71,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -175,7 +175,6 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public InTotoStatementArgs build() {
             return new InTotoStatementArgs(predicateType, provenance, slsaProvenance, subject, type);
         }

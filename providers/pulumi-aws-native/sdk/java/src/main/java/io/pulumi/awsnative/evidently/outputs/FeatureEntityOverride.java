@@ -60,7 +60,6 @@ public final class FeatureEntityOverride {
             this.variation = variation;
             return this;
         }
-
         public FeatureEntityOverride build() {
             return new FeatureEntityOverride(entityId, variation);
         }

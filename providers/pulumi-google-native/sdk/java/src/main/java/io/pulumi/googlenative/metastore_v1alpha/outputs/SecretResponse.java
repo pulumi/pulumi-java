@@ -52,7 +52,6 @@ public final class SecretResponse {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(cloudSecret);
         }

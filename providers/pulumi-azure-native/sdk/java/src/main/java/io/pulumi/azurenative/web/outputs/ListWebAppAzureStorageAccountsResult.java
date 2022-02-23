@@ -141,7 +141,6 @@ public final class ListWebAppAzureStorageAccountsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppAzureStorageAccountsResult build() {
             return new ListWebAppAzureStorageAccountsResult(id, kind, name, properties, type);
         }

@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsForSCCPowershellResult build() {
             return new GetPrivateEndpointConnectionsForSCCPowershellResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

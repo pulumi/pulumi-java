@@ -550,7 +550,6 @@ public final class EphemeralContainer {
             this.workingDir = workingDir;
             return this;
         }
-
         public EphemeralContainer build() {
             return new EphemeralContainer(args, command, env, envFrom, image, imagePullPolicy, lifecycle, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, stdin, stdinOnce, targetContainerName, terminationMessagePath, terminationMessagePolicy, tty, volumeDevices, volumeMounts, workingDir);
         }

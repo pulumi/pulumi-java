@@ -76,7 +76,6 @@ public final class ReservationShareSettingsProjectMap {
             this.projectId = projectId;
             return this;
         }
-
         public ReservationShareSettingsProjectMap build() {
             return new ReservationShareSettingsProjectMap(id, projectId);
         }

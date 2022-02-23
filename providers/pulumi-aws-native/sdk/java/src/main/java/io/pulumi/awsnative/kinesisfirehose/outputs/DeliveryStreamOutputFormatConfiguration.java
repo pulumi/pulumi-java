@@ -46,7 +46,6 @@ public final class DeliveryStreamOutputFormatConfiguration {
             this.serializer = serializer;
             return this;
         }
-
         public DeliveryStreamOutputFormatConfiguration build() {
             return new DeliveryStreamOutputFormatConfiguration(serializer);
         }

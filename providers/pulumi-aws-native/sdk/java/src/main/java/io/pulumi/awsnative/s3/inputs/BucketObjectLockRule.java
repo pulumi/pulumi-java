@@ -19,7 +19,7 @@ public final class BucketObjectLockRule extends io.pulumi.resources.InvokeArgs {
     public static final BucketObjectLockRule Empty = new BucketObjectLockRule();
 
     @InputImport(name="defaultRetention")
-    private final @Nullable BucketDefaultRetention defaultRetention;
+        private final @Nullable BucketDefaultRetention defaultRetention;
 
     public Optional<BucketDefaultRetention> getDefaultRetention() {
         return this.defaultRetention == null ? Optional.empty() : Optional.ofNullable(this.defaultRetention);
@@ -57,7 +57,6 @@ public final class BucketObjectLockRule extends io.pulumi.resources.InvokeArgs {
             this.defaultRetention = defaultRetention;
             return this;
         }
-
         public BucketObjectLockRule build() {
             return new BucketObjectLockRule(defaultRetention);
         }

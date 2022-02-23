@@ -97,7 +97,6 @@ public final class ExpressRouteCircuitSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ExpressRouteCircuitSkuResponse build() {
             return new ExpressRouteCircuitSkuResponse(family, name, tier);
         }

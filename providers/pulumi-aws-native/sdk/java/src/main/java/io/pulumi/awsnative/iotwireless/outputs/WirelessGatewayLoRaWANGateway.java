@@ -58,7 +58,6 @@ public final class WirelessGatewayLoRaWANGateway {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public WirelessGatewayLoRaWANGateway build() {
             return new WirelessGatewayLoRaWANGateway(gatewayEui, rfRegion);
         }

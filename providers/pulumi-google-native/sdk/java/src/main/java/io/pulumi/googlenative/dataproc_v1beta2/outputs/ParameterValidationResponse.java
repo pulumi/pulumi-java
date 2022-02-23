@@ -75,7 +75,6 @@ public final class ParameterValidationResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ParameterValidationResponse build() {
             return new ParameterValidationResponse(regex, values);
         }

@@ -226,7 +226,6 @@ public final class GetUserRuleCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUserRuleCollectionResult build() {
             return new GetUserRuleCollectionResult(appliesToGroups, description, displayName, etag, id, name, provisioningState, systemData, type);
         }

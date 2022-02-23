@@ -159,7 +159,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse {
             this.unchangedCount = Objects.requireNonNull(unchangedCount);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse build() {
             return new GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse(differenceCount, errorCount, logCount, newestDate, oldestDate, unchangedCount);
         }

@@ -76,7 +76,6 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListSiteIdentifiersAssignedToHostNameResult build() {
             return new ListSiteIdentifiersAssignedToHostNameResult(nextLink, value);
         }

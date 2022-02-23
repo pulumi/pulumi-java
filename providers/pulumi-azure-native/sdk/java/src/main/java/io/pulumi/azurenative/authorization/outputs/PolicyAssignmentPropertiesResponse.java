@@ -99,7 +99,6 @@ public final class PolicyAssignmentPropertiesResponse {
             this.scope = scope;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponse build() {
             return new PolicyAssignmentPropertiesResponse(policy, roleDefinition, scope);
         }

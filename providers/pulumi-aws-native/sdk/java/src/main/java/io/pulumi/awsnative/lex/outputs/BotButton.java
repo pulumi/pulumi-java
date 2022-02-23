@@ -74,7 +74,6 @@ public final class BotButton {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotButton build() {
             return new BotButton(text, value);
         }

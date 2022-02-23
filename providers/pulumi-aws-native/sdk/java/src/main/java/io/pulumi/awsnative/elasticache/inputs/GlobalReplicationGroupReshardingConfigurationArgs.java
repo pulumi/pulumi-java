@@ -20,7 +20,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
      * 
      */
     @InputImport(name="nodeGroupId")
-    private final @Nullable Input<String> nodeGroupId;
+        private final @Nullable Input<String> nodeGroupId;
 
     public Input<String> getNodeGroupId() {
         return this.nodeGroupId == null ? Input.empty() : this.nodeGroupId;
@@ -31,7 +31,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
      * 
      */
     @InputImport(name="preferredAvailabilityZones")
-    private final @Nullable Input<List<String>> preferredAvailabilityZones;
+        private final @Nullable Input<List<String>> preferredAvailabilityZones;
 
     public Input<List<String>> getPreferredAvailabilityZones() {
         return this.preferredAvailabilityZones == null ? Input.empty() : this.preferredAvailabilityZones;
@@ -90,7 +90,6 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
             this.preferredAvailabilityZones = Input.ofNullable(preferredAvailabilityZones);
             return this;
         }
-
         public GlobalReplicationGroupReshardingConfigurationArgs build() {
             return new GlobalReplicationGroupReshardingConfigurationArgs(nodeGroupId, preferredAvailabilityZones);
         }

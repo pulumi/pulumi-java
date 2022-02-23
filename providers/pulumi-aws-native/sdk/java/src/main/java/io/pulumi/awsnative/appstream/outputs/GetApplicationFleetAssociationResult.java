@@ -30,7 +30,6 @@ public final class GetApplicationFleetAssociationResult {
         public Builder(GetApplicationFleetAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetApplicationFleetAssociationResult build() {
             return new GetApplicationFleetAssociationResult();
         }

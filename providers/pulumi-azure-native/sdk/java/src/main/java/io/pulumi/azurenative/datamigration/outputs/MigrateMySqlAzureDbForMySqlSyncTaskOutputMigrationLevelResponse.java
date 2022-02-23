@@ -202,7 +202,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }

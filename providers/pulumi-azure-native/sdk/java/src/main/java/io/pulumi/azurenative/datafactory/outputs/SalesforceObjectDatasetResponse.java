@@ -231,7 +231,6 @@ public final class SalesforceObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceObjectDatasetResponse build() {
             return new SalesforceObjectDatasetResponse(annotations, description, folder, linkedServiceName, objectApiName, parameters, schema, structure, type);
         }

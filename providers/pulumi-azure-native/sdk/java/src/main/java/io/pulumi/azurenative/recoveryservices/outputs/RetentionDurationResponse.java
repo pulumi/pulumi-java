@@ -79,7 +79,6 @@ public final class RetentionDurationResponse {
             this.durationType = durationType;
             return this;
         }
-
         public RetentionDurationResponse build() {
             return new RetentionDurationResponse(count, durationType);
         }

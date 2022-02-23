@@ -75,7 +75,6 @@ public final class SingleClusterRoutingResponse {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public SingleClusterRoutingResponse build() {
             return new SingleClusterRoutingResponse(allowTransactionalWrites, clusterId);
         }

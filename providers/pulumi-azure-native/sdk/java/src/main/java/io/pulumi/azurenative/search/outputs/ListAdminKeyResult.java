@@ -74,7 +74,6 @@ public final class ListAdminKeyResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListAdminKeyResult build() {
             return new ListAdminKeyResult(primaryKey, secondaryKey);
         }

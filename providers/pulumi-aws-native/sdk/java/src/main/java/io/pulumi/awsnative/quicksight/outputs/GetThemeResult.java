@@ -195,7 +195,6 @@ public final class GetThemeResult {
             this.version = version;
             return this;
         }
-
         public GetThemeResult build() {
             return new GetThemeResult(arn, createdTime, lastUpdatedTime, name, permissions, tags, type, version);
         }

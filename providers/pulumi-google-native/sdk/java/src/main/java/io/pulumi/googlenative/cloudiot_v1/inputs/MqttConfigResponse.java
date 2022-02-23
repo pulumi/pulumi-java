@@ -21,7 +21,7 @@ public final class MqttConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mqttEnabledState", required=true)
-    private final String mqttEnabledState;
+      private final String mqttEnabledState;
 
     public String getMqttEnabledState() {
         return this.mqttEnabledState;
@@ -59,7 +59,6 @@ public final class MqttConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
             return this;
         }
-
         public MqttConfigResponse build() {
             return new MqttConfigResponse(mqttEnabledState);
         }

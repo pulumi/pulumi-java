@@ -25,7 +25,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -36,7 +36,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="tableUri")
-    private final @Nullable Input<String> tableUri;
+      private final @Nullable Input<String> tableUri;
 
     public Input<String> getTableUri() {
         return this.tableUri == null ? Input.empty() : this.tableUri;
@@ -47,7 +47,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
+      private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
     public Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -121,7 +121,6 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(force, tableUri, writeDisposition);
         }

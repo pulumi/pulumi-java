@@ -380,7 +380,6 @@ public final class SapOpenHubLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SapOpenHubLinkedServiceResponse build() {
             return new SapOpenHubLinkedServiceResponse(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, systemId, systemNumber, type, userName);
         }

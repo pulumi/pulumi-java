@@ -249,7 +249,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualMachineScaleSetIPConfigurationResponse build() {
             return new VirtualMachineScaleSetIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }

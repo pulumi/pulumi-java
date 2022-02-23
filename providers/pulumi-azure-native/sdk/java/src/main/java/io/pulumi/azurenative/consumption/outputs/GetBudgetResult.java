@@ -293,7 +293,6 @@ public final class GetBudgetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBudgetResult build() {
             return new GetBudgetResult(amount, category, currentSpend, eTag, filter, forecastSpend, id, name, notifications, timeGrain, timePeriod, type);
         }

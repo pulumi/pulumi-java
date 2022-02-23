@@ -76,7 +76,6 @@ public final class NonResourceAttributes {
             this.verb = verb;
             return this;
         }
-
         public NonResourceAttributes build() {
             return new NonResourceAttributes(path, verb);
         }

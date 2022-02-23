@@ -247,7 +247,6 @@ public final class GetHubResult {
             this.webEndpoint = Objects.requireNonNull(webEndpoint);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(apiEndpoint, hubBillingInfo, id, location, name, provisioningState, tags, tenantFeatures, type, webEndpoint);
         }

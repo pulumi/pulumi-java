@@ -98,7 +98,6 @@ public final class ManagementPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public ManagementPolicyFilterResponse build() {
             return new ManagementPolicyFilterResponse(blobIndexMatch, blobTypes, prefixMatch);
         }

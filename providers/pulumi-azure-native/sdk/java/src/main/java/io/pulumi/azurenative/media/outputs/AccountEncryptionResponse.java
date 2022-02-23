@@ -77,7 +77,6 @@ public final class AccountEncryptionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keyVaultProperties, type);
         }

@@ -22,7 +22,7 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rule", required=true)
-    private final List<BucketLifecycleRuleItemResponse> rule;
+      private final List<BucketLifecycleRuleItemResponse> rule;
 
     public List<BucketLifecycleRuleItemResponse> getRule() {
         return this.rule;
@@ -60,7 +60,6 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public BucketLifecycleResponse build() {
             return new BucketLifecycleResponse(rule);
         }

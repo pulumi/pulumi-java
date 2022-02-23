@@ -24,7 +24,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable String lastRefreshedAt;
+        private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
@@ -35,7 +35,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable String oldestRecoveryPoint;
+        private final @Nullable String oldestRecoveryPoint;
 
     public Optional<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
@@ -46,7 +46,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Integer recoveryPointCount;
+        private final @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
@@ -105,7 +105,6 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public MabFileFolderProtectedItemExtendedInfoResponse build() {
             return new MabFileFolderProtectedItemExtendedInfoResponse(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);
         }

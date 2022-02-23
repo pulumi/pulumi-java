@@ -434,7 +434,6 @@ public final class GetShareSubscriptionResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetShareSubscriptionResult build() {
             return new GetShareSubscriptionResult(createdAt, expirationDate, id, invitationId, name, providerEmail, providerName, providerTenantName, provisioningState, shareDescription, shareKind, shareName, shareSubscriptionStatus, shareTerms, sourceShareLocation, systemData, type, userEmail, userName);
         }

@@ -76,7 +76,6 @@ public final class ListTopLevelDomainAgreementsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListTopLevelDomainAgreementsResult build() {
             return new ListTopLevelDomainAgreementsResult(nextLink, value);
         }

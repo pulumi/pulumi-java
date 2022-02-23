@@ -76,7 +76,6 @@ public final class BoundingPolyResponse {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-
         public BoundingPolyResponse build() {
             return new BoundingPolyResponse(label, vertices);
         }

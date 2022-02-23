@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2BigQueryFieldResponse build() {
             return new GooglePrivacyDlpV2BigQueryFieldResponse(field, table);
         }

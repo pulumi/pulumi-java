@@ -95,7 +95,6 @@ public final class VmImageResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public VmImageResponse build() {
             return new VmImageResponse(imageFamily, imageName, project);
         }

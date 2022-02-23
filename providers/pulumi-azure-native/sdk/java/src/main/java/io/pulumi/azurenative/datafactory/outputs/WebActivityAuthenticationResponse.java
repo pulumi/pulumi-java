@@ -186,7 +186,6 @@ public final class WebActivityAuthenticationResponse {
             this.username = username;
             return this;
         }
-
         public WebActivityAuthenticationResponse build() {
             return new WebActivityAuthenticationResponse(credential, password, pfx, resource, type, userTenant, username);
         }

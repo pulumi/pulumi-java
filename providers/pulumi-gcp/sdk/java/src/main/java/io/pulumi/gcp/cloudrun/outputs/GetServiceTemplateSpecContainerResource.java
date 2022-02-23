@@ -59,7 +59,6 @@ public final class GetServiceTemplateSpecContainerResource {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
-
         public GetServiceTemplateSpecContainerResource build() {
             return new GetServiceTemplateSpecContainerResource(limits, requests);
         }

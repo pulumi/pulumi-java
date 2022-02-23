@@ -54,7 +54,6 @@ public final class StandardComponentPropertiesResponse {
             this.key = key;
             return this;
         }
-
         public StandardComponentPropertiesResponse build() {
             return new StandardComponentPropertiesResponse(key);
         }

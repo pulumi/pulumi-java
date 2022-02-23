@@ -448,7 +448,6 @@ public final class ExecuteSSISPackageActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteSSISPackageActivityResponse build() {
             return new ExecuteSSISPackageActivityResponse(connectVia, dependsOn, description, environmentPath, executionCredential, linkedServiceName, logLocation, loggingLevel, name, packageConnectionManagers, packageLocation, packageParameters, policy, projectConnectionManagers, projectParameters, propertyOverrides, runtime, type, userProperties);
         }

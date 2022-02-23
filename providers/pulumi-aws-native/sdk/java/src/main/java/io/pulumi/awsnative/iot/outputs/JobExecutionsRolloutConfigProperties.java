@@ -77,7 +77,6 @@ public final class JobExecutionsRolloutConfigProperties {
             this.maximumPerMinute = maximumPerMinute;
             return this;
         }
-
         public JobExecutionsRolloutConfigProperties build() {
             return new JobExecutionsRolloutConfigProperties(exponentialRolloutRate, maximumPerMinute);
         }

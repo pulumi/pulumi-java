@@ -54,7 +54,6 @@ public final class LinuxOsInfoResponse {
             this.linuxOsState = linuxOsState;
             return this;
         }
-
         public LinuxOsInfoResponse build() {
             return new LinuxOsInfoResponse(linuxOsState);
         }

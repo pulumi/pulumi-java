@@ -101,7 +101,6 @@ public final class DataSourceColumnConfiguration {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public DataSourceColumnConfiguration build() {
             return new DataSourceColumnConfiguration(changeDetectingColumns, documentDataColumnName, documentIdColumnName, documentTitleColumnName, fieldMappings);
         }

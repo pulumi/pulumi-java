@@ -304,7 +304,6 @@ public final class IpSecurityRestrictionResponse {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
-
         public IpSecurityRestrictionResponse build() {
             return new IpSecurityRestrictionResponse(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
         }

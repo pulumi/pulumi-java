@@ -103,7 +103,6 @@ public final class RegionDiskDiskEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public RegionDiskDiskEncryptionKey build() {
             return new RegionDiskDiskEncryptionKey(kmsKeyName, rawKey, sha256);
         }

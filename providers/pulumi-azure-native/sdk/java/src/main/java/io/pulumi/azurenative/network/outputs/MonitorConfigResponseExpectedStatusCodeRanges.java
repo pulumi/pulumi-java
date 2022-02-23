@@ -76,7 +76,6 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
             this.min = min;
             return this;
         }
-
         public MonitorConfigResponseExpectedStatusCodeRanges build() {
             return new MonitorConfigResponseExpectedStatusCodeRanges(max, min);
         }

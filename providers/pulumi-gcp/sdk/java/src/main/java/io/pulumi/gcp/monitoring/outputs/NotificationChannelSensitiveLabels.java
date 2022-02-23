@@ -103,7 +103,6 @@ public final class NotificationChannelSensitiveLabels {
             this.serviceKey = serviceKey;
             return this;
         }
-
         public NotificationChannelSensitiveLabels build() {
             return new NotificationChannelSensitiveLabels(authToken, password, serviceKey);
         }

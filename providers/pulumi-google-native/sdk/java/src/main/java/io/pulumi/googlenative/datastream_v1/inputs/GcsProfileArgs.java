@@ -23,7 +23,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -34,7 +34,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootPath")
-    private final @Nullable Input<String> rootPath;
+      private final @Nullable Input<String> rootPath;
 
     public Input<String> getRootPath() {
         return this.rootPath == null ? Input.empty() : this.rootPath;
@@ -93,7 +93,6 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.rootPath = Input.ofNullable(rootPath);
             return this;
         }
-
         public GcsProfileArgs build() {
             return new GcsProfileArgs(bucket, rootPath);
         }

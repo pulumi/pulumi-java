@@ -90,7 +90,6 @@ public final class GetChannelResult {
             this.tags = tags;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(channelStorage, id, retentionPeriod, tags);
         }

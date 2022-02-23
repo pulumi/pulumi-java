@@ -76,7 +76,6 @@ public final class ListWebAppFunctionSecretsSlotResult {
             this.triggerUrl = triggerUrl;
             return this;
         }
-
         public ListWebAppFunctionSecretsSlotResult build() {
             return new ListWebAppFunctionSecretsSlotResult(key, triggerUrl);
         }

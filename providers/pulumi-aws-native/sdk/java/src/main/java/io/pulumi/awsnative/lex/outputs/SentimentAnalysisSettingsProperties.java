@@ -52,7 +52,6 @@ public final class SentimentAnalysisSettingsProperties {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
-
         public SentimentAnalysisSettingsProperties build() {
             return new SentimentAnalysisSettingsProperties(detectSentiment);
         }

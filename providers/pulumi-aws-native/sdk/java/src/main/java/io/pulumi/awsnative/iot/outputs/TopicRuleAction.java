@@ -327,7 +327,6 @@ public final class TopicRuleAction {
             this.timestream = timestream;
             return this;
         }
-
         public TopicRuleAction build() {
             return new TopicRuleAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamoDB, dynamoDBv2, elasticsearch, firehose, http, iotAnalytics, iotEvents, iotSiteWise, kafka, kinesis, lambda, openSearch, republish, s3, sns, sqs, stepFunctions, timestream);
         }

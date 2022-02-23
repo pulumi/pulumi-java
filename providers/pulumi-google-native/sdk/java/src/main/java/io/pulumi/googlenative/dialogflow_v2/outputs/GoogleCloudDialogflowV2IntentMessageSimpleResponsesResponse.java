@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse(simpleResponses);
         }

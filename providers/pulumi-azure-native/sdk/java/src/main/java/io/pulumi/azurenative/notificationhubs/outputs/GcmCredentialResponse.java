@@ -76,7 +76,6 @@ public final class GcmCredentialResponse {
             this.googleApiKey = googleApiKey;
             return this;
         }
-
         public GcmCredentialResponse build() {
             return new GcmCredentialResponse(gcmEndpoint, googleApiKey);
         }

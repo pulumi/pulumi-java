@@ -274,7 +274,6 @@ public final class RoleResponse {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public RoleResponse build() {
             return new RoleResponse(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
         }

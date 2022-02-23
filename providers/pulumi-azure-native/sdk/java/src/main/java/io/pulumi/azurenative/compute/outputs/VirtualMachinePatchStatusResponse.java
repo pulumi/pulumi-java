@@ -100,7 +100,6 @@ public final class VirtualMachinePatchStatusResponse {
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
         }
-
         public VirtualMachinePatchStatusResponse build() {
             return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
         }

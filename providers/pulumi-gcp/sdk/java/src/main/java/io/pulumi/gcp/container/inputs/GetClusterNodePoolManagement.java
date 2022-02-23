@@ -13,14 +13,14 @@ public final class GetClusterNodePoolManagement extends io.pulumi.resources.Invo
     public static final GetClusterNodePoolManagement Empty = new GetClusterNodePoolManagement();
 
     @InputImport(name="autoRepair", required=true)
-    private final Boolean autoRepair;
+        private final Boolean autoRepair;
 
     public Boolean getAutoRepair() {
         return this.autoRepair;
     }
 
     @InputImport(name="autoUpgrade", required=true)
-    private final Boolean autoUpgrade;
+        private final Boolean autoUpgrade;
 
     public Boolean getAutoUpgrade() {
         return this.autoUpgrade;
@@ -69,7 +69,6 @@ public final class GetClusterNodePoolManagement extends io.pulumi.resources.Invo
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
-
         public GetClusterNodePoolManagement build() {
             return new GetClusterNodePoolManagement(autoRepair, autoUpgrade);
         }

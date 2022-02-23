@@ -157,7 +157,6 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public DeliveryStreamSplunkDestinationConfiguration build() {
             return new DeliveryStreamSplunkDestinationConfiguration(cloudWatchLoggingOptions, hECAcknowledgmentTimeoutInSeconds, hECEndpoint, hECEndpointType, hECToken, processingConfiguration, retryOptions, s3BackupMode, s3Configuration);
         }

@@ -143,7 +143,6 @@ public final class DomainUserSettings {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public DomainUserSettings build() {
             return new DomainUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }

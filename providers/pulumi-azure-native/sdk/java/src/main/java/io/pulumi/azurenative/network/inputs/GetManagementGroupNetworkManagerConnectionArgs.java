@@ -17,7 +17,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-    private final String managementGroupId;
+        private final String managementGroupId;
 
     public String getManagementGroupId() {
         return this.managementGroupId;
@@ -28,7 +28,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
      * 
      */
     @InputImport(name="networkManagerConnectionName", required=true)
-    private final String networkManagerConnectionName;
+        private final String networkManagerConnectionName;
 
     public String getNetworkManagerConnectionName() {
         return this.networkManagerConnectionName;
@@ -77,7 +77,6 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
             this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
             return this;
         }
-
         public GetManagementGroupNetworkManagerConnectionArgs build() {
             return new GetManagementGroupNetworkManagerConnectionArgs(managementGroupId, networkManagerConnectionName);
         }

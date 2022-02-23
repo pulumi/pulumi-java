@@ -26,7 +26,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeNameServerConfig")
-    private final @Nullable Input<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig;
+        private final @Nullable Input<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig;
 
     public Input<PolicyAlternativeNameServerConfigGetArgs> getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig == null ? Input.empty() : this.alternativeNameServerConfig;
@@ -37,7 +37,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableInboundForwarding")
-    private final @Nullable Input<Boolean> enableInboundForwarding;
+        private final @Nullable Input<Boolean> enableInboundForwarding;
 
     public Input<Boolean> getEnableInboundForwarding() {
         return this.enableInboundForwarding == null ? Input.empty() : this.enableInboundForwarding;
@@ -63,7 +63,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+        private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -74,7 +74,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-    private final @Nullable Input<List<PolicyNetworkGetArgs>> networks;
+        private final @Nullable Input<List<PolicyNetworkGetArgs>> networks;
 
     public Input<List<PolicyNetworkGetArgs>> getNetworks() {
         return this.networks == null ? Input.empty() : this.networks;
@@ -98,7 +98,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -232,7 +232,6 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public PolicyState build() {
             return new PolicyState(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, name, networks, project);
         }

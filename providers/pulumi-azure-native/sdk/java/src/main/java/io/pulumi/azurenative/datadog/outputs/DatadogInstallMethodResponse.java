@@ -97,7 +97,6 @@ public final class DatadogInstallMethodResponse {
             this.toolVersion = toolVersion;
             return this;
         }
-
         public DatadogInstallMethodResponse build() {
             return new DatadogInstallMethodResponse(installerVersion, tool, toolVersion);
         }

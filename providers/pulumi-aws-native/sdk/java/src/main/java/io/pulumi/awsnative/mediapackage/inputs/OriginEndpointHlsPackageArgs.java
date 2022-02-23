@@ -31,7 +31,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adMarkers")
-    private final @Nullable Input<OriginEndpointHlsPackageAdMarkers> adMarkers;
+        private final @Nullable Input<OriginEndpointHlsPackageAdMarkers> adMarkers;
 
     public Input<OriginEndpointHlsPackageAdMarkers> getAdMarkers() {
         return this.adMarkers == null ? Input.empty() : this.adMarkers;
@@ -42,21 +42,21 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adTriggers")
-    private final @Nullable Input<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers;
+        private final @Nullable Input<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers;
 
     public Input<List<OriginEndpointHlsPackageAdTriggersItem>> getAdTriggers() {
         return this.adTriggers == null ? Input.empty() : this.adTriggers;
     }
 
     @InputImport(name="adsOnDeliveryRestrictions")
-    private final @Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
+        private final @Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
 
     public Input<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Input.empty() : this.adsOnDeliveryRestrictions;
     }
 
     @InputImport(name="encryption")
-    private final @Nullable Input<OriginEndpointHlsEncryptionArgs> encryption;
+        private final @Nullable Input<OriginEndpointHlsEncryptionArgs> encryption;
 
     public Input<OriginEndpointHlsEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -67,7 +67,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeIframeOnlyStream")
-    private final @Nullable Input<Boolean> includeIframeOnlyStream;
+        private final @Nullable Input<Boolean> includeIframeOnlyStream;
 
     public Input<Boolean> getIncludeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Input.empty() : this.includeIframeOnlyStream;
@@ -78,7 +78,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="playlistType")
-    private final @Nullable Input<OriginEndpointHlsPackagePlaylistType> playlistType;
+        private final @Nullable Input<OriginEndpointHlsPackagePlaylistType> playlistType;
 
     public Input<OriginEndpointHlsPackagePlaylistType> getPlaylistType() {
         return this.playlistType == null ? Input.empty() : this.playlistType;
@@ -89,7 +89,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="playlistWindowSeconds")
-    private final @Nullable Input<Integer> playlistWindowSeconds;
+        private final @Nullable Input<Integer> playlistWindowSeconds;
 
     public Input<Integer> getPlaylistWindowSeconds() {
         return this.playlistWindowSeconds == null ? Input.empty() : this.playlistWindowSeconds;
@@ -100,7 +100,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="programDateTimeIntervalSeconds")
-    private final @Nullable Input<Integer> programDateTimeIntervalSeconds;
+        private final @Nullable Input<Integer> programDateTimeIntervalSeconds;
 
     public Input<Integer> getProgramDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Input.empty() : this.programDateTimeIntervalSeconds;
@@ -111,14 +111,14 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+        private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
+        private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
 
     public Input<OriginEndpointStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;
@@ -129,7 +129,7 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useAudioRenditionGroup")
-    private final @Nullable Input<Boolean> useAudioRenditionGroup;
+        private final @Nullable Input<Boolean> useAudioRenditionGroup;
 
     public Input<Boolean> getUseAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Input.empty() : this.useAudioRenditionGroup;
@@ -323,7 +323,6 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
             this.useAudioRenditionGroup = Input.ofNullable(useAudioRenditionGroup);
             return this;
         }
-
         public OriginEndpointHlsPackageArgs build() {
             return new OriginEndpointHlsPackageArgs(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
         }

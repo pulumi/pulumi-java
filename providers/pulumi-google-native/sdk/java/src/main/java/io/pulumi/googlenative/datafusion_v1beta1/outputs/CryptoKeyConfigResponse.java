@@ -52,7 +52,6 @@ public final class CryptoKeyConfigResponse {
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
         }
-
         public CryptoKeyConfigResponse build() {
             return new CryptoKeyConfigResponse(keyReference);
         }

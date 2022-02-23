@@ -118,7 +118,6 @@ public final class TableDataSetResponse {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public TableDataSetResponse build() {
             return new TableDataSetResponse(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
         }

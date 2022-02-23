@@ -134,7 +134,6 @@ public final class GetSuiteDefinitionResult {
             this.tags = tags;
             return this;
         }
-
         public GetSuiteDefinitionResult build() {
             return new GetSuiteDefinitionResult(suiteDefinitionArn, suiteDefinitionConfiguration, suiteDefinitionId, suiteDefinitionVersion, tags);
         }

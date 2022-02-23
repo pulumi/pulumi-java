@@ -119,7 +119,6 @@ public final class GetProjectResult {
             this.sample = sample;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(datasetName, recipeName, roleArn, sample);
         }

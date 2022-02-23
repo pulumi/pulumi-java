@@ -20,7 +20,7 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<Double> target;
+        private final Input<Double> target;
 
     public Input<Double> getTarget() {
         return this.target;
@@ -63,7 +63,6 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs build() {
             return new AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs(target);
         }

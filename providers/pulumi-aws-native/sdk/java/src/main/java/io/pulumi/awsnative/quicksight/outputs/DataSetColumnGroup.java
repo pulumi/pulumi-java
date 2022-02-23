@@ -46,7 +46,6 @@ public final class DataSetColumnGroup {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
-
         public DataSetColumnGroup build() {
             return new DataSetColumnGroup(geoSpatialColumnGroup);
         }

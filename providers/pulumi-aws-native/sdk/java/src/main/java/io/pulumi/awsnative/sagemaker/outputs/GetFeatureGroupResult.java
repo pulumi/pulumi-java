@@ -30,7 +30,6 @@ public final class GetFeatureGroupResult {
         public Builder(GetFeatureGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetFeatureGroupResult build() {
             return new GetFeatureGroupResult();
         }

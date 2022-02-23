@@ -23,7 +23,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable String emailAddress;
+        private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
@@ -34,7 +34,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * 
      */
     @InputImport(name="firstName")
-    private final @Nullable String firstName;
+        private final @Nullable String firstName;
 
     public Optional<String> getFirstName() {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
@@ -45,7 +45,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * 
      */
     @InputImport(name="lastName")
-    private final @Nullable String lastName;
+        private final @Nullable String lastName;
 
     public Optional<String> getLastName() {
         return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
@@ -104,7 +104,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
             this.lastName = lastName;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseUserDetail build() {
             return new OrganizationResourcePropertiesResponseUserDetail(emailAddress, firstName, lastName);
         }

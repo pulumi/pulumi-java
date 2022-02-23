@@ -139,7 +139,6 @@ public final class RequestResponse {
             this.useragent = useragent;
             return this;
         }
-
         public RequestResponse build() {
             return new RequestResponse(addr, host, id, method, useragent);
         }

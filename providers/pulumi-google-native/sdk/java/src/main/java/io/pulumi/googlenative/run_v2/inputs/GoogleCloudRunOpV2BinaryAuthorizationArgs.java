@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="breakglassJustification")
-    private final @Nullable Input<String> breakglassJustification;
+      private final @Nullable Input<String> breakglassJustification;
 
     public Input<String> getBreakglassJustification() {
         return this.breakglassJustification == null ? Input.empty() : this.breakglassJustification;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="useDefault")
-    private final @Nullable Input<Boolean> useDefault;
+      private final @Nullable Input<Boolean> useDefault;
 
     public Input<Boolean> getUseDefault() {
         return this.useDefault == null ? Input.empty() : this.useDefault;
@@ -94,7 +94,6 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
             this.useDefault = Input.ofNullable(useDefault);
             return this;
         }
-
         public GoogleCloudRunOpV2BinaryAuthorizationArgs build() {
             return new GoogleCloudRunOpV2BinaryAuthorizationArgs(breakglassJustification, useDefault);
         }

@@ -75,7 +75,6 @@ public final class DashboardStringParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardStringParameter build() {
             return new DashboardStringParameter(name, values);
         }

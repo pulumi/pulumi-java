@@ -245,7 +245,6 @@ public final class AS2SecuritySettingsResponse {
             this.signingCertificateName = signingCertificateName;
             return this;
         }
-
         public AS2SecuritySettingsResponse build() {
             return new AS2SecuritySettingsResponse(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
         }

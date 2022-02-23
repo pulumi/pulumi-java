@@ -23,7 +23,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mountPath", required=true)
-    private final String mountPath;
+      private final String mountPath;
 
     public String getMountPath() {
         return this.mountPath;
@@ -34,7 +34,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -45,7 +45,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -56,7 +56,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versions", required=true)
-    private final List<SecretVersionResponse> versions;
+      private final List<SecretVersionResponse> versions;
 
     public List<SecretVersionResponse> getVersions() {
         return this.versions;
@@ -125,7 +125,6 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public SecretVolumeResponse build() {
             return new SecretVolumeResponse(mountPath, project, secret, versions);
         }

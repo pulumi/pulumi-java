@@ -23,7 +23,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linuxOperatingSystemProfile")
-    private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
+        private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
     public Optional<LinuxOperatingSystemProfileResponse> getLinuxOperatingSystemProfile() {
         return this.linuxOperatingSystemProfile == null ? Optional.empty() : Optional.ofNullable(this.linuxOperatingSystemProfile);
@@ -61,7 +61,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(linuxOperatingSystemProfile);
         }

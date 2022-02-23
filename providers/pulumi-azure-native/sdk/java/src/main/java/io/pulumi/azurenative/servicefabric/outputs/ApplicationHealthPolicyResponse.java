@@ -78,7 +78,6 @@ public final class ApplicationHealthPolicyResponse {
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
-
         public ApplicationHealthPolicyResponse build() {
             return new ApplicationHealthPolicyResponse(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
         }

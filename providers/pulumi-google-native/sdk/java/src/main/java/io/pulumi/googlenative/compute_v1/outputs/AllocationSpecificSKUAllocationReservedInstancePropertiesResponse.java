@@ -140,7 +140,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(guestAccelerators, localSsds, locationHint, machineType, minCpuPlatform);
         }

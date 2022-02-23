@@ -74,7 +74,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(revisionId, url);
         }

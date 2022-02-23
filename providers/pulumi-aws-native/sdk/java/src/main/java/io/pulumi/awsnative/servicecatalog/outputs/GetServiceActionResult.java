@@ -116,7 +116,6 @@ public final class GetServiceActionResult {
             this.name = name;
             return this;
         }
-
         public GetServiceActionResult build() {
             return new GetServiceActionResult(acceptLanguage, definition, definitionType, description, id, name);
         }

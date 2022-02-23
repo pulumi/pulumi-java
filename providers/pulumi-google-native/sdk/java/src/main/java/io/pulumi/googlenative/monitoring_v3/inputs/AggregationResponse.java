@@ -22,7 +22,7 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alignmentPeriod", required=true)
-    private final String alignmentPeriod;
+      private final String alignmentPeriod;
 
     public String getAlignmentPeriod() {
         return this.alignmentPeriod;
@@ -33,7 +33,7 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="crossSeriesReducer", required=true)
-    private final String crossSeriesReducer;
+      private final String crossSeriesReducer;
 
     public String getCrossSeriesReducer() {
         return this.crossSeriesReducer;
@@ -44,7 +44,7 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupByFields", required=true)
-    private final List<String> groupByFields;
+      private final List<String> groupByFields;
 
     public List<String> getGroupByFields() {
         return this.groupByFields;
@@ -55,7 +55,7 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="perSeriesAligner", required=true)
-    private final String perSeriesAligner;
+      private final String perSeriesAligner;
 
     public String getPerSeriesAligner() {
         return this.perSeriesAligner;
@@ -124,7 +124,6 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
             this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
             return this;
         }
-
         public AggregationResponse build() {
             return new AggregationResponse(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

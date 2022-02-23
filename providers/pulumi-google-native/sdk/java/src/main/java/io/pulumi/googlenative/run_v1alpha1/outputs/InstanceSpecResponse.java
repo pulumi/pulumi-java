@@ -161,7 +161,6 @@ public final class InstanceSpecResponse {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public InstanceSpecResponse build() {
             return new InstanceSpecResponse(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
         }

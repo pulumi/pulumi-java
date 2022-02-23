@@ -24,7 +24,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+        private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
@@ -35,7 +35,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isAdmin", required=true)
-    private final Input<Boolean> isAdmin;
+        private final Input<Boolean> isAdmin;
 
     public Input<Boolean> getIsAdmin() {
         return this.isAdmin;
@@ -46,7 +46,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="issuerThumbprint")
-    private final @Nullable Input<String> issuerThumbprint;
+        private final @Nullable Input<String> issuerThumbprint;
 
     public Input<String> getIssuerThumbprint() {
         return this.issuerThumbprint == null ? Input.empty() : this.issuerThumbprint;
@@ -57,7 +57,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+        private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -146,7 +146,6 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
-
         public ClientCertificateArgs build() {
             return new ClientCertificateArgs(commonName, isAdmin, issuerThumbprint, thumbprint);
         }

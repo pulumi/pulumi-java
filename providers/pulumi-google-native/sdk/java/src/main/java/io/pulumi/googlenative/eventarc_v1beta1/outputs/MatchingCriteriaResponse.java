@@ -74,7 +74,6 @@ public final class MatchingCriteriaResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MatchingCriteriaResponse build() {
             return new MatchingCriteriaResponse(attribute, value);
         }

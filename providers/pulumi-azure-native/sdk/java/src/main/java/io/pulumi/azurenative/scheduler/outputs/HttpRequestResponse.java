@@ -144,7 +144,6 @@ public final class HttpRequestResponse {
             this.uri = uri;
             return this;
         }
-
         public HttpRequestResponse build() {
             return new HttpRequestResponse(authentication, body, headers, method, uri);
         }

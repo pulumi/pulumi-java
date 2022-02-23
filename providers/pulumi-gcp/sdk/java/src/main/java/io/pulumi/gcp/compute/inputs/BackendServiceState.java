@@ -34,7 +34,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="affinityCookieTtlSec")
-    private final @Nullable Input<Integer> affinityCookieTtlSec;
+        private final @Nullable Input<Integer> affinityCookieTtlSec;
 
     public Input<Integer> getAffinityCookieTtlSec() {
         return this.affinityCookieTtlSec == null ? Input.empty() : this.affinityCookieTtlSec;
@@ -46,7 +46,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backends")
-    private final @Nullable Input<List<BackendServiceBackendGetArgs>> backends;
+        private final @Nullable Input<List<BackendServiceBackendGetArgs>> backends;
 
     public Input<List<BackendServiceBackendGetArgs>> getBackends() {
         return this.backends == null ? Input.empty() : this.backends;
@@ -58,7 +58,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cdnPolicy")
-    private final @Nullable Input<BackendServiceCdnPolicyGetArgs> cdnPolicy;
+        private final @Nullable Input<BackendServiceCdnPolicyGetArgs> cdnPolicy;
 
     public Input<BackendServiceCdnPolicyGetArgs> getCdnPolicy() {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
@@ -71,7 +71,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="circuitBreakers")
-    private final @Nullable Input<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
+        private final @Nullable Input<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
     public Input<BackendServiceCircuitBreakersGetArgs> getCircuitBreakers() {
         return this.circuitBreakers == null ? Input.empty() : this.circuitBreakers;
@@ -83,7 +83,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectionDrainingTimeoutSec")
-    private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
+        private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
 
     public Input<Integer> getConnectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec == null ? Input.empty() : this.connectionDrainingTimeoutSec;
@@ -102,7 +102,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consistentHash")
-    private final @Nullable Input<BackendServiceConsistentHashGetArgs> consistentHash;
+        private final @Nullable Input<BackendServiceConsistentHashGetArgs> consistentHash;
 
     public Input<BackendServiceConsistentHashGetArgs> getConsistentHash() {
         return this.consistentHash == null ? Input.empty() : this.consistentHash;
@@ -113,7 +113,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -125,7 +125,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customRequestHeaders")
-    private final @Nullable Input<List<String>> customRequestHeaders;
+        private final @Nullable Input<List<String>> customRequestHeaders;
 
     public Input<List<String>> getCustomRequestHeaders() {
         return this.customRequestHeaders == null ? Input.empty() : this.customRequestHeaders;
@@ -137,7 +137,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customResponseHeaders")
-    private final @Nullable Input<List<String>> customResponseHeaders;
+        private final @Nullable Input<List<String>> customResponseHeaders;
 
     public Input<List<String>> getCustomResponseHeaders() {
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
@@ -149,7 +149,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -160,7 +160,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableCdn")
-    private final @Nullable Input<Boolean> enableCdn;
+        private final @Nullable Input<Boolean> enableCdn;
 
     public Input<Boolean> getEnableCdn() {
         return this.enableCdn == null ? Input.empty() : this.enableCdn;
@@ -171,7 +171,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+        private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -187,7 +187,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="healthChecks")
-    private final @Nullable Input<String> healthChecks;
+        private final @Nullable Input<String> healthChecks;
 
     public Input<String> getHealthChecks() {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
@@ -199,7 +199,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="iap")
-    private final @Nullable Input<BackendServiceIapGetArgs> iap;
+        private final @Nullable Input<BackendServiceIapGetArgs> iap;
 
     public Input<BackendServiceIapGetArgs> getIap() {
         return this.iap == null ? Input.empty() : this.iap;
@@ -215,7 +215,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancingScheme")
-    private final @Nullable Input<String> loadBalancingScheme;
+        private final @Nullable Input<String> loadBalancingScheme;
 
     public Input<String> getLoadBalancingScheme() {
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
@@ -245,7 +245,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="localityLbPolicy")
-    private final @Nullable Input<String> localityLbPolicy;
+        private final @Nullable Input<String> localityLbPolicy;
 
     public Input<String> getLocalityLbPolicy() {
         return this.localityLbPolicy == null ? Input.empty() : this.localityLbPolicy;
@@ -258,7 +258,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<BackendServiceLogConfigGetArgs> logConfig;
+        private final @Nullable Input<BackendServiceLogConfigGetArgs> logConfig;
 
     public Input<BackendServiceLogConfigGetArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -269,7 +269,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -283,7 +283,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outlierDetection")
-    private final @Nullable Input<BackendServiceOutlierDetectionGetArgs> outlierDetection;
+        private final @Nullable Input<BackendServiceOutlierDetectionGetArgs> outlierDetection;
 
     public Input<BackendServiceOutlierDetectionGetArgs> getOutlierDetection() {
         return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
@@ -296,7 +296,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portName")
-    private final @Nullable Input<String> portName;
+        private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -308,7 +308,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -322,7 +322,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -333,7 +333,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityPolicy")
-    private final @Nullable Input<String> securityPolicy;
+        private final @Nullable Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
@@ -348,7 +348,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securitySettings")
-    private final @Nullable Input<BackendServiceSecuritySettingsGetArgs> securitySettings;
+        private final @Nullable Input<BackendServiceSecuritySettingsGetArgs> securitySettings;
 
     public Input<BackendServiceSecuritySettingsGetArgs> getSecuritySettings() {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
@@ -359,7 +359,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -372,7 +372,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<String> sessionAffinity;
+        private final @Nullable Input<String> sessionAffinity;
 
     public Input<String> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -384,7 +384,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+        private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -818,7 +818,6 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
-
         public BackendServiceState build() {
             return new BackendServiceState(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, connectionDrainingTimeoutSec, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, enableCdn, fingerprint, healthChecks, iap, loadBalancingScheme, localityLbPolicy, logConfig, name, outlierDetection, portName, project, protocol, securityPolicy, securitySettings, selfLink, sessionAffinity, timeoutSec);
         }

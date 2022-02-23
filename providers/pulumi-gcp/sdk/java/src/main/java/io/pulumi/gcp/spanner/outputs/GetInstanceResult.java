@@ -175,7 +175,6 @@ public final class GetInstanceResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(config, displayName, forceDestroy, id, labels, name, numNodes, processingUnits, project, state);
         }

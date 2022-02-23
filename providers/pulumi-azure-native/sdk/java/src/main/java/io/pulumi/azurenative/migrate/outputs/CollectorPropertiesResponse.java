@@ -111,7 +111,6 @@ public final class CollectorPropertiesResponse {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public CollectorPropertiesResponse build() {
             return new CollectorPropertiesResponse(agentProperties, createdTimestamp, discoverySiteId, updatedTimestamp);
         }

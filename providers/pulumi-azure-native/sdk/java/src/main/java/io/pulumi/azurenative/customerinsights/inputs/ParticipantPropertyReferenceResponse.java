@@ -21,7 +21,7 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-    private final String sourcePropertyName;
+        private final String sourcePropertyName;
 
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
@@ -32,7 +32,7 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-    private final String targetPropertyName;
+        private final String targetPropertyName;
 
     public String getTargetPropertyName() {
         return this.targetPropertyName;
@@ -81,7 +81,6 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public ParticipantPropertyReferenceResponse build() {
             return new ParticipantPropertyReferenceResponse(sourcePropertyName, targetPropertyName);
         }

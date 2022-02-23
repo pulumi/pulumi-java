@@ -267,7 +267,6 @@ public final class AvailableContactsResponse {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
         }
-
         public AvailableContactsResponse build() {
             return new AvailableContactsResponse(endAzimuthDegrees, endElevationDegrees, groundStationName, maximumElevationDegrees, rxEndTime, rxStartTime, spacecraft, startAzimuthDegrees, startElevationDegrees, txEndTime, txStartTime);
         }

@@ -24,7 +24,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+        private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -120,7 +120,6 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public SecretKeySelectorArgs build() {
             return new SecretKeySelectorArgs(key, name, optional);
         }

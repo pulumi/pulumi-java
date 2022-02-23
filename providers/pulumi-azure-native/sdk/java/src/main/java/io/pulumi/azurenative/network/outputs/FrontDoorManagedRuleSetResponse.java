@@ -142,7 +142,6 @@ public final class FrontDoorManagedRuleSetResponse {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public FrontDoorManagedRuleSetResponse build() {
             return new FrontDoorManagedRuleSetResponse(exclusions, ruleGroupOverrides, ruleSetAction, ruleSetType, ruleSetVersion);
         }

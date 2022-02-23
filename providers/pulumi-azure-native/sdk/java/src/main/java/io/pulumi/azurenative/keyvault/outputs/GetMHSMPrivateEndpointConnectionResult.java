@@ -270,7 +270,6 @@ public final class GetMHSMPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMHSMPrivateEndpointConnectionResult build() {
             return new GetMHSMPrivateEndpointConnectionResult(etag, id, location, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, sku, systemData, tags, type);
         }

@@ -184,7 +184,6 @@ public final class MicrosoftAccessSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MicrosoftAccessSourceResponse build() {
             return new MicrosoftAccessSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

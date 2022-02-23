@@ -21,7 +21,7 @@ public final class ExternalVpnGatewayInterfaceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -59,7 +59,6 @@ public final class ExternalVpnGatewayInterfaceResponse extends io.pulumi.resourc
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public ExternalVpnGatewayInterfaceResponse build() {
             return new ExternalVpnGatewayInterfaceResponse(ipAddress);
         }

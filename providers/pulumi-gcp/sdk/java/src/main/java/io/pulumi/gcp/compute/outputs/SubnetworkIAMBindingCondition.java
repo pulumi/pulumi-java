@@ -97,7 +97,6 @@ public final class SubnetworkIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public SubnetworkIAMBindingCondition build() {
             return new SubnetworkIAMBindingCondition(description, expression, title);
         }

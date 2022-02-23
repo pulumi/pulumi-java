@@ -23,7 +23,7 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -34,7 +34,7 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+        private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;
@@ -93,7 +93,6 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public ReferenceVmArgs build() {
             return new ReferenceVmArgs(password, userName);
         }

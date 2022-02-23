@@ -98,7 +98,6 @@ public final class MethodResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodResponse build() {
             return new MethodResponse(responseModels, responseParameters, statusCode);
         }

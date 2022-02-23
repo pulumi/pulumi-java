@@ -21,7 +21,7 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="usePartitionedTables", required=true)
-    private final Boolean usePartitionedTables;
+      private final Boolean usePartitionedTables;
 
     public Boolean getUsePartitionedTables() {
         return this.usePartitionedTables;
@@ -32,7 +32,7 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="usesTimestampColumnPartitioning", required=true)
-    private final Boolean usesTimestampColumnPartitioning;
+      private final Boolean usesTimestampColumnPartitioning;
 
     public Boolean getUsesTimestampColumnPartitioning() {
         return this.usesTimestampColumnPartitioning;
@@ -81,7 +81,6 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
         }
-
         public BigQueryOptionsResponse build() {
             return new BigQueryOptionsResponse(usePartitionedTables, usesTimestampColumnPartitioning);
         }

@@ -53,7 +53,6 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
             this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleIgnoreActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleIgnoreActionResponse(ignoreTerms);
         }

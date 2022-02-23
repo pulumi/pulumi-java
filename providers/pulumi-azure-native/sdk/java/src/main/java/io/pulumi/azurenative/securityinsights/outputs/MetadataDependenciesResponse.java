@@ -161,7 +161,6 @@ public final class MetadataDependenciesResponse {
             this.version = version;
             return this;
         }
-
         public MetadataDependenciesResponse build() {
             return new MetadataDependenciesResponse(contentId, criteria, kind, name, operator, version);
         }

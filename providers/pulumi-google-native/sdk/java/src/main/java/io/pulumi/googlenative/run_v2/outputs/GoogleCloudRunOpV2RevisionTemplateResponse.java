@@ -313,7 +313,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
             this.vpcAccess = Objects.requireNonNull(vpcAccess);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionTemplateResponse build() {
             return new GoogleCloudRunOpV2RevisionTemplateResponse(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }

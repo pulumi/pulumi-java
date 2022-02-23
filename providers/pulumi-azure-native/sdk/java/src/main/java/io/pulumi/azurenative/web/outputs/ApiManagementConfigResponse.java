@@ -54,7 +54,6 @@ public final class ApiManagementConfigResponse {
             this.id = id;
             return this;
         }
-
         public ApiManagementConfigResponse build() {
             return new ApiManagementConfigResponse(id);
         }

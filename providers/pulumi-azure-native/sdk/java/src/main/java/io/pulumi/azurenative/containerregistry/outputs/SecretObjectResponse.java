@@ -82,7 +82,6 @@ public final class SecretObjectResponse {
             this.value = value;
             return this;
         }
-
         public SecretObjectResponse build() {
             return new SecretObjectResponse(type, value);
         }

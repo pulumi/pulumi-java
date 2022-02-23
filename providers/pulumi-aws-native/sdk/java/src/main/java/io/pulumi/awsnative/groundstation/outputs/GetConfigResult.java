@@ -115,7 +115,6 @@ public final class GetConfigResult {
             this.type = type;
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(arn, configData, id, name, tags, type);
         }

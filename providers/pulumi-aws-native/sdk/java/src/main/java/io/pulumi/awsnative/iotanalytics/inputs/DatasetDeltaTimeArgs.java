@@ -15,14 +15,14 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     public static final DatasetDeltaTimeArgs Empty = new DatasetDeltaTimeArgs();
 
     @InputImport(name="offsetSeconds", required=true)
-    private final Input<Integer> offsetSeconds;
+        private final Input<Integer> offsetSeconds;
 
     public Input<Integer> getOffsetSeconds() {
         return this.offsetSeconds;
     }
 
     @InputImport(name="timeExpression", required=true)
-    private final Input<String> timeExpression;
+        private final Input<String> timeExpression;
 
     public Input<String> getTimeExpression() {
         return this.timeExpression;
@@ -81,7 +81,6 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
             this.timeExpression = Input.of(Objects.requireNonNull(timeExpression));
             return this;
         }
-
         public DatasetDeltaTimeArgs build() {
             return new DatasetDeltaTimeArgs(offsetSeconds, timeExpression);
         }

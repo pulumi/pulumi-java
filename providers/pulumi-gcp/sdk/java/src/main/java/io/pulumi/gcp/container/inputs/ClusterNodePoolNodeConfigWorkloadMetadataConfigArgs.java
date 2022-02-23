@@ -22,7 +22,7 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+        private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -65,7 +65,6 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs build() {
             return new ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs(mode);
         }

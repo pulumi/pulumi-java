@@ -75,7 +75,6 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public PrivateEndpointConnectionVaultPropertiesResponse build() {
             return new PrivateEndpointConnectionVaultPropertiesResponse(id, properties);
         }

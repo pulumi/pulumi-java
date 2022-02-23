@@ -21,7 +21,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddress", required=true)
-    private final Input<String> destinationAddress;
+      private final Input<String> destinationAddress;
 
     public Input<String> getDestinationAddress() {
         return this.destinationAddress;
@@ -32,7 +32,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Input<Integer> destinationPort;
 
     public Input<Integer> getDestinationPort() {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
@@ -43,7 +43,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -54,42 +54,42 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="privateConnectionId", required=true)
-    private final Input<String> privateConnectionId;
+      private final Input<String> privateConnectionId;
 
     public Input<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="routeId", required=true)
-    private final Input<String> routeId;
+      private final Input<String> routeId;
 
     public Input<String> getRouteId() {
         return this.routeId;
@@ -253,7 +253,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.routeId = Input.of(Objects.requireNonNull(routeId));
             return this;
         }
-
         public RouteArgs build() {
             return new RouteArgs(destinationAddress, destinationPort, displayName, labels, location, privateConnectionId, project, requestId, routeId);
         }

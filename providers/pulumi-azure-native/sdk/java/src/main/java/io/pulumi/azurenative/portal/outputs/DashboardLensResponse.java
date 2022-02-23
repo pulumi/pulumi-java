@@ -101,7 +101,6 @@ public final class DashboardLensResponse {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public DashboardLensResponse build() {
             return new DashboardLensResponse(metadata, order, parts);
         }

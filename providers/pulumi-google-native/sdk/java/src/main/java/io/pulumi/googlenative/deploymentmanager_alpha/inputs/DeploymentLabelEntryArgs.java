@@ -23,7 +23,7 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -34,7 +34,7 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -93,7 +93,6 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public DeploymentLabelEntryArgs build() {
             return new DeploymentLabelEntryArgs(key, value);
         }

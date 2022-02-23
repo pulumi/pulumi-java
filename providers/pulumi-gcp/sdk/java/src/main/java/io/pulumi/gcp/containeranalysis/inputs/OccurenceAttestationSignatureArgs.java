@@ -28,7 +28,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicKeyId", required=true)
-    private final Input<String> publicKeyId;
+        private final Input<String> publicKeyId;
 
     public Input<String> getPublicKeyId() {
         return this.publicKeyId;
@@ -45,7 +45,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signature")
-    private final @Nullable Input<String> signature;
+        private final @Nullable Input<String> signature;
 
     public Input<String> getSignature() {
         return this.signature == null ? Input.empty() : this.signature;
@@ -104,7 +104,6 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
             this.signature = Input.ofNullable(signature);
             return this;
         }
-
         public OccurenceAttestationSignatureArgs build() {
             return new OccurenceAttestationSignatureArgs(publicKeyId, signature);
         }

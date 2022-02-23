@@ -76,7 +76,6 @@ public final class ListWebAppSyncFunctionTriggersResult {
             this.triggerUrl = triggerUrl;
             return this;
         }
-
         public ListWebAppSyncFunctionTriggersResult build() {
             return new ListWebAppSyncFunctionTriggersResult(key, triggerUrl);
         }

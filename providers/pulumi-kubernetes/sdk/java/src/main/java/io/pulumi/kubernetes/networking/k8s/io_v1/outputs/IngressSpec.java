@@ -122,7 +122,6 @@ public final class IngressSpec {
             this.tls = tls;
             return this;
         }
-
         public IngressSpec build() {
             return new IngressSpec(defaultBackend, ingressClassName, rules, tls);
         }

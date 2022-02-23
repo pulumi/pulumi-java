@@ -25,7 +25,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deidentifyTemplate")
-    private final @Nullable Input<String> deidentifyTemplate;
+      private final @Nullable Input<String> deidentifyTemplate;
 
     public Input<String> getDeidentifyTemplate() {
         return this.deidentifyTemplate == null ? Input.empty() : this.deidentifyTemplate;
@@ -36,7 +36,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -47,7 +47,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="insightsExportSettings")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
     public Input<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
         return this.insightsExportSettings == null ? Input.empty() : this.insightsExportSettings;
@@ -58,14 +58,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="inspectTemplate")
-    private final @Nullable Input<String> inspectTemplate;
+      private final @Nullable Input<String> inspectTemplate;
 
     public Input<String> getInspectTemplate() {
         return this.inspectTemplate == null ? Input.empty() : this.inspectTemplate;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,14 +76,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -94,7 +94,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="purgeDataTypes")
-    private final @Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
+      private final @Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
     public Input<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
         return this.purgeDataTypes == null ? Input.empty() : this.purgeDataTypes;
@@ -105,7 +105,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redactionScope")
-    private final @Nullable Input<SecuritySettingRedactionScope> redactionScope;
+      private final @Nullable Input<SecuritySettingRedactionScope> redactionScope;
 
     public Input<SecuritySettingRedactionScope> getRedactionScope() {
         return this.redactionScope == null ? Input.empty() : this.redactionScope;
@@ -116,7 +116,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redactionStrategy")
-    private final @Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy;
+      private final @Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy;
 
     public Input<SecuritySettingRedactionStrategy> getRedactionStrategy() {
         return this.redactionStrategy == null ? Input.empty() : this.redactionStrategy;
@@ -127,7 +127,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retentionWindowDays")
-    private final @Nullable Input<Integer> retentionWindowDays;
+      private final @Nullable Input<Integer> retentionWindowDays;
 
     public Input<Integer> getRetentionWindowDays() {
         return this.retentionWindowDays == null ? Input.empty() : this.retentionWindowDays;
@@ -321,7 +321,6 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             this.retentionWindowDays = Input.ofNullable(retentionWindowDays);
             return this;
         }
-
         public SecuritySettingArgs build() {
             return new SecuritySettingArgs(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, location, name, project, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);
         }

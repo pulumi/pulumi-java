@@ -52,7 +52,6 @@ public final class RuntimeGuestOsFeatureResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuntimeGuestOsFeatureResponse build() {
             return new RuntimeGuestOsFeatureResponse(type);
         }

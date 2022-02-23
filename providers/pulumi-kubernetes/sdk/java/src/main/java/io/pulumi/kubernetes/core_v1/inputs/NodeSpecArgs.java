@@ -27,7 +27,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configSource")
-    private final @Nullable Input<NodeConfigSourceArgs> configSource;
+        private final @Nullable Input<NodeConfigSourceArgs> configSource;
 
     public Input<NodeConfigSourceArgs> getConfigSource() {
         return this.configSource == null ? Input.empty() : this.configSource;
@@ -38,7 +38,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalID")
-    private final @Nullable Input<String> externalID;
+        private final @Nullable Input<String> externalID;
 
     public Input<String> getExternalID() {
         return this.externalID == null ? Input.empty() : this.externalID;
@@ -49,7 +49,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCIDR")
-    private final @Nullable Input<String> podCIDR;
+        private final @Nullable Input<String> podCIDR;
 
     public Input<String> getPodCIDR() {
         return this.podCIDR == null ? Input.empty() : this.podCIDR;
@@ -60,7 +60,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCIDRs")
-    private final @Nullable Input<List<String>> podCIDRs;
+        private final @Nullable Input<List<String>> podCIDRs;
 
     public Input<List<String>> getPodCIDRs() {
         return this.podCIDRs == null ? Input.empty() : this.podCIDRs;
@@ -71,7 +71,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerID")
-    private final @Nullable Input<String> providerID;
+        private final @Nullable Input<String> providerID;
 
     public Input<String> getProviderID() {
         return this.providerID == null ? Input.empty() : this.providerID;
@@ -82,7 +82,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taints")
-    private final @Nullable Input<List<TaintArgs>> taints;
+        private final @Nullable Input<List<TaintArgs>> taints;
 
     public Input<List<TaintArgs>> getTaints() {
         return this.taints == null ? Input.empty() : this.taints;
@@ -93,7 +93,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unschedulable")
-    private final @Nullable Input<Boolean> unschedulable;
+        private final @Nullable Input<Boolean> unschedulable;
 
     public Input<Boolean> getUnschedulable() {
         return this.unschedulable == null ? Input.empty() : this.unschedulable;
@@ -227,7 +227,6 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.unschedulable = Input.ofNullable(unschedulable);
             return this;
         }
-
         public NodeSpecArgs build() {
             return new NodeSpecArgs(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);
         }

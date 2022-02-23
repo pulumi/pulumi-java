@@ -16,14 +16,14 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
     public static final AuthorityAccessUrlArgs Empty = new AuthorityAccessUrlArgs();
 
     @InputImport(name="caCertificateAccessUrl")
-    private final @Nullable Input<String> caCertificateAccessUrl;
+        private final @Nullable Input<String> caCertificateAccessUrl;
 
     public Input<String> getCaCertificateAccessUrl() {
         return this.caCertificateAccessUrl == null ? Input.empty() : this.caCertificateAccessUrl;
     }
 
     @InputImport(name="crlAccessUrls")
-    private final @Nullable Input<List<String>> crlAccessUrls;
+        private final @Nullable Input<List<String>> crlAccessUrls;
 
     public Input<List<String>> getCrlAccessUrls() {
         return this.crlAccessUrls == null ? Input.empty() : this.crlAccessUrls;
@@ -82,7 +82,6 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
             this.crlAccessUrls = Input.ofNullable(crlAccessUrls);
             return this;
         }
-
         public AuthorityAccessUrlArgs build() {
             return new AuthorityAccessUrlArgs(caCertificateAccessUrl, crlAccessUrls);
         }

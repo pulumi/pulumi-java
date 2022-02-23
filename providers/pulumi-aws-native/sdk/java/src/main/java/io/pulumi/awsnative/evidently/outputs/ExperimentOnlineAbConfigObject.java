@@ -62,7 +62,6 @@ public final class ExperimentOnlineAbConfigObject {
             this.treatmentWeights = treatmentWeights;
             return this;
         }
-
         public ExperimentOnlineAbConfigObject build() {
             return new ExperimentOnlineAbConfigObject(controlTreatmentName, treatmentWeights);
         }

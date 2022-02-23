@@ -75,7 +75,6 @@ public final class GetInstanceServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public GetInstanceServiceAccount build() {
             return new GetInstanceServiceAccount(email, scopes);
         }

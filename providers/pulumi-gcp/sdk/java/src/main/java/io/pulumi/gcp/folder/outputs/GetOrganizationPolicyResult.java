@@ -162,7 +162,6 @@ public final class GetOrganizationPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetOrganizationPolicyResult build() {
             return new GetOrganizationPolicyResult(booleanPolicies, constraint, etag, folder, id, listPolicies, restorePolicies, updateTime, version);
         }

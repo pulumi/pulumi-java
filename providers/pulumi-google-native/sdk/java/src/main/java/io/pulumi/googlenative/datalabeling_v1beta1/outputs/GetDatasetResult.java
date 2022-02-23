@@ -202,7 +202,6 @@ public final class GetDatasetResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(blockingResources, createTime, dataItemCount, description, displayName, inputConfigs, lastMigrateTime, name);
         }

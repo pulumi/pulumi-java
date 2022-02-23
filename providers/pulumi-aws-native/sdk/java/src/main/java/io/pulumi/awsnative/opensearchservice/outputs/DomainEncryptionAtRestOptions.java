@@ -61,7 +61,6 @@ public final class DomainEncryptionAtRestOptions {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public DomainEncryptionAtRestOptions build() {
             return new DomainEncryptionAtRestOptions(enabled, kmsKeyId);
         }

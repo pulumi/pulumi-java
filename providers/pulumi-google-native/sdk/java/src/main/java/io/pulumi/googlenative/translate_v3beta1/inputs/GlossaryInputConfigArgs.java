@@ -22,7 +22,7 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gcsSource", required=true)
-    private final Input<GcsSourceArgs> gcsSource;
+      private final Input<GcsSourceArgs> gcsSource;
 
     public Input<GcsSourceArgs> getGcsSource() {
         return this.gcsSource;
@@ -65,7 +65,6 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
             this.gcsSource = Input.of(Objects.requireNonNull(gcsSource));
             return this;
         }
-
         public GlossaryInputConfigArgs build() {
             return new GlossaryInputConfigArgs(gcsSource);
         }

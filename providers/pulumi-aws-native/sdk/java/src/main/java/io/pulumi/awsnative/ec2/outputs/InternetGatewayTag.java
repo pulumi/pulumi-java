@@ -58,7 +58,6 @@ public final class InternetGatewayTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InternetGatewayTag build() {
             return new InternetGatewayTag(key, value);
         }

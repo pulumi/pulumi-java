@@ -482,7 +482,6 @@ public final class GetRunbookResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRunbookResult build() {
             return new GetRunbookResult(creationTime, description, draft, etag, id, jobCount, lastModifiedBy, lastModifiedTime, location, logActivityTrace, logProgress, logVerbose, name, outputTypes, parameters, provisioningState, publishContentLink, runbookType, state, tags, type);
         }

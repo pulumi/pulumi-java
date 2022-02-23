@@ -96,7 +96,6 @@ public final class ResourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ResourceResponse build() {
             return new ResourceResponse(contentHash, name, uri);
         }

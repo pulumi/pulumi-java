@@ -418,7 +418,6 @@ public final class MasterTargetServerResponse {
             this.versionStatus = versionStatus;
             return this;
         }
-
         public MasterTargetServerResponse build() {
             return new MasterTargetServerResponse(agentExpiryDate, agentVersion, agentVersionDetails, dataStores, diskCount, healthErrors, id, ipAddress, lastHeartbeat, marsAgentExpiryDate, marsAgentVersion, marsAgentVersionDetails, name, osType, osVersion, retentionVolumes, validationErrors, versionStatus);
         }

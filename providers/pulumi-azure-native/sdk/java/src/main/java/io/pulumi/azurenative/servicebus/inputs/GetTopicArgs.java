@@ -17,7 +17,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+        private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -98,7 +98,6 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public GetTopicArgs build() {
             return new GetTopicArgs(namespaceName, resourceGroupName, topicName);
         }

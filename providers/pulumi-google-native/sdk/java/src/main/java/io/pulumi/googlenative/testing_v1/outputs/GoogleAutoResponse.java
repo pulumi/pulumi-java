@@ -30,7 +30,6 @@ public final class GoogleAutoResponse {
         public Builder(GoogleAutoResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleAutoResponse build() {
             return new GoogleAutoResponse();
         }

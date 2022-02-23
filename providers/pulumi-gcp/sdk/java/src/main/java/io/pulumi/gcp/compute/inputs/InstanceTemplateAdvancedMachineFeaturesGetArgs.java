@@ -20,7 +20,7 @@ public final class InstanceTemplateAdvancedMachineFeaturesGetArgs extends io.pul
      * 
      */
     @InputImport(name="enableNestedVirtualization")
-    private final @Nullable Input<Boolean> enableNestedVirtualization;
+        private final @Nullable Input<Boolean> enableNestedVirtualization;
 
     public Input<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
@@ -31,7 +31,7 @@ public final class InstanceTemplateAdvancedMachineFeaturesGetArgs extends io.pul
      * 
      */
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<Integer> threadsPerCore;
+        private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -90,7 +90,6 @@ public final class InstanceTemplateAdvancedMachineFeaturesGetArgs extends io.pul
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }
-
         public InstanceTemplateAdvancedMachineFeaturesGetArgs build() {
             return new InstanceTemplateAdvancedMachineFeaturesGetArgs(enableNestedVirtualization, threadsPerCore);
         }

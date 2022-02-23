@@ -139,7 +139,6 @@ public final class GetBackupPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(id, name, properties, systemData, type);
         }

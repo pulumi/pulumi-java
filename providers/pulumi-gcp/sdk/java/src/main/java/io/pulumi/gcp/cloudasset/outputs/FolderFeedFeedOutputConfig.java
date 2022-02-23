@@ -54,7 +54,6 @@ public final class FolderFeedFeedOutputConfig {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public FolderFeedFeedOutputConfig build() {
             return new FolderFeedFeedOutputConfig(pubsubDestination);
         }

@@ -202,7 +202,6 @@ public final class GetHybridUseBenefitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridUseBenefitResult build() {
             return new GetHybridUseBenefitResult(createdDate, etag, id, lastUpdatedDate, name, provisioningState, sku, type);
         }

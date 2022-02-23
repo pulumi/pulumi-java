@@ -76,7 +76,6 @@ public final class InboundIpRuleResponse {
             this.ipMask = ipMask;
             return this;
         }
-
         public InboundIpRuleResponse build() {
             return new InboundIpRuleResponse(action, ipMask);
         }

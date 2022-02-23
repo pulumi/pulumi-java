@@ -97,7 +97,6 @@ public final class BucketIamConfigurationResponse {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }
-
         public BucketIamConfigurationResponse build() {
             return new BucketIamConfigurationResponse(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }

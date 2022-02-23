@@ -76,7 +76,6 @@ public final class TlsValidationOptionsResponse {
             this.ignoreSignature = ignoreSignature;
             return this;
         }
-
         public TlsValidationOptionsResponse build() {
             return new TlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

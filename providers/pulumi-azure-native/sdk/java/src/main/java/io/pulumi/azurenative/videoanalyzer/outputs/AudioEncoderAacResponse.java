@@ -78,7 +78,6 @@ public final class AudioEncoderAacResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AudioEncoderAacResponse build() {
             return new AudioEncoderAacResponse(bitrateKbps, type);
         }

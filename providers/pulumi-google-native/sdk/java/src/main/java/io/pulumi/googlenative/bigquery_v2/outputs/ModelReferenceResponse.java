@@ -95,7 +95,6 @@ public final class ModelReferenceResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ModelReferenceResponse build() {
             return new ModelReferenceResponse(datasetId, modelId, project);
         }

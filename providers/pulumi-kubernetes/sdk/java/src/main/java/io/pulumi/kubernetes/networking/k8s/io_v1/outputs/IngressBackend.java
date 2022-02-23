@@ -77,7 +77,6 @@ public final class IngressBackend {
             this.service = service;
             return this;
         }
-
         public IngressBackend build() {
             return new IngressBackend(resource, service);
         }

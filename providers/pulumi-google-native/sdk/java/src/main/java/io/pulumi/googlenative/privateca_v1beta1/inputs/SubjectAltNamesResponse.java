@@ -23,7 +23,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="customSans", required=true)
-    private final List<X509ExtensionResponse> customSans;
+      private final List<X509ExtensionResponse> customSans;
 
     public List<X509ExtensionResponse> getCustomSans() {
         return this.customSans;
@@ -34,7 +34,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dnsNames", required=true)
-    private final List<String> dnsNames;
+      private final List<String> dnsNames;
 
     public List<String> getDnsNames() {
         return this.dnsNames;
@@ -45,7 +45,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="emailAddresses", required=true)
-    private final List<String> emailAddresses;
+      private final List<String> emailAddresses;
 
     public List<String> getEmailAddresses() {
         return this.emailAddresses;
@@ -56,7 +56,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipAddresses", required=true)
-    private final List<String> ipAddresses;
+      private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses;
@@ -67,7 +67,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uris", required=true)
-    private final List<String> uris;
+      private final List<String> uris;
 
     public List<String> getUris() {
         return this.uris;
@@ -146,7 +146,6 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public SubjectAltNamesResponse build() {
             return new SubjectAltNamesResponse(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

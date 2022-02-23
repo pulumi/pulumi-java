@@ -21,14 +21,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedValues", required=true)
-    private final Input<List<String>> allowedValues;
+      private final Input<List<String>> allowedValues;
 
     public Input<List<String>> getAllowedValues() {
         return this.allowedValues;
     }
 
     @InputImport(name="attributeDefinitionId", required=true)
-    private final Input<String> attributeDefinitionId;
+      private final Input<String> attributeDefinitionId;
 
     public Input<String> getAttributeDefinitionId() {
         return this.attributeDefinitionId;
@@ -39,7 +39,7 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<AttributeDefinitionCategory> category;
+      private final Input<AttributeDefinitionCategory> category;
 
     public Input<AttributeDefinitionCategory> getCategory() {
         return this.category;
@@ -50,14 +50,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consentDefaultValues")
-    private final @Nullable Input<List<String>> consentDefaultValues;
+      private final @Nullable Input<List<String>> consentDefaultValues;
 
     public Input<List<String>> getConsentDefaultValues() {
         return this.consentDefaultValues == null ? Input.empty() : this.consentDefaultValues;
     }
 
     @InputImport(name="consentStoreId", required=true)
-    private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
@@ -68,14 +68,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataMappingDefaultValue")
-    private final @Nullable Input<String> dataMappingDefaultValue;
+      private final @Nullable Input<String> dataMappingDefaultValue;
 
     public Input<String> getDataMappingDefaultValue() {
         return this.dataMappingDefaultValue == null ? Input.empty() : this.dataMappingDefaultValue;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -86,14 +86,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -104,14 +104,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -305,7 +305,6 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public AttributeDefinitionArgs build() {
             return new AttributeDefinitionArgs(allowedValues, attributeDefinitionId, category, consentDefaultValues, consentStoreId, dataMappingDefaultValue, datasetId, description, location, name, project);
         }

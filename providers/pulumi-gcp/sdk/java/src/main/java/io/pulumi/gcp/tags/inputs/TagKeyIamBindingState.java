@@ -17,7 +17,7 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
     public static final TagKeyIamBindingState Empty = new TagKeyIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TagKeyIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<TagKeyIamBindingConditionGetArgs> condition;
 
     public Input<TagKeyIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -48,7 +48,7 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -59,7 +59,7 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable Input<String> tagKey;
+        private final @Nullable Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;
@@ -163,7 +163,6 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
             this.tagKey = Input.ofNullable(tagKey);
             return this;
         }
-
         public TagKeyIamBindingState build() {
             return new TagKeyIamBindingState(condition, etag, members, role, tagKey);
         }

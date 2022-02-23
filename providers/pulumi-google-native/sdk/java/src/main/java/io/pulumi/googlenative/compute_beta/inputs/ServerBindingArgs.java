@@ -15,7 +15,7 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServerBindingArgs Empty = new ServerBindingArgs();
 
     @InputImport(name="type")
-    private final @Nullable Input<ServerBindingType> type;
+      private final @Nullable Input<ServerBindingType> type;
 
     public Input<ServerBindingType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -58,7 +58,6 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ServerBindingArgs build() {
             return new ServerBindingArgs(type);
         }

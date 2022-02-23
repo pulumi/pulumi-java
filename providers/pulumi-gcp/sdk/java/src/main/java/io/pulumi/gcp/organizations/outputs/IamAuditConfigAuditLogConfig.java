@@ -86,7 +86,6 @@ public final class IamAuditConfigAuditLogConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public IamAuditConfigAuditLogConfig build() {
             return new IamAuditConfigAuditLogConfig(exemptedMembers, logType);
         }

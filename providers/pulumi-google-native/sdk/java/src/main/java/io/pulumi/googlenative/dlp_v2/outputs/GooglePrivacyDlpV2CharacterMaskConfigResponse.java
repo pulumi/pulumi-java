@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
             this.reverseOrder = Objects.requireNonNull(reverseOrder);
             return this;
         }
-
         public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
             return new GooglePrivacyDlpV2CharacterMaskConfigResponse(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
         }

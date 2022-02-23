@@ -13,14 +13,14 @@ public final class TopicRuleTimestreamDimension extends io.pulumi.resources.Invo
     public static final TopicRuleTimestreamDimension Empty = new TopicRuleTimestreamDimension();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class TopicRuleTimestreamDimension extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleTimestreamDimension build() {
             return new TopicRuleTimestreamDimension(name, value);
         }

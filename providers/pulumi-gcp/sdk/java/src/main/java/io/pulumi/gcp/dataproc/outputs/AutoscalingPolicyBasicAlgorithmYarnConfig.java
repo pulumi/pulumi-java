@@ -182,7 +182,6 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
             this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
         }
-
         public AutoscalingPolicyBasicAlgorithmYarnConfig build() {
             return new AutoscalingPolicyBasicAlgorithmYarnConfig(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

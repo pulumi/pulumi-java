@@ -76,7 +76,6 @@ public final class ExternalSubnetResponse {
             this.name = name;
             return this;
         }
-
         public ExternalSubnetResponse build() {
             return new ExternalSubnetResponse(id, name);
         }

@@ -89,7 +89,6 @@ public final class ResizeErrorResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ResizeErrorResponse build() {
             return new ResizeErrorResponse(code, details, message);
         }

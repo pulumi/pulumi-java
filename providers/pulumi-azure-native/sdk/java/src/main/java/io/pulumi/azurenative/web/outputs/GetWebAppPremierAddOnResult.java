@@ -266,7 +266,6 @@ public final class GetWebAppPremierAddOnResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetWebAppPremierAddOnResult build() {
             return new GetWebAppPremierAddOnResult(id, kind, location, marketplaceOffer, marketplacePublisher, name, product, sku, tags, type, vendor);
         }

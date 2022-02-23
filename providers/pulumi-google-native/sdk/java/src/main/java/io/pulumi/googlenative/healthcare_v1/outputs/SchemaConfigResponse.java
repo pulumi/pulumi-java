@@ -74,7 +74,6 @@ public final class SchemaConfigResponse {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public SchemaConfigResponse build() {
             return new SchemaConfigResponse(recursiveStructureDepth, schemaType);
         }

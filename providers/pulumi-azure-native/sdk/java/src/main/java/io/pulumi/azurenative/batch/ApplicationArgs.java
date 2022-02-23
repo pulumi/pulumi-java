@@ -20,7 +20,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowUpdates")
-    private final @Nullable Input<Boolean> allowUpdates;
+        private final @Nullable Input<Boolean> allowUpdates;
 
     public Input<Boolean> getAllowUpdates() {
         return this.allowUpdates == null ? Input.empty() : this.allowUpdates;
@@ -42,7 +42,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+        private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -53,7 +53,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-    private final @Nullable Input<String> defaultVersion;
+        private final @Nullable Input<String> defaultVersion;
 
     public Input<String> getDefaultVersion() {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
@@ -64,7 +64,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -75,7 +75,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(accountName, allowUpdates, applicationName, defaultVersion, displayName, resourceGroupName);
         }

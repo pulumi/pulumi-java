@@ -54,7 +54,6 @@ public final class CxAgentSpeechToTextSettings {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-
         public CxAgentSpeechToTextSettings build() {
             return new CxAgentSpeechToTextSettings(enableSpeechAdaptation);
         }

@@ -73,7 +73,6 @@ public final class CaPoolIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public CaPoolIamMemberCondition build() {
             return new CaPoolIamMemberCondition(description, expression, title);
         }

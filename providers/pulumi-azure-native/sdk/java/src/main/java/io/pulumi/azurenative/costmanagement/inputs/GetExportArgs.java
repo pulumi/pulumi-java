@@ -19,7 +19,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exportName", required=true)
-    private final String exportName;
+        private final String exportName;
 
     public String getExportName() {
         return this.exportName;
@@ -41,7 +41,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -100,7 +100,6 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetExportArgs build() {
             return new GetExportArgs(expand, exportName, scope);
         }

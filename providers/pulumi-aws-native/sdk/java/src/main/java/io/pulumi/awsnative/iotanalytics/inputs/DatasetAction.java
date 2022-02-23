@@ -17,21 +17,21 @@ public final class DatasetAction extends io.pulumi.resources.InvokeArgs {
     public static final DatasetAction Empty = new DatasetAction();
 
     @InputImport(name="actionName", required=true)
-    private final String actionName;
+        private final String actionName;
 
     public String getActionName() {
         return this.actionName;
     }
 
     @InputImport(name="containerAction")
-    private final @Nullable DatasetContainerAction containerAction;
+        private final @Nullable DatasetContainerAction containerAction;
 
     public Optional<DatasetContainerAction> getContainerAction() {
         return this.containerAction == null ? Optional.empty() : Optional.ofNullable(this.containerAction);
     }
 
     @InputImport(name="queryAction")
-    private final @Nullable DatasetQueryAction queryAction;
+        private final @Nullable DatasetQueryAction queryAction;
 
     public Optional<DatasetQueryAction> getQueryAction() {
         return this.queryAction == null ? Optional.empty() : Optional.ofNullable(this.queryAction);
@@ -90,7 +90,6 @@ public final class DatasetAction extends io.pulumi.resources.InvokeArgs {
             this.queryAction = queryAction;
             return this;
         }
-
         public DatasetAction build() {
             return new DatasetAction(actionName, containerAction, queryAction);
         }

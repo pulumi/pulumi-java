@@ -29,7 +29,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+        private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -40,7 +40,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasets")
-    private final @Nullable List<DatasetReferenceResponse> datasets;
+        private final @Nullable List<DatasetReferenceResponse> datasets;
 
     public List<DatasetReferenceResponse> getDatasets() {
         return this.datasets == null ? List.of() : this.datasets;
@@ -51,7 +51,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="derivedModelIds")
-    private final @Nullable List<String> derivedModelIds;
+        private final @Nullable List<String> derivedModelIds;
 
     public List<String> getDerivedModelIds() {
         return this.derivedModelIds == null ? List.of() : this.derivedModelIds;
@@ -62,7 +62,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -73,7 +73,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="experimentName")
-    private final @Nullable String experimentName;
+        private final @Nullable String experimentName;
 
     public Optional<String> getExperimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
@@ -84,7 +84,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable String framework;
+        private final @Nullable String framework;
 
     public Optional<String> getFramework() {
         return this.framework == null ? Optional.empty() : Optional.ofNullable(this.framework);
@@ -95,7 +95,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frameworkVersion")
-    private final @Nullable String frameworkVersion;
+        private final @Nullable String frameworkVersion;
 
     public Optional<String> getFrameworkVersion() {
         return this.frameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.frameworkVersion);
@@ -106,7 +106,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -117,7 +117,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kvTags")
-    private final @Nullable Map<String,String> kvTags;
+        private final @Nullable Map<String,String> kvTags;
 
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
@@ -128,7 +128,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mimeType", required=true)
-    private final String mimeType;
+        private final String mimeType;
 
     public String getMimeType() {
         return this.mimeType;
@@ -139,7 +139,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="modifiedTime")
-    private final @Nullable String modifiedTime;
+        private final @Nullable String modifiedTime;
 
     public Optional<String> getModifiedTime() {
         return this.modifiedTime == null ? Optional.empty() : Optional.ofNullable(this.modifiedTime);
@@ -150,7 +150,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -161,7 +161,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentModelId")
-    private final @Nullable String parentModelId;
+        private final @Nullable String parentModelId;
 
     public Optional<String> getParentModelId() {
         return this.parentModelId == null ? Optional.empty() : Optional.ofNullable(this.parentModelId);
@@ -172,7 +172,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -183,7 +183,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceRequirements")
-    private final @Nullable ContainerResourceRequirementsResponse resourceRequirements;
+        private final @Nullable ContainerResourceRequirementsResponse resourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> getResourceRequirements() {
         return this.resourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.resourceRequirements);
@@ -194,7 +194,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="runId")
-    private final @Nullable String runId;
+        private final @Nullable String runId;
 
     public Optional<String> getRunId() {
         return this.runId == null ? Optional.empty() : Optional.ofNullable(this.runId);
@@ -205,7 +205,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sampleInputData")
-    private final @Nullable String sampleInputData;
+        private final @Nullable String sampleInputData;
 
     public Optional<String> getSampleInputData() {
         return this.sampleInputData == null ? Optional.empty() : Optional.ofNullable(this.sampleInputData);
@@ -216,7 +216,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sampleOutputData")
-    private final @Nullable String sampleOutputData;
+        private final @Nullable String sampleOutputData;
 
     public Optional<String> getSampleOutputData() {
         return this.sampleOutputData == null ? Optional.empty() : Optional.ofNullable(this.sampleOutputData);
@@ -227,7 +227,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="unpack")
-    private final @Nullable Boolean unpack;
+        private final @Nullable Boolean unpack;
 
     public Optional<Boolean> getUnpack() {
         return this.unpack == null ? Optional.empty() : Optional.ofNullable(this.unpack);
@@ -238,7 +238,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -249,7 +249,7 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Double version;
+        private final @Nullable Double version;
 
     public Optional<Double> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -488,7 +488,6 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
             this.version = version;
             return this;
         }
-
         public ModelResponse build() {
             return new ModelResponse(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
         }

@@ -22,7 +22,7 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -33,7 +33,7 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -82,7 +82,6 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public InstancePropertiesPatchResponse build() {
             return new InstancePropertiesPatchResponse(labels, metadata);
         }

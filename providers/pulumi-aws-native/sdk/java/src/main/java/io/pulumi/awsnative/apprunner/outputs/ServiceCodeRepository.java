@@ -83,7 +83,6 @@ public final class ServiceCodeRepository {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
-
         public ServiceCodeRepository build() {
             return new ServiceCodeRepository(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }

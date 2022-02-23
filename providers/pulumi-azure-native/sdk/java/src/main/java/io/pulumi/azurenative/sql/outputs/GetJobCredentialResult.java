@@ -116,7 +116,6 @@ public final class GetJobCredentialResult {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GetJobCredentialResult build() {
             return new GetJobCredentialResult(id, name, type, username);
         }

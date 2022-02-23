@@ -79,7 +79,6 @@ public final class ZipDeflateReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ZipDeflateReadSettingsResponse build() {
             return new ZipDeflateReadSettingsResponse(preserveZipFileNameAsFolder, type);
         }

@@ -99,7 +99,6 @@ public final class OpenIdConnectRegistrationResponse {
             this.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }
-
         public OpenIdConnectRegistrationResponse build() {
             return new OpenIdConnectRegistrationResponse(clientCredential, clientId, openIdConnectConfiguration);
         }

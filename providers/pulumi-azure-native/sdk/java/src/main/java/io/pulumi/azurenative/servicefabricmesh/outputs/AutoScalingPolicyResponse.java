@@ -97,7 +97,6 @@ public final class AutoScalingPolicyResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AutoScalingPolicyResponse build() {
             return new AutoScalingPolicyResponse(mechanism, name, trigger);
         }

@@ -246,7 +246,6 @@ public final class GetStudioResult {
             this.url = url;
             return this;
         }
-
         public GetStudioResult build() {
             return new GetStudioResult(arn, defaultS3Location, description, idpAuthUrl, idpRelayStateParameterName, name, studioId, subnetIds, tags, url);
         }

@@ -17,7 +17,7 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="routeTableName", required=true)
-    private final String routeTableName;
+        private final String routeTableName;
 
     public String getRouteTableName() {
         return this.routeTableName;
@@ -39,7 +39,7 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final String virtualHubName;
+        private final String virtualHubName;
 
     public String getVirtualHubName() {
         return this.virtualHubName;
@@ -98,7 +98,6 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public GetVirtualHubRouteTableV2Args build() {
             return new GetVirtualHubRouteTableV2Args(resourceGroupName, routeTableName, virtualHubName);
         }

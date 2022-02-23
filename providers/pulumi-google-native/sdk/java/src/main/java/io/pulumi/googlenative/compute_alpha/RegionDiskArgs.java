@@ -25,7 +25,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable Input<RegionDiskArchitecture> architecture;
+      private final @Nullable Input<RegionDiskArchitecture> architecture;
 
     public Input<RegionDiskArchitecture> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -36,7 +36,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -58,7 +58,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eraseWindowsVssSignature")
-    private final @Nullable Input<Boolean> eraseWindowsVssSignature;
+      private final @Nullable Input<Boolean> eraseWindowsVssSignature;
 
     public Input<Boolean> getEraseWindowsVssSignature() {
         return this.eraseWindowsVssSignature == null ? Input.empty() : this.eraseWindowsVssSignature;
@@ -69,7 +69,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-    private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
 
     public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
@@ -80,7 +80,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -91,7 +91,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseCodes")
-    private final @Nullable Input<List<String>> licenseCodes;
+      private final @Nullable Input<List<String>> licenseCodes;
 
     public Input<List<String>> getLicenseCodes() {
         return this.licenseCodes == null ? Input.empty() : this.licenseCodes;
@@ -102,7 +102,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenses")
-    private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Input<List<String>> licenses;
 
     public Input<List<String>> getLicenses() {
         return this.licenses == null ? Input.empty() : this.licenses;
@@ -113,7 +113,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-    private final @Nullable Input<String> locationHint;
+      private final @Nullable Input<String> locationHint;
 
     public Input<String> getLocationHint() {
         return this.locationHint == null ? Input.empty() : this.locationHint;
@@ -124,7 +124,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiWriter")
-    private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Input<Boolean> multiWriter;
 
     public Input<Boolean> getMultiWriter() {
         return this.multiWriter == null ? Input.empty() : this.multiWriter;
@@ -135,7 +135,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -146,7 +146,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<String> options;
+      private final @Nullable Input<String> options;
 
     public Input<String> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -157,14 +157,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-    private final @Nullable Input<String> physicalBlockSizeBytes;
+      private final @Nullable Input<String> physicalBlockSizeBytes;
 
     public Input<String> getPhysicalBlockSizeBytes() {
         return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -175,14 +175,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedIops")
-    private final @Nullable Input<String> provisionedIops;
+      private final @Nullable Input<String> provisionedIops;
 
     public Input<String> getProvisionedIops() {
         return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -193,14 +193,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaZones")
-    private final @Nullable Input<List<String>> replicaZones;
+      private final @Nullable Input<List<String>> replicaZones;
 
     public Input<List<String>> getReplicaZones() {
         return this.replicaZones == null ? Input.empty() : this.replicaZones;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -211,7 +211,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Input<List<String>> resourcePolicies;
 
     public Input<List<String>> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -222,7 +222,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-    private final @Nullable Input<String> sizeGb;
+      private final @Nullable Input<String> sizeGb;
 
     public Input<String> getSizeGb() {
         return this.sizeGb == null ? Input.empty() : this.sizeGb;
@@ -233,7 +233,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -244,7 +244,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImage")
-    private final @Nullable Input<String> sourceImage;
+      private final @Nullable Input<String> sourceImage;
 
     public Input<String> getSourceImage() {
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
@@ -255,7 +255,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
@@ -266,7 +266,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceInstantSnapshot")
-    private final @Nullable Input<String> sourceInstantSnapshot;
+      private final @Nullable Input<String> sourceInstantSnapshot;
 
     public Input<String> getSourceInstantSnapshot() {
         return this.sourceInstantSnapshot == null ? Input.empty() : this.sourceInstantSnapshot;
@@ -277,7 +277,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshot")
-    private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Input<String> sourceSnapshot;
 
     public Input<String> getSourceSnapshot() {
         return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
@@ -288,7 +288,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
@@ -299,7 +299,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceStorageObject")
-    private final @Nullable Input<String> sourceStorageObject;
+      private final @Nullable Input<String> sourceStorageObject;
 
     public Input<String> getSourceStorageObject() {
         return this.sourceStorageObject == null ? Input.empty() : this.sourceStorageObject;
@@ -310,7 +310,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -321,7 +321,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLicenses")
-    private final @Nullable Input<List<String>> userLicenses;
+      private final @Nullable Input<List<String>> userLicenses;
 
     public Input<List<String>> getUserLicenses() {
         return this.userLicenses == null ? Input.empty() : this.userLicenses;
@@ -785,7 +785,6 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.userLicenses = Input.ofNullable(userLicenses);
             return this;
         }
-
         public RegionDiskArgs build() {
             return new RegionDiskArgs(architecture, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, labels, licenseCodes, licenses, locationHint, multiWriter, name, options, physicalBlockSizeBytes, project, provisionedIops, region, replicaZones, requestId, resourcePolicies, sizeGb, sourceDisk, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey, sourceStorageObject, type, userLicenses);
         }

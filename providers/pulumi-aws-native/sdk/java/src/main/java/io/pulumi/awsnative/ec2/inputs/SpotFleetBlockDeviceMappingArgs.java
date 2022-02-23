@@ -16,28 +16,28 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     public static final SpotFleetBlockDeviceMappingArgs Empty = new SpotFleetBlockDeviceMappingArgs();
 
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="ebs")
-    private final @Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs;
+        private final @Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs;
 
     public Input<SpotFleetEbsBlockDeviceArgs> getEbs() {
         return this.ebs == null ? Input.empty() : this.ebs;
     }
 
     @InputImport(name="noDevice")
-    private final @Nullable Input<String> noDevice;
+        private final @Nullable Input<String> noDevice;
 
     public Input<String> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
     }
 
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+        private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;
@@ -126,7 +126,6 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }
-
         public SpotFleetBlockDeviceMappingArgs build() {
             return new SpotFleetBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);
         }

@@ -164,7 +164,6 @@ public final class GetApiKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetApiKeyResult build() {
             return new GetApiKeyResult(aPIKeyId, customerId, description, enabled, stageKeys, tags);
         }

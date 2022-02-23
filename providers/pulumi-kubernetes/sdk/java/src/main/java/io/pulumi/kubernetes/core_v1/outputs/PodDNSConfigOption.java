@@ -68,7 +68,6 @@ public final class PodDNSConfigOption {
             this.value = value;
             return this;
         }
-
         public PodDNSConfigOption build() {
             return new PodDNSConfigOption(name, value);
         }

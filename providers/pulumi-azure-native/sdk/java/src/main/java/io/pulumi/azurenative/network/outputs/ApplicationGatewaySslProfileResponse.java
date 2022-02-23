@@ -206,7 +206,6 @@ public final class ApplicationGatewaySslProfileResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewaySslProfileResponse build() {
             return new ApplicationGatewaySslProfileResponse(clientAuthConfiguration, etag, id, name, provisioningState, sslPolicy, trustedClientCertificates, type);
         }

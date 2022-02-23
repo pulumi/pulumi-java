@@ -119,7 +119,6 @@ public final class WindowsSecurityContextOptions {
             this.runAsUserName = runAsUserName;
             return this;
         }
-
         public WindowsSecurityContextOptions build() {
             return new WindowsSecurityContextOptions(gmsaCredentialSpec, gmsaCredentialSpecName, hostProcess, runAsUserName);
         }

@@ -106,7 +106,6 @@ public final class OrganizationSecurityPolicyRuleMatch {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatch build() {
             return new OrganizationSecurityPolicyRuleMatch(config, description, versionedExpr);
         }

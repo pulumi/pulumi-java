@@ -54,7 +54,6 @@ public final class ListGlobalUserEnvironmentsResult {
             this.environments = environments;
             return this;
         }
-
         public ListGlobalUserEnvironmentsResult build() {
             return new ListGlobalUserEnvironmentsResult(environments);
         }

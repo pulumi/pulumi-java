@@ -140,7 +140,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(description, dictionary, displayName, largeCustomDictionary, regex);
         }

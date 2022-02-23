@@ -23,7 +23,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Object> parameters;
+        private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -56,7 +56,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DataCatalogTagArgs>> tags;
+        private final @Nullable Input<List<DataCatalogTagArgs>> tags;
 
     public Input<List<DataCatalogTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -67,7 +67,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<DataCatalogType> type;
+        private final Input<DataCatalogType> type;
 
     public Input<DataCatalogType> getType() {
         return this.type;
@@ -171,7 +171,6 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DataCatalogArgs build() {
             return new DataCatalogArgs(description, name, parameters, tags, type);
         }

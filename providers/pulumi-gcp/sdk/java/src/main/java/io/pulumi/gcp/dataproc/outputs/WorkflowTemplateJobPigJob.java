@@ -186,7 +186,6 @@ public final class WorkflowTemplateJobPigJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobPigJob build() {
             return new WorkflowTemplateJobPigJob(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

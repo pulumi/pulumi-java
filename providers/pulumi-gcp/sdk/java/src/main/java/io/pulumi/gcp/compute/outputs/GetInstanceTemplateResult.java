@@ -694,7 +694,6 @@ public final class GetInstanceTemplateResult {
             this.tagsFingerprint = Objects.requireNonNull(tagsFingerprint);
             return this;
         }
-
         public GetInstanceTemplateResult build() {
             return new GetInstanceTemplateResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfigs, description, disks, enableDisplay, filter, guestAccelerators, id, instanceDescription, labels, machineType, metadata, metadataFingerprint, metadataStartupScript, minCpuPlatform, mostRecent, name, namePrefix, networkInterfaces, networkPerformanceConfigs, project, region, reservationAffinities, schedulings, selfLink, serviceAccounts, shieldedInstanceConfigs, tags, tagsFingerprint);
         }

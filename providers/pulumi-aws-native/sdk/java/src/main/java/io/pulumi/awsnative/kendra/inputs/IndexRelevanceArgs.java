@@ -20,35 +20,35 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexRelevanceArgs Empty = new IndexRelevanceArgs();
 
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
     }
 
     @InputImport(name="freshness")
-    private final @Nullable Input<Boolean> freshness;
+        private final @Nullable Input<Boolean> freshness;
 
     public Input<Boolean> getFreshness() {
         return this.freshness == null ? Input.empty() : this.freshness;
     }
 
     @InputImport(name="importance")
-    private final @Nullable Input<Integer> importance;
+        private final @Nullable Input<Integer> importance;
 
     public Input<Integer> getImportance() {
         return this.importance == null ? Input.empty() : this.importance;
     }
 
     @InputImport(name="rankOrder")
-    private final @Nullable Input<IndexOrder> rankOrder;
+        private final @Nullable Input<IndexOrder> rankOrder;
 
     public Input<IndexOrder> getRankOrder() {
         return this.rankOrder == null ? Input.empty() : this.rankOrder;
     }
 
     @InputImport(name="valueImportanceItems")
-    private final @Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems;
+        private final @Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
     public Input<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {
         return this.valueImportanceItems == null ? Input.empty() : this.valueImportanceItems;
@@ -152,7 +152,6 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             this.valueImportanceItems = Input.ofNullable(valueImportanceItems);
             return this;
         }
-
         public IndexRelevanceArgs build() {
             return new IndexRelevanceArgs(duration, freshness, importance, rankOrder, valueImportanceItems);
         }

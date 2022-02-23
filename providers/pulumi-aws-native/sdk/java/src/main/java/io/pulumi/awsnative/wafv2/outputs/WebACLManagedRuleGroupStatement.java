@@ -102,7 +102,6 @@ public final class WebACLManagedRuleGroupStatement {
             this.version = version;
             return this;
         }
-
         public WebACLManagedRuleGroupStatement build() {
             return new WebACLManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName, version);
         }

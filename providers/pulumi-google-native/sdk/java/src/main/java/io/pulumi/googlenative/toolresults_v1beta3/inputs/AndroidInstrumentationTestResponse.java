@@ -23,7 +23,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testPackageId", required=true)
-    private final String testPackageId;
+      private final String testPackageId;
 
     public String getTestPackageId() {
         return this.testPackageId;
@@ -34,7 +34,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testRunnerClass", required=true)
-    private final String testRunnerClass;
+      private final String testRunnerClass;
 
     public String getTestRunnerClass() {
         return this.testRunnerClass;
@@ -45,7 +45,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testTargets", required=true)
-    private final List<String> testTargets;
+      private final List<String> testTargets;
 
     public List<String> getTestTargets() {
         return this.testTargets;
@@ -56,7 +56,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="useOrchestrator", required=true)
-    private final Boolean useOrchestrator;
+      private final Boolean useOrchestrator;
 
     public Boolean getUseOrchestrator() {
         return this.useOrchestrator;
@@ -125,7 +125,6 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }

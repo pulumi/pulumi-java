@@ -247,7 +247,6 @@ public final class GetLoadTestResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoadTestResult build() {
             return new GetLoadTestResult(dataPlaneURI, description, id, identity, location, name, provisioningState, systemData, tags, type);
         }

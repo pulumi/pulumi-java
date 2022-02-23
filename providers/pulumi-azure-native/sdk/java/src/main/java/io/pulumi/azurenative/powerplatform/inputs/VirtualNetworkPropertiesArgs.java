@@ -24,7 +24,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetPropertiesArgs> subnet;
+        private final @Nullable Input<SubnetPropertiesArgs> subnet;
 
     public Input<SubnetPropertiesArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -94,7 +94,6 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public VirtualNetworkPropertiesArgs build() {
             return new VirtualNetworkPropertiesArgs(id, subnet);
         }

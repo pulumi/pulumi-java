@@ -96,7 +96,6 @@ public final class GetLBIPRangesResult {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public GetLBIPRangesResult build() {
             return new GetLBIPRangesResult(httpSslTcpInternals, id, networks);
         }

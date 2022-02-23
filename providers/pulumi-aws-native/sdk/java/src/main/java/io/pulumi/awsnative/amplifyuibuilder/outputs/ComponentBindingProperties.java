@@ -30,7 +30,6 @@ public final class ComponentBindingProperties {
         public Builder(ComponentBindingProperties defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentBindingProperties build() {
             return new ComponentBindingProperties();
         }

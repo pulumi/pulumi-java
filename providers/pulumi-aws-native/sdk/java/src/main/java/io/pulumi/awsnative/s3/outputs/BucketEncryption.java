@@ -53,7 +53,6 @@ public final class BucketEncryption {
             this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
             return this;
         }
-
         public BucketEncryption build() {
             return new BucketEncryption(serverSideEncryptionConfiguration);
         }

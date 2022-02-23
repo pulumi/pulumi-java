@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
             this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
             return this;
         }
-
         public GooglePrivacyDlpV2RequestedOptionsResponse build() {
             return new GooglePrivacyDlpV2RequestedOptionsResponse(jobConfig, snapshotInspectTemplate);
         }

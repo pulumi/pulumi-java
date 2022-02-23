@@ -15,21 +15,21 @@ public final class GetRegionInstanceGroupManagerArgs extends io.pulumi.resources
     public static final GetRegionInstanceGroupManagerArgs Empty = new GetRegionInstanceGroupManagerArgs();
 
     @InputImport(name="instanceGroupManager", required=true)
-    private final String instanceGroupManager;
+      private final String instanceGroupManager;
 
     public String getInstanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionInstanceGroupManagerArgs extends io.pulumi.resources
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionInstanceGroupManagerArgs build() {
             return new GetRegionInstanceGroupManagerArgs(instanceGroupManager, project, region);
         }

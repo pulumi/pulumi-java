@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="manual")
-    private final @Nullable Input<GooglePrivacyDlpV2ManualArgs> manual;
+      private final @Nullable Input<GooglePrivacyDlpV2ManualArgs> manual;
 
     public Input<GooglePrivacyDlpV2ManualArgs> getManual() {
         return this.manual == null ? Input.empty() : this.manual;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule;
+      private final @Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
     public Input<GooglePrivacyDlpV2ScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public GooglePrivacyDlpV2TriggerArgs build() {
             return new GooglePrivacyDlpV2TriggerArgs(manual, schedule);
         }

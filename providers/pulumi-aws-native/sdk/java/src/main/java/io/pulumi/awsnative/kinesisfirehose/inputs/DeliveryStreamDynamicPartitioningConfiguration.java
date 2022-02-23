@@ -16,14 +16,14 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends io.pul
     public static final DeliveryStreamDynamicPartitioningConfiguration Empty = new DeliveryStreamDynamicPartitioningConfiguration();
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="retryOptions")
-    private final @Nullable DeliveryStreamRetryOptions retryOptions;
+        private final @Nullable DeliveryStreamRetryOptions retryOptions;
 
     public Optional<DeliveryStreamRetryOptions> getRetryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
@@ -72,7 +72,6 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends io.pul
             this.retryOptions = retryOptions;
             return this;
         }
-
         public DeliveryStreamDynamicPartitioningConfiguration build() {
             return new DeliveryStreamDynamicPartitioningConfiguration(enabled, retryOptions);
         }

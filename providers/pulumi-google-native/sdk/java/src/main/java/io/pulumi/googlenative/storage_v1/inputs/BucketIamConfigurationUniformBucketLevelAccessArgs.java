@@ -24,7 +24,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
      * 
      */
     @InputImport(name="lockedTime")
-    private final @Nullable Input<String> lockedTime;
+      private final @Nullable Input<String> lockedTime;
 
     public Input<String> getLockedTime() {
         return this.lockedTime == null ? Input.empty() : this.lockedTime;
@@ -94,7 +94,6 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
             this.lockedTime = Input.ofNullable(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationUniformBucketLevelAccessArgs build() {
             return new BucketIamConfigurationUniformBucketLevelAccessArgs(enabled, lockedTime);
         }

@@ -52,7 +52,6 @@ public final class RestrictionEvaluationsResponse {
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }
-
         public RestrictionEvaluationsResponse build() {
             return new RestrictionEvaluationsResponse(memberRestrictionEvaluation);
         }

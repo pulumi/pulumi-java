@@ -225,7 +225,6 @@ public final class EventGridResponse {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
         }
-
         public EventGridResponse build() {
             return new EventGridResponse(accessKey1, accessKey2, authenticationType, createdTime, deadLetterSecret, deadLetterUri, endpointType, provisioningState, topicEndpoint);
         }

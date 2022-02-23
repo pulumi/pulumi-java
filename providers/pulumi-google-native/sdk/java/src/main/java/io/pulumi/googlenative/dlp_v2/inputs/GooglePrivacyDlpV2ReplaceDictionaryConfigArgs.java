@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
+      private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
 
     public Input<GooglePrivacyDlpV2WordListArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(wordList);
         }

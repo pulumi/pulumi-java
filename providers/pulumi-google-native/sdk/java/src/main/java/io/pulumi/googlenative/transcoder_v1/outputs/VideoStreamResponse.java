@@ -97,7 +97,6 @@ public final class VideoStreamResponse {
             this.vp9 = Objects.requireNonNull(vp9);
             return this;
         }
-
         public VideoStreamResponse build() {
             return new VideoStreamResponse(h264, h265, vp9);
         }

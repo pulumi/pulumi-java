@@ -100,7 +100,6 @@ public final class TensorFlowResponse {
             this.workerCount = workerCount;
             return this;
         }
-
         public TensorFlowResponse build() {
             return new TensorFlowResponse(distributionType, parameterServerCount, workerCount);
         }

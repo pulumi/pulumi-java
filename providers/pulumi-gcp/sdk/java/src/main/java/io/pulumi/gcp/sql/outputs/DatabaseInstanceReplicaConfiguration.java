@@ -279,7 +279,6 @@ public final class DatabaseInstanceReplicaConfiguration {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
-
         public DatabaseInstanceReplicaConfiguration build() {
             return new DatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

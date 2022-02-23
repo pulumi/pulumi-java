@@ -118,7 +118,6 @@ public final class AndroidInstrumentationTestResponse {
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }

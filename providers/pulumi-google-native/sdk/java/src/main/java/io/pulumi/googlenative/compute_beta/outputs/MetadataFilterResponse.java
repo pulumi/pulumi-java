@@ -76,7 +76,6 @@ public final class MetadataFilterResponse {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public MetadataFilterResponse build() {
             return new MetadataFilterResponse(filterLabels, filterMatchCriteria);
         }

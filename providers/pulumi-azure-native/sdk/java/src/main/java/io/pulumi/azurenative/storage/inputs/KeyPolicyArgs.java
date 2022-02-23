@@ -22,7 +22,7 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyExpirationPeriodInDays", required=true)
-    private final Input<Integer> keyExpirationPeriodInDays;
+        private final Input<Integer> keyExpirationPeriodInDays;
 
     public Input<Integer> getKeyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
@@ -65,7 +65,6 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyExpirationPeriodInDays = Input.of(Objects.requireNonNull(keyExpirationPeriodInDays));
             return this;
         }
-
         public KeyPolicyArgs build() {
             return new KeyPolicyArgs(keyExpirationPeriodInDays);
         }

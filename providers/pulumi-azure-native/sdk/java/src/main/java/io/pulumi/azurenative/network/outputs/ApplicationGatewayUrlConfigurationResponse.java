@@ -98,7 +98,6 @@ public final class ApplicationGatewayUrlConfigurationResponse {
             this.reroute = reroute;
             return this;
         }
-
         public ApplicationGatewayUrlConfigurationResponse build() {
             return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
         }

@@ -25,7 +25,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assetNames")
-    private final @Nullable Input<List<String>> assetNames;
+        private final @Nullable Input<List<String>> assetNames;
 
     public Input<List<String>> getAssetNames() {
         return this.assetNames == null ? Input.empty() : this.assetNames;
@@ -40,7 +40,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assetTypes")
-    private final @Nullable Input<List<String>> assetTypes;
+        private final @Nullable Input<List<String>> assetTypes;
 
     public Input<List<String>> getAssetTypes() {
         return this.assetTypes == null ? Input.empty() : this.assetTypes;
@@ -53,7 +53,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="billingProject")
-    private final @Nullable Input<String> billingProject;
+        private final @Nullable Input<String> billingProject;
 
     public Input<String> getBillingProject() {
         return this.billingProject == null ? Input.empty() : this.billingProject;
@@ -69,7 +69,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<OrganizationFeedConditionGetArgs> condition;
+        private final @Nullable Input<OrganizationFeedConditionGetArgs> condition;
 
     public Input<OrganizationFeedConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -81,7 +81,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -92,7 +92,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="feedId")
-    private final @Nullable Input<String> feedId;
+        private final @Nullable Input<String> feedId;
 
     public Input<String> getFeedId() {
         return this.feedId == null ? Input.empty() : this.feedId;
@@ -104,7 +104,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="feedOutputConfig")
-    private final @Nullable Input<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
+        private final @Nullable Input<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
 
     public Input<OrganizationFeedFeedOutputConfigGetArgs> getFeedOutputConfig() {
         return this.feedOutputConfig == null ? Input.empty() : this.feedOutputConfig;
@@ -115,7 +115,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -126,7 +126,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+        private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -290,7 +290,6 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
-
         public OrganizationFeedState build() {
             return new OrganizationFeedState(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, name, orgId);
         }

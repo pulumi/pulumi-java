@@ -78,7 +78,6 @@ public final class CompressionSettingsResponse {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-
         public CompressionSettingsResponse build() {
             return new CompressionSettingsResponse(contentTypesToCompress, isCompressionEnabled);
         }

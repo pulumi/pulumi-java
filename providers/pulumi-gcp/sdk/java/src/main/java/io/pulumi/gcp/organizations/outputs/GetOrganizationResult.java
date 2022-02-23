@@ -186,7 +186,6 @@ public final class GetOrganizationResult {
             this.organization = organization;
             return this;
         }
-
         public GetOrganizationResult build() {
             return new GetOrganizationResult(createTime, directoryCustomerId, domain, id, lifecycleState, name, orgId, organization);
         }

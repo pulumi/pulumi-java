@@ -97,7 +97,6 @@ public final class IngressFromResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public IngressFromResponse build() {
             return new IngressFromResponse(identities, identityType, sources);
         }

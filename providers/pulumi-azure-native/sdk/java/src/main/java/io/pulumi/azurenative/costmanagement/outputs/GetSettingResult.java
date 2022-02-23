@@ -183,7 +183,6 @@ public final class GetSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSettingResult build() {
             return new GetSettingResult(cache, id, kind, name, scope, startOn, type);
         }

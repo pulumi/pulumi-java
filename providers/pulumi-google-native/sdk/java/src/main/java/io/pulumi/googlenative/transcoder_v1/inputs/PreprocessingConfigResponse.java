@@ -26,7 +26,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="audio", required=true)
-    private final AudioResponse audio;
+      private final AudioResponse audio;
 
     public AudioResponse getAudio() {
         return this.audio;
@@ -37,7 +37,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="color", required=true)
-    private final ColorResponse color;
+      private final ColorResponse color;
 
     public ColorResponse getColor() {
         return this.color;
@@ -48,7 +48,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="crop", required=true)
-    private final CropResponse crop;
+      private final CropResponse crop;
 
     public CropResponse getCrop() {
         return this.crop;
@@ -59,7 +59,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="deblock", required=true)
-    private final DeblockResponse deblock;
+      private final DeblockResponse deblock;
 
     public DeblockResponse getDeblock() {
         return this.deblock;
@@ -70,7 +70,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="denoise", required=true)
-    private final DenoiseResponse denoise;
+      private final DenoiseResponse denoise;
 
     public DenoiseResponse getDenoise() {
         return this.denoise;
@@ -81,7 +81,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="pad", required=true)
-    private final PadResponse pad;
+      private final PadResponse pad;
 
     public PadResponse getPad() {
         return this.pad;
@@ -170,7 +170,6 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
             this.pad = Objects.requireNonNull(pad);
             return this;
         }
-
         public PreprocessingConfigResponse build() {
             return new PreprocessingConfigResponse(audio, color, crop, deblock, denoise, pad);
         }

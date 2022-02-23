@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb(pullDeps, source);
         }

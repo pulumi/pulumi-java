@@ -24,7 +24,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject", required=true)
-    private final Input<SubjectArgs> subject;
+      private final Input<SubjectArgs> subject;
 
     public Input<SubjectArgs> getSubject() {
         return this.subject;
@@ -35,7 +35,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAltName")
-    private final @Nullable Input<SubjectAltNamesArgs> subjectAltName;
+      private final @Nullable Input<SubjectAltNamesArgs> subjectAltName;
 
     public Input<SubjectAltNamesArgs> getSubjectAltName() {
         return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
@@ -94,7 +94,6 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }
-
         public SubjectConfigArgs build() {
             return new SubjectConfigArgs(subject, subjectAltName);
         }

@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroup build() {
             return new OsPolicyAssignmentOsPolicyResourceGroup(inventoryFilters, resources);
         }

@@ -186,7 +186,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SqlDedicatedGatewayServiceResourcePropertiesResponse build() {
             return new SqlDedicatedGatewayServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, sqlDedicatedGatewayEndpoint, status);
         }

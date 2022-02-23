@@ -88,7 +88,6 @@ public final class PackagingConfigurationSpekeKeyProvider {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PackagingConfigurationSpekeKeyProvider build() {
             return new PackagingConfigurationSpekeKeyProvider(roleArn, systemIds, url);
         }

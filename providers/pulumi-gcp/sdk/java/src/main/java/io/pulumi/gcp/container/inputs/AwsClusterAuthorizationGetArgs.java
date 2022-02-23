@@ -19,7 +19,7 @@ public final class AwsClusterAuthorizationGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="adminUsers", required=true)
-    private final Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
+        private final Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
     public Input<List<AwsClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
         return this.adminUsers;
@@ -62,7 +62,6 @@ public final class AwsClusterAuthorizationGetArgs extends io.pulumi.resources.Re
             this.adminUsers = Input.of(Objects.requireNonNull(adminUsers));
             return this;
         }
-
         public AwsClusterAuthorizationGetArgs build() {
             return new AwsClusterAuthorizationGetArgs(adminUsers);
         }

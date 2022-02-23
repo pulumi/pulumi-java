@@ -119,7 +119,6 @@ public final class ConnectorCollectionInfoResponse {
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
         }
-
         public ConnectorCollectionInfoResponse build() {
             return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
         }

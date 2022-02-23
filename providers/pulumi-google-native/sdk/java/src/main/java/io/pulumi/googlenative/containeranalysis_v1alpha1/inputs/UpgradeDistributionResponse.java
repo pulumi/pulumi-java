@@ -22,7 +22,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="classification", required=true)
-    private final String classification;
+      private final String classification;
 
     public String getClassification() {
         return this.classification;
@@ -33,7 +33,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final String cpeUri;
+      private final String cpeUri;
 
     public String getCpeUri() {
         return this.cpeUri;
@@ -44,7 +44,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cve", required=true)
-    private final List<String> cve;
+      private final List<String> cve;
 
     public List<String> getCve() {
         return this.cve;
@@ -55,7 +55,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -124,7 +124,6 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public UpgradeDistributionResponse build() {
             return new UpgradeDistributionResponse(classification, cpeUri, cve, severity);
         }

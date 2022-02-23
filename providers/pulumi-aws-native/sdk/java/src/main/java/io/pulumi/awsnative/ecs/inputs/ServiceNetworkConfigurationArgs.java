@@ -15,7 +15,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     public static final ServiceNetworkConfigurationArgs Empty = new ServiceNetworkConfigurationArgs();
 
     @InputImport(name="awsvpcConfiguration")
-    private final @Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
+        private final @Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
     public Input<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {
         return this.awsvpcConfiguration == null ? Input.empty() : this.awsvpcConfiguration;
@@ -58,7 +58,6 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
             this.awsvpcConfiguration = Input.ofNullable(awsvpcConfiguration);
             return this;
         }
-
         public ServiceNetworkConfigurationArgs build() {
             return new ServiceNetworkConfigurationArgs(awsvpcConfiguration);
         }

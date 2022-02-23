@@ -119,7 +119,6 @@ public final class ReachabilityDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ReachabilityDetailsResponse build() {
             return new ReachabilityDetailsResponse(error, result, traces, verifyTime);
         }

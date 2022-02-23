@@ -58,7 +58,6 @@ public final class EndpointGroupPortOverride {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }
-
         public EndpointGroupPortOverride build() {
             return new EndpointGroupPortOverride(endpointPort, listenerPort);
         }

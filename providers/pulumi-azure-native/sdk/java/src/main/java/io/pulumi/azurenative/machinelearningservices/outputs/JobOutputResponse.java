@@ -74,7 +74,6 @@ public final class JobOutputResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public JobOutputResponse build() {
             return new JobOutputResponse(datastoreId, path);
         }

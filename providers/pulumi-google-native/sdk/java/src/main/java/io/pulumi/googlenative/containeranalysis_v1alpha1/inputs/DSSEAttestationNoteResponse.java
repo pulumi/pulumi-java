@@ -21,7 +21,7 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hint", required=true)
-    private final DSSEHintResponse hint;
+      private final DSSEHintResponse hint;
 
     public DSSEHintResponse getHint() {
         return this.hint;
@@ -59,7 +59,6 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public DSSEAttestationNoteResponse build() {
             return new DSSEAttestationNoteResponse(hint);
         }

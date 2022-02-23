@@ -74,7 +74,6 @@ public final class AppMonitorTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppMonitorTag build() {
             return new AppMonitorTag(key, value);
         }

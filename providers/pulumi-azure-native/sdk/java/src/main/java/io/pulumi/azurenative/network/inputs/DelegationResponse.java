@@ -24,7 +24,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<String> actions;
+        private final List<String> actions;
 
     public List<String> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -46,7 +46,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -57,7 +57,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -68,7 +68,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -79,7 +79,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable String serviceName;
+        private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
@@ -90,7 +90,7 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -189,7 +189,6 @@ public final class DelegationResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public DelegationResponse build() {
             return new DelegationResponse(actions, etag, id, name, provisioningState, serviceName, type);
         }

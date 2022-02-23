@@ -119,7 +119,6 @@ public final class SsisEnvironmentReferenceResponse {
             this.referenceType = referenceType;
             return this;
         }
-
         public SsisEnvironmentReferenceResponse build() {
             return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
         }

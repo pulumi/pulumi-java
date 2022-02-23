@@ -24,7 +24,7 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricColumn")
-    private final @Nullable String metricColumn;
+        private final @Nullable String metricColumn;
 
     public Optional<String> getMetricColumn() {
         return this.metricColumn == null ? Optional.empty() : Optional.ofNullable(this.metricColumn);
@@ -35,7 +35,7 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricTriggerType")
-    private final @Nullable String metricTriggerType;
+        private final @Nullable String metricTriggerType;
 
     public Optional<String> getMetricTriggerType() {
         return this.metricTriggerType == null ? Optional.empty() : Optional.ofNullable(this.metricTriggerType);
@@ -46,7 +46,7 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Double threshold;
+        private final @Nullable Double threshold;
 
     public Optional<Double> getThreshold() {
         return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
@@ -57,7 +57,7 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="thresholdOperator")
-    private final @Nullable String thresholdOperator;
+        private final @Nullable String thresholdOperator;
 
     public Optional<String> getThresholdOperator() {
         return this.thresholdOperator == null ? Optional.empty() : Optional.ofNullable(this.thresholdOperator);
@@ -126,7 +126,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
             this.thresholdOperator = thresholdOperator;
             return this;
         }
-
         public LogMetricTriggerResponse build() {
             return new LogMetricTriggerResponse(metricColumn, metricTriggerType, threshold, thresholdOperator);
         }

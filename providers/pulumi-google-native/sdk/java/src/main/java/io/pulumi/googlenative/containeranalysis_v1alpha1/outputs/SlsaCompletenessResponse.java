@@ -95,7 +95,6 @@ public final class SlsaCompletenessResponse {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
         public SlsaCompletenessResponse build() {
             return new SlsaCompletenessResponse(arguments, environment, materials);
         }

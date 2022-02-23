@@ -443,7 +443,6 @@ public final class SparkLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SparkLinkedServiceResponse build() {
             return new SparkLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, thriftTransportProtocol, trustedCertPath, type, useSystemTrustStore, username);
         }

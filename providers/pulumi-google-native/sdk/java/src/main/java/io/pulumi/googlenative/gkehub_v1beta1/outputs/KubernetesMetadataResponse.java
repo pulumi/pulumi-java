@@ -159,7 +159,6 @@ public final class KubernetesMetadataResponse {
             this.vcpuCount = Objects.requireNonNull(vcpuCount);
             return this;
         }
-
         public KubernetesMetadataResponse build() {
             return new KubernetesMetadataResponse(kubernetesApiServerVersion, memoryMb, nodeCount, nodeProviderId, updateTime, vcpuCount);
         }

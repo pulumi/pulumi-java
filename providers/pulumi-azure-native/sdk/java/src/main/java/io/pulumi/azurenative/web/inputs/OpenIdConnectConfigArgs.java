@@ -23,7 +23,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationEndpoint")
-    private final @Nullable Input<String> authorizationEndpoint;
+        private final @Nullable Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint == null ? Input.empty() : this.authorizationEndpoint;
@@ -34,7 +34,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificationUri")
-    private final @Nullable Input<String> certificationUri;
+        private final @Nullable Input<String> certificationUri;
 
     public Input<String> getCertificationUri() {
         return this.certificationUri == null ? Input.empty() : this.certificationUri;
@@ -45,7 +45,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+        private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -56,7 +56,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenEndpoint")
-    private final @Nullable Input<String> tokenEndpoint;
+        private final @Nullable Input<String> tokenEndpoint;
 
     public Input<String> getTokenEndpoint() {
         return this.tokenEndpoint == null ? Input.empty() : this.tokenEndpoint;
@@ -67,7 +67,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="wellKnownOpenIdConfiguration")
-    private final @Nullable Input<String> wellKnownOpenIdConfiguration;
+        private final @Nullable Input<String> wellKnownOpenIdConfiguration;
 
     public Input<String> getWellKnownOpenIdConfiguration() {
         return this.wellKnownOpenIdConfiguration == null ? Input.empty() : this.wellKnownOpenIdConfiguration;
@@ -171,7 +171,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
             this.wellKnownOpenIdConfiguration = Input.ofNullable(wellKnownOpenIdConfiguration);
             return this;
         }
-
         public OpenIdConnectConfigArgs build() {
             return new OpenIdConnectConfigArgs(authorizationEndpoint, certificationUri, issuer, tokenEndpoint, wellKnownOpenIdConfiguration);
         }

@@ -222,7 +222,6 @@ public final class GetCanaryEvaluationResult {
             this.verdict = Objects.requireNonNull(verdict);
             return this;
         }
-
         public GetCanaryEvaluationResult build() {
             return new GetCanaryEvaluationResult(control, createTime, endTime, metricLabels, name, startTime, state, treatment, verdict);
         }

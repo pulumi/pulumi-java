@@ -124,7 +124,6 @@ public final class LocationThresholdRuleConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public LocationThresholdRuleConditionResponse build() {
             return new LocationThresholdRuleConditionResponse(dataSource, failedLocationCount, odataType, windowSize);
         }

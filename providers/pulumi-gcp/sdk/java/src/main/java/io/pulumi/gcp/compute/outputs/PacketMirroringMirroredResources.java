@@ -103,7 +103,6 @@ public final class PacketMirroringMirroredResources {
             this.tags = tags;
             return this;
         }
-
         public PacketMirroringMirroredResources build() {
             return new PacketMirroringMirroredResources(instances, subnetworks, tags);
         }

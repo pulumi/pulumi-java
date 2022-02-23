@@ -15,14 +15,14 @@ public final class InstanceFromTemplateReservationAffinitySpecificReservationArg
     public static final InstanceFromTemplateReservationAffinitySpecificReservationArgs Empty = new InstanceFromTemplateReservationAffinitySpecificReservationArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -81,7 +81,6 @@ public final class InstanceFromTemplateReservationAffinitySpecificReservationArg
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public InstanceFromTemplateReservationAffinitySpecificReservationArgs build() {
             return new InstanceFromTemplateReservationAffinitySpecificReservationArgs(key, values);
         }

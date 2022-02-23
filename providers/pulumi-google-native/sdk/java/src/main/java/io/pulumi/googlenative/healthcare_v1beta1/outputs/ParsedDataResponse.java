@@ -45,7 +45,6 @@ public final class ParsedDataResponse {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
         public ParsedDataResponse build() {
             return new ParsedDataResponse(segments);
         }

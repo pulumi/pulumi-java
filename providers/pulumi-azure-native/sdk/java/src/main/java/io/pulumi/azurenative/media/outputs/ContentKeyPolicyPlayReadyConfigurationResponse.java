@@ -101,7 +101,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
             this.responseCustomData = responseCustomData;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyConfigurationResponse build() {
             return new ContentKeyPolicyPlayReadyConfigurationResponse(licenses, odataType, responseCustomData);
         }

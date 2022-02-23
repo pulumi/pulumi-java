@@ -73,7 +73,6 @@ public final class ConsentStoreIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ConsentStoreIamMemberCondition build() {
             return new ConsentStoreIamMemberCondition(description, expression, title);
         }

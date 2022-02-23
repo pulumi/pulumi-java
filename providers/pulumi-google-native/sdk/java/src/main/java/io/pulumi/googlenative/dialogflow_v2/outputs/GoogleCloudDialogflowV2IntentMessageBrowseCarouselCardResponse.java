@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse(imageDisplayOptions, items);
         }

@@ -23,7 +23,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -34,7 +34,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xcodeVersion")
-    private final @Nullable Input<String> xcodeVersion;
+      private final @Nullable Input<String> xcodeVersion;
 
     public Input<String> getXcodeVersion() {
         return this.xcodeVersion == null ? Input.empty() : this.xcodeVersion;
@@ -93,7 +93,6 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             this.xcodeVersion = Input.ofNullable(xcodeVersion);
             return this;
         }
-
         public IosXcTestArgs build() {
             return new IosXcTestArgs(bundleId, xcodeVersion);
         }

@@ -24,7 +24,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<Integer> height;
+      private final @Nullable Input<Integer> height;
 
     public Input<Integer> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -35,7 +35,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widget")
-    private final @Nullable Input<WidgetArgs> widget;
+      private final @Nullable Input<WidgetArgs> widget;
 
     public Input<WidgetArgs> getWidget() {
         return this.widget == null ? Input.empty() : this.widget;
@@ -46,7 +46,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<Integer> width;
+      private final @Nullable Input<Integer> width;
 
     public Input<Integer> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -57,7 +57,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xPos")
-    private final @Nullable Input<Integer> xPos;
+      private final @Nullable Input<Integer> xPos;
 
     public Input<Integer> getXPos() {
         return this.xPos == null ? Input.empty() : this.xPos;
@@ -68,7 +68,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yPos")
-    private final @Nullable Input<Integer> yPos;
+      private final @Nullable Input<Integer> yPos;
 
     public Input<Integer> getYPos() {
         return this.yPos == null ? Input.empty() : this.yPos;
@@ -172,7 +172,6 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             this.yPos = Input.ofNullable(yPos);
             return this;
         }
-
         public TileArgs build() {
             return new TileArgs(height, widget, width, xPos, yPos);
         }

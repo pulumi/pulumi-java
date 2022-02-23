@@ -116,7 +116,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(arn, description, id, name, tags);
         }

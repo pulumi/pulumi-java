@@ -24,7 +24,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileExtension", required=true)
-    private final Object fileExtension;
+        private final Object fileExtension;
 
     public Object getFileExtension() {
         return this.fileExtension;
@@ -35,7 +35,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Object fileNamePrefix;
+        private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
@@ -46,7 +46,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Object maxRowsPerFile;
+        private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
@@ -57,7 +57,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="quoteAllText")
-    private final @Nullable Object quoteAllText;
+        private final @Nullable Object quoteAllText;
 
     public Optional<Object> getQuoteAllText() {
         return this.quoteAllText == null ? Optional.empty() : Optional.ofNullable(this.quoteAllText);
@@ -69,7 +69,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextWriteSettingsResponse build() {
             return new DelimitedTextWriteSettingsResponse(fileExtension, fileNamePrefix, maxRowsPerFile, quoteAllText, type);
         }

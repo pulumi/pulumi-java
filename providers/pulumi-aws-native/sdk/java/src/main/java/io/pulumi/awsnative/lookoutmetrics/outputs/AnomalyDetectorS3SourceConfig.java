@@ -87,7 +87,6 @@ public final class AnomalyDetectorS3SourceConfig {
             this.templatedPathList = templatedPathList;
             return this;
         }
-
         public AnomalyDetectorS3SourceConfig build() {
             return new AnomalyDetectorS3SourceConfig(fileFormatDescriptor, historicalDataPathList, roleArn, templatedPathList);
         }

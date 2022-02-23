@@ -54,7 +54,6 @@ public final class RoutingRuleUpdateParametersResponseWebApplicationFirewallPoli
             this.id = id;
             return this;
         }
-
         public RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }

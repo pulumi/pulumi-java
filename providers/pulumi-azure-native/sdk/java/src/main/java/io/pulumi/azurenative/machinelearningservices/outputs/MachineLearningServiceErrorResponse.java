@@ -52,7 +52,6 @@ public final class MachineLearningServiceErrorResponse {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public MachineLearningServiceErrorResponse build() {
             return new MachineLearningServiceErrorResponse(error);
         }

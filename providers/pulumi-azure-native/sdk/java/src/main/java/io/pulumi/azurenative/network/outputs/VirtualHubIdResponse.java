@@ -54,7 +54,6 @@ public final class VirtualHubIdResponse {
             this.id = id;
             return this;
         }
-
         public VirtualHubIdResponse build() {
             return new VirtualHubIdResponse(id);
         }

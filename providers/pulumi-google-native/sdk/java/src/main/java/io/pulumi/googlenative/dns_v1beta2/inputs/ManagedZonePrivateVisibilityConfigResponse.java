@@ -20,14 +20,14 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="gkeClusters", required=true)
-    private final List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
+      private final List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
 
     public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> getGkeClusters() {
         return this.gkeClusters;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -38,7 +38,7 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="networks", required=true)
-    private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+      private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;
@@ -97,7 +97,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(gkeClusters, kind, networks);
         }

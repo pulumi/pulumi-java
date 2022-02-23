@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends
      * 
      */
     @InputImport(name="variants", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
+      private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 
     public List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> getVariants() {
         return this.variants;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1VersionVariantsResponse(variants);
         }

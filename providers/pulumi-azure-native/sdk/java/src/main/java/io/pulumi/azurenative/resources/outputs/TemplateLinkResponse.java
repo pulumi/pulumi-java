@@ -139,7 +139,6 @@ public final class TemplateLinkResponse {
             this.uri = uri;
             return this;
         }
-
         public TemplateLinkResponse build() {
             return new TemplateLinkResponse(contentVersion, id, queryString, relativePath, uri);
         }

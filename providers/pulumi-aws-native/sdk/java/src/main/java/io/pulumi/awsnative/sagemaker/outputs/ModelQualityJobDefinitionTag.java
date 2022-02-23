@@ -74,7 +74,6 @@ public final class ModelQualityJobDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ModelQualityJobDefinitionTag build() {
             return new ModelQualityJobDefinitionTag(key, value);
         }

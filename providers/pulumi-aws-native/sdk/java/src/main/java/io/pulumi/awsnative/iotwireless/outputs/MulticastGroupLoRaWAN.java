@@ -119,7 +119,6 @@ public final class MulticastGroupLoRaWAN {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public MulticastGroupLoRaWAN build() {
             return new MulticastGroupLoRaWAN(dlClass, numberOfDevicesInGroup, numberOfDevicesRequested, rfRegion);
         }

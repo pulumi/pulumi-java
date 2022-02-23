@@ -119,7 +119,6 @@ public final class ElementaryStreamResponse {
             this.videoStream = Objects.requireNonNull(videoStream);
             return this;
         }
-
         public ElementaryStreamResponse build() {
             return new ElementaryStreamResponse(audioStream, key, textStream, videoStream);
         }

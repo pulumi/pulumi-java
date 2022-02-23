@@ -22,7 +22,7 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
@@ -33,7 +33,7 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -82,7 +82,6 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RouterNatLogConfigResponse build() {
             return new RouterNatLogConfigResponse(enable, filter);
         }

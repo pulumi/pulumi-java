@@ -23,7 +23,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable String architecture;
+        private final @Nullable String architecture;
 
     public Optional<String> getArchitecture() {
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
@@ -34,7 +34,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="os", required=true)
-    private final String os;
+        private final String os;
 
     public String getOs() {
         return this.os;
@@ -45,7 +45,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="variant")
-    private final @Nullable String variant;
+        private final @Nullable String variant;
 
     public Optional<String> getVariant() {
         return this.variant == null ? Optional.empty() : Optional.ofNullable(this.variant);
@@ -104,7 +104,6 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
             this.variant = variant;
             return this;
         }
-
         public PlatformPropertiesResponse build() {
             return new PlatformPropertiesResponse(architecture, os, variant);
         }

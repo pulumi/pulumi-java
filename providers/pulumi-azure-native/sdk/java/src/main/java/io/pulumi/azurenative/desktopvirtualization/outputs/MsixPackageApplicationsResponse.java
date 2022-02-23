@@ -181,7 +181,6 @@ public final class MsixPackageApplicationsResponse {
             this.rawPng = rawPng;
             return this;
         }
-
         public MsixPackageApplicationsResponse build() {
             return new MsixPackageApplicationsResponse(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);
         }

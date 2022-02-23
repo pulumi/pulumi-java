@@ -73,7 +73,6 @@ public final class AttestorIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AttestorIamMemberCondition build() {
             return new AttestorIamMemberCondition(description, expression, title);
         }

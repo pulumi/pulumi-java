@@ -182,7 +182,6 @@ public final class GetClusterResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterConfig, defaultStorageType, encryptionConfig, location, name, serveNodes, state);
         }

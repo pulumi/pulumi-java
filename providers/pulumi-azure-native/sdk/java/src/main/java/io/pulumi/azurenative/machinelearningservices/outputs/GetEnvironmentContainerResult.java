@@ -139,7 +139,6 @@ public final class GetEnvironmentContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnvironmentContainerResult build() {
             return new GetEnvironmentContainerResult(id, name, properties, systemData, type);
         }

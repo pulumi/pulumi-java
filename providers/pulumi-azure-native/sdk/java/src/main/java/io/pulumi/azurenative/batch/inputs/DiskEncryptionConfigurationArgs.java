@@ -24,7 +24,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<DiskEncryptionTarget>> targets;
+        private final @Nullable Input<List<DiskEncryptionTarget>> targets;
 
     public Input<List<DiskEncryptionTarget>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
@@ -67,7 +67,6 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             this.targets = Input.ofNullable(targets);
             return this;
         }
-
         public DiskEncryptionConfigurationArgs build() {
             return new DiskEncryptionConfigurationArgs(targets);
         }

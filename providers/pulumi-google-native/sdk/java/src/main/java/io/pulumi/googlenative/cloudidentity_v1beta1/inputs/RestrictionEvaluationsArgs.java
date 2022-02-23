@@ -23,7 +23,7 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="memberRestrictionEvaluation")
-    private final @Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
+      private final @Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
     public Input<MembershipRoleRestrictionEvaluationArgs> getMemberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation == null ? Input.empty() : this.memberRestrictionEvaluation;
@@ -66,7 +66,6 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
             this.memberRestrictionEvaluation = Input.ofNullable(memberRestrictionEvaluation);
             return this;
         }
-
         public RestrictionEvaluationsArgs build() {
             return new RestrictionEvaluationsArgs(memberRestrictionEvaluation);
         }

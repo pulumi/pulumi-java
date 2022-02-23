@@ -20,7 +20,7 @@ public final class DatasetDefaultEncryptionConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -63,7 +63,6 @@ public final class DatasetDefaultEncryptionConfigurationArgs extends io.pulumi.r
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public DatasetDefaultEncryptionConfigurationArgs build() {
             return new DatasetDefaultEncryptionConfigurationArgs(kmsKeyName);
         }

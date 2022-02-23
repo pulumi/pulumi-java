@@ -15,7 +15,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -53,7 +53,6 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetProjectIamPolicyArgs build() {
             return new GetProjectIamPolicyArgs(project);
         }

@@ -117,7 +117,6 @@ public final class GetBillingAccountResult {
             this.open = Objects.requireNonNull(open);
             return this;
         }
-
         public GetBillingAccountResult build() {
             return new GetBillingAccountResult(displayName, masterBillingAccount, name, open);
         }

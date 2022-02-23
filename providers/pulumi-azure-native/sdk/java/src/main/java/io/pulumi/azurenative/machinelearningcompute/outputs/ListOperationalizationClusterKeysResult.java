@@ -165,7 +165,6 @@ public final class ListOperationalizationClusterKeysResult {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public ListOperationalizationClusterKeysResult build() {
             return new ListOperationalizationClusterKeysResult(appInsights, containerRegistry, containerService, serviceAuthConfiguration, sslConfiguration, storageAccount);
         }

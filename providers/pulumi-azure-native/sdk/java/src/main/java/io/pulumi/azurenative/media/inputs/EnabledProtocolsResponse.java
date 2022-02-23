@@ -21,7 +21,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dash", required=true)
-    private final Boolean dash;
+        private final Boolean dash;
 
     public Boolean getDash() {
         return this.dash;
@@ -32,7 +32,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="download", required=true)
-    private final Boolean download;
+        private final Boolean download;
 
     public Boolean getDownload() {
         return this.download;
@@ -43,7 +43,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="hls", required=true)
-    private final Boolean hls;
+        private final Boolean hls;
 
     public Boolean getHls() {
         return this.hls;
@@ -54,7 +54,7 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="smoothStreaming", required=true)
-    private final Boolean smoothStreaming;
+        private final Boolean smoothStreaming;
 
     public Boolean getSmoothStreaming() {
         return this.smoothStreaming;
@@ -123,7 +123,6 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }
-
         public EnabledProtocolsResponse build() {
             return new EnabledProtocolsResponse(dash, download, hls, smoothStreaming);
         }

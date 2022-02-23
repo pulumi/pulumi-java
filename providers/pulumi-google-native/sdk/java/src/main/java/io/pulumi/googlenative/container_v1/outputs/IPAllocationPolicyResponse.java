@@ -243,7 +243,6 @@ public final class IPAllocationPolicyResponse {
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
         }
-
         public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
         }

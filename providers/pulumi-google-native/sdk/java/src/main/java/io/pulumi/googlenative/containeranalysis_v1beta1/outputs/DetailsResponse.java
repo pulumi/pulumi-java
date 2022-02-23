@@ -52,7 +52,6 @@ public final class DetailsResponse {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public DetailsResponse build() {
             return new DetailsResponse(attestation);
         }

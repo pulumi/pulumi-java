@@ -121,7 +121,6 @@ public final class VideoEncoderH264Response {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VideoEncoderH264Response build() {
             return new VideoEncoderH264Response(bitrateKbps, frameRate, scale, type);
         }

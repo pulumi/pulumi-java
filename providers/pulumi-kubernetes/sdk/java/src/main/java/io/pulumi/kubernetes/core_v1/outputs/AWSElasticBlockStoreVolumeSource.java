@@ -120,7 +120,6 @@ public final class AWSElasticBlockStoreVolumeSource {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public AWSElasticBlockStoreVolumeSource build() {
             return new AWSElasticBlockStoreVolumeSource(fsType, partition, readOnly, volumeID);
         }

@@ -521,7 +521,6 @@ public final class GetRoleAssignmentResult {
             this.widgetTypes = widgetTypes;
             return this;
         }
-
         public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(assignmentName, conflationPolicies, connectors, description, displayName, id, interactions, kpis, links, name, principals, profiles, provisioningState, relationshipLinks, relationships, role, roleAssignments, sasPolicies, segments, tenantId, type, views, widgetTypes);
         }

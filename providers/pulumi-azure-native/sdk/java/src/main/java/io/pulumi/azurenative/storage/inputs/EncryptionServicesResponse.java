@@ -23,7 +23,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="blob")
-    private final @Nullable EncryptionServiceResponse blob;
+        private final @Nullable EncryptionServiceResponse blob;
 
     public Optional<EncryptionServiceResponse> getBlob() {
         return this.blob == null ? Optional.empty() : Optional.ofNullable(this.blob);
@@ -34,7 +34,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="file")
-    private final @Nullable EncryptionServiceResponse file;
+        private final @Nullable EncryptionServiceResponse file;
 
     public Optional<EncryptionServiceResponse> getFile() {
         return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
@@ -45,7 +45,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="queue")
-    private final @Nullable EncryptionServiceResponse queue;
+        private final @Nullable EncryptionServiceResponse queue;
 
     public Optional<EncryptionServiceResponse> getQueue() {
         return this.queue == null ? Optional.empty() : Optional.ofNullable(this.queue);
@@ -56,7 +56,7 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="table")
-    private final @Nullable EncryptionServiceResponse table;
+        private final @Nullable EncryptionServiceResponse table;
 
     public Optional<EncryptionServiceResponse> getTable() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
@@ -125,7 +125,6 @@ public final class EncryptionServicesResponse extends io.pulumi.resources.Invoke
             this.table = table;
             return this;
         }
-
         public EncryptionServicesResponse build() {
             return new EncryptionServicesResponse(blob, file, queue, table);
         }

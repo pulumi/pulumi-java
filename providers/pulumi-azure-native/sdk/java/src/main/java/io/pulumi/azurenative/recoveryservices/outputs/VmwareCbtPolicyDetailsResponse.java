@@ -121,7 +121,6 @@ public final class VmwareCbtPolicyDetailsResponse {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
-
         public VmwareCbtPolicyDetailsResponse build() {
             return new VmwareCbtPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, recoveryPointHistoryInMinutes);
         }

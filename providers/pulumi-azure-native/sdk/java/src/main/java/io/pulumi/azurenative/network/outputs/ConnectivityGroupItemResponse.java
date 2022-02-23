@@ -118,7 +118,6 @@ public final class ConnectivityGroupItemResponse {
             this.useHubGateway = useHubGateway;
             return this;
         }
-
         public ConnectivityGroupItemResponse build() {
             return new ConnectivityGroupItemResponse(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
         }

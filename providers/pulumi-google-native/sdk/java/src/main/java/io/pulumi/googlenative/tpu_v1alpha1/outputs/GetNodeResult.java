@@ -395,7 +395,6 @@ public final class GetNodeResult {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }
-
         public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, description, health, healthDescription, labels, name, network, networkEndpoints, schedulingConfig, serviceAccount, state, symptoms, tensorflowVersion, useServiceNetworking);
         }

@@ -179,7 +179,6 @@ public final class GetServerAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAdministratorResult build() {
             return new GetServerAdministratorResult(administratorType, id, login, name, sid, tenantId, type);
         }

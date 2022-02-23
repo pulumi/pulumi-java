@@ -139,7 +139,6 @@ public final class GetModelContainerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetModelContainerResult build() {
             return new GetModelContainerResult(id, name, properties, systemData, type);
         }

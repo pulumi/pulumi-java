@@ -757,7 +757,6 @@ public final class GetAccountResult {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, computePolicies, creationTime, currentTier, dataLakeStoreAccounts, debugDataAccessLevel, defaultDataLakeStoreAccount, endpoint, firewallAllowAzureIps, firewallRules, firewallState, hiveMetastores, id, lastModifiedTime, location, maxActiveJobCountPerUser, maxDegreeOfParallelism, maxDegreeOfParallelismPerJob, maxJobCount, maxJobRunningTimeInMin, maxQueuedJobCountPerUser, minPriorityPerJob, name, newTier, provisioningState, publicDataLakeStoreAccounts, queryStoreRetention, state, storageAccounts, systemMaxDegreeOfParallelism, systemMaxJobCount, tags, type, virtualNetworkRules);
         }

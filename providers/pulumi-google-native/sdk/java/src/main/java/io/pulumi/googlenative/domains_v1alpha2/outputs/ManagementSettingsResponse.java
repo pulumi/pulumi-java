@@ -74,7 +74,6 @@ public final class ManagementSettingsResponse {
             this.transferLockState = Objects.requireNonNull(transferLockState);
             return this;
         }
-
         public ManagementSettingsResponse build() {
             return new ManagementSettingsResponse(renewalMethod, transferLockState);
         }

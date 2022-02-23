@@ -15,35 +15,35 @@ public final class GetRegistryImageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @InputImport(name="digest")
-    private final @Nullable String digest;
+        private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
     @InputImport(name="tag")
-    private final @Nullable String tag;
+        private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -122,7 +122,6 @@ public final class GetRegistryImageArgs extends io.pulumi.resources.InvokeArgs {
             this.tag = tag;
             return this;
         }
-
         public GetRegistryImageArgs build() {
             return new GetRegistryImageArgs(digest, name, project, region, tag);
         }

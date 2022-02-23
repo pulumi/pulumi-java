@@ -75,7 +75,6 @@ public final class AsyncOptionsResponse {
             this.pollingOptions = Objects.requireNonNull(pollingOptions);
             return this;
         }
-
         public AsyncOptionsResponse build() {
             return new AsyncOptionsResponse(methodMatch, pollingOptions);
         }

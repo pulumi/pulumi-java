@@ -17,7 +17,7 @@ public final class WebACLExcludedRule extends io.pulumi.resources.InvokeArgs {
     public static final WebACLExcludedRule Empty = new WebACLExcludedRule();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class WebACLExcludedRule extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLExcludedRule build() {
             return new WebACLExcludedRule(name);
         }

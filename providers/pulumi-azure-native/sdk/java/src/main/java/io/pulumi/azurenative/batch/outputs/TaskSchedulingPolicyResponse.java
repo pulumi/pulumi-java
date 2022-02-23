@@ -44,7 +44,6 @@ public final class TaskSchedulingPolicyResponse {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }
-
         public TaskSchedulingPolicyResponse build() {
             return new TaskSchedulingPolicyResponse(nodeFillType);
         }

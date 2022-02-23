@@ -74,7 +74,6 @@ public final class ConfigurationAggregatorTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConfigurationAggregatorTag build() {
             return new ConfigurationAggregatorTag(key, value);
         }

@@ -30,7 +30,6 @@ public final class AttributeGroupTags {
         public Builder(AttributeGroupTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AttributeGroupTags build() {
             return new AttributeGroupTags();
         }

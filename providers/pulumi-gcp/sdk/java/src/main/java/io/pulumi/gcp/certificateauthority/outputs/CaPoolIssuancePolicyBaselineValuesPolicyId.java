@@ -53,7 +53,6 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesPolicyId build() {
             return new CaPoolIssuancePolicyBaselineValuesPolicyId(objectIdPaths);
         }

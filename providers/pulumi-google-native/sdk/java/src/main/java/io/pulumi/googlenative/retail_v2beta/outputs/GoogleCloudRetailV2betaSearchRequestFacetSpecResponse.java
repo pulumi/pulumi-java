@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecResponse {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestFacetSpecResponse build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecResponse(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }

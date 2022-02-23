@@ -120,7 +120,6 @@ public final class MetricCounterResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public MetricCounterResponse build() {
             return new MetricCounterResponse(additionalDimensions, dimensionFilter, instance, name);
         }

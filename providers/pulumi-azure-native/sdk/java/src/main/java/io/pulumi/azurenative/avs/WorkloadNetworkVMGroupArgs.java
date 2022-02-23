@@ -21,7 +21,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -32,7 +32,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -43,7 +43,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -54,7 +54,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Double> revision;
+        private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -76,7 +76,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmGroupId")
-    private final @Nullable Input<String> vmGroupId;
+        private final @Nullable Input<String> vmGroupId;
 
     public Input<String> getVmGroupId() {
         return this.vmGroupId == null ? Input.empty() : this.vmGroupId;
@@ -195,7 +195,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
             this.vmGroupId = Input.ofNullable(vmGroupId);
             return this;
         }
-
         public WorkloadNetworkVMGroupArgs build() {
             return new WorkloadNetworkVMGroupArgs(displayName, members, privateCloudName, resourceGroupName, revision, vmGroupId);
         }

@@ -98,7 +98,6 @@ public final class ScheduleRecurrenceResponse {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
-
         public ScheduleRecurrenceResponse build() {
             return new ScheduleRecurrenceResponse(recurrenceType, recurrenceValue, weeklyDaysList);
         }

@@ -73,7 +73,6 @@ public final class TaxonomyIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TaxonomyIamBindingCondition build() {
             return new TaxonomyIamBindingCondition(description, expression, title);
         }

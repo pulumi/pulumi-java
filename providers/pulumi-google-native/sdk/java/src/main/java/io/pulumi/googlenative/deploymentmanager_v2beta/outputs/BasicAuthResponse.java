@@ -58,7 +58,6 @@ public final class BasicAuthResponse {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public BasicAuthResponse build() {
             return new BasicAuthResponse(password, user);
         }

@@ -23,7 +23,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferLockState")
-    private final @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
+      private final @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
 
     public Input<ManagementSettingsTransferLockState> getTransferLockState() {
         return this.transferLockState == null ? Input.empty() : this.transferLockState;
@@ -66,7 +66,6 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
             this.transferLockState = Input.ofNullable(transferLockState);
             return this;
         }
-
         public ManagementSettingsArgs build() {
             return new ManagementSettingsArgs(transferLockState);
         }

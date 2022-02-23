@@ -120,7 +120,6 @@ public final class RecoveryPlanScriptActionDetailsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public RecoveryPlanScriptActionDetailsResponse build() {
             return new RecoveryPlanScriptActionDetailsResponse(fabricLocation, instanceType, path, timeout);
         }

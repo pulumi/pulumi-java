@@ -58,7 +58,6 @@ public final class BucketFilterRule {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BucketFilterRule build() {
             return new BucketFilterRule(name, value);
         }

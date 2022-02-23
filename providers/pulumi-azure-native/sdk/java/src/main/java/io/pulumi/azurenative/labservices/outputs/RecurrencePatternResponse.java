@@ -120,7 +120,6 @@ public final class RecurrencePatternResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public RecurrencePatternResponse build() {
             return new RecurrencePatternResponse(expirationDate, frequency, interval, weekDays);
         }

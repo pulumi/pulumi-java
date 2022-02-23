@@ -139,7 +139,6 @@ public final class ArmPlanResponse {
             this.version = version;
             return this;
         }
-
         public ArmPlanResponse build() {
             return new ArmPlanResponse(name, product, promotionCode, publisher, version);
         }

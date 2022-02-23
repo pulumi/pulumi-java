@@ -203,7 +203,6 @@ public final class PySparkJobResponse {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }
-
         public PySparkJobResponse build() {
             return new PySparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

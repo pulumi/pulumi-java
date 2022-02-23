@@ -76,7 +76,6 @@ public final class PipelineRunTargetPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public PipelineRunTargetPropertiesResponse build() {
             return new PipelineRunTargetPropertiesResponse(name, type);
         }

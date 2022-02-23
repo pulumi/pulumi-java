@@ -76,7 +76,6 @@ public final class AuthenticationResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(providers, rules);
         }

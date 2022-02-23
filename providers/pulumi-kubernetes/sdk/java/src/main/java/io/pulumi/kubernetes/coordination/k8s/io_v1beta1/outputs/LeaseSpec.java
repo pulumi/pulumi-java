@@ -140,7 +140,6 @@ public final class LeaseSpec {
             this.renewTime = renewTime;
             return this;
         }
-
         public LeaseSpec build() {
             return new LeaseSpec(acquireTime, holderIdentity, leaseDurationSeconds, leaseTransitions, renewTime);
         }

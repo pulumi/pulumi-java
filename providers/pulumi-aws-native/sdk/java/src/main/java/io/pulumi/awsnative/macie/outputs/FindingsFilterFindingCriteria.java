@@ -46,7 +46,6 @@ public final class FindingsFilterFindingCriteria {
             this.criterion = criterion;
             return this;
         }
-
         public FindingsFilterFindingCriteria build() {
             return new FindingsFilterFindingCriteria(criterion);
         }

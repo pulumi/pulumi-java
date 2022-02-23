@@ -139,7 +139,6 @@ public final class KeyVaultPropertiesResponse {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyName, keyVaultUri, keyVersion, lastKeyRotationTimestamp);
         }

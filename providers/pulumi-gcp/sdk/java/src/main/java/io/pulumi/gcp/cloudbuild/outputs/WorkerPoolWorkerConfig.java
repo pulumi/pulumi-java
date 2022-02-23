@@ -99,7 +99,6 @@ public final class WorkerPoolWorkerConfig {
             this.noExternalIp = noExternalIp;
             return this;
         }
-
         public WorkerPoolWorkerConfig build() {
             return new WorkerPoolWorkerConfig(diskSizeGb, machineType, noExternalIp);
         }

@@ -23,7 +23,7 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudHealthcareSource")
-    private final @Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource;
+      private final @Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
     public Input<CloudHealthcareSourceArgs> getCloudHealthcareSource() {
         return this.cloudHealthcareSource == null ? Input.empty() : this.cloudHealthcareSource;
@@ -66,7 +66,6 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
             this.cloudHealthcareSource = Input.ofNullable(cloudHealthcareSource);
             return this;
         }
-
         public AnnotationSourceArgs build() {
             return new AnnotationSourceArgs(cloudHealthcareSource);
         }

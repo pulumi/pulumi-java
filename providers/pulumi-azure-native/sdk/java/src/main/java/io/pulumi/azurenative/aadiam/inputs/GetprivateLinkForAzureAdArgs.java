@@ -17,7 +17,7 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final String policyName;
+        private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetprivateLinkForAzureAdArgs build() {
             return new GetprivateLinkForAzureAdArgs(policyName, resourceGroupName);
         }

@@ -78,7 +78,6 @@ public final class CryptoKeyVersionTemplate {
             this.protectionLevel = protectionLevel;
             return this;
         }
-
         public CryptoKeyVersionTemplate build() {
             return new CryptoKeyVersionTemplate(algorithm, protectionLevel);
         }

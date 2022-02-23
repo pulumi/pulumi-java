@@ -44,7 +44,6 @@ public final class ResourceTypeEndpointResponseFeaturesRule {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public ResourceTypeEndpointResponseFeaturesRule build() {
             return new ResourceTypeEndpointResponseFeaturesRule(requiredFeaturesPolicy);
         }

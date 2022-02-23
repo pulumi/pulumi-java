@@ -162,7 +162,6 @@ public final class PostgresInstanceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public PostgresInstanceSkuResponse build() {
             return new PostgresInstanceSkuResponse(capacity, dev, family, name, size, tier);
         }

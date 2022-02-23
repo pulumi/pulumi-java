@@ -248,7 +248,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(etag, id, identity, kind, location, name, properties, sku, tags, type);
         }

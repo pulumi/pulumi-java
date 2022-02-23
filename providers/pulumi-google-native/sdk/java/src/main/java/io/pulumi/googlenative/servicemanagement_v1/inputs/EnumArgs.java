@@ -28,7 +28,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumvalue")
-    private final @Nullable Input<List<EnumValueArgs>> enumvalue;
+      private final @Nullable Input<List<EnumValueArgs>> enumvalue;
 
     public Input<List<EnumValueArgs>> getEnumvalue() {
         return this.enumvalue == null ? Input.empty() : this.enumvalue;
@@ -39,7 +39,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -61,7 +61,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-    private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Input<SourceContextArgs> sourceContext;
 
     public Input<SourceContextArgs> getSourceContext() {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
@@ -72,7 +72,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-    private final @Nullable Input<EnumSyntax> syntax;
+      private final @Nullable Input<EnumSyntax> syntax;
 
     public Input<EnumSyntax> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
@@ -176,7 +176,6 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
-
         public EnumArgs build() {
             return new EnumArgs(enumvalue, name, options, sourceContext, syntax);
         }

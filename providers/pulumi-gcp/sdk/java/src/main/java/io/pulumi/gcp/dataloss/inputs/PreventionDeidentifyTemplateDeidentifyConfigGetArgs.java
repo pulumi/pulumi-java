@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
      * 
      */
     @InputImport(name="infoTypeTransformations", required=true)
-    private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
+        private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> getInfoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -62,7 +62,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
             this.infoTypeTransformations = Input.of(Objects.requireNonNull(infoTypeTransformations));
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigGetArgs(infoTypeTransformations);
         }

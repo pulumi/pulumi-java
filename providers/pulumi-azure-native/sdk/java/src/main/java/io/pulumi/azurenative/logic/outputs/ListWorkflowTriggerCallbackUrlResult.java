@@ -162,7 +162,6 @@ public final class ListWorkflowTriggerCallbackUrlResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListWorkflowTriggerCallbackUrlResult build() {
             return new ListWorkflowTriggerCallbackUrlResult(basePath, method, queries, relativePath, relativePathParameters, value);
         }

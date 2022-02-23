@@ -18,7 +18,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -61,7 +61,6 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs build() {
             return new TagTemplateFieldTypeEnumTypeAllowedValueGetArgs(displayName);
         }

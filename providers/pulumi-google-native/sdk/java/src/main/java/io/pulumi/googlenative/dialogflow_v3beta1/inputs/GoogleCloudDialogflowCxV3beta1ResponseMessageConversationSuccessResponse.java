@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(metadata);
         }

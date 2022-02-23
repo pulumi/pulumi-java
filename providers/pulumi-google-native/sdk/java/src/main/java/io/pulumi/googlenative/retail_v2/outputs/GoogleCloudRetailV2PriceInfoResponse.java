@@ -181,7 +181,6 @@ public final class GoogleCloudRetailV2PriceInfoResponse {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
-
         public GoogleCloudRetailV2PriceInfoResponse build() {
             return new GoogleCloudRetailV2PriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
         }

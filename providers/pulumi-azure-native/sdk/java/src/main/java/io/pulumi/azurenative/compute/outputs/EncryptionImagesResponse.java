@@ -78,7 +78,6 @@ public final class EncryptionImagesResponse {
             this.osDiskImage = osDiskImage;
             return this;
         }
-
         public EncryptionImagesResponse build() {
             return new EncryptionImagesResponse(dataDiskImages, osDiskImage);
         }

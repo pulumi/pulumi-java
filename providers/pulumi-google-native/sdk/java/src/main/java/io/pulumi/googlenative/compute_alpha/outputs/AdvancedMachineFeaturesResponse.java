@@ -138,7 +138,6 @@ public final class AdvancedMachineFeaturesResponse {
             this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
             return this;
         }
-
         public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, numaNodeCount, threadsPerCore, visibleCoreCount);
         }

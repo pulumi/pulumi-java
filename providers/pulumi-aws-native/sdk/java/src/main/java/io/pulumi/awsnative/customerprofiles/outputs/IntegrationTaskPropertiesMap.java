@@ -59,7 +59,6 @@ public final class IntegrationTaskPropertiesMap {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public IntegrationTaskPropertiesMap build() {
             return new IntegrationTaskPropertiesMap(operatorPropertyKey, property);
         }

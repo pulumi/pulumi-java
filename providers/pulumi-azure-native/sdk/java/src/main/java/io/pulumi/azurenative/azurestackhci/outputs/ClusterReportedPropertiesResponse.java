@@ -139,7 +139,6 @@ public final class ClusterReportedPropertiesResponse {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ClusterReportedPropertiesResponse build() {
             return new ClusterReportedPropertiesResponse(clusterId, clusterName, clusterVersion, lastUpdated, nodes);
         }

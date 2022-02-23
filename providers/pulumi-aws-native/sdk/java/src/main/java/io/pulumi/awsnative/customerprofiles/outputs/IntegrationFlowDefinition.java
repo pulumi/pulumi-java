@@ -116,7 +116,6 @@ public final class IntegrationFlowDefinition {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
-
         public IntegrationFlowDefinition build() {
             return new IntegrationFlowDefinition(description, flowName, kmsArn, sourceFlowConfig, tasks, triggerConfig);
         }

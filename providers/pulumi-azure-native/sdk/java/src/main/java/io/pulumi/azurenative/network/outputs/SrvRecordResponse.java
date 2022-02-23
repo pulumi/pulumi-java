@@ -119,7 +119,6 @@ public final class SrvRecordResponse {
             this.weight = weight;
             return this;
         }
-
         public SrvRecordResponse build() {
             return new SrvRecordResponse(port, priority, target, weight);
         }

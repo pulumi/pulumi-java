@@ -95,7 +95,6 @@ public final class TableRangePartitioningRange {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public TableRangePartitioningRange build() {
             return new TableRangePartitioningRange(end, interval, start);
         }

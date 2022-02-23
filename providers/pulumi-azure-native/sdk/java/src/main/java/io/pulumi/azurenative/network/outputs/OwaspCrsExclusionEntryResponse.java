@@ -95,7 +95,6 @@ public final class OwaspCrsExclusionEntryResponse {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public OwaspCrsExclusionEntryResponse build() {
             return new OwaspCrsExclusionEntryResponse(matchVariable, selector, selectorMatchOperator);
         }

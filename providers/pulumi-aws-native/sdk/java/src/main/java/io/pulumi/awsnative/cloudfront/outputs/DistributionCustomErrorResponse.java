@@ -88,7 +88,6 @@ public final class DistributionCustomErrorResponse {
             this.responsePagePath = responsePagePath;
             return this;
         }
-
         public DistributionCustomErrorResponse build() {
             return new DistributionCustomErrorResponse(errorCachingMinTTL, errorCode, responseCode, responsePagePath);
         }

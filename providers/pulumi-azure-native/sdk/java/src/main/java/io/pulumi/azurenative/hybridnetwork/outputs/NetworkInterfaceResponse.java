@@ -120,7 +120,6 @@ public final class NetworkInterfaceResponse {
             this.vmSwitchType = vmSwitchType;
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(ipConfigurations, macAddress, networkInterfaceName, vmSwitchType);
         }

@@ -60,7 +60,6 @@ public final class NetworkInsightsAnalysisTag {
             this.value = value;
             return this;
         }
-
         public NetworkInsightsAnalysisTag build() {
             return new NetworkInsightsAnalysisTag(key, value);
         }

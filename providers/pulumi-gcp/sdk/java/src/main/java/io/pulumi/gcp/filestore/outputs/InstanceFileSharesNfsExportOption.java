@@ -165,7 +165,6 @@ public final class InstanceFileSharesNfsExportOption {
             this.squashMode = squashMode;
             return this;
         }
-
         public InstanceFileSharesNfsExportOption build() {
             return new InstanceFileSharesNfsExportOption(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

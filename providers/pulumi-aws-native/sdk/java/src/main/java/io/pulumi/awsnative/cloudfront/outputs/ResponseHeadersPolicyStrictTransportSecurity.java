@@ -87,7 +87,6 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
             this.preload = preload;
             return this;
         }
-
         public ResponseHeadersPolicyStrictTransportSecurity build() {
             return new ResponseHeadersPolicyStrictTransportSecurity(accessControlMaxAgeSec, includeSubdomains, override, preload);
         }

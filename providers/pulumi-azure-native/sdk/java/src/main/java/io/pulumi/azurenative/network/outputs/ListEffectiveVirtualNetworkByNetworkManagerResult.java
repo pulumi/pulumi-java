@@ -78,7 +78,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerResult {
             this.value = value;
             return this;
         }
-
         public ListEffectiveVirtualNetworkByNetworkManagerResult build() {
             return new ListEffectiveVirtualNetworkByNetworkManagerResult(skipToken, value);
         }

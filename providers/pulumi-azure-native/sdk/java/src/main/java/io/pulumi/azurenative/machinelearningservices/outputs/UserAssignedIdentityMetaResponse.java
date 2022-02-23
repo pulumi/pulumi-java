@@ -76,7 +76,6 @@ public final class UserAssignedIdentityMetaResponse {
             this.principalId = principalId;
             return this;
         }
-
         public UserAssignedIdentityMetaResponse build() {
             return new UserAssignedIdentityMetaResponse(clientId, principalId);
         }

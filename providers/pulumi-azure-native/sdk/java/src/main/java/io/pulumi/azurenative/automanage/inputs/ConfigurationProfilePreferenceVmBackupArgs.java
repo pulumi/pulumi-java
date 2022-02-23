@@ -24,7 +24,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instantRpRetentionRangeInDays")
-    private final @Nullable Input<Integer> instantRpRetentionRangeInDays;
+        private final @Nullable Input<Integer> instantRpRetentionRangeInDays;
 
     public Input<Integer> getInstantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Input.empty() : this.instantRpRetentionRangeInDays;
@@ -35,7 +35,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<String> retentionPolicy;
+        private final @Nullable Input<String> retentionPolicy;
 
     public Input<String> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -46,7 +46,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="schedulePolicy")
-    private final @Nullable Input<String> schedulePolicy;
+        private final @Nullable Input<String> schedulePolicy;
 
     public Input<String> getSchedulePolicy() {
         return this.schedulePolicy == null ? Input.empty() : this.schedulePolicy;
@@ -57,7 +57,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -146,7 +146,6 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public ConfigurationProfilePreferenceVmBackupArgs build() {
             return new ConfigurationProfilePreferenceVmBackupArgs(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);
         }

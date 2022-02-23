@@ -19,7 +19,7 @@ public final class CxAgentSpeechToTextSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enableSpeechAdaptation")
-    private final @Nullable Input<Boolean> enableSpeechAdaptation;
+        private final @Nullable Input<Boolean> enableSpeechAdaptation;
 
     public Input<Boolean> getEnableSpeechAdaptation() {
         return this.enableSpeechAdaptation == null ? Input.empty() : this.enableSpeechAdaptation;
@@ -62,7 +62,6 @@ public final class CxAgentSpeechToTextSettingsArgs extends io.pulumi.resources.R
             this.enableSpeechAdaptation = Input.ofNullable(enableSpeechAdaptation);
             return this;
         }
-
         public CxAgentSpeechToTextSettingsArgs build() {
             return new CxAgentSpeechToTextSettingsArgs(enableSpeechAdaptation);
         }

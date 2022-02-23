@@ -44,7 +44,6 @@ public final class MitigationActionUpdateDeviceCertificateParams {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public MitigationActionUpdateDeviceCertificateParams build() {
             return new MitigationActionUpdateDeviceCertificateParams(action);
         }

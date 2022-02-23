@@ -76,7 +76,6 @@ public final class JobQueryDefaultDataset {
             this.projectId = projectId;
             return this;
         }
-
         public JobQueryDefaultDataset build() {
             return new JobQueryDefaultDataset(datasetId, projectId);
         }

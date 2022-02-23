@@ -95,7 +95,6 @@ public final class GetEnvgroupAttachmentResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEnvgroupAttachmentResult build() {
             return new GetEnvgroupAttachmentResult(createdAt, environment, name);
         }

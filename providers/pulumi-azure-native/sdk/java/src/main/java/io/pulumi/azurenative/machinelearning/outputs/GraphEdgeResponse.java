@@ -118,7 +118,6 @@ public final class GraphEdgeResponse {
             this.targetPortId = targetPortId;
             return this;
         }
-
         public GraphEdgeResponse build() {
             return new GraphEdgeResponse(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
         }

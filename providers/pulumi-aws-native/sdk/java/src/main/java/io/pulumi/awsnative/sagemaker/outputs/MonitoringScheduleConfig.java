@@ -97,7 +97,6 @@ public final class MonitoringScheduleConfig {
             this.scheduleConfig = scheduleConfig;
             return this;
         }
-
         public MonitoringScheduleConfig build() {
             return new MonitoringScheduleConfig(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
         }

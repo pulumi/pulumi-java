@@ -23,7 +23,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+        private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -34,7 +34,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disk", required=true)
-    private final Input<String> disk;
+        private final Input<String> disk;
 
     public Input<String> getDisk() {
         return this.disk;
@@ -48,7 +48,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -61,7 +61,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -73,7 +73,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -85,7 +85,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -204,7 +204,6 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public AttachedDiskArgs build() {
             return new AttachedDiskArgs(deviceName, disk, instance, mode, project, zone);
         }

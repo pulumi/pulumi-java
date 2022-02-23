@@ -250,7 +250,6 @@ public final class AKSVariantResponseResponse {
             this.type = type;
             return this;
         }
-
         public AKSVariantResponseResponse build() {
             return new AKSVariantResponseResponse(computeType, deploymentType, description, error, isDefault, kvTags, properties, state, trafficPercentile, type);
         }

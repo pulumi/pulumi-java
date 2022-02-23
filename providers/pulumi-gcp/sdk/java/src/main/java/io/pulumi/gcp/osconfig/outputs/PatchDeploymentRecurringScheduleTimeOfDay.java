@@ -120,7 +120,6 @@ public final class PatchDeploymentRecurringScheduleTimeOfDay {
             this.seconds = seconds;
             return this;
         }
-
         public PatchDeploymentRecurringScheduleTimeOfDay build() {
             return new PatchDeploymentRecurringScheduleTimeOfDay(hours, minutes, nanos, seconds);
         }

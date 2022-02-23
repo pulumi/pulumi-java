@@ -182,7 +182,6 @@ public final class PostgreSqlConnectionProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public PostgreSqlConnectionProfileResponse build() {
             return new PostgreSqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
         }

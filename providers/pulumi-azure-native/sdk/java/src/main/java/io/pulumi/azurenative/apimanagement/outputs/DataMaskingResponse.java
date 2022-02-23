@@ -76,7 +76,6 @@ public final class DataMaskingResponse {
             this.queryParams = queryParams;
             return this;
         }
-
         public DataMaskingResponse build() {
             return new DataMaskingResponse(headers, queryParams);
         }

@@ -293,7 +293,6 @@ public final class GetStorageTargetResult {
             this.unknown = unknown;
             return this;
         }
-
         public GetStorageTargetResult build() {
             return new GetStorageTargetResult(blobNfs, clfs, id, junctions, location, name, nfs3, provisioningState, systemData, targetType, type, unknown);
         }

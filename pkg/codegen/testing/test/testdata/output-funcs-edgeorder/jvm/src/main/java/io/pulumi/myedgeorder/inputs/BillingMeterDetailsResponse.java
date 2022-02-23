@@ -24,7 +24,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final String frequency;
+      private final String frequency;
 
     public String getFrequency() {
         return this.frequency;
@@ -35,7 +35,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="meterDetails", required=true)
-    private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
+      private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
 
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> getMeterDetails() {
         return this.meterDetails;
@@ -46,7 +46,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="meteringType", required=true)
-    private final String meteringType;
+      private final String meteringType;
 
     public String getMeteringType() {
         return this.meteringType;
@@ -57,7 +57,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -126,7 +126,6 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BillingMeterDetailsResponse build() {
             return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
         }

@@ -14,14 +14,14 @@ public final class InstanceProfileTagArgs extends io.pulumi.resources.ResourceAr
     public static final InstanceProfileTagArgs Empty = new InstanceProfileTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class InstanceProfileTagArgs extends io.pulumi.resources.ResourceAr
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public InstanceProfileTagArgs build() {
             return new InstanceProfileTagArgs(key, value);
         }

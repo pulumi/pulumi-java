@@ -95,7 +95,6 @@ public final class StatusResponse {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(displayStatus, message, timestamp);
         }

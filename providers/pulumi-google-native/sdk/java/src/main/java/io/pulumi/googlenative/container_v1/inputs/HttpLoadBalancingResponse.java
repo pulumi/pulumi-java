@@ -21,7 +21,7 @@ public final class HttpLoadBalancingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -59,7 +59,6 @@ public final class HttpLoadBalancingResponse extends io.pulumi.resources.InvokeA
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HttpLoadBalancingResponse build() {
             return new HttpLoadBalancingResponse(disabled);
         }

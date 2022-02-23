@@ -96,7 +96,6 @@ public final class ODataErrorResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ODataErrorResponse build() {
             return new ODataErrorResponse(code, details, message);
         }

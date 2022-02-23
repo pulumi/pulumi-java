@@ -25,7 +25,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="callCredentials")
-    private final @Nullable Input<CallCredentialsArgs> callCredentials;
+      private final @Nullable Input<CallCredentialsArgs> callCredentials;
 
     public Input<CallCredentialsArgs> getCallCredentials() {
         return this.callCredentials == null ? Input.empty() : this.callCredentials;
@@ -36,7 +36,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="channelCredentials")
-    private final @Nullable Input<ChannelCredentialsArgs> channelCredentials;
+      private final @Nullable Input<ChannelCredentialsArgs> channelCredentials;
 
     public Input<ChannelCredentialsArgs> getChannelCredentials() {
         return this.channelCredentials == null ? Input.empty() : this.channelCredentials;
@@ -47,7 +47,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetUri")
-    private final @Nullable Input<String> targetUri;
+      private final @Nullable Input<String> targetUri;
 
     public Input<String> getTargetUri() {
         return this.targetUri == null ? Input.empty() : this.targetUri;
@@ -121,7 +121,6 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
             this.targetUri = Input.ofNullable(targetUri);
             return this;
         }
-
         public GrpcServiceConfigArgs build() {
             return new GrpcServiceConfigArgs(callCredentials, channelCredentials, targetUri);
         }

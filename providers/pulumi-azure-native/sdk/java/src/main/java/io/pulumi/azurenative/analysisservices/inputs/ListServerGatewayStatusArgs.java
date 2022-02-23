@@ -17,7 +17,7 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -77,7 +77,6 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public ListServerGatewayStatusArgs build() {
             return new ListServerGatewayStatusArgs(resourceGroupName, serverName);
         }

@@ -58,7 +58,6 @@ public final class CloudFormationProvisionedProductProvisioningParameter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CloudFormationProvisionedProductProvisioningParameter build() {
             return new CloudFormationProvisionedProductProvisioningParameter(key, value);
         }

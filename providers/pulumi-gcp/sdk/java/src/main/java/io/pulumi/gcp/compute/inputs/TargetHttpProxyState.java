@@ -21,7 +21,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -32,7 +32,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,7 +61,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -73,7 +73,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="proxyBind")
-    private final @Nullable Input<Boolean> proxyBind;
+        private final @Nullable Input<Boolean> proxyBind;
 
     public Input<Boolean> getProxyBind() {
         return this.proxyBind == null ? Input.empty() : this.proxyBind;
@@ -84,7 +84,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="proxyId")
-    private final @Nullable Input<Integer> proxyId;
+        private final @Nullable Input<Integer> proxyId;
 
     public Input<Integer> getProxyId() {
         return this.proxyId == null ? Input.empty() : this.proxyId;
@@ -95,7 +95,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -107,7 +107,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlMap")
-    private final @Nullable Input<String> urlMap;
+        private final @Nullable Input<String> urlMap;
 
     public Input<String> getUrlMap() {
         return this.urlMap == null ? Input.empty() : this.urlMap;
@@ -256,7 +256,6 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }
-
         public TargetHttpProxyState build() {
             return new TargetHttpProxyState(creationTimestamp, description, name, project, proxyBind, proxyId, selfLink, urlMap);
         }

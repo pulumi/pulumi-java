@@ -142,7 +142,6 @@ public final class GetReservationIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetReservationIamPolicyResult build() {
             return new GetReservationIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

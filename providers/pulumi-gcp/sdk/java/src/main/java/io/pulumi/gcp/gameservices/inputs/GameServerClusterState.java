@@ -21,7 +21,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable Input<String> clusterId;
+        private final @Nullable Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -34,7 +34,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionInfo")
-    private final @Nullable Input<GameServerClusterConnectionInfoGetArgs> connectionInfo;
+        private final @Nullable Input<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
     public Input<GameServerClusterConnectionInfoGetArgs> getConnectionInfo() {
         return this.connectionInfo == null ? Input.empty() : this.connectionInfo;
@@ -45,7 +45,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -68,7 +68,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,7 +81,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -104,7 +104,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="realmId")
-    private final @Nullable Input<String> realmId;
+        private final @Nullable Input<String> realmId;
 
     public Input<String> getRealmId() {
         return this.realmId == null ? Input.empty() : this.realmId;
@@ -253,7 +253,6 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             this.realmId = Input.ofNullable(realmId);
             return this;
         }
-
         public GameServerClusterState build() {
             return new GameServerClusterState(clusterId, connectionInfo, description, labels, location, name, project, realmId);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="event")
-    private final @Nullable Input<String> event;
+      private final @Nullable Input<String> event;
 
     public Input<String> getEvent() {
         return this.event == null ? Input.empty() : this.event;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
             this.event = Input.ofNullable(event);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EventInputArgs build() {
             return new GoogleCloudDialogflowCxV3EventInputArgs(event);
         }

@@ -184,7 +184,6 @@ public final class PriorityClass {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PriorityClass build() {
             return new PriorityClass(apiVersion, description, globalDefault, kind, metadata, preemptionPolicy, value);
         }

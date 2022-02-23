@@ -95,7 +95,6 @@ public final class ComponentTransformResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ComponentTransformResponse build() {
             return new ComponentTransformResponse(name, originalTransform, userName);
         }

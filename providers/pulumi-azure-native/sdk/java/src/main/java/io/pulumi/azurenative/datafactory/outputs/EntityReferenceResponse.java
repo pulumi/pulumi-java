@@ -76,7 +76,6 @@ public final class EntityReferenceResponse {
             this.type = type;
             return this;
         }
-
         public EntityReferenceResponse build() {
             return new EntityReferenceResponse(referenceName, type);
         }

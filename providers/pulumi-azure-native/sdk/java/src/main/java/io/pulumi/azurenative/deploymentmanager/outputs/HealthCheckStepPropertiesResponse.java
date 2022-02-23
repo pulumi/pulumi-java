@@ -77,7 +77,6 @@ public final class HealthCheckStepPropertiesResponse {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
-
         public HealthCheckStepPropertiesResponse build() {
             return new HealthCheckStepPropertiesResponse(attributes, stepType);
         }

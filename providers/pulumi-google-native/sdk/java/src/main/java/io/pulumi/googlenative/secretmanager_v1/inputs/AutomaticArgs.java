@@ -23,7 +23,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption")
-    private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
+      private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
     public Input<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
         return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
@@ -66,7 +66,6 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
             this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
             return this;
         }
-
         public AutomaticArgs build() {
             return new AutomaticArgs(customerManagedEncryption);
         }

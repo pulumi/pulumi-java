@@ -153,7 +153,6 @@ public final class AuthorityConfigX509Config {
             this.policyIds = policyIds;
             return this;
         }
-
         public AuthorityConfigX509Config build() {
             return new AuthorityConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

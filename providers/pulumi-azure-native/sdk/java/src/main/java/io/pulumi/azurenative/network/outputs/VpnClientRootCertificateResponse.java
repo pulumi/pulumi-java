@@ -139,7 +139,6 @@ public final class VpnClientRootCertificateResponse {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public VpnClientRootCertificateResponse build() {
             return new VpnClientRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }

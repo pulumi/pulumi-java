@@ -268,7 +268,6 @@ public final class GetAgentPoolResult {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }
-
         public GetAgentPoolResult build() {
             return new GetAgentPoolResult(count, id, location, name, os, provisioningState, systemData, tags, tier, type, virtualNetworkSubnetResourceId);
         }

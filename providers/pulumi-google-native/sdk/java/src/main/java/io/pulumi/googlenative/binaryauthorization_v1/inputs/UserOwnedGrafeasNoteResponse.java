@@ -23,7 +23,7 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="delegationServiceAccountEmail", required=true)
-    private final String delegationServiceAccountEmail;
+      private final String delegationServiceAccountEmail;
 
     public String getDelegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail;
@@ -34,7 +34,7 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="noteReference", required=true)
-    private final String noteReference;
+      private final String noteReference;
 
     public String getNoteReference() {
         return this.noteReference;
@@ -45,7 +45,7 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="publicKeys", required=true)
-    private final List<AttestorPublicKeyResponse> publicKeys;
+      private final List<AttestorPublicKeyResponse> publicKeys;
 
     public List<AttestorPublicKeyResponse> getPublicKeys() {
         return this.publicKeys;
@@ -104,7 +104,6 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public UserOwnedGrafeasNoteResponse build() {
             return new UserOwnedGrafeasNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }

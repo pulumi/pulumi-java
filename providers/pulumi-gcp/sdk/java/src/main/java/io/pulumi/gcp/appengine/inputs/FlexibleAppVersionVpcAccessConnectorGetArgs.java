@@ -18,7 +18,7 @@ public final class FlexibleAppVersionVpcAccessConnectorGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class FlexibleAppVersionVpcAccessConnectorGetArgs extends io.pulumi
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public FlexibleAppVersionVpcAccessConnectorGetArgs build() {
             return new FlexibleAppVersionVpcAccessConnectorGetArgs(name);
         }

@@ -116,7 +116,6 @@ public final class SqlAclEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SqlAclEntryResponse build() {
             return new SqlAclEntryResponse(expireTime, label, ttl, value);
         }

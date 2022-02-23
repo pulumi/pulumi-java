@@ -77,7 +77,6 @@ public final class AssessmentScope {
             this.awsServices = awsServices;
             return this;
         }
-
         public AssessmentScope build() {
             return new AssessmentScope(awsAccounts, awsServices);
         }

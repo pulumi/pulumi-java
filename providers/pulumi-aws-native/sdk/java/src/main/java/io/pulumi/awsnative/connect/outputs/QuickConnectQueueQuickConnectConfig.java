@@ -58,7 +58,6 @@ public final class QuickConnectQueueQuickConnectConfig {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
         }
-
         public QuickConnectQueueQuickConnectConfig build() {
             return new QuickConnectQueueQuickConnectConfig(contactFlowArn, queueArn);
         }

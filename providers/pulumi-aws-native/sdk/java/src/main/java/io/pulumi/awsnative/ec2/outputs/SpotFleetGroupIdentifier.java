@@ -44,7 +44,6 @@ public final class SpotFleetGroupIdentifier {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public SpotFleetGroupIdentifier build() {
             return new SpotFleetGroupIdentifier(groupId);
         }

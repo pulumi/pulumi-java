@@ -54,7 +54,6 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
-
         public ConnectionMonitorIcmpConfigurationResponse build() {
             return new ConnectionMonitorIcmpConfigurationResponse(disableTraceRoute);
         }

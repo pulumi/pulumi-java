@@ -104,7 +104,6 @@ public final class GetProjectServiceAccountResult {
             this.userProject = userProject;
             return this;
         }
-
         public GetProjectServiceAccountResult build() {
             return new GetProjectServiceAccountResult(emailAddress, id, project, userProject);
         }

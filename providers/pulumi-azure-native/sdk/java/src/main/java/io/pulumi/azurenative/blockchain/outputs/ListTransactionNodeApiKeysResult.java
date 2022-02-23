@@ -54,7 +54,6 @@ public final class ListTransactionNodeApiKeysResult {
             this.keys = keys;
             return this;
         }
-
         public ListTransactionNodeApiKeysResult build() {
             return new ListTransactionNodeApiKeysResult(keys);
         }

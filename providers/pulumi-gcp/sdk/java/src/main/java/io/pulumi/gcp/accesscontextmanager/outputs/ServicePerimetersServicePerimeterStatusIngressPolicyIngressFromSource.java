@@ -100,7 +100,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
             this.resource = resource;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource(accessLevel, resource);
         }

@@ -25,7 +25,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="basicSli")
-    private final @Nullable Input<BasicSliArgs> basicSli;
+      private final @Nullable Input<BasicSliArgs> basicSli;
 
     public Input<BasicSliArgs> getBasicSli() {
         return this.basicSli == null ? Input.empty() : this.basicSli;
@@ -36,7 +36,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requestBased")
-    private final @Nullable Input<RequestBasedSliArgs> requestBased;
+      private final @Nullable Input<RequestBasedSliArgs> requestBased;
 
     public Input<RequestBasedSliArgs> getRequestBased() {
         return this.requestBased == null ? Input.empty() : this.requestBased;
@@ -47,7 +47,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="windowsBased")
-    private final @Nullable Input<WindowsBasedSliArgs> windowsBased;
+      private final @Nullable Input<WindowsBasedSliArgs> windowsBased;
 
     public Input<WindowsBasedSliArgs> getWindowsBased() {
         return this.windowsBased == null ? Input.empty() : this.windowsBased;
@@ -121,7 +121,6 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
             this.windowsBased = Input.ofNullable(windowsBased);
             return this;
         }
-
         public ServiceLevelIndicatorArgs build() {
             return new ServiceLevelIndicatorArgs(basicSli, requestBased, windowsBased);
         }

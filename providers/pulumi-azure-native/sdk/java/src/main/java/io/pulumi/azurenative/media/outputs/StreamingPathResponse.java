@@ -97,7 +97,6 @@ public final class StreamingPathResponse {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public StreamingPathResponse build() {
             return new StreamingPathResponse(encryptionScheme, paths, streamingProtocol);
         }

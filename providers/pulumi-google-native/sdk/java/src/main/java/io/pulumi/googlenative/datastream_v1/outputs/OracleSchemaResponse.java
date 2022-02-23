@@ -76,7 +76,6 @@ public final class OracleSchemaResponse {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public OracleSchemaResponse build() {
             return new OracleSchemaResponse(oracleTables, schema);
         }

@@ -52,7 +52,6 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public ConnectorProfileZendeskConnectorProfileProperties build() {
             return new ConnectorProfileZendeskConnectorProfileProperties(instanceUrl);
         }

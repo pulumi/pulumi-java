@@ -25,7 +25,7 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -40,7 +40,7 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final Input<String> containerType;
+        private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -51,7 +51,7 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -62,7 +62,7 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable Input<String> healthStatus;
+        private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -73,7 +73,7 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable Input<String> registrationStatus;
+        private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -177,7 +177,6 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
             this.registrationStatus = Input.ofNullable(registrationStatus);
             return this;
         }
-
         public AzureSqlContainerArgs build() {
             return new AzureSqlContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
         }

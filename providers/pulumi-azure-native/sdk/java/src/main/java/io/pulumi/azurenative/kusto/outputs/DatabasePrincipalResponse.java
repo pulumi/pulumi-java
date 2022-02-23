@@ -181,7 +181,6 @@ public final class DatabasePrincipalResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatabasePrincipalResponse build() {
             return new DatabasePrincipalResponse(appId, email, fqn, name, role, tenantName, type);
         }

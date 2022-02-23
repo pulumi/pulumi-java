@@ -15,28 +15,28 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends io.pulumi.reso
     public static final GetRegionWorkflowTemplateIamPolicyArgs Empty = new GetRegionWorkflowTemplateIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="regionId", required=true)
-    private final String regionId;
+      private final String regionId;
 
     public String getRegionId() {
         return this.regionId;
     }
 
     @InputImport(name="workflowTemplateId", required=true)
-    private final String workflowTemplateId;
+      private final String workflowTemplateId;
 
     public String getWorkflowTemplateId() {
         return this.workflowTemplateId;
@@ -105,7 +105,6 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends io.pulumi.reso
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
         }
-
         public GetRegionWorkflowTemplateIamPolicyArgs build() {
             return new GetRegionWorkflowTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, regionId, workflowTemplateId);
         }

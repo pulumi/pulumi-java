@@ -95,7 +95,6 @@ public final class StreamingbufferResponse {
             this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
             return this;
         }
-
         public StreamingbufferResponse build() {
             return new StreamingbufferResponse(estimatedBytes, estimatedRows, oldestEntryTime);
         }

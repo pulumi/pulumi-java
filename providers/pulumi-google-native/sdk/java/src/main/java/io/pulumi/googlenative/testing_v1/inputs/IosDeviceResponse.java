@@ -21,7 +21,7 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosModelId", required=true)
-    private final String iosModelId;
+      private final String iosModelId;
 
     public String getIosModelId() {
         return this.iosModelId;
@@ -32,7 +32,7 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosVersionId", required=true)
-    private final String iosVersionId;
+      private final String iosVersionId;
 
     public String getIosVersionId() {
         return this.iosVersionId;
@@ -43,7 +43,7 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locale", required=true)
-    private final String locale;
+      private final String locale;
 
     public String getLocale() {
         return this.locale;
@@ -54,7 +54,7 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="orientation", required=true)
-    private final String orientation;
+      private final String orientation;
 
     public String getOrientation() {
         return this.orientation;
@@ -123,7 +123,6 @@ public final class IosDeviceResponse extends io.pulumi.resources.InvokeArgs {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public IosDeviceResponse build() {
             return new IosDeviceResponse(iosModelId, iosVersionId, locale, orientation);
         }

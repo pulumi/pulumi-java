@@ -76,7 +76,6 @@ public final class ImageAnnotationResponse {
             this.frameIndex = Objects.requireNonNull(frameIndex);
             return this;
         }
-
         public ImageAnnotationResponse build() {
             return new ImageAnnotationResponse(boundingPolys, frameIndex);
         }

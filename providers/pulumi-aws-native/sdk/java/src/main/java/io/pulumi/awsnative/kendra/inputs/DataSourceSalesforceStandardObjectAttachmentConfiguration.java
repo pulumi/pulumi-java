@@ -17,14 +17,14 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration ext
     public static final DataSourceSalesforceStandardObjectAttachmentConfiguration Empty = new DataSourceSalesforceStandardObjectAttachmentConfiguration();
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable String documentTitleFieldName;
+        private final @Nullable String documentTitleFieldName;
 
     public Optional<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
@@ -73,7 +73,6 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration ext
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
             return new DataSourceSalesforceStandardObjectAttachmentConfiguration(documentTitleFieldName, fieldMappings);
         }

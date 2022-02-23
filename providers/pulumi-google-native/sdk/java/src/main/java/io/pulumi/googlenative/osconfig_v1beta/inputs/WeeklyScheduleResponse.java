@@ -21,7 +21,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final String dayOfWeek;
+      private final String dayOfWeek;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
@@ -59,7 +59,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public WeeklyScheduleResponse build() {
             return new WeeklyScheduleResponse(dayOfWeek);
         }

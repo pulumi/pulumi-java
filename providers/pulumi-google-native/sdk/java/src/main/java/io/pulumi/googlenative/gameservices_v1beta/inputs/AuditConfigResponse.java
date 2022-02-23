@@ -23,14 +23,14 @@ public final class AuditConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<AuditLogConfigResponse> auditLogConfigs;
+      private final List<AuditLogConfigResponse> auditLogConfigs;
 
     public List<AuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
 
     @InputImport(name="exemptedMembers", required=true)
-    private final List<String> exemptedMembers;
+      private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
@@ -41,7 +41,7 @@ public final class AuditConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -100,7 +100,6 @@ public final class AuditConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public AuditConfigResponse build() {
             return new AuditConfigResponse(auditLogConfigs, exemptedMembers, service);
         }

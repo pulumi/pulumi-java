@@ -60,7 +60,6 @@ public final class SiteTag {
             this.value = value;
             return this;
         }
-
         public SiteTag build() {
             return new SiteTag(key, value);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * 
      */
     @InputImport(name="destinationName", required=true)
-    private final String destinationName;
+      private final String destinationName;
 
     public String getDestinationName() {
         return this.destinationName;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(destinationName, uri);
         }

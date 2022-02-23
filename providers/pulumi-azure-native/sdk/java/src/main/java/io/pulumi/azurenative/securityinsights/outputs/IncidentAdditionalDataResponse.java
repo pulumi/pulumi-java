@@ -139,7 +139,6 @@ public final class IncidentAdditionalDataResponse {
             this.tactics = Objects.requireNonNull(tactics);
             return this;
         }
-
         public IncidentAdditionalDataResponse build() {
             return new IncidentAdditionalDataResponse(alertProductNames, alertsCount, bookmarksCount, commentsCount, tactics);
         }

@@ -30,7 +30,6 @@ public final class AndroidTestLoopResponse {
         public Builder(AndroidTestLoopResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse();
         }

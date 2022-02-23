@@ -78,7 +78,6 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
             this.tags = tags;
             return this;
         }
-
         public AzureToAzureVmSyncedConfigDetailsResponse build() {
             return new AzureToAzureVmSyncedConfigDetailsResponse(inputEndpoints, tags);
         }

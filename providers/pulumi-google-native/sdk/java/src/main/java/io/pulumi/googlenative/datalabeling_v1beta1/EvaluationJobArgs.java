@@ -21,7 +21,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-    private final Input<String> annotationSpecSet;
+      private final Input<String> annotationSpecSet;
 
     public Input<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
@@ -32,7 +32,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -43,7 +43,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationJobConfig", required=true)
-    private final Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
+      private final Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> getEvaluationJobConfig() {
         return this.evaluationJobConfig;
@@ -54,7 +54,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelMissingGroundTruth", required=true)
-    private final Input<Boolean> labelMissingGroundTruth;
+      private final Input<Boolean> labelMissingGroundTruth;
 
     public Input<Boolean> getLabelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
@@ -65,14 +65,14 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelVersion", required=true)
-    private final Input<String> modelVersion;
+      private final Input<String> modelVersion;
 
     public Input<String> getModelVersion() {
         return this.modelVersion;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -217,7 +217,6 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public EvaluationJobArgs build() {
             return new EvaluationJobArgs(annotationSpecSet, description, evaluationJobConfig, labelMissingGroundTruth, modelVersion, project, schedule);
         }

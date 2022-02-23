@@ -22,7 +22,7 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlDatabases", required=true)
-    private final List<MysqlDatabaseResponse> mysqlDatabases;
+      private final List<MysqlDatabaseResponse> mysqlDatabases;
 
     public List<MysqlDatabaseResponse> getMysqlDatabases() {
         return this.mysqlDatabases;
@@ -60,7 +60,6 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }
-
         public MysqlRdbmsResponse build() {
             return new MysqlRdbmsResponse(mysqlDatabases);
         }

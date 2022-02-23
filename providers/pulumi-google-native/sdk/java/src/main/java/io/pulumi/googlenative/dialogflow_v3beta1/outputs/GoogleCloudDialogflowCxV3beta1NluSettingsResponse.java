@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(classificationThreshold, modelTrainingMode, modelType);
         }

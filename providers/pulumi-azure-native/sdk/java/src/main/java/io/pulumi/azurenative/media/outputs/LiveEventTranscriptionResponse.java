@@ -100,7 +100,6 @@ public final class LiveEventTranscriptionResponse {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
-
         public LiveEventTranscriptionResponse build() {
             return new LiveEventTranscriptionResponse(inputTrackSelection, language, outputTranscriptionTrack);
         }

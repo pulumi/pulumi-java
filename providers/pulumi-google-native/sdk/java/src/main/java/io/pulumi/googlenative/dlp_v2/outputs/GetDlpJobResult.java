@@ -246,7 +246,6 @@ public final class GetDlpJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDlpJobResult build() {
             return new GetDlpJobResult(createTime, endTime, errors, inspectDetails, jobTriggerName, name, riskDetails, startTime, state, type);
         }

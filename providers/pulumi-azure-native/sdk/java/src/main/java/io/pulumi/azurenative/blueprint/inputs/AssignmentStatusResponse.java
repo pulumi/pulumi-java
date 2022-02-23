@@ -22,7 +22,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="lastModified", required=true)
-    private final String lastModified;
+        private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -33,7 +33,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="managedResources", required=true)
-    private final List<String> managedResources;
+        private final List<String> managedResources;
 
     public List<String> getManagedResources() {
         return this.managedResources;
@@ -44,7 +44,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="timeCreated", required=true)
-    private final String timeCreated;
+        private final String timeCreated;
 
     public String getTimeCreated() {
         return this.timeCreated;
@@ -103,7 +103,6 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public AssignmentStatusResponse build() {
             return new AssignmentStatusResponse(lastModified, managedResources, timeCreated);
         }

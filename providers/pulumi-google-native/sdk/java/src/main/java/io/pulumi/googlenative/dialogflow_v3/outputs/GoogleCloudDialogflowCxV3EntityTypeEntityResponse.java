@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EntityTypeEntityResponse build() {
             return new GoogleCloudDialogflowCxV3EntityTypeEntityResponse(synonyms, value);
         }

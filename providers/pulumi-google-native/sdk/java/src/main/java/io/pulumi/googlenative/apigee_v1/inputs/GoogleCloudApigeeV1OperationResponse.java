@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="methods", required=true)
-    private final List<String> methods;
+      private final List<String> methods;
 
     public List<String> getMethods() {
         return this.methods;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -82,7 +82,6 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationResponse build() {
             return new GoogleCloudApigeeV1OperationResponse(methods, resource);
         }

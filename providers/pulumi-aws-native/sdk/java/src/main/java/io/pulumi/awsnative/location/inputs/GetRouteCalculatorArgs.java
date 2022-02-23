@@ -13,7 +13,7 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
     public static final GetRouteCalculatorArgs Empty = new GetRouteCalculatorArgs();
 
     @InputImport(name="calculatorName", required=true)
-    private final String calculatorName;
+        private final String calculatorName;
 
     public String getCalculatorName() {
         return this.calculatorName;
@@ -51,7 +51,6 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
         }
-
         public GetRouteCalculatorArgs build() {
             return new GetRouteCalculatorArgs(calculatorName);
         }

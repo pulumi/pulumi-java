@@ -34,7 +34,6 @@ public final class AppDevExperienceFeatureSpecArgs extends io.pulumi.resources.R
         public Builder(AppDevExperienceFeatureSpecArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppDevExperienceFeatureSpecArgs build() {
             return new AppDevExperienceFeatureSpecArgs();
         }

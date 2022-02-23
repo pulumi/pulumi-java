@@ -106,7 +106,6 @@ public final class PackagingConfigurationHlsPackage {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public PackagingConfigurationHlsPackage build() {
             return new PackagingConfigurationHlsPackage(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }

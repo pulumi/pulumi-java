@@ -374,7 +374,6 @@ public final class GetEventHubEventSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubEventSourceResult build() {
             return new GetEventHubEventSourceResult(consumerGroupName, creationTime, eventHubName, eventSourceResourceId, id, keyName, kind, localTimestamp, location, name, provisioningState, serviceBusNamespace, tags, time, timestampPropertyName, type);
         }

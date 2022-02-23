@@ -25,7 +25,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="individualOutcome")
-    private final @Nullable Input<List<IndividualOutcomeArgs>> individualOutcome;
+      private final @Nullable Input<List<IndividualOutcomeArgs>> individualOutcome;
 
     public Input<List<IndividualOutcomeArgs>> getIndividualOutcome() {
         return this.individualOutcome == null ? Input.empty() : this.individualOutcome;
@@ -36,7 +36,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollUp")
-    private final @Nullable Input<PrimaryStepRollUp> rollUp;
+      private final @Nullable Input<PrimaryStepRollUp> rollUp;
 
     public Input<PrimaryStepRollUp> getRollUp() {
         return this.rollUp == null ? Input.empty() : this.rollUp;
@@ -95,7 +95,6 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
             this.rollUp = Input.ofNullable(rollUp);
             return this;
         }
-
         public PrimaryStepArgs build() {
             return new PrimaryStepArgs(individualOutcome, rollUp);
         }

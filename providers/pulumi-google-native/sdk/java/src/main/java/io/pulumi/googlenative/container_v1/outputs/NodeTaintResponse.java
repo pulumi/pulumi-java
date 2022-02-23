@@ -95,7 +95,6 @@ public final class NodeTaintResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public NodeTaintResponse build() {
             return new NodeTaintResponse(effect, key, value);
         }

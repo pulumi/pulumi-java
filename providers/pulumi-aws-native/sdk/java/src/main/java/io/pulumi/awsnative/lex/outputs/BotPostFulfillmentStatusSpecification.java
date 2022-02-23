@@ -73,7 +73,6 @@ public final class BotPostFulfillmentStatusSpecification {
             this.timeoutResponse = timeoutResponse;
             return this;
         }
-
         public BotPostFulfillmentStatusSpecification build() {
             return new BotPostFulfillmentStatusSpecification(failureResponse, successResponse, timeoutResponse);
         }

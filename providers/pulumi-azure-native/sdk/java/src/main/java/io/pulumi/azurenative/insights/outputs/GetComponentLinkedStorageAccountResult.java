@@ -118,7 +118,6 @@ public final class GetComponentLinkedStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetComponentLinkedStorageAccountResult build() {
             return new GetComponentLinkedStorageAccountResult(id, linkedStorageAccount, name, type);
         }

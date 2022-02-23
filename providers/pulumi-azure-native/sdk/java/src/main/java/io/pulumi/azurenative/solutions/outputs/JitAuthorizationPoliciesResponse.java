@@ -74,7 +74,6 @@ public final class JitAuthorizationPoliciesResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public JitAuthorizationPoliciesResponse build() {
             return new JitAuthorizationPoliciesResponse(principalId, roleDefinitionId);
         }

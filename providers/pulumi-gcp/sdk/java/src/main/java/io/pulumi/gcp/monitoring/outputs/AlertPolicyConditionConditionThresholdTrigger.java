@@ -85,7 +85,6 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
             this.percent = percent;
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdTrigger build() {
             return new AlertPolicyConditionConditionThresholdTrigger(count, percent);
         }

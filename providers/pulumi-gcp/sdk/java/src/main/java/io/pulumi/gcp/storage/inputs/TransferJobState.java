@@ -21,7 +21,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+        private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -32,7 +32,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionTime")
-    private final @Nullable Input<String> deletionTime;
+        private final @Nullable Input<String> deletionTime;
 
     public Input<String> getDeletionTime() {
         return this.deletionTime == null ? Input.empty() : this.deletionTime;
@@ -43,7 +43,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModificationTime")
-    private final @Nullable Input<String> lastModificationTime;
+        private final @Nullable Input<String> lastModificationTime;
 
     public Input<String> getLastModificationTime() {
         return this.lastModificationTime == null ? Input.empty() : this.lastModificationTime;
@@ -65,7 +65,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<TransferJobScheduleGetArgs> schedule;
+        private final @Nullable Input<TransferJobScheduleGetArgs> schedule;
 
     public Input<TransferJobScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -99,7 +99,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -110,7 +110,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferSpec")
-    private final @Nullable Input<TransferJobTransferSpecGetArgs> transferSpec;
+        private final @Nullable Input<TransferJobTransferSpecGetArgs> transferSpec;
 
     public Input<TransferJobTransferSpecGetArgs> getTransferSpec() {
         return this.transferSpec == null ? Input.empty() : this.transferSpec;
@@ -274,7 +274,6 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
             this.transferSpec = Input.ofNullable(transferSpec);
             return this;
         }
-
         public TransferJobState build() {
             return new TransferJobState(creationTime, deletionTime, description, lastModificationTime, name, project, schedule, status, transferSpec);
         }

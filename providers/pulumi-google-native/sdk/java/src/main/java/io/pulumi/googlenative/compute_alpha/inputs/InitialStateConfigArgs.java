@@ -24,7 +24,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dbs")
-    private final @Nullable Input<List<FileContentBufferArgs>> dbs;
+      private final @Nullable Input<List<FileContentBufferArgs>> dbs;
 
     public Input<List<FileContentBufferArgs>> getDbs() {
         return this.dbs == null ? Input.empty() : this.dbs;
@@ -35,7 +35,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dbxs")
-    private final @Nullable Input<List<FileContentBufferArgs>> dbxs;
+      private final @Nullable Input<List<FileContentBufferArgs>> dbxs;
 
     public Input<List<FileContentBufferArgs>> getDbxs() {
         return this.dbxs == null ? Input.empty() : this.dbxs;
@@ -46,7 +46,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keks")
-    private final @Nullable Input<List<FileContentBufferArgs>> keks;
+      private final @Nullable Input<List<FileContentBufferArgs>> keks;
 
     public Input<List<FileContentBufferArgs>> getKeks() {
         return this.keks == null ? Input.empty() : this.keks;
@@ -57,7 +57,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pk")
-    private final @Nullable Input<FileContentBufferArgs> pk;
+      private final @Nullable Input<FileContentBufferArgs> pk;
 
     public Input<FileContentBufferArgs> getPk() {
         return this.pk == null ? Input.empty() : this.pk;
@@ -146,7 +146,6 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             this.pk = Input.ofNullable(pk);
             return this;
         }
-
         public InitialStateConfigArgs build() {
             return new InitialStateConfigArgs(dbs, dbxs, keks, pk);
         }

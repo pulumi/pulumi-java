@@ -124,7 +124,6 @@ public final class GetAwsVersionsResult {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }
-
         public GetAwsVersionsResult build() {
             return new GetAwsVersionsResult(id, location, project, supportedRegions, validVersions);
         }

@@ -76,7 +76,6 @@ public final class InfrastructureConfigurationS3Logs {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public InfrastructureConfigurationS3Logs build() {
             return new InfrastructureConfigurationS3Logs(s3BucketName, s3KeyPrefix);
         }

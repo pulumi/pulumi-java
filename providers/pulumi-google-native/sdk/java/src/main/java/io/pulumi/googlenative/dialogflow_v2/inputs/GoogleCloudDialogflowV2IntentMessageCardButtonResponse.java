@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
      * 
      */
     @InputImport(name="postback", required=true)
-    private final String postback;
+      private final String postback;
 
     public String getPostback() {
         return this.postback;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCardButtonResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCardButtonResponse(postback, text);
         }

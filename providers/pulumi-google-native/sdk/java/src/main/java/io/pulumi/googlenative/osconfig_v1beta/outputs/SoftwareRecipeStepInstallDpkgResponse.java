@@ -52,7 +52,6 @@ public final class SoftwareRecipeStepInstallDpkgResponse {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public SoftwareRecipeStepInstallDpkgResponse build() {
             return new SoftwareRecipeStepInstallDpkgResponse(artifactId);
         }

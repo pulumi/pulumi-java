@@ -23,7 +23,7 @@ public final class DeliveryRuleCookiesConditionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleCookiesConditionResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final CookiesMatchConditionParametersResponse parameters;
+        private final CookiesMatchConditionParametersResponse parameters;
 
     public CookiesMatchConditionParametersResponse getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class DeliveryRuleCookiesConditionResponse extends io.pulumi.resour
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCookiesConditionResponse build() {
             return new DeliveryRuleCookiesConditionResponse(name, parameters);
         }

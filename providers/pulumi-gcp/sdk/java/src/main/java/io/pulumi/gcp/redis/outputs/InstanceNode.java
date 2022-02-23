@@ -68,7 +68,6 @@ public final class InstanceNode {
             this.zone = zone;
             return this;
         }
-
         public InstanceNode build() {
             return new InstanceNode(id, zone);
         }

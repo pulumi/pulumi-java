@@ -413,7 +413,6 @@ public final class AzureMySqlSectionResponse {
             this.userPassword = userPassword;
             return this;
         }
-
         public AzureMySqlSectionResponse build() {
             return new AzureMySqlSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
         }

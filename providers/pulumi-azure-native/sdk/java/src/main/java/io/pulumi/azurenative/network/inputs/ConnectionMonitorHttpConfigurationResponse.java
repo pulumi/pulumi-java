@@ -27,7 +27,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="method")
-    private final @Nullable String method;
+        private final @Nullable String method;
 
     public Optional<String> getMethod() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
@@ -38,7 +38,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -49,7 +49,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -60,7 +60,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="preferHTTPS")
-    private final @Nullable Boolean preferHTTPS;
+        private final @Nullable Boolean preferHTTPS;
 
     public Optional<Boolean> getPreferHTTPS() {
         return this.preferHTTPS == null ? Optional.empty() : Optional.ofNullable(this.preferHTTPS);
@@ -71,7 +71,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="requestHeaders")
-    private final @Nullable List<HTTPHeaderResponse> requestHeaders;
+        private final @Nullable List<HTTPHeaderResponse> requestHeaders;
 
     public List<HTTPHeaderResponse> getRequestHeaders() {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
@@ -82,7 +82,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="validStatusCodeRanges")
-    private final @Nullable List<String> validStatusCodeRanges;
+        private final @Nullable List<String> validStatusCodeRanges;
 
     public List<String> getValidStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;
@@ -171,7 +171,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
-
         public ConnectionMonitorHttpConfigurationResponse build() {
             return new ConnectionMonitorHttpConfigurationResponse(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }

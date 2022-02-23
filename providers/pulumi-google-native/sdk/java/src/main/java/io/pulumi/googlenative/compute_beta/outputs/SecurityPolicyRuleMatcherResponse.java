@@ -97,7 +97,6 @@ public final class SecurityPolicyRuleMatcherResponse {
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
         }
-
         public SecurityPolicyRuleMatcherResponse build() {
             return new SecurityPolicyRuleMatcherResponse(config, expr, versionedExpr);
         }

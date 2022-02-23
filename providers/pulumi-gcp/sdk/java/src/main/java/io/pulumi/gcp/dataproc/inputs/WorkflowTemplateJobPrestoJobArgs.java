@@ -24,7 +24,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientTags")
-    private final @Nullable Input<List<String>> clientTags;
+        private final @Nullable Input<List<String>> clientTags;
 
     public Input<List<String>> getClientTags() {
         return this.clientTags == null ? Input.empty() : this.clientTags;
@@ -35,7 +35,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="continueOnFailure")
-    private final @Nullable Input<Boolean> continueOnFailure;
+        private final @Nullable Input<Boolean> continueOnFailure;
 
     public Input<Boolean> getContinueOnFailure() {
         return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
@@ -46,7 +46,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigArgs> loggingConfig;
+        private final @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigArgs> loggingConfig;
 
     public Input<WorkflowTemplateJobPrestoJobLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -57,7 +57,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+        private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -68,7 +68,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -79,7 +79,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="queryFileUri")
-    private final @Nullable Input<String> queryFileUri;
+        private final @Nullable Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
@@ -90,7 +90,7 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="queryList")
-    private final @Nullable Input<WorkflowTemplateJobPrestoJobQueryListArgs> queryList;
+        private final @Nullable Input<WorkflowTemplateJobPrestoJobQueryListArgs> queryList;
 
     public Input<WorkflowTemplateJobPrestoJobQueryListArgs> getQueryList() {
         return this.queryList == null ? Input.empty() : this.queryList;
@@ -224,7 +224,6 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
             this.queryList = Input.ofNullable(queryList);
             return this;
         }
-
         public WorkflowTemplateJobPrestoJobArgs build() {
             return new WorkflowTemplateJobPrestoJobArgs(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }

@@ -310,7 +310,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
             this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyPlayRightResponse build() {
             return new ContentKeyPolicyPlayReadyPlayRightResponse(agcAndColorStripeRestriction, allowPassingVideoContentToUnknownOutput, analogVideoOpl, compressedDigitalAudioOpl, compressedDigitalVideoOpl, digitalVideoOnlyContentRestriction, explicitAnalogTelevisionOutputRestriction, firstPlayExpiration, imageConstraintForAnalogComponentVideoRestriction, imageConstraintForAnalogComputerMonitorRestriction, scmsRestriction, uncompressedDigitalAudioOpl, uncompressedDigitalVideoOpl);
         }

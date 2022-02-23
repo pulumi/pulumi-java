@@ -61,7 +61,6 @@ public final class ThemeSheetStyle {
             this.tileLayout = tileLayout;
             return this;
         }
-
         public ThemeSheetStyle build() {
             return new ThemeSheetStyle(tile, tileLayout);
         }

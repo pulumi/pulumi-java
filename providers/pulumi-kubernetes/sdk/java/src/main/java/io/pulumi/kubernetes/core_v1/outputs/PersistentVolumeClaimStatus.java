@@ -173,7 +173,6 @@ public final class PersistentVolumeClaimStatus {
             this.resizeStatus = resizeStatus;
             return this;
         }
-
         public PersistentVolumeClaimStatus build() {
             return new PersistentVolumeClaimStatus(accessModes, allocatedResources, capacity, conditions, phase, resizeStatus);
         }

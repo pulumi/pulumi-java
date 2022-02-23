@@ -74,7 +74,6 @@ public final class SettingsParameterDescriptionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SettingsParameterDescriptionResponse build() {
             return new SettingsParameterDescriptionResponse(name, value);
         }

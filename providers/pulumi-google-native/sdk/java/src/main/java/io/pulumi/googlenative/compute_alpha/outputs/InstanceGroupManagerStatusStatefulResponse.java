@@ -75,7 +75,6 @@ public final class InstanceGroupManagerStatusStatefulResponse {
             this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulResponse build() {
             return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
         }

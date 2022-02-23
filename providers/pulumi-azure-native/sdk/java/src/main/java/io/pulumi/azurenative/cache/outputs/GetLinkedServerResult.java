@@ -179,7 +179,6 @@ public final class GetLinkedServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedServerResult build() {
             return new GetLinkedServerResult(id, linkedRedisCacheId, linkedRedisCacheLocation, name, provisioningState, serverRole, type);
         }

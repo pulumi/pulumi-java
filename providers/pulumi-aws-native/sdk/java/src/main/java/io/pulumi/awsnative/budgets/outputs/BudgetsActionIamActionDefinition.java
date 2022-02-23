@@ -86,7 +86,6 @@ public final class BudgetsActionIamActionDefinition {
             this.users = users;
             return this;
         }
-
         public BudgetsActionIamActionDefinition build() {
             return new BudgetsActionIamActionDefinition(groups, policyArn, roles, users);
         }

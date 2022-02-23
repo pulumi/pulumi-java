@@ -98,7 +98,6 @@ public final class SubnetResourceSettingsResponse {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public SubnetResourceSettingsResponse build() {
             return new SubnetResourceSettingsResponse(addressPrefix, name, networkSecurityGroup);
         }

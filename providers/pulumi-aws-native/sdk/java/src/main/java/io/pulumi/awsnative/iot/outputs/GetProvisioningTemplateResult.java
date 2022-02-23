@@ -129,7 +129,6 @@ public final class GetProvisioningTemplateResult {
             this.templateBody = templateBody;
             return this;
         }
-
         public GetProvisioningTemplateResult build() {
             return new GetProvisioningTemplateResult(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateArn, templateBody);
         }

@@ -75,7 +75,6 @@ public final class ConfigurationAggregatorAccountAggregationSource {
             this.awsRegions = awsRegions;
             return this;
         }
-
         public ConfigurationAggregatorAccountAggregationSource build() {
             return new ConfigurationAggregatorAccountAggregationSource(accountIds, allAwsRegions, awsRegions);
         }

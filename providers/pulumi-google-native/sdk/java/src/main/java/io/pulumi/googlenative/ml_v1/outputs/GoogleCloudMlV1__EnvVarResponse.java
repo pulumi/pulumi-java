@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__EnvVarResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudMlV1__EnvVarResponse build() {
             return new GoogleCloudMlV1__EnvVarResponse(name, value);
         }

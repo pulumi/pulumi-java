@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__XraiAttributionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="numIntegralSteps")
-    private final @Nullable Input<Integer> numIntegralSteps;
+      private final @Nullable Input<Integer> numIntegralSteps;
 
     public Input<Integer> getNumIntegralSteps() {
         return this.numIntegralSteps == null ? Input.empty() : this.numIntegralSteps;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1__XraiAttributionArgs extends io.pulumi.resour
             this.numIntegralSteps = Input.ofNullable(numIntegralSteps);
             return this;
         }
-
         public GoogleCloudMlV1__XraiAttributionArgs build() {
             return new GoogleCloudMlV1__XraiAttributionArgs(numIntegralSteps);
         }

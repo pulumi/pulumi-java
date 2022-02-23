@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * 
      */
     @InputImport(name="confidenceScore", required=true)
-    private final Double confidenceScore;
+      private final Double confidenceScore;
 
     public Double getConfidenceScore() {
         return this.confidenceScore;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * 
      */
     @InputImport(name="queryRecord", required=true)
-    private final String queryRecord;
+      private final String queryRecord;
 
     public String getQueryRecord() {
         return this.queryRecord;
@@ -56,7 +56,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * 
      */
     @InputImport(name="suggestion", required=true)
-    private final String suggestion;
+      private final String suggestion;
 
     public String getSuggestion() {
         return this.suggestion;
@@ -125,7 +125,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
             this.suggestion = Objects.requireNonNull(suggestion);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse(confidenceScore, metadata, queryRecord, suggestion);
         }

@@ -95,7 +95,6 @@ public final class AssetModelHierarchy {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AssetModelHierarchy build() {
             return new AssetModelHierarchy(childAssetModelId, logicalId, name);
         }

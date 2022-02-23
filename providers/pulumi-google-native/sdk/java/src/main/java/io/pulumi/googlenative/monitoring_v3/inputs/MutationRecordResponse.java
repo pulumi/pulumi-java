@@ -21,7 +21,7 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mutateTime", required=true)
-    private final String mutateTime;
+      private final String mutateTime;
 
     public String getMutateTime() {
         return this.mutateTime;
@@ -32,7 +32,7 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mutatedBy", required=true)
-    private final String mutatedBy;
+      private final String mutatedBy;
 
     public String getMutatedBy() {
         return this.mutatedBy;
@@ -81,7 +81,6 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
             this.mutatedBy = Objects.requireNonNull(mutatedBy);
             return this;
         }
-
         public MutationRecordResponse build() {
             return new MutationRecordResponse(mutateTime, mutatedBy);
         }

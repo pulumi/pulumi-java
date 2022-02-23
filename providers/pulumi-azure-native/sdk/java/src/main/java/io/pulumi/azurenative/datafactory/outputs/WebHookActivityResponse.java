@@ -293,7 +293,6 @@ public final class WebHookActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public WebHookActivityResponse build() {
             return new WebHookActivityResponse(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
         }

@@ -19,7 +19,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="networkInterfaceName", required=true)
-    private final String networkInterfaceName;
+        private final String networkInterfaceName;
 
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
@@ -41,7 +41,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNetworkInterfaceArgs build() {
             return new GetNetworkInterfaceArgs(expand, networkInterfaceName, resourceGroupName);
         }

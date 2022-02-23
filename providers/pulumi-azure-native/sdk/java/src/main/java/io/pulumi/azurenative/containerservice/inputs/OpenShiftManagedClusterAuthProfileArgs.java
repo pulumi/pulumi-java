@@ -24,7 +24,7 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="identityProviders")
-    private final @Nullable Input<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
+        private final @Nullable Input<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
     public Input<List<OpenShiftManagedClusterIdentityProviderArgs>> getIdentityProviders() {
         return this.identityProviders == null ? Input.empty() : this.identityProviders;
@@ -67,7 +67,6 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
             this.identityProviders = Input.ofNullable(identityProviders);
             return this;
         }
-
         public OpenShiftManagedClusterAuthProfileArgs build() {
             return new OpenShiftManagedClusterAuthProfileArgs(identityProviders);
         }

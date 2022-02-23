@@ -167,7 +167,6 @@ public final class JobHiveConfig {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public JobHiveConfig build() {
             return new JobHiveConfig(continueOnFailure, jarFileUris, properties, queryFileUri, queryLists, scriptVariables);
         }

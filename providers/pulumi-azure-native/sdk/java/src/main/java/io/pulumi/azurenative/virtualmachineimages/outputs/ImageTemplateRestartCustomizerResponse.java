@@ -141,7 +141,6 @@ public final class ImageTemplateRestartCustomizerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateRestartCustomizerResponse build() {
             return new ImageTemplateRestartCustomizerResponse(name, restartCheckCommand, restartCommand, restartTimeout, type);
         }

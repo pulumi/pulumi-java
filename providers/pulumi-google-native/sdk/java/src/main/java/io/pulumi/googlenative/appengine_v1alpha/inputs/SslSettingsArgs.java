@@ -23,7 +23,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+      private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -66,7 +66,6 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
-
         public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId);
         }

@@ -44,7 +44,6 @@ public final class FlowSlackSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowSlackSourceProperties build() {
             return new FlowSlackSourceProperties(object);
         }

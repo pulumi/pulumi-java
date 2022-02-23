@@ -117,7 +117,6 @@ public final class GetQueueAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueAuthorizationRuleResult build() {
             return new GetQueueAuthorizationRuleResult(id, name, rights, type);
         }

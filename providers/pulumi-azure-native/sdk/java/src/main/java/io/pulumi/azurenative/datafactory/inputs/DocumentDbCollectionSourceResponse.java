@@ -24,7 +24,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Object additionalColumns;
+        private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
@@ -35,7 +35,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -46,7 +46,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -57,7 +57,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="nestingSeparator")
-    private final @Nullable Object nestingSeparator;
+        private final @Nullable Object nestingSeparator;
 
     public Optional<Object> getNestingSeparator() {
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
@@ -68,7 +68,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Object query;
+        private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -79,7 +79,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="queryTimeout")
-    private final @Nullable Object queryTimeout;
+        private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
@@ -90,7 +90,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -101,7 +101,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -113,7 +113,7 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -232,7 +232,6 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbCollectionSourceResponse build() {
             return new DocumentDbCollectionSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, nestingSeparator, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

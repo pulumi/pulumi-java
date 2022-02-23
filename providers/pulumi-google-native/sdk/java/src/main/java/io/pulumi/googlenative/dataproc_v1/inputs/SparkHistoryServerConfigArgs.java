@@ -23,7 +23,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataprocCluster")
-    private final @Nullable Input<String> dataprocCluster;
+      private final @Nullable Input<String> dataprocCluster;
 
     public Input<String> getDataprocCluster() {
         return this.dataprocCluster == null ? Input.empty() : this.dataprocCluster;
@@ -66,7 +66,6 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
             this.dataprocCluster = Input.ofNullable(dataprocCluster);
             return this;
         }
-
         public SparkHistoryServerConfigArgs build() {
             return new SparkHistoryServerConfigArgs(dataprocCluster);
         }

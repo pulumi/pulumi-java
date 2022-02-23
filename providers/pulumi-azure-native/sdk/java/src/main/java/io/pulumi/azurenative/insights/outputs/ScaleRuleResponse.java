@@ -75,7 +75,6 @@ public final class ScaleRuleResponse {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }
-
         public ScaleRuleResponse build() {
             return new ScaleRuleResponse(metricTrigger, scaleAction);
         }

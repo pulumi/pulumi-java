@@ -24,7 +24,7 @@ public final class DomainSharingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notebookOutputOption")
-    private final @Nullable Input<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
+        private final @Nullable Input<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
 
     public Input<DomainSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
         return this.notebookOutputOption == null ? Input.empty() : this.notebookOutputOption;
@@ -35,7 +35,7 @@ public final class DomainSharingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="s3KmsKeyId")
-    private final @Nullable Input<String> s3KmsKeyId;
+        private final @Nullable Input<String> s3KmsKeyId;
 
     public Input<String> getS3KmsKeyId() {
         return this.s3KmsKeyId == null ? Input.empty() : this.s3KmsKeyId;
@@ -46,7 +46,7 @@ public final class DomainSharingSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="s3OutputPath")
-    private final @Nullable Input<String> s3OutputPath;
+        private final @Nullable Input<String> s3OutputPath;
 
     public Input<String> getS3OutputPath() {
         return this.s3OutputPath == null ? Input.empty() : this.s3OutputPath;
@@ -120,7 +120,6 @@ public final class DomainSharingSettingsArgs extends io.pulumi.resources.Resourc
             this.s3OutputPath = Input.ofNullable(s3OutputPath);
             return this;
         }
-
         public DomainSharingSettingsArgs build() {
             return new DomainSharingSettingsArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }

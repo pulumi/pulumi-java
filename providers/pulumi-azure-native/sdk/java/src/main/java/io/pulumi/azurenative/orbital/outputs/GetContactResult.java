@@ -455,7 +455,6 @@ public final class GetContactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContactResult build() {
             return new GetContactResult(contactProfile, endAzimuthDegrees, endElevationDegrees, errorMessage, etag, groundStationName, id, maximumElevationDegrees, name, reservationEndTime, reservationStartTime, rxEndTime, rxStartTime, startAzimuthDegrees, startElevationDegrees, status, systemData, txEndTime, txStartTime, type);
         }

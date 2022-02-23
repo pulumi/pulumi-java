@@ -158,7 +158,6 @@ public final class LatestOperationResultResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public LatestOperationResultResponse build() {
             return new LatestOperationResultResponse(errorCode, errorMessage, httpMethod, operationUrl, requestUri, status);
         }

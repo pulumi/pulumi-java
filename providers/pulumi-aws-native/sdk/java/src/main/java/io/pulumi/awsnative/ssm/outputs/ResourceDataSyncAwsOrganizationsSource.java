@@ -60,7 +60,6 @@ public final class ResourceDataSyncAwsOrganizationsSource {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
-
         public ResourceDataSyncAwsOrganizationsSource build() {
             return new ResourceDataSyncAwsOrganizationsSource(organizationSourceType, organizationalUnits);
         }

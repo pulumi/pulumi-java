@@ -140,7 +140,6 @@ public final class RouterBgpResponse {
             this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
             return this;
         }
-
         public RouterBgpResponse build() {
             return new RouterBgpResponse(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }

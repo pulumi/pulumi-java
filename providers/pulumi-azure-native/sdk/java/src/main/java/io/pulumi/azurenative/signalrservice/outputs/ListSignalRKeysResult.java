@@ -118,7 +118,6 @@ public final class ListSignalRKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListSignalRKeysResult build() {
             return new ListSignalRKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

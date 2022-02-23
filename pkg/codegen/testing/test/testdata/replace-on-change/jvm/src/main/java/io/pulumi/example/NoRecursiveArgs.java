@@ -30,7 +30,6 @@ public final class NoRecursiveArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(NoRecursiveArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public NoRecursiveArgs build() {
             return new NoRecursiveArgs();
         }

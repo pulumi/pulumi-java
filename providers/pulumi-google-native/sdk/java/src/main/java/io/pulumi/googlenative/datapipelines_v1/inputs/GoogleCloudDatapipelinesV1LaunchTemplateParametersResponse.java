@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @InputImport(name="environment", required=true)
-    private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
+      private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse getEnvironment() {
         return this.environment;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+      private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Map<String,String> parameters;
+      private final Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
         return this.parameters;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @InputImport(name="transformNameMapping", required=true)
-    private final Map<String,String> transformNameMapping;
+      private final Map<String,String> transformNameMapping;
 
     public Map<String,String> getTransformNameMapping() {
         return this.transformNameMapping;
@@ -68,7 +68,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @InputImport(name="update", required=true)
-    private final Boolean update;
+      private final Boolean update;
 
     public Boolean getUpdate() {
         return this.update;
@@ -147,7 +147,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(environment, jobName, parameters, transformNameMapping, update);
         }

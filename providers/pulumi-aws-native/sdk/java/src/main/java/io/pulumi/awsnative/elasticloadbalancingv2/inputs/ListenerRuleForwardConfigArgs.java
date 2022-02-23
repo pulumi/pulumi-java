@@ -17,14 +17,14 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
     public static final ListenerRuleForwardConfigArgs Empty = new ListenerRuleForwardConfigArgs();
 
     @InputImport(name="targetGroupStickinessConfig")
-    private final @Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
+        private final @Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
     public Input<ListenerRuleTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Input.empty() : this.targetGroupStickinessConfig;
     }
 
     @InputImport(name="targetGroups")
-    private final @Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
+        private final @Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
 
     public Input<List<ListenerRuleTargetGroupTupleArgs>> getTargetGroups() {
         return this.targetGroups == null ? Input.empty() : this.targetGroups;
@@ -83,7 +83,6 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
             this.targetGroups = Input.ofNullable(targetGroups);
             return this;
         }
-
         public ListenerRuleForwardConfigArgs build() {
             return new ListenerRuleForwardConfigArgs(targetGroupStickinessConfig, targetGroups);
         }

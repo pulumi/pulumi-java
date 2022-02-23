@@ -68,7 +68,6 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public RRSetRoutingPolicyGeoPolicyResponse build() {
             return new RRSetRoutingPolicyGeoPolicyResponse(items, kind);
         }

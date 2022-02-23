@@ -97,7 +97,6 @@ public final class GetReferenceImageResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetReferenceImageResult build() {
             return new GetReferenceImageResult(boundingPolys, name, uri);
         }

@@ -76,7 +76,6 @@ public final class KeyPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public KeyPropertiesResponse build() {
             return new KeyPropertiesResponse(name, version);
         }

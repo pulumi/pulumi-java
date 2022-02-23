@@ -54,7 +54,6 @@ public final class SelfSubjectRulesReviewSpec {
             this.namespace = namespace;
             return this;
         }
-
         public SelfSubjectRulesReviewSpec build() {
             return new SelfSubjectRulesReviewSpec(namespace);
         }

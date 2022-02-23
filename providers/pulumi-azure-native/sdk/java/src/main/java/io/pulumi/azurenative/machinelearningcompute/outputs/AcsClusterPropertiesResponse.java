@@ -185,7 +185,6 @@ public final class AcsClusterPropertiesResponse {
             this.systemServices = systemServices;
             return this;
         }
-
         public AcsClusterPropertiesResponse build() {
             return new AcsClusterPropertiesResponse(agentCount, agentVmSize, clusterFqdn, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }

@@ -292,7 +292,6 @@ public final class GetFirewallRuleGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallRuleGroupResult build() {
             return new GetFirewallRuleGroupResult(arn, creationTime, creatorRequestId, firewallRules, id, modificationTime, ownerId, ruleCount, shareStatus, status, statusMessage, tags);
         }

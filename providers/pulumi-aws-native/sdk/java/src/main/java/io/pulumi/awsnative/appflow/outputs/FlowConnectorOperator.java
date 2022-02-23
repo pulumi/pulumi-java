@@ -243,7 +243,6 @@ public final class FlowConnectorOperator {
             this.zendesk = zendesk;
             return this;
         }
-
         public FlowConnectorOperator build() {
             return new FlowConnectorOperator(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }

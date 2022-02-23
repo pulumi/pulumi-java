@@ -100,7 +100,6 @@ public final class SftpLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SftpLocationResponse build() {
             return new SftpLocationResponse(fileName, folderPath, type);
         }

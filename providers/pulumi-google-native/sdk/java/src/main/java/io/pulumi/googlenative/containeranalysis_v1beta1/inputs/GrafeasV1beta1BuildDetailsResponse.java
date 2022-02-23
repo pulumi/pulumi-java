@@ -22,7 +22,7 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provenance", required=true)
-    private final BuildProvenanceResponse provenance;
+      private final BuildProvenanceResponse provenance;
 
     public BuildProvenanceResponse getProvenance() {
         return this.provenance;
@@ -33,7 +33,7 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provenanceBytes", required=true)
-    private final String provenanceBytes;
+      private final String provenanceBytes;
 
     public String getProvenanceBytes() {
         return this.provenanceBytes;
@@ -82,7 +82,6 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public GrafeasV1beta1BuildDetailsResponse build() {
             return new GrafeasV1beta1BuildDetailsResponse(provenance, provenanceBytes);
         }

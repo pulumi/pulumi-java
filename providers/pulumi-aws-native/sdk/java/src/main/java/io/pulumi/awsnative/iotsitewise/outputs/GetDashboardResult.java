@@ -162,7 +162,6 @@ public final class GetDashboardResult {
             this.tags = tags;
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(dashboardArn, dashboardDefinition, dashboardDescription, dashboardId, dashboardName, tags);
         }

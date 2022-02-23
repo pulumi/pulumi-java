@@ -287,7 +287,6 @@ public final class GetAssetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssetResult build() {
             return new GetAssetResult(alternateId, assetId, container, created, description, id, lastModified, name, storageAccountName, storageEncryptionFormat, systemData, type);
         }

@@ -98,7 +98,6 @@ public final class AutoScaleVCoreSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public AutoScaleVCoreSkuResponse build() {
             return new AutoScaleVCoreSkuResponse(capacity, name, tier);
         }

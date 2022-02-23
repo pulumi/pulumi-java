@@ -95,7 +95,6 @@ public final class PerNodeStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public PerNodeStateResponse build() {
             return new PerNodeStateResponse(arcInstance, name, state);
         }

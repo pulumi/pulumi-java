@@ -23,7 +23,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+        private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -45,7 +45,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDefinitionId")
-    private final @Nullable Input<String> policyDefinitionId;
+        private final @Nullable Input<String> policyDefinitionId;
 
     public Input<String> getPolicyDefinitionId() {
         return this.policyDefinitionId == null ? Input.empty() : this.policyDefinitionId;
@@ -119,7 +119,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             this.policyDefinitionId = Input.ofNullable(policyDefinitionId);
             return this;
         }
-
         public ApplicationPolicyArgs build() {
             return new ApplicationPolicyArgs(name, parameters, policyDefinitionId);
         }

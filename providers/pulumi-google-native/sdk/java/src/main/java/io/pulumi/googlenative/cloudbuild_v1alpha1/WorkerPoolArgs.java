@@ -22,7 +22,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -33,7 +33,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<WorkerPoolRegionsItem>> regions;
+      private final @Nullable Input<List<WorkerPoolRegionsItem>> regions;
 
     public Input<List<WorkerPoolRegionsItem>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
@@ -55,7 +55,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<WorkerConfigArgs> workerConfig;
+      private final @Nullable Input<WorkerConfigArgs> workerConfig;
 
     public Input<WorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -66,7 +66,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerCount")
-    private final @Nullable Input<String> workerCount;
+      private final @Nullable Input<String> workerCount;
 
     public Input<String> getWorkerCount() {
         return this.workerCount == null ? Input.empty() : this.workerCount;
@@ -170,7 +170,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }
-
         public WorkerPoolArgs build() {
             return new WorkerPoolArgs(name, project, regions, workerConfig, workerCount);
         }

@@ -21,7 +21,7 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -32,7 +32,7 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceCustomStringParameterResponse build() {
             return new WorkspaceCustomStringParameterResponse(type, value);
         }

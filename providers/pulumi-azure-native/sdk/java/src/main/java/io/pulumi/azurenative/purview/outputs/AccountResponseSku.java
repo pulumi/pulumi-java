@@ -77,7 +77,6 @@ public final class AccountResponseSku {
             this.name = name;
             return this;
         }
-
         public AccountResponseSku build() {
             return new AccountResponseSku(capacity, name);
         }

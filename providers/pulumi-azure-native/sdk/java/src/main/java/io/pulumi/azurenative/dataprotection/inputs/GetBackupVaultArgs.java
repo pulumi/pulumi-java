@@ -17,7 +17,7 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -77,7 +77,6 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetBackupVaultArgs build() {
             return new GetBackupVaultArgs(resourceGroupName, vaultName);
         }

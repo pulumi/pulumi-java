@@ -182,7 +182,6 @@ public final class SqlTriggerGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlTriggerGetPropertiesResponseResource build() {
             return new SqlTriggerGetPropertiesResponseResource(body, etag, id, rid, triggerOperation, triggerType, ts);
         }

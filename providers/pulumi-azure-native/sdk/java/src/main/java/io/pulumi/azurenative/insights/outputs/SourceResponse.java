@@ -119,7 +119,6 @@ public final class SourceResponse {
             this.queryType = queryType;
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(authorizedResources, dataSourceId, query, queryType);
         }

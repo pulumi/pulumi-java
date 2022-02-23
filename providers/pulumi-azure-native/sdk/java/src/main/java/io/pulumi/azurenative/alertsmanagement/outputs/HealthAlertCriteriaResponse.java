@@ -54,7 +54,6 @@ public final class HealthAlertCriteriaResponse {
             this.allOf = allOf;
             return this;
         }
-
         public HealthAlertCriteriaResponse build() {
             return new HealthAlertCriteriaResponse(allOf);
         }

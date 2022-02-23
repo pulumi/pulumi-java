@@ -30,7 +30,6 @@ public final class ChannelServiceManagedS3 extends io.pulumi.resources.InvokeArg
         public Builder(ChannelServiceManagedS3 defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ChannelServiceManagedS3 build() {
             return new ChannelServiceManagedS3();
         }

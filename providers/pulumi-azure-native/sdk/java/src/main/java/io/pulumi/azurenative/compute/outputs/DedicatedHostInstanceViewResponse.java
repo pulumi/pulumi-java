@@ -100,7 +100,6 @@ public final class DedicatedHostInstanceViewResponse {
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewResponse build() {
             return new DedicatedHostInstanceViewResponse(assetId, availableCapacity, statuses);
         }

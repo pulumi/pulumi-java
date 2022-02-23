@@ -23,7 +23,7 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable String height;
+        private final @Nullable String height;
 
     public Optional<String> getHeight() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
@@ -34,7 +34,7 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="left")
-    private final @Nullable String left;
+        private final @Nullable String left;
 
     public Optional<String> getLeft() {
         return this.left == null ? Optional.empty() : Optional.ofNullable(this.left);
@@ -45,7 +45,7 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="top")
-    private final @Nullable String top;
+        private final @Nullable String top;
 
     public Optional<String> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
@@ -56,7 +56,7 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable String width;
+        private final @Nullable String width;
 
     public Optional<String> getWidth() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
@@ -125,7 +125,6 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
             this.width = width;
             return this;
         }
-
         public RectangleResponse build() {
             return new RectangleResponse(height, left, top, width);
         }

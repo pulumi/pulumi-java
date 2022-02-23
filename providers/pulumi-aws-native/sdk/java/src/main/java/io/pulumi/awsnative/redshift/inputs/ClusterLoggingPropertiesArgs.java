@@ -15,14 +15,14 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     public static final ClusterLoggingPropertiesArgs Empty = new ClusterLoggingPropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+        private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -81,7 +81,6 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
             this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public ClusterLoggingPropertiesArgs build() {
             return new ClusterLoggingPropertiesArgs(bucketName, s3KeyPrefix);
         }

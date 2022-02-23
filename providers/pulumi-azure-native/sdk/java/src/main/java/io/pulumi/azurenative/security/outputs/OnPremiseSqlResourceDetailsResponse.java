@@ -181,7 +181,6 @@ public final class OnPremiseSqlResourceDetailsResponse {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public OnPremiseSqlResourceDetailsResponse build() {
             return new OnPremiseSqlResourceDetailsResponse(databaseName, machineName, serverName, source, sourceComputerId, vmuuid, workspaceId);
         }

@@ -100,7 +100,6 @@ public final class ParquetWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetWriteSettingsResponse build() {
             return new ParquetWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }

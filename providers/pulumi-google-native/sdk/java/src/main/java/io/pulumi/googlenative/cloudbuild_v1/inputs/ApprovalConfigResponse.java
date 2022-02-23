@@ -21,7 +21,7 @@ public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="approvalRequired", required=true)
-    private final Boolean approvalRequired;
+      private final Boolean approvalRequired;
 
     public Boolean getApprovalRequired() {
         return this.approvalRequired;
@@ -59,7 +59,6 @@ public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs
             this.approvalRequired = Objects.requireNonNull(approvalRequired);
             return this;
         }
-
         public ApprovalConfigResponse build() {
             return new ApprovalConfigResponse(approvalRequired);
         }

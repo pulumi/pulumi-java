@@ -23,7 +23,7 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -66,7 +66,6 @@ public final class ExpiryDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
-
         public ExpiryDetailArgs build() {
             return new ExpiryDetailArgs(expireTime);
         }

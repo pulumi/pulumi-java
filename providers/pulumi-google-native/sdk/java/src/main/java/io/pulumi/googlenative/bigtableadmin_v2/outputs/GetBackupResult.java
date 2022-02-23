@@ -201,7 +201,6 @@ public final class GetBackupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(encryptionInfo, endTime, expireTime, name, sizeBytes, sourceTable, startTime, state);
         }

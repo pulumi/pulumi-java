@@ -120,7 +120,6 @@ public final class PodTemplate {
             this.template = template;
             return this;
         }
-
         public PodTemplate build() {
             return new PodTemplate(apiVersion, kind, metadata, template);
         }

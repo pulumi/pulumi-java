@@ -17,14 +17,14 @@ public final class ListenerForwardConfig extends io.pulumi.resources.InvokeArgs 
     public static final ListenerForwardConfig Empty = new ListenerForwardConfig();
 
     @InputImport(name="targetGroupStickinessConfig")
-    private final @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
+        private final @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
 
     public Optional<ListenerTargetGroupStickinessConfig> getTargetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupStickinessConfig);
     }
 
     @InputImport(name="targetGroups")
-    private final @Nullable List<ListenerTargetGroupTuple> targetGroups;
+        private final @Nullable List<ListenerTargetGroupTuple> targetGroups;
 
     public List<ListenerTargetGroupTuple> getTargetGroups() {
         return this.targetGroups == null ? List.of() : this.targetGroups;
@@ -73,7 +73,6 @@ public final class ListenerForwardConfig extends io.pulumi.resources.InvokeArgs 
             this.targetGroups = targetGroups;
             return this;
         }
-
         public ListenerForwardConfig build() {
             return new ListenerForwardConfig(targetGroupStickinessConfig, targetGroups);
         }

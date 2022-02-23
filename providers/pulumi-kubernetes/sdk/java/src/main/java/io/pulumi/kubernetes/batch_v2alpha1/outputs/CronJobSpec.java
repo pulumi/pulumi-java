@@ -184,7 +184,6 @@ public final class CronJobSpec {
             this.suspend = suspend;
             return this;
         }
-
         public CronJobSpec build() {
             return new CronJobSpec(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);
         }

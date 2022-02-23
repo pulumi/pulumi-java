@@ -99,7 +99,6 @@ public final class AdvancedScheduleResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public AdvancedScheduleResponse build() {
             return new AdvancedScheduleResponse(monthDays, monthlyOccurrences, weekDays);
         }

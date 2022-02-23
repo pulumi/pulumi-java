@@ -120,7 +120,6 @@ public final class GetEndpointPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetEndpointPolicyIamPolicyResult build() {
             return new GetEndpointPolicyIamPolicyResult(auditConfigs, bindings, etag, version);
         }

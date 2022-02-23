@@ -148,7 +148,6 @@ public final class PackagingConfigurationHlsManifest {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationHlsManifest build() {
             return new PackagingConfigurationHlsManifest(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }

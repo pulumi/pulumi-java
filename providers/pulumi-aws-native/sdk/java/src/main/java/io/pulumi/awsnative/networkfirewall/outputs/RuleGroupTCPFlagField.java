@@ -60,7 +60,6 @@ public final class RuleGroupTCPFlagField {
             this.masks = masks;
             return this;
         }
-
         public RuleGroupTCPFlagField build() {
             return new RuleGroupTCPFlagField(flags, masks);
         }

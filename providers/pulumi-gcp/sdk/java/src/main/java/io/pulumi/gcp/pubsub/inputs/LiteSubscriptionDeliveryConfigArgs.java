@@ -19,7 +19,7 @@ public final class LiteSubscriptionDeliveryConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deliveryRequirement", required=true)
-    private final Input<String> deliveryRequirement;
+        private final Input<String> deliveryRequirement;
 
     public Input<String> getDeliveryRequirement() {
         return this.deliveryRequirement;
@@ -62,7 +62,6 @@ public final class LiteSubscriptionDeliveryConfigArgs extends io.pulumi.resource
             this.deliveryRequirement = Input.of(Objects.requireNonNull(deliveryRequirement));
             return this;
         }
-
         public LiteSubscriptionDeliveryConfigArgs build() {
             return new LiteSubscriptionDeliveryConfigArgs(deliveryRequirement);
         }

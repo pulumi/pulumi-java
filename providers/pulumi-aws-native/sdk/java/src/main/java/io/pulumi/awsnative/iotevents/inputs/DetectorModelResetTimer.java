@@ -21,7 +21,7 @@ public final class DetectorModelResetTimer extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timerName", required=true)
-    private final String timerName;
+        private final String timerName;
 
     public String getTimerName() {
         return this.timerName;
@@ -59,7 +59,6 @@ public final class DetectorModelResetTimer extends io.pulumi.resources.InvokeArg
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public DetectorModelResetTimer build() {
             return new DetectorModelResetTimer(timerName);
         }

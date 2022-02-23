@@ -311,7 +311,6 @@ public final class GetvNetPeeringResult {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }
-
         public GetvNetPeeringResult build() {
             return new GetvNetPeeringResult(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, databricksAddressSpace, databricksVirtualNetwork, id, name, peeringState, provisioningState, remoteAddressSpace, remoteVirtualNetwork, type, useRemoteGateways);
         }

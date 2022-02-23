@@ -54,7 +54,6 @@ public final class PropertiesResponseNetworkInjection {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public PropertiesResponseNetworkInjection build() {
             return new PropertiesResponseNetworkInjection(virtualNetworks);
         }

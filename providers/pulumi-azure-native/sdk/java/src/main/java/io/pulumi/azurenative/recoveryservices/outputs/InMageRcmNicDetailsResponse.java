@@ -305,7 +305,6 @@ public final class InMageRcmNicDetailsResponse {
             this.testSubnetName = Objects.requireNonNull(testSubnetName);
             return this;
         }
-
         public InMageRcmNicDetailsResponse build() {
             return new InMageRcmNicDetailsResponse(isPrimaryNic, isSelectedForFailover, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, sourceSubnetName, targetIPAddress, targetIPAddressType, targetSubnetName, testIPAddress, testIPAddressType, testSubnetName);
         }

@@ -22,7 +22,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auth", required=true)
-    private final String auth;
+      private final String auth;
 
     public String getAuth() {
         return this.auth;
@@ -33,7 +33,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -82,7 +82,6 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }

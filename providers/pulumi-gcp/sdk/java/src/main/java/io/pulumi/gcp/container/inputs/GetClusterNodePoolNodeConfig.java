@@ -26,168 +26,168 @@ public final class GetClusterNodePoolNodeConfig extends io.pulumi.resources.Invo
     public static final GetClusterNodePoolNodeConfig Empty = new GetClusterNodePoolNodeConfig();
 
     @InputImport(name="bootDiskKmsKey", required=true)
-    private final String bootDiskKmsKey;
+        private final String bootDiskKmsKey;
 
     public String getBootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
 
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+        private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
 
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+        private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
     }
 
     @InputImport(name="ephemeralStorageConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
+        private final List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
 
     public List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> getEphemeralStorageConfigs() {
         return this.ephemeralStorageConfigs;
     }
 
     @InputImport(name="gcfsConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs;
+        private final List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs;
 
     public List<GetClusterNodePoolNodeConfigGcfsConfig> getGcfsConfigs() {
         return this.gcfsConfigs;
     }
 
     @InputImport(name="guestAccelerators", required=true)
-    private final List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
+        private final List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
 
     public List<GetClusterNodePoolNodeConfigGuestAccelerator> getGuestAccelerators() {
         return this.guestAccelerators;
     }
 
     @InputImport(name="imageType", required=true)
-    private final String imageType;
+        private final String imageType;
 
     public String getImageType() {
         return this.imageType;
     }
 
     @InputImport(name="kubeletConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs;
+        private final List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs;
 
     public List<GetClusterNodePoolNodeConfigKubeletConfig> getKubeletConfigs() {
         return this.kubeletConfigs;
     }
 
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+        private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="linuxNodeConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs;
+        private final List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs;
 
     public List<GetClusterNodePoolNodeConfigLinuxNodeConfig> getLinuxNodeConfigs() {
         return this.linuxNodeConfigs;
     }
 
     @InputImport(name="localSsdCount", required=true)
-    private final Integer localSsdCount;
+        private final Integer localSsdCount;
 
     public Integer getLocalSsdCount() {
         return this.localSsdCount;
     }
 
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+        private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
     }
 
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+        private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
 
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+        private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @InputImport(name="nodeGroup", required=true)
-    private final String nodeGroup;
+        private final String nodeGroup;
 
     public String getNodeGroup() {
         return this.nodeGroup;
     }
 
     @InputImport(name="oauthScopes", required=true)
-    private final List<String> oauthScopes;
+        private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
 
     @InputImport(name="preemptible", required=true)
-    private final Boolean preemptible;
+        private final Boolean preemptible;
 
     public Boolean getPreemptible() {
         return this.preemptible;
     }
 
     @InputImport(name="sandboxConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs;
+        private final List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs;
 
     public List<GetClusterNodePoolNodeConfigSandboxConfig> getSandboxConfigs() {
         return this.sandboxConfigs;
     }
 
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+        private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
     }
 
     @InputImport(name="shieldedInstanceConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
+        private final List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
 
     public List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> getShieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
 
     @InputImport(name="spot", required=true)
-    private final Boolean spot;
+        private final Boolean spot;
 
     public Boolean getSpot() {
         return this.spot;
     }
 
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+        private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
     }
 
     @InputImport(name="taints", required=true)
-    private final List<GetClusterNodePoolNodeConfigTaint> taints;
+        private final List<GetClusterNodePoolNodeConfigTaint> taints;
 
     public List<GetClusterNodePoolNodeConfigTaint> getTaints() {
         return this.taints;
     }
 
     @InputImport(name="workloadMetadataConfigs", required=true)
-    private final List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
+        private final List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
 
     public List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfigs() {
         return this.workloadMetadataConfigs;
@@ -456,7 +456,6 @@ public final class GetClusterNodePoolNodeConfig extends io.pulumi.resources.Invo
             this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
             return this;
         }
-
         public GetClusterNodePoolNodeConfig build() {
             return new GetClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
         }

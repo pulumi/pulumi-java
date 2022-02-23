@@ -26,7 +26,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appSettingsOverrides")
-    private final @Nullable Input<Map<String,String>> appSettingsOverrides;
+        private final @Nullable Input<Map<String,String>> appSettingsOverrides;
 
     public Input<Map<String,String>> getAppSettingsOverrides() {
         return this.appSettingsOverrides == null ? Input.empty() : this.appSettingsOverrides;
@@ -37,7 +37,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneCustomHostNames")
-    private final @Nullable Input<Boolean> cloneCustomHostNames;
+        private final @Nullable Input<Boolean> cloneCustomHostNames;
 
     public Input<Boolean> getCloneCustomHostNames() {
         return this.cloneCustomHostNames == null ? Input.empty() : this.cloneCustomHostNames;
@@ -48,7 +48,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneSourceControl")
-    private final @Nullable Input<Boolean> cloneSourceControl;
+        private final @Nullable Input<Boolean> cloneSourceControl;
 
     public Input<Boolean> getCloneSourceControl() {
         return this.cloneSourceControl == null ? Input.empty() : this.cloneSourceControl;
@@ -59,7 +59,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configureLoadBalancing")
-    private final @Nullable Input<Boolean> configureLoadBalancing;
+        private final @Nullable Input<Boolean> configureLoadBalancing;
 
     public Input<Boolean> getConfigureLoadBalancing() {
         return this.configureLoadBalancing == null ? Input.empty() : this.configureLoadBalancing;
@@ -71,7 +71,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="correlationId")
-    private final @Nullable Input<String> correlationId;
+        private final @Nullable Input<String> correlationId;
 
     public Input<String> getCorrelationId() {
         return this.correlationId == null ? Input.empty() : this.correlationId;
@@ -82,7 +82,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingEnvironment")
-    private final @Nullable Input<String> hostingEnvironment;
+        private final @Nullable Input<String> hostingEnvironment;
 
     public Input<String> getHostingEnvironment() {
         return this.hostingEnvironment == null ? Input.empty() : this.hostingEnvironment;
@@ -93,7 +93,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overwrite")
-    private final @Nullable Input<Boolean> overwrite;
+        private final @Nullable Input<Boolean> overwrite;
 
     public Input<Boolean> getOverwrite() {
         return this.overwrite == null ? Input.empty() : this.overwrite;
@@ -106,7 +106,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceWebAppId", required=true)
-    private final Input<String> sourceWebAppId;
+        private final Input<String> sourceWebAppId;
 
     public Input<String> getSourceWebAppId() {
         return this.sourceWebAppId;
@@ -117,7 +117,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceWebAppLocation")
-    private final @Nullable Input<String> sourceWebAppLocation;
+        private final @Nullable Input<String> sourceWebAppLocation;
 
     public Input<String> getSourceWebAppLocation() {
         return this.sourceWebAppLocation == null ? Input.empty() : this.sourceWebAppLocation;
@@ -129,7 +129,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficManagerProfileId")
-    private final @Nullable Input<String> trafficManagerProfileId;
+        private final @Nullable Input<String> trafficManagerProfileId;
 
     public Input<String> getTrafficManagerProfileId() {
         return this.trafficManagerProfileId == null ? Input.empty() : this.trafficManagerProfileId;
@@ -140,7 +140,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficManagerProfileName")
-    private final @Nullable Input<String> trafficManagerProfileName;
+        private final @Nullable Input<String> trafficManagerProfileName;
 
     public Input<String> getTrafficManagerProfileName() {
         return this.trafficManagerProfileName == null ? Input.empty() : this.trafficManagerProfileName;
@@ -334,7 +334,6 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.trafficManagerProfileName = Input.ofNullable(trafficManagerProfileName);
             return this;
         }
-
         public CloningInfoArgs build() {
             return new CloningInfoArgs(appSettingsOverrides, cloneCustomHostNames, cloneSourceControl, configureLoadBalancing, correlationId, hostingEnvironment, overwrite, sourceWebAppId, sourceWebAppLocation, trafficManagerProfileId, trafficManagerProfileName);
         }

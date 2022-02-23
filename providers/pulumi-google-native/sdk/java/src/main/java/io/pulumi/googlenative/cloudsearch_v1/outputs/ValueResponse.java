@@ -113,7 +113,6 @@ public final class ValueResponse {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public ValueResponse build() {
             return new ValueResponse(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
         }

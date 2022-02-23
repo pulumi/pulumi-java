@@ -24,7 +24,7 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
      * 
      */
     @InputImport(name="certificateProviderInstance")
-    private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
+      private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
 
     public Input<CertificateProviderInstanceArgs> getCertificateProviderInstance() {
         return this.certificateProviderInstance == null ? Input.empty() : this.certificateProviderInstance;
@@ -35,7 +35,7 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
      * 
      */
     @InputImport(name="grpcEndpoint")
-    private final @Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+      private final @Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 
     public Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> getGrpcEndpoint() {
         return this.grpcEndpoint == null ? Input.empty() : this.grpcEndpoint;
@@ -94,7 +94,6 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
             this.grpcEndpoint = Input.ofNullable(grpcEndpoint);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1CertificateProviderArgs build() {
             return new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs(certificateProviderInstance, grpcEndpoint);
         }

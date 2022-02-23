@@ -268,7 +268,6 @@ public final class KubeletConfigResponse {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }
-
         public KubeletConfigResponse build() {
             return new KubeletConfigResponse(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);
         }

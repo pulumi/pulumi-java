@@ -17,7 +17,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+        private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -77,7 +77,6 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public ListTopicSharedAccessKeysArgs build() {
             return new ListTopicSharedAccessKeysArgs(resourceGroupName, topicName);
         }

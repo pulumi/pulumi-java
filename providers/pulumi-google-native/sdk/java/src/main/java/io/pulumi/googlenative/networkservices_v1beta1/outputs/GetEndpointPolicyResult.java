@@ -266,7 +266,6 @@ public final class GetEndpointPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEndpointPolicyResult build() {
             return new GetEndpointPolicyResult(authorizationPolicy, clientTlsPolicy, createTime, description, endpointMatcher, labels, name, serverTlsPolicy, trafficPortSelector, type, updateTime);
         }

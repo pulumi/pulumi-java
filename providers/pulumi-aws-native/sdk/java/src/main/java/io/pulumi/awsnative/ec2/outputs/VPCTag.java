@@ -58,7 +58,6 @@ public final class VPCTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public VPCTag build() {
             return new VPCTag(key, value);
         }

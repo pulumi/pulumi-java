@@ -52,7 +52,6 @@ public final class BlobShareResponse {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
-
         public BlobShareResponse build() {
             return new BlobShareResponse(sasUri);
         }

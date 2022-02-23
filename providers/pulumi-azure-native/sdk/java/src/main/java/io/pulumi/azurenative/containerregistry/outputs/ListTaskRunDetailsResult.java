@@ -252,7 +252,6 @@ public final class ListTaskRunDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListTaskRunDetailsResult build() {
             return new ListTaskRunDetailsResult(forceUpdateTag, id, identity, location, name, provisioningState, runRequest, runResult, systemData, type);
         }

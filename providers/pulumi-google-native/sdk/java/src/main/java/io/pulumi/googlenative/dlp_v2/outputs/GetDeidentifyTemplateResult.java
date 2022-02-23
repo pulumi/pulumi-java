@@ -159,7 +159,6 @@ public final class GetDeidentifyTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDeidentifyTemplateResult build() {
             return new GetDeidentifyTemplateResult(createTime, deidentifyConfig, description, displayName, name, updateTime);
         }

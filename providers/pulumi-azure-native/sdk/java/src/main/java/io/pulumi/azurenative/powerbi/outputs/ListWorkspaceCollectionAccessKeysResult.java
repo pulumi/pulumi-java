@@ -76,7 +76,6 @@ public final class ListWorkspaceCollectionAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListWorkspaceCollectionAccessKeysResult build() {
             return new ListWorkspaceCollectionAccessKeysResult(key1, key2);
         }

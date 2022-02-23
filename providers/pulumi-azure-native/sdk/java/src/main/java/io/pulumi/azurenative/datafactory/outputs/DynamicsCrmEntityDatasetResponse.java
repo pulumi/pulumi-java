@@ -231,7 +231,6 @@ public final class DynamicsCrmEntityDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicsCrmEntityDatasetResponse build() {
             return new DynamicsCrmEntityDatasetResponse(annotations, description, entityName, folder, linkedServiceName, parameters, schema, structure, type);
         }

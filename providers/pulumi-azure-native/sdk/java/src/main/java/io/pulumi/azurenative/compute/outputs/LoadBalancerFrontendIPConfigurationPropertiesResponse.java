@@ -98,7 +98,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
             this.subnet = subnet;
             return this;
         }
-
         public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
             return new LoadBalancerFrontendIPConfigurationPropertiesResponse(privateIPAddress, publicIPAddress, subnet);
         }

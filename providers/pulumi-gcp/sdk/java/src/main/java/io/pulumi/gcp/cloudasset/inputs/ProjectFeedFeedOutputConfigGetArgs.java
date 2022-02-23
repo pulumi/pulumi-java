@@ -19,7 +19,7 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-    private final Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+        private final Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
     public Input<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {
         return this.pubsubDestination;
@@ -62,7 +62,6 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
             this.pubsubDestination = Input.of(Objects.requireNonNull(pubsubDestination));
             return this;
         }
-
         public ProjectFeedFeedOutputConfigGetArgs build() {
             return new ProjectFeedFeedOutputConfigGetArgs(pubsubDestination);
         }

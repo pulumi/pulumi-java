@@ -21,14 +21,14 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable Input<List<String>> groupIds;
+        private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
     }
 
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -87,7 +87,6 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesArgs build() {
             return new PrivateEndpointConnectionPropertiesArgs(groupIds, privateLinkServiceConnectionState);
         }

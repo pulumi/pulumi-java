@@ -17,7 +17,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+        private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -28,7 +28,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -39,7 +39,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final String restApiId;
+        private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;
@@ -98,7 +98,6 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public GetMethodArgs build() {
             return new GetMethodArgs(httpMethod, resourceId, restApiId);
         }

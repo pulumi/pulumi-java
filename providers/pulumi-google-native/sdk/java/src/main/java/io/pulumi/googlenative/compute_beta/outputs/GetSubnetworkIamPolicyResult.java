@@ -142,7 +142,6 @@ public final class GetSubnetworkIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSubnetworkIamPolicyResult build() {
             return new GetSubnetworkIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

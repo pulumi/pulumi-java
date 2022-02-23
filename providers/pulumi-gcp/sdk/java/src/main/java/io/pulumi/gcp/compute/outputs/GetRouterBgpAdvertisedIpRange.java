@@ -58,7 +58,6 @@ public final class GetRouterBgpAdvertisedIpRange {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public GetRouterBgpAdvertisedIpRange build() {
             return new GetRouterBgpAdvertisedIpRange(description, range);
         }

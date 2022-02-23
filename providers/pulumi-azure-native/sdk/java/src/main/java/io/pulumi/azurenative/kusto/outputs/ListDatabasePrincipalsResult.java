@@ -54,7 +54,6 @@ public final class ListDatabasePrincipalsResult {
             this.value = value;
             return this;
         }
-
         public ListDatabasePrincipalsResult build() {
             return new ListDatabasePrincipalsResult(value);
         }

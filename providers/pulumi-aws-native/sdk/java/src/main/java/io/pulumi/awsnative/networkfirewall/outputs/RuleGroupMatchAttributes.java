@@ -115,7 +115,6 @@ public final class RuleGroupMatchAttributes {
             this.tCPFlags = tCPFlags;
             return this;
         }
-
         public RuleGroupMatchAttributes build() {
             return new RuleGroupMatchAttributes(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
         }

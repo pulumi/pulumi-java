@@ -292,7 +292,6 @@ public final class VpnClientConfigurationResponse {
             this.vpnClientRootCertificates = vpnClientRootCertificates;
             return this;
         }
-
         public VpnClientConfigurationResponse build() {
             return new VpnClientConfigurationResponse(aadAudience, aadIssuer, aadTenant, radiusServerAddress, radiusServerSecret, radiusServers, vpnAuthenticationTypes, vpnClientAddressPool, vpnClientIpsecPolicies, vpnClientProtocols, vpnClientRevokedCertificates, vpnClientRootCertificates);
         }

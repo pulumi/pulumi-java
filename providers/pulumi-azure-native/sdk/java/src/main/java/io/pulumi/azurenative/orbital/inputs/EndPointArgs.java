@@ -24,7 +24,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endPointName", required=true)
-    private final Input<String> endPointName;
+        private final Input<String> endPointName;
 
     public Input<String> getEndPointName() {
         return this.endPointName;
@@ -35,7 +35,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final Input<String> ipAddress;
+        private final Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress;
@@ -46,7 +46,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<String> port;
+        private final Input<String> port;
 
     public Input<String> getPort() {
         return this.port;
@@ -57,7 +57,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,Protocol>> protocol;
+        private final Input<Either<String,Protocol>> protocol;
 
     public Input<Either<String,Protocol>> getProtocol() {
         return this.protocol;
@@ -146,7 +146,6 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public EndPointArgs build() {
             return new EndPointArgs(endPointName, ipAddress, port, protocol);
         }

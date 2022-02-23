@@ -54,7 +54,6 @@ public final class VpnNatRuleMappingResponse {
             this.addressSpace = addressSpace;
             return this;
         }
-
         public VpnNatRuleMappingResponse build() {
             return new VpnNatRuleMappingResponse(addressSpace);
         }

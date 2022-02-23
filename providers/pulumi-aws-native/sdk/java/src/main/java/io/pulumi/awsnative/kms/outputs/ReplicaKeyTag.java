@@ -74,7 +74,6 @@ public final class ReplicaKeyTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ReplicaKeyTag build() {
             return new ReplicaKeyTag(key, value);
         }

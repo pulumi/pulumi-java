@@ -290,7 +290,6 @@ public final class SqlDWSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SqlDWSourceResponse build() {
             return new SqlDWSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

@@ -52,7 +52,6 @@ public final class ConnectToTargetSqlMITaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlMITaskInputResponse build() {
             return new ConnectToTargetSqlMITaskInputResponse(targetConnectionInfo);
         }

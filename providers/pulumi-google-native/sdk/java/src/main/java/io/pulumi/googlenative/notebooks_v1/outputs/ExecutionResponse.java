@@ -222,7 +222,6 @@ public final class ExecutionResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public ExecutionResponse build() {
             return new ExecutionResponse(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
         }

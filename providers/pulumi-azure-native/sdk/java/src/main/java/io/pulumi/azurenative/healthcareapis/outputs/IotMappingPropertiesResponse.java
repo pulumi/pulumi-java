@@ -54,7 +54,6 @@ public final class IotMappingPropertiesResponse {
             this.content = content;
             return this;
         }
-
         public IotMappingPropertiesResponse build() {
             return new IotMappingPropertiesResponse(content);
         }

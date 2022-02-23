@@ -98,7 +98,6 @@ public final class GoogleRpcStatusResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public GoogleRpcStatusResponse build() {
             return new GoogleRpcStatusResponse(code, details, message);
         }

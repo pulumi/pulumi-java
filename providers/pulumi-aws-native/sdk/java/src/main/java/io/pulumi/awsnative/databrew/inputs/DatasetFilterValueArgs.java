@@ -18,7 +18,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetFilterValueArgs Empty = new DatasetFilterValueArgs();
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -29,7 +29,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="valueReference", required=true)
-    private final Input<String> valueReference;
+        private final Input<String> valueReference;
 
     public Input<String> getValueReference() {
         return this.valueReference;
@@ -88,7 +88,6 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
             this.valueReference = Input.of(Objects.requireNonNull(valueReference));
             return this;
         }
-
         public DatasetFilterValueArgs build() {
             return new DatasetFilterValueArgs(value, valueReference);
         }

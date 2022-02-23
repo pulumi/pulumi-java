@@ -17,7 +17,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiVersion", required=true)
-    private final String apiVersion;
+        private final String apiVersion;
 
     public String getApiVersion() {
         return this.apiVersion;
@@ -28,7 +28,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileVersion", required=true)
-    private final String profileVersion;
+        private final String profileVersion;
 
     public String getProfileVersion() {
         return this.profileVersion;
@@ -77,7 +77,6 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }
-
         public ApiProfileResponse build() {
             return new ApiProfileResponse(apiVersion, profileVersion);
         }

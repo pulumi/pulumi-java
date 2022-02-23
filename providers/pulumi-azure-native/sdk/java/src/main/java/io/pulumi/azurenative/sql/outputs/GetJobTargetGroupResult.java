@@ -118,7 +118,6 @@ public final class GetJobTargetGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobTargetGroupResult build() {
             return new GetJobTargetGroupResult(id, members, name, type);
         }

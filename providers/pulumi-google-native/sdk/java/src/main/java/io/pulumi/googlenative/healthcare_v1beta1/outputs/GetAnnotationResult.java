@@ -163,7 +163,6 @@ public final class GetAnnotationResult {
             this.textAnnotation = Objects.requireNonNull(textAnnotation);
             return this;
         }
-
         public GetAnnotationResult build() {
             return new GetAnnotationResult(annotationSource, customData, imageAnnotation, name, resourceAnnotation, textAnnotation);
         }

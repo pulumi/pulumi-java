@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @InputImport(name="database", required=true)
-    private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(database, instanceId, type);
         }

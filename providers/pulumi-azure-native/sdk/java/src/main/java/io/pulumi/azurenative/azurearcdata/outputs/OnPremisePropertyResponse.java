@@ -97,7 +97,6 @@ public final class OnPremisePropertyResponse {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
-
         public OnPremisePropertyResponse build() {
             return new OnPremisePropertyResponse(id, publicSigningKey, signingCertificateThumbprint);
         }

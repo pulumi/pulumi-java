@@ -267,7 +267,6 @@ public final class GetBackupPolicyResult {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(backupPolicyCreationType, id, kind, lastBackupTime, name, nextBackupTime, scheduledBackupStatus, schedulesCount, ssmHostName, type, volumeIds);
         }

@@ -136,7 +136,6 @@ public final class AzureBackupRuleResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AzureBackupRuleResponse build() {
             return new AzureBackupRuleResponse(backupParameters, dataStore, name, objectType, trigger);
         }

@@ -23,7 +23,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable Input<String> gid;
+        private final @Nullable Input<String> gid;
 
     public Input<String> getGid() {
         return this.gid == null ? Input.empty() : this.gid;
@@ -34,7 +34,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable Input<String> sid;
+        private final @Nullable Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid == null ? Input.empty() : this.sid;
@@ -45,7 +45,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -56,7 +56,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+        private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -145,7 +145,6 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public SAPSystemIDArgs build() {
             return new SAPSystemIDArgs(gid, sid, uid, username);
         }

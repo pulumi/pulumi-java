@@ -25,7 +25,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+        private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -36,7 +36,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -47,7 +47,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -59,7 +59,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheParameters")
-    private final @Nullable Input<InstanceMemcacheParametersArgs> memcacheParameters;
+        private final @Nullable Input<InstanceMemcacheParametersArgs> memcacheParameters;
 
     public Input<InstanceMemcacheParametersArgs> getMemcacheParameters() {
         return this.memcacheParameters == null ? Input.empty() : this.memcacheParameters;
@@ -74,7 +74,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheVersion")
-    private final @Nullable Input<String> memcacheVersion;
+        private final @Nullable Input<String> memcacheVersion;
 
     public Input<String> getMemcacheVersion() {
         return this.memcacheVersion == null ? Input.empty() : this.memcacheVersion;
@@ -85,7 +85,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -97,7 +97,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeConfig", required=true)
-    private final Input<InstanceNodeConfigArgs> nodeConfig;
+        private final Input<InstanceNodeConfigArgs> nodeConfig;
 
     public Input<InstanceNodeConfigArgs> getNodeConfig() {
         return this.nodeConfig;
@@ -108,7 +108,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount", required=true)
-    private final Input<Integer> nodeCount;
+        private final Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount;
@@ -120,7 +120,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -131,7 +131,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -143,7 +143,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -337,7 +337,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(authorizedNetwork, displayName, labels, memcacheParameters, memcacheVersion, name, nodeConfig, nodeCount, project, region, zones);
         }

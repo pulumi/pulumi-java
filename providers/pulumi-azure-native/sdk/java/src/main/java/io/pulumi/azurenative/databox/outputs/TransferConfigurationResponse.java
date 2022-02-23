@@ -99,7 +99,6 @@ public final class TransferConfigurationResponse {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
-
         public TransferConfigurationResponse build() {
             return new TransferConfigurationResponse(transferAllDetails, transferConfigurationType, transferFilterDetails);
         }

@@ -25,7 +25,7 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -36,7 +36,7 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sinkRefs")
-    private final @Nullable List<String> sinkRefs;
+        private final @Nullable List<String> sinkRefs;
 
     public List<String> getSinkRefs() {
         return this.sinkRefs == null ? List.of() : this.sinkRefs;
@@ -85,7 +85,6 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
             this.sinkRefs = sinkRefs;
             return this;
         }
-
         public DiagnosticsRefResponse build() {
             return new DiagnosticsRefResponse(enabled, sinkRefs);
         }

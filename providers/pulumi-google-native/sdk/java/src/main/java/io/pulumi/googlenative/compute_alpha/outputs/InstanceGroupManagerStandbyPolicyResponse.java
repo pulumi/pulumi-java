@@ -44,7 +44,6 @@ public final class InstanceGroupManagerStandbyPolicyResponse {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public InstanceGroupManagerStandbyPolicyResponse build() {
             return new InstanceGroupManagerStandbyPolicyResponse(initialDelaySec);
         }

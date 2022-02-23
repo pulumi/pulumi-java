@@ -25,7 +25,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="animationEnd")
-    private final @Nullable Input<AnimationEndArgs> animationEnd;
+      private final @Nullable Input<AnimationEndArgs> animationEnd;
 
     public Input<AnimationEndArgs> getAnimationEnd() {
         return this.animationEnd == null ? Input.empty() : this.animationEnd;
@@ -36,7 +36,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="animationFade")
-    private final @Nullable Input<AnimationFadeArgs> animationFade;
+      private final @Nullable Input<AnimationFadeArgs> animationFade;
 
     public Input<AnimationFadeArgs> getAnimationFade() {
         return this.animationFade == null ? Input.empty() : this.animationFade;
@@ -47,7 +47,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="animationStatic")
-    private final @Nullable Input<AnimationStaticArgs> animationStatic;
+      private final @Nullable Input<AnimationStaticArgs> animationStatic;
 
     public Input<AnimationStaticArgs> getAnimationStatic() {
         return this.animationStatic == null ? Input.empty() : this.animationStatic;
@@ -121,7 +121,6 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
             this.animationStatic = Input.ofNullable(animationStatic);
             return this;
         }
-
         public AnimationArgs build() {
             return new AnimationArgs(animationEnd, animationFade, animationStatic);
         }

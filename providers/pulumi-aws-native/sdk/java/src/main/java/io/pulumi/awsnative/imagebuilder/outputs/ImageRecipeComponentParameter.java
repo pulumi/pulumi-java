@@ -75,7 +75,6 @@ public final class ImageRecipeComponentParameter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ImageRecipeComponentParameter build() {
             return new ImageRecipeComponentParameter(name, value);
         }

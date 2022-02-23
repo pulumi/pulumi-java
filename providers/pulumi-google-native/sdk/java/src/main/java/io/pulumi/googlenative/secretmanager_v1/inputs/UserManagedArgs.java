@@ -23,7 +23,7 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final Input<List<ReplicaArgs>> replicas;
+      private final Input<List<ReplicaArgs>> replicas;
 
     public Input<List<ReplicaArgs>> getReplicas() {
         return this.replicas;
@@ -66,7 +66,6 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }
-
         public UserManagedArgs build() {
             return new UserManagedArgs(replicas);
         }

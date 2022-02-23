@@ -52,7 +52,6 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public ConnectorProfileMarketoConnectorProfileProperties build() {
             return new ConnectorProfileMarketoConnectorProfileProperties(instanceUrl);
         }

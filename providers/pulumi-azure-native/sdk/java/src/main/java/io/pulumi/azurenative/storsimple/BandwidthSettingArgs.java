@@ -22,7 +22,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthSettingName")
-    private final @Nullable Input<String> bandwidthSettingName;
+        private final @Nullable Input<String> bandwidthSettingName;
 
     public Input<String> getBandwidthSettingName() {
         return this.bandwidthSettingName == null ? Input.empty() : this.bandwidthSettingName;
@@ -33,7 +33,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Kind> kind;
+        private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -44,7 +44,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final Input<String> managerName;
+        private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -55,7 +55,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schedules", required=true)
-    private final Input<List<BandwidthScheduleArgs>> schedules;
+        private final Input<List<BandwidthScheduleArgs>> schedules;
 
     public Input<List<BandwidthScheduleArgs>> getSchedules() {
         return this.schedules;
@@ -170,7 +170,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             this.schedules = Input.of(Objects.requireNonNull(schedules));
             return this;
         }
-
         public BandwidthSettingArgs build() {
             return new BandwidthSettingArgs(bandwidthSettingName, kind, managerName, resourceGroupName, schedules);
         }

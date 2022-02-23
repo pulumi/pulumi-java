@@ -57,7 +57,6 @@ public final class ClusterNodeConfigLinuxNodeConfig {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public ClusterNodeConfigLinuxNodeConfig build() {
             return new ClusterNodeConfigLinuxNodeConfig(sysctls);
         }

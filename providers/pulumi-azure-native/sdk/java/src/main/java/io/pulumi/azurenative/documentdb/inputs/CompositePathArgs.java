@@ -21,7 +21,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Either<String,CompositePathSortOrder>> order;
+        private final @Nullable Input<Either<String,CompositePathSortOrder>> order;
 
     public Input<Either<String,CompositePathSortOrder>> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -32,7 +32,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -91,7 +91,6 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public CompositePathArgs build() {
             return new CompositePathArgs(order, path);
         }

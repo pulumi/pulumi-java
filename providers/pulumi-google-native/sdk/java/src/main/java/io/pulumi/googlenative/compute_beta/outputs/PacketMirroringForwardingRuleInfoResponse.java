@@ -74,7 +74,6 @@ public final class PacketMirroringForwardingRuleInfoResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringForwardingRuleInfoResponse build() {
             return new PacketMirroringForwardingRuleInfoResponse(canonicalUrl, url);
         }

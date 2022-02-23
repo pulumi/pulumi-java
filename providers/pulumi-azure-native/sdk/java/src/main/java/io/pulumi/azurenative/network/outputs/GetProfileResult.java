@@ -313,7 +313,6 @@ public final class GetProfileResult {
             this.type = type;
             return this;
         }
-
         public GetProfileResult build() {
             return new GetProfileResult(allowedEndpointRecordTypes, dnsConfig, endpoints, id, location, maxReturn, monitorConfig, name, profileStatus, tags, trafficRoutingMethod, trafficViewEnrollmentStatus, type);
         }

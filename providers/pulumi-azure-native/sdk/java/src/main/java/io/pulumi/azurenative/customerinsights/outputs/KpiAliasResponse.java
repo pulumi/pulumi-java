@@ -74,7 +74,6 @@ public final class KpiAliasResponse {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public KpiAliasResponse build() {
             return new KpiAliasResponse(aliasName, expression);
         }

@@ -75,7 +75,6 @@ public final class SpecificationResponse {
             this.iosTest = Objects.requireNonNull(iosTest);
             return this;
         }
-
         public SpecificationResponse build() {
             return new SpecificationResponse(androidTest, iosTest);
         }

@@ -66,7 +66,6 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
             return new ManagedZonePrivateVisibilityConfigGKEClusterResponse(gkeClusterName, kind);
         }

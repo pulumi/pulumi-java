@@ -74,7 +74,6 @@ public final class SubnetGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SubnetGroupTag build() {
             return new SubnetGroupTag(key, value);
         }

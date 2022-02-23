@@ -102,7 +102,6 @@ public final class AuthPlatformResponse {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public AuthPlatformResponse build() {
             return new AuthPlatformResponse(configFilePath, enabled, runtimeVersion);
         }

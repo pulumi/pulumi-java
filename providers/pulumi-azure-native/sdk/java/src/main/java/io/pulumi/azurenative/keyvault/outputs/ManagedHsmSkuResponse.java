@@ -74,7 +74,6 @@ public final class ManagedHsmSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ManagedHsmSkuResponse build() {
             return new ManagedHsmSkuResponse(family, name);
         }

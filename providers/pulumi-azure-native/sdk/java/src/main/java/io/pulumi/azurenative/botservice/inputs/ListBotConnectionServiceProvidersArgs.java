@@ -30,7 +30,6 @@ public final class ListBotConnectionServiceProvidersArgs extends io.pulumi.resou
         public Builder(ListBotConnectionServiceProvidersArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ListBotConnectionServiceProvidersArgs build() {
             return new ListBotConnectionServiceProvidersArgs();
         }

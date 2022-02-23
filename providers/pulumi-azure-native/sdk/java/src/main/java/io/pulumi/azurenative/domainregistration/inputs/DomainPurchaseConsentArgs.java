@@ -24,7 +24,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreedAt")
-    private final @Nullable Input<String> agreedAt;
+        private final @Nullable Input<String> agreedAt;
 
     public Input<String> getAgreedAt() {
         return this.agreedAt == null ? Input.empty() : this.agreedAt;
@@ -35,7 +35,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreedBy")
-    private final @Nullable Input<String> agreedBy;
+        private final @Nullable Input<String> agreedBy;
 
     public Input<String> getAgreedBy() {
         return this.agreedBy == null ? Input.empty() : this.agreedBy;
@@ -46,7 +46,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreementKeys")
-    private final @Nullable Input<List<String>> agreementKeys;
+        private final @Nullable Input<List<String>> agreementKeys;
 
     public Input<List<String>> getAgreementKeys() {
         return this.agreementKeys == null ? Input.empty() : this.agreementKeys;
@@ -120,7 +120,6 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
             this.agreementKeys = Input.ofNullable(agreementKeys);
             return this;
         }
-
         public DomainPurchaseConsentArgs build() {
             return new DomainPurchaseConsentArgs(agreedAt, agreedBy, agreementKeys);
         }

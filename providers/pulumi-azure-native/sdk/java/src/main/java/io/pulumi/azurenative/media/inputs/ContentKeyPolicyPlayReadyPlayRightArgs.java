@@ -28,7 +28,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="agcAndColorStripeRestriction")
-    private final @Nullable Input<Integer> agcAndColorStripeRestriction;
+        private final @Nullable Input<Integer> agcAndColorStripeRestriction;
 
     public Input<Integer> getAgcAndColorStripeRestriction() {
         return this.agcAndColorStripeRestriction == null ? Input.empty() : this.agcAndColorStripeRestriction;
@@ -39,7 +39,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowPassingVideoContentToUnknownOutput", required=true)
-    private final Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
+        private final Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
 
     public Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> getAllowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="analogVideoOpl")
-    private final @Nullable Input<Integer> analogVideoOpl;
+        private final @Nullable Input<Integer> analogVideoOpl;
 
     public Input<Integer> getAnalogVideoOpl() {
         return this.analogVideoOpl == null ? Input.empty() : this.analogVideoOpl;
@@ -61,7 +61,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="compressedDigitalAudioOpl")
-    private final @Nullable Input<Integer> compressedDigitalAudioOpl;
+        private final @Nullable Input<Integer> compressedDigitalAudioOpl;
 
     public Input<Integer> getCompressedDigitalAudioOpl() {
         return this.compressedDigitalAudioOpl == null ? Input.empty() : this.compressedDigitalAudioOpl;
@@ -72,7 +72,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="compressedDigitalVideoOpl")
-    private final @Nullable Input<Integer> compressedDigitalVideoOpl;
+        private final @Nullable Input<Integer> compressedDigitalVideoOpl;
 
     public Input<Integer> getCompressedDigitalVideoOpl() {
         return this.compressedDigitalVideoOpl == null ? Input.empty() : this.compressedDigitalVideoOpl;
@@ -83,7 +83,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="digitalVideoOnlyContentRestriction", required=true)
-    private final Input<Boolean> digitalVideoOnlyContentRestriction;
+        private final Input<Boolean> digitalVideoOnlyContentRestriction;
 
     public Input<Boolean> getDigitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
@@ -94,7 +94,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="explicitAnalogTelevisionOutputRestriction")
-    private final @Nullable Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
+        private final @Nullable Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
 
     public Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> getExplicitAnalogTelevisionOutputRestriction() {
         return this.explicitAnalogTelevisionOutputRestriction == null ? Input.empty() : this.explicitAnalogTelevisionOutputRestriction;
@@ -105,7 +105,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="firstPlayExpiration")
-    private final @Nullable Input<String> firstPlayExpiration;
+        private final @Nullable Input<String> firstPlayExpiration;
 
     public Input<String> getFirstPlayExpiration() {
         return this.firstPlayExpiration == null ? Input.empty() : this.firstPlayExpiration;
@@ -116,7 +116,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
-    private final Input<Boolean> imageConstraintForAnalogComponentVideoRestriction;
+        private final Input<Boolean> imageConstraintForAnalogComponentVideoRestriction;
 
     public Input<Boolean> getImageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
@@ -127,7 +127,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
-    private final Input<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
+        private final Input<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
 
     public Input<Boolean> getImageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
@@ -138,7 +138,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scmsRestriction")
-    private final @Nullable Input<Integer> scmsRestriction;
+        private final @Nullable Input<Integer> scmsRestriction;
 
     public Input<Integer> getScmsRestriction() {
         return this.scmsRestriction == null ? Input.empty() : this.scmsRestriction;
@@ -149,7 +149,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="uncompressedDigitalAudioOpl")
-    private final @Nullable Input<Integer> uncompressedDigitalAudioOpl;
+        private final @Nullable Input<Integer> uncompressedDigitalAudioOpl;
 
     public Input<Integer> getUncompressedDigitalAudioOpl() {
         return this.uncompressedDigitalAudioOpl == null ? Input.empty() : this.uncompressedDigitalAudioOpl;
@@ -160,7 +160,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="uncompressedDigitalVideoOpl")
-    private final @Nullable Input<Integer> uncompressedDigitalVideoOpl;
+        private final @Nullable Input<Integer> uncompressedDigitalVideoOpl;
 
     public Input<Integer> getUncompressedDigitalVideoOpl() {
         return this.uncompressedDigitalVideoOpl == null ? Input.empty() : this.uncompressedDigitalVideoOpl;
@@ -384,7 +384,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
             this.uncompressedDigitalVideoOpl = Input.ofNullable(uncompressedDigitalVideoOpl);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyPlayRightArgs build() {
             return new ContentKeyPolicyPlayReadyPlayRightArgs(agcAndColorStripeRestriction, allowPassingVideoContentToUnknownOutput, analogVideoOpl, compressedDigitalAudioOpl, compressedDigitalVideoOpl, digitalVideoOnlyContentRestriction, explicitAnalogTelevisionOutputRestriction, firstPlayExpiration, imageConstraintForAnalogComponentVideoRestriction, imageConstraintForAnalogComputerMonitorRestriction, scmsRestriction, uncompressedDigitalAudioOpl, uncompressedDigitalVideoOpl);
         }

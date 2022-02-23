@@ -163,7 +163,6 @@ public final class GetBandwidthSettingResult {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }
-
         public GetBandwidthSettingResult build() {
             return new GetBandwidthSettingResult(id, kind, name, schedules, type, volumeCount);
         }

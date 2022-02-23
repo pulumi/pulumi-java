@@ -275,7 +275,6 @@ public final class AmazonRedshiftLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public AmazonRedshiftLinkedServiceResponse build() {
             return new AmazonRedshiftLinkedServiceResponse(annotations, connectVia, database, description, encryptedCredential, parameters, password, port, server, type, username);
         }

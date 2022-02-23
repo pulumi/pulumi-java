@@ -116,7 +116,6 @@ public final class ReplicatingStepResponse {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }
-
         public ReplicatingStepResponse build() {
             return new ReplicatingStepResponse(lastThirtyMinutesAverageBytesPerSecond, lastTwoMinutesAverageBytesPerSecond, replicatedBytes, totalBytes);
         }

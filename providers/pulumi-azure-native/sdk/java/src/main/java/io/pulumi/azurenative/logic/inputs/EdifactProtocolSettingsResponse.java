@@ -34,7 +34,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="acknowledgementSettings", required=true)
-    private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
+        private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
 
     public EdifactAcknowledgementSettingsResponse getAcknowledgementSettings() {
         return this.acknowledgementSettings;
@@ -45,7 +45,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="edifactDelimiterOverrides")
-    private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
+        private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
 
     public List<EdifactDelimiterOverrideResponse> getEdifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
@@ -56,7 +56,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="envelopeOverrides")
-    private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
+        private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
 
     public List<EdifactEnvelopeOverrideResponse> getEnvelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
@@ -67,7 +67,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="envelopeSettings", required=true)
-    private final EdifactEnvelopeSettingsResponse envelopeSettings;
+        private final EdifactEnvelopeSettingsResponse envelopeSettings;
 
     public EdifactEnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
@@ -78,7 +78,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="framingSettings", required=true)
-    private final EdifactFramingSettingsResponse framingSettings;
+        private final EdifactFramingSettingsResponse framingSettings;
 
     public EdifactFramingSettingsResponse getFramingSettings() {
         return this.framingSettings;
@@ -89,7 +89,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageFilter", required=true)
-    private final EdifactMessageFilterResponse messageFilter;
+        private final EdifactMessageFilterResponse messageFilter;
 
     public EdifactMessageFilterResponse getMessageFilter() {
         return this.messageFilter;
@@ -100,7 +100,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messageFilterList")
-    private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
+        private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
 
     public List<EdifactMessageIdentifierResponse> getMessageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
@@ -111,7 +111,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="processingSettings", required=true)
-    private final EdifactProcessingSettingsResponse processingSettings;
+        private final EdifactProcessingSettingsResponse processingSettings;
 
     public EdifactProcessingSettingsResponse getProcessingSettings() {
         return this.processingSettings;
@@ -122,7 +122,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="schemaReferences", required=true)
-    private final List<EdifactSchemaReferenceResponse> schemaReferences;
+        private final List<EdifactSchemaReferenceResponse> schemaReferences;
 
     public List<EdifactSchemaReferenceResponse> getSchemaReferences() {
         return this.schemaReferences;
@@ -133,7 +133,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="validationOverrides")
-    private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
+        private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
 
     public List<EdifactValidationOverrideResponse> getValidationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
@@ -144,7 +144,7 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="validationSettings", required=true)
-    private final EdifactValidationSettingsResponse validationSettings;
+        private final EdifactValidationSettingsResponse validationSettings;
 
     public EdifactValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
@@ -283,7 +283,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public EdifactProtocolSettingsResponse build() {
             return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }

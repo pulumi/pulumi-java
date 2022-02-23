@@ -21,7 +21,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brand")
-    private final @Nullable Input<String> brand;
+        private final @Nullable Input<String> brand;
 
     public Input<String> getBrand() {
         return this.brand == null ? Input.empty() : this.brand;
@@ -32,7 +32,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -43,7 +43,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -54,7 +54,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+        private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -143,7 +143,6 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public ClientState build() {
             return new ClientState(brand, clientId, displayName, secret);
         }

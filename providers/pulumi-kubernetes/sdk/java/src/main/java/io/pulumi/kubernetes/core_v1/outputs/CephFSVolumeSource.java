@@ -163,7 +163,6 @@ public final class CephFSVolumeSource {
             this.user = user;
             return this;
         }
-
         public CephFSVolumeSource build() {
             return new CephFSVolumeSource(monitors, path, readOnly, secretFile, secretRef, user);
         }

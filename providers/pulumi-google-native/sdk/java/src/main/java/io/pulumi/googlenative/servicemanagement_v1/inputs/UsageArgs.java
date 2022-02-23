@@ -25,7 +25,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerNotificationChannel")
-    private final @Nullable Input<String> producerNotificationChannel;
+      private final @Nullable Input<String> producerNotificationChannel;
 
     public Input<String> getProducerNotificationChannel() {
         return this.producerNotificationChannel == null ? Input.empty() : this.producerNotificationChannel;
@@ -36,7 +36,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirements")
-    private final @Nullable Input<List<String>> requirements;
+      private final @Nullable Input<List<String>> requirements;
 
     public Input<List<String>> getRequirements() {
         return this.requirements == null ? Input.empty() : this.requirements;
@@ -47,7 +47,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<UsageRuleArgs>> rules;
+      private final @Nullable Input<List<UsageRuleArgs>> rules;
 
     public Input<List<UsageRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -121,7 +121,6 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public UsageArgs build() {
             return new UsageArgs(producerNotificationChannel, requirements, rules);
         }

@@ -139,7 +139,6 @@ public final class GetInstanceResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(featurePolicy, location, loggingEnabled, name, state);
         }

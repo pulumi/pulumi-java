@@ -24,7 +24,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -35,7 +35,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="window")
-    private final @Nullable Input<MaintenanceWindowArgs> window;
+      private final @Nullable Input<MaintenanceWindowArgs> window;
 
     public Input<MaintenanceWindowArgs> getWindow() {
         return this.window == null ? Input.empty() : this.window;
@@ -94,7 +94,6 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             this.window = Input.ofNullable(window);
             return this;
         }
-
         public MaintenancePolicyArgs build() {
             return new MaintenancePolicyArgs(resourceVersion, window);
         }

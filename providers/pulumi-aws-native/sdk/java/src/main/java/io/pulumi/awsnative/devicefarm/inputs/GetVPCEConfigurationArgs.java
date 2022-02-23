@@ -13,7 +13,7 @@ public final class GetVPCEConfigurationArgs extends io.pulumi.resources.InvokeAr
     public static final GetVPCEConfigurationArgs Empty = new GetVPCEConfigurationArgs();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -51,7 +51,6 @@ public final class GetVPCEConfigurationArgs extends io.pulumi.resources.InvokeAr
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetVPCEConfigurationArgs build() {
             return new GetVPCEConfigurationArgs(arn);
         }

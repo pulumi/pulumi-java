@@ -97,7 +97,6 @@ public final class WebBackendServiceIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebBackendServiceIamMemberCondition build() {
             return new WebBackendServiceIamMemberCondition(description, expression, title);
         }

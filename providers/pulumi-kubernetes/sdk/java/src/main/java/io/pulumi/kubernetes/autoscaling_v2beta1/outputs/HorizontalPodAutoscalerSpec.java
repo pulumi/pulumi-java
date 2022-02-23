@@ -121,7 +121,6 @@ public final class HorizontalPodAutoscalerSpec {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
-
         public HorizontalPodAutoscalerSpec build() {
             return new HorizontalPodAutoscalerSpec(maxReplicas, metrics, minReplicas, scaleTargetRef);
         }

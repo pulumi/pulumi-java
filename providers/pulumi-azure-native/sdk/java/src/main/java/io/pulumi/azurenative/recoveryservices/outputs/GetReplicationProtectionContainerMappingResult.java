@@ -140,7 +140,6 @@ public final class GetReplicationProtectionContainerMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationProtectionContainerMappingResult build() {
             return new GetReplicationProtectionContainerMappingResult(id, location, name, properties, type);
         }

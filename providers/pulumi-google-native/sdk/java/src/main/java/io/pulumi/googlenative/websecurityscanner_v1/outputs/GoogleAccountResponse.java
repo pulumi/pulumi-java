@@ -74,7 +74,6 @@ public final class GoogleAccountResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleAccountResponse build() {
             return new GoogleAccountResponse(password, username);
         }

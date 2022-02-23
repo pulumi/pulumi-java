@@ -117,7 +117,6 @@ public final class EndpointsApiServiceResponse {
             this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy);
             return this;
         }
-
         public EndpointsApiServiceResponse build() {
             return new EndpointsApiServiceResponse(configId, disableTraceSampling, name, rolloutStrategy);
         }

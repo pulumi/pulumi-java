@@ -204,7 +204,6 @@ public final class GetStorageAccountCredentialResult {
             this.volumesCount = Objects.requireNonNull(volumesCount);
             return this;
         }
-
         public GetStorageAccountCredentialResult build() {
             return new GetStorageAccountCredentialResult(accessKey, endPoint, id, kind, name, sslStatus, type, volumesCount);
         }

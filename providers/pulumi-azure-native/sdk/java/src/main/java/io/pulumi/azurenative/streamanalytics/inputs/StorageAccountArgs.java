@@ -23,7 +23,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<String> accountKey;
+        private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -34,7 +34,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -93,7 +93,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
-
         public StorageAccountArgs build() {
             return new StorageAccountArgs(accountKey, accountName);
         }

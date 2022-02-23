@@ -23,7 +23,7 @@ public final class StudioComponentLicenseServiceConfiguration extends io.pulumi.
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+        private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -61,7 +61,6 @@ public final class StudioComponentLicenseServiceConfiguration extends io.pulumi.
             this.endpoint = endpoint;
             return this;
         }
-
         public StudioComponentLicenseServiceConfiguration build() {
             return new StudioComponentLicenseServiceConfiguration(endpoint);
         }

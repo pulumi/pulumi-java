@@ -224,7 +224,6 @@ public final class GetRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationResult build() {
             return new GetRegistrationResult(billingModel, cloudId, etag, id, location, name, objectId, tags, type);
         }

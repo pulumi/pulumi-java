@@ -120,7 +120,6 @@ public final class GetSpokeIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSpokeIamPolicyResult build() {
             return new GetSpokeIamPolicyResult(auditConfigs, bindings, etag, version);
         }

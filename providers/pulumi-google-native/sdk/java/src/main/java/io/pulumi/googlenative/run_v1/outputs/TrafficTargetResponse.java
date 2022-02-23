@@ -160,7 +160,6 @@ public final class TrafficTargetResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public TrafficTargetResponse build() {
             return new TrafficTargetResponse(configurationName, latestRevision, percent, revisionName, tag, url);
         }

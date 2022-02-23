@@ -205,7 +205,6 @@ public final class JiraSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JiraSourceResponse build() {
             return new JiraSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

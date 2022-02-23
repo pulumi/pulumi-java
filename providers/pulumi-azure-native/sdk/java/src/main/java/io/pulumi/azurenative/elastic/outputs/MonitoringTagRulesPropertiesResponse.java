@@ -77,7 +77,6 @@ public final class MonitoringTagRulesPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public MonitoringTagRulesPropertiesResponse build() {
             return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState);
         }

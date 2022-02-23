@@ -23,7 +23,7 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="callCredentials", required=true)
-    private final CallCredentialsResponse callCredentials;
+      private final CallCredentialsResponse callCredentials;
 
     public CallCredentialsResponse getCallCredentials() {
         return this.callCredentials;
@@ -34,7 +34,7 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="channelCredentials", required=true)
-    private final ChannelCredentialsResponse channelCredentials;
+      private final ChannelCredentialsResponse channelCredentials;
 
     public ChannelCredentialsResponse getChannelCredentials() {
         return this.channelCredentials;
@@ -45,7 +45,7 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetUri", required=true)
-    private final String targetUri;
+      private final String targetUri;
 
     public String getTargetUri() {
         return this.targetUri;
@@ -104,7 +104,6 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GrpcServiceConfigResponse build() {
             return new GrpcServiceConfigResponse(callCredentials, channelCredentials, targetUri);
         }

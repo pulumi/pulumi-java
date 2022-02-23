@@ -24,7 +24,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<Object> authentication;
+        private final @Nullable Input<Object> authentication;
 
     public Input<Object> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -35,7 +35,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+        private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -46,7 +46,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<Map<String,String>> headers;
+        private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -57,7 +57,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<String> method;
+        private final @Nullable Input<String> method;
 
     public Input<String> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -68,7 +68,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -172,7 +172,6 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public HttpRequestArgs build() {
             return new HttpRequestArgs(authentication, body, headers, method, uri);
         }

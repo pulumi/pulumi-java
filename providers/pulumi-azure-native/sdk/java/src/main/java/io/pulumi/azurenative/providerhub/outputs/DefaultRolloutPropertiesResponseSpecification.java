@@ -146,7 +146,6 @@ public final class DefaultRolloutPropertiesResponseSpecification {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
-
         public DefaultRolloutPropertiesResponseSpecification build() {
             return new DefaultRolloutPropertiesResponseSpecification(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }

@@ -263,7 +263,6 @@ public final class GetDatabaseInstanceSetting {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatabaseInstanceSetting build() {
             return new GetDatabaseInstanceSetting(activationPolicy, availabilityType, backupConfigurations, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfigs, ipConfigurations, locationPreferences, maintenanceWindows, pricingPlan, tier, userLabels, version);
         }

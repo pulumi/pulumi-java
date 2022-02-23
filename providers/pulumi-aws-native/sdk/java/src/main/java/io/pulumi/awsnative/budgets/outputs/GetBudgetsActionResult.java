@@ -131,7 +131,6 @@ public final class GetBudgetsActionResult {
             this.subscribers = subscribers;
             return this;
         }
-
         public GetBudgetsActionResult build() {
             return new GetBudgetsActionResult(actionId, actionThreshold, approvalModel, definition, executionRoleArn, notificationType, subscribers);
         }

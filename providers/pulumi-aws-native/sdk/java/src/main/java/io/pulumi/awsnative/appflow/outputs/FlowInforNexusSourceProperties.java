@@ -44,7 +44,6 @@ public final class FlowInforNexusSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowInforNexusSourceProperties build() {
             return new FlowInforNexusSourceProperties(object);
         }

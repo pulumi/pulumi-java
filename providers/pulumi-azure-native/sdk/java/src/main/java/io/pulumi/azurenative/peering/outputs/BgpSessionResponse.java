@@ -266,7 +266,6 @@ public final class BgpSessionResponse {
             this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
             return this;
         }
-
         public BgpSessionResponse build() {
             return new BgpSessionResponse(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6, sessionStateV4, sessionStateV6);
         }

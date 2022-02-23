@@ -77,7 +77,6 @@ public final class ParameterSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterSpecificationResponse build() {
             return new ParameterSpecificationResponse(defaultValue, type);
         }

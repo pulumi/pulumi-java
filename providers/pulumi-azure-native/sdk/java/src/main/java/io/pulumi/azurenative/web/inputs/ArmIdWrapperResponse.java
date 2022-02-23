@@ -17,7 +17,7 @@ public final class ArmIdWrapperResponse extends io.pulumi.resources.InvokeArgs {
     public static final ArmIdWrapperResponse Empty = new ArmIdWrapperResponse();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -55,7 +55,6 @@ public final class ArmIdWrapperResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ArmIdWrapperResponse build() {
             return new ArmIdWrapperResponse(id);
         }

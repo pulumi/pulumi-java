@@ -15,21 +15,21 @@ public final class GetRegionBackendServiceArgs extends io.pulumi.resources.Invok
     public static final GetRegionBackendServiceArgs Empty = new GetRegionBackendServiceArgs();
 
     @InputImport(name="backendService", required=true)
-    private final String backendService;
+      private final String backendService;
 
     public String getBackendService() {
         return this.backendService;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionBackendServiceArgs extends io.pulumi.resources.Invok
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionBackendServiceArgs build() {
             return new GetRegionBackendServiceArgs(backendService, project, region);
         }

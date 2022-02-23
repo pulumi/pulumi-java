@@ -54,7 +54,6 @@ public final class VICredentialResponse {
             this.username = username;
             return this;
         }
-
         public VICredentialResponse build() {
             return new VICredentialResponse(username);
         }

@@ -77,7 +77,6 @@ public final class PodTemplateSpec {
             this.spec = spec;
             return this;
         }
-
         public PodTemplateSpec build() {
             return new PodTemplateSpec(metadata, spec);
         }

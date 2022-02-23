@@ -309,7 +309,6 @@ public final class GetUserResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(email, familyName, givenName, id, latestOperationResult, location, name, provisioningState, tags, tenantId, totalUsage, type, uniqueIdentifier);
         }

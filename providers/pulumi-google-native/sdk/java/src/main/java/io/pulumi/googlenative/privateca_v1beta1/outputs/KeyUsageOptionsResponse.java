@@ -221,7 +221,6 @@ public final class KeyUsageOptionsResponse {
             this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
             return this;
         }
-
         public KeyUsageOptionsResponse build() {
             return new KeyUsageOptionsResponse(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

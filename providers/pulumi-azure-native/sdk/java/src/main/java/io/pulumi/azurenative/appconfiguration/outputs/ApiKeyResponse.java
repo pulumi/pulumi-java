@@ -159,7 +159,6 @@ public final class ApiKeyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ApiKeyResponse build() {
             return new ApiKeyResponse(connectionString, id, lastModified, name, readOnly, value);
         }

@@ -94,7 +94,6 @@ public final class TriggerBuildArtifacts {
             this.objects = objects;
             return this;
         }
-
         public TriggerBuildArtifacts build() {
             return new TriggerBuildArtifacts(images, objects);
         }

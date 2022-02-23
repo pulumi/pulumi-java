@@ -23,7 +23,7 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceNodeId")
-    private final @Nullable Input<String> sourceNodeId;
+        private final @Nullable Input<String> sourceNodeId;
 
     public Input<String> getSourceNodeId() {
         return this.sourceNodeId == null ? Input.empty() : this.sourceNodeId;
@@ -34,7 +34,7 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortId")
-    private final @Nullable Input<String> sourcePortId;
+        private final @Nullable Input<String> sourcePortId;
 
     public Input<String> getSourcePortId() {
         return this.sourcePortId == null ? Input.empty() : this.sourcePortId;
@@ -45,7 +45,7 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetNodeId")
-    private final @Nullable Input<String> targetNodeId;
+        private final @Nullable Input<String> targetNodeId;
 
     public Input<String> getTargetNodeId() {
         return this.targetNodeId == null ? Input.empty() : this.targetNodeId;
@@ -56,7 +56,7 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPortId")
-    private final @Nullable Input<String> targetPortId;
+        private final @Nullable Input<String> targetPortId;
 
     public Input<String> getTargetPortId() {
         return this.targetPortId == null ? Input.empty() : this.targetPortId;
@@ -145,7 +145,6 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
             this.targetPortId = Input.ofNullable(targetPortId);
             return this;
         }
-
         public GraphEdgeArgs build() {
             return new GraphEdgeArgs(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
         }

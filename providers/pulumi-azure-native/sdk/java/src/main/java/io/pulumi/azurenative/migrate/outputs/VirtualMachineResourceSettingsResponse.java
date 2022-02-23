@@ -141,7 +141,6 @@ public final class VirtualMachineResourceSettingsResponse {
             this.targetVmSize = targetVmSize;
             return this;
         }
-
         public VirtualMachineResourceSettingsResponse build() {
             return new VirtualMachineResourceSettingsResponse(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
         }

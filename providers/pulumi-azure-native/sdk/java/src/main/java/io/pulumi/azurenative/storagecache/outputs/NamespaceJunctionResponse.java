@@ -118,7 +118,6 @@ public final class NamespaceJunctionResponse {
             this.targetPath = targetPath;
             return this;
         }
-
         public NamespaceJunctionResponse build() {
             return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }

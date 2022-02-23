@@ -21,7 +21,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -43,7 +43,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPoolVolume")
-    private final @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume;
+        private final @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume;
 
     public Input<DiskPoolVolumeArgs> getDiskPoolVolume() {
         return this.diskPoolVolume == null ? Input.empty() : this.diskPoolVolume;
@@ -54,7 +54,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netAppVolume")
-    private final @Nullable Input<NetAppVolumeArgs> netAppVolume;
+        private final @Nullable Input<NetAppVolumeArgs> netAppVolume;
 
     public Input<NetAppVolumeArgs> getNetAppVolume() {
         return this.netAppVolume == null ? Input.empty() : this.netAppVolume;
@@ -65,7 +65,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -76,7 +76,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -195,7 +195,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DatastoreArgs build() {
             return new DatastoreArgs(clusterName, datastoreName, diskPoolVolume, netAppVolume, privateCloudName, resourceGroupName);
         }

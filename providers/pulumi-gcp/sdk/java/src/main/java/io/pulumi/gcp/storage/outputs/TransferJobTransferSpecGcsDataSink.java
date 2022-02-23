@@ -76,7 +76,6 @@ public final class TransferJobTransferSpecGcsDataSink {
             this.path = path;
             return this;
         }
-
         public TransferJobTransferSpecGcsDataSink build() {
             return new TransferJobTransferSpecGcsDataSink(bucketName, path);
         }

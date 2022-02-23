@@ -21,7 +21,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieTtlArgs extends i
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieTtlArgs extends i
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<Integer> seconds;
+        private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;
@@ -92,7 +92,6 @@ public final class RegionBackendServiceConsistentHashHttpCookieTtlArgs extends i
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public RegionBackendServiceConsistentHashHttpCookieTtlArgs build() {
             return new RegionBackendServiceConsistentHashHttpCookieTtlArgs(nanos, seconds);
         }

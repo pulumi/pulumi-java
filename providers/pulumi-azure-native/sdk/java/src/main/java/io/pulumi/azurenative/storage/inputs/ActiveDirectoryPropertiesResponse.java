@@ -21,7 +21,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="azureStorageSid", required=true)
-    private final String azureStorageSid;
+        private final String azureStorageSid;
 
     public String getAzureStorageSid() {
         return this.azureStorageSid;
@@ -32,7 +32,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="domainGuid", required=true)
-    private final String domainGuid;
+        private final String domainGuid;
 
     public String getDomainGuid() {
         return this.domainGuid;
@@ -43,7 +43,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+        private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -54,7 +54,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="domainSid", required=true)
-    private final String domainSid;
+        private final String domainSid;
 
     public String getDomainSid() {
         return this.domainSid;
@@ -65,7 +65,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="forestName", required=true)
-    private final String forestName;
+        private final String forestName;
 
     public String getForestName() {
         return this.forestName;
@@ -76,7 +76,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="netBiosDomainName", required=true)
-    private final String netBiosDomainName;
+        private final String netBiosDomainName;
 
     public String getNetBiosDomainName() {
         return this.netBiosDomainName;
@@ -165,7 +165,6 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }
-
         public ActiveDirectoryPropertiesResponse build() {
             return new ActiveDirectoryPropertiesResponse(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }

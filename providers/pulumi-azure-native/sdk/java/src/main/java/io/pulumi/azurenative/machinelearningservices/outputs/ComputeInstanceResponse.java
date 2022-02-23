@@ -208,7 +208,6 @@ public final class ComputeInstanceResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ComputeInstanceResponse build() {
             return new ComputeInstanceResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

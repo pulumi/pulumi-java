@@ -270,7 +270,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(hostName, id, identity, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }

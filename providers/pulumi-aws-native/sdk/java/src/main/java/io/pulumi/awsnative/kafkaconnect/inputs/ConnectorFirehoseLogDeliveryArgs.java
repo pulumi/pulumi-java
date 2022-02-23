@@ -24,7 +24,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deliveryStream")
-    private final @Nullable Input<String> deliveryStream;
+        private final @Nullable Input<String> deliveryStream;
 
     public Input<String> getDeliveryStream() {
         return this.deliveryStream == null ? Input.empty() : this.deliveryStream;
@@ -35,7 +35,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -94,7 +94,6 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ConnectorFirehoseLogDeliveryArgs build() {
             return new ConnectorFirehoseLogDeliveryArgs(deliveryStream, enabled);
         }

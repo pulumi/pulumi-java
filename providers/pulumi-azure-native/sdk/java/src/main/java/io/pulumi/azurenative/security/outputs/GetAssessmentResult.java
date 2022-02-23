@@ -253,7 +253,6 @@ public final class GetAssessmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(additionalData, displayName, id, links, metadata, name, partnersData, resourceDetails, status, type);
         }

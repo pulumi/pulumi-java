@@ -19,7 +19,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="parameterType", required=true)
-    private final QueryParameterTypeResponse parameterType;
+      private final QueryParameterTypeResponse parameterType;
 
     public QueryParameterTypeResponse getParameterType() {
         return this.parameterType;
@@ -41,7 +41,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="parameterValue", required=true)
-    private final QueryParameterValueResponse parameterValue;
+      private final QueryParameterValueResponse parameterValue;
 
     public QueryParameterValueResponse getParameterValue() {
         return this.parameterValue;
@@ -100,7 +100,6 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public QueryParameterResponse build() {
             return new QueryParameterResponse(name, parameterType, parameterValue);
         }

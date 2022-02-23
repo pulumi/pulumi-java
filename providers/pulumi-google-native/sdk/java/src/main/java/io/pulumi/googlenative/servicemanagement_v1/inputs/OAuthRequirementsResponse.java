@@ -21,7 +21,7 @@ public final class OAuthRequirementsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="canonicalScopes", required=true)
-    private final String canonicalScopes;
+      private final String canonicalScopes;
 
     public String getCanonicalScopes() {
         return this.canonicalScopes;
@@ -59,7 +59,6 @@ public final class OAuthRequirementsResponse extends io.pulumi.resources.InvokeA
             this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
             return this;
         }
-
         public OAuthRequirementsResponse build() {
             return new OAuthRequirementsResponse(canonicalScopes);
         }

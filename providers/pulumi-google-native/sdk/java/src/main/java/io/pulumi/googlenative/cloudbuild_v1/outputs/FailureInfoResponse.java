@@ -74,7 +74,6 @@ public final class FailureInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FailureInfoResponse build() {
             return new FailureInfoResponse(detail, type);
         }

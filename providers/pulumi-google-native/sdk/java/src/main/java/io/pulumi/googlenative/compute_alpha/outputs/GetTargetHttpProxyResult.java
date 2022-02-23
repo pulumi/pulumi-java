@@ -265,7 +265,6 @@ public final class GetTargetHttpProxyResult {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetTargetHttpProxyResult build() {
             return new GetTargetHttpProxyResult(creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, region, selfLink, selfLinkWithId, urlMap);
         }

@@ -216,7 +216,6 @@ public final class CertificateAuthoritySubject {
             this.title = title;
             return this;
         }
-
         public CertificateAuthoritySubject build() {
             return new CertificateAuthoritySubject(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
         }

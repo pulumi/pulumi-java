@@ -89,7 +89,6 @@ public final class RuleGroupRateBasedStatement {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public RuleGroupRateBasedStatement build() {
             return new RuleGroupRateBasedStatement(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

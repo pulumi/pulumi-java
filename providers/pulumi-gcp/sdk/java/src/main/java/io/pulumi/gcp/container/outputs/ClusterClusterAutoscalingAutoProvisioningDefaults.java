@@ -135,7 +135,6 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public ClusterClusterAutoscalingAutoProvisioningDefaults build() {
             return new ClusterClusterAutoscalingAutoProvisioningDefaults(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }

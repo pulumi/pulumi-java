@@ -24,7 +24,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="accessMode")
-    private final @Nullable Input<String> accessMode;
+        private final @Nullable Input<String> accessMode;
 
     public Input<String> getAccessMode() {
         return this.accessMode == null ? Input.empty() : this.accessMode;
@@ -37,7 +37,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="anonGid")
-    private final @Nullable Input<Integer> anonGid;
+        private final @Nullable Input<Integer> anonGid;
 
     public Input<Integer> getAnonGid() {
         return this.anonGid == null ? Input.empty() : this.anonGid;
@@ -50,7 +50,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="anonUid")
-    private final @Nullable Input<Integer> anonUid;
+        private final @Nullable Input<Integer> anonUid;
 
     public Input<Integer> getAnonUid() {
         return this.anonUid == null ? Input.empty() : this.anonUid;
@@ -63,7 +63,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ipRanges")
-    private final @Nullable Input<List<String>> ipRanges;
+        private final @Nullable Input<List<String>> ipRanges;
 
     public Input<List<String>> getIpRanges() {
         return this.ipRanges == null ? Input.empty() : this.ipRanges;
@@ -77,7 +77,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="squashMode")
-    private final @Nullable Input<String> squashMode;
+        private final @Nullable Input<String> squashMode;
 
     public Input<String> getSquashMode() {
         return this.squashMode == null ? Input.empty() : this.squashMode;
@@ -181,7 +181,6 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
             this.squashMode = Input.ofNullable(squashMode);
             return this;
         }
-
         public InstanceFileSharesNfsExportOptionGetArgs build() {
             return new InstanceFileSharesNfsExportOptionGetArgs(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

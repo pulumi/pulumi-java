@@ -247,7 +247,6 @@ public final class BackupSetInfoResponse {
             this.listOfBackupFiles = listOfBackupFiles;
             return this;
         }
-
         public BackupSetInfoResponse build() {
             return new BackupSetInfoResponse(backupFinishedDate, backupSetId, backupStartDate, backupType, databaseName, firstLsn, isBackupRestored, lastLsn, lastModifiedTime, listOfBackupFiles);
         }

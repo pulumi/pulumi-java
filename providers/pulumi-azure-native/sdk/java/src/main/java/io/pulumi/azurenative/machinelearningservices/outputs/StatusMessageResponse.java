@@ -116,7 +116,6 @@ public final class StatusMessageResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusMessageResponse build() {
             return new StatusMessageResponse(code, createdTimeUtc, level, message);
         }

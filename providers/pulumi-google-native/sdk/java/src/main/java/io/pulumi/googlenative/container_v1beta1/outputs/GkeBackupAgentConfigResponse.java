@@ -52,7 +52,6 @@ public final class GkeBackupAgentConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GkeBackupAgentConfigResponse build() {
             return new GkeBackupAgentConfigResponse(enabled);
         }

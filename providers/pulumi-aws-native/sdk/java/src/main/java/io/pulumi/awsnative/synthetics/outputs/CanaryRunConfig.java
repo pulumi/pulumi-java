@@ -120,7 +120,6 @@ public final class CanaryRunConfig {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
         }

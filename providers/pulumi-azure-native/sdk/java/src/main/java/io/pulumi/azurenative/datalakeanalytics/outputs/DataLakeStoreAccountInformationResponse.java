@@ -116,7 +116,6 @@ public final class DataLakeStoreAccountInformationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DataLakeStoreAccountInformationResponse build() {
             return new DataLakeStoreAccountInformationResponse(id, name, suffix, type);
         }

@@ -74,7 +74,6 @@ public final class KnowledgeBaseResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KnowledgeBaseResponse build() {
             return new KnowledgeBaseResponse(name, url);
         }

@@ -75,7 +75,6 @@ public final class RecurrenceResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public RecurrenceResponse build() {
             return new RecurrenceResponse(frequency, schedule);
         }

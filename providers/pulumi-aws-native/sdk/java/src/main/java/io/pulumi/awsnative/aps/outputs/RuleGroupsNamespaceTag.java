@@ -74,7 +74,6 @@ public final class RuleGroupsNamespaceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupsNamespaceTag build() {
             return new RuleGroupsNamespaceTag(key, value);
         }

@@ -97,7 +97,6 @@ public final class AssignmentPrincipalResponse {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AssignmentPrincipalResponse build() {
             return new AssignmentPrincipalResponse(principalId, principalMetadata, principalType);
         }

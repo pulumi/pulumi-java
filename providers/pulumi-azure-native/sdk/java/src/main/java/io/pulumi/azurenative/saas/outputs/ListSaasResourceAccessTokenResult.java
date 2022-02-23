@@ -76,7 +76,6 @@ public final class ListSaasResourceAccessTokenResult {
             this.token = token;
             return this;
         }
-
         public ListSaasResourceAccessTokenResult build() {
             return new ListSaasResourceAccessTokenResult(publisherOfferBaseUri, token);
         }

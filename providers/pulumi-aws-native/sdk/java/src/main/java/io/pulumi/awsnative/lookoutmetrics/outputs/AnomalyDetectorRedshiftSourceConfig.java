@@ -138,7 +138,6 @@ public final class AnomalyDetectorRedshiftSourceConfig {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
-
         public AnomalyDetectorRedshiftSourceConfig build() {
             return new AnomalyDetectorRedshiftSourceConfig(clusterIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }

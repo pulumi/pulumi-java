@@ -97,7 +97,6 @@ public final class EnvironmentSuperuserParameters {
             this.lastName = lastName;
             return this;
         }
-
         public EnvironmentSuperuserParameters build() {
             return new EnvironmentSuperuserParameters(emailAddress, firstName, lastName);
         }

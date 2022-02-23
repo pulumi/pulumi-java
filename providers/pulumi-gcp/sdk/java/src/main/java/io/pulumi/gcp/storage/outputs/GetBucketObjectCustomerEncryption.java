@@ -58,7 +58,6 @@ public final class GetBucketObjectCustomerEncryption {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
-
         public GetBucketObjectCustomerEncryption build() {
             return new GetBucketObjectCustomerEncryption(encryptionAlgorithm, encryptionKey);
         }

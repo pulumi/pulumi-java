@@ -23,7 +23,7 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable String direction;
+        private final @Nullable String direction;
 
     public Optional<String> getDirection() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
@@ -34,7 +34,7 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ReportConfigSortingResponse build() {
             return new ReportConfigSortingResponse(direction, name);
         }

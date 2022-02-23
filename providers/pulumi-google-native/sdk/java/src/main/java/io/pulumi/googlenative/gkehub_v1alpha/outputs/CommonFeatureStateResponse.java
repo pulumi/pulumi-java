@@ -97,7 +97,6 @@ public final class CommonFeatureStateResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public CommonFeatureStateResponse build() {
             return new CommonFeatureStateResponse(appdevexperience, servicemesh, state);
         }

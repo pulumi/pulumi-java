@@ -96,7 +96,6 @@ public final class DataSourceTeradataParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceTeradataParameters build() {
             return new DataSourceTeradataParameters(database, host, port);
         }

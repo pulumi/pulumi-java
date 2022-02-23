@@ -26,7 +26,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrateBps", required=true)
-    private final Input<Integer> bitrateBps;
+      private final Input<Integer> bitrateBps;
 
     public Input<Integer> getBitrateBps() {
         return this.bitrateBps;
@@ -37,7 +37,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelCount")
-    private final @Nullable Input<Integer> channelCount;
+      private final @Nullable Input<Integer> channelCount;
 
     public Input<Integer> getChannelCount() {
         return this.channelCount == null ? Input.empty() : this.channelCount;
@@ -48,7 +48,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelLayout")
-    private final @Nullable Input<List<String>> channelLayout;
+      private final @Nullable Input<List<String>> channelLayout;
 
     public Input<List<String>> getChannelLayout() {
         return this.channelLayout == null ? Input.empty() : this.channelLayout;
@@ -59,7 +59,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-    private final @Nullable Input<String> codec;
+      private final @Nullable Input<String> codec;
 
     public Input<String> getCodec() {
         return this.codec == null ? Input.empty() : this.codec;
@@ -70,7 +70,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapping")
-    private final @Nullable Input<List<AudioMappingArgs>> mapping;
+      private final @Nullable Input<List<AudioMappingArgs>> mapping;
 
     public Input<List<AudioMappingArgs>> getMapping() {
         return this.mapping == null ? Input.empty() : this.mapping;
@@ -81,7 +81,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleRateHertz")
-    private final @Nullable Input<Integer> sampleRateHertz;
+      private final @Nullable Input<Integer> sampleRateHertz;
 
     public Input<Integer> getSampleRateHertz() {
         return this.sampleRateHertz == null ? Input.empty() : this.sampleRateHertz;
@@ -200,7 +200,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
             return this;
         }
-
         public AudioStreamArgs build() {
             return new AudioStreamArgs(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }

@@ -87,7 +87,6 @@ public final class InAppTemplateButtonConfig {
             this.web = web;
             return this;
         }
-
         public InAppTemplateButtonConfig build() {
             return new InAppTemplateButtonConfig(android, defaultConfig, iOS, web);
         }

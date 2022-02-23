@@ -231,7 +231,6 @@ public final class CosmosDbSqlApiCollectionDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbSqlApiCollectionDatasetResponse build() {
             return new CosmosDbSqlApiCollectionDatasetResponse(annotations, collectionName, description, folder, linkedServiceName, parameters, schema, structure, type);
         }

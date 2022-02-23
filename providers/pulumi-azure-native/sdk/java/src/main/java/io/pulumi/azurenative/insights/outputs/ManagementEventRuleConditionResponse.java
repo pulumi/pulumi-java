@@ -103,7 +103,6 @@ public final class ManagementEventRuleConditionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ManagementEventRuleConditionResponse build() {
             return new ManagementEventRuleConditionResponse(aggregation, dataSource, odataType);
         }

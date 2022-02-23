@@ -16,14 +16,14 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     public static final IntegrationTriggerConfigArgs Empty = new IntegrationTriggerConfigArgs();
 
     @InputImport(name="triggerProperties")
-    private final @Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties;
+        private final @Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties;
 
     public Input<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
         return this.triggerProperties == null ? Input.empty() : this.triggerProperties;
     }
 
     @InputImport(name="triggerType", required=true)
-    private final Input<IntegrationTriggerType> triggerType;
+        private final Input<IntegrationTriggerType> triggerType;
 
     public Input<IntegrationTriggerType> getTriggerType() {
         return this.triggerType;
@@ -82,7 +82,6 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
             this.triggerType = Input.of(Objects.requireNonNull(triggerType));
             return this;
         }
-
         public IntegrationTriggerConfigArgs build() {
             return new IntegrationTriggerConfigArgs(triggerProperties, triggerType);
         }

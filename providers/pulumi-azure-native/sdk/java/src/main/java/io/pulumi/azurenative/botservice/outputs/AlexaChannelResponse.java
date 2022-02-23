@@ -142,7 +142,6 @@ public final class AlexaChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AlexaChannelResponse build() {
             return new AlexaChannelResponse(channelName, etag, location, properties, provisioningState);
         }

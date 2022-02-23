@@ -17,7 +17,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="liveEventName", required=true)
-    private final String liveEventName;
+        private final String liveEventName;
 
     public String getLiveEventName() {
         return this.liveEventName;
@@ -39,7 +39,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="liveOutputName", required=true)
-    private final String liveOutputName;
+        private final String liveOutputName;
 
     public String getLiveOutputName() {
         return this.liveOutputName;
@@ -50,7 +50,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLiveOutputArgs build() {
             return new GetLiveOutputArgs(accountName, liveEventName, liveOutputName, resourceGroupName);
         }

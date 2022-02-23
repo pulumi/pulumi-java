@@ -75,7 +75,6 @@ public final class ClusterClusterConfigMasterConfigAccelerator {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public ClusterClusterConfigMasterConfigAccelerator build() {
             return new ClusterClusterConfigMasterConfigAccelerator(acceleratorCount, acceleratorType);
         }

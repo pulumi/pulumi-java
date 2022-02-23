@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -66,7 +66,6 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
             this.filter = Input.ofNullable(filter);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleFilterActionArgs build() {
             return new GoogleCloudRetailV2betaRuleFilterActionArgs(filter);
         }

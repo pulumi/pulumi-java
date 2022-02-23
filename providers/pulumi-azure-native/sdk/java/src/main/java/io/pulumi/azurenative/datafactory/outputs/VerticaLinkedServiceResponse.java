@@ -210,7 +210,6 @@ public final class VerticaLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VerticaLinkedServiceResponse build() {
             return new VerticaLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
         }

@@ -96,7 +96,6 @@ public final class EdifactOneWayAgreementResponse {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public EdifactOneWayAgreementResponse build() {
             return new EdifactOneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

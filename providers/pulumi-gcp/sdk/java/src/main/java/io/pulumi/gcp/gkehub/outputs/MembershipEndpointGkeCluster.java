@@ -44,7 +44,6 @@ public final class MembershipEndpointGkeCluster {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public MembershipEndpointGkeCluster build() {
             return new MembershipEndpointGkeCluster(resourceLink);
         }

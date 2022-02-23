@@ -34,7 +34,6 @@ public final class MatrixDimensionDefinitionArgs extends io.pulumi.resources.Res
         public Builder(MatrixDimensionDefinitionArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MatrixDimensionDefinitionArgs build() {
             return new MatrixDimensionDefinitionArgs();
         }

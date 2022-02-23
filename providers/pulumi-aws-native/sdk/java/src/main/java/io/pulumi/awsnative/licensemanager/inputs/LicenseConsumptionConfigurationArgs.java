@@ -17,21 +17,21 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     public static final LicenseConsumptionConfigurationArgs Empty = new LicenseConsumptionConfigurationArgs();
 
     @InputImport(name="borrowConfiguration")
-    private final @Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration;
+        private final @Nullable Input<LicenseBorrowConfigurationArgs> borrowConfiguration;
 
     public Input<LicenseBorrowConfigurationArgs> getBorrowConfiguration() {
         return this.borrowConfiguration == null ? Input.empty() : this.borrowConfiguration;
     }
 
     @InputImport(name="provisionalConfiguration")
-    private final @Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
+        private final @Nullable Input<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
 
     public Input<LicenseProvisionalConfigurationArgs> getProvisionalConfiguration() {
         return this.provisionalConfiguration == null ? Input.empty() : this.provisionalConfiguration;
     }
 
     @InputImport(name="renewType")
-    private final @Nullable Input<String> renewType;
+        private final @Nullable Input<String> renewType;
 
     public Input<String> getRenewType() {
         return this.renewType == null ? Input.empty() : this.renewType;
@@ -105,7 +105,6 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
             this.renewType = Input.ofNullable(renewType);
             return this;
         }
-
         public LicenseConsumptionConfigurationArgs build() {
             return new LicenseConsumptionConfigurationArgs(borrowConfiguration, provisionalConfiguration, renewType);
         }

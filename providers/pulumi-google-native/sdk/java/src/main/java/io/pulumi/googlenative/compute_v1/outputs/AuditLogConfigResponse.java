@@ -97,7 +97,6 @@ public final class AuditLogConfigResponse {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public AuditLogConfigResponse build() {
             return new AuditLogConfigResponse(exemptedMembers, ignoreChildExemptions, logType);
         }

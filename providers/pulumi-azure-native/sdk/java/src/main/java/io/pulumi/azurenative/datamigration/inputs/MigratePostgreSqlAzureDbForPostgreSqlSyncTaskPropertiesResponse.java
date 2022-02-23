@@ -35,7 +35,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="commands", required=true)
-    private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+        private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -46,7 +46,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<ODataErrorResponse> errors;
+        private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -57,7 +57,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="input")
-    private final @Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse input;
+        private final @Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse input;
 
     public Optional<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -68,7 +68,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="output", required=true)
-    private final List<Object> output;
+        private final List<Object> output;
 
     public List<Object> getOutput() {
         return this.output;
@@ -79,7 +79,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -91,7 +91,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final String taskType;
+        private final String taskType;
 
     public String getTaskType() {
         return this.taskType;
@@ -180,7 +180,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

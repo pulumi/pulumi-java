@@ -54,7 +54,6 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
             this.type = type;
             return this;
         }
-
         public IntegrationServiceEnvironmentAccessEndpointResponse build() {
             return new IntegrationServiceEnvironmentAccessEndpointResponse(type);
         }

@@ -77,7 +77,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerator build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerator(acceleratorCount, acceleratorType);
         }

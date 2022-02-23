@@ -81,7 +81,6 @@ public final class DataSetIngestionWaitPolicy {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
-
         public DataSetIngestionWaitPolicy build() {
             return new DataSetIngestionWaitPolicy(ingestionWaitTimeInHours, waitForSpiceIngestion);
         }

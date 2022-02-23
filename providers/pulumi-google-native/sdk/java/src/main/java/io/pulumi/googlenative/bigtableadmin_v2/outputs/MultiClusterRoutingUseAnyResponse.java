@@ -53,7 +53,6 @@ public final class MultiClusterRoutingUseAnyResponse {
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }
-
         public MultiClusterRoutingUseAnyResponse build() {
             return new MultiClusterRoutingUseAnyResponse(clusterIds);
         }

@@ -83,7 +83,6 @@ public final class GetServerCertificateResult {
             this.tags = tags;
             return this;
         }
-
         public GetServerCertificateResult build() {
             return new GetServerCertificateResult(arn, path, tags);
         }

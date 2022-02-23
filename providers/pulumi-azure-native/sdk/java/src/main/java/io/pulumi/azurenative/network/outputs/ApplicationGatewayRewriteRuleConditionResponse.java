@@ -119,7 +119,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
             this.variable = variable;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleConditionResponse build() {
             return new ApplicationGatewayRewriteRuleConditionResponse(ignoreCase, negate, pattern, variable);
         }

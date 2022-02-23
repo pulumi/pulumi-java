@@ -15,7 +15,7 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     public static final ManagedZoneReverseLookupConfigArgs Empty = new ManagedZoneReverseLookupConfigArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,6 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ManagedZoneReverseLookupConfigArgs build() {
             return new ManagedZoneReverseLookupConfigArgs(kind);
         }

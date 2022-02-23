@@ -20,7 +20,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -43,7 +43,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
+        private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
 
     public Input<BackendServiceConsistentHashHttpCookieTtlGetArgs> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -117,7 +117,6 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public BackendServiceConsistentHashHttpCookieGetArgs build() {
             return new BackendServiceConsistentHashHttpCookieGetArgs(name, path, ttl);
         }

@@ -13,14 +13,14 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
     public static final GetBillingAccountExclusionArgs Empty = new GetBillingAccountExclusionArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="exclusionId", required=true)
-    private final String exclusionId;
+      private final String exclusionId;
 
     public String getExclusionId() {
         return this.exclusionId;
@@ -69,7 +69,6 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
             this.exclusionId = Objects.requireNonNull(exclusionId);
             return this;
         }
-
         public GetBillingAccountExclusionArgs build() {
             return new GetBillingAccountExclusionArgs(billingAccountId, exclusionId);
         }

@@ -22,7 +22,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="v1Name", required=true)
-    private final String v1Name;
+      private final String v1Name;
 
     public String getV1Name() {
         return this.v1Name;
@@ -33,7 +33,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="v2Blob", required=true)
-    private final List<String> v2Blob;
+      private final List<String> v2Blob;
 
     public List<String> getV2Blob() {
         return this.v2Blob;
@@ -44,7 +44,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="v2Name", required=true)
-    private final String v2Name;
+      private final String v2Name;
 
     public String getV2Name() {
         return this.v2Name;
@@ -103,7 +103,6 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
             this.v2Name = Objects.requireNonNull(v2Name);
             return this;
         }
-
         public FingerprintResponse build() {
             return new FingerprintResponse(v1Name, v2Blob, v2Name);
         }

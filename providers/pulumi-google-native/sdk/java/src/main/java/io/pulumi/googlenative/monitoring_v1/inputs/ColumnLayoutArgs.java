@@ -24,7 +24,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<ColumnArgs>> columns;
+      private final @Nullable Input<List<ColumnArgs>> columns;
 
     public Input<List<ColumnArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -67,7 +67,6 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.columns = Input.ofNullable(columns);
             return this;
         }
-
         public ColumnLayoutArgs build() {
             return new ColumnLayoutArgs(columns);
         }

@@ -75,7 +75,6 @@ public final class TrafficSelectorPolicyResponse {
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
-
         public TrafficSelectorPolicyResponse build() {
             return new TrafficSelectorPolicyResponse(localAddressRanges, remoteAddressRanges);
         }

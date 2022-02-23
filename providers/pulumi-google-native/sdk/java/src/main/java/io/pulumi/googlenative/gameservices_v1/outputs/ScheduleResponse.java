@@ -116,7 +116,6 @@ public final class ScheduleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(cronJobDuration, cronSpec, endTime, startTime);
         }

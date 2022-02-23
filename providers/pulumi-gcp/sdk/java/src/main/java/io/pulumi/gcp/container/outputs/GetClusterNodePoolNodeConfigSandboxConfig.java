@@ -44,7 +44,6 @@ public final class GetClusterNodePoolNodeConfigSandboxConfig {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigSandboxConfig build() {
             return new GetClusterNodePoolNodeConfigSandboxConfig(sandboxType);
         }

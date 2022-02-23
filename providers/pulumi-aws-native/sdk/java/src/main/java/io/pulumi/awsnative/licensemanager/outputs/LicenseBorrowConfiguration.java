@@ -59,7 +59,6 @@ public final class LicenseBorrowConfiguration {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
-
         public LicenseBorrowConfiguration build() {
             return new LicenseBorrowConfiguration(allowEarlyCheckIn, maxTimeToLiveInMinutes);
         }

@@ -100,7 +100,6 @@ public final class PreventionInspectTemplateInspectConfigLimits {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigLimits build() {
             return new PreventionInspectTemplateInspectConfigLimits(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
         }

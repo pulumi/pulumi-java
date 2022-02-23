@@ -53,7 +53,6 @@ public final class StandardSqlTableTypeResponse {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public StandardSqlTableTypeResponse build() {
             return new StandardSqlTableTypeResponse(columns);
         }

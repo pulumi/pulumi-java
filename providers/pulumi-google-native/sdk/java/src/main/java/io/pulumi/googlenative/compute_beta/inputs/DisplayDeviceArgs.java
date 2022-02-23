@@ -23,7 +23,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDisplay")
-    private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Input<Boolean> enableDisplay;
 
     public Input<Boolean> getEnableDisplay() {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
@@ -66,7 +66,6 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.enableDisplay = Input.ofNullable(enableDisplay);
             return this;
         }
-
         public DisplayDeviceArgs build() {
             return new DisplayDeviceArgs(enableDisplay);
         }

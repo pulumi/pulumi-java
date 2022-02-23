@@ -98,7 +98,6 @@ public final class WorkflowStepCustomStepDetailsProperties {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public WorkflowStepCustomStepDetailsProperties build() {
             return new WorkflowStepCustomStepDetailsProperties(name, target, timeoutSeconds);
         }

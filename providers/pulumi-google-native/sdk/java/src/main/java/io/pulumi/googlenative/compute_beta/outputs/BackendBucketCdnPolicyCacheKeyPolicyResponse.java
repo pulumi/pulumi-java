@@ -75,7 +75,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }
-
         public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
             return new BackendBucketCdnPolicyCacheKeyPolicyResponse(includeHttpHeaders, queryStringWhitelist);
         }

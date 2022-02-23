@@ -23,7 +23,7 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="agentArns", required=true)
-    private final Input<List<String>> agentArns;
+        private final Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns;
@@ -66,7 +66,6 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }
-
         public LocationNFSOnPremConfigArgs build() {
             return new LocationNFSOnPremConfigArgs(agentArns);
         }

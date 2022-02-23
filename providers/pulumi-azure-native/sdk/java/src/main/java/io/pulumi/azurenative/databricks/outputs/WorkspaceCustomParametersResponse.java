@@ -373,7 +373,6 @@ public final class WorkspaceCustomParametersResponse {
             this.vnetAddressPrefix = vnetAddressPrefix;
             return this;
         }
-
         public WorkspaceCustomParametersResponse build() {
             return new WorkspaceCustomParametersResponse(amlWorkspaceId, customPrivateSubnetName, customPublicSubnetName, customVirtualNetworkId, enableNoPublicIp, encryption, loadBalancerBackendPoolName, loadBalancerId, natGatewayName, prepareEncryption, publicIpName, requireInfrastructureEncryption, resourceTags, storageAccountName, storageAccountSkuName, vnetAddressPrefix);
         }

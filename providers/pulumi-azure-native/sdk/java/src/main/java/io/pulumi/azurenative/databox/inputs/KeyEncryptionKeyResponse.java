@@ -24,7 +24,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="identityProperties")
-    private final @Nullable IdentityPropertiesResponse identityProperties;
+        private final @Nullable IdentityPropertiesResponse identityProperties;
 
     public Optional<IdentityPropertiesResponse> getIdentityProperties() {
         return this.identityProperties == null ? Optional.empty() : Optional.ofNullable(this.identityProperties);
@@ -35,7 +35,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kekType", required=true)
-    private final String kekType;
+        private final String kekType;
 
     public String getKekType() {
         return this.kekType;
@@ -46,7 +46,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kekUrl")
-    private final @Nullable String kekUrl;
+        private final @Nullable String kekUrl;
 
     public Optional<String> getKekUrl() {
         return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
@@ -57,7 +57,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kekVaultResourceID")
-    private final @Nullable String kekVaultResourceID;
+        private final @Nullable String kekVaultResourceID;
 
     public Optional<String> getKekVaultResourceID() {
         return this.kekVaultResourceID == null ? Optional.empty() : Optional.ofNullable(this.kekVaultResourceID);
@@ -126,7 +126,6 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
-
         public KeyEncryptionKeyResponse build() {
             return new KeyEncryptionKeyResponse(identityProperties, kekType, kekUrl, kekVaultResourceID);
         }

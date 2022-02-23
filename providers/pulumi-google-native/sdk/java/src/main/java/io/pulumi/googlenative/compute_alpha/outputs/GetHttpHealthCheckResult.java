@@ -306,7 +306,6 @@ public final class GetHttpHealthCheckResult {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public GetHttpHealthCheckResult build() {
             return new GetHttpHealthCheckResult(checkIntervalSec, creationTimestamp, description, healthyThreshold, host, kind, name, port, requestPath, selfLink, selfLinkWithId, timeoutSec, unhealthyThreshold);
         }

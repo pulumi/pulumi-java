@@ -142,7 +142,6 @@ public final class AverageLoadScalingTriggerResponse {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
         }
-
         public AverageLoadScalingTriggerResponse build() {
             return new AverageLoadScalingTriggerResponse(kind, lowerLoadThreshold, metric, scaleIntervalInSeconds, upperLoadThreshold);
         }

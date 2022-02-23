@@ -75,7 +75,6 @@ public final class ComputeResourceResponse {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
-
         public ComputeResourceResponse build() {
             return new ComputeResourceResponse(memoryInGB, processorCount);
         }

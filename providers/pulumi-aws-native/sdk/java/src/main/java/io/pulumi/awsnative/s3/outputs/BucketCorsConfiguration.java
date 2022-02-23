@@ -45,7 +45,6 @@ public final class BucketCorsConfiguration {
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }
-
         public BucketCorsConfiguration build() {
             return new BucketCorsConfiguration(corsRules);
         }

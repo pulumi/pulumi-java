@@ -77,7 +77,6 @@ public final class GatewayPlatform {
             this.greengrassV2 = greengrassV2;
             return this;
         }
-
         public GatewayPlatform build() {
             return new GatewayPlatform(greengrass, greengrassV2);
         }

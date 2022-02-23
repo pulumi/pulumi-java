@@ -53,7 +53,6 @@ public final class ObjectIdResponse {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-
         public ObjectIdResponse build() {
             return new ObjectIdResponse(objectIdPath);
         }

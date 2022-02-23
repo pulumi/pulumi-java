@@ -183,7 +183,6 @@ public final class ListVirtualMachineApplicableSchedulesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListVirtualMachineApplicableSchedulesResult build() {
             return new ListVirtualMachineApplicableSchedulesResult(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }

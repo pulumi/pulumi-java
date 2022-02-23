@@ -19,7 +19,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-    private final Input<String> cloudSecret;
+        private final Input<String> cloudSecret;
 
     public Input<String> getCloudSecret() {
         return this.cloudSecret;
@@ -62,7 +62,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
             this.cloudSecret = Input.of(Objects.requireNonNull(cloudSecret));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(cloudSecret);
         }

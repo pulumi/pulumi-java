@@ -112,7 +112,6 @@ public final class DeliveryStreamSchemaConfiguration {
             this.versionId = versionId;
             return this;
         }
-
         public DeliveryStreamSchemaConfiguration build() {
             return new DeliveryStreamSchemaConfiguration(catalogId, databaseName, region, roleARN, tableName, versionId);
         }

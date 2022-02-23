@@ -53,7 +53,6 @@ public final class ClusterLogging {
             this.clusterLogging = clusterLogging;
             return this;
         }
-
         public ClusterLogging build() {
             return new ClusterLogging(clusterLogging);
         }

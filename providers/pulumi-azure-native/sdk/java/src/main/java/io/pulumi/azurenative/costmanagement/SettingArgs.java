@@ -21,7 +21,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cache")
-    private final @Nullable Input<List<SettingsPropertiesCacheArgs>> cache;
+        private final @Nullable Input<List<SettingsPropertiesCacheArgs>> cache;
 
     public Input<List<SettingsPropertiesCacheArgs>> getCache() {
         return this.cache == null ? Input.empty() : this.cache;
@@ -32,7 +32,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -43,7 +43,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingName")
-    private final @Nullable Input<String> settingName;
+        private final @Nullable Input<String> settingName;
 
     public Input<String> getSettingName() {
         return this.settingName == null ? Input.empty() : this.settingName;
@@ -54,7 +54,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startOn")
-    private final @Nullable Input<String> startOn;
+        private final @Nullable Input<String> startOn;
 
     public Input<String> getStartOn() {
         return this.startOn == null ? Input.empty() : this.startOn;
@@ -143,7 +143,6 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
             this.startOn = Input.ofNullable(startOn);
             return this;
         }
-
         public SettingArgs build() {
             return new SettingArgs(cache, scope, settingName, startOn);
         }

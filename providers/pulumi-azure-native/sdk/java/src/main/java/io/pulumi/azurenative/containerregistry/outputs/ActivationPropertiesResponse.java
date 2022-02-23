@@ -52,7 +52,6 @@ public final class ActivationPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ActivationPropertiesResponse build() {
             return new ActivationPropertiesResponse(status);
         }

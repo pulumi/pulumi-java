@@ -44,7 +44,6 @@ public final class ModelBiasJobDefinitionMonitoringResources {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public ModelBiasJobDefinitionMonitoringResources build() {
             return new ModelBiasJobDefinitionMonitoringResources(clusterConfig);
         }

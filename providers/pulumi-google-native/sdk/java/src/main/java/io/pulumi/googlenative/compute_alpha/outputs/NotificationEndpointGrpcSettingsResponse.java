@@ -139,7 +139,6 @@ public final class NotificationEndpointGrpcSettingsResponse {
             this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
             return this;
         }
-
         public NotificationEndpointGrpcSettingsResponse build() {
             return new NotificationEndpointGrpcSettingsResponse(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }

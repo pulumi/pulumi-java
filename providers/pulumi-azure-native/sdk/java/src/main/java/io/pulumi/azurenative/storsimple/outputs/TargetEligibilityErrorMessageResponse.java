@@ -97,7 +97,6 @@ public final class TargetEligibilityErrorMessageResponse {
             this.resultCode = resultCode;
             return this;
         }
-
         public TargetEligibilityErrorMessageResponse build() {
             return new TargetEligibilityErrorMessageResponse(message, resolution, resultCode);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="errorCount", required=true)
-    private final String errorCount;
+      private final String errorCount;
 
     public String getErrorCount() {
         return this.errorCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="nodeHours", required=true)
-    private final Double nodeHours;
+      private final Double nodeHours;
 
     public Double getNodeHours() {
         return this.nodeHours;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="outputPath", required=true)
-    private final String outputPath;
+      private final String outputPath;
 
     public String getOutputPath() {
         return this.outputPath;
@@ -55,7 +55,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="predictionCount", required=true)
-    private final String predictionCount;
+      private final String predictionCount;
 
     public String getPredictionCount() {
         return this.predictionCount;
@@ -124,7 +124,6 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends io.pulumi.r
             this.predictionCount = Objects.requireNonNull(predictionCount);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionOutputResponse build() {
             return new GoogleCloudMlV1__PredictionOutputResponse(errorCount, nodeHours, outputPath, predictionCount);
         }

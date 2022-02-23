@@ -120,7 +120,6 @@ public final class GetPolicyBasedRouteIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetPolicyBasedRouteIamPolicyResult build() {
             return new GetPolicyBasedRouteIamPolicyResult(auditConfigs, bindings, etag, version);
         }

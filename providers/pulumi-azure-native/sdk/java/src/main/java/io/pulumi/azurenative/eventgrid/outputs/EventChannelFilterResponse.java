@@ -97,7 +97,6 @@ public final class EventChannelFilterResponse {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }
-
         public EventChannelFilterResponse build() {
             return new EventChannelFilterResponse(advancedFilters, enableAdvancedFilteringOnArrays);
         }

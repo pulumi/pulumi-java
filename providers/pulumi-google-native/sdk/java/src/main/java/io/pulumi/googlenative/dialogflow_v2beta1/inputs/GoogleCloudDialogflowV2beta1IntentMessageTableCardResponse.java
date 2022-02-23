@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="buttons", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="columnProperties", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> getColumnProperties() {
         return this.columnProperties;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="rows", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> getRows() {
         return this.rows;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="subtitle", required=true)
-    private final String subtitle;
+      private final String subtitle;
 
     public String getSubtitle() {
         return this.subtitle;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -170,7 +170,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(buttons, columnProperties, image, rows, subtitle, title);
         }

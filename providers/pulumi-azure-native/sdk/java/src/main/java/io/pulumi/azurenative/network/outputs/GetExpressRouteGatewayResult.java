@@ -249,7 +249,6 @@ public final class GetExpressRouteGatewayResult {
             this.virtualHub = Objects.requireNonNull(virtualHub);
             return this;
         }
-
         public GetExpressRouteGatewayResult build() {
             return new GetExpressRouteGatewayResult(autoScaleConfiguration, etag, expressRouteConnections, id, location, name, provisioningState, tags, type, virtualHub);
         }

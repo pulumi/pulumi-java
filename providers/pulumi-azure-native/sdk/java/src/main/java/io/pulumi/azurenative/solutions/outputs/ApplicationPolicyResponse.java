@@ -97,7 +97,6 @@ public final class ApplicationPolicyResponse {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
-
         public ApplicationPolicyResponse build() {
             return new ApplicationPolicyResponse(name, parameters, policyDefinitionId);
         }

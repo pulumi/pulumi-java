@@ -138,7 +138,6 @@ public final class TestIssueResponse {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }
-
         public TestIssueResponse build() {
             return new TestIssueResponse(category, errorMessage, severity, type, warning);
         }

@@ -64,7 +64,6 @@ public final class PodReadinessGate {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public PodReadinessGate build() {
             return new PodReadinessGate(conditionType);
         }

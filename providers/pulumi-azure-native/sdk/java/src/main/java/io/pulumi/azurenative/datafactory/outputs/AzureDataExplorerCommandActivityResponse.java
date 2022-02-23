@@ -231,7 +231,6 @@ public final class AzureDataExplorerCommandActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureDataExplorerCommandActivityResponse build() {
             return new AzureDataExplorerCommandActivityResponse(command, commandTimeout, dependsOn, description, linkedServiceName, name, policy, type, userProperties);
         }

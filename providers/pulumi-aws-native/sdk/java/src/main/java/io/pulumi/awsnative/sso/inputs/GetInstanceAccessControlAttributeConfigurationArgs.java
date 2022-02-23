@@ -17,7 +17,7 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends io
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final String instanceArn;
+        private final String instanceArn;
 
     public String getInstanceArn() {
         return this.instanceArn;
@@ -55,7 +55,6 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends io
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public GetInstanceAccessControlAttributeConfigurationArgs build() {
             return new GetInstanceAccessControlAttributeConfigurationArgs(instanceArn);
         }

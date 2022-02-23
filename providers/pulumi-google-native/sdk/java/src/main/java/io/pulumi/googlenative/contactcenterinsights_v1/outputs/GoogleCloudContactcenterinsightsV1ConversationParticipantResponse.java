@@ -116,7 +116,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
         }

@@ -106,7 +106,6 @@ public final class PacketMirroringFilter {
             this.ipProtocols = ipProtocols;
             return this;
         }
-
         public PacketMirroringFilter build() {
             return new PacketMirroringFilter(cidrRanges, direction, ipProtocols);
         }

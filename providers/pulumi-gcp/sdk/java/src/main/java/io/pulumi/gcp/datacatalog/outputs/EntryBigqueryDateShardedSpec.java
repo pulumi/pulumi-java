@@ -74,7 +74,6 @@ public final class EntryBigqueryDateShardedSpec {
             this.tablePrefix = tablePrefix;
             return this;
         }
-
         public EntryBigqueryDateShardedSpec build() {
             return new EntryBigqueryDateShardedSpec(dataset, shardCount, tablePrefix);
         }

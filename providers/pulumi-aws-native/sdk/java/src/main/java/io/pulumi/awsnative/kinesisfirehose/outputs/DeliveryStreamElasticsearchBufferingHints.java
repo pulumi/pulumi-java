@@ -60,7 +60,6 @@ public final class DeliveryStreamElasticsearchBufferingHints {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public DeliveryStreamElasticsearchBufferingHints build() {
             return new DeliveryStreamElasticsearchBufferingHints(intervalInSeconds, sizeInMBs);
         }

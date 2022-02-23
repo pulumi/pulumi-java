@@ -54,7 +54,6 @@ public final class SqlContainerGetPropertiesResponseResource {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(indexingPolicy);
         }

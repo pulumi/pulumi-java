@@ -86,7 +86,6 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig build() {
             return new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

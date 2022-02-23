@@ -204,7 +204,6 @@ public final class GetGalleryApplicationVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryApplicationVersionResult build() {
             return new GetGalleryApplicationVersionResult(id, location, name, provisioningState, publishingProfile, replicationStatus, tags, type);
         }

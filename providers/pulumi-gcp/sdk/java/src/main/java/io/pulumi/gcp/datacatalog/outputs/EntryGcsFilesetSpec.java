@@ -101,7 +101,6 @@ public final class EntryGcsFilesetSpec {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
-
         public EntryGcsFilesetSpec build() {
             return new EntryGcsFilesetSpec(filePatterns, sampleGcsFileSpecs);
         }

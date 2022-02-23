@@ -52,7 +52,6 @@ public final class DefaultSnatStatusResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public DefaultSnatStatusResponse build() {
             return new DefaultSnatStatusResponse(disabled);
         }

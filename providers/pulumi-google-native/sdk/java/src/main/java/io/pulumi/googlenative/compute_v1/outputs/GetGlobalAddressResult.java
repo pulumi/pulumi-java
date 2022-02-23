@@ -370,7 +370,6 @@ public final class GetGlobalAddressResult {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-
         public GetGlobalAddressResult build() {
             return new GetGlobalAddressResult(address, addressType, creationTimestamp, description, ipVersion, kind, name, network, networkTier, prefixLength, purpose, region, selfLink, status, subnetwork, users);
         }

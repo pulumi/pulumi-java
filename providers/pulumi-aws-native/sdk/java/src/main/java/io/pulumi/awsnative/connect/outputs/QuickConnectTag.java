@@ -74,7 +74,6 @@ public final class QuickConnectTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public QuickConnectTag build() {
             return new QuickConnectTag(key, value);
         }

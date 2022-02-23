@@ -22,7 +22,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,14 +33,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -51,7 +51,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ModelStateArgs> state;
+      private final @Nullable Input<ModelStateArgs> state;
 
     public Input<ModelStateArgs> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -62,7 +62,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -73,7 +73,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tfliteModel")
-    private final @Nullable Input<TfLiteModelArgs> tfliteModel;
+      private final @Nullable Input<TfLiteModelArgs> tfliteModel;
 
     public Input<TfLiteModelArgs> getTfliteModel() {
         return this.tfliteModel == null ? Input.empty() : this.tfliteModel;
@@ -192,7 +192,6 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.tfliteModel = Input.ofNullable(tfliteModel);
             return this;
         }
-
         public ModelArgs build() {
             return new ModelArgs(displayName, name, project, state, tags, tfliteModel);
         }

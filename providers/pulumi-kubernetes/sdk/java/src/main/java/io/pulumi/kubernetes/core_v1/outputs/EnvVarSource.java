@@ -121,7 +121,6 @@ public final class EnvVarSource {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
-
         public EnvVarSource build() {
             return new EnvVarSource(configMapKeyRef, fieldRef, resourceFieldRef, secretKeyRef);
         }

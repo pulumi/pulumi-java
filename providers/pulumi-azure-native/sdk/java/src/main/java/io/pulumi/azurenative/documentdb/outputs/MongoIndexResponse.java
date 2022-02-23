@@ -77,7 +77,6 @@ public final class MongoIndexResponse {
             this.options = options;
             return this;
         }
-
         public MongoIndexResponse build() {
             return new MongoIndexResponse(key, options);
         }

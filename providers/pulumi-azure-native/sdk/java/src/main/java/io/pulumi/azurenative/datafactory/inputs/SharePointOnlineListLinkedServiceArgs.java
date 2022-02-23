@@ -31,7 +31,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -75,7 +75,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -86,7 +86,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="servicePrincipalId", required=true)
-    private final Input<Object> servicePrincipalId;
+        private final Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId;
@@ -97,7 +97,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="servicePrincipalKey", required=true)
-    private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey;
@@ -108,7 +108,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="siteUrl", required=true)
-    private final Input<Object> siteUrl;
+        private final Input<Object> siteUrl;
 
     public Input<Object> getSiteUrl() {
         return this.siteUrl;
@@ -119,7 +119,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<Object> tenantId;
+        private final Input<Object> tenantId;
 
     public Input<Object> getTenantId() {
         return this.tenantId;
@@ -131,7 +131,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -310,7 +310,6 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SharePointOnlineListLinkedServiceArgs build() {
             return new SharePointOnlineListLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
         }

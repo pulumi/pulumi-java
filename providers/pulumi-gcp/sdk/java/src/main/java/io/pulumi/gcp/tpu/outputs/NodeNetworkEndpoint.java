@@ -61,7 +61,6 @@ public final class NodeNetworkEndpoint {
             this.port = port;
             return this;
         }
-
         public NodeNetworkEndpoint build() {
             return new NodeNetworkEndpoint(ipAddress, port);
         }

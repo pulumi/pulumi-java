@@ -111,7 +111,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(hotwordRegex, likelihoodAdjustment, proximity);
         }

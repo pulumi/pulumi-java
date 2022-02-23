@@ -29,7 +29,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable String deleteOption;
+        private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
@@ -40,7 +40,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
+        private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> getDnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
@@ -51,7 +51,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Integer idleTimeoutInMinutes;
+        private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -62,7 +62,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="ipTags")
-    private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
+        private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
 
     public List<VirtualMachineIpTagResponse> getIpTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
@@ -73,7 +73,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -84,7 +84,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-    private final @Nullable String publicIPAddressVersion;
+        private final @Nullable String publicIPAddressVersion;
 
     public Optional<String> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
@@ -95,7 +95,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="publicIPAllocationMethod")
-    private final @Nullable String publicIPAllocationMethod;
+        private final @Nullable String publicIPAllocationMethod;
 
     public Optional<String> getPublicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
@@ -106,7 +106,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="publicIPPrefix")
-    private final @Nullable SubResourceResponse publicIPPrefix;
+        private final @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> getPublicIPPrefix() {
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
@@ -117,7 +117,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable PublicIPAddressSkuResponse sku;
+        private final @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -236,7 +236,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
             this.sku = sku;
             return this;
         }
-
         public VirtualMachinePublicIPAddressConfigurationResponse build() {
             return new VirtualMachinePublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
         }

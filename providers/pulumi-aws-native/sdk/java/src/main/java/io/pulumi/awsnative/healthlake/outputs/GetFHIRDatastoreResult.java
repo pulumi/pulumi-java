@@ -116,7 +116,6 @@ public final class GetFHIRDatastoreResult {
             this.tags = tags;
             return this;
         }
-
         public GetFHIRDatastoreResult build() {
             return new GetFHIRDatastoreResult(createdAt, datastoreArn, datastoreEndpoint, datastoreId, datastoreStatus, tags);
         }

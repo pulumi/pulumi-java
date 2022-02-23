@@ -27,14 +27,14 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
      * 
      */
     @InputImport(name="manifestLayout")
-    private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
+        private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
 
     public Optional<PackagingConfigurationDashManifestManifestLayout> getManifestLayout() {
         return this.manifestLayout == null ? Optional.empty() : Optional.ofNullable(this.manifestLayout);
     }
 
     @InputImport(name="manifestName")
-    private final @Nullable String manifestName;
+        private final @Nullable String manifestName;
 
     public Optional<String> getManifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
@@ -45,7 +45,7 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
      * 
      */
     @InputImport(name="minBufferTimeSeconds")
-    private final @Nullable Integer minBufferTimeSeconds;
+        private final @Nullable Integer minBufferTimeSeconds;
 
     public Optional<Integer> getMinBufferTimeSeconds() {
         return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
@@ -56,14 +56,14 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable PackagingConfigurationDashManifestProfile profile;
+        private final @Nullable PackagingConfigurationDashManifestProfile profile;
 
     public Optional<PackagingConfigurationDashManifestProfile> getProfile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable PackagingConfigurationStreamSelection streamSelection;
+        private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
@@ -142,7 +142,6 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationDashManifest build() {
             return new PackagingConfigurationDashManifest(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
         }

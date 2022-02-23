@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
      * 
      */
     @InputImport(name="spendBasis")
-    private final @Nullable Input<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis;
+      private final @Nullable Input<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis;
 
     public Input<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> getSpendBasis() {
         return this.spendBasis == null ? Input.empty() : this.spendBasis;
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
      * 
      */
     @InputImport(name="thresholdPercent", required=true)
-    private final Input<Double> thresholdPercent;
+      private final Input<Double> thresholdPercent;
 
     public Input<Double> getThresholdPercent() {
         return this.thresholdPercent;
@@ -94,7 +94,6 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
             this.thresholdPercent = Input.of(Objects.requireNonNull(thresholdPercent));
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1ThresholdRuleArgs build() {
             return new GoogleCloudBillingBudgetsV1ThresholdRuleArgs(spendBasis, thresholdPercent);
         }

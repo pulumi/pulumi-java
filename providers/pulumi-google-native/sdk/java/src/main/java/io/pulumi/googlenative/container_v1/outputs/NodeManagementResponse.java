@@ -96,7 +96,6 @@ public final class NodeManagementResponse {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }
-
         public NodeManagementResponse build() {
             return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
         }

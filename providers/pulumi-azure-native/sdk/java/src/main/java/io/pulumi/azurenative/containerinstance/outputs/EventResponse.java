@@ -159,7 +159,6 @@ public final class EventResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

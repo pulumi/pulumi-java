@@ -502,7 +502,6 @@ public final class ProductResponse {
             this.vmExtensionType = vmExtensionType;
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(billingPartNumber, compatibility, description, displayName, etag, galleryItemIdentity, iconUris, id, legalTerms, links, name, offer, offerVersion, payloadLength, privacyPolicy, productKind, productProperties, publisherDisplayName, publisherIdentifier, sku, type, vmExtensionType);
         }

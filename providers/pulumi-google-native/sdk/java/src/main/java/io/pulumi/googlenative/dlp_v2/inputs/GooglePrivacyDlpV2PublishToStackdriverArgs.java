@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishToStackdriverArgs extends io.pulumi.
         public Builder(GooglePrivacyDlpV2PublishToStackdriverArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishToStackdriverArgs build() {
             return new GooglePrivacyDlpV2PublishToStackdriverArgs();
         }

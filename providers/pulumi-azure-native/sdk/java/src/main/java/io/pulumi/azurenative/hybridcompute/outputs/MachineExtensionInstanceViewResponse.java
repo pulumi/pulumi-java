@@ -119,7 +119,6 @@ public final class MachineExtensionInstanceViewResponse {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionInstanceViewResponse build() {
             return new MachineExtensionInstanceViewResponse(name, status, type, typeHandlerVersion);
         }

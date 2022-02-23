@@ -15,35 +15,35 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEndpointArgs Empty = new GetEndpointArgs();
 
     @InputImport(name="endpointId", required=true)
-    private final String endpointId;
+      private final String endpointId;
 
     public String getEndpointId() {
         return this.endpointId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final String namespaceId;
+      private final String namespaceId;
 
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -122,7 +122,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointId, location, namespaceId, project, serviceId);
         }

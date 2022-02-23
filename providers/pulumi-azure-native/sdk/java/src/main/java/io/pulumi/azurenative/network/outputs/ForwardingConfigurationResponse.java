@@ -141,7 +141,6 @@ public final class ForwardingConfigurationResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ForwardingConfigurationResponse build() {
             return new ForwardingConfigurationResponse(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }

@@ -446,7 +446,6 @@ public final class ListTaskDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListTaskDetailsResult build() {
             return new ListTaskDetailsResult(agentConfiguration, agentPoolName, creationDate, credentials, id, identity, isSystemTask, location, logTemplate, name, platform, provisioningState, status, step, systemData, tags, timeout, trigger, type);
         }

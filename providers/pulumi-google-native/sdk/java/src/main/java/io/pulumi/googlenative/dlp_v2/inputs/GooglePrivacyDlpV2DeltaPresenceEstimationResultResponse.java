@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
      * 
      */
     @InputImport(name="deltaPresenceEstimationHistogram", required=true)
-    private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
+      private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> getDeltaPresenceEstimationHistogram() {
         return this.deltaPresenceEstimationHistogram;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
             this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(deltaPresenceEstimationHistogram);
         }

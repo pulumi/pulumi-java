@@ -74,7 +74,6 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public ComputeInstanceConnectivityEndpointsResponse build() {
             return new ComputeInstanceConnectivityEndpointsResponse(privateIpAddress, publicIpAddress);
         }

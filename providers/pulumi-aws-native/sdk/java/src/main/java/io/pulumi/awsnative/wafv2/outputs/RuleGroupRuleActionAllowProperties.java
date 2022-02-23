@@ -46,7 +46,6 @@ public final class RuleGroupRuleActionAllowProperties {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionAllowProperties build() {
             return new RuleGroupRuleActionAllowProperties(customRequestHandling);
         }

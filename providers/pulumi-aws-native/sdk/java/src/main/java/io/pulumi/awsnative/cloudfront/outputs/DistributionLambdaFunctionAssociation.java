@@ -74,7 +74,6 @@ public final class DistributionLambdaFunctionAssociation {
             this.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }
-
         public DistributionLambdaFunctionAssociation build() {
             return new DistributionLambdaFunctionAssociation(eventType, includeBody, lambdaFunctionARN);
         }

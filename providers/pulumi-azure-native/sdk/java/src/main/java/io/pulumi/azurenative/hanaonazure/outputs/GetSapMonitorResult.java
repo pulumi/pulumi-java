@@ -309,7 +309,6 @@ public final class GetSapMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSapMonitorResult build() {
             return new GetSapMonitorResult(enableCustomerAnalytics, id, location, logAnalyticsWorkspaceArmId, logAnalyticsWorkspaceId, logAnalyticsWorkspaceSharedKey, managedResourceGroupName, monitorSubnet, name, provisioningState, sapMonitorCollectorVersion, tags, type);
         }

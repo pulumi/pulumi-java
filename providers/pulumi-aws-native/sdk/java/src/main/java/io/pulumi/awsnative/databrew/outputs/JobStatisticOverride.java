@@ -59,7 +59,6 @@ public final class JobStatisticOverride {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public JobStatisticOverride build() {
             return new JobStatisticOverride(parameters, statistic);
         }

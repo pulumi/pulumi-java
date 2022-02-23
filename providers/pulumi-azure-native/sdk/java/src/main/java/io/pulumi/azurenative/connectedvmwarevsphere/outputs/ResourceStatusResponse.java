@@ -158,7 +158,6 @@ public final class ResourceStatusResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceStatusResponse build() {
             return new ResourceStatusResponse(lastUpdatedAt, message, reason, severity, status, type);
         }

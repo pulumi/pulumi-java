@@ -26,7 +26,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+        private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -37,7 +37,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -48,7 +48,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerOperation")
-    private final @Nullable Input<Either<String,TriggerOperation>> triggerOperation;
+        private final @Nullable Input<Either<String,TriggerOperation>> triggerOperation;
 
     public Input<Either<String,TriggerOperation>> getTriggerOperation() {
         return this.triggerOperation == null ? Input.empty() : this.triggerOperation;
@@ -59,7 +59,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerType")
-    private final @Nullable Input<Either<String,TriggerType>> triggerType;
+        private final @Nullable Input<Either<String,TriggerType>> triggerType;
 
     public Input<Either<String,TriggerType>> getTriggerType() {
         return this.triggerType == null ? Input.empty() : this.triggerType;
@@ -148,7 +148,6 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
             this.triggerType = Input.ofNullable(triggerType);
             return this;
         }
-
         public SqlTriggerResourceArgs build() {
             return new SqlTriggerResourceArgs(body, id, triggerOperation, triggerType);
         }

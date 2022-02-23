@@ -76,7 +76,6 @@ public final class PrivilegeResponseResource {
             this.db = db;
             return this;
         }
-
         public PrivilegeResponseResource build() {
             return new PrivilegeResponseResource(collection, db);
         }

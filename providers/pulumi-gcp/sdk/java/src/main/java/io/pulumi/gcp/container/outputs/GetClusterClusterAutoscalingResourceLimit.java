@@ -72,7 +72,6 @@ public final class GetClusterClusterAutoscalingResourceLimit {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetClusterClusterAutoscalingResourceLimit build() {
             return new GetClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
         }

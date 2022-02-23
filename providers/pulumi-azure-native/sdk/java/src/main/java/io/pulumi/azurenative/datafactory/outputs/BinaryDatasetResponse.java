@@ -266,7 +266,6 @@ public final class BinaryDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinaryDatasetResponse build() {
             return new BinaryDatasetResponse(annotations, compression, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

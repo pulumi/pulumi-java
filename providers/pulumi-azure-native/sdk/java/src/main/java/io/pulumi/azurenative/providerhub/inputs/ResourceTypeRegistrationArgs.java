@@ -15,7 +15,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
     @InputImport(name="properties")
-    private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
+        private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
 
     public Input<ResourceTypeRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -58,7 +58,6 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public ResourceTypeRegistrationArgs build() {
             return new ResourceTypeRegistrationArgs(properties);
         }

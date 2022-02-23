@@ -26,7 +26,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automaticRestart", required=true)
-    private final Boolean automaticRestart;
+      private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
@@ -37,7 +37,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityDomain", required=true)
-    private final Integer availabilityDomain;
+      private final Integer availabilityDomain;
 
     public Integer getAvailabilityDomain() {
         return this.availabilityDomain;
@@ -48,7 +48,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="currentCpus", required=true)
-    private final Integer currentCpus;
+      private final Integer currentCpus;
 
     public Integer getCurrentCpus() {
         return this.currentCpus;
@@ -59,7 +59,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="currentMemoryMb", required=true)
-    private final String currentMemoryMb;
+      private final String currentMemoryMb;
 
     public String getCurrentMemoryMb() {
         return this.currentMemoryMb;
@@ -70,7 +70,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostErrorTimeoutSeconds", required=true)
-    private final Integer hostErrorTimeoutSeconds;
+      private final Integer hostErrorTimeoutSeconds;
 
     public Integer getHostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
@@ -81,7 +81,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceTerminationAction", required=true)
-    private final String instanceTerminationAction;
+      private final String instanceTerminationAction;
 
     public String getInstanceTerminationAction() {
         return this.instanceTerminationAction;
@@ -92,7 +92,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latencyTolerant", required=true)
-    private final Boolean latencyTolerant;
+      private final Boolean latencyTolerant;
 
     public Boolean getLatencyTolerant() {
         return this.latencyTolerant;
@@ -103,7 +103,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationHint", required=true)
-    private final String locationHint;
+      private final String locationHint;
 
     public String getLocationHint() {
         return this.locationHint;
@@ -114,7 +114,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maintenanceFreezeDurationHours", required=true)
-    private final Integer maintenanceFreezeDurationHours;
+      private final Integer maintenanceFreezeDurationHours;
 
     public Integer getMaintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
@@ -125,7 +125,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maintenanceInterval", required=true)
-    private final String maintenanceInterval;
+      private final String maintenanceInterval;
 
     public String getMaintenanceInterval() {
         return this.maintenanceInterval;
@@ -136,7 +136,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxRunDuration", required=true)
-    private final DurationResponse maxRunDuration;
+      private final DurationResponse maxRunDuration;
 
     public DurationResponse getMaxRunDuration() {
         return this.maxRunDuration;
@@ -147,7 +147,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minNodeCpus", required=true)
-    private final Integer minNodeCpus;
+      private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
@@ -158,7 +158,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodeAffinities", required=true)
-    private final List<SchedulingNodeAffinityResponse> nodeAffinities;
+      private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
         return this.nodeAffinities;
@@ -169,7 +169,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="onHostMaintenance", required=true)
-    private final String onHostMaintenance;
+      private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
@@ -180,7 +180,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preemptible", required=true)
-    private final Boolean preemptible;
+      private final Boolean preemptible;
 
     public Boolean getPreemptible() {
         return this.preemptible;
@@ -191,7 +191,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningModel", required=true)
-    private final String provisioningModel;
+      private final String provisioningModel;
 
     public String getProvisioningModel() {
         return this.provisioningModel;
@@ -202,7 +202,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="terminationTime", required=true)
-    private final String terminationTime;
+      private final String terminationTime;
 
     public String getTerminationTime() {
         return this.terminationTime;
@@ -401,7 +401,6 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
             this.terminationTime = Objects.requireNonNull(terminationTime);
             return this;
         }
-
         public SchedulingResponse build() {
             return new SchedulingResponse(automaticRestart, availabilityDomain, currentCpus, currentMemoryMb, hostErrorTimeoutSeconds, instanceTerminationAction, latencyTolerant, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, maxRunDuration, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel, terminationTime);
         }

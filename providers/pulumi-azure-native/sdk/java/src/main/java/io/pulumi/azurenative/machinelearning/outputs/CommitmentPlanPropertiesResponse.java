@@ -246,7 +246,6 @@ public final class CommitmentPlanPropertiesResponse {
             this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
             return this;
         }
-
         public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(chargeForOverage, chargeForPlan, creationDate, includedQuantities, maxAssociationLimit, maxCapacityLimit, minCapacityLimit, planMeter, refillFrequencyInDays, suspendPlanOnOverage);
         }

@@ -44,7 +44,6 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }
-
         public SecurityPolicyDdosProtectionConfigResponse build() {
             return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
         }

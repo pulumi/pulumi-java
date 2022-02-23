@@ -25,7 +25,7 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,NatGatewaySkuName>> name;
+        private final @Nullable Input<Either<String,NatGatewaySkuName>> name;
 
     public Input<Either<String,NatGatewaySkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,6 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public NatGatewaySkuArgs build() {
             return new NatGatewaySkuArgs(name);
         }

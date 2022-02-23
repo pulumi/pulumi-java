@@ -30,7 +30,6 @@ public final class SuppressionResponse {
         public Builder(SuppressionResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SuppressionResponse build() {
             return new SuppressionResponse();
         }

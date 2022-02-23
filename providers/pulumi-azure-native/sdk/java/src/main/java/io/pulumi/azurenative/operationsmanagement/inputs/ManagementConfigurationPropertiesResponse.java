@@ -26,7 +26,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+        private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -37,7 +37,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<ArmTemplateParameterResponse> parameters;
+        private final List<ArmTemplateParameterResponse> parameters;
 
     public List<ArmTemplateParameterResponse> getParameters() {
         return this.parameters;
@@ -48,7 +48,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final String parentResourceType;
+        private final String parentResourceType;
 
     public String getParentResourceType() {
         return this.parentResourceType;
@@ -59,7 +59,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -70,7 +70,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="template", required=true)
-    private final Object template;
+        private final Object template;
 
     public Object getTemplate() {
         return this.template;
@@ -149,7 +149,6 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public ManagementConfigurationPropertiesResponse build() {
             return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
         }

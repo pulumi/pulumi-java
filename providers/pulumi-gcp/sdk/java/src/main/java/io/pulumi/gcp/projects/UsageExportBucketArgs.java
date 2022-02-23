@@ -19,7 +19,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -41,7 +41,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,6 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public UsageExportBucketArgs build() {
             return new UsageExportBucketArgs(bucketName, prefix, project);
         }

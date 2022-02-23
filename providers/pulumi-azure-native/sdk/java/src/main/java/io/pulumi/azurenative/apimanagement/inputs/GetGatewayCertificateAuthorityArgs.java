@@ -17,7 +17,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateId", required=true)
-    private final String certificateId;
+        private final String certificateId;
 
     public String getCertificateId() {
         return this.certificateId;
@@ -28,7 +28,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final String gatewayId;
+        private final String gatewayId;
 
     public String getGatewayId() {
         return this.gatewayId;
@@ -39,7 +39,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -119,7 +119,6 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetGatewayCertificateAuthorityArgs build() {
             return new GetGatewayCertificateAuthorityArgs(certificateId, gatewayId, resourceGroupName, serviceName);
         }

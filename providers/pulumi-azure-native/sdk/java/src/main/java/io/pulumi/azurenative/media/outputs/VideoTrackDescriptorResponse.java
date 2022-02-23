@@ -54,7 +54,6 @@ public final class VideoTrackDescriptorResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public VideoTrackDescriptorResponse build() {
             return new VideoTrackDescriptorResponse(odataType);
         }

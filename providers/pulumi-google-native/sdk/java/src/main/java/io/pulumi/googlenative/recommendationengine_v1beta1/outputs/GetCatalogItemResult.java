@@ -183,7 +183,6 @@ public final class GetCatalogItemResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetCatalogItemResult build() {
             return new GetCatalogItemResult(categoryHierarchies, description, itemAttributes, itemGroupId, productMetadata, tags, title);
         }

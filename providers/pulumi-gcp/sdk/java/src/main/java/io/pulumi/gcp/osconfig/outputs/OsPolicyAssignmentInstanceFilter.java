@@ -122,7 +122,6 @@ public final class OsPolicyAssignmentInstanceFilter {
             this.inventories = inventories;
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilter build() {
             return new OsPolicyAssignmentInstanceFilter(all, exclusionLabels, inclusionLabels, inventories);
         }

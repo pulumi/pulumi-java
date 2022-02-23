@@ -21,7 +21,7 @@ public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testProcessDuration", required=true)
-    private final DurationResponse testProcessDuration;
+      private final DurationResponse testProcessDuration;
 
     public DurationResponse getTestProcessDuration() {
         return this.testProcessDuration;
@@ -59,7 +59,6 @@ public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
             this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
             return this;
         }
-
         public TestTimingResponse build() {
             return new TestTimingResponse(testProcessDuration);
         }

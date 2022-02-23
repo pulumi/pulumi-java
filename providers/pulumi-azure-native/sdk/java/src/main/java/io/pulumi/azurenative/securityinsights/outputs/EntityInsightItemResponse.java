@@ -121,7 +121,6 @@ public final class EntityInsightItemResponse {
             this.tableQueryResults = tableQueryResults;
             return this;
         }
-
         public EntityInsightItemResponse build() {
             return new EntityInsightItemResponse(chartQueryResults, queryId, queryTimeInterval, tableQueryResults);
         }

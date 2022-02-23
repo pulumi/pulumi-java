@@ -99,7 +99,6 @@ public final class TransferJobSchedule {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
-
         public TransferJobSchedule build() {
             return new TransferJobSchedule(scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

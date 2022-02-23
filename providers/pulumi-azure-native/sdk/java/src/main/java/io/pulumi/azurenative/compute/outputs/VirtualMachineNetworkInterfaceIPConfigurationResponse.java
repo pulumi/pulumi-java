@@ -206,7 +206,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }

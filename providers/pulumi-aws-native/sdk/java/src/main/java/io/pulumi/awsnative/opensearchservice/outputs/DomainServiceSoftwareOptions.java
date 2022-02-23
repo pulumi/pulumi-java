@@ -139,7 +139,6 @@ public final class DomainServiceSoftwareOptions {
             this.updateStatus = updateStatus;
             return this;
         }
-
         public DomainServiceSoftwareOptions build() {
             return new DomainServiceSoftwareOptions(automatedUpdateDate, cancellable, currentVersion, description, newVersion, optionalDeployment, updateAvailable, updateStatus);
         }

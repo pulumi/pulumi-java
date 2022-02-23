@@ -313,7 +313,6 @@ public final class GetNetworkSecurityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkSecurityGroupResult build() {
             return new GetNetworkSecurityGroupResult(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
         }

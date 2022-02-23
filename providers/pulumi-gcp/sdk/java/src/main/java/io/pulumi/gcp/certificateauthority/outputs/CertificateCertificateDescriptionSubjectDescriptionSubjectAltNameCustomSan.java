@@ -94,7 +94,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.value = value;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(critical, obectIds, value);
         }

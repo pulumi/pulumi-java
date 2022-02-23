@@ -95,7 +95,6 @@ public final class RangePartitioningRangeResponse {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public RangePartitioningRangeResponse build() {
             return new RangePartitioningRangeResponse(end, interval, start);
         }

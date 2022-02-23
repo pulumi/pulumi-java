@@ -53,7 +53,6 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesPolicyId build() {
             return new CertificateTemplatePredefinedValuesPolicyId(objectIdPaths);
         }

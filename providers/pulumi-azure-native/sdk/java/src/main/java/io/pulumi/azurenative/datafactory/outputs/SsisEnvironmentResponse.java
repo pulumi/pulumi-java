@@ -165,7 +165,6 @@ public final class SsisEnvironmentResponse {
             this.variables = variables;
             return this;
         }
-
         public SsisEnvironmentResponse build() {
             return new SsisEnvironmentResponse(description, folderId, id, name, type, variables);
         }

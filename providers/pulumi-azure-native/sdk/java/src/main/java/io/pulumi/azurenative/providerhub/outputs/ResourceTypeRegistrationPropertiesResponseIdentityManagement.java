@@ -60,7 +60,6 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
             this.type = type;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseIdentityManagement build() {
             return new ResourceTypeRegistrationPropertiesResponseIdentityManagement(applicationId, type);
         }

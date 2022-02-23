@@ -46,7 +46,6 @@ public final class EntryBigqueryTableSpecTableSpec {
             this.groupedEntry = groupedEntry;
             return this;
         }
-
         public EntryBigqueryTableSpecTableSpec build() {
             return new EntryBigqueryTableSpecTableSpec(groupedEntry);
         }

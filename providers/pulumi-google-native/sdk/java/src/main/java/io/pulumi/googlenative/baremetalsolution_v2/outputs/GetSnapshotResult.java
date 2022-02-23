@@ -137,7 +137,6 @@ public final class GetSnapshotResult {
             this.storageVolume = Objects.requireNonNull(storageVolume);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(createTime, description, name, sizeBytes, storageVolume);
         }

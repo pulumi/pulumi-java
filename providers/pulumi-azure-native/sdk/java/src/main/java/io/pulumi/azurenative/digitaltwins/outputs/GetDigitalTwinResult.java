@@ -282,7 +282,6 @@ public final class GetDigitalTwinResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDigitalTwinResult build() {
             return new GetDigitalTwinResult(createdTime, hostName, id, identity, lastUpdatedTime, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }

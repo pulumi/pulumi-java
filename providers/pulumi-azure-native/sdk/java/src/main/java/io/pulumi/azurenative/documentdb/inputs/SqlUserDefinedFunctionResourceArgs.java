@@ -23,7 +23,7 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+        private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -34,7 +34,7 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -93,7 +93,6 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public SqlUserDefinedFunctionResourceArgs build() {
             return new SqlUserDefinedFunctionResourceArgs(body, id);
         }

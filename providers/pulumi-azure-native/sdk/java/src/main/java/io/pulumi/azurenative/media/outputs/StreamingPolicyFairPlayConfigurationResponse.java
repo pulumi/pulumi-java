@@ -77,7 +77,6 @@ public final class StreamingPolicyFairPlayConfigurationResponse {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public StreamingPolicyFairPlayConfigurationResponse build() {
             return new StreamingPolicyFairPlayConfigurationResponse(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
         }

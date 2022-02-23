@@ -21,7 +21,7 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -32,7 +32,7 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -81,7 +81,6 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ForwardInfoResponse build() {
             return new ForwardInfoResponse(resourceUri, target);
         }

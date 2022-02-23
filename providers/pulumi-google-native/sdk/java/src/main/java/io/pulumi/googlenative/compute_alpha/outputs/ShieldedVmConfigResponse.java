@@ -95,7 +95,6 @@ public final class ShieldedVmConfigResponse {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedVmConfigResponse build() {
             return new ShieldedVmConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

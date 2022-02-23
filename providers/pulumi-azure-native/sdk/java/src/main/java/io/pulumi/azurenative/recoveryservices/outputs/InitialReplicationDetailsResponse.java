@@ -76,7 +76,6 @@ public final class InitialReplicationDetailsResponse {
             this.initialReplicationType = initialReplicationType;
             return this;
         }
-
         public InitialReplicationDetailsResponse build() {
             return new InitialReplicationDetailsResponse(initialReplicationProgressPercentage, initialReplicationType);
         }

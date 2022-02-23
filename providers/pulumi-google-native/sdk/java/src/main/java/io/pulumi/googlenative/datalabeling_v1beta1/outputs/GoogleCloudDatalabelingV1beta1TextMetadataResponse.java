@@ -52,7 +52,6 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextMetadataResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextMetadataResponse(languageCode);
         }

@@ -126,7 +126,6 @@ public final class IndexJwtTokenTypeConfiguration {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }
-
         public IndexJwtTokenTypeConfiguration build() {
             return new IndexJwtTokenTypeConfiguration(claimRegex, groupAttributeField, issuer, keyLocation, secretManagerArn, uRL, userNameAttributeField);
         }

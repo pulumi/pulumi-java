@@ -46,7 +46,6 @@ public final class ResponsePlanNotificationTargetItem {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public ResponsePlanNotificationTargetItem build() {
             return new ResponsePlanNotificationTargetItem(snsTopicArn);
         }

@@ -343,7 +343,6 @@ public final class PodStatus {
             this.startTime = startTime;
             return this;
         }
-
         public PodStatus build() {
             return new PodStatus(conditions, containerStatuses, ephemeralContainerStatuses, hostIP, initContainerStatuses, message, nominatedNodeName, phase, podIP, podIPs, qosClass, reason, startTime);
         }

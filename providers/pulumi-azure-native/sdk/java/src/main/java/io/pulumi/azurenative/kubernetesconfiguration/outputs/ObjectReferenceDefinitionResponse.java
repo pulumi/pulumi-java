@@ -76,7 +76,6 @@ public final class ObjectReferenceDefinitionResponse {
             this.namespace = namespace;
             return this;
         }
-
         public ObjectReferenceDefinitionResponse build() {
             return new ObjectReferenceDefinitionResponse(name, namespace);
         }

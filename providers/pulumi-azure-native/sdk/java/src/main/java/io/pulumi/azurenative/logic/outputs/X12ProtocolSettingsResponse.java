@@ -297,7 +297,6 @@ public final class X12ProtocolSettingsResponse {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-
         public X12ProtocolSettingsResponse build() {
             return new X12ProtocolSettingsResponse(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
         }

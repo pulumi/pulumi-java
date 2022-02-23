@@ -181,7 +181,6 @@ public final class ResourceAttributes {
             this.version = version;
             return this;
         }
-
         public ResourceAttributes build() {
             return new ResourceAttributes(group, name, namespace, resource, subresource, verb, version);
         }

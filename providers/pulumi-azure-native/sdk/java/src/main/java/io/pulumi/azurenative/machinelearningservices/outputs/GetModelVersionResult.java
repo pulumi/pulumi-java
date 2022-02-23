@@ -139,7 +139,6 @@ public final class GetModelVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetModelVersionResult build() {
             return new GetModelVersionResult(id, name, properties, systemData, type);
         }

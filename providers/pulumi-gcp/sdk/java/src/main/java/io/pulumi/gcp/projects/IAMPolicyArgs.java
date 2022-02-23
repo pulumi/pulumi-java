@@ -20,7 +20,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -32,7 +32,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -91,7 +91,6 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
-
         public IAMPolicyArgs build() {
             return new IAMPolicyArgs(policyData, project);
         }

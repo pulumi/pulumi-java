@@ -294,7 +294,6 @@ public final class GetSecurityConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityConnectorResult build() {
             return new GetSecurityConnectorResult(cloudName, etag, hierarchyIdentifier, id, kind, location, name, offerings, organizationalData, systemData, tags, type);
         }

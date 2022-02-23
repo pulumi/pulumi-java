@@ -181,7 +181,6 @@ public final class GetApiReleaseResult {
             this.updatedDateTime = Objects.requireNonNull(updatedDateTime);
             return this;
         }
-
         public GetApiReleaseResult build() {
             return new GetApiReleaseResult(apiId, createdDateTime, id, name, notes, type, updatedDateTime);
         }

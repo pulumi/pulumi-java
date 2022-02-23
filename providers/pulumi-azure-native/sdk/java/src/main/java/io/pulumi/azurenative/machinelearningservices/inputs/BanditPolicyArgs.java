@@ -25,7 +25,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delayEvaluation")
-    private final @Nullable Input<Integer> delayEvaluation;
+        private final @Nullable Input<Integer> delayEvaluation;
 
     public Input<Integer> getDelayEvaluation() {
         return this.delayEvaluation == null ? Input.empty() : this.delayEvaluation;
@@ -36,7 +36,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable Input<Integer> evaluationInterval;
+        private final @Nullable Input<Integer> evaluationInterval;
 
     public Input<Integer> getEvaluationInterval() {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
@@ -47,7 +47,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType", required=true)
-    private final Input<String> policyType;
+        private final Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType;
@@ -58,7 +58,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slackAmount")
-    private final @Nullable Input<Double> slackAmount;
+        private final @Nullable Input<Double> slackAmount;
 
     public Input<Double> getSlackAmount() {
         return this.slackAmount == null ? Input.empty() : this.slackAmount;
@@ -69,7 +69,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slackFactor")
-    private final @Nullable Input<Double> slackFactor;
+        private final @Nullable Input<Double> slackFactor;
 
     public Input<Double> getSlackFactor() {
         return this.slackFactor == null ? Input.empty() : this.slackFactor;
@@ -173,7 +173,6 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.slackFactor = Input.ofNullable(slackFactor);
             return this;
         }
-
         public BanditPolicyArgs build() {
             return new BanditPolicyArgs(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }

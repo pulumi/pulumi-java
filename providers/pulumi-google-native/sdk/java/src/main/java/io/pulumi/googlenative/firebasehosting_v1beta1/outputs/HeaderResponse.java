@@ -96,7 +96,6 @@ public final class HeaderResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public HeaderResponse build() {
             return new HeaderResponse(glob, headers, regex);
         }

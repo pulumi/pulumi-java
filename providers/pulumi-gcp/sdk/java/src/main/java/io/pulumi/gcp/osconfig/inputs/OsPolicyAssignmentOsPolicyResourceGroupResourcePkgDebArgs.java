@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * 
      */
     @InputImport(name="pullDeps")
-    private final @Nullable Input<Boolean> pullDeps;
+        private final @Nullable Input<Boolean> pullDeps;
 
     public Input<Boolean> getPullDeps() {
         return this.pullDeps == null ? Input.empty() : this.pullDeps;
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
+        private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> getSource() {
         return this.source;
@@ -90,7 +90,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(pullDeps, source);
         }

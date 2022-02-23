@@ -76,7 +76,6 @@ public final class Hl7TypesConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7TypesConfigResponse build() {
             return new Hl7TypesConfigResponse(type, version);
         }

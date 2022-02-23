@@ -265,7 +265,6 @@ public final class GetDatabaseAdvisorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseAdvisorResult build() {
             return new GetDatabaseAdvisorResult(advisorStatus, autoExecuteStatus, autoExecuteStatusInheritedFrom, id, kind, lastChecked, location, name, recommendationsStatus, recommendedActions, type);
         }

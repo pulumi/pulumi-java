@@ -117,7 +117,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(hostRewrite, pathPrefixRewrite, pathTemplateRewrite);
         }

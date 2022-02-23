@@ -22,7 +22,7 @@ public final class RevisionTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final ObjectMetaResponse metadata;
+      private final ObjectMetaResponse metadata;
 
     public ObjectMetaResponse getMetadata() {
         return this.metadata;
@@ -33,7 +33,7 @@ public final class RevisionTemplateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="spec", required=true)
-    private final RevisionSpecResponse spec;
+      private final RevisionSpecResponse spec;
 
     public RevisionSpecResponse getSpec() {
         return this.spec;
@@ -82,7 +82,6 @@ public final class RevisionTemplateResponse extends io.pulumi.resources.InvokeAr
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public RevisionTemplateResponse build() {
             return new RevisionTemplateResponse(metadata, spec);
         }

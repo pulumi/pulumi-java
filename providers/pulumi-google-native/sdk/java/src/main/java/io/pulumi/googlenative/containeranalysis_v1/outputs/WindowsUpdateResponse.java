@@ -182,7 +182,6 @@ public final class WindowsUpdateResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WindowsUpdateResponse build() {
             return new WindowsUpdateResponse(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }

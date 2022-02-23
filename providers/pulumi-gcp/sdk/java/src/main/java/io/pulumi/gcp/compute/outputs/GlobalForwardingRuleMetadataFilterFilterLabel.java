@@ -78,7 +78,6 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GlobalForwardingRuleMetadataFilterFilterLabel build() {
             return new GlobalForwardingRuleMetadataFilterFilterLabel(name, value);
         }

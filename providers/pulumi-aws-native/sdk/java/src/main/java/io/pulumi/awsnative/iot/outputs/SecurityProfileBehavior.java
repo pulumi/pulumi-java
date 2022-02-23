@@ -126,7 +126,6 @@ public final class SecurityProfileBehavior {
             this.suppressAlerts = suppressAlerts;
             return this;
         }
-
         public SecurityProfileBehavior build() {
             return new SecurityProfileBehavior(criteria, metric, metricDimension, name, suppressAlerts);
         }

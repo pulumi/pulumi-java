@@ -75,7 +75,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(bestEffort, configurationData);
         }

@@ -233,7 +233,6 @@ public final class JsonSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public JsonSinkResponse build() {
             return new JsonSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

@@ -22,7 +22,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="containerPort", required=true)
-    private final Integer containerPort;
+      private final Integer containerPort;
 
     public Integer getContainerPort() {
         return this.containerPort;
@@ -33,7 +33,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -103,7 +103,6 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(containerPort, name, protocol);
         }

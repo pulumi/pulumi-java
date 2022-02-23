@@ -24,7 +24,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="documentationRootUrl", required=true)
-    private final String documentationRootUrl;
+      private final String documentationRootUrl;
 
     public String getDocumentationRootUrl() {
         return this.documentationRootUrl;
@@ -35,7 +35,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="overview", required=true)
-    private final String overview;
+      private final String overview;
 
     public String getOverview() {
         return this.overview;
@@ -46,7 +46,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pages", required=true)
-    private final List<PageResponse> pages;
+      private final List<PageResponse> pages;
 
     public List<PageResponse> getPages() {
         return this.pages;
@@ -57,7 +57,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<DocumentationRuleResponse> rules;
+      private final List<DocumentationRuleResponse> rules;
 
     public List<DocumentationRuleResponse> getRules() {
         return this.rules;
@@ -68,7 +68,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serviceRootUrl", required=true)
-    private final String serviceRootUrl;
+      private final String serviceRootUrl;
 
     public String getServiceRootUrl() {
         return this.serviceRootUrl;
@@ -79,7 +79,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="summary", required=true)
-    private final String summary;
+      private final String summary;
 
     public String getSummary() {
         return this.summary;
@@ -168,7 +168,6 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public DocumentationResponse build() {
             return new DocumentationResponse(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
         }

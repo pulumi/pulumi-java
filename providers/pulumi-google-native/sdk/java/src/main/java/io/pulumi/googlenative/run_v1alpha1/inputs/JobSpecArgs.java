@@ -25,7 +25,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDeadlineSeconds")
-    private final @Nullable Input<String> activeDeadlineSeconds;
+      private final @Nullable Input<String> activeDeadlineSeconds;
 
     public Input<String> getActiveDeadlineSeconds() {
         return this.activeDeadlineSeconds == null ? Input.empty() : this.activeDeadlineSeconds;
@@ -36,7 +36,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backoffLimit")
-    private final @Nullable Input<Integer> backoffLimit;
+      private final @Nullable Input<Integer> backoffLimit;
 
     public Input<Integer> getBackoffLimit() {
         return this.backoffLimit == null ? Input.empty() : this.backoffLimit;
@@ -47,7 +47,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completions")
-    private final @Nullable Input<Integer> completions;
+      private final @Nullable Input<Integer> completions;
 
     public Input<Integer> getCompletions() {
         return this.completions == null ? Input.empty() : this.completions;
@@ -58,7 +58,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parallelism")
-    private final @Nullable Input<Integer> parallelism;
+      private final @Nullable Input<Integer> parallelism;
 
     public Input<Integer> getParallelism() {
         return this.parallelism == null ? Input.empty() : this.parallelism;
@@ -69,7 +69,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<InstanceTemplateSpecArgs> template;
+      private final @Nullable Input<InstanceTemplateSpecArgs> template;
 
     public Input<InstanceTemplateSpecArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -80,7 +80,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttlSecondsAfterFinished")
-    private final @Nullable Input<Integer> ttlSecondsAfterFinished;
+      private final @Nullable Input<Integer> ttlSecondsAfterFinished;
 
     public Input<Integer> getTtlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished == null ? Input.empty() : this.ttlSecondsAfterFinished;
@@ -199,7 +199,6 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.ttlSecondsAfterFinished = Input.ofNullable(ttlSecondsAfterFinished);
             return this;
         }
-
         public JobSpecArgs build() {
             return new JobSpecArgs(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
         }

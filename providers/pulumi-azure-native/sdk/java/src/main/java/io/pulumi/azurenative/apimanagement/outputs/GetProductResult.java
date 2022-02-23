@@ -246,7 +246,6 @@ public final class GetProductResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProductResult build() {
             return new GetProductResult(approvalRequired, description, displayName, id, name, state, subscriptionRequired, subscriptionsLimit, terms, type);
         }

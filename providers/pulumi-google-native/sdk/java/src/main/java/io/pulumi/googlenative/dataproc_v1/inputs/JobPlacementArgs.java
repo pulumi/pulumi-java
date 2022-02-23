@@ -24,7 +24,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterLabels")
-    private final @Nullable Input<Map<String,String>> clusterLabels;
+      private final @Nullable Input<Map<String,String>> clusterLabels;
 
     public Input<Map<String,String>> getClusterLabels() {
         return this.clusterLabels == null ? Input.empty() : this.clusterLabels;
@@ -35,7 +35,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -94,7 +94,6 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public JobPlacementArgs build() {
             return new JobPlacementArgs(clusterLabels, clusterName);
         }

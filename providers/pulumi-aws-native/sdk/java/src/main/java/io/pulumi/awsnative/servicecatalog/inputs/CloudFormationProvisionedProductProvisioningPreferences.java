@@ -18,49 +18,49 @@ public final class CloudFormationProvisionedProductProvisioningPreferences exten
     public static final CloudFormationProvisionedProductProvisioningPreferences Empty = new CloudFormationProvisionedProductProvisioningPreferences();
 
     @InputImport(name="stackSetAccounts")
-    private final @Nullable List<String> stackSetAccounts;
+        private final @Nullable List<String> stackSetAccounts;
 
     public List<String> getStackSetAccounts() {
         return this.stackSetAccounts == null ? List.of() : this.stackSetAccounts;
     }
 
     @InputImport(name="stackSetFailureToleranceCount")
-    private final @Nullable Integer stackSetFailureToleranceCount;
+        private final @Nullable Integer stackSetFailureToleranceCount;
 
     public Optional<Integer> getStackSetFailureToleranceCount() {
         return this.stackSetFailureToleranceCount == null ? Optional.empty() : Optional.ofNullable(this.stackSetFailureToleranceCount);
     }
 
     @InputImport(name="stackSetFailureTolerancePercentage")
-    private final @Nullable Integer stackSetFailureTolerancePercentage;
+        private final @Nullable Integer stackSetFailureTolerancePercentage;
 
     public Optional<Integer> getStackSetFailureTolerancePercentage() {
         return this.stackSetFailureTolerancePercentage == null ? Optional.empty() : Optional.ofNullable(this.stackSetFailureTolerancePercentage);
     }
 
     @InputImport(name="stackSetMaxConcurrencyCount")
-    private final @Nullable Integer stackSetMaxConcurrencyCount;
+        private final @Nullable Integer stackSetMaxConcurrencyCount;
 
     public Optional<Integer> getStackSetMaxConcurrencyCount() {
         return this.stackSetMaxConcurrencyCount == null ? Optional.empty() : Optional.ofNullable(this.stackSetMaxConcurrencyCount);
     }
 
     @InputImport(name="stackSetMaxConcurrencyPercentage")
-    private final @Nullable Integer stackSetMaxConcurrencyPercentage;
+        private final @Nullable Integer stackSetMaxConcurrencyPercentage;
 
     public Optional<Integer> getStackSetMaxConcurrencyPercentage() {
         return this.stackSetMaxConcurrencyPercentage == null ? Optional.empty() : Optional.ofNullable(this.stackSetMaxConcurrencyPercentage);
     }
 
     @InputImport(name="stackSetOperationType")
-    private final @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType;
+        private final @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType;
 
     public Optional<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
         return this.stackSetOperationType == null ? Optional.empty() : Optional.ofNullable(this.stackSetOperationType);
     }
 
     @InputImport(name="stackSetRegions")
-    private final @Nullable List<String> stackSetRegions;
+        private final @Nullable List<String> stackSetRegions;
 
     public List<String> getStackSetRegions() {
         return this.stackSetRegions == null ? List.of() : this.stackSetRegions;
@@ -159,7 +159,6 @@ public final class CloudFormationProvisionedProductProvisioningPreferences exten
             this.stackSetRegions = stackSetRegions;
             return this;
         }
-
         public CloudFormationProvisionedProductProvisioningPreferences build() {
             return new CloudFormationProvisionedProductProvisioningPreferences(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }

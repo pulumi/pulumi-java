@@ -54,7 +54,6 @@ public final class ThemeBorderStyle {
             this.show = show;
             return this;
         }
-
         public ThemeBorderStyle build() {
             return new ThemeBorderStyle(show);
         }

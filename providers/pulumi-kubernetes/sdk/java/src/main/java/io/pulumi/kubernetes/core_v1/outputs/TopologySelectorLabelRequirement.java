@@ -75,7 +75,6 @@ public final class TopologySelectorLabelRequirement {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public TopologySelectorLabelRequirement build() {
             return new TopologySelectorLabelRequirement(key, values);
         }

@@ -76,7 +76,6 @@ public final class ErrorResponseResponse {
             this.message = message;
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, message);
         }

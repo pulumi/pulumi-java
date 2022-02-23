@@ -110,7 +110,6 @@ public final class ContactListTopic {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public ContactListTopic build() {
             return new ContactListTopic(defaultSubscriptionStatus, description, displayName, topicName);
         }

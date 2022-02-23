@@ -35,7 +35,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiConfig")
-    private final @Nullable Input<FlexibleAppVersionApiConfigGetArgs> apiConfig;
+        private final @Nullable Input<FlexibleAppVersionApiConfigGetArgs> apiConfig;
 
     public Input<FlexibleAppVersionApiConfigGetArgs> getApiConfig() {
         return this.apiConfig == null ? Input.empty() : this.apiConfig;
@@ -47,7 +47,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automaticScaling")
-    private final @Nullable Input<FlexibleAppVersionAutomaticScalingGetArgs> automaticScaling;
+        private final @Nullable Input<FlexibleAppVersionAutomaticScalingGetArgs> automaticScaling;
 
     public Input<FlexibleAppVersionAutomaticScalingGetArgs> getAutomaticScaling() {
         return this.automaticScaling == null ? Input.empty() : this.automaticScaling;
@@ -58,7 +58,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="betaSettings")
-    private final @Nullable Input<Map<String,String>> betaSettings;
+        private final @Nullable Input<Map<String,String>> betaSettings;
 
     public Input<Map<String,String>> getBetaSettings() {
         return this.betaSettings == null ? Input.empty() : this.betaSettings;
@@ -70,7 +70,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultExpiration")
-    private final @Nullable Input<String> defaultExpiration;
+        private final @Nullable Input<String> defaultExpiration;
 
     public Input<String> getDefaultExpiration() {
         return this.defaultExpiration == null ? Input.empty() : this.defaultExpiration;
@@ -81,7 +81,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deleteServiceOnDestroy")
-    private final @Nullable Input<Boolean> deleteServiceOnDestroy;
+        private final @Nullable Input<Boolean> deleteServiceOnDestroy;
 
     public Input<Boolean> getDeleteServiceOnDestroy() {
         return this.deleteServiceOnDestroy == null ? Input.empty() : this.deleteServiceOnDestroy;
@@ -93,7 +93,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deployment")
-    private final @Nullable Input<FlexibleAppVersionDeploymentGetArgs> deployment;
+        private final @Nullable Input<FlexibleAppVersionDeploymentGetArgs> deployment;
 
     public Input<FlexibleAppVersionDeploymentGetArgs> getDeployment() {
         return this.deployment == null ? Input.empty() : this.deployment;
@@ -105,7 +105,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endpointsApiService")
-    private final @Nullable Input<FlexibleAppVersionEndpointsApiServiceGetArgs> endpointsApiService;
+        private final @Nullable Input<FlexibleAppVersionEndpointsApiServiceGetArgs> endpointsApiService;
 
     public Input<FlexibleAppVersionEndpointsApiServiceGetArgs> getEndpointsApiService() {
         return this.endpointsApiService == null ? Input.empty() : this.endpointsApiService;
@@ -117,7 +117,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entrypoint")
-    private final @Nullable Input<FlexibleAppVersionEntrypointGetArgs> entrypoint;
+        private final @Nullable Input<FlexibleAppVersionEntrypointGetArgs> entrypoint;
 
     public Input<FlexibleAppVersionEntrypointGetArgs> getEntrypoint() {
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
@@ -128,7 +128,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envVariables")
-    private final @Nullable Input<Map<String,String>> envVariables;
+        private final @Nullable Input<Map<String,String>> envVariables;
 
     public Input<Map<String,String>> getEnvVariables() {
         return this.envVariables == null ? Input.empty() : this.envVariables;
@@ -141,7 +141,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="handlers")
-    private final @Nullable Input<List<FlexibleAppVersionHandlerGetArgs>> handlers;
+        private final @Nullable Input<List<FlexibleAppVersionHandlerGetArgs>> handlers;
 
     public Input<List<FlexibleAppVersionHandlerGetArgs>> getHandlers() {
         return this.handlers == null ? Input.empty() : this.handlers;
@@ -153,7 +153,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inboundServices")
-    private final @Nullable Input<List<String>> inboundServices;
+        private final @Nullable Input<List<String>> inboundServices;
 
     public Input<List<String>> getInboundServices() {
         return this.inboundServices == null ? Input.empty() : this.inboundServices;
@@ -167,7 +167,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceClass")
-    private final @Nullable Input<String> instanceClass;
+        private final @Nullable Input<String> instanceClass;
 
     public Input<String> getInstanceClass() {
         return this.instanceClass == null ? Input.empty() : this.instanceClass;
@@ -179,7 +179,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="livenessCheck")
-    private final @Nullable Input<FlexibleAppVersionLivenessCheckGetArgs> livenessCheck;
+        private final @Nullable Input<FlexibleAppVersionLivenessCheckGetArgs> livenessCheck;
 
     public Input<FlexibleAppVersionLivenessCheckGetArgs> getLivenessCheck() {
         return this.livenessCheck == null ? Input.empty() : this.livenessCheck;
@@ -191,7 +191,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="manualScaling")
-    private final @Nullable Input<FlexibleAppVersionManualScalingGetArgs> manualScaling;
+        private final @Nullable Input<FlexibleAppVersionManualScalingGetArgs> manualScaling;
 
     public Input<FlexibleAppVersionManualScalingGetArgs> getManualScaling() {
         return this.manualScaling == null ? Input.empty() : this.manualScaling;
@@ -202,7 +202,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -214,7 +214,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<FlexibleAppVersionNetworkGetArgs> network;
+        private final @Nullable Input<FlexibleAppVersionNetworkGetArgs> network;
 
     public Input<FlexibleAppVersionNetworkGetArgs> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -225,7 +225,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="nobuildFilesRegex")
-    private final @Nullable Input<String> nobuildFilesRegex;
+        private final @Nullable Input<String> nobuildFilesRegex;
 
     public Input<String> getNobuildFilesRegex() {
         return this.nobuildFilesRegex == null ? Input.empty() : this.nobuildFilesRegex;
@@ -236,7 +236,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="noopOnDestroy")
-    private final @Nullable Input<Boolean> noopOnDestroy;
+        private final @Nullable Input<Boolean> noopOnDestroy;
 
     public Input<Boolean> getNoopOnDestroy() {
         return this.noopOnDestroy == null ? Input.empty() : this.noopOnDestroy;
@@ -248,7 +248,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -260,7 +260,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="readinessCheck")
-    private final @Nullable Input<FlexibleAppVersionReadinessCheckGetArgs> readinessCheck;
+        private final @Nullable Input<FlexibleAppVersionReadinessCheckGetArgs> readinessCheck;
 
     public Input<FlexibleAppVersionReadinessCheckGetArgs> getReadinessCheck() {
         return this.readinessCheck == null ? Input.empty() : this.readinessCheck;
@@ -272,7 +272,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<FlexibleAppVersionResourcesGetArgs> resources;
+        private final @Nullable Input<FlexibleAppVersionResourcesGetArgs> resources;
 
     public Input<FlexibleAppVersionResourcesGetArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -283,7 +283,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtime")
-    private final @Nullable Input<String> runtime;
+        private final @Nullable Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -296,7 +296,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeApiVersion")
-    private final @Nullable Input<String> runtimeApiVersion;
+        private final @Nullable Input<String> runtimeApiVersion;
 
     public Input<String> getRuntimeApiVersion() {
         return this.runtimeApiVersion == null ? Input.empty() : this.runtimeApiVersion;
@@ -307,7 +307,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeChannel")
-    private final @Nullable Input<String> runtimeChannel;
+        private final @Nullable Input<String> runtimeChannel;
 
     public Input<String> getRuntimeChannel() {
         return this.runtimeChannel == null ? Input.empty() : this.runtimeChannel;
@@ -318,7 +318,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeMainExecutablePath")
-    private final @Nullable Input<String> runtimeMainExecutablePath;
+        private final @Nullable Input<String> runtimeMainExecutablePath;
 
     public Input<String> getRuntimeMainExecutablePath() {
         return this.runtimeMainExecutablePath == null ? Input.empty() : this.runtimeMainExecutablePath;
@@ -329,7 +329,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -342,7 +342,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="servingStatus")
-    private final @Nullable Input<String> servingStatus;
+        private final @Nullable Input<String> servingStatus;
 
     public Input<String> getServingStatus() {
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
@@ -354,7 +354,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+        private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -366,7 +366,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpcAccessConnector")
-    private final @Nullable Input<FlexibleAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+        private final @Nullable Input<FlexibleAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
     public Input<FlexibleAppVersionVpcAccessConnectorGetArgs> getVpcAccessConnector() {
         return this.vpcAccessConnector == null ? Input.empty() : this.vpcAccessConnector;
@@ -830,7 +830,6 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
             this.vpcAccessConnector = Input.ofNullable(vpcAccessConnector);
             return this;
         }
-
         public FlexibleAppVersionState build() {
             return new FlexibleAppVersionState(apiConfig, automaticScaling, betaSettings, defaultExpiration, deleteServiceOnDestroy, deployment, endpointsApiService, entrypoint, envVariables, handlers, inboundServices, instanceClass, livenessCheck, manualScaling, name, network, nobuildFilesRegex, noopOnDestroy, project, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, service, servingStatus, versionId, vpcAccessConnector);
         }

@@ -75,7 +75,6 @@ public final class DistributionCutResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public DistributionCutResponse build() {
             return new DistributionCutResponse(distributionFilter, range);
         }

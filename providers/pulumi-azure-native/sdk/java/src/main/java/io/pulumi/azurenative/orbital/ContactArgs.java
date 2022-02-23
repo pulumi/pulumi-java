@@ -20,7 +20,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactName")
-    private final @Nullable Input<String> contactName;
+        private final @Nullable Input<String> contactName;
 
     public Input<String> getContactName() {
         return this.contactName == null ? Input.empty() : this.contactName;
@@ -31,7 +31,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactProfile", required=true)
-    private final Input<ResourceReferenceArgs> contactProfile;
+        private final Input<ResourceReferenceArgs> contactProfile;
 
     public Input<ResourceReferenceArgs> getContactProfile() {
         return this.contactProfile;
@@ -42,7 +42,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groundStationName", required=true)
-    private final Input<String> groundStationName;
+        private final Input<String> groundStationName;
 
     public Input<String> getGroundStationName() {
         return this.groundStationName;
@@ -53,7 +53,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationEndTime", required=true)
-    private final Input<String> reservationEndTime;
+        private final Input<String> reservationEndTime;
 
     public Input<String> getReservationEndTime() {
         return this.reservationEndTime;
@@ -64,7 +64,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationStartTime", required=true)
-    private final Input<String> reservationStartTime;
+        private final Input<String> reservationStartTime;
 
     public Input<String> getReservationStartTime() {
         return this.reservationStartTime;
@@ -75,7 +75,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spacecraftName", required=true)
-    private final Input<String> spacecraftName;
+        private final Input<String> spacecraftName;
 
     public Input<String> getSpacecraftName() {
         return this.spacecraftName;
@@ -220,7 +220,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.spacecraftName = Input.of(Objects.requireNonNull(spacecraftName));
             return this;
         }
-
         public ContactArgs build() {
             return new ContactArgs(contactName, contactProfile, groundStationName, reservationEndTime, reservationStartTime, resourceGroupName, spacecraftName);
         }

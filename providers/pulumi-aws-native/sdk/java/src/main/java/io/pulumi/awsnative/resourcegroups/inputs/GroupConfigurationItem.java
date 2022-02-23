@@ -17,14 +17,14 @@ public final class GroupConfigurationItem extends io.pulumi.resources.InvokeArgs
     public static final GroupConfigurationItem Empty = new GroupConfigurationItem();
 
     @InputImport(name="parameters")
-    private final @Nullable List<GroupConfigurationParameter> parameters;
+        private final @Nullable List<GroupConfigurationParameter> parameters;
 
     public List<GroupConfigurationParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -73,7 +73,6 @@ public final class GroupConfigurationItem extends io.pulumi.resources.InvokeArgs
             this.type = type;
             return this;
         }
-
         public GroupConfigurationItem build() {
             return new GroupConfigurationItem(parameters, type);
         }

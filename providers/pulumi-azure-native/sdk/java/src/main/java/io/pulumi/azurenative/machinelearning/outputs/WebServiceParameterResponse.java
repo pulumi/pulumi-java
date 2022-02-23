@@ -77,7 +77,6 @@ public final class WebServiceParameterResponse {
             this.value = value;
             return this;
         }
-
         public WebServiceParameterResponse build() {
             return new WebServiceParameterResponse(certificateThumbprint, value);
         }

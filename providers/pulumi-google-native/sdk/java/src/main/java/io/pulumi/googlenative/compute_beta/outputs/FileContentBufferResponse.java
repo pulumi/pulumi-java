@@ -74,7 +74,6 @@ public final class FileContentBufferResponse {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
-
         public FileContentBufferResponse build() {
             return new FileContentBufferResponse(content, fileType);
         }

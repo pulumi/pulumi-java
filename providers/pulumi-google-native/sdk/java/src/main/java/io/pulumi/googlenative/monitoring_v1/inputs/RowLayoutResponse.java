@@ -22,7 +22,7 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rows", required=true)
-    private final List<RowResponse> rows;
+      private final List<RowResponse> rows;
 
     public List<RowResponse> getRows() {
         return this.rows;
@@ -60,7 +60,6 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }
-
         public RowLayoutResponse build() {
             return new RowLayoutResponse(rows);
         }

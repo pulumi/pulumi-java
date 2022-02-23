@@ -163,7 +163,6 @@ public final class GetProactiveDetectionConfigurationResult {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }
-
         public GetProactiveDetectionConfigurationResult build() {
             return new GetProactiveDetectionConfigurationResult(customEmails, enabled, lastUpdatedTime, name, ruleDefinitions, sendEmailsToSubscriptionOwners);
         }

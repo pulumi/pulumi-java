@@ -238,7 +238,6 @@ public final class GetVPCResult {
             this.vpcId = vpcId;
             return this;
         }
-
         public GetVPCResult build() {
             return new GetVPCResult(cidrBlockAssociations, defaultNetworkAcl, defaultSecurityGroup, enableDnsHostnames, enableDnsSupport, instanceTenancy, ipv6CidrBlocks, tags, vpcId);
         }

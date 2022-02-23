@@ -77,7 +77,6 @@ public final class InstanceState {
             this.name = name;
             return this;
         }
-
         public InstanceState build() {
             return new InstanceState(code, name);
         }

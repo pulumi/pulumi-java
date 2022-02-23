@@ -23,7 +23,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categoryId")
-    private final @Nullable Input<String> categoryId;
+      private final @Nullable Input<String> categoryId;
 
     public Input<String> getCategoryId() {
         return this.categoryId == null ? Input.empty() : this.categoryId;
@@ -34,7 +34,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public CategoryArgs build() {
             return new CategoryArgs(categoryId, name);
         }

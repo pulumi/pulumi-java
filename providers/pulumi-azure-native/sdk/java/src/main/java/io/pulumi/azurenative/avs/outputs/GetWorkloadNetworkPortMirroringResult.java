@@ -245,7 +245,6 @@ public final class GetWorkloadNetworkPortMirroringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPortMirroringResult build() {
             return new GetWorkloadNetworkPortMirroringResult(destination, direction, displayName, id, name, provisioningState, revision, source, status, type);
         }

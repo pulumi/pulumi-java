@@ -60,7 +60,6 @@ public final class DomainNameTag {
             this.value = value;
             return this;
         }
-
         public DomainNameTag build() {
             return new DomainNameTag(key, value);
         }

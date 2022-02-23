@@ -573,7 +573,6 @@ public final class GetVirtualMachineScaleSetResult {
             this.zones = zones;
             return this;
         }
-
         public GetVirtualMachineScaleSetResult build() {
             return new GetVirtualMachineScaleSetResult(additionalCapabilities, automaticRepairsPolicy, doNotRunExtensionsOnOverprovisionedVMs, extendedLocation, hostGroup, id, identity, location, name, orchestrationMode, overprovision, plan, platformFaultDomainCount, provisioningState, proximityPlacementGroup, scaleInPolicy, singlePlacementGroup, sku, tags, type, uniqueId, upgradePolicy, virtualMachineProfile, zoneBalance, zones);
         }

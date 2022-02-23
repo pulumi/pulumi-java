@@ -21,7 +21,7 @@ public final class DiscoveryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-    private final String analysisKind;
+      private final String analysisKind;
 
     public String getAnalysisKind() {
         return this.analysisKind;
@@ -59,7 +59,6 @@ public final class DiscoveryResponse extends io.pulumi.resources.InvokeArgs {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
-
         public DiscoveryResponse build() {
             return new DiscoveryResponse(analysisKind);
         }

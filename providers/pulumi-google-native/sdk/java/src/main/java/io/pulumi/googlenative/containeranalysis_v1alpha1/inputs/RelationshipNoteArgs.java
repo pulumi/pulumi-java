@@ -23,7 +23,7 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RelationshipNoteType> type;
+      private final @Nullable Input<RelationshipNoteType> type;
 
     public Input<RelationshipNoteType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RelationshipNoteArgs build() {
             return new RelationshipNoteArgs(type);
         }

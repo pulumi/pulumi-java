@@ -44,7 +44,6 @@ public final class FlowDynatraceSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowDynatraceSourceProperties build() {
             return new FlowDynatraceSourceProperties(object);
         }

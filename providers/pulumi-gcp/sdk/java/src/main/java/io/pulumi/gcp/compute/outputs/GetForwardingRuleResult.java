@@ -357,7 +357,6 @@ public final class GetForwardingRuleResult {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public GetForwardingRuleResult build() {
             return new GetForwardingRuleResult(allPorts, allowGlobalAccess, backendService, creationTimestamp, description, id, ipAddress, ipProtocol, isMirroringCollector, labelFingerprint, labels, loadBalancingScheme, name, network, networkTier, portRange, ports, project, region, selfLink, serviceLabel, serviceName, subnetwork, target);
         }

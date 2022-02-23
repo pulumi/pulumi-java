@@ -46,7 +46,6 @@ public final class MigrateProjectResponseTags {
             this.additionalProperties = additionalProperties;
             return this;
         }
-
         public MigrateProjectResponseTags build() {
             return new MigrateProjectResponseTags(additionalProperties);
         }

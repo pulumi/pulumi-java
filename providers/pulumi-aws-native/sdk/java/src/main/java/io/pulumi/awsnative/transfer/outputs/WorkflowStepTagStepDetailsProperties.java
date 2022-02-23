@@ -78,7 +78,6 @@ public final class WorkflowStepTagStepDetailsProperties {
             this.tags = tags;
             return this;
         }
-
         public WorkflowStepTagStepDetailsProperties build() {
             return new WorkflowStepTagStepDetailsProperties(name, tags);
         }

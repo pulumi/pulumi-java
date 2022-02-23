@@ -442,7 +442,6 @@ public final class HDInsightStreamingActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public HDInsightStreamingActivityResponse build() {
             return new HDInsightStreamingActivityResponse(arguments, combiner, commandEnvironment, defines, dependsOn, description, fileLinkedService, filePaths, getDebugInfo, input, linkedServiceName, mapper, name, output, policy, reducer, storageLinkedServices, type, userProperties);
         }

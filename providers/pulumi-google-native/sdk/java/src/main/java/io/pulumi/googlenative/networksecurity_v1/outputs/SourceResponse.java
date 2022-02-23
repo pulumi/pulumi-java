@@ -75,7 +75,6 @@ public final class SourceResponse {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(ipBlocks, principals);
         }

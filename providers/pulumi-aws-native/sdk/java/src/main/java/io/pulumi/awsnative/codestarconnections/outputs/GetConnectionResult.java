@@ -120,7 +120,6 @@ public final class GetConnectionResult {
             this.tags = tags;
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(connectionArn, connectionStatus, ownerAccountId, tags);
         }

@@ -139,7 +139,6 @@ public final class ListenerAuthenticateCognitoConfig {
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
         }
-
         public ListenerAuthenticateCognitoConfig build() {
             return new ListenerAuthenticateCognitoConfig(authenticationRequestExtraParams, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, userPoolArn, userPoolClientId, userPoolDomain);
         }

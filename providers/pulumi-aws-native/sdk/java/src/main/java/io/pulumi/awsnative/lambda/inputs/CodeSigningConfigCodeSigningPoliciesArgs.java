@@ -22,7 +22,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="untrustedArtifactOnDeployment", required=true)
-    private final Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
+        private final Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
     public Input<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
@@ -65,7 +65,6 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
             this.untrustedArtifactOnDeployment = Input.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
             return this;
         }
-
         public CodeSigningConfigCodeSigningPoliciesArgs build() {
             return new CodeSigningConfigCodeSigningPoliciesArgs(untrustedArtifactOnDeployment);
         }

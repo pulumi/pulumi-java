@@ -98,7 +98,6 @@ public final class URLMapHeaderActionResponseHeadersToAdd {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public URLMapHeaderActionResponseHeadersToAdd build() {
             return new URLMapHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }

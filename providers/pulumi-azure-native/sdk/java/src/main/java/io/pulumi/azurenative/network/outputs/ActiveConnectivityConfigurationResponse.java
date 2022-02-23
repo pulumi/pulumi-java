@@ -290,7 +290,6 @@ public final class ActiveConnectivityConfigurationResponse {
             this.region = region;
             return this;
         }
-
         public ActiveConnectivityConfigurationResponse build() {
             return new ActiveConnectivityConfigurationResponse(appliesToGroups, commitTime, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState, region);
         }

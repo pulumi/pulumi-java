@@ -119,7 +119,6 @@ public final class HealthProbeParametersResponse {
             this.probeRequestType = probeRequestType;
             return this;
         }
-
         public HealthProbeParametersResponse build() {
             return new HealthProbeParametersResponse(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
         }

@@ -397,7 +397,6 @@ public final class GetInstanceResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(authorizedNetwork, createTime, discoveryEndpoint, displayName, instanceMessages, labels, memcacheFullVersion, memcacheNodes, memcacheVersion, name, nodeConfig, nodeCount, parameters, state, updateAvailable, updateTime, zones);
         }

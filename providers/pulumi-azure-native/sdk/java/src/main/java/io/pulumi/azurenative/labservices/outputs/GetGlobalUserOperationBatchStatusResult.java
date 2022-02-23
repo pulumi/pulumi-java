@@ -53,7 +53,6 @@ public final class GetGlobalUserOperationBatchStatusResult {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GetGlobalUserOperationBatchStatusResult build() {
             return new GetGlobalUserOperationBatchStatusResult(items);
         }

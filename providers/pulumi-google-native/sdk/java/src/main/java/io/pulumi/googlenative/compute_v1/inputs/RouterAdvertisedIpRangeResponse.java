@@ -21,7 +21,7 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="range", required=true)
-    private final String range;
+      private final String range;
 
     public String getRange() {
         return this.range;
@@ -81,7 +81,6 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterAdvertisedIpRangeResponse build() {
             return new RouterAdvertisedIpRangeResponse(description, range);
         }

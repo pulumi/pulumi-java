@@ -52,7 +52,6 @@ public final class OSPolicyResourcePackageResourceAPTResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OSPolicyResourcePackageResourceAPTResponse build() {
             return new OSPolicyResourcePackageResourceAPTResponse(name);
         }

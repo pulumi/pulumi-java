@@ -15,14 +15,14 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     public static final ProvisioningTemplateProvisioningHookArgs Empty = new ProvisioningTemplateProvisioningHookArgs();
 
     @InputImport(name="payloadVersion")
-    private final @Nullable Input<String> payloadVersion;
+        private final @Nullable Input<String> payloadVersion;
 
     public Input<String> getPayloadVersion() {
         return this.payloadVersion == null ? Input.empty() : this.payloadVersion;
     }
 
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+        private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;
@@ -81,7 +81,6 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }
-
         public ProvisioningTemplateProvisioningHookArgs build() {
             return new ProvisioningTemplateProvisioningHookArgs(payloadVersion, targetArn);
         }

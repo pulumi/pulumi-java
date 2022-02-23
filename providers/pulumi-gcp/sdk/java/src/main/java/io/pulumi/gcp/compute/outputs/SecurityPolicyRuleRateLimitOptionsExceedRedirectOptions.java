@@ -60,7 +60,6 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions build() {
             return new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions(target, type);
         }

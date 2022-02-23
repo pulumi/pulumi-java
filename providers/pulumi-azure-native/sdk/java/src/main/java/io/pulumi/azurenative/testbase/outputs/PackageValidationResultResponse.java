@@ -97,7 +97,6 @@ public final class PackageValidationResultResponse {
             this.validationName = Objects.requireNonNull(validationName);
             return this;
         }
-
         public PackageValidationResultResponse build() {
             return new PackageValidationResultResponse(errors, isValid, validationName);
         }

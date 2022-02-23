@@ -163,7 +163,6 @@ public final class SecurityProfileMetricValue {
             this.strings = strings;
             return this;
         }
-
         public SecurityProfileMetricValue build() {
             return new SecurityProfileMetricValue(cidrs, count, number, numbers, ports, strings);
         }

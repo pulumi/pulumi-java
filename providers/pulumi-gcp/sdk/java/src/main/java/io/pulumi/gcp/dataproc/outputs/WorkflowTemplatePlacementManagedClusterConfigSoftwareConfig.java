@@ -91,7 +91,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig(imageVersion, optionalComponents, properties);
         }

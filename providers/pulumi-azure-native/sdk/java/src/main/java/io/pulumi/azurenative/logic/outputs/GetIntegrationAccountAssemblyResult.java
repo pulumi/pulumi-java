@@ -162,7 +162,6 @@ public final class GetIntegrationAccountAssemblyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountAssemblyResult build() {
             return new GetIntegrationAccountAssemblyResult(id, location, name, properties, tags, type);
         }

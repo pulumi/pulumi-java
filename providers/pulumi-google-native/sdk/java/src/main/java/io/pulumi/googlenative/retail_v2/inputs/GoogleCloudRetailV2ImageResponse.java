@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="height", required=true)
-    private final Integer height;
+      private final Integer height;
 
     public Integer getHeight() {
         return this.height;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="width", required=true)
-    private final Integer width;
+      private final Integer width;
 
     public Integer getWidth() {
         return this.width;
@@ -103,7 +103,6 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRetailV2ImageResponse build() {
             return new GoogleCloudRetailV2ImageResponse(height, uri, width);
         }

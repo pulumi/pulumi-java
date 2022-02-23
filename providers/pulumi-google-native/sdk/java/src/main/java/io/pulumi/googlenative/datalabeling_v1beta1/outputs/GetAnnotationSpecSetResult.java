@@ -139,7 +139,6 @@ public final class GetAnnotationSpecSetResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetAnnotationSpecSetResult build() {
             return new GetAnnotationSpecSetResult(annotationSpecs, blockingResources, description, displayName, name);
         }

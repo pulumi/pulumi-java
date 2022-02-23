@@ -80,7 +80,6 @@ public final class SubscriptionRetryPolicy {
             this.minimumBackoff = minimumBackoff;
             return this;
         }
-
         public SubscriptionRetryPolicy build() {
             return new SubscriptionRetryPolicy(maximumBackoff, minimumBackoff);
         }

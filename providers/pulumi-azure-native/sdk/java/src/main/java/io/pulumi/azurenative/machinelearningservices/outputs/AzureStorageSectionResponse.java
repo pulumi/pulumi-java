@@ -344,7 +344,6 @@ public final class AzureStorageSectionResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public AzureStorageSectionResponse build() {
             return new AzureStorageSectionResponse(accountKey, accountName, areWorkspaceManagedIdentitiesAllowed, blobCacheTimeout, clientCredentials, containerName, credential, credentialType, endpoint, isSas, protocol, resourceGroup, sasToken, serviceDataAccessAuthIdentity, subscriptionId);
         }

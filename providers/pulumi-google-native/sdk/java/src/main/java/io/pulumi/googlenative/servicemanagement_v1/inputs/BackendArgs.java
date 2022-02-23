@@ -24,7 +24,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<BackendRuleArgs>> rules;
+      private final @Nullable Input<List<BackendRuleArgs>> rules;
 
     public Input<List<BackendRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public BackendArgs build() {
             return new BackendArgs(rules);
         }

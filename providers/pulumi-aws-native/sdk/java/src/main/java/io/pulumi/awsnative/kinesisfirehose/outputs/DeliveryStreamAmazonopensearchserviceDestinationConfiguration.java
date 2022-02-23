@@ -211,7 +211,6 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceDestinationConfiguration build() {
             return new DeliveryStreamAmazonopensearchserviceDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }

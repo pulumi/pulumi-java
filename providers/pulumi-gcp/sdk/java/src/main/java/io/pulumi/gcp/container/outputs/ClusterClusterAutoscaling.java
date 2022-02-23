@@ -138,7 +138,6 @@ public final class ClusterClusterAutoscaling {
             this.resourceLimits = resourceLimits;
             return this;
         }
-
         public ClusterClusterAutoscaling build() {
             return new ClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

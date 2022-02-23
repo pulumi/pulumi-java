@@ -18,7 +18,7 @@ public final class ClusteringResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<String> fields;
+      private final List<String> fields;
 
     public List<String> getFields() {
         return this.fields;
@@ -56,7 +56,6 @@ public final class ClusteringResponse extends io.pulumi.resources.InvokeArgs {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public ClusteringResponse build() {
             return new ClusteringResponse(fields);
         }

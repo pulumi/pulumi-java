@@ -76,7 +76,6 @@ public final class GatewayOperatorPropertiesResponse {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public GatewayOperatorPropertiesResponse build() {
             return new GatewayOperatorPropertiesResponse(instances, resourceRequests);
         }

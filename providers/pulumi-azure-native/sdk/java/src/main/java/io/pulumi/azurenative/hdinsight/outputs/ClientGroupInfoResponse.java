@@ -76,7 +76,6 @@ public final class ClientGroupInfoResponse {
             this.groupName = groupName;
             return this;
         }
-
         public ClientGroupInfoResponse build() {
             return new ClientGroupInfoResponse(groupId, groupName);
         }

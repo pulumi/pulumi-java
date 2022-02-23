@@ -52,7 +52,6 @@ public final class ListMachineLearningComputeKeysResult {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public ListMachineLearningComputeKeysResult build() {
             return new ListMachineLearningComputeKeysResult(computeType);
         }

@@ -20,7 +20,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable List<SubResource> targetResources;
+        private final @Nullable List<SubResource> targetResources;
 
     public List<SubResource> getTargetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
@@ -58,7 +58,6 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
             this.targetResources = targetResources;
             return this;
         }
-
         public GetDnsResourceReferenceByTarResourcesArgs build() {
             return new GetDnsResourceReferenceByTarResourcesArgs(targetResources);
         }

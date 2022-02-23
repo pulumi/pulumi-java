@@ -99,7 +99,6 @@ public final class FleetRuntimeConfiguration {
             this.serverProcesses = serverProcesses;
             return this;
         }
-
         public FleetRuntimeConfiguration build() {
             return new FleetRuntimeConfiguration(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
         }

@@ -75,7 +75,6 @@ public final class TaskDefinitionProxyConfiguration {
             this.type = type;
             return this;
         }
-
         public TaskDefinitionProxyConfiguration build() {
             return new TaskDefinitionProxyConfiguration(containerName, proxyConfigurationProperties, type);
         }

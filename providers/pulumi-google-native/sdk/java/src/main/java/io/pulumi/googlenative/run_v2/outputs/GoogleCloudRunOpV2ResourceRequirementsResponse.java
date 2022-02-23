@@ -76,7 +76,6 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
             return new GoogleCloudRunOpV2ResourceRequirementsResponse(cpuIdle, limits);
         }

@@ -60,7 +60,6 @@ public final class FindingsFilterListItem {
             this.name = name;
             return this;
         }
-
         public FindingsFilterListItem build() {
             return new FindingsFilterListItem(id, name);
         }

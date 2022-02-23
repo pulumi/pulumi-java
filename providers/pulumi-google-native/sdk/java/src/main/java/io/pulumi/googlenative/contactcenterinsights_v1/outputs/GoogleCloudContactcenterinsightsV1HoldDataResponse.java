@@ -30,7 +30,6 @@ public final class GoogleCloudContactcenterinsightsV1HoldDataResponse {
         public Builder(GoogleCloudContactcenterinsightsV1HoldDataResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudContactcenterinsightsV1HoldDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1HoldDataResponse();
         }

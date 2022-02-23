@@ -139,7 +139,6 @@ public final class GetRepoResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetRepoResult build() {
             return new GetRepoResult(mirrorConfig, name, pubsubConfigs, size, url);
         }

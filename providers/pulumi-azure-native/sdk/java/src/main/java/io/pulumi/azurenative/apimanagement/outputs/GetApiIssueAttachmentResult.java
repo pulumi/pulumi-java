@@ -158,7 +158,6 @@ public final class GetApiIssueAttachmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiIssueAttachmentResult build() {
             return new GetApiIssueAttachmentResult(content, contentFormat, id, name, title, type);
         }

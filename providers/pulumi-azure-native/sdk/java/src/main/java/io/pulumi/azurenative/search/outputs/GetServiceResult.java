@@ -399,7 +399,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(hostingMode, id, identity, location, name, networkRuleSet, partitionCount, privateEndpointConnections, provisioningState, publicNetworkAccess, replicaCount, sharedPrivateLinkResources, sku, status, statusDetails, tags, type);
         }

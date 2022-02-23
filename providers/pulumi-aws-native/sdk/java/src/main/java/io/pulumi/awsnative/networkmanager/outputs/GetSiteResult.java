@@ -142,7 +142,6 @@ public final class GetSiteResult {
             this.tags = tags;
             return this;
         }
-
         public GetSiteResult build() {
             return new GetSiteResult(description, location, siteArn, siteId, tags);
         }

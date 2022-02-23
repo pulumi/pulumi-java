@@ -95,7 +95,6 @@ public final class FollowerDatabaseDefinitionResponse {
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }
-
         public FollowerDatabaseDefinitionResponse build() {
             return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, databaseName, kustoPoolResourceId);
         }

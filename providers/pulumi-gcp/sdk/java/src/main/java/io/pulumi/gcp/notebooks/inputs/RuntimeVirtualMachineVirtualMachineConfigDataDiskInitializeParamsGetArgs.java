@@ -21,7 +21,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+        private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -49,7 +49,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+        private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -63,7 +63,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+        private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -76,7 +76,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -180,7 +180,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs(description, diskName, diskSizeGb, diskType, labels);
         }

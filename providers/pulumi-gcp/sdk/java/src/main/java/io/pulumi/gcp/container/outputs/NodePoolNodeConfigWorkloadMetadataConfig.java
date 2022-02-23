@@ -44,7 +44,6 @@ public final class NodePoolNodeConfigWorkloadMetadataConfig {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public NodePoolNodeConfigWorkloadMetadataConfig build() {
             return new NodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

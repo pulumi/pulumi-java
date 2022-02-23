@@ -224,7 +224,6 @@ public final class GetAnalyticsItemResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetAnalyticsItemResult build() {
             return new GetAnalyticsItemResult(content, id, name, properties, scope, timeCreated, timeModified, type, version);
         }

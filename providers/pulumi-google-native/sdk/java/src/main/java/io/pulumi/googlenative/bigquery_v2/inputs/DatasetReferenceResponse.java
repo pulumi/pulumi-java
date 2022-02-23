@@ -17,7 +17,7 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -77,7 +77,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(datasetId, project);
         }

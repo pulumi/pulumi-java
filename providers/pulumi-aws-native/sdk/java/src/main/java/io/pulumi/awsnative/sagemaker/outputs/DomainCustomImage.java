@@ -98,7 +98,6 @@ public final class DomainCustomImage {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
-
         public DomainCustomImage build() {
             return new DomainCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }

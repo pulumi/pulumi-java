@@ -74,7 +74,6 @@ public final class GetTenantResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetTenantResult build() {
             return new GetTenantResult(externalId, name);
         }

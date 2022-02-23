@@ -19,7 +19,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectLambdaAccessPoint", required=true)
-    private final Input<String> objectLambdaAccessPoint;
+        private final Input<String> objectLambdaAccessPoint;
 
     public Input<String> getObjectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
@@ -30,7 +30,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDocument", required=true)
-    private final Input<Object> policyDocument;
+        private final Input<Object> policyDocument;
 
     public Input<Object> getPolicyDocument() {
         return this.policyDocument;
@@ -89,7 +89,6 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
             this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
             return this;
         }
-
         public AccessPointPolicyArgs build() {
             return new AccessPointPolicyArgs(objectLambdaAccessPoint, policyDocument);
         }

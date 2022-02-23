@@ -74,7 +74,6 @@ public final class ExpressionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ExpressionResponse build() {
             return new ExpressionResponse(type, value);
         }

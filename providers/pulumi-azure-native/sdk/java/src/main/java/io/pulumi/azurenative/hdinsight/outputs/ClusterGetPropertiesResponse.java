@@ -510,7 +510,6 @@ public final class ClusterGetPropertiesResponse {
             this.tier = tier;
             return this;
         }
-
         public ClusterGetPropertiesResponse build() {
             return new ClusterGetPropertiesResponse(clusterDefinition, clusterHdpVersion, clusterId, clusterState, clusterVersion, computeIsolationProperties, computeProfile, connectivityEndpoints, createdDate, diskEncryptionProperties, encryptionInTransitProperties, errors, excludedServicesConfig, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, provisioningState, quotaInfo, securityProfile, storageProfile, tier);
         }

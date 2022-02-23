@@ -23,7 +23,7 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tagInfo")
-    private final @Nullable Input<RetentionTagArgs> tagInfo;
+        private final @Nullable Input<RetentionTagArgs> tagInfo;
 
     public Input<RetentionTagArgs> getTagInfo() {
         return this.tagInfo == null ? Input.empty() : this.tagInfo;
@@ -66,7 +66,6 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
             this.tagInfo = Input.ofNullable(tagInfo);
             return this;
         }
-
         public AdhocBasedTaggingCriteriaArgs build() {
             return new AdhocBasedTaggingCriteriaArgs(tagInfo);
         }

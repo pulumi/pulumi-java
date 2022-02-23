@@ -54,7 +54,6 @@ public final class TriggerTransport {
             this.pubsubs = pubsubs;
             return this;
         }
-
         public TriggerTransport build() {
             return new TriggerTransport(pubsubs);
         }

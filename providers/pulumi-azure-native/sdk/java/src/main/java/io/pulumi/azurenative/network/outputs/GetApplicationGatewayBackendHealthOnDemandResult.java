@@ -77,7 +77,6 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
             this.backendHealthHttpSettings = backendHealthHttpSettings;
             return this;
         }
-
         public GetApplicationGatewayBackendHealthOnDemandResult build() {
             return new GetApplicationGatewayBackendHealthOnDemandResult(backendAddressPool, backendHealthHttpSettings);
         }

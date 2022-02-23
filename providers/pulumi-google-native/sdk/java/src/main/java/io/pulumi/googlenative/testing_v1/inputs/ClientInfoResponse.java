@@ -23,7 +23,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clientInfoDetails", required=true)
-    private final List<ClientInfoDetailResponse> clientInfoDetails;
+      private final List<ClientInfoDetailResponse> clientInfoDetails;
 
     public List<ClientInfoDetailResponse> getClientInfoDetails() {
         return this.clientInfoDetails;
@@ -34,7 +34,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ClientInfoResponse build() {
             return new ClientInfoResponse(clientInfoDetails, name);
         }

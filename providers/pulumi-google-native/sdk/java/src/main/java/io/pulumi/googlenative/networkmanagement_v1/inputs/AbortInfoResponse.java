@@ -21,7 +21,7 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cause", required=true)
-    private final String cause;
+      private final String cause;
 
     public String getCause() {
         return this.cause;
@@ -32,7 +32,7 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -81,7 +81,6 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public AbortInfoResponse build() {
             return new AbortInfoResponse(cause, resourceUri);
         }

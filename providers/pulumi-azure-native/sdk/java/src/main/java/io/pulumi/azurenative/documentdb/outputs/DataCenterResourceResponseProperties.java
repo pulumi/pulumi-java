@@ -163,7 +163,6 @@ public final class DataCenterResourceResponseProperties {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-
         public DataCenterResourceResponseProperties build() {
             return new DataCenterResourceResponseProperties(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState, seedNodes);
         }

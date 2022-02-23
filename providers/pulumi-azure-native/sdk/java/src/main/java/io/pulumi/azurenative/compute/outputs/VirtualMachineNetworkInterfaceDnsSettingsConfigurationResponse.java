@@ -54,7 +54,6 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
             this.dnsServers = dnsServers;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(dnsServers);
         }

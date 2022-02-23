@@ -159,7 +159,6 @@ public final class GetSnapshotResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(createTime, description, filesystemUsedBytes, labels, name, state);
         }

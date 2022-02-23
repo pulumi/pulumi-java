@@ -15,14 +15,14 @@ public final class ConfigDataflowEndpointConfig extends io.pulumi.resources.Invo
     public static final ConfigDataflowEndpointConfig Empty = new ConfigDataflowEndpointConfig();
 
     @InputImport(name="dataflowEndpointName")
-    private final @Nullable String dataflowEndpointName;
+        private final @Nullable String dataflowEndpointName;
 
     public Optional<String> getDataflowEndpointName() {
         return this.dataflowEndpointName == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointName);
     }
 
     @InputImport(name="dataflowEndpointRegion")
-    private final @Nullable String dataflowEndpointRegion;
+        private final @Nullable String dataflowEndpointRegion;
 
     public Optional<String> getDataflowEndpointRegion() {
         return this.dataflowEndpointRegion == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointRegion);
@@ -71,7 +71,6 @@ public final class ConfigDataflowEndpointConfig extends io.pulumi.resources.Invo
             this.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
         }
-
         public ConfigDataflowEndpointConfig build() {
             return new ConfigDataflowEndpointConfig(dataflowEndpointName, dataflowEndpointRegion);
         }

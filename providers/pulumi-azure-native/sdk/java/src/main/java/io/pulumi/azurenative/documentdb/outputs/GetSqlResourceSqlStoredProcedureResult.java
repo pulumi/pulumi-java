@@ -154,7 +154,6 @@ public final class GetSqlResourceSqlStoredProcedureResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlStoredProcedureResult build() {
             return new GetSqlResourceSqlStoredProcedureResult(id, location, name, resource, tags, type);
         }

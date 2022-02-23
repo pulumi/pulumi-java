@@ -83,7 +83,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation(infoTypes, primitiveTransformation);
         }

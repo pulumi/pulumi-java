@@ -97,7 +97,6 @@ public final class JitApproverDefinitionResponse {
             this.type = type;
             return this;
         }
-
         public JitApproverDefinitionResponse build() {
             return new JitApproverDefinitionResponse(displayName, id, type);
         }

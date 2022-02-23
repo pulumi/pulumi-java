@@ -76,7 +76,6 @@ public final class ResourceGroupValueResponse {
             this.name = name;
             return this;
         }
-
         public ResourceGroupValueResponse build() {
             return new ResourceGroupValueResponse(location, name);
         }

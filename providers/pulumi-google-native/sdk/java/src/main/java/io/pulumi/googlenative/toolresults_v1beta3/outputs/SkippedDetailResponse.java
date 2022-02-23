@@ -95,7 +95,6 @@ public final class SkippedDetailResponse {
             this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
             return this;
         }
-
         public SkippedDetailResponse build() {
             return new SkippedDetailResponse(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }

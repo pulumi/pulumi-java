@@ -22,7 +22,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
      * 
      */
     @InputImport(name="logSource", required=true)
-    private final String logSource;
+      private final String logSource;
 
     public String getLogSource() {
         return this.logSource;
@@ -33,7 +33,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
      * 
      */
     @InputImport(name="policyOverlay", required=true)
-    private final Map<String,String> policyOverlay;
+      private final Map<String,String> policyOverlay;
 
     public Map<String,String> getPolicyOverlay() {
         return this.policyOverlay;
@@ -82,7 +82,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
             this.policyOverlay = Objects.requireNonNull(policyOverlay);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse build() {
             return new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(logSource, policyOverlay);
         }

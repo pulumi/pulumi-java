@@ -97,7 +97,6 @@ public final class SoftwareRecipeStepRunScriptResponse {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public SoftwareRecipeStepRunScriptResponse build() {
             return new SoftwareRecipeStepRunScriptResponse(allowedExitCodes, interpreter, script);
         }

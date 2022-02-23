@@ -252,7 +252,6 @@ public final class GetLicenseResult {
             this.version = version;
             return this;
         }
-
         public GetLicenseResult build() {
             return new GetLicenseResult(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseArn, licenseMetadata, licenseName, productName, productSKU, validity, version);
         }

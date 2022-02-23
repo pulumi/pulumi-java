@@ -269,7 +269,6 @@ public final class ISCSIVolumeSource {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
         }
-
         public ISCSIVolumeSource build() {
             return new ISCSIVolumeSource(chapAuthDiscovery, chapAuthSession, fsType, initiatorName, iqn, iscsiInterface, lun, portals, readOnly, secretRef, targetPortal);
         }

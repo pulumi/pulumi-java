@@ -52,7 +52,6 @@ public final class PacketMirroringMirroredResourcesSubnetwork {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PacketMirroringMirroredResourcesSubnetwork build() {
             return new PacketMirroringMirroredResourcesSubnetwork(url);
         }

@@ -113,7 +113,6 @@ public final class InstanceServerCaCert {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public InstanceServerCaCert build() {
             return new InstanceServerCaCert(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

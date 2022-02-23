@@ -54,7 +54,6 @@ public final class LanguageExtensionsListResponse {
             this.value = value;
             return this;
         }
-
         public LanguageExtensionsListResponse build() {
             return new LanguageExtensionsListResponse(value);
         }

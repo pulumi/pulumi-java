@@ -22,7 +22,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
      * 
      */
     @InputImport(name="dataflowFlexTemplateRequest", required=true)
-    private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
+      private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
      * 
      */
     @InputImport(name="dataflowLaunchTemplateRequest", required=true)
-    private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
+      private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
@@ -82,7 +82,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
             this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1WorkloadResponse build() {
             return new GoogleCloudDatapipelinesV1WorkloadResponse(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }

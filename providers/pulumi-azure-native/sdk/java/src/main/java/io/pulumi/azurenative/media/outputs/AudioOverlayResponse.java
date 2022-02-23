@@ -184,7 +184,6 @@ public final class AudioOverlayResponse {
             this.start = start;
             return this;
         }
-
         public AudioOverlayResponse build() {
             return new AudioOverlayResponse(audioGainLevel, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, start);
         }

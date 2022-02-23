@@ -164,7 +164,6 @@ public final class BlobOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobOutputDataSourceResponse build() {
             return new BlobOutputDataSourceResponse(container, dateFormat, pathPattern, storageAccounts, timeFormat, type);
         }

@@ -96,7 +96,6 @@ public final class GetSubscriptionResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(deliveryConfig, name, topic);
         }

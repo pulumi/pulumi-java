@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="apiSource", required=true)
-    private final Input<String> apiSource;
+      private final Input<String> apiSource;
 
     public Input<String> getApiSource() {
         return this.apiSource;
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="operations", required=true)
-    private final Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
+      private final Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
 
     public Input<List<GoogleCloudApigeeV1GraphQLOperationArgs>> getOperations() {
         return this.operations;
@@ -60,7 +60,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
+      private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
 
     public Input<GoogleCloudApigeeV1QuotaArgs> getQuota() {
         return this.quota == null ? Input.empty() : this.quota;
@@ -149,7 +149,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
             this.quota = Input.ofNullable(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationConfigArgs build() {
             return new GoogleCloudApigeeV1GraphQLOperationConfigArgs(apiSource, attributes, operations, quota);
         }

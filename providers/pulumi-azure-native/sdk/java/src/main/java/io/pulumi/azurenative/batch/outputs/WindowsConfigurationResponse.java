@@ -54,7 +54,6 @@ public final class WindowsConfigurationResponse {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-
         public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(enableAutomaticUpdates);
         }

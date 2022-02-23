@@ -203,7 +203,6 @@ public final class GetNetworkExperimentProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkExperimentProfileResult build() {
             return new GetNetworkExperimentProfileResult(enabledState, etag, id, location, name, resourceState, tags, type);
         }

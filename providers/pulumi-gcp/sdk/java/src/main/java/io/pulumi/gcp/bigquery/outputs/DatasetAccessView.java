@@ -99,7 +99,6 @@ public final class DatasetAccessView {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public DatasetAccessView build() {
             return new DatasetAccessView(datasetId, projectId, tableId);
         }

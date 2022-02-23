@@ -116,7 +116,6 @@ public final class AuthorityResponse {
             this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
             return this;
         }
-
         public AuthorityResponse build() {
             return new AuthorityResponse(identityProvider, issuer, oidcJwks, workloadIdentityPool);
         }

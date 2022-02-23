@@ -76,7 +76,6 @@ public final class OpenAuthenticationPolicyClaimResponse {
             this.value = value;
             return this;
         }
-
         public OpenAuthenticationPolicyClaimResponse build() {
             return new OpenAuthenticationPolicyClaimResponse(name, value);
         }

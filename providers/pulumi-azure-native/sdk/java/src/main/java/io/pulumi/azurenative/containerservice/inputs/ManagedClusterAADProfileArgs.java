@@ -25,7 +25,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adminGroupObjectIDs")
-    private final @Nullable Input<List<String>> adminGroupObjectIDs;
+        private final @Nullable Input<List<String>> adminGroupObjectIDs;
 
     public Input<List<String>> getAdminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? Input.empty() : this.adminGroupObjectIDs;
@@ -36,7 +36,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientAppID")
-    private final @Nullable Input<String> clientAppID;
+        private final @Nullable Input<String> clientAppID;
 
     public Input<String> getClientAppID() {
         return this.clientAppID == null ? Input.empty() : this.clientAppID;
@@ -47,7 +47,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableAzureRBAC")
-    private final @Nullable Input<Boolean> enableAzureRBAC;
+        private final @Nullable Input<Boolean> enableAzureRBAC;
 
     public Input<Boolean> getEnableAzureRBAC() {
         return this.enableAzureRBAC == null ? Input.empty() : this.enableAzureRBAC;
@@ -58,7 +58,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="managed")
-    private final @Nullable Input<Boolean> managed;
+        private final @Nullable Input<Boolean> managed;
 
     public Input<Boolean> getManaged() {
         return this.managed == null ? Input.empty() : this.managed;
@@ -69,7 +69,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serverAppID")
-    private final @Nullable Input<String> serverAppID;
+        private final @Nullable Input<String> serverAppID;
 
     public Input<String> getServerAppID() {
         return this.serverAppID == null ? Input.empty() : this.serverAppID;
@@ -80,7 +80,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serverAppSecret")
-    private final @Nullable Input<String> serverAppSecret;
+        private final @Nullable Input<String> serverAppSecret;
 
     public Input<String> getServerAppSecret() {
         return this.serverAppSecret == null ? Input.empty() : this.serverAppSecret;
@@ -91,7 +91,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tenantID")
-    private final @Nullable Input<String> tenantID;
+        private final @Nullable Input<String> tenantID;
 
     public Input<String> getTenantID() {
         return this.tenantID == null ? Input.empty() : this.tenantID;
@@ -225,7 +225,6 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
             this.tenantID = Input.ofNullable(tenantID);
             return this;
         }
-
         public ManagedClusterAADProfileArgs build() {
             return new ManagedClusterAADProfileArgs(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }

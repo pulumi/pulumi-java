@@ -26,7 +26,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReadySeconds")
-    private final @Nullable Input<Integer> minReadySeconds;
+        private final @Nullable Input<Integer> minReadySeconds;
 
     public Input<Integer> getMinReadySeconds() {
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
@@ -37,7 +37,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionHistoryLimit")
-    private final @Nullable Input<Integer> revisionHistoryLimit;
+        private final @Nullable Input<Integer> revisionHistoryLimit;
 
     public Input<Integer> getRevisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
@@ -48,7 +48,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+        private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -59,7 +59,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<PodTemplateSpecArgs> template;
+        private final Input<PodTemplateSpecArgs> template;
 
     public Input<PodTemplateSpecArgs> getTemplate() {
         return this.template;
@@ -70,7 +70,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateGeneration")
-    private final @Nullable Input<Integer> templateGeneration;
+        private final @Nullable Input<Integer> templateGeneration;
 
     public Input<Integer> getTemplateGeneration() {
         return this.templateGeneration == null ? Input.empty() : this.templateGeneration;
@@ -81,7 +81,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateStrategy")
-    private final @Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy;
+        private final @Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy;
 
     public Input<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {
         return this.updateStrategy == null ? Input.empty() : this.updateStrategy;
@@ -200,7 +200,6 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.updateStrategy = Input.ofNullable(updateStrategy);
             return this;
         }
-
         public DaemonSetSpecArgs build() {
             return new DaemonSetSpecArgs(minReadySeconds, revisionHistoryLimit, selector, template, templateGeneration, updateStrategy);
         }

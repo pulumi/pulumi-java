@@ -22,7 +22,7 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="registrationDefinitionId", required=true)
-    private final Input<String> registrationDefinitionId;
+        private final Input<String> registrationDefinitionId;
 
     public Input<String> getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
@@ -65,7 +65,6 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
             this.registrationDefinitionId = Input.of(Objects.requireNonNull(registrationDefinitionId));
             return this;
         }
-
         public RegistrationAssignmentPropertiesArgs build() {
             return new RegistrationAssignmentPropertiesArgs(registrationDefinitionId);
         }

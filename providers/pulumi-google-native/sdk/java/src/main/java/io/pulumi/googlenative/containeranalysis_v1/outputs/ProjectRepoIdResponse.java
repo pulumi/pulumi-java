@@ -74,7 +74,6 @@ public final class ProjectRepoIdResponse {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public ProjectRepoIdResponse build() {
             return new ProjectRepoIdResponse(project, repoName);
         }

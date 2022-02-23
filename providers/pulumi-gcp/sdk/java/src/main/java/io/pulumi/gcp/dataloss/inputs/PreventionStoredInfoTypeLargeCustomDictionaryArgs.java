@@ -22,7 +22,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends io.
      * 
      */
     @InputImport(name="bigQueryField")
-    private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField;
+        private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> getBigQueryField() {
         return this.bigQueryField == null ? Input.empty() : this.bigQueryField;
@@ -34,7 +34,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends io.
      * 
      */
     @InputImport(name="cloudStorageFileSet")
-    private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet;
+        private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> getCloudStorageFileSet() {
         return this.cloudStorageFileSet == null ? Input.empty() : this.cloudStorageFileSet;
@@ -47,7 +47,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends io.
      * 
      */
     @InputImport(name="outputPath", required=true)
-    private final Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath;
+        private final Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> getOutputPath() {
         return this.outputPath;
@@ -121,7 +121,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends io.
             this.outputPath = Input.of(Objects.requireNonNull(outputPath));
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryArgs(bigQueryField, cloudStorageFileSet, outputPath);
         }

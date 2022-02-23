@@ -26,7 +26,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="assignmentType")
-    private final @Nullable String assignmentType;
+        private final @Nullable String assignmentType;
 
     public Optional<String> getAssignmentType() {
         return this.assignmentType == null ? Optional.empty() : Optional.ofNullable(this.assignmentType);
@@ -37,7 +37,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="configurationParameter")
-    private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
+        private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
     public List<ConfigurationParameterResponse> getConfigurationParameter() {
         return this.configurationParameter == null ? List.of() : this.configurationParameter;
@@ -48,7 +48,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="configurationProtectedParameter")
-    private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
+        private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
     public List<ConfigurationParameterResponse> getConfigurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
@@ -59,7 +59,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="configurationSetting")
-    private final @Nullable ConfigurationSettingResponse configurationSetting;
+        private final @Nullable ConfigurationSettingResponse configurationSetting;
 
     public Optional<ConfigurationSettingResponse> getConfigurationSetting() {
         return this.configurationSetting == null ? Optional.empty() : Optional.ofNullable(this.configurationSetting);
@@ -70,7 +70,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="contentHash")
-    private final @Nullable String contentHash;
+        private final @Nullable String contentHash;
 
     public Optional<String> getContentHash() {
         return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
@@ -81,7 +81,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+        private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -92,7 +92,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="contentUri")
-    private final @Nullable String contentUri;
+        private final @Nullable String contentUri;
 
     public Optional<String> getContentUri() {
         return this.contentUri == null ? Optional.empty() : Optional.ofNullable(this.contentUri);
@@ -103,7 +103,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -114,7 +114,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -125,7 +125,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -254,7 +254,6 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
             this.version = version;
             return this;
         }
-
         public GuestConfigurationNavigationResponse build() {
             return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
         }

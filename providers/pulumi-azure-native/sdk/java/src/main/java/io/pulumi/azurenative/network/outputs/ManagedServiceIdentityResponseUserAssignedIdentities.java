@@ -74,7 +74,6 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ManagedServiceIdentityResponseUserAssignedIdentities build() {
             return new ManagedServiceIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

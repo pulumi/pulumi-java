@@ -44,7 +44,6 @@ public final class ScheduledQueryScheduleConfiguration {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public ScheduledQueryScheduleConfiguration build() {
             return new ScheduledQueryScheduleConfiguration(scheduleExpression);
         }

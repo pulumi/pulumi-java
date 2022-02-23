@@ -15,21 +15,21 @@ public final class GetRegionSslPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetRegionSslPolicyArgs Empty = new GetRegionSslPolicyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="sslPolicy", required=true)
-    private final String sslPolicy;
+      private final String sslPolicy;
 
     public String getSslPolicy() {
         return this.sslPolicy;
@@ -88,7 +88,6 @@ public final class GetRegionSslPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
-
         public GetRegionSslPolicyArgs build() {
             return new GetRegionSslPolicyArgs(project, region, sslPolicy);
         }

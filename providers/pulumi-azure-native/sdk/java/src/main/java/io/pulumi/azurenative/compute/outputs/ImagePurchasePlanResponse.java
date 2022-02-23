@@ -97,7 +97,6 @@ public final class ImagePurchasePlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public ImagePurchasePlanResponse build() {
             return new ImagePurchasePlanResponse(name, product, publisher);
         }

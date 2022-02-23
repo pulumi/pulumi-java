@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(maxValue, minValue);
         }

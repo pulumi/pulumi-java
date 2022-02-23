@@ -21,7 +21,7 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerImageNames")
-    private final @Nullable List<String> containerImageNames;
+        private final @Nullable List<String> containerImageNames;
 
     public List<String> getContainerImageNames() {
         return this.containerImageNames == null ? List.of() : this.containerImageNames;
@@ -32,14 +32,14 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="containerRegistries")
-    private final @Nullable List<ContainerRegistryResponse> containerRegistries;
+        private final @Nullable List<ContainerRegistryResponse> containerRegistries;
 
     public List<ContainerRegistryResponse> getContainerRegistries() {
         return this.containerRegistries == null ? List.of() : this.containerRegistries;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -98,7 +98,6 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerImageNames, containerRegistries, type);
         }

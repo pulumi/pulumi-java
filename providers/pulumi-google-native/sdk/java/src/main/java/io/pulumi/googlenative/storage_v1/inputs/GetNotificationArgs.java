@@ -15,28 +15,28 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNotificationArgs Empty = new GetNotificationArgs();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="notification", required=true)
-    private final String notification;
+      private final String notification;
 
     public String getNotification() {
         return this.notification;
     }
 
     @InputImport(name="provisionalUserProject")
-    private final @Nullable String provisionalUserProject;
+      private final @Nullable String provisionalUserProject;
 
     public Optional<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @InputImport(name="userProject")
-    private final @Nullable String userProject;
+      private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
@@ -105,7 +105,6 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
             this.userProject = userProject;
             return this;
         }
-
         public GetNotificationArgs build() {
             return new GetNotificationArgs(bucket, notification, provisionalUserProject, userProject);
         }

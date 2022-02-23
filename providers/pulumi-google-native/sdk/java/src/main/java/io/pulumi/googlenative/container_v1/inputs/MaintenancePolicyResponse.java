@@ -22,7 +22,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceVersion", required=true)
-    private final String resourceVersion;
+      private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
@@ -33,7 +33,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="window", required=true)
-    private final MaintenanceWindowResponse window;
+      private final MaintenanceWindowResponse window;
 
     public MaintenanceWindowResponse getWindow() {
         return this.window;
@@ -82,7 +82,6 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
             this.window = Objects.requireNonNull(window);
             return this;
         }
-
         public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(resourceVersion, window);
         }

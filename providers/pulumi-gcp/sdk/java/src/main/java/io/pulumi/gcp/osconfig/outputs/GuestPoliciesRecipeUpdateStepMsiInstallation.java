@@ -98,7 +98,6 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
             this.flags = flags;
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepMsiInstallation build() {
             return new GuestPoliciesRecipeUpdateStepMsiInstallation(allowedExitCodes, artifactId, flags);
         }

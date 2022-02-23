@@ -23,7 +23,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -34,7 +34,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cdnPolicy")
-    private final @Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy;
+      private final @Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy;
 
     public Input<BackendBucketCdnPolicyArgs> getCdnPolicy() {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
@@ -45,7 +45,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compressionMode")
-    private final @Nullable Input<BackendBucketCompressionMode> compressionMode;
+      private final @Nullable Input<BackendBucketCompressionMode> compressionMode;
 
     public Input<BackendBucketCompressionMode> getCompressionMode() {
         return this.compressionMode == null ? Input.empty() : this.compressionMode;
@@ -56,7 +56,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseHeaders")
-    private final @Nullable Input<List<String>> customResponseHeaders;
+      private final @Nullable Input<List<String>> customResponseHeaders;
 
     public Input<List<String>> getCustomResponseHeaders() {
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
@@ -67,7 +67,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -78,7 +78,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCdn")
-    private final @Nullable Input<Boolean> enableCdn;
+      private final @Nullable Input<Boolean> enableCdn;
 
     public Input<Boolean> getEnableCdn() {
         return this.enableCdn == null ? Input.empty() : this.enableCdn;
@@ -89,7 +89,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -100,21 +100,21 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -293,7 +293,6 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public BackendBucketArgs build() {
             return new BackendBucketArgs(bucketName, cdnPolicy, compressionMode, customResponseHeaders, description, enableCdn, kind, name, project, requestId);
         }

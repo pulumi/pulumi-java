@@ -74,7 +74,6 @@ public final class CertDnsChallengeResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public CertDnsChallengeResponse build() {
             return new CertDnsChallengeResponse(domainName, token);
         }

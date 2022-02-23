@@ -25,7 +25,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredState")
-    private final @Nullable Input<PackageDesiredState> desiredState;
+      private final @Nullable Input<PackageDesiredState> desiredState;
 
     public Input<PackageDesiredState> getDesiredState() {
         return this.desiredState == null ? Input.empty() : this.desiredState;
@@ -36,7 +36,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manager")
-    private final @Nullable Input<PackageManager> manager;
+      private final @Nullable Input<PackageManager> manager;
 
     public Input<PackageManager> getManager() {
         return this.manager == null ? Input.empty() : this.manager;
@@ -47,7 +47,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -121,7 +121,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PackageArgs build() {
             return new PackageArgs(desiredState, manager, name);
         }

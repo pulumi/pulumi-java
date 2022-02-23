@@ -75,7 +75,6 @@ public final class EnvironmentModuleLoggingConfiguration {
             this.logLevel = logLevel;
             return this;
         }
-
         public EnvironmentModuleLoggingConfiguration build() {
             return new EnvironmentModuleLoggingConfiguration(cloudWatchLogGroupArn, enabled, logLevel);
         }

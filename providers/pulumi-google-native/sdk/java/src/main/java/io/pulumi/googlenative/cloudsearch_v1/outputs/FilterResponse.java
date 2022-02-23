@@ -59,7 +59,6 @@ public final class FilterResponse {
             this.valueFilter = Objects.requireNonNull(valueFilter);
             return this;
         }
-
         public FilterResponse build() {
             return new FilterResponse(compositeFilter, valueFilter);
         }

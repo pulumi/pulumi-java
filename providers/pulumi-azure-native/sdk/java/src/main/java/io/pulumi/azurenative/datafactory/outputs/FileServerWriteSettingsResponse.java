@@ -121,7 +121,6 @@ public final class FileServerWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileServerWriteSettingsResponse build() {
             return new FileServerWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }

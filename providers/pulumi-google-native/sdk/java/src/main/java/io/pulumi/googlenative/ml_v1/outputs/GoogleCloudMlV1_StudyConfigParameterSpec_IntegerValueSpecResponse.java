@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(maxValue, minValue);
         }

@@ -19,7 +19,7 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="timestamp")
-    private final @Nullable String timestamp;
+        private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
@@ -57,7 +57,6 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
             this.timestamp = timestamp;
             return this;
         }
-
         public PipelineSourceTriggerDescriptorResponse build() {
             return new PipelineSourceTriggerDescriptorResponse(timestamp);
         }

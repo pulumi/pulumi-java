@@ -13,7 +13,7 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
     public static final GetLoggingConfigurationArgs Empty = new GetLoggingConfigurationArgs();
 
     @InputImport(name="firewallArn", required=true)
-    private final String firewallArn;
+        private final String firewallArn;
 
     public String getFirewallArn() {
         return this.firewallArn;
@@ -51,7 +51,6 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
             this.firewallArn = Objects.requireNonNull(firewallArn);
             return this;
         }
-
         public GetLoggingConfigurationArgs build() {
             return new GetLoggingConfigurationArgs(firewallArn);
         }

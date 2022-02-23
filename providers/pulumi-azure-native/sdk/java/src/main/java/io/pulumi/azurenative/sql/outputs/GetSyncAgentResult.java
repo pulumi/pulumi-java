@@ -224,7 +224,6 @@ public final class GetSyncAgentResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSyncAgentResult build() {
             return new GetSyncAgentResult(expiryTime, id, isUpToDate, lastAliveTime, name, state, syncDatabaseId, type, version);
         }

@@ -229,7 +229,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationARN, autoConfigurationEnabled, cWEMonitorEnabled, componentMonitoringSettings, customComponents, logPatternSets, opsCenterEnabled, opsItemSNSTopicArn, tags);
         }

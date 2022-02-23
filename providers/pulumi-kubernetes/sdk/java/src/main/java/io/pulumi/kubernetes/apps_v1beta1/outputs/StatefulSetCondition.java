@@ -139,7 +139,6 @@ public final class StatefulSetCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StatefulSetCondition build() {
             return new StatefulSetCondition(lastTransitionTime, message, reason, status, type);
         }

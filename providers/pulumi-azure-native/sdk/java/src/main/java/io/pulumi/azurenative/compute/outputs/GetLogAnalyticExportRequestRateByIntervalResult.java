@@ -52,7 +52,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetLogAnalyticExportRequestRateByIntervalResult build() {
             return new GetLogAnalyticExportRequestRateByIntervalResult(properties);
         }

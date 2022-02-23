@@ -202,7 +202,6 @@ public final class GetSavedQueryResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSavedQueryResult build() {
             return new GetSavedQueryResult(content, createTime, creator, description, labels, lastUpdateTime, lastUpdater, name);
         }

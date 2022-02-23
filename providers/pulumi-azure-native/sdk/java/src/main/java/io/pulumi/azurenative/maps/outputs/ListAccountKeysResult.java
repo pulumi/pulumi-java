@@ -95,7 +95,6 @@ public final class ListAccountKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(id, primaryKey, secondaryKey);
         }

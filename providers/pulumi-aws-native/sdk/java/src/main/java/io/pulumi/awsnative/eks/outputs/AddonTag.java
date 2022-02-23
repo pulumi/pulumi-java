@@ -74,7 +74,6 @@ public final class AddonTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AddonTag build() {
             return new AddonTag(key, value);
         }

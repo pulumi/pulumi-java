@@ -13,7 +13,7 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetTemplateArgs build() {
             return new GetTemplateArgs(id);
         }

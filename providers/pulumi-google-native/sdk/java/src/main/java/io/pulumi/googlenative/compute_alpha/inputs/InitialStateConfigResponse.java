@@ -22,7 +22,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dbs", required=true)
-    private final List<FileContentBufferResponse> dbs;
+      private final List<FileContentBufferResponse> dbs;
 
     public List<FileContentBufferResponse> getDbs() {
         return this.dbs;
@@ -33,7 +33,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dbxs", required=true)
-    private final List<FileContentBufferResponse> dbxs;
+      private final List<FileContentBufferResponse> dbxs;
 
     public List<FileContentBufferResponse> getDbxs() {
         return this.dbxs;
@@ -44,7 +44,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keks", required=true)
-    private final List<FileContentBufferResponse> keks;
+      private final List<FileContentBufferResponse> keks;
 
     public List<FileContentBufferResponse> getKeks() {
         return this.keks;
@@ -55,7 +55,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pk", required=true)
-    private final FileContentBufferResponse pk;
+      private final FileContentBufferResponse pk;
 
     public FileContentBufferResponse getPk() {
         return this.pk;
@@ -124,7 +124,6 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
             this.pk = Objects.requireNonNull(pk);
             return this;
         }
-
         public InitialStateConfigResponse build() {
             return new InitialStateConfigResponse(dbs, dbxs, keks, pk);
         }

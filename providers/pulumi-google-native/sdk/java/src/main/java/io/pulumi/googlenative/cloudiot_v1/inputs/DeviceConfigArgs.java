@@ -23,7 +23,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryData")
-    private final @Nullable Input<String> binaryData;
+      private final @Nullable Input<String> binaryData;
 
     public Input<String> getBinaryData() {
         return this.binaryData == null ? Input.empty() : this.binaryData;
@@ -66,7 +66,6 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.binaryData = Input.ofNullable(binaryData);
             return this;
         }
-
         public DeviceConfigArgs build() {
             return new DeviceConfigArgs(binaryData);
         }

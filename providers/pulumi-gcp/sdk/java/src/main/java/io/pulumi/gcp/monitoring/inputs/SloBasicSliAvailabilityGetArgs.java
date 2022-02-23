@@ -19,7 +19,7 @@ public final class SloBasicSliAvailabilityGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -62,7 +62,6 @@ public final class SloBasicSliAvailabilityGetArgs extends io.pulumi.resources.Re
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public SloBasicSliAvailabilityGetArgs build() {
             return new SloBasicSliAvailabilityGetArgs(enabled);
         }

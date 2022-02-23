@@ -144,7 +144,6 @@ public final class AlertingActionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AlertingActionResponse build() {
             return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
         }

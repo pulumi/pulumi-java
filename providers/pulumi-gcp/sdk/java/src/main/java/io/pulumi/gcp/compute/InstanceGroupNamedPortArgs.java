@@ -20,7 +20,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="group", required=true)
-    private final Input<String> group;
+        private final Input<String> group;
 
     public Input<String> getGroup() {
         return this.group;
@@ -32,7 +32,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -55,7 +55,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -66,7 +66,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -170,7 +170,6 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceGroupNamedPortArgs build() {
             return new InstanceGroupNamedPortArgs(group, name, port, project, zone);
         }

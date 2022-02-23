@@ -252,7 +252,6 @@ public final class SparkObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SparkObjectDatasetResponse build() {
             return new SparkObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

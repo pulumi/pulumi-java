@@ -184,7 +184,6 @@ public final class GetOfficeDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOfficeDataConnectorResult build() {
             return new GetOfficeDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }

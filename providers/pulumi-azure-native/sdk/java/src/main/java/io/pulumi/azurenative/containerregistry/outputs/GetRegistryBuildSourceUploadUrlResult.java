@@ -76,7 +76,6 @@ public final class GetRegistryBuildSourceUploadUrlResult {
             this.uploadUrl = uploadUrl;
             return this;
         }
-
         public GetRegistryBuildSourceUploadUrlResult build() {
             return new GetRegistryBuildSourceUploadUrlResult(relativePath, uploadUrl);
         }

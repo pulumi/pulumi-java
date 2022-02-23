@@ -75,7 +75,6 @@ public final class ConfigSpectrumConfig {
             this.polarization = polarization;
             return this;
         }
-
         public ConfigSpectrumConfig build() {
             return new ConfigSpectrumConfig(bandwidth, centerFrequency, polarization);
         }

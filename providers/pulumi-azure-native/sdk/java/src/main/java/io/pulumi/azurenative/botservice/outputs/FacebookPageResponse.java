@@ -76,7 +76,6 @@ public final class FacebookPageResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public FacebookPageResponse build() {
             return new FacebookPageResponse(accessToken, id);
         }

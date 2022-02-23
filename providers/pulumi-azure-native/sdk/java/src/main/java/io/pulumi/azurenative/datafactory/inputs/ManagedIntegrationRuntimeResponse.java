@@ -27,7 +27,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="computeProperties")
-    private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
+        private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
 
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return this.computeProperties == null ? Optional.empty() : Optional.ofNullable(this.computeProperties);
@@ -38,7 +38,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="customerVirtualNetwork")
-    private final @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork;
+        private final @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork;
 
     public Optional<IntegrationRuntimeCustomerVirtualNetworkResponse> getCustomerVirtualNetwork() {
         return this.customerVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.customerVirtualNetwork);
@@ -49,7 +49,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -60,7 +60,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="managedVirtualNetwork")
-    private final @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork;
+        private final @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork;
 
     public Optional<ManagedVirtualNetworkReferenceResponse> getManagedVirtualNetwork() {
         return this.managedVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.managedVirtualNetwork);
@@ -71,7 +71,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ssisProperties")
-    private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
+        private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
 
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return this.ssisProperties == null ? Optional.empty() : Optional.ofNullable(this.ssisProperties);
@@ -82,7 +82,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -94,7 +94,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -193,7 +193,6 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, customerVirtualNetwork, description, managedVirtualNetwork, ssisProperties, state, type);
         }

@@ -27,7 +27,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="databaseEncryption")
-    private final @Nullable Input<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
+        private final @Nullable Input<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
     public Input<AzureClusterControlPlaneDatabaseEncryptionArgs> getDatabaseEncryption() {
         return this.databaseEncryption == null ? Input.empty() : this.databaseEncryption;
@@ -38,7 +38,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mainVolume")
-    private final @Nullable Input<AzureClusterControlPlaneMainVolumeArgs> mainVolume;
+        private final @Nullable Input<AzureClusterControlPlaneMainVolumeArgs> mainVolume;
 
     public Input<AzureClusterControlPlaneMainVolumeArgs> getMainVolume() {
         return this.mainVolume == null ? Input.empty() : this.mainVolume;
@@ -49,7 +49,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="proxyConfig")
-    private final @Nullable Input<AzureClusterControlPlaneProxyConfigArgs> proxyConfig;
+        private final @Nullable Input<AzureClusterControlPlaneProxyConfigArgs> proxyConfig;
 
     public Input<AzureClusterControlPlaneProxyConfigArgs> getProxyConfig() {
         return this.proxyConfig == null ? Input.empty() : this.proxyConfig;
@@ -60,7 +60,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replicaPlacements")
-    private final @Nullable Input<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements;
+        private final @Nullable Input<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements;
 
     public Input<List<AzureClusterControlPlaneReplicaPlacementArgs>> getReplicaPlacements() {
         return this.replicaPlacements == null ? Input.empty() : this.replicaPlacements;
@@ -71,7 +71,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rootVolume")
-    private final @Nullable Input<AzureClusterControlPlaneRootVolumeArgs> rootVolume;
+        private final @Nullable Input<AzureClusterControlPlaneRootVolumeArgs> rootVolume;
 
     public Input<AzureClusterControlPlaneRootVolumeArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -82,7 +82,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sshConfig", required=true)
-    private final Input<AzureClusterControlPlaneSshConfigArgs> sshConfig;
+        private final Input<AzureClusterControlPlaneSshConfigArgs> sshConfig;
 
     public Input<AzureClusterControlPlaneSshConfigArgs> getSshConfig() {
         return this.sshConfig;
@@ -93,7 +93,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -104,7 +104,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -115,7 +115,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -126,7 +126,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable Input<String> vmSize;
+        private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;
@@ -305,7 +305,6 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }
-
         public AzureClusterControlPlaneArgs build() {
             return new AzureClusterControlPlaneArgs(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
         }

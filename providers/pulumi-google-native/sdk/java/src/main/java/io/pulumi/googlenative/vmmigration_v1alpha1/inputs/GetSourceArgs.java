@@ -15,21 +15,21 @@ public final class GetSourceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSourceArgs Empty = new GetSourceArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -88,7 +88,6 @@ public final class GetSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public GetSourceArgs build() {
             return new GetSourceArgs(location, project, sourceId);
         }

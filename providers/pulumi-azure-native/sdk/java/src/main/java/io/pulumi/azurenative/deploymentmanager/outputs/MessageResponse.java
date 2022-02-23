@@ -74,7 +74,6 @@ public final class MessageResponse {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
         }
-
         public MessageResponse build() {
             return new MessageResponse(message, timeStamp);
         }

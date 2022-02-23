@@ -52,7 +52,6 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopSchedule {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyVmStopSchedule build() {
             return new ResourcePolicyInstanceSchedulePolicyVmStopSchedule(schedule);
         }

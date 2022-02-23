@@ -17,7 +17,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="blockchainMemberName", required=true)
-    private final String blockchainMemberName;
+        private final String blockchainMemberName;
 
     public String getBlockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,7 +28,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="transactionNodeName", required=true)
-    private final String transactionNodeName;
+        private final String transactionNodeName;
 
     public String getTransactionNodeName() {
         return this.transactionNodeName;
@@ -98,7 +98,6 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
             this.transactionNodeName = Objects.requireNonNull(transactionNodeName);
             return this;
         }
-
         public ListTransactionNodeApiKeysArgs build() {
             return new ListTransactionNodeApiKeysArgs(blockchainMemberName, resourceGroupName, transactionNodeName);
         }

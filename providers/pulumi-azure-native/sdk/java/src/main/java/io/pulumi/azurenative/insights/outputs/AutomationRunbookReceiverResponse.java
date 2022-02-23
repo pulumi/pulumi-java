@@ -182,7 +182,6 @@ public final class AutomationRunbookReceiverResponse {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
         }
-
         public AutomationRunbookReceiverResponse build() {
             return new AutomationRunbookReceiverResponse(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }

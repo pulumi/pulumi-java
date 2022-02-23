@@ -21,7 +21,7 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="all")
-    private final @Nullable Input<Boolean> all;
+        private final @Nullable Input<Boolean> all;
 
     public Input<Boolean> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -32,7 +32,7 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+        private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -91,7 +91,6 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public PolicyListPolicyDenyGetArgs build() {
             return new PolicyListPolicyDenyGetArgs(all, values);
         }

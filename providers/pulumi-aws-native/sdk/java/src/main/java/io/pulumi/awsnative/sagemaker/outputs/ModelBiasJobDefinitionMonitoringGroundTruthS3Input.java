@@ -52,7 +52,6 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public ModelBiasJobDefinitionMonitoringGroundTruthS3Input build() {
             return new ModelBiasJobDefinitionMonitoringGroundTruthS3Input(s3Uri);
         }

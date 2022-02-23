@@ -121,7 +121,6 @@ public final class DatabaseProjectSummaryResponse {
             this.refreshSummaryState = refreshSummaryState;
             return this;
         }
-
         public DatabaseProjectSummaryResponse build() {
             return new DatabaseProjectSummaryResponse(extendedSummary, instanceType, lastSummaryRefreshedTime, refreshSummaryState);
         }

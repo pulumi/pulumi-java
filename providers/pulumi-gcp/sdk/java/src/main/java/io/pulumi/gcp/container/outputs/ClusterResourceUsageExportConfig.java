@@ -108,7 +108,6 @@ public final class ClusterResourceUsageExportConfig {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
-
         public ClusterResourceUsageExportConfig build() {
             return new ClusterResourceUsageExportConfig(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      * 
      */
     @InputImport(name="objectiveValue", required=true)
-    private final Double objectiveValue;
+      private final Double objectiveValue;
 
     public Double getObjectiveValue() {
         return this.objectiveValue;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      * 
      */
     @InputImport(name="trainingStep", required=true)
-    private final String trainingStep;
+      private final String trainingStep;
 
     public String getTrainingStep() {
         return this.trainingStep;
@@ -82,7 +82,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
             this.trainingStep = Objects.requireNonNull(trainingStep);
             return this;
         }
-
         public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse build() {
             return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(objectiveValue, trainingStep);
         }

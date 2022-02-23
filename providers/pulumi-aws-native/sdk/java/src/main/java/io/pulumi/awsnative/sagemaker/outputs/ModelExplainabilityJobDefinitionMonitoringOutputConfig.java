@@ -78,7 +78,6 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionMonitoringOutputConfig build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }

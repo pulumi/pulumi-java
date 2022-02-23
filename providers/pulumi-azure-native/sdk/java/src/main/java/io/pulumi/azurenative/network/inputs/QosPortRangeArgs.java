@@ -23,7 +23,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<Integer> end;
+        private final @Nullable Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -34,7 +34,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<Integer> start;
+        private final @Nullable Input<Integer> start;
 
     public Input<Integer> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -93,7 +93,6 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public QosPortRangeArgs build() {
             return new QosPortRangeArgs(end, start);
         }

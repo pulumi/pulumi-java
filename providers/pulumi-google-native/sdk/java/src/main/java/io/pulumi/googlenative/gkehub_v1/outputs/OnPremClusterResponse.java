@@ -96,7 +96,6 @@ public final class OnPremClusterResponse {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public OnPremClusterResponse build() {
             return new OnPremClusterResponse(adminCluster, clusterMissing, resourceLink);
         }

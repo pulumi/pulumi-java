@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends i
      * 
      */
     @InputImport(name="failureCondition", required=true)
-    private final String failureCondition;
+      private final String failureCondition;
 
     public String getFailureCondition() {
         return this.failureCondition;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends i
      * 
      */
     @InputImport(name="rolloutCondition", required=true)
-    private final String rolloutCondition;
+      private final String rolloutCondition;
 
     public String getRolloutCondition() {
         return this.rolloutCondition;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends i
      * 
      */
     @InputImport(name="rolloutSteps", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> rolloutSteps;
+      private final List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> rolloutSteps;
 
     public List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> getRolloutSteps() {
         return this.rolloutSteps;
@@ -104,7 +104,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends i
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigResponse(failureCondition, rolloutCondition, rolloutSteps);
         }

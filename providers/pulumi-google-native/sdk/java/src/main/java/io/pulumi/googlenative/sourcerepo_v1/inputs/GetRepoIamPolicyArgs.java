@@ -15,21 +15,21 @@ public final class GetRepoIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRepoIamPolicyArgs Empty = new GetRepoIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="repoId", required=true)
-    private final String repoId;
+      private final String repoId;
 
     public String getRepoId() {
         return this.repoId;
@@ -88,7 +88,6 @@ public final class GetRepoIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
-
         public GetRepoIamPolicyArgs build() {
             return new GetRepoIamPolicyArgs(optionsRequestedPolicyVersion, project, repoId);
         }

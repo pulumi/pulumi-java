@@ -13,14 +13,14 @@ public final class RecordingConfigurationTag extends io.pulumi.resources.InvokeA
     public static final RecordingConfigurationTag Empty = new RecordingConfigurationTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class RecordingConfigurationTag extends io.pulumi.resources.InvokeA
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecordingConfigurationTag build() {
             return new RecordingConfigurationTag(key, value);
         }

@@ -151,7 +151,6 @@ public final class MasterAuthResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MasterAuthResponse build() {
             return new MasterAuthResponse(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate, password, username);
         }

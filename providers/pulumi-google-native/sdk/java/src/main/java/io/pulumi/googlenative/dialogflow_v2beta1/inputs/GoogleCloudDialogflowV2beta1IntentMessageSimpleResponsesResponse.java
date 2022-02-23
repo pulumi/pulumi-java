@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> getSimpleResponses() {
         return this.simpleResponses;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(simpleResponses);
         }

@@ -22,7 +22,7 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final FingerprintResponse fingerprint;
+      private final FingerprintResponse fingerprint;
 
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
@@ -33,7 +33,7 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUrl", required=true)
-    private final String resourceUrl;
+      private final String resourceUrl;
 
     public String getResourceUrl() {
         return this.resourceUrl;
@@ -82,7 +82,6 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
-
         public ImageNoteResponse build() {
             return new ImageNoteResponse(fingerprint, resourceUrl);
         }

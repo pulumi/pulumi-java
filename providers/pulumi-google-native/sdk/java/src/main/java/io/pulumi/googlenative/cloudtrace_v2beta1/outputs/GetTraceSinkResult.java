@@ -96,7 +96,6 @@ public final class GetTraceSinkResult {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }
-
         public GetTraceSinkResult build() {
             return new GetTraceSinkResult(name, outputConfig, writerIdentity);
         }

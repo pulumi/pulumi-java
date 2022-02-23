@@ -98,7 +98,6 @@ public final class InstanceSchedulingNodeAffinity {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceSchedulingNodeAffinity build() {
             return new InstanceSchedulingNodeAffinity(key, operator, values);
         }

@@ -76,7 +76,6 @@ public final class KeyVaultResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public KeyVaultResourceSettingsResponse build() {
             return new KeyVaultResourceSettingsResponse(resourceType, targetResourceName);
         }

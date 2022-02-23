@@ -52,7 +52,6 @@ public final class SasTokenInformationResponse {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
-
         public SasTokenInformationResponse build() {
             return new SasTokenInformationResponse(accessToken);
         }

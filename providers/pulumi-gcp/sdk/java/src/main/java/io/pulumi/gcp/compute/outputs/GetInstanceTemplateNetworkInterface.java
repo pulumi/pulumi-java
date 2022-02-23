@@ -275,7 +275,6 @@ public final class GetInstanceTemplateNetworkInterface {
             this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
             return this;
         }
-
         public GetInstanceTemplateNetworkInterface build() {
             return new GetInstanceTemplateNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

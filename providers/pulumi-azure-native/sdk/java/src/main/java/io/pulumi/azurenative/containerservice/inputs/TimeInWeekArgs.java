@@ -27,7 +27,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Either<String,WeekDay>> day;
+        private final @Nullable Input<Either<String,WeekDay>> day;
 
     public Input<Either<String,WeekDay>> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -38,7 +38,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hourSlots")
-    private final @Nullable Input<List<Integer>> hourSlots;
+        private final @Nullable Input<List<Integer>> hourSlots;
 
     public Input<List<Integer>> getHourSlots() {
         return this.hourSlots == null ? Input.empty() : this.hourSlots;
@@ -97,7 +97,6 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
             this.hourSlots = Input.ofNullable(hourSlots);
             return this;
         }
-
         public TimeInWeekArgs build() {
             return new TimeInWeekArgs(day, hourSlots);
         }

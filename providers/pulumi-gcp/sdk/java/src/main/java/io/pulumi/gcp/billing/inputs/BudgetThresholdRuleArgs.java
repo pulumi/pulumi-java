@@ -23,7 +23,7 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="spendBasis")
-    private final @Nullable Input<String> spendBasis;
+        private final @Nullable Input<String> spendBasis;
 
     public Input<String> getSpendBasis() {
         return this.spendBasis == null ? Input.empty() : this.spendBasis;
@@ -35,7 +35,7 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="thresholdPercent", required=true)
-    private final Input<Double> thresholdPercent;
+        private final Input<Double> thresholdPercent;
 
     public Input<Double> getThresholdPercent() {
         return this.thresholdPercent;
@@ -94,7 +94,6 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
             this.thresholdPercent = Input.of(Objects.requireNonNull(thresholdPercent));
             return this;
         }
-
         public BudgetThresholdRuleArgs build() {
             return new BudgetThresholdRuleArgs(spendBasis, thresholdPercent);
         }

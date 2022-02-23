@@ -242,7 +242,6 @@ public final class NodeSystemInfo {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
         }
-
         public NodeSystemInfo build() {
             return new NodeSystemInfo(architecture, bootID, containerRuntimeVersion, kernelVersion, kubeProxyVersion, kubeletVersion, machineID, operatingSystem, osImage, systemUUID);
         }

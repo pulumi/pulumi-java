@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SecurityPolicyRuleRedirectOptionsResponse build() {
             return new SecurityPolicyRuleRedirectOptionsResponse(target, type);
         }

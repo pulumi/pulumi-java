@@ -24,7 +24,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="column")
-    private final @Nullable Input<String> column;
+        private final @Nullable Input<String> column;
 
     public Input<String> getColumn() {
         return this.column == null ? Input.empty() : this.column;
@@ -37,7 +37,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<TagFieldGetArgs>> fields;
+        private final @Nullable Input<List<TagFieldGetArgs>> fields;
 
     public Input<List<TagFieldGetArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -51,7 +51,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -76,7 +76,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<String> template;
+        private final @Nullable Input<String> template;
 
     public Input<String> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -87,7 +87,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateDisplayname")
-    private final @Nullable Input<String> templateDisplayname;
+        private final @Nullable Input<String> templateDisplayname;
 
     public Input<String> getTemplateDisplayname() {
         return this.templateDisplayname == null ? Input.empty() : this.templateDisplayname;
@@ -206,7 +206,6 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             this.templateDisplayname = Input.ofNullable(templateDisplayname);
             return this;
         }
-
         public TagState build() {
             return new TagState(column, fields, name, parent, template, templateDisplayname);
         }

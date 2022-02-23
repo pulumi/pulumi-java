@@ -21,14 +21,14 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     public static final ComplianceOccurrenceArgs Empty = new ComplianceOccurrenceArgs();
 
     @InputImport(name="nonComplianceReason")
-    private final @Nullable Input<String> nonComplianceReason;
+      private final @Nullable Input<String> nonComplianceReason;
 
     public Input<String> getNonComplianceReason() {
         return this.nonComplianceReason == null ? Input.empty() : this.nonComplianceReason;
     }
 
     @InputImport(name="nonCompliantFiles")
-    private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
+      private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
 
     public Input<List<NonCompliantFileArgs>> getNonCompliantFiles() {
         return this.nonCompliantFiles == null ? Input.empty() : this.nonCompliantFiles;
@@ -87,7 +87,6 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
             this.nonCompliantFiles = Input.ofNullable(nonCompliantFiles);
             return this;
         }
-
         public ComplianceOccurrenceArgs build() {
             return new ComplianceOccurrenceArgs(nonComplianceReason, nonCompliantFiles);
         }

@@ -17,7 +17,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     public static final InstanceArgs Empty = new InstanceArgs();
 
     @InputImport(name="databaseId")
-    private final @Nullable Input<String> databaseId;
+      private final @Nullable Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId == null ? Input.empty() : this.databaseId;
@@ -28,14 +28,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseUrl")
-    private final @Nullable Input<String> databaseUrl;
+      private final @Nullable Input<String> databaseUrl;
 
     public Input<String> getDatabaseUrl() {
         return this.databaseUrl == null ? Input.empty() : this.databaseUrl;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -68,7 +68,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<InstanceState> state;
+      private final @Nullable Input<InstanceState> state;
 
     public Input<InstanceState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -79,14 +79,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<InstanceType> type;
+      private final @Nullable Input<InstanceType> type;
 
     public Input<InstanceType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -235,7 +235,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(databaseId, databaseUrl, location, name, project, state, type, validateOnly);
         }

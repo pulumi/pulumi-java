@@ -145,7 +145,6 @@ public final class ListenerRuleRuleCondition {
             this.values = values;
             return this;
         }
-
         public ListenerRuleRuleCondition build() {
             return new ListenerRuleRuleCondition(field, hostHeaderConfig, httpHeaderConfig, httpRequestMethodConfig, pathPatternConfig, queryStringConfig, sourceIpConfig, values);
         }

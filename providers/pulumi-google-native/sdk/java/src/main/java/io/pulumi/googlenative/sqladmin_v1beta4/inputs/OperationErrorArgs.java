@@ -23,7 +23,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -34,7 +34,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -45,7 +45,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -119,7 +119,6 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public OperationErrorArgs build() {
             return new OperationErrorArgs(code, kind, message);
         }

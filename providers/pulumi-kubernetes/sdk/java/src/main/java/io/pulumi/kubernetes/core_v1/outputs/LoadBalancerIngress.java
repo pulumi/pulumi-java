@@ -99,7 +99,6 @@ public final class LoadBalancerIngress {
             this.ports = ports;
             return this;
         }
-
         public LoadBalancerIngress build() {
             return new LoadBalancerIngress(hostname, ip, ports);
         }

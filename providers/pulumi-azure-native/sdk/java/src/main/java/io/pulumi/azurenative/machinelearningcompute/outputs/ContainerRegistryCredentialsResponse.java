@@ -116,7 +116,6 @@ public final class ContainerRegistryCredentialsResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ContainerRegistryCredentialsResponse build() {
             return new ContainerRegistryCredentialsResponse(loginServer, password, password2, username);
         }

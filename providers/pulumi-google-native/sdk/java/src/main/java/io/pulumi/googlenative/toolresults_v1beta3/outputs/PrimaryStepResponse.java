@@ -76,7 +76,6 @@ public final class PrimaryStepResponse {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
         }
-
         public PrimaryStepResponse build() {
             return new PrimaryStepResponse(individualOutcome, rollUp);
         }

@@ -337,7 +337,6 @@ public final class GetNodeTemplateResult {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public GetNodeTemplateResult build() {
             return new GetNodeTemplateResult(accelerators, cpuOvercommitType, creationTimestamp, description, disks, kind, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, region, selfLink, serverBinding, status, statusMessage);
         }

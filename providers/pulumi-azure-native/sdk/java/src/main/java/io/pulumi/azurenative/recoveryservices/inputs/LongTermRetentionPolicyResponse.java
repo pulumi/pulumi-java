@@ -27,7 +27,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dailySchedule")
-    private final @Nullable DailyRetentionScheduleResponse dailySchedule;
+        private final @Nullable DailyRetentionScheduleResponse dailySchedule;
 
     public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
         return this.dailySchedule == null ? Optional.empty() : Optional.ofNullable(this.dailySchedule);
@@ -38,7 +38,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="monthlySchedule")
-    private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
+        private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
 
     public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
         return this.monthlySchedule == null ? Optional.empty() : Optional.ofNullable(this.monthlySchedule);
@@ -50,7 +50,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionPolicyType", required=true)
-    private final String retentionPolicyType;
+        private final String retentionPolicyType;
 
     public String getRetentionPolicyType() {
         return this.retentionPolicyType;
@@ -61,7 +61,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="weeklySchedule")
-    private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
+        private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
 
     public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
         return this.weeklySchedule == null ? Optional.empty() : Optional.ofNullable(this.weeklySchedule);
@@ -72,7 +72,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="yearlySchedule")
-    private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
+        private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
     public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {
         return this.yearlySchedule == null ? Optional.empty() : Optional.ofNullable(this.yearlySchedule);
@@ -151,7 +151,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
             this.yearlySchedule = yearlySchedule;
             return this;
         }
-
         public LongTermRetentionPolicyResponse build() {
             return new LongTermRetentionPolicyResponse(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }

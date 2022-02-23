@@ -15,14 +15,14 @@ public final class SpotFleetVCpuCountRangeRequestArgs extends io.pulumi.resource
     public static final SpotFleetVCpuCountRangeRequestArgs Empty = new SpotFleetVCpuCountRangeRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Integer> max;
+        private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Integer> min;
+        private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class SpotFleetVCpuCountRangeRequestArgs extends io.pulumi.resource
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public SpotFleetVCpuCountRangeRequestArgs build() {
             return new SpotFleetVCpuCountRangeRequestArgs(max, min);
         }

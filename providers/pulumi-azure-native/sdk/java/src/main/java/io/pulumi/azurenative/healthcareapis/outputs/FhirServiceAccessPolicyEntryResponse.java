@@ -52,7 +52,6 @@ public final class FhirServiceAccessPolicyEntryResponse {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public FhirServiceAccessPolicyEntryResponse build() {
             return new FhirServiceAccessPolicyEntryResponse(objectId);
         }

@@ -13,21 +13,21 @@ public final class GetClusterDnsConfig extends io.pulumi.resources.InvokeArgs {
     public static final GetClusterDnsConfig Empty = new GetClusterDnsConfig();
 
     @InputImport(name="clusterDns", required=true)
-    private final String clusterDns;
+        private final String clusterDns;
 
     public String getClusterDns() {
         return this.clusterDns;
     }
 
     @InputImport(name="clusterDnsDomain", required=true)
-    private final String clusterDnsDomain;
+        private final String clusterDnsDomain;
 
     public String getClusterDnsDomain() {
         return this.clusterDnsDomain;
     }
 
     @InputImport(name="clusterDnsScope", required=true)
-    private final String clusterDnsScope;
+        private final String clusterDnsScope;
 
     public String getClusterDnsScope() {
         return this.clusterDnsScope;
@@ -86,7 +86,6 @@ public final class GetClusterDnsConfig extends io.pulumi.resources.InvokeArgs {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }
-
         public GetClusterDnsConfig build() {
             return new GetClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

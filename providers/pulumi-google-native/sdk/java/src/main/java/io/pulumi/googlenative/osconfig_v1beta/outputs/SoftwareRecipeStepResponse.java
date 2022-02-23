@@ -185,7 +185,6 @@ public final class SoftwareRecipeStepResponse {
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
         }
-
         public SoftwareRecipeStepResponse build() {
             return new SoftwareRecipeStepResponse(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

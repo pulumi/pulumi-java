@@ -120,7 +120,6 @@ public final class BucketCor {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public BucketCor build() {
             return new BucketCor(maxAgeSeconds, methods, origins, responseHeaders);
         }

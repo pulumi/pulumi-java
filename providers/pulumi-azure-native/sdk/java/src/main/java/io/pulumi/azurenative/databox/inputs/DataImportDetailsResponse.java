@@ -23,7 +23,7 @@ public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountDetails", required=true)
-    private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
+        private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
         return this.accountDetails;
@@ -61,7 +61,6 @@ public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeA
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
-
         public DataImportDetailsResponse build() {
             return new DataImportDetailsResponse(accountDetails);
         }

@@ -267,7 +267,6 @@ public final class NsgSecurityRuleResponse {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
-
         public NsgSecurityRuleResponse build() {
             return new NsgSecurityRuleResponse(access, description, destinationAddressPrefix, destinationPortRange, direction, name, priority, protocol, sourceAddressPrefix, sourcePortRange);
         }

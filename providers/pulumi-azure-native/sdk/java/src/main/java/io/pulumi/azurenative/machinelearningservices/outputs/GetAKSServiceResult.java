@@ -231,7 +231,6 @@ public final class GetAKSServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAKSServiceResult build() {
             return new GetAKSServiceResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

@@ -183,7 +183,6 @@ public final class TimeWindowCustomAlertRuleResponse {
             this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
             return this;
         }
-
         public TimeWindowCustomAlertRuleResponse build() {
             return new TimeWindowCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType, timeWindowSize);
         }

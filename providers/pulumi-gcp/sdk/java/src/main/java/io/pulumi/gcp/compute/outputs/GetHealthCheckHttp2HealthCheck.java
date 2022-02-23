@@ -124,7 +124,6 @@ public final class GetHealthCheckHttp2HealthCheck {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckHttp2HealthCheck build() {
             return new GetHealthCheckHttp2HealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

@@ -74,7 +74,6 @@ public final class Sysctl {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Sysctl build() {
             return new Sysctl(name, value);
         }

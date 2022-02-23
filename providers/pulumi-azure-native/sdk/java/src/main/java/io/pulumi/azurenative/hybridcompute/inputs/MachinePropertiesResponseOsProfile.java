@@ -21,7 +21,7 @@ public final class MachinePropertiesResponseOsProfile extends io.pulumi.resource
      * 
      */
     @InputImport(name="computerName", required=true)
-    private final String computerName;
+        private final String computerName;
 
     public String getComputerName() {
         return this.computerName;
@@ -59,7 +59,6 @@ public final class MachinePropertiesResponseOsProfile extends io.pulumi.resource
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }
-
         public MachinePropertiesResponseOsProfile build() {
             return new MachinePropertiesResponseOsProfile(computerName);
         }

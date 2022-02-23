@@ -54,7 +54,6 @@ public final class DataImportDetailsResponse {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
-
         public DataImportDetailsResponse build() {
             return new DataImportDetailsResponse(accountDetails);
         }

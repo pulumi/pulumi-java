@@ -77,7 +77,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
             this.occurrence = occurrence;
             return this;
         }
-
         public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceResponse(day, occurrence);
         }

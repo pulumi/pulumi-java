@@ -30,7 +30,6 @@ public final class DataSetFieldFolderMap {
         public Builder(DataSetFieldFolderMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetFieldFolderMap build() {
             return new DataSetFieldFolderMap();
         }

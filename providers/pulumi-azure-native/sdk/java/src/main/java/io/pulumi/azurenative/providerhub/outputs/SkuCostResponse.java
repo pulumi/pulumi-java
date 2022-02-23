@@ -74,7 +74,6 @@ public final class SkuCostResponse {
             this.quantity = quantity;
             return this;
         }
-
         public SkuCostResponse build() {
             return new SkuCostResponse(extendedUnit, meterId, quantity);
         }

@@ -78,7 +78,6 @@ public final class ListSubAccountMonitoredResourcesResult {
             this.value = value;
             return this;
         }
-
         public ListSubAccountMonitoredResourcesResult build() {
             return new ListSubAccountMonitoredResourcesResult(nextLink, value);
         }

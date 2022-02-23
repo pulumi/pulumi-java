@@ -52,7 +52,6 @@ public final class EmailPreferencesResponse {
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
         }
-
         public EmailPreferencesResponse build() {
             return new EmailPreferencesResponse(enableFailureEmail);
         }

@@ -61,7 +61,6 @@ public final class DatasetLateDataRule {
             this.ruleName = ruleName;
             return this;
         }
-
         public DatasetLateDataRule build() {
             return new DatasetLateDataRule(ruleConfiguration, ruleName);
         }

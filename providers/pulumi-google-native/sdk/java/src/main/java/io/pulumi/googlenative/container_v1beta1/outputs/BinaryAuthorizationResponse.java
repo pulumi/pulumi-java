@@ -52,7 +52,6 @@ public final class BinaryAuthorizationResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BinaryAuthorizationResponse build() {
             return new BinaryAuthorizationResponse(enabled);
         }

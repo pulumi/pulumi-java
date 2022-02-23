@@ -119,7 +119,6 @@ public final class ManagedClusterHTTPProxyConfigResponse {
             this.trustedCa = trustedCa;
             return this;
         }
-
         public ManagedClusterHTTPProxyConfigResponse build() {
             return new ManagedClusterHTTPProxyConfigResponse(httpProxy, httpsProxy, noProxy, trustedCa);
         }

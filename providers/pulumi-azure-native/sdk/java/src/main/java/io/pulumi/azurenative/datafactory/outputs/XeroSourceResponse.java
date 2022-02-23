@@ -205,7 +205,6 @@ public final class XeroSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public XeroSourceResponse build() {
             return new XeroSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

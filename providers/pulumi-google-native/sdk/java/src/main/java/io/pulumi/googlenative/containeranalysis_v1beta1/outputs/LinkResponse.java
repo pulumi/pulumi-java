@@ -141,7 +141,6 @@ public final class LinkResponse {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public LinkResponse build() {
             return new LinkResponse(byproducts, command, environment, materials, products);
         }

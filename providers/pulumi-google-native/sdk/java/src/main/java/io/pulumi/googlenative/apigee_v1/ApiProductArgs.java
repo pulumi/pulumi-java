@@ -19,7 +19,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiProductArgs Empty = new ApiProductArgs();
 
     @InputImport(name="apiResources")
-    private final @Nullable Input<List<String>> apiResources;
+      private final @Nullable Input<List<String>> apiResources;
 
     public Input<List<String>> getApiResources() {
         return this.apiResources == null ? Input.empty() : this.apiResources;
@@ -30,7 +30,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalType")
-    private final @Nullable Input<String> approvalType;
+      private final @Nullable Input<String> approvalType;
 
     public Input<String> getApprovalType() {
         return this.approvalType == null ? Input.empty() : this.approvalType;
@@ -41,7 +41,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -52,7 +52,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -63,7 +63,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -74,7 +74,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -85,7 +85,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environments")
-    private final @Nullable Input<List<String>> environments;
+      private final @Nullable Input<List<String>> environments;
 
     public Input<List<String>> getEnvironments() {
         return this.environments == null ? Input.empty() : this.environments;
@@ -96,7 +96,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphqlOperationGroup")
-    private final @Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
+      private final @Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
 
     public Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> getGraphqlOperationGroup() {
         return this.graphqlOperationGroup == null ? Input.empty() : this.graphqlOperationGroup;
@@ -107,7 +107,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -118,7 +118,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -129,14 +129,14 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationGroup")
-    private final @Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
+      private final @Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
 
     public Input<GoogleCloudApigeeV1OperationGroupArgs> getOperationGroup() {
         return this.operationGroup == null ? Input.empty() : this.operationGroup;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -147,7 +147,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxies")
-    private final @Nullable Input<List<String>> proxies;
+      private final @Nullable Input<List<String>> proxies;
 
     public Input<List<String>> getProxies() {
         return this.proxies == null ? Input.empty() : this.proxies;
@@ -158,7 +158,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable Input<String> quota;
+      private final @Nullable Input<String> quota;
 
     public Input<String> getQuota() {
         return this.quota == null ? Input.empty() : this.quota;
@@ -169,7 +169,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaInterval")
-    private final @Nullable Input<String> quotaInterval;
+      private final @Nullable Input<String> quotaInterval;
 
     public Input<String> getQuotaInterval() {
         return this.quotaInterval == null ? Input.empty() : this.quotaInterval;
@@ -180,7 +180,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaTimeUnit")
-    private final @Nullable Input<String> quotaTimeUnit;
+      private final @Nullable Input<String> quotaTimeUnit;
 
     public Input<String> getQuotaTimeUnit() {
         return this.quotaTimeUnit == null ? Input.empty() : this.quotaTimeUnit;
@@ -191,7 +191,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -475,7 +475,6 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public ApiProductArgs build() {
             return new ApiProductArgs(apiResources, approvalType, attributes, createdAt, description, displayName, environments, graphqlOperationGroup, lastModifiedAt, name, operationGroup, organizationId, proxies, quota, quotaInterval, quotaTimeUnit, scopes);
         }

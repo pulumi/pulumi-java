@@ -74,7 +74,6 @@ public final class ParticipantProfilePropertyReferenceResponse {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }
-
         public ParticipantProfilePropertyReferenceResponse build() {
             return new ParticipantProfilePropertyReferenceResponse(interactionPropertyName, profilePropertyName);
         }

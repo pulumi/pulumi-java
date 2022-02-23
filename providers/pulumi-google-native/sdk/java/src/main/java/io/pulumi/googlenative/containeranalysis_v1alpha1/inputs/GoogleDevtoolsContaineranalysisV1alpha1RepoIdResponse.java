@@ -22,7 +22,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * 
      */
     @InputImport(name="projectRepoId", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
+      private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
 
     public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
         return this.projectRepoId;
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * 
      */
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -82,7 +82,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(projectRepoId, uid);
         }

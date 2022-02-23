@@ -119,7 +119,6 @@ public final class EdgeUsageDataCollectionPolicyResponse {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
         }
-
         public EdgeUsageDataCollectionPolicyResponse build() {
             return new EdgeUsageDataCollectionPolicyResponse(dataCollectionFrequency, dataReportingFrequency, eventHubDetails, maxAllowedUnreportedUsageDuration);
         }

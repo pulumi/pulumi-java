@@ -19,7 +19,7 @@ public final class AzureNodePoolConfigRootVolumeGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sizeGib")
-    private final @Nullable Input<Integer> sizeGib;
+        private final @Nullable Input<Integer> sizeGib;
 
     public Input<Integer> getSizeGib() {
         return this.sizeGib == null ? Input.empty() : this.sizeGib;
@@ -62,7 +62,6 @@ public final class AzureNodePoolConfigRootVolumeGetArgs extends io.pulumi.resour
             this.sizeGib = Input.ofNullable(sizeGib);
             return this;
         }
-
         public AzureNodePoolConfigRootVolumeGetArgs build() {
             return new AzureNodePoolConfigRootVolumeGetArgs(sizeGib);
         }

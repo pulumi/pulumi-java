@@ -104,7 +104,6 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchConfig build() {
             return new OrganizationSecurityPolicyRuleMatchConfig(destIpRanges, layer4Configs, srcIpRanges);
         }

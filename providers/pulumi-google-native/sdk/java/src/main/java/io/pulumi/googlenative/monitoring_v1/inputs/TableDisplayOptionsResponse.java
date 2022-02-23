@@ -22,7 +22,7 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="shownColumns", required=true)
-    private final List<String> shownColumns;
+      private final List<String> shownColumns;
 
     public List<String> getShownColumns() {
         return this.shownColumns;
@@ -60,7 +60,6 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }
-
         public TableDisplayOptionsResponse build() {
             return new TableDisplayOptionsResponse(shownColumns);
         }

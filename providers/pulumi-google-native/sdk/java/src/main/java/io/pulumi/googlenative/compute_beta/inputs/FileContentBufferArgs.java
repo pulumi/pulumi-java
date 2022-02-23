@@ -20,7 +20,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -31,7 +31,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileType")
-    private final @Nullable Input<FileContentBufferFileType> fileType;
+      private final @Nullable Input<FileContentBufferFileType> fileType;
 
     public Input<FileContentBufferFileType> getFileType() {
         return this.fileType == null ? Input.empty() : this.fileType;
@@ -90,7 +90,6 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
             this.fileType = Input.ofNullable(fileType);
             return this;
         }
-
         public FileContentBufferArgs build() {
             return new FileContentBufferArgs(content, fileType);
         }

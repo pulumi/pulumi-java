@@ -98,7 +98,6 @@ public final class SecretKeySelector {
             this.optional = optional;
             return this;
         }
-
         public SecretKeySelector build() {
             return new SecretKeySelector(key, name, optional);
         }

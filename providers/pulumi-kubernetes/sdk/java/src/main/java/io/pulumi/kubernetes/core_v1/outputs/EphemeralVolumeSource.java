@@ -89,7 +89,6 @@ public final class EphemeralVolumeSource {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }
-
         public EphemeralVolumeSource build() {
             return new EphemeralVolumeSource(readOnly, volumeClaimTemplate);
         }

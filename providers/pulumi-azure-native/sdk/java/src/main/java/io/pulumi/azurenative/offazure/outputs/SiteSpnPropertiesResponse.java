@@ -160,7 +160,6 @@ public final class SiteSpnPropertiesResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public SiteSpnPropertiesResponse build() {
             return new SiteSpnPropertiesResponse(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
         }

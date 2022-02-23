@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
             this.bigqueryConnectionSpec = Objects.requireNonNull(bigqueryConnectionSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(bigqueryConnectionSpec);
         }

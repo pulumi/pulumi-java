@@ -291,7 +291,6 @@ public final class GetMetadataActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public GetMetadataActivityResponse build() {
             return new GetMetadataActivityResponse(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
         }

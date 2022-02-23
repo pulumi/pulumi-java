@@ -60,7 +60,6 @@ public final class ClusterNodePoolManagement {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
-
         public ClusterNodePoolManagement build() {
             return new ClusterNodePoolManagement(autoRepair, autoUpgrade);
         }

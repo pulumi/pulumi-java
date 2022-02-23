@@ -23,7 +23,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final Input<Object> filePath;
+        private final Input<Object> filePath;
 
     public Input<Object> getFilePath() {
         return this.filePath;
@@ -34,7 +34,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -93,7 +93,6 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public AzureMLWebServiceFileArgs build() {
             return new AzureMLWebServiceFileArgs(filePath, linkedServiceName);
         }

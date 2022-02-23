@@ -77,7 +77,6 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth build() {
             return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(dayOfWeek, weekOrdinal);
         }

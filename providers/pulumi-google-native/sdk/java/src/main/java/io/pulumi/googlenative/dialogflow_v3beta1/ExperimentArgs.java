@@ -22,7 +22,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -33,7 +33,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -44,7 +44,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition;
 
     public Input<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> getDefinition() {
         return this.definition == null ? Input.empty() : this.definition;
@@ -55,7 +55,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -77,14 +77,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -95,7 +95,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experimentLength")
-    private final @Nullable Input<String> experimentLength;
+      private final @Nullable Input<String> experimentLength;
 
     public Input<String> getExperimentLength() {
         return this.experimentLength == null ? Input.empty() : this.experimentLength;
@@ -106,14 +106,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdateTime")
-    private final @Nullable Input<String> lastUpdateTime;
+      private final @Nullable Input<String> lastUpdateTime;
 
     public Input<String> getLastUpdateTime() {
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -124,14 +124,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -142,7 +142,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="result")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result;
 
     public Input<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> getResult() {
         return this.result == null ? Input.empty() : this.result;
@@ -153,7 +153,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutConfig")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig;
 
     public Input<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> getRolloutConfig() {
         return this.rolloutConfig == null ? Input.empty() : this.rolloutConfig;
@@ -164,7 +164,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutFailureReason")
-    private final @Nullable Input<String> rolloutFailureReason;
+      private final @Nullable Input<String> rolloutFailureReason;
 
     public Input<String> getRolloutFailureReason() {
         return this.rolloutFailureReason == null ? Input.empty() : this.rolloutFailureReason;
@@ -175,7 +175,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutState")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState;
 
     public Input<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> getRolloutState() {
         return this.rolloutState == null ? Input.empty() : this.rolloutState;
@@ -186,7 +186,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -197,7 +197,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ExperimentState> state;
+      private final @Nullable Input<ExperimentState> state;
 
     public Input<ExperimentState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -208,7 +208,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variantsHistory")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> getVariantsHistory() {
         return this.variantsHistory == null ? Input.empty() : this.variantsHistory;
@@ -522,7 +522,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.variantsHistory = Input.ofNullable(variantsHistory);
             return this;
         }
-
         public ExperimentArgs build() {
             return new ExperimentArgs(agentId, createTime, definition, description, displayName, endTime, environmentId, experimentLength, lastUpdateTime, location, name, project, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }

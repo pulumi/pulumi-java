@@ -18,14 +18,14 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     public static final SubscriptionStateRuleArgs Empty = new SubscriptionStateRuleArgs();
 
     @InputImport(name="allowedActions")
-    private final @Nullable Input<List<String>> allowedActions;
+        private final @Nullable Input<List<String>> allowedActions;
 
     public Input<List<String>> getAllowedActions() {
         return this.allowedActions == null ? Input.empty() : this.allowedActions;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,SubscriptionState>> state;
+        private final @Nullable Input<Either<String,SubscriptionState>> state;
 
     public Input<Either<String,SubscriptionState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -84,7 +84,6 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SubscriptionStateRuleArgs build() {
             return new SubscriptionStateRuleArgs(allowedActions, state);
         }

@@ -133,7 +133,6 @@ public final class BatchConfigurationPropertiesResponse {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }
-
         public BatchConfigurationPropertiesResponse build() {
             return new BatchConfigurationPropertiesResponse(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
         }

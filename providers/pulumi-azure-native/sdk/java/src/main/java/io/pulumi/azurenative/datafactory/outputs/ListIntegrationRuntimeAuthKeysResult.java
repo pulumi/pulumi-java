@@ -76,7 +76,6 @@ public final class ListIntegrationRuntimeAuthKeysResult {
             this.authKey2 = authKey2;
             return this;
         }
-
         public ListIntegrationRuntimeAuthKeysResult build() {
             return new ListIntegrationRuntimeAuthKeysResult(authKey1, authKey2);
         }

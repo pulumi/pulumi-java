@@ -23,7 +23,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -34,7 +34,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="port", required=true)
-    private final String port;
+        private final String port;
 
     public String getPort() {
         return this.port;
@@ -83,7 +83,6 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public KubernetesIPConfigurationResponse build() {
             return new KubernetesIPConfigurationResponse(ipAddress, port);
         }

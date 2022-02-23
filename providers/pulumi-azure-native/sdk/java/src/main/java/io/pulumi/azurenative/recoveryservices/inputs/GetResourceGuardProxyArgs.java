@@ -17,14 +17,14 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="resourceGuardProxyName", required=true)
-    private final String resourceGuardProxyName;
+        private final String resourceGuardProxyName;
 
     public String getResourceGuardProxyName() {
         return this.resourceGuardProxyName;
@@ -35,7 +35,7 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -94,7 +94,6 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetResourceGuardProxyArgs build() {
             return new GetResourceGuardProxyArgs(resourceGroupName, resourceGuardProxyName, vaultName);
         }

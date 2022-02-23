@@ -20,7 +20,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isActiveCMK")
-    private final @Nullable Input<Boolean> isActiveCMK;
+        private final @Nullable Input<Boolean> isActiveCMK;
 
     public Input<Boolean> getIsActiveCMK() {
         return this.isActiveCMK == null ? Input.empty() : this.isActiveCMK;
@@ -31,7 +31,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+        private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -42,7 +42,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultUrl")
-    private final @Nullable Input<String> keyVaultUrl;
+        private final @Nullable Input<String> keyVaultUrl;
 
     public Input<String> getKeyVaultUrl() {
         return this.keyVaultUrl == null ? Input.empty() : this.keyVaultUrl;
@@ -53,7 +53,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -168,7 +168,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(isActiveCMK, keyName, keyVaultUrl, resourceGroupName, workspaceName);
         }

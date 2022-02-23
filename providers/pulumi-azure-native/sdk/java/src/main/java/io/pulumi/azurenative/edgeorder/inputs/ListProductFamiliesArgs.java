@@ -23,7 +23,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="customerSubscriptionDetails")
-    private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+        private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
@@ -34,7 +34,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -45,7 +45,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filterableProperties", required=true)
-    private final Map<String,List<FilterableProperty>> filterableProperties;
+        private final Map<String,List<FilterableProperty>> filterableProperties;
 
     public Map<String,List<FilterableProperty>> getFilterableProperties() {
         return this.filterableProperties;
@@ -56,7 +56,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -125,7 +125,6 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
             this.skipToken = skipToken;
             return this;
         }
-
         public ListProductFamiliesArgs build() {
             return new ListProductFamiliesArgs(customerSubscriptionDetails, expand, filterableProperties, skipToken);
         }

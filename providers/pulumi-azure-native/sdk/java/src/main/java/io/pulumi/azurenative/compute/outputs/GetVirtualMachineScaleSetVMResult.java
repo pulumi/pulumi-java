@@ -618,7 +618,6 @@ public final class GetVirtualMachineScaleSetVMResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetVirtualMachineScaleSetVMResult build() {
             return new GetVirtualMachineScaleSetVMResult(additionalCapabilities, availabilitySet, diagnosticsProfile, hardwareProfile, id, instanceId, instanceView, latestModelApplied, licenseType, location, modelDefinitionApplied, name, networkProfile, networkProfileConfiguration, osProfile, plan, protectionPolicy, provisioningState, resources, securityProfile, sku, storageProfile, tags, type, userData, vmId, zones);
         }

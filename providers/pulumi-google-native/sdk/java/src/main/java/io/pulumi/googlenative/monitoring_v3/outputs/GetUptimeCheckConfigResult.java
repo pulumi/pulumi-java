@@ -313,7 +313,6 @@ public final class GetUptimeCheckConfigResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetUptimeCheckConfigResult build() {
             return new GetUptimeCheckConfigResult(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, resourceGroup, selectedRegions, tcpCheck, timeout);
         }

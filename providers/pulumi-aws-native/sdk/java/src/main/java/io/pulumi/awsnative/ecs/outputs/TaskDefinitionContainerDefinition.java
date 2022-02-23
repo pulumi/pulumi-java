@@ -609,7 +609,6 @@ public final class TaskDefinitionContainerDefinition {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public TaskDefinitionContainerDefinition build() {
             return new TaskDefinitionContainerDefinition(command, cpu, dependsOn, disableNetworking, dnsSearchDomains, dnsServers, dockerLabels, dockerSecurityOptions, entryPoint, environment, environmentFiles, essential, extraHosts, firelensConfiguration, healthCheck, hostname, image, interactive, links, linuxParameters, logConfiguration, memory, memoryReservation, mountPoints, name, portMappings, privileged, pseudoTerminal, readonlyRootFilesystem, repositoryCredentials, resourceRequirements, secrets, startTimeout, stopTimeout, systemControls, ulimits, user, volumesFrom, workingDirectory);
         }

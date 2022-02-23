@@ -77,7 +77,6 @@ public final class ListUpgradableVersionDetailsResult {
             this.upgradableVersions = upgradableVersions;
             return this;
         }
-
         public ListUpgradableVersionDetailsResult build() {
             return new ListUpgradableVersionDetailsResult(currentVersion, upgradableVersions);
         }

@@ -52,7 +52,6 @@ public final class ManagerIntrinsicSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagerIntrinsicSettingsResponse build() {
             return new ManagerIntrinsicSettingsResponse(type);
         }

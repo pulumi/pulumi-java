@@ -73,7 +73,6 @@ public final class EnvironmentIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public EnvironmentIamBindingCondition build() {
             return new EnvironmentIamBindingCondition(description, expression, title);
         }

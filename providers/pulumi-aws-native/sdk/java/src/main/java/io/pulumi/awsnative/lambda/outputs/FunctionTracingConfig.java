@@ -54,7 +54,6 @@ public final class FunctionTracingConfig {
             this.mode = mode;
             return this;
         }
-
         public FunctionTracingConfig build() {
             return new FunctionTracingConfig(mode);
         }

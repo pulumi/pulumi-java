@@ -19,42 +19,42 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     public static final TopicRuleTimestreamActionArgs Empty = new TopicRuleTimestreamActionArgs();
 
     @InputImport(name="batchMode")
-    private final @Nullable Input<Boolean> batchMode;
+        private final @Nullable Input<Boolean> batchMode;
 
     public Input<Boolean> getBatchMode() {
         return this.batchMode == null ? Input.empty() : this.batchMode;
     }
 
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="dimensions", required=true)
-    private final Input<List<TopicRuleTimestreamDimensionArgs>> dimensions;
+        private final Input<List<TopicRuleTimestreamDimensionArgs>> dimensions;
 
     public Input<List<TopicRuleTimestreamDimensionArgs>> getDimensions() {
         return this.dimensions;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+        private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="timestamp")
-    private final @Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp;
+        private final @Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp;
 
     public Input<TopicRuleTimestreamTimestampArgs> getTimestamp() {
         return this.timestamp == null ? Input.empty() : this.timestamp;
@@ -173,7 +173,6 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
             this.timestamp = Input.ofNullable(timestamp);
             return this;
         }
-
         public TopicRuleTimestreamActionArgs build() {
             return new TopicRuleTimestreamActionArgs(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
         }

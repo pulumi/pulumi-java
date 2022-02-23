@@ -22,7 +22,7 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Integer capacity;
+        private final Integer capacity;
 
     public Integer getCapacity() {
         return this.capacity;
@@ -33,7 +33,7 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,6 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ApiManagementServiceSkuPropertiesResponse build() {
             return new ApiManagementServiceSkuPropertiesResponse(capacity, name);
         }

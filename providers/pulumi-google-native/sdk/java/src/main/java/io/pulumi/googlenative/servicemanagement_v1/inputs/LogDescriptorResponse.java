@@ -23,7 +23,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="labels", required=true)
-    private final List<LabelDescriptorResponse> labels;
+      private final List<LabelDescriptorResponse> labels;
 
     public List<LabelDescriptorResponse> getLabels() {
         return this.labels;
@@ -56,7 +56,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -125,7 +125,6 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LogDescriptorResponse build() {
             return new LogDescriptorResponse(description, displayName, labels, name);
         }

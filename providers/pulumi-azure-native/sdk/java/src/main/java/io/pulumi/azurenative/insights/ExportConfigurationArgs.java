@@ -19,7 +19,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationAccountId")
-    private final @Nullable Input<String> destinationAccountId;
+        private final @Nullable Input<String> destinationAccountId;
 
     public Input<String> getDestinationAccountId() {
         return this.destinationAccountId == null ? Input.empty() : this.destinationAccountId;
@@ -30,7 +30,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationAddress")
-    private final @Nullable Input<String> destinationAddress;
+        private final @Nullable Input<String> destinationAddress;
 
     public Input<String> getDestinationAddress() {
         return this.destinationAddress == null ? Input.empty() : this.destinationAddress;
@@ -41,7 +41,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationStorageLocationId")
-    private final @Nullable Input<String> destinationStorageLocationId;
+        private final @Nullable Input<String> destinationStorageLocationId;
 
     public Input<String> getDestinationStorageLocationId() {
         return this.destinationStorageLocationId == null ? Input.empty() : this.destinationStorageLocationId;
@@ -52,7 +52,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationStorageSubscriptionId")
-    private final @Nullable Input<String> destinationStorageSubscriptionId;
+        private final @Nullable Input<String> destinationStorageSubscriptionId;
 
     public Input<String> getDestinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId == null ? Input.empty() : this.destinationStorageSubscriptionId;
@@ -63,7 +63,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationType")
-    private final @Nullable Input<String> destinationType;
+        private final @Nullable Input<String> destinationType;
 
     public Input<String> getDestinationType() {
         return this.destinationType == null ? Input.empty() : this.destinationType;
@@ -74,7 +74,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="exportId")
-    private final @Nullable Input<String> exportId;
+        private final @Nullable Input<String> exportId;
 
     public Input<String> getExportId() {
         return this.exportId == null ? Input.empty() : this.exportId;
@@ -85,7 +85,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<String> isEnabled;
+        private final @Nullable Input<String> isEnabled;
 
     public Input<String> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -96,7 +96,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationQueueEnabled")
-    private final @Nullable Input<String> notificationQueueEnabled;
+        private final @Nullable Input<String> notificationQueueEnabled;
 
     public Input<String> getNotificationQueueEnabled() {
         return this.notificationQueueEnabled == null ? Input.empty() : this.notificationQueueEnabled;
@@ -107,7 +107,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationQueueUri")
-    private final @Nullable Input<String> notificationQueueUri;
+        private final @Nullable Input<String> notificationQueueUri;
 
     public Input<String> getNotificationQueueUri() {
         return this.notificationQueueUri == null ? Input.empty() : this.notificationQueueUri;
@@ -118,7 +118,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recordTypes")
-    private final @Nullable Input<String> recordTypes;
+        private final @Nullable Input<String> recordTypes;
 
     public Input<String> getRecordTypes() {
         return this.recordTypes == null ? Input.empty() : this.recordTypes;
@@ -129,7 +129,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -140,7 +140,7 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -349,7 +349,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ExportConfigurationArgs build() {
             return new ExportConfigurationArgs(destinationAccountId, destinationAddress, destinationStorageLocationId, destinationStorageSubscriptionId, destinationType, exportId, isEnabled, notificationQueueEnabled, notificationQueueUri, recordTypes, resourceGroupName, resourceName);
         }

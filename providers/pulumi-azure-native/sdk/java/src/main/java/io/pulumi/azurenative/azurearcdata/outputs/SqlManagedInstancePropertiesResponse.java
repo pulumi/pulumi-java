@@ -196,7 +196,6 @@ public final class SqlManagedInstancePropertiesResponse {
             this.startTime = startTime;
             return this;
         }
-
         public SqlManagedInstancePropertiesResponse build() {
             return new SqlManagedInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, provisioningState, startTime);
         }

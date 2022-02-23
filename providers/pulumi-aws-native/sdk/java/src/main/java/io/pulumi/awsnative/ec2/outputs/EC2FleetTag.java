@@ -58,7 +58,6 @@ public final class EC2FleetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EC2FleetTag build() {
             return new EC2FleetTag(key, value);
         }

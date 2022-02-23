@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -63,7 +63,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs(values);
         }

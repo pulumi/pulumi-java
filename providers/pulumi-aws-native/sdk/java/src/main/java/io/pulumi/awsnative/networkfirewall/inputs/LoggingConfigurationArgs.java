@@ -15,7 +15,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     public static final LoggingConfigurationArgs Empty = new LoggingConfigurationArgs();
 
     @InputImport(name="logDestinationConfigs", required=true)
-    private final Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
+        private final Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
     public Input<List<LoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
@@ -58,7 +58,6 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             this.logDestinationConfigs = Input.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-
         public LoggingConfigurationArgs build() {
             return new LoggingConfigurationArgs(logDestinationConfigs);
         }

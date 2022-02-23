@@ -220,7 +220,6 @@ public final class AutoscalingPolicyResponse {
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
         }
-
         public AutoscalingPolicyResponse build() {
             return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleInControl, scalingSchedules);
         }

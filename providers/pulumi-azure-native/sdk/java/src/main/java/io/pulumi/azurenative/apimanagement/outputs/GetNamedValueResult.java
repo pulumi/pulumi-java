@@ -205,7 +205,6 @@ public final class GetNamedValueResult {
             this.value = value;
             return this;
         }
-
         public GetNamedValueResult build() {
             return new GetNamedValueResult(displayName, id, keyVault, name, secret, tags, type, value);
         }

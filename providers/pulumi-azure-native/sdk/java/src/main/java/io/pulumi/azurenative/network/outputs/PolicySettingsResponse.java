@@ -141,7 +141,6 @@ public final class PolicySettingsResponse {
             this.state = state;
             return this;
         }
-
         public PolicySettingsResponse build() {
             return new PolicySettingsResponse(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }

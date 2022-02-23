@@ -29,7 +29,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="customErrorConfigurations")
-    private final @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
+        private final @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
     public Input<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
         return this.customErrorConfigurations == null ? Input.empty() : this.customErrorConfigurations;
@@ -40,7 +40,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable Input<SubResourceArgs> firewallPolicy;
+        private final @Nullable Input<SubResourceArgs> firewallPolicy;
 
     public Input<SubResourceArgs> getFirewallPolicy() {
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
@@ -51,7 +51,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-    private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+        private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
     public Input<SubResourceArgs> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
@@ -62,7 +62,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="frontendPort")
-    private final @Nullable Input<SubResourceArgs> frontendPort;
+        private final @Nullable Input<SubResourceArgs> frontendPort;
 
     public Input<SubResourceArgs> getFrontendPort() {
         return this.frontendPort == null ? Input.empty() : this.frontendPort;
@@ -73,7 +73,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -84,7 +84,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostNames")
-    private final @Nullable Input<List<String>> hostNames;
+        private final @Nullable Input<List<String>> hostNames;
 
     public Input<List<String>> getHostNames() {
         return this.hostNames == null ? Input.empty() : this.hostNames;
@@ -95,7 +95,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -106,7 +106,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
+        private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
 
     public Input<Either<String,ApplicationGatewayProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -128,7 +128,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="requireServerNameIndication")
-    private final @Nullable Input<Boolean> requireServerNameIndication;
+        private final @Nullable Input<Boolean> requireServerNameIndication;
 
     public Input<Boolean> getRequireServerNameIndication() {
         return this.requireServerNameIndication == null ? Input.empty() : this.requireServerNameIndication;
@@ -139,7 +139,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sslCertificate")
-    private final @Nullable Input<SubResourceArgs> sslCertificate;
+        private final @Nullable Input<SubResourceArgs> sslCertificate;
 
     public Input<SubResourceArgs> getSslCertificate() {
         return this.sslCertificate == null ? Input.empty() : this.sslCertificate;
@@ -150,7 +150,7 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sslProfile")
-    private final @Nullable Input<SubResourceArgs> sslProfile;
+        private final @Nullable Input<SubResourceArgs> sslProfile;
 
     public Input<SubResourceArgs> getSslProfile() {
         return this.sslProfile == null ? Input.empty() : this.sslProfile;
@@ -359,7 +359,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
             this.sslProfile = Input.ofNullable(sslProfile);
             return this;
         }
-
         public ApplicationGatewayHttpListenerArgs build() {
             return new ApplicationGatewayHttpListenerArgs(customErrorConfigurations, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, requireServerNameIndication, sslCertificate, sslProfile);
         }

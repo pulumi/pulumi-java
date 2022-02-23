@@ -22,7 +22,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="nodeId", required=true)
-    private final String nodeId;
+        private final String nodeId;
 
     public String getNodeId() {
         return this.nodeId;
@@ -33,7 +33,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="nodeState", required=true)
-    private final String nodeState;
+        private final String nodeState;
 
     public String getNodeState() {
         return this.nodeState;
@@ -44,7 +44,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="port", required=true)
-    private final Double port;
+        private final Double port;
 
     public Double getPort() {
         return this.port;
@@ -55,7 +55,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+        private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -66,7 +66,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIpAddress", required=true)
-    private final String publicIpAddress;
+        private final String publicIpAddress;
 
     public String getPublicIpAddress() {
         return this.publicIpAddress;
@@ -77,7 +77,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="runId", required=true)
-    private final String runId;
+        private final String runId;
 
     public String getRunId() {
         return this.runId;
@@ -166,7 +166,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
-
         public AmlComputeNodeInformationResponse build() {
             return new AmlComputeNodeInformationResponse(nodeId, nodeState, port, privateIpAddress, publicIpAddress, runId);
         }

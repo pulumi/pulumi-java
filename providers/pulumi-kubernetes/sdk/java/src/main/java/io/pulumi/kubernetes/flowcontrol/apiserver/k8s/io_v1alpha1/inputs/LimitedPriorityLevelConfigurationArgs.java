@@ -30,7 +30,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="assuredConcurrencyShares")
-    private final @Nullable Input<Integer> assuredConcurrencyShares;
+        private final @Nullable Input<Integer> assuredConcurrencyShares;
 
     public Input<Integer> getAssuredConcurrencyShares() {
         return this.assuredConcurrencyShares == null ? Input.empty() : this.assuredConcurrencyShares;
@@ -41,7 +41,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="limitResponse")
-    private final @Nullable Input<LimitResponseArgs> limitResponse;
+        private final @Nullable Input<LimitResponseArgs> limitResponse;
 
     public Input<LimitResponseArgs> getLimitResponse() {
         return this.limitResponse == null ? Input.empty() : this.limitResponse;
@@ -100,7 +100,6 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
             this.limitResponse = Input.ofNullable(limitResponse);
             return this;
         }
-
         public LimitedPriorityLevelConfigurationArgs build() {
             return new LimitedPriorityLevelConfigurationArgs(assuredConcurrencyShares, limitResponse);
         }

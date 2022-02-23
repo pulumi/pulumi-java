@@ -20,7 +20,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable Input<String> gatewayId;
+        private final @Nullable Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
@@ -42,7 +42,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationData")
-    private final @Nullable Input<ResourceLocationDataContractArgs> locationData;
+        private final @Nullable Input<ResourceLocationDataContractArgs> locationData;
 
     public Input<ResourceLocationDataContractArgs> getLocationData() {
         return this.locationData == null ? Input.empty() : this.locationData;
@@ -53,7 +53,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public GatewayArgs build() {
             return new GatewayArgs(description, gatewayId, locationData, resourceGroupName, serviceName);
         }

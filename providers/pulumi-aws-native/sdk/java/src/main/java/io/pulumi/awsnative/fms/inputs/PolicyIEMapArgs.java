@@ -20,14 +20,14 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyIEMapArgs Empty = new PolicyIEMapArgs();
 
     @InputImport(name="aCCOUNT")
-    private final @Nullable Input<List<String>> aCCOUNT;
+        private final @Nullable Input<List<String>> aCCOUNT;
 
     public Input<List<String>> getACCOUNT() {
         return this.aCCOUNT == null ? Input.empty() : this.aCCOUNT;
     }
 
     @InputImport(name="oRGUNIT")
-    private final @Nullable Input<List<String>> oRGUNIT;
+        private final @Nullable Input<List<String>> oRGUNIT;
 
     public Input<List<String>> getORGUNIT() {
         return this.oRGUNIT == null ? Input.empty() : this.oRGUNIT;
@@ -86,7 +86,6 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
             this.oRGUNIT = Input.ofNullable(oRGUNIT);
             return this;
         }
-
         public PolicyIEMapArgs build() {
             return new PolicyIEMapArgs(aCCOUNT, oRGUNIT);
         }

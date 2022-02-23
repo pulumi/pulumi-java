@@ -15,28 +15,28 @@ public final class GetFunctionIamPolicyArgs extends io.pulumi.resources.InvokeAr
     public static final GetFunctionIamPolicyArgs Empty = new GetFunctionIamPolicyArgs();
 
     @InputImport(name="functionId", required=true)
-    private final String functionId;
+      private final String functionId;
 
     public String getFunctionId() {
         return this.functionId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetFunctionIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.project = project;
             return this;
         }
-
         public GetFunctionIamPolicyArgs build() {
             return new GetFunctionIamPolicyArgs(functionId, location, optionsRequestedPolicyVersion, project);
         }

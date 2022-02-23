@@ -23,7 +23,7 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<String> cpu;
+        private final @Nullable Input<String> cpu;
 
     public Input<String> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -34,7 +34,7 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceRoleArn")
-    private final @Nullable Input<String> instanceRoleArn;
+        private final @Nullable Input<String> instanceRoleArn;
 
     public Input<String> getInstanceRoleArn() {
         return this.instanceRoleArn == null ? Input.empty() : this.instanceRoleArn;
@@ -45,7 +45,7 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<String> memory;
+        private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -119,7 +119,6 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
             this.memory = Input.ofNullable(memory);
             return this;
         }
-
         public ServiceInstanceConfigurationArgs build() {
             return new ServiceInstanceConfigurationArgs(cpu, instanceRoleArn, memory);
         }

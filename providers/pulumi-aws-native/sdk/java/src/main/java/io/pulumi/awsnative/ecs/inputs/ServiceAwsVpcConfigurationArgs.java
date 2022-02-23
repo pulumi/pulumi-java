@@ -17,21 +17,21 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     public static final ServiceAwsVpcConfigurationArgs Empty = new ServiceAwsVpcConfigurationArgs();
 
     @InputImport(name="assignPublicIp")
-    private final @Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
+        private final @Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
     public Input<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
         return this.assignPublicIp == null ? Input.empty() : this.assignPublicIp;
     }
 
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+        private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
     }
 
     @InputImport(name="subnets")
-    private final @Nullable Input<List<String>> subnets;
+        private final @Nullable Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -105,7 +105,6 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
-
         public ServiceAwsVpcConfigurationArgs build() {
             return new ServiceAwsVpcConfigurationArgs(assignPublicIp, securityGroups, subnets);
         }

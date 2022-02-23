@@ -221,7 +221,6 @@ public final class GetApplicationPackageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationPackageResult build() {
             return new GetApplicationPackageResult(etag, format, id, lastActivationTime, name, state, storageUrl, storageUrlExpiry, type);
         }

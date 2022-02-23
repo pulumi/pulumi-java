@@ -74,7 +74,6 @@ public final class AzureFirewallIpGroupsResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public AzureFirewallIpGroupsResponse build() {
             return new AzureFirewallIpGroupsResponse(changeNumber, id);
         }

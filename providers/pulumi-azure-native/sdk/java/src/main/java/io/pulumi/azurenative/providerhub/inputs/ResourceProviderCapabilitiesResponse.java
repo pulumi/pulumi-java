@@ -16,21 +16,21 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
     public static final ResourceProviderCapabilitiesResponse Empty = new ResourceProviderCapabilitiesResponse();
 
     @InputImport(name="effect", required=true)
-    private final String effect;
+        private final String effect;
 
     public String getEffect() {
         return this.effect;
     }
 
     @InputImport(name="quotaId", required=true)
-    private final String quotaId;
+        private final String quotaId;
 
     public String getQuotaId() {
         return this.quotaId;
     }
 
     @InputImport(name="requiredFeatures")
-    private final @Nullable List<String> requiredFeatures;
+        private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
@@ -89,7 +89,6 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public ResourceProviderCapabilitiesResponse build() {
             return new ResourceProviderCapabilitiesResponse(effect, quotaId, requiredFeatures);
         }

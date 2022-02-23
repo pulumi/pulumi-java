@@ -199,7 +199,6 @@ public final class StandardAppVersionHandler {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public StandardAppVersionHandler build() {
             return new StandardAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

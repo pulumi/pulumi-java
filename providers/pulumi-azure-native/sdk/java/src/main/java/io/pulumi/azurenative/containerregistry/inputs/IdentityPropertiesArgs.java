@@ -26,7 +26,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+        private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -37,7 +37,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -48,7 +48,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+        private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Input<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -151,7 +151,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(principalId, tenantId, type, userAssignedIdentities);
         }

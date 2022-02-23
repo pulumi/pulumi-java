@@ -53,7 +53,6 @@ public final class LabelSelectorResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public LabelSelectorResponse build() {
             return new LabelSelectorResponse(labels);
         }

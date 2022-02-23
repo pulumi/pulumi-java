@@ -76,7 +76,6 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public JitNetworkAccessRequestVirtualMachineResponse build() {
             return new JitNetworkAccessRequestVirtualMachineResponse(id, ports);
         }

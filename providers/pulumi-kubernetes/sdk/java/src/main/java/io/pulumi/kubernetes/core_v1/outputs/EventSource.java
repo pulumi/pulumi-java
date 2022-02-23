@@ -76,7 +76,6 @@ public final class EventSource {
             this.host = host;
             return this;
         }
-
         public EventSource build() {
             return new EventSource(component, host);
         }

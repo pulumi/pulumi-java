@@ -22,7 +22,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -44,7 +44,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -55,7 +55,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CreateUpdateOptionsArgs> options;
+        private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -77,7 +77,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<SqlTriggerResourceArgs> resource;
+        private final Input<SqlTriggerResourceArgs> resource;
 
     public Input<SqlTriggerResourceArgs> getResource() {
         return this.resource;
@@ -88,7 +88,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="triggerName")
-    private final @Nullable Input<String> triggerName;
+        private final @Nullable Input<String> triggerName;
 
     public Input<String> getTriggerName() {
         return this.triggerName == null ? Input.empty() : this.triggerName;
@@ -274,7 +274,6 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }
-
         public SqlResourceSqlTriggerArgs build() {
             return new SqlResourceSqlTriggerArgs(accountName, containerName, databaseName, location, options, resource, resourceGroupName, tags, triggerName);
         }

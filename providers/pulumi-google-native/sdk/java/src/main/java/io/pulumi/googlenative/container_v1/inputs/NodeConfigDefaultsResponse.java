@@ -21,7 +21,7 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gcfsConfig", required=true)
-    private final GcfsConfigResponse gcfsConfig;
+      private final GcfsConfigResponse gcfsConfig;
 
     public GcfsConfigResponse getGcfsConfig() {
         return this.gcfsConfig;
@@ -59,7 +59,6 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }
-
         public NodeConfigDefaultsResponse build() {
             return new NodeConfigDefaultsResponse(gcfsConfig);
         }

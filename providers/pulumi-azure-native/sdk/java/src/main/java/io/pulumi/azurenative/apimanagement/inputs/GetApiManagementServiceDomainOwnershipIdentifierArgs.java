@@ -30,7 +30,6 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierArgs extends 
         public Builder(GetApiManagementServiceDomainOwnershipIdentifierArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetApiManagementServiceDomainOwnershipIdentifierArgs build() {
             return new GetApiManagementServiceDomainOwnershipIdentifierArgs();
         }

@@ -73,7 +73,6 @@ public final class DistributionOriginGroup {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public DistributionOriginGroup build() {
             return new DistributionOriginGroup(failoverCriteria, id, members);
         }

@@ -160,7 +160,6 @@ public final class ReplicationAgentDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReplicationAgentDetailsResponse build() {
             return new ReplicationAgentDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

@@ -21,7 +21,7 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -81,7 +81,6 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServiceRegistryInstanceResponse build() {
             return new ServiceRegistryInstanceResponse(name, status);
         }

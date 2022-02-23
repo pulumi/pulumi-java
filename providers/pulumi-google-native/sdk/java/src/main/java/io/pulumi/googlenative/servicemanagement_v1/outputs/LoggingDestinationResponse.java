@@ -75,7 +75,6 @@ public final class LoggingDestinationResponse {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
-
         public LoggingDestinationResponse build() {
             return new LoggingDestinationResponse(logs, monitoredResource);
         }

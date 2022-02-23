@@ -117,7 +117,6 @@ public final class EventTriggerResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public EventTriggerResponse build() {
             return new EventTriggerResponse(eventType, failurePolicy, resource, service);
         }

@@ -247,7 +247,6 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
-
         public AutoprovisioningNodePoolDefaultsResponse build() {
             return new AutoprovisioningNodePoolDefaultsResponse(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
         }

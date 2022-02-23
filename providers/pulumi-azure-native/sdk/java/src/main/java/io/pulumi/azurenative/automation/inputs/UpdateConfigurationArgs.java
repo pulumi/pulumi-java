@@ -28,7 +28,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="azureVirtualMachines")
-    private final @Nullable Input<List<String>> azureVirtualMachines;
+        private final @Nullable Input<List<String>> azureVirtualMachines;
 
     public Input<List<String>> getAzureVirtualMachines() {
         return this.azureVirtualMachines == null ? Input.empty() : this.azureVirtualMachines;
@@ -39,7 +39,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+        private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -50,7 +50,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linux")
-    private final @Nullable Input<LinuxPropertiesArgs> linux;
+        private final @Nullable Input<LinuxPropertiesArgs> linux;
 
     public Input<LinuxPropertiesArgs> getLinux() {
         return this.linux == null ? Input.empty() : this.linux;
@@ -61,7 +61,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="nonAzureComputerNames")
-    private final @Nullable Input<List<String>> nonAzureComputerNames;
+        private final @Nullable Input<List<String>> nonAzureComputerNames;
 
     public Input<List<String>> getNonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? Input.empty() : this.nonAzureComputerNames;
@@ -72,7 +72,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-    private final Input<OperatingSystemType> operatingSystem;
+        private final Input<OperatingSystemType> operatingSystem;
 
     public Input<OperatingSystemType> getOperatingSystem() {
         return this.operatingSystem;
@@ -83,7 +83,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<TargetPropertiesArgs> targets;
+        private final @Nullable Input<TargetPropertiesArgs> targets;
 
     public Input<TargetPropertiesArgs> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
@@ -94,7 +94,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="windows")
-    private final @Nullable Input<WindowsPropertiesArgs> windows;
+        private final @Nullable Input<WindowsPropertiesArgs> windows;
 
     public Input<WindowsPropertiesArgs> getWindows() {
         return this.windows == null ? Input.empty() : this.windows;
@@ -228,7 +228,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             this.windows = Input.ofNullable(windows);
             return this;
         }
-
         public UpdateConfigurationArgs build() {
             return new UpdateConfigurationArgs(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
         }

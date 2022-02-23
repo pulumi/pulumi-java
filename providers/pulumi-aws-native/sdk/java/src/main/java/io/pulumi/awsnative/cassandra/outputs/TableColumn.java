@@ -58,7 +58,6 @@ public final class TableColumn {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }
-
         public TableColumn build() {
             return new TableColumn(columnName, columnType);
         }

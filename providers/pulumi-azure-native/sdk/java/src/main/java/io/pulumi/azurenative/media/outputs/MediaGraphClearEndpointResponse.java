@@ -100,7 +100,6 @@ public final class MediaGraphClearEndpointResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public MediaGraphClearEndpointResponse build() {
             return new MediaGraphClearEndpointResponse(credentials, odataType, url);
         }

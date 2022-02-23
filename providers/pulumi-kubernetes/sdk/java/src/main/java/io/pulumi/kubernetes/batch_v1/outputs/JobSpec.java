@@ -264,7 +264,6 @@ public final class JobSpec {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
-
         public JobSpec build() {
             return new JobSpec(activeDeadlineSeconds, backoffLimit, completionMode, completions, manualSelector, parallelism, selector, suspend, template, ttlSecondsAfterFinished);
         }

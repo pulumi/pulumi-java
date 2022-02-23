@@ -81,7 +81,6 @@ public final class URLMapPathMatcherPathRuleRouteActionTimeout {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionTimeout build() {
             return new URLMapPathMatcherPathRuleRouteActionTimeout(nanos, seconds);
         }

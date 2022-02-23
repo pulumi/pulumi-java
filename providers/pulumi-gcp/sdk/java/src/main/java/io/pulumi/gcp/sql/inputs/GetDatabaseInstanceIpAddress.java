@@ -13,21 +13,21 @@ public final class GetDatabaseInstanceIpAddress extends io.pulumi.resources.Invo
     public static final GetDatabaseInstanceIpAddress Empty = new GetDatabaseInstanceIpAddress();
 
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+        private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
     }
 
     @InputImport(name="timeToRetire", required=true)
-    private final String timeToRetire;
+        private final String timeToRetire;
 
     public String getTimeToRetire() {
         return this.timeToRetire;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -86,7 +86,6 @@ public final class GetDatabaseInstanceIpAddress extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseInstanceIpAddress build() {
             return new GetDatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
         }

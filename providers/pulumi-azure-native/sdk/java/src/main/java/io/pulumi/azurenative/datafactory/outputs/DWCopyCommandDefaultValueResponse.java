@@ -76,7 +76,6 @@ public final class DWCopyCommandDefaultValueResponse {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public DWCopyCommandDefaultValueResponse build() {
             return new DWCopyCommandDefaultValueResponse(columnName, defaultValue);
         }

@@ -74,7 +74,6 @@ public final class RoleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RoleTag build() {
             return new RoleTag(key, value);
         }

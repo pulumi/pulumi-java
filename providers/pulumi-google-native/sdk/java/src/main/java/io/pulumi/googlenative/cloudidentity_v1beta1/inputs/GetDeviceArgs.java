@@ -13,7 +13,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @InputImport(name="deviceId", required=true)
-    private final String deviceId;
+      private final String deviceId;
 
     public String getDeviceId() {
         return this.deviceId;
@@ -51,7 +51,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceId);
         }

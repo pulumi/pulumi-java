@@ -35,7 +35,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-    private final @Nullable Input<AttestationArgs> attestation;
+      private final @Nullable Input<AttestationArgs> attestation;
 
     public Input<AttestationArgs> getAttestation() {
         return this.attestation == null ? Input.empty() : this.attestation;
@@ -46,7 +46,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildDetails")
-    private final @Nullable Input<BuildDetailsArgs> buildDetails;
+      private final @Nullable Input<BuildDetailsArgs> buildDetails;
 
     public Input<BuildDetailsArgs> getBuildDetails() {
         return this.buildDetails == null ? Input.empty() : this.buildDetails;
@@ -57,7 +57,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compliance")
-    private final @Nullable Input<ComplianceOccurrenceArgs> compliance;
+      private final @Nullable Input<ComplianceOccurrenceArgs> compliance;
 
     public Input<ComplianceOccurrenceArgs> getCompliance() {
         return this.compliance == null ? Input.empty() : this.compliance;
@@ -68,7 +68,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-    private final @Nullable Input<DeploymentArgs> deployment;
+      private final @Nullable Input<DeploymentArgs> deployment;
 
     public Input<DeploymentArgs> getDeployment() {
         return this.deployment == null ? Input.empty() : this.deployment;
@@ -79,7 +79,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="derivedImage")
-    private final @Nullable Input<DerivedArgs> derivedImage;
+      private final @Nullable Input<DerivedArgs> derivedImage;
 
     public Input<DerivedArgs> getDerivedImage() {
         return this.derivedImage == null ? Input.empty() : this.derivedImage;
@@ -90,7 +90,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovered")
-    private final @Nullable Input<DiscoveredArgs> discovered;
+      private final @Nullable Input<DiscoveredArgs> discovered;
 
     public Input<DiscoveredArgs> getDiscovered() {
         return this.discovered == null ? Input.empty() : this.discovered;
@@ -101,7 +101,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsseAttestation")
-    private final @Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation;
+      private final @Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
     public Input<DSSEAttestationOccurrenceArgs> getDsseAttestation() {
         return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
@@ -112,7 +112,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envelope")
-    private final @Nullable Input<EnvelopeArgs> envelope;
+      private final @Nullable Input<EnvelopeArgs> envelope;
 
     public Input<EnvelopeArgs> getEnvelope() {
         return this.envelope == null ? Input.empty() : this.envelope;
@@ -123,7 +123,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installation")
-    private final @Nullable Input<InstallationArgs> installation;
+      private final @Nullable Input<InstallationArgs> installation;
 
     public Input<InstallationArgs> getInstallation() {
         return this.installation == null ? Input.empty() : this.installation;
@@ -134,14 +134,14 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName")
-    private final @Nullable Input<String> noteName;
+      private final @Nullable Input<String> noteName;
 
     public Input<String> getNoteName() {
         return this.noteName == null ? Input.empty() : this.noteName;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -152,7 +152,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-    private final @Nullable Input<String> remediation;
+      private final @Nullable Input<String> remediation;
 
     public Input<String> getRemediation() {
         return this.remediation == null ? Input.empty() : this.remediation;
@@ -163,7 +163,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<ResourceArgs> resource;
+      private final @Nullable Input<ResourceArgs> resource;
 
     public Input<ResourceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -174,7 +174,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUrl")
-    private final @Nullable Input<String> resourceUrl;
+      private final @Nullable Input<String> resourceUrl;
 
     public Input<String> getResourceUrl() {
         return this.resourceUrl == null ? Input.empty() : this.resourceUrl;
@@ -185,7 +185,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sbom")
-    private final @Nullable Input<DocumentOccurrenceArgs> sbom;
+      private final @Nullable Input<DocumentOccurrenceArgs> sbom;
 
     public Input<DocumentOccurrenceArgs> getSbom() {
         return this.sbom == null ? Input.empty() : this.sbom;
@@ -196,7 +196,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxFile")
-    private final @Nullable Input<FileOccurrenceArgs> spdxFile;
+      private final @Nullable Input<FileOccurrenceArgs> spdxFile;
 
     public Input<FileOccurrenceArgs> getSpdxFile() {
         return this.spdxFile == null ? Input.empty() : this.spdxFile;
@@ -207,7 +207,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxPackage")
-    private final @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage;
+      private final @Nullable Input<PackageInfoOccurrenceArgs> spdxPackage;
 
     public Input<PackageInfoOccurrenceArgs> getSpdxPackage() {
         return this.spdxPackage == null ? Input.empty() : this.spdxPackage;
@@ -218,7 +218,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxRelationship")
-    private final @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship;
+      private final @Nullable Input<RelationshipOccurrenceArgs> spdxRelationship;
 
     public Input<RelationshipOccurrenceArgs> getSpdxRelationship() {
         return this.spdxRelationship == null ? Input.empty() : this.spdxRelationship;
@@ -229,7 +229,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgrade")
-    private final @Nullable Input<UpgradeOccurrenceArgs> upgrade;
+      private final @Nullable Input<UpgradeOccurrenceArgs> upgrade;
 
     public Input<UpgradeOccurrenceArgs> getUpgrade() {
         return this.upgrade == null ? Input.empty() : this.upgrade;
@@ -240,7 +240,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerabilityDetails")
-    private final @Nullable Input<VulnerabilityDetailsArgs> vulnerabilityDetails;
+      private final @Nullable Input<VulnerabilityDetailsArgs> vulnerabilityDetails;
 
     public Input<VulnerabilityDetailsArgs> getVulnerabilityDetails() {
         return this.vulnerabilityDetails == null ? Input.empty() : this.vulnerabilityDetails;
@@ -569,7 +569,6 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerabilityDetails = Input.ofNullable(vulnerabilityDetails);
             return this;
         }
-
         public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, buildDetails, compliance, deployment, derivedImage, discovered, dsseAttestation, envelope, installation, noteName, project, remediation, resource, resourceUrl, sbom, spdxFile, spdxPackage, spdxRelationship, upgrade, vulnerabilityDetails);
         }

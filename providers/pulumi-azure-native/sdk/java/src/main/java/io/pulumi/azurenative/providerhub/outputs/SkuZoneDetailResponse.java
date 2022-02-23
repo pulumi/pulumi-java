@@ -61,7 +61,6 @@ public final class SkuZoneDetailResponse {
             this.name = name;
             return this;
         }
-
         public SkuZoneDetailResponse build() {
             return new SkuZoneDetailResponse(capabilities, name);
         }

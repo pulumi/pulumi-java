@@ -117,7 +117,6 @@ public final class AzureBlobStorageDataResponse {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public AzureBlobStorageDataResponse build() {
             return new AzureBlobStorageDataResponse(azureCredentials, container, path, storageAccount);
         }

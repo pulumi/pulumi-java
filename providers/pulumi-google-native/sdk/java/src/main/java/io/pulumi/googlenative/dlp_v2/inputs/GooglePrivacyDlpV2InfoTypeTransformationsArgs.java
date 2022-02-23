@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
      * 
      */
     @InputImport(name="transformations", required=true)
-    private final Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
+      private final Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
     public Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> getTransformations() {
         return this.transformations;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
             this.transformations = Input.of(Objects.requireNonNull(transformations));
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeTransformationsArgs build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationsArgs(transformations);
         }

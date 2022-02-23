@@ -98,7 +98,6 @@ public final class PodsMetricStatus {
             this.selector = selector;
             return this;
         }
-
         public PodsMetricStatus build() {
             return new PodsMetricStatus(currentAverageValue, metricName, selector);
         }

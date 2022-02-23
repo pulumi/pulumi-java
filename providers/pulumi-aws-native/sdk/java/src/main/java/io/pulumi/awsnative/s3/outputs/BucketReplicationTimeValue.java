@@ -44,7 +44,6 @@ public final class BucketReplicationTimeValue {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public BucketReplicationTimeValue build() {
             return new BucketReplicationTimeValue(minutes);
         }

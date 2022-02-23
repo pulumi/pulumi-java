@@ -118,7 +118,6 @@ public final class GetDomainConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetDomainConfigurationResult build() {
             return new GetDomainConfigurationResult(arn, authorizerConfig, domainConfigurationStatus, domainType, serverCertificates, tags);
         }

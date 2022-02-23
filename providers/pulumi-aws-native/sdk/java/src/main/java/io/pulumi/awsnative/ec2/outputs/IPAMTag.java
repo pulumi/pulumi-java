@@ -74,7 +74,6 @@ public final class IPAMTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IPAMTag build() {
             return new IPAMTag(key, value);
         }

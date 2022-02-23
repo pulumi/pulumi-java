@@ -96,7 +96,6 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudRunOpV2VersionToPathResponse build() {
             return new GoogleCloudRunOpV2VersionToPathResponse(mode, path, version);
         }

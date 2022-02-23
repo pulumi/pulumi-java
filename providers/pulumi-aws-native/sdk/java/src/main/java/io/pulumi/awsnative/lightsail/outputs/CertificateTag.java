@@ -76,7 +76,6 @@ public final class CertificateTag {
             this.value = value;
             return this;
         }
-
         public CertificateTag build() {
             return new CertificateTag(key, value);
         }

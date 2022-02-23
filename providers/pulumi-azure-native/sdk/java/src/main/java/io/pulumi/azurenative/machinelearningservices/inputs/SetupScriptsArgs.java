@@ -23,7 +23,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scripts")
-    private final @Nullable Input<ScriptsToExecuteArgs> scripts;
+        private final @Nullable Input<ScriptsToExecuteArgs> scripts;
 
     public Input<ScriptsToExecuteArgs> getScripts() {
         return this.scripts == null ? Input.empty() : this.scripts;
@@ -66,7 +66,6 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
             this.scripts = Input.ofNullable(scripts);
             return this;
         }
-
         public SetupScriptsArgs build() {
             return new SetupScriptsArgs(scripts);
         }

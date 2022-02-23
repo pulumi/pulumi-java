@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="secretKeyRef", required=true)
-    private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
+      private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 
     public GoogleCloudRunOpV2SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;
@@ -59,7 +59,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends io.pulumi.reso
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarSourceResponse build() {
             return new GoogleCloudRunOpV2EnvVarSourceResponse(secretKeyRef);
         }

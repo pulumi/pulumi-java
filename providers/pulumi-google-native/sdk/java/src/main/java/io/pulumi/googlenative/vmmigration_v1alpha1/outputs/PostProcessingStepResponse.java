@@ -30,7 +30,6 @@ public final class PostProcessingStepResponse {
         public Builder(PostProcessingStepResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PostProcessingStepResponse build() {
             return new PostProcessingStepResponse();
         }

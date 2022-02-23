@@ -24,7 +24,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databaseInstancesAssessedCount")
-    private final @Nullable Integer databaseInstancesAssessedCount;
+        private final @Nullable Integer databaseInstancesAssessedCount;
 
     public Optional<Integer> getDatabaseInstancesAssessedCount() {
         return this.databaseInstancesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databaseInstancesAssessedCount);
@@ -35,7 +35,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databasesAssessedCount")
-    private final @Nullable Integer databasesAssessedCount;
+        private final @Nullable Integer databasesAssessedCount;
 
     public Optional<Integer> getDatabasesAssessedCount() {
         return this.databasesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databasesAssessedCount);
@@ -47,7 +47,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -58,7 +58,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="migrationReadyCount")
-    private final @Nullable Integer migrationReadyCount;
+        private final @Nullable Integer migrationReadyCount;
 
     public Optional<Integer> getMigrationReadyCount() {
         return this.migrationReadyCount == null ? Optional.empty() : Optional.ofNullable(this.migrationReadyCount);
@@ -127,7 +127,6 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
             this.migrationReadyCount = migrationReadyCount;
             return this;
         }
-
         public DatabasesSolutionSummaryResponse build() {
             return new DatabasesSolutionSummaryResponse(databaseInstancesAssessedCount, databasesAssessedCount, instanceType, migrationReadyCount);
         }

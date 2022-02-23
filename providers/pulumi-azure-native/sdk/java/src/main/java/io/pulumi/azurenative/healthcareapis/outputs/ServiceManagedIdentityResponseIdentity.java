@@ -54,7 +54,6 @@ public final class ServiceManagedIdentityResponseIdentity {
             this.type = type;
             return this;
         }
-
         public ServiceManagedIdentityResponseIdentity build() {
             return new ServiceManagedIdentityResponseIdentity(type);
         }

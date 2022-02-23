@@ -153,7 +153,6 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsResponse(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

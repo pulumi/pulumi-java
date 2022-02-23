@@ -74,7 +74,6 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectorProfileServiceNowConnectorProfileCredentials build() {
             return new ConnectorProfileServiceNowConnectorProfileCredentials(password, username);
         }

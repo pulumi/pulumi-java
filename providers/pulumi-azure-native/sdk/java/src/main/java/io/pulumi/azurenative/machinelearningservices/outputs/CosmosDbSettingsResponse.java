@@ -54,7 +54,6 @@ public final class CosmosDbSettingsResponse {
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }
-
         public CosmosDbSettingsResponse build() {
             return new CosmosDbSettingsResponse(collectionsThroughput);
         }

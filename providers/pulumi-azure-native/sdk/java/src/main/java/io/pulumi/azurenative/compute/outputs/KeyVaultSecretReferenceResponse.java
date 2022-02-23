@@ -75,7 +75,6 @@ public final class KeyVaultSecretReferenceResponse {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public KeyVaultSecretReferenceResponse build() {
             return new KeyVaultSecretReferenceResponse(secretUrl, sourceVault);
         }

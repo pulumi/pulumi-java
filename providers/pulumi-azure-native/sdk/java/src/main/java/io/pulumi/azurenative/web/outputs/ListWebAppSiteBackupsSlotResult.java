@@ -76,7 +76,6 @@ public final class ListWebAppSiteBackupsSlotResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListWebAppSiteBackupsSlotResult build() {
             return new ListWebAppSiteBackupsSlotResult(nextLink, value);
         }

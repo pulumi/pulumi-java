@@ -165,7 +165,6 @@ public final class RunbookDraftResponse {
             this.parameters = parameters;
             return this;
         }
-
         public RunbookDraftResponse build() {
             return new RunbookDraftResponse(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
         }

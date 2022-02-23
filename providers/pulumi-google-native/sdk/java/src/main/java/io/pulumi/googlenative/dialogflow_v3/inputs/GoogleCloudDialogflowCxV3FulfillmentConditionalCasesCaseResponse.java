@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * 
      */
     @InputImport(name="caseContent", required=true)
-    private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
+      private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
         return this.caseContent;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * 
      */
     @InputImport(name="condition", required=true)
-    private final String condition;
+      private final String condition;
 
     public String getCondition() {
         return this.condition;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(caseContent, condition);
         }

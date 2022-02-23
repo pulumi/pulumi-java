@@ -26,7 +26,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="alarmMetrics")
-    private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
+        private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
     public Input<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
         return this.alarmMetrics == null ? Input.empty() : this.alarmMetrics;
@@ -37,7 +37,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<List<ApplicationLogArgs>> logs;
+        private final @Nullable Input<List<ApplicationLogArgs>> logs;
 
     public Input<List<ApplicationLogArgs>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -48,7 +48,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="windowsEvents")
-    private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
+        private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
 
     public Input<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
         return this.windowsEvents == null ? Input.empty() : this.windowsEvents;
@@ -122,7 +122,6 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
             this.windowsEvents = Input.ofNullable(windowsEvents);
             return this;
         }
-
         public ApplicationSubComponentConfigurationDetailsArgs build() {
             return new ApplicationSubComponentConfigurationDetailsArgs(alarmMetrics, logs, windowsEvents);
         }

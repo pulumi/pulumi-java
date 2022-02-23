@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3DtmfInputResponse build() {
             return new GoogleCloudDialogflowCxV3DtmfInputResponse(digits, finishDigit);
         }

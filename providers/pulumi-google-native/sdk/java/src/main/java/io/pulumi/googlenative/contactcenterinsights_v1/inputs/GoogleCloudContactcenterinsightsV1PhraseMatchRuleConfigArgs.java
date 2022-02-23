@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
      * 
      */
     @InputImport(name="exactMatchConfig")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
     public Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
         return this.exactMatchConfig == null ? Input.empty() : this.exactMatchConfig;
@@ -66,7 +66,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
             this.exactMatchConfig = Input.ofNullable(exactMatchConfig);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(exactMatchConfig);
         }

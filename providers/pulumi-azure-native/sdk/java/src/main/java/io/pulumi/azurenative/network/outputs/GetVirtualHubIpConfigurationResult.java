@@ -225,7 +225,6 @@ public final class GetVirtualHubIpConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualHubIpConfigurationResult build() {
             return new GetVirtualHubIpConfigurationResult(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
         }

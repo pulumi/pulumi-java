@@ -205,7 +205,6 @@ public final class AnomalyDetectorMetricSet {
             this.timezone = timezone;
             return this;
         }
-
         public AnomalyDetectorMetricSet build() {
             return new AnomalyDetectorMetricSet(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
         }

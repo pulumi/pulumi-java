@@ -53,7 +53,6 @@ public final class BucketCustomPlacementConfigResponse {
             this.dataLocations = Objects.requireNonNull(dataLocations);
             return this;
         }
-
         public BucketCustomPlacementConfigResponse build() {
             return new BucketCustomPlacementConfigResponse(dataLocations);
         }

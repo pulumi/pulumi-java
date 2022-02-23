@@ -17,7 +17,7 @@ public final class GetConfigurationAggregatorArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configurationAggregatorName", required=true)
-    private final String configurationAggregatorName;
+        private final String configurationAggregatorName;
 
     public String getConfigurationAggregatorName() {
         return this.configurationAggregatorName;
@@ -55,7 +55,6 @@ public final class GetConfigurationAggregatorArgs extends io.pulumi.resources.In
             this.configurationAggregatorName = Objects.requireNonNull(configurationAggregatorName);
             return this;
         }
-
         public GetConfigurationAggregatorArgs build() {
             return new GetConfigurationAggregatorArgs(configurationAggregatorName);
         }

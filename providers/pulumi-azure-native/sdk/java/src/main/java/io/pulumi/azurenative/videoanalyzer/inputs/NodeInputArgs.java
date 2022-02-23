@@ -22,7 +22,7 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName", required=true)
-    private final Input<String> nodeName;
+        private final Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName;
@@ -65,7 +65,6 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
             this.nodeName = Input.of(Objects.requireNonNull(nodeName));
             return this;
         }
-
         public NodeInputArgs build() {
             return new NodeInputArgs(nodeName);
         }

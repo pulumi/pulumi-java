@@ -161,7 +161,6 @@ public final class GetServiceTopologyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceTopologyResult build() {
             return new GetServiceTopologyResult(artifactSourceId, id, location, name, tags, type);
         }

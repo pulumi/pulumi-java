@@ -26,7 +26,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+        private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -37,7 +37,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskSizeGiB")
-    private final @Nullable Input<Integer> diskSizeGiB;
+        private final @Nullable Input<Integer> diskSizeGiB;
 
     public Input<Integer> getDiskSizeGiB() {
         return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
@@ -48,7 +48,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<Either<String,StorageType>> diskType;
+        private final @Nullable Input<Either<String,StorageType>> diskType;
 
     public Input<Either<String,StorageType>> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -122,7 +122,6 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
-
         public AttachNewDataDiskOptionsArgs build() {
             return new AttachNewDataDiskOptionsArgs(diskName, diskSizeGiB, diskType);
         }

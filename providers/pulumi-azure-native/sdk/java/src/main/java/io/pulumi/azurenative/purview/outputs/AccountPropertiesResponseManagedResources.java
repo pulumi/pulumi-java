@@ -95,7 +95,6 @@ public final class AccountPropertiesResponseManagedResources {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public AccountPropertiesResponseManagedResources build() {
             return new AccountPropertiesResponseManagedResources(eventHubNamespace, resourceGroup, storageAccount);
         }

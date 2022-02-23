@@ -17,7 +17,7 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
@@ -28,7 +28,7 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -77,7 +77,6 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventIntegrationMetadata build() {
             return new EventIntegrationMetadata(key, value);
         }

@@ -46,7 +46,6 @@ public final class FlowIncrementalPullConfig {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-
         public FlowIncrementalPullConfig build() {
             return new FlowIncrementalPullConfig(datetimeTypeFieldName);
         }

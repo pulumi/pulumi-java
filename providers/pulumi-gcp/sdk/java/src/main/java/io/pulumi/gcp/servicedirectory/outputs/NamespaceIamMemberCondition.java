@@ -73,7 +73,6 @@ public final class NamespaceIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public NamespaceIamMemberCondition build() {
             return new NamespaceIamMemberCondition(description, expression, title);
         }

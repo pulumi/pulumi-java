@@ -100,7 +100,6 @@ public final class TriggerGithubPullRequest {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public TriggerGithubPullRequest build() {
             return new TriggerGithubPullRequest(branch, commentControl, invertRegex);
         }

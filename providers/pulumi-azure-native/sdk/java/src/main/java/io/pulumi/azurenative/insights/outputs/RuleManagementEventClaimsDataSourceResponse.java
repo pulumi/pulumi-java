@@ -54,7 +54,6 @@ public final class RuleManagementEventClaimsDataSourceResponse {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public RuleManagementEventClaimsDataSourceResponse build() {
             return new RuleManagementEventClaimsDataSourceResponse(emailAddress);
         }

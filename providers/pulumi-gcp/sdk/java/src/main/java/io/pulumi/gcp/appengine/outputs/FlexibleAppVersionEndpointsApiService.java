@@ -133,7 +133,6 @@ public final class FlexibleAppVersionEndpointsApiService {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
-
         public FlexibleAppVersionEndpointsApiService build() {
             return new FlexibleAppVersionEndpointsApiService(configId, disableTraceSampling, name, rolloutStrategy);
         }

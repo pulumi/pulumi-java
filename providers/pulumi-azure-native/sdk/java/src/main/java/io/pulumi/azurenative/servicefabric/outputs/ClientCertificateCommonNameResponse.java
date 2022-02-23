@@ -96,7 +96,6 @@ public final class ClientCertificateCommonNameResponse {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public ClientCertificateCommonNameResponse build() {
             return new ClientCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }

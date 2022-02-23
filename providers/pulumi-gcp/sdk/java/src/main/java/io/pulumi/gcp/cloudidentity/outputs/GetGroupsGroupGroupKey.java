@@ -58,7 +58,6 @@ public final class GetGroupsGroupGroupKey {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GetGroupsGroupGroupKey build() {
             return new GetGroupsGroupGroupKey(id, namespace);
         }

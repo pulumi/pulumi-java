@@ -23,7 +23,7 @@ public final class FhirServiceExportConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageAccountName")
-    private final @Nullable Input<String> storageAccountName;
+        private final @Nullable Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -66,7 +66,6 @@ public final class FhirServiceExportConfigurationArgs extends io.pulumi.resource
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
-
         public FhirServiceExportConfigurationArgs build() {
             return new FhirServiceExportConfigurationArgs(storageAccountName);
         }

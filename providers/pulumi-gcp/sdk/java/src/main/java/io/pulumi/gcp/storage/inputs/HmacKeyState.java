@@ -19,7 +19,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessId")
-    private final @Nullable Input<String> accessId;
+        private final @Nullable Input<String> accessId;
 
     public Input<String> getAccessId() {
         return this.accessId == null ? Input.empty() : this.accessId;
@@ -31,7 +31,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -42,7 +42,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+        private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -53,7 +53,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+        private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -66,7 +66,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -77,7 +77,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeCreated")
-    private final @Nullable Input<String> timeCreated;
+        private final @Nullable Input<String> timeCreated;
 
     public Input<String> getTimeCreated() {
         return this.timeCreated == null ? Input.empty() : this.timeCreated;
@@ -88,7 +88,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-    private final @Nullable Input<String> updated;
+        private final @Nullable Input<String> updated;
 
     public Input<String> getUpdated() {
         return this.updated == null ? Input.empty() : this.updated;
@@ -222,7 +222,6 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             this.updated = Input.ofNullable(updated);
             return this;
         }
-
         public HmacKeyState build() {
             return new HmacKeyState(accessId, project, secret, serviceAccountEmail, state, timeCreated, updated);
         }

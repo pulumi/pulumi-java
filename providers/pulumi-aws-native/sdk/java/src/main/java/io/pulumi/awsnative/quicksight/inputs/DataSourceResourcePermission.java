@@ -22,7 +22,7 @@ public final class DataSourceResourcePermission extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="actions", required=true)
-    private final List<String> actions;
+        private final List<String> actions;
 
     public List<String> getActions() {
         return this.actions;
@@ -47,7 +47,7 @@ public final class DataSourceResourcePermission extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="principal", required=true)
-    private final String principal;
+        private final String principal;
 
     public String getPrincipal() {
         return this.principal;
@@ -96,7 +96,6 @@ public final class DataSourceResourcePermission extends io.pulumi.resources.Invo
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public DataSourceResourcePermission build() {
             return new DataSourceResourcePermission(actions, principal);
         }

@@ -15,21 +15,21 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
     public static final GetBitbucketServerConfigArgs Empty = new GetBitbucketServerConfigArgs();
 
     @InputImport(name="bitbucketServerConfigId", required=true)
-    private final String bitbucketServerConfigId;
+      private final String bitbucketServerConfigId;
 
     public String getBitbucketServerConfigId() {
         return this.bitbucketServerConfigId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
             this.project = project;
             return this;
         }
-
         public GetBitbucketServerConfigArgs build() {
             return new GetBitbucketServerConfigArgs(bitbucketServerConfigId, location, project);
         }

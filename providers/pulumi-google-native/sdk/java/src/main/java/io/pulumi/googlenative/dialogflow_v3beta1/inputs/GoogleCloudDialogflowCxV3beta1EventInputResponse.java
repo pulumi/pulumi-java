@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse extends io.p
      * 
      */
     @InputImport(name="event", required=true)
-    private final String event;
+      private final String event;
 
     public String getEvent() {
         return this.event;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse extends io.p
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EventInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EventInputResponse(event);
         }

@@ -54,7 +54,6 @@ public final class LoginRoutesResponse {
             this.logoutEndpoint = logoutEndpoint;
             return this;
         }
-
         public LoginRoutesResponse build() {
             return new LoginRoutesResponse(logoutEndpoint);
         }

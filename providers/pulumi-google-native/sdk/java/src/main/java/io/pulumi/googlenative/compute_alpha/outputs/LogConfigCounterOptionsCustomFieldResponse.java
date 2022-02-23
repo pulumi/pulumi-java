@@ -74,7 +74,6 @@ public final class LogConfigCounterOptionsCustomFieldResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LogConfigCounterOptionsCustomFieldResponse build() {
             return new LogConfigCounterOptionsCustomFieldResponse(name, value);
         }

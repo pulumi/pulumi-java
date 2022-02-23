@@ -116,7 +116,6 @@ public final class NetworkInterfaceResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(externalIp, internalIp, network, subnetwork);
         }

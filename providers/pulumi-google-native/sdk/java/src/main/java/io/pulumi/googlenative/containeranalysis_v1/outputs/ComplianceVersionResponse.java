@@ -74,7 +74,6 @@ public final class ComplianceVersionResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceVersionResponse build() {
             return new ComplianceVersionResponse(cpeUri, version);
         }

@@ -20,14 +20,14 @@ public final class WorkGroupResultConfiguration extends io.pulumi.resources.Invo
     public static final WorkGroupResultConfiguration Empty = new WorkGroupResultConfiguration();
 
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
+        private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
 
     public Optional<WorkGroupEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @InputImport(name="outputLocation")
-    private final @Nullable String outputLocation;
+        private final @Nullable String outputLocation;
 
     public Optional<String> getOutputLocation() {
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
@@ -76,7 +76,6 @@ public final class WorkGroupResultConfiguration extends io.pulumi.resources.Invo
             this.outputLocation = outputLocation;
             return this;
         }
-
         public WorkGroupResultConfiguration build() {
             return new WorkGroupResultConfiguration(encryptionConfiguration, outputLocation);
         }

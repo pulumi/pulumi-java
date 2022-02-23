@@ -22,7 +22,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="credential", required=true)
-    private final CloudSqlCredentialResponse credential;
+      private final CloudSqlCredentialResponse credential;
 
     public CloudSqlCredentialResponse getCredential() {
         return this.credential;
@@ -33,7 +33,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="database", required=true)
-    private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
@@ -44,7 +44,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -55,7 +55,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -124,7 +124,6 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CloudSqlPropertiesResponse build() {
             return new CloudSqlPropertiesResponse(credential, database, instanceId, type);
         }

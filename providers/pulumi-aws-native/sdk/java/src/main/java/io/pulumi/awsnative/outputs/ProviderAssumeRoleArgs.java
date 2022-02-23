@@ -205,7 +205,6 @@ public final class ProviderAssumeRoleArgs {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-
         public ProviderAssumeRoleArgs build() {
             return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }

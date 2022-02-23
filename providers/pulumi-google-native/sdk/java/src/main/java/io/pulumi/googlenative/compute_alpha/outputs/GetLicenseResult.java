@@ -215,7 +215,6 @@ public final class GetLicenseResult {
             this.transferable = Objects.requireNonNull(transferable);
             return this;
         }
-
         public GetLicenseResult build() {
             return new GetLicenseResult(creationTimestamp, description, kind, licenseCode, name, resourceRequirements, selfLink, selfLinkWithId, transferable);
         }

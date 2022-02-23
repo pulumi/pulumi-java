@@ -22,7 +22,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable Input<String> addressPrefix;
+        private final @Nullable Input<String> addressPrefix;
 
     public Input<String> getAddressPrefix() {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
@@ -33,7 +33,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasBgpOverride")
-    private final @Nullable Input<Boolean> hasBgpOverride;
+        private final @Nullable Input<Boolean> hasBgpOverride;
 
     public Input<Boolean> getHasBgpOverride() {
         return this.hasBgpOverride == null ? Input.empty() : this.hasBgpOverride;
@@ -44,7 +44,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -55,7 +55,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIpAddress")
-    private final @Nullable Input<String> nextHopIpAddress;
+        private final @Nullable Input<String> nextHopIpAddress;
 
     public Input<String> getNextHopIpAddress() {
         return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;
@@ -77,7 +77,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-    private final Input<Either<String,RouteNextHopType>> nextHopType;
+        private final Input<Either<String,RouteNextHopType>> nextHopType;
 
     public Input<Either<String,RouteNextHopType>> getNextHopType() {
         return this.nextHopType;
@@ -88,7 +88,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeName")
-    private final @Nullable Input<String> routeName;
+        private final @Nullable Input<String> routeName;
 
     public Input<String> getRouteName() {
         return this.routeName == null ? Input.empty() : this.routeName;
@@ -110,7 +110,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableName", required=true)
-    private final Input<String> routeTableName;
+        private final Input<String> routeTableName;
 
     public Input<String> getRouteTableName() {
         return this.routeTableName;
@@ -121,7 +121,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -300,7 +300,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RouteArgs build() {
             return new RouteArgs(addressPrefix, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, resourceGroupName, routeName, routeTableName, type);
         }

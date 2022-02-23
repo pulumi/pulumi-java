@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="charactersToSkip")
-    private final @Nullable Input<String> charactersToSkip;
+        private final @Nullable Input<String> charactersToSkip;
 
     public Input<String> getCharactersToSkip() {
         return this.charactersToSkip == null ? Input.empty() : this.charactersToSkip;
@@ -31,7 +31,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="commonCharactersToIgnore")
-    private final @Nullable Input<String> commonCharactersToIgnore;
+        private final @Nullable Input<String> commonCharactersToIgnore;
 
     public Input<String> getCommonCharactersToIgnore() {
         return this.commonCharactersToIgnore == null ? Input.empty() : this.commonCharactersToIgnore;
@@ -90,7 +90,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.commonCharactersToIgnore = Input.ofNullable(commonCharactersToIgnore);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(charactersToSkip, commonCharactersToIgnore);
         }

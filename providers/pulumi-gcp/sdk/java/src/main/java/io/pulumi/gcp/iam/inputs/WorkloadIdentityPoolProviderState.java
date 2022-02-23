@@ -34,7 +34,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="attributeCondition")
-    private final @Nullable Input<String> attributeCondition;
+        private final @Nullable Input<String> attributeCondition;
 
     public Input<String> getAttributeCondition() {
         return this.attributeCondition == null ? Input.empty() : this.attributeCondition;
@@ -81,7 +81,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="attributeMapping")
-    private final @Nullable Input<Map<String,String>> attributeMapping;
+        private final @Nullable Input<Map<String,String>> attributeMapping;
 
     public Input<Map<String,String>> getAttributeMapping() {
         return this.attributeMapping == null ? Input.empty() : this.attributeMapping;
@@ -93,7 +93,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="aws")
-    private final @Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws;
+        private final @Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws;
 
     public Input<WorkloadIdentityPoolProviderAwsGetArgs> getAws() {
         return this.aws == null ? Input.empty() : this.aws;
@@ -104,7 +104,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -116,7 +116,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -127,7 +127,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -139,7 +139,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -151,7 +151,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="oidc")
-    private final @Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
+        private final @Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
 
     public Input<WorkloadIdentityPoolProviderOidcGetArgs> getOidc() {
         return this.oidc == null ? Input.empty() : this.oidc;
@@ -163,7 +163,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -177,7 +177,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -190,7 +190,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="workloadIdentityPoolId")
-    private final @Nullable Input<String> workloadIdentityPoolId;
+        private final @Nullable Input<String> workloadIdentityPoolId;
 
     public Input<String> getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId == null ? Input.empty() : this.workloadIdentityPoolId;
@@ -203,7 +203,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="workloadIdentityPoolProviderId")
-    private final @Nullable Input<String> workloadIdentityPoolProviderId;
+        private final @Nullable Input<String> workloadIdentityPoolProviderId;
 
     public Input<String> getWorkloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId == null ? Input.empty() : this.workloadIdentityPoolProviderId;
@@ -412,7 +412,6 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             this.workloadIdentityPoolProviderId = Input.ofNullable(workloadIdentityPoolProviderId);
             return this;
         }
-
         public WorkloadIdentityPoolProviderState build() {
             return new WorkloadIdentityPoolProviderState(attributeCondition, attributeMapping, aws, description, disabled, displayName, name, oidc, project, state, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }

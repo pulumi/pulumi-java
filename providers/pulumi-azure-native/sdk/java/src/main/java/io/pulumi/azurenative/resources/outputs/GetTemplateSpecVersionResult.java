@@ -270,7 +270,6 @@ public final class GetTemplateSpecVersionResult {
             this.uiFormDefinition = uiFormDefinition;
             return this;
         }
-
         public GetTemplateSpecVersionResult build() {
             return new GetTemplateSpecVersionResult(description, id, linkedTemplates, location, mainTemplate, metadata, name, systemData, tags, type, uiFormDefinition);
         }

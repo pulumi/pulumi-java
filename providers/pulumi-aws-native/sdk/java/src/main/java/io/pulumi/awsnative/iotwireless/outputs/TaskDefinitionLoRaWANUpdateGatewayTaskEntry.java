@@ -60,7 +60,6 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry {
             this.updateVersion = updateVersion;
             return this;
         }
-
         public TaskDefinitionLoRaWANUpdateGatewayTaskEntry build() {
             return new TaskDefinitionLoRaWANUpdateGatewayTaskEntry(currentVersion, updateVersion);
         }

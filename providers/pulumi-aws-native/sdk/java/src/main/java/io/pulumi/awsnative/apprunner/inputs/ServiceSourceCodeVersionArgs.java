@@ -23,7 +23,7 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ServiceSourceCodeVersionType> type;
+        private final Input<ServiceSourceCodeVersionType> type;
 
     public Input<ServiceSourceCodeVersionType> getType() {
         return this.type;
@@ -34,7 +34,7 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -93,7 +93,6 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ServiceSourceCodeVersionArgs build() {
             return new ServiceSourceCodeVersionArgs(type, value);
         }

@@ -548,7 +548,6 @@ public final class GetSnapshotResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(creationData, diskAccessId, diskSizeBytes, diskSizeGB, diskState, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, id, incremental, location, managedBy, name, networkAccessPolicy, osType, provisioningState, purchasePlan, sku, supportsHibernation, tags, timeCreated, type, uniqueId);
         }

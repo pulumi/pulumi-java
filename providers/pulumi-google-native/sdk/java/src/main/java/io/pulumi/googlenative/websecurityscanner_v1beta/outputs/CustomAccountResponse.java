@@ -95,7 +95,6 @@ public final class CustomAccountResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CustomAccountResponse build() {
             return new CustomAccountResponse(loginUrl, password, username);
         }

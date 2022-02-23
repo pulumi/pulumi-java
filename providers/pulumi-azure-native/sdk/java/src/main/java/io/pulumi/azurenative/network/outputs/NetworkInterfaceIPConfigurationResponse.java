@@ -401,7 +401,6 @@ public final class NetworkInterfaceIPConfigurationResponse {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
-
         public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, etag, id, loadBalancerBackendAddressPools, loadBalancerInboundNatRules, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, privateLinkConnectionProperties, provisioningState, publicIPAddress, subnet, type, virtualNetworkTaps);
         }

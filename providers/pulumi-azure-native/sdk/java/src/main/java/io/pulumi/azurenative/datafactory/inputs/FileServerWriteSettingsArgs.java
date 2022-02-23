@@ -24,7 +24,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="copyBehavior")
-    private final @Nullable Input<Object> copyBehavior;
+        private final @Nullable Input<Object> copyBehavior;
 
     public Input<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
@@ -35,7 +35,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -46,7 +46,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -58,7 +58,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FileServerWriteSettingsArgs build() {
             return new FileServerWriteSettingsArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }

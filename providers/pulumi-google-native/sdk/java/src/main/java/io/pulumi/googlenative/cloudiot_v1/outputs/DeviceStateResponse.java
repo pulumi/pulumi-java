@@ -74,7 +74,6 @@ public final class DeviceStateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public DeviceStateResponse build() {
             return new DeviceStateResponse(binaryData, updateTime);
         }

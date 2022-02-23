@@ -351,7 +351,6 @@ public final class GetCanaryResult {
             this.visualReference = visualReference;
             return this;
         }
-
         public GetCanaryResult build() {
             return new GetCanaryResult(artifactConfig, artifactS3Location, code, executionRoleArn, failureRetentionPeriod, id, runConfig, runtimeVersion, schedule, startCanaryAfterCreation, state, successRetentionPeriod, tags, vPCConfig, visualReference);
         }

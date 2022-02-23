@@ -267,7 +267,6 @@ public final class GetNamespaceResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, id, location, metricId, name, provisioningState, serviceBusEndpoint, sku, tags, type, updatedAt);
         }

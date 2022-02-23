@@ -77,7 +77,6 @@ public final class GetGlobalUserPersonalPreferencesResult {
             this.id = id;
             return this;
         }
-
         public GetGlobalUserPersonalPreferencesResult build() {
             return new GetGlobalUserPersonalPreferencesResult(favoriteLabResourceIds, id);
         }

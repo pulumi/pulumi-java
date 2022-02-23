@@ -19,7 +19,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -89,7 +89,6 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public InstanceGroupNamedPortArgs build() {
             return new InstanceGroupNamedPortArgs(name, port);
         }

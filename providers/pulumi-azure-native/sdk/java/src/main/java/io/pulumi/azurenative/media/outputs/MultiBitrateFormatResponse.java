@@ -100,7 +100,6 @@ public final class MultiBitrateFormatResponse {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public MultiBitrateFormatResponse build() {
             return new MultiBitrateFormatResponse(filenamePattern, odataType, outputFiles);
         }

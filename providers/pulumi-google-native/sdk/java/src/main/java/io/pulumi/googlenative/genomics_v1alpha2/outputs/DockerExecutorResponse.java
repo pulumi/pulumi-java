@@ -74,7 +74,6 @@ public final class DockerExecutorResponse {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public DockerExecutorResponse build() {
             return new DockerExecutorResponse(cmd, imageName);
         }

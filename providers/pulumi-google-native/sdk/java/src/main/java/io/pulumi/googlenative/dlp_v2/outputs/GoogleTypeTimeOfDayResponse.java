@@ -116,7 +116,6 @@ public final class GoogleTypeTimeOfDayResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GoogleTypeTimeOfDayResponse build() {
             return new GoogleTypeTimeOfDayResponse(hours, minutes, nanos, seconds);
         }

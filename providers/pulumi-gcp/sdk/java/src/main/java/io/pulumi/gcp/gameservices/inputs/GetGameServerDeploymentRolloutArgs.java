@@ -17,7 +17,7 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deploymentId", required=true)
-    private final String deploymentId;
+        private final String deploymentId;
 
     public String getDeploymentId() {
         return this.deploymentId;
@@ -55,7 +55,6 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public GetGameServerDeploymentRolloutArgs build() {
             return new GetGameServerDeploymentRolloutArgs(deploymentId);
         }

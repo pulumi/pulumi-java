@@ -20,14 +20,14 @@ public final class ThemeTileLayoutStyle extends io.pulumi.resources.InvokeArgs {
     public static final ThemeTileLayoutStyle Empty = new ThemeTileLayoutStyle();
 
     @InputImport(name="gutter")
-    private final @Nullable ThemeGutterStyle gutter;
+        private final @Nullable ThemeGutterStyle gutter;
 
     public Optional<ThemeGutterStyle> getGutter() {
         return this.gutter == null ? Optional.empty() : Optional.ofNullable(this.gutter);
     }
 
     @InputImport(name="margin")
-    private final @Nullable ThemeMarginStyle margin;
+        private final @Nullable ThemeMarginStyle margin;
 
     public Optional<ThemeMarginStyle> getMargin() {
         return this.margin == null ? Optional.empty() : Optional.ofNullable(this.margin);
@@ -76,7 +76,6 @@ public final class ThemeTileLayoutStyle extends io.pulumi.resources.InvokeArgs {
             this.margin = margin;
             return this;
         }
-
         public ThemeTileLayoutStyle build() {
             return new ThemeTileLayoutStyle(gutter, margin);
         }

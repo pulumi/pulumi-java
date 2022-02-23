@@ -162,7 +162,6 @@ public final class ResourceSettingsResponse {
             this.size = size;
             return this;
         }
-
         public ResourceSettingsResponse build() {
             return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
         }

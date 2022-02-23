@@ -255,7 +255,6 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public AmazonRdsForSqlServerLinkedServiceResponse build() {
             return new AmazonRdsForSqlServerLinkedServiceResponse(alwaysEncryptedSettings, annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type, userName);
         }

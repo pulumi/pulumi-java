@@ -98,7 +98,6 @@ public final class ExportResponse {
             this.blobPathPrefix = blobPathPrefix;
             return this;
         }
-
         public ExportResponse build() {
             return new ExportResponse(blobListBlobPath, blobPath, blobPathPrefix);
         }

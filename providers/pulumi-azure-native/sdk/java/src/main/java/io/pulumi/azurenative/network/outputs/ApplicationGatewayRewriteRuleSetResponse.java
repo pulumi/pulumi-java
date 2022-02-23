@@ -141,7 +141,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
             this.rewriteRules = rewriteRules;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleSetResponse build() {
             return new ApplicationGatewayRewriteRuleSetResponse(etag, id, name, provisioningState, rewriteRules);
         }

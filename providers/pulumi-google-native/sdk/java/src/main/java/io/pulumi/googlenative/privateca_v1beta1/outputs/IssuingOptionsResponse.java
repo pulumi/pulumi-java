@@ -74,7 +74,6 @@ public final class IssuingOptionsResponse {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }
-
         public IssuingOptionsResponse build() {
             return new IssuingOptionsResponse(includeCaCertUrl, includeCrlAccessUrl);
         }

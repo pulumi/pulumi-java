@@ -21,7 +21,7 @@ public final class SloRequestBasedSliDistributionCutRangeGetArgs extends io.pulu
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Input<Double> max;
+        private final @Nullable Input<Double> max;
 
     public Input<Double> getMax() {
         return this.max == null ? Input.empty() : this.max;
@@ -34,7 +34,7 @@ public final class SloRequestBasedSliDistributionCutRangeGetArgs extends io.pulu
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Input<Double> min;
+        private final @Nullable Input<Double> min;
 
     public Input<Double> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -93,7 +93,6 @@ public final class SloRequestBasedSliDistributionCutRangeGetArgs extends io.pulu
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public SloRequestBasedSliDistributionCutRangeGetArgs build() {
             return new SloRequestBasedSliDistributionCutRangeGetArgs(max, min);
         }

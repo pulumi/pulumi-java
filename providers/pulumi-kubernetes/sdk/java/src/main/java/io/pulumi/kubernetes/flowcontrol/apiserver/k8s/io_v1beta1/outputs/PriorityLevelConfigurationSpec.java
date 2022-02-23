@@ -77,7 +77,6 @@ public final class PriorityLevelConfigurationSpec {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PriorityLevelConfigurationSpec build() {
             return new PriorityLevelConfigurationSpec(limited, type);
         }

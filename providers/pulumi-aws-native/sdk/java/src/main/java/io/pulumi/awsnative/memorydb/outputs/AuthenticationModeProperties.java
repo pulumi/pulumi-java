@@ -78,7 +78,6 @@ public final class AuthenticationModeProperties {
             this.type = type;
             return this;
         }
-
         public AuthenticationModeProperties build() {
             return new AuthenticationModeProperties(passwords, type);
         }

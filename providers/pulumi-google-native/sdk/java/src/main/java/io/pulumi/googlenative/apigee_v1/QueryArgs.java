@@ -23,7 +23,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csvDelimiter")
-    private final @Nullable Input<String> csvDelimiter;
+      private final @Nullable Input<String> csvDelimiter;
 
     public Input<String> getCsvDelimiter() {
         return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
@@ -34,7 +34,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<List<String>> dimensions;
+      private final @Nullable Input<List<String>> dimensions;
 
     public Input<List<String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -45,14 +45,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envgroupHostname")
-    private final @Nullable Input<String> envgroupHostname;
+      private final @Nullable Input<String> envgroupHostname;
 
     public Input<String> getEnvgroupHostname() {
         return this.envgroupHostname == null ? Input.empty() : this.envgroupHostname;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -63,7 +63,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -74,7 +74,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByTimeUnit")
-    private final @Nullable Input<String> groupByTimeUnit;
+      private final @Nullable Input<String> groupByTimeUnit;
 
     public Input<String> getGroupByTimeUnit() {
         return this.groupByTimeUnit == null ? Input.empty() : this.groupByTimeUnit;
@@ -85,7 +85,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<Integer> limit;
+      private final @Nullable Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -96,7 +96,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
+      private final @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
     public Input<List<GoogleCloudApigeeV1QueryMetricArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -107,14 +107,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -125,7 +125,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+      private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -136,7 +136,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportDefinitionId")
-    private final @Nullable Input<String> reportDefinitionId;
+      private final @Nullable Input<String> reportDefinitionId;
 
     public Input<String> getReportDefinitionId() {
         return this.reportDefinitionId == null ? Input.empty() : this.reportDefinitionId;
@@ -147,7 +147,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeRange", required=true)
-    private final Input<Object> timeRange;
+      private final Input<Object> timeRange;
 
     public Input<Object> getTimeRange() {
         return this.timeRange;
@@ -371,7 +371,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             this.timeRange = Input.of(Objects.requireNonNull(timeRange));
             return this;
         }
-
         public QueryArgs build() {
             return new QueryArgs(csvDelimiter, dimensions, envgroupHostname, environmentId, filter, groupByTimeUnit, limit, metrics, name, organizationId, outputFormat, reportDefinitionId, timeRange);
         }

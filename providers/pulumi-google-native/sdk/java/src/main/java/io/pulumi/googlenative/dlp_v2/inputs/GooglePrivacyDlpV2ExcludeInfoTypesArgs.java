@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="infoTypes")
-    private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Input<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }
-
         public GooglePrivacyDlpV2ExcludeInfoTypesArgs build() {
             return new GooglePrivacyDlpV2ExcludeInfoTypesArgs(infoTypes);
         }

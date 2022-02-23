@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
             this.customerChannel = Objects.requireNonNull(customerChannel);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(agentChannel, customerChannel);
         }

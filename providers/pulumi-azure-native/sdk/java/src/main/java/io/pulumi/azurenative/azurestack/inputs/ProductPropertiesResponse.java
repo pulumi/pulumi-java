@@ -23,7 +23,7 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -61,7 +61,6 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
             this.version = version;
             return this;
         }
-
         public ProductPropertiesResponse build() {
             return new ProductPropertiesResponse(version);
         }

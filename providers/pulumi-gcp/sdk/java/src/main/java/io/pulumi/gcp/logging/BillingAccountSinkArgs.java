@@ -23,7 +23,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bigqueryOptions")
-    private final @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
+        private final @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
 
     public Input<BillingAccountSinkBigqueryOptionsArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
@@ -34,7 +34,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="billingAccount", required=true)
-    private final Input<String> billingAccount;
+        private final Input<String> billingAccount;
 
     public Input<String> getBillingAccount() {
         return this.billingAccount;
@@ -45,7 +45,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+        private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -70,7 +70,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -81,7 +81,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions;
+        private final @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions;
 
     public Input<List<BillingAccountSinkExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -93,7 +93,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -104,7 +104,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -253,7 +253,6 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public BillingAccountSinkArgs build() {
             return new BillingAccountSinkArgs(bigqueryOptions, billingAccount, description, destination, disabled, exclusions, filter, name);
         }

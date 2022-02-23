@@ -74,7 +74,6 @@ public final class ConnectorProfileOAuthProperties {
             this.tokenUrl = tokenUrl;
             return this;
         }
-
         public ConnectorProfileOAuthProperties build() {
             return new ConnectorProfileOAuthProperties(authCodeUrl, oAuthScopes, tokenUrl);
         }

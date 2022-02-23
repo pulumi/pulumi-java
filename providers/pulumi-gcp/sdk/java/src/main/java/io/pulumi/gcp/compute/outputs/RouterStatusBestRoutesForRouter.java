@@ -257,7 +257,6 @@ public final class RouterStatusBestRoutesForRouter {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public RouterStatusBestRoutesForRouter build() {
             return new RouterStatusBestRoutesForRouter(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
         }

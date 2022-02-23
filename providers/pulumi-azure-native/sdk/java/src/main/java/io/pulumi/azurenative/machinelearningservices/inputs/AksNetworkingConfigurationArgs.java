@@ -23,7 +23,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dnsServiceIP")
-    private final @Nullable Input<String> dnsServiceIP;
+        private final @Nullable Input<String> dnsServiceIP;
 
     public Input<String> getDnsServiceIP() {
         return this.dnsServiceIP == null ? Input.empty() : this.dnsServiceIP;
@@ -34,7 +34,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dockerBridgeCidr")
-    private final @Nullable Input<String> dockerBridgeCidr;
+        private final @Nullable Input<String> dockerBridgeCidr;
 
     public Input<String> getDockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Input.empty() : this.dockerBridgeCidr;
@@ -45,7 +45,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceCidr")
-    private final @Nullable Input<String> serviceCidr;
+        private final @Nullable Input<String> serviceCidr;
 
     public Input<String> getServiceCidr() {
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
@@ -56,7 +56,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -145,7 +145,6 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public AksNetworkingConfigurationArgs build() {
             return new AksNetworkingConfigurationArgs(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
         }

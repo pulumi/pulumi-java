@@ -22,7 +22,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -44,7 +44,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="googleSupport", required=true)
-    private final Boolean googleSupport;
+      private final Boolean googleSupport;
 
     public Boolean getGoogleSupport() {
         return this.googleSupport;
@@ -55,7 +55,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -124,7 +124,6 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ActorResponse build() {
             return new ActorResponse(displayName, email, googleSupport, principalId);
         }

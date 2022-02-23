@@ -60,7 +60,6 @@ public final class SpotFleetAcceleratorCountRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetAcceleratorCountRequest build() {
             return new SpotFleetAcceleratorCountRequest(max, min);
         }

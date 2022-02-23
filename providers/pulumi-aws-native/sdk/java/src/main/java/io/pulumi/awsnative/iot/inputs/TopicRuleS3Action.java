@@ -16,28 +16,28 @@ public final class TopicRuleS3Action extends io.pulumi.resources.InvokeArgs {
     public static final TopicRuleS3Action Empty = new TopicRuleS3Action();
 
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+        private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="cannedAcl")
-    private final @Nullable TopicRuleCannedAccessControlList cannedAcl;
+        private final @Nullable TopicRuleCannedAccessControlList cannedAcl;
 
     public Optional<TopicRuleCannedAccessControlList> getCannedAcl() {
         return this.cannedAcl == null ? Optional.empty() : Optional.ofNullable(this.cannedAcl);
     }
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -106,7 +106,6 @@ public final class TopicRuleS3Action extends io.pulumi.resources.InvokeArgs {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleS3Action build() {
             return new TopicRuleS3Action(bucketName, cannedAcl, key, roleArn);
         }

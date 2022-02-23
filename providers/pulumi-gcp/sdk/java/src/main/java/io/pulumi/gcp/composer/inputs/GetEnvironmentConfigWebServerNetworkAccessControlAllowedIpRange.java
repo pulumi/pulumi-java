@@ -13,14 +13,14 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
     public static final GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange Empty = new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange();
 
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
             return new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(description, value);
         }

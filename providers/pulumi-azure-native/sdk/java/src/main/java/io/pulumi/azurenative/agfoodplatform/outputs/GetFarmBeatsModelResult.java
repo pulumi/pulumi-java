@@ -203,7 +203,6 @@ public final class GetFarmBeatsModelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFarmBeatsModelResult build() {
             return new GetFarmBeatsModelResult(id, instanceUri, location, name, provisioningState, systemData, tags, type);
         }

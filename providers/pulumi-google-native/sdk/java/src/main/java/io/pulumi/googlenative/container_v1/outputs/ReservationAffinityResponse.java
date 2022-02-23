@@ -96,7 +96,6 @@ public final class ReservationAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReservationAffinityResponse build() {
             return new ReservationAffinityResponse(consumeReservationType, key, values);
         }

@@ -58,7 +58,6 @@ public final class AppImageConfigTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AppImageConfigTag build() {
             return new AppImageConfigTag(key, value);
         }

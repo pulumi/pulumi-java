@@ -117,7 +117,6 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public GremlinDatabaseGetPropertiesResponseResource build() {
             return new GremlinDatabaseGetPropertiesResponseResource(etag, id, rid, ts);
         }

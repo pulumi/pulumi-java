@@ -71,7 +71,6 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public NodeTemplateNodeTypeFlexibilityResponse build() {
             return new NodeTemplateNodeTypeFlexibilityResponse(cpus, localSsd, memory);
         }

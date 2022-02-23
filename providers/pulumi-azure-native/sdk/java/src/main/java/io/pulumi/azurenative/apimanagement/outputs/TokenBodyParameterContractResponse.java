@@ -74,7 +74,6 @@ public final class TokenBodyParameterContractResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenBodyParameterContractResponse build() {
             return new TokenBodyParameterContractResponse(name, value);
         }

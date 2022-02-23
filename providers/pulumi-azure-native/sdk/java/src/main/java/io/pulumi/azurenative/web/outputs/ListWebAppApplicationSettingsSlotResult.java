@@ -140,7 +140,6 @@ public final class ListWebAppApplicationSettingsSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppApplicationSettingsSlotResult build() {
             return new ListWebAppApplicationSettingsSlotResult(id, kind, name, properties, type);
         }

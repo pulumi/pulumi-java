@@ -118,7 +118,6 @@ public final class EncryptionResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(keyName, keySource, keyVaultUri, keyVersion);
         }

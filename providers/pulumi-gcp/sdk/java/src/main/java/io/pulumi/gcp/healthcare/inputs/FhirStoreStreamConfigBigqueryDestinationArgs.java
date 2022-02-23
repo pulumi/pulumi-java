@@ -19,7 +19,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="datasetUri", required=true)
-    private final Input<String> datasetUri;
+        private final Input<String> datasetUri;
 
     public Input<String> getDatasetUri() {
         return this.datasetUri;
@@ -31,7 +31,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="schemaConfig", required=true)
-    private final Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
+        private final Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
     public Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {
         return this.schemaConfig;
@@ -90,7 +90,6 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
             this.schemaConfig = Input.of(Objects.requireNonNull(schemaConfig));
             return this;
         }
-
         public FhirStoreStreamConfigBigqueryDestinationArgs build() {
             return new FhirStoreStreamConfigBigqueryDestinationArgs(datasetUri, schemaConfig);
         }

@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardResponse(buttons, columnProperties, image, rows, subtitle, title);
         }

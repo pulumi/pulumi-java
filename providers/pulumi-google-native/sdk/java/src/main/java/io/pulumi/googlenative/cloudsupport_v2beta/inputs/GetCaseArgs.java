@@ -13,21 +13,21 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCaseArgs Empty = new GetCaseArgs();
 
     @InputImport(name="caseId", required=true)
-    private final String caseId;
+      private final String caseId;
 
     public String getCaseId() {
         return this.caseId;
     }
 
     @InputImport(name="v2betaId1", required=true)
-    private final String v2betaId1;
+      private final String v2betaId1;
 
     public String getV2betaId1() {
         return this.v2betaId1;
     }
 
     @InputImport(name="v2betumId", required=true)
-    private final String v2betumId;
+      private final String v2betumId;
 
     public String getV2betumId() {
         return this.v2betumId;
@@ -86,7 +86,6 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
             this.v2betumId = Objects.requireNonNull(v2betumId);
             return this;
         }
-
         public GetCaseArgs build() {
             return new GetCaseArgs(caseId, v2betaId1, v2betumId);
         }

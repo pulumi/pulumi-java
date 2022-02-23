@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStoragePathResponse build() {
             return new GooglePrivacyDlpV2CloudStoragePathResponse(path);
         }

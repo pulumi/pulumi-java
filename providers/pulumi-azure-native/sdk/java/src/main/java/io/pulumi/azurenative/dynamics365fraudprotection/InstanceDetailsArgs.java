@@ -21,7 +21,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administration")
-    private final @Nullable Input<DFPInstanceAdministratorsArgs> administration;
+        private final @Nullable Input<DFPInstanceAdministratorsArgs> administration;
 
     public Input<DFPInstanceAdministratorsArgs> getAdministration() {
         return this.administration == null ? Input.empty() : this.administration;
@@ -32,7 +32,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+        private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -43,7 +43,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InstanceDetailsArgs build() {
             return new InstanceDetailsArgs(administration, instanceName, location, resourceGroupName, tags);
         }

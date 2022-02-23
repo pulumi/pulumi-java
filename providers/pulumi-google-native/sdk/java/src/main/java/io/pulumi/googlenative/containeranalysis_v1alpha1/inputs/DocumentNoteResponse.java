@@ -21,7 +21,7 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataLicence", required=true)
-    private final String dataLicence;
+      private final String dataLicence;
 
     public String getDataLicence() {
         return this.dataLicence;
@@ -32,7 +32,7 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="spdxVersion", required=true)
-    private final String spdxVersion;
+      private final String spdxVersion;
 
     public String getSpdxVersion() {
         return this.spdxVersion;
@@ -81,7 +81,6 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.spdxVersion = Objects.requireNonNull(spdxVersion);
             return this;
         }
-
         public DocumentNoteResponse build() {
             return new DocumentNoteResponse(dataLicence, spdxVersion);
         }

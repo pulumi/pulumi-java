@@ -97,7 +97,6 @@ public final class ResourceUsageExportConfigResponse {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
-
         public ResourceUsageExportConfigResponse build() {
             return new ResourceUsageExportConfigResponse(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }

@@ -60,7 +60,6 @@ public final class ExtendedLocationOptionsResponse {
             this.type = type;
             return this;
         }
-
         public ExtendedLocationOptionsResponse build() {
             return new ExtendedLocationOptionsResponse(supportedPolicy, type);
         }

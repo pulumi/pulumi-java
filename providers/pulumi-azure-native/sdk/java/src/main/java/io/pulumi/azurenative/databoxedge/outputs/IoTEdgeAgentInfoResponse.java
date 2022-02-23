@@ -98,7 +98,6 @@ public final class IoTEdgeAgentInfoResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public IoTEdgeAgentInfoResponse build() {
             return new IoTEdgeAgentInfoResponse(imageName, imageRepository, tag);
         }

@@ -60,7 +60,6 @@ public final class CachePolicyQueryStringsConfig {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public CachePolicyQueryStringsConfig build() {
             return new CachePolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }

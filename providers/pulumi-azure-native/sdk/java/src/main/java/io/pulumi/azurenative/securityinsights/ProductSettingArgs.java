@@ -21,7 +21,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,SettingKind>> kind;
+        private final Input<Either<String,SettingKind>> kind;
 
     public Input<Either<String,SettingKind>> getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -43,7 +43,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingsName")
-    private final @Nullable Input<String> settingsName;
+        private final @Nullable Input<String> settingsName;
 
     public Input<String> getSettingsName() {
         return this.settingsName == null ? Input.empty() : this.settingsName;
@@ -65,7 +65,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -169,7 +169,6 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public ProductSettingArgs build() {
             return new ProductSettingArgs(kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }

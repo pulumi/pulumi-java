@@ -119,7 +119,6 @@ public final class DatasetParameter {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatasetParameter build() {
             return new DatasetParameter(createColumn, datetimeOptions, filter, name, type);
         }

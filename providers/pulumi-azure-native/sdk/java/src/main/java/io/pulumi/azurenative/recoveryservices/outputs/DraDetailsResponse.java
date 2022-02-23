@@ -160,7 +160,6 @@ public final class DraDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public DraDetailsResponse build() {
             return new DraDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

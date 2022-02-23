@@ -116,7 +116,6 @@ public final class ForwardShippingDetailsResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public ForwardShippingDetailsResponse build() {
             return new ForwardShippingDetailsResponse(carrierDisplayName, carrierName, trackingId, trackingUrl);
         }

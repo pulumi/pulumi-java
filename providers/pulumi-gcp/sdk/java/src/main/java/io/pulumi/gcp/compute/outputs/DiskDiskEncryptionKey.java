@@ -134,7 +134,6 @@ public final class DiskDiskEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public DiskDiskEncryptionKey build() {
             return new DiskDiskEncryptionKey(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

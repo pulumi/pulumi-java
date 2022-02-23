@@ -79,7 +79,6 @@ public final class ClusterNetworkPolicy {
             this.provider = provider;
             return this;
         }
-
         public ClusterNetworkPolicy build() {
             return new ClusterNetworkPolicy(enabled, provider);
         }

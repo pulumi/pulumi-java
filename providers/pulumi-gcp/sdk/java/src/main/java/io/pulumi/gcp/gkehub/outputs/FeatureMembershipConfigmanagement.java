@@ -143,7 +143,6 @@ public final class FeatureMembershipConfigmanagement {
             this.version = version;
             return this;
         }
-
         public FeatureMembershipConfigmanagement build() {
             return new FeatureMembershipConfigmanagement(binauthz, configSync, hierarchyController, policyController, version);
         }

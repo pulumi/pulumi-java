@@ -15,35 +15,35 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @InputImport(name="deviceId", required=true)
-    private final String deviceId;
+      private final String deviceId;
 
     public String getDeviceId() {
         return this.deviceId;
     }
 
     @InputImport(name="fieldMask")
-    private final @Nullable String fieldMask;
+      private final @Nullable String fieldMask;
 
     public Optional<String> getFieldMask() {
         return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+      private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;
@@ -122,7 +122,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceId, fieldMask, location, project, registryId);
         }

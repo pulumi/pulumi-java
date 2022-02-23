@@ -54,7 +54,6 @@ public final class VmmDetailsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public VmmDetailsResponse build() {
             return new VmmDetailsResponse(instanceType);
         }

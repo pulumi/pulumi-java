@@ -138,7 +138,6 @@ public final class BucketReplicationDestination {
             this.storageClass = storageClass;
             return this;
         }
-
         public BucketReplicationDestination build() {
             return new BucketReplicationDestination(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }

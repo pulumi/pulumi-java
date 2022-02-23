@@ -23,7 +23,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final FhirStoreArgs Empty = new FhirStoreArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -34,7 +34,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSearchHandlingStrict")
-    private final @Nullable Input<Boolean> defaultSearchHandlingStrict;
+      private final @Nullable Input<Boolean> defaultSearchHandlingStrict;
 
     public Input<Boolean> getDefaultSearchHandlingStrict() {
         return this.defaultSearchHandlingStrict == null ? Input.empty() : this.defaultSearchHandlingStrict;
@@ -45,7 +45,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableReferentialIntegrity")
-    private final @Nullable Input<Boolean> disableReferentialIntegrity;
+      private final @Nullable Input<Boolean> disableReferentialIntegrity;
 
     public Input<Boolean> getDisableReferentialIntegrity() {
         return this.disableReferentialIntegrity == null ? Input.empty() : this.disableReferentialIntegrity;
@@ -56,7 +56,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableResourceVersioning")
-    private final @Nullable Input<Boolean> disableResourceVersioning;
+      private final @Nullable Input<Boolean> disableResourceVersioning;
 
     public Input<Boolean> getDisableResourceVersioning() {
         return this.disableResourceVersioning == null ? Input.empty() : this.disableResourceVersioning;
@@ -67,14 +67,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableUpdateCreate")
-    private final @Nullable Input<Boolean> enableUpdateCreate;
+      private final @Nullable Input<Boolean> enableUpdateCreate;
 
     public Input<Boolean> getEnableUpdateCreate() {
         return this.enableUpdateCreate == null ? Input.empty() : this.enableUpdateCreate;
     }
 
     @InputImport(name="fhirStoreId")
-    private final @Nullable Input<String> fhirStoreId;
+      private final @Nullable Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId == null ? Input.empty() : this.fhirStoreId;
@@ -85,14 +85,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,14 +103,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
     public Input<NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -121,7 +121,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchConfig")
-    private final @Nullable Input<SearchConfigArgs> searchConfig;
+      private final @Nullable Input<SearchConfigArgs> searchConfig;
 
     public Input<SearchConfigArgs> getSearchConfig() {
         return this.searchConfig == null ? Input.empty() : this.searchConfig;
@@ -132,7 +132,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-    private final @Nullable Input<List<StreamConfigArgs>> streamConfigs;
+      private final @Nullable Input<List<StreamConfigArgs>> streamConfigs;
 
     public Input<List<StreamConfigArgs>> getStreamConfigs() {
         return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
@@ -143,7 +143,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationConfig")
-    private final @Nullable Input<ValidationConfigArgs> validationConfig;
+      private final @Nullable Input<ValidationConfigArgs> validationConfig;
 
     public Input<ValidationConfigArgs> getValidationConfig() {
         return this.validationConfig == null ? Input.empty() : this.validationConfig;
@@ -154,7 +154,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<FhirStoreVersion> version;
+      private final @Nullable Input<FhirStoreVersion> version;
 
     public Input<FhirStoreVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -393,7 +393,6 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FhirStoreArgs build() {
             return new FhirStoreArgs(datasetId, defaultSearchHandlingStrict, disableReferentialIntegrity, disableResourceVersioning, enableUpdateCreate, fhirStoreId, labels, location, notificationConfig, project, searchConfig, streamConfigs, validationConfig, version);
         }

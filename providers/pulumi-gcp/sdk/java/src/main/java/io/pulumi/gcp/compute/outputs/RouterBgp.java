@@ -151,7 +151,6 @@ public final class RouterBgp {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public RouterBgp build() {
             return new RouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }

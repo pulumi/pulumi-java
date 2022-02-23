@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOnFeatures")
-    private final @Nullable Input<List<String>> addOnFeatures;
+        private final @Nullable Input<List<String>> addOnFeatures;
 
     public Input<List<String>> getAddOnFeatures() {
         return this.addOnFeatures == null ? Input.empty() : this.addOnFeatures;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationTypeVersionsCleanupPolicy")
-    private final @Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
+        private final @Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
     public Input<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
         return this.applicationTypeVersionsCleanupPolicy == null ? Input.empty() : this.applicationTypeVersionsCleanupPolicy;
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureActiveDirectory")
-    private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+        private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
         return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
@@ -65,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<CertificateDescriptionArgs> certificate;
+        private final @Nullable Input<CertificateDescriptionArgs> certificate;
 
     public Input<CertificateDescriptionArgs> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -76,7 +76,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateCommonNames")
-    private final @Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames;
+        private final @Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
     public Input<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
         return this.certificateCommonNames == null ? Input.empty() : this.certificateCommonNames;
@@ -87,7 +87,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateCommonNames")
-    private final @Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
+        private final @Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
     public Input<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
         return this.clientCertificateCommonNames == null ? Input.empty() : this.clientCertificateCommonNames;
@@ -98,7 +98,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateThumbprints")
-    private final @Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
+        private final @Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
     public Input<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
         return this.clientCertificateThumbprints == null ? Input.empty() : this.clientCertificateThumbprints;
@@ -109,7 +109,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterCodeVersion")
-    private final @Nullable Input<String> clusterCodeVersion;
+        private final @Nullable Input<String> clusterCodeVersion;
 
     public Input<String> getClusterCodeVersion() {
         return this.clusterCodeVersion == null ? Input.empty() : this.clusterCodeVersion;
@@ -120,7 +120,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+        private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -131,7 +131,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticsStorageAccountConfig")
-    private final @Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
+        private final @Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
     public Input<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
         return this.diagnosticsStorageAccountConfig == null ? Input.empty() : this.diagnosticsStorageAccountConfig;
@@ -142,7 +142,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventStoreServiceEnabled")
-    private final @Nullable Input<Boolean> eventStoreServiceEnabled;
+        private final @Nullable Input<Boolean> eventStoreServiceEnabled;
 
     public Input<Boolean> getEventStoreServiceEnabled() {
         return this.eventStoreServiceEnabled == null ? Input.empty() : this.eventStoreServiceEnabled;
@@ -153,7 +153,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fabricSettings")
-    private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
+        private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
     public Input<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
         return this.fabricSettings == null ? Input.empty() : this.fabricSettings;
@@ -164,7 +164,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -175,7 +175,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementEndpoint", required=true)
-    private final Input<String> managementEndpoint;
+        private final Input<String> managementEndpoint;
 
     public Input<String> getManagementEndpoint() {
         return this.managementEndpoint;
@@ -186,7 +186,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypes", required=true)
-    private final Input<List<NodeTypeDescriptionArgs>> nodeTypes;
+        private final Input<List<NodeTypeDescriptionArgs>> nodeTypes;
 
     public Input<List<NodeTypeDescriptionArgs>> getNodeTypes() {
         return this.nodeTypes;
@@ -203,7 +203,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reliabilityLevel")
-    private final @Nullable Input<String> reliabilityLevel;
+        private final @Nullable Input<String> reliabilityLevel;
 
     public Input<String> getReliabilityLevel() {
         return this.reliabilityLevel == null ? Input.empty() : this.reliabilityLevel;
@@ -214,7 +214,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -225,7 +225,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseProxyCertificate")
-    private final @Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate;
+        private final @Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate;
 
     public Input<CertificateDescriptionArgs> getReverseProxyCertificate() {
         return this.reverseProxyCertificate == null ? Input.empty() : this.reverseProxyCertificate;
@@ -236,7 +236,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reverseProxyCertificateCommonNames")
-    private final @Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
+        private final @Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
     public Input<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
         return this.reverseProxyCertificateCommonNames == null ? Input.empty() : this.reverseProxyCertificateCommonNames;
@@ -247,7 +247,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -258,7 +258,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeDescription")
-    private final @Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription;
+        private final @Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription;
 
     public Input<ClusterUpgradePolicyArgs> getUpgradeDescription() {
         return this.upgradeDescription == null ? Input.empty() : this.upgradeDescription;
@@ -272,7 +272,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeMode")
-    private final @Nullable Input<String> upgradeMode;
+        private final @Nullable Input<String> upgradeMode;
 
     public Input<String> getUpgradeMode() {
         return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
@@ -283,7 +283,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-    private final @Nullable Input<String> vmImage;
+        private final @Nullable Input<String> vmImage;
 
     public Input<String> getVmImage() {
         return this.vmImage == null ? Input.empty() : this.vmImage;
@@ -657,7 +657,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(addOnFeatures, applicationTypeVersionsCleanupPolicy, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterName, diagnosticsStorageAccountConfig, eventStoreServiceEnabled, fabricSettings, location, managementEndpoint, nodeTypes, reliabilityLevel, resourceGroupName, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, upgradeDescription, upgradeMode, vmImage);
         }

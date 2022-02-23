@@ -139,7 +139,6 @@ public final class OpenIdConnectConfigResponse {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
-
         public OpenIdConnectConfigResponse build() {
             return new OpenIdConnectConfigResponse(authorizationEndpoint, certificationUri, issuer, tokenEndpoint, wellKnownOpenIdConfiguration);
         }

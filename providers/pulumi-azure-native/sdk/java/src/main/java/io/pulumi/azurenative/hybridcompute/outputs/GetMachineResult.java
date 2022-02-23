@@ -558,7 +558,6 @@ public final class GetMachineResult {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }
-
         public GetMachineResult build() {
             return new GetMachineResult(adFqdn, agentVersion, clientPublicKey, displayName, dnsFqdn, domainName, errorDetails, extensions, id, identity, lastStatusChange, location, locationData, machineFqdn, name, osName, osProfile, osSku, osVersion, provisioningState, status, tags, type, vmId, vmUuid);
         }

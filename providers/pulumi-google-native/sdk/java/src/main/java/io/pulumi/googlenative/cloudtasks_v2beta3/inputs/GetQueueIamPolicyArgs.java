@@ -15,21 +15,21 @@ public final class GetQueueIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetQueueIamPolicyArgs Empty = new GetQueueIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="queueId", required=true)
-    private final String queueId;
+      private final String queueId;
 
     public String getQueueId() {
         return this.queueId;
@@ -88,7 +88,6 @@ public final class GetQueueIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
-
         public GetQueueIamPolicyArgs build() {
             return new GetQueueIamPolicyArgs(location, project, queueId);
         }

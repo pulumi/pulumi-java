@@ -134,7 +134,6 @@ public final class APIService {
             this.status = status;
             return this;
         }
-
         public APIService build() {
             return new APIService(apiVersion, kind, metadata, spec, status);
         }

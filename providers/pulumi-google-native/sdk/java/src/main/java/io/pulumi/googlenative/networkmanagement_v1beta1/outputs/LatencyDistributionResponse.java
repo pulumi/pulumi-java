@@ -53,7 +53,6 @@ public final class LatencyDistributionResponse {
             this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
             return this;
         }
-
         public LatencyDistributionResponse build() {
             return new LatencyDistributionResponse(latencyPercentiles);
         }

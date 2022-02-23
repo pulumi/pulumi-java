@@ -61,7 +61,6 @@ public final class RepositoryEncryptionConfiguration {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public RepositoryEncryptionConfiguration build() {
             return new RepositoryEncryptionConfiguration(encryptionType, kmsKey);
         }

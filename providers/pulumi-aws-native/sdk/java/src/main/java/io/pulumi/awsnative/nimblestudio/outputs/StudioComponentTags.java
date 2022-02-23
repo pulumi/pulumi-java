@@ -30,7 +30,6 @@ public final class StudioComponentTags {
         public Builder(StudioComponentTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StudioComponentTags build() {
             return new StudioComponentTags();
         }

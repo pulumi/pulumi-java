@@ -60,7 +60,6 @@ public final class TaskDefinitionKeyValuePair {
             this.value = value;
             return this;
         }
-
         public TaskDefinitionKeyValuePair build() {
             return new TaskDefinitionKeyValuePair(name, value);
         }

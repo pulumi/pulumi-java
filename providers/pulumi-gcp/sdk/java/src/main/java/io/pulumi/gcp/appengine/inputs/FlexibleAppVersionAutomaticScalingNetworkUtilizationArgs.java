@@ -19,7 +19,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetReceivedBytesPerSecond")
-    private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
+        private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
 
     public Input<Integer> getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetReceivedPacketsPerSecond")
-    private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
+        private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
 
     public Input<Integer> getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetSentBytesPerSecond")
-    private final @Nullable Input<Integer> targetSentBytesPerSecond;
+        private final @Nullable Input<Integer> targetSentBytesPerSecond;
 
     public Input<Integer> getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
@@ -52,7 +52,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
      * 
      */
     @InputImport(name="targetSentPacketsPerSecond")
-    private final @Nullable Input<Integer> targetSentPacketsPerSecond;
+        private final @Nullable Input<Integer> targetSentPacketsPerSecond;
 
     public Input<Integer> getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond == null ? Input.empty() : this.targetSentPacketsPerSecond;
@@ -141,7 +141,6 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
             this.targetSentPacketsPerSecond = Input.ofNullable(targetSentPacketsPerSecond);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs build() {
             return new FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

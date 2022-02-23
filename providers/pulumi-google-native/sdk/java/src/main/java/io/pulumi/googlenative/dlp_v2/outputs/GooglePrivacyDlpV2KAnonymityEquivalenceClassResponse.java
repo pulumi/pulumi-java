@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(equivalenceClassSize, quasiIdsValues);
         }

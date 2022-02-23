@@ -24,7 +24,7 @@ public final class DataTransferConfigScheduleOptionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="disableAutoScheduling")
-    private final @Nullable Input<Boolean> disableAutoScheduling;
+        private final @Nullable Input<Boolean> disableAutoScheduling;
 
     public Input<Boolean> getDisableAutoScheduling() {
         return this.disableAutoScheduling == null ? Input.empty() : this.disableAutoScheduling;
@@ -38,7 +38,7 @@ public final class DataTransferConfigScheduleOptionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -53,7 +53,7 @@ public final class DataTransferConfigScheduleOptionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -127,7 +127,6 @@ public final class DataTransferConfigScheduleOptionsGetArgs extends io.pulumi.re
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public DataTransferConfigScheduleOptionsGetArgs build() {
             return new DataTransferConfigScheduleOptionsGetArgs(disableAutoScheduling, endTime, startTime);
         }

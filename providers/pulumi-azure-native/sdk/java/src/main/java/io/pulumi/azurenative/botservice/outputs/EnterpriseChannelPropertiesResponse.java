@@ -78,7 +78,6 @@ public final class EnterpriseChannelPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public EnterpriseChannelPropertiesResponse build() {
             return new EnterpriseChannelPropertiesResponse(nodes, state);
         }

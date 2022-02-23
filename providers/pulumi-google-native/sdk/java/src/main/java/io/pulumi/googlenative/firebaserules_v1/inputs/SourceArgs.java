@@ -23,7 +23,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="files", required=true)
-    private final Input<List<FileArgs>> files;
+      private final Input<List<FileArgs>> files;
 
     public Input<List<FileArgs>> getFiles() {
         return this.files;
@@ -66,7 +66,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.files = Input.of(Objects.requireNonNull(files));
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(files);
         }

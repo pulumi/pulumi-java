@@ -199,7 +199,6 @@ public final class GetIPAMScopeResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMScopeResult build() {
             return new GetIPAMScopeResult(arn, description, ipamArn, ipamScopeId, ipamScopeType, isDefault, poolCount, tags);
         }

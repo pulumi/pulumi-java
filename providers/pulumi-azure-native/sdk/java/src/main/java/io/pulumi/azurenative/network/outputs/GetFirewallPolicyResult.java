@@ -465,7 +465,6 @@ public final class GetFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(basePolicy, childPolicies, dnsSettings, etag, firewalls, id, identity, insights, intrusionDetection, location, name, provisioningState, ruleCollectionGroups, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity, type);
         }

@@ -24,7 +24,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -35,7 +35,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final Input<String> secretName;
+        private final Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName;
@@ -46,7 +46,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final Input<String> shareName;
+        private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -120,7 +120,6 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public AzureFileVolumeSourceArgs build() {
             return new AzureFileVolumeSourceArgs(readOnly, secretName, shareName);
         }

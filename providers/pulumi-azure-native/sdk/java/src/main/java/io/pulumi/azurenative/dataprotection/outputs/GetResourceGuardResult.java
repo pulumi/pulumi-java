@@ -227,7 +227,6 @@ public final class GetResourceGuardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceGuardResult build() {
             return new GetResourceGuardResult(eTag, id, identity, location, name, properties, systemData, tags, type);
         }

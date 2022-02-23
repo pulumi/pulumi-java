@@ -75,7 +75,6 @@ public final class LinkedTemplateArtifactResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public LinkedTemplateArtifactResponse build() {
             return new LinkedTemplateArtifactResponse(path, template);
         }

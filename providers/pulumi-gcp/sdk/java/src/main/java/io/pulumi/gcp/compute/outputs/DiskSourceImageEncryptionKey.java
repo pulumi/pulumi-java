@@ -134,7 +134,6 @@ public final class DiskSourceImageEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public DiskSourceImageEncryptionKey build() {
             return new DiskSourceImageEncryptionKey(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

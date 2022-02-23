@@ -76,7 +76,6 @@ public final class FuotaTaskLoRaWAN {
             this.startTime = startTime;
             return this;
         }
-
         public FuotaTaskLoRaWAN build() {
             return new FuotaTaskLoRaWAN(rfRegion, startTime);
         }

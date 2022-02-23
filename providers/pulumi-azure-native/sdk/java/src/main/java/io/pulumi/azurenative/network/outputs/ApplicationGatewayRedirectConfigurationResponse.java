@@ -289,7 +289,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
-
         public ApplicationGatewayRedirectConfigurationResponse build() {
             return new ApplicationGatewayRedirectConfigurationResponse(etag, id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, type, urlPathMaps);
         }

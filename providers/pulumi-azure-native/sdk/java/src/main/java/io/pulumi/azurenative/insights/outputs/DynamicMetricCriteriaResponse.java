@@ -271,7 +271,6 @@ public final class DynamicMetricCriteriaResponse {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public DynamicMetricCriteriaResponse build() {
             return new DynamicMetricCriteriaResponse(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
         }

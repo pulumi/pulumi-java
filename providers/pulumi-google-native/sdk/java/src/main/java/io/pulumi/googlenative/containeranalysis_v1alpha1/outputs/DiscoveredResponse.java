@@ -117,7 +117,6 @@ public final class DiscoveredResponse {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }
-
         public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }

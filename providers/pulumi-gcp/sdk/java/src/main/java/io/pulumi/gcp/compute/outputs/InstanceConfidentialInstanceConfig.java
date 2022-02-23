@@ -52,7 +52,6 @@ public final class InstanceConfidentialInstanceConfig {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public InstanceConfidentialInstanceConfig build() {
             return new InstanceConfidentialInstanceConfig(enableConfidentialCompute);
         }

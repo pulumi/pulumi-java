@@ -164,7 +164,6 @@ public final class GetActionRuleByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActionRuleByNameResult build() {
             return new GetActionRuleByNameResult(id, location, name, properties, tags, type);
         }

@@ -22,7 +22,7 @@ public final class AllowedKeyTypeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ellipticCurve", required=true)
-    private final EcKeyTypeResponse ellipticCurve;
+      private final EcKeyTypeResponse ellipticCurve;
 
     public EcKeyTypeResponse getEllipticCurve() {
         return this.ellipticCurve;
@@ -33,7 +33,7 @@ public final class AllowedKeyTypeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rsa", required=true)
-    private final RsaKeyTypeResponse rsa;
+      private final RsaKeyTypeResponse rsa;
 
     public RsaKeyTypeResponse getRsa() {
         return this.rsa;
@@ -82,7 +82,6 @@ public final class AllowedKeyTypeResponse extends io.pulumi.resources.InvokeArgs
             this.rsa = Objects.requireNonNull(rsa);
             return this;
         }
-
         public AllowedKeyTypeResponse build() {
             return new AllowedKeyTypeResponse(ellipticCurve, rsa);
         }

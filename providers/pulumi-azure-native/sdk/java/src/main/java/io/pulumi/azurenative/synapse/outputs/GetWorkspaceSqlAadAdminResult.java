@@ -181,7 +181,6 @@ public final class GetWorkspaceSqlAadAdminResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkspaceSqlAadAdminResult build() {
             return new GetWorkspaceSqlAadAdminResult(administratorType, id, login, name, sid, tenantId, type);
         }

@@ -95,7 +95,6 @@ public final class GoogleCloudChannelV1EduDataResponse {
             this.website = Objects.requireNonNull(website);
             return this;
         }
-
         public GoogleCloudChannelV1EduDataResponse build() {
             return new GoogleCloudChannelV1EduDataResponse(instituteSize, instituteType, website);
         }

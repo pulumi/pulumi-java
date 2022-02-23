@@ -21,7 +21,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
      * 
      */
     @InputImport(name="critical", required=true)
-    private final Input<Boolean> critical;
+        private final Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical;
@@ -33,7 +33,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId;
+        private final Input<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId;
 
     public Input<CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs> getObjectId() {
         return this.objectId;
@@ -44,7 +44,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -118,7 +118,6 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CertificateConfigX509ConfigAdditionalExtensionGetArgs build() {
             return new CertificateConfigX509ConfigAdditionalExtensionGetArgs(critical, objectId, value);
         }

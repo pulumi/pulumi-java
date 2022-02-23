@@ -118,7 +118,6 @@ public final class ConnectionGatewayReferenceResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionGatewayReferenceResponse build() {
             return new ConnectionGatewayReferenceResponse(id, location, name, type);
         }

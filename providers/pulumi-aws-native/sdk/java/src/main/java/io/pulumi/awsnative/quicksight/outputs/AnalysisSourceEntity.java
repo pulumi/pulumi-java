@@ -46,7 +46,6 @@ public final class AnalysisSourceEntity {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
-
         public AnalysisSourceEntity build() {
             return new AnalysisSourceEntity(sourceTemplate);
         }

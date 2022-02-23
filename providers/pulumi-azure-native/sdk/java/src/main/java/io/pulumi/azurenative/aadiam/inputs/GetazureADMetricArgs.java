@@ -17,7 +17,7 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="azureADMetricsName", required=true)
-    private final String azureADMetricsName;
+        private final String azureADMetricsName;
 
     public String getAzureADMetricsName() {
         return this.azureADMetricsName;
@@ -28,7 +28,7 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetazureADMetricArgs build() {
             return new GetazureADMetricArgs(azureADMetricsName, resourceGroupName);
         }

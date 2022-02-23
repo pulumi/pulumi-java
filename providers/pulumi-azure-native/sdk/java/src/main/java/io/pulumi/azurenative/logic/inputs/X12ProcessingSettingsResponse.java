@@ -21,7 +21,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="convertImpliedDecimal", required=true)
-    private final Boolean convertImpliedDecimal;
+        private final Boolean convertImpliedDecimal;
 
     public Boolean getConvertImpliedDecimal() {
         return this.convertImpliedDecimal;
@@ -32,7 +32,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createEmptyXmlTagsForTrailingSeparators", required=true)
-    private final Boolean createEmptyXmlTagsForTrailingSeparators;
+        private final Boolean createEmptyXmlTagsForTrailingSeparators;
 
     public Boolean getCreateEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
@@ -43,7 +43,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maskSecurityInfo", required=true)
-    private final Boolean maskSecurityInfo;
+        private final Boolean maskSecurityInfo;
 
     public Boolean getMaskSecurityInfo() {
         return this.maskSecurityInfo;
@@ -54,7 +54,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="preserveInterchange", required=true)
-    private final Boolean preserveInterchange;
+        private final Boolean preserveInterchange;
 
     public Boolean getPreserveInterchange() {
         return this.preserveInterchange;
@@ -65,7 +65,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="suspendInterchangeOnError", required=true)
-    private final Boolean suspendInterchangeOnError;
+        private final Boolean suspendInterchangeOnError;
 
     public Boolean getSuspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
@@ -76,7 +76,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="useDotAsDecimalSeparator", required=true)
-    private final Boolean useDotAsDecimalSeparator;
+        private final Boolean useDotAsDecimalSeparator;
 
     public Boolean getUseDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
@@ -165,7 +165,6 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public X12ProcessingSettingsResponse build() {
             return new X12ProcessingSettingsResponse(convertImpliedDecimal, createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }

@@ -20,7 +20,7 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiclusteringress")
-    private final @Nullable Input<FeatureSpecMulticlusteringressArgs> multiclusteringress;
+        private final @Nullable Input<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 
     public Input<FeatureSpecMulticlusteringressArgs> getMulticlusteringress() {
         return this.multiclusteringress == null ? Input.empty() : this.multiclusteringress;
@@ -63,7 +63,6 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.multiclusteringress = Input.ofNullable(multiclusteringress);
             return this;
         }
-
         public FeatureSpecArgs build() {
             return new FeatureSpecArgs(multiclusteringress);
         }

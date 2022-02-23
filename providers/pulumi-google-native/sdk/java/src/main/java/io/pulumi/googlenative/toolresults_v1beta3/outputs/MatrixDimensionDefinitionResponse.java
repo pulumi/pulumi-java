@@ -30,7 +30,6 @@ public final class MatrixDimensionDefinitionResponse {
         public Builder(MatrixDimensionDefinitionResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MatrixDimensionDefinitionResponse build() {
             return new MatrixDimensionDefinitionResponse();
         }

@@ -21,7 +21,7 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TestBaseAccountSKUCapabilityResponse build() {
             return new TestBaseAccountSKUCapabilityResponse(name, value);
         }

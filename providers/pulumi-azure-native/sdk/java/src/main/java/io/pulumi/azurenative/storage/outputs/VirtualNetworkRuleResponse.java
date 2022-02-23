@@ -97,7 +97,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(action, state, virtualNetworkResourceId);
         }

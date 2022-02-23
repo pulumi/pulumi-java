@@ -22,7 +22,7 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="pemCertificates", required=true)
-    private final List<String> pemCertificates;
+      private final List<String> pemCertificates;
 
     public List<String> getPemCertificates() {
         return this.pemCertificates;
@@ -60,7 +60,6 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
-
         public SubordinateConfigChainResponse build() {
             return new SubordinateConfigChainResponse(pemCertificates);
         }

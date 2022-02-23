@@ -76,7 +76,6 @@ public final class SchemaRegistry {
             this.name = name;
             return this;
         }
-
         public SchemaRegistry build() {
             return new SchemaRegistry(arn, name);
         }

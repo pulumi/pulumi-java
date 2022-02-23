@@ -712,7 +712,6 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, buildId, buildName, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, maxInstances, minInstances, name, network, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, status, timeout, updateTime, versionId, vpcConnector, vpcConnectorEgressSettings);
         }

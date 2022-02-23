@@ -124,7 +124,6 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig {
             this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
             return this;
         }
-
         public GetEnvironmentConfigPrivateEnvironmentConfig build() {
             return new GetEnvironmentConfigPrivateEnvironmentConfig(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEndpoint, enablePrivatelyUsedPublicIps, masterIpv4CidrBlock, webServerIpv4CidrBlock);
         }

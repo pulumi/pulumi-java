@@ -15,7 +15,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     public static final EnvgroupAttachmentArgs Empty = new EnvgroupAttachmentArgs();
 
     @InputImport(name="envgroupId", required=true)
-    private final Input<String> envgroupId;
+      private final Input<String> envgroupId;
 
     public Input<String> getEnvgroupId() {
         return this.envgroupId;
@@ -26,7 +26,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environment", required=true)
-    private final Input<String> environment;
+      private final Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment;
@@ -37,14 +37,14 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -133,7 +133,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public EnvgroupAttachmentArgs build() {
             return new EnvgroupAttachmentArgs(envgroupId, environment, name, organizationId);
         }

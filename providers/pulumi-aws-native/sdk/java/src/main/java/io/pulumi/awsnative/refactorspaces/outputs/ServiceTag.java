@@ -74,7 +74,6 @@ public final class ServiceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ServiceTag build() {
             return new ServiceTag(key, value);
         }

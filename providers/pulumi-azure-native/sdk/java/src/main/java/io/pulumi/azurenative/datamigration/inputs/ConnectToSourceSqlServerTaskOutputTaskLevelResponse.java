@@ -24,7 +24,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="agentJobs", required=true)
-    private final Map<String,String> agentJobs;
+        private final Map<String,String> agentJobs;
 
     public Map<String,String> getAgentJobs() {
         return this.agentJobs;
@@ -35,7 +35,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="databases", required=true)
-    private final Map<String,String> databases;
+        private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
         return this.databases;
@@ -46,7 +46,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -57,7 +57,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="logins", required=true)
-    private final Map<String,String> logins;
+        private final Map<String,String> logins;
 
     public Map<String,String> getLogins() {
         return this.logins;
@@ -69,7 +69,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -80,7 +80,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="sourceServerBrandVersion", required=true)
-    private final String sourceServerBrandVersion;
+        private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -91,7 +91,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="sourceServerVersion", required=true)
-    private final String sourceServerVersion;
+        private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
@@ -102,7 +102,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+        private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -211,7 +211,6 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputTaskLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputTaskLevelResponse(agentJobs, databases, id, logins, resultType, sourceServerBrandVersion, sourceServerVersion, validationErrors);
         }

@@ -439,7 +439,6 @@ public final class ActiveSecurityUserRuleResponse {
             this.sources = sources;
             return this;
         }
-
         public ActiveSecurityUserRuleResponse build() {
             return new ActiveSecurityUserRuleResponse(commitTime, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, id, kind, protocol, provisioningState, region, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

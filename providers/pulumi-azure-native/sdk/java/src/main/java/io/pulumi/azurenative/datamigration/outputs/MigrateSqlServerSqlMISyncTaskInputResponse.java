@@ -166,7 +166,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskInputResponse build() {
             return new MigrateSqlServerSqlMISyncTaskInputResponse(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }

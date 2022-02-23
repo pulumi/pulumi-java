@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionResponse(title);
         }

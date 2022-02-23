@@ -22,7 +22,7 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="authorizationLoggingOptions", required=true)
-    private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
+      private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
@@ -33,7 +33,7 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="logName", required=true)
-    private final String logName;
+      private final String logName;
 
     public String getLogName() {
         return this.logName;
@@ -82,7 +82,6 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public CloudAuditOptionsResponse build() {
             return new CloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

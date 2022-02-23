@@ -21,7 +21,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accessType", required=true)
-    private final String accessType;
+      private final String accessType;
 
     public String getAccessType() {
         return this.accessType;
@@ -32,7 +32,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="proxyUri", required=true)
-    private final String proxyUri;
+      private final String proxyUri;
 
     public String getProxyUri() {
         return this.proxyUri;
@@ -43,7 +43,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="runtimeOwner", required=true)
-    private final String runtimeOwner;
+      private final String runtimeOwner;
 
     public String getRuntimeOwner() {
         return this.runtimeOwner;
@@ -102,7 +102,6 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
         }
-
         public RuntimeAccessConfigResponse build() {
             return new RuntimeAccessConfigResponse(accessType, proxyUri, runtimeOwner);
         }

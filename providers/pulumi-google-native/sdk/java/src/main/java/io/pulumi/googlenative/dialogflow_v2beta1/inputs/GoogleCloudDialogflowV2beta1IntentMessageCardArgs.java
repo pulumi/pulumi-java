@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons;
 
     public Input<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardArgs(buttons, imageUri, subtitle, title);
         }

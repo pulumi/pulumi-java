@@ -21,7 +21,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="excludeObjects", required=true)
-    private final MysqlRdbmsResponse excludeObjects;
+      private final MysqlRdbmsResponse excludeObjects;
 
     public MysqlRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
@@ -32,7 +32,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="includeObjects", required=true)
-    private final MysqlRdbmsResponse includeObjects;
+      private final MysqlRdbmsResponse includeObjects;
 
     public MysqlRdbmsResponse getIncludeObjects() {
         return this.includeObjects;
@@ -81,7 +81,6 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public MysqlSourceConfigResponse build() {
             return new MysqlSourceConfigResponse(excludeObjects, includeObjects);
         }

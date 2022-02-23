@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }
-
         public GoogleCloudMlV1__AutoScalingResponse build() {
             return new GoogleCloudMlV1__AutoScalingResponse(maxNodes, metrics, minNodes);
         }

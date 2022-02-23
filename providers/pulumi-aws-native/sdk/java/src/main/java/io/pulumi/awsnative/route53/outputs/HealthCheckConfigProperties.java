@@ -261,7 +261,6 @@ public final class HealthCheckConfigProperties {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HealthCheckConfigProperties build() {
             return new HealthCheckConfigProperties(alarmIdentifier, childHealthChecks, enableSNI, failureThreshold, fullyQualifiedDomainName, healthThreshold, iPAddress, insufficientDataHealthStatus, inverted, measureLatency, port, regions, requestInterval, resourcePath, routingControlArn, searchString, type);
         }

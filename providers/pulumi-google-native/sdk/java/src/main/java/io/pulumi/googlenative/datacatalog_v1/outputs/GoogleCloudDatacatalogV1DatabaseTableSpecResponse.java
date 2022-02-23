@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1DatabaseTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1DatabaseTableSpecResponse(type);
         }

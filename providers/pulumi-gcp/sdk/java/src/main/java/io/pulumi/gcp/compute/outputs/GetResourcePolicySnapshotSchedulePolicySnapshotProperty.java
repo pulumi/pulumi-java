@@ -74,7 +74,6 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicySnapshotProperty build() {
             return new GetResourcePolicySnapshotSchedulePolicySnapshotProperty(guestFlush, labels, storageLocations);
         }

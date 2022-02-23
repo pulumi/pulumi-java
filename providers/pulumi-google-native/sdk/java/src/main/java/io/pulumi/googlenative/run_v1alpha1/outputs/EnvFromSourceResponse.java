@@ -97,7 +97,6 @@ public final class EnvFromSourceResponse {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
-
         public EnvFromSourceResponse build() {
             return new EnvFromSourceResponse(configMapRef, prefix, secretRef);
         }

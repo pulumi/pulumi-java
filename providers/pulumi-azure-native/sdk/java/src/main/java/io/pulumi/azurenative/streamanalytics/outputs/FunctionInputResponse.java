@@ -77,7 +77,6 @@ public final class FunctionInputResponse {
             this.isConfigurationParameter = isConfigurationParameter;
             return this;
         }
-
         public FunctionInputResponse build() {
             return new FunctionInputResponse(dataType, isConfigurationParameter);
         }

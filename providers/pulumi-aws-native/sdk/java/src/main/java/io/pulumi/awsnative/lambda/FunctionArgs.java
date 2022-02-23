@@ -27,7 +27,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionArgs Empty = new FunctionArgs();
 
     @InputImport(name="architectures")
-    private final @Nullable Input<List<FunctionArchitecturesItem>> architectures;
+        private final @Nullable Input<List<FunctionArchitecturesItem>> architectures;
 
     public Input<List<FunctionArchitecturesItem>> getArchitectures() {
         return this.architectures == null ? Input.empty() : this.architectures;
@@ -38,7 +38,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final Input<FunctionCodeArgs> code;
+        private final Input<FunctionCodeArgs> code;
 
     public Input<FunctionCodeArgs> getCode() {
         return this.code;
@@ -49,7 +49,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codeSigningConfigArn")
-    private final @Nullable Input<String> codeSigningConfigArn;
+        private final @Nullable Input<String> codeSigningConfigArn;
 
     public Input<String> getCodeSigningConfigArn() {
         return this.codeSigningConfigArn == null ? Input.empty() : this.codeSigningConfigArn;
@@ -60,7 +60,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterConfig")
-    private final @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig;
+        private final @Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
     public Input<FunctionDeadLetterConfigArgs> getDeadLetterConfig() {
         return this.deadLetterConfig == null ? Input.empty() : this.deadLetterConfig;
@@ -71,7 +71,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -82,7 +82,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<FunctionEnvironmentArgs> environment;
+        private final @Nullable Input<FunctionEnvironmentArgs> environment;
 
     public Input<FunctionEnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -93,7 +93,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemConfigs")
-    private final @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
+        private final @Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
 
     public Input<List<FunctionFileSystemConfigArgs>> getFileSystemConfigs() {
         return this.fileSystemConfigs == null ? Input.empty() : this.fileSystemConfigs;
@@ -104,7 +104,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName")
-    private final @Nullable Input<String> functionName;
+        private final @Nullable Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName == null ? Input.empty() : this.functionName;
@@ -115,7 +115,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handler")
-    private final @Nullable Input<String> handler;
+        private final @Nullable Input<String> handler;
 
     public Input<String> getHandler() {
         return this.handler == null ? Input.empty() : this.handler;
@@ -126,7 +126,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageConfig")
-    private final @Nullable Input<FunctionImageConfigArgs> imageConfig;
+        private final @Nullable Input<FunctionImageConfigArgs> imageConfig;
 
     public Input<FunctionImageConfigArgs> getImageConfig() {
         return this.imageConfig == null ? Input.empty() : this.imageConfig;
@@ -137,7 +137,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+        private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -148,7 +148,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layers")
-    private final @Nullable Input<List<String>> layers;
+        private final @Nullable Input<List<String>> layers;
 
     public Input<List<String>> getLayers() {
         return this.layers == null ? Input.empty() : this.layers;
@@ -159,7 +159,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySize")
-    private final @Nullable Input<Integer> memorySize;
+        private final @Nullable Input<Integer> memorySize;
 
     public Input<Integer> getMemorySize() {
         return this.memorySize == null ? Input.empty() : this.memorySize;
@@ -170,7 +170,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<FunctionPackageType> packageType;
+        private final @Nullable Input<FunctionPackageType> packageType;
 
     public Input<FunctionPackageType> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
@@ -181,7 +181,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedConcurrentExecutions")
-    private final @Nullable Input<Integer> reservedConcurrentExecutions;
+        private final @Nullable Input<Integer> reservedConcurrentExecutions;
 
     public Input<Integer> getReservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions == null ? Input.empty() : this.reservedConcurrentExecutions;
@@ -192,7 +192,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -203,7 +203,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-    private final @Nullable Input<String> runtime;
+        private final @Nullable Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -214,7 +214,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FunctionTagArgs>> tags;
+        private final @Nullable Input<List<FunctionTagArgs>> tags;
 
     public Input<List<FunctionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -225,7 +225,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+        private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -236,7 +236,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingConfig")
-    private final @Nullable Input<FunctionTracingConfigArgs> tracingConfig;
+        private final @Nullable Input<FunctionTracingConfigArgs> tracingConfig;
 
     public Input<FunctionTracingConfigArgs> getTracingConfig() {
         return this.tracingConfig == null ? Input.empty() : this.tracingConfig;
@@ -247,7 +247,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<FunctionVpcConfigArgs> vpcConfig;
+        private final @Nullable Input<FunctionVpcConfigArgs> vpcConfig;
 
     public Input<FunctionVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
@@ -591,7 +591,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }
-
         public FunctionArgs build() {
             return new FunctionArgs(architectures, code, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, functionName, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }

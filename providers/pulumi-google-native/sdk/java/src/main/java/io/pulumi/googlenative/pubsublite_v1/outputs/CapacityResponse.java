@@ -74,7 +74,6 @@ public final class CapacityResponse {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
-
         public CapacityResponse build() {
             return new CapacityResponse(publishMibPerSec, subscribeMibPerSec);
         }

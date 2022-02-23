@@ -150,7 +150,6 @@ public final class GetTableResult {
             this.tags = tags;
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(billingMode, defaultTimeToLive, encryptionSpecification, pointInTimeRecoveryEnabled, regularColumns, tags);
         }

@@ -22,7 +22,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="color", required=true)
-    private final String color;
+      private final String color;
 
     public String getColor() {
         return this.color;
@@ -33,7 +33,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -44,7 +44,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -55,7 +55,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetAxis", required=true)
-    private final String targetAxis;
+      private final String targetAxis;
 
     public String getTargetAxis() {
         return this.targetAxis;
@@ -66,7 +66,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Double value;
+      private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -145,7 +145,6 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ThresholdResponse build() {
             return new ThresholdResponse(color, direction, label, targetAxis, value);
         }

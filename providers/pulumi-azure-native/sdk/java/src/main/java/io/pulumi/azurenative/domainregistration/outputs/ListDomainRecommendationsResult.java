@@ -76,7 +76,6 @@ public final class ListDomainRecommendationsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListDomainRecommendationsResult build() {
             return new ListDomainRecommendationsResult(nextLink, value);
         }

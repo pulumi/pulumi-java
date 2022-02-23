@@ -15,14 +15,14 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
     public static final SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs Empty = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs();
 
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+        private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs(target, type);
         }

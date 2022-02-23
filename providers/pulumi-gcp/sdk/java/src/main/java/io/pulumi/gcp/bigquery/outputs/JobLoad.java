@@ -549,7 +549,6 @@ public final class JobLoad {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobLoad build() {
             return new JobLoad(allowJaggedRows, allowQuotedNewlines, autodetect, createDisposition, destinationEncryptionConfiguration, destinationTable, encoding, fieldDelimiter, ignoreUnknownValues, maxBadRecords, nullMarker, projectionFields, quote, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, writeDisposition);
         }

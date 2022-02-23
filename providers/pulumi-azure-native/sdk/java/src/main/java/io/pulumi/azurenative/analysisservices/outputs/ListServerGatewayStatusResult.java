@@ -54,7 +54,6 @@ public final class ListServerGatewayStatusResult {
             this.status = status;
             return this;
         }
-
         public ListServerGatewayStatusResult build() {
             return new ListServerGatewayStatusResult(status);
         }

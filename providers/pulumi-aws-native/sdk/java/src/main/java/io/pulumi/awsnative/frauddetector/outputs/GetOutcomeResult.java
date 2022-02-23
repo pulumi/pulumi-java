@@ -141,7 +141,6 @@ public final class GetOutcomeResult {
             this.tags = tags;
             return this;
         }
-
         public GetOutcomeResult build() {
             return new GetOutcomeResult(arn, createdTime, description, lastUpdatedTime, tags);
         }

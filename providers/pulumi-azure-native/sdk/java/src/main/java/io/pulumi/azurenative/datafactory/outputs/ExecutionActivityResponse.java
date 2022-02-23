@@ -188,7 +188,6 @@ public final class ExecutionActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecutionActivityResponse build() {
             return new ExecutionActivityResponse(dependsOn, description, linkedServiceName, name, policy, type, userProperties);
         }

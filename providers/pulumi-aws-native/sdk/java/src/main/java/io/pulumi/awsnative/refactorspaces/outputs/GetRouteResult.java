@@ -96,7 +96,6 @@ public final class GetRouteResult {
             this.tags = tags;
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(arn, pathResourceToId, routeIdentifier, tags);
         }

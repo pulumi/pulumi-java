@@ -21,7 +21,7 @@ public final class ManagedPrometheusConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class ManagedPrometheusConfigResponse extends io.pulumi.resources.I
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ManagedPrometheusConfigResponse build() {
             return new ManagedPrometheusConfigResponse(enabled);
         }

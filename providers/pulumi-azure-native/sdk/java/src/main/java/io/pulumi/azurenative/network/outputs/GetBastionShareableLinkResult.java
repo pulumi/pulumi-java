@@ -78,7 +78,6 @@ public final class GetBastionShareableLinkResult {
             this.value = value;
             return this;
         }
-
         public GetBastionShareableLinkResult build() {
             return new GetBastionShareableLinkResult(nextLink, value);
         }

@@ -76,7 +76,6 @@ public final class DataStoreIndexProperty {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataStoreIndexProperty build() {
             return new DataStoreIndexProperty(direction, name);
         }

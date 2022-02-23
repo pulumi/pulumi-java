@@ -17,7 +17,7 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="registrationDefinitionId", required=true)
-    private final String registrationDefinitionId;
+        private final String registrationDefinitionId;
 
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
@@ -28,7 +28,7 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetRegistrationDefinitionArgs build() {
             return new GetRegistrationDefinitionArgs(registrationDefinitionId, scope);
         }

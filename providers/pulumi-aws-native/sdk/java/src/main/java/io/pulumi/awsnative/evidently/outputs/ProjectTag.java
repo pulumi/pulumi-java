@@ -74,7 +74,6 @@ public final class ProjectTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ProjectTag build() {
             return new ProjectTag(key, value);
         }

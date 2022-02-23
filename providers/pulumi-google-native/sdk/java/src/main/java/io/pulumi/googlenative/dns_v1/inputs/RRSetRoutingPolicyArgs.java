@@ -21,21 +21,21 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
     @InputImport(name="geo")
-    private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
+      private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
     public Input<RRSetRoutingPolicyGeoPolicyArgs> getGeo() {
         return this.geo == null ? Input.empty() : this.geo;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="wrr")
-    private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
+      private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
     public Input<RRSetRoutingPolicyWrrPolicyArgs> getWrr() {
         return this.wrr == null ? Input.empty() : this.wrr;
@@ -109,7 +109,6 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
             this.wrr = Input.ofNullable(wrr);
             return this;
         }
-
         public RRSetRoutingPolicyArgs build() {
             return new RRSetRoutingPolicyArgs(geo, kind, wrr);
         }

@@ -23,7 +23,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -34,7 +34,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -45,7 +45,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firewallRuleType", required=true)
-    private final String firewallRuleType;
+      private final String firewallRuleType;
 
     public String getFirewallRuleType() {
         return this.firewallRuleType;
@@ -67,7 +67,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -78,7 +78,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-    private final String policy;
+      private final String policy;
 
     public String getPolicy() {
         return this.policy;
@@ -89,7 +89,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -100,7 +100,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetServiceAccounts", required=true)
-    private final List<String> targetServiceAccounts;
+      private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {
         return this.targetServiceAccounts;
@@ -111,7 +111,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetTags", required=true)
-    private final List<String> targetTags;
+      private final List<String> targetTags;
 
     public List<String> getTargetTags() {
         return this.targetTags;
@@ -122,7 +122,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -251,7 +251,6 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public FirewallInfoResponse build() {
             return new FirewallInfoResponse(action, direction, displayName, firewallRuleType, networkUri, policy, priority, targetServiceAccounts, targetTags, uri);
         }

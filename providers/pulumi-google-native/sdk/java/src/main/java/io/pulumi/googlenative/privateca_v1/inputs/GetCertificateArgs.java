@@ -15,28 +15,28 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
     @InputImport(name="caPoolId", required=true)
-    private final String caPoolId;
+      private final String caPoolId;
 
     public String getCaPoolId() {
         return this.caPoolId;
     }
 
     @InputImport(name="certificateId", required=true)
-    private final String certificateId;
+      private final String certificateId;
 
     public String getCertificateId() {
         return this.certificateId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCertificateArgs build() {
             return new GetCertificateArgs(caPoolId, certificateId, location, project);
         }

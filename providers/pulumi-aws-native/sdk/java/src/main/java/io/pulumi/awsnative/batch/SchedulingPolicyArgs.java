@@ -17,7 +17,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final SchedulingPolicyArgs Empty = new SchedulingPolicyArgs();
 
     @InputImport(name="fairsharePolicy")
-    private final @Nullable Input<SchedulingPolicyFairsharePolicyArgs> fairsharePolicy;
+        private final @Nullable Input<SchedulingPolicyFairsharePolicyArgs> fairsharePolicy;
 
     public Input<SchedulingPolicyFairsharePolicyArgs> getFairsharePolicy() {
         return this.fairsharePolicy == null ? Input.empty() : this.fairsharePolicy;
@@ -28,7 +28,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -39,7 +39,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+        private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -113,7 +113,6 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SchedulingPolicyArgs build() {
             return new SchedulingPolicyArgs(fairsharePolicy, name, tags);
         }

@@ -25,7 +25,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOfDay")
-    private final @Nullable Input<TimeOfDayArgs> endTimeOfDay;
+      private final @Nullable Input<TimeOfDayArgs> endTimeOfDay;
 
     public Input<TimeOfDayArgs> getEndTimeOfDay() {
         return this.endTimeOfDay == null ? Input.empty() : this.endTimeOfDay;
@@ -36,7 +36,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repeatInterval")
-    private final @Nullable Input<String> repeatInterval;
+      private final @Nullable Input<String> repeatInterval;
 
     public Input<String> getRepeatInterval() {
         return this.repeatInterval == null ? Input.empty() : this.repeatInterval;
@@ -47,7 +47,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleEndDate")
-    private final @Nullable Input<DateArgs> scheduleEndDate;
+      private final @Nullable Input<DateArgs> scheduleEndDate;
 
     public Input<DateArgs> getScheduleEndDate() {
         return this.scheduleEndDate == null ? Input.empty() : this.scheduleEndDate;
@@ -58,7 +58,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleStartDate", required=true)
-    private final Input<DateArgs> scheduleStartDate;
+      private final Input<DateArgs> scheduleStartDate;
 
     public Input<DateArgs> getScheduleStartDate() {
         return this.scheduleStartDate;
@@ -69,7 +69,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOfDay")
-    private final @Nullable Input<TimeOfDayArgs> startTimeOfDay;
+      private final @Nullable Input<TimeOfDayArgs> startTimeOfDay;
 
     public Input<TimeOfDayArgs> getStartTimeOfDay() {
         return this.startTimeOfDay == null ? Input.empty() : this.startTimeOfDay;
@@ -173,7 +173,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.startTimeOfDay = Input.ofNullable(startTimeOfDay);
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

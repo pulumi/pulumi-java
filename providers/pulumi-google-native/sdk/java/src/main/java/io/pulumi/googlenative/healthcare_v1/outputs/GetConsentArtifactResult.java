@@ -204,7 +204,6 @@ public final class GetConsentArtifactResult {
             this.witnessSignature = Objects.requireNonNull(witnessSignature);
             return this;
         }
-
         public GetConsentArtifactResult build() {
             return new GetConsentArtifactResult(consentContentScreenshots, consentContentVersion, guardianSignature, metadata, name, userId, userSignature, witnessSignature);
         }

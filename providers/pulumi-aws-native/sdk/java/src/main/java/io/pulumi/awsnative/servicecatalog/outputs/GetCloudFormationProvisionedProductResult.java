@@ -230,7 +230,6 @@ public final class GetCloudFormationProvisionedProductResult {
             this.tags = tags;
             return this;
         }
-
         public GetCloudFormationProvisionedProductResult build() {
             return new GetCloudFormationProvisionedProductResult(acceptLanguage, cloudformationStackArn, outputs, pathId, pathName, productId, productName, provisionedProductId, provisioningArtifactId, provisioningArtifactName, provisioningParameters, provisioningPreferences, recordId, tags);
         }

@@ -58,7 +58,6 @@ public final class TagsItemProperties {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TagsItemProperties build() {
             return new TagsItemProperties(key, value);
         }

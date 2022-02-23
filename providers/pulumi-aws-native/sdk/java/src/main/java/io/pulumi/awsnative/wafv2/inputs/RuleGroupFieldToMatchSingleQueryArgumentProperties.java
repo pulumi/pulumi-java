@@ -17,7 +17,7 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentProperties extends io
     public static final RuleGroupFieldToMatchSingleQueryArgumentProperties Empty = new RuleGroupFieldToMatchSingleQueryArgumentProperties();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentProperties extends io
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupFieldToMatchSingleQueryArgumentProperties build() {
             return new RuleGroupFieldToMatchSingleQueryArgumentProperties(name);
         }

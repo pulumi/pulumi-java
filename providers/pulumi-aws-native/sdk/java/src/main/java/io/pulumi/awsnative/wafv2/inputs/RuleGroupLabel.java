@@ -13,7 +13,7 @@ public final class RuleGroupLabel extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupLabel Empty = new RuleGroupLabel();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class RuleGroupLabel extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupLabel build() {
             return new RuleGroupLabel(name);
         }

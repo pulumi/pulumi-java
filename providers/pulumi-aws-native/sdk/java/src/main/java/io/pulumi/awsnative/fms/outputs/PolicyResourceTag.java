@@ -60,7 +60,6 @@ public final class PolicyResourceTag {
             this.value = value;
             return this;
         }
-
         public PolicyResourceTag build() {
             return new PolicyResourceTag(key, value);
         }

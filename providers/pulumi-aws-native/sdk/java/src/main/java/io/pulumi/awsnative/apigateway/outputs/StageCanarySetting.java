@@ -121,7 +121,6 @@ public final class StageCanarySetting {
             this.useStageCache = useStageCache;
             return this;
         }
-
         public StageCanarySetting build() {
             return new StageCanarySetting(deploymentId, percentTraffic, stageVariableOverrides, useStageCache);
         }

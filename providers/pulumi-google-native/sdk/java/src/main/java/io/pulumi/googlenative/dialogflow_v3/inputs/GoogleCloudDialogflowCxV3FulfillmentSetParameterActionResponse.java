@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final String parameter;
+      private final String parameter;
 
     public String getParameter() {
         return this.parameter;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      * 
      */
     @InputImport(name="value", required=true)
-    private final Object value;
+      private final Object value;
 
     public Object getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(parameter, value);
         }

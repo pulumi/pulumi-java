@@ -207,7 +207,6 @@ public final class CustomResourceDefinitionVersion {
             this.subresources = subresources;
             return this;
         }
-
         public CustomResourceDefinitionVersion build() {
             return new CustomResourceDefinitionVersion(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
         }

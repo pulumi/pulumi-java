@@ -24,7 +24,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+        private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -67,7 +67,6 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public LoginScopesArgs build() {
             return new LoginScopesArgs(scopes);
         }

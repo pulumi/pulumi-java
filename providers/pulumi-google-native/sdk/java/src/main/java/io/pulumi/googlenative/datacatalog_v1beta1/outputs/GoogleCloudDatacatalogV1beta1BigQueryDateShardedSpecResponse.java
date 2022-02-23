@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(dataset, shardCount, tablePrefix);
         }

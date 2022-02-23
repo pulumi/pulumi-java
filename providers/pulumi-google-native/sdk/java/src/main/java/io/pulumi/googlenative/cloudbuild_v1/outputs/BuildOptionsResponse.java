@@ -309,7 +309,6 @@ public final class BuildOptionsResponse {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public BuildOptionsResponse build() {
             return new BuildOptionsResponse(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }

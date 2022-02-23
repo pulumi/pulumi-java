@@ -209,7 +209,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbMongoDbApiLinkedServiceResponse build() {
             return new CosmosDbMongoDbApiLinkedServiceResponse(annotations, connectVia, connectionString, database, description, isServerVersionAbove32, parameters, type);
         }

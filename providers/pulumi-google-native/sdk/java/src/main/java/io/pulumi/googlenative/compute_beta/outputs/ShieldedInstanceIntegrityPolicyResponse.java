@@ -52,7 +52,6 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedInstanceIntegrityPolicyResponse build() {
             return new ShieldedInstanceIntegrityPolicyResponse(updateAutoLearnPolicy);
         }

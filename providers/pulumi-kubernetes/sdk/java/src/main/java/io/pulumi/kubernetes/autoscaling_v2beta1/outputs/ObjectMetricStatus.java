@@ -141,7 +141,6 @@ public final class ObjectMetricStatus {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ObjectMetricStatus build() {
             return new ObjectMetricStatus(averageValue, currentValue, metricName, selector, target);
         }

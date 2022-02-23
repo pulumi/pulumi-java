@@ -20,7 +20,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * 
      */
     @InputImport(name="aggregationWindowLength")
-    private final @Nullable Input<String> aggregationWindowLength;
+        private final @Nullable Input<String> aggregationWindowLength;
 
     public Input<String> getAggregationWindowLength() {
         return this.aggregationWindowLength == null ? Input.empty() : this.aggregationWindowLength;
@@ -31,7 +31,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * 
      */
     @InputImport(name="targetUtilization", required=true)
-    private final Input<Double> targetUtilization;
+        private final Input<Double> targetUtilization;
 
     public Input<Double> getTargetUtilization() {
         return this.targetUtilization;
@@ -90,7 +90,6 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
             this.targetUtilization = Input.of(Objects.requireNonNull(targetUtilization));
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingCpuUtilizationArgs build() {
             return new FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(aggregationWindowLength, targetUtilization);
         }

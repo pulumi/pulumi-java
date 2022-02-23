@@ -84,7 +84,6 @@ public final class PackagingConfigurationMssPackage {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public PackagingConfigurationMssPackage build() {
             return new PackagingConfigurationMssPackage(encryption, mssManifests, segmentDurationSeconds);
         }

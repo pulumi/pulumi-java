@@ -44,7 +44,6 @@ public final class GetAppEngineServiceTelemetry {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetAppEngineServiceTelemetry build() {
             return new GetAppEngineServiceTelemetry(resourceName);
         }

@@ -20,7 +20,7 @@ public final class ClusterIdentityServiceConfigGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -63,7 +63,6 @@ public final class ClusterIdentityServiceConfigGetArgs extends io.pulumi.resourc
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public ClusterIdentityServiceConfigGetArgs build() {
             return new ClusterIdentityServiceConfigGetArgs(enabled);
         }

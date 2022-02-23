@@ -74,7 +74,6 @@ public final class MethodSelectorResponse {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
-
         public MethodSelectorResponse build() {
             return new MethodSelectorResponse(method, permission);
         }

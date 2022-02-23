@@ -15,7 +15,7 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
     public static final PolicyAlternativeNameServerConfigResponse Empty = new PolicyAlternativeNameServerConfigResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -26,7 +26,7 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-    private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
+      private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
     public List<PolicyAlternativeNameServerConfigTargetNameServerResponse> getTargetNameServers() {
         return this.targetNameServers;
@@ -75,7 +75,6 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigResponse build() {
             return new PolicyAlternativeNameServerConfigResponse(kind, targetNameServers);
         }

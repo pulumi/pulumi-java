@@ -21,7 +21,7 @@ public final class ResourceAnnotationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -59,7 +59,6 @@ public final class ResourceAnnotationResponse extends io.pulumi.resources.Invoke
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public ResourceAnnotationResponse build() {
             return new ResourceAnnotationResponse(label);
         }

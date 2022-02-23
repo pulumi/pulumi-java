@@ -74,7 +74,6 @@ public final class UserDefinedFunctionResourceResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public UserDefinedFunctionResourceResponse build() {
             return new UserDefinedFunctionResourceResponse(inlineCode, resourceUri);
         }

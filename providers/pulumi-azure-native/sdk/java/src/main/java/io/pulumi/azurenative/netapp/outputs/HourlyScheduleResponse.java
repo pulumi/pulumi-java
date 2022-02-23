@@ -98,7 +98,6 @@ public final class HourlyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public HourlyScheduleResponse build() {
             return new HourlyScheduleResponse(minute, snapshotsToKeep, usedBytes);
         }

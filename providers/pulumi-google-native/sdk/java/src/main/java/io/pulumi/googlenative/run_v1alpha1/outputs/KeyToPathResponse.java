@@ -96,7 +96,6 @@ public final class KeyToPathResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public KeyToPathResponse build() {
             return new KeyToPathResponse(key, mode, path);
         }

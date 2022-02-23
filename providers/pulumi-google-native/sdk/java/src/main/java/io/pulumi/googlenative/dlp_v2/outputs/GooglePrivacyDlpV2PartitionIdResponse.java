@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GooglePrivacyDlpV2PartitionIdResponse build() {
             return new GooglePrivacyDlpV2PartitionIdResponse(namespaceId, project);
         }

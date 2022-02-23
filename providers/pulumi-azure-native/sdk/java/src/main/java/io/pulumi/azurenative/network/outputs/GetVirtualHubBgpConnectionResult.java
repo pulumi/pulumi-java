@@ -203,7 +203,6 @@ public final class GetVirtualHubBgpConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualHubBgpConnectionResult build() {
             return new GetVirtualHubBgpConnectionResult(connectionState, etag, id, name, peerAsn, peerIp, provisioningState, type);
         }

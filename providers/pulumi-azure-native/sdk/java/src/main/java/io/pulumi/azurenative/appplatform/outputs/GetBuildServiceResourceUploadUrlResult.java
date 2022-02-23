@@ -76,7 +76,6 @@ public final class GetBuildServiceResourceUploadUrlResult {
             this.uploadUrl = uploadUrl;
             return this;
         }
-
         public GetBuildServiceResourceUploadUrlResult build() {
             return new GetBuildServiceResourceUploadUrlResult(relativePath, uploadUrl);
         }

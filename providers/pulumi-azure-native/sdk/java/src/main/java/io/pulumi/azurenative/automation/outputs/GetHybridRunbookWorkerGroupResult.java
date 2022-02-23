@@ -185,7 +185,6 @@ public final class GetHybridRunbookWorkerGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridRunbookWorkerGroupResult build() {
             return new GetHybridRunbookWorkerGroupResult(credential, groupType, hybridRunbookWorkers, id, name, systemData, type);
         }

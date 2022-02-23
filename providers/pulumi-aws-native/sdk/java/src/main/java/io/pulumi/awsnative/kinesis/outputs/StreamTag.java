@@ -74,7 +74,6 @@ public final class StreamTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StreamTag build() {
             return new StreamTag(key, value);
         }

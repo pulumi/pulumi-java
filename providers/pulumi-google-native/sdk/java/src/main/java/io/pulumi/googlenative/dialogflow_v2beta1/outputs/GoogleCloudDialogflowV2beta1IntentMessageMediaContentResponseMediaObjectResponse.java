@@ -138,7 +138,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(contentUrl, description, icon, largeImage, name);
         }

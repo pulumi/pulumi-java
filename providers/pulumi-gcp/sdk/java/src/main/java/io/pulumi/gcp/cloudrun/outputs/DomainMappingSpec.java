@@ -110,7 +110,6 @@ public final class DomainMappingSpec {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }
-
         public DomainMappingSpec build() {
             return new DomainMappingSpec(certificateMode, forceOverride, routeName);
         }

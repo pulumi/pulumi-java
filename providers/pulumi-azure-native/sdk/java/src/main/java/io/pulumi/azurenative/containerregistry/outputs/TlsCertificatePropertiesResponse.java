@@ -74,7 +74,6 @@ public final class TlsCertificatePropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TlsCertificatePropertiesResponse build() {
             return new TlsCertificatePropertiesResponse(location, type);
         }

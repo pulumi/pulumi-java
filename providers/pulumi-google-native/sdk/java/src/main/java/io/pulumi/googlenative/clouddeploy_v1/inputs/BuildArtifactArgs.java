@@ -23,7 +23,7 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -34,7 +34,7 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -93,7 +93,6 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public BuildArtifactArgs build() {
             return new BuildArtifactArgs(image, tag);
         }

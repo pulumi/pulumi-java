@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+        private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+        private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -43,7 +43,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
      * 
      */
     @InputImport(name="flags")
-    private final @Nullable Input<List<String>> flags;
+        private final @Nullable Input<List<String>> flags;
 
     public Input<List<String>> getFlags() {
         return this.flags == null ? Input.empty() : this.flags;
@@ -117,7 +117,6 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationArgs extends io.p
             this.flags = Input.ofNullable(flags);
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepMsiInstallationArgs build() {
             return new GuestPoliciesRecipeUpdateStepMsiInstallationArgs(allowedExitCodes, artifactId, flags);
         }

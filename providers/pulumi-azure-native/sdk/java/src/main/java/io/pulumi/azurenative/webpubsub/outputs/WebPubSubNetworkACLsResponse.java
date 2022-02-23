@@ -100,7 +100,6 @@ public final class WebPubSubNetworkACLsResponse {
             this.publicNetwork = publicNetwork;
             return this;
         }
-
         public WebPubSubNetworkACLsResponse build() {
             return new WebPubSubNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
         }

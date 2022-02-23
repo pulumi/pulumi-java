@@ -52,7 +52,6 @@ public final class IdentityServiceConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public IdentityServiceConfigResponse build() {
             return new IdentityServiceConfigResponse(enabled);
         }

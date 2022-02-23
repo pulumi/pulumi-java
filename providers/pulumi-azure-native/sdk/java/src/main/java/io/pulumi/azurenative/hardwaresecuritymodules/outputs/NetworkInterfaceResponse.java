@@ -76,7 +76,6 @@ public final class NetworkInterfaceResponse {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(id, privateIpAddress);
         }

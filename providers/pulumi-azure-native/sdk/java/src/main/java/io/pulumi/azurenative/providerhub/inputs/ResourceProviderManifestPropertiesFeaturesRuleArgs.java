@@ -16,7 +16,7 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
     public static final ResourceProviderManifestPropertiesFeaturesRuleArgs Empty = new ResourceProviderManifestPropertiesFeaturesRuleArgs();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-    private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+        private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
     public Input<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
@@ -59,7 +59,6 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
             this.requiredFeaturesPolicy = Input.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
         }
-
         public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {
             return new ResourceProviderManifestPropertiesFeaturesRuleArgs(requiredFeaturesPolicy);
         }

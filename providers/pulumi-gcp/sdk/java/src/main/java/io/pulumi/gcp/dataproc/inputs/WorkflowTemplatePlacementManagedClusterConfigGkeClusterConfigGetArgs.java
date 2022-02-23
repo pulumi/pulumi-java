@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @InputImport(name="namespacedGkeDeploymentTarget")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs> namespacedGkeDeploymentTarget;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs> namespacedGkeDeploymentTarget;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs> getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget == null ? Input.empty() : this.namespacedGkeDeploymentTarget;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.namespacedGkeDeploymentTarget = Input.ofNullable(namespacedGkeDeploymentTarget);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs(namespacedGkeDeploymentTarget);
         }

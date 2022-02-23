@@ -137,7 +137,6 @@ public final class JobStatistics3Response {
             this.outputRows = Objects.requireNonNull(outputRows);
             return this;
         }
-
         public JobStatistics3Response build() {
             return new JobStatistics3Response(badRecords, inputFileBytes, inputFiles, outputBytes, outputRows);
         }

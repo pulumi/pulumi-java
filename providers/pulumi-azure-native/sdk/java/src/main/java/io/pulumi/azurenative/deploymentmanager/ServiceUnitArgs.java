@@ -22,7 +22,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<ServiceUnitArtifactsArgs> artifacts;
+        private final @Nullable Input<ServiceUnitArtifactsArgs> artifacts;
 
     public Input<ServiceUnitArtifactsArgs> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -33,7 +33,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMode", required=true)
-    private final Input<DeploymentMode> deploymentMode;
+        private final Input<DeploymentMode> deploymentMode;
 
     public Input<DeploymentMode> getDeploymentMode() {
         return this.deploymentMode;
@@ -44,7 +44,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -77,7 +77,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTopologyName", required=true)
-    private final Input<String> serviceTopologyName;
+        private final Input<String> serviceTopologyName;
 
     public Input<String> getServiceTopologyName() {
         return this.serviceTopologyName;
@@ -88,7 +88,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceUnitName")
-    private final @Nullable Input<String> serviceUnitName;
+        private final @Nullable Input<String> serviceUnitName;
 
     public Input<String> getServiceUnitName() {
         return this.serviceUnitName == null ? Input.empty() : this.serviceUnitName;
@@ -99,7 +99,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceGroup", required=true)
-    private final Input<String> targetResourceGroup;
+        private final Input<String> targetResourceGroup;
 
     public Input<String> getTargetResourceGroup() {
         return this.targetResourceGroup;
@@ -274,7 +274,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             this.targetResourceGroup = Input.of(Objects.requireNonNull(targetResourceGroup));
             return this;
         }
-
         public ServiceUnitArgs build() {
             return new ServiceUnitArgs(artifacts, deploymentMode, location, resourceGroupName, serviceName, serviceTopologyName, serviceUnitName, tags, targetResourceGroup);
         }

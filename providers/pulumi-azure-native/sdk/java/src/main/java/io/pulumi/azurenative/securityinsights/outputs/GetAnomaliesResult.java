@@ -185,7 +185,6 @@ public final class GetAnomaliesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAnomaliesResult build() {
             return new GetAnomaliesResult(etag, id, isEnabled, kind, name, systemData, type);
         }

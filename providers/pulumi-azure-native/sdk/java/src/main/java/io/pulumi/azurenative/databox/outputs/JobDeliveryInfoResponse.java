@@ -54,7 +54,6 @@ public final class JobDeliveryInfoResponse {
             this.scheduledDateTime = scheduledDateTime;
             return this;
         }
-
         public JobDeliveryInfoResponse build() {
             return new JobDeliveryInfoResponse(scheduledDateTime);
         }

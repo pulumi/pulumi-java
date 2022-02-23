@@ -96,7 +96,6 @@ public final class PubsubTargetResponse {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public PubsubTargetResponse build() {
             return new PubsubTargetResponse(attributes, data, topicName);
         }

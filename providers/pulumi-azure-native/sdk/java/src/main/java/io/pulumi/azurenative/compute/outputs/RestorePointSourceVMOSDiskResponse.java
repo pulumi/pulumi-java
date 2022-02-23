@@ -185,7 +185,6 @@ public final class RestorePointSourceVMOSDiskResponse {
             this.osType = osType;
             return this;
         }
-
         public RestorePointSourceVMOSDiskResponse build() {
             return new RestorePointSourceVMOSDiskResponse(caching, diskRestorePoint, diskSizeGB, encryptionSettings, managedDisk, name, osType);
         }

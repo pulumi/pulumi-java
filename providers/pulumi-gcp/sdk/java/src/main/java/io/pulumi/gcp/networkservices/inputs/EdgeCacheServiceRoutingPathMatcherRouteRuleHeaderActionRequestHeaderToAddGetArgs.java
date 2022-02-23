@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="headerValue", required=true)
-    private final Input<String> headerValue;
+        private final Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue;
@@ -43,7 +43,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @InputImport(name="replace")
-    private final @Nullable Input<Boolean> replace;
+        private final @Nullable Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace == null ? Input.empty() : this.replace;
@@ -117,7 +117,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
             this.replace = Input.ofNullable(replace);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(headerName, headerValue, replace);
         }

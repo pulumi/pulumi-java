@@ -54,7 +54,6 @@ public final class GetVPCDHCPOptionsAssociationResult {
             this.id = id;
             return this;
         }
-
         public GetVPCDHCPOptionsAssociationResult build() {
             return new GetVPCDHCPOptionsAssociationResult(id);
         }

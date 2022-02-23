@@ -25,7 +25,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<FilterArgs> filter;
+      private final @Nullable Input<FilterArgs> filter;
 
     public Input<FilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -47,7 +47,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -121,7 +121,6 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public PubSubArgs build() {
             return new PubSubArgs(enabled, filter, topic);
         }

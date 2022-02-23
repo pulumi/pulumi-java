@@ -22,7 +22,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="driverLogLevels", required=true)
-    private final Map<String,String> driverLogLevels;
+      private final Map<String,String> driverLogLevels;
 
     public Map<String,String> getDriverLogLevels() {
         return this.driverLogLevels;
@@ -60,7 +60,6 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(driverLogLevels);
         }

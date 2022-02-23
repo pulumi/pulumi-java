@@ -353,7 +353,6 @@ public final class VirtualNetworkPeeringResponse {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }
-
         public VirtualNetworkPeeringResponse build() {
             return new VirtualNetworkPeeringResponse(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, etag, id, name, peeringState, provisioningState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, resourceGuid, type, useRemoteGateways);
         }

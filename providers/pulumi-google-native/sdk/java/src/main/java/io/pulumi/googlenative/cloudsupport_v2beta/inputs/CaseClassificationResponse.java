@@ -21,7 +21,7 @@ public final class CaseClassificationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -59,7 +59,6 @@ public final class CaseClassificationResponse extends io.pulumi.resources.Invoke
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public CaseClassificationResponse build() {
             return new CaseClassificationResponse(displayName);
         }

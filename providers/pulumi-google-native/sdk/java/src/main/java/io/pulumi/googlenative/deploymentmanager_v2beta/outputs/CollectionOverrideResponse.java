@@ -75,7 +75,6 @@ public final class CollectionOverrideResponse {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public CollectionOverrideResponse build() {
             return new CollectionOverrideResponse(collection, options);
         }

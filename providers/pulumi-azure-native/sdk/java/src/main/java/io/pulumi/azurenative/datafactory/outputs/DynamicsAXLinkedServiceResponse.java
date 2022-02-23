@@ -275,7 +275,6 @@ public final class DynamicsAXLinkedServiceResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DynamicsAXLinkedServiceResponse build() {
             return new DynamicsAXLinkedServiceResponse(aadResourceId, annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, tenant, type, url);
         }

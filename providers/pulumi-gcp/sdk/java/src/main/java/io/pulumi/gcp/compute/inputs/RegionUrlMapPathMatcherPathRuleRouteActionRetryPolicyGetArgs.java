@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      * 
      */
     @InputImport(name="numRetries")
-    private final @Nullable Input<Integer> numRetries;
+        private final @Nullable Input<Integer> numRetries;
 
     public Input<Integer> getNumRetries() {
         return this.numRetries == null ? Input.empty() : this.numRetries;
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      * 
      */
     @InputImport(name="perTryTimeout")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> getPerTryTimeout() {
         return this.perTryTimeout == null ? Input.empty() : this.perTryTimeout;
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      * 
      */
     @InputImport(name="retryConditions")
-    private final @Nullable Input<List<String>> retryConditions;
+        private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;
@@ -139,7 +139,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs(numRetries, perTryTimeout, retryConditions);
         }

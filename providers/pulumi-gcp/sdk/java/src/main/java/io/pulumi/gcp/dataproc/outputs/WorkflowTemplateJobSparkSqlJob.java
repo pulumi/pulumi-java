@@ -164,7 +164,6 @@ public final class WorkflowTemplateJobSparkSqlJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobSparkSqlJob build() {
             return new WorkflowTemplateJobSparkSqlJob(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

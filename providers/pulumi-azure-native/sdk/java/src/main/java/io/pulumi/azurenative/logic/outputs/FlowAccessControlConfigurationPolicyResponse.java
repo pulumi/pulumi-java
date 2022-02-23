@@ -78,7 +78,6 @@ public final class FlowAccessControlConfigurationPolicyResponse {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
-
         public FlowAccessControlConfigurationPolicyResponse build() {
             return new FlowAccessControlConfigurationPolicyResponse(allowedCallerIpAddresses, openAuthenticationPolicies);
         }

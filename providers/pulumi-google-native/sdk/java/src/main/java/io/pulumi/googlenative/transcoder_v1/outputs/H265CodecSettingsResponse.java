@@ -434,7 +434,6 @@ public final class H265CodecSettingsResponse {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
         }
-
         public H265CodecSettingsResponse build() {
             return new H265CodecSettingsResponse(allowOpenGop, aqStrength, bFrameCount, bPyramid, bitrateBps, crfLevel, enableTwoPass, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, preset, profile, rateControlMode, tune, vbvFullnessBits, vbvSizeBits, widthPixels);
         }

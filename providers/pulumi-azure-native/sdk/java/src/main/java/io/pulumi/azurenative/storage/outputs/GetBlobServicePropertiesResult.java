@@ -314,7 +314,6 @@ public final class GetBlobServicePropertiesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobServicePropertiesResult build() {
             return new GetBlobServicePropertiesResult(automaticSnapshotPolicyEnabled, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, id, isVersioningEnabled, lastAccessTimeTrackingPolicy, name, restorePolicy, sku, type);
         }

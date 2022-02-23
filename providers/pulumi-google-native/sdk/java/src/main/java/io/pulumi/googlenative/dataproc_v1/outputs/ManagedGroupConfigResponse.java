@@ -74,7 +74,6 @@ public final class ManagedGroupConfigResponse {
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
         }
-
         public ManagedGroupConfigResponse build() {
             return new ManagedGroupConfigResponse(instanceGroupManagerName, instanceTemplateName);
         }

@@ -19,7 +19,7 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -62,7 +62,6 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public PrivateEndpointPropertyArgs build() {
             return new PrivateEndpointPropertyArgs(id);
         }

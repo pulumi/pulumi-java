@@ -119,7 +119,6 @@ public final class DiskDetailsResponse {
             this.vhdType = vhdType;
             return this;
         }
-
         public DiskDetailsResponse build() {
             return new DiskDetailsResponse(maxSizeMB, vhdId, vhdName, vhdType);
         }

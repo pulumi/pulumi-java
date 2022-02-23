@@ -98,7 +98,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
             this.totalArtifacts = totalArtifacts;
             return this;
         }
-
         public ArtifactDeploymentStatusPropertiesResponse build() {
             return new ArtifactDeploymentStatusPropertiesResponse(artifactsApplied, deploymentStatus, totalArtifacts);
         }

@@ -96,7 +96,6 @@ public final class PacketMirroringFilterResponse {
             this.ipProtocols = Objects.requireNonNull(ipProtocols);
             return this;
         }
-
         public PacketMirroringFilterResponse build() {
             return new PacketMirroringFilterResponse(cidrRanges, direction, ipProtocols);
         }

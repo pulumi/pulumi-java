@@ -182,7 +182,6 @@ public final class GetApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(allowUpdates, defaultVersion, displayName, etag, id, name, type);
         }

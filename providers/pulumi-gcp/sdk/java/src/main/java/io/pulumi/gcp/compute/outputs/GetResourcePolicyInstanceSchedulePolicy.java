@@ -100,7 +100,6 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
             this.vmStopSchedules = Objects.requireNonNull(vmStopSchedules);
             return this;
         }
-
         public GetResourcePolicyInstanceSchedulePolicy build() {
             return new GetResourcePolicyInstanceSchedulePolicy(expirationTime, startTime, timeZone, vmStartSchedules, vmStopSchedules);
         }

@@ -44,7 +44,6 @@ public final class GetClusterWorkloadIdentityConfig {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public GetClusterWorkloadIdentityConfig build() {
             return new GetClusterWorkloadIdentityConfig(workloadPool);
         }

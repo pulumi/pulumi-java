@@ -24,7 +24,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<SecretArgs> password;
+      private final @Nullable Input<SecretArgs> password;
 
     public Input<SecretArgs> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -35,7 +35,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -94,7 +94,6 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public UserPasswordArgs build() {
             return new UserPasswordArgs(password, username);
         }

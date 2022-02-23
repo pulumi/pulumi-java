@@ -98,7 +98,6 @@ public final class ConnectorS3LogDelivery {
             this.prefix = prefix;
             return this;
         }
-
         public ConnectorS3LogDelivery build() {
             return new ConnectorS3LogDelivery(bucket, enabled, prefix);
         }

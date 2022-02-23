@@ -23,7 +23,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dsRecords", required=true)
-    private final List<DsRecordResponse> dsRecords;
+      private final List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> getDsRecords() {
         return this.dsRecords;
@@ -34,7 +34,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nameServers", required=true)
-    private final List<String> nameServers;
+      private final List<String> nameServers;
 
     public List<String> getNameServers() {
         return this.nameServers;
@@ -83,7 +83,6 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public CustomDnsResponse build() {
             return new CustomDnsResponse(dsRecords, nameServers);
         }

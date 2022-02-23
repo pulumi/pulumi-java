@@ -375,7 +375,6 @@ public final class GetScheduleResult {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }

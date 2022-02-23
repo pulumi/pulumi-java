@@ -21,7 +21,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -59,7 +59,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeInfoResponse build() {
             return new NodeInfoResponse(zone);
         }

@@ -228,7 +228,6 @@ public final class DatasetResponseDataPath {
             this.sqlDataPath = sqlDataPath;
             return this;
         }
-
         public DatasetResponseDataPath build() {
             return new DatasetResponseDataPath(additionalProperties, azureFilePath, datastoreName, httpUrl, partitionFormat, partitionFormatIgnoreError, paths, relativePath, sqlDataPath);
         }

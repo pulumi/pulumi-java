@@ -359,7 +359,6 @@ public final class BackendServiceBackend {
             this.maxUtilization = maxUtilization;
             return this;
         }
-
         public BackendServiceBackend build() {
             return new BackendServiceBackend(balancingMode, capacityScaler, description, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

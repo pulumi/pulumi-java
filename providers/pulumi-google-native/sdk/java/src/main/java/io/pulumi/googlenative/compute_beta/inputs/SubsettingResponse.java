@@ -18,7 +18,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
     @InputImport(name="policy", required=true)
-    private final String policy;
+      private final String policy;
 
     public String getPolicy() {
         return this.policy;
@@ -29,7 +29,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subsetSize", required=true)
-    private final Integer subsetSize;
+      private final Integer subsetSize;
 
     public Integer getSubsetSize() {
         return this.subsetSize;
@@ -78,7 +78,6 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
             this.subsetSize = Objects.requireNonNull(subsetSize);
             return this;
         }
-
         public SubsettingResponse build() {
             return new SubsettingResponse(policy, subsetSize);
         }

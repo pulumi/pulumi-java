@@ -96,7 +96,6 @@ public final class GeoFilterResponse {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public GeoFilterResponse build() {
             return new GeoFilterResponse(action, countryCodes, relativePath);
         }

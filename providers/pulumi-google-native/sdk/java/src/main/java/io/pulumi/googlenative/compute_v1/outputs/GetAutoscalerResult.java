@@ -310,7 +310,6 @@ public final class GetAutoscalerResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetAutoscalerResult build() {
             return new GetAutoscalerResult(autoscalingPolicy, creationTimestamp, description, kind, name, recommendedSize, region, scalingScheduleStatus, selfLink, status, statusDetails, target, zone);
         }

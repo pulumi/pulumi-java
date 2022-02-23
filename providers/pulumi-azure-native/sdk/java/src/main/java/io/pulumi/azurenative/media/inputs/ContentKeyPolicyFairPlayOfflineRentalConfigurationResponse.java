@@ -17,7 +17,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
      * 
      */
     @InputImport(name="playbackDurationSeconds", required=true)
-    private final Double playbackDurationSeconds;
+        private final Double playbackDurationSeconds;
 
     public Double getPlaybackDurationSeconds() {
         return this.playbackDurationSeconds;
@@ -28,7 +28,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
      * 
      */
     @InputImport(name="storageDurationSeconds", required=true)
-    private final Double storageDurationSeconds;
+        private final Double storageDurationSeconds;
 
     public Double getStorageDurationSeconds() {
         return this.storageDurationSeconds;
@@ -77,7 +77,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }
-
         public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(playbackDurationSeconds, storageDurationSeconds);
         }

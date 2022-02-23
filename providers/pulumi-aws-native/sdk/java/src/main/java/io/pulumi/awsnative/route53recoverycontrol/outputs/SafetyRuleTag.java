@@ -58,7 +58,6 @@ public final class SafetyRuleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SafetyRuleTag build() {
             return new SafetyRuleTag(key, value);
         }

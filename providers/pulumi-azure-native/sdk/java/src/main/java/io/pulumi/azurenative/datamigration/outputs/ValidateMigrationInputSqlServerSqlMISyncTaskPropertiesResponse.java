@@ -169,7 +169,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesRespons
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

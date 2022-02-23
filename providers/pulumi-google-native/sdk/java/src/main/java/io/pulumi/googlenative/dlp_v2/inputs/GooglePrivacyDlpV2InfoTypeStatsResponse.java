@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="count", required=true)
-    private final String count;
+      private final String count;
 
     public String getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeStatsResponse(count, infoType);
         }

@@ -120,7 +120,6 @@ public final class SourceProvenanceResponse {
             this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
             return this;
         }
-
         public SourceProvenanceResponse build() {
             return new SourceProvenanceResponse(fileHashes, resolvedRepoSource, resolvedStorageSource, resolvedStorageSourceManifest);
         }

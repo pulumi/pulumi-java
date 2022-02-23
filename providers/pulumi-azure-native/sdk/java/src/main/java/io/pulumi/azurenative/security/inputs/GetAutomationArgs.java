@@ -17,7 +17,7 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automationName", required=true)
-    private final String automationName;
+        private final String automationName;
 
     public String getAutomationName() {
         return this.automationName;
@@ -28,7 +28,7 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAutomationArgs build() {
             return new GetAutomationArgs(automationName, resourceGroupName);
         }

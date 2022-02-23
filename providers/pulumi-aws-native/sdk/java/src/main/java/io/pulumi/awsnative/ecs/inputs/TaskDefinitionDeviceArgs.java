@@ -16,21 +16,21 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionDeviceArgs Empty = new TaskDefinitionDeviceArgs();
 
     @InputImport(name="containerPath")
-    private final @Nullable Input<String> containerPath;
+        private final @Nullable Input<String> containerPath;
 
     public Input<String> getContainerPath() {
         return this.containerPath == null ? Input.empty() : this.containerPath;
     }
 
     @InputImport(name="hostPath")
-    private final @Nullable Input<String> hostPath;
+        private final @Nullable Input<String> hostPath;
 
     public Input<String> getHostPath() {
         return this.hostPath == null ? Input.empty() : this.hostPath;
     }
 
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+        private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -104,7 +104,6 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
-
         public TaskDefinitionDeviceArgs build() {
             return new TaskDefinitionDeviceArgs(containerPath, hostPath, permissions);
         }

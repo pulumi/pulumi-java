@@ -44,7 +44,6 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseFeaturesRule build() {
             return new ResourceProviderManifestPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
         }

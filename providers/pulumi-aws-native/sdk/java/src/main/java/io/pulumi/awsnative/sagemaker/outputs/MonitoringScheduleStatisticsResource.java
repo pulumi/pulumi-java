@@ -54,7 +54,6 @@ public final class MonitoringScheduleStatisticsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public MonitoringScheduleStatisticsResource build() {
             return new MonitoringScheduleStatisticsResource(s3Uri);
         }

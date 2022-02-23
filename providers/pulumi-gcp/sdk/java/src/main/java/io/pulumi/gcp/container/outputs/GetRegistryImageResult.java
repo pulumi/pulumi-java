@@ -133,7 +133,6 @@ public final class GetRegistryImageResult {
             this.tag = tag;
             return this;
         }
-
         public GetRegistryImageResult build() {
             return new GetRegistryImageResult(digest, id, imageUrl, name, project, region, tag);
         }

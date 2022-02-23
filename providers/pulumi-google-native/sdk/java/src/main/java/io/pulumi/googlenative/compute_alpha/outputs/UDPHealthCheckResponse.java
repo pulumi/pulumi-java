@@ -117,7 +117,6 @@ public final class UDPHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public UDPHealthCheckResponse build() {
             return new UDPHealthCheckResponse(port, portName, request, response);
         }

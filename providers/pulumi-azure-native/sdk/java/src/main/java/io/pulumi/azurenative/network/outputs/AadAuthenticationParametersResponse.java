@@ -97,7 +97,6 @@ public final class AadAuthenticationParametersResponse {
             this.aadTenant = aadTenant;
             return this;
         }
-
         public AadAuthenticationParametersResponse build() {
             return new AadAuthenticationParametersResponse(aadAudience, aadIssuer, aadTenant);
         }

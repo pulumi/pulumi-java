@@ -166,7 +166,6 @@ public final class IndexingPolicyResponse {
             this.spatialIndexes = spatialIndexes;
             return this;
         }
-
         public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
         }

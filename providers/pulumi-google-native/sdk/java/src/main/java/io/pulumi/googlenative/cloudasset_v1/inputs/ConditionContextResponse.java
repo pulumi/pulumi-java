@@ -21,7 +21,7 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accessTime", required=true)
-    private final String accessTime;
+      private final String accessTime;
 
     public String getAccessTime() {
         return this.accessTime;
@@ -59,7 +59,6 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
         }
-
         public ConditionContextResponse build() {
             return new ConditionContextResponse(accessTime);
         }

@@ -54,7 +54,6 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint {
             this.state = state;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponseSharePoint build() {
             return new OfficeDataConnectorDataTypesResponseSharePoint(state);
         }

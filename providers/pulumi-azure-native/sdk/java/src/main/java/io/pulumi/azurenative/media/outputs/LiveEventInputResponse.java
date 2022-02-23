@@ -142,7 +142,6 @@ public final class LiveEventInputResponse {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public LiveEventInputResponse build() {
             return new LiveEventInputResponse(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }

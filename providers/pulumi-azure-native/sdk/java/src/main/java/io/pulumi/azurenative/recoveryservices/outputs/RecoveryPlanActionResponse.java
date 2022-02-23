@@ -121,7 +121,6 @@ public final class RecoveryPlanActionResponse {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
-
         public RecoveryPlanActionResponse build() {
             return new RecoveryPlanActionResponse(actionName, customDetails, failoverDirections, failoverTypes);
         }

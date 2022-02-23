@@ -24,7 +24,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrAllowList")
-    private final @Nullable Input<List<String>> cidrAllowList;
+        private final @Nullable Input<List<String>> cidrAllowList;
 
     public Input<List<String>> getCidrAllowList() {
         return this.cidrAllowList == null ? Input.empty() : this.cidrAllowList;
@@ -35,7 +35,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -57,7 +57,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<FlowOutputEncryptionArgs> encryption;
+        private final @Nullable Input<FlowOutputEncryptionArgs> encryption;
 
     public Input<FlowOutputEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -68,7 +68,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowArn", required=true)
-    private final Input<String> flowArn;
+        private final Input<String> flowArn;
 
     public Input<String> getFlowArn() {
         return this.flowArn;
@@ -79,7 +79,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLatency")
-    private final @Nullable Input<Integer> maxLatency;
+        private final @Nullable Input<Integer> maxLatency;
 
     public Input<Integer> getMaxLatency() {
         return this.maxLatency == null ? Input.empty() : this.maxLatency;
@@ -90,7 +90,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minLatency")
-    private final @Nullable Input<Integer> minLatency;
+        private final @Nullable Input<Integer> minLatency;
 
     public Input<Integer> getMinLatency() {
         return this.minLatency == null ? Input.empty() : this.minLatency;
@@ -101,7 +101,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -123,7 +123,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<FlowOutputProtocol> protocol;
+        private final Input<FlowOutputProtocol> protocol;
 
     public Input<FlowOutputProtocol> getProtocol() {
         return this.protocol;
@@ -134,7 +134,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteId")
-    private final @Nullable Input<String> remoteId;
+        private final @Nullable Input<String> remoteId;
 
     public Input<String> getRemoteId() {
         return this.remoteId == null ? Input.empty() : this.remoteId;
@@ -145,7 +145,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smoothingLatency")
-    private final @Nullable Input<Integer> smoothingLatency;
+        private final @Nullable Input<Integer> smoothingLatency;
 
     public Input<Integer> getSmoothingLatency() {
         return this.smoothingLatency == null ? Input.empty() : this.smoothingLatency;
@@ -156,7 +156,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamId")
-    private final @Nullable Input<String> streamId;
+        private final @Nullable Input<String> streamId;
 
     public Input<String> getStreamId() {
         return this.streamId == null ? Input.empty() : this.streamId;
@@ -167,7 +167,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcInterfaceAttachment")
-    private final @Nullable Input<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
+        private final @Nullable Input<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
 
     public Input<FlowOutputVpcInterfaceAttachmentArgs> getVpcInterfaceAttachment() {
         return this.vpcInterfaceAttachment == null ? Input.empty() : this.vpcInterfaceAttachment;
@@ -406,7 +406,6 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcInterfaceAttachment = Input.ofNullable(vpcInterfaceAttachment);
             return this;
         }
-
         public FlowOutputArgs build() {
             return new FlowOutputArgs(cidrAllowList, description, destination, encryption, flowArn, maxLatency, minLatency, name, port, protocol, remoteId, smoothingLatency, streamId, vpcInterfaceAttachment);
         }

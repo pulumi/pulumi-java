@@ -13,7 +13,7 @@ public final class GetRealtimeLogConfigArgs extends io.pulumi.resources.InvokeAr
     public static final GetRealtimeLogConfigArgs Empty = new GetRealtimeLogConfigArgs();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -51,7 +51,6 @@ public final class GetRealtimeLogConfigArgs extends io.pulumi.resources.InvokeAr
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetRealtimeLogConfigArgs build() {
             return new GetRealtimeLogConfigArgs(arn);
         }

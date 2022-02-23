@@ -155,7 +155,6 @@ public final class GetNotificationRuleResult {
             this.targets = targets;
             return this;
         }
-
         public GetNotificationRuleResult build() {
             return new GetNotificationRuleResult(arn, createdBy, detailType, eventTypeId, eventTypeIds, name, status, targetAddress, targets);
         }

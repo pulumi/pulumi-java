@@ -54,7 +54,6 @@ public final class ListDatabaseAccountConnectionStringsResult {
             this.connectionStrings = connectionStrings;
             return this;
         }
-
         public ListDatabaseAccountConnectionStringsResult build() {
             return new ListDatabaseAccountConnectionStringsResult(connectionStrings);
         }

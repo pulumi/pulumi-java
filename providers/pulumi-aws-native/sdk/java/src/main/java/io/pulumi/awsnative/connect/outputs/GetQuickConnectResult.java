@@ -163,7 +163,6 @@ public final class GetQuickConnectResult {
             this.tags = tags;
             return this;
         }
-
         public GetQuickConnectResult build() {
             return new GetQuickConnectResult(description, instanceArn, name, quickConnectArn, quickConnectConfig, tags);
         }

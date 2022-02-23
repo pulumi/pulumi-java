@@ -22,7 +22,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="columnCount", required=true)
-    private final Integer columnCount;
+      private final Integer columnCount;
 
     public Integer getColumnCount() {
         return this.columnCount;
@@ -33,7 +33,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTimeOffset", required=true)
-    private final String endTimeOffset;
+      private final String endTimeOffset;
 
     public String getEndTimeOffset() {
         return this.endTimeOffset;
@@ -44,7 +44,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filePrefix", required=true)
-    private final String filePrefix;
+      private final String filePrefix;
 
     public String getFilePrefix() {
         return this.filePrefix;
@@ -55,7 +55,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -66,7 +66,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="interval", required=true)
-    private final String interval;
+      private final String interval;
 
     public String getInterval() {
         return this.interval;
@@ -77,7 +77,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quality", required=true)
-    private final Integer quality;
+      private final Integer quality;
 
     public Integer getQuality() {
         return this.quality;
@@ -88,7 +88,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rowCount", required=true)
-    private final Integer rowCount;
+      private final Integer rowCount;
 
     public Integer getRowCount() {
         return this.rowCount;
@@ -99,7 +99,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="spriteHeightPixels", required=true)
-    private final Integer spriteHeightPixels;
+      private final Integer spriteHeightPixels;
 
     public Integer getSpriteHeightPixels() {
         return this.spriteHeightPixels;
@@ -110,7 +110,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="spriteWidthPixels", required=true)
-    private final Integer spriteWidthPixels;
+      private final Integer spriteWidthPixels;
 
     public Integer getSpriteWidthPixels() {
         return this.spriteWidthPixels;
@@ -121,7 +121,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTimeOffset", required=true)
-    private final String startTimeOffset;
+      private final String startTimeOffset;
 
     public String getStartTimeOffset() {
         return this.startTimeOffset;
@@ -132,7 +132,7 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="totalCount", required=true)
-    private final Integer totalCount;
+      private final Integer totalCount;
 
     public Integer getTotalCount() {
         return this.totalCount;
@@ -271,7 +271,6 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public SpriteSheetResponse build() {
             return new SpriteSheetResponse(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
         }

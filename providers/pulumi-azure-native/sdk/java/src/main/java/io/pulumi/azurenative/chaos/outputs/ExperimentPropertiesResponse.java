@@ -100,7 +100,6 @@ public final class ExperimentPropertiesResponse {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public ExperimentPropertiesResponse build() {
             return new ExperimentPropertiesResponse(selectors, startOnCreation, steps);
         }

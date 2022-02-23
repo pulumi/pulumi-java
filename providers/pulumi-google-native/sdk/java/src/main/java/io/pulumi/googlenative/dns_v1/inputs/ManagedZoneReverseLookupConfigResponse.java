@@ -13,7 +13,7 @@ public final class ManagedZoneReverseLookupConfigResponse extends io.pulumi.reso
     public static final ManagedZoneReverseLookupConfigResponse Empty = new ManagedZoneReverseLookupConfigResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -51,7 +51,6 @@ public final class ManagedZoneReverseLookupConfigResponse extends io.pulumi.reso
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZoneReverseLookupConfigResponse build() {
             return new ManagedZoneReverseLookupConfigResponse(kind);
         }

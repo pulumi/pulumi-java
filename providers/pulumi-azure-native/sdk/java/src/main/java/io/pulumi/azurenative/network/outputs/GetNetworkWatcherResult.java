@@ -182,7 +182,6 @@ public final class GetNetworkWatcherResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkWatcherResult build() {
             return new GetNetworkWatcherResult(etag, id, location, name, provisioningState, tags, type);
         }

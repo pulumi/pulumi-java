@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connector", required=true)
-    private final String connector;
+      private final String connector;
 
     public String getConnector() {
         return this.connector;
@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="egress", required=true)
-    private final String egress;
+      private final String egress;
 
     public String getEgress() {
         return this.egress;
@@ -81,7 +81,6 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
             this.egress = Objects.requireNonNull(egress);
             return this;
         }
-
         public GoogleCloudRunOpV2VpcAccessResponse build() {
             return new GoogleCloudRunOpV2VpcAccessResponse(connector, egress);
         }

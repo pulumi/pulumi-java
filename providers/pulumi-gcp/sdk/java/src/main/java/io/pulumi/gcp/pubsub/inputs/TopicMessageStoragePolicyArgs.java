@@ -24,7 +24,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allowedPersistenceRegions", required=true)
-    private final Input<List<String>> allowedPersistenceRegions;
+        private final Input<List<String>> allowedPersistenceRegions;
 
     public Input<List<String>> getAllowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
@@ -67,7 +67,6 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
             this.allowedPersistenceRegions = Input.of(Objects.requireNonNull(allowedPersistenceRegions));
             return this;
         }
-
         public TopicMessageStoragePolicyArgs build() {
             return new TopicMessageStoragePolicyArgs(allowedPersistenceRegions);
         }

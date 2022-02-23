@@ -118,7 +118,6 @@ public final class StorageQueueMessageResponse {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public StorageQueueMessageResponse build() {
             return new StorageQueueMessageResponse(message, queueName, sasToken, storageAccount);
         }

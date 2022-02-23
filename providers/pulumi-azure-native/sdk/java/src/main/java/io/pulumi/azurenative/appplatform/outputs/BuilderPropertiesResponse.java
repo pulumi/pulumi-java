@@ -100,7 +100,6 @@ public final class BuilderPropertiesResponse {
             this.stack = stack;
             return this;
         }
-
         public BuilderPropertiesResponse build() {
             return new BuilderPropertiesResponse(buildpackGroups, provisioningState, stack);
         }

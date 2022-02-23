@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InfoTypeArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2InfoTypeArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -93,7 +93,6 @@ public final class GooglePrivacyDlpV2InfoTypeArgs extends io.pulumi.resources.Re
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeArgs build() {
             return new GooglePrivacyDlpV2InfoTypeArgs(name, version);
         }

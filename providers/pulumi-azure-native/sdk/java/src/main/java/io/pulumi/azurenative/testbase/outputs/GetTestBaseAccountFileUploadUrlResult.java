@@ -74,7 +74,6 @@ public final class GetTestBaseAccountFileUploadUrlResult {
             this.uploadUrl = Objects.requireNonNull(uploadUrl);
             return this;
         }
-
         public GetTestBaseAccountFileUploadUrlResult build() {
             return new GetTestBaseAccountFileUploadUrlResult(blobPath, uploadUrl);
         }

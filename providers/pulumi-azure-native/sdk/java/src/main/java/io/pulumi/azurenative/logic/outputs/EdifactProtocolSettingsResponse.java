@@ -275,7 +275,6 @@ public final class EdifactProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public EdifactProtocolSettingsResponse build() {
             return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }

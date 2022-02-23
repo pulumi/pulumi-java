@@ -26,7 +26,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupFinishedDate")
-    private final @Nullable String backupFinishedDate;
+        private final @Nullable String backupFinishedDate;
 
     public Optional<String> getBackupFinishedDate() {
         return this.backupFinishedDate == null ? Optional.empty() : Optional.ofNullable(this.backupFinishedDate);
@@ -37,7 +37,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupSetId")
-    private final @Nullable String backupSetId;
+        private final @Nullable String backupSetId;
 
     public Optional<String> getBackupSetId() {
         return this.backupSetId == null ? Optional.empty() : Optional.ofNullable(this.backupSetId);
@@ -48,7 +48,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupStartDate")
-    private final @Nullable String backupStartDate;
+        private final @Nullable String backupStartDate;
 
     public Optional<String> getBackupStartDate() {
         return this.backupStartDate == null ? Optional.empty() : Optional.ofNullable(this.backupStartDate);
@@ -59,7 +59,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupType")
-    private final @Nullable String backupType;
+        private final @Nullable String backupType;
 
     public Optional<String> getBackupType() {
         return this.backupType == null ? Optional.empty() : Optional.ofNullable(this.backupType);
@@ -70,7 +70,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+        private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -81,7 +81,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="firstLsn")
-    private final @Nullable String firstLsn;
+        private final @Nullable String firstLsn;
 
     public Optional<String> getFirstLsn() {
         return this.firstLsn == null ? Optional.empty() : Optional.ofNullable(this.firstLsn);
@@ -92,7 +92,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="isBackupRestored")
-    private final @Nullable Boolean isBackupRestored;
+        private final @Nullable Boolean isBackupRestored;
 
     public Optional<Boolean> getIsBackupRestored() {
         return this.isBackupRestored == null ? Optional.empty() : Optional.ofNullable(this.isBackupRestored);
@@ -103,7 +103,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lastLsn")
-    private final @Nullable String lastLsn;
+        private final @Nullable String lastLsn;
 
     public Optional<String> getLastLsn() {
         return this.lastLsn == null ? Optional.empty() : Optional.ofNullable(this.lastLsn);
@@ -114,7 +114,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lastModifiedTime")
-    private final @Nullable String lastModifiedTime;
+        private final @Nullable String lastModifiedTime;
 
     public Optional<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
@@ -125,7 +125,7 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="listOfBackupFiles")
-    private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
+        private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
     public List<BackupFileInfoResponse> getListOfBackupFiles() {
         return this.listOfBackupFiles == null ? List.of() : this.listOfBackupFiles;
@@ -254,7 +254,6 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.listOfBackupFiles = listOfBackupFiles;
             return this;
         }
-
         public BackupSetInfoResponse build() {
             return new BackupSetInfoResponse(backupFinishedDate, backupSetId, backupStartDate, backupType, databaseName, firstLsn, isBackupRestored, lastLsn, lastModifiedTime, listOfBackupFiles);
         }

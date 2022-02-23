@@ -117,7 +117,6 @@ public final class SpacecraftLinkResponse {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public SpacecraftLinkResponse build() {
             return new SpacecraftLinkResponse(bandwidthMHz, centerFrequencyMHz, direction, polarization);
         }

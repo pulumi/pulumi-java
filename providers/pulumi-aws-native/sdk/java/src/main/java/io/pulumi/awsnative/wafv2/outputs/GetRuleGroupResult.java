@@ -208,7 +208,6 @@ public final class GetRuleGroupResult {
             this.visibilityConfig = visibilityConfig;
             return this;
         }
-
         public GetRuleGroupResult build() {
             return new GetRuleGroupResult(arn, availableLabels, capacity, consumedLabels, customResponseBodies, description, id, labelNamespace, rules, tags, visibilityConfig);
         }

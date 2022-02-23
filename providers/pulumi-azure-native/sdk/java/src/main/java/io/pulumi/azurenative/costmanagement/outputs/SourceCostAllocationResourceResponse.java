@@ -96,7 +96,6 @@ public final class SourceCostAllocationResourceResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SourceCostAllocationResourceResponse build() {
             return new SourceCostAllocationResourceResponse(name, resourceType, values);
         }

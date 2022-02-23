@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
      * 
      */
     @InputImport(name="originalPrice", required=true)
-    private final GoogleCloudRetailV2betaIntervalResponse originalPrice;
+      private final GoogleCloudRetailV2betaIntervalResponse originalPrice;
 
     public GoogleCloudRetailV2betaIntervalResponse getOriginalPrice() {
         return this.originalPrice;
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
      * 
      */
     @InputImport(name="price", required=true)
-    private final GoogleCloudRetailV2betaIntervalResponse price;
+      private final GoogleCloudRetailV2betaIntervalResponse price;
 
     public GoogleCloudRetailV2betaIntervalResponse getPrice() {
         return this.price;
@@ -81,7 +81,6 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
             this.price = Objects.requireNonNull(price);
             return this;
         }
-
         public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse build() {
             return new GoogleCloudRetailV2betaPriceInfoPriceRangeResponse(originalPrice, price);
         }

@@ -17,7 +17,7 @@ public final class GetNotificationHubArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetNotificationHubArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="notificationHubName", required=true)
-    private final String notificationHubName;
+        private final String notificationHubName;
 
     public String getNotificationHubName() {
         return this.notificationHubName;
@@ -39,7 +39,7 @@ public final class GetNotificationHubArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetNotificationHubArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNotificationHubArgs build() {
             return new GetNotificationHubArgs(namespaceName, notificationHubName, resourceGroupName);
         }

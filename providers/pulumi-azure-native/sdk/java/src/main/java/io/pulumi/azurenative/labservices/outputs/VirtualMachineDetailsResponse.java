@@ -158,7 +158,6 @@ public final class VirtualMachineDetailsResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public VirtualMachineDetailsResponse build() {
             return new VirtualMachineDetailsResponse(lastKnownPowerState, privateIpAddress, provisioningState, rdpAuthority, sshAuthority, userName);
         }

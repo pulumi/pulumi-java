@@ -52,7 +52,6 @@ public final class FileReferenceResponse {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
-
         public FileReferenceResponse build() {
             return new FileReferenceResponse(fileUri);
         }

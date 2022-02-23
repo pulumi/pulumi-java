@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
             this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(noSmalltalk, onlyEndUser);
         }

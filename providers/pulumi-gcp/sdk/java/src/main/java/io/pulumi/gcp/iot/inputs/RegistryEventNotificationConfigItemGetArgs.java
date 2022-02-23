@@ -19,7 +19,7 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-    private final Input<String> pubsubTopicName;
+        private final Input<String> pubsubTopicName;
 
     public Input<String> getPubsubTopicName() {
         return this.pubsubTopicName;
@@ -34,7 +34,7 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="subfolderMatches")
-    private final @Nullable Input<String> subfolderMatches;
+        private final @Nullable Input<String> subfolderMatches;
 
     public Input<String> getSubfolderMatches() {
         return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;
@@ -93,7 +93,6 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
             this.subfolderMatches = Input.ofNullable(subfolderMatches);
             return this;
         }
-
         public RegistryEventNotificationConfigItemGetArgs build() {
             return new RegistryEventNotificationConfigItemGetArgs(pubsubTopicName, subfolderMatches);
         }

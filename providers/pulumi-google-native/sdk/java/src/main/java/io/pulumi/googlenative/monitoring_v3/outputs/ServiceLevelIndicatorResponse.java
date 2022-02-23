@@ -97,7 +97,6 @@ public final class ServiceLevelIndicatorResponse {
             this.windowsBased = Objects.requireNonNull(windowsBased);
             return this;
         }
-
         public ServiceLevelIndicatorResponse build() {
             return new ServiceLevelIndicatorResponse(basicSli, requestBased, windowsBased);
         }

@@ -21,7 +21,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<MachineImageIamMemberConditionArgs> condition;
+        private final @Nullable Input<MachineImageIamMemberConditionArgs> condition;
 
     public Input<MachineImageIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,14 +32,14 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="machineImage", required=true)
-    private final Input<String> machineImage;
+        private final Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -168,7 +168,6 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public MachineImageIamMemberArgs build() {
             return new MachineImageIamMemberArgs(condition, machineImage, member, project, role);
         }

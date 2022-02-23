@@ -98,7 +98,6 @@ public final class ManagedDiskParametersResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public ManagedDiskParametersResponse build() {
             return new ManagedDiskParametersResponse(diskEncryptionSet, id, storageAccountType);
         }

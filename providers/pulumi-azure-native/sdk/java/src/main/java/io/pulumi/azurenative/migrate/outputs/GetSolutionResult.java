@@ -140,7 +140,6 @@ public final class GetSolutionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSolutionResult build() {
             return new GetSolutionResult(etag, id, name, properties, type);
         }

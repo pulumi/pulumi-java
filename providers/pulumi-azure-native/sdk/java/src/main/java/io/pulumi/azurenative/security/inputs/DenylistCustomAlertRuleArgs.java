@@ -24,7 +24,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="denylistValues", required=true)
-    private final Input<List<String>> denylistValues;
+        private final Input<List<String>> denylistValues;
 
     public Input<List<String>> getDenylistValues() {
         return this.denylistValues;
@@ -35,7 +35,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -47,7 +47,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+        private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -121,7 +121,6 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public DenylistCustomAlertRuleArgs build() {
             return new DenylistCustomAlertRuleArgs(denylistValues, isEnabled, ruleType);
         }

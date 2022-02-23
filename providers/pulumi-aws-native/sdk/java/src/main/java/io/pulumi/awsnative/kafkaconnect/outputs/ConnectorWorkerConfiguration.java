@@ -75,7 +75,6 @@ public final class ConnectorWorkerConfiguration {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }
-
         public ConnectorWorkerConfiguration build() {
             return new ConnectorWorkerConfiguration(revision, workerConfigurationArn);
         }

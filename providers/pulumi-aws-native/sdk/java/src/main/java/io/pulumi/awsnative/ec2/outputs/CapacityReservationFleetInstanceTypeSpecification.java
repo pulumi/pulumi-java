@@ -128,7 +128,6 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
             this.weight = weight;
             return this;
         }
-
         public CapacityReservationFleetInstanceTypeSpecification build() {
             return new CapacityReservationFleetInstanceTypeSpecification(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);
         }

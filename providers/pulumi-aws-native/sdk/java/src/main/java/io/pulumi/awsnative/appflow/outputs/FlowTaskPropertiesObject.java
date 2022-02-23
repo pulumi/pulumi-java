@@ -59,7 +59,6 @@ public final class FlowTaskPropertiesObject {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FlowTaskPropertiesObject build() {
             return new FlowTaskPropertiesObject(key, value);
         }

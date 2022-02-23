@@ -15,7 +15,7 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
     public static final IntegrationIncrementalPullConfigArgs Empty = new IntegrationIncrementalPullConfigArgs();
 
     @InputImport(name="datetimeTypeFieldName")
-    private final @Nullable Input<String> datetimeTypeFieldName;
+        private final @Nullable Input<String> datetimeTypeFieldName;
 
     public Input<String> getDatetimeTypeFieldName() {
         return this.datetimeTypeFieldName == null ? Input.empty() : this.datetimeTypeFieldName;
@@ -58,7 +58,6 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
             this.datetimeTypeFieldName = Input.ofNullable(datetimeTypeFieldName);
             return this;
         }
-
         public IntegrationIncrementalPullConfigArgs build() {
             return new IntegrationIncrementalPullConfigArgs(datetimeTypeFieldName);
         }

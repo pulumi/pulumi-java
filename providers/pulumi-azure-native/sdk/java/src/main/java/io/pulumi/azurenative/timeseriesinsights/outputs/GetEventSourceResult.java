@@ -160,7 +160,6 @@ public final class GetEventSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventSourceResult build() {
             return new GetEventSourceResult(id, kind, location, name, tags, type);
         }

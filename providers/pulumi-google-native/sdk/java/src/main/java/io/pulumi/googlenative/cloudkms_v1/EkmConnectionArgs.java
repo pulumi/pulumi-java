@@ -17,7 +17,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
     @InputImport(name="ekmConnectionId", required=true)
-    private final Input<String> ekmConnectionId;
+      private final Input<String> ekmConnectionId;
 
     public Input<String> getEkmConnectionId() {
         return this.ekmConnectionId;
@@ -28,21 +28,21 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -53,7 +53,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceResolvers")
-    private final @Nullable Input<List<ServiceResolverArgs>> serviceResolvers;
+      private final @Nullable Input<List<ServiceResolverArgs>> serviceResolvers;
 
     public Input<List<ServiceResolverArgs>> getServiceResolvers() {
         return this.serviceResolvers == null ? Input.empty() : this.serviceResolvers;
@@ -157,7 +157,6 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceResolvers = Input.ofNullable(serviceResolvers);
             return this;
         }
-
         public EkmConnectionArgs build() {
             return new EkmConnectionArgs(ekmConnectionId, etag, location, project, serviceResolvers);
         }

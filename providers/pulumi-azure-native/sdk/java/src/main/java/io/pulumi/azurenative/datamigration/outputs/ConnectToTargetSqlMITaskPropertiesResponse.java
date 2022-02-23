@@ -169,7 +169,6 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetSqlMITaskPropertiesResponse build() {
             return new ConnectToTargetSqlMITaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

@@ -44,7 +44,6 @@ public final class DeliveryStreamKMSEncryptionConfig {
             this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
             return this;
         }
-
         public DeliveryStreamKMSEncryptionConfig build() {
             return new DeliveryStreamKMSEncryptionConfig(aWSKMSKeyARN);
         }

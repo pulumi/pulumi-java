@@ -53,7 +53,6 @@ public final class AllowedConfigListResponse {
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
-
         public AllowedConfigListResponse build() {
             return new AllowedConfigListResponse(allowedConfigValues);
         }

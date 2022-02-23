@@ -208,7 +208,6 @@ public final class TriggerTriggerTemplate {
             this.tagName = tagName;
             return this;
         }
-
         public TriggerTriggerTemplate build() {
             return new TriggerTriggerTemplate(branchName, commitSha, dir, invertRegex, projectId, repoName, tagName);
         }

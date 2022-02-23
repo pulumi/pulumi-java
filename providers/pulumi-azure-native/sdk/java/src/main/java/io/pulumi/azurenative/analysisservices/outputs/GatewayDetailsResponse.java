@@ -97,7 +97,6 @@ public final class GatewayDetailsResponse {
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }
-
         public GatewayDetailsResponse build() {
             return new GatewayDetailsResponse(dmtsClusterUri, gatewayObjectId, gatewayResourceId);
         }

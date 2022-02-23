@@ -207,7 +207,6 @@ public final class RerunTumblingWindowTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RerunTumblingWindowTriggerResponse build() {
             return new RerunTumblingWindowTriggerResponse(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, runtimeState, type);
         }

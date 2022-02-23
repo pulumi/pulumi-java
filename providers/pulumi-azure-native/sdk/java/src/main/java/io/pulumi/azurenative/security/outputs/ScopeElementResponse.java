@@ -54,7 +54,6 @@ public final class ScopeElementResponse {
             this.field = field;
             return this;
         }
-
         public ScopeElementResponse build() {
             return new ScopeElementResponse(field);
         }

@@ -161,7 +161,6 @@ public final class GetCustomEntityStoreAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomEntityStoreAssignmentResult build() {
             return new GetCustomEntityStoreAssignmentResult(entityStoreDatabaseLink, id, name, principal, systemData, type);
         }

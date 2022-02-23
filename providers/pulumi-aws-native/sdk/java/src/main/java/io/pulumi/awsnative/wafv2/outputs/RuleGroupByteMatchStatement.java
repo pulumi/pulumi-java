@@ -103,7 +103,6 @@ public final class RuleGroupByteMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupByteMatchStatement build() {
             return new RuleGroupByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }

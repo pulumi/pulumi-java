@@ -96,7 +96,6 @@ public final class AttestorPublicKeyResponse {
             this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
             return this;
         }
-
         public AttestorPublicKeyResponse build() {
             return new AttestorPublicKeyResponse(asciiArmoredPgpPublicKey, comment, pkixPublicKey);
         }

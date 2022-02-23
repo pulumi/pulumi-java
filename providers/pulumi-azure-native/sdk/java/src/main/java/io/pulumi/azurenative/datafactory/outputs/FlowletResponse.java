@@ -231,7 +231,6 @@ public final class FlowletResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FlowletResponse build() {
             return new FlowletResponse(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }

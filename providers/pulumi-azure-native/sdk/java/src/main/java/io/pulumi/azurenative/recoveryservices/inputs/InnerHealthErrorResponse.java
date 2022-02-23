@@ -23,7 +23,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="creationTimeUtc")
-    private final @Nullable String creationTimeUtc;
+        private final @Nullable String creationTimeUtc;
 
     public Optional<String> getCreationTimeUtc() {
         return this.creationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.creationTimeUtc);
@@ -34,7 +34,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="entityId")
-    private final @Nullable String entityId;
+        private final @Nullable String entityId;
 
     public Optional<String> getEntityId() {
         return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
@@ -45,7 +45,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorCategory")
-    private final @Nullable String errorCategory;
+        private final @Nullable String errorCategory;
 
     public Optional<String> getErrorCategory() {
         return this.errorCategory == null ? Optional.empty() : Optional.ofNullable(this.errorCategory);
@@ -56,7 +56,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorCode")
-    private final @Nullable String errorCode;
+        private final @Nullable String errorCode;
 
     public Optional<String> getErrorCode() {
         return this.errorCode == null ? Optional.empty() : Optional.ofNullable(this.errorCode);
@@ -67,7 +67,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorLevel")
-    private final @Nullable String errorLevel;
+        private final @Nullable String errorLevel;
 
     public Optional<String> getErrorLevel() {
         return this.errorLevel == null ? Optional.empty() : Optional.ofNullable(this.errorLevel);
@@ -78,7 +78,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorMessage")
-    private final @Nullable String errorMessage;
+        private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
@@ -89,7 +89,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorSource")
-    private final @Nullable String errorSource;
+        private final @Nullable String errorSource;
 
     public Optional<String> getErrorSource() {
         return this.errorSource == null ? Optional.empty() : Optional.ofNullable(this.errorSource);
@@ -100,7 +100,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="errorType")
-    private final @Nullable String errorType;
+        private final @Nullable String errorType;
 
     public Optional<String> getErrorType() {
         return this.errorType == null ? Optional.empty() : Optional.ofNullable(this.errorType);
@@ -111,7 +111,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="possibleCauses")
-    private final @Nullable String possibleCauses;
+        private final @Nullable String possibleCauses;
 
     public Optional<String> getPossibleCauses() {
         return this.possibleCauses == null ? Optional.empty() : Optional.ofNullable(this.possibleCauses);
@@ -122,7 +122,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recommendedAction")
-    private final @Nullable String recommendedAction;
+        private final @Nullable String recommendedAction;
 
     public Optional<String> getRecommendedAction() {
         return this.recommendedAction == null ? Optional.empty() : Optional.ofNullable(this.recommendedAction);
@@ -133,7 +133,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recoveryProviderErrorMessage")
-    private final @Nullable String recoveryProviderErrorMessage;
+        private final @Nullable String recoveryProviderErrorMessage;
 
     public Optional<String> getRecoveryProviderErrorMessage() {
         return this.recoveryProviderErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.recoveryProviderErrorMessage);
@@ -144,7 +144,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="summaryMessage")
-    private final @Nullable String summaryMessage;
+        private final @Nullable String summaryMessage;
 
     public Optional<String> getSummaryMessage() {
         return this.summaryMessage == null ? Optional.empty() : Optional.ofNullable(this.summaryMessage);
@@ -293,7 +293,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
             this.summaryMessage = summaryMessage;
             return this;
         }
-
         public InnerHealthErrorResponse build() {
             return new InnerHealthErrorResponse(creationTimeUtc, entityId, errorCategory, errorCode, errorLevel, errorMessage, errorSource, errorType, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }

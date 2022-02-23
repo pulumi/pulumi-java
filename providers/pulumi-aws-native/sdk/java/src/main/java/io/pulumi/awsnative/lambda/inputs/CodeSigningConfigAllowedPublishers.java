@@ -22,7 +22,7 @@ public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resource
      * 
      */
     @InputImport(name="signingProfileVersionArns", required=true)
-    private final List<String> signingProfileVersionArns;
+        private final List<String> signingProfileVersionArns;
 
     public List<String> getSigningProfileVersionArns() {
         return this.signingProfileVersionArns;
@@ -60,7 +60,6 @@ public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resource
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }
-
         public CodeSigningConfigAllowedPublishers build() {
             return new CodeSigningConfigAllowedPublishers(signingProfileVersionArns);
         }

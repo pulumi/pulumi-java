@@ -77,7 +77,6 @@ public final class InsightsTableResultResponse {
             this.rows = rows;
             return this;
         }
-
         public InsightsTableResultResponse build() {
             return new InsightsTableResultResponse(columns, rows);
         }

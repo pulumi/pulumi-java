@@ -96,7 +96,6 @@ public final class BuiltImageResponse {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
         }
-
         public BuiltImageResponse build() {
             return new BuiltImageResponse(digest, name, pushTiming);
         }

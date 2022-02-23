@@ -76,7 +76,6 @@ public final class ApplicationGatewayCustomErrorResponse {
             this.statusCode = statusCode;
             return this;
         }
-
         public ApplicationGatewayCustomErrorResponse build() {
             return new ApplicationGatewayCustomErrorResponse(customErrorPageUrl, statusCode);
         }

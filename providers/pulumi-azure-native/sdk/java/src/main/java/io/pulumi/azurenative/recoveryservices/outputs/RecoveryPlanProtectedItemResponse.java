@@ -76,7 +76,6 @@ public final class RecoveryPlanProtectedItemResponse {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
-
         public RecoveryPlanProtectedItemResponse build() {
             return new RecoveryPlanProtectedItemResponse(id, virtualMachineId);
         }

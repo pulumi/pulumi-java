@@ -97,7 +97,6 @@ public final class StartMigrationScenarioServerRoleResultResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public StartMigrationScenarioServerRoleResultResponse build() {
             return new StartMigrationScenarioServerRoleResultResponse(exceptionsAndWarnings, name, state);
         }

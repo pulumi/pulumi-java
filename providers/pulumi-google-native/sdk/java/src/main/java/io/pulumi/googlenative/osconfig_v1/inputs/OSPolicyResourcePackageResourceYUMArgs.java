@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceYUMArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class OSPolicyResourcePackageResourceYUMArgs extends io.pulumi.reso
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public OSPolicyResourcePackageResourceYUMArgs build() {
             return new OSPolicyResourcePackageResourceYUMArgs(name);
         }

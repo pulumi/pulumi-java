@@ -25,7 +25,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="definition", required=true)
-    private final ManagementPolicyDefinitionResponse definition;
+        private final ManagementPolicyDefinitionResponse definition;
 
     public ManagementPolicyDefinitionResponse getDefinition() {
         return this.definition;
@@ -36,7 +36,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -47,7 +47,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagementPolicyRuleResponse build() {
             return new ManagementPolicyRuleResponse(definition, enabled, name, type);
         }

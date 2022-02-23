@@ -73,7 +73,6 @@ public final class IamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public IamMemberCondition build() {
             return new IamMemberCondition(description, expression, title);
         }

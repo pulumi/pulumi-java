@@ -52,7 +52,6 @@ public final class DataQualityJobDefinitionStoppingCondition {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public DataQualityJobDefinitionStoppingCondition build() {
             return new DataQualityJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }

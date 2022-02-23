@@ -23,7 +23,7 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="routes", required=true)
-    private final List<HttpRouteConfigResponse> routes;
+        private final List<HttpRouteConfigResponse> routes;
 
     public List<HttpRouteConfigResponse> getRoutes() {
         return this.routes;
@@ -83,7 +83,6 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
-
         public HttpHostConfigResponse build() {
             return new HttpHostConfigResponse(name, routes);
         }

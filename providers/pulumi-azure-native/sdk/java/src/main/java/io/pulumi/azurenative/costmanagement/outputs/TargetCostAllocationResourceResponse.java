@@ -118,7 +118,6 @@ public final class TargetCostAllocationResourceResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public TargetCostAllocationResourceResponse build() {
             return new TargetCostAllocationResourceResponse(name, policyType, resourceType, values);
         }

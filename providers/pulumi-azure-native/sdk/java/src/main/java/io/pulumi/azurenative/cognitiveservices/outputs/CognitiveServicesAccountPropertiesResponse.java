@@ -337,7 +337,6 @@ public final class CognitiveServicesAccountPropertiesResponse {
             this.userOwnedStorage = userOwnedStorage;
             return this;
         }
-
         public CognitiveServicesAccountPropertiesResponse build() {
             return new CognitiveServicesAccountPropertiesResponse(apiProperties, capabilities, customSubDomainName, dateCreated, encryption, endpoint, internalId, isMigrated, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, skuChangeInfo, userOwnedStorage);
         }

@@ -99,7 +99,6 @@ public final class DocumentAttachmentsSource {
             this.values = values;
             return this;
         }
-
         public DocumentAttachmentsSource build() {
             return new DocumentAttachmentsSource(key, name, values);
         }

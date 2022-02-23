@@ -74,7 +74,6 @@ public final class AwsAccessKeyResponse {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public AwsAccessKeyResponse build() {
             return new AwsAccessKeyResponse(accessKeyId, secretAccessKey);
         }

@@ -159,7 +159,6 @@ public final class GetVersionResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(createTime, description, displayName, name, nluSettings, state);
         }

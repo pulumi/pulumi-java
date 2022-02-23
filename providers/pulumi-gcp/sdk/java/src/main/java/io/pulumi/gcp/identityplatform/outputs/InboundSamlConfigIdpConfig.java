@@ -123,7 +123,6 @@ public final class InboundSamlConfigIdpConfig {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
-
         public InboundSamlConfigIdpConfig build() {
             return new InboundSamlConfigIdpConfig(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }

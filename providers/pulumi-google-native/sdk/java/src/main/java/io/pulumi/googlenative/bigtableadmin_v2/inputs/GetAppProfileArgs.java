@@ -15,21 +15,21 @@ public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAppProfileArgs Empty = new GetAppProfileArgs();
 
     @InputImport(name="appProfileId", required=true)
-    private final String appProfileId;
+      private final String appProfileId;
 
     public String getAppProfileId() {
         return this.appProfileId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetAppProfileArgs build() {
             return new GetAppProfileArgs(appProfileId, instanceId, project);
         }

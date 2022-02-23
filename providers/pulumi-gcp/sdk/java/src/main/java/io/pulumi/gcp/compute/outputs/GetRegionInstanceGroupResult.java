@@ -158,7 +158,6 @@ public final class GetRegionInstanceGroupResult {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public GetRegionInstanceGroupResult build() {
             return new GetRegionInstanceGroupResult(id, instances, name, project, region, selfLink, size);
         }

@@ -157,7 +157,6 @@ public final class DistributionOrigin {
             this.s3OriginConfig = s3OriginConfig;
             return this;
         }
-
         public DistributionOrigin build() {
             return new DistributionOrigin(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);
         }

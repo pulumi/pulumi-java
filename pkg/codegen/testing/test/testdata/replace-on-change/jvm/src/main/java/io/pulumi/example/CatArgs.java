@@ -30,7 +30,6 @@ public final class CatArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(CatArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public CatArgs build() {
             return new CatArgs();
         }

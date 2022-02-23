@@ -371,7 +371,6 @@ public final class GetJobResult {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, timeout, validationConfigurations);
         }

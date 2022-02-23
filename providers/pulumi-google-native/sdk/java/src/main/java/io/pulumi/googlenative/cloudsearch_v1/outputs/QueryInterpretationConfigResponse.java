@@ -74,7 +74,6 @@ public final class QueryInterpretationConfigResponse {
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
         }
-
         public QueryInterpretationConfigResponse build() {
             return new QueryInterpretationConfigResponse(forceDisableSupplementalResults, forceVerbatimMode);
         }

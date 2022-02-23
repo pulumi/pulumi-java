@@ -77,7 +77,6 @@ public final class SecretResponse {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(encryptedSecret, keyVaultId);
         }

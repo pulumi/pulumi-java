@@ -52,7 +52,6 @@ public final class StorageLensCloudWatchMetrics {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public StorageLensCloudWatchMetrics build() {
             return new StorageLensCloudWatchMetrics(isEnabled);
         }

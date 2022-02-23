@@ -74,7 +74,6 @@ public final class ErrorDefinitionResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorDefinitionResponse build() {
             return new ErrorDefinitionResponse(code, message);
         }

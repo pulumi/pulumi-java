@@ -25,7 +25,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="encryptionAtHost")
-    private final @Nullable Boolean encryptionAtHost;
+        private final @Nullable Boolean encryptionAtHost;
 
     public Optional<Boolean> getEncryptionAtHost() {
         return this.encryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.encryptionAtHost);
@@ -36,7 +36,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="securityType")
-    private final @Nullable String securityType;
+        private final @Nullable String securityType;
 
     public Optional<String> getSecurityType() {
         return this.securityType == null ? Optional.empty() : Optional.ofNullable(this.securityType);
@@ -47,7 +47,7 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uefiSettings")
-    private final @Nullable UefiSettingsResponse uefiSettings;
+        private final @Nullable UefiSettingsResponse uefiSettings;
 
     public Optional<UefiSettingsResponse> getUefiSettings() {
         return this.uefiSettings == null ? Optional.empty() : Optional.ofNullable(this.uefiSettings);
@@ -106,7 +106,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
             this.uefiSettings = uefiSettings;
             return this;
         }
-
         public SecurityProfileResponse build() {
             return new SecurityProfileResponse(encryptionAtHost, securityType, uefiSettings);
         }

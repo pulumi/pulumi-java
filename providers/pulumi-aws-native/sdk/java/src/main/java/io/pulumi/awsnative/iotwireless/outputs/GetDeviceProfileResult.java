@@ -142,7 +142,6 @@ public final class GetDeviceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeviceProfileResult build() {
             return new GetDeviceProfileResult(arn, id, loRaWAN, name, tags);
         }

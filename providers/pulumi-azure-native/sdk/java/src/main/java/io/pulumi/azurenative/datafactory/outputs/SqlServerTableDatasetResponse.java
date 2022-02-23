@@ -252,7 +252,6 @@ public final class SqlServerTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SqlServerTableDatasetResponse build() {
             return new SqlServerTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

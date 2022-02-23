@@ -21,7 +21,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parametersSchema", required=true)
-    private final String parametersSchema;
+        private final String parametersSchema;
 
     public String getParametersSchema() {
         return this.parametersSchema;
@@ -43,7 +43,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="publisher", required=true)
-    private final String publisher;
+        private final String publisher;
 
     public String getPublisher() {
         return this.publisher;
@@ -54,7 +54,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetType", required=true)
-    private final String targetType;
+        private final String targetType;
 
     public String getTargetType() {
         return this.targetType;
@@ -65,7 +65,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="urn", required=true)
-    private final String urn;
+        private final String urn;
 
     public String getUrn() {
         return this.urn;
@@ -144,7 +144,6 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
             this.urn = Objects.requireNonNull(urn);
             return this;
         }
-
         public CapabilityPropertiesResponse build() {
             return new CapabilityPropertiesResponse(description, parametersSchema, publisher, targetType, urn);
         }

@@ -76,7 +76,6 @@ public final class TrailDataResource {
             this.values = values;
             return this;
         }
-
         public TrailDataResource build() {
             return new TrailDataResource(type, values);
         }

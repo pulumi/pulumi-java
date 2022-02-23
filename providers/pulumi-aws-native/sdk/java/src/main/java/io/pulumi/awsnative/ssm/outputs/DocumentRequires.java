@@ -76,7 +76,6 @@ public final class DocumentRequires {
             this.version = version;
             return this;
         }
-
         public DocumentRequires build() {
             return new DocumentRequires(name, version);
         }

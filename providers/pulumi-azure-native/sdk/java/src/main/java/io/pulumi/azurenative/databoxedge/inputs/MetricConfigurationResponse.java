@@ -25,7 +25,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="counterSets", required=true)
-    private final List<MetricCounterSetResponse> counterSets;
+        private final List<MetricCounterSetResponse> counterSets;
 
     public List<MetricCounterSetResponse> getCounterSets() {
         return this.counterSets;
@@ -36,7 +36,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="mdmAccount")
-    private final @Nullable String mdmAccount;
+        private final @Nullable String mdmAccount;
 
     public Optional<String> getMdmAccount() {
         return this.mdmAccount == null ? Optional.empty() : Optional.ofNullable(this.mdmAccount);
@@ -47,7 +47,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="metricNameSpace")
-    private final @Nullable String metricNameSpace;
+        private final @Nullable String metricNameSpace;
 
     public Optional<String> getMetricNameSpace() {
         return this.metricNameSpace == null ? Optional.empty() : Optional.ofNullable(this.metricNameSpace);
@@ -58,7 +58,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -127,7 +127,6 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public MetricConfigurationResponse build() {
             return new MetricConfigurationResponse(counterSets, mdmAccount, metricNameSpace, resourceId);
         }

@@ -76,7 +76,6 @@ public final class TrustPolicyResponse {
             this.type = type;
             return this;
         }
-
         public TrustPolicyResponse build() {
             return new TrustPolicyResponse(status, type);
         }

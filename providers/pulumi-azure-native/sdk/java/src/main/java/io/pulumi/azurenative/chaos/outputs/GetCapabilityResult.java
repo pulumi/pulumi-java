@@ -139,7 +139,6 @@ public final class GetCapabilityResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCapabilityResult build() {
             return new GetCapabilityResult(id, name, properties, systemData, type);
         }

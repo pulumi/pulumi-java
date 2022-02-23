@@ -193,7 +193,6 @@ public final class StandardAppVersionHandlerStaticFiles {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
-
         public StandardAppVersionHandlerStaticFiles build() {
             return new StandardAppVersionHandlerStaticFiles(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }

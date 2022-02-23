@@ -58,7 +58,6 @@ public final class TableProvisionedThroughput {
             this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
             return this;
         }
-
         public TableProvisionedThroughput build() {
             return new TableProvisionedThroughput(readCapacityUnits, writeCapacityUnits);
         }

@@ -98,7 +98,6 @@ public final class PackagingConfigurationStreamSelection {
             this.streamOrder = streamOrder;
             return this;
         }
-
         public PackagingConfigurationStreamSelection build() {
             return new PackagingConfigurationStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }

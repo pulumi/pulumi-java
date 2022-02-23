@@ -74,7 +74,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse build() {
             return new EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse(labelName, labelValue);
         }

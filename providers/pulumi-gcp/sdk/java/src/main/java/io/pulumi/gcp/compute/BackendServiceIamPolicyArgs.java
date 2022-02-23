@@ -15,21 +15,21 @@ public final class BackendServiceIamPolicyArgs extends io.pulumi.resources.Resou
     public static final BackendServiceIamPolicyArgs Empty = new BackendServiceIamPolicyArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,6 @@ public final class BackendServiceIamPolicyArgs extends io.pulumi.resources.Resou
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public BackendServiceIamPolicyArgs build() {
             return new BackendServiceIamPolicyArgs(name, policyData, project);
         }

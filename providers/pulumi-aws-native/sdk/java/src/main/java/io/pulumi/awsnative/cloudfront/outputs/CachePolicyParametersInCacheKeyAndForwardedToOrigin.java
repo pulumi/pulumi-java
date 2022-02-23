@@ -102,7 +102,6 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public CachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOrigin(cookiesConfig, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfig, queryStringsConfig);
         }

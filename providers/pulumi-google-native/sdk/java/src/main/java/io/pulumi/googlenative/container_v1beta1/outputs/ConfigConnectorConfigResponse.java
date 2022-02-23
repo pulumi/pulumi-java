@@ -52,7 +52,6 @@ public final class ConfigConnectorConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConfigConnectorConfigResponse build() {
             return new ConfigConnectorConfigResponse(enabled);
         }

@@ -23,7 +23,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="rewrite")
-    private final @Nullable String rewrite;
+        private final @Nullable String rewrite;
 
     public Optional<String> getRewrite() {
         return this.rewrite == null ? Optional.empty() : Optional.ofNullable(this.rewrite);
@@ -34,7 +34,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -45,7 +45,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -104,7 +104,6 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HttpRouteMatchPathResponse build() {
             return new HttpRouteMatchPathResponse(rewrite, type, value);
         }

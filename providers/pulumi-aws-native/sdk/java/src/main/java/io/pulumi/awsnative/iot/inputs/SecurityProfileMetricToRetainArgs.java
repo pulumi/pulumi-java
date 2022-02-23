@@ -24,14 +24,14 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<String> metric;
+        private final Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric;
     }
 
     @InputImport(name="metricDimension")
-    private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+        private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
 
     public Input<SecurityProfileMetricDimensionArgs> getMetricDimension() {
         return this.metricDimension == null ? Input.empty() : this.metricDimension;
@@ -90,7 +90,6 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
             this.metricDimension = Input.ofNullable(metricDimension);
             return this;
         }
-
         public SecurityProfileMetricToRetainArgs build() {
             return new SecurityProfileMetricToRetainArgs(metric, metricDimension);
         }

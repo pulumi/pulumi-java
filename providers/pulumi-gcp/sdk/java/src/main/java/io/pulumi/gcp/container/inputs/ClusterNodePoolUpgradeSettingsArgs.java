@@ -14,14 +14,14 @@ public final class ClusterNodePoolUpgradeSettingsArgs extends io.pulumi.resource
     public static final ClusterNodePoolUpgradeSettingsArgs Empty = new ClusterNodePoolUpgradeSettingsArgs();
 
     @InputImport(name="maxSurge", required=true)
-    private final Input<Integer> maxSurge;
+        private final Input<Integer> maxSurge;
 
     public Input<Integer> getMaxSurge() {
         return this.maxSurge;
     }
 
     @InputImport(name="maxUnavailable", required=true)
-    private final Input<Integer> maxUnavailable;
+        private final Input<Integer> maxUnavailable;
 
     public Input<Integer> getMaxUnavailable() {
         return this.maxUnavailable;
@@ -80,7 +80,6 @@ public final class ClusterNodePoolUpgradeSettingsArgs extends io.pulumi.resource
             this.maxUnavailable = Input.of(Objects.requireNonNull(maxUnavailable));
             return this;
         }
-
         public ClusterNodePoolUpgradeSettingsArgs build() {
             return new ClusterNodePoolUpgradeSettingsArgs(maxSurge, maxUnavailable);
         }

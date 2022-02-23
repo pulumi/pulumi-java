@@ -69,7 +69,6 @@ public final class SecurityProfileMetricToRetain {
             this.metricDimension = metricDimension;
             return this;
         }
-
         public SecurityProfileMetricToRetain build() {
             return new SecurityProfileMetricToRetain(metric, metricDimension);
         }

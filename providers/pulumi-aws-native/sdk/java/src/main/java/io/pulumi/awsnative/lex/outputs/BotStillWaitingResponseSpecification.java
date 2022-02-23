@@ -97,7 +97,6 @@ public final class BotStillWaitingResponseSpecification {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public BotStillWaitingResponseSpecification build() {
             return new BotStillWaitingResponseSpecification(allowInterrupt, frequencyInSeconds, messageGroupsList, timeoutInSeconds);
         }

@@ -226,7 +226,6 @@ public final class FactoryGitHubConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FactoryGitHubConfigurationResponse build() {
             return new FactoryGitHubConfigurationResponse(accountName, clientId, clientSecret, collaborationBranch, hostName, lastCommitId, repositoryName, rootFolder, type);
         }

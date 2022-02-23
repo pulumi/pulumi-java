@@ -81,7 +81,6 @@ public final class ClusterAddonsConfigCloudrunConfig {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
-
         public ClusterAddonsConfigCloudrunConfig build() {
             return new ClusterAddonsConfigCloudrunConfig(disabled, loadBalancerType);
         }

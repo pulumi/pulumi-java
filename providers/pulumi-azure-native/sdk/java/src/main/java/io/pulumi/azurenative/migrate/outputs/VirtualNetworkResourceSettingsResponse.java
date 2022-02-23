@@ -169,7 +169,6 @@ public final class VirtualNetworkResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public VirtualNetworkResourceSettingsResponse build() {
             return new VirtualNetworkResourceSettingsResponse(addressSpace, dnsServers, enableDdosProtection, resourceType, subnets, targetResourceName);
         }

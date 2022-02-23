@@ -160,7 +160,6 @@ public final class GetApiIssueCommentResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetApiIssueCommentResult build() {
             return new GetApiIssueCommentResult(createdDate, id, name, text, type, userId);
         }

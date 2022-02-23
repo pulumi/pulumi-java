@@ -252,7 +252,6 @@ public final class PrestoObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrestoObjectDatasetResponse build() {
             return new PrestoObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

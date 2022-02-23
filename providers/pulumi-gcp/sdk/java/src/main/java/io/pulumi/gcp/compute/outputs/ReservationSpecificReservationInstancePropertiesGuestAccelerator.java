@@ -83,7 +83,6 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesGuestAccelerator build() {
             return new ReservationSpecificReservationInstancePropertiesGuestAccelerator(acceleratorCount, acceleratorType);
         }

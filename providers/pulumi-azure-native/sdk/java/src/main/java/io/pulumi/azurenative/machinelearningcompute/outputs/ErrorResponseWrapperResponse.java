@@ -54,7 +54,6 @@ public final class ErrorResponseWrapperResponse {
             this.error = error;
             return this;
         }
-
         public ErrorResponseWrapperResponse build() {
             return new ErrorResponseWrapperResponse(error);
         }

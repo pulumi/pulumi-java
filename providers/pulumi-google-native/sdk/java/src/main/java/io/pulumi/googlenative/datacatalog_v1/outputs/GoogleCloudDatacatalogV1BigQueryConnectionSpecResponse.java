@@ -97,7 +97,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(cloudSql, connectionType, hasCredential);
         }

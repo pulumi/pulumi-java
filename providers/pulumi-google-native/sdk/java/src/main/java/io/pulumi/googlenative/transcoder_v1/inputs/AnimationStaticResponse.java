@@ -22,7 +22,7 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="startTimeOffset", required=true)
-    private final String startTimeOffset;
+      private final String startTimeOffset;
 
     public String getStartTimeOffset() {
         return this.startTimeOffset;
@@ -33,7 +33,7 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="xy", required=true)
-    private final NormalizedCoordinateResponse xy;
+      private final NormalizedCoordinateResponse xy;
 
     public NormalizedCoordinateResponse getXy() {
         return this.xy;
@@ -82,7 +82,6 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationStaticResponse build() {
             return new AnimationStaticResponse(startTimeOffset, xy);
         }

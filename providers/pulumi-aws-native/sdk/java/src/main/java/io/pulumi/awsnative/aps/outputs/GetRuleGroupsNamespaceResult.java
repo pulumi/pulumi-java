@@ -120,7 +120,6 @@ public final class GetRuleGroupsNamespaceResult {
             this.workspace = workspace;
             return this;
         }
-
         public GetRuleGroupsNamespaceResult build() {
             return new GetRuleGroupsNamespaceResult(arn, data, tags, workspace);
         }

@@ -76,7 +76,6 @@ public final class RetentionPropertiesProperties {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
-
         public RetentionPropertiesProperties build() {
             return new RetentionPropertiesProperties(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
         }

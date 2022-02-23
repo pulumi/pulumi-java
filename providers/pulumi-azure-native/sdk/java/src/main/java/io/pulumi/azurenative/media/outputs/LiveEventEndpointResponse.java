@@ -76,7 +76,6 @@ public final class LiveEventEndpointResponse {
             this.url = url;
             return this;
         }
-
         public LiveEventEndpointResponse build() {
             return new LiveEventEndpointResponse(protocol, url);
         }

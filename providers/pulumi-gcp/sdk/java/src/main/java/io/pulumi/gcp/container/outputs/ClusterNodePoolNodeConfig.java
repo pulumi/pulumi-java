@@ -631,7 +631,6 @@ public final class ClusterNodePoolNodeConfig {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
-
         public ClusterNodePoolNodeConfig build() {
             return new ClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }

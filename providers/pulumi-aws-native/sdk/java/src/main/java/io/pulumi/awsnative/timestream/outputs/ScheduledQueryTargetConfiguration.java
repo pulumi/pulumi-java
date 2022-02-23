@@ -44,7 +44,6 @@ public final class ScheduledQueryTargetConfiguration {
             this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
             return this;
         }
-
         public ScheduledQueryTargetConfiguration build() {
             return new ScheduledQueryTargetConfiguration(timestreamConfiguration);
         }

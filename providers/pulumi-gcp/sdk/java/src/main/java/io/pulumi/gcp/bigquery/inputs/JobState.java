@@ -27,7 +27,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copy")
-    private final @Nullable Input<JobCopyGetArgs> copy;
+        private final @Nullable Input<JobCopyGetArgs> copy;
 
     public Input<JobCopyGetArgs> getCopy() {
         return this.copy == null ? Input.empty() : this.copy;
@@ -39,7 +39,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extract")
-    private final @Nullable Input<JobExtractGetArgs> extract;
+        private final @Nullable Input<JobExtractGetArgs> extract;
 
     public Input<JobExtractGetArgs> getExtract() {
         return this.extract == null ? Input.empty() : this.extract;
@@ -50,7 +50,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+        private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -61,7 +61,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTimeoutMs")
-    private final @Nullable Input<String> jobTimeoutMs;
+        private final @Nullable Input<String> jobTimeoutMs;
 
     public Input<String> getJobTimeoutMs() {
         return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
@@ -72,7 +72,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobType")
-    private final @Nullable Input<String> jobType;
+        private final @Nullable Input<String> jobType;
 
     public Input<String> getJobType() {
         return this.jobType == null ? Input.empty() : this.jobType;
@@ -83,7 +83,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -95,7 +95,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="load")
-    private final @Nullable Input<JobLoadGetArgs> load;
+        private final @Nullable Input<JobLoadGetArgs> load;
 
     public Input<JobLoadGetArgs> getLoad() {
         return this.load == null ? Input.empty() : this.load;
@@ -106,7 +106,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -118,7 +118,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -130,7 +130,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<JobQueryGetArgs> query;
+        private final @Nullable Input<JobQueryGetArgs> query;
 
     public Input<JobQueryGetArgs> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -141,7 +141,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable Input<List<JobStatusGetArgs>> statuses;
+        private final @Nullable Input<List<JobStatusGetArgs>> statuses;
 
     public Input<List<JobStatusGetArgs>> getStatuses() {
         return this.statuses == null ? Input.empty() : this.statuses;
@@ -152,7 +152,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userEmail")
-    private final @Nullable Input<String> userEmail;
+        private final @Nullable Input<String> userEmail;
 
     public Input<String> getUserEmail() {
         return this.userEmail == null ? Input.empty() : this.userEmail;
@@ -361,7 +361,6 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             this.userEmail = Input.ofNullable(userEmail);
             return this;
         }
-
         public JobState build() {
             return new JobState(copy, extract, jobId, jobTimeoutMs, jobType, labels, load, location, project, query, statuses, userEmail);
         }

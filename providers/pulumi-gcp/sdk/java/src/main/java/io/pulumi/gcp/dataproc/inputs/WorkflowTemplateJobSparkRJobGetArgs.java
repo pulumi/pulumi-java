@@ -22,7 +22,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="archiveUris")
-    private final @Nullable Input<List<String>> archiveUris;
+        private final @Nullable Input<List<String>> archiveUris;
 
     public Input<List<String>> getArchiveUris() {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
@@ -33,7 +33,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -44,7 +44,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fileUris")
-    private final @Nullable Input<List<String>> fileUris;
+        private final @Nullable Input<List<String>> fileUris;
 
     public Input<List<String>> getFileUris() {
         return this.fileUris == null ? Input.empty() : this.fileUris;
@@ -55,7 +55,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> loggingConfig;
+        private final @Nullable Input<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> loggingConfig;
 
     public Input<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -66,7 +66,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mainRFileUri", required=true)
-    private final Input<String> mainRFileUri;
+        private final Input<String> mainRFileUri;
 
     public Input<String> getMainRFileUri() {
         return this.mainRFileUri;
@@ -77,7 +77,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -196,7 +196,6 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public WorkflowTemplateJobSparkRJobGetArgs build() {
             return new WorkflowTemplateJobSparkRJobGetArgs(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

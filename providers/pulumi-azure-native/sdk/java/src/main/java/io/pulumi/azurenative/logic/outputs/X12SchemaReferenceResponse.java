@@ -118,7 +118,6 @@ public final class X12SchemaReferenceResponse {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public X12SchemaReferenceResponse build() {
             return new X12SchemaReferenceResponse(messageId, schemaName, schemaVersion, senderApplicationId);
         }

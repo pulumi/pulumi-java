@@ -55,7 +55,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList(words);
         }

@@ -60,7 +60,6 @@ public final class NetworkInsightsAnalysisAnalysisComponent {
             this.id = id;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisComponent build() {
             return new NetworkInsightsAnalysisAnalysisComponent(arn, id);
         }

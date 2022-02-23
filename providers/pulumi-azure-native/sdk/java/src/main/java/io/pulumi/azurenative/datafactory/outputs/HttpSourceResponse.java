@@ -163,7 +163,6 @@ public final class HttpSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpSourceResponse build() {
             return new HttpSourceResponse(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, type);
         }

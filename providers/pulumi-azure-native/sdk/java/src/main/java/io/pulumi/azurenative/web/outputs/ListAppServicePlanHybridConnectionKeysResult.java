@@ -160,7 +160,6 @@ public final class ListAppServicePlanHybridConnectionKeysResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListAppServicePlanHybridConnectionKeysResult build() {
             return new ListAppServicePlanHybridConnectionKeysResult(id, kind, name, sendKeyName, sendKeyValue, type);
         }

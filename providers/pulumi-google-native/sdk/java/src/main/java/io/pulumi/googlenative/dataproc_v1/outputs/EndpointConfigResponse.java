@@ -76,7 +76,6 @@ public final class EndpointConfigResponse {
             this.httpPorts = Objects.requireNonNull(httpPorts);
             return this;
         }
-
         public EndpointConfigResponse build() {
             return new EndpointConfigResponse(enableHttpPortAccess, httpPorts);
         }

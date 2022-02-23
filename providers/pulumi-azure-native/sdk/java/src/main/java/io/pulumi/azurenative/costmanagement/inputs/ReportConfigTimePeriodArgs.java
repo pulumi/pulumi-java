@@ -22,7 +22,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="from", required=true)
-    private final Input<String> from;
+        private final Input<String> from;
 
     public Input<String> getFrom() {
         return this.from;
@@ -33,7 +33,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="to", required=true)
-    private final Input<String> to;
+        private final Input<String> to;
 
     public Input<String> getTo() {
         return this.to;
@@ -92,7 +92,6 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
             this.to = Input.of(Objects.requireNonNull(to));
             return this;
         }
-
         public ReportConfigTimePeriodArgs build() {
             return new ReportConfigTimePeriodArgs(from, to);
         }

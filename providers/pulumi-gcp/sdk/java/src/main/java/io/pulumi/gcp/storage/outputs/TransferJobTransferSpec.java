@@ -187,7 +187,6 @@ public final class TransferJobTransferSpec {
             this.transferOptions = transferOptions;
             return this;
         }
-
         public TransferJobTransferSpec build() {
             return new TransferJobTransferSpec(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, transferOptions);
         }

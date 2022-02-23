@@ -84,7 +84,6 @@ public final class SloWindowsBasedSliMetricMeanInRangeRange {
             this.min = min;
             return this;
         }
-
         public SloWindowsBasedSliMetricMeanInRangeRange build() {
             return new SloWindowsBasedSliMetricMeanInRangeRange(max, min);
         }

@@ -74,7 +74,6 @@ public final class AddressDetailsResponse {
             this.returnAddress = Objects.requireNonNull(returnAddress);
             return this;
         }
-
         public AddressDetailsResponse build() {
             return new AddressDetailsResponse(forwardAddress, returnAddress);
         }

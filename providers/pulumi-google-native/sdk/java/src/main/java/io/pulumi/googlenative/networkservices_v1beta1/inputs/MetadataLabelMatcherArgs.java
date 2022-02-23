@@ -25,7 +25,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataLabelMatchCriteria")
-    private final @Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
+      private final @Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
 
     public Input<MetadataLabelMatcherMetadataLabelMatchCriteria> getMetadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria == null ? Input.empty() : this.metadataLabelMatchCriteria;
@@ -36,7 +36,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataLabels")
-    private final @Nullable Input<List<MetadataLabelsArgs>> metadataLabels;
+      private final @Nullable Input<List<MetadataLabelsArgs>> metadataLabels;
 
     public Input<List<MetadataLabelsArgs>> getMetadataLabels() {
         return this.metadataLabels == null ? Input.empty() : this.metadataLabels;
@@ -95,7 +95,6 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
             this.metadataLabels = Input.ofNullable(metadataLabels);
             return this;
         }
-
         public MetadataLabelMatcherArgs build() {
             return new MetadataLabelMatcherArgs(metadataLabelMatchCriteria, metadataLabels);
         }

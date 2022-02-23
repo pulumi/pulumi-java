@@ -52,7 +52,6 @@ public final class ReplicationSyncResponse {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public ReplicationSyncResponse build() {
             return new ReplicationSyncResponse(lastSyncTime);
         }

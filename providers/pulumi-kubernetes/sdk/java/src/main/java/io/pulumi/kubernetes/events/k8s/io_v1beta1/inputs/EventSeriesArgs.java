@@ -24,7 +24,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -35,7 +35,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastObservedTime", required=true)
-    private final Input<String> lastObservedTime;
+        private final Input<String> lastObservedTime;
 
     public Input<String> getLastObservedTime() {
         return this.lastObservedTime;
@@ -46,7 +46,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -120,7 +120,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public EventSeriesArgs build() {
             return new EventSeriesArgs(count, lastObservedTime, state);
         }

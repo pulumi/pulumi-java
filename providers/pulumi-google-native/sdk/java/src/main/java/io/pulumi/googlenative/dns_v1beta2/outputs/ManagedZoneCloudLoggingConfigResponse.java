@@ -67,7 +67,6 @@ public final class ManagedZoneCloudLoggingConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZoneCloudLoggingConfigResponse build() {
             return new ManagedZoneCloudLoggingConfigResponse(enableLogging, kind);
         }

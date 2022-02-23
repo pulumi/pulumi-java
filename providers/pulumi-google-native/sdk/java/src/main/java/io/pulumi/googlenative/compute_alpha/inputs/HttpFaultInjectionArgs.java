@@ -24,7 +24,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="abort")
-    private final @Nullable Input<HttpFaultAbortArgs> abort;
+      private final @Nullable Input<HttpFaultAbortArgs> abort;
 
     public Input<HttpFaultAbortArgs> getAbort() {
         return this.abort == null ? Input.empty() : this.abort;
@@ -35,7 +35,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="delay")
-    private final @Nullable Input<HttpFaultDelayArgs> delay;
+      private final @Nullable Input<HttpFaultDelayArgs> delay;
 
     public Input<HttpFaultDelayArgs> getDelay() {
         return this.delay == null ? Input.empty() : this.delay;
@@ -94,7 +94,6 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
             this.delay = Input.ofNullable(delay);
             return this;
         }
-
         public HttpFaultInjectionArgs build() {
             return new HttpFaultInjectionArgs(abort, delay);
         }

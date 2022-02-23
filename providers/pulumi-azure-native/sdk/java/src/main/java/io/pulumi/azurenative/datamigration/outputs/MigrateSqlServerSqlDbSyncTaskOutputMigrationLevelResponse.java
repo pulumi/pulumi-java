@@ -224,7 +224,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse(databaseCount, endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }

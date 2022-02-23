@@ -26,7 +26,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentationRootUrl")
-    private final @Nullable Input<String> documentationRootUrl;
+      private final @Nullable Input<String> documentationRootUrl;
 
     public Input<String> getDocumentationRootUrl() {
         return this.documentationRootUrl == null ? Input.empty() : this.documentationRootUrl;
@@ -37,7 +37,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overview")
-    private final @Nullable Input<String> overview;
+      private final @Nullable Input<String> overview;
 
     public Input<String> getOverview() {
         return this.overview == null ? Input.empty() : this.overview;
@@ -48,7 +48,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pages")
-    private final @Nullable Input<List<PageArgs>> pages;
+      private final @Nullable Input<List<PageArgs>> pages;
 
     public Input<List<PageArgs>> getPages() {
         return this.pages == null ? Input.empty() : this.pages;
@@ -59,7 +59,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<DocumentationRuleArgs>> rules;
+      private final @Nullable Input<List<DocumentationRuleArgs>> rules;
 
     public Input<List<DocumentationRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -70,7 +70,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRootUrl")
-    private final @Nullable Input<String> serviceRootUrl;
+      private final @Nullable Input<String> serviceRootUrl;
 
     public Input<String> getServiceRootUrl() {
         return this.serviceRootUrl == null ? Input.empty() : this.serviceRootUrl;
@@ -81,7 +81,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="summary")
-    private final @Nullable Input<String> summary;
+      private final @Nullable Input<String> summary;
 
     public Input<String> getSummary() {
         return this.summary == null ? Input.empty() : this.summary;
@@ -200,7 +200,6 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             this.summary = Input.ofNullable(summary);
             return this;
         }
-
         public DocumentationArgs build() {
             return new DocumentationArgs(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
         }

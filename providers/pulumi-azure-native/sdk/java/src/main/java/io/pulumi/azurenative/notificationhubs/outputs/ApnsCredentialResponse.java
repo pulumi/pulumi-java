@@ -202,7 +202,6 @@ public final class ApnsCredentialResponse {
             this.token = token;
             return this;
         }
-
         public ApnsCredentialResponse build() {
             return new ApnsCredentialResponse(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
         }

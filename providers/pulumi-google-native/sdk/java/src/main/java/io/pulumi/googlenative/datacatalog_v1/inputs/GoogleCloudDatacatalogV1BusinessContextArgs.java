@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="contacts")
-    private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
+      private final @Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
     public Input<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
         return this.contacts == null ? Input.empty() : this.contacts;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * 
      */
     @InputImport(name="entryOverview")
-    private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+      private final @Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
     public Input<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {
         return this.entryOverview == null ? Input.empty() : this.entryOverview;
@@ -94,7 +94,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
             this.entryOverview = Input.ofNullable(entryOverview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BusinessContextArgs build() {
             return new GoogleCloudDatacatalogV1BusinessContextArgs(contacts, entryOverview);
         }

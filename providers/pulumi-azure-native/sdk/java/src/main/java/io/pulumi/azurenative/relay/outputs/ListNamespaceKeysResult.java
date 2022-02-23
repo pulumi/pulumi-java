@@ -139,7 +139,6 @@ public final class ListNamespaceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListNamespaceKeysResult build() {
             return new ListNamespaceKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

@@ -248,7 +248,6 @@ public final class VideoOverlayResponse {
             this.start = start;
             return this;
         }
-
         public VideoOverlayResponse build() {
             return new VideoOverlayResponse(audioGainLevel, cropRectangle, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, opacity, position, start);
         }

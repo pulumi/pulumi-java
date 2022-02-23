@@ -76,7 +76,6 @@ public final class StepResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(branches, name);
         }

@@ -76,7 +76,6 @@ public final class MetricStreamTag {
             this.value = value;
             return this;
         }
-
         public MetricStreamTag build() {
             return new MetricStreamTag(key, value);
         }

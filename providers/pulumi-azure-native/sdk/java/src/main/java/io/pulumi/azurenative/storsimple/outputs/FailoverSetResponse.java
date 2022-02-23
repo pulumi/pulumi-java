@@ -78,7 +78,6 @@ public final class FailoverSetResponse {
             this.volumeContainers = volumeContainers;
             return this;
         }
-
         public FailoverSetResponse build() {
             return new FailoverSetResponse(eligibilityResult, volumeContainers);
         }

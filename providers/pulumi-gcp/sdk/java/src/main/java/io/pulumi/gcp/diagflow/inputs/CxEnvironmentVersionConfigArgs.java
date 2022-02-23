@@ -18,7 +18,7 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -61,7 +61,6 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public CxEnvironmentVersionConfigArgs build() {
             return new CxEnvironmentVersionConfigArgs(version);
         }

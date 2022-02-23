@@ -23,7 +23,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileFormat")
-    private final @Nullable Input<FaqFileFormat> fileFormat;
+        private final @Nullable Input<FaqFileFormat> fileFormat;
 
     public Input<FaqFileFormat> getFileFormat() {
         return this.fileFormat == null ? Input.empty() : this.fileFormat;
@@ -45,7 +45,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexId", required=true)
-    private final Input<String> indexId;
+        private final Input<String> indexId;
 
     public Input<String> getIndexId() {
         return this.indexId;
@@ -56,7 +56,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -78,7 +78,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Path", required=true)
-    private final Input<FaqS3PathArgs> s3Path;
+        private final Input<FaqS3PathArgs> s3Path;
 
     public Input<FaqS3PathArgs> getS3Path() {
         return this.s3Path;
@@ -89,7 +89,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FaqTagArgs>> tags;
+        private final @Nullable Input<List<FaqTagArgs>> tags;
 
     public Input<List<FaqTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FaqArgs build() {
             return new FaqArgs(description, fileFormat, indexId, name, roleArn, s3Path, tags);
         }

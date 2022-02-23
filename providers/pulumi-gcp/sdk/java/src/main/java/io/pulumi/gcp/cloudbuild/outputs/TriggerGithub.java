@@ -130,7 +130,6 @@ public final class TriggerGithub {
             this.push = push;
             return this;
         }
-
         public TriggerGithub build() {
             return new TriggerGithub(name, owner, pullRequest, push);
         }

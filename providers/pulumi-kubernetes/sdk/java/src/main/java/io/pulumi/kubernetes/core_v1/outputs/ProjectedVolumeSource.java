@@ -78,7 +78,6 @@ public final class ProjectedVolumeSource {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public ProjectedVolumeSource build() {
             return new ProjectedVolumeSource(defaultMode, sources);
         }

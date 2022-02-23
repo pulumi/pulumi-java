@@ -154,7 +154,6 @@ public final class GetBackendServiceCdnPolicy {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public GetBackendServiceCdnPolicy build() {
             return new GetBackendServiceCdnPolicy(cacheKeyPolicies, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

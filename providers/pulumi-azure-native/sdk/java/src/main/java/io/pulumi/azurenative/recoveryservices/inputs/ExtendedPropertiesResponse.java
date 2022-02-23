@@ -23,7 +23,7 @@ public final class ExtendedPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="diskExclusionProperties")
-    private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
+        private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
     public Optional<DiskExclusionPropertiesResponse> getDiskExclusionProperties() {
         return this.diskExclusionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskExclusionProperties);
@@ -61,7 +61,6 @@ public final class ExtendedPropertiesResponse extends io.pulumi.resources.Invoke
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
-
         public ExtendedPropertiesResponse build() {
             return new ExtendedPropertiesResponse(diskExclusionProperties);
         }

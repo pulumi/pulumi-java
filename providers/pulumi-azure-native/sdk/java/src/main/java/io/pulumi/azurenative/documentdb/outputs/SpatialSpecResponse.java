@@ -77,7 +77,6 @@ public final class SpatialSpecResponse {
             this.types = types;
             return this;
         }
-
         public SpatialSpecResponse build() {
             return new SpatialSpecResponse(path, types);
         }

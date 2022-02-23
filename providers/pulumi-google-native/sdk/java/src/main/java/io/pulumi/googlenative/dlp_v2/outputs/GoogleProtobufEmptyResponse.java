@@ -30,7 +30,6 @@ public final class GoogleProtobufEmptyResponse {
         public Builder(GoogleProtobufEmptyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleProtobufEmptyResponse build() {
             return new GoogleProtobufEmptyResponse();
         }

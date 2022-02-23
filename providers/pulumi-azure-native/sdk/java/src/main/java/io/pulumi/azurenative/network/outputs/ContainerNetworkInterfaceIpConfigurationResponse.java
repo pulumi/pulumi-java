@@ -118,7 +118,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceIpConfigurationResponse build() {
             return new ContainerNetworkInterfaceIpConfigurationResponse(etag, name, provisioningState, type);
         }

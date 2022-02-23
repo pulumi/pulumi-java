@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      * 
      */
     @InputImport(name="minDuration", required=true)
-    private final String minDuration;
+      private final String minDuration;
 
     public String getMinDuration() {
         return this.minDuration;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      * 
      */
     @InputImport(name="trafficPercent", required=true)
-    private final Integer trafficPercent;
+      private final Integer trafficPercent;
 
     public Integer getTrafficPercent() {
         return this.trafficPercent;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
             this.trafficPercent = Objects.requireNonNull(trafficPercent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse(displayName, minDuration, trafficPercent);
         }

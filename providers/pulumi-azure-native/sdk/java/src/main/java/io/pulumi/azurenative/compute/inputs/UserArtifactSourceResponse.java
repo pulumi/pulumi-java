@@ -23,7 +23,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="defaultConfigurationLink")
-    private final @Nullable String defaultConfigurationLink;
+        private final @Nullable String defaultConfigurationLink;
 
     public Optional<String> getDefaultConfigurationLink() {
         return this.defaultConfigurationLink == null ? Optional.empty() : Optional.ofNullable(this.defaultConfigurationLink);
@@ -34,7 +34,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="mediaLink", required=true)
-    private final String mediaLink;
+        private final String mediaLink;
 
     public String getMediaLink() {
         return this.mediaLink;
@@ -83,7 +83,6 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
-
         public UserArtifactSourceResponse build() {
             return new UserArtifactSourceResponse(defaultConfigurationLink, mediaLink);
         }

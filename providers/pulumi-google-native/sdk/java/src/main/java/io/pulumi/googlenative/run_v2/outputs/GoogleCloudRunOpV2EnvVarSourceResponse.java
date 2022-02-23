@@ -52,7 +52,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarSourceResponse build() {
             return new GoogleCloudRunOpV2EnvVarSourceResponse(secretKeyRef);
         }

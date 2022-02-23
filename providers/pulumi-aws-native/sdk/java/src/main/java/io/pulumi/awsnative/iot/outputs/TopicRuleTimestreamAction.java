@@ -116,7 +116,6 @@ public final class TopicRuleTimestreamAction {
             this.timestamp = timestamp;
             return this;
         }
-
         public TopicRuleTimestreamAction build() {
             return new TopicRuleTimestreamAction(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
         }

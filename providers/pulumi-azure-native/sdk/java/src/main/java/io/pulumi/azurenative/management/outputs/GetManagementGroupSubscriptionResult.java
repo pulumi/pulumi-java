@@ -182,7 +182,6 @@ public final class GetManagementGroupSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupSubscriptionResult build() {
             return new GetManagementGroupSubscriptionResult(displayName, id, name, parent, state, tenant, type);
         }

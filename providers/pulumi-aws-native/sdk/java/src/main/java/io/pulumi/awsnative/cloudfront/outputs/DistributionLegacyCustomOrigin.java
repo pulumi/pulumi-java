@@ -101,7 +101,6 @@ public final class DistributionLegacyCustomOrigin {
             this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
             return this;
         }
-
         public DistributionLegacyCustomOrigin build() {
             return new DistributionLegacyCustomOrigin(dNSName, hTTPPort, hTTPSPort, originProtocolPolicy, originSSLProtocols);
         }

@@ -116,7 +116,6 @@ public final class EndPointResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public EndPointResponse build() {
             return new EndPointResponse(endPointName, ipAddress, port, protocol);
         }

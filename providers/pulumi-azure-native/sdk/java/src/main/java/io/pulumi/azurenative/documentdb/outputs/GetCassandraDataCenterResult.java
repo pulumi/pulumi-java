@@ -117,7 +117,6 @@ public final class GetCassandraDataCenterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraDataCenterResult build() {
             return new GetCassandraDataCenterResult(id, name, properties, type);
         }

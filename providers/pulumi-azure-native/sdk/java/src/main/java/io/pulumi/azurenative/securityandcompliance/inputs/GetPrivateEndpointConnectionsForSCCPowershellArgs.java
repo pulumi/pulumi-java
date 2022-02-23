@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellArgs extends io.
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-    private final String privateEndpointConnectionName;
+        private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellArgs extends io.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellArgs extends io.
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -98,7 +98,6 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellArgs extends io.
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetPrivateEndpointConnectionsForSCCPowershellArgs build() {
             return new GetPrivateEndpointConnectionsForSCCPowershellArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }

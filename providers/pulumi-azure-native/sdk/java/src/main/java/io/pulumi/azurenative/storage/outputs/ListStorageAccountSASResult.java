@@ -52,7 +52,6 @@ public final class ListStorageAccountSASResult {
             this.accountSasToken = Objects.requireNonNull(accountSasToken);
             return this;
         }
-
         public ListStorageAccountSASResult build() {
             return new ListStorageAccountSASResult(accountSasToken);
         }

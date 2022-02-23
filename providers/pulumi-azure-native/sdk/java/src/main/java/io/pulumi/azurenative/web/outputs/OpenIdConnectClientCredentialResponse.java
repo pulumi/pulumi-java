@@ -76,7 +76,6 @@ public final class OpenIdConnectClientCredentialResponse {
             this.method = method;
             return this;
         }
-
         public OpenIdConnectClientCredentialResponse build() {
             return new OpenIdConnectClientCredentialResponse(clientSecretSettingName, method);
         }

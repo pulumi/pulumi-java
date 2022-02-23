@@ -17,7 +17,7 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final String domainName;
+        private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListDomainSharedAccessKeysArgs build() {
             return new ListDomainSharedAccessKeysArgs(domainName, resourceGroupName);
         }

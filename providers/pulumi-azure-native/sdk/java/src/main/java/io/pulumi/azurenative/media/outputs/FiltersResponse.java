@@ -124,7 +124,6 @@ public final class FiltersResponse {
             this.rotation = rotation;
             return this;
         }
-
         public FiltersResponse build() {
             return new FiltersResponse(crop, deinterlace, overlays, rotation);
         }

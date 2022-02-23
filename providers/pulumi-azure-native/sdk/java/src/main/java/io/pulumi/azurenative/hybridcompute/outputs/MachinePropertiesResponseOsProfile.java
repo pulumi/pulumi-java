@@ -52,7 +52,6 @@ public final class MachinePropertiesResponseOsProfile {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }
-
         public MachinePropertiesResponseOsProfile build() {
             return new MachinePropertiesResponseOsProfile(computerName);
         }

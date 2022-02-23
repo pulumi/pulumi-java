@@ -54,7 +54,6 @@ public final class ThemeMarginStyle {
             this.show = show;
             return this;
         }
-
         public ThemeMarginStyle build() {
             return new ThemeMarginStyle(show);
         }

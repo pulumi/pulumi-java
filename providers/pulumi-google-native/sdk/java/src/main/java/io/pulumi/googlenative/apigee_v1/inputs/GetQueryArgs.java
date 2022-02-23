@@ -13,21 +13,21 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetQueryArgs Empty = new GetQueryArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="queryId", required=true)
-    private final String queryId;
+      private final String queryId;
 
     public String getQueryId() {
         return this.queryId;
@@ -86,7 +86,6 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.queryId = Objects.requireNonNull(queryId);
             return this;
         }
-
         public GetQueryArgs build() {
             return new GetQueryArgs(environmentId, organizationId, queryId);
         }

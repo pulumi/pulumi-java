@@ -98,7 +98,6 @@ public final class LinuxUserConfigurationResponse {
             this.uid = uid;
             return this;
         }
-
         public LinuxUserConfigurationResponse build() {
             return new LinuxUserConfigurationResponse(gid, sshPrivateKey, uid);
         }

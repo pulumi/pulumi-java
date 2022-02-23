@@ -97,7 +97,6 @@ public final class InferenceContainerPropertiesResponse {
             this.scoringRoute = scoringRoute;
             return this;
         }
-
         public InferenceContainerPropertiesResponse build() {
             return new InferenceContainerPropertiesResponse(livenessRoute, readinessRoute, scoringRoute);
         }

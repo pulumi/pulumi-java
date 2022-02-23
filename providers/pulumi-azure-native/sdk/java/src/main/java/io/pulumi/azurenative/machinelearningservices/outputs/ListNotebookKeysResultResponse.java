@@ -58,7 +58,6 @@ public final class ListNotebookKeysResultResponse {
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
         }
-
         public ListNotebookKeysResultResponse build() {
             return new ListNotebookKeysResultResponse(primaryAccessKey, secondaryAccessKey);
         }

@@ -269,7 +269,6 @@ public final class BackendAddressPoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BackendAddressPoolResponse build() {
             return new BackendAddressPoolResponse(backendIPConfigurations, etag, id, loadBalancerBackendAddresses, loadBalancingRules, location, name, outboundRule, outboundRules, provisioningState, type);
         }

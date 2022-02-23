@@ -22,7 +22,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<String> category;
+        private final Input<String> category;
 
     public Input<String> getCategory() {
         return this.category;
@@ -33,7 +33,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionAlias")
-    private final @Nullable Input<String> functionAlias;
+        private final @Nullable Input<String> functionAlias;
 
     public Input<String> getFunctionAlias() {
         return this.functionAlias == null ? Input.empty() : this.functionAlias;
@@ -55,7 +55,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionParameters")
-    private final @Nullable Input<String> functionParameters;
+        private final @Nullable Input<String> functionParameters;
 
     public Input<String> getFunctionParameters() {
         return this.functionParameters == null ? Input.empty() : this.functionParameters;
@@ -66,7 +66,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -77,7 +77,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="savedSearchId")
-    private final @Nullable Input<String> savedSearchId;
+        private final @Nullable Input<String> savedSearchId;
 
     public Input<String> getSavedSearchId() {
         return this.savedSearchId == null ? Input.empty() : this.savedSearchId;
@@ -99,7 +99,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TagArgs>> tags;
+        private final @Nullable Input<List<TagArgs>> tags;
 
     public Input<List<TagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Double> version;
+        private final @Nullable Input<Double> version;
 
     public Input<Double> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -121,7 +121,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -300,7 +300,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public SavedSearchArgs build() {
             return new SavedSearchArgs(category, displayName, functionAlias, functionParameters, query, resourceGroupName, savedSearchId, tags, version, workspaceName);
         }

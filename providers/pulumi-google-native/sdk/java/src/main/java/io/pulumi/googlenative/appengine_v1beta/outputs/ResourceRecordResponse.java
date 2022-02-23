@@ -95,7 +95,6 @@ public final class ResourceRecordResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceRecordResponse build() {
             return new ResourceRecordResponse(name, rrdata, type);
         }

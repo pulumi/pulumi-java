@@ -59,7 +59,6 @@ public final class InstanceFromMachineImageReservationAffinitySpecificReservatio
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceFromMachineImageReservationAffinitySpecificReservation build() {
             return new InstanceFromMachineImageReservationAffinitySpecificReservation(key, values);
         }

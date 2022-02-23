@@ -139,7 +139,6 @@ public final class GetThreatIntelligenceIndicatorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetThreatIntelligenceIndicatorResult build() {
             return new GetThreatIntelligenceIndicatorResult(etag, id, kind, name, type);
         }

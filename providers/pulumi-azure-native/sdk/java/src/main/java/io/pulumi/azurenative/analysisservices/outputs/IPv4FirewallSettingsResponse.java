@@ -78,7 +78,6 @@ public final class IPv4FirewallSettingsResponse {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public IPv4FirewallSettingsResponse build() {
             return new IPv4FirewallSettingsResponse(enablePowerBIService, firewallRules);
         }

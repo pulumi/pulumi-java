@@ -120,7 +120,6 @@ public final class Lease {
             this.spec = spec;
             return this;
         }
-
         public Lease build() {
             return new Lease(apiVersion, kind, metadata, spec);
         }

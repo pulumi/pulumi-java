@@ -407,7 +407,6 @@ public final class ObjectMeta {
             this.uid = uid;
             return this;
         }
-
         public ObjectMeta build() {
             return new ObjectMeta(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, managedFields, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

@@ -30,7 +30,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="delegationServiceAccountEmail")
-    private final @Nullable Input<String> delegationServiceAccountEmail;
+        private final @Nullable Input<String> delegationServiceAccountEmail;
 
     public Input<String> getDelegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail == null ? Input.empty() : this.delegationServiceAccountEmail;
@@ -47,7 +47,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="noteReference", required=true)
-    private final Input<String> noteReference;
+        private final Input<String> noteReference;
 
     public Input<String> getNoteReference() {
         return this.noteReference;
@@ -65,7 +65,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyArgs>> publicKeys;
+        private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyArgs>> publicKeys;
 
     public Input<List<AttestorAttestationAuthorityNotePublicKeyArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -139,7 +139,6 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
-
         public AttestorAttestationAuthorityNoteArgs build() {
             return new AttestorAttestationAuthorityNoteArgs(delegationServiceAccountEmail, noteReference, publicKeys);
         }

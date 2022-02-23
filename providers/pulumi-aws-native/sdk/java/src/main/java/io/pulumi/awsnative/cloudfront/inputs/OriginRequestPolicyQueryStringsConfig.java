@@ -16,14 +16,14 @@ public final class OriginRequestPolicyQueryStringsConfig extends io.pulumi.resou
     public static final OriginRequestPolicyQueryStringsConfig Empty = new OriginRequestPolicyQueryStringsConfig();
 
     @InputImport(name="queryStringBehavior", required=true)
-    private final String queryStringBehavior;
+        private final String queryStringBehavior;
 
     public String getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-    private final @Nullable List<String> queryStrings;
+        private final @Nullable List<String> queryStrings;
 
     public List<String> getQueryStrings() {
         return this.queryStrings == null ? List.of() : this.queryStrings;
@@ -72,7 +72,6 @@ public final class OriginRequestPolicyQueryStringsConfig extends io.pulumi.resou
             this.queryStrings = queryStrings;
             return this;
         }
-
         public OriginRequestPolicyQueryStringsConfig build() {
             return new OriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }

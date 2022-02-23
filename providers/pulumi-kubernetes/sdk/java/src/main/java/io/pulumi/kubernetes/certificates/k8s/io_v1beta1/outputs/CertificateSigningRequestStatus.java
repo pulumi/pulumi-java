@@ -78,7 +78,6 @@ public final class CertificateSigningRequestStatus {
             this.conditions = conditions;
             return this;
         }
-
         public CertificateSigningRequestStatus build() {
             return new CertificateSigningRequestStatus(certificate, conditions);
         }

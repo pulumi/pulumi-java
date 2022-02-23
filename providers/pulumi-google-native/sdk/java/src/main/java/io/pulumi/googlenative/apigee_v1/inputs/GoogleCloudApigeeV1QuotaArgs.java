@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<String> interval;
+      private final Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="limit", required=true)
-    private final Input<String> limit;
+      private final Input<String> limit;
 
     public Input<String> getLimit() {
         return this.limit;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeUnit")
-    private final @Nullable Input<String> timeUnit;
+      private final @Nullable Input<String> timeUnit;
 
     public Input<String> getTimeUnit() {
         return this.timeUnit == null ? Input.empty() : this.timeUnit;
@@ -119,7 +119,6 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
             this.timeUnit = Input.ofNullable(timeUnit);
             return this;
         }
-
         public GoogleCloudApigeeV1QuotaArgs build() {
             return new GoogleCloudApigeeV1QuotaArgs(interval, limit, timeUnit);
         }

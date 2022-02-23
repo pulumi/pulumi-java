@@ -23,7 +23,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountUrl")
-    private final @Nullable Input<String> accountUrl;
+        private final @Nullable Input<String> accountUrl;
 
     public Input<String> getAccountUrl() {
         return this.accountUrl == null ? Input.empty() : this.accountUrl;
@@ -34,7 +34,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="filesystem")
-    private final @Nullable Input<String> filesystem;
+        private final @Nullable Input<String> filesystem;
 
     public Input<String> getFilesystem() {
         return this.filesystem == null ? Input.empty() : this.filesystem;
@@ -93,7 +93,6 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
             this.filesystem = Input.ofNullable(filesystem);
             return this;
         }
-
         public DataLakeStorageAccountDetailsArgs build() {
             return new DataLakeStorageAccountDetailsArgs(accountUrl, filesystem);
         }

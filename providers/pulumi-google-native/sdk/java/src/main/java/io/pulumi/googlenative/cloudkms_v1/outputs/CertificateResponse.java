@@ -223,7 +223,6 @@ public final class CertificateResponse {
             this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
             return this;
         }
-
         public CertificateResponse build() {
             return new CertificateResponse(issuer, notAfterTime, notBeforeTime, parsed, rawDer, serialNumber, sha256Fingerprint, subject, subjectAlternativeDnsNames);
         }

@@ -105,7 +105,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

@@ -25,7 +25,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="aggregations", required=true)
-    private final List<AggregationResponse> aggregations;
+      private final List<AggregationResponse> aggregations;
 
     public List<AggregationResponse> getAggregations() {
         return this.aggregations;
@@ -36,7 +36,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="comparison", required=true)
-    private final String comparison;
+      private final String comparison;
 
     public String getComparison() {
         return this.comparison;
@@ -47,7 +47,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="denominatorAggregations", required=true)
-    private final List<AggregationResponse> denominatorAggregations;
+      private final List<AggregationResponse> denominatorAggregations;
 
     public List<AggregationResponse> getDenominatorAggregations() {
         return this.denominatorAggregations;
@@ -58,7 +58,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="denominatorFilter", required=true)
-    private final String denominatorFilter;
+      private final String denominatorFilter;
 
     public String getDenominatorFilter() {
         return this.denominatorFilter;
@@ -69,7 +69,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -80,7 +80,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -91,7 +91,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="thresholdValue", required=true)
-    private final Double thresholdValue;
+      private final Double thresholdValue;
 
     public Double getThresholdValue() {
         return this.thresholdValue;
@@ -102,7 +102,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final TriggerResponse trigger;
+      private final TriggerResponse trigger;
 
     public TriggerResponse getTrigger() {
         return this.trigger;
@@ -211,7 +211,6 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricThresholdResponse build() {
             return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

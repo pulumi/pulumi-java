@@ -103,7 +103,6 @@ public final class InstanceNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceNetworkInterfaceAccessConfig build() {
             return new InstanceNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

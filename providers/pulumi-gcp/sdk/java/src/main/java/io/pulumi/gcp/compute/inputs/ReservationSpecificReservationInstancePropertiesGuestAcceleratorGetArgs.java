@@ -20,7 +20,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * 
      */
     @InputImport(name="acceleratorCount", required=true)
-    private final Input<Integer> acceleratorCount;
+        private final Input<Integer> acceleratorCount;
 
     public Input<Integer> getAcceleratorCount() {
         return this.acceleratorCount;
@@ -34,7 +34,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final Input<String> acceleratorType;
+        private final Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType;
@@ -93,7 +93,6 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
             this.acceleratorType = Input.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs build() {
             return new ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs(acceleratorCount, acceleratorType);
         }

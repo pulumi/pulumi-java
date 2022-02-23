@@ -89,7 +89,6 @@ public final class DatasetInput {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public DatasetInput build() {
             return new DatasetInput(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
         }

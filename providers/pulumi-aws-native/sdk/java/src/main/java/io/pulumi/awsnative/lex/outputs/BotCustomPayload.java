@@ -52,7 +52,6 @@ public final class BotCustomPayload {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BotCustomPayload build() {
             return new BotCustomPayload(value);
         }

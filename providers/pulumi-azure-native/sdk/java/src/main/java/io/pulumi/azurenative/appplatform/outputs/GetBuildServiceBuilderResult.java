@@ -139,7 +139,6 @@ public final class GetBuildServiceBuilderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBuildServiceBuilderResult build() {
             return new GetBuildServiceBuilderResult(id, name, properties, systemData, type);
         }

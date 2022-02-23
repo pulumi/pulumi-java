@@ -54,7 +54,6 @@ public final class SshConfigurationResponse {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public SshConfigurationResponse build() {
             return new SshConfigurationResponse(publicKeys);
         }

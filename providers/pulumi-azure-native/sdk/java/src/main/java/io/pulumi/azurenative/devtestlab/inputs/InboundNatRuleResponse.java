@@ -24,7 +24,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="backendPort")
-    private final @Nullable Integer backendPort;
+        private final @Nullable Integer backendPort;
 
     public Optional<Integer> getBackendPort() {
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
@@ -35,7 +35,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="frontendPort")
-    private final @Nullable Integer frontendPort;
+        private final @Nullable Integer frontendPort;
 
     public Optional<Integer> getFrontendPort() {
         return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
@@ -46,7 +46,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="transportProtocol")
-    private final @Nullable String transportProtocol;
+        private final @Nullable String transportProtocol;
 
     public Optional<String> getTransportProtocol() {
         return this.transportProtocol == null ? Optional.empty() : Optional.ofNullable(this.transportProtocol);
@@ -105,7 +105,6 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public InboundNatRuleResponse build() {
             return new InboundNatRuleResponse(backendPort, frontendPort, transportProtocol);
         }

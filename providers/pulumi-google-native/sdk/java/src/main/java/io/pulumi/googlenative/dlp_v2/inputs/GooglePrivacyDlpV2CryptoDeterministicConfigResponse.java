@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
      * 
      */
     @InputImport(name="context", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse context;
+      private final GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse getContext() {
         return this.context;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-    private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
      * 
      */
     @InputImport(name="surrogateInfoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getSurrogateInfoType() {
         return this.surrogateInfoType;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoDeterministicConfigResponse(context, cryptoKey, surrogateInfoType);
         }

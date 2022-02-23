@@ -60,7 +60,6 @@ public final class ListenerRuleQueryStringKeyValue {
             this.value = value;
             return this;
         }
-
         public ListenerRuleQueryStringKeyValue build() {
             return new ListenerRuleQueryStringKeyValue(key, value);
         }

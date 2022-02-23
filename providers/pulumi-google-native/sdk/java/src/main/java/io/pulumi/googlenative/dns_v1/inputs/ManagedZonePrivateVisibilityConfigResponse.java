@@ -15,7 +15,7 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
     public static final ManagedZonePrivateVisibilityConfigResponse Empty = new ManagedZonePrivateVisibilityConfigResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -26,7 +26,7 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="networks", required=true)
-    private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+      private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;
@@ -75,7 +75,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(kind, networks);
         }

@@ -76,7 +76,6 @@ public final class GetPipelineResult {
             this.tags = tags;
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(id, pipelineActivities, tags);
         }

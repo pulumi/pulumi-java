@@ -319,7 +319,6 @@ public final class XeroLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public XeroLinkedServiceResponse build() {
             return new XeroLinkedServiceResponse(annotations, connectVia, connectionProperties, consumerKey, description, encryptedCredential, host, parameters, privateKey, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

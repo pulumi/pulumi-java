@@ -24,7 +24,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+        private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -37,7 +37,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Integer retentionInDays;
+        private final @Nullable Integer retentionInDays;
 
     public Optional<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
@@ -48,7 +48,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="sasUrl")
-    private final @Nullable String sasUrl;
+        private final @Nullable String sasUrl;
 
     public Optional<String> getSasUrl() {
         return this.sasUrl == null ? Optional.empty() : Optional.ofNullable(this.sasUrl);
@@ -107,7 +107,6 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
             this.sasUrl = sasUrl;
             return this;
         }
-
         public AzureBlobStorageApplicationLogsConfigResponse build() {
             return new AzureBlobStorageApplicationLogsConfigResponse(level, retentionInDays, sasUrl);
         }

@@ -120,7 +120,6 @@ public final class GetGlobalReplicationGroupResult {
             this.status = status;
             return this;
         }
-
         public GetGlobalReplicationGroupResult build() {
             return new GetGlobalReplicationGroupResult(cacheParameterGroupName, globalReplicationGroupId, members, status);
         }

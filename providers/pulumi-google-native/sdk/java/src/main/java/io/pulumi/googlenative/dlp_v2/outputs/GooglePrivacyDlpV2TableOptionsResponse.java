@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-
         public GooglePrivacyDlpV2TableOptionsResponse build() {
             return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
         }

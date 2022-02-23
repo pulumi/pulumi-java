@@ -97,7 +97,6 @@ public final class LoadBalancingSettingsParametersResponse {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-
         public LoadBalancingSettingsParametersResponse build() {
             return new LoadBalancingSettingsParametersResponse(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
         }

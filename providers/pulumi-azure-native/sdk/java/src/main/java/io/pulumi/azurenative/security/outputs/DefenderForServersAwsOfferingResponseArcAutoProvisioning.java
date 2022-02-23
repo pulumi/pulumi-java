@@ -77,7 +77,6 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseArcAutoProvisioning build() {
             return new DefenderForServersAwsOfferingResponseArcAutoProvisioning(enabled, servicePrincipalSecretMetadata);
         }

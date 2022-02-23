@@ -97,7 +97,6 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public SecurityAssessmentMetadataPartnerDataResponse build() {
             return new SecurityAssessmentMetadataPartnerDataResponse(partnerName, productName, secret);
         }

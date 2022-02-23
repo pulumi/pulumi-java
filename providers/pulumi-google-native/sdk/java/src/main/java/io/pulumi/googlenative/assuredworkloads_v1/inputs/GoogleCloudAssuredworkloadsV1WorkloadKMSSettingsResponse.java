@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
      * 
      */
     @InputImport(name="nextRotationTime", required=true)
-    private final String nextRotationTime;
+      private final String nextRotationTime;
 
     public String getNextRotationTime() {
         return this.nextRotationTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
      * 
      */
     @InputImport(name="rotationPeriod", required=true)
-    private final String rotationPeriod;
+      private final String rotationPeriod;
 
     public String getRotationPeriod() {
         return this.rotationPeriod;
@@ -81,7 +81,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(nextRotationTime, rotationPeriod);
         }

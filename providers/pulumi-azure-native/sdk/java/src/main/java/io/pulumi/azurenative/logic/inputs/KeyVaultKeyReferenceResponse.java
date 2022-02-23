@@ -24,7 +24,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -35,7 +35,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVault", required=true)
-    private final KeyVaultKeyReferenceResponseKeyVault keyVault;
+        private final KeyVaultKeyReferenceResponseKeyVault keyVault;
 
     public KeyVaultKeyReferenceResponseKeyVault getKeyVault() {
         return this.keyVault;
@@ -46,7 +46,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+        private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -105,7 +105,6 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
             this.keyVersion = keyVersion;
             return this;
         }
-
         public KeyVaultKeyReferenceResponse build() {
             return new KeyVaultKeyReferenceResponse(keyName, keyVault, keyVersion);
         }

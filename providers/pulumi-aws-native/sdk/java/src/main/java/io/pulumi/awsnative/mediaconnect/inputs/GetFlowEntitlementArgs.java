@@ -17,7 +17,7 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="entitlementArn", required=true)
-    private final String entitlementArn;
+        private final String entitlementArn;
 
     public String getEntitlementArn() {
         return this.entitlementArn;
@@ -55,7 +55,6 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
             this.entitlementArn = Objects.requireNonNull(entitlementArn);
             return this;
         }
-
         public GetFlowEntitlementArgs build() {
             return new GetFlowEntitlementArgs(entitlementArn);
         }

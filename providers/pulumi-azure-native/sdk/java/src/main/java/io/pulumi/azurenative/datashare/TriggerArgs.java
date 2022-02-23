@@ -21,7 +21,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,TriggerKind>> kind;
+        private final Input<Either<String,TriggerKind>> kind;
 
     public Input<Either<String,TriggerKind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+        private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -65,7 +65,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerName")
-    private final @Nullable Input<String> triggerName;
+        private final @Nullable Input<String> triggerName;
 
     public Input<String> getTriggerName() {
         return this.triggerName == null ? Input.empty() : this.triggerName;
@@ -169,7 +169,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }
-
         public TriggerArgs build() {
             return new TriggerArgs(accountName, kind, resourceGroupName, shareSubscriptionName, triggerName);
         }

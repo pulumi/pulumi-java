@@ -78,7 +78,6 @@ public final class RestorePointSourceVMStorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public RestorePointSourceVMStorageProfileResponse build() {
             return new RestorePointSourceVMStorageProfileResponse(dataDisks, osDisk);
         }

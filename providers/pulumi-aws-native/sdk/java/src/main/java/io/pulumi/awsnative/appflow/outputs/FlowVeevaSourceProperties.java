@@ -100,7 +100,6 @@ public final class FlowVeevaSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowVeevaSourceProperties build() {
             return new FlowVeevaSourceProperties(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
         }

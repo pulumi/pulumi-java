@@ -117,7 +117,6 @@ public final class RouterBgpPeerBfdResponse {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }
-
         public RouterBgpPeerBfdResponse build() {
             return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }

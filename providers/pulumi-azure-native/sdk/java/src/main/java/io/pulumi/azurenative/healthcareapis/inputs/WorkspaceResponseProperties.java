@@ -21,7 +21,7 @@ public final class WorkspaceResponseProperties extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -59,7 +59,6 @@ public final class WorkspaceResponseProperties extends io.pulumi.resources.Invok
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public WorkspaceResponseProperties build() {
             return new WorkspaceResponseProperties(provisioningState);
         }

@@ -60,7 +60,6 @@ public final class DefaultRolloutSpecificationResponseCanary {
             this.skipRegions = skipRegions;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseCanary build() {
             return new DefaultRolloutSpecificationResponseCanary(regions, skipRegions);
         }

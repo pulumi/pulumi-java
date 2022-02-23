@@ -309,7 +309,6 @@ public final class GetCaseResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCaseResult build() {
             return new GetCaseResult(classification, createTime, creator, description, displayName, escalated, name, priority, state, subscriberEmailAddresses, testCase, timeZone, updateTime);
         }

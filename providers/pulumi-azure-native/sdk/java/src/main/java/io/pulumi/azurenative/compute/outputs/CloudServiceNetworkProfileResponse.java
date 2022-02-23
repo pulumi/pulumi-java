@@ -78,7 +78,6 @@ public final class CloudServiceNetworkProfileResponse {
             this.swappableCloudService = swappableCloudService;
             return this;
         }
-
         public CloudServiceNetworkProfileResponse build() {
             return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
         }

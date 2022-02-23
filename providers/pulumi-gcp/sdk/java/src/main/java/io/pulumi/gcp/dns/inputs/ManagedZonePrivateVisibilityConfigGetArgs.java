@@ -15,7 +15,7 @@ public final class ManagedZonePrivateVisibilityConfigGetArgs extends io.pulumi.r
     public static final ManagedZonePrivateVisibilityConfigGetArgs Empty = new ManagedZonePrivateVisibilityConfigGetArgs();
 
     @InputImport(name="networks", required=true)
-    private final Input<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> networks;
+        private final Input<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> networks;
 
     public Input<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> getNetworks() {
         return this.networks;
@@ -58,7 +58,6 @@ public final class ManagedZonePrivateVisibilityConfigGetArgs extends io.pulumi.r
             this.networks = Input.of(Objects.requireNonNull(networks));
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigGetArgs build() {
             return new ManagedZonePrivateVisibilityConfigGetArgs(networks);
         }

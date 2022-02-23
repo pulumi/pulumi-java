@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<Map<String,String>> disks;
+      private final @Nullable Input<Map<String,String>> disks;
 
     public Input<Map<String,String>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -35,7 +35,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="externalIPs")
-    private final @Nullable Input<Map<String,String>> externalIPs;
+      private final @Nullable Input<Map<String,String>> externalIPs;
 
     public Input<Map<String,String>> getExternalIPs() {
         return this.externalIPs == null ? Input.empty() : this.externalIPs;
@@ -46,7 +46,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="internalIPs")
-    private final @Nullable Input<Map<String,String>> internalIPs;
+      private final @Nullable Input<Map<String,String>> internalIPs;
 
     public Input<Map<String,String>> getInternalIPs() {
         return this.internalIPs == null ? Input.empty() : this.internalIPs;
@@ -120,7 +120,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             this.internalIPs = Input.ofNullable(internalIPs);
             return this;
         }
-
         public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks, externalIPs, internalIPs);
         }

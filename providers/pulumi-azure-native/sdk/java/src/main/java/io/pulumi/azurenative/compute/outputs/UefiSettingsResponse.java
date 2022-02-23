@@ -76,7 +76,6 @@ public final class UefiSettingsResponse {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
-
         public UefiSettingsResponse build() {
             return new UefiSettingsResponse(secureBootEnabled, vTpmEnabled);
         }

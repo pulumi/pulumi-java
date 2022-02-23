@@ -16,14 +16,14 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
     public static final AnomalyDetectorJsonFormatDescriptorArgs Empty = new AnomalyDetectorJsonFormatDescriptorArgs();
 
     @InputImport(name="charset")
-    private final @Nullable Input<String> charset;
+        private final @Nullable Input<String> charset;
 
     public Input<String> getCharset() {
         return this.charset == null ? Input.empty() : this.charset;
     }
 
     @InputImport(name="fileCompression")
-    private final @Nullable Input<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
+        private final @Nullable Input<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
 
     public Input<AnomalyDetectorJsonFormatDescriptorFileCompression> getFileCompression() {
         return this.fileCompression == null ? Input.empty() : this.fileCompression;
@@ -82,7 +82,6 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
             this.fileCompression = Input.ofNullable(fileCompression);
             return this;
         }
-
         public AnomalyDetectorJsonFormatDescriptorArgs build() {
             return new AnomalyDetectorJsonFormatDescriptorArgs(charset, fileCompression);
         }

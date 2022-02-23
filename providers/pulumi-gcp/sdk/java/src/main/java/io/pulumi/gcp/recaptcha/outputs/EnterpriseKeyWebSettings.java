@@ -141,7 +141,6 @@ public final class EnterpriseKeyWebSettings {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public EnterpriseKeyWebSettings build() {
             return new EnterpriseKeyWebSettings(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }

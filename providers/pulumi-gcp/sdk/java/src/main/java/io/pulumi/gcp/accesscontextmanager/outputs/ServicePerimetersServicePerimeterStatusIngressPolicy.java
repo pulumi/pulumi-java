@@ -85,7 +85,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
             this.ingressTo = ingressTo;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicy build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicy(ingressFrom, ingressTo);
         }

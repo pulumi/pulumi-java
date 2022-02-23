@@ -25,7 +25,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="goodBadMetricFilter")
-    private final @Nullable Input<String> goodBadMetricFilter;
+      private final @Nullable Input<String> goodBadMetricFilter;
 
     public Input<String> getGoodBadMetricFilter() {
         return this.goodBadMetricFilter == null ? Input.empty() : this.goodBadMetricFilter;
@@ -36,7 +36,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="goodTotalRatioThreshold")
-    private final @Nullable Input<PerformanceThresholdArgs> goodTotalRatioThreshold;
+      private final @Nullable Input<PerformanceThresholdArgs> goodTotalRatioThreshold;
 
     public Input<PerformanceThresholdArgs> getGoodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold == null ? Input.empty() : this.goodTotalRatioThreshold;
@@ -47,7 +47,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metricMeanInRange")
-    private final @Nullable Input<MetricRangeArgs> metricMeanInRange;
+      private final @Nullable Input<MetricRangeArgs> metricMeanInRange;
 
     public Input<MetricRangeArgs> getMetricMeanInRange() {
         return this.metricMeanInRange == null ? Input.empty() : this.metricMeanInRange;
@@ -58,7 +58,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metricSumInRange")
-    private final @Nullable Input<MetricRangeArgs> metricSumInRange;
+      private final @Nullable Input<MetricRangeArgs> metricSumInRange;
 
     public Input<MetricRangeArgs> getMetricSumInRange() {
         return this.metricSumInRange == null ? Input.empty() : this.metricSumInRange;
@@ -69,7 +69,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="windowPeriod")
-    private final @Nullable Input<String> windowPeriod;
+      private final @Nullable Input<String> windowPeriod;
 
     public Input<String> getWindowPeriod() {
         return this.windowPeriod == null ? Input.empty() : this.windowPeriod;
@@ -173,7 +173,6 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             this.windowPeriod = Input.ofNullable(windowPeriod);
             return this;
         }
-
         public WindowsBasedSliArgs build() {
             return new WindowsBasedSliArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

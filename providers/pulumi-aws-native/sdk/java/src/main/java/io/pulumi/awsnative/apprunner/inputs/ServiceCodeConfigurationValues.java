@@ -26,7 +26,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="buildCommand")
-    private final @Nullable String buildCommand;
+        private final @Nullable String buildCommand;
 
     public Optional<String> getBuildCommand() {
         return this.buildCommand == null ? Optional.empty() : Optional.ofNullable(this.buildCommand);
@@ -37,7 +37,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="port")
-    private final @Nullable String port;
+        private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -48,14 +48,14 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="runtime", required=true)
-    private final ServiceCodeConfigurationValuesRuntime runtime;
+        private final ServiceCodeConfigurationValuesRuntime runtime;
 
     public ServiceCodeConfigurationValuesRuntime getRuntime() {
         return this.runtime;
     }
 
     @InputImport(name="runtimeEnvironmentVariables")
-    private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
+        private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
     public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
@@ -66,7 +66,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="startCommand")
-    private final @Nullable String startCommand;
+        private final @Nullable String startCommand;
 
     public Optional<String> getStartCommand() {
         return this.startCommand == null ? Optional.empty() : Optional.ofNullable(this.startCommand);
@@ -145,7 +145,6 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
             this.startCommand = startCommand;
             return this;
         }
-
         public ServiceCodeConfigurationValues build() {
             return new ServiceCodeConfigurationValues(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }

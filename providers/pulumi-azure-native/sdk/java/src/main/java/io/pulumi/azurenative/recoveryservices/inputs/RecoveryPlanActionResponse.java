@@ -26,7 +26,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="actionName", required=true)
-    private final String actionName;
+        private final String actionName;
 
     public String getActionName() {
         return this.actionName;
@@ -37,7 +37,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customDetails", required=true)
-    private final Object customDetails;
+        private final Object customDetails;
 
     public Object getCustomDetails() {
         return this.customDetails;
@@ -48,7 +48,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="failoverDirections", required=true)
-    private final List<String> failoverDirections;
+        private final List<String> failoverDirections;
 
     public List<String> getFailoverDirections() {
         return this.failoverDirections;
@@ -59,7 +59,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="failoverTypes", required=true)
-    private final List<String> failoverTypes;
+        private final List<String> failoverTypes;
 
     public List<String> getFailoverTypes() {
         return this.failoverTypes;
@@ -128,7 +128,6 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
-
         public RecoveryPlanActionResponse build() {
             return new RecoveryPlanActionResponse(actionName, customDetails, failoverDirections, failoverTypes);
         }

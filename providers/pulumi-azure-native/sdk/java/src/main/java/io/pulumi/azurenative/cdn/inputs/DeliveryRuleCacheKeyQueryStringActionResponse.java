@@ -23,7 +23,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends io.pulu
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends io.pulu
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final CacheKeyQueryStringActionParametersResponse parameters;
+        private final CacheKeyQueryStringActionParametersResponse parameters;
 
     public CacheKeyQueryStringActionParametersResponse getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends io.pulu
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCacheKeyQueryStringActionResponse build() {
             return new DeliveryRuleCacheKeyQueryStringActionResponse(name, parameters);
         }

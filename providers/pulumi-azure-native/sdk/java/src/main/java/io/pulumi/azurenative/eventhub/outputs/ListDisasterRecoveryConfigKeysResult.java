@@ -179,7 +179,6 @@ public final class ListDisasterRecoveryConfigKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListDisasterRecoveryConfigKeysResult build() {
             return new ListDisasterRecoveryConfigKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

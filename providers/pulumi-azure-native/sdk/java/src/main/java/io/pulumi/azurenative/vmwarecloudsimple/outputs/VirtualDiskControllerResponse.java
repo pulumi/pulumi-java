@@ -116,7 +116,6 @@ public final class VirtualDiskControllerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualDiskControllerResponse build() {
             return new VirtualDiskControllerResponse(id, name, subType, type);
         }

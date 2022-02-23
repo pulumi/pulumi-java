@@ -52,7 +52,6 @@ public final class DataCollectionEndpointResponseLogsIngestion {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public DataCollectionEndpointResponseLogsIngestion build() {
             return new DataCollectionEndpointResponseLogsIngestion(endpoint);
         }

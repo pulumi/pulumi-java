@@ -23,7 +23,7 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualMachineId")
-    private final @Nullable Input<String> virtualMachineId;
+        private final @Nullable Input<String> virtualMachineId;
 
     public Input<String> getVirtualMachineId() {
         return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
@@ -93,7 +93,6 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
             this.virtualMachineId = Input.ofNullable(virtualMachineId);
             return this;
         }
-
         public RecoveryPlanProtectedItemArgs build() {
             return new RecoveryPlanProtectedItemArgs(id, virtualMachineId);
         }

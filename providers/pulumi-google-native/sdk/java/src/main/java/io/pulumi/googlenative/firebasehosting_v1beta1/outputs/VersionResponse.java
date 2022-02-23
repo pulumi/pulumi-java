@@ -287,7 +287,6 @@ public final class VersionResponse {
             this.versionBytes = Objects.requireNonNull(versionBytes);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(config, createTime, createUser, deleteTime, deleteUser, fileCount, finalizeTime, finalizeUser, labels, name, status, versionBytes);
         }

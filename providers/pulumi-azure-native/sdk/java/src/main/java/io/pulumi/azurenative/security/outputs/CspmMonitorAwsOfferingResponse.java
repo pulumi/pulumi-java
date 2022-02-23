@@ -100,7 +100,6 @@ public final class CspmMonitorAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public CspmMonitorAwsOfferingResponse build() {
             return new CspmMonitorAwsOfferingResponse(description, nativeCloudConnection, offeringType);
         }

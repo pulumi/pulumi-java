@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
      * 
      */
     @InputImport(name="isMultiLabel")
-    private final @Nullable Input<Boolean> isMultiLabel;
+      private final @Nullable Input<Boolean> isMultiLabel;
 
     public Input<Boolean> getIsMultiLabel() {
         return this.isMultiLabel == null ? Input.empty() : this.isMultiLabel;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
             this.isMultiLabel = Input.ofNullable(isMultiLabel);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(isMultiLabel);
         }

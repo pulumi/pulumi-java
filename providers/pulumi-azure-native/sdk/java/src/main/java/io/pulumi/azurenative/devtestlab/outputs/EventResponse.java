@@ -54,7 +54,6 @@ public final class EventResponse {
             this.eventName = eventName;
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(eventName);
         }

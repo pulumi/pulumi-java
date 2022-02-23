@@ -74,7 +74,6 @@ public final class ContainerAppSecretResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ContainerAppSecretResponse build() {
             return new ContainerAppSecretResponse(name, value);
         }

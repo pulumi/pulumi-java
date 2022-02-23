@@ -74,7 +74,6 @@ public final class DataSourceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DataSourceTag build() {
             return new DataSourceTag(key, value);
         }

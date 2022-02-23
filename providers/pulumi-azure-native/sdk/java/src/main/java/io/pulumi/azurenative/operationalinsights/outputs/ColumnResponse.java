@@ -182,7 +182,6 @@ public final class ColumnResponse {
             this.type = type;
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(dataTypeHint, description, displayName, isDefaultDisplay, isHidden, name, type);
         }

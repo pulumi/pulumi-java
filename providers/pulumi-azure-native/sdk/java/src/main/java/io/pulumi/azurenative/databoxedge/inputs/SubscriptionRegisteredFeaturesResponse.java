@@ -15,14 +15,14 @@ public final class SubscriptionRegisteredFeaturesResponse extends io.pulumi.reso
     public static final SubscriptionRegisteredFeaturesResponse Empty = new SubscriptionRegisteredFeaturesResponse();
 
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -71,7 +71,6 @@ public final class SubscriptionRegisteredFeaturesResponse extends io.pulumi.reso
             this.state = state;
             return this;
         }
-
         public SubscriptionRegisteredFeaturesResponse build() {
             return new SubscriptionRegisteredFeaturesResponse(name, state);
         }

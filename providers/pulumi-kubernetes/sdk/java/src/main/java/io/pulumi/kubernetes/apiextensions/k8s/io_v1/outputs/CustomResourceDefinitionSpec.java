@@ -165,7 +165,6 @@ public final class CustomResourceDefinitionSpec {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public CustomResourceDefinitionSpec build() {
             return new CustomResourceDefinitionSpec(conversion, group, names, preserveUnknownFields, scope, versions);
         }

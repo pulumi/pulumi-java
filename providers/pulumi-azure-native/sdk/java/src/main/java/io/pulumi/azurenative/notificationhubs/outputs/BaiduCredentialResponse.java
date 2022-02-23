@@ -97,7 +97,6 @@ public final class BaiduCredentialResponse {
             this.baiduSecretKey = baiduSecretKey;
             return this;
         }
-
         public BaiduCredentialResponse build() {
             return new BaiduCredentialResponse(baiduApiKey, baiduEndPoint, baiduSecretKey);
         }

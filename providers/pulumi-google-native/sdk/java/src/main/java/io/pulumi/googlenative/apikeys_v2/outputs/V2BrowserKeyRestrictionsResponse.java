@@ -53,7 +53,6 @@ public final class V2BrowserKeyRestrictionsResponse {
             this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
             return this;
         }
-
         public V2BrowserKeyRestrictionsResponse build() {
             return new V2BrowserKeyRestrictionsResponse(allowedReferrers);
         }

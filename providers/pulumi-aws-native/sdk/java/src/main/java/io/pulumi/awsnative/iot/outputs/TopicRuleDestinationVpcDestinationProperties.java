@@ -87,7 +87,6 @@ public final class TopicRuleDestinationVpcDestinationProperties {
             this.vpcId = vpcId;
             return this;
         }
-
         public TopicRuleDestinationVpcDestinationProperties build() {
             return new TopicRuleDestinationVpcDestinationProperties(roleArn, securityGroups, subnetIds, vpcId);
         }

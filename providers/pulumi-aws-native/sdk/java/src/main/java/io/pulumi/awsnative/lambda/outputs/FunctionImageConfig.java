@@ -98,7 +98,6 @@ public final class FunctionImageConfig {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public FunctionImageConfig build() {
             return new FunctionImageConfig(command, entryPoint, workingDirectory);
         }

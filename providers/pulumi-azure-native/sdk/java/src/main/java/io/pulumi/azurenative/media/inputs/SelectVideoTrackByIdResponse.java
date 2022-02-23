@@ -23,7 +23,7 @@ public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="trackId", required=true)
-    private final Double trackId;
+        private final Double trackId;
 
     public Double getTrackId() {
         return this.trackId;
@@ -83,7 +83,6 @@ public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.Invo
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public SelectVideoTrackByIdResponse build() {
             return new SelectVideoTrackByIdResponse(odataType, trackId);
         }

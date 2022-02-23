@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="conditionalCases", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases;
+      private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases;
 
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> getConditionalCases() {
         return this.conditionalCases;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="messages", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages;
+      private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages;
 
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> getMessages() {
         return this.messages;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="returnPartialResponses", required=true)
-    private final Boolean returnPartialResponses;
+      private final Boolean returnPartialResponses;
 
     public Boolean getReturnPartialResponses() {
         return this.returnPartialResponses;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="setParameterActions", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions;
+      private final List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions;
 
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> getSetParameterActions() {
         return this.setParameterActions;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
      * 
      */
     @InputImport(name="webhook", required=true)
-    private final String webhook;
+      private final String webhook;
 
     public String getWebhook() {
         return this.webhook;
@@ -170,7 +170,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }

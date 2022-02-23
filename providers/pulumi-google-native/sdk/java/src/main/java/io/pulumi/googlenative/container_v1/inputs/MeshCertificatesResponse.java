@@ -21,7 +21,7 @@ public final class MeshCertificatesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enableCertificates", required=true)
-    private final Boolean enableCertificates;
+      private final Boolean enableCertificates;
 
     public Boolean getEnableCertificates() {
         return this.enableCertificates;
@@ -59,7 +59,6 @@ public final class MeshCertificatesResponse extends io.pulumi.resources.InvokeAr
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }
-
         public MeshCertificatesResponse build() {
             return new MeshCertificatesResponse(enableCertificates);
         }

@@ -59,7 +59,6 @@ public final class FilterStringFilter {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FilterStringFilter build() {
             return new FilterStringFilter(comparison, value);
         }

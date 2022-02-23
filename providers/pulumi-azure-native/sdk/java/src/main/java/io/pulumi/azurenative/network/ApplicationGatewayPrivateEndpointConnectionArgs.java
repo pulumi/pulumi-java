@@ -20,7 +20,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="applicationGatewayName", required=true)
-    private final Input<String> applicationGatewayName;
+        private final Input<String> applicationGatewayName;
 
     public Input<String> getApplicationGatewayName() {
         return this.applicationGatewayName;
@@ -31,7 +31,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+        private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -42,7 +42,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -53,7 +53,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,7 +64,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -75,7 +75,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ApplicationGatewayPrivateEndpointConnectionArgs build() {
             return new ApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, id, name, privateLinkServiceConnectionState, resourceGroupName);
         }

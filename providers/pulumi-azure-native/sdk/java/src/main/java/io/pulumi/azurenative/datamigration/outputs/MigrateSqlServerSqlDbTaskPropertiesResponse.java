@@ -175,7 +175,6 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskPropertiesResponse build() {
             return new MigrateSqlServerSqlDbTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

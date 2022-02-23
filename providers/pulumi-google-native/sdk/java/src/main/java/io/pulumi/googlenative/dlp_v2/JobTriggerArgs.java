@@ -23,7 +23,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,14 +45,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inspectJob")
-    private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
+      private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
     public Input<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -63,14 +63,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -81,7 +81,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<JobTriggerStatus> status;
+      private final Input<JobTriggerStatus> status;
 
     public Input<JobTriggerStatus> getStatus() {
         return this.status;
@@ -92,7 +92,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerId")
-    private final @Nullable Input<String> triggerId;
+      private final @Nullable Input<String> triggerId;
 
     public Input<String> getTriggerId() {
         return this.triggerId == null ? Input.empty() : this.triggerId;
@@ -103,7 +103,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
+      private final @Nullable Input<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 
     public Input<List<GooglePrivacyDlpV2TriggerArgs>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
@@ -267,7 +267,6 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }
-
         public JobTriggerArgs build() {
             return new JobTriggerArgs(description, displayName, inspectJob, location, name, project, status, triggerId, triggers);
         }

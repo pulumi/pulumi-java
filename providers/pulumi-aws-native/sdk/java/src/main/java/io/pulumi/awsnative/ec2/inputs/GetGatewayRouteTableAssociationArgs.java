@@ -17,7 +17,7 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final String gatewayId;
+        private final String gatewayId;
 
     public String getGatewayId() {
         return this.gatewayId;
@@ -55,7 +55,6 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public GetGatewayRouteTableAssociationArgs build() {
             return new GetGatewayRouteTableAssociationArgs(gatewayId);
         }

@@ -21,7 +21,7 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableIntegrityMonitoring", required=true)
-    private final Boolean enableIntegrityMonitoring;
+      private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
@@ -32,7 +32,7 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableSecureBoot", required=true)
-    private final Boolean enableSecureBoot;
+      private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
@@ -81,7 +81,6 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot);
         }

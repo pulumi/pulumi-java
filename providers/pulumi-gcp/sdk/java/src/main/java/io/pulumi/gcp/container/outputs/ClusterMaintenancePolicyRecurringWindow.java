@@ -71,7 +71,6 @@ public final class ClusterMaintenancePolicyRecurringWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ClusterMaintenancePolicyRecurringWindow build() {
             return new ClusterMaintenancePolicyRecurringWindow(endTime, recurrence, startTime);
         }

@@ -16,14 +16,14 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     public static final ConfigUplinkEchoConfigArgs Empty = new ConfigUplinkEchoConfigArgs();
 
     @InputImport(name="antennaUplinkConfigArn")
-    private final @Nullable Input<String> antennaUplinkConfigArn;
+        private final @Nullable Input<String> antennaUplinkConfigArn;
 
     public Input<String> getAntennaUplinkConfigArn() {
         return this.antennaUplinkConfigArn == null ? Input.empty() : this.antennaUplinkConfigArn;
     }
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -82,7 +82,6 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public ConfigUplinkEchoConfigArgs build() {
             return new ConfigUplinkEchoConfigArgs(antennaUplinkConfigArn, enabled);
         }

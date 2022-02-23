@@ -60,7 +60,6 @@ public final class TaskDefinitionKernelCapabilities {
             this.drop = drop;
             return this;
         }
-
         public TaskDefinitionKernelCapabilities build() {
             return new TaskDefinitionKernelCapabilities(add, drop);
         }

@@ -139,7 +139,6 @@ public final class NetworkResponse {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
-
         public NetworkResponse build() {
             return new NetworkResponse(forwardedPorts, instanceTag, name, sessionAffinity, subnetworkName);
         }

@@ -19,7 +19,7 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<Map<String,String>> labels;
+        private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -62,7 +62,6 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends io.pulumi.re
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public GuestPoliciesAssignmentGroupLabelGetArgs build() {
             return new GuestPoliciesAssignmentGroupLabelGetArgs(labels);
         }

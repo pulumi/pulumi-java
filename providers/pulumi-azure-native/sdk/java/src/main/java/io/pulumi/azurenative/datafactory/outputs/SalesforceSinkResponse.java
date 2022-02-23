@@ -247,7 +247,6 @@ public final class SalesforceSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SalesforceSinkResponse build() {
             return new SalesforceSinkResponse(disableMetricsCollection, externalIdFieldName, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

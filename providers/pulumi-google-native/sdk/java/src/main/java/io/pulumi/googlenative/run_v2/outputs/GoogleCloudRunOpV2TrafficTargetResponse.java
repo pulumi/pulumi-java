@@ -117,7 +117,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetResponse(percent, revision, tag, type);
         }

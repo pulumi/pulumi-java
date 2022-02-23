@@ -119,7 +119,6 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }
-
         public DataBoxHeavyAccountCopyLogDetailsResponse build() {
             return new DataBoxHeavyAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
         }

@@ -105,7 +105,6 @@ public final class StatusCause {
             this.reason = reason;
             return this;
         }
-
         public StatusCause build() {
             return new StatusCause(field, message, reason);
         }

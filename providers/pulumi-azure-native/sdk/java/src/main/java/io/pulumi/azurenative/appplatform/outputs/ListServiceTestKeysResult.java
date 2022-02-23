@@ -140,7 +140,6 @@ public final class ListServiceTestKeysResult {
             this.secondaryTestEndpoint = secondaryTestEndpoint;
             return this;
         }
-
         public ListServiceTestKeysResult build() {
             return new ListServiceTestKeysResult(enabled, primaryKey, primaryTestEndpoint, secondaryKey, secondaryTestEndpoint);
         }

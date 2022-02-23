@@ -21,7 +21,7 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutG
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutG
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<String> seconds;
+        private final Input<String> seconds;
 
     public Input<String> getSeconds() {
         return this.seconds;
@@ -92,7 +92,6 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutG
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs build() {
             return new URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs(nanos, seconds);
         }

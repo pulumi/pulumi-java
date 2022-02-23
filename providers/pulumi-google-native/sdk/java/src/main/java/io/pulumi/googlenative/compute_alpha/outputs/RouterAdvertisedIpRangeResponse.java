@@ -74,7 +74,6 @@ public final class RouterAdvertisedIpRangeResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterAdvertisedIpRangeResponse build() {
             return new RouterAdvertisedIpRangeResponse(description, range);
         }

@@ -46,7 +46,6 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration {
             this.basicAuthentication = basicAuthentication;
             return this;
         }
-
         public DataSourceWebCrawlerAuthenticationConfiguration build() {
             return new DataSourceWebCrawlerAuthenticationConfiguration(basicAuthentication);
         }

@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(featureConfigs, groupSuggestionResponses);
         }

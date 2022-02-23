@@ -13,14 +13,14 @@ public final class IndexJsonTokenTypeConfiguration extends io.pulumi.resources.I
     public static final IndexJsonTokenTypeConfiguration Empty = new IndexJsonTokenTypeConfiguration();
 
     @InputImport(name="groupAttributeField", required=true)
-    private final String groupAttributeField;
+        private final String groupAttributeField;
 
     public String getGroupAttributeField() {
         return this.groupAttributeField;
     }
 
     @InputImport(name="userNameAttributeField", required=true)
-    private final String userNameAttributeField;
+        private final String userNameAttributeField;
 
     public String getUserNameAttributeField() {
         return this.userNameAttributeField;
@@ -69,7 +69,6 @@ public final class IndexJsonTokenTypeConfiguration extends io.pulumi.resources.I
             this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
             return this;
         }
-
         public IndexJsonTokenTypeConfiguration build() {
             return new IndexJsonTokenTypeConfiguration(groupAttributeField, userNameAttributeField);
         }

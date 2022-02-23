@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse(allowPlaybackInterruption, audioUri);
         }

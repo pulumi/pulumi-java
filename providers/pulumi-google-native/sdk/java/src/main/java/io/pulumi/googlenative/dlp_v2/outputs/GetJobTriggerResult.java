@@ -246,7 +246,6 @@ public final class GetJobTriggerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetJobTriggerResult build() {
             return new GetJobTriggerResult(createTime, description, displayName, errors, inspectJob, lastRunTime, name, status, triggers, updateTime);
         }

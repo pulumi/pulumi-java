@@ -87,7 +87,6 @@ public final class ServiceLoadBalancer {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public ServiceLoadBalancer build() {
             return new ServiceLoadBalancer(containerName, containerPort, loadBalancerName, targetGroupArn);
         }

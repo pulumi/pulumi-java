@@ -224,7 +224,6 @@ public final class SharedPrivateLinkResourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharedPrivateLinkResourceResponse build() {
             return new SharedPrivateLinkResourceResponse(groupId, id, name, privateLinkResourceId, provisioningState, requestMessage, status, systemData, type);
         }

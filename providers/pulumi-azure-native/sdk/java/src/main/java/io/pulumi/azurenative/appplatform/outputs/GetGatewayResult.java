@@ -163,7 +163,6 @@ public final class GetGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(id, name, properties, sku, systemData, type);
         }

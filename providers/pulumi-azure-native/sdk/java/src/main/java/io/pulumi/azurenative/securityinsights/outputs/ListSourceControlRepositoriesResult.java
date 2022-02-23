@@ -76,7 +76,6 @@ public final class ListSourceControlRepositoriesResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListSourceControlRepositoriesResult build() {
             return new ListSourceControlRepositoriesResult(nextLink, value);
         }

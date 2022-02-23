@@ -119,7 +119,6 @@ public final class ExternalMetricStatus {
             this.metricSelector = metricSelector;
             return this;
         }
-
         public ExternalMetricStatus build() {
             return new ExternalMetricStatus(currentAverageValue, currentValue, metricName, metricSelector);
         }

@@ -221,7 +221,6 @@ public final class GetAppResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appId, appName, arn, buildSpec, customHeaders, customRules, defaultDomain, description, enableBranchAutoDeletion, environmentVariables, iAMServiceRole, name, repository, tags);
         }

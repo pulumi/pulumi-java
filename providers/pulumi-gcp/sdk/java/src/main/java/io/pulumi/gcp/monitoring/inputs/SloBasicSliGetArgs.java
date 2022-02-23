@@ -23,7 +23,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availability")
-    private final @Nullable Input<SloBasicSliAvailabilityGetArgs> availability;
+        private final @Nullable Input<SloBasicSliAvailabilityGetArgs> availability;
 
     public Input<SloBasicSliAvailabilityGetArgs> getAvailability() {
         return this.availability == null ? Input.empty() : this.availability;
@@ -35,7 +35,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latency")
-    private final @Nullable Input<SloBasicSliLatencyGetArgs> latency;
+        private final @Nullable Input<SloBasicSliLatencyGetArgs> latency;
 
     public Input<SloBasicSliLatencyGetArgs> getLatency() {
         return this.latency == null ? Input.empty() : this.latency;
@@ -51,7 +51,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -67,7 +67,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+        private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -83,7 +83,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<List<String>> versions;
+        private final @Nullable Input<List<String>> versions;
 
     public Input<List<String>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -187,7 +187,6 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public SloBasicSliGetArgs build() {
             return new SloBasicSliGetArgs(availability, latency, locations, methods, versions);
         }

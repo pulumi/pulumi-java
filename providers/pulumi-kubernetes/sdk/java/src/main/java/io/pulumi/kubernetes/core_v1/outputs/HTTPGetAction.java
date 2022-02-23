@@ -151,7 +151,6 @@ public final class HTTPGetAction {
             this.scheme = scheme;
             return this;
         }
-
         public HTTPGetAction build() {
             return new HTTPGetAction(host, httpHeaders, path, port, scheme);
         }
